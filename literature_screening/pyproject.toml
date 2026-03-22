@@ -10,11 +10,14 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
   "bibtexparser>=1.4.1",
+  "fastapi>=0.135.1",
   "httpx>=0.27.0",
   "jsonschema>=4.23.0",
   "pydantic>=2.8.2",
   "pydantic-settings>=2.4.0",
+  "python-multipart>=0.0.22",
   "pyyaml>=6.0.2",
+  "uvicorn>=0.42.0",
 ]
 
 [project.optional-dependencies]

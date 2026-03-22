@@ -1,8 +1,8 @@
-# 架构说明
+﻿# 架构说明
 
 ## 1. 仓库分层
 
-当前仓库按职责分成两层：
+当前仓库按职责分成三层：
 
 ### 初筛主项目
 
@@ -31,17 +31,29 @@
 - 生成简洁综述式报告
 - 生成参考列表
 
-这两个模块已经拆分。主项目不再依赖独立报告模块才能完成初筛。
+### 新 Web 工作台
+
+路径：
+
+- `E:\wenxian\literature_screening_web`
+
+职责：
+
+- 提供现代化交互界面
+- 管理任务创建、状态轮询、结果查看和文件下载
+- 通过本地 API 访问初筛主项目与独立报告模块
 
 ## 2. 主项目结构
 
 ```text
 src/literature_screening/
+  api/            本地 API 适配层
   bibtex/         输入解析、标准化、去重、导出
   core/           配置、模型、常量、异常、环境变量
   pipeline/       主流程编排
   reporting/      初筛结果报告
   screening/      Prompt、批次、LLM 客户端、响应校验
+  studio/         前端/API 共用的编排服务层
 ```
 
 ### `bibtex/`
@@ -68,34 +80,46 @@ src/literature_screening/
 - `validator.py`
   - 校验返回的 `paper_id` 集合与批次完整性
 
-### `reporting/`
+### `api/`
 
-- `report_generator.py`
-  - 生成纳入/剔除/不确定报告
-- `summary_builder.py`
-  - 汇总运行统计
-- `writers.py`
-  - 写入 Markdown / JSON 文件
+- `app.py`
+  - FastAPI 入口
+- `schemas.py`
+  - API 请求/响应模型
+- `task_store.py`
+  - 本地任务状态存储与后台线程调度
+
+### `studio/`
+
+- `service.py`
+  - Web 前端与兼容版 Streamlit 共用的编排服务层
 
 ## 3. 前端结构
 
-路径：
+兼容版 Streamlit：
 
 - `E:\wenxian\literature_screening\frontend_app`
 
-前端原则：
+新的 Web 工作台：
 
-- 页面层只处理交互
-- 服务层统一调用初筛和报告模块
-- 尽量不让 UI 直接依赖底层实现细节
+- `E:\wenxian\literature_screening_web\src\api`
+- `E:\wenxian\literature_screening_web\src\stores`
+- `E:\wenxian\literature_screening_web\src\views`
+- `E:\wenxian\literature_screening_web\src\components`
+- `E:\wenxian\literature_screening_web\src\router`
 
-关键文件：
+## 4. API 适配层
 
-- `app.py`
-- `services.py`
-- `styles.py`
+新增本地 API 的目的，是让前端不直接依赖 Python 脚本和本地输出目录结构。
 
-## 4. 配置原则
+当前接口职责：
+
+- 创建初筛任务
+- 创建报告任务
+- 提供任务列表与详情
+- 提供产物下载接口
+
+## 5. 配置原则
 
 主项目入口使用 YAML 配置，示例文件：
 
@@ -111,7 +135,7 @@ src/literature_screening/
 - `model`
 - `report`
 
-## 5. 当前发布分支保留内容
+## 6. 当前发布分支保留内容
 
 发布分支只保留：
 

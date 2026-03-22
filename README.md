@@ -1,11 +1,13 @@
-# wenxian
+﻿# wenxian
 
-本仓库当前保留两部分主体代码：
+本仓库当前保留三部分主体代码：
 
 - `literature_screening/`
   - 初筛主项目，负责文献输入解析、去重、分批筛选、初步报告和文献导出
 - `literature_screening/separated_modules/formal_report_module/`
   - 独立报告模块，基于初筛结果生成简洁的综述式 Markdown 报告
+- `literature_screening_web/`
+  - 新的 Vue 3 本地工作台，负责现代化交互界面
 
 仓库已经清理掉试跑过程中产生的场景数据、调试产物和输出目录，发布分支只保留可维护的代码、最小测试、示例配置和说明文档。
 
@@ -26,18 +28,24 @@
 
 ### 本地前端
 
-提供一个 `Streamlit` 工作台，便于本地交互：
+当前有两套前端：
 
-- 选择输入文件
-- 填写筛选标准
-- 运行初筛
-- 查看结果
-- 基于初筛结果触发独立报告模块
+- `literature_screening_web/`
+  - 新的 Vue 3 + Vite + Pinia + Naive UI 工作台
+- `literature_screening/frontend_app/`
+  - 旧的 Streamlit 工作台，保留为兼容入口
+
+新前端通过 Python API 访问主项目和独立报告模块。
 
 启动：
 
 ```bash
-python -m streamlit run E:\wenxian\literature_screening\frontend_app\app.py
+cd E:\wenxian\literature_screening
+python -m uvicorn literature_screening.api.app:app --host 127.0.0.1 --port 8000
+
+cd E:\wenxian\literature_screening_web
+npm install
+npm run dev
 ```
 
 ### 独立报告模块
@@ -96,6 +104,9 @@ python E:\wenxian\literature_screening\separated_modules\formal_report_module\sc
 ```text
 E:\wenxian
   README.md
+  literature_screening_web/
+    README.md
+    src/
   literature_screening/
     README.md
     pyproject.toml
@@ -113,3 +124,4 @@ E:\wenxian
 - [主项目说明](literature_screening/README.md)
 - [架构说明](literature_screening/docs/architecture.md)
 - [独立报告模块说明](literature_screening/separated_modules/formal_report_module/README.md)
+- [Web 工作台说明](literature_screening/docs/web-workbench.md)

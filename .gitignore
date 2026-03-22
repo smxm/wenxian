@@ -1,4 +1,4 @@
-.env
+﻿.env
 .env.*
 !.env.example
 
@@ -10,6 +10,7 @@ __pycache__/
 .pytest_cache/
 *.pyc
 tmp_*
+*.log
 
 *.egg-info/
 
@@ -19,6 +20,8 @@ literature_screening/data/output/
 literature_screening/data/ui_runs/
 literature_screening/configs/data/output/
 literature_screening/separated_modules/formal_report_module/outputs/
+literature_screening_web/node_modules/
+literature_screening_web/dist/
 
 /fat/
 /robot/
