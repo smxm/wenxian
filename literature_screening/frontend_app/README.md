@@ -1,14 +1,12 @@
-# Frontend App
+# 前端工作台
 
-这是面向当前文献筛选项目的本地交互前端。
+这个目录提供本地 `Streamlit` 前端，用于统一操作初筛主流程和独立报告模块。
 
-## 定位
+## 目标
 
-- 不替代主项目初筛逻辑
-- 不替代独立报告模块
-- 只做统一交互、参数编排、运行结果展示
+前端只做交互编排，不复制后端业务逻辑。
 
-## 推荐启动方式
+## 启动
 
 ```bash
 python -m streamlit run E:\wenxian\literature_screening\frontend_app\app.py
@@ -16,18 +14,25 @@ python -m streamlit run E:\wenxian\literature_screening\frontend_app\app.py
 
 ## 当前功能
 
-- 从本地文件夹或上传文件导入文献
-- 支持 `.bib`、`.ris`、`.enw` 和 EndNote 风格 `.txt`
-- 从 Markdown 自动读取筛选标准并允许人工微调
-- 调用主项目完成初筛
-- 预览纳入/剔除/不确定结果
-- 调用独立报告模块生成简洁报告
-- 回看 UI 工作台生成的历史运行目录
-- 默认导出更适合 Zotero 的 `.ris` 文献文件
+- 选择或上传文献文件
+- 支持 `.bib`、`.ris`、`.enw`、PubMed `.txt`
+- 读取和编辑筛选标准
+- 运行初筛
+- 查看纳入 / 剔除 / `uncertain`
+- 触发独立报告模块生成简洁报告
+- 管理本地 UI 运行目录
 
-## 架构原则
+## 结构
 
-- 前端只和 `frontend_app/services.py` 交互
-- 初筛参数变化优先改服务层
-- 报告模块变化也优先改服务层
-- 尽量避免 UI 代码直接依赖底层 pipeline 细节
+- `app.py`
+  - 页面入口
+- `services.py`
+  - 与初筛主项目、独立报告模块交互的服务层
+- `styles.py`
+  - 页面样式
+
+## 约束
+
+- 页面层不直接依赖底层 pipeline 细节
+- 模块参数变动优先在 `services.py` 适配
+- UI 层只读取结果，不重新实现初筛和报告逻辑

@@ -7,6 +7,7 @@ literature_screening/.env.*
 !literature_screening/.env.example
 
 __pycache__/
+.pytest_cache/
 *.pyc
 tmp_*
 
@@ -18,3 +19,12 @@ literature_screening/data/output/
 literature_screening/data/ui_runs/
 literature_screening/configs/data/output/
 literature_screening/separated_modules/formal_report_module/outputs/
+
+/fat/
+/robot/
+/肥胖/
+/CNKI-*
+/scopus_export_*
+/AI自动筛选整理文献系统-*.md
+/灌溉文献.md
+/筛选形成报告.md

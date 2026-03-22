@@ -1,46 +1,106 @@
-# Literature Screening
+# 文献初筛主项目
 
-AI-assisted literature screening pipeline for merged BibTeX inputs.
+这个目录是当前仓库的主项目。职责已经收口到“初步筛选”，不再承担最终成稿报告的生成。
 
-## Quick Start
+## 当前边界
 
-1. Create a virtual environment.
-2. Install dependencies with `pip install -e .`.
-3. Copy `.env.example` to `.env` and set `KIMI_API_KEY` or `DEEPSEEK_API_KEY`.
-4. Adjust `configs/config.example.yaml`.
-5. Run:
+主项目负责：
+
+- 读取文献输入文件
+- 合并与去重
+- 分批调用大模型进行标题/摘要级别的初筛
+- 输出纳入、剔除、`uncertain` 结果
+- 导出保留文献
+
+主项目不负责：
+
+- 最终综述式报告的深加工
+- 报告模板排版优化
+- 引文格式渲染
+
+最终报告能力已经拆到：
+
+- `E:\wenxian\literature_screening\separated_modules\formal_report_module`
+
+## 支持的输入格式
+
+- `BibTeX`：`.bib`
+- `RIS`：`.ris`
+- `EndNote`：`.enw`
+- `PubMed` 文本导出：`.txt`
+
+## 当前能力
+
+- 多文件输入
+- DOI 精确去重
+- 标题标准化精确去重
+- 分批筛选
+- 到达目标纳入数后停止
+- `Kimi` / `DeepSeek` 接入
+- 默认 `RIS` 导出
+- 可选 `BibTeX` 导出
+
+## 安装
 
 ```bash
-python -m literature_screening.main --config ./configs/config.example.yaml
+cd E:\wenxian\literature_screening
+python -m venv .venv
+.venv\Scripts\activate
+pip install -e .[dev,ui]
 ```
 
-## Current Scope
+设置环境变量：
 
-This repository is now focused on the initial screening workflow:
+```bash
+copy .env.example .env
+```
 
-- merging multiple literature export files
-- parsing `.bib`, `.ris`, `.enw`, and EndNote-style `.txt`
-- deduplication
-- batch screening with supported LLM providers
-- exporting screening reports and retained bibliography files
-- default retained-reference export in `.ris`, with optional `.bib` compatibility export
+然后在 `.env` 中填写至少一个：
 
-The current main pipeline does not generate the final polished report. That capability has been split out from the primary screening flow and moved under `separated_modules/formal_report_module`.
+- `KIMI_API_KEY`
+- `DEEPSEEK_API_KEY`
 
-## Local Frontend
+## 运行
 
-An interactive local frontend is now available under:
+```bash
+cd E:\wenxian\literature_screening
+python -m literature_screening.main --config .\configs\config.example.yaml
+```
 
-- `E:\wenxian\literature_screening\frontend_app`
+仅检查配置和输出目录：
 
-Launch it with:
+```bash
+python -m literature_screening.main --config .\configs\config.example.yaml --dry-run
+```
+
+## 前端工作台
 
 ```bash
 python -m streamlit run E:\wenxian\literature_screening\frontend_app\app.py
 ```
 
-The frontend acts as an orchestration layer only:
+前端只做编排：
 
-- it calls the screening pipeline for initial screening
-- it calls the detached simple-report module for the concise report
-- it keeps UI-specific run records under `data/ui_runs`
+- 组织初筛参数
+- 触发初筛主流程
+- 读取初筛结果
+- 调用独立报告模块
+
+## 目录
+
+```text
+literature_screening/
+  configs/                 示例配置
+  docs/                    技术说明
+  frontend_app/            本地 Streamlit 前端
+  prompts/                 初筛 Prompt 与输出 Schema
+  separated_modules/       已拆分出去的扩展模块
+  src/                     主项目源码
+  tests/                   主项目最小测试
+```
+
+## 说明文档
+
+- [架构说明](docs/architecture.md)
+- [前端说明](frontend_app/README.md)
+- [独立报告模块说明](separated_modules/formal_report_module/README.md)
