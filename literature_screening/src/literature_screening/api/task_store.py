@@ -41,6 +41,7 @@ class TaskStore:
             "progress_message": None,
             "created_at": now,
             "updated_at": now,
+            "attempt_count": 0,
             "metadata": metadata or {},
             "summary": None,
             "error": None,
@@ -51,6 +52,7 @@ class TaskStore:
             "records": [],
         }
         self._write(root_dir / "task.json", payload)
+        self.append_event(task_id, kind="task-created", message=f"Created {kind} task", metadata={"title": title})
         return StoredTask(task_id=task_id, root_dir=root_dir, payload=payload)
 
     def load_task(self, task_id: str) -> dict[str, Any]:
@@ -63,6 +65,12 @@ class TaskStore:
         tasks.sort(key=lambda item: item["created_at"], reverse=True)
         return tasks
 
+    def load_events(self, task_id: str) -> list[dict[str, Any]]:
+        events_path = self.tasks_dir / task_id / "events.json"
+        if not events_path.exists():
+            return []
+        return json.loads(events_path.read_text(encoding="utf-8"))
+
     def update(self, task_id: str, **changes: Any) -> dict[str, Any]:
         task_path = self.tasks_dir / task_id / "task.json"
         with self._lock:
@@ -72,6 +80,31 @@ class TaskStore:
             self._write(task_path, payload)
         return payload
 
+    def append_event(
+        self,
+        task_id: str,
+        *,
+        kind: str,
+        message: str,
+        metadata: dict[str, Any] | None = None,
+    ) -> dict[str, Any]:
+        events_path = self.tasks_dir / task_id / "events.json"
+        with self._lock:
+            if events_path.exists():
+                events = json.loads(events_path.read_text(encoding="utf-8"))
+            else:
+                events = []
+            event = {
+                "id": uuid.uuid4().hex[:12],
+                "kind": kind,
+                "message": message,
+                "metadata": metadata or {},
+                "created_at": datetime.now().astimezone().isoformat(),
+            }
+            events.append(event)
+            self._write(events_path, events)
+        return event
+
     def run_in_background(
         self,
         task: StoredTask,
@@ -80,7 +113,33 @@ class TaskStore:
         thread = threading.Thread(target=self._run_worker, args=(task, worker), daemon=True)
         thread.start()
 
+    def retry_in_background(
+        self,
+        task_id: str,
+        worker: Callable[[StoredTask], dict[str, Any]],
+    ) -> dict[str, Any]:
+        payload = self.load_task(task_id)
+        next_attempt = int(payload.get("attempt_count", 0)) + 1
+        payload = self.update(
+            task_id,
+            status="pending",
+            phase="queued",
+            phase_label="Queued",
+            progress_current=0,
+            progress_total=None,
+            progress_message="Retry scheduled",
+            error=None,
+            attempt_count=next_attempt,
+        )
+        self.append_event(task_id, kind="task-retry", message="Retry scheduled", metadata={"attempt_count": next_attempt})
+        stored = StoredTask(task_id=task_id, root_dir=self.tasks_dir / task_id, payload=payload)
+        self.run_in_background(stored, worker)
+        return payload
+
     def _run_worker(self, task: StoredTask, worker: Callable[[StoredTask], dict[str, Any]]) -> None:
+        current = self.load_task(task.task_id)
+        attempt_count = int(current.get("attempt_count", 0)) or 1
+        self.append_event(task.task_id, kind="task-started", message="Task execution started", metadata={"attempt_count": attempt_count})
         self.update(
             task.task_id,
             status="running",
@@ -89,6 +148,7 @@ class TaskStore:
             progress_current=0,
             progress_total=None,
             progress_message="Initializing task",
+            attempt_count=attempt_count,
         )
         try:
             result = worker(task)
@@ -100,6 +160,7 @@ class TaskStore:
                 progress_message="Task completed",
                 **result,
             )
+            self.append_event(task.task_id, kind="task-succeeded", message="Task completed successfully")
         except Exception as exc:
             detail = "".join(traceback.format_exception(exc))
             self.update(
@@ -110,6 +171,7 @@ class TaskStore:
                 progress_message=str(exc),
                 error=detail,
             )
+            self.append_event(task.task_id, kind="task-failed", message=str(exc), metadata={"error_type": exc.__class__.__name__})
 
     @staticmethod
     def _read(path: Path) -> dict[str, Any]:

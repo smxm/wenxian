@@ -1,5 +1,15 @@
 import axios from 'axios'
-import type { MetaPayload, ReportFormPayload, ScreeningFormPayload, TaskDetail, TaskSnapshot } from '@/types/api'
+import type {
+  DatasetRecord,
+  MetaPayload,
+  ProjectDetail,
+  ProjectSnapshot,
+  ReportFormPayload,
+  ScreeningFormPayload,
+  TaskDetail,
+  TaskSnapshot,
+  TaskTemplateRecord
+} from '@/types/api'
 
 const http = axios.create({
   baseURL: '/api',
@@ -16,17 +26,37 @@ export async function fetchTasks() {
   return data
 }
 
+export async function fetchProjectTasks(projectId: string) {
+  const { data } = await http.get<TaskSnapshot[]>('/tasks', { params: { project_id: projectId } })
+  return data
+}
+
 export async function fetchTask(taskId: string) {
   const { data } = await http.get<TaskDetail>(`/tasks/${taskId}`)
   return data
 }
 
+export async function retryTask(taskId: string, mode: 'retry' | 'resume' = 'resume') {
+  const { data } = await http.post<TaskSnapshot>(`/tasks/${taskId}/retry`, { mode })
+  return data
+}
+
+export async function applyReviewOverride(taskId: string, payload: { paper_id: string; decision: 'include' | 'exclude' | 'uncertain'; reason: string }) {
+  const { data } = await http.post<TaskDetail>(`/tasks/${taskId}/review-overrides`, payload)
+  return data
+}
+
 export async function createScreeningTask(payload: ScreeningFormPayload) {
   const formData = new FormData()
+  if (payload.project_id) formData.append('project_id', payload.project_id)
+  if (payload.new_project_name) formData.append('new_project_name', payload.new_project_name)
+  if (payload.new_project_description) formData.append('new_project_description', payload.new_project_description)
+  if (payload.parent_task_id) formData.append('parent_task_id', payload.parent_task_id)
   formData.append('title', payload.title)
   formData.append('topic', payload.topic)
   formData.append('inclusion_json', JSON.stringify(payload.inclusion))
   formData.append('exclusion_json', JSON.stringify(payload.exclusion))
+  formData.append('source_dataset_ids_json', JSON.stringify(payload.source_dataset_ids))
   formData.append('provider', payload.model.provider)
   formData.append('model_name', payload.model.model_name)
   formData.append('api_base_url', payload.model.api_base_url)
@@ -50,6 +80,40 @@ export async function createScreeningTask(payload: ScreeningFormPayload) {
 
 export async function createReportTask(payload: ReportFormPayload) {
   const { data } = await http.post<TaskSnapshot>('/report/tasks', payload)
+  return data
+}
+
+export async function fetchProjects() {
+  const { data } = await http.get<ProjectSnapshot[]>('/projects')
+  return data
+}
+
+export async function fetchProject(projectId: string) {
+  const { data } = await http.get<ProjectDetail>(`/projects/${projectId}`)
+  return data
+}
+
+export async function createProject(payload: { name: string; topic: string; description: string }) {
+  const { data } = await http.post<ProjectSnapshot>('/projects', payload)
+  return data
+}
+
+export async function fetchDataset(datasetId: string) {
+  const { data } = await http.get<DatasetRecord>(`/datasets/${datasetId}`)
+  return data
+}
+
+export async function fetchTemplates(projectId?: string) {
+  const { data } = await http.get<TaskTemplateRecord[]>('/templates', { params: projectId ? { project_id: projectId } : undefined })
+  return data
+}
+
+export async function createTemplate(payload: { name: string; payload: Record<string, unknown>; project_id?: string | null }) {
+  const form = new FormData()
+  form.append('name', payload.name)
+  form.append('payload_json', JSON.stringify(payload.payload))
+  if (payload.project_id) form.append('project_id', payload.project_id)
+  const { data } = await http.post<TaskTemplateRecord>('/templates', form)
   return data
 }
 

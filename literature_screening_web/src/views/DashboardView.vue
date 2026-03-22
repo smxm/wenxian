@@ -7,11 +7,13 @@ import OverviewMetric from '@/components/OverviewMetric.vue'
 import StatusPill from '@/components/StatusPill.vue'
 import { useDraftsStore } from '@/stores/drafts'
 import { useMetaStore } from '@/stores/meta'
+import { useProjectsStore } from '@/stores/projects'
 import { useTasksStore } from '@/stores/tasks'
 
 const metaStore = useMetaStore()
 const tasksStore = useTasksStore()
 const draftsStore = useDraftsStore()
+const projectsStore = useProjectsStore()
 
 const stats = computed(() => {
   const tasks = tasksStore.list
@@ -25,7 +27,7 @@ const stats = computed(() => {
 
 onMounted(async () => {
   draftsStore.hydrate()
-  await Promise.all([metaStore.ensureLoaded(), tasksStore.refreshList()])
+  await Promise.all([metaStore.ensureLoaded(), tasksStore.refreshList(), projectsStore.refreshProjects()])
 })
 </script>
 
@@ -78,6 +80,21 @@ onMounted(async () => {
     </section>
 
     <section class="dashboard-grid">
+      <NCard title="项目" class="panel-surface">
+        <NList hoverable clickable v-if="projectsStore.list.length">
+          <NListItem v-for="project in projectsStore.list.slice(0, 6)" :key="project.id">
+            <RouterLink :to="`/projects/${project.id}`" class="task-link">
+              <div>
+                <div class="task-title">{{ project.name }}</div>
+                <NText depth="3">{{ project.topic }}</NText>
+              </div>
+              <NText depth="3">{{ project.dataset_count }} 个数据集</NText>
+            </RouterLink>
+          </NListItem>
+        </NList>
+        <NEmpty v-else description="还没有项目。" />
+      </NCard>
+
       <NCard title="最近任务" class="panel-surface">
         <NList hoverable clickable v-if="tasksStore.list.length">
           <NListItem v-for="task in tasksStore.list.slice(0, 6)" :key="task.id">
@@ -96,6 +113,7 @@ onMounted(async () => {
       <NCard title="当前工作方式" class="panel-surface">
         <ul class="principles">
           <li>初筛表单会自动保存为草稿，切换页面不会丢。</li>
+          <li>项目会沉淀任务链和数据集，后续任务可以直接复用上一轮结果。</li>
           <li>任务中心持续显示所有运行中的任务，不再依赖单页停留。</li>
           <li>初筛成功后可直接创建简洁报告任务，并查看生成进度。</li>
           <li>后续新增模型、模板或任务类型，只扩展 API 和组件，不重写整套前端。</li>

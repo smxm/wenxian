@@ -2,6 +2,7 @@ export type ProviderName = 'deepseek' | 'kimi'
 export type TaskKind = 'screening' | 'report'
 export type TaskStatus = 'pending' | 'running' | 'succeeded' | 'failed'
 export type ReferenceStyle = 'gbt7714' | 'apa7'
+export type DatasetKind = 'included' | 'excluded' | 'unused' | 'cumulative_included' | 'report_source' | string
 
 export interface ProviderPreset {
   provider: ProviderName
@@ -17,11 +18,55 @@ export interface MetaPayload {
   acceptedInputFormats: string[]
 }
 
+export interface ProjectSnapshot {
+  id: string
+  name: string
+  topic: string
+  description: string
+  created_at: string
+  updated_at: string
+  dataset_count: number
+}
+
+export interface DatasetRecord {
+  id: string
+  project_id: string
+  task_id?: string | null
+  kind: DatasetKind
+  label: string
+  filename: string
+  path: string
+  format: string
+  record_count?: number | null
+  source_dataset_ids: string[]
+  created_at: string
+  updated_at: string
+  metadata: Record<string, unknown>
+}
+
+export interface TaskTemplateRecord {
+  id: string
+  project_id?: string | null
+  name: string
+  scope: 'global' | 'project'
+  payload: Record<string, unknown>
+  created_at: string
+  updated_at: string
+}
+
 export interface TaskArtifact {
   key: string
   filename: string
   content_type: string
   size_bytes?: number | null
+}
+
+export interface TaskEvent {
+  id: string
+  kind: string
+  message: string
+  metadata: Record<string, unknown>
+  created_at: string
 }
 
 export interface ScreeningRecordRow {
@@ -49,8 +94,13 @@ export interface TaskSnapshot {
   updated_at: string
   summary?: Record<string, unknown> | null
   error?: string | null
+  project_id?: string | null
+  parent_task_id?: string | null
+  input_dataset_ids: string[]
+  output_dataset_ids: string[]
   project_topic?: string | null
   model_provider?: string | null
+  attempt_count: number
   artifacts: TaskArtifact[]
 }
 
@@ -59,6 +109,12 @@ export interface TaskDetail extends TaskSnapshot {
   output_dir?: string | null
   records: ScreeningRecordRow[]
   markdown_preview?: string | null
+  events: TaskEvent[]
+}
+
+export interface ProjectDetail extends ProjectSnapshot {
+  tasks: TaskSnapshot[]
+  datasets: DatasetRecord[]
 }
 
 export interface ModelSettings {
@@ -72,6 +128,11 @@ export interface ModelSettings {
 }
 
 export interface ScreeningFormPayload {
+  project_id?: string | null
+  new_project_name?: string
+  new_project_description?: string
+  source_dataset_ids: string[]
+  parent_task_id?: string | null
   title: string
   topic: string
   inclusion: string[]
@@ -89,7 +150,8 @@ export interface ScreeningFormPayload {
 
 export interface ReportFormPayload {
   title: string
-  screening_task_id: string
+  screening_task_id?: string | null
+  dataset_ids: string[]
   project_topic: string
   model: ModelSettings
   report_name: string

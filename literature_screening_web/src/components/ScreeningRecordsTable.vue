@@ -6,6 +6,11 @@ import type { ScreeningRecordRow } from '@/types/api'
 
 const props = defineProps<{
   rows: ScreeningRecordRow[]
+  selectedPaperId?: string | null
+}>()
+
+const emit = defineEmits<{
+  select: [row: ScreeningRecordRow]
 }>()
 
 const filter = ref('')
@@ -38,9 +43,11 @@ const columns: DataTableColumns<ScreeningRecordRow> = [
 const filteredRows = computed(() => {
   const keyword = filter.value.trim().toLowerCase()
   if (!keyword) return props.rows
-  return props.rows.filter((row) => {
-    return [row.title, row.reason, row.journal, row.doi].filter(Boolean).some((value) => value!.toLowerCase().includes(keyword))
-  })
+  return props.rows.filter((row) =>
+    [row.title, row.reason, row.journal, row.doi]
+      .filter(Boolean)
+      .some((value) => value!.toLowerCase().includes(keyword))
+  )
 })
 
 const groups = computed(() => ({
@@ -48,6 +55,14 @@ const groups = computed(() => ({
   exclude: filteredRows.value.filter(row => row.decision === 'exclude'),
   uncertain: filteredRows.value.filter(row => row.decision === 'uncertain')
 }))
+
+function rowProps(row: ScreeningRecordRow) {
+  const active = row.paper_id === props.selectedPaperId
+  return {
+    onClick: () => emit('select', row),
+    style: active ? 'cursor:pointer;background: rgba(95,122,102,0.08);' : 'cursor:pointer;'
+  }
+}
 </script>
 
 <template>
@@ -55,13 +70,13 @@ const groups = computed(() => ({
     <NInput v-model:value="filter" placeholder="筛选标题、理由或期刊" clearable />
     <NTabs type="segment">
       <NTabPane name="include" :tab="`纳入 (${groups.include.length})`">
-        <NDataTable :columns="columns" :data="groups.include" :pagination="{ pageSize: 8 }" />
+        <NDataTable :columns="columns" :data="groups.include" :pagination="{ pageSize: 8 }" :row-props="rowProps" />
       </NTabPane>
       <NTabPane name="exclude" :tab="`剔除 (${groups.exclude.length})`">
-        <NDataTable :columns="columns" :data="groups.exclude" :pagination="{ pageSize: 8 }" />
+        <NDataTable :columns="columns" :data="groups.exclude" :pagination="{ pageSize: 8 }" :row-props="rowProps" />
       </NTabPane>
       <NTabPane name="uncertain" :tab="`不确定 (${groups.uncertain.length})`">
-        <NDataTable :columns="columns" :data="groups.uncertain" :pagination="{ pageSize: 8 }" />
+        <NDataTable :columns="columns" :data="groups.uncertain" :pagination="{ pageSize: 8 }" :row-props="rowProps" />
       </NTabPane>
     </NTabs>
   </div>

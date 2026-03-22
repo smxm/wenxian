@@ -4,6 +4,12 @@ import type { ModelSettings, ReferenceStyle } from '@/types/api'
 const STORAGE_KEY = 'literature-screening-studio:drafts'
 
 export interface ScreeningDraftState {
+  projectId: string | null
+  newProjectName: string
+  newProjectDescription: string
+  sourceDatasetIds: string[]
+  parentTaskId: string | null
+  selectedTemplateId: string | null
   title: string
   topic: string
   criteriaMarkdown: string
@@ -32,6 +38,12 @@ export interface ReportDraftState {
 
 function createDefaultScreeningDraft(): ScreeningDraftState {
   return {
+    projectId: null,
+    newProjectName: '',
+    newProjectDescription: '',
+    sourceDatasetIds: [],
+    parentTaskId: null,
+    selectedTemplateId: null,
     title: 'new-screening-run',
     topic: '',
     criteriaMarkdown: '',

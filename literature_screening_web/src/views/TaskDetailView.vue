@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { computed, onMounted, watch } from 'vue'
+import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import dayjs from 'dayjs'
-import { FileText, RefreshCw } from 'lucide-vue-next'
+import { FileText, RefreshCw, RotateCcw } from 'lucide-vue-next'
 import {
   NAlert,
   NButton,
@@ -29,6 +29,7 @@ import StatusPill from '@/components/StatusPill.vue'
 import { useDraftsStore } from '@/stores/drafts'
 import { useMetaStore } from '@/stores/meta'
 import { useTasksStore } from '@/stores/tasks'
+import type { ScreeningRecordRow } from '@/types/api'
 
 const route = useRoute()
 const router = useRouter()
@@ -41,7 +42,11 @@ const taskId = computed(() => String(route.params.taskId))
 const task = computed(() => tasksStore.currentTask)
 const isRunning = computed(() => task.value?.status === 'running' || task.value?.status === 'pending')
 const isScreeningTask = computed(() => task.value?.kind === 'screening')
+const isFailedTask = computed(() => task.value?.status === 'failed')
 const reportDraft = computed(() => draftsStore.getReportDraft(taskId.value))
+const selectedRecord = ref<ScreeningRecordRow | null>(null)
+const reviewDecision = ref<'include' | 'exclude' | 'uncertain'>('include')
+const reviewReason = ref('')
 
 const screeningSummary = computed<Record<string, number | string>>(() => {
   const source = task.value?.summary ?? {}
@@ -49,7 +54,9 @@ const screeningSummary = computed<Record<string, number | string>>(() => {
     raw_entries_count: Number(source.raw_entries_count ?? 0),
     deduped_entries_count: Number(source.deduped_entries_count ?? 0),
     included_count: Number(source.included_count ?? 0),
-    uncertain_count: Number(source.uncertain_count ?? 0)
+    excluded_count: Number(source.excluded_count ?? 0),
+    uncertain_count: Number(source.uncertain_count ?? 0),
+    processed_count: Number(source.processed_count ?? 0)
   }
 })
 
@@ -71,6 +78,11 @@ watch(
     if (!draft.title || draft.title === `${nextTask.id}-report`) {
       draftsStore.updateReportDraft(nextTask.id, { title: `${nextTask.title}-report` })
     }
+    if (!selectedRecord.value && nextTask.records.length) {
+      selectedRecord.value = nextTask.records[0]
+      reviewDecision.value = nextTask.records[0].decision as 'include' | 'exclude' | 'uncertain'
+      reviewReason.value = nextTask.records[0].reason || ''
+    }
   },
   { immediate: true }
 )
@@ -83,11 +95,36 @@ onMounted(async () => {
 
 watch(taskId, async (nextTaskId, prevTaskId) => {
   if (!nextTaskId || nextTaskId === prevTaskId) return
+  selectedRecord.value = null
   await tasksStore.loadTask(nextTaskId)
 })
 
+function handleSelectRecord(row: ScreeningRecordRow) {
+  selectedRecord.value = row
+  reviewDecision.value = row.decision as 'include' | 'exclude' | 'uncertain'
+  reviewReason.value = row.reason || ''
+}
+
 async function refreshCurrentTask() {
   await tasksStore.loadTask(taskId.value)
+}
+
+async function retryCurrentTask() {
+  if (!task.value) return
+  await tasksStore.retry(task.value.id, 'resume')
+  message.success('任务已重新启动')
+}
+
+async function submitReviewOverride() {
+  if (!task.value || !selectedRecord.value) return
+  await tasksStore.review(task.value.id, {
+    paper_id: selectedRecord.value.paper_id,
+    decision: reviewDecision.value,
+    reason: reviewReason.value
+  })
+  selectedRecord.value =
+    tasksStore.currentTask?.records.find((row) => row.paper_id === selectedRecord.value?.paper_id) ?? null
+  message.success('人工审核结果已保存')
 }
 
 async function submitReport() {
@@ -96,6 +133,7 @@ async function submitReport() {
   const created = await tasksStore.submitReport({
     title: reportDraft.value.title,
     screening_task_id: task.value.id,
+    dataset_ids: [],
     project_topic: reportDraft.value.projectTopic,
     report_name: reportDraft.value.reportName,
     retry_times: reportDraft.value.retryTimes,
@@ -112,7 +150,7 @@ async function submitReport() {
     }
   })
   draftsStore.clearReportDraft(task.value.id)
-  message.success('简洁报告任务已创建。')
+  message.success('简洁报告任务已创建')
   await router.push(`/tasks/${created.id}`)
 }
 
@@ -130,7 +168,10 @@ function patchReportDraft(patch: Record<string, unknown>) {
         <div class="hero-meta">
           <StatusPill :status="task.status" />
           <NText depth="3">阶段：{{ task.phase_label || task.phase }}</NText>
+          <NText depth="3">尝试次数：{{ task.attempt_count }}</NText>
           <NText depth="3">更新时间：{{ dayjs(task.updated_at).format('YYYY-MM-DD HH:mm:ss') }}</NText>
+          <NText depth="3" v-if="task.project_id">项目：{{ task.project_id }}</NText>
+          <NText depth="3" v-if="task.parent_task_id">父任务：{{ task.parent_task_id }}</NText>
         </div>
       </div>
       <NSpace>
@@ -139,6 +180,12 @@ function patchReportDraft(patch: Record<string, unknown>) {
             <RefreshCw :size="16" />
           </template>
           刷新
+        </NButton>
+        <NButton v-if="isFailedTask" tertiary @click="retryCurrentTask">
+          <template #icon>
+            <RotateCcw :size="16" />
+          </template>
+          继续执行
         </NButton>
       </NSpace>
     </section>
@@ -167,7 +214,7 @@ function patchReportDraft(patch: Record<string, unknown>) {
     </NCard>
 
     <NSpin v-if="isRunning && task.kind === 'report'" size="large">
-      <template #description>报告任务正在整理单篇文献、参考列表和最终 Markdown。</template>
+      <template #description>报告任务正在整理单篇摘要、参考列表和最终 Markdown。</template>
     </NSpin>
 
     <template v-if="task.kind === 'screening'">
@@ -175,7 +222,9 @@ function patchReportDraft(patch: Record<string, unknown>) {
         <OverviewMetric label="原始条目" :value="screeningSummary.raw_entries_count ?? 0" />
         <OverviewMetric label="去重后" :value="screeningSummary.deduped_entries_count ?? 0" />
         <OverviewMetric label="纳入" :value="screeningSummary.included_count ?? 0" />
+        <OverviewMetric label="剔除" :value="screeningSummary.excluded_count ?? 0" />
         <OverviewMetric label="不确定" :value="screeningSummary.uncertain_count ?? 0" />
+        <OverviewMetric label="已处理" :value="screeningSummary.processed_count ?? 0" />
       </section>
 
       <NCard v-if="task.status === 'succeeded'" title="生成简洁报告" class="panel-surface">
@@ -242,7 +291,7 @@ function patchReportDraft(patch: Record<string, unknown>) {
 
         <NDivider />
         <div class="report-action-row">
-          <div class="report-copy">创建后会生成一个独立的报告任务。你可以在任务中心同时观察初筛和报告，不需要停留在当前页面。</div>
+          <div class="report-copy">报告任务会继承当前初筛结果，并在任务中心独立运行。</div>
           <NButton type="primary" @click="submitReport">
             <template #icon>
               <FileText :size="16" />
@@ -252,9 +301,44 @@ function patchReportDraft(patch: Record<string, unknown>) {
         </div>
       </NCard>
 
-      <NCard title="筛选记录" class="panel-surface">
-        <ScreeningRecordsTable :rows="task.records" />
-      </NCard>
+      <section class="review-grid">
+        <NCard title="筛选记录" class="panel-surface">
+          <ScreeningRecordsTable
+            :rows="task.records"
+            :selected-paper-id="selectedRecord?.paper_id ?? null"
+            @select="handleSelectRecord"
+          />
+        </NCard>
+
+        <NCard title="人工审核与修正" class="panel-surface">
+          <template v-if="selectedRecord">
+            <div class="review-meta">
+              <div class="review-title">{{ selectedRecord.title }}</div>
+              <div class="review-submeta">
+                <span>{{ selectedRecord.year || '年份未知' }}</span>
+                <span>{{ selectedRecord.journal || '期刊未知' }}</span>
+              </div>
+            </div>
+            <NForm label-placement="top">
+              <NFormItem label="判定结果">
+                <NSelect
+                  v-model:value="reviewDecision"
+                  :options="[
+                    { label: '纳入', value: 'include' },
+                    { label: '剔除', value: 'exclude' },
+                    { label: '不确定', value: 'uncertain' }
+                  ]"
+                />
+              </NFormItem>
+              <NFormItem label="审核理由">
+                <NInput v-model:value="reviewReason" type="textarea" :autosize="{ minRows: 4, maxRows: 8 }" />
+              </NFormItem>
+            </NForm>
+            <NButton type="primary" @click="submitReviewOverride">保存人工审核结果</NButton>
+          </template>
+          <NAlert v-else type="info" :show-icon="false">从左侧表格选择一篇文献后，可在这里做人工修正。</NAlert>
+        </NCard>
+      </section>
     </template>
 
     <template v-if="task.kind === 'report'">
@@ -267,6 +351,34 @@ function patchReportDraft(patch: Record<string, unknown>) {
     <NCard title="产物文件" class="panel-surface">
       <ArtifactList :task-id="task.id" :artifacts="task.artifacts" />
     </NCard>
+
+    <section class="bottom-grid">
+      <NCard title="任务链与数据集" class="panel-surface">
+        <div class="lineage-grid">
+          <div>
+            <div class="lineage-label">输入数据集</div>
+            <div class="lineage-value">{{ task.input_dataset_ids.length ? task.input_dataset_ids.join('，') : '无' }}</div>
+          </div>
+          <div>
+            <div class="lineage-label">输出数据集</div>
+            <div class="lineage-value">{{ task.output_dataset_ids.length ? task.output_dataset_ids.join('，') : '无' }}</div>
+          </div>
+        </div>
+      </NCard>
+
+      <NCard title="审计事件" class="panel-surface">
+        <div v-if="task.events.length" class="event-list">
+          <div v-for="event in task.events" :key="event.id" class="event-item">
+            <div class="event-head">
+              <strong>{{ event.kind }}</strong>
+              <span>{{ dayjs(event.created_at).format('YYYY-MM-DD HH:mm:ss') }}</span>
+            </div>
+            <div class="event-message">{{ event.message }}</div>
+          </div>
+        </div>
+        <NAlert v-else type="info" :show-icon="false">当前任务还没有审计事件。</NAlert>
+      </NCard>
+    </section>
   </div>
 </template>
 
@@ -305,8 +417,15 @@ h1 {
 
 .metrics-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 16px;
+}
+
+.review-grid,
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 18px;
 }
 
 .progress-stack {
@@ -339,21 +458,86 @@ h1 {
   align-items: center;
 }
 
+.lineage-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.lineage-label {
+  font-weight: 700;
+}
+
+.lineage-value {
+  margin-top: 6px;
+  color: #5b665d;
+  word-break: break-word;
+}
+
+.review-meta {
+  margin-bottom: 12px;
+}
+
+.review-title {
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.review-submeta {
+  margin-top: 6px;
+  display: flex;
+  gap: 12px;
+  color: #5b665d;
+  font-size: 13px;
+}
+
+.event-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.event-item {
+  padding-top: 12px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.event-item:first-child {
+  padding-top: 0;
+  border-top: none;
+}
+
+.event-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: #5b665d;
+  font-size: 13px;
+}
+
+.event-message {
+  margin-top: 6px;
+}
+
 .error-block {
   white-space: pre-wrap;
   margin: 0;
   font-family: Consolas, monospace;
 }
 
-@media (max-width: 1100px) {
-  .task-hero,
-  .report-action-row {
-    flex-direction: column;
-    align-items: stretch;
+@media (max-width: 1200px) {
+  .metrics-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .metrics-grid {
-    grid-template-columns: 1fr 1fr;
+  .review-grid,
+  .bottom-grid,
+  .task-hero,
+  .report-action-row,
+  .lineage-grid {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+    align-items: stretch;
   }
 }
 </style>

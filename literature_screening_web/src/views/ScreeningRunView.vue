@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from 'vue'
-import { useRouter } from 'vue-router'
-import { CircleDashed, FileUp, WandSparkles } from 'lucide-vue-next'
+import { useRoute, useRouter } from 'vue-router'
+import { CircleDashed, FileUp, Save, WandSparkles, X } from 'lucide-vue-next'
 import {
   NAlert,
   NButton,
@@ -20,15 +20,26 @@ import {
 } from 'naive-ui'
 import { useDraftsStore } from '@/stores/drafts'
 import { useMetaStore } from '@/stores/meta'
+import { useProjectsStore } from '@/stores/projects'
 import { useTasksStore } from '@/stores/tasks'
 import { parseCriteriaMarkdown } from '@/utils/criteria'
 import type { ModelSettings, ProviderName } from '@/types/api'
 
 const router = useRouter()
+const route = useRoute()
 const metaStore = useMetaStore()
 const tasksStore = useTasksStore()
 const draftsStore = useDraftsStore()
+const projectsStore = useProjectsStore()
 const message = useMessage()
+
+const selectedProjectId = ref<string | null>(null)
+const newProjectName = ref('')
+const newProjectDescription = ref('')
+const sourceDatasetIds = ref<string[]>([])
+const parentTaskId = ref<string | null>(null)
+const selectedTemplateId = ref<string | null>(null)
+const templateName = ref('')
 
 const title = ref('new-screening-run')
 const topic = ref('')
@@ -59,9 +70,36 @@ const hydratingDraft = ref(false)
 
 const selectedPreset = computed(() => metaStore.providerPresets.find((item) => item.provider === provider.value))
 const rememberedFileNames = computed(() => draftsStore.screeningDraft.fileNames)
+const currentProject = computed(() =>
+  projectsStore.currentProject?.id === selectedProjectId.value ? projectsStore.currentProject : null
+)
+const projectOptions = computed(() =>
+  projectsStore.list.map((item) => ({
+    label: `${item.name} · ${item.topic}`,
+    value: item.id
+  }))
+)
+const datasetOptions = computed(() =>
+  (currentProject.value?.datasets ?? []).map((item) => ({
+    label: `${item.label} · ${item.record_count ?? '-'} 篇 · ${item.kind}`,
+    value: item.id
+  }))
+)
+const templateOptions = computed(() =>
+  projectsStore.templates.map((item) => ({
+    label: item.name,
+    value: item.id
+  }))
+)
 
 function applyDraft() {
   const draft = draftsStore.screeningDraft
+  selectedProjectId.value = draft.projectId
+  newProjectName.value = draft.newProjectName
+  newProjectDescription.value = draft.newProjectDescription
+  sourceDatasetIds.value = [...draft.sourceDatasetIds]
+  parentTaskId.value = draft.parentTaskId
+  selectedTemplateId.value = draft.selectedTemplateId
   title.value = draft.title
   topic.value = draft.topic
   criteriaMarkdown.value = draft.criteriaMarkdown
@@ -81,6 +119,12 @@ function applyDraft() {
 
 function persistDraft() {
   draftsStore.updateScreeningDraft({
+    projectId: selectedProjectId.value,
+    newProjectName: newProjectName.value,
+    newProjectDescription: newProjectDescription.value,
+    sourceDatasetIds: sourceDatasetIds.value,
+    parentTaskId: parentTaskId.value,
+    selectedTemplateId: selectedTemplateId.value,
     title: title.value,
     topic: topic.value,
     criteriaMarkdown: criteriaMarkdown.value,
@@ -111,8 +155,42 @@ watch(provider, (nextProvider) => {
   }
 })
 
+watch(selectedProjectId, async (nextProjectId) => {
+  if (nextProjectId) {
+    await projectsStore.loadProject(nextProjectId)
+  }
+  if (!hydratingDraft.value && !nextProjectId) {
+    sourceDatasetIds.value = []
+    selectedTemplateId.value = null
+  }
+})
+
+watch(selectedTemplateId, (nextTemplateId) => {
+  if (!nextTemplateId) return
+  const template = projectsStore.templates.find((item) => item.id === nextTemplateId)
+  if (!template) return
+  const payload = template.payload as Record<string, unknown>
+  if (typeof payload.topic === 'string') topic.value = payload.topic
+  if (Array.isArray(payload.inclusion)) inclusion.value = payload.inclusion as string[]
+  if (Array.isArray(payload.exclusion)) exclusion.value = payload.exclusion as string[]
+  if (typeof payload.criteriaMarkdown === 'string') criteriaMarkdown.value = payload.criteriaMarkdown
+  if (typeof payload.batchSize === 'number') batchSize.value = payload.batchSize
+  if (typeof payload.targetIncludeCount === 'number') targetIncludeCount.value = payload.targetIncludeCount
+  if (typeof payload.stopWhenReached === 'boolean') stopWhenReached.value = payload.stopWhenReached
+  if (typeof payload.allowUncertain === 'boolean') allowUncertain.value = payload.allowUncertain
+  if (typeof payload.retryTimes === 'number') retryTimes.value = payload.retryTimes
+  if (typeof payload.requestTimeout === 'number') requestTimeout.value = payload.requestTimeout
+  message.success(`已应用模板：${template.name}`)
+})
+
 watch(
   [
+    selectedProjectId,
+    newProjectName,
+    newProjectDescription,
+    sourceDatasetIds,
+    parentTaskId,
+    selectedTemplateId,
     title,
     topic,
     criteriaMarkdown,
@@ -128,9 +206,7 @@ watch(
     requestTimeout,
     encoding
   ],
-  () => {
-    persistDraft()
-  },
+  () => persistDraft(),
   { deep: true }
 )
 
@@ -145,19 +221,23 @@ function parseCriteria() {
     return
   }
 
-  if (draft.warnings.length) {
-    message.info(draft.warnings[0])
-  } else {
-    message.success('已解析到结构化字段。')
-  }
+  if (draft.warnings.length) message.info(draft.warnings[0])
+  else message.success('已解析到结构化字段。')
 }
 
 function setFiles(nextFiles: File[]) {
   files.value = nextFiles
   draftsStore.setScreeningFiles(nextFiles)
-  if (nextFiles.length) {
-    message.success(`已选择 ${nextFiles.length} 个文件。`)
-  }
+  if (nextFiles.length) message.success(`已选择 ${nextFiles.length} 个文件。`)
+}
+
+function removeFile(index: number) {
+  const nextFiles = files.value.filter((_, current) => current !== index)
+  setFiles(nextFiles)
+}
+
+function clearFiles() {
+  setFiles([])
 }
 
 function handleFileChange(event: Event) {
@@ -186,8 +266,38 @@ function openFilePicker() {
   fileInputRef.value?.click()
 }
 
+async function saveCurrentAsTemplate() {
+  if (!selectedProjectId.value || !templateName.value.trim()) {
+    message.warning('先选择项目并填写模板名称。')
+    return
+  }
+  await projectsStore.saveTemplate({
+    name: templateName.value.trim(),
+    project_id: selectedProjectId.value,
+    payload: {
+      topic: topic.value,
+      inclusion: inclusion.value.filter(Boolean),
+      exclusion: exclusion.value.filter(Boolean),
+      criteriaMarkdown: criteriaMarkdown.value,
+      batchSize: batchSize.value,
+      targetIncludeCount: targetIncludeCount.value,
+      stopWhenReached: stopWhenReached.value,
+      allowUncertain: allowUncertain.value,
+      retryTimes: retryTimes.value,
+      requestTimeout: requestTimeout.value
+    }
+  })
+  message.success('模板已保存。')
+  templateName.value = ''
+}
+
 async function submit() {
   const task = await tasksStore.submitScreening({
+    project_id: selectedProjectId.value,
+    new_project_name: selectedProjectId.value ? '' : newProjectName.value,
+    new_project_description: selectedProjectId.value ? '' : newProjectDescription.value,
+    source_dataset_ids: sourceDatasetIds.value,
+    parent_task_id: parentTaskId.value,
     title: title.value,
     topic: topic.value,
     inclusion: inclusion.value.filter(Boolean),
@@ -207,16 +317,30 @@ async function submit() {
   await router.push(`/tasks/${task.id}`)
 }
 
+const hasInputSource = computed(() => files.value.length > 0 || sourceDatasetIds.value.length > 0)
 const canSubmit = computed(() => {
-  return Boolean(topic.value.trim()) && inclusion.value.some(Boolean) && exclusion.value.some(Boolean) && files.value.length > 0
+  const hasProject = Boolean(selectedProjectId.value || newProjectName.value.trim())
+  return hasProject && Boolean(topic.value.trim()) && inclusion.value.some(Boolean) && exclusion.value.some(Boolean) && hasInputSource.value
 })
 
 onMounted(async () => {
   draftsStore.hydrate()
-  await metaStore.ensureLoaded()
+  await Promise.all([metaStore.ensureLoaded(), projectsStore.refreshProjects()])
   hydratingDraft.value = true
   applyDraft()
+
+  const queryProjectId = typeof route.query.projectId === 'string' ? route.query.projectId : null
+  const querySourceDatasetId = typeof route.query.sourceDatasetId === 'string' ? route.query.sourceDatasetId : null
+  const queryParentTaskId = typeof route.query.parentTaskId === 'string' ? route.query.parentTaskId : null
+  if (queryProjectId) selectedProjectId.value = queryProjectId
+  if (querySourceDatasetId && !sourceDatasetIds.value.includes(querySourceDatasetId)) sourceDatasetIds.value = [querySourceDatasetId]
+  if (queryParentTaskId) parentTaskId.value = queryParentTaskId
   hydratingDraft.value = false
+
+  if (selectedProjectId.value) {
+    await projectsStore.loadProject(selectedProjectId.value)
+  }
+
   if (!files.value.length && rememberedFileNames.value.length) {
     message.info('已恢复草稿内容。由于浏览器限制，已选文件需要重新选择一次。')
   }
@@ -228,13 +352,69 @@ onMounted(async () => {
     <section class="screening-hero panel-surface">
       <div>
         <div class="eyebrow">Screening Composer</div>
-        <h1>为初筛任务建立一份可恢复、可复用的运行配置</h1>
-        <p>表单内容会自动保存为草稿。切换页面回来仍可继续编辑，任务提交后会自动清空当前草稿。</p>
+        <h1>围绕项目、数据集和任务链创建新的初筛任务</h1>
+        <p>同一个项目下的任务可以复用已有数据集。你可以直接从上一轮的 unused 数据集继续筛，也可以上传新文件补充输入源。</p>
       </div>
-      <NAlert type="info" :show-icon="false">当前建议优先使用 DeepSeek 跑通初筛；如需 Kimi，可在同一页面直接切换。</NAlert>
+      <NAlert type="info" :show-icon="false">当前页面会自动保存为草稿；项目内模板可用于快速复用一套筛选标准。</NAlert>
     </section>
 
     <div class="screening-grid">
+      <NCard title="项目与来源" class="panel-surface card-span-2">
+        <NGrid :cols="2" :x-gap="18" :y-gap="12" responsive="screen" item-responsive>
+          <NGridItem span="2 m:1">
+            <NFormItem label="选择已有项目">
+              <NSelect v-model:value="selectedProjectId" clearable :options="projectOptions" placeholder="选择项目，或留空后新建项目" />
+            </NFormItem>
+          </NGridItem>
+          <NGridItem span="2 m:1">
+            <NFormItem label="来源数据集">
+              <NSelect
+                v-model:value="sourceDatasetIds"
+                multiple
+                clearable
+                :disabled="!selectedProjectId"
+                :options="datasetOptions"
+                placeholder="可从 unused / included / cumulative 数据集继续"
+              />
+            </NFormItem>
+          </NGridItem>
+          <NGridItem span="2 m:1" v-if="!selectedProjectId">
+            <NFormItem label="新建项目名称">
+              <NInput v-model:value="newProjectName" placeholder="例如：SCAP-BALF-病毒谱-免疫-预后" />
+            </NFormItem>
+          </NGridItem>
+          <NGridItem span="2 m:1" v-if="!selectedProjectId">
+            <NFormItem label="项目说明">
+              <NInput v-model:value="newProjectDescription" placeholder="可选，用于记录项目范围和交付背景" />
+            </NFormItem>
+          </NGridItem>
+          <NGridItem span="2">
+            <NFormItem label="任务模板">
+              <NGrid :cols="3" :x-gap="12" responsive="screen" item-responsive>
+                <NGridItem span="2">
+                  <NSelect
+                    v-model:value="selectedTemplateId"
+                    clearable
+                    :disabled="!selectedProjectId"
+                    :options="templateOptions"
+                    placeholder="选择项目模板后自动填充筛选配置"
+                  />
+                </NGridItem>
+                <NGridItem span="1">
+                  <NInput v-model:value="templateName" :disabled="!selectedProjectId" placeholder="模板名称" />
+                </NGridItem>
+              </NGrid>
+            </NFormItem>
+            <NButton tertiary :disabled="!selectedProjectId" @click="saveCurrentAsTemplate">
+              <template #icon>
+                <Save :size="16" />
+              </template>
+              保存当前配置为模板
+            </NButton>
+          </NGridItem>
+        </NGrid>
+      </NCard>
+
       <NCard title="任务基本信息" class="panel-surface">
         <NForm label-placement="top">
           <NFormItem label="任务名称">
@@ -265,8 +445,17 @@ onMounted(async () => {
           已恢复草稿中的文件名：{{ rememberedFileNames.join('，') }}。文件内容不能跨刷新恢复，请重新选择文件。
         </NAlert>
 
+        <div class="file-toolbar" v-if="files.length">
+          <NButton tertiary size="small" @click="clearFiles">清空全部文件</NButton>
+        </div>
+
         <div class="file-list" v-if="files.length">
-          <div v-for="file in files" :key="file.name" class="file-pill">{{ file.name }}</div>
+          <div v-for="(file, index) in files" :key="`${file.name}-${index}`" class="file-pill">
+            <span>{{ file.name }}</span>
+            <button class="file-pill-remove" type="button" @click.stop="removeFile(index)">
+              <X :size="12" />
+            </button>
+          </div>
         </div>
       </NCard>
 
@@ -377,7 +566,7 @@ onMounted(async () => {
     <div class="action-bar panel-surface">
       <div>
         <div class="action-title">提交为后台任务</div>
-        <div class="action-copy">提交后会进入任务详情页。页面会持续显示阶段、进度和最终产物。</div>
+        <div class="action-copy">本任务将归属于一个项目，并记录其来源数据集、父任务和输出数据集，供后续继续筛选或生成报告。</div>
       </div>
       <NButton :disabled="!canSubmit || tasksStore.submitting" type="primary" size="large" @click="submit">
         <template #icon>
@@ -459,7 +648,8 @@ p {
   color: #69736a;
 }
 
-.draft-alert {
+.draft-alert,
+.file-toolbar {
   margin-top: 14px;
 }
 
@@ -471,11 +661,23 @@ p {
 }
 
 .file-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   padding: 8px 12px;
   border-radius: 999px;
   background: rgba(45, 106, 79, 0.12);
   color: #28513e;
   font-size: 13px;
+}
+
+.file-pill-remove {
+  border: none;
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  display: inline-flex;
+  cursor: pointer;
 }
 
 .toggles {

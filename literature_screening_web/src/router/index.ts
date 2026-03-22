@@ -19,6 +19,12 @@ export const router = createRouter({
       component: () => import('@/views/TasksView.vue')
     },
     {
+      path: '/projects/:projectId',
+      name: 'project-detail',
+      component: () => import('@/views/ProjectDetailView.vue'),
+      props: true
+    },
+    {
       path: '/tasks/:taskId',
       name: 'task-detail',
       component: () => import('@/views/TaskDetailView.vue'),

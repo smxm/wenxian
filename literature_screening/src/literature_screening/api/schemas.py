@@ -10,6 +10,7 @@ TaskKind = Literal["screening", "report"]
 TaskStatus = Literal["pending", "running", "succeeded", "failed"]
 ProviderName = Literal["deepseek", "kimi"]
 ReferenceStyle = Literal["gbt7714", "apa7"]
+DatasetKind = Literal["included", "excluded", "unused", "cumulative_included", "report_source"]
 
 
 class ModelSettings(BaseModel):
@@ -39,7 +40,8 @@ class ScreeningTaskCreate(BaseModel):
 
 class ReportTaskCreate(BaseModel):
     title: str
-    screening_task_id: str
+    screening_task_id: str | None = None
+    dataset_ids: list[str] = Field(default_factory=list)
     project_topic: str
     model: ModelSettings
     report_name: str = "simple_report"
@@ -48,11 +50,76 @@ class ReportTaskCreate(BaseModel):
     reference_style: ReferenceStyle = "gbt7714"
 
 
+class ProjectCreate(BaseModel):
+    name: str
+    topic: str
+    description: str = ""
+
+
+class DatasetRecord(BaseModel):
+    id: str
+    project_id: str
+    task_id: str | None = None
+    kind: DatasetKind | str
+    label: str
+    filename: str
+    path: str
+    format: str
+    record_count: int | None = None
+    source_dataset_ids: list[str] = Field(default_factory=list)
+    created_at: datetime
+    updated_at: datetime
+    metadata: dict = Field(default_factory=dict)
+
+
+class ProjectSnapshot(BaseModel):
+    id: str
+    name: str
+    topic: str
+    description: str = ""
+    created_at: datetime
+    updated_at: datetime
+    dataset_count: int = 0
+
+
+class ProjectDetail(ProjectSnapshot):
+    tasks: list["TaskSnapshot"] = Field(default_factory=list)
+    datasets: list[DatasetRecord] = Field(default_factory=list)
+
+
+class TaskTemplateRecord(BaseModel):
+    id: str
+    project_id: str | None = None
+    name: str
+    scope: Literal["global", "project"] = "project"
+    payload: dict = Field(default_factory=dict)
+    created_at: datetime
+    updated_at: datetime
+
+
 class TaskArtifact(BaseModel):
     key: str
     filename: str
     content_type: str = "application/octet-stream"
     size_bytes: int | None = None
+
+
+class TaskEvent(BaseModel):
+    id: str
+    kind: str
+    message: str
+    metadata: dict = Field(default_factory=dict)
+    created_at: datetime
+
+
+class ReviewOverrideRequest(BaseModel):
+    paper_id: str
+    decision: Literal["include", "exclude", "uncertain"]
+    reason: str = ""
+
+
+class RetryTaskRequest(BaseModel):
+    mode: Literal["retry", "resume"] = "resume"
 
 
 class TaskSnapshot(BaseModel):
@@ -69,8 +136,13 @@ class TaskSnapshot(BaseModel):
     progress_current: int | None = None
     progress_total: int | None = None
     progress_message: str | None = None
+    project_id: str | None = None
+    parent_task_id: str | None = None
+    input_dataset_ids: list[str] = Field(default_factory=list)
+    output_dataset_ids: list[str] = Field(default_factory=list)
     project_topic: str | None = None
     model_provider: str | None = None
+    attempt_count: int = 0
     artifacts: list[TaskArtifact] = Field(default_factory=list)
 
 
@@ -90,4 +162,8 @@ class TaskDetail(TaskSnapshot):
     output_dir: str | None = None
     records: list[ScreeningRecordRow] = Field(default_factory=list)
     markdown_preview: str | None = None
+    events: list[TaskEvent] = Field(default_factory=list)
+
+
+ProjectDetail.model_rebuild()
 

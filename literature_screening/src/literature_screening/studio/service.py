@@ -62,6 +62,7 @@ class ScreeningJobRequest:
     criteria: CriteriaDraft
     model: ModelDraft
     runs_root: Path = DEFAULT_RUNS_ROOT
+    run_root_override: Path | None = None
     batch_size: int = 5
     target_include_count: int = 9999
     stop_when_target_reached: bool = False
@@ -101,6 +102,7 @@ class ReportJobRequest:
     model: ModelDraft
     report_name: str = "simple_report"
     runs_root: Path = DEFAULT_RUNS_ROOT
+    report_output_dir_override: Path | None = None
     timeout_seconds: int = 240
     retry_times: int = 6
     reference_style: str = "gbt7714"
@@ -152,8 +154,12 @@ def run_screening_job(
     from literature_screening.core.models import ScreeningConfig
     from literature_screening.pipeline.run_pipeline import run_pipeline
 
-    run_slug = _build_run_slug(request.project_name)
-    run_root = request.runs_root / run_slug
+    if request.run_root_override is not None:
+        run_root = request.run_root_override
+        run_slug = run_root.name
+    else:
+        run_slug = _build_run_slug(request.project_name)
+        run_root = request.runs_root / run_slug
     input_dir = run_root / "inputs"
     criteria_dir = run_root / "criteria"
     output_dir = run_root / "screening_output"
@@ -278,7 +284,7 @@ def generate_simple_report_job(
     from literature_screening.formal_report.simple_report import DEFAULT_SIMPLE_REPORT_FILENAME
     from literature_screening.formal_report.simple_report import generate_simple_report
 
-    report_output_dir = request.screening_output_dir.parent / f"{request.report_name}_output"
+    report_output_dir = request.report_output_dir_override or (request.screening_output_dir.parent / f"{request.report_name}_output")
     report_output_dir.mkdir(parents=True, exist_ok=True)
     _emit_progress(
         progress_callback,
@@ -444,3 +450,38 @@ def _emit_progress(
 ) -> None:
     if callback is not None:
         callback(phase, label, current, total, message)
+
+
+def prepare_virtual_screening_output_from_dataset_paths(dataset_paths: list[Path], output_dir: Path) -> Path:
+    bootstrap_project_paths()
+
+    from literature_screening.bibtex.deduper import deduplicate_records
+    from literature_screening.bibtex.parser import parse_bibtex_files
+    from literature_screening.core.models import ScreeningDecision
+
+    output_dir.mkdir(parents=True, exist_ok=True)
+    records = parse_bibtex_files(dataset_paths, encoding="auto")
+    deduped_records = deduplicate_records(records)
+    decisions = [
+        ScreeningDecision(
+            paper_id=record.paper_id,
+            batch_id="virtual_dataset",
+            decision="include",
+            reason="Selected from reusable project dataset.",
+            evidence=[],
+            confidence=1.0,
+            model_provider="system",
+            model_name="dataset-loader",
+            timestamp=datetime.now().astimezone(),
+        )
+        for record in deduped_records
+    ]
+    (output_dir / "deduped_records.json").write_text(
+        json.dumps([record.model_dump(mode="json") for record in deduped_records], ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    (output_dir / "screening_decisions.json").write_text(
+        json.dumps([decision.model_dump(mode="json") for decision in decisions], ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    return output_dir
