@@ -1,0 +1,40 @@
+{
+    "batch_id": "batch_0009",
+    "results": [
+        {
+            "paper_id": "paper_000041",
+            "decision": "include",
+            "reason": "标题和摘要明确研究地下煤矿中的抗冲击钻孔机器人，涉及钻进控制、机构设计和实验验证，符合研究主题和纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000042",
+            "decision": "uncertain",
+            "reason": "标题和摘要研究地下钻孔机器人的自动送杆技术，涉及运动学建模，但未明确说明破土或推进机制，信息不足以判断是否满足纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000043",
+            "decision": "include",
+            "reason": "标题和摘要明确研究月球风化层环境中的机器人钻孔测试，涉及钻进机制、机器人与颗粒介质相互作用和实验验证，符合研究主题和纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000044",
+            "decision": "include",
+            "reason": "标题和摘要明确研究可微分物理挖掘机器人，涉及砂土和土壤等颗粒介质的挖掘机制、机构设计和实验验证，符合研究主题和纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000045",
+            "decision": "exclude",
+            "reason": "标题和摘要明确研究应用于海底地层的钻探机器人，属于纯水下机器人，命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        }
+    ]
+}

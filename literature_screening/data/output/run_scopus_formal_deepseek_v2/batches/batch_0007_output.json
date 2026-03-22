@@ -1,0 +1,55 @@
+{
+  "batch_id": "batch_0007",
+  "results": [
+    {
+      "paper_id": "paper_000031",
+      "decision": "include",
+      "reason": "标题和摘要明确描述仿生螺旋驱动自掘进机器人，研究其在颗粒介质中的掘进行为，符合推进与破土机制主题。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000032",
+      "decision": "include",
+      "reason": "标题和摘要描述受鼹鼠蟹启发的垂直自掘进腿式机器人，研究其在颗粒介质中的挖掘机制，符合研究主题。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "paper_id": "paper_000033",
+      "decision": "include",
+      "reason": "标题和摘要明确研究旋转穿透和水平自掘进软体机器人，涉及旋转对穿透阻力的影响及机器人设计，符合机制研究。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.93
+    },
+    {
+      "paper_id": "paper_000034",
+      "decision": "uncertain",
+      "reason": "标题和摘要描述深海地层钻孔机器人的锚固力研究，涉及机器人推进，但未明确说明是否具备自主破土能力或是否属于纯水下机器人。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000035",
+      "decision": "exclude",
+      "reason": "标题和摘要聚焦于防冲钻孔机器人的钻杆定位方法，属于视觉识别技术，未涉及机器人推进或破土机制的研究。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.88
+    }
+  ]
+}

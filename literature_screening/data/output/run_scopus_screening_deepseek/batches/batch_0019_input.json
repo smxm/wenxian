@@ -1,0 +1,94 @@
+{
+  "batch_id": "batch_0019",
+  "paper_count": 3,
+  "paper_ids": [
+    "paper_000055",
+    "paper_000056",
+    "paper_000057"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000055",
+      "entry_type": "article",
+      "title": "A novel hydraulic track motion control method of anti-impact drilling robot based on MI-DDPG",
+      "authors": [
+        "Zhang, Cong",
+        "Wang, Zhongbin",
+        "Wang, Guofa",
+        "Gu, Jinheng",
+        "Si, Lei",
+        "Wei, Dong"
+      ],
+      "year": 2025,
+      "journal": "Asian Journal of Control",
+      "doi": "10.1002/asjc.70041",
+      "abstract": "With the complex environment and poor road conditions in underground coal mines, accurate autonomous traveling of hydraulic tracks is a prerequisite for the Anti-Impact Drilling Robot (AIDR) to achieve the goal of unmanned operation. In this paper, an AIDR path-tracking control method that integrates reinforcement learning and manual instruction is proposed to reduce the tracking deviation during traveling and enhance the robustness of the control system. Based on AIDR kinematic modeling, a heading angle reward factor, a lateral deviation reward factor, a steering radius deviation reward factor, and a line speed reward factor are added to the deep deterministic policy gradient (DDPG) reward function. The path-tracking problem is transformed into a multi-objective optimization problem. For the problem of low efficiency of DDPG, manual instruction deep deterministic policy gradient (MI-DDPG) is proposed by optimizing the empirical pool part using a manual instruction method. The results show that compared with the traditional path tracking control method, the method proposed in this paper has a maximum lateral deviation of 0.079 m during straight-line travel and a maximum steering radius deviation of 0.062 m during circular steering of the AIDR under the cinder soft pavement (a typical harsh road condition in underground coal mines). This method can effectively improve the accuracy of AIDR path tracking, especially adapting to the complex and soft road environment of underground coal mines. © 2025 Chinese Automatic Control Society and John Wiley & Sons Australia, Ltd.",
+      "keywords": [],
+      "normalized_title": "a novel hydraulic track motion control method of anti impact drilling robot based on mi ddpg",
+      "raw_bibtex": "@ARTICLE{Zhang2025,\n\tnote = {Cited by: 0; All Open Access; Bronze Open Access},\n\tsource = {Scopus},\n\tpublication_stage = {Article in press},\n\ttype = {Article},\n\tabstract = {With the complex environment and poor road conditions in underground coal mines, accurate autonomous traveling of hydraulic tracks is a prerequisite for the Anti-Impact Drilling Robot (AIDR) to achieve the goal of unmanned operation. In this paper, an AIDR path-tracking control method that integrates reinforcement learning and manual instruction is proposed to reduce the tracking deviation during traveling and enhance the robustness of the control system. Based on AIDR kinematic modeling, a heading angle reward factor, a lateral deviation reward factor, a steering radius deviation reward factor, and a line speed reward factor are added to the deep deterministic policy gradient (DDPG) reward function. The path-tracking problem is transformed into a multi-objective optimization problem. For the problem of low efficiency of DDPG, manual instruction deep deterministic policy gradient (MI-DDPG) is proposed by optimizing the empirical pool part using a manual instruction method. The results show that compared with the traditional path tracking control method, the method proposed in this paper has a maximum lateral deviation of 0.079 m during straight-line travel and a maximum steering radius deviation of 0.062 m during circular steering of the AIDR under the cinder soft pavement (a typical harsh road condition in underground coal mines). This method can effectively improve the accuracy of AIDR path tracking, especially adapting to the complex and soft road environment of underground coal mines. © 2025 Chinese Automatic Control Society and John Wiley & Sons Australia, Ltd.},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105024430711&doi=10.1002%2Fasjc.70041&partnerID=40&md5=4e4687a48a8ad5f3949f75f7e3266e3f},\n\tdoi = {10.1002/asjc.70041},\n\tjournal = {Asian Journal of Control},\n\tyear = {2025},\n\ttitle = {A novel hydraulic track motion control method of anti-impact drilling robot based on MI-DDPG},\n\tauthor = {Zhang, Cong and Wang, Zhongbin and Wang, Guofa and Gu, Jinheng and Si, Lei and Wei, Dong}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_5136afff-7a2e-45c0-b397-6ea33975cd3b.bib"
+      ],
+      "source_keys": [
+        "Zhang2025"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000056",
+      "entry_type": "article",
+      "title": "Research on intelligent make-up & break-out methods for drill pipe threads of underground drilling robot in coal mine based on multi-source information fusion",
+      "authors": [
+        "Lu, Qianhai",
+        "Kong, Lingfei",
+        "Dong, Hongbo",
+        "Li, Longlong",
+        "Liu, Jie",
+        "Sun, Jin"
+      ],
+      "year": 2026,
+      "journal": "Measurement: Journal of the International Measurement Confederation",
+      "doi": "10.1016/j.measurement.2026.120374",
+      "abstract": "To address the critical technical challenges in the automated drill pipe thread make-up & break-out operations of the Underground Drilling Robot in Coal Mines, including multi-physics coupled interference, the inability to perform online detection of thread fastening status, and the lack of fault self-recovery mechanisms, this study innovatively proposes a dynamic thread state identification and adaptive make-up & break-out control method based on spatiotemporal fusion of multi-source heterogeneous information. By constructing a multi-dimensional sensor data fusion framework, a dynamic evolution model is established. Quantitative metrics for effective make-up & break-out lengths are proposed, overcoming the limitations of traditional threshold control:1 A displacement-feed pressure-rotational speed joint analysis algorithm is developed to detect effective make-up length, achieving precise localisation of thread contact states through discrete wavelet multi-scale decomposition.2 A displacement-rotational speed-feed velocity collaborative monitoring model is designed to calculate effective break-out length, enhancing robustness under complex working conditions by incorporating a sliding window dynamic optimization mechanism. To address the challenge of self-recovery during make-up & break-out failures, A stepwise back-off control method is established to resolve axial deviation issues during drill pipe thread make-up. A dual-mode torque regulation strategy is constructed to dynamically respond to abnormal preload conditions during drill pipe thread break-out. Industrial experiments demonstrate that the system achieves thread state recognition accuracies of 96.38% (make-up) and 97.55% (break-out) within a drilling inclination range of −90° to 90°. Large-scale underground validations confirm fault self-recovery success rates of 82.67% (make-up) and 70.69% (break-out). The “perception-decision-execution” closed-loop control methodology advances the automation level of drill pipe handling processes. © 2026 Elsevier Ltd",
+      "keywords": [],
+      "normalized_title": "research on intelligent make up break out methods for drill pipe threads of underground drilling robot in coal mine based on multi source information fusion",
+      "raw_bibtex": "@ARTICLE{Lu2026,\n\tnote = {Cited by: 0},\n\tsource = {Scopus},\n\tpublication_stage = {Final},\n\ttype = {Article},\n\tabstract = {To address the critical technical challenges in the automated drill pipe thread make-up & break-out operations of the Underground Drilling Robot in Coal Mines, including multi-physics coupled interference, the inability to perform online detection of thread fastening status, and the lack of fault self-recovery mechanisms, this study innovatively proposes a dynamic thread state identification and adaptive make-up & break-out control method based on spatiotemporal fusion of multi-source heterogeneous information. By constructing a multi-dimensional sensor data fusion framework, a dynamic evolution model is established. Quantitative metrics for effective make-up & break-out lengths are proposed, overcoming the limitations of traditional threshold control:1 A displacement-feed pressure-rotational speed joint analysis algorithm is developed to detect effective make-up length, achieving precise localisation of thread contact states through discrete wavelet multi-scale decomposition.2 A displacement-rotational speed-feed velocity collaborative monitoring model is designed to calculate effective break-out length, enhancing robustness under complex working conditions by incorporating a sliding window dynamic optimization mechanism. To address the challenge of self-recovery during make-up & break-out failures, A stepwise back-off control method is established to resolve axial deviation issues during drill pipe thread make-up. A dual-mode torque regulation strategy is constructed to dynamically respond to abnormal preload conditions during drill pipe thread break-out. Industrial experiments demonstrate that the system achieves thread state recognition accuracies of 96.38% (make-up) and 97.55% (break-out) within a drilling inclination range of −90° to 90°. Large-scale underground validations confirm fault self-recovery success rates of 82.67% (make-up) and 70.69% (break-out). The “perception-decision-execution” closed-loop control methodology advances the automation level of drill pipe handling processes. © 2026 Elsevier Ltd},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105027467896&doi=10.1016%2Fj.measurement.2026.120374&partnerID=40&md5=ca239ae797b5cf6be7780ca482e1684b},\n\tdoi = {10.1016/j.measurement.2026.120374},\n\tvolume = {265},\n\tjournal = {Measurement: Journal of the International Measurement Confederation},\n\tyear = {2026},\n\ttitle = {Research on intelligent make-up & break-out methods for drill pipe threads of underground drilling robot in coal mine based on multi-source information fusion},\n\tauthor = {Lu, Qianhai and Kong, Lingfei and Dong, Hongbo and Li, Longlong and Liu, Jie and Sun, Jin}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_5136afff-7a2e-45c0-b397-6ea33975cd3b.bib"
+      ],
+      "source_keys": [
+        "Lu2026"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000057",
+      "entry_type": "article",
+      "title": "An earthworm-like modular soft robot for locomotion in multi-terrain environments",
+      "authors": [
+        "Das, Riddhi",
+        "Babu, Saravana Prashanth Murali",
+        "Visentin, Francesco",
+        "Palagi, Stefano",
+        "Mazzolai, Barbara"
+      ],
+      "year": 2023,
+      "journal": "Scientific Reports",
+      "doi": "10.1038/s41598-023-28873-w",
+      "abstract": "Robotic locomotion in subterranean environments is still unsolved, and it requires innovative designs and strategies to overcome the challenges of burrowing and moving in unstructured conditions with high pressure and friction at depths of a few centimeters. Inspired by antagonistic muscle contractions and constant volume coelomic chambers observed in earthworms, we designed and developed a modular soft robot based on a peristaltic soft actuator (PSA). The PSA demonstrates two active configurations from a neutral state by switching the input source between positive and negative pressure. PSA generates a longitudinal force for axial penetration and a radial force for anchorage, through bidirectional deformation of the central bellows-like structure, which demonstrates its versatility and ease of control. The performance of PSA depends on the amount and type of fluid confined in an elastomer chamber, generating different forces and displacements. The assembled robot with five PSA modules enabled to perform peristaltic locomotion in different media. The role of friction was also investigated during experimental locomotion tests by attaching passive scales like earthworm setae to the ventral side of the robot. This study proposes a new method for developing a peristaltic earthworm-like soft robot and provides a better understanding of locomotion in different environments. © 2023, The Author(s).",
+      "keywords": [],
+      "normalized_title": "an earthworm like modular soft robot for locomotion in multi terrain environments",
+      "raw_bibtex": "@ARTICLE{Das2023,\n\tnote = {Cited by: 95; All Open Access; Gold Open Access; Green Open Access},\n\tsource = {Scopus},\n\tpublication_stage = {Final},\n\ttype = {Article},\n\tabstract = {Robotic locomotion in subterranean environments is still unsolved, and it requires innovative designs and strategies to overcome the challenges of burrowing and moving in unstructured conditions with high pressure and friction at depths of a few centimeters. Inspired by antagonistic muscle contractions and constant volume coelomic chambers observed in earthworms, we designed and developed a modular soft robot based on a peristaltic soft actuator (PSA). The PSA demonstrates two active configurations from a neutral state by switching the input source between positive and negative pressure. PSA generates a longitudinal force for axial penetration and a radial force for anchorage, through bidirectional deformation of the central bellows-like structure, which demonstrates its versatility and ease of control. The performance of PSA depends on the amount and type of fluid confined in an elastomer chamber, generating different forces and displacements. The assembled robot with five PSA modules enabled to perform peristaltic locomotion in different media. The role of friction was also investigated during experimental locomotion tests by attaching passive scales like earthworm setae to the ventral side of the robot. This study proposes a new method for developing a peristaltic earthworm-like soft robot and provides a better understanding of locomotion in different environments. © 2023, The Author(s).},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85146940191&doi=10.1038%2Fs41598-023-28873-w&partnerID=40&md5=85a21947fc676c13c0338a3379361a4b},\n\tdoi = {10.1038/s41598-023-28873-w},\n\tnumber = {1},\n\tvolume = {13},\n\tjournal = {Scientific Reports},\n\tyear = {2023},\n\ttitle = {An earthworm-like modular soft robot for locomotion in multi-terrain environments},\n\tauthor = {Das, Riddhi and Babu, Saravana Prashanth Murali and Visentin, Francesco and Palagi, Stefano and Mazzolai, Barbara}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_c2e4649e-a142-464c-a172-5d6d6db3a28e.bib"
+      ],
+      "source_keys": [
+        "Das2023"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

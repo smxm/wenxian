@@ -1,0 +1,1050 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确研究火星土壤中的穿透机制，涉及振动液化等推进机制，符合地下钻进机器人研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:53:19.695519+08:00"
+  },
+  {
+    "paper_id": "paper_000002",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦小行星拦截与防御，未涉及土壤或地下介质中的机器人推进或破土机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:53:19.695519+08:00"
+  },
+  {
+    "paper_id": "paper_000003",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "标题和摘要提到月球穿透器用于科学探测，但未明确描述机器人系统或具体的推进破土机制细节。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:53:19.695519+08:00"
+  },
+  {
+    "paper_id": "paper_000004",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于高速弹丸与沙靶的相互作用，无机器人系统背景，属于纯土力学研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:53:56.366835+08:00"
+  },
+  {
+    "paper_id": "paper_000005",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确研究用于月球土壤探测的冲击式贯入器，涉及推进机制和实验验证，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:53:56.366835+08:00"
+  },
+  {
+    "paper_id": "paper_000006",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "标题和摘要涉及深空探测贯入器的缓冲保护设计，但未明确描述机器人系统或自主破土机制，信息不足。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:53:56.366835+08:00"
+  },
+  {
+    "paper_id": "paper_000007",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究对象为弹丸在沙中的减速动力学，无机器人系统背景，属于纯土力学研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:54:08.968160+08:00"
+  },
+  {
+    "paper_id": "paper_000008",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究对象为空心贯入器在海底粘土中的贯入性能，无机器人系统背景，属于纯土力学研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:54:08.968160+08:00"
+  },
+  {
+    "paper_id": "paper_000009",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "摘要明确提到仿生掘进机器人，研究水平贯入机制，涉及机器人与颗粒介质相互作用。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:54:08.968160+08:00"
+  },
+  {
+    "paper_id": "paper_000010",
+    "batch_id": "batch_0004",
+    "decision": "uncertain",
+    "reason": "标题和摘要描述的是用于测量月球土壤物理性质的设备，包含自深穿透锤，但未明确提及机器人系统或推进破土机制的研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:54:22.938965+08:00"
+  },
+  {
+    "paper_id": "paper_000011",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于中子传感器在穿透器测试中的性能验证，未涉及机器人系统设计、推进破土机制或机器人与颗粒介质相互作用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:54:22.938965+08:00"
+  },
+  {
+    "paper_id": "paper_000012",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要研究的是古生物足迹的埋藏学，使用穿透器进行实验模拟，但无机器人系统背景，属于纯地质研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:54:22.938965+08:00"
+  },
+  {
+    "paper_id": "paper_000013",
+    "batch_id": "batch_0005",
+    "decision": "include",
+    "reason": "标题和摘要明确描述用于行星风化层探测的柔性贯入器设计，涉及推进机制和实验验证，符合研究主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:54:37.500112+08:00"
+  },
+  {
+    "paper_id": "paper_000014",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于颗粒介质中冲击成坑的可视化研究，无机器人系统背景，属于纯土力学研究，命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:54:37.500112+08:00"
+  },
+  {
+    "paper_id": "paper_000015",
+    "batch_id": "batch_0005",
+    "decision": "include",
+    "reason": "标题和摘要明确研究用于月球地下探测的高速冲击贯入器，涉及机器人系统设计、数值模拟和实验验证，符合研究主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:54:37.500112+08:00"
+  },
+  {
+    "paper_id": "paper_000016",
+    "batch_id": "batch_0006",
+    "decision": "include",
+    "reason": "标题和摘要明确研究冲击穿透器与月球土壤颗粒的相互作用，涉及推进和破土机制，符合地下钻进机器人主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:54:50.594731+08:00"
+  },
+  {
+    "paper_id": "paper_000017",
+    "batch_id": "batch_0006",
+    "decision": "include",
+    "reason": "标题和摘要聚焦于穿透过程模拟以估计行星土壤性质，涉及推进和破土机制，符合研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:54:50.594731+08:00"
+  },
+  {
+    "paper_id": "paper_000018",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要主要讨论行星地形测量技术，未涉及机器人推进或破土机制，不符合筛选主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:54:50.594731+08:00"
+  },
+  {
+    "paper_id": "paper_000019",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于小行星防御的撞击模拟，未提及机器人系统或地下推进机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:55:04.555997+08:00"
+  },
+  {
+    "paper_id": "paper_000020",
+    "batch_id": "batch_0007",
+    "decision": "include",
+    "reason": "标题和摘要明确描述火星穿透器（Mole）在土壤中的穿透行为、机制分析及土壤相互作用研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:55:04.555997+08:00"
+  },
+  {
+    "paper_id": "paper_000021",
+    "batch_id": "batch_0007",
+    "decision": "include",
+    "reason": "标题和摘要明确研究低速穿透器（LVP）在土壤中的穿透效率与反冲矛盾，涉及机构设计、动态建模和实验验证。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:55:04.555997+08:00"
+  },
+  {
+    "paper_id": "paper_000022",
+    "batch_id": "batch_0008",
+    "decision": "include",
+    "reason": "标题和摘要明确描述火星土壤中的穿透机器人系统，涉及推进机制和土壤相互作用分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:55:17.625489+08:00"
+  },
+  {
+    "paper_id": "paper_000023",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要仅涉及机器人定位与建图算法，未提及任何推进、破土或钻进机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:55:17.625489+08:00"
+  },
+  {
+    "paper_id": "paper_000024",
+    "batch_id": "batch_0008",
+    "decision": "include",
+    "reason": "标题和摘要明确描述受蚯蚓启发的软体掘进机器人，涉及仿生掘进机制和土壤中推进实验。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:55:17.625489+08:00"
+  },
+  {
+    "paper_id": "paper_000025",
+    "batch_id": "batch_0009",
+    "decision": "include",
+    "reason": "标题和摘要明确描述仿生掘进机器人系统，涉及行星土壤探索、推进机制、运动学建模和实验验证，符合研究主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:55:32.050506+08:00"
+  },
+  {
+    "paper_id": "paper_000026",
+    "batch_id": "batch_0009",
+    "decision": "include",
+    "reason": "标题和摘要明确描述自主钻进机器人系统，用于月球地下探索，涉及双螺旋推进机制、建模和实验验证，符合研究主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.92,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:55:32.050506+08:00"
+  },
+  {
+    "paper_id": "paper_000027",
+    "batch_id": "batch_0009",
+    "decision": "uncertain",
+    "reason": "摘要主要进行多尺度颗粒介质力学分析，虽提及自掘进机器人设计启示，但机器人系统具体信息不足，难以确认是否满足纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:55:32.050506+08:00"
+  },
+  {
+    "paper_id": "paper_000028",
+    "batch_id": "batch_0010",
+    "decision": "include",
+    "reason": "标题和摘要明确研究双螺旋钻进机器人在颗粒介质中的动力学，涉及推进机制和实验验证，符合筛选主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:55:43.719741+08:00"
+  },
+  {
+    "paper_id": "paper_000029",
+    "batch_id": "batch_0010",
+    "decision": "include",
+    "reason": "标题和摘要描述鼹鼠仿生机器人，研究破土机制和机构设计，并在土壤中进行实验验证，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.92,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:55:43.719741+08:00"
+  },
+  {
+    "paper_id": "paper_000030",
+    "batch_id": "batch_0010",
+    "decision": "include",
+    "reason": "标题和摘要研究月球地下探索的鼹鼠型钻进机器人动态模型，涉及推进机制和机器人与风化层相互作用，符合筛选主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:55:43.719741+08:00"
+  },
+  {
+    "paper_id": "paper_000031",
+    "batch_id": "batch_0011",
+    "decision": "include",
+    "reason": "标题和摘要明确描述仿生螺旋驱动自掘进机器人，研究其在颗粒介质中的掘进行为，符合研究主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:55:58.192098+08:00"
+  },
+  {
+    "paper_id": "paper_000032",
+    "batch_id": "batch_0011",
+    "decision": "include",
+    "reason": "标题和摘要描述受鼹鼠蟹启发的垂直自掘进机器人，研究腿式挖掘机制和颗粒介质相互作用，符合研究主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.92,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:55:58.192098+08:00"
+  },
+  {
+    "paper_id": "paper_000033",
+    "batch_id": "batch_0011",
+    "decision": "include",
+    "reason": "标题和摘要描述仿生旋转穿透和水平自掘进软体机器人，研究旋转对穿透阻力的影响并开发掘进机器人，符合研究主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.93,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:55:58.192098+08:00"
+  },
+  {
+    "paper_id": "paper_000034",
+    "batch_id": "batch_0012",
+    "decision": "include",
+    "reason": "标题和摘要明确描述深海地层钻进机器人，涉及仿生推进机制和土壤相互作用研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:56:10.734617+08:00"
+  },
+  {
+    "paper_id": "paper_000035",
+    "batch_id": "batch_0012",
+    "decision": "exclude",
+    "reason": "标题和摘要仅涉及钻杆定位方法研究，未提及机器人推进或破土机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:56:10.734617+08:00"
+  },
+  {
+    "paper_id": "paper_000036",
+    "batch_id": "batch_0012",
+    "decision": "include",
+    "reason": "标题和摘要明确描述行星风化层采样钻进机器人，涉及钻进组件和运动规划机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:56:10.734617+08:00"
+  },
+  {
+    "paper_id": "paper_000037",
+    "batch_id": "batch_0013",
+    "decision": "exclude",
+    "reason": "标题和摘要表明研究对象是下水道巡检机器人，仅在既有管道内移动，不具备自主破土能力。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:56:24.130960+08:00"
+  },
+  {
+    "paper_id": "paper_000038",
+    "batch_id": "batch_0013",
+    "decision": "include",
+    "reason": "标题明确针对钻孔机器人，摘要涉及路径规划系统在挑战性环境中的验证，符合研究主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:56:24.130960+08:00"
+  },
+  {
+    "paper_id": "paper_000039",
+    "batch_id": "batch_0013",
+    "decision": "uncertain",
+    "reason": "标题和摘要聚焦于低光照图像增强算法，虽提及煤矿钻孔机器人背景，但未直接涉及推进或破土机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:56:24.130960+08:00"
+  },
+  {
+    "paper_id": "paper_000040",
+    "batch_id": "batch_0014",
+    "decision": "include",
+    "reason": "标题和摘要明确研究旋转运动对土壤贯入阻力的影响，涉及机器人掘进机制和颗粒介质相互作用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:56:37.562478+08:00"
+  },
+  {
+    "paper_id": "paper_000041",
+    "batch_id": "batch_0014",
+    "decision": "uncertain",
+    "reason": "摘要提到抗冲钻机器人用于煤矿钻孔，但未明确说明是否具备自主破土能力或涉及具体推进破土机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:56:37.562478+08:00"
+  },
+  {
+    "paper_id": "paper_000042",
+    "batch_id": "batch_0014",
+    "decision": "exclude",
+    "reason": "标题和摘要仅涉及钻杆自动送进和定位误差补偿算法，未涉及机器人推进或破土机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:56:37.562478+08:00"
+  },
+  {
+    "paper_id": "paper_000043",
+    "batch_id": "batch_0015",
+    "decision": "include",
+    "reason": "标题和摘要明确研究月球风化层环境中的机器人钻进测试，涉及钻进机制和实验验证。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:56:50.715292+08:00"
+  },
+  {
+    "paper_id": "paper_000044",
+    "batch_id": "batch_0015",
+    "decision": "include",
+    "reason": "标题和摘要明确研究可微分物理挖掘机器人，涉及砂土等颗粒介质中的挖掘机制和机器人系统。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:56:50.715292+08:00"
+  },
+  {
+    "paper_id": "paper_000045",
+    "batch_id": "batch_0015",
+    "decision": "include",
+    "reason": "标题和摘要明确研究海底地层钻探机器人的自推进钻头设计，涉及推进机制和破土效果分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:56:50.715292+08:00"
+  },
+  {
+    "paper_id": "paper_000046",
+    "batch_id": "batch_0016",
+    "decision": "uncertain",
+    "reason": "标题和摘要明确涉及地下钻进机器人，但主要研究定位方法而非推进或破土机制，难以确认是否满足纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:57:04.505908+08:00"
+  },
+  {
+    "paper_id": "paper_000047",
+    "batch_id": "batch_0016",
+    "decision": "uncertain",
+    "reason": "标题和摘要明确涉及钻进机器人，但主要研究钻孔识别方法而非推进或破土机制，难以确认是否满足纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:57:04.505908+08:00"
+  },
+  {
+    "paper_id": "paper_000048",
+    "batch_id": "batch_0016",
+    "decision": "uncertain",
+    "reason": "标题和摘要明确涉及地下煤矿钻进机器人，但主要研究误差补偿算法而非推进或破土机制，难以确认是否满足纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:57:04.505908+08:00"
+  },
+  {
+    "paper_id": "paper_000049",
+    "batch_id": "batch_0017",
+    "decision": "include",
+    "reason": "标题和摘要明确描述用于行星风化层钻进的机器人系统，涉及推进、破土机制和实验验证。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:57:17.872811+08:00"
+  },
+  {
+    "paper_id": "paper_000050",
+    "batch_id": "batch_0017",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于矿用锚杆钻机机械臂的运动控制算法，未涉及自主破土或推进机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:57:17.872811+08:00"
+  },
+  {
+    "paper_id": "paper_000051",
+    "batch_id": "batch_0017",
+    "decision": "uncertain",
+    "reason": "标题和摘要描述果园自主钻孔机器人，但信息不足确认是否涉及土壤中推进或破土机制研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:57:17.872811+08:00"
+  },
+  {
+    "paper_id": "paper_000052",
+    "batch_id": "batch_0018",
+    "decision": "exclude",
+    "reason": "标题和摘要仅涉及视觉跟踪系统，未提及推进或破土机制，不符合研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:57:30.664564+08:00"
+  },
+  {
+    "paper_id": "paper_000053",
+    "batch_id": "batch_0018",
+    "decision": "include",
+    "reason": "标题和摘要明确研究颗粒介质中的推进机制，涉及机构设计、运动学建模和实验验证。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:57:30.664564+08:00"
+  },
+  {
+    "paper_id": "paper_000054",
+    "batch_id": "batch_0018",
+    "decision": "include",
+    "reason": "标题和摘要明确研究地下掘进机器人，涉及推进机制、机构设计和实验验证。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:57:30.664564+08:00"
+  },
+  {
+    "paper_id": "paper_000055",
+    "batch_id": "batch_0019",
+    "decision": "uncertain",
+    "reason": "标题和摘要提到地下煤矿中的抗冲击钻孔机器人，但主要关注液压履带运动控制，未明确涉及推进或破土机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:57:44.798434+08:00"
+  },
+  {
+    "paper_id": "paper_000056",
+    "batch_id": "batch_0019",
+    "decision": "uncertain",
+    "reason": "标题和摘要涉及地下钻孔机器人的钻杆螺纹操作，但未明确讨论推进或破土机制，主题相关性不直接。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:57:44.798434+08:00"
+  },
+  {
+    "paper_id": "paper_000057",
+    "batch_id": "batch_0019",
+    "decision": "include",
+    "reason": "标题和摘要明确描述一种仿生蚯蚓软机器人，用于地下环境中的蠕动推进和挖掘，符合研究主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:57:44.798434+08:00"
+  },
+  {
+    "paper_id": "paper_000058",
+    "batch_id": "batch_0020",
+    "decision": "include",
+    "reason": "标题和摘要明确描述水下颗粒介质中的机器人掘进系统，涉及流体化推进机制和实验验证。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:57:58.502401+08:00"
+  },
+  {
+    "paper_id": "paper_000059",
+    "batch_id": "batch_0020",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于水凝胶管材料制备方法，无机器人系统或地下推进破土机制相关内容。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:57:58.502401+08:00"
+  },
+  {
+    "paper_id": "paper_000060",
+    "batch_id": "batch_0020",
+    "decision": "include",
+    "reason": "标题和摘要明确描述使用折纸脚实现颗粒介质中往复掘进的机器人系统，涉及机构设计和运动学建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:57:58.502401+08:00"
+  },
+  {
+    "paper_id": "paper_000061",
+    "batch_id": "batch_0021",
+    "decision": "include",
+    "reason": "标题和摘要明确描述了一种尖端生长的软体机器人，能够执行挖掘和穿越复杂路径等任务，符合生长式推进机制的研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:58:12.982309+08:00"
+  },
+  {
+    "paper_id": "paper_000062",
+    "batch_id": "batch_0021",
+    "decision": "include",
+    "reason": "标题和摘要明确描述了一种受植物根系启发的机器人探针，通过尖端生长在土壤中推进，符合地下钻进机器人推进机制的研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:58:12.982309+08:00"
+  },
+  {
+    "paper_id": "paper_000063",
+    "batch_id": "batch_0021",
+    "decision": "include",
+    "reason": "标题和摘要明确描述了一种受植物根系启发的软体生长机器人，具有挖掘和定向推进能力，并在湿压实砂土中进行了实验验证。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:58:12.982309+08:00"
+  },
+  {
+    "paper_id": "paper_000064",
+    "batch_id": "batch_0022",
+    "decision": "include",
+    "reason": "标题和摘要明确研究软体机器人在沙土中的掘进性能与效率，涉及推进机制和实验验证，符合研究主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:58:27.781814+08:00"
+  },
+  {
+    "paper_id": "paper_000065",
+    "batch_id": "batch_0022",
+    "decision": "include",
+    "reason": "标题和摘要描述受植物根系生长启发的软体机器人，能在土壤中生长式推进，涉及机构设计和运动学建模，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:58:27.781814+08:00"
+  },
+  {
+    "paper_id": "paper_000066",
+    "batch_id": "batch_0022",
+    "decision": "include",
+    "reason": "标题和摘要研究受蚯蚓启发的软体爬行机器人，涉及在多种地形中爬行和掘进的机制，并进行实验验证，符合研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.92,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:58:27.781814+08:00"
+  },
+  {
+    "paper_id": "paper_000067",
+    "batch_id": "batch_0023",
+    "decision": "include",
+    "reason": "标题和摘要明确描述自钻式种子载体，涉及在土壤中推进的机器人系统，符合研究主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:58:41.407840+08:00"
+  },
+  {
+    "paper_id": "paper_000068",
+    "batch_id": "batch_0023",
+    "decision": "exclude",
+    "reason": "标题和摘要仅涉及软体机械臂的方向控制，未提及地下推进或破土机制，不符合研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:58:41.407840+08:00"
+  },
+  {
+    "paper_id": "paper_000069",
+    "batch_id": "batch_0023",
+    "decision": "include",
+    "reason": "摘要提到软体机器人能在松散沙土中挖掘和推进，涉及破土机制和机器人-颗粒介质相互作用，符合纳入标准。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:58:41.407840+08:00"
+  },
+  {
+    "paper_id": "paper_000070",
+    "batch_id": "batch_0024",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于软体致动器材料设计，未提及地下推进或破土机制，且应用场景为可穿戴技术和软体机器人，不符合筛选主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-20T17:58:50.716920+08:00"
+  }
+]

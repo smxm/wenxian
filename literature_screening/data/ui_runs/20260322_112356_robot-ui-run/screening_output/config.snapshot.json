@@ -1,0 +1,69 @@
+{
+  "project": {
+    "name": "robot-ui-run",
+    "output_dir": "E:\\wenxian\\literature_screening\\data\\ui_runs\\20260322_112356_robot-ui-run\\screening_output",
+    "save_raw_response": true,
+    "save_intermediate_files": true
+  },
+  "input": {
+    "input_files": [
+      "E:\\wenxian\\literature_screening\\data\\ui_runs\\20260322_112356_robot-ui-run\\inputs\\abstract-ObesityMes-set.txt"
+    ],
+    "encoding": "utf-8"
+  },
+  "dedup": {
+    "enabled": true,
+    "strict_doi_match": true,
+    "normalized_title_exact_match": true,
+    "fuzzy_title_match": false
+  },
+  "screening": {
+    "batch_size": 5,
+    "target_include_count": 10,
+    "stop_when_target_reached": true,
+    "allow_uncertain": true,
+    "retry_times": 8,
+    "request_timeout_seconds": 240
+  },
+  "criteria": {
+    "topic": "你是一位医学与代谢疾病领域的资深学术研究员，正在协助我筛选参考文献。我正在撰写一篇关于“脂肪沉积与调控在人类肥胖及代谢综合征中的病理机制与干预策略”的综述论文，我需要你帮我找出我能用到的参考文献。",
+    "inclusion": [
+      "必须探讨人类、实验动物（如小鼠）或细胞模型中的病理性脂肪沉积（如肥胖、脂肪肝、异位脂质沉积）",
+      "涉及特定的分子机制（如基因调控、信号通路、自噬）、器官间通讯或潜在的药物/天然产物干预靶点",
+      "属于综述或高质量实验研究",
+      "必须探讨人类、实验动物（如小鼠）或细胞模型中的病理性脂肪沉积（如肥胖、脂肪肝、异位脂质沉积）",
+      "涉及特定的分子机制（如基因调控、信号通路、自噬）、器官间通讯或潜在的药物/天然产物干预靶点",
+      "属于综述或高质量实验研究"
+    ],
+    "exclusion": [
+      "农业畜牧业中为了提高肉质（如肌内脂肪）的动物研究文献",
+      "纯外科抽脂或整容文献",
+      "无具体机制探讨的纯流行病学调查",
+      "非英文文献",
+      "农业畜牧业中为了提高肉质（如肌内脂肪）的动物研究文献",
+      "纯外科抽脂或整容文献",
+      "无具体机制探讨的纯流行病学调查",
+      "非英文文献"
+    ]
+  },
+  "model": {
+    "provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "api_base_url": "https://api.deepseek.com/v1",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 1536,
+    "min_request_interval_seconds": 2.0
+  },
+  "report": {
+    "export_included_ris": true,
+    "export_excluded_ris": false,
+    "export_unused_ris": true,
+    "export_included_bib": false,
+    "export_excluded_bib": false,
+    "export_unused_bib": false,
+    "included_report_format": "md",
+    "excluded_report_format": "md",
+    "summary_format": "json"
+  }
+}

@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0004",
+    "results": [
+        {
+            "paper_id": "paper_000031",
+            "decision": "uncertain",
+            "reason": "标题和摘要信息不完整，无法判断是否涉及脂肪沉积的病理机制或干预策略。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.4
+        },
+        {
+            "paper_id": "paper_000032",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及新型化合物通过PPARγ通路改善代谢紊乱和脂肪细胞炎症，符合干预策略研究。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000033",
+            "decision": "exclude",
+            "reason": "研究对象为水产养殖鱼类，属于农业畜牧业研究，不符合人类或实验动物病理机制研究主题。",
+            "evidence": ["title", "abstract", "journal"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000034",
+            "decision": "include",
+            "reason": "标题和摘要明确研究人类肥胖中ANKRD53下调及其在脂肪细胞脂解和线粒体代谢中的机制，符合病理机制研究。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000035",
+            "decision": "uncertain",
+            "reason": "标题和摘要信息不足，无法确认是否涉及病理性脂肪沉积的机制或干预研究。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.4
+        },
+        {
+            "paper_id": "paper_000036",
+            "decision": "include",
+            "reason": "标题和摘要明确研究天然产物通过PPARα/NF-κB通路改善高脂饮食诱导的脂质功能障碍，符合干预策略研究。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000037",
+            "decision": "include",
+            "reason": "标题和摘要明确研究12,13-diHOME通过调节自噬通路改善肥胖小鼠MASLD，符合病理机制和干预策略研究。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000038",
+            "decision": "exclude",
+            "reason": "研究对象为奶牛，属于农业畜牧业研究，旨在提高肉质或肌内脂肪，不符合病理机制研究主题。",
+            "evidence": ["title", "abstract", "journal"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000039",
+            "decision": "include",
+            "reason": "标题和摘要明确综述膳食生物活性化合物通过自噬调节改善脂质沉积机制，符合干预策略研究。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000040",
+            "decision": "uncertain",
+            "reason": "标题和摘要信息不足，无法确认是否具体涉及脂肪沉积的病理机制或干预策略。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.4
+        }
+    ]
+}

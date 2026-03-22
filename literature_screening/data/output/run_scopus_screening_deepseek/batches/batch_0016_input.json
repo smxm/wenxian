@@ -1,0 +1,95 @@
+{
+  "batch_id": "batch_0016",
+  "paper_count": 3,
+  "paper_ids": [
+    "paper_000046",
+    "paper_000047",
+    "paper_000048"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000046",
+      "entry_type": "article",
+      "title": "A novel positioning method of anti-punching drilling robot based on the fusion of multi-IMUs and visual image",
+      "authors": [
+        "Si, Lei",
+        "Wang, Zhongbin",
+        "Li, Jiahao",
+        "Wei, Dong",
+        "Zhao, Shihao"
+      ],
+      "year": 2023,
+      "journal": "ISA Transactions",
+      "doi": "10.1016/j.isatra.2023.01.010",
+      "abstract": "Anti-punching drilling robot (APDR) is the key equipment for underground rock burst relief in coal mine and the accurate position and attitude determination is the basis and premise for realizing unmanned pressure relief operation. In this paper, a novel positioning method of APDR based on spatial array inertial measurement units (IMUs) and visual image is proposed. Firstly, the spatial array layout of multiple IMUs is displayed creatively, and the data fusion model and the posture calculation process of spatial array IMUs are constructed. The superiority of proposed spatial array IMUs is verified through the motion trajectory simulation analysis and mobile carrier simulation experiments. Then, an image enhancement method (SSR-AF) is designed to overcome the problems of atomization, glare, uneven illumination and noise interference in coal mine images, so as to improve the accuracy of image feature extraction and matching. Accordingly, the positioning estimation model based on continuous frame images is established. Furthermore, the fusion positioning process of APDR is presented by using the loose coupling mode based on Kalman filtering algorithm. The position and attitude monitoring experimental platform of APDR is built in a simulated coal mine tunnel. The experimental results indicate that the calculation errors of displacement and attitude based on the proposed fusion positioning method is superior to the competing methods, which meet the actual positioning requirements, and verify the feasibility and practicability of the proposed positioning method for APDR. © 2023 ISA",
+      "keywords": [],
+      "normalized_title": "a novel positioning method of anti punching drilling robot based on the fusion of multi imus and visual image",
+      "raw_bibtex": "@ARTICLE{Si2023730,\n\tnote = {Cited by: 16},\n\tsource = {Scopus},\n\tpublication_stage = {Final},\n\ttype = {Article},\n\tabstract = {Anti-punching drilling robot (APDR) is the key equipment for underground rock burst relief in coal mine and the accurate position and attitude determination is the basis and premise for realizing unmanned pressure relief operation. In this paper, a novel positioning method of APDR based on spatial array inertial measurement units (IMUs) and visual image is proposed. Firstly, the spatial array layout of multiple IMUs is displayed creatively, and the data fusion model and the posture calculation process of spatial array IMUs are constructed. The superiority of proposed spatial array IMUs is verified through the motion trajectory simulation analysis and mobile carrier simulation experiments. Then, an image enhancement method (SSR-AF) is designed to overcome the problems of atomization, glare, uneven illumination and noise interference in coal mine images, so as to improve the accuracy of image feature extraction and matching. Accordingly, the positioning estimation model based on continuous frame images is established. Furthermore, the fusion positioning process of APDR is presented by using the loose coupling mode based on Kalman filtering algorithm. The position and attitude monitoring experimental platform of APDR is built in a simulated coal mine tunnel. The experimental results indicate that the calculation errors of displacement and attitude based on the proposed fusion positioning method is superior to the competing methods, which meet the actual positioning requirements, and verify the feasibility and practicability of the proposed positioning method for APDR. © 2023 ISA},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85146481880&doi=10.1016%2Fj.isatra.2023.01.010&partnerID=40&md5=81461a2e0667b15741cf56a60f261a89},\n\tdoi = {10.1016/j.isatra.2023.01.010},\n\tpages = {730 - 746},\n\tvolume = {137},\n\tjournal = {ISA Transactions},\n\tyear = {2023},\n\ttitle = {A novel positioning method of anti-punching drilling robot based on the fusion of multi-IMUs and visual image},\n\tauthor = {Si, Lei and Wang, Zhongbin and Li, Jiahao and Wei, Dong and Zhao, Shihao}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_5136afff-7a2e-45c0-b397-6ea33975cd3b.bib"
+      ],
+      "source_keys": [
+        "Si2023730"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000047",
+      "entry_type": "article",
+      "title": "A Novel Pressure Relief Hole Recognition Method of Drilling Robot Based on SinGAN and Improved Faster R-CNN",
+      "authors": [
+        "Liang, Bin",
+        "Wang, Zhongbin",
+        "Si, Lei",
+        "Wei, Dong",
+        "Gu, Jinheng",
+        "Dai, Jianbo"
+      ],
+      "year": 2023,
+      "journal": "Applied Sciences (Switzerland)",
+      "doi": "10.3390/app13010513",
+      "abstract": "The drilling robot is the key equipment for pressure relief in rockburst mines, and the accurate recognition of a pressure relief hole is the premise for optimizing the layout of pressure relief holes and intelligent drilling. In view of this, a pressure relief hole recognition method for a drilling robot, based on single-image generative adversarial network (SinGAN) and improved faster region convolution neural network (Faster R-CNN), is proposed. Aiming at the problem of insufficient sample generation diversity and poor performance of the traditional SinGAN model, some improvement measures including image size adjustment, multi-stage training, and dynamically changing iteration times are designed as an improved SinGAN for the generation of pressure relief hole images. In addition, to solve the problem that the traditional depth neural network is not ideal for small-size target recognition, an improved Faster R-CNN based on multi-scale image input and multi-layer feature fusion is designed with the improved SqueezeNet as the framework, and the sample data collected from ground experiments are used for comparative analysis. The results indicate that the improved SinGAN model can improve the diversity of generated images on the premise of ensuring the quality of image samples, and can greatly improve the training speed of the model. The accuracy and recall rate of the improved Faster R-CNN model were able to reach 90.09% and 98.32%, respectively, and the average detection time was 0.19 s, which verifies the superiority of the improved Faster R-CNN model. To further verify the practicability of the proposed method, some field images were collected from the underground rockburst relief area in the coal mine, and a corresponding test analysis was carried out. Compared with three YOLO models, the accuracy and recall rate of improved Faster R-CNN model improved significantly, although the training time and recognition time increased to a certain extent, which proves the feasibility and effectiveness of the proposed method. © 2022 by the authors.",
+      "keywords": [],
+      "normalized_title": "a novel pressure relief hole recognition method of drilling robot based on singan and improved faster r cnn",
+      "raw_bibtex": "@ARTICLE{Liang2023,\n\tnote = {Cited by: 6; All Open Access; Gold Open Access; Green Open Access},\n\tsource = {Scopus},\n\tpublication_stage = {Final},\n\ttype = {Article},\n\tabstract = {The drilling robot is the key equipment for pressure relief in rockburst mines, and the accurate recognition of a pressure relief hole is the premise for optimizing the layout of pressure relief holes and intelligent drilling. In view of this, a pressure relief hole recognition method for a drilling robot, based on single-image generative adversarial network (SinGAN) and improved faster region convolution neural network (Faster R-CNN), is proposed. Aiming at the problem of insufficient sample generation diversity and poor performance of the traditional SinGAN model, some improvement measures including image size adjustment, multi-stage training, and dynamically changing iteration times are designed as an improved SinGAN for the generation of pressure relief hole images. In addition, to solve the problem that the traditional depth neural network is not ideal for small-size target recognition, an improved Faster R-CNN based on multi-scale image input and multi-layer feature fusion is designed with the improved SqueezeNet as the framework, and the sample data collected from ground experiments are used for comparative analysis. The results indicate that the improved SinGAN model can improve the diversity of generated images on the premise of ensuring the quality of image samples, and can greatly improve the training speed of the model. The accuracy and recall rate of the improved Faster R-CNN model were able to reach 90.09% and 98.32%, respectively, and the average detection time was 0.19 s, which verifies the superiority of the improved Faster R-CNN model. To further verify the practicability of the proposed method, some field images were collected from the underground rockburst relief area in the coal mine, and a corresponding test analysis was carried out. Compared with three YOLO models, the accuracy and recall rate of improved Faster R-CNN model improved significantly, although the training time and recognition time increased to a certain extent, which proves the feasibility and effectiveness of the proposed method. © 2022 by the authors.},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85145820966&doi=10.3390%2Fapp13010513&partnerID=40&md5=5f865074040ae3b37913b18e6d4ae492},\n\tdoi = {10.3390/app13010513},\n\tnumber = {1},\n\tvolume = {13},\n\tjournal = {Applied Sciences (Switzerland)},\n\tyear = {2023},\n\ttitle = {A Novel Pressure Relief Hole Recognition Method of Drilling Robot Based on SinGAN and Improved Faster R-CNN},\n\tauthor = {Liang, Bin and Wang, Zhongbin and Si, Lei and Wei, Dong and Gu, Jinheng and Dai, Jianbo}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_5136afff-7a2e-45c0-b397-6ea33975cd3b.bib"
+      ],
+      "source_keys": [
+        "Liang2023"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000048",
+      "entry_type": "article",
+      "title": "Precision Error Compensation Algorithm for Automated Drill Pipe Gripping in Underground Coal Mine Drilling Robots",
+      "authors": [
+        "Qianhai, Lu",
+        "Lingfei, Kong",
+        "Hongbo, Dong",
+        "Shan, Wu",
+        "Chenyu, Dai",
+        "Jia, Wang",
+        "Jingchao, Jia"
+      ],
+      "year": 2026,
+      "journal": "Journal of Field Robotics",
+      "doi": "10.1002/rob.70161",
+      "abstract": "To address the industry challenge of traditional error compensation methods failing in large spaces under harsh conditions—such as high dust, strong vibrations, and the explosion-proof MA certification requirements in underground coal mines—this paper proposes a novel error compensation algorithm based on zoning and Gaussian regression. It develops a sensorless compensation framework that operates within explosion-proof constraints by integrating zonal calibration with Gaussian Process Regression (GPR), which overcomes the dual challenges of visual failure and the limited availability of MA explosion-proof sensors. To tackle the accuracy issue in large workspaces, a three-level partition-boundary-regression architecture is designed. The workspace, with a ± 20° azimuth angle and 16 layers of drill pipes, is divided into 12 sector cells. The boundary layer uses cubic polynomial error compensation, while the internal cells employ spatial continuity error prediction based on the RBF kernel function. Experimental results show a significant reduction in grasping errors after compensation (X/Y/Z ≤ 4.5/2.5/1.5 mm), with an accuracy improvement of 82%. Additionally, an industrial downhole test has completed 2448 rod pickings with a success rate of 98.5%. This study offers a novel solution for precision control of robots in highly constrained environments. © 2026 Wiley Periodicals LLC.",
+      "keywords": [],
+      "normalized_title": "precision error compensation algorithm for automated drill pipe gripping in underground coal mine drilling robots",
+      "raw_bibtex": "@ARTICLE{Qianhai2026,\n\tnote = {Cited by: 0},\n\tsource = {Scopus},\n\tpublication_stage = {Article in press},\n\ttype = {Article},\n\tabstract = {To address the industry challenge of traditional error compensation methods failing in large spaces under harsh conditions—such as high dust, strong vibrations, and the explosion-proof MA certification requirements in underground coal mines—this paper proposes a novel error compensation algorithm based on zoning and Gaussian regression. It develops a sensorless compensation framework that operates within explosion-proof constraints by integrating zonal calibration with Gaussian Process Regression (GPR), which overcomes the dual challenges of visual failure and the limited availability of MA explosion-proof sensors. To tackle the accuracy issue in large workspaces, a three-level partition-boundary-regression architecture is designed. The workspace, with a ± 20° azimuth angle and 16 layers of drill pipes, is divided into 12 sector cells. The boundary layer uses cubic polynomial error compensation, while the internal cells employ spatial continuity error prediction based on the RBF kernel function. Experimental results show a significant reduction in grasping errors after compensation (X/Y/Z ≤ 4.5/2.5/1.5 mm), with an accuracy improvement of 82%. Additionally, an industrial downhole test has completed 2448 rod pickings with a success rate of 98.5%. This study offers a novel solution for precision control of robots in highly constrained environments. © 2026 Wiley Periodicals LLC.},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105028955850&doi=10.1002%2Frob.70161&partnerID=40&md5=e649f4c4d7bde0b1588dbe102ba01d8e},\n\tdoi = {10.1002/rob.70161},\n\tjournal = {Journal of Field Robotics},\n\tyear = {2026},\n\ttitle = {Precision Error Compensation Algorithm for Automated Drill Pipe Gripping in Underground Coal Mine Drilling Robots},\n\tauthor = {Qianhai, Lu and Lingfei, Kong and Hongbo, Dong and Shan, Wu and Chenyu, Dai and Jia, Wang and Jingchao, Jia}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_5136afff-7a2e-45c0-b397-6ea33975cd3b.bib"
+      ],
+      "source_keys": [
+        "Qianhai2026"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

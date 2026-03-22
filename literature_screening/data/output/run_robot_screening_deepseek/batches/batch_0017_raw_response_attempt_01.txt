@@ -1,0 +1,40 @@
+{
+    "batch_id": "batch_0017",
+    "results": [
+        {
+            "paper_id": "paper_000081",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究农业土壤的细胞毒性和遗传毒性评估，属于纯农业研究，没有机器人应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000082",
+            "decision": "exclude",
+            "reason": "标题和摘要研究纳米颗粒对小麦幼苗抗旱性的影响，属于纯农业研究，没有机器人技术。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000083",
+            "decision": "include",
+            "reason": "标题明确为仿生机器人，摘要描述受植物根系生长启发的软体机器人，涉及向地下或土壤中生长的机制。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000084",
+            "decision": "exclude",
+            "reason": "标题和摘要研究铜污染土壤中氮肥优化对植物生长的影响，属于纯农业研究，没有机器人应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000085",
+            "decision": "uncertain",
+            "reason": "摘要提到颗粒介质中的侵入力建模，应用于蟹类挖掘和植物根系生长等场景，但未明确说明是否针对机器人技术或地下物联网集成。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        }
+    ]
+}

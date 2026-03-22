@@ -1,0 +1,35 @@
+{
+  "batch_id": "batch_0007",
+  "results": [
+    {
+      "paper_id": "paper_000019",
+      "decision": "exclude",
+      "reason": "标题和摘要聚焦于小行星防御的撞击模拟，未提及机器人系统或地下推进机制。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000020",
+      "decision": "include",
+      "reason": "标题和摘要明确描述火星穿透器（Mole）在土壤中的穿透行为、机制分析及土壤相互作用研究。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000021",
+      "decision": "include",
+      "reason": "标题和摘要明确研究低速穿透器（LVP）在土壤中的穿透效率与反冲矛盾，涉及机构设计、动态建模和实验验证。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.88
+    }
+  ]
+}

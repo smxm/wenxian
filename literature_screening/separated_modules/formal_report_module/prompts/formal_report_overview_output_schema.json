@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "FormalReportOverviewPayload",
+  "type": "object",
+  "required": [
+    "report_title",
+    "overview",
+    "category_overviews",
+    "conclusion"
+  ],
+  "properties": {
+    "report_title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "overview": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category_overviews": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "category_name",
+          "category_summary",
+          "category_value",
+          "representative_paper_ids"
+        ],
+        "properties": {
+          "category_name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "category_summary": {
+            "type": "string",
+            "minLength": 1
+          },
+          "category_value": {
+            "type": "string",
+            "minLength": 1
+          },
+          "representative_paper_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "conclusion": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,105 @@
+{
+  "batch_id": "batch_0001",
+  "results": [
+    {
+      "paper_id": "paper_000001",
+      "decision": "include",
+      "reason": "标题和摘要明确研究火星土壤中穿透器的推进机制，涉及振动液化等破土方法，符合研究主题。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000002",
+      "decision": "exclude",
+      "reason": "标题和摘要聚焦小行星防御，涉及空中拦截和大气层燃烧，不符合地下推进机器人主题。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000003",
+      "decision": "uncertain",
+      "reason": "标题和摘要讨论月球穿透器的科学应用，但未明确描述推进或破土机制，信息不足。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000004",
+      "decision": "exclude",
+      "reason": "标题和摘要研究高速弹丸在沙中的冲击，无机器人系统背景，属于纯土力学研究。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "paper_id": "paper_000005",
+      "decision": "include",
+      "reason": "标题和摘要明确研究冲击穿透器在月球土壤中的性能验证，涉及推进机制和实验，符合纳入标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.88
+    },
+    {
+      "paper_id": "paper_000006",
+      "decision": "uncertain",
+      "reason": "标题和摘要聚焦穿透器的缓冲保护设计，虽涉及地下推进但机制细节不足，难以确认是否满足纳入标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000007",
+      "decision": "exclude",
+      "reason": "标题和摘要研究弹丸在沙中的减速动力学，无机器人载体背景，属于纯土力学应用。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.82
+    },
+    {
+      "paper_id": "paper_000008",
+      "decision": "uncertain",
+      "reason": "标题和摘要研究海底粘土中空心穿透器的性能，涉及推进机制但机器人背景不明确，信息有限。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "paper_id": "paper_000009",
+      "decision": "include",
+      "reason": "标题和摘要明确研究颗粒介质中有限长度侵入体的水平穿透，涉及仿生掘进机器人机制，符合主题。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.87
+    },
+    {
+      "paper_id": "paper_000010",
+      "decision": "uncertain",
+      "reason": "标题和摘要描述月球土壤性质测量设备，包含自深穿透器但未详细说明推进机制，相关性不明确。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.48
+    }
+  ]
+}

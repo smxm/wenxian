@@ -1,0 +1,35 @@
+{
+  "batch_id": "batch_0009",
+  "results": [
+    {
+      "paper_id": "paper_000025",
+      "decision": "include",
+      "reason": "标题和摘要明确描述仿生掘进机器人系统，涉及行星土壤探索、推进机制、运动学建模和实验验证，符合研究主题和纳入标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000026",
+      "decision": "include",
+      "reason": "标题和摘要明确描述自主钻进机器人系统，用于月球地下探索，涉及双螺旋推进机制、建模和实验验证，符合研究主题和纳入标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "paper_id": "paper_000027",
+      "decision": "uncertain",
+      "reason": "摘要主要进行多尺度颗粒介质力学分析，虽提及自掘进机器人设计启示，但机器人系统具体信息不足，难以确认是否满足纳入标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    }
+  ]
+}

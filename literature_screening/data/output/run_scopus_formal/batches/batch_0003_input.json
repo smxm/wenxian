@@ -1,0 +1,584 @@
+{
+  "batch_id": "batch_0003",
+  "paper_count": 20,
+  "paper_ids": [
+    "paper_000041",
+    "paper_000042",
+    "paper_000043",
+    "paper_000044",
+    "paper_000045",
+    "paper_000046",
+    "paper_000047",
+    "paper_000048",
+    "paper_000049",
+    "paper_000050",
+    "paper_000051",
+    "paper_000052",
+    "paper_000053",
+    "paper_000054",
+    "paper_000055",
+    "paper_000056",
+    "paper_000057",
+    "paper_000058",
+    "paper_000059",
+    "paper_000060"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000041",
+      "entry_type": "ARTICLE",
+      "title": "Research on Adaptive Drilling Control Technology Based on Coal Rock Traits During the Drilling Process",
+      "authors": [
+        "Liang, Bin",
+        "Li, Guang",
+        "Shan, Guangpeng"
+      ],
+      "year": 2025,
+      "journal": "Machines",
+      "doi": "10.3390/machines13020133",
+      "abstract": "The anti-punch drilling robot is a core piece of equipment used to realize unmanned drilling and pressure relief operations in underground coal mines. Adaptive drilling, conducted according to the coal rock properties encountered during drilling, is essential to improve the safety and efficiency of the pressure relief working face. This paper analyzed the composition of the anti-punch drilling robot drilling system and workflow of the drilling system and then calculated the optimal rotary speed and the optimal feed speed for different Platts hardness coefficients of the coal rock through the analysis of the drilling rod force. Based on the characteristics of the drilling electrohydraulic control system, a rotary adaptive controller based on a self-resistant control algorithm and a feed adaptive controller based on sliding mode variable structure control were designed. A joint simulation was carried out using AMESim 2020.1 and Simulink 2020b software to analyze the control performance of each controller. Finally, an experimental platform for the drilling robot electrohydraulic control system was constructed; different hardness coefficients of concrete specimens were used to simulate the hardness of the coal rock with different traits. Single coal rock hardness experiments and drilling experiments with sudden changes in coal rock hardness were carried out. The experimental results showed that the adaptive control strategy proposed in this paper satisfies the requirements of drilling system control. © 2025 by the authors.",
+      "keywords": [],
+      "normalized_title": "research on adaptive drilling control technology based on coal rock traits during the drilling process",
+      "raw_bibtex": "@ARTICLE{Liang2025,\n\tauthor = {Liang, Bin and Li, Guang and Shan, Guangpeng},\n\ttitle = {Research on Adaptive Drilling Control Technology Based on Coal Rock Traits During the Drilling Process},\n\tyear = {2025},\n\tjournal = {Machines},\n\tvolume = {13},\n\tnumber = {2},\n\tdoi = {10.3390/machines13020133},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85219040292&doi=10.3390%2Fmachines13020133&partnerID=40&md5=5b79977c325f6b4b254c73d0ca98a0d0},\n\tabstract = {The anti-punch drilling robot is a core piece of equipment used to realize unmanned drilling and pressure relief operations in underground coal mines. Adaptive drilling, conducted according to the coal rock properties encountered during drilling, is essential to improve the safety and efficiency of the pressure relief working face. This paper analyzed the composition of the anti-punch drilling robot drilling system and workflow of the drilling system and then calculated the optimal rotary speed and the optimal feed speed for different Platts hardness coefficients of the coal rock through the analysis of the drilling rod force. Based on the characteristics of the drilling electrohydraulic control system, a rotary adaptive controller based on a self-resistant control algorithm and a feed adaptive controller based on sliding mode variable structure control were designed. A joint simulation was carried out using AMESim 2020.1 and Simulink 2020b software to analyze the control performance of each controller. Finally, an experimental platform for the drilling robot electrohydraulic control system was constructed; different hardness coefficients of concrete specimens were used to simulate the hardness of the coal rock with different traits. Single coal rock hardness experiments and drilling experiments with sudden changes in coal rock hardness were carried out. The experimental results showed that the adaptive control strategy proposed in this paper satisfies the requirements of drilling system control. © 2025 by the authors.},\n\ttype = {Article},\n\tpublication_stage = {Final},\n\tsource = {Scopus},\n\tnote = {Cited by: 1; All Open Access; Gold Open Access; Green Open Access}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_5136afff-7a2e-45c0-b397-6ea33975cd3b.bib"
+      ],
+      "source_keys": [
+        "Liang2025"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000042",
+      "entry_type": "ARTICLE",
+      "title": "Algorithm for Automatic Rod Feeding and Positioning Error Compensation for Underground Drilling Robots in Coal Mines",
+      "authors": [
+        "Lu, Qianhai",
+        "Kong, Lingfei",
+        "Peng, Guangyu",
+        "Jia, Wang",
+        "Jin, Sun",
+        "Dai, Chenyu",
+        "Zhu, Qianxiang"
+      ],
+      "year": 2023,
+      "journal": "Sensors",
+      "doi": "10.3390/s23177530",
+      "abstract": "In the pursuit of automating the entire underground drilling process in coal mines, the automatic rod feeding technology of drilling robots plays a crucial role. However, the current lack of positional accuracy in automatic rod feeding leads to frequent accidents. To address this issue, this paper presents an algorithm for compensating positioning errors in automatic rod feeding. The algorithm is based on a theoretical mathematical model and manual teaching methods. To enhance the positioning accuracy, we first calibrate the pull rope sensor to correct its measurement precision. Subsequently, we establish a theoretical mathematical model for rod feeding positions by employing spatial coordinate system transformations. We determine the target rod feeding position using a manual teaching-based approach. Furthermore, we analyze the relationship between the theoretical rod delivery position and the target rod delivery position and propose an anisotropic spatial difference compensation technique that considers both distance and direction. Finally, we validate the feasibility of our proposed algorithm through automatic rod feeding tests conducted on a coal mine underground drilling robot. The results demonstrate that our algorithm significantly improves the accuracy of rod feeding positions for coal mine underground drilling robots. © 2023 by the authors.",
+      "keywords": [],
+      "normalized_title": "algorithm for automatic rod feeding and positioning error compensation for underground drilling robots in coal mines",
+      "raw_bibtex": "@ARTICLE{Lu2023,\n\tauthor = {Lu, Qianhai and Kong, Lingfei and Peng, Guangyu and Jia, Wang and Jin, Sun and Dai, Chenyu and Zhu, Qianxiang},\n\ttitle = {Algorithm for Automatic Rod Feeding and Positioning Error Compensation for Underground Drilling Robots in Coal Mines},\n\tyear = {2023},\n\tjournal = {Sensors},\n\tvolume = {23},\n\tnumber = {17},\n\tdoi = {10.3390/s23177530},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85170349973&doi=10.3390%2Fs23177530&partnerID=40&md5=e39de5ab9b9a2ed013c6b27e199fd61a},\n\tabstract = {In the pursuit of automating the entire underground drilling process in coal mines, the automatic rod feeding technology of drilling robots plays a crucial role. However, the current lack of positional accuracy in automatic rod feeding leads to frequent accidents. To address this issue, this paper presents an algorithm for compensating positioning errors in automatic rod feeding. The algorithm is based on a theoretical mathematical model and manual teaching methods. To enhance the positioning accuracy, we first calibrate the pull rope sensor to correct its measurement precision. Subsequently, we establish a theoretical mathematical model for rod feeding positions by employing spatial coordinate system transformations. We determine the target rod feeding position using a manual teaching-based approach. Furthermore, we analyze the relationship between the theoretical rod delivery position and the target rod delivery position and propose an anisotropic spatial difference compensation technique that considers both distance and direction. Finally, we validate the feasibility of our proposed algorithm through automatic rod feeding tests conducted on a coal mine underground drilling robot. The results demonstrate that our algorithm significantly improves the accuracy of rod feeding positions for coal mine underground drilling robots. © 2023 by the authors.},\n\ttype = {Article},\n\tpublication_stage = {Final},\n\tsource = {Scopus},\n\tnote = {Cited by: 3; All Open Access; Gold Open Access; Green Open Access}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_5136afff-7a2e-45c0-b397-6ea33975cd3b.bib"
+      ],
+      "source_keys": [
+        "Lu2023"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000043",
+      "entry_type": "ARTICLE",
+      "title": "Robotic drilling tests in simulated lunar regolith environment",
+      "authors": [
+        "Zhang, Tao",
+        "Zhang, Yinliang",
+        "Xu, Kun",
+        "Ding, Xilun",
+        "Wei, Hongyu",
+        "Chao, Chaoyue",
+        "Wang, Bin",
+        "Wang, Bing"
+      ],
+      "year": 2021,
+      "journal": "Journal of Field Robotics",
+      "doi": "10.1002/rob.22018",
+      "abstract": "A deep extraterrestrial drilling mission potentially adds a new level of complexity, and it is crucial to understand the associated challenges. To cope with China's Chang'E 5 mission to return subsurface regolith samples from the Moon, a series of laboratory tests were performed to validate the lunar robotic drilling from 2015 to 2018. The tests took place in a simulated thermal-vacuum regolith environment, a highly relevant lunar analog site. Force and temperature sensors were integrated into a 2-m class dry auger coring drill to assess the mechanical and thermophysical status of the sampling process. The operation of the entire testing system was automated, covering regolith penetration and data collection and storage. The science team used sensing data to characterize the subsurface geologic strata, assess the conditions of the drilling robot, and direct the sampling strategy. This experiment represents an essential first step in understanding the technology and operational requirements for lunar drilling and sampling mission. Many laboratory tests have helped guide the design and implementation of the highly successful lunar regolith-sampling task in the Chang'E 5 mission. This paper documents the experimental system design, highlighting some critical design criteria and design tradeoffs. It also discusses the results of laboratory testing and lists some of the key technological lessons learned. © 2021 Wiley Periodicals LLC",
+      "keywords": [],
+      "normalized_title": "robotic drilling tests in simulated lunar regolith environment",
+      "raw_bibtex": "@ARTICLE{Zhang20211011,\n\tauthor = {Zhang, Tao and Zhang, Yinliang and Xu, Kun and Ding, Xilun and Wei, Hongyu and Chao, Chaoyue and Wang, Bin and Wang, Bing},\n\ttitle = {Robotic drilling tests in simulated lunar regolith environment},\n\tyear = {2021},\n\tjournal = {Journal of Field Robotics},\n\tvolume = {38},\n\tnumber = {8},\n\tpages = {1011 - 1035},\n\tdoi = {10.1002/rob.22018},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85103899645&doi=10.1002%2Frob.22018&partnerID=40&md5=b6250ac2a6ddff2a5754336355c17b7c},\n\tabstract = {A deep extraterrestrial drilling mission potentially adds a new level of complexity, and it is crucial to understand the associated challenges. To cope with China's Chang'E 5 mission to return subsurface regolith samples from the Moon, a series of laboratory tests were performed to validate the lunar robotic drilling from 2015 to 2018. The tests took place in a simulated thermal-vacuum regolith environment, a highly relevant lunar analog site. Force and temperature sensors were integrated into a 2-m class dry auger coring drill to assess the mechanical and thermophysical status of the sampling process. The operation of the entire testing system was automated, covering regolith penetration and data collection and storage. The science team used sensing data to characterize the subsurface geologic strata, assess the conditions of the drilling robot, and direct the sampling strategy. This experiment represents an essential first step in understanding the technology and operational requirements for lunar drilling and sampling mission. Many laboratory tests have helped guide the design and implementation of the highly successful lunar regolith-sampling task in the Chang'E 5 mission. This paper documents the experimental system design, highlighting some critical design criteria and design tradeoffs. It also discusses the results of laboratory testing and lists some of the key technological lessons learned. © 2021 Wiley Periodicals LLC},\n\ttype = {Article},\n\tpublication_stage = {Final},\n\tsource = {Scopus},\n\tnote = {Cited by: 29}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_5136afff-7a2e-45c0-b397-6ea33975cd3b.bib"
+      ],
+      "source_keys": [
+        "Zhang20211011"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000044",
+      "entry_type": "ARTICLE",
+      "title": "DDBot: Differentiable Physics-Based Digging Robot for Unknown Granular Materials",
+      "authors": [
+        "Yang, Xintong",
+        "Wei, Minglun",
+        "Lai, Yu-Kun",
+        "Ji, Ze"
+      ],
+      "year": 2026,
+      "journal": "IEEE Transactions on Robotics",
+      "doi": "10.1109/tro.2025.3636815",
+      "abstract": "Automating the manipulation of granular materials poses significant challenges due to complex contact dynamics, unpredictable material properties, and intricate system states. Existing approaches often fail to achieve efficiency and accuracy in such tasks. To fill the research gap, this article studies the small-scale and high-precision granular material digging task with unknown physical properties. A key scientific problem addressed is the feasibility of applying first-order gradient-based optimization to complex differentiable granular material simulation and overcoming associated numerical instability. A new framework, named differentiable digging robot (DDBot), is proposed to manipulate granular materials, including sand and soil. Specifically, we equip DDBot with a differentiable physics-based simulator, tailored for granular material manipulation, powered by GPU-accelerated parallel computing and automatic differentiation. DDBot can perform efficient differentiable system identification and high-precision digging skill optimization for unknown granular materials, which is enabled by a differentiable skill-to-action mapping, a task-oriented demonstration method, gradient clipping and line search-based gradient descent. Experimental results show that DDBot can efficiently (converge within 5 to 20 minutes) identify unknown granular material dynamics and optimize digging skills, with high-precision results in zero-shot real-world deployments, highlighting its practicality. Benchmark results against state-of-the-art baselines also confirm the robustness and efficiency of DDBot in such digging tasks. © 2004-2012 IEEE.",
+      "keywords": [],
+      "normalized_title": "ddbot differentiable physics based digging robot for unknown granular materials",
+      "raw_bibtex": "@ARTICLE{Yang2026152,\n\tauthor = {Yang, Xintong and Wei, Minglun and Lai, Yu-Kun and Ji, Ze},\n\ttitle = {DDBot: Differentiable Physics-Based Digging Robot for Unknown Granular Materials},\n\tyear = {2026},\n\tjournal = {IEEE Transactions on Robotics},\n\tvolume = {42},\n\tpages = {152 - 169},\n\tdoi = {10.1109/TRO.2025.3636815},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105023642180&doi=10.1109%2FTRO.2025.3636815&partnerID=40&md5=ca8d4e84847bbf0921c29056ff2acb06},\n\tabstract = {Automating the manipulation of granular materials poses significant challenges due to complex contact dynamics, unpredictable material properties, and intricate system states. Existing approaches often fail to achieve efficiency and accuracy in such tasks. To fill the research gap, this article studies the small-scale and high-precision granular material digging task with unknown physical properties. A key scientific problem addressed is the feasibility of applying first-order gradient-based optimization to complex differentiable granular material simulation and overcoming associated numerical instability. A new framework, named differentiable digging robot (DDBot), is proposed to manipulate granular materials, including sand and soil. Specifically, we equip DDBot with a differentiable physics-based simulator, tailored for granular material manipulation, powered by GPU-accelerated parallel computing and automatic differentiation. DDBot can perform efficient differentiable system identification and high-precision digging skill optimization for unknown granular materials, which is enabled by a differentiable skill-to-action mapping, a task-oriented demonstration method, gradient clipping and line search-based gradient descent. Experimental results show that DDBot can efficiently (converge within 5 to 20 minutes) identify unknown granular material dynamics and optimize digging skills, with high-precision results in zero-shot real-world deployments, highlighting its practicality. Benchmark results against state-of-the-art baselines also confirm the robustness and efficiency of DDBot in such digging tasks. © 2004-2012 IEEE.},\n\ttype = {Article},\n\tpublication_stage = {Final},\n\tsource = {Scopus},\n\tnote = {Cited by: 0}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_5136afff-7a2e-45c0-b397-6ea33975cd3b.bib"
+      ],
+      "source_keys": [
+        "Yang2026152"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000045",
+      "entry_type": "ARTICLE",
+      "title": "Design and comparative analysis of self-propelling drill bit applied to deep-sea stratum drilling robot; [应用于海底地层钻探机器人的自推进钻头设计及自推进效果对比分析]",
+      "authors": [
+        "Zhang, Peihao",
+        "Lin, Xingshuang",
+        "Wang, Hao",
+        "Chen, Jiawang",
+        "Tian, Zhenwei",
+        "Weng, Zixin",
+        "Ren, Ziqiang",
+        "Zhou, Peng"
+      ],
+      "year": 2023,
+      "journal": "Journal of Zhejiang University: Science A",
+      "doi": "10.1631/jzus.a2200351",
+      "abstract": "Robotic subsea stratum drilling robot is a method for new subsea stratigraphic geological investigation and resource exploration. Resistance at the front end is the main source of resistance to the robot’s motion in the strata. Since there is no continuous and strong downward drilling force as in conventional drilling rigs, robot movement relies heavily on the drill bit to reduce the drilling resistance. In this study we propose a self-propelling drill bit that can discharge soil debris to provide propulsive force and reduce the resistance. The key parameter of the drill bit design, the spiral blade lead angle, was determined by theoretical analysis of the drill bit’s soil discharging effect. To verify the structural advantages of the self-propelling drill bit in reducing resistance, a comparative analysis with a conventional conical drill bit was conducted. The drilling process of both bits was simulated using finite element simulation at various rotation speeds, the penetration force and torque data of both drill bits were obtained, and tests prepared accordingly in subsea soil were conducted. The simulations and tests verified that the penetration force of the self-propelling drill bit was lower than that of the conventional conical drill bit. The self-propelling drill bit can reduce the resistance effectively, and may play an important role in the stratum movement of drilling robots. © 2023, Zhejiang University Press.",
+      "keywords": [],
+      "normalized_title": "design and comparative analysis of self propelling drill bit applied to deep sea stratum drilling robot 应用于海底地层钻探机器人的自推进钻头设计及自推进效果对比分析",
+      "raw_bibtex": "@ARTICLE{Zhang2023925,\n\tauthor = {Zhang, Peihao and Lin, Xingshuang and Wang, Hao and Chen, Jiawang and Tian, Zhenwei and Weng, Zixin and Ren, Ziqiang and Zhou, Peng},\n\ttitle = {Design and comparative analysis of self-propelling drill bit applied to deep-sea stratum drilling robot; [应用于海底地层钻探机器人的自推进钻头设计及自推进效果对比分析]},\n\tyear = {2023},\n\tjournal = {Journal of Zhejiang University: Science A},\n\tvolume = {24},\n\tnumber = {10},\n\tpages = {925 - 936},\n\tdoi = {10.1631/jzus.A2200351},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85149122540&doi=10.1631%2Fjzus.A2200351&partnerID=40&md5=f3c2fd5cf4148cad65d7a198fa59c4e0},\n\tabstract = {Robotic subsea stratum drilling robot is a method for new subsea stratigraphic geological investigation and resource exploration. Resistance at the front end is the main source of resistance to the robot’s motion in the strata. Since there is no continuous and strong downward drilling force as in conventional drilling rigs, robot movement relies heavily on the drill bit to reduce the drilling resistance. In this study we propose a self-propelling drill bit that can discharge soil debris to provide propulsive force and reduce the resistance. The key parameter of the drill bit design, the spiral blade lead angle, was determined by theoretical analysis of the drill bit’s soil discharging effect. To verify the structural advantages of the self-propelling drill bit in reducing resistance, a comparative analysis with a conventional conical drill bit was conducted. The drilling process of both bits was simulated using finite element simulation at various rotation speeds, the penetration force and torque data of both drill bits were obtained, and tests prepared accordingly in subsea soil were conducted. The simulations and tests verified that the penetration force of the self-propelling drill bit was lower than that of the conventional conical drill bit. The self-propelling drill bit can reduce the resistance effectively, and may play an important role in the stratum movement of drilling robots. © 2023, Zhejiang University Press.},\n\ttype = {Article},\n\tpublication_stage = {Final},\n\tsource = {Scopus},\n\tnote = {Cited by: 5}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_5136afff-7a2e-45c0-b397-6ea33975cd3b.bib"
+      ],
+      "source_keys": [
+        "Zhang2023925"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000046",
+      "entry_type": "ARTICLE",
+      "title": "A novel positioning method of anti-punching drilling robot based on the fusion of multi-IMUs and visual image",
+      "authors": [
+        "Si, Lei",
+        "Wang, Zhongbin",
+        "Li, Jiahao",
+        "Wei, Dong",
+        "Zhao, Shihao"
+      ],
+      "year": 2023,
+      "journal": "ISA Transactions",
+      "doi": "10.1016/j.isatra.2023.01.010",
+      "abstract": "Anti-punching drilling robot (APDR) is the key equipment for underground rock burst relief in coal mine and the accurate position and attitude determination is the basis and premise for realizing unmanned pressure relief operation. In this paper, a novel positioning method of APDR based on spatial array inertial measurement units (IMUs) and visual image is proposed. Firstly, the spatial array layout of multiple IMUs is displayed creatively, and the data fusion model and the posture calculation process of spatial array IMUs are constructed. The superiority of proposed spatial array IMUs is verified through the motion trajectory simulation analysis and mobile carrier simulation experiments. Then, an image enhancement method (SSR-AF) is designed to overcome the problems of atomization, glare, uneven illumination and noise interference in coal mine images, so as to improve the accuracy of image feature extraction and matching. Accordingly, the positioning estimation model based on continuous frame images is established. Furthermore, the fusion positioning process of APDR is presented by using the loose coupling mode based on Kalman filtering algorithm. The position and attitude monitoring experimental platform of APDR is built in a simulated coal mine tunnel. The experimental results indicate that the calculation errors of displacement and attitude based on the proposed fusion positioning method is superior to the competing methods, which meet the actual positioning requirements, and verify the feasibility and practicability of the proposed positioning method for APDR. © 2023 ISA",
+      "keywords": [],
+      "normalized_title": "a novel positioning method of anti punching drilling robot based on the fusion of multi imus and visual image",
+      "raw_bibtex": "@ARTICLE{Si2023730,\n\tauthor = {Si, Lei and Wang, Zhongbin and Li, Jiahao and Wei, Dong and Zhao, Shihao},\n\ttitle = {A novel positioning method of anti-punching drilling robot based on the fusion of multi-IMUs and visual image},\n\tyear = {2023},\n\tjournal = {ISA Transactions},\n\tvolume = {137},\n\tpages = {730 - 746},\n\tdoi = {10.1016/j.isatra.2023.01.010},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85146481880&doi=10.1016%2Fj.isatra.2023.01.010&partnerID=40&md5=81461a2e0667b15741cf56a60f261a89},\n\tabstract = {Anti-punching drilling robot (APDR) is the key equipment for underground rock burst relief in coal mine and the accurate position and attitude determination is the basis and premise for realizing unmanned pressure relief operation. In this paper, a novel positioning method of APDR based on spatial array inertial measurement units (IMUs) and visual image is proposed. Firstly, the spatial array layout of multiple IMUs is displayed creatively, and the data fusion model and the posture calculation process of spatial array IMUs are constructed. The superiority of proposed spatial array IMUs is verified through the motion trajectory simulation analysis and mobile carrier simulation experiments. Then, an image enhancement method (SSR-AF) is designed to overcome the problems of atomization, glare, uneven illumination and noise interference in coal mine images, so as to improve the accuracy of image feature extraction and matching. Accordingly, the positioning estimation model based on continuous frame images is established. Furthermore, the fusion positioning process of APDR is presented by using the loose coupling mode based on Kalman filtering algorithm. The position and attitude monitoring experimental platform of APDR is built in a simulated coal mine tunnel. The experimental results indicate that the calculation errors of displacement and attitude based on the proposed fusion positioning method is superior to the competing methods, which meet the actual positioning requirements, and verify the feasibility and practicability of the proposed positioning method for APDR. © 2023 ISA},\n\ttype = {Article},\n\tpublication_stage = {Final},\n\tsource = {Scopus},\n\tnote = {Cited by: 16}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_5136afff-7a2e-45c0-b397-6ea33975cd3b.bib"
+      ],
+      "source_keys": [
+        "Si2023730"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000047",
+      "entry_type": "ARTICLE",
+      "title": "A Novel Pressure Relief Hole Recognition Method of Drilling Robot Based on SinGAN and Improved Faster R-CNN",
+      "authors": [
+        "Liang, Bin",
+        "Wang, Zhongbin",
+        "Si, Lei",
+        "Wei, Dong",
+        "Gu, Jinheng",
+        "Dai, Jianbo"
+      ],
+      "year": 2023,
+      "journal": "Applied Sciences (Switzerland)",
+      "doi": "10.3390/app13010513",
+      "abstract": "The drilling robot is the key equipment for pressure relief in rockburst mines, and the accurate recognition of a pressure relief hole is the premise for optimizing the layout of pressure relief holes and intelligent drilling. In view of this, a pressure relief hole recognition method for a drilling robot, based on single-image generative adversarial network (SinGAN) and improved faster region convolution neural network (Faster R-CNN), is proposed. Aiming at the problem of insufficient sample generation diversity and poor performance of the traditional SinGAN model, some improvement measures including image size adjustment, multi-stage training, and dynamically changing iteration times are designed as an improved SinGAN for the generation of pressure relief hole images. In addition, to solve the problem that the traditional depth neural network is not ideal for small-size target recognition, an improved Faster R-CNN based on multi-scale image input and multi-layer feature fusion is designed with the improved SqueezeNet as the framework, and the sample data collected from ground experiments are used for comparative analysis. The results indicate that the improved SinGAN model can improve the diversity of generated images on the premise of ensuring the quality of image samples, and can greatly improve the training speed of the model. The accuracy and recall rate of the improved Faster R-CNN model were able to reach 90.09% and 98.32%, respectively, and the average detection time was 0.19 s, which verifies the superiority of the improved Faster R-CNN model. To further verify the practicability of the proposed method, some field images were collected from the underground rockburst relief area in the coal mine, and a corresponding test analysis was carried out. Compared with three YOLO models, the accuracy and recall rate of improved Faster R-CNN model improved significantly, although the training time and recognition time increased to a certain extent, which proves the feasibility and effectiveness of the proposed method. © 2022 by the authors.",
+      "keywords": [],
+      "normalized_title": "a novel pressure relief hole recognition method of drilling robot based on singan and improved faster r cnn",
+      "raw_bibtex": "@ARTICLE{Liang2023,\n\tauthor = {Liang, Bin and Wang, Zhongbin and Si, Lei and Wei, Dong and Gu, Jinheng and Dai, Jianbo},\n\ttitle = {A Novel Pressure Relief Hole Recognition Method of Drilling Robot Based on SinGAN and Improved Faster R-CNN},\n\tyear = {2023},\n\tjournal = {Applied Sciences (Switzerland)},\n\tvolume = {13},\n\tnumber = {1},\n\tdoi = {10.3390/app13010513},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85145820966&doi=10.3390%2Fapp13010513&partnerID=40&md5=5f865074040ae3b37913b18e6d4ae492},\n\tabstract = {The drilling robot is the key equipment for pressure relief in rockburst mines, and the accurate recognition of a pressure relief hole is the premise for optimizing the layout of pressure relief holes and intelligent drilling. In view of this, a pressure relief hole recognition method for a drilling robot, based on single-image generative adversarial network (SinGAN) and improved faster region convolution neural network (Faster R-CNN), is proposed. Aiming at the problem of insufficient sample generation diversity and poor performance of the traditional SinGAN model, some improvement measures including image size adjustment, multi-stage training, and dynamically changing iteration times are designed as an improved SinGAN for the generation of pressure relief hole images. In addition, to solve the problem that the traditional depth neural network is not ideal for small-size target recognition, an improved Faster R-CNN based on multi-scale image input and multi-layer feature fusion is designed with the improved SqueezeNet as the framework, and the sample data collected from ground experiments are used for comparative analysis. The results indicate that the improved SinGAN model can improve the diversity of generated images on the premise of ensuring the quality of image samples, and can greatly improve the training speed of the model. The accuracy and recall rate of the improved Faster R-CNN model were able to reach 90.09% and 98.32%, respectively, and the average detection time was 0.19 s, which verifies the superiority of the improved Faster R-CNN model. To further verify the practicability of the proposed method, some field images were collected from the underground rockburst relief area in the coal mine, and a corresponding test analysis was carried out. Compared with three YOLO models, the accuracy and recall rate of improved Faster R-CNN model improved significantly, although the training time and recognition time increased to a certain extent, which proves the feasibility and effectiveness of the proposed method. © 2022 by the authors.},\n\ttype = {Article},\n\tpublication_stage = {Final},\n\tsource = {Scopus},\n\tnote = {Cited by: 6; All Open Access; Gold Open Access; Green Open Access}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_5136afff-7a2e-45c0-b397-6ea33975cd3b.bib"
+      ],
+      "source_keys": [
+        "Liang2023"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000048",
+      "entry_type": "ARTICLE",
+      "title": "Precision Error Compensation Algorithm for Automated Drill Pipe Gripping in Underground Coal Mine Drilling Robots",
+      "authors": [
+        "Qianhai, Lu",
+        "Lingfei, Kong",
+        "Hongbo, Dong",
+        "Shan, Wu",
+        "Chenyu, Dai",
+        "Jia, Wang",
+        "Jingchao, Jia"
+      ],
+      "year": 2026,
+      "journal": "Journal of Field Robotics",
+      "doi": "10.1002/rob.70161",
+      "abstract": "To address the industry challenge of traditional error compensation methods failing in large spaces under harsh conditions—such as high dust, strong vibrations, and the explosion-proof MA certification requirements in underground coal mines—this paper proposes a novel error compensation algorithm based on zoning and Gaussian regression. It develops a sensorless compensation framework that operates within explosion-proof constraints by integrating zonal calibration with Gaussian Process Regression (GPR), which overcomes the dual challenges of visual failure and the limited availability of MA explosion-proof sensors. To tackle the accuracy issue in large workspaces, a three-level partition-boundary-regression architecture is designed. The workspace, with a ± 20° azimuth angle and 16 layers of drill pipes, is divided into 12 sector cells. The boundary layer uses cubic polynomial error compensation, while the internal cells employ spatial continuity error prediction based on the RBF kernel function. Experimental results show a significant reduction in grasping errors after compensation (X/Y/Z ≤ 4.5/2.5/1.5 mm), with an accuracy improvement of 82%. Additionally, an industrial downhole test has completed 2448 rod pickings with a success rate of 98.5%. This study offers a novel solution for precision control of robots in highly constrained environments. © 2026 Wiley Periodicals LLC.",
+      "keywords": [],
+      "normalized_title": "precision error compensation algorithm for automated drill pipe gripping in underground coal mine drilling robots",
+      "raw_bibtex": "@ARTICLE{Qianhai2026,\n\tauthor = {Qianhai, Lu and Lingfei, Kong and Hongbo, Dong and Shan, Wu and Chenyu, Dai and Jia, Wang and Jingchao, Jia},\n\ttitle = {Precision Error Compensation Algorithm for Automated Drill Pipe Gripping in Underground Coal Mine Drilling Robots},\n\tyear = {2026},\n\tjournal = {Journal of Field Robotics},\n\tdoi = {10.1002/rob.70161},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105028955850&doi=10.1002%2Frob.70161&partnerID=40&md5=e649f4c4d7bde0b1588dbe102ba01d8e},\n\tabstract = {To address the industry challenge of traditional error compensation methods failing in large spaces under harsh conditions—such as high dust, strong vibrations, and the explosion-proof MA certification requirements in underground coal mines—this paper proposes a novel error compensation algorithm based on zoning and Gaussian regression. It develops a sensorless compensation framework that operates within explosion-proof constraints by integrating zonal calibration with Gaussian Process Regression (GPR), which overcomes the dual challenges of visual failure and the limited availability of MA explosion-proof sensors. To tackle the accuracy issue in large workspaces, a three-level partition-boundary-regression architecture is designed. The workspace, with a ± 20° azimuth angle and 16 layers of drill pipes, is divided into 12 sector cells. The boundary layer uses cubic polynomial error compensation, while the internal cells employ spatial continuity error prediction based on the RBF kernel function. Experimental results show a significant reduction in grasping errors after compensation (X/Y/Z ≤ 4.5/2.5/1.5 mm), with an accuracy improvement of 82%. Additionally, an industrial downhole test has completed 2448 rod pickings with a success rate of 98.5%. This study offers a novel solution for precision control of robots in highly constrained environments. © 2026 Wiley Periodicals LLC.},\n\ttype = {Article},\n\tpublication_stage = {Article in press},\n\tsource = {Scopus},\n\tnote = {Cited by: 0}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_5136afff-7a2e-45c0-b397-6ea33975cd3b.bib"
+      ],
+      "source_keys": [
+        "Qianhai2026"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000049",
+      "entry_type": "ARTICLE",
+      "title": "A two-DOF drilling robot with a suction drill for planetary regolith exploration",
+      "authors": [
+        "Zhang, Yinliang",
+        "Zhong, Lin",
+        "Wu, Riyue",
+        "Long, Zhiwei",
+        "Xu, Kun",
+        "Zhang, Tao"
+      ],
+      "year": 2025,
+      "journal": "Advances in Space Research",
+      "doi": "10.1016/j.asr.2025.02.014",
+      "abstract": "Planetary exploration is critical for human beings to understand the mysteries of the universe, trace the origin and evolution of life, and promote the sustainable development of human society. This article presents a two-degree-of-freedom (two-DOF) drilling robot with a suction drill bit that may be useful for extraterrestrial drilling. The device consists of a propulsion unit and an excavation unit. The propulsion unit has a radial expansion function that can accommodate slight variations in borehole diameter and maintain the body position and orientation of the drilling robot. The excavation unit breaks up the regolith and transports the chips to the ground to make room for advancement. The cutting discharge unit transports the chips from the front end of the drill bit to the surface. This article provides the system design, performance analysis, and cutting mechanics model of the robot in detail. Among others, the cutting mechanical model was completed and validated for a tine and multi-row tines and performed well in predicting drilling loads (average error of 13.81 %). The drilling experiments were conducted mainly on the sand and lunar regolith simulant (LRS), and the robot demonstrated good performance by penetrating a depth of 520 mm in the sand within 420 s. For LRS with more complex mechanical properties, the robot reached 182 mm in 270 s, indicating that the robot can also adapt to extraterrestrial regolith drilling. With appropriate improvements in future work, this robot is considered to have possible applications in extraterrestrial exploration. © 2025 COSPAR",
+      "keywords": [],
+      "normalized_title": "a two dof drilling robot with a suction drill for planetary regolith exploration",
+      "raw_bibtex": "@ARTICLE{Zhang20256089,\n\tauthor = {Zhang, Yinliang and Zhong, Lin and Wu, Riyue and Long, Zhiwei and Xu, Kun and Zhang, Tao},\n\ttitle = {A two-DOF drilling robot with a suction drill for planetary regolith exploration},\n\tyear = {2025},\n\tjournal = {Advances in Space Research},\n\tvolume = {75},\n\tnumber = {8},\n\tpages = {6089 - 6103},\n\tdoi = {10.1016/j.asr.2025.02.014},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105001995188&doi=10.1016%2Fj.asr.2025.02.014&partnerID=40&md5=49fb0340fe9b847c7c4074f77a5c8608},\n\tabstract = {Planetary exploration is critical for human beings to understand the mysteries of the universe, trace the origin and evolution of life, and promote the sustainable development of human society. This article presents a two-degree-of-freedom (two-DOF) drilling robot with a suction drill bit that may be useful for extraterrestrial drilling. The device consists of a propulsion unit and an excavation unit. The propulsion unit has a radial expansion function that can accommodate slight variations in borehole diameter and maintain the body position and orientation of the drilling robot. The excavation unit breaks up the regolith and transports the chips to the ground to make room for advancement. The cutting discharge unit transports the chips from the front end of the drill bit to the surface. This article provides the system design, performance analysis, and cutting mechanics model of the robot in detail. Among others, the cutting mechanical model was completed and validated for a tine and multi-row tines and performed well in predicting drilling loads (average error of 13.81 %). The drilling experiments were conducted mainly on the sand and lunar regolith simulant (LRS), and the robot demonstrated good performance by penetrating a depth of 520 mm in the sand within 420 s. For LRS with more complex mechanical properties, the robot reached 182 mm in 270 s, indicating that the robot can also adapt to extraterrestrial regolith drilling. With appropriate improvements in future work, this robot is considered to have possible applications in extraterrestrial exploration. © 2025 COSPAR},\n\ttype = {Article},\n\tpublication_stage = {Final},\n\tsource = {Scopus},\n\tnote = {Cited by: 0}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_5136afff-7a2e-45c0-b397-6ea33975cd3b.bib"
+      ],
+      "source_keys": [
+        "Zhang20256089"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000050",
+      "entry_type": "ARTICLE",
+      "title": "Workspace analysis and motion control strategy of robotic mine anchor drilling truck manipulator based on the WOA-FOPID algorithm",
+      "authors": [
+        "Jun, Zhang",
+        "Yiliang, Wang",
+        "Liming, Che",
+        "Ning, Wang",
+        "Yuepin, Bai",
+        "Chaofan, Wang"
+      ],
+      "year": 2022,
+      "journal": "Frontiers in Earth Science",
+      "doi": "10.3389/feart.2022.954547",
+      "abstract": "The manipulator is the key component of the anchor drilling robot to automatically complete the anchoring operation underground. Due to the complexity of its motion equation and the limitations of its control strategy, the real-time pose and the positioning accuracy of the manipulator are inferior, which seriously restricts the safety, efficiency, and speed of roadway excavation. In order to improve the positioning accuracy and realize the optimal efficiency of the manipulator, this article designs a manipulator structure with four degrees of freedom. With the help of the D-H method and the intelligent parameter setting method, this article carries out the basic theoretical research on the kinematics and the fractional order FOPID control algorithm of the manipulator of the mining roof bolter, and formulates a manipulator motion control strategy. At the same time, combined with numerical simulations and field experiments, we explore the robustness and control efficiency of the hydraulic system of the manipulator under the working conditions of a harsh environment and limited space, and reveal that the intelligent optimization algorithm can control the motion state of the manipulator more accurately and stably after the parameters of the fractional order FOPID controller are positively determined. This study effectively solved the dynamic model uncertainty caused by time-varying internal parameters and external loads of the hydraulic servo system, optimized and reconstructed the structure and motion coefficient parameters of the manipulator, and revealed the control mechanism of a precise spatial positioning and online trajectory planning of the hydraulic servo system of the manipulator. Compared with the traditional PID control algorithm, this algorithm has a faster response speed and better expected track tracking ability. This research lays a theoretical foundation for the precise positioning and automatic support of the manipulator, and also provides a reference for the design of similar motion control algorithms. Copyright © 2022 Jun, Yiliang, Liming, Ning, Yuepin and Chaofan.",
+      "keywords": [],
+      "normalized_title": "workspace analysis and motion control strategy of robotic mine anchor drilling truck manipulator based on the woa fopid algorithm",
+      "raw_bibtex": "@ARTICLE{Jun2022,\n\tauthor = {Jun, Zhang and Yiliang, Wang and Liming, Che and Ning, Wang and Yuepin, Bai and Chaofan, Wang},\n\ttitle = {Workspace analysis and motion control strategy of robotic mine anchor drilling truck manipulator based on the WOA-FOPID algorithm},\n\tyear = {2022},\n\tjournal = {Frontiers in Earth Science},\n\tvolume = {10},\n\tdoi = {10.3389/feart.2022.954547},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85136180959&doi=10.3389%2Ffeart.2022.954547&partnerID=40&md5=9cccca47ff3436823356aa912d44effe},\n\tabstract = {The manipulator is the key component of the anchor drilling robot to automatically complete the anchoring operation underground. Due to the complexity of its motion equation and the limitations of its control strategy, the real-time pose and the positioning accuracy of the manipulator are inferior, which seriously restricts the safety, efficiency, and speed of roadway excavation. In order to improve the positioning accuracy and realize the optimal efficiency of the manipulator, this article designs a manipulator structure with four degrees of freedom. With the help of the D-H method and the intelligent parameter setting method, this article carries out the basic theoretical research on the kinematics and the fractional order FOPID control algorithm of the manipulator of the mining roof bolter, and formulates a manipulator motion control strategy. At the same time, combined with numerical simulations and field experiments, we explore the robustness and control efficiency of the hydraulic system of the manipulator under the working conditions of a harsh environment and limited space, and reveal that the intelligent optimization algorithm can control the motion state of the manipulator more accurately and stably after the parameters of the fractional order FOPID controller are positively determined. This study effectively solved the dynamic model uncertainty caused by time-varying internal parameters and external loads of the hydraulic servo system, optimized and reconstructed the structure and motion coefficient parameters of the manipulator, and revealed the control mechanism of a precise spatial positioning and online trajectory planning of the hydraulic servo system of the manipulator. Compared with the traditional PID control algorithm, this algorithm has a faster response speed and better expected track tracking ability. This research lays a theoretical foundation for the precise positioning and automatic support of the manipulator, and also provides a reference for the design of similar motion control algorithms. Copyright © 2022 Jun, Yiliang, Liming, Ning, Yuepin and Chaofan.},\n\ttype = {Article},\n\tpublication_stage = {Final},\n\tsource = {Scopus},\n\tnote = {Cited by: 6; All Open Access; Gold Open Access; Green Open Access}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_5136afff-7a2e-45c0-b397-6ea33975cd3b.bib"
+      ],
+      "source_keys": [
+        "Jun2022"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000051",
+      "entry_type": "ARTICLE",
+      "title": "Optimizing Orchard Planting Efficiency with a GIS-Integrated Autonomous Soil-Drilling Robot",
+      "authors": [
+        "Eceoğlu, Osman",
+        "Ünal, İlker"
+      ],
+      "year": 2024,
+      "journal": "AgriEngineering",
+      "doi": "10.3390/agriengineering6030166",
+      "abstract": "A typical orchard’s mechanical operation consists of three or four stages: lining and digging for plantation, moving the seedling from nurseries to the farm, moving the seedling to the planting hole, and planting the seedling in the hole. However, the digging of the planting hole is the most time-consuming operation. In fruit orchards, the use of robots is increasingly becoming more prevalent to increase operational efficiency. They offer practical and effective services to both industry and people, whether they are assigned to plant trees, reduce the use of chemical fertilizers, or carry heavy loads to relieve staff. Robots can operate for extended periods of time and can be highly adept at repetitive tasks like planting many trees. The present study aims to identify the locations for planting trees in orchards using geographic information systems (GISs), to develop an autonomous drilling machine and use the developed robot to open planting holes. There is no comparable study on autonomous hole planting in the literature in this regard. The agricultural mobile robot is a four=wheeled nonholonomic robot with differential steering and forwarding capability to stable target positions. The designed mobile robot can be used in fully autonomous, partially autonomous, or fully manual modes. The drilling system, which is a y-axis shifter driven by a DC motor with a reducer includes an auger with a 2.1 HP gasoline engine. SOLIDWORKS 2020 software was used for designing and drawing the mobile robot and drilling system. The Microsoft Visual Basic.NET programming language was used to create the robot navigation system and drilling mechanism software. The cross-track error (XTE), which determines the distances between the actual and desired holes positions, was utilized to analyze the steering accuracy of the mobile robot to the drilling spots. Consequently, the average of the arithmetic means was determined to be 4.35 cm, and the standard deviation was 1.73 cm. This figure indicates that the suggested system is effective for drilling plant holes in orchards. © 2024 by the authors.",
+      "keywords": [],
+      "normalized_title": "optimizing orchard planting efficiency with a gis integrated autonomous soil drilling robot",
+      "raw_bibtex": "@ARTICLE{Eceoğlu20242870,\n\tauthor = {Eceoğlu, Osman and Ünal, İlker},\n\ttitle = {Optimizing Orchard Planting Efficiency with a GIS-Integrated Autonomous Soil-Drilling Robot},\n\tyear = {2024},\n\tjournal = {AgriEngineering},\n\tvolume = {6},\n\tnumber = {3},\n\tpages = {2870 - 2890},\n\tdoi = {10.3390/agriengineering6030166},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85205094224&doi=10.3390%2Fagriengineering6030166&partnerID=40&md5=0201ecc624be74caea2ce34540e97bd9},\n\tabstract = {A typical orchard’s mechanical operation consists of three or four stages: lining and digging for plantation, moving the seedling from nurseries to the farm, moving the seedling to the planting hole, and planting the seedling in the hole. However, the digging of the planting hole is the most time-consuming operation. In fruit orchards, the use of robots is increasingly becoming more prevalent to increase operational efficiency. They offer practical and effective services to both industry and people, whether they are assigned to plant trees, reduce the use of chemical fertilizers, or carry heavy loads to relieve staff. Robots can operate for extended periods of time and can be highly adept at repetitive tasks like planting many trees. The present study aims to identify the locations for planting trees in orchards using geographic information systems (GISs), to develop an autonomous drilling machine and use the developed robot to open planting holes. There is no comparable study on autonomous hole planting in the literature in this regard. The agricultural mobile robot is a four=wheeled nonholonomic robot with differential steering and forwarding capability to stable target positions. The designed mobile robot can be used in fully autonomous, partially autonomous, or fully manual modes. The drilling system, which is a y-axis shifter driven by a DC motor with a reducer includes an auger with a 2.1 HP gasoline engine. SOLIDWORKS 2020 software was used for designing and drawing the mobile robot and drilling system. The Microsoft Visual Basic.NET programming language was used to create the robot navigation system and drilling mechanism software. The cross-track error (XTE), which determines the distances between the actual and desired holes positions, was utilized to analyze the steering accuracy of the mobile robot to the drilling spots. Consequently, the average of the arithmetic means was determined to be 4.35 cm, and the standard deviation was 1.73 cm. This figure indicates that the suggested system is effective for drilling plant holes in orchards. © 2024 by the authors.},\n\ttype = {Article},\n\tpublication_stage = {Final},\n\tsource = {Scopus},\n\tnote = {Cited by: 3; All Open Access; Gold Open Access; Green Open Access}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_5136afff-7a2e-45c0-b397-6ea33975cd3b.bib"
+      ],
+      "source_keys": [
+        "Eceoğlu20242870"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000052",
+      "entry_type": "ARTICLE",
+      "title": "Tracking System for a Coal Mine Drilling Robot for Low-Illumination Environments",
+      "authors": [
+        "You, Shaoze",
+        "Zhu, Hua",
+        "Li, Menggang",
+        "Li, Yutan",
+        "Tang, Chaoquan"
+      ],
+      "year": 2023,
+      "journal": "Applied Sciences (Switzerland)",
+      "doi": "10.3390/app13010568",
+      "abstract": "In recent years, discriminative correlation filters (DCF) based trackers have been widely used in mobile robots due to their efficiency. However, underground coal mines are typically a low illumination environment, and tracking in this environment is a challenging problem that has not been adequately addressed in the literature. Thus, this paper proposes a Low-illumination Long-term Correlation Tracker (LLCT) and designs a visual tracking system for coal mine drilling robots. A low-illumination tracking framework combining image enhancement strategies and long-time tracking is proposed. A long-term memory correlation filter tracker with an interval update strategy is utilized. In addition, a local area illumination detection method is proposed to prevent the failure of the enhancement algorithm due to local over-exposure. A convenient image enhancement method is proposed to boost efficiency. Extensive experiments on popular object tracking benchmark datasets demonstrate that the proposed tracker significantly outperforms the baseline trackers, achieving high real-time performance. The tracker’s performance is verified on an underground drilling robot in a coal mine. The results of the field experiment demonstrate that the performance of the novel tracking framework is better than that of state-of-the-art trackers in low-illumination environments. © 2022 by the authors.",
+      "keywords": [],
+      "normalized_title": "tracking system for a coal mine drilling robot for low illumination environments",
+      "raw_bibtex": "@ARTICLE{You2023,\n\tauthor = {You, Shaoze and Zhu, Hua and Li, Menggang and Li, Yutan and Tang, Chaoquan},\n\ttitle = {Tracking System for a Coal Mine Drilling Robot for Low-Illumination Environments},\n\tyear = {2023},\n\tjournal = {Applied Sciences (Switzerland)},\n\tvolume = {13},\n\tnumber = {1},\n\tdoi = {10.3390/app13010568},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85145730679&doi=10.3390%2Fapp13010568&partnerID=40&md5=e802bf5f396e31bb6592f8cfbcf478d0},\n\tabstract = {In recent years, discriminative correlation filters (DCF) based trackers have been widely used in mobile robots due to their efficiency. However, underground coal mines are typically a low illumination environment, and tracking in this environment is a challenging problem that has not been adequately addressed in the literature. Thus, this paper proposes a Low-illumination Long-term Correlation Tracker (LLCT) and designs a visual tracking system for coal mine drilling robots. A low-illumination tracking framework combining image enhancement strategies and long-time tracking is proposed. A long-term memory correlation filter tracker with an interval update strategy is utilized. In addition, a local area illumination detection method is proposed to prevent the failure of the enhancement algorithm due to local over-exposure. A convenient image enhancement method is proposed to boost efficiency. Extensive experiments on popular object tracking benchmark datasets demonstrate that the proposed tracker significantly outperforms the baseline trackers, achieving high real-time performance. The tracker’s performance is verified on an underground drilling robot in a coal mine. The results of the field experiment demonstrate that the performance of the novel tracking framework is better than that of state-of-the-art trackers in low-illumination environments. © 2022 by the authors.},\n\ttype = {Article},\n\tpublication_stage = {Final},\n\tsource = {Scopus},\n\tnote = {Cited by: 7; All Open Access; Gold Open Access; Green Open Access}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_5136afff-7a2e-45c0-b397-6ea33975cd3b.bib"
+      ],
+      "source_keys": [
+        "You2023"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000053",
+      "entry_type": "ARTICLE",
+      "title": "Compliant Fins for Locomotion in Granular Media",
+      "authors": [
+        "Li, Dongting",
+        "Huang, Sichuan",
+        "Tang, Yong",
+        "Marvi, Hamidreza",
+        "Tao, Junliang",
+        "Aukes, Daniel M."
+      ],
+      "year": 2021,
+      "journal": "IEEE Robotics and Automation Letters",
+      "doi": "10.1109/lra.2021.3084877",
+      "abstract": "In this letter, we present an approach to study the behavior of compliant plates in granular media and optimize the performance of a robot that utilizes this technique for mobility. From previous work and fundamental tests on thin plate force generation inside granular media, we introduce an origami-inspired mechanism with non-linear compliance in the joints that can be used in granular propulsion. This concept utilizes one-sided joint limits to create an asymmetric gait cycle that avoids more complicated alternatives often found in other swimming/digging robots. To analyze its locomotion as well as its shape and propulsive force, we utilize granular Resistive Force Theory (RFT) as a starting point. Adding compliance to this theory enables us to predict the time-based evolution of compliant plates when they are dragged and rotated. It also permits more rational design of swimming robots where fin design variables may be optimized against the characteristics of the granular medium. This is done using a Python-based dynamic simulation library to model the deformation of the plates and optimize aspects of the robot's gait. Finally, we prototype and test robot with a gait optimized using the modelling techniques mentioned above. © 2016 IEEE.",
+      "keywords": [],
+      "normalized_title": "compliant fins for locomotion in granular media",
+      "raw_bibtex": "@ARTICLE{Li20215984,\n\tauthor = {Li, Dongting and Huang, Sichuan and Tang, Yong and Marvi, Hamidreza and Tao, Junliang and Aukes, Daniel M.},\n\ttitle = {Compliant Fins for Locomotion in Granular Media},\n\tyear = {2021},\n\tjournal = {IEEE Robotics and Automation Letters},\n\tvolume = {6},\n\tnumber = {3},\n\tpages = {5984 - 5991},\n\tdoi = {10.1109/LRA.2021.3084877},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85107214609&doi=10.1109%2FLRA.2021.3084877&partnerID=40&md5=93fb610cdb2b0b2425a132a677a884b0},\n\tabstract = {In this letter, we present an approach to study the behavior of compliant plates in granular media and optimize the performance of a robot that utilizes this technique for mobility. From previous work and fundamental tests on thin plate force generation inside granular media, we introduce an origami-inspired mechanism with non-linear compliance in the joints that can be used in granular propulsion. This concept utilizes one-sided joint limits to create an asymmetric gait cycle that avoids more complicated alternatives often found in other swimming/digging robots. To analyze its locomotion as well as its shape and propulsive force, we utilize granular Resistive Force Theory (RFT) as a starting point. Adding compliance to this theory enables us to predict the time-based evolution of compliant plates when they are dragged and rotated. It also permits more rational design of swimming robots where fin design variables may be optimized against the characteristics of the granular medium. This is done using a Python-based dynamic simulation library to model the deformation of the plates and optimize aspects of the robot's gait. Finally, we prototype and test robot with a gait optimized using the modelling techniques mentioned above. © 2016 IEEE.},\n\ttype = {Article},\n\tpublication_stage = {Final},\n\tsource = {Scopus},\n\tnote = {Cited by: 22; All Open Access; Green Open Access}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_5136afff-7a2e-45c0-b397-6ea33975cd3b.bib"
+      ],
+      "source_keys": [
+        "Li20215984"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000054",
+      "entry_type": "ARTICLE",
+      "title": "Controlling subterranean forces enables a fast, steerable, burrowing soft robot",
+      "authors": [
+        "Naclerio, Nicholas D.",
+        "Karsai, Andras",
+        "Murray-Cooper, Mason",
+        "Ozkan-Aydin, Yasemin",
+        "Aydin, Enes",
+        "Goldman, Daniel I.",
+        "Hawkes, Elliot W."
+      ],
+      "year": 2021,
+      "journal": "Science Robotics",
+      "doi": "10.1126/scirobotics.abe2922",
+      "abstract": "Robotic navigation on land, through air, and in water is well researched; numerous robots have successfully demonstrated motion in these environments. However, one frontier for robotic locomotion remains largely unexplored—below ground. Subterranean navigation is simply hard to do, in part because the interaction forces of underground motion are higher than in air or water by orders of magnitude and because we lack for these interactions a robust fundamental physics understanding. We present and test three hypotheses, derived from biological observation and the physics of granular intrusion, and use the results to inform the design of our burrowing robot. These results reveal that (i) tip extension reduces total drag by an amount equal to the skin drag of the body, (ii) granular aeration via tip-based airflow reduces drag with a nonlinear dependence on depth and flow angle, and (iii) variation of the angle of the tip-based flow has a nonmonotonic effect on lift in granular media. Informed by these results, we realize a steerable, root-like soft robot that controls subterranean lift and drag forces to burrow faster than previous approaches by over an order of magnitude and does so through real sand. We also demonstrate that the robot can modulate its pullout force by an order of magnitude and control its direction of motion in both the horizontal and vertical planes to navigate around subterranean obstacles. Our results advance the understanding and capabilities of robotic subterranean locomotion. Copyright © 2021 The Authors, some rights reserved.",
+      "keywords": [],
+      "normalized_title": "controlling subterranean forces enables a fast steerable burrowing soft robot",
+      "raw_bibtex": "@ARTICLE{Naclerio2021,\n\tauthor = {Naclerio, Nicholas D. and Karsai, Andras and Murray-Cooper, Mason and Ozkan-Aydin, Yasemin and Aydin, Enes and Goldman, Daniel I. and Hawkes, Elliot W.},\n\ttitle = {Controlling subterranean forces enables a fast, steerable, burrowing soft robot},\n\tyear = {2021},\n\tjournal = {Science Robotics},\n\tvolume = {6},\n\tnumber = {55},\n\tdoi = {10.1126/scirobotics.abe2922},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85108376500&doi=10.1126%2Fscirobotics.abe2922&partnerID=40&md5=3bba414610417c46dd078ae35c5a75b5},\n\tabstract = {Robotic navigation on land, through air, and in water is well researched; numerous robots have successfully demonstrated motion in these environments. However, one frontier for robotic locomotion remains largely unexplored—below ground. Subterranean navigation is simply hard to do, in part because the interaction forces of underground motion are higher than in air or water by orders of magnitude and because we lack for these interactions a robust fundamental physics understanding. We present and test three hypotheses, derived from biological observation and the physics of granular intrusion, and use the results to inform the design of our burrowing robot. These results reveal that (i) tip extension reduces total drag by an amount equal to the skin drag of the body, (ii) granular aeration via tip-based airflow reduces drag with a nonlinear dependence on depth and flow angle, and (iii) variation of the angle of the tip-based flow has a nonmonotonic effect on lift in granular media. Informed by these results, we realize a steerable, root-like soft robot that controls subterranean lift and drag forces to burrow faster than previous approaches by over an order of magnitude and does so through real sand. We also demonstrate that the robot can modulate its pullout force by an order of magnitude and control its direction of motion in both the horizontal and vertical planes to navigate around subterranean obstacles. Our results advance the understanding and capabilities of robotic subterranean locomotion. Copyright © 2021 The Authors, some rights reserved.},\n\ttype = {Article},\n\tpublication_stage = {Final},\n\tsource = {Scopus},\n\tnote = {Cited by: 153}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_5136afff-7a2e-45c0-b397-6ea33975cd3b.bib",
+        "scopus_export_Mar 20-2026_c2e4649e-a142-464c-a172-5d6d6db3a28e.bib"
+      ],
+      "source_keys": [
+        "Naclerio2021"
+      ],
+      "merged_from": [
+        "raw_000087"
+      ],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000055",
+      "entry_type": "ARTICLE",
+      "title": "A novel hydraulic track motion control method of anti-impact drilling robot based on MI-DDPG",
+      "authors": [
+        "Zhang, Cong",
+        "Wang, Zhongbin",
+        "Wang, Guofa",
+        "Gu, Jinheng",
+        "Si, Lei",
+        "Wei, Dong"
+      ],
+      "year": 2025,
+      "journal": "Asian Journal of Control",
+      "doi": "10.1002/asjc.70041",
+      "abstract": "With the complex environment and poor road conditions in underground coal mines, accurate autonomous traveling of hydraulic tracks is a prerequisite for the Anti-Impact Drilling Robot (AIDR) to achieve the goal of unmanned operation. In this paper, an AIDR path-tracking control method that integrates reinforcement learning and manual instruction is proposed to reduce the tracking deviation during traveling and enhance the robustness of the control system. Based on AIDR kinematic modeling, a heading angle reward factor, a lateral deviation reward factor, a steering radius deviation reward factor, and a line speed reward factor are added to the deep deterministic policy gradient (DDPG) reward function. The path-tracking problem is transformed into a multi-objective optimization problem. For the problem of low efficiency of DDPG, manual instruction deep deterministic policy gradient (MI-DDPG) is proposed by optimizing the empirical pool part using a manual instruction method. The results show that compared with the traditional path tracking control method, the method proposed in this paper has a maximum lateral deviation of 0.079 m during straight-line travel and a maximum steering radius deviation of 0.062 m during circular steering of the AIDR under the cinder soft pavement (a typical harsh road condition in underground coal mines). This method can effectively improve the accuracy of AIDR path tracking, especially adapting to the complex and soft road environment of underground coal mines. © 2025 Chinese Automatic Control Society and John Wiley & Sons Australia, Ltd.",
+      "keywords": [],
+      "normalized_title": "a novel hydraulic track motion control method of anti impact drilling robot based on mi ddpg",
+      "raw_bibtex": "@ARTICLE{Zhang2025,\n\tauthor = {Zhang, Cong and Wang, Zhongbin and Wang, Guofa and Gu, Jinheng and Si, Lei and Wei, Dong},\n\ttitle = {A novel hydraulic track motion control method of anti-impact drilling robot based on MI-DDPG},\n\tyear = {2025},\n\tjournal = {Asian Journal of Control},\n\tdoi = {10.1002/asjc.70041},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105024430711&doi=10.1002%2Fasjc.70041&partnerID=40&md5=4e4687a48a8ad5f3949f75f7e3266e3f},\n\tabstract = {With the complex environment and poor road conditions in underground coal mines, accurate autonomous traveling of hydraulic tracks is a prerequisite for the Anti-Impact Drilling Robot (AIDR) to achieve the goal of unmanned operation. In this paper, an AIDR path-tracking control method that integrates reinforcement learning and manual instruction is proposed to reduce the tracking deviation during traveling and enhance the robustness of the control system. Based on AIDR kinematic modeling, a heading angle reward factor, a lateral deviation reward factor, a steering radius deviation reward factor, and a line speed reward factor are added to the deep deterministic policy gradient (DDPG) reward function. The path-tracking problem is transformed into a multi-objective optimization problem. For the problem of low efficiency of DDPG, manual instruction deep deterministic policy gradient (MI-DDPG) is proposed by optimizing the empirical pool part using a manual instruction method. The results show that compared with the traditional path tracking control method, the method proposed in this paper has a maximum lateral deviation of 0.079 m during straight-line travel and a maximum steering radius deviation of 0.062 m during circular steering of the AIDR under the cinder soft pavement (a typical harsh road condition in underground coal mines). This method can effectively improve the accuracy of AIDR path tracking, especially adapting to the complex and soft road environment of underground coal mines. © 2025 Chinese Automatic Control Society and John Wiley & Sons Australia, Ltd.},\n\ttype = {Article},\n\tpublication_stage = {Article in press},\n\tsource = {Scopus},\n\tnote = {Cited by: 0; All Open Access; Bronze Open Access}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_5136afff-7a2e-45c0-b397-6ea33975cd3b.bib"
+      ],
+      "source_keys": [
+        "Zhang2025"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000056",
+      "entry_type": "ARTICLE",
+      "title": "Research on intelligent make-up & break-out methods for drill pipe threads of underground drilling robot in coal mine based on multi-source information fusion",
+      "authors": [
+        "Lu, Qianhai",
+        "Kong, Lingfei",
+        "Dong, Hongbo",
+        "Li, Longlong",
+        "Liu, Jie",
+        "Sun, Jin"
+      ],
+      "year": 2026,
+      "journal": "Measurement: Journal of the International Measurement Confederation",
+      "doi": "10.1016/j.measurement.2026.120374",
+      "abstract": "To address the critical technical challenges in the automated drill pipe thread make-up & break-out operations of the Underground Drilling Robot in Coal Mines, including multi-physics coupled interference, the inability to perform online detection of thread fastening status, and the lack of fault self-recovery mechanisms, this study innovatively proposes a dynamic thread state identification and adaptive make-up & break-out control method based on spatiotemporal fusion of multi-source heterogeneous information. By constructing a multi-dimensional sensor data fusion framework, a dynamic evolution model is established. Quantitative metrics for effective make-up & break-out lengths are proposed, overcoming the limitations of traditional threshold control:1 A displacement-feed pressure-rotational speed joint analysis algorithm is developed to detect effective make-up length, achieving precise localisation of thread contact states through discrete wavelet multi-scale decomposition.2 A displacement-rotational speed-feed velocity collaborative monitoring model is designed to calculate effective break-out length, enhancing robustness under complex working conditions by incorporating a sliding window dynamic optimization mechanism. To address the challenge of self-recovery during make-up & break-out failures, A stepwise back-off control method is established to resolve axial deviation issues during drill pipe thread make-up. A dual-mode torque regulation strategy is constructed to dynamically respond to abnormal preload conditions during drill pipe thread break-out. Industrial experiments demonstrate that the system achieves thread state recognition accuracies of 96.38% (make-up) and 97.55% (break-out) within a drilling inclination range of −90° to 90°. Large-scale underground validations confirm fault self-recovery success rates of 82.67% (make-up) and 70.69% (break-out). The “perception-decision-execution” closed-loop control methodology advances the automation level of drill pipe handling processes. © 2026 Elsevier Ltd",
+      "keywords": [],
+      "normalized_title": "research on intelligent make up break out methods for drill pipe threads of underground drilling robot in coal mine based on multi source information fusion",
+      "raw_bibtex": "@ARTICLE{Lu2026,\n\tauthor = {Lu, Qianhai and Kong, Lingfei and Dong, Hongbo and Li, Longlong and Liu, Jie and Sun, Jin},\n\ttitle = {Research on intelligent make-up & break-out methods for drill pipe threads of underground drilling robot in coal mine based on multi-source information fusion},\n\tyear = {2026},\n\tjournal = {Measurement: Journal of the International Measurement Confederation},\n\tvolume = {265},\n\tdoi = {10.1016/j.measurement.2026.120374},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105027467896&doi=10.1016%2Fj.measurement.2026.120374&partnerID=40&md5=ca239ae797b5cf6be7780ca482e1684b},\n\tabstract = {To address the critical technical challenges in the automated drill pipe thread make-up & break-out operations of the Underground Drilling Robot in Coal Mines, including multi-physics coupled interference, the inability to perform online detection of thread fastening status, and the lack of fault self-recovery mechanisms, this study innovatively proposes a dynamic thread state identification and adaptive make-up & break-out control method based on spatiotemporal fusion of multi-source heterogeneous information. By constructing a multi-dimensional sensor data fusion framework, a dynamic evolution model is established. Quantitative metrics for effective make-up & break-out lengths are proposed, overcoming the limitations of traditional threshold control:1 A displacement-feed pressure-rotational speed joint analysis algorithm is developed to detect effective make-up length, achieving precise localisation of thread contact states through discrete wavelet multi-scale decomposition.2 A displacement-rotational speed-feed velocity collaborative monitoring model is designed to calculate effective break-out length, enhancing robustness under complex working conditions by incorporating a sliding window dynamic optimization mechanism. To address the challenge of self-recovery during make-up & break-out failures, A stepwise back-off control method is established to resolve axial deviation issues during drill pipe thread make-up. A dual-mode torque regulation strategy is constructed to dynamically respond to abnormal preload conditions during drill pipe thread break-out. Industrial experiments demonstrate that the system achieves thread state recognition accuracies of 96.38% (make-up) and 97.55% (break-out) within a drilling inclination range of −90° to 90°. Large-scale underground validations confirm fault self-recovery success rates of 82.67% (make-up) and 70.69% (break-out). The “perception-decision-execution” closed-loop control methodology advances the automation level of drill pipe handling processes. © 2026 Elsevier Ltd},\n\ttype = {Article},\n\tpublication_stage = {Final},\n\tsource = {Scopus},\n\tnote = {Cited by: 0}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_5136afff-7a2e-45c0-b397-6ea33975cd3b.bib"
+      ],
+      "source_keys": [
+        "Lu2026"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000057",
+      "entry_type": "ARTICLE",
+      "title": "An earthworm-like modular soft robot for locomotion in multi-terrain environments",
+      "authors": [
+        "Das, Riddhi",
+        "Babu, Saravana Prashanth Murali",
+        "Visentin, Francesco",
+        "Palagi, Stefano",
+        "Mazzolai, Barbara"
+      ],
+      "year": 2023,
+      "journal": "Scientific Reports",
+      "doi": "10.1038/s41598-023-28873-w",
+      "abstract": "Robotic locomotion in subterranean environments is still unsolved, and it requires innovative designs and strategies to overcome the challenges of burrowing and moving in unstructured conditions with high pressure and friction at depths of a few centimeters. Inspired by antagonistic muscle contractions and constant volume coelomic chambers observed in earthworms, we designed and developed a modular soft robot based on a peristaltic soft actuator (PSA). The PSA demonstrates two active configurations from a neutral state by switching the input source between positive and negative pressure. PSA generates a longitudinal force for axial penetration and a radial force for anchorage, through bidirectional deformation of the central bellows-like structure, which demonstrates its versatility and ease of control. The performance of PSA depends on the amount and type of fluid confined in an elastomer chamber, generating different forces and displacements. The assembled robot with five PSA modules enabled to perform peristaltic locomotion in different media. The role of friction was also investigated during experimental locomotion tests by attaching passive scales like earthworm setae to the ventral side of the robot. This study proposes a new method for developing a peristaltic earthworm-like soft robot and provides a better understanding of locomotion in different environments. © 2023, The Author(s).",
+      "keywords": [],
+      "normalized_title": "an earthworm like modular soft robot for locomotion in multi terrain environments",
+      "raw_bibtex": "@ARTICLE{Das2023,\n\tauthor = {Das, Riddhi and Babu, Saravana Prashanth Murali and Visentin, Francesco and Palagi, Stefano and Mazzolai, Barbara},\n\ttitle = {An earthworm-like modular soft robot for locomotion in multi-terrain environments},\n\tyear = {2023},\n\tjournal = {Scientific Reports},\n\tvolume = {13},\n\tnumber = {1},\n\tdoi = {10.1038/s41598-023-28873-w},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85146940191&doi=10.1038%2Fs41598-023-28873-w&partnerID=40&md5=85a21947fc676c13c0338a3379361a4b},\n\tabstract = {Robotic locomotion in subterranean environments is still unsolved, and it requires innovative designs and strategies to overcome the challenges of burrowing and moving in unstructured conditions with high pressure and friction at depths of a few centimeters. Inspired by antagonistic muscle contractions and constant volume coelomic chambers observed in earthworms, we designed and developed a modular soft robot based on a peristaltic soft actuator (PSA). The PSA demonstrates two active configurations from a neutral state by switching the input source between positive and negative pressure. PSA generates a longitudinal force for axial penetration and a radial force for anchorage, through bidirectional deformation of the central bellows-like structure, which demonstrates its versatility and ease of control. The performance of PSA depends on the amount and type of fluid confined in an elastomer chamber, generating different forces and displacements. The assembled robot with five PSA modules enabled to perform peristaltic locomotion in different media. The role of friction was also investigated during experimental locomotion tests by attaching passive scales like earthworm setae to the ventral side of the robot. This study proposes a new method for developing a peristaltic earthworm-like soft robot and provides a better understanding of locomotion in different environments. © 2023, The Author(s).},\n\ttype = {Article},\n\tpublication_stage = {Final},\n\tsource = {Scopus},\n\tnote = {Cited by: 95; All Open Access; Gold Open Access; Green Open Access}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_c2e4649e-a142-464c-a172-5d6d6db3a28e.bib"
+      ],
+      "source_keys": [
+        "Das2023"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000058",
+      "entry_type": "ARTICLE",
+      "title": "Burrowing and unburrowing in submerged granular media through fluidization and shape-change",
+      "authors": [
+        "Nayak, Aniruddha",
+        "Seo, Hoseung",
+        "Gravish, Nick",
+        "Tolley, Michael T."
+      ],
+      "year": 2025,
+      "journal": "Frontiers in Robotics and AI",
+      "doi": "10.3389/frobt.2025.1546407",
+      "abstract": "Subterranean exploration in submerged granular media (GM) presents significant challenges for robotic systems due to high drag forces and the complex physics of GM. This paper introduces a robotic system that combines water-jet-based fluidization for self-burrowing in submerged environments and an untethered, volume-change mechanism for burrowing out. The water-based fluidization approach significantly reduces drag on the robot, allowing it to burrow into GM with minimal force. To burrow out, the robot uses a soft, inflatable bladder that undergoes periodic radial expansion, inspired by natural systems such as razor clams. Experimental results demonstrate that increased water flow rates accelerate the burrowing process, while the unburrowing mechanism is effective at varying depths. Comparisons between pneumatic and hydraulic untethered systems highlight trade-offs in terms of operational time and unburrowing speed. This work advances the capabilities of robots in underwater environments, with potential applications in environmental monitoring and underwater archaeology. Copyright © 2025 Nayak, Seo, Gravish and Tolley.",
+      "keywords": [],
+      "normalized_title": "burrowing and unburrowing in submerged granular media through fluidization and shape change",
+      "raw_bibtex": "@ARTICLE{Nayak2025,\n\tauthor = {Nayak, Aniruddha and Seo, Hoseung and Gravish, Nick and Tolley, Michael T.},\n\ttitle = {Burrowing and unburrowing in submerged granular media through fluidization and shape-change},\n\tyear = {2025},\n\tjournal = {Frontiers in Robotics and AI},\n\tvolume = {12},\n\tdoi = {10.3389/frobt.2025.1546407},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105013353581&doi=10.3389%2Ffrobt.2025.1546407&partnerID=40&md5=620c97022fdbd0d81ca8cca6320d46b4},\n\tabstract = {Subterranean exploration in submerged granular media (GM) presents significant challenges for robotic systems due to high drag forces and the complex physics of GM. This paper introduces a robotic system that combines water-jet-based fluidization for self-burrowing in submerged environments and an untethered, volume-change mechanism for burrowing out. The water-based fluidization approach significantly reduces drag on the robot, allowing it to burrow into GM with minimal force. To burrow out, the robot uses a soft, inflatable bladder that undergoes periodic radial expansion, inspired by natural systems such as razor clams. Experimental results demonstrate that increased water flow rates accelerate the burrowing process, while the unburrowing mechanism is effective at varying depths. Comparisons between pneumatic and hydraulic untethered systems highlight trade-offs in terms of operational time and unburrowing speed. This work advances the capabilities of robots in underwater environments, with potential applications in environmental monitoring and underwater archaeology. Copyright © 2025 Nayak, Seo, Gravish and Tolley.},\n\ttype = {Article},\n\tpublication_stage = {Final},\n\tsource = {Scopus},\n\tnote = {Cited by: 0; All Open Access; Gold Open Access; Green Open Access}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_c2e4649e-a142-464c-a172-5d6d6db3a28e.bib"
+      ],
+      "source_keys": [
+        "Nayak2025"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000059",
+      "entry_type": "ARTICLE",
+      "title": "Continuous and Controllable Preparation of Sodium Alginate Hydrogel Tubes Guided by the Soft Cap Inspired by the Apical Growth of the Plant",
+      "authors": [
+        "Wang, Guohua",
+        "Wang, Yicheng",
+        "Lu, Guoqiang",
+        "Dong, Shiyu",
+        "Tang, Ruifen",
+        "Zhao, Yingying",
+        "Nie, Jun",
+        "Zhu, Xiaoqun"
+      ],
+      "year": 2024,
+      "journal": "ACS Applied Materials and Interfaces",
+      "doi": "10.1021/acsami.4c00655",
+      "abstract": "Hydrogel tubes made of sodium alginate (SA) have potential applications in drug delivery, soft robots, biomimetic blood vessels, tissue stents, and other fields. However, the continuous preparation of hollow SA hydrogel tubes with good stability and size control remains a huge challenge for chemists, material scientists, and medical practitioners. Inspired by the plant apical growth strategy, a new method named soft cap-guided growth was proposed to produce SA hydrogel tubes. Due to the introduction of inert low gravity substances, such as air and heptane, into the extrusion needle in front of calcium chloride solution to form a soft cap, the SA hydrogel tubes with controllable sizes were fabricated rapidly and continuously without using a template through a negative gravitropism mechanism. The SA hydrogel tubes had good tensile strength, high burst pressure, and good cell compatibility. In addition, hydrogel tubes with complex patterns were conveniently created by controlling the motion path of a soft cap, such as a rotating SA bath or magnetic force. Our research provided a simple innovative technique to steer the growth of hydrogel tubes, which made it possible to mass produce hydrogel tubes with controllable sizes and programmable patterns. © 2024 American Chemical Society.",
+      "keywords": [],
+      "normalized_title": "continuous and controllable preparation of sodium alginate hydrogel tubes guided by the soft cap inspired by the apical growth of the plant",
+      "raw_bibtex": "@ARTICLE{Wang202429600,\n\tauthor = {Wang, Guohua and Wang, Yicheng and Lu, Guoqiang and Dong, Shiyu and Tang, Ruifen and Zhao, Yingying and Nie, Jun and Zhu, Xiaoqun},\n\ttitle = {Continuous and Controllable Preparation of Sodium Alginate Hydrogel Tubes Guided by the Soft Cap Inspired by the Apical Growth of the Plant},\n\tyear = {2024},\n\tjournal = {ACS Applied Materials and Interfaces},\n\tvolume = {16},\n\tnumber = {23},\n\tpages = {29600 - 29609},\n\tdoi = {10.1021/acsami.4c00655},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85195311093&doi=10.1021%2Facsami.4c00655&partnerID=40&md5=760a5580777297f6241ba8e647be7d7a},\n\tabstract = {Hydrogel tubes made of sodium alginate (SA) have potential applications in drug delivery, soft robots, biomimetic blood vessels, tissue stents, and other fields. However, the continuous preparation of hollow SA hydrogel tubes with good stability and size control remains a huge challenge for chemists, material scientists, and medical practitioners. Inspired by the plant apical growth strategy, a new method named soft cap-guided growth was proposed to produce SA hydrogel tubes. Due to the introduction of inert low gravity substances, such as air and heptane, into the extrusion needle in front of calcium chloride solution to form a soft cap, the SA hydrogel tubes with controllable sizes were fabricated rapidly and continuously without using a template through a negative gravitropism mechanism. The SA hydrogel tubes had good tensile strength, high burst pressure, and good cell compatibility. In addition, hydrogel tubes with complex patterns were conveniently created by controlling the motion path of a soft cap, such as a rotating SA bath or magnetic force. Our research provided a simple innovative technique to steer the growth of hydrogel tubes, which made it possible to mass produce hydrogel tubes with controllable sizes and programmable patterns. © 2024 American Chemical Society.},\n\ttype = {Article},\n\tpublication_stage = {Final},\n\tsource = {Scopus},\n\tnote = {Cited by: 3}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_c2e4649e-a142-464c-a172-5d6d6db3a28e.bib"
+      ],
+      "source_keys": [
+        "Wang202429600"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000060",
+      "entry_type": "ARTICLE",
+      "title": "Efficient reciprocating burrowing with anisotropic origami feet",
+      "authors": [
+        "Kim, Sareum",
+        "Treers, Laura K.",
+        "Huh, Tae Myung",
+        "Stuart, Hannah S."
+      ],
+      "year": 2023,
+      "journal": "Frontiers in Robotics and AI",
+      "doi": "10.3389/frobt.2023.1214160",
+      "abstract": "Origami folding is an ancient art which holds promise for creating compliant and adaptable mechanisms, but has yet to be extensively studied for granular environments. At the same time, biological systems exploit anisotropic body forces for locomotion, such as the frictional anisotropy of a snake’s skin. In this work, we explore how foldable origami feet can be used to passively induce anisotropic force response in granular media, through varying their resistive plane. We present a reciprocating burrower which transfers pure symmetric linear motion into directed burrowing motion using a pair of deployable origami feet on either end. We also present an application of the reduced order model granular Resistive Force Theory to inform the design of deformable structures, and compare results with those from experiments and Discrete Element Method simulations. Through a single actuator, and without the use of advanced controllers or sensors, these origami feet enable burrowing locomotion. In this paper, we achieve burrowing translation ratios—net forward motion to overall linear actuation—over 46% by changing foot design without altering overall foot size. Specifically, anisotropic folding foot parameters should be tuned for optimal performance given a linear actuator’s stroke length. Copyright © 2023 Kim, Treers, Huh and Stuart.",
+      "keywords": [],
+      "normalized_title": "efficient reciprocating burrowing with anisotropic origami feet",
+      "raw_bibtex": "@ARTICLE{Kim2023,\n\tauthor = {Kim, Sareum and Treers, Laura K. and Huh, Tae Myung and Stuart, Hannah S.},\n\ttitle = {Efficient reciprocating burrowing with anisotropic origami feet},\n\tyear = {2023},\n\tjournal = {Frontiers in Robotics and AI},\n\tvolume = {10},\n\tdoi = {10.3389/frobt.2023.1214160},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85168264308&doi=10.3389%2Ffrobt.2023.1214160&partnerID=40&md5=3e8d7609ee5189d1aee150b6535b7963},\n\tabstract = {Origami folding is an ancient art which holds promise for creating compliant and adaptable mechanisms, but has yet to be extensively studied for granular environments. At the same time, biological systems exploit anisotropic body forces for locomotion, such as the frictional anisotropy of a snake’s skin. In this work, we explore how foldable origami feet can be used to passively induce anisotropic force response in granular media, through varying their resistive plane. We present a reciprocating burrower which transfers pure symmetric linear motion into directed burrowing motion using a pair of deployable origami feet on either end. We also present an application of the reduced order model granular Resistive Force Theory to inform the design of deformable structures, and compare results with those from experiments and Discrete Element Method simulations. Through a single actuator, and without the use of advanced controllers or sensors, these origami feet enable burrowing locomotion. In this paper, we achieve burrowing translation ratios—net forward motion to overall linear actuation—over 46% by changing foot design without altering overall foot size. Specifically, anisotropic folding foot parameters should be tuned for optimal performance given a linear actuator’s stroke length. Copyright © 2023 Kim, Treers, Huh and Stuart.},\n\ttype = {Article},\n\tpublication_stage = {Final},\n\tsource = {Scopus},\n\tnote = {Cited by: 5; All Open Access; Gold Open Access; Green Open Access}\n}",
+      "source_files": [
+        "scopus_export_Mar 20-2026_c2e4649e-a142-464c-a172-5d6d6db3a28e.bib"
+      ],
+      "source_keys": [
+        "Kim2023"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题显示研究了基于阿基米德螺旋原理的自主钻进系统，摘要提到了钻进机器人的设计和模型，以及在模拟月壤中的实验验证。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "kimi",
+    "model_name": "moonshot-v1-auto",
+    "timestamp": "2026-03-20T15:01:53.774190+08:00"
+  },
+  {
+    "paper_id": "paper_000002",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要均提到了旋转穿透在干沙中的研究，与自埋机器人设计相关，符合研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "kimi",
+    "model_name": "moonshot-v1-auto",
+    "timestamp": "2026-03-20T15:01:53.774190+08:00"
+  },
+  {
+    "paper_id": "paper_000003",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要均提到了仿生螺旋驱动的自埋机器人，与地下钻进机器人推进与破土机制相关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "kimi",
+    "model_name": "moonshot-v1-auto",
+    "timestamp": "2026-03-20T15:01:53.774190+08:00"
+  }
+]

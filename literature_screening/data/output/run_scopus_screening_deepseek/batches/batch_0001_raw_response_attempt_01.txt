@@ -1,0 +1,26 @@
+{
+    "batch_id": "batch_0001",
+    "results": [
+        {
+            "paper_id": "paper_000001",
+            "decision": "include",
+            "reason": "标题和摘要明确研究火星土壤中的穿透机制，涉及振动液化等推进机制，符合地下钻进机器人研究主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000002",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦小行星拦截与防御，未涉及土壤或地下介质中的机器人推进或破土机制。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000003",
+            "decision": "uncertain",
+            "reason": "标题和摘要提到月球穿透器用于科学探测，但未明确描述机器人系统或具体的推进破土机制细节。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        }
+    ]
+}

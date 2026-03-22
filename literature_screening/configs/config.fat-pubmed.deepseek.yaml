@@ -1,0 +1,56 @@
+project:
+  name: "fat-pubmed-screening-deepseek"
+  output_dir: "../data/output/run_fat_pubmed_deepseek"
+  save_raw_response: true
+  save_intermediate_files: true
+
+input:
+  input_files:
+    - "../../fat/abstract-ObesityMes-set.txt"
+  encoding: "utf-8"
+
+dedup:
+  enabled: true
+  strict_doi_match: true
+  normalized_title_exact_match: true
+  fuzzy_title_match: false
+
+screening:
+  batch_size: 10
+  target_include_count: 30
+  stop_when_target_reached: true
+  allow_uncertain: true
+  retry_times: 8
+  request_timeout_seconds: 240
+
+criteria:
+  topic: "脂肪沉积与调控在人类肥胖及代谢综合征中的病理机制与干预策略"
+  inclusion:
+    - "必须探讨人类、实验动物或细胞模型中的病理性脂肪沉积，如肥胖、脂肪肝、异位脂质沉积。"
+    - "需要涉及特定的分子机制、信号通路、自噬、器官间通讯，或潜在的药物/天然产物干预靶点。"
+    - "属于综述或高质量实验研究。"
+  exclusion:
+    - "排除农业畜牧业中为了提高肉质或肌内脂肪的动物研究。"
+    - "排除纯外科抽脂或整容文献。"
+    - "排除无具体机制探讨的纯流行病学调查。"
+    - "排除非英文文献。"
+
+model:
+  provider: "deepseek"
+  model_name: "deepseek-chat"
+  api_base_url: "https://api.deepseek.com/v1"
+  api_key_env: "DEEPSEEK_API_KEY"
+  temperature: 0.0
+  max_tokens: 1536
+  min_request_interval_seconds: 2.0
+
+report:
+  export_included_ris: true
+  export_excluded_ris: false
+  export_unused_ris: true
+  export_included_bib: false
+  export_excluded_bib: false
+  export_unused_bib: false
+  included_report_format: "md"
+  excluded_report_format: "md"
+  summary_format: "json"

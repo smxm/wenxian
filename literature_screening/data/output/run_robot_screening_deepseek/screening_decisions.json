@@ -1,0 +1,1367 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究蜘蛛洞穴的生物学和地质学特征，没有涉及机器人技术或地下物联网应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:05:02.689493+08:00"
+  },
+  {
+    "paper_id": "paper_000002",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确描述水下颗粒介质中基于流体化和形状变化的机器人自挖掘系统，符合主动挖掘机制的研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:05:02.689493+08:00"
+  },
+  {
+    "paper_id": "paper_000003",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要明确针对月球表层探索，属于排除标准中的星际与深空探索研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:05:02.689493+08:00"
+  },
+  {
+    "paper_id": "paper_000004",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要提到生物启发挖掘机器人和颗粒介质中的侵入问题，但未明确描述机器人系统或地下物联网应用，信息不足。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:05:02.689493+08:00"
+  },
+  {
+    "paper_id": "paper_000005",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "摘要明确研究旋转穿透机制及其对自挖掘机器人设计的启示，符合主动挖掘机制的研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:05:02.689493+08:00"
+  },
+  {
+    "paper_id": "paper_000006",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确描述鼹鼠启发的机器人，使用门齿挖掘土壤并进行实验验证，符合主动挖掘机器人的纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:05:17.938360+08:00"
+  },
+  {
+    "paper_id": "paper_000007",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要比较双锚和伸缩软体机器人在沙土中的掘出性能，涉及主动挖掘机制和地下介质场景验证。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:05:17.938360+08:00"
+  },
+  {
+    "paper_id": "paper_000008",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要描述受生物启发的旋转穿透和水平自挖掘软体机器人，涉及旋转挖掘机制和沙土实验验证。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.92,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:05:17.938360+08:00"
+  },
+  {
+    "paper_id": "paper_000009",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要描述受蚯蚓启发的软体挖掘机器人，使用3D打印水压骨架在土壤中推进，符合主动挖掘机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:05:17.938360+08:00"
+  },
+  {
+    "paper_id": "paper_000010",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "标题和摘要主要研究围压对旋转诱导穿透阻力减少的影响，使用DEM模拟，但未明确描述机器人本体或地下作业验证。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:05:17.938360+08:00"
+  },
+  {
+    "paper_id": "paper_000011",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要明确表明该研究针对行星土壤探索，属于星际与深空探索研究，命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:05:33.310301+08:00"
+  },
+  {
+    "paper_id": "paper_000012",
+    "batch_id": "batch_0003",
+    "decision": "uncertain",
+    "reason": "标题和摘要涉及软煤层钻孔技术，虽提及仿生机制，但未明确说明是否为机器人技术，且可能属于传统工程装备范畴。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:05:33.310301+08:00"
+  },
+  {
+    "paper_id": "paper_000013",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要明确研究双螺旋钻掘机器人在颗粒介质中的动力学，涉及主动钻探机制和地下介质场景验证。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:05:33.310301+08:00"
+  },
+  {
+    "paper_id": "paper_000014",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要仅研究高原鼠兔的掘洞活动对生态系统的影响，属于纯生物学研究，没有机器人应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:05:33.310301+08:00"
+  },
+  {
+    "paper_id": "paper_000015",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要明确针对月球地下探索，属于星际与深空探索研究，命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:05:33.310301+08:00"
+  },
+  {
+    "paper_id": "paper_000016",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "标题和摘要明确研究鼹鼠仿生机器人前爪设计以提升在颗粒介质中的挖掘效率，并进行了机器人挖掘实验验证。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:05:50.458074+08:00"
+  },
+  {
+    "paper_id": "paper_000017",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "标题和摘要明确描述一种仿生螺旋驱动自挖掘机器人，并在玻璃珠（沙模拟物）中测试了其挖掘行为。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:05:50.458074+08:00"
+  },
+  {
+    "paper_id": "paper_000018",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "标题和摘要明确研究一种快速、可转向的挖掘软机器人，通过控制地下力在真实沙子中实现挖掘，并展示了地下导航能力。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.92,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:05:50.458074+08:00"
+  },
+  {
+    "paper_id": "paper_000019",
+    "batch_id": "batch_0004",
+    "decision": "uncertain",
+    "reason": "标题和摘要研究仿生自挖掘探针在浅层颗粒材料中的行为，但主要基于离散元法数值模拟，未明确提及物理原型或机器人验证。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:05:50.458074+08:00"
+  },
+  {
+    "paper_id": "paper_000020",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要表明这是一篇综述论文，回顾仿生地工技术的挖掘策略等，未涉及具体的机器人技术研究或验证。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:05:50.458074+08:00"
+  },
+  {
+    "paper_id": "paper_000021",
+    "batch_id": "batch_0005",
+    "decision": "include",
+    "reason": "标题和摘要明确描述受鼹鼠蟹启发的垂直自挖掘机器人，涉及挖掘机制和颗粒介质场景验证。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:06:05.708390+08:00"
+  },
+  {
+    "paper_id": "paper_000022",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要仅讨论植物修复污染土壤，属于纯农业研究，没有机器人技术应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:06:05.708390+08:00"
+  },
+  {
+    "paper_id": "paper_000023",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦植物间作与菌根真菌对镉污染土壤的修复，属于纯农业研究，没有机器人技术。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:06:05.708390+08:00"
+  },
+  {
+    "paper_id": "paper_000024",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要研究干旱对仙人掌根际真菌微生物组的影响，属于纯生物学研究，没有机器人应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:06:05.708390+08:00"
+  },
+  {
+    "paper_id": "paper_000025",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论铜耐受内生菌对植物生长和铜修复的促进作用，属于纯生物学和农业研究，没有机器人技术。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:06:05.708390+08:00"
+  },
+  {
+    "paper_id": "paper_000026",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要仅涉及农业微生物研究，未提及任何机器人技术或地下物联网应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:06:22.580583+08:00"
+  },
+  {
+    "paper_id": "paper_000027",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要仅讨论水稻对农药的降解机制，属于纯农业研究，未涉及机器人技术。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:06:22.580583+08:00"
+  },
+  {
+    "paper_id": "paper_000028",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要仅涉及重金属污染土壤的微生物修复，属于纯生物学/农业研究，未提及机器人。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:06:22.580583+08:00"
+  },
+  {
+    "paper_id": "paper_000029",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要仅研究农业土壤不同深度的微生物群落结构，属于纯环境微生物研究，未涉及机器人技术。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:06:22.580583+08:00"
+  },
+  {
+    "paper_id": "paper_000030",
+    "batch_id": "batch_0006",
+    "decision": "include",
+    "reason": "标题明确描述“自主自埋种子载体”，摘要详细说明其仿生钻探机制、材料特性和应用场景，符合地层机器人机制分类。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:06:22.580583+08:00"
+  },
+  {
+    "paper_id": "paper_000031",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究内容为植物修复砷污染土壤，属于纯农业研究，没有机器人应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:06:39.181787+08:00"
+  },
+  {
+    "paper_id": "paper_000032",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "摘要提到智能除草机器人，但研究重点是作物标记和荧光成像识别，没有涉及地下钻探或挖掘机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:06:39.181787+08:00"
+  },
+  {
+    "paper_id": "paper_000033",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究内容为土壤污染物迁移的植物修复机制，属于环境科学领域，没有机器人技术。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:06:39.181787+08:00"
+  },
+  {
+    "paper_id": "paper_000034",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究内容为植物修复污染土壤，属于纯农业环境研究，没有机器人应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:06:39.181787+08:00"
+  },
+  {
+    "paper_id": "paper_000035",
+    "batch_id": "batch_0007",
+    "decision": "uncertain",
+    "reason": "标题提到机器人系统用于植物根表型分析，摘要描述为在土壤中工作的机器人，但未明确说明是否具有主动钻探或挖掘机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:06:39.181787+08:00"
+  },
+  {
+    "paper_id": "paper_000036",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究纳米材料对棉花耐盐性的影响，属于纯农业研究，没有机器人应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:06:54.031859+08:00"
+  },
+  {
+    "paper_id": "paper_000037",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论纳米零价铁与植物协同修复污染土壤，属于环境修复研究，没有涉及机器人技术。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:06:54.031859+08:00"
+  },
+  {
+    "paper_id": "paper_000038",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要研究新烟碱类农药在土壤-水系统中的迁移监测，属于环境污染物迁移研究，与机器人技术无关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:06:54.031859+08:00"
+  },
+  {
+    "paper_id": "paper_000039",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要分析入侵植物对温室气体排放的影响，属于生态学研究，没有机器人或地下物联网相关内容。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:06:54.031859+08:00"
+  },
+  {
+    "paper_id": "paper_000040",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要研究芘降解细菌在植物根系的定殖与性能，属于微生物修复研究，没有机器人技术或地下作业验证。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:06:54.031859+08:00"
+  },
+  {
+    "paper_id": "paper_000041",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于农业除草机器人对表层土壤物理属性的影响，未提及向地下主动钻探、挖掘或穿透的机器人机制，且属于农业应用研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:07:10.406030+08:00"
+  },
+  {
+    "paper_id": "paper_000042",
+    "batch_id": "batch_0009",
+    "decision": "include",
+    "reason": "标题和摘要明确研究植物根系启发的土壤勘探机器人设计，涉及土壤穿透机制和自主穿透系统，符合地层机器人机制分类主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:07:10.406030+08:00"
+  },
+  {
+    "paper_id": "paper_000043",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "标题和摘要仅讨论堆肥茶的生物活性和抗菌特性，未涉及任何机器人技术或地下勘探内容，属于纯农业/生物化学研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:07:10.406030+08:00"
+  },
+  {
+    "paper_id": "paper_000044",
+    "batch_id": "batch_0009",
+    "decision": "include",
+    "reason": "标题和摘要研究植物根系启发的土壤侵入器性能，涉及径向和轴向生长穿透策略，直接支持地下自主勘探机器人设计。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:07:10.406030+08:00"
+  },
+  {
+    "paper_id": "paper_000045",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "标题和摘要仅研究土壤镉对饲料作物根系有机酸分泌的影响，属于纯植物生理学研究，未涉及机器人技术或地下勘探。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.92,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:07:10.406030+08:00"
+  },
+  {
+    "paper_id": "paper_000046",
+    "batch_id": "batch_0010",
+    "decision": "include",
+    "reason": "标题和摘要明确描述了一种能够在地下环境中挖掘和探索的尖端生长软机器人，符合地层机器人机制的研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:07:26.268209+08:00"
+  },
+  {
+    "paper_id": "paper_000047",
+    "batch_id": "batch_0010",
+    "decision": "uncertain",
+    "reason": "标题和摘要讨论软机器人的自旋转和翻转机制，但未明确涉及地下钻探、挖掘或穿透能力，信息不足以判断是否符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:07:26.268209+08:00"
+  },
+  {
+    "paper_id": "paper_000048",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于农业土壤水分和热流的数值模拟，属于纯农业研究，没有机器人应用或地下物联网集成。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:07:26.268209+08:00"
+  },
+  {
+    "paper_id": "paper_000049",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "标题和摘要研究纳米材料在植物组织中的命运，属于纯生物学和农业研究，没有机器人技术或地下物联网应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:07:26.268209+08:00"
+  },
+  {
+    "paper_id": "paper_000050",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论洋葱废物堆肥对土壤病原真菌的生物控制，属于纯农业和环境研究，没有机器人技术或地下物联网应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:07:26.268209+08:00"
+  },
+  {
+    "paper_id": "paper_000051",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究植物根系表型平台，属于纯生物学研究，没有机器人应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:07:42.032613+08:00"
+  },
+  {
+    "paper_id": "paper_000052",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "标题和摘要研究微塑料对番茄生长的影响，属于纯农业环境研究，没有机器人技术。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:07:42.032613+08:00"
+  },
+  {
+    "paper_id": "paper_000053",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "标题和摘要研究玉米大豆根际微生物组，属于纯农业微生物学研究，没有机器人技术。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:07:42.032613+08:00"
+  },
+  {
+    "paper_id": "paper_000054",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "标题和摘要研究骨源生物炭修复污染土壤，属于环境修复研究，没有机器人技术。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:07:42.032613+08:00"
+  },
+  {
+    "paper_id": "paper_000055",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "标题和摘要研究纳米氧化铈对大豆的影响，属于纳米材料环境效应研究，没有机器人技术。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:07:42.032613+08:00"
+  },
+  {
+    "paper_id": "paper_000056",
+    "batch_id": "batch_0012",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦全球农业生产力损失评估，未涉及机器人技术或地下物联网应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:07:56.878587+08:00"
+  },
+  {
+    "paper_id": "paper_000057",
+    "batch_id": "batch_0012",
+    "decision": "exclude",
+    "reason": "摘要专注于水稻秧苗根毯的离散元柔性建模与实验验证，属于农业机械仿真研究，未涉及地层机器人或地下作业。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:07:56.878587+08:00"
+  },
+  {
+    "paper_id": "paper_000058",
+    "batch_id": "batch_0012",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论生物炭对镉修复和土壤微生物的影响，属于环境修复研究，未涉及机器人技术或地下物联网。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:07:56.878587+08:00"
+  },
+  {
+    "paper_id": "paper_000059",
+    "batch_id": "batch_0012",
+    "decision": "uncertain",
+    "reason": "标题提到土壤疏松装置设计，摘要描述使用冲击波改善土壤通气性，可能涉及地下作业机制，但未明确提及机器人或物联网集成。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:07:56.878587+08:00"
+  },
+  {
+    "paper_id": "paper_000060",
+    "batch_id": "batch_0012",
+    "decision": "exclude",
+    "reason": "标题和摘要研究有机农业对根系碳分配的影响，属于农业土壤碳管理研究，未涉及机器人技术或地下物联网。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:07:56.878587+08:00"
+  },
+  {
+    "paper_id": "paper_000061",
+    "batch_id": "batch_0013",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究农业土壤改良对小麦吸收放射性核素的影响，属于纯农业研究，没有机器人技术应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:08:11.511418+08:00"
+  },
+  {
+    "paper_id": "paper_000062",
+    "batch_id": "batch_0013",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论微生物促进小麦生长的磷溶解机制，属于纯生物学/农业研究，没有涉及机器人技术。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:08:11.511418+08:00"
+  },
+  {
+    "paper_id": "paper_000063",
+    "batch_id": "batch_0013",
+    "decision": "exclude",
+    "reason": "标题和摘要研究污染物对小麦根际微生物群落的影响，属于纯农业/环境科学研究，没有机器人技术内容。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:08:11.511418+08:00"
+  },
+  {
+    "paper_id": "paper_000064",
+    "batch_id": "batch_0013",
+    "decision": "include",
+    "reason": "标题明确提及仿生植物根机器人传感器系统，摘要描述集成传感器的机器人根在土壤环境中监测和自主探索，符合地层机器人机制与应用主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:08:11.511418+08:00"
+  },
+  {
+    "paper_id": "paper_000065",
+    "batch_id": "batch_0013",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论生物炭与轮作系统对污染土壤的安全利用，属于农业土壤修复研究，没有机器人技术内容。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:08:11.511418+08:00"
+  },
+  {
+    "paper_id": "paper_000066",
+    "batch_id": "batch_0014",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦农业氮利用效率的经济环境效益，未涉及地下机器人或物联网技术。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:08:26.568684+08:00"
+  },
+  {
+    "paper_id": "paper_000067",
+    "batch_id": "batch_0014",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论有机改良剂分解与土壤微生物，属于纯农业研究，无机器人应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:08:26.568684+08:00"
+  },
+  {
+    "paper_id": "paper_000068",
+    "batch_id": "batch_0014",
+    "decision": "exclude",
+    "reason": "研究纳米零价铁用于污染土壤修复与作物安全生产，未涉及机器人钻探或地下物联网。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:08:26.568684+08:00"
+  },
+  {
+    "paper_id": "paper_000069",
+    "batch_id": "batch_0014",
+    "decision": "exclude",
+    "reason": "标题和摘要研究植物根尖环状运动的分子机制与功能，属于纯生物学研究，无机器人应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:08:26.568684+08:00"
+  },
+  {
+    "paper_id": "paper_000070",
+    "batch_id": "batch_0014",
+    "decision": "exclude",
+    "reason": "标题和摘要描述农业机器人施肥的气动装置，仅涉及地表精准农业，未涉及地下钻探或物联网集成。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:08:26.568684+08:00"
+  },
+  {
+    "paper_id": "paper_000071",
+    "batch_id": "batch_0015",
+    "decision": "exclude",
+    "reason": "标题和摘要仅讨论耕作方式与土壤有机质的关系，未涉及机器人技术或地下物联网应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:08:41.327767+08:00"
+  },
+  {
+    "paper_id": "paper_000072",
+    "batch_id": "batch_0015",
+    "decision": "exclude",
+    "reason": "研究聚焦于土壤pH值对N2O排放的影响，属于农业环境研究，未涉及机器人技术或地下作业。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.93,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:08:41.327767+08:00"
+  },
+  {
+    "paper_id": "paper_000073",
+    "batch_id": "batch_0015",
+    "decision": "exclude",
+    "reason": "文献研究农业灌溉中的硝酸盐淋溶问题，属于纯农业环境科学，未涉及机器人或地下物联网技术。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.94,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:08:41.327767+08:00"
+  },
+  {
+    "paper_id": "paper_000074",
+    "batch_id": "batch_0015",
+    "decision": "exclude",
+    "reason": "研究植物修复镉污染土壤，属于环境修复的农业应用，未涉及机器人钻探、挖掘或地下物联网集成。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.92,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:08:41.327767+08:00"
+  },
+  {
+    "paper_id": "paper_000075",
+    "batch_id": "batch_0015",
+    "decision": "exclude",
+    "reason": "研究硅和硒对水稻镉毒性的缓解作用，属于植物生理与农业化学，未涉及机器人技术或地下作业场景。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.94,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:08:41.327767+08:00"
+  },
+  {
+    "paper_id": "paper_000076",
+    "batch_id": "batch_0016",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究农业土壤改良，未涉及机器人技术或地下物联网。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:08:55.961727+08:00"
+  },
+  {
+    "paper_id": "paper_000077",
+    "batch_id": "batch_0016",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究农业土壤污染监测，未涉及机器人技术或地下物联网。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:08:55.961727+08:00"
+  },
+  {
+    "paper_id": "paper_000078",
+    "batch_id": "batch_0016",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究土壤氟污染对植物影响，未涉及机器人技术或地下物联网。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:08:55.961727+08:00"
+  },
+  {
+    "paper_id": "paper_000079",
+    "batch_id": "batch_0016",
+    "decision": "include",
+    "reason": "标题和摘要明确描述仿生机器人探针，具备地下钻探能力，符合地层机器人机制分类。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:08:55.961727+08:00"
+  },
+  {
+    "paper_id": "paper_000080",
+    "batch_id": "batch_0016",
+    "decision": "include",
+    "reason": "标题和摘要明确描述软体生长机器人，具备地下挖掘和导航能力，符合地层机器人机制分类。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:08:55.961727+08:00"
+  },
+  {
+    "paper_id": "paper_000081",
+    "batch_id": "batch_0017",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究农业土壤的细胞毒性和遗传毒性评估，属于纯农业研究，没有机器人应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:09:11.093418+08:00"
+  },
+  {
+    "paper_id": "paper_000082",
+    "batch_id": "batch_0017",
+    "decision": "exclude",
+    "reason": "标题和摘要研究纳米颗粒对小麦幼苗抗旱性的影响，属于纯农业研究，没有机器人技术。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:09:11.093418+08:00"
+  },
+  {
+    "paper_id": "paper_000083",
+    "batch_id": "batch_0017",
+    "decision": "include",
+    "reason": "标题明确为仿生机器人，摘要描述受植物根系生长启发的软体机器人，涉及向地下或土壤中生长的机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:09:11.093418+08:00"
+  },
+  {
+    "paper_id": "paper_000084",
+    "batch_id": "batch_0017",
+    "decision": "exclude",
+    "reason": "标题和摘要研究铜污染土壤中氮肥优化对植物生长的影响，属于纯农业研究，没有机器人应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:09:11.093418+08:00"
+  },
+  {
+    "paper_id": "paper_000085",
+    "batch_id": "batch_0017",
+    "decision": "uncertain",
+    "reason": "摘要提到颗粒介质中的侵入力建模，应用于蟹类挖掘和植物根系生长等场景，但未明确说明是否针对机器人技术或地下物联网集成。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:09:11.093418+08:00"
+  },
+  {
+    "paper_id": "paper_000086",
+    "batch_id": "batch_0018",
+    "decision": "exclude",
+    "reason": "标题和摘要均聚焦植物真菌微生物组与农业研究，未涉及任何机器人技术或地下物联网应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:09:26.765442+08:00"
+  },
+  {
+    "paper_id": "paper_000087",
+    "batch_id": "batch_0018",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论废水灌溉对植物的重金属风险，属于纯农业与环境健康研究，无机器人或地下技术内容。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:09:26.765442+08:00"
+  },
+  {
+    "paper_id": "paper_000088",
+    "batch_id": "batch_0018",
+    "decision": "exclude",
+    "reason": "标题和摘要描述植物微生物培养组学方法，属于农业微生物学研究，未提及机器人、钻探或地下物联网。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:09:26.765442+08:00"
+  },
+  {
+    "paper_id": "paper_000089",
+    "batch_id": "batch_0018",
+    "decision": "exclude",
+    "reason": "标题和摘要研究蔬菜对抗生素的吸收，属于农业与环境污染领域，与机器人技术或地下作业无关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:09:26.765442+08:00"
+  },
+  {
+    "paper_id": "paper_000090",
+    "batch_id": "batch_0018",
+    "decision": "include",
+    "reason": "标题明确为“仿蛏子掘进机器人”，摘要详细描述其利用局部流化机制在土壤中掘进的设计与实验，符合地层机器人机制主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:09:26.765442+08:00"
+  },
+  {
+    "paper_id": "paper_000091",
+    "batch_id": "batch_0019",
+    "decision": "include",
+    "reason": "标题和摘要明确研究蛤蜊启发的钻探机制，并展望开发自挖掘机器人用于岩土工程应用，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-21T12:09:34.264135+08:00"
+  }
+]

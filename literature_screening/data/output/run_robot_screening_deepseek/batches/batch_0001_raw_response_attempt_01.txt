@@ -1,0 +1,40 @@
+{
+    "batch_id": "batch_0001",
+    "results": [
+        {
+            "paper_id": "paper_000001",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究蜘蛛洞穴的生物学和地质学特征，没有涉及机器人技术或地下物联网应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000002",
+            "decision": "include",
+            "reason": "标题和摘要明确描述水下颗粒介质中基于流体化和形状变化的机器人自挖掘系统，符合主动挖掘机制的研究主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000003",
+            "decision": "exclude",
+            "reason": "标题和摘要明确针对月球表层探索，属于排除标准中的星际与深空探索研究。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000004",
+            "decision": "uncertain",
+            "reason": "摘要提到生物启发挖掘机器人和颗粒介质中的侵入问题，但未明确描述机器人系统或地下物联网应用，信息不足。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000005",
+            "decision": "include",
+            "reason": "摘要明确研究旋转穿透机制及其对自挖掘机器人设计的启示，符合主动挖掘机制的研究主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        }
+    ]
+}

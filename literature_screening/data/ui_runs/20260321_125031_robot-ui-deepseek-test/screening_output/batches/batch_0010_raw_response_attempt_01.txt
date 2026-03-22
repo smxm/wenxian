@@ -1,0 +1,40 @@
+{
+    "batch_id": "batch_0010",
+    "results": [
+        {
+            "paper_id": "paper_000046",
+            "decision": "include",
+            "reason": "标题和摘要明确描述了一种受生物启发的尖端生长软机器人，能够执行挖掘和探索任务，符合主动向地下钻探的机器人技术主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000047",
+            "decision": "uncertain",
+            "reason": "标题和摘要描述了各向异性摩擦表面的自旋转-外翻软体环，但未明确提及地下、土壤或颗粒介质中的钻探、挖掘或穿透应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.45
+        },
+        {
+            "paper_id": "paper_000048",
+            "decision": "exclude",
+            "reason": "标题和摘要明确为农业土壤水热流动的数值模拟研究，属于纯农业研究，无机器人应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000049",
+            "decision": "exclude",
+            "reason": "标题和摘要明确为植物组织中纳米材料效应的生物学研究，属于纯生物学研究，无机器人应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000050",
+            "decision": "exclude",
+            "reason": "标题和摘要明确为洋葱废弃物堆肥控制土传病原真菌的农业研究，属于纯农业研究，无机器人应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        }
+    ]
+}

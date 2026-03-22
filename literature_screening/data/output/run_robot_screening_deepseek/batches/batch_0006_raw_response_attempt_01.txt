@@ -1,0 +1,40 @@
+{
+    "batch_id": "batch_0006",
+    "results": [
+        {
+            "paper_id": "paper_000026",
+            "decision": "exclude",
+            "reason": "标题和摘要仅涉及农业微生物研究，未提及任何机器人技术或地下物联网应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000027",
+            "decision": "exclude",
+            "reason": "标题和摘要仅讨论水稻对农药的降解机制，属于纯农业研究，未涉及机器人技术。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000028",
+            "decision": "exclude",
+            "reason": "标题和摘要仅涉及重金属污染土壤的微生物修复，属于纯生物学/农业研究，未提及机器人。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000029",
+            "decision": "exclude",
+            "reason": "标题和摘要仅研究农业土壤不同深度的微生物群落结构，属于纯环境微生物研究，未涉及机器人技术。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000030",
+            "decision": "include",
+            "reason": "标题明确描述“自主自埋种子载体”，摘要详细说明其仿生钻探机制、材料特性和应用场景，符合地层机器人机制分类。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        }
+    ]
+}

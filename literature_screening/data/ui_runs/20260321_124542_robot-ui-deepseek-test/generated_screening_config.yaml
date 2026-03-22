@@ -1,0 +1,61 @@
+project:
+  name: robot-ui-deepseek-test
+  output_dir: E:\wenxian\literature_screening\data\ui_runs\20260321_124542_robot-ui-deepseek-test\screening_output
+  save_raw_response: true
+  save_intermediate_files: true
+input:
+  input_files:
+  - E:\wenxian\literature_screening\data\ui_runs\20260321_124542_robot-ui-deepseek-test\inputs\scopus_export_Mar
+    21-2026_2b9e7c39-4592-47e6-b330-11a09faae898.bib
+  - E:\wenxian\literature_screening\data\ui_runs\20260321_124542_robot-ui-deepseek-test\inputs\scopus_export_Mar
+    21-2026_47ca475a-7b86-4fe2-8aad-84682db01e6e.bib
+  - E:\wenxian\literature_screening\data\ui_runs\20260321_124542_robot-ui-deepseek-test\inputs\scopus_export_Mar
+    21-2026_874238cc-6e95-42c9-bba8-d70f85903297.bib
+  - E:\wenxian\literature_screening\data\ui_runs\20260321_124542_robot-ui-deepseek-test\inputs\scopus_export_Mar
+    21-2026_9fd21cac-4153-430a-8ac4-f1d1e3c86319.bib
+  encoding: utf-8
+dedup:
+  enabled: true
+  strict_doi_match: true
+  normalized_title_exact_match: true
+  fuzzy_title_match: false
+screening:
+  batch_size: 5
+  target_include_count: 9999
+  stop_when_target_reached: false
+  allow_uncertain: true
+  retry_times: 8
+  request_timeout_seconds: 240
+criteria:
+  topic: 面向地下基础设施物联网的自挖掘/地层机器人（Self-burrowing/Earth-penetrating Robots）机制分类与应用
+  inclusion:
+  - 必须涉及能够主动向地下、土壤或颗粒介质中钻探、挖掘、穿透的机器人技术（如蠕动、旋转、挖掘、生长、流化机制）
+  - 或重点探讨此类地层机器人在地下环境中的定位、通信协同及物联网（IoUT）集成
+  - 必须涉及能够主动向地下、土壤或颗粒介质中钻探、挖掘、穿透的机器人技术（如蠕动、旋转、挖掘、生长、流化机制）
+  - 或重点探讨此类地层机器人在地下环境中的定位、通信协同及物联网（IoUT）集成
+  exclusion:
+  - 星际与太空探索研究（如针对月壤、火星土壤等外星壤的深空挖掘机器人）
+  - 纯生物学或农业研究（仅研究动植物发育，无机器人应用）
+  - 传统大型土木工程盾构/挖掘设备（无小型化、智能化特征）
+  - 仅在既有空管道内行驶且无破土/钻探能力的常规巡检机器人
+  - 纯算法理论且无地下介质场景验证的文献
+  - 星际与太空探索研究（如针对月壤、火星土壤等外星壤的深空挖掘机器人）
+  - 纯生物学或农业研究（仅研究动植物发育，无机器人应用）
+  - 传统大型土木工程盾构/挖掘设备（无小型化、智能化特征）
+  - 仅在既有空管道内行驶且无破土/钻探能力的常规巡检机器人
+  - 纯算法理论且无地下介质场景验证的文献
+model:
+  provider: deepseek
+  model_name: deepseek-chat
+  api_base_url: https://api.deepseek.com/v1
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.0
+  max_tokens: 1536
+  min_request_interval_seconds: 2.0
+report:
+  export_included_bib: true
+  export_excluded_bib: true
+  export_unused_bib: true
+  included_report_format: md
+  excluded_report_format: md
+  summary_format: json

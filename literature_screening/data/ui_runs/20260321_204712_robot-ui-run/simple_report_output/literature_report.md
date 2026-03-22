@@ -1,0 +1,304 @@
+# 你是一位农业与畜牧科学领域的资深学术研究员，正在协助我筛选参考文献。我正在撰写一篇关于“经济动物（牛、猪、羊等）脂肪沉积（特别是肌内脂肪）的分子调控网络与肉质改良策略”的综述论文，我需要你帮我找出我能用到的参考文献。相关文献整理报告
+
+## 一、相关文献总体情况
+
+本次纳入文献共 30 篇，整体上主要分布在冲击与贯入机制、机器人控制与作业辅助、介质响应与相互作用、建模与机理分析等类型。这些研究大多围绕地下介质中的推进、钻探、挖掘、穿透及相关系统设计展开，同时也涉及机器人在复杂地下环境中的控制、协同与应用延展。其中以“冲击与贯入机制”相关文献数量最多，说明这一方向在当前主题下受到较多关注。
+
+## 二、类型划分
+
+### 冲击与贯入机制
+
+该类文献共 13 篇，主要围绕“冲击与贯入机制”这一方向展开。就“你是一位农业与畜牧科学领域的资深学术研究员，正在协助我筛选参考文献。我正在撰写一篇关于“经济动物（牛、猪、羊等）脂肪沉积（特别是肌内脂肪）的分子调控网络与肉质改良策略”的综述论文，我需要你帮我找出我能用到的参考文献。”而言，这一类型的研究可用于梳理相应机制路线的代表性方案与应用思路。
+
+- Identification of Meat Quality Determining Marker Genes in Fibroblasts of Bovine Muscle Using Transcriptomic Profiling
+- Unveiling the Regulatory Mechanism of Tibetan Pigs Adipogenesis Mediated by WNT16: From Differential Phenotypes to the Application of Multi-Omics Approaches
+- ceRNA Profiling Reveals circSAMD4A Promoted Porcine Adipocytes Differentiation via Targeting miR-127/PRKAR2B
+- Muscle tissue transcriptome of F1 Angus-Nellore bulls and steers feedlot finished: impacts on intramuscular fat deposition
+- Impact of dietary Lactobacillus supplementation on intramuscular fat deposition and meat quality of Sunit sheep
+- RNA-Seq Analysis Reveals the Potential Molecular Mechanisms of Puerarin on Intramuscular Fat Deposition in Heat-Stressed Beef Cattle
+- Bta-miR-493 Inhibits Bovine Preadipocytes Differentiation by Targeting BMPR1A via the TGFβ/BMP and p38MAPK Signaling Pathways
+- Identification of Candidate Genes and Regulatory Competitive Endogenous RNA (ceRNA) Networks Underlying Intramuscular Fat Content in Yorkshire Pigs with Extreme Fat Deposition Phenotypes
+- Preliminary studies on the molecular mechanism of intramuscular fat deposition in the longest dorsal muscle of sheep
+- Transcriptome analysis unveils multiple reasons behind delayed and slower deposition of intramuscular fat compared to subcutaneous fat in cattle
+- Early-life vitamin A supplementation modulates the skeletal muscle transcriptome and intramuscular fat deposition in feedlot-finished beef steers
+- Vitamin A mediates FABP4 to regulate intramuscular fat production: a new target and strategy for optimizing beef quality
+- Phosphoenolpyruvate carboxykinase 2 (PCK2) attenuates bovine adipocyte lipolysis through PNPLA2 activity repression
+
+### 机器人控制与作业辅助
+
+该类文献共 9 篇，主要围绕“机器人控制与作业辅助”这一方向展开。就“你是一位农业与畜牧科学领域的资深学术研究员，正在协助我筛选参考文献。我正在撰写一篇关于“经济动物（牛、猪、羊等）脂肪沉积（特别是肌内脂肪）的分子调控网络与肉质改良策略”的综述论文，我需要你帮我找出我能用到的参考文献。”而言，这一类型的研究可用于梳理相应机制路线的代表性方案与应用思路。
+
+- Multi-omics analysis reveals gut microbiota-induced intramuscular fat deposition via regulating expression of lipogenesis-associated genes
+- CRTC3 Regulates the Lipid Metabolism and Adipogenic Differentiation of Porcine Intramuscular and Subcutaneous Adipocytes by Activating the Calcium Pathway
+- Puerarin improved growth performance and postmortem meat quality by regulating lipid metabolism of cattle under hot environment
+- Screening of lncRNA profiles during intramuscular adipogenic differentiation in longissimus dorsi and semitendinosus muscles in pigs
+- Candidate genes validation for intramuscular fat content of Nellore Cattle
+- Neonatal vitamin A administration increases intramuscular fat by promoting angiogenesis and preadipocyte formation
+- Transcriptome and HS-SPME-GC-MS analysis of key genes and flavor components associated with beef marbling
+- Effect of miR-149-5p on intramuscular fat deposition in pigs based on metabolomics and transcriptomics
+- Circular RNA Profiling Identifies Novel circPPARA that Promotes Intramuscular Fat Deposition in Pigs
+
+### 介质响应与相互作用
+
+该类文献共 3 篇，主要围绕“介质响应与相互作用”这一方向展开。就“你是一位农业与畜牧科学领域的资深学术研究员，正在协助我筛选参考文献。我正在撰写一篇关于“经济动物（牛、猪、羊等）脂肪沉积（特别是肌内脂肪）的分子调控网络与肉质改良策略”的综述论文，我需要你帮我找出我能用到的参考文献。”而言，这一类型的研究可用于梳理相应机制路线的代表性方案与应用思路。
+
+- Low lysine stimulates adipogenesis through ZFP423 upregulation in bovine stromal vascular cells
+- Integrated analysis of lactylation modification and proteomics revealed potential epigenetic regulation in intramuscular fat deposition of Xidu black pigs
+- Identification of porcine fast/slow myogenic exosomes and their regulatory effects on lipid accumulation in intramuscular adipocytes
+
+### 建模与机理分析
+
+该类文献共 3 篇，主要围绕“建模与机理分析”这一方向展开。就“你是一位农业与畜牧科学领域的资深学术研究员，正在协助我筛选参考文献。我正在撰写一篇关于“经济动物（牛、猪、羊等）脂肪沉积（特别是肌内脂肪）的分子调控网络与肉质改良策略”的综述论文，我需要你帮我找出我能用到的参考文献。”而言，这一类型的研究可用于梳理相应机制路线的代表性方案与应用思路。
+
+- Identification and analysis of lncRNA, miRNA and mRNA related to subcutaneous and intramuscular fat in Laiwu pigs
+- Transcriptome, proteome and metabolome analysis provide insights on fat deposition and meat quality in pig
+- A Single-Cell Atlas of Porcine Skeletal Muscle Reveals Mechanisms That Regulate Intramuscular Adipogenesis
+
+### 相关机制研究
+
+该类文献共 2 篇，主要围绕“相关机制研究”这一方向展开。就“你是一位农业与畜牧科学领域的资深学术研究员，正在协助我筛选参考文献。我正在撰写一篇关于“经济动物（牛、猪、羊等）脂肪沉积（特别是肌内脂肪）的分子调控网络与肉质改良策略”的综述论文，我需要你帮我找出我能用到的参考文献。”而言，这一类型的研究可用于梳理相应机制路线的代表性方案与应用思路。
+
+- Identification of several lncRNA-mRNA pairs associated with marbling trait between Nanyang and Angus cattle
+- GSK3 regulation Wnt/β-catenin signaling affects adipogenesis in bovine skeletal muscle fibro/adipogenic progenitors
+
+**三、逐篇文献总结分析**
+
+## Identification of Meat Quality Determining Marker Genes in Fibroblasts of Bovine Muscle Using Transcriptomic Profiling
+
+总结：
+本研究通过转录组分析比较了牛股二头肌和背最长肌成纤维细胞，识别出253个差异表达基因，其中超过100个与肌内脂肪沉积、嫩度和韧性相关。研究揭示了这些基因参与胶原合成、细胞分化等生物过程，并通过网络分析表明肌内脂肪沉积与肉嫩度密切相关。
+
+分析：
+该文献通过转录组学方法系统识别了影响牛肉品质的关键基因，特别是肌内脂肪沉积相关基因网络。这为理解脂肪沉积的分子调控机制提供了具体基因靶点，适合支撑肉质改良的分子育种或营养调控策略设计。
+
+## Multi-omics analysis reveals gut microbiota-induced intramuscular fat deposition via regulating expression of lipogenesis-associated genes
+
+总结：
+该文献通过多组学分析，研究了肠道微生物对猪肌内脂肪沉积的影响。研究采用粪便微生物移植实验，发现特定核心菌群能调控脂质沉积，并验证了其通过上调脂质生成相关基因表达促进肌内脂肪积累。
+
+分析：
+该文献为综述提供了肠道微生物调控肌内脂肪沉积的具体机制，适合支撑脂质代谢的分子网络分析。其多组学方法可应用于肉质改良策略的设计，特别是通过微生物干预优化经济动物的脂肪分布。
+
+## Unveiling the Regulatory Mechanism of Tibetan Pigs Adipogenesis Mediated by WNT16: From Differential Phenotypes to the Application of Multi-Omics Approaches
+
+总结：
+该研究以藏猪为对象，通过组织学、脂肪酸组成分析及多组学方法，探究了不同脂肪组织的表型差异与调控机制。研究发现肌内脂肪细胞面积较小且单不饱和脂肪酸含量较高，并识别出WNT16基因在脂肪细胞分化中的关键作用。研究揭示了WNT16作为位点特异性脂肪沉积的潜在调控因子，为通过营养或遗传手段优化肉质提供了分子靶点。
+
+分析：
+该文献通过多组学整合分析，系统阐明了WNT16在脂肪沉积中的调控机制，可直接支撑综述中关于肌内脂肪分子网络的讨论。其从表型到基因功能的研究思路，适用于阐述经济动物肉质改良的策略设计，特别是针对位点特异性脂肪沉积的调控应用场景。
+
+## ceRNA Profiling Reveals circSAMD4A Promoted Porcine Adipocytes Differentiation via Targeting miR-127/PRKAR2B
+
+总结：
+该研究通过RNA测序系统揭示了猪脂肪细胞分化过程中的ceRNA网络，识别出504个差异表达circRNA、126个差异表达miRNA和1615个差异表达mRNA。研究发现circSAMD4A通过竞争性结合miR-127，解除对PRKAR2B的抑制，从而促进脂肪细胞分化和脂质积累。这些结果为理解circRNA在脂肪生成中的调控机制提供了新见解。
+
+分析：
+该文献对综述论文的分子调控网络部分具有直接参考价值，具体展示了circRNA通过ceRNA机制调控脂肪细胞分化的完整通路。研究发现的circSAMD4A/miR-127/PRKAR2B轴可作为肌内脂肪沉积调控的典型案例，支撑关于非编码RNA在肉质改良中作用机制的论述。实验采用的猪原代脂肪细胞模型和系统测序方法，为研究经济动物脂肪沉积提供了可靠的技术参考。
+
+## Muscle tissue transcriptome of F1 Angus-Nellore bulls and steers feedlot finished: impacts on intramuscular fat deposition
+
+总结：
+该研究通过RNA测序分析F1安格斯-内洛尔公牛与阉牛骨骼肌组织，识别了与肌内脂肪沉积相关的差异表达基因和代谢通路。研究发现阉牛肌内脂肪含量显著高于公牛，并揭示了胰岛素抵抗、AMPK、PI3K-Akt等通路在脂质代谢中的关键作用。这些结果首次在杂交牛中明确了PI3K-Akt通路及相关基因对肌内脂肪沉积的调控机制。
+
+分析：
+该文献为综述论文提供了肌内脂肪沉积分子调控网络的具体机制证据，特别是PI3K-Akt通路和候选基因如FOXO1、PPARG的作用。它适合支撑肉质改良策略中阉割影响脂质代谢的分子基础，并可用于设计基于转录组分析的育种或营养干预方案。
+
+## CRTC3 Regulates the Lipid Metabolism and Adipogenic Differentiation of Porcine Intramuscular and Subcutaneous Adipocytes by Activating the Calcium Pathway
+
+总结：
+该文献研究了CRTC3在猪肌内和皮下脂肪细胞脂质代谢及成脂分化中的作用。通过代谢组学和RNA测序分析，发现CRTC3过表达显著改变肌内脂肪细胞的代谢物，特别是甘油磷脂代谢，并揭示其通过激活钙-cAMP信号通路促进成脂分化。这些结果为理解CRTC3调控脂肪沉积的机制提供了新见解。
+
+分析：
+该文献对综述论文的分子调控网络部分有重要参考价值，它具体阐明了CRTC3通过钙信号通路调控脂质代谢的机制，适合支撑脂肪沉积的转录调控和信号转导研究。其多组学分析方法可为肉质改良策略中的系统生物学研究提供范例，有助于构建经济动物脂肪沉积的整合调控模型。
+
+## Impact of dietary Lactobacillus supplementation on intramuscular fat deposition and meat quality of Sunit sheep
+
+总结：
+该研究通过90天饲喂实验，探究了日粮添加乳酸菌对苏尼特羊肌内脂肪沉积和肉质的影响。结果表明，乳酸菌组显著增加了肌内脂肪含量，降低了剪切力和蒸煮损失，并改变了脂肪酸组成，特别是提高了功能性脂肪酸比例。代谢组学分析揭示，乳酸菌通过影响肉碱循环、三羧酸循环等脂质代谢途径，从而改善肉质和营养价值。
+
+分析：
+这篇文献为综述论文提供了营养干预改善肌内脂肪沉积的具体案例，支撑了通过微生物添加剂调控脂质代谢网络的机制。它适用于讨论经济动物肉质改良策略中，乳酸菌作为饲料添加剂的应用场景，并可作为分子调控网络研究中的实证参考，帮助构建从营养干预到代谢途径变化的系统设计框架。
+
+## RNA-Seq Analysis Reveals the Potential Molecular Mechanisms of Puerarin on Intramuscular Fat Deposition in Heat-Stressed Beef Cattle
+
+总结：
+该文献研究了葛根素对热应激肉牛肌内脂肪沉积的影响及其分子机制。通过饲料添加葛根素并利用RNA-Seq技术分析转录组，发现葛根素能调节脂质代谢相关基因表达，从而促进肌内脂肪沉积。结果表明，葛根素通过调控脂质代谢途径增强热应激肉牛的肌内脂肪含量。
+
+分析：
+该文献为综述论文提供了营养干预调控肌内脂肪沉积的具体案例，适合支撑肉质改良策略中营养调控机制的研究。其RNA-Seq分析揭示了脂质代谢相关基因网络，有助于理解分子调控网络在脂肪沉积中的作用。文献结果可应用于经济动物肉质改良的系统设计，特别是在热应激环境下优化脂肪沉积策略。
+
+## Bta-miR-493 Inhibits Bovine Preadipocytes Differentiation by Targeting BMPR1A via the TGFβ/BMP and p38MAPK Signaling Pathways
+
+总结：
+该文献研究了bta-miR-493在牛脂肪沉积中的作用，发现其通过靶向BMPR1A基因，经TGFβ/BMP和p38MAPK信号通路促进前脂肪细胞增殖但抑制分化。结果揭示了bta-miR-493-BMPR1A-TGFβ/BMP/p38MAPK调控轴，为高肌内脂肪沉积的分子育种提供了理论基础。
+
+分析：
+该文献对综述论文的参考价值在于，它具体阐明了非编码RNA调控脂肪沉积的分子机制，适合支撑肌内脂肪形成的信号通路分析。其发现的调控轴可用于讨论肉质改良策略中的靶点设计，为分子育种应用场景提供实证依据。
+
+## Identification of Candidate Genes and Regulatory Competitive Endogenous RNA (ceRNA) Networks Underlying Intramuscular Fat Content in Yorkshire Pigs with Extreme Fat Deposition Phenotypes
+
+总结：
+该研究通过全转录组分析比较了高、低肌内脂肪含量的约克夏猪，识别出与脂肪酸代谢和脂肪细胞分化相关的差异表达RNA。研究构建了竞争性内源RNA调控网络，揭示了lncRNA、circRNA、miRNA和mRNA之间的相互作用，并发现了可能调控脂质代谢的关键分子。这些结果为理解猪肌内脂肪沉积的分子机制提供了潜在调控因子和网络框架。
+
+分析：
+这篇文献对于综述论文中关于肌内脂肪分子调控网络的部分具有直接参考价值，它展示了ceRNA网络在脂肪沉积中的具体应用，适合支撑非编码RNA调控机制的研究。研究中的候选基因和网络可作为肉质改良策略的分子靶点，有助于阐述标记辅助选择在农业科学中的应用场景。
+
+## Puerarin improved growth performance and postmortem meat quality by regulating lipid metabolism of cattle under hot environment
+
+总结：
+该研究评估了热环境下葛根素对肉牛生长性能、肉质和血清指标的影响。通过补充不同剂量葛根素，发现400 mg/kg剂量能降低血清皮质醇水平、提高生长激素和肌内脂肪含量，从而改善生长性能和肉质。结果表明，葛根素通过调节应激激素和脂质代谢，增强了肉牛的抗氧化和免疫能力。
+
+分析：
+这篇文献为综述提供了营养干预调节肌内脂肪沉积的具体案例，适合支撑热环境下通过植物提取物改善肉质的机制。它可用于讨论脂质代谢调控在肉质改良中的应用场景，以及应激激素与脂肪沉积的关联性研究脉络。
+
+## Preliminary studies on the molecular mechanism of intramuscular fat deposition in the longest dorsal muscle of sheep
+
+总结：
+该文献研究了小尾寒羊最长背肌肌内脂肪沉积的分子机制，通过转录组测序和生物信息学分析发现AMPK信号通路及相关基因PPARGC1A和ADIPOQ在脂肪沉积中起关键作用。研究结果表明PPARGC1A基因与肌内脂肪含量呈正相关，而ADIPOQ基因呈负相关，揭示了这两个基因在调控肌内脂肪沉积中的重要作用。
+
+分析：
+该文献对于综述论文中经济动物肌内脂肪分子调控网络部分具有直接参考价值，特别是提供了羊这一物种的具体基因调控证据。研究发现的PPARGC1A和ADIPOQ基因调控机制可用于支撑肉质改良策略中基因靶点选择的理论基础，其转录组分析方法也为其他经济动物的类似研究提供了可借鉴的技术路径。
+
+## Transcriptome analysis unveils multiple reasons behind delayed and slower deposition of intramuscular fat compared to subcutaneous fat in cattle
+
+总结：
+该研究通过转录组分析比较牛肌内脂肪与皮下脂肪，发现肌内脂肪发育延迟且沉积较慢，可能与脂肪酸结合能力降低、甘油三酯合成减少及脂肪生成能力下降有关。差异表达基因分析显示，肌内脂肪中促进脂肪发育的基因如AGPAT2和FABP4表达下调，而抑制基因如FOXO6和HDAC9表达上调，同时PPAR信号通路活性降低、Wnt信号通路活性增加。
+
+分析：
+这篇文献为综述论文提供了肌内脂肪沉积分子调控网络的关键证据，适合支撑脂肪发育的转录调控机制，特别是PPAR和Wnt信号通路在脂肪生成中的作用。它可用于解释肌内脂肪沉积缓慢的生物学基础，为肉质改良策略如基因靶向干预或营养调控提供理论依据，并有助于构建经济动物脂肪沉积的系统研究脉络。
+
+## Identification of several lncRNA-mRNA pairs associated with marbling trait between Nanyang and Angus cattle
+
+总结：
+该研究通过转录组测序比较了高大理石纹（安格斯牛）和低大理石纹（南阳牛）肌肉样本，识别出487个差异表达mRNA和283个差异表达lncRNA，并发现了27对与脂肪沉积和脂质代谢相关的lncRNA-mRNA对。这些候选基因和lncRNA为调控牛大理石纹性状提供了遗传基础，揭示了lncRNA在肌内脂肪形成中的潜在作用机制。
+
+分析：
+该文献通过识别lncRNA-mRNA调控对，为经济动物脂肪沉积的分子网络提供了具体机制证据，适合支撑肌内脂肪形成的转录调控研究。它可用于阐述脂质代谢相关基因（如ADIPOQ、PLIN1）在肉质改良中的应用场景，为设计基于lncRNA的育种策略提供参考。
+
+## Identification and analysis of lncRNA, miRNA and mRNA related to subcutaneous and intramuscular fat in Laiwu pigs
+
+总结：
+该文献通过深度RNA测序和生物信息学方法，鉴定了莱芜猪皮下和肌内脂肪组织中差异表达的lncRNA、miRNA和mRNA，并构建了共表达和ceRNA网络。研究发现Wnt信号通路在肌内脂肪生成和脂质积累中起关键调控作用，涉及TCONS_00006525等lncRNA靶向WNT5A等基因。这为理解猪脂肪沉积的转录后调控机制提供了理论基础。
+
+分析：
+该文献对于综述论文中经济动物脂肪沉积的分子调控网络部分具有直接参考价值，特别是支撑Wnt信号通路在肌内脂肪形成中的机制分析。它适用于肉质改良策略中基于多组学数据的系统设计，有助于梳理lncRNA介导的调控脉络，为靶向基因干预提供依据。
+
+## Low lysine stimulates adipogenesis through ZFP423 upregulation in bovine stromal vascular cells
+
+总结：
+该研究探讨了低赖氨酸水平如何通过上调ZFP423等基因表达，促进牛肌内基质血管细胞的脂肪生成。实验表明，降低赖氨酸浓度能增强前脂肪细胞定向和分化，提高脂质积累与相关转录因子表达。这些发现揭示了赖氨酸调控脂肪沉积的潜在分子机制。
+
+分析：
+该文献为综述提供了营养干预（赖氨酸水平）影响肌内脂肪沉积的具体机制证据，适合支撑饲料配方优化策略。它点明了ZFP423等关键基因在脂肪生成中的作用，有助于构建经济动物肉质改良的分子调控网络。
+
+## Screening of lncRNA profiles during intramuscular adipogenic differentiation in longissimus dorsi and semitendinosus muscles in pigs
+
+总结：
+本研究通过分离猪背最长肌和半腱肌的肌内前脂肪细胞，在体外诱导其成脂分化，并利用高通量RNA-seq技术分析了分化过程中lncRNA的表达谱。研究发现差异表达的lncRNA富集于成脂和脂质代谢相关通路，并鉴定出lnc_000368在成脂过程中表达逐渐升高。敲低lnc_000368会抑制成脂基因和脂解基因的表达，从而损害猪肌内脂肪细胞的脂质积累，表明该lncRNA是调控肌内脂肪沉积的潜在靶点。
+
+分析：
+该文献为综述提供了猪肌内脂肪沉积中lncRNA调控机制的具体案例，适合支撑表观遗传调控在肉质改良中的应用。其RNA-seq数据和通路分析可参考用于构建分子调控网络，而lnc_000368的发现有助于探讨靶向基因在育种策略中的潜力，强化了非编码RNA在脂肪代谢中的研究脉络。
+
+## Candidate genes validation for intramuscular fat content of Nellore Cattle
+
+总结：
+该研究通过实时PCR和质谱分析，验证了与内洛尔牛肌内脂肪含量相关的候选基因。研究发现FABP4、DGAT1、DGAT2、STAT5A和BARX2等基因在脂肪代谢和沉积中起关键作用，并确认这些基因可作为肌内脂肪的生物标志物。
+
+分析：
+该文献为综述提供了基因验证和多组学方法的具体案例，支撑脂肪沉积的分子调控机制研究。它适用于肉质改良策略中生物标志物的应用场景，有助于系统设计基于基因表达的育种方案。
+
+## Neonatal vitamin A administration increases intramuscular fat by promoting angiogenesis and preadipocyte formation
+
+总结：
+该研究探讨了维生素A对牛肉大理石花纹脂肪发育的影响及机制。通过给安格斯阉牛注射维生素A并进行体外实验，发现维生素A/视黄酸通过上调VEGFA、激活VEGFA/VEGFR2信号通路，促进肌内血管发育和脂肪前体细胞形成，从而增加肌内脂肪含量而不影响整体肥度。
+
+分析：
+该文献为经济动物肌内脂肪沉积的分子调控网络提供了具体机制参考，特别是营养干预（维生素A）通过血管生成调控脂肪前体细胞形成的途径。适合支撑肉质改良策略中早期营养调控的应用场景，以及血管-脂肪细胞互作在肌内脂肪沉积中的研究脉络。
+
+## Transcriptome and HS-SPME-GC-MS analysis of key genes and flavor components associated with beef marbling
+
+总结：
+该文献通过转录组分析和HS-SPME-GC-MS技术，研究了牛大理石纹形成的关键基因和风味成分。研究发现A5级牛肉的肌内脂肪含量显著高于A1级，并鉴定了与脂肪沉积相关的FABP4、PLIN1等关键基因及七种主要香气化合物。研究结果为牛肉品质改良提供了候选基因和通路数据。
+
+分析：
+该文献对于综述论文中脂肪沉积分子调控网络部分具有参考价值，可支撑胆固醇代谢和PPAR信号通路等机制分析。其应用场景包括牛肉育种和肉质改良策略，为系统设计基因筛选实验提供了具体数据基础。
+
+## Integrated analysis of lactylation modification and proteomics revealed potential epigenetic regulation in intramuscular fat deposition of Xidu black pigs
+
+总结：
+该研究通过整合蛋白质组学和乳酰化修饰分析，探究了猪肌内脂肪沉积的表观遗传调控机制。研究发现乳酰化修饰水平与脂肪沉积效率相关，并揭示乳酸介导的乳酰化通过抑制PPARγ信号通路阻碍脂肪细胞分化。
+
+分析：
+该文献为综述提供了乳酰化修饰在猪肌内脂肪沉积中的具体调控机制，适合支撑表观遗传层面的分子网络分析。其多组学整合方法可应用于肉质改良的系统设计，为理解脂肪沉积的代谢通路提供实证参考。
+
+## GSK3 regulation Wnt/β-catenin signaling affects adipogenesis in bovine skeletal muscle fibro/adipogenic progenitors
+
+总结：
+该文献通过单细胞RNA测序分析了延边牛骨骼肌细胞群的结构与异质性，识别出纤维/脂肪祖细胞（FAPs）作为肌内脂肪沉积的关键细胞类型。研究使用LY2090314/XAV-939激活或抑制Wnt/β-catenin信号，发现阻断GSK3可稳定β-catenin并抑制FAPs的脂肪生成相关基因表达，而抑制Wnt/β-catenin通路则促进脂质积累。此外，阻断GSK3增强了FAPs对肌肉卫星细胞的旁分泌效应，增加了肌管形成。
+
+分析：
+该文献为综述论文提供了关于牛肌内脂肪沉积的细胞起源和分子调控机制的直接证据，特别是Wnt/GSK3/β-catenin信号通路在FAPs脂肪生成中的作用。它适合支撑肉质改良策略中针对信号通路的调控机制，例如通过干预GSK3来抑制脂肪沉积或增强肌肉发育。研究中的单细胞图谱和实验方法可为系统设计提供参考，帮助理解经济动物脂肪沉积的复杂网络。
+
+## Early-life vitamin A supplementation modulates the skeletal muscle transcriptome and intramuscular fat deposition in feedlot-finished beef steers
+
+总结：
+该研究评估了新生期补充维生素A对肉牛肌内脂肪沉积的影响及其调控脂肪生成和脂质合成的分子机制。研究发现，维生素A补充显著提高了肌内脂肪含量，并通过转录组分析揭示了在哺乳期和育肥期分别上调了肌动蛋白细胞骨架、胰岛素、钙信号通路以及PI3K-Akt、AMPK、PPAR信号通路。关键脂肪生成基因如KRAS、LEP、ACACA等在维生素A作用下上调，表明维生素A通过调节PI3K-Akt等通路增强脂肪细胞分化和脂质代谢。
+
+分析：
+这篇文献为综述论文提供了维生素A补充调控肌内脂肪沉积的分子机制证据，适合支撑脂肪生成信号通路（如PI3K-Akt、PPAR）在肉质改良中的应用。它可用于分析早期营养干预如何通过转录组变化影响长期脂肪沉积，为经济动物肉质改良策略中的分子调控网络研究提供具体案例。
+
+## Identification of porcine fast/slow myogenic exosomes and their regulatory effects on lipid accumulation in intramuscular adipocytes
+
+总结：
+该研究首次分离鉴定了猪快肌（EDL）和慢肌（SOL）来源的外泌体，并比较了它们对背最长肌脂肪细胞脂质积累的影响。研究发现SOL来源的外泌体（SOL-EXO）蛋白质含量更高，并通过蛋白质组学鉴定出72个差异表达蛋白。结果表明，肌肉与脂肪组织的相互作用部分是通过SOL-EXO促进肌内脂肪细胞的成脂活性实现的。
+
+分析：
+该文献为肌内脂肪沉积的调控机制提供了外泌体介导的肌肉-脂肪组织互作新视角，特别是明确了慢肌来源外泌体的促脂质积累作用。其蛋白质组学数据可用于支撑特定外泌体蛋白作为调控靶点的研究脉络，并为通过调控肌肉类型影响肉质的策略提供了分子层面的参考依据。
+
+## Vitamin A mediates FABP4 to regulate intramuscular fat production: a new target and strategy for optimizing beef quality
+
+总结：
+该研究探讨了维生素A活性代谢物视黄酸（RA）如何通过调控FABP4等关键基因来影响牛肌内脂肪（IMF）的沉积。研究采用浓度梯度补充RA并结合多组学分析，发现RA能促进肌内脂肪细胞增殖与分化，并增强甘油三酯的生物合成。最终确认FABP4是维生素A调控牛肌内脂肪沉积的关键效应分子，为优化牛肉品质提供了新的分子靶点。
+
+分析：
+这篇文献对于综述论文中关于肌内脂肪分子调控网络的部分具有重要参考价值，它具体揭示了维生素A通过FABP4介导的调控机制，适合支撑营养因子影响脂肪沉积的分子通路分析。研究中的多组学整合方法和功能验证策略可为肉质改良的系统设计提供借鉴，有助于构建经济动物脂肪沉积的调控网络模型。
+
+## Effect of miR-149-5p on intramuscular fat deposition in pigs based on metabolomics and transcriptomics
+
+总结：
+该文献研究了miR-149-5p对猪肌内脂肪沉积的影响，通过代谢组学和转录组学分析，发现其过表达改变了脂质代谢相关代谢物和基因表达，并抑制脂肪生成分化，涉及cAMP信号通路和ATP7A靶向作用。
+
+分析：
+这篇文献为综述提供了miRNA调控肌内脂肪沉积的具体机制证据，适合支撑分子调控网络中的信号通路分析，如MAPK和PI3K-Akt，并可用于肉质改良策略中靶点筛选的应用场景。
+
+## Circular RNA Profiling Identifies Novel circPPARA that Promotes Intramuscular Fat Deposition in Pigs
+
+总结：
+该研究通过RNA测序分析高、低肌内脂肪含量猪的背最长肌，鉴定出336个差异表达的环状RNA，其中circPPARA的表达与肌内脂肪含量正相关。功能研究表明circPPARA通过吸附miR-429和miR-200b促进猪肌内前脂肪细胞分化并抑制增殖，从而影响肌内脂肪沉积。
+
+分析：
+该文献为肌内脂肪沉积的分子调控网络提供了环状RNA层面的新机制，特别是circPPARA-miRNA调控轴。它适合支撑脂肪细胞分化与增殖平衡的调控机制，为通过RNA干预改善肉质提供了潜在靶点，并丰富了经济动物脂肪代谢的转录后调控研究脉络。
+
+## Transcriptome, proteome and metabolome analysis provide insights on fat deposition and meat quality in pig
+
+总结：
+该研究通过转录组、蛋白组和代谢组多组学分析，系统探究了猪肌内脂肪沉积与肉品质的关系。研究发现差异表达基因、差异蛋白和差异代谢物富集于Wnt、PI3K-Akt、Rap1和Ras等信号通路，并鉴定出RapGEF1为调控肌内脂肪含量的关键基因。研究为揭示猪肌内脂肪沉积的分子机制提供了基础数据和新见解。
+
+分析：
+该文献通过多组学整合分析，系统揭示了肌内脂肪沉积相关的关键信号通路和调控基因，为综述中“分子调控网络”部分提供了具体的机制支撑。其鉴定的RapGEF1等关键基因及富集通路，可直接用于阐述脂肪沉积的分子调控机制，并为肉质改良的靶点筛选提供参考依据。
+
+## A Single-Cell Atlas of Porcine Skeletal Muscle Reveals Mechanisms That Regulate Intramuscular Adipogenesis
+
+总结：
+该研究通过单细胞RNA测序技术，分析了猪骨骼肌在发育早期和晚期的细胞图谱，揭示了纤维/脂肪祖细胞分化为脂肪细胞和肌核细胞的机制，并识别出THRSP基因作为肌内脂肪细胞的关键生物标志物。
+
+分析：
+这篇文献为综述提供了肌内脂肪形成的细胞层面机制，特别是纤维/脂肪祖细胞的分化路径，适合支撑肉质改良中脂肪沉积调控的分子网络分析。其单细胞测序方法可应用于经济动物脂肪沉积的系统设计研究，有助于优化育种策略。
+
+## Phosphoenolpyruvate carboxykinase 2 (PCK2) attenuates bovine adipocyte lipolysis through PNPLA2 activity repression
+
+总结：
+该研究通过多组学分析发现PCK2是调控牛、羊、猪肌内脂肪沉积的保守因子，其沉默会抑制脂肪细胞增殖和脂质积累，并揭示PCK2通过抑制PNPLA2活性来减弱脂解作用，从而促进肌内脂肪沉积。
+
+分析：
+该文献为综述提供了PCK2调控肌内脂肪沉积的具体分子机制，特别是通过PNPLA2抑制脂解的新途径，适合支撑脂肪细胞分化与脂代谢调控的网络构建，以及肉质改良中靶向基因干预的应用场景。

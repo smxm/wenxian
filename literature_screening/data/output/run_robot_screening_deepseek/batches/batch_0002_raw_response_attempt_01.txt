@@ -1,0 +1,40 @@
+{
+    "batch_id": "batch_0002",
+    "results": [
+        {
+            "paper_id": "paper_000006",
+            "decision": "include",
+            "reason": "标题和摘要明确描述鼹鼠启发的机器人，使用门齿挖掘土壤并进行实验验证，符合主动挖掘机器人的纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000007",
+            "decision": "include",
+            "reason": "标题和摘要比较双锚和伸缩软体机器人在沙土中的掘出性能，涉及主动挖掘机制和地下介质场景验证。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000008",
+            "decision": "include",
+            "reason": "标题和摘要描述受生物启发的旋转穿透和水平自挖掘软体机器人，涉及旋转挖掘机制和沙土实验验证。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000009",
+            "decision": "include",
+            "reason": "标题和摘要描述受蚯蚓启发的软体挖掘机器人，使用3D打印水压骨架在土壤中推进，符合主动挖掘机制。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000010",
+            "decision": "uncertain",
+            "reason": "标题和摘要主要研究围压对旋转诱导穿透阻力减少的影响，使用DEM模拟，但未明确描述机器人本体或地下作业验证。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        }
+    ]
+}

@@ -1,0 +1,105 @@
+{
+  "batch_id": "batch_0002",
+  "results": [
+    {
+      "paper_id": "paper_000011",
+      "decision": "exclude",
+      "reason": "标题和摘要明确显示研究对象为牛，属于农业畜牧业动物研究，命中排除标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "paper_id": "paper_000012",
+      "decision": "include",
+      "reason": "标题和摘要明确探讨天然产物提取物在肥胖小鼠模型和脂肪细胞中通过调节代谢通路减少脂肪积累的机制，符合研究主题和纳入标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000013",
+      "decision": "uncertain",
+      "reason": "标题和摘要表明这是一篇关于脂肪组织巨噬细胞多样性和功能的综述，与脂肪沉积调控相关，但摘要未明确说明是否聚焦于病理性脂肪沉积或具体干预策略。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000014",
+      "decision": "include",
+      "reason": "标题和摘要明确研究大麻提取物在脂肪细胞中通过调节脂质代谢相关基因和蛋白表达来抑制肥胖的分子机制，符合研究主题和纳入标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000015",
+      "decision": "exclude",
+      "reason": "标题和摘要明确显示研究对象为鸡，属于农业畜牧业动物研究，命中排除标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "paper_id": "paper_000016",
+      "decision": "include",
+      "reason": "标题和摘要明确研究核肌球蛋白1在小鼠脂肪组织重塑、代谢炎症和肥胖中的机制，涉及染色质水平调控和具体基因通路，符合研究主题和纳入标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000017",
+      "decision": "uncertain",
+      "reason": "标题信息不完整，摘要内容实为作者列表，无法判断研究内容是否与脂肪沉积的病理机制或干预策略相关。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "paper_id": "paper_000018",
+      "decision": "include",
+      "reason": "标题和摘要明确为综述，探讨环状RNA在脂肪褐变和脂质代谢中的调控机制及其治疗潜力，符合研究主题和纳入标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000019",
+      "decision": "uncertain",
+      "reason": "标题信息不完整，摘要内容实为作者列表，无法判断研究内容是否与人类或实验动物的病理性脂肪沉积及具体机制相关。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "paper_id": "paper_000020",
+      "decision": "uncertain",
+      "reason": "标题信息不完整（疑似DOI），摘要内容实为作者列表，无法判断研究内容是否探讨人类脂肪组织中Notch信号与肥胖的具体分子机制。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.45
+    }
+  ]
+}

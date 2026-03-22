@@ -1,0 +1,35 @@
+{
+  "batch_id": "batch_0004",
+  "results": [
+    {
+      "paper_id": "paper_000010",
+      "decision": "uncertain",
+      "reason": "标题和摘要描述的是用于测量月球土壤物理性质的设备，包含自深穿透锤，但未明确提及机器人系统或推进破土机制的研究。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000011",
+      "decision": "exclude",
+      "reason": "标题和摘要聚焦于中子传感器在穿透器测试中的性能验证，未涉及机器人系统设计、推进破土机制或机器人与颗粒介质相互作用。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000012",
+      "decision": "exclude",
+      "reason": "标题和摘要研究的是古生物足迹的埋藏学，使用穿透器进行实验模拟，但无机器人系统背景，属于纯地质研究。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+project:
+  name: "cnki-enw-check"
+  output_dir: "../data/output/run_cnki_enw"
+  save_raw_response: false
+  save_intermediate_files: true
+
+input:
+  input_files:
+    - "../../CNKI-20260320143821757.enw"
+  encoding: "auto"
+
+dedup:
+  enabled: true
+  strict_doi_match: true
+  normalized_title_exact_match: true
+  fuzzy_title_match: false
+
+screening:
+  batch_size: 20
+  target_include_count: 50
+  stop_when_target_reached: true
+  allow_uncertain: true
+  retry_times: 2
+  request_timeout_seconds: 120
+
+criteria:
+  topic: "中文 ENW 输入兼容性检查"
+  inclusion:
+    - "仅用于检查 EndNote ENW 解析"
+  exclusion:
+    - "本配置不用于真实筛选"
+
+model:
+  provider: "kimi"
+  model_name: "moonshot-v1-auto"
+  api_base_url: "https://api.moonshot.cn/v1"
+  api_key_env: "KIMI_API_KEY"
+  temperature: 0.1
+
+report:
+  export_included_bib: false
+  export_excluded_bib: false
+  export_unused_bib: false
+  included_report_format: "md"
+  excluded_report_format: "md"
+  summary_format: "json"

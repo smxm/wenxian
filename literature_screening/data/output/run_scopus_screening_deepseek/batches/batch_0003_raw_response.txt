@@ -1,0 +1,26 @@
+{
+    "batch_id": "batch_0003",
+    "results": [
+        {
+            "paper_id": "paper_000007",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究对象为弹丸在沙中的减速动力学，无机器人系统背景，属于纯土力学研究。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000008",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究对象为空心贯入器在海底粘土中的贯入性能，无机器人系统背景，属于纯土力学研究。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000009",
+            "decision": "include",
+            "reason": "摘要明确提到仿生掘进机器人，研究水平贯入机制，涉及机器人与颗粒介质相互作用。",
+            "evidence": ["abstract"],
+            "confidence": 0.8
+        }
+    ]
+}

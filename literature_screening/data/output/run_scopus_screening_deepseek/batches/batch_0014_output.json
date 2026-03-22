@@ -1,0 +1,35 @@
+{
+  "batch_id": "batch_0014",
+  "results": [
+    {
+      "paper_id": "paper_000040",
+      "decision": "include",
+      "reason": "标题和摘要明确研究旋转运动对土壤贯入阻力的影响，涉及机器人掘进机制和颗粒介质相互作用。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000041",
+      "decision": "uncertain",
+      "reason": "摘要提到抗冲钻机器人用于煤矿钻孔，但未明确说明是否具备自主破土能力或涉及具体推进破土机制。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000042",
+      "decision": "exclude",
+      "reason": "标题和摘要仅涉及钻杆自动送进和定位误差补偿算法，未涉及机器人推进或破土机制。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.8
+    }
+  ]
+}

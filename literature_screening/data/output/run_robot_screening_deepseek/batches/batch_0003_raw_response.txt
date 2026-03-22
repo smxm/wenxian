@@ -1,0 +1,40 @@
+{
+    "batch_id": "batch_0003",
+    "results": [
+        {
+            "paper_id": "paper_000011",
+            "decision": "exclude",
+            "reason": "标题和摘要明确表明该研究针对行星土壤探索，属于星际与深空探索研究，命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000012",
+            "decision": "uncertain",
+            "reason": "标题和摘要涉及软煤层钻孔技术，虽提及仿生机制，但未明确说明是否为机器人技术，且可能属于传统工程装备范畴。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000013",
+            "decision": "include",
+            "reason": "标题和摘要明确研究双螺旋钻掘机器人在颗粒介质中的动力学，涉及主动钻探机制和地下介质场景验证。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000014",
+            "decision": "exclude",
+            "reason": "标题和摘要仅研究高原鼠兔的掘洞活动对生态系统的影响，属于纯生物学研究，没有机器人应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000015",
+            "decision": "exclude",
+            "reason": "标题和摘要明确针对月球地下探索，属于星际与深空探索研究，命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        }
+    ]
+}

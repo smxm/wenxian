@@ -1,0 +1,40 @@
+{
+    "batch_id": "batch_0008",
+    "results": [
+        {
+            "paper_id": "paper_000036",
+            "decision": "include",
+            "reason": "标题和摘要明确描述用于行星风化层采样的钻进机器人，涉及钻进、推进机制和机构设计。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000037",
+            "decision": "exclude",
+            "reason": "标题和摘要描述地下管道数据集，研究对象为管道巡检机器人，不具备自主破土能力。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000038",
+            "decision": "uncertain",
+            "reason": "标题和摘要描述钻进机器人的路径规划，但未明确涉及推进或破土机制，主题相关性不足。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000039",
+            "decision": "exclude",
+            "reason": "标题和摘要描述图像增强算法用于钻杆检测，无机器人推进或破土机制相关内容。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000040",
+            "decision": "include",
+            "reason": "摘要明确研究旋转运动对穿透阻力的影响，涉及自掘进机器人设计和机器人与颗粒介质相互作用。",
+            "evidence": ["abstract"],
+            "confidence": 0.92
+        }
+    ]
+}
