@@ -4,6 +4,7 @@ from datetime import datetime
 from pathlib import Path
 import time
 import json
+from typing import Callable
 
 from literature_screening.bibtex.deduper import deduplicate_records
 from literature_screening.bibtex.exporter import export_bibtex
@@ -30,7 +31,14 @@ from literature_screening.screening.response_parser import parse_model_json
 from literature_screening.screening.validator import validate_batch_response
 
 
-def run_pipeline(config: RunConfig, dry_run: bool = False) -> None:
+ProgressCallback = Callable[[str, str, int | None, int | None, str | None], None]
+
+
+def run_pipeline(
+    config: RunConfig,
+    dry_run: bool = False,
+    progress_callback: ProgressCallback | None = None,
+) -> None:
     run_id = f"run_{datetime.now().astimezone().strftime('%Y%m%d_%H%M%S')}"
     output_dir = Path(config.project.output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
@@ -41,7 +49,9 @@ def run_pipeline(config: RunConfig, dry_run: bool = False) -> None:
     write_json(config, snapshot_path)
 
     input_paths = [Path(item) for item in config.input.input_files]
+    _emit_progress(progress_callback, "parsing-inputs", "Parsing inputs", 0, None, "Parsing source files")
     merged_records = parse_bibtex_files(input_paths, encoding=config.input.encoding)
+    _emit_progress(progress_callback, "deduplicating", "Deduplicating", 0, None, "Removing duplicate records")
     deduped_records = deduplicate_records(merged_records) if config.dedup.enabled else merged_records
     batch_records = build_batch_records(
         deduped_records,
@@ -49,6 +59,14 @@ def run_pipeline(config: RunConfig, dry_run: bool = False) -> None:
         topic=config.criteria.topic,
         model_provider=config.model.provider,
         model_name=config.model.model_name,
+    )
+    _emit_progress(
+        progress_callback,
+        "building-batches",
+        "Building batches",
+        0,
+        len(batch_records),
+        f"Prepared {len(batch_records)} screening batches",
     )
 
     if config.project.save_intermediate_files:
@@ -77,6 +95,7 @@ def run_pipeline(config: RunConfig, dry_run: bool = False) -> None:
     write_json(summary, output_dir / "run_summary.json")
 
     if dry_run:
+        _emit_progress(progress_callback, "completed", "Completed", 0, 0, "Dry run completed")
         return
 
     prompt_template_path = _project_root() / "prompts" / "screening_prompt.md"
@@ -87,6 +106,14 @@ def run_pipeline(config: RunConfig, dry_run: bool = False) -> None:
     processed_batches = 0
 
     for batch in batch_records:
+        _emit_progress(
+            progress_callback,
+            "screening",
+            "Screening batches",
+            processed_batches,
+            len(batch_records),
+            f"Running batch {processed_batches + 1} of {len(batch_records)}",
+        )
         batch_output_path = output_dir / "batches" / f"{batch.batch_id}_output.json"
         payload = _load_existing_batch_payload(batch_output_path, batch.batch_id, batch.paper_ids)
         if payload is None:
@@ -109,6 +136,14 @@ def run_pipeline(config: RunConfig, dry_run: bool = False) -> None:
             )
             write_json(payload, batch_output_path)
         processed_batches += 1
+        _emit_progress(
+            progress_callback,
+            "screening",
+            "Screening batches",
+            processed_batches,
+            len(batch_records),
+            f"Completed batch {processed_batches} of {len(batch_records)}",
+        )
 
         batch_decisions = _payload_to_decisions(payload, batch.batch_id, config)
         decisions.extend(batch_decisions)
@@ -142,6 +177,14 @@ def run_pipeline(config: RunConfig, dry_run: bool = False) -> None:
     excluded_rows = _collect_report_rows(record_map, decisions, STATUS_EXCLUDED)
     uncertain_rows = _collect_report_rows(record_map, decisions, STATUS_UNCERTAIN)
 
+    _emit_progress(
+        progress_callback,
+        "exporting-results",
+        "Exporting results",
+        processed_batches,
+        len(batch_records),
+        "Writing reports and RIS/BibTeX exports",
+    )
     write_json([decision.model_dump(mode="json") for decision in decisions], output_dir / "screening_decisions.json")
     write_screening_markdown_report(included_rows, "Included Papers", output_dir / "included_report.md")
     write_screening_markdown_report(excluded_rows, "Excluded Papers", output_dir / "excluded_report.md")
@@ -197,6 +240,14 @@ def run_pipeline(config: RunConfig, dry_run: bool = False) -> None:
         "finished_at": finished_at.isoformat(),
     }
     write_json(final_summary, output_dir / "run_summary.json")
+    _emit_progress(
+        progress_callback,
+        "completed",
+        "Completed",
+        processed_batches,
+        len(batch_records),
+        "Screening task completed",
+    )
 
 
 def _write_batch_input_files(output_dir: Path, batch_records: list, records: list) -> None:
@@ -386,3 +437,15 @@ def _run_with_retries(operation, retry_times: int):
                 time.sleep(delay_seconds)
     assert last_error is not None
     raise last_error
+
+
+def _emit_progress(
+    callback: ProgressCallback | None,
+    phase: str,
+    label: str,
+    current: int | None,
+    total: int | None,
+    message: str | None = None,
+) -> None:
+    if callback is not None:
+        callback(phase, label, current, total, message)

@@ -1,12 +1,14 @@
 <script setup lang="ts">
-import { computed, h, onMounted } from 'vue'
+import { computed, h, onMounted, onUnmounted } from 'vue'
 import { RouterLink, RouterView, useRoute } from 'vue-router'
-import { BookOpen, FileSearch, Files, LayoutDashboard, Sparkles } from 'lucide-vue-next'
+import { FileSearch, Files, LayoutDashboard, Sparkles } from 'lucide-vue-next'
 import { NBadge, NButton, NLayout, NLayoutContent, NLayoutSider, NMenu, NSpace, NText } from 'naive-ui'
+import { useDraftsStore } from '@/stores/drafts'
 import { useTasksStore } from '@/stores/tasks'
 
 const route = useRoute()
 const tasksStore = useTasksStore()
+const draftsStore = useDraftsStore()
 
 const menuOptions = [
   {
@@ -33,7 +35,13 @@ const activeKey = computed(() => {
 })
 
 onMounted(() => {
+  draftsStore.hydrate()
   void tasksStore.refreshList()
+  tasksStore.startPolling()
+})
+
+onUnmounted(() => {
+  tasksStore.stopPolling()
 })
 </script>
 
@@ -57,15 +65,13 @@ onMounted(() => {
             <div class="brand-title">文献筛选工作台</div>
           </div>
         </div>
-        <p class="brand-copy">
-          为初筛和简洁报告提供一套稳定的本地工作流界面。
-        </p>
+        <p class="brand-copy">把初筛、任务管理和简洁报告放进同一个本地工作流。</p>
       </div>
 
       <NMenu :value="activeKey" :options="menuOptions" class="nav-menu" />
 
       <div class="status-block panel-surface">
-        <div class="status-title">当前状态</div>
+        <div class="status-title">状态概览</div>
         <NSpace vertical :size="10">
           <div class="status-row">
             <NText depth="3">运行中任务</NText>
@@ -75,10 +81,31 @@ onMounted(() => {
             <NText depth="3">已完成报告</NText>
             <NBadge :value="tasksStore.completedReports.length" color="#8f5b1f" />
           </div>
-          <NButton tertiary block @click="tasksStore.refreshList()">
-            刷新任务
-          </NButton>
+          <div class="status-row">
+            <NText depth="3">未提交草稿</NText>
+            <NBadge :value="draftsStore.hasScreeningDraft ? 1 : 0" color="#6a776c" />
+          </div>
+          <NButton tertiary block @click="tasksStore.refreshList()">刷新任务</NButton>
+          <RouterLink v-if="draftsStore.hasScreeningDraft" to="/screening/new" class="status-link">
+            继续编辑未提交的初筛草稿
+          </RouterLink>
         </NSpace>
+
+        <div v-if="tasksStore.runningTasks.length" class="running-list">
+          <div class="running-title">正在运行</div>
+          <RouterLink
+            v-for="task in tasksStore.runningTasks.slice(0, 4)"
+            :key="task.id"
+            :to="`/tasks/${task.id}`"
+            class="running-item"
+          >
+            <div class="running-item-title">{{ task.title }}</div>
+            <div class="running-item-meta">
+              {{ task.phase_label || task.phase }}
+              <span v-if="task.progress_total"> · {{ task.progress_current || 0 }}/{{ task.progress_total }}</span>
+            </div>
+          </RouterLink>
+        </div>
       </div>
     </NLayoutSider>
 
@@ -86,11 +113,9 @@ onMounted(() => {
       <div class="topbar panel-surface">
         <div>
           <div class="topbar-eyebrow">Studio</div>
-          <div class="topbar-title">将初筛与整理报告放进同一个现代工作台</div>
+          <div class="topbar-title">把初筛与整理报告放进同一个现代工作台</div>
         </div>
-        <div class="topbar-note">
-          主流程只做初筛，报告模块单独维护，前端只认稳定 API。
-        </div>
+        <div class="topbar-note">主流程负责初筛，简洁报告作为下游任务独立生成，前端统一走稳定 API。</div>
       </div>
 
       <RouterView />
@@ -157,7 +182,8 @@ onMounted(() => {
   overflow: hidden;
 }
 
-.status-title {
+.status-title,
+.running-title {
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -166,6 +192,37 @@ onMounted(() => {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.status-link {
+  color: #2d6a4f;
+  font-size: 13px;
+}
+
+.running-list {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.running-item {
+  display: block;
+  padding: 10px 0;
+}
+
+.running-item + .running-item {
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.running-item-title {
+  font-weight: 600;
+  color: #1f2520;
+}
+
+.running-item-meta {
+  margin-top: 4px;
+  color: #5b665d;
+  font-size: 13px;
 }
 
 .topbar {

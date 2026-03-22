@@ -150,8 +150,17 @@ async def create_screening_task(
     )
 
     def worker(stored_task: StoredTask) -> dict:
-        TASK_STORE.update(stored_task.task_id, phase="screening")
-        result = run_screening_job(payload)
+        result = run_screening_job(
+            payload,
+            progress_callback=lambda phase, label, current=None, total=None, message=None: TASK_STORE.update(
+                stored_task.task_id,
+                phase=phase,
+                phase_label=label,
+                progress_current=current,
+                progress_total=total,
+                progress_message=message,
+            ),
+        )
         return {
             "summary": result.summary,
             "project_topic": topic,
@@ -201,8 +210,17 @@ def create_report_task(request: ReportTaskCreate) -> TaskSnapshot:
     )
 
     def worker(stored_task: StoredTask) -> dict:
-        TASK_STORE.update(stored_task.task_id, phase="reporting")
-        result = generate_simple_report_job(payload)
+        result = generate_simple_report_job(
+            payload,
+            progress_callback=lambda phase, label, current=None, total=None, message=None: TASK_STORE.update(
+                stored_task.task_id,
+                phase=phase,
+                phase_label=label,
+                progress_current=current,
+                progress_total=total,
+                progress_message=message,
+            ),
+        )
         return {
             "summary": {"report_name": request.report_name, "reference_style": request.reference_style},
             "project_topic": request.project_topic,
@@ -236,6 +254,10 @@ def _to_snapshot(task: dict) -> TaskSnapshot:
         updated_at=task["updated_at"],
         summary=task.get("summary"),
         error=task.get("error"),
+        phase_label=task.get("phase_label"),
+        progress_current=task.get("progress_current"),
+        progress_total=task.get("progress_total"),
+        progress_message=task.get("progress_message"),
         project_topic=task.get("project_topic") or task.get("metadata", {}).get("project_topic"),
         model_provider=task.get("model_provider") or task.get("metadata", {}).get("model_provider"),
         artifacts=artifacts,

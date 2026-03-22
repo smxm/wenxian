@@ -1,27 +1,30 @@
 <script setup lang="ts">
 import { computed, onMounted } from 'vue'
 import { RouterLink } from 'vue-router'
-import { ArrowRight, BookMarked, Bot, FolderOpenDot, LayoutPanelTop } from 'lucide-vue-next'
+import { ArrowRight, Bot, FolderOpenDot, LayoutPanelTop } from 'lucide-vue-next'
 import { NButton, NCard, NEmpty, NList, NListItem, NSpace, NText } from 'naive-ui'
 import OverviewMetric from '@/components/OverviewMetric.vue'
 import StatusPill from '@/components/StatusPill.vue'
+import { useDraftsStore } from '@/stores/drafts'
 import { useMetaStore } from '@/stores/meta'
 import { useTasksStore } from '@/stores/tasks'
 
 const metaStore = useMetaStore()
 const tasksStore = useTasksStore()
+const draftsStore = useDraftsStore()
 
 const stats = computed(() => {
   const tasks = tasksStore.list
   return {
     total: tasks.length,
-    running: tasks.filter(task => task.status === 'running').length,
-    screening: tasks.filter(task => task.kind === 'screening').length,
-    reports: tasks.filter(task => task.kind === 'report').length
+    running: tasks.filter((task) => task.status === 'running' || task.status === 'pending').length,
+    screening: tasks.filter((task) => task.kind === 'screening').length,
+    reports: tasks.filter((task) => task.kind === 'report').length
   }
 })
 
 onMounted(async () => {
+  draftsStore.hydrate()
   await Promise.all([metaStore.ensureLoaded(), tasksStore.refreshList()])
 })
 </script>
@@ -32,19 +35,19 @@ onMounted(async () => {
       <div class="hero-copy panel-surface">
         <div class="eyebrow">Workbench Overview</div>
         <h1>把文献输入、初筛执行、结果复查和简洁报告放进同一套前端工作流</h1>
-        <p>
-          新前端只面向稳定 API，不直接绑定底层 Python 文件结构。这样后面筛选模块和报告模块继续演进时，UI 不需要跟着碎裂。
-        </p>
+        <p>前端只依赖稳定 API，不直接绑定底层 Python 文件结构。筛选模块和报告模块可以继续演进，界面不会跟着一起失控。</p>
         <NSpace>
-          <NButton type="primary" size="large" tag="a" :href="'/screening/new'">
-            新建初筛
-            <template #icon>
-              <ArrowRight :size="16" />
-            </template>
-          </NButton>
-          <NButton tertiary size="large" tag="a" :href="'/tasks'">
-            查看任务中心
-          </NButton>
+          <RouterLink to="/screening/new">
+            <NButton type="primary" size="large">
+              {{ draftsStore.hasScreeningDraft ? '继续编辑初筛草稿' : '新建初筛' }}
+              <template #icon>
+                <ArrowRight :size="16" />
+              </template>
+            </NButton>
+          </RouterLink>
+          <RouterLink to="/tasks">
+            <NButton tertiary size="large">查看任务中心</NButton>
+          </RouterLink>
         </NSpace>
       </div>
 
@@ -57,15 +60,11 @@ onMounted(async () => {
           </div>
           <div class="support-item">
             <Bot :size="18" />
-            <span>{{ metaStore.providerPresets.map(item => item.label).join(' / ') || 'DeepSeek / Kimi' }}</span>
-          </div>
-          <div class="support-item">
-            <BookMarked :size="18" />
-            <span>GB/T 7714 顺序输出 + APA7 CSL 渲染</span>
+            <span>{{ metaStore.providerPresets.map((item) => item.label).join(' / ') || 'DeepSeek / Kimi' }}</span>
           </div>
           <div class="support-item">
             <LayoutPanelTop :size="18" />
-            <span>初筛和报告模块已拆分，前端走统一 API</span>
+            <span>草稿自动保存，任务统一轮询，报告独立生成</span>
           </div>
         </div>
       </div>
@@ -94,12 +93,12 @@ onMounted(async () => {
         <NEmpty v-else description="还没有任务记录。" />
       </NCard>
 
-      <NCard title="工作流原则" class="panel-surface">
+      <NCard title="当前工作方式" class="panel-surface">
         <ul class="principles">
-          <li>前端只依赖稳定 API，不直接碰 Python 脚本。</li>
-          <li>初筛是主流程，报告是下游模块，不相互污染。</li>
-          <li>任务产物统一可下载，避免散落在本地目录里找文件。</li>
-          <li>未来新增模型、模板或任务类型，只扩展 API 与页面组件，不重写整个 UI。</li>
+          <li>初筛表单会自动保存为草稿，切换页面不会丢。</li>
+          <li>任务中心持续显示所有运行中的任务，不再依赖单页停留。</li>
+          <li>初筛成功后可直接创建简洁报告任务，并查看生成进度。</li>
+          <li>后续新增模型、模板或任务类型，只扩展 API 和组件，不重写整套前端。</li>
         </ul>
       </NCard>
     </section>
@@ -142,6 +141,10 @@ onMounted(async () => {
   letter-spacing: 0.16em;
   font-size: 12px;
   color: #6a776c;
+}
+
+.hero-side-title {
+  font-weight: 700;
 }
 
 h1 {

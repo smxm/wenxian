@@ -35,6 +35,10 @@ class TaskStore:
             "status": "pending",
             "title": title,
             "phase": "queued",
+            "phase_label": "Queued",
+            "progress_current": 0,
+            "progress_total": None,
+            "progress_message": None,
             "created_at": now,
             "updated_at": now,
             "metadata": metadata or {},
@@ -77,13 +81,35 @@ class TaskStore:
         thread.start()
 
     def _run_worker(self, task: StoredTask, worker: Callable[[StoredTask], dict[str, Any]]) -> None:
-        self.update(task.task_id, status="running", phase="starting")
+        self.update(
+            task.task_id,
+            status="running",
+            phase="starting",
+            phase_label="Starting",
+            progress_current=0,
+            progress_total=None,
+            progress_message="Initializing task",
+        )
         try:
             result = worker(task)
-            self.update(task.task_id, status="succeeded", phase="completed", **result)
+            self.update(
+                task.task_id,
+                status="succeeded",
+                phase="completed",
+                phase_label="Completed",
+                progress_message="Task completed",
+                **result,
+            )
         except Exception as exc:
             detail = "".join(traceback.format_exception(exc))
-            self.update(task.task_id, status="failed", phase="failed", error=detail)
+            self.update(
+                task.task_id,
+                status="failed",
+                phase="failed",
+                phase_label="Failed",
+                progress_message=str(exc),
+                error=detail,
+            )
 
     @staticmethod
     def _read(path: Path) -> dict[str, Any]:

@@ -65,6 +65,10 @@ class TaskSnapshot(BaseModel):
     updated_at: datetime
     summary: dict | None = None
     error: str | None = None
+    phase_label: str | None = None
+    progress_current: int | None = None
+    progress_total: int | None = None
+    progress_message: str | None = None
     project_topic: str | None = None
     model_provider: str | None = None
     artifacts: list[TaskArtifact] = Field(default_factory=list)

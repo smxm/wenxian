@@ -7,7 +7,7 @@ import sys
 from dataclasses import dataclass, field
 from datetime import datetime
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 import yaml
 
@@ -18,6 +18,7 @@ DETACHED_MODULE_ROOT = PROJECT_ROOT / "separated_modules" / "formal_report_modul
 DETACHED_SRC = DETACHED_MODULE_ROOT / "src"
 DEFAULT_RUNS_ROOT = PROJECT_ROOT / "data" / "studio_runs"
 SUPPORTED_INPUT_SUFFIXES = {".bib", ".enw", ".ris", ".txt"}
+ProgressCallback = Callable[[str, str, int | None, int | None, str | None], None]
 
 
 def bootstrap_project_paths() -> None:
@@ -135,7 +136,10 @@ def scan_supported_input_files(folder: Path) -> list[Path]:
     return sorted(files, key=lambda item: item.name.lower())
 
 
-def run_screening_job(request: ScreeningJobRequest) -> ScreeningJobResult:
+def run_screening_job(
+    request: ScreeningJobRequest,
+    progress_callback: ProgressCallback | None = None,
+) -> ScreeningJobResult:
     bootstrap_project_paths()
 
     from literature_screening.core.models import CriteriaConfig
@@ -158,9 +162,19 @@ def run_screening_job(request: ScreeningJobRequest) -> ScreeningJobResult:
     criteria_dir.mkdir(parents=True, exist_ok=True)
     output_dir.mkdir(parents=True, exist_ok=True)
 
+    _emit_progress(progress_callback, "preparing-inputs", "Preparing inputs", 0, None, "Copying uploaded files")
+
     copied_input_paths = _copy_input_files(request.input_paths, input_dir)
     criteria_path = criteria_dir / "criteria.md"
     criteria_path.write_text(_render_criteria_markdown(request.criteria), encoding="utf-8")
+    _emit_progress(
+        progress_callback,
+        "building-config",
+        "Building configuration",
+        0,
+        None,
+        "Creating screening config snapshot",
+    )
 
     config_payload = {
         "project": {
@@ -225,7 +239,7 @@ def run_screening_job(request: ScreeningJobRequest) -> ScreeningJobResult:
         model=ModelConfig(**config_payload["model"]),
         report=ReportConfig(**config_payload["report"]),
     )
-    run_pipeline(run_config, dry_run=False)
+    run_pipeline(run_config, dry_run=False, progress_callback=progress_callback)
 
     summary = _load_json(output_dir / "run_summary.json")
     records = load_screening_records(output_dir)
@@ -254,7 +268,10 @@ def run_screening_job(request: ScreeningJobRequest) -> ScreeningJobResult:
     )
 
 
-def generate_simple_report_job(request: ReportJobRequest) -> ReportJobResult:
+def generate_simple_report_job(
+    request: ReportJobRequest,
+    progress_callback: ProgressCallback | None = None,
+) -> ReportJobResult:
     bootstrap_project_paths()
 
     from literature_screening.core.models import ModelConfig
@@ -263,6 +280,14 @@ def generate_simple_report_job(request: ReportJobRequest) -> ReportJobResult:
 
     report_output_dir = request.screening_output_dir.parent / f"{request.report_name}_output"
     report_output_dir.mkdir(parents=True, exist_ok=True)
+    _emit_progress(
+        progress_callback,
+        "loading-screening-results",
+        "Loading screening results",
+        0,
+        None,
+        "Reading included papers from screening output",
+    )
 
     model_config = ModelConfig(
         provider=request.model.provider,
@@ -281,6 +306,7 @@ def generate_simple_report_job(request: ReportJobRequest) -> ReportJobResult:
         timeout_seconds=request.timeout_seconds,
         retry_times=request.retry_times,
         reference_style=request.reference_style,
+        progress_callback=progress_callback,
     )
     report_path = report_output_dir / DEFAULT_SIMPLE_REPORT_FILENAME
     notes_path = report_output_dir / "paper_notes.json"
@@ -406,3 +432,15 @@ def _render_criteria_markdown(criteria: CriteriaDraft) -> str:
 
 def _load_json(path: Path) -> Any:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _emit_progress(
+    callback: ProgressCallback | None,
+    phase: str,
+    label: str,
+    current: int | None,
+    total: int | None,
+    message: str | None = None,
+) -> None:
+    if callback is not None:
+        callback(phase, label, current, total, message)

@@ -3,6 +3,7 @@ from __future__ import annotations
 import json
 import time
 from pathlib import Path
+from typing import Callable
 
 from pydantic import BaseModel
 
@@ -19,6 +20,7 @@ from literature_screening.screening.response_parser import parse_model_json
 
 DEFAULT_SIMPLE_REPORT_FILENAME = "literature_report.md"
 LEGACY_SIMPLE_REPORT_FILENAME = "simple_report.md"
+ProgressCallback = Callable[[str, str, int | None, int | None, str | None], None]
 
 
 class SimplePaperNote(BaseModel):
@@ -39,6 +41,7 @@ def generate_simple_report(
     retry_times: int = 6,
     reference_style: ReferenceStyle = "gbt7714",
     max_papers: int | None = None,
+    progress_callback: ProgressCallback | None = None,
 ) -> None:
     """Generate the detached report module's default concise literature report."""
     report_output_dir.mkdir(parents=True, exist_ok=True)
@@ -48,6 +51,14 @@ def generate_simple_report(
     included_rows = load_included_rows(screening_output_dir)
     if max_papers is not None:
         included_rows = included_rows[:max_papers]
+    _emit_progress(
+        progress_callback,
+        "loading-notes",
+        "Loading included papers",
+        0,
+        len(included_rows),
+        f"Loaded {len(included_rows)} included papers",
+    )
     cards = build_fallback_literature_cards(included_rows)
     card_map = {card.paper_id: card for card in cards}
 
@@ -60,6 +71,15 @@ def generate_simple_report(
             continue
 
         category = card_map[paper.paper_id].classification.primary_category
+        completed = len(notes)
+        _emit_progress(
+            progress_callback,
+            "building-paper-notes",
+            "Building paper notes",
+            completed,
+            len(included_rows),
+            f"Generating note for {paper.title}",
+        )
         try:
             note = _request_note_with_retries(
                 client=client,
@@ -80,10 +100,26 @@ def generate_simple_report(
 
     ordered_notes = [notes[paper.paper_id] for paper, _ in included_rows]
     ordered_papers = [paper for paper, _ in included_rows]
+    _emit_progress(
+        progress_callback,
+        "building-references",
+        "Building references",
+        len(ordered_notes),
+        len(ordered_notes),
+        f"Rendering {reference_style.upper()} reference list",
+    )
     reference_lines = build_reference_block(
         ordered_papers,
         style=reference_style,
         working_dir=report_output_dir / "raw" / "references",
+    )
+    _emit_progress(
+        progress_callback,
+        "rendering-report",
+        "Rendering report",
+        len(ordered_notes),
+        len(ordered_notes),
+        "Writing literature report markdown",
     )
     markdown = render_simple_report_markdown(
         project_topic=project_topic,
@@ -94,6 +130,14 @@ def generate_simple_report(
     )
     (report_output_dir / DEFAULT_SIMPLE_REPORT_FILENAME).write_text(markdown, encoding="utf-8")
     (report_output_dir / LEGACY_SIMPLE_REPORT_FILENAME).write_text(markdown, encoding="utf-8")
+    _emit_progress(
+        progress_callback,
+        "completed",
+        "Completed",
+        len(ordered_notes),
+        len(ordered_notes),
+        "Report generation completed",
+    )
 
 
 def render_simple_report_markdown(
@@ -301,3 +345,15 @@ def _write_notes(notes: list[SimplePaperNote], path: Path) -> None:
 def _append_log(path: Path, message: str) -> None:
     with path.open("a", encoding="utf-8") as file:
         file.write(message.rstrip() + "\n")
+
+
+def _emit_progress(
+    callback: ProgressCallback | None,
+    phase: str,
+    label: str,
+    current: int | None,
+    total: int | None,
+    message: str | None = None,
+) -> None:
+    if callback is not None:
+        callback(phase, label, current, total, message)

@@ -41,6 +41,10 @@ export interface TaskSnapshot {
   status: TaskStatus
   title: string
   phase: string
+  phase_label?: string | null
+  progress_current?: number | null
+  progress_total?: number | null
+  progress_message?: string | null
   created_at: string
   updated_at: string
   summary?: Record<string, unknown> | null

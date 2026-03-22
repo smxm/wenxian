@@ -2,7 +2,23 @@
 import { computed, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { CircleDashed, FileUp, WandSparkles } from 'lucide-vue-next'
-import { NAlert, NButton, NCard, NCheckbox, NDynamicInput, NForm, NFormItem, NGrid, NGridItem, NInput, NInputNumber, NSelect, NSpace, NText, useMessage } from 'naive-ui'
+import {
+  NAlert,
+  NButton,
+  NCard,
+  NCheckbox,
+  NDynamicInput,
+  NForm,
+  NFormItem,
+  NGrid,
+  NGridItem,
+  NInput,
+  NInputNumber,
+  NSelect,
+  NText,
+  useMessage
+} from 'naive-ui'
+import { useDraftsStore } from '@/stores/drafts'
 import { useMetaStore } from '@/stores/meta'
 import { useTasksStore } from '@/stores/tasks'
 import { parseCriteriaMarkdown } from '@/utils/criteria'
@@ -11,6 +27,7 @@ import type { ModelSettings, ProviderName } from '@/types/api'
 const router = useRouter()
 const metaStore = useMetaStore()
 const tasksStore = useTasksStore()
+const draftsStore = useDraftsStore()
 const message = useMessage()
 
 const title = ref('new-screening-run')
@@ -38,22 +55,84 @@ const encoding = ref('auto')
 const files = ref<File[]>([])
 const isDragging = ref(false)
 const fileInputRef = ref<HTMLInputElement | null>(null)
+const hydratingDraft = ref(false)
 
-const selectedPreset = computed(() => metaStore.providerPresets.find(item => item.provider === provider.value))
+const selectedPreset = computed(() => metaStore.providerPresets.find((item) => item.provider === provider.value))
+const rememberedFileNames = computed(() => draftsStore.screeningDraft.fileNames)
+
+function applyDraft() {
+  const draft = draftsStore.screeningDraft
+  title.value = draft.title
+  topic.value = draft.topic
+  criteriaMarkdown.value = draft.criteriaMarkdown
+  inclusion.value = draft.inclusion.length ? [...draft.inclusion] : ['']
+  exclusion.value = draft.exclusion.length ? [...draft.exclusion] : ['']
+  provider.value = draft.provider
+  model.value = { ...draft.model }
+  batchSize.value = draft.batchSize
+  targetIncludeCount.value = draft.targetIncludeCount
+  stopWhenReached.value = draft.stopWhenReached
+  allowUncertain.value = draft.allowUncertain
+  retryTimes.value = draft.retryTimes
+  requestTimeout.value = draft.requestTimeout
+  encoding.value = draft.encoding
+  files.value = [...draftsStore.screeningFiles]
+}
+
+function persistDraft() {
+  draftsStore.updateScreeningDraft({
+    title: title.value,
+    topic: topic.value,
+    criteriaMarkdown: criteriaMarkdown.value,
+    inclusion: inclusion.value,
+    exclusion: exclusion.value,
+    provider: provider.value,
+    model: model.value,
+    batchSize: batchSize.value,
+    targetIncludeCount: targetIncludeCount.value,
+    stopWhenReached: stopWhenReached.value,
+    allowUncertain: allowUncertain.value,
+    retryTimes: retryTimes.value,
+    requestTimeout: requestTimeout.value,
+    encoding: encoding.value
+  })
+}
 
 watch(provider, (nextProvider) => {
-  const preset = metaStore.providerPresets.find(item => item.provider === nextProvider)
+  if (hydratingDraft.value) return
+  const preset = metaStore.providerPresets.find((item) => item.provider === nextProvider)
   if (!preset) return
   model.value = {
+    ...model.value,
     provider: preset.provider,
     model_name: preset.defaultModel,
     api_base_url: preset.defaultBaseUrl,
-    api_key_env: preset.defaultApiKeyEnv,
-    temperature: model.value.temperature,
-    max_tokens: model.value.max_tokens,
-    min_request_interval_seconds: model.value.min_request_interval_seconds
+    api_key_env: preset.defaultApiKeyEnv
   }
 })
+
+watch(
+  [
+    title,
+    topic,
+    criteriaMarkdown,
+    inclusion,
+    exclusion,
+    provider,
+    model,
+    batchSize,
+    targetIncludeCount,
+    stopWhenReached,
+    allowUncertain,
+    retryTimes,
+    requestTimeout,
+    encoding
+  ],
+  () => {
+    persistDraft()
+  },
+  { deep: true }
+)
 
 function parseCriteria() {
   const draft = parseCriteriaMarkdown(criteriaMarkdown.value)
@@ -73,16 +152,17 @@ function parseCriteria() {
   }
 }
 
-function handleFileChange(event: Event) {
-  const input = event.target as HTMLInputElement
-  files.value = Array.from(input.files ?? [])
-}
-
 function setFiles(nextFiles: File[]) {
   files.value = nextFiles
+  draftsStore.setScreeningFiles(nextFiles)
   if (nextFiles.length) {
     message.success(`已选择 ${nextFiles.length} 个文件。`)
   }
+}
+
+function handleFileChange(event: Event) {
+  const input = event.target as HTMLInputElement
+  setFiles(Array.from(input.files ?? []))
 }
 
 function handleDrop(event: DragEvent) {
@@ -122,6 +202,8 @@ async function submit() {
     encoding: encoding.value,
     files: files.value
   })
+  draftsStore.clearScreeningDraft()
+  message.success('初筛任务已创建。')
   await router.push(`/tasks/${task.id}`)
 }
 
@@ -130,7 +212,14 @@ const canSubmit = computed(() => {
 })
 
 onMounted(async () => {
+  draftsStore.hydrate()
   await metaStore.ensureLoaded()
+  hydratingDraft.value = true
+  applyDraft()
+  hydratingDraft.value = false
+  if (!files.value.length && rememberedFileNames.value.length) {
+    message.info('已恢复草稿内容。由于浏览器限制，已选文件需要重新选择一次。')
+  }
 })
 </script>
 
@@ -139,14 +228,10 @@ onMounted(async () => {
     <section class="screening-hero panel-surface">
       <div>
         <div class="eyebrow">Screening Composer</div>
-        <h1>为初筛任务建立一份真正可复用的运行配置</h1>
-        <p>
-          这里提交的是任务，不是一次性脚本。前端会把输入文件、筛选标准和模型参数整理成稳定请求，再交给后端 API 执行。
-        </p>
+        <h1>为初筛任务建立一份可恢复、可复用的运行配置</h1>
+        <p>表单内容会自动保存为草稿。切换页面回来仍可继续编辑，任务提交后会自动清空当前草稿。</p>
       </div>
-      <NAlert type="info" :show-icon="false">
-        当前推荐先用 DeepSeek 走通任务，再根据需要切换 Kimi。
-      </NAlert>
+      <NAlert type="info" :show-icon="false">当前建议优先使用 DeepSeek 跑通初筛；如需 Kimi，可在同一页面直接切换。</NAlert>
     </section>
 
     <div class="screening-grid">
@@ -156,7 +241,7 @@ onMounted(async () => {
             <NInput v-model:value="title" />
           </NFormItem>
           <NFormItem label="研究主题">
-            <NInput v-model:value="topic" placeholder="例如：肥胖相关代谢调控研究" />
+            <NInput v-model:value="topic" placeholder="例如：SCAP 患者 BALF 病毒谱与免疫调控研究" />
           </NFormItem>
         </NForm>
       </NCard>
@@ -173,15 +258,15 @@ onMounted(async () => {
           <input ref="fileInputRef" class="hidden-input" type="file" multiple @change="handleFileChange" />
           <FileUp :size="22" />
           <div class="dropzone-title">拖入或选择文献文件</div>
-          <div class="dropzone-copy">
-            {{ metaStore.acceptedInputFormats.join(' / ') || '.bib / .ris / .enw / .txt' }}
-          </div>
+          <div class="dropzone-copy">{{ metaStore.acceptedInputFormats.join(' / ') || '.bib / .ris / .enw / .txt' }}</div>
         </div>
 
+        <NAlert v-if="rememberedFileNames.length && !files.length" type="warning" :show-icon="false" class="draft-alert">
+          已恢复草稿中的文件名：{{ rememberedFileNames.join('，') }}。文件内容不能跨刷新恢复，请重新选择文件。
+        </NAlert>
+
         <div class="file-list" v-if="files.length">
-          <div v-for="file in files" :key="file.name" class="file-pill">
-            {{ file.name }}
-          </div>
+          <div v-for="file in files" :key="file.name" class="file-pill">{{ file.name }}</div>
         </div>
       </NCard>
 
@@ -190,7 +275,7 @@ onMounted(async () => {
           <NGridItem span="2 m:1">
             <NForm label-placement="top">
               <NFormItem label="原始 Markdown 标准">
-                <NInput v-model:value="criteriaMarkdown" type="textarea" :rows="14" placeholder="# Topic..." />
+                <NInput v-model:value="criteriaMarkdown" type="textarea" :rows="14" placeholder="# 主题 / 纳入标准 / 排除标准" />
               </NFormItem>
               <NButton secondary type="primary" @click="parseCriteria">
                 <template #icon>
@@ -220,7 +305,7 @@ onMounted(async () => {
             <NFormItem label="模型提供商">
               <NSelect
                 v-model:value="provider"
-                :options="metaStore.providerPresets.map(item => ({ label: item.label, value: item.provider }))"
+                :options="metaStore.providerPresets.map((item) => ({ label: item.label, value: item.provider }))"
               />
             </NFormItem>
           </NGridItem>
@@ -235,8 +320,8 @@ onMounted(async () => {
             </NFormItem>
           </NGridItem>
           <NGridItem span="2 m:1">
-            <NFormItem label="API Key 变量">
-              <NInput v-model:value="model.api_key_env" />
+            <NFormItem label="API Key 变量名">
+              <NInput v-model:value="model.api_key_env" placeholder="例如：DEEPSEEK_API_KEY" />
             </NFormItem>
           </NGridItem>
           <NGridItem span="4">
@@ -292,7 +377,7 @@ onMounted(async () => {
     <div class="action-bar panel-surface">
       <div>
         <div class="action-title">提交为后台任务</div>
-        <div class="action-copy">提交后会跳转到任务详情页，前端会自动轮询状态并展示产物。</div>
+        <div class="action-copy">提交后会进入任务详情页。页面会持续显示阶段、进度和最终产物。</div>
       </div>
       <NButton :disabled="!canSubmit || tasksStore.submitting" type="primary" size="large" @click="submit">
         <template #icon>
@@ -372,6 +457,10 @@ p {
 
 .dropzone-copy {
   color: #69736a;
+}
+
+.draft-alert {
+  margin-top: 14px;
 }
 
 .file-list {
