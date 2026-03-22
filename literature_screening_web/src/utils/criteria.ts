@@ -6,89 +6,149 @@ export interface ParsedCriteriaDraft {
   warnings: string[]
 }
 
+type SectionType = 'inclusion' | 'exclusion' | null
+
 function normalizeLine(input: string) {
-  return input.replace(/\u3000/g, ' ').trim()
+  return input.replace(/\u3000/g, ' ').replace(/\s+/g, ' ').trim()
+}
+
+function stripMarkdownDecoration(input: string) {
+  return input
+    .replace(/^\s*#+\s*/, '')
+    .replace(/^\s*[-*+]\s+/, '')
+    .replace(/^\s*\d+[.)、]\s+/, '')
+    .replace(/\*\*/g, '')
+    .replace(/__/g, '')
+    .replace(/`/g, '')
+    .trim()
 }
 
 function isBulletLine(line: string) {
-  return /^[-*•]\s+/.test(line) || /^\d+[.)、]\s+/.test(line)
+  return /^[-*+]\s+/.test(line) || /^\d+[.)、]\s+/.test(line)
 }
 
 function stripBullet(line: string) {
-  return line.replace(/^[-*•]\s+/, '').replace(/^\d+[.)、]\s+/, '').trim()
+  return stripMarkdownDecoration(line)
 }
 
-function detectHeadingType(line: string): 'topic' | 'inclusion' | 'exclusion' | null {
-  const heading = line.replace(/^#+/, '').trim().toLowerCase()
-  if (/(纳入|inclusion)/i.test(heading)) return 'inclusion'
-  if (/(排除|exclusion)/i.test(heading)) return 'exclusion'
-  if (heading) return 'topic'
+function normalizeLabel(line: string) {
+  return stripMarkdownDecoration(line)
+    .replace(/[()（）]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function detectSection(line: string): SectionType {
+  const normalized = normalizeLabel(line).toLowerCase()
+  if (/(^| )纳入标准( |$)|(^| )inclusion criteria( |$)|(^| )inclusion( |$)/i.test(normalized)) {
+    return 'inclusion'
+  }
+  if (/(^| )排除标准( |$)|(^| )exclusion criteria( |$)|(^| )exclusion( |$)/i.test(normalized)) {
+    return 'exclusion'
+  }
   return null
+}
+
+function splitInlineCriteria(value: string) {
+  return value
+    .split(/[；;]+/)
+    .map((item) => stripMarkdownDecoration(item))
+    .filter(Boolean)
+}
+
+function parseInlineSection(line: string): { section: SectionType; items: string[] } | null {
+  const cleaned = stripMarkdownDecoration(line)
+  const normalized = normalizeLabel(cleaned)
+
+  const inclusionMatch = normalized.match(/^(纳入标准|inclusion criteria|inclusion)\s*[:：]\s*(.+)$/i)
+  if (inclusionMatch) {
+    return { section: 'inclusion', items: splitInlineCriteria(inclusionMatch[2]) }
+  }
+
+  const exclusionMatch = normalized.match(/^(排除标准|exclusion criteria|exclusion)\s*[:：]\s*(.+)$/i)
+  if (exclusionMatch) {
+    return { section: 'exclusion', items: splitInlineCriteria(exclusionMatch[2]) }
+  }
+
+  return null
+}
+
+function looksLikeSectionHeader(line: string) {
+  const normalized = normalizeLabel(line)
+  return /^(纳入标准|排除标准|inclusion criteria|exclusion criteria|inclusion|exclusion)\s*[:：]?$/i.test(normalized)
+}
+
+function isMeaningfulTopicLine(line: string) {
+  const normalized = normalizeLabel(line)
+  if (!normalized) return false
+  if (/^(role|task|step \d+|input data)$/i.test(normalized)) return false
+  if (/^(你是一位|我将提供|请根据|请按以下|重要指令)/.test(normalized)) return false
+  if (detectSection(normalized)) return false
+  return true
 }
 
 export function parseCriteriaMarkdown(markdown: string): ParsedCriteriaDraft {
   const lines = markdown.replace(/\r\n/g, '\n').split('\n').map(normalizeLine)
   let topic = ''
-  let section: 'inclusion' | 'exclusion' | null = null
+  let section: SectionType = null
   const inclusion: string[] = []
   const exclusion: string[] = []
   const warnings: string[] = []
 
-  for (const line of lines) {
-    if (!line) continue
+  for (const rawLine of lines) {
+    if (!rawLine) continue
+
+    const line = rawLine.trim()
+    const inlineSection = parseInlineSection(line)
+    if (inlineSection) {
+      section = inlineSection.section
+      if (section === 'inclusion') inclusion.push(...inlineSection.items)
+      if (section === 'exclusion') exclusion.push(...inlineSection.items)
+      continue
+    }
+
+    const sectionType = detectSection(line)
+    if (sectionType && looksLikeSectionHeader(line)) {
+      section = sectionType
+      continue
+    }
 
     if (line.startsWith('#')) {
-      const type = detectHeadingType(line)
-      if (type === 'inclusion' || type === 'exclusion') {
-        section = type
+      const heading = stripMarkdownDecoration(line)
+      const headingSection = detectSection(heading)
+      if (headingSection) {
+        section = headingSection
         continue
       }
-      if (type === 'topic' && !topic) {
-        topic = line.replace(/^#+/, '').trim()
+      if (!topic && isMeaningfulTopicLine(heading)) {
+        topic = heading
       }
       continue
     }
 
-    if (!topic && !isBulletLine(line) && !/^(纳入标准|排除标准|inclusion|exclusion)/i.test(line)) {
-      topic = line
+    if (!topic && !isBulletLine(line) && isMeaningfulTopicLine(line)) {
+      topic = stripMarkdownDecoration(line)
       continue
     }
 
-    const inlineInclusion = line.match(/^(纳入标准|inclusion|inclusion criteria)\s*[:：]\s*(.+)$/i)
-    if (inlineInclusion) {
-      section = 'inclusion'
-      inclusion.push(...inlineInclusion[2].split(/[；;]+/).map(item => item.trim()).filter(Boolean))
-      continue
-    }
-
-    const inlineExclusion = line.match(/^(排除标准|exclusion|exclusion criteria)\s*[:：]\s*(.+)$/i)
-    if (inlineExclusion) {
-      section = 'exclusion'
-      exclusion.push(...inlineExclusion[2].split(/[；;]+/).map(item => item.trim()).filter(Boolean))
-      continue
-    }
-
-    if (/^(纳入标准|inclusion|inclusion criteria)$/i.test(line)) {
-      section = 'inclusion'
-      continue
-    }
-
-    if (/^(排除标准|exclusion|exclusion criteria)$/i.test(line)) {
-      section = 'exclusion'
+    if (sectionType) {
+      section = sectionType
       continue
     }
 
     if (isBulletLine(line)) {
       const value = stripBullet(line)
       if (!value) continue
-      if (section === 'inclusion') inclusion.push(value)
-      else if (section === 'exclusion') exclusion.push(value)
-      continue
+      if (section === 'inclusion') {
+        inclusion.push(value)
+      } else if (section === 'exclusion') {
+        exclusion.push(value)
+      }
     }
   }
 
   if (!topic) {
-    warnings.push('未识别到主题，建议在 Markdown 中单独写一个一级标题或首行主题。')
+    warnings.push('未识别到主题，建议在 Markdown 中单独写一个一级标题或明确的主题行。')
   }
   if (!inclusion.length) {
     warnings.push('未识别到纳入标准，建议使用“纳入标准”标题或“纳入标准：”写法。')
