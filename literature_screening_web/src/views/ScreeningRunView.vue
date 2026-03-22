@@ -2,7 +2,7 @@
 import { computed, onMounted, ref, watch } from 'vue'
 import { useRouter } from 'vue-router'
 import { CircleDashed, FileUp, WandSparkles } from 'lucide-vue-next'
-import { NAlert, NButton, NCard, NCheckbox, NDynamicInput, NForm, NFormItem, NGrid, NGridItem, NInput, NInputNumber, NSelect, NSpace, NText } from 'naive-ui'
+import { NAlert, NButton, NCard, NCheckbox, NDynamicInput, NForm, NFormItem, NGrid, NGridItem, NInput, NInputNumber, NSelect, NSpace, NText, useMessage } from 'naive-ui'
 import { useMetaStore } from '@/stores/meta'
 import { useTasksStore } from '@/stores/tasks'
 import { parseCriteriaMarkdown } from '@/utils/criteria'
@@ -11,6 +11,7 @@ import type { ModelSettings, ProviderName } from '@/types/api'
 const router = useRouter()
 const metaStore = useMetaStore()
 const tasksStore = useTasksStore()
+const message = useMessage()
 
 const title = ref('new-screening-run')
 const topic = ref('')
@@ -35,6 +36,8 @@ const retryTimes = ref(6)
 const requestTimeout = ref(240)
 const encoding = ref('auto')
 const files = ref<File[]>([])
+const isDragging = ref(false)
+const fileInputRef = ref<HTMLInputElement | null>(null)
 
 const selectedPreset = computed(() => metaStore.providerPresets.find(item => item.provider === provider.value))
 
@@ -57,11 +60,50 @@ function parseCriteria() {
   if (draft.topic) topic.value = draft.topic
   if (draft.inclusion.length) inclusion.value = draft.inclusion
   if (draft.exclusion.length) exclusion.value = draft.exclusion
+
+  if (!draft.inclusion.length && !draft.exclusion.length) {
+    message.warning('没有识别出纳入/排除标准。请检查 Markdown 是否包含“纳入标准”“排除标准”标题或对应的冒号写法。')
+    return
+  }
+
+  if (draft.warnings.length) {
+    message.info(draft.warnings[0])
+  } else {
+    message.success('已解析到结构化字段。')
+  }
 }
 
 function handleFileChange(event: Event) {
   const input = event.target as HTMLInputElement
   files.value = Array.from(input.files ?? [])
+}
+
+function setFiles(nextFiles: File[]) {
+  files.value = nextFiles
+  if (nextFiles.length) {
+    message.success(`已选择 ${nextFiles.length} 个文件。`)
+  }
+}
+
+function handleDrop(event: DragEvent) {
+  event.preventDefault()
+  isDragging.value = false
+  const droppedFiles = Array.from(event.dataTransfer?.files ?? [])
+  if (!droppedFiles.length) return
+  setFiles(droppedFiles)
+}
+
+function handleDragOver(event: DragEvent) {
+  event.preventDefault()
+  isDragging.value = true
+}
+
+function handleDragLeave() {
+  isDragging.value = false
+}
+
+function openFilePicker() {
+  fileInputRef.value?.click()
 }
 
 async function submit() {
@@ -120,14 +162,21 @@ onMounted(async () => {
       </NCard>
 
       <NCard title="输入文件" class="panel-surface">
-        <label class="dropzone">
-          <input class="hidden-input" type="file" multiple @change="handleFileChange" />
+        <div
+          class="dropzone"
+          :class="{ 'dropzone-active': isDragging }"
+          @click="openFilePicker"
+          @dragover="handleDragOver"
+          @dragleave="handleDragLeave"
+          @drop="handleDrop"
+        >
+          <input ref="fileInputRef" class="hidden-input" type="file" multiple @change="handleFileChange" />
           <FileUp :size="22" />
           <div class="dropzone-title">拖入或选择文献文件</div>
           <div class="dropzone-copy">
             {{ metaStore.acceptedInputFormats.join(' / ') || '.bib / .ris / .enw / .txt' }}
           </div>
-        </label>
+        </div>
 
         <div class="file-list" v-if="files.length">
           <div v-for="file in files" :key="file.name" class="file-pill">
@@ -303,6 +352,13 @@ p {
   border: 1px dashed #b0a38b;
   background: linear-gradient(180deg, rgba(255, 253, 248, 0.8), rgba(236, 232, 220, 0.8));
   cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.dropzone-active {
+  transform: translateY(-2px);
+  border-color: #2d6a4f;
+  background: linear-gradient(180deg, rgba(233, 246, 236, 0.95), rgba(221, 238, 226, 0.95));
 }
 
 .hidden-input {
