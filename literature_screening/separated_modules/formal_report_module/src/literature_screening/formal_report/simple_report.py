@@ -7,13 +7,10 @@ from typing import Callable
 
 from pydantic import BaseModel
 
-from literature_screening.core.models import ModelConfig
-from literature_screening.core.models import PaperRecord
-from literature_screening.core.models import ScreeningDecision
+from literature_screening.core.models import ModelConfig, PaperRecord, ScreeningDecision
 from literature_screening.formal_report.fallback import build_fallback_literature_cards
 from literature_screening.formal_report.pipeline import load_included_rows
-from literature_screening.formal_report.reference_list import ReferenceStyle
-from literature_screening.formal_report.reference_list import build_reference_block
+from literature_screening.formal_report.reference_list import ReferenceStyle, build_reference_block
 from literature_screening.formal_report.text_utils import normalize_text
 from literature_screening.screening.llm_client import ChatCompletionClient
 from literature_screening.screening.response_parser import parse_model_json
@@ -31,6 +28,17 @@ class SimplePaperNote(BaseModel):
     analysis: str
 
 
+class SimpleReportCategory(BaseModel):
+    name: str
+    intro: str
+    paper_ids: list[str]
+
+
+class SimpleReportOverview(BaseModel):
+    overall_summary: str
+    categories: list[SimpleReportCategory]
+
+
 def generate_simple_report(
     *,
     screening_output_dir: Path,
@@ -43,7 +51,6 @@ def generate_simple_report(
     max_papers: int | None = None,
     progress_callback: ProgressCallback | None = None,
 ) -> None:
-    """Generate the detached report module's default concise literature report."""
     report_output_dir.mkdir(parents=True, exist_ok=True)
     (report_output_dir / "logs").mkdir(exist_ok=True)
     (report_output_dir / "raw").mkdir(exist_ok=True)
@@ -59,18 +66,21 @@ def generate_simple_report(
         len(included_rows),
         f"Loaded {len(included_rows)} included papers",
     )
+
     cards = build_fallback_literature_cards(included_rows)
-    card_map = {card.paper_id: card for card in cards}
+    category_hint_map = {card.paper_id: card.classification.primary_category for card in cards}
 
     client = ChatCompletionClient(model_config, timeout_seconds=timeout_seconds)
-    notes = _load_existing_notes(report_output_dir / "paper_notes.json")
-    prompt_path = Path(__file__).resolve().parents[3] / "prompts" / "simple_paper_note_prompt.md"
+    notes_path = report_output_dir / "paper_notes.json"
+    overview_path = report_output_dir / "report_overview.json"
+    note_prompt_path = Path(__file__).resolve().parents[3] / "prompts" / "simple_paper_note_prompt.md"
+    overview_prompt_path = Path(__file__).resolve().parents[3] / "prompts" / "simple_report_overview_prompt.md"
 
+    notes = _load_existing_notes(notes_path)
     for paper, decision in included_rows:
         if paper.paper_id in notes:
             continue
 
-        category = card_map[paper.paper_id].classification.primary_category
         completed = len(notes)
         _emit_progress(
             progress_callback,
@@ -80,26 +90,50 @@ def generate_simple_report(
             len(included_rows),
             f"Generating note for {paper.title}",
         )
+        category_hint = category_hint_map.get(paper.paper_id, "相关研究")
         try:
             note = _request_note_with_retries(
                 client=client,
-                prompt_path=prompt_path,
+                prompt_path=note_prompt_path,
                 paper=paper,
                 decision=decision,
-                category=category,
+                category_hint=category_hint,
                 project_topic=project_topic,
                 raw_output_path=report_output_dir / "raw" / f"{paper.paper_id}.txt",
                 retry_times=retry_times,
             )
         except Exception as exc:
             _append_log(report_output_dir / "logs" / "paper_note_errors.log", f"{paper.paper_id}: {exc}")
-            note = _fallback_note(paper=paper, decision=decision, category=category, project_topic=project_topic)
+            note = _fallback_note(paper=paper, decision=decision, category_hint=category_hint, project_topic=project_topic)
 
         notes[note.paper_id] = note
-        _write_notes([notes[paper_id] for paper_id in notes], report_output_dir / "paper_notes.json")
+        _write_notes([notes[paper_id] for paper_id in notes], notes_path)
 
     ordered_notes = [notes[paper.paper_id] for paper, _ in included_rows]
     ordered_papers = [paper for paper, _ in included_rows]
+
+    _emit_progress(
+        progress_callback,
+        "building-overview",
+        "Building overview",
+        len(ordered_notes),
+        len(ordered_notes),
+        "Generating overall summary and category grouping from paper notes",
+    )
+    try:
+        overview = _request_overview_with_retries(
+            client=client,
+            prompt_path=overview_prompt_path,
+            project_topic=project_topic,
+            notes=ordered_notes,
+            raw_output_path=report_output_dir / "raw" / "report_overview.txt",
+            retry_times=retry_times,
+        )
+    except Exception as exc:
+        _append_log(report_output_dir / "logs" / "report_overview_errors.log", str(exc))
+        overview = _fallback_overview(project_topic=project_topic, notes=ordered_notes)
+    overview_path.write_text(json.dumps(overview.model_dump(mode="json"), ensure_ascii=False, indent=2), encoding="utf-8")
+
     _emit_progress(
         progress_callback,
         "building-references",
@@ -113,6 +147,7 @@ def generate_simple_report(
         style=reference_style,
         working_dir=report_output_dir / "raw" / "references",
     )
+
     _emit_progress(
         progress_callback,
         "rendering-report",
@@ -124,12 +159,14 @@ def generate_simple_report(
     markdown = render_simple_report_markdown(
         project_topic=project_topic,
         notes=ordered_notes,
+        overview=overview,
         records=ordered_papers,
         reference_style=reference_style,
         reference_lines=reference_lines,
     )
     (report_output_dir / DEFAULT_SIMPLE_REPORT_FILENAME).write_text(markdown, encoding="utf-8")
     (report_output_dir / LEGACY_SIMPLE_REPORT_FILENAME).write_text(markdown, encoding="utf-8")
+
     _emit_progress(
         progress_callback,
         "completed",
@@ -144,27 +181,26 @@ def render_simple_report_markdown(
     *,
     project_topic: str,
     notes: list[SimplePaperNote],
+    overview: SimpleReportOverview | None = None,
     records: list[PaperRecord] | None = None,
     reference_style: ReferenceStyle = "gbt7714",
     reference_lines: list[str] | None = None,
 ) -> str:
-    grouped: dict[str, list[SimplePaperNote]] = {}
-    for note in notes:
-        grouped.setdefault(note.category, []).append(note)
+    note_map = {note.paper_id: note for note in notes}
+    resolved_overview = overview or _fallback_overview(project_topic=project_topic, notes=notes)
 
-    ordered_groups = sorted(grouped.items(), key=lambda item: (-len(item[1]), item[0]))
-    total_summary = _build_total_summary(project_topic=project_topic, ordered_groups=ordered_groups)
-
-    lines = ["# 一、相关文献总体情况", "", total_summary, ""]
+    lines = ["# 一、相关文献总体情况", "", resolved_overview.overall_summary.strip(), ""]
 
     lines.extend(["# 二、类型划分", ""])
-    for category_name, items in ordered_groups:
-        lines.append(f"## {category_name}")
+    for category in resolved_overview.categories:
+        lines.append(f"## {category.name}")
         lines.append("")
-        lines.append(_build_category_intro(category_name=category_name, count=len(items), project_topic=project_topic))
+        lines.append(category.intro.strip())
         lines.append("")
-        for note in items:
-            lines.append(f"- {note.title}")
+        for paper_id in category.paper_ids:
+            note = note_map.get(paper_id)
+            if note is not None:
+                lines.append(f"- {note.title}")
         lines.append("")
 
     lines.extend(["# 三、逐篇文献总结分析", ""])
@@ -193,7 +229,7 @@ def _request_note_with_retries(
     prompt_path: Path,
     paper: PaperRecord,
     decision: ScreeningDecision,
-    category: str,
+    category_hint: str,
     project_topic: str,
     raw_output_path: Path,
     retry_times: int,
@@ -205,7 +241,7 @@ def _request_note_with_retries(
                 prompt_path=prompt_path,
                 paper=paper,
                 decision=decision,
-                category=category,
+                category_hint=category_hint,
                 project_topic=project_topic,
             )
             raw_text = client.chat(prompt)
@@ -215,11 +251,38 @@ def _request_note_with_retries(
                 {
                     "paper_id": paper.paper_id,
                     "title": normalize_text(paper.title) or paper.title,
-                    "category": category,
+                    "category": category_hint,
                     "summary": payload["summary"],
                     "analysis": payload["analysis"],
                 }
             )
+        except Exception as exc:
+            last_error = exc
+            if attempt < retry_times:
+                delay_seconds = client.extract_retry_after_seconds(exc) or (2 ** attempt)
+                time.sleep(delay_seconds)
+    assert last_error is not None
+    raise last_error
+
+
+def _request_overview_with_retries(
+    *,
+    client: ChatCompletionClient,
+    prompt_path: Path,
+    project_topic: str,
+    notes: list[SimplePaperNote],
+    raw_output_path: Path,
+    retry_times: int,
+) -> SimpleReportOverview:
+    last_error: Exception | None = None
+    for attempt in range(retry_times + 1):
+        try:
+            prompt = _build_overview_prompt(prompt_path=prompt_path, project_topic=project_topic, notes=notes)
+            raw_text = client.chat(prompt)
+            raw_output_path.write_text(raw_text, encoding="utf-8")
+            payload = parse_model_json(raw_text)
+            overview = SimpleReportOverview.model_validate(payload)
+            return _normalize_overview(overview=overview, notes=notes, project_topic=project_topic)
         except Exception as exc:
             last_error = exc
             if attempt < retry_times:
@@ -234,7 +297,7 @@ def _build_note_prompt(
     prompt_path: Path,
     paper: PaperRecord,
     decision: ScreeningDecision,
-    category: str,
+    category_hint: str,
     project_topic: str,
 ) -> str:
     template = prompt_path.read_text(encoding="utf-8")
@@ -248,16 +311,45 @@ def _build_note_prompt(
         "abstract": normalize_text(paper.abstract),
         "keywords": paper.keywords,
         "screening_reason": normalize_text(decision.reason),
-        "category": category,
+        "category_hint": category_hint,
         "project_topic": project_topic,
     }
     schema = {
         "summary": "string",
         "analysis": "string",
     }
-    return (
-        template.replace("{{ input_payload }}", json.dumps(payload, ensure_ascii=False, indent=2))
-        .replace("{{ output_schema }}", json.dumps(schema, ensure_ascii=False, indent=2))
+    return template.replace("{{ input_payload }}", json.dumps(payload, ensure_ascii=False, indent=2)).replace(
+        "{{ output_schema }}", json.dumps(schema, ensure_ascii=False, indent=2)
+    )
+
+
+def _build_overview_prompt(*, prompt_path: Path, project_topic: str, notes: list[SimplePaperNote]) -> str:
+    template = prompt_path.read_text(encoding="utf-8")
+    payload = {
+        "project_topic": project_topic,
+        "notes": [
+            {
+                "paper_id": note.paper_id,
+                "title": note.title,
+                "summary": note.summary,
+                "analysis": note.analysis,
+                "category_hint": note.category,
+            }
+            for note in notes
+        ],
+    }
+    schema = {
+        "overall_summary": "string",
+        "categories": [
+            {
+                "name": "string",
+                "intro": "string",
+                "paper_ids": ["paper_id_1", "paper_id_2"],
+            }
+        ],
+    }
+    return template.replace("{{ input_payload }}", json.dumps(payload, ensure_ascii=False, indent=2)).replace(
+        "{{ output_schema }}", json.dumps(schema, ensure_ascii=False, indent=2)
     )
 
 
@@ -265,33 +357,89 @@ def _fallback_note(
     *,
     paper: PaperRecord,
     decision: ScreeningDecision,
-    category: str,
+    category_hint: str,
     project_topic: str,
 ) -> SimplePaperNote:
     title = normalize_text(paper.title) or paper.title
-    summary = _fallback_summary(title=title, abstract=normalize_text(paper.abstract), category=category)
-    analysis = _fallback_analysis(reason=normalize_text(decision.reason), category=category, project_topic=project_topic)
+    summary = _fallback_summary(title=title, abstract=normalize_text(paper.abstract), category_hint=category_hint)
+    analysis = _fallback_analysis(reason=normalize_text(decision.reason), category_hint=category_hint, project_topic=project_topic)
     return SimplePaperNote(
         paper_id=paper.paper_id,
         title=title,
-        category=category,
+        category=category_hint,
         summary=summary,
         analysis=analysis,
     )
 
 
-def _fallback_summary(*, title: str, abstract: str | None, category: str) -> str:
+def _fallback_summary(*, title: str, abstract: str | None, category_hint: str) -> str:
     if abstract:
         first_sentence = abstract.split(". ")[0].split("。")[0].strip()
         if first_sentence:
-            return f"该文献围绕“{title}”所对应的问题展开，主要属于{category}方向。摘要显示，研究重点涉及{_trim(first_sentence)}。"
-    return f"该文献主要围绕“{title}”展开，可归入{category}方向，具体技术细节仍需结合全文进一步确认。"
+            return f"该文献围绕“{title}”展开，当前可归入“{category_hint}”相关研究。摘要显示其重点涉及{_trim(first_sentence)}。"
+    return f"该文献围绕“{title}”展开，可作为“{category_hint}”方向的参考材料，具体研究设计仍需结合全文进一步确认。"
 
 
-def _fallback_analysis(*, reason: str | None, category: str, project_topic: str) -> str:
+def _fallback_analysis(*, reason: str | None, category_hint: str, project_topic: str) -> str:
     if reason:
-        return f"从当前主题“{project_topic}”来看，这篇文献的参考价值主要在于：{reason}"
-    return f"对于“{project_topic}”这一主题，这篇文献可作为{category}方向的参考材料，用于补充相关机制、应用场景或系统设计思路。"
+        return f"结合当前主题“{project_topic}”，这篇文献的参考价值主要体现在：{reason}"
+    return f"对于“{project_topic}”这一主题，这篇文献可作为“{category_hint}”方向的补充证据，用于梳理该方向的研究切入点和应用价值。"
+
+
+def _fallback_overview(*, project_topic: str, notes: list[SimplePaperNote]) -> SimpleReportOverview:
+    grouped: dict[str, list[SimplePaperNote]] = {}
+    for note in notes:
+        grouped.setdefault(note.category or "其他相关研究", []).append(note)
+    ordered_groups = sorted(grouped.items(), key=lambda item: (-len(item[1]), item[0]))
+    return SimpleReportOverview(
+        overall_summary=_build_total_summary(project_topic=project_topic, ordered_groups=ordered_groups),
+        categories=[
+            SimpleReportCategory(
+                name=name,
+                intro=_build_category_intro(category_name=name, count=len(items), project_topic=project_topic),
+                paper_ids=[item.paper_id for item in items],
+            )
+            for name, items in ordered_groups
+        ],
+    )
+
+
+def _normalize_overview(*, overview: SimpleReportOverview, notes: list[SimplePaperNote], project_topic: str) -> SimpleReportOverview:
+    note_ids = [note.paper_id for note in notes]
+    valid_ids = set(note_ids)
+    assigned: list[str] = []
+    categories: list[SimpleReportCategory] = []
+
+    for category in overview.categories:
+        cleaned_ids: list[str] = []
+        for paper_id in category.paper_ids:
+            if paper_id in valid_ids and paper_id not in assigned:
+                cleaned_ids.append(paper_id)
+                assigned.append(paper_id)
+        if cleaned_ids:
+            categories.append(
+                SimpleReportCategory(
+                    name=category.name.strip() or "未命名类型",
+                    intro=category.intro.strip() or _build_category_intro(category_name=category.name.strip() or "未命名类型", count=len(cleaned_ids), project_topic=project_topic),
+                    paper_ids=cleaned_ids,
+                )
+            )
+
+    missing = [paper_id for paper_id in note_ids if paper_id not in assigned]
+    if missing:
+        categories.append(
+            SimpleReportCategory(
+                name="其他相关文献",
+                intro=_build_category_intro(category_name="其他相关文献", count=len(missing), project_topic=project_topic),
+                paper_ids=missing,
+            )
+        )
+
+    overall_summary = overview.overall_summary.strip() or _build_total_summary(
+        project_topic=project_topic,
+        ordered_groups=[(category.name, [note for note in notes if note.paper_id in category.paper_ids]) for category in categories],
+    )
+    return SimpleReportOverview(overall_summary=overall_summary, categories=categories)
 
 
 def _build_total_summary(*, project_topic: str, ordered_groups: list[tuple[str, list[SimplePaperNote]]]) -> str:
@@ -303,23 +451,18 @@ def _build_total_summary(*, project_topic: str, ordered_groups: list[tuple[str, 
         )
 
     main_categories = "、".join(name for name, _ in ordered_groups[:4]) if ordered_groups else "若干相关方向"
-    if ordered_groups:
-        top_name, _top_items = ordered_groups[0]
-        top_statement = f"其中以“{top_name}”相关文献数量最多，说明这一方向在当前主题下受到较多关注。"
-    else:
-        top_statement = ""
+    top_name, _ = ordered_groups[0]
     return (
-        f"本次纳入文献共 {total_count} 篇，整体上主要分布在{main_categories}等类型。"
-        "从研究内容来看，这些文献大多围绕机制阐释、实验验证、干预策略评估或综述性整理展开，"
-        f"能够较好地反映当前主题下较受关注的研究切入点与证据积累方向。{top_statement}"
+        f"本次纳入文献共 {total_count} 篇，整体主要分布在{main_categories}等类型。"
+        "从逐篇整理结果看，现有文献主要围绕机制阐释、实验验证、应用评估或综述性整合展开，"
+        f"其中“{top_name}”相关文献数量最多，说明这一方向在当前主题下受到较多关注。"
     )
 
 
 def _build_category_intro(*, category_name: str, count: int, project_topic: str) -> str:
-    count_phrase = f"共 {count} 篇" if count > 1 else "目前仅 1 篇"
     return (
-        f"该类文献{count_phrase}，主要围绕“{category_name}”这一方向展开。"
-        f"就“{project_topic}”而言，这一类型的研究可用于梳理该方向的核心问题、常见研究路径及其参考价值。"
+        f"该类文献共 {count} 篇，主要围绕“{category_name}”这一方向展开。"
+        f"就“{project_topic}”而言，这一类型文献可用于梳理该方向的核心问题、常见研究路径及其参考价值。"
     )
 
 

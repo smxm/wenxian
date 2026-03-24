@@ -25,27 +25,40 @@ _bootstrap()
 from literature_screening.core.models import PaperRecord
 from literature_screening.formal_report.reference_list import build_reference_block
 from literature_screening.formal_report.simple_report import SimplePaperNote
+from literature_screening.formal_report.simple_report import SimpleReportCategory
+from literature_screening.formal_report.simple_report import SimpleReportOverview
 from literature_screening.formal_report.simple_report import _build_total_summary
+from literature_screening.formal_report.simple_report import _normalize_overview
 from literature_screening.formal_report.simple_report import render_simple_report_markdown
 
 
-def test_render_simple_report_markdown_matches_requested_structure() -> None:
+def test_render_simple_report_markdown_uses_ai_overview_structure() -> None:
     notes = [
         SimplePaperNote(
             paper_id="paper_1",
             title="Original Title A",
-            category="钻进与螺旋推进",
-            summary="这是一段总结。",
-            analysis="这是一段分析。",
+            category="旧提示类别A",
+            summary="这是第一篇的总结。",
+            analysis="这是第一篇的分析。",
         ),
         SimplePaperNote(
             paper_id="paper_2",
             title="Original Title B",
-            category="钻进与螺旋推进",
-            summary="第二段总结。",
-            analysis="第二段分析。",
+            category="旧提示类别B",
+            summary="这是第二篇的总结。",
+            analysis="这是第二篇的分析。",
         ),
     ]
+    overview = SimpleReportOverview(
+        overall_summary="这批文献主要围绕两个方向展开，分别体现了不同的研究切入点。",
+        categories=[
+            SimpleReportCategory(
+                name="方向一",
+                intro="这一类文献关注方向一。",
+                paper_ids=["paper_2", "paper_1"],
+            )
+        ],
+    )
     records = [
         PaperRecord(
             paper_id="paper_1",
@@ -66,10 +79,17 @@ def test_render_simple_report_markdown_matches_requested_structure() -> None:
         ),
     ]
 
-    markdown = render_simple_report_markdown(project_topic="测试主题", notes=notes, records=records)
+    markdown = render_simple_report_markdown(
+        project_topic="测试主题",
+        notes=notes,
+        overview=overview,
+        records=records,
+    )
 
     assert "# 一、相关文献总体情况" in markdown
-    assert "# 二、类型划分" in markdown
+    assert "这批文献主要围绕两个方向展开" in markdown
+    assert "## 方向一" in markdown
+    assert markdown.index("- Original Title B") < markdown.index("- Original Title A")
     assert "## Original Title A" in markdown
     assert "总结：" in markdown
     assert "分析：" in markdown
@@ -89,6 +109,10 @@ def test_render_simple_report_markdown_supports_apa7_reference_style(tmp_path: P
             analysis="简要分析。",
         )
     ]
+    overview = SimpleReportOverview(
+        overall_summary="总体上，这批文献聚焦于实验验证。",
+        categories=[SimpleReportCategory(name="实验验证", intro="这一类文献围绕实验验证展开。", paper_ids=["paper_1"])],
+    )
     records = [
         PaperRecord(
             paper_id="paper_1",
@@ -105,6 +129,7 @@ def test_render_simple_report_markdown_supports_apa7_reference_style(tmp_path: P
     markdown = render_simple_report_markdown(
         project_topic="测试主题",
         notes=notes,
+        overview=overview,
         records=records,
         reference_style="apa7",
         reference_lines=reference_lines,
@@ -121,3 +146,20 @@ def test_build_total_summary_handles_empty_note_list() -> None:
 
     assert "暂未形成可供整理的纳入文献" in summary
     assert "测试主题" in summary
+
+
+def test_normalize_overview_assigns_missing_notes() -> None:
+    notes = [
+        SimplePaperNote(paper_id="paper_1", title="A", category="甲", summary="s1", analysis="a1"),
+        SimplePaperNote(paper_id="paper_2", title="B", category="乙", summary="s2", analysis="a2"),
+    ]
+    overview = SimpleReportOverview(
+        overall_summary="",
+        categories=[SimpleReportCategory(name="甲类", intro="", paper_ids=["paper_1"])],
+    )
+
+    normalized = _normalize_overview(overview=overview, notes=notes, project_topic="测试主题")
+
+    assert len(normalized.categories) == 2
+    assert normalized.categories[1].name == "其他相关文献"
+    assert normalized.categories[1].paper_ids == ["paper_2"]

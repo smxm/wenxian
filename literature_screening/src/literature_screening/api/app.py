@@ -755,7 +755,7 @@ def _collect_screening_artifacts(result) -> dict:
 
 
 def _collect_report_artifacts(result) -> dict:
-    return {
+    artifacts = {
         "literature_report": {
             "path": str(result.report_path),
             "filename": result.report_path.name,
@@ -769,6 +769,15 @@ def _collect_report_artifacts(result) -> dict:
             "size_bytes": result.notes_path.stat().st_size if result.notes_path.exists() else None,
         },
     }
+    overview_path = result.report_output_dir / "report_overview.json"
+    if overview_path.exists():
+        artifacts["report_overview"] = {
+            "path": str(overview_path),
+            "filename": overview_path.name,
+            "content_type": "application/json",
+            "size_bytes": overview_path.stat().st_size,
+        }
+    return artifacts
 
 
 def _screening_request_from_task(task: dict) -> ScreeningJobRequest:
