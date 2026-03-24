@@ -1,84 +1,77 @@
 # wenxian
 
-本仓库当前保留两部分主体代码：
+这是一个本地文献工作台仓库，当前包含三部分：
 
 - `literature_screening/`
-  - 初筛主项目，负责文献输入解析、去重、分批筛选、初步报告和文献导出
+  - 初筛主项目与本地 API
 - `literature_screening/separated_modules/formal_report_module/`
-  - 独立报告模块，基于初筛结果生成简洁的综述式 Markdown 报告
+  - 独立报告模块
+- `literature_screening_web/`
+  - Vue 3 Web 工作台
 
-仓库已经清理掉试跑过程中产生的场景数据、调试产物和输出目录，发布分支只保留可维护的代码、最小测试、示例配置和说明文档。
+## 已实现的核心能力
 
-## 当前功能
+### 项目 / 数据集 / 任务链
 
-### 文献初筛
+- 每个任务都属于一个 `Project`
+- 每次运行都会形成可追踪的 `Task`
+- 初筛和审核产物会登记为 `Dataset`
+- 支持从已有 `unused`、`included`、`cumulative_included` 数据集继续筛选
+- 支持 `parent_task_id` 形成任务链
+- 项目内自动维护 `cumulative_included` 累计纳入集
 
-主项目支持：
+### 初筛
 
-- 输入格式：`.bib`、`.ris`、`.enw`、PubMed 导出 `.txt`
-- 多文件合并
-- DOI/标题标准化去重
-- 按批次调用大模型初筛
-- 支持 `Kimi` 和 `DeepSeek`
-- 达到目标纳入数量后提前停止
+- 输入格式：`.bib`、`.ris`、`.enw`、PubMed `.txt`
+- 多文件合并与 DOI/标题去重
+- DeepSeek / Kimi 模型接入
+- 达到目标纳入数后提前停止
 - 输出纳入、剔除、`uncertain` 报告
 - 默认导出 `RIS`，可选兼容导出 `BibTeX`
 
-### 本地前端
+### 报告
 
-提供一个 `Streamlit` 工作台，便于本地交互：
+- 报告模块与初筛主流程完全拆分
+- 可基于单轮筛选结果生成报告
+- 可基于项目内一个或多个 dataset 生成报告
+- `GB/T 7714` 按报告顺序列出参考文献
+- `APA7` 使用 `pandoc + citeproc + CSL` 渲染
 
-- 选择输入文件
-- 填写筛选标准
-- 运行初筛
-- 查看结果
-- 基于初筛结果触发独立报告模块
+### 工作流 / 平台能力
 
-启动：
+- 项目级模板 / preset
+- 输入源管理：上传文件 + 复用已有数据集
+- 中间态可视化：阶段、进度、进度消息
+- 失败恢复 / 断点续跑：支持继续执行，初筛复用已完成 batch
+- 审核与人工修正：可人工改判单篇结果并产出 reviewed RIS
+- 搜索与过滤：按项目、任务类型、状态、关键词过滤
+- 日志和可审计性：任务事件流 / 审计时间线
+- 报告来源控制：明确选择哪些 dataset 进入报告
 
-```bash
-python -m streamlit run E:\wenxian\literature_screening\frontend_app\app.py
-```
+### 配置与隔离策略
 
-### 独立报告模块
+- API Key 只通过环境变量读取，不写入任务和项目数据
+- 模板按 project 作用域隔离
+- 数据集、任务和产物按 project 归档
 
-报告模块已经与初筛主流程拆分，当前默认输出简洁报告，结构为：
+## 启动
 
-- 相关文献总体情况
-- 类型划分
-- 每篇文献的“总结 / 分析”
-- 参考列表
-
-其中：
-
-- `GB/T 7714` 参考列表按报告中的出现顺序输出
-- `APA7` 参考列表通过 `pandoc + citeproc + CSL` 渲染
-
-## 安装
+后端 API：
 
 ```bash
 cd E:\wenxian\literature_screening
-python -m venv .venv
-.venv\Scripts\activate
-pip install -e .[dev,ui]
+python -m uvicorn literature_screening.api.app:app --host 127.0.0.1 --port 8000
 ```
 
-复制环境变量模板并填写 API Key：
+Web 前端：
 
 ```bash
-copy .env.example .env
+cd E:\wenxian\literature_screening_web
+npm install
+npm run dev
 ```
 
-## 快速开始
-
-### 运行初筛
-
-```bash
-cd E:\wenxian\literature_screening
-python -m literature_screening.main --config .\configs\config.example.yaml
-```
-
-### 生成独立报告
+独立报告命令行入口：
 
 ```bash
 python E:\wenxian\literature_screening\separated_modules\formal_report_module\scripts\run_report.py ^
@@ -91,25 +84,9 @@ python E:\wenxian\literature_screening\separated_modules\formal_report_module\sc
   --api-key-env DEEPSEEK_API_KEY
 ```
 
-## 目录说明
+## 说明文档
 
-```text
-E:\wenxian
-  README.md
-  literature_screening/
-    README.md
-    pyproject.toml
-    configs/
-    docs/
-    frontend_app/
-    prompts/
-    separated_modules/
-    src/
-    tests/
-```
-
-更具体的结构和模块边界见：
-
-- [主项目说明](literature_screening/README.md)
-- [架构说明](literature_screening/docs/architecture.md)
-- [独立报告模块说明](literature_screening/separated_modules/formal_report_module/README.md)
+- [主项目说明](E:/wenxian/literature_screening/README.md)
+- [架构说明](E:/wenxian/literature_screening/docs/architecture.md)
+- [Web 工作台说明](E:/wenxian/literature_screening/docs/web-workbench.md)
+- [独立报告模块说明](E:/wenxian/literature_screening/separated_modules/formal_report_module/README.md)
