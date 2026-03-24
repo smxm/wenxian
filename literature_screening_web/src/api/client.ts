@@ -61,6 +61,7 @@ export async function createScreeningTask(payload: ScreeningFormPayload) {
   formData.append('model_name', payload.model.model_name)
   formData.append('api_base_url', payload.model.api_base_url)
   formData.append('api_key_env', payload.model.api_key_env)
+  if (payload.model.api_key) formData.append('api_key', payload.model.api_key)
   formData.append('temperature', String(payload.model.temperature))
   formData.append('max_tokens', String(payload.model.max_tokens))
   formData.append('min_request_interval_seconds', String(payload.model.min_request_interval_seconds))

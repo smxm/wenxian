@@ -11,6 +11,7 @@ from fastapi.responses import FileResponse
 from literature_screening.api.schemas import DatasetRecord, ProjectCreate, ProjectDetail, ProjectSnapshot
 from literature_screening.api.schemas import ReportTaskCreate, RetryTaskRequest, ReviewOverrideRequest, TaskArtifact
 from literature_screening.api.schemas import TaskDetail, TaskEvent, TaskSnapshot, TaskTemplateRecord
+from literature_screening.api.secret_store import SecretStore
 from literature_screening.api.task_store import StoredTask, TaskStore
 from literature_screening.api.template_store import TemplateStore
 from literature_screening.api.workspace_store import WorkspaceStore
@@ -28,6 +29,7 @@ API_RUNS_ROOT = PROJECT_ROOT / "data" / "api_runs"
 TASK_STORE = TaskStore(API_RUNS_ROOT)
 WORKSPACE_STORE = WorkspaceStore(API_RUNS_ROOT)
 TEMPLATE_STORE = TemplateStore(API_RUNS_ROOT)
+SECRET_STORE = SecretStore()
 
 app = FastAPI(title="Literature Screening Studio API", version="0.2.0")
 app.add_middleware(
@@ -321,6 +323,7 @@ async def create_screening_task(
     model_name: str = Form(...),
     api_base_url: str = Form(...),
     api_key_env: str = Form(...),
+    api_key: str = Form(""),
     temperature: float = Form(0.0),
     max_tokens: int = Form(1536),
     min_request_interval_seconds: float = Form(2.0),
@@ -352,6 +355,7 @@ async def create_screening_task(
             raise HTTPException(status_code=400, detail="All source datasets must belong to the selected project")
         input_paths.append(Path(dataset["path"]))
 
+    secret_id = SECRET_STORE.put(api_key.strip()) if api_key.strip() else None
     task = TASK_STORE.create_task(
         kind="screening",
         title=title,
@@ -384,6 +388,7 @@ async def create_screening_task(
                 "parent_task_id": parent_task_id,
                 "source_dataset_ids": source_dataset_ids,
             },
+            "model_secret_id": secret_id,
         },
     )
     uploads_dir = task.root_dir / "uploads"
@@ -411,6 +416,7 @@ async def create_screening_task(
             model_name=model_name,
             api_base_url=api_base_url,
             api_key_env=api_key_env,
+            api_key=api_key.strip() or None,
             temperature=temperature,
             max_tokens=max_tokens,
             min_request_interval_seconds=min_request_interval_seconds,
@@ -509,8 +515,9 @@ def create_report_task(request: ReportTaskCreate) -> TaskSnapshot:
             "model_provider": request.model.provider,
             "source_screening_task_id": request.screening_task_id,
             "input_dataset_ids": source_dataset_ids,
-            "request_payload": request.model_dump(mode="json"),
+            "request_payload": request.model_dump(mode="json", exclude={"model": {"api_key"}}),
             "virtual_dataset_paths": [str(path) for path in dataset_paths],
+            "model_secret_id": SECRET_STORE.put(request.model.api_key.strip()) if (request.model.api_key or "").strip() else None,
         },
     )
     payload = ReportJobRequest(
@@ -521,6 +528,7 @@ def create_report_task(request: ReportTaskCreate) -> TaskSnapshot:
             model_name=request.model.model_name,
             api_base_url=request.model.api_base_url,
             api_key_env=request.model.api_key_env,
+            api_key=(request.model.api_key or "").strip() or None,
             temperature=request.model.temperature,
             max_tokens=request.model.max_tokens,
             min_request_interval_seconds=request.model.min_request_interval_seconds,
@@ -783,6 +791,7 @@ def _collect_report_artifacts(result) -> dict:
 def _screening_request_from_task(task: dict) -> ScreeningJobRequest:
     metadata = task.get("metadata", {})
     payload = metadata.get("request_payload", {})
+    api_key = SECRET_STORE.get(metadata.get("model_secret_id"))
     input_paths = [Path(item) for item in metadata.get("uploaded_input_paths", [])]
     for dataset_id in payload.get("source_dataset_ids", []):
         dataset = _require_dataset(dataset_id)
@@ -800,6 +809,7 @@ def _screening_request_from_task(task: dict) -> ScreeningJobRequest:
             model_name=payload["model_name"],
             api_base_url=payload["api_base_url"],
             api_key_env=payload["api_key_env"],
+            api_key=api_key,
             temperature=payload["temperature"],
             max_tokens=payload["max_tokens"],
             min_request_interval_seconds=payload["min_request_interval_seconds"],
@@ -819,6 +829,7 @@ def _screening_request_from_task(task: dict) -> ScreeningJobRequest:
 def _report_request_from_task(task: dict) -> ReportJobRequest:
     metadata = task.get("metadata", {})
     payload = metadata.get("request_payload", {})
+    api_key = SECRET_STORE.get(metadata.get("model_secret_id"))
     screening_output_dir = task.get("metadata", {}).get("source_screening_task_id")
     if payload.get("screening_task_id"):
         source_task = _get_task_or_404(payload["screening_task_id"])
@@ -837,6 +848,7 @@ def _report_request_from_task(task: dict) -> ReportJobRequest:
             model_name=payload["model"]["model_name"],
             api_base_url=payload["model"]["api_base_url"],
             api_key_env=payload["model"]["api_key_env"],
+            api_key=api_key,
             temperature=payload["model"]["temperature"],
             max_tokens=payload["model"]["max_tokens"],
             min_request_interval_seconds=payload["model"]["min_request_interval_seconds"],

@@ -20,6 +20,7 @@ import {
   useMessage
 } from 'naive-ui'
 import StatusPill from '@/components/StatusPill.vue'
+import { useDraftsStore } from '@/stores/drafts'
 import { useMetaStore } from '@/stores/meta'
 import { useProjectsStore } from '@/stores/projects'
 import { useTasksStore } from '@/stores/tasks'
@@ -30,6 +31,7 @@ const message = useMessage()
 const projectsStore = useProjectsStore()
 const tasksStore = useTasksStore()
 const metaStore = useMetaStore()
+const draftsStore = useDraftsStore()
 
 const projectId = computed(() => String(route.params.projectId))
 const datasetQuery = ref('')
@@ -101,6 +103,7 @@ async function submitProjectReport() {
       model_name: preset.defaultModel,
       api_base_url: preset.defaultBaseUrl,
       api_key_env: preset.defaultApiKeyEnv,
+      api_key: draftsStore.getProviderApiKey(preset.provider),
       temperature: 0,
       max_tokens: 1536,
       min_request_interval_seconds: 2

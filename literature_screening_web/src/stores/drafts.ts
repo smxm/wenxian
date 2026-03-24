@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import type { ModelSettings, ReferenceStyle } from '@/types/api'
+import type { ModelSettings, ProviderName, ReferenceStyle } from '@/types/api'
 
 const STORAGE_KEY = 'literature-screening-studio:drafts'
 
@@ -35,6 +35,8 @@ export interface ReportDraftState {
   retryTimes: number
   timeoutSeconds: number
 }
+
+type ApiKeyMap = Partial<Record<ProviderName, string>>
 
 function createDefaultScreeningDraft(): ScreeningDraftState {
   return {
@@ -89,6 +91,7 @@ function readPersisted() {
     return JSON.parse(raw) as {
       screeningDraft?: Partial<ScreeningDraftState>
       reportDrafts?: Record<string, Partial<ReportDraftState>>
+      apiKeys?: ApiKeyMap
     }
   } catch {
     return null
@@ -101,11 +104,13 @@ export const useDraftsStore = defineStore('drafts', {
     screeningDraft: ScreeningDraftState
     screeningFiles: File[]
     reportDrafts: Record<string, ReportDraftState>
+    apiKeys: ApiKeyMap
   } => ({
     hydrated: false,
     screeningDraft: createDefaultScreeningDraft(),
     screeningFiles: [],
-    reportDrafts: {}
+    reportDrafts: {},
+    apiKeys: {}
   }),
   getters: {
     hasScreeningDraft: (state) =>
@@ -145,6 +150,12 @@ export const useDraftsStore = defineStore('drafts', {
           ])
         )
       }
+      if (persisted && 'apiKeys' in persisted && persisted.apiKeys) {
+        this.apiKeys = persisted.apiKeys as ApiKeyMap
+        if (this.screeningDraft.provider && this.apiKeys[this.screeningDraft.provider]) {
+          this.screeningDraft.model.api_key = this.apiKeys[this.screeningDraft.provider]
+        }
+      }
       this.hydrated = true
     },
     persist() {
@@ -153,7 +164,8 @@ export const useDraftsStore = defineStore('drafts', {
         STORAGE_KEY,
         JSON.stringify({
           screeningDraft: this.screeningDraft,
-          reportDrafts: this.reportDrafts
+          reportDrafts: this.reportDrafts,
+          apiKeys: this.apiKeys
         })
       )
     },
@@ -165,6 +177,9 @@ export const useDraftsStore = defineStore('drafts', {
           ...this.screeningDraft.model,
           ...(patch.model ?? {})
         }
+      }
+      if (this.screeningDraft.model.api_key) {
+        this.apiKeys[this.screeningDraft.provider] = this.screeningDraft.model.api_key
       }
       this.persist()
     },
@@ -195,6 +210,17 @@ export const useDraftsStore = defineStore('drafts', {
     clearReportDraft(screeningTaskId: string) {
       delete this.reportDrafts[screeningTaskId]
       this.persist()
+    },
+    setProviderApiKey(provider: ProviderName, apiKey: string) {
+      if (apiKey) this.apiKeys[provider] = apiKey
+      else delete this.apiKeys[provider]
+      if (this.screeningDraft.provider === provider) {
+        this.screeningDraft.model.api_key = apiKey
+      }
+      this.persist()
+    },
+    getProviderApiKey(provider: ProviderName) {
+      return this.apiKeys[provider] ?? ''
     }
   }
 })

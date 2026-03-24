@@ -144,6 +144,7 @@ async function submitReport() {
       model_name: preset.defaultModel,
       api_base_url: preset.defaultBaseUrl,
       api_key_env: preset.defaultApiKeyEnv,
+      api_key: draftsStore.getProviderApiKey(preset.provider),
       temperature: 0,
       max_tokens: 1536,
       min_request_interval_seconds: 2

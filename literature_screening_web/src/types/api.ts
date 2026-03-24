@@ -122,6 +122,7 @@ export interface ModelSettings {
   model_name: string
   api_base_url: string
   api_key_env: string
+  api_key?: string
   temperature: number
   max_tokens: number
   min_request_interval_seconds: number

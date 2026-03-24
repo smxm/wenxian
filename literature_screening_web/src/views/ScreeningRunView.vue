@@ -52,6 +52,7 @@ const model = ref<ModelSettings>({
   model_name: 'deepseek-chat',
   api_base_url: 'https://api.deepseek.com/v1',
   api_key_env: 'DEEPSEEK_API_KEY',
+  api_key: '',
   temperature: 0,
   max_tokens: 1536,
   min_request_interval_seconds: 2
@@ -151,7 +152,8 @@ watch(provider, (nextProvider) => {
     provider: preset.provider,
     model_name: preset.defaultModel,
     api_base_url: preset.defaultBaseUrl,
-    api_key_env: preset.defaultApiKeyEnv
+    api_key_env: preset.defaultApiKeyEnv,
+    api_key: draftsStore.getProviderApiKey(preset.provider)
   }
 })
 
@@ -328,6 +330,9 @@ onMounted(async () => {
   await Promise.all([metaStore.ensureLoaded(), projectsStore.refreshProjects()])
   hydratingDraft.value = true
   applyDraft()
+  if (!model.value.api_key) {
+    model.value.api_key = draftsStore.getProviderApiKey(provider.value)
+  }
 
   const queryProjectId = typeof route.query.projectId === 'string' ? route.query.projectId : null
   const querySourceDatasetId = typeof route.query.sourceDatasetId === 'string' ? route.query.sourceDatasetId : null
@@ -508,9 +513,20 @@ onMounted(async () => {
               <NInput v-model:value="model.model_name" />
             </NFormItem>
           </NGridItem>
-          <NGridItem span="2 m:1">
+<NGridItem span="2 m:1">
             <NFormItem label="API Key 变量名">
               <NInput v-model:value="model.api_key_env" placeholder="例如：DEEPSEEK_API_KEY" />
+            </NFormItem>
+          </NGridItem>
+          <NGridItem span="2 m:1">
+            <NFormItem label="API Key（本地缓存）">
+              <NInput
+                type="password"
+                show-password-on="click"
+                :value="model.api_key || ''"
+                @update:value="(value) => { model.api_key = value; draftsStore.setProviderApiKey(provider, value) }"
+                placeholder="可直接填写，仅保存在当前浏览器本地"
+              />
             </NFormItem>
           </NGridItem>
           <NGridItem span="4">

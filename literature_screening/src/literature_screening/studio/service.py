@@ -50,6 +50,7 @@ class ModelDraft:
     model_name: str
     api_base_url: str
     api_key_env: str
+    api_key: str | None = None
     temperature: float = 0.0
     max_tokens: int = 1536
     min_request_interval_seconds: float = 2.0
@@ -242,7 +243,7 @@ def run_screening_job(
         dedup=DedupConfig(**config_payload["dedup"]),
         screening=ScreeningConfig(**config_payload["screening"]),
         criteria=CriteriaConfig(**config_payload["criteria"]),
-        model=ModelConfig(**config_payload["model"]),
+        model=ModelConfig(**config_payload["model"], api_key=request.model.api_key),
         report=ReportConfig(**config_payload["report"]),
     )
     run_pipeline(run_config, dry_run=False, progress_callback=progress_callback)
@@ -300,6 +301,7 @@ def generate_simple_report_job(
         model_name=request.model.model_name,
         api_base_url=request.model.api_base_url,
         api_key_env=request.model.api_key_env,
+        api_key=request.model.api_key,
         temperature=request.model.temperature,
         max_tokens=request.model.max_tokens,
         min_request_interval_seconds=request.model.min_request_interval_seconds,

@@ -18,6 +18,7 @@ class ModelSettings(BaseModel):
     model_name: str
     api_base_url: str
     api_key_env: str
+    api_key: str | None = None
     temperature: float = 0.0
     max_tokens: int = 1536
     min_request_interval_seconds: float = 2.0
