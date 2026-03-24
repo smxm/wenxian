@@ -320,6 +320,12 @@ function patchReportDraft(patch: Record<string, unknown>) {
                 <span>{{ selectedRecord.journal || '期刊未知' }}</span>
               </div>
             </div>
+            <div class="abstract-block">
+              <div class="abstract-label">摘要信息</div>
+              <div class="abstract-panel">
+                {{ selectedRecord.abstract || '当前记录没有可用摘要。' }}
+              </div>
+            </div>
             <NForm label-placement="top">
               <NFormItem label="判定结果">
                 <NSelect
@@ -490,6 +496,29 @@ h1 {
   gap: 12px;
   color: #5b665d;
   font-size: 13px;
+}
+
+.abstract-block {
+  margin-bottom: 14px;
+}
+
+.abstract-label {
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #526054;
+}
+
+.abstract-panel {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(241, 245, 240, 0.85);
+  border: 1px solid rgba(86, 112, 92, 0.12);
+  color: #435046;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  max-height: 220px;
+  overflow: auto;
 }
 
 .event-list {

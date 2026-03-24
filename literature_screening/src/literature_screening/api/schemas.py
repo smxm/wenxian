@@ -156,6 +156,7 @@ class ScreeningRecordRow(BaseModel):
     year: int | None = None
     journal: str | None = None
     doi: str | None = None
+    abstract: str | None = None
 
 
 class TaskDetail(TaskSnapshot):

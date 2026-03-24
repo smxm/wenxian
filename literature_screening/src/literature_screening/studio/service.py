@@ -351,6 +351,7 @@ def load_screening_records(output_dir: Path) -> list[dict[str, Any]]:
                 "year": paper.get("year"),
                 "journal": paper.get("journal", ""),
                 "doi": paper.get("doi", ""),
+                "abstract": paper.get("abstract", ""),
             }
         )
     return rows

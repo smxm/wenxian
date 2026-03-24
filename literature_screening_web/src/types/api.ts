@@ -78,6 +78,7 @@ export interface ScreeningRecordRow {
   year?: number | null
   journal?: string | null
   doi?: string | null
+  abstract?: string | null
 }
 
 export interface TaskSnapshot {
