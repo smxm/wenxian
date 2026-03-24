@@ -1,6 +1,8 @@
 from __future__ import annotations
 
+import difflib
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -9,7 +11,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 
 from literature_screening.api.schemas import DatasetRecord, ProjectCreate, ProjectDetail, ProjectSnapshot
-from literature_screening.api.schemas import ReportTaskCreate, RetryTaskRequest, ReviewOverrideRequest, TaskArtifact
+from literature_screening.api.schemas import ReferenceOverrideRequest, ReportTaskCreate, RetryTaskRequest, ReviewOverrideRequest, TaskArtifact
 from literature_screening.api.schemas import TaskDetail, TaskEvent, TaskSnapshot, TaskTemplateRecord
 from literature_screening.api.secret_store import SecretStore
 from literature_screening.api.task_store import StoredTask, TaskStore
@@ -296,6 +298,69 @@ def apply_review_override(task_id: str, request: ReviewOverrideRequest) -> TaskD
         kind="manual-review",
         message=f"Reviewed {request.paper_id} -> {request.decision}",
         metadata={"paper_id": request.paper_id, "decision": request.decision, "output_dataset_ids": reviewed_dataset_ids},
+    )
+    return _to_detail(TASK_STORE.load_task(task_id))
+
+
+@app.post("/api/tasks/{task_id}/reference-overrides", response_model=TaskDetail)
+def apply_reference_override(task_id: str, request: ReferenceOverrideRequest) -> TaskDetail:
+    task = _get_task_or_404(task_id)
+    if task["kind"] != "report" or task["status"] != "succeeded":
+        raise HTTPException(status_code=400, detail="Only completed report tasks support reference override")
+
+    output_dir = Path(task["output_dir"])
+    notes_path = output_dir / "paper_notes.json"
+    report_path = output_dir / "literature_report.md"
+    if not notes_path.exists() or not report_path.exists():
+        raise HTTPException(status_code=404, detail="Report notes or markdown file is missing")
+
+    note_payload = json.loads(notes_path.read_text(encoding="utf-8"))
+    ordered_titles = [str(item.get("title", "")).strip() for item in note_payload if str(item.get("title", "")).strip()]
+    if not ordered_titles:
+        raise HTTPException(status_code=400, detail="Report note order is unavailable")
+
+    reference_style = str((task.get("summary") or {}).get("reference_style", "gbt7714"))
+    try:
+        reordered_lines = _reorder_reference_entries(
+            raw_text=request.references_text,
+            ordered_titles=ordered_titles,
+            reference_style=reference_style,
+        )
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
+
+    original_markdown = report_path.read_text(encoding="utf-8")
+    updated_markdown = _replace_reference_section(original_markdown, reordered_lines)
+
+    reviewed_dir = output_dir / "reviewed"
+    reviewed_dir.mkdir(parents=True, exist_ok=True)
+    reviewed_report_path = reviewed_dir / "literature_report.reviewed.md"
+    reviewed_refs_path = reviewed_dir / "references.reviewed.txt"
+    reviewed_report_path.write_text(updated_markdown, encoding="utf-8")
+    reviewed_refs_path.write_text("\n".join(reordered_lines).strip() + "\n", encoding="utf-8")
+
+    artifacts = {
+        **task.get("artifacts", {}),
+        "literature_report_reviewed": {
+            "path": str(reviewed_report_path),
+            "filename": reviewed_report_path.name,
+            "content_type": "text/markdown; charset=utf-8",
+            "size_bytes": reviewed_report_path.stat().st_size,
+        },
+        "references_reviewed": {
+            "path": str(reviewed_refs_path),
+            "filename": reviewed_refs_path.name,
+            "content_type": "text/plain; charset=utf-8",
+            "size_bytes": reviewed_refs_path.stat().st_size,
+        },
+    }
+    summary = {**(task.get("summary") or {}), "reference_override_applied": True}
+    TASK_STORE.update(task_id, markdown_preview=updated_markdown, artifacts=artifacts, summary=summary)
+    TASK_STORE.append_event(
+        task_id,
+        kind="reference-override",
+        message=f"Reordered {len(reordered_lines)} references using manual override",
+        metadata={"reference_style": reference_style, "count": len(reordered_lines)},
     )
     return _to_detail(TASK_STORE.load_task(task_id))
 
@@ -669,6 +734,126 @@ def _register_review_datasets(
         )
         dataset_ids.append(dataset["id"])
     return dataset_ids
+
+
+def _reorder_reference_entries(*, raw_text: str, ordered_titles: list[str], reference_style: str) -> list[str]:
+    entries = _parse_reference_entries(raw_text)
+    if not entries:
+        raise ValueError("没有识别到可用的参考文献条目。请粘贴完整的参考列表。")
+
+    matched_entries: list[str] = []
+    used_indexes: set[int] = set()
+    missing_titles: list[str] = []
+
+    for title in ordered_titles:
+        match_index = _find_best_reference_match(title=title, entries=entries, used_indexes=used_indexes)
+        if match_index is None:
+            missing_titles.append(title)
+            continue
+        used_indexes.add(match_index)
+        matched_entries.append(entries[match_index])
+
+    if missing_titles:
+        preview = "；".join(missing_titles[:3])
+        suffix = " 等" if len(missing_titles) > 3 else ""
+        raise ValueError(f"有 {len(missing_titles)} 篇文献在你粘贴的参考列表里没有匹配上：{preview}{suffix}")
+
+    return _renumber_reference_entries(matched_entries, reference_style=reference_style)
+
+
+def _parse_reference_entries(raw_text: str) -> list[str]:
+    text = raw_text.replace("\r\n", "\n").strip()
+    if not text:
+        return []
+
+    if re.search(r"(?m)^\s*\[\d+\]", text):
+        entries: list[str] = []
+        current: list[str] = []
+        for line in text.split("\n"):
+            stripped = line.strip()
+            if not stripped:
+                continue
+            if re.match(r"^\[\d+\]", stripped):
+                if current:
+                    entries.append(" ".join(current).strip())
+                current = [stripped]
+            else:
+                current.append(stripped)
+        if current:
+            entries.append(" ".join(current).strip())
+        return entries
+
+    if "\n\n" in text:
+        return [" ".join(block.splitlines()).strip() for block in re.split(r"\n\s*\n", text) if block.strip()]
+
+    return [line.strip() for line in text.splitlines() if line.strip()]
+
+
+def _find_best_reference_match(*, title: str, entries: list[str], used_indexes: set[int]) -> int | None:
+    normalized_title = _normalize_reference_match_text(title)
+    if not normalized_title:
+        return None
+
+    best_index: int | None = None
+    best_score = 0.0
+    for index, entry in enumerate(entries):
+        if index in used_indexes:
+            continue
+        candidate_title = _extract_reference_title(entry)
+        normalized_candidate = _normalize_reference_match_text(candidate_title or entry)
+        if not normalized_candidate:
+            continue
+
+        score = 0.0
+        if normalized_title == normalized_candidate:
+            score = 1.0
+        elif normalized_title in normalized_candidate or normalized_candidate in normalized_title:
+            score = 0.95
+        else:
+            score = difflib.SequenceMatcher(None, normalized_title, normalized_candidate).ratio()
+
+        if score > best_score:
+            best_index = index
+            best_score = score
+
+    if best_score >= 0.6:
+        return best_index
+    return None
+
+
+def _extract_reference_title(entry: str) -> str:
+    stripped = re.sub(r"^\s*\[\d+\]\s*", "", entry).strip()
+    patterns = [
+        r"^[^.]+\.\s*(.+?)\[[A-Za-z/]+\]\.",
+        r"^\s*.+?\(\d{4}\)\.\s*(.+?)\.\s*(?:<|[A-Z][a-z])",
+    ]
+    for pattern in patterns:
+        match = re.search(pattern, stripped)
+        if match:
+            return match.group(1).strip()
+    return stripped
+
+
+def _normalize_reference_match_text(text: str) -> str:
+    lowered = text.lower()
+    lowered = lowered.replace("–", "-").replace("—", "-")
+    return re.sub(r"[^a-z0-9\u4e00-\u9fff]+", "", lowered)
+
+
+def _renumber_reference_entries(entries: list[str], *, reference_style: str) -> list[str]:
+    cleaned = [re.sub(r"^\s*\[\d+\]\s*", "", entry).strip() for entry in entries]
+    if reference_style == "apa7":
+        return cleaned
+    return [f"[{index}] {entry}" for index, entry in enumerate(cleaned, start=1)]
+
+
+def _replace_reference_section(markdown: str, reference_lines: list[str]) -> str:
+    marker = "# 参考列表"
+    if marker not in markdown:
+        raise ValueError("报告中没有找到“参考列表”章节。")
+    head, _tail = markdown.split(marker, 1)
+    body = "\n".join(reference_lines).strip()
+    return f"{head.rstrip()}\n\n{marker}\n\n{body}\n"
 
 
 def _get_task_or_404(task_id: str) -> dict:

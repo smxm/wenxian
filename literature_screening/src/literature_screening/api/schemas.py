@@ -119,6 +119,10 @@ class ReviewOverrideRequest(BaseModel):
     reason: str = ""
 
 
+class ReferenceOverrideRequest(BaseModel):
+    references_text: str
+
+
 class RetryTaskRequest(BaseModel):
     mode: Literal["retry", "resume"] = "resume"
 

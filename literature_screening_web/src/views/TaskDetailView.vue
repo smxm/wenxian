@@ -47,6 +47,7 @@ const reportDraft = computed(() => draftsStore.getReportDraft(taskId.value))
 const selectedRecord = ref<ScreeningRecordRow | null>(null)
 const reviewDecision = ref<'include' | 'exclude' | 'uncertain'>('include')
 const reviewReason = ref('')
+const referenceOverrideText = ref('')
 
 const screeningSummary = computed<Record<string, number | string>>(() => {
   const source = task.value?.summary ?? {}
@@ -157,6 +158,12 @@ async function submitReport() {
 
 function patchReportDraft(patch: Record<string, unknown>) {
   draftsStore.updateReportDraft(taskId.value, patch)
+}
+
+async function submitReferenceOverride() {
+  if (!task.value || !referenceOverrideText.value.trim()) return
+  await tasksStore.reviewReferences(task.value.id, referenceOverrideText.value)
+  message.success('参考列表已按报告顺序重排，并生成修正版报告')
 }
 </script>
 
@@ -353,6 +360,23 @@ function patchReportDraft(patch: Record<string, unknown>) {
       <NAlert v-else type="info" :show-icon="false">
         报告任务已创建。完成后这里会直接显示 Markdown 预览。
       </NAlert>
+
+      <NCard v-if="task.status === 'succeeded'" title="参考列表人工修正" class="panel-surface">
+        <div class="report-copy">
+          粘贴你从 Zotero 或其他来源修正后的参考列表。系统会按当前报告中的文献顺序自动重排，并替换报告尾部参考列表。
+        </div>
+        <div class="reference-override-form">
+          <NInput
+            v-model:value="referenceOverrideText"
+            type="textarea"
+            :autosize="{ minRows: 8, maxRows: 16 }"
+            placeholder="把修正后的参考列表整段粘贴到这里"
+          />
+          <NButton type="primary" @click="submitReferenceOverride" :disabled="!referenceOverrideText.trim()">
+            应用参考列表修正
+          </NButton>
+        </div>
+      </NCard>
     </template>
 
     <NCard title="产物文件" class="panel-surface">
@@ -463,6 +487,13 @@ h1 {
   justify-content: space-between;
   gap: 20px;
   align-items: center;
+}
+
+.reference-override-form {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .lineage-grid {

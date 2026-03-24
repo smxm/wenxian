@@ -46,6 +46,11 @@ export async function applyReviewOverride(taskId: string, payload: { paper_id: s
   return data
 }
 
+export async function applyReferenceOverride(taskId: string, payload: { references_text: string }) {
+  const { data } = await http.post<TaskDetail>(`/tasks/${taskId}/reference-overrides`, payload)
+  return data
+}
+
 export async function createScreeningTask(payload: ScreeningFormPayload) {
   const formData = new FormData()
   if (payload.project_id) formData.append('project_id', payload.project_id)
