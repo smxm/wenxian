@@ -38,14 +38,42 @@ DEEPSEEK_API_KEY=你的真实DeepSeekKey
 KIMI_API_KEY=
 ```
 
-## 4. 启动
+## 4. 配置站点访问密码
+
+先生成 `.htpasswd`：
+
+```bash
+openssl passwd -apr1
+```
+
+系统会让你输入密码，并输出一行类似：
+
+```text
+$apr1$xxxxxxxx$xxxxxxxxxxxxxxxxxxxxxx
+```
+
+然后写入：
+
+```bash
+cat > deploy/.htpasswd <<'EOF'
+friend:把上面那串完整hash贴到这里
+EOF
+```
+
+说明：
+
+- `friend` 是登录用户名，可以自己改
+- 冒号后面必须是完整 hash，不是明文密码
+- 之后你和朋友访问网站时都要先输入这个用户名和密码
+
+## 5. 启动
 
 ```bash
 mkdir -p server-data/api_runs
 docker compose up -d --build
 ```
 
-## 5. 查看状态
+## 6. 查看状态
 
 ```bash
 docker compose ps
@@ -53,7 +81,7 @@ docker compose logs -f api
 docker compose logs -f web
 ```
 
-## 6. 访问
+## 7. 访问
 
 浏览器打开：
 
@@ -61,7 +89,9 @@ docker compose logs -f web
 http://你的服务器公网IP
 ```
 
-## 7. 腾讯云控制台要放行的端口
+首次访问会先弹出浏览器用户名/密码框。
+
+## 8. 腾讯云控制台要放行的端口
 
 - 80
 - 22
@@ -70,7 +100,7 @@ http://你的服务器公网IP
 
 - 443
 
-## 8. 停止与更新
+## 9. 停止与更新
 
 停止：
 
@@ -85,7 +115,7 @@ git pull
 docker compose up -d --build
 ```
 
-## 9. 数据位置
+## 10. 数据位置
 
 运行数据保存在：
 
