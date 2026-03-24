@@ -900,7 +900,7 @@ def _to_detail(task: dict) -> TaskDetail:
         **snapshot.model_dump(),
         run_root=task.get("run_root"),
         output_dir=task.get("output_dir"),
-        records=task.get("records", []),
+        records=_resolve_task_records(task),
         markdown_preview=task.get("markdown_preview"),
         events=[TaskEvent.model_validate(item) for item in TASK_STORE.load_events(task["id"])],
     )
@@ -913,6 +913,37 @@ def _artifact_from_entry(key: str, payload: dict) -> TaskArtifact:
         content_type=payload.get("content_type", "application/octet-stream"),
         size_bytes=payload.get("size_bytes"),
     )
+
+
+def _resolve_task_records(task: dict) -> list[dict]:
+    current_records = task.get("records", []) or []
+    if task.get("kind") != "screening":
+        return current_records
+
+    output_dir = task.get("output_dir")
+    if not output_dir:
+        return current_records
+
+    if current_records and all(record.get("abstract") for record in current_records):
+        return current_records
+
+    try:
+        hydrated_records = load_screening_records(Path(output_dir))
+    except Exception:
+        return current_records
+
+    if not current_records:
+        return hydrated_records
+
+    current_map = {record.get("paper_id"): record for record in current_records}
+    merged: list[dict] = []
+    for hydrated in hydrated_records:
+        existing = current_map.get(hydrated.get("paper_id"))
+        if existing:
+            merged.append({**hydrated, **existing, "abstract": hydrated.get("abstract") or existing.get("abstract")})
+        else:
+            merged.append(hydrated)
+    return merged
 
 
 def _collect_screening_artifacts(result) -> dict:
