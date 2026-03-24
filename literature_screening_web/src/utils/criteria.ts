@@ -70,7 +70,7 @@ function detectSection(line: string): SectionType {
 
 function looksLikeSectionHeader(line: string) {
   const normalized = normalizeLabel(line)
-  return /^(纳入标准|排除标准|inclusion criteria|exclusion criteria|inclusion|exclusion)\s*[:：]?$/i.test(normalized)
+  return /^(纳入标准(\s+inclusion criteria)?|排除标准(\s+exclusion criteria)?|inclusion criteria|exclusion criteria|inclusion|exclusion)\s*[:：]?$/i.test(normalized)
 }
 
 function splitInlineCriteria(value: string) {
@@ -82,14 +82,14 @@ function splitInlineCriteria(value: string) {
 
 function parseInlineSection(line: string): { section: SectionType; items: string[] } | null {
   const cleaned = normalizeLabel(line)
-  const inclusionMatch = cleaned.match(/^(纳入标准|inclusion criteria|inclusion)\s*[:：]\s*(.+)$/i)
+  const inclusionMatch = cleaned.match(/^(纳入标准(\s+inclusion criteria)?|inclusion criteria|inclusion)\s*[:：]\s*(.*)$/i)
   if (inclusionMatch) {
-    return { section: 'inclusion', items: splitInlineCriteria(inclusionMatch[2]) }
+    return { section: 'inclusion', items: splitInlineCriteria(inclusionMatch[inclusionMatch.length - 1] || '') }
   }
 
-  const exclusionMatch = cleaned.match(/^(排除标准|exclusion criteria|exclusion)\s*[:：]\s*(.+)$/i)
+  const exclusionMatch = cleaned.match(/^(排除标准(\s+exclusion criteria)?|exclusion criteria|exclusion)\s*[:：]\s*(.*)$/i)
   if (exclusionMatch) {
-    return { section: 'exclusion', items: splitInlineCriteria(exclusionMatch[2]) }
+    return { section: 'exclusion', items: splitInlineCriteria(exclusionMatch[exclusionMatch.length - 1] || '') }
   }
 
   return null
