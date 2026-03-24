@@ -316,6 +316,10 @@ async function submit() {
   })
   draftsStore.clearScreeningDraft()
   message.success('初筛任务已创建。')
+  if (task.project_id) {
+    await router.push(`/threads/${task.project_id}`)
+    return
+  }
   await router.push(`/tasks/${task.id}`)
 }
 

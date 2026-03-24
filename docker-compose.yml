@@ -1,0 +1,27 @@
+services:
+  api:
+    build:
+      context: ./literature_screening
+      dockerfile: Dockerfile
+    container_name: literature-screening-api
+    restart: unless-stopped
+    environment:
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY:-}
+      KIMI_API_KEY: ${KIMI_API_KEY:-}
+      PYTHONUNBUFFERED: "1"
+    volumes:
+      - ./server-data/api_runs:/app/data/api_runs
+    expose:
+      - "8000"
+
+  web:
+    build:
+      context: ./literature_screening_web
+      dockerfile: Dockerfile
+    container_name: literature-screening-web
+    restart: unless-stopped
+    depends_on:
+      - api
+    ports:
+      - "80:80"
+

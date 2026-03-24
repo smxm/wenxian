@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { createProject, fetchProject, fetchProjects, fetchTemplates, createTemplate } from '@/api/client'
+import { createProject, deleteProject, fetchProject, fetchProjects, fetchTemplates, createTemplate, updateProject } from '@/api/client'
 import type { ProjectDetail, ProjectSnapshot, TaskTemplateRecord } from '@/types/api'
 
 export const useProjectsStore = defineStore('projects', {
@@ -39,6 +39,22 @@ export const useProjectsStore = defineStore('projects', {
       const project = await createProject(payload)
       await this.refreshProjects()
       return project
+    },
+    async updateProject(projectId: string, payload: { name: string; topic: string; description: string }) {
+      const project = await updateProject(projectId, payload)
+      await this.refreshProjects()
+      if (this.currentProject?.id === projectId) {
+        await this.loadProject(projectId)
+      }
+      return project
+    },
+    async deleteProject(projectId: string) {
+      await deleteProject(projectId)
+      if (this.currentProject?.id === projectId) {
+        this.currentProject = null
+        this.templates = []
+      }
+      await this.refreshProjects()
     },
     async saveTemplate(payload: { name: string; payload: Record<string, unknown>; project_id?: string | null }) {
       const template = await createTemplate(payload)

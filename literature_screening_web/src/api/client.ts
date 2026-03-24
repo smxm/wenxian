@@ -41,6 +41,11 @@ export async function retryTask(taskId: string, mode: 'retry' | 'resume' = 'resu
   return data
 }
 
+export async function cancelTask(taskId: string) {
+  const { data } = await http.post<TaskSnapshot>(`/tasks/${taskId}/cancel`)
+  return data
+}
+
 export async function applyReviewOverride(taskId: string, payload: { paper_id: string; decision: 'include' | 'exclude' | 'uncertain'; reason: string }) {
   const { data } = await http.post<TaskDetail>(`/tasks/${taskId}/review-overrides`, payload)
   return data
@@ -101,6 +106,16 @@ export async function fetchProject(projectId: string) {
 
 export async function createProject(payload: { name: string; topic: string; description: string }) {
   const { data } = await http.post<ProjectSnapshot>('/projects', payload)
+  return data
+}
+
+export async function updateProject(projectId: string, payload: { name: string; topic: string; description: string }) {
+  const { data } = await http.put<ProjectSnapshot>(`/projects/${projectId}`, payload)
+  return data
+}
+
+export async function deleteProject(projectId: string) {
+  const { data } = await http.delete<{ status: string }>(`/projects/${projectId}`)
   return data
 }
 

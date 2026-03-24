@@ -21,6 +21,7 @@ from literature_screening.core.constants import (
     STOP_REASON_MANUAL,
     STOP_REASON_TARGET_REACHED,
 )
+from literature_screening.core.exceptions import ResponseParseError, SchemaValidationError, TaskCancelledError
 from literature_screening.core.models import RunConfig, ScreeningDecision
 from literature_screening.reporting.report_generator import write_screening_markdown_report
 from literature_screening.reporting.writers import write_json
@@ -32,12 +33,14 @@ from literature_screening.screening.validator import validate_batch_response
 
 
 ProgressCallback = Callable[[str, str, int | None, int | None, str | None], None]
+CancelCallback = Callable[[], bool]
 
 
 def run_pipeline(
     config: RunConfig,
     dry_run: bool = False,
     progress_callback: ProgressCallback | None = None,
+    cancel_callback: CancelCallback | None = None,
 ) -> None:
     run_id = f"run_{datetime.now().astimezone().strftime('%Y%m%d_%H%M%S')}"
     output_dir = Path(config.project.output_dir)
@@ -49,8 +52,10 @@ def run_pipeline(
     write_json(config, snapshot_path)
 
     input_paths = [Path(item) for item in config.input.input_files]
+    _ensure_not_cancelled(cancel_callback)
     _emit_progress(progress_callback, "parsing-inputs", "Parsing inputs", 0, None, "Parsing source files")
     merged_records = parse_bibtex_files(input_paths, encoding=config.input.encoding)
+    _ensure_not_cancelled(cancel_callback)
     _emit_progress(progress_callback, "deduplicating", "Deduplicating", 0, None, "Removing duplicate records")
     deduped_records = deduplicate_records(merged_records) if config.dedup.enabled else merged_records
     batch_records = build_batch_records(
@@ -106,6 +111,7 @@ def run_pipeline(
     processed_batches = 0
 
     for batch in batch_records:
+        _ensure_not_cancelled(cancel_callback)
         _emit_progress(
             progress_callback,
             "screening",
@@ -118,21 +124,16 @@ def run_pipeline(
         payload = _load_existing_batch_payload(batch_output_path, batch.batch_id, batch.paper_ids)
         if payload is None:
             batch_papers = [record_map[paper_id] for paper_id in batch.paper_ids if paper_id in record_map]
-            prompt = build_screening_prompt(
-                template_path=prompt_template_path,
-                batch_id=batch.batch_id,
-                criteria=config.criteria,
-                papers=batch_papers,
-            )
-
-            payload = _request_validated_batch_payload(
+            payload = _request_batch_payload_with_split_fallback(
                 client=client,
-                prompt=prompt,
-                retry_times=config.screening.retry_times,
+                template_path=prompt_template_path,
+                criteria=config.criteria,
                 batch_id=batch.batch_id,
-                expected_paper_ids=batch.paper_ids,
+                batch_papers=batch_papers,
+                retry_times=config.screening.retry_times,
                 output_dir=output_dir,
                 save_raw_response=config.project.save_raw_response,
+                cancel_callback=cancel_callback,
             )
             write_json(payload, batch_output_path)
         processed_batches += 1
@@ -289,10 +290,12 @@ def _request_validated_batch_payload(
     expected_paper_ids: list[str],
     output_dir: Path,
     save_raw_response: bool,
+    cancel_callback: CancelCallback | None = None,
 ) -> dict:
     last_error: Exception | None = None
 
     for attempt in range(retry_times + 1):
+        _ensure_not_cancelled(cancel_callback)
         raw_text = ""
         try:
             raw_text = client.chat(prompt)
@@ -318,10 +321,91 @@ def _request_validated_batch_payload(
                 failed_raw_path.write_text(raw_text, encoding="utf-8")
             if attempt < retry_times:
                 delay_seconds = client.extract_retry_after_seconds(exc) or (2 ** attempt)
+                _ensure_not_cancelled(cancel_callback)
                 time.sleep(delay_seconds)
 
     assert last_error is not None
     raise last_error
+
+
+def _request_batch_payload_with_split_fallback(
+    *,
+    client: ChatCompletionClient,
+    template_path: Path,
+    criteria,
+    batch_id: str,
+    batch_papers: list,
+    retry_times: int,
+    output_dir: Path,
+    save_raw_response: bool,
+    cancel_callback: CancelCallback | None = None,
+) -> dict:
+    _ensure_not_cancelled(cancel_callback)
+    prompt = build_screening_prompt(
+        template_path=template_path,
+        batch_id=batch_id,
+        criteria=criteria,
+        papers=batch_papers,
+    )
+    expected_paper_ids = [paper.paper_id for paper in batch_papers]
+
+    try:
+        return _request_validated_batch_payload(
+            client=client,
+            prompt=prompt,
+            retry_times=retry_times,
+            batch_id=batch_id,
+            expected_paper_ids=expected_paper_ids,
+            output_dir=output_dir,
+            save_raw_response=save_raw_response,
+            cancel_callback=cancel_callback,
+        )
+    except (ResponseParseError, SchemaValidationError):
+        if len(batch_papers) <= 1:
+            raise
+
+    midpoint = len(batch_papers) // 2
+    left_papers = batch_papers[:midpoint]
+    right_papers = batch_papers[midpoint:]
+
+    left_payload = _request_batch_payload_with_split_fallback(
+        client=client,
+        template_path=template_path,
+        criteria=criteria,
+        batch_id=f"{batch_id}_part1",
+        batch_papers=left_papers,
+        retry_times=retry_times,
+        output_dir=output_dir,
+        save_raw_response=save_raw_response,
+        cancel_callback=cancel_callback,
+    )
+    right_payload = _request_batch_payload_with_split_fallback(
+        client=client,
+        template_path=template_path,
+        criteria=criteria,
+        batch_id=f"{batch_id}_part2",
+        batch_papers=right_papers,
+        retry_times=retry_times,
+        output_dir=output_dir,
+        save_raw_response=save_raw_response,
+        cancel_callback=cancel_callback,
+    )
+
+    payload = {
+        "batch_id": batch_id,
+        "results": left_payload["results"] + right_payload["results"],
+    }
+    validate_batch_response(
+        payload,
+        expected_batch_id=batch_id,
+        expected_paper_ids=expected_paper_ids,
+    )
+    return payload
+
+
+def _ensure_not_cancelled(cancel_callback: CancelCallback | None) -> None:
+    if cancel_callback and cancel_callback():
+        raise TaskCancelledError("Task cancelled by user")
 
 
 def _load_existing_batch_payload(

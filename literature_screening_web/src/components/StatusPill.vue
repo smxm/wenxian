@@ -10,7 +10,8 @@ const label = computed(() => {
     pending: '待开始',
     running: '运行中',
     succeeded: '已完成',
-    failed: '失败'
+    failed: '失败',
+    cancelled: '已停止'
   }
   return mapping[props.status] ?? props.status
 })
@@ -20,7 +21,8 @@ const tone = computed(() => {
     pending: 'tone-pending',
     running: 'tone-running',
     succeeded: 'tone-succeeded',
-    failed: 'tone-failed'
+    failed: 'tone-failed',
+    cancelled: 'tone-cancelled'
   }
   return mapping[props.status] ?? 'tone-pending'
 })
@@ -60,5 +62,10 @@ const tone = computed(() => {
 .tone-failed {
   background: rgba(192, 86, 33, 0.14);
   color: #963b10;
+}
+
+.tone-cancelled {
+  background: rgba(97, 90, 77, 0.16);
+  color: #574f40;
 }
 </style>

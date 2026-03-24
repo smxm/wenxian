@@ -20,7 +20,11 @@ export const router = createRouter({
     },
     {
       path: '/projects/:projectId',
-      name: 'project-detail',
+      redirect: to => ({ path: `/threads/${String(to.params.projectId)}` })
+    },
+    {
+      path: '/threads/:projectId',
+      name: 'thread-detail',
       component: () => import('@/views/ProjectDetailView.vue'),
       props: true
     },

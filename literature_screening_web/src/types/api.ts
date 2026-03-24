@@ -1,6 +1,6 @@
 export type ProviderName = 'deepseek' | 'kimi'
 export type TaskKind = 'screening' | 'report'
-export type TaskStatus = 'pending' | 'running' | 'succeeded' | 'failed'
+export type TaskStatus = 'pending' | 'running' | 'succeeded' | 'failed' | 'cancelled'
 export type ReferenceStyle = 'gbt7714' | 'apa7'
 export type DatasetKind = 'included' | 'excluded' | 'unused' | 'cumulative_included' | 'report_source' | string
 

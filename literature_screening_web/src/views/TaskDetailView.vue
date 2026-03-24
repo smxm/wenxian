@@ -2,7 +2,7 @@
 import { computed, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import dayjs from 'dayjs'
-import { FileText, RefreshCw, RotateCcw } from 'lucide-vue-next'
+import { FileText, RefreshCw, RotateCcw, Square } from 'lucide-vue-next'
 import {
   NAlert,
   NButton,
@@ -42,7 +42,7 @@ const taskId = computed(() => String(route.params.taskId))
 const task = computed(() => tasksStore.currentTask)
 const isRunning = computed(() => task.value?.status === 'running' || task.value?.status === 'pending')
 const isScreeningTask = computed(() => task.value?.kind === 'screening')
-const isFailedTask = computed(() => task.value?.status === 'failed')
+const isRetriableTask = computed(() => task.value?.status === 'failed' || task.value?.status === 'cancelled')
 const reportDraft = computed(() => draftsStore.getReportDraft(taskId.value))
 const selectedRecord = ref<ScreeningRecordRow | null>(null)
 const reviewDecision = ref<'include' | 'exclude' | 'uncertain'>('include')
@@ -114,6 +114,12 @@ async function retryCurrentTask() {
   if (!task.value) return
   await tasksStore.retry(task.value.id, 'resume')
   message.success('任务已重新启动')
+}
+
+async function cancelCurrentTask() {
+  if (!task.value) return
+  await tasksStore.cancel(task.value.id)
+  message.success('已请求停止当前任务')
 }
 
 async function submitReviewOverride() {
@@ -189,11 +195,17 @@ async function submitReferenceOverride() {
           </template>
           刷新
         </NButton>
-        <NButton v-if="isFailedTask" tertiary @click="retryCurrentTask">
+        <NButton v-if="isRetriableTask" tertiary @click="retryCurrentTask">
           <template #icon>
             <RotateCcw :size="16" />
           </template>
           继续执行
+        </NButton>
+        <NButton v-if="isRunning" tertiary @click="cancelCurrentTask">
+          <template #icon>
+            <Square :size="14" />
+          </template>
+          停止当前任务
         </NButton>
       </NSpace>
     </section>

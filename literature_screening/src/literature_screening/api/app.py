@@ -10,7 +10,7 @@ from fastapi import FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 
-from literature_screening.api.schemas import DatasetRecord, ProjectCreate, ProjectDetail, ProjectSnapshot
+from literature_screening.api.schemas import DatasetRecord, ProjectCreate, ProjectDetail, ProjectSnapshot, ProjectUpdate
 from literature_screening.api.schemas import ReferenceOverrideRequest, ReportTaskCreate, RetryTaskRequest, ReviewOverrideRequest, TaskArtifact
 from literature_screening.api.schemas import TaskDetail, TaskEvent, TaskSnapshot, TaskTemplateRecord
 from literature_screening.api.secret_store import SecretStore
@@ -86,6 +86,27 @@ def create_project(request: ProjectCreate) -> ProjectSnapshot:
     return ProjectSnapshot.model_validate(project | {"dataset_count": 0})
 
 
+@app.put("/api/projects/{project_id}", response_model=ProjectSnapshot)
+def update_project(project_id: str, request: ProjectUpdate) -> ProjectSnapshot:
+    project = WORKSPACE_STORE.update_project(
+        project_id,
+        name=request.name,
+        topic=request.topic,
+        description=request.description,
+    )
+    return ProjectSnapshot.model_validate(project | {"dataset_count": len(WORKSPACE_STORE.list_project_datasets(project_id))})
+
+
+@app.delete("/api/projects/{project_id}")
+def delete_project(project_id: str) -> dict[str, str]:
+    WORKSPACE_STORE.load_project(project_id)
+    related_tasks = [task for task in TASK_STORE.list_tasks() if _task_project_id(task) == project_id]
+    for task in related_tasks:
+        TASK_STORE.delete_task(task["id"])
+    WORKSPACE_STORE.delete_project(project_id)
+    return {"status": "deleted"}
+
+
 @app.get("/api/projects/{project_id}", response_model=ProjectDetail)
 def get_project(project_id: str) -> ProjectDetail:
     project = WORKSPACE_STORE.load_project(project_id)
@@ -156,10 +177,21 @@ def get_task(task_id: str) -> TaskDetail:
     return _to_detail(task)
 
 
+@app.post("/api/tasks/{task_id}/cancel", response_model=TaskSnapshot)
+def cancel_task(task_id: str) -> TaskSnapshot:
+    task = _get_task_or_404(task_id)
+    if task["status"] not in {"pending", "running"}:
+        raise HTTPException(status_code=400, detail="Only pending or running tasks can be cancelled")
+    cancelled = TASK_STORE.cancel_task(task_id)
+    return _to_snapshot(cancelled)
+
+
 @app.post("/api/tasks/{task_id}/retry", response_model=TaskSnapshot)
 def retry_task(task_id: str, request: RetryTaskRequest) -> TaskSnapshot:
     task = _get_task_or_404(task_id)
     kind = task["kind"]
+    if task.get("status") not in {"failed", "cancelled"}:
+        raise HTTPException(status_code=400, detail="Only failed or cancelled tasks can be retried")
 
     if kind == "screening":
         payload = _screening_request_from_task(task)
@@ -175,6 +207,7 @@ def retry_task(task_id: str, request: RetryTaskRequest) -> TaskSnapshot:
                     progress_total=total,
                     progress_message=message,
                 ),
+                cancel_callback=lambda: TASK_STORE.is_cancel_requested(stored_task.task_id),
             )
             artifacts = _collect_screening_artifacts(result)
             output_dataset_ids = _register_screening_datasets(
@@ -508,6 +541,7 @@ async def create_screening_task(
                 progress_total=total,
                 progress_message=message,
             ),
+            cancel_callback=lambda: TASK_STORE.is_cancel_requested(stored_task.task_id),
         )
         artifacts = _collect_screening_artifacts(result)
         output_dataset_ids = _register_screening_datasets(

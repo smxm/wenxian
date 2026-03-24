@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import shutil
 import uuid
 from datetime import datetime
 from pathlib import Path
@@ -54,6 +55,11 @@ class WorkspaceStore:
         payload["updated_at"] = datetime.now().astimezone().isoformat()
         self._write(path, payload)
         return payload
+
+    def delete_project(self, project_id: str) -> None:
+        project_root = self._project_root(project_id)
+        if project_root.exists():
+            shutil.rmtree(project_root)
 
     def list_project_datasets(self, project_id: str) -> list[dict[str, Any]]:
         datasets_dir = self._project_root(project_id) / "datasets"

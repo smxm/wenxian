@@ -142,6 +142,7 @@ def scan_supported_input_files(folder: Path) -> list[Path]:
 def run_screening_job(
     request: ScreeningJobRequest,
     progress_callback: ProgressCallback | None = None,
+    cancel_callback: Callable[[], bool] | None = None,
 ) -> ScreeningJobResult:
     bootstrap_project_paths()
 
@@ -246,7 +247,7 @@ def run_screening_job(
         model=ModelConfig(**config_payload["model"], api_key=request.model.api_key),
         report=ReportConfig(**config_payload["report"]),
     )
-    run_pipeline(run_config, dry_run=False, progress_callback=progress_callback)
+    run_pipeline(run_config, dry_run=False, progress_callback=progress_callback, cancel_callback=cancel_callback)
 
     summary = _load_json(output_dir / "run_summary.json")
     records = load_screening_records(output_dir)

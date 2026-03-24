@@ -7,7 +7,7 @@ from pydantic import BaseModel, Field
 
 
 TaskKind = Literal["screening", "report"]
-TaskStatus = Literal["pending", "running", "succeeded", "failed"]
+TaskStatus = Literal["pending", "running", "succeeded", "failed", "cancelled"]
 ProviderName = Literal["deepseek", "kimi"]
 ReferenceStyle = Literal["gbt7714", "apa7"]
 DatasetKind = Literal["included", "excluded", "unused", "cumulative_included", "report_source"]
@@ -52,6 +52,12 @@ class ReportTaskCreate(BaseModel):
 
 
 class ProjectCreate(BaseModel):
+    name: str
+    topic: str
+    description: str = ""
+
+
+class ProjectUpdate(BaseModel):
     name: str
     topic: str
     description: str = ""
