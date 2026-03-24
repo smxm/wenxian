@@ -20,7 +20,7 @@ from literature_screening.api.workspace_store import WorkspaceStore
 from literature_screening.studio.service import CriteriaDraft, ModelDraft, ReportJobRequest
 from literature_screening.studio.service import ScreeningJobRequest, generate_simple_report_job
 from literature_screening.studio.service import prepare_virtual_screening_output_from_dataset_paths
-from literature_screening.studio.service import run_screening_job, save_uploaded_file_bytes
+from literature_screening.studio.service import load_screening_records, run_screening_job, save_uploaded_file_bytes
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
