@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 import time
 from pathlib import Path
 from typing import Callable
@@ -17,6 +18,7 @@ from literature_screening.screening.response_parser import parse_model_json
 
 DEFAULT_SIMPLE_REPORT_FILENAME = "literature_report.md"
 LEGACY_SIMPLE_REPORT_FILENAME = "simple_report.md"
+NOTE_CACHE_VERSION = "v1"
 ProgressCallback = Callable[[str, str, int | None, int | None, str | None], None]
 
 
@@ -43,6 +45,7 @@ def generate_simple_report(
     *,
     screening_output_dir: Path,
     report_output_dir: Path,
+    shared_notes_cache_dir: Path | None = None,
     project_topic: str,
     model_config: ModelConfig,
     timeout_seconds: int = 180,
@@ -77,8 +80,15 @@ def generate_simple_report(
     overview_prompt_path = Path(__file__).resolve().parents[3] / "prompts" / "simple_report_overview_prompt.md"
 
     notes = _load_existing_notes(notes_path)
+    shared_cache_path = _build_shared_notes_cache_path(shared_notes_cache_dir, model_config) if shared_notes_cache_dir else None
+    shared_notes = _load_existing_notes(shared_cache_path)
     for paper, decision in included_rows:
         if paper.paper_id in notes:
+            continue
+        cached_note = shared_notes.get(paper.paper_id)
+        if cached_note is not None:
+            notes[cached_note.paper_id] = cached_note
+            _write_notes([notes[paper_id] for paper_id in notes], notes_path)
             continue
 
         completed = len(notes)
@@ -108,6 +118,9 @@ def generate_simple_report(
 
         notes[note.paper_id] = note
         _write_notes([notes[paper_id] for paper_id in notes], notes_path)
+        if shared_cache_path is not None:
+            shared_notes[note.paper_id] = note
+            _write_notes(list(shared_notes.values()), shared_cache_path)
 
     ordered_notes = [notes[paper.paper_id] for paper, _ in included_rows]
     ordered_papers = [paper for paper, _ in included_rows]
@@ -442,6 +455,13 @@ def _normalize_overview(*, overview: SimpleReportOverview, notes: list[SimplePap
     return SimpleReportOverview(overall_summary=overall_summary, categories=categories)
 
 
+def _build_shared_notes_cache_path(shared_notes_cache_dir: Path, model_config: ModelConfig) -> Path:
+    provider = re.sub(r"[^a-zA-Z0-9_-]+", "-", model_config.provider).strip("-").lower() or "provider"
+    model = re.sub(r"[^a-zA-Z0-9_-]+", "-", model_config.model_name).strip("-").lower() or "model"
+    filename = f"paper_notes_cache_{provider}_{model}_{NOTE_CACHE_VERSION}.json"
+    return shared_notes_cache_dir / filename
+
+
 def _build_total_summary(*, project_topic: str, ordered_groups: list[tuple[str, list[SimplePaperNote]]]) -> str:
     total_count = sum(len(items) for _, items in ordered_groups)
     if not ordered_groups:
@@ -473,8 +493,8 @@ def _trim(text: str, limit: int = 120) -> str:
     return cleaned[: limit - 1].rstrip() + "…"
 
 
-def _load_existing_notes(path: Path) -> dict[str, SimplePaperNote]:
-    if not path.exists():
+def _load_existing_notes(path: Path | None) -> dict[str, SimplePaperNote]:
+    if path is None or not path.exists():
         return {}
     payload = json.loads(path.read_text(encoding="utf-8"))
     notes = [SimplePaperNote.model_validate(item) for item in payload]
@@ -482,6 +502,7 @@ def _load_existing_notes(path: Path) -> dict[str, SimplePaperNote]:
 
 
 def _write_notes(notes: list[SimplePaperNote], path: Path) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps([note.model_dump(mode="json") for note in notes], ensure_ascii=False, indent=2), encoding="utf-8")
 
 

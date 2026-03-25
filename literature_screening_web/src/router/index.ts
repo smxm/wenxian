@@ -9,6 +9,11 @@ export const router = createRouter({
       component: () => import('@/views/DashboardView.vue')
     },
     {
+      path: '/strategy/new',
+      name: 'strategy-new',
+      component: () => import('@/views/StrategyRunView.vue')
+    },
+    {
       path: '/screening/new',
       name: 'screening-new',
       component: () => import('@/views/ScreeningRunView.vue')

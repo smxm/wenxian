@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { computed, onMounted, reactive } from 'vue'
+import { computed, onMounted, reactive, ref } from 'vue'
 import { useRouter, RouterLink } from 'vue-router'
 import dayjs from 'dayjs'
-import { ArrowRight, Bot, FolderOpenDot, MessageSquareText, Pencil, PlusCircle, Trash2 } from 'lucide-vue-next'
+import { ArrowRight, Bot, FilePlus2, FolderOpenDot, Pencil, Sparkles, Trash2 } from 'lucide-vue-next'
 import { NButton, NCard, NEmpty, NForm, NFormItem, NInput, NModal, NSpace, NTag, useMessage } from 'naive-ui'
 import OverviewMetric from '@/components/OverviewMetric.vue'
 import StatusPill from '@/components/StatusPill.vue'
@@ -18,13 +18,14 @@ const tasksStore = useTasksStore()
 const draftsStore = useDraftsStore()
 const projectsStore = useProjectsStore()
 
+const showCreateModal = ref(false)
+
 const createForm = reactive({
-  name: '',
-  topic: '',
-  description: ''
+  title: '',
+  content: ''
 })
 
-const editingProjectId = reactive<{ value: string | null }>({ value: null })
+const editingProjectId = ref<string | null>(null)
 const editForm = reactive({
   name: '',
   topic: '',
@@ -54,19 +55,23 @@ const threadCards = computed(() =>
   })
 )
 
+function resetCreateForm() {
+  createForm.title = ''
+  createForm.content = ''
+}
+
 async function createThread() {
-  if (!createForm.name.trim() || !createForm.topic.trim()) {
-    message.warning('主题名称和研究主题不能为空')
+  if (!createForm.title.trim() || !createForm.content.trim()) {
+    message.warning('主题和内容不能为空')
     return
   }
   const project = await projectsStore.createProject({
-    name: createForm.name.trim(),
-    topic: createForm.topic.trim(),
-    description: createForm.description.trim()
+    name: createForm.title.trim(),
+    topic: createForm.content.trim(),
+    description: createForm.content.trim()
   })
-  createForm.name = ''
-  createForm.topic = ''
-  createForm.description = ''
+  resetCreateForm()
+  showCreateModal.value = false
   message.success('主题线程已创建')
   await router.push(`/threads/${project.id}`)
 }
@@ -81,7 +86,7 @@ function openEditThread(project: { id: string; name: string; topic: string; desc
 async function saveThreadEdit() {
   if (!editingProjectId.value) return
   if (!editForm.name.trim() || !editForm.topic.trim()) {
-    message.warning('Thread name and topic are required')
+    message.warning('主题和内容不能为空')
     return
   }
   await projectsStore.updateProject(editingProjectId.value, {
@@ -90,16 +95,16 @@ async function saveThreadEdit() {
     description: editForm.description.trim()
   })
   editingProjectId.value = null
-  message.success('Thread updated')
+  message.success('主题线程已更新')
 }
 
 async function removeThread(project: { id: string; name: string }) {
-  if (!window.confirm(`Delete thread "${project.name}"? This will also remove related screening and report tasks.`)) {
+  if (!window.confirm(`确认删除主题“${project.name}”？相关初筛和报告任务也会一起删除。`)) {
     return
   }
   await projectsStore.deleteProject(project.id)
   await tasksStore.refreshList()
-  message.success('Thread deleted')
+  message.success('主题线程已删除')
 }
 
 onMounted(async () => {
@@ -113,25 +118,39 @@ onMounted(async () => {
     <section class="hero-grid">
       <div class="hero-copy panel-surface">
         <div class="eyebrow">Thread-first Workflow</div>
-        <h1>按主题建立对话线程，在同一条线上持续推进多轮初筛与报告</h1>
-        <p>一个主题就是一条长期线程。你可以在里面发起首轮筛选、从未使用文献继续下一轮、做人工复核，并最终生成报告。</p>
+        <h1>按主题建立线程，在同一条线里推进检索方案、初筛、复核和报告</h1>
+        <p>
+          这里不再要求先理解项目、数据集或任务类型。先建一个主题线程，在线程里逐步新增初筛轮次、
+          基于剩余文献继续筛选，最后生成报告。
+        </p>
         <NSpace>
+          <NButton type="primary" size="large" @click="showCreateModal = true">
+            <template #icon>
+              <FilePlus2 :size="16" />
+            </template>
+            新建线程
+          </NButton>
           <RouterLink to="/screening/new">
-            <NButton type="primary" size="large">
+            <NButton secondary size="large">
               {{ draftsStore.hasScreeningDraft ? '继续未提交的初筛草稿' : '打开高级初筛入口' }}
               <template #icon>
                 <ArrowRight :size="16" />
               </template>
             </NButton>
           </RouterLink>
-          <RouterLink to="/tasks">
-            <NButton tertiary size="large">查看后台任务</NButton>
+          <RouterLink to="/strategy/new">
+            <NButton tertiary size="large">
+              <template #icon>
+                <Sparkles :size="16" />
+              </template>
+              生成检索与筛选方案
+            </NButton>
           </RouterLink>
         </NSpace>
       </div>
 
       <div class="hero-side panel-surface">
-        <div class="hero-side-title">当前环境</div>
+        <div class="hero-side-title">当前能力</div>
         <div class="support-grid">
           <div class="support-item">
             <FolderOpenDot :size="18" />
@@ -142,8 +161,8 @@ onMounted(async () => {
             <span>{{ metaStore.providerPresets.map((item) => item.label).join(' / ') || 'DeepSeek / Kimi' }}</span>
           </div>
           <div class="support-item">
-            <MessageSquareText :size="18" />
-            <span>线程里持续保存筛选轮次、人工修正和报告结果</span>
+            <Sparkles :size="18" />
+            <span>线程内可继续筛剩余文献、人工复核，并基于复核结果直接生成报告</span>
           </div>
         </div>
       </div>
@@ -157,47 +176,15 @@ onMounted(async () => {
     </section>
 
     <section class="dashboard-grid">
-      <NCard title="新建主题线程" class="panel-surface">
-        <NForm label-placement="top">
-          <NFormItem label="主题线程名称">
-            <NInput v-model:value="createForm.name" placeholder="例如：AI/XR 在猫咪与动物交互中的应用" />
-          </NFormItem>
-          <NFormItem label="研究主题">
-            <NInput
-              v-model:value="createForm.topic"
-              type="textarea"
-              :autosize="{ minRows: 3, maxRows: 6 }"
-              placeholder="说明研究主题、交付目标或筛选范围"
-            />
-          </NFormItem>
-          <NFormItem label="备注">
-            <NInput
-              v-model:value="createForm.description"
-              type="textarea"
-              :autosize="{ minRows: 2, maxRows: 4 }"
-              placeholder="可选。记录委托背景、额外限制或后续说明"
-            />
-          </NFormItem>
-        </NForm>
-        <NButton type="primary" @click="createThread">
-          <template #icon>
-            <PlusCircle :size="16" />
-          </template>
-          创建主题线程
-        </NButton>
+      <NCard title="如何使用" class="panel-surface">
+        <ol class="principles">
+          <li>先新建一个主题线程，只填主题和内容说明。</li>
+          <li>进入线程后，按需要先生成检索与筛选方案，或直接发起第一轮初筛。</li>
+          <li>每一轮初筛完成后，都能继续筛未使用文献、进入人工复核或直接生成报告。</li>
+          <li>报告和复核结果都会回到同一条线程里，不需要单独管理底层数据集。</li>
+        </ol>
       </NCard>
 
-      <NCard title="线程说明" class="panel-surface">
-        <ul class="principles">
-          <li>每个主题线程可以包含多轮初筛，不同轮次自动串联。</li>
-          <li>从上一轮未使用文献继续筛选，会直接成为线程中的下一条消息。</li>
-          <li>报告生成、人工审核、参考列表修正都会回到同一条线程中。</li>
-          <li>系统内部仍会跟踪文件和数据关系，但前端不再直接暴露 dataset 概念。</li>
-        </ul>
-      </NCard>
-    </section>
-
-    <section class="thread-grid">
       <NCard title="最近主题线程" class="panel-surface">
         <div v-if="threadCards.length" class="thread-list">
           <RouterLink v-for="thread in threadCards" :key="thread.id" :to="`/threads/${thread.id}`" class="thread-card">
@@ -223,9 +210,7 @@ onMounted(async () => {
               <NTag size="small" round>{{ thread.reportCount }} 个报告</NTag>
               <span>更新于 {{ dayjs(thread.updated_at).format('YYYY-MM-DD HH:mm') }}</span>
             </div>
-            <div class="thread-card-tail" v-if="thread.latestTask">
-              最近动作：{{ thread.latestTask.title }}
-            </div>
+            <div class="thread-card-tail" v-if="thread.latestTask">最近动作：{{ thread.latestTask.title }}</div>
           </RouterLink>
         </div>
         <NEmpty v-else description="还没有主题线程" />
@@ -233,27 +218,58 @@ onMounted(async () => {
     </section>
 
     <NModal
-      :show="editingProjectId.value !== null"
+      :show="showCreateModal"
       preset="card"
-      style="max-width: 640px"
-      title="Edit Thread"
-      @update:show="(value) => { if (!value) editingProjectId.value = null }"
+      style="max-width: 720px"
+      title="新建主题线程"
+      @update:show="(value) => { showCreateModal = value; if (!value) resetCreateForm() }"
     >
       <NForm label-placement="top">
-        <NFormItem label="Thread Name">
+        <NFormItem label="主题">
+          <NInput
+            v-model:value="createForm.title"
+            placeholder="例如：机器学习在场地效应（Site Effects）评估与预测中的应用"
+          />
+        </NFormItem>
+        <NFormItem label="内容">
+          <NInput
+            v-model:value="createForm.content"
+            type="textarea"
+            :autosize="{ minRows: 5, maxRows: 10 }"
+            placeholder="简要说明这条线程要解决什么问题、筛什么文献、最后要形成什么交付。"
+          />
+        </NFormItem>
+      </NForm>
+      <template #footer>
+        <NSpace justify="end">
+          <NButton @click="showCreateModal = false">取消</NButton>
+          <NButton type="primary" @click="createThread">创建线程</NButton>
+        </NSpace>
+      </template>
+    </NModal>
+
+    <NModal
+      :show="editingProjectId !== null"
+      preset="card"
+      style="max-width: 720px"
+      title="编辑主题线程"
+      @update:show="(value) => { if (!value) editingProjectId = null }"
+    >
+      <NForm label-placement="top">
+        <NFormItem label="主题">
           <NInput v-model:value="editForm.name" />
         </NFormItem>
-        <NFormItem label="Topic">
-          <NInput v-model:value="editForm.topic" type="textarea" :autosize="{ minRows: 3, maxRows: 6 }" />
+        <NFormItem label="内容">
+          <NInput v-model:value="editForm.topic" type="textarea" :autosize="{ minRows: 5, maxRows: 10 }" />
         </NFormItem>
-        <NFormItem label="Description">
+        <NFormItem label="备注">
           <NInput v-model:value="editForm.description" type="textarea" :autosize="{ minRows: 2, maxRows: 4 }" />
         </NFormItem>
       </NForm>
       <template #footer>
         <NSpace justify="end">
-          <NButton @click="editingProjectId.value = null">Cancel</NButton>
-          <NButton type="primary" @click="saveThreadEdit">Save</NButton>
+          <NButton @click="editingProjectId = null">取消</NButton>
+          <NButton type="primary" @click="saveThreadEdit">保存</NButton>
         </NSpace>
       </template>
     </NModal>
@@ -269,14 +285,13 @@ onMounted(async () => {
 
 .hero-grid,
 .dashboard-grid,
-.metric-grid,
-.thread-grid {
+.metric-grid {
   display: grid;
   gap: 18px;
 }
 
 .hero-grid {
-  grid-template-columns: 1.5fr 1fr;
+  grid-template-columns: 1.45fr 1fr;
 }
 
 .metric-grid {
@@ -284,7 +299,7 @@ onMounted(async () => {
 }
 
 .dashboard-grid {
-  grid-template-columns: 1.2fr 1fr;
+  grid-template-columns: 0.9fr 1.1fr;
 }
 
 .hero-copy,
@@ -305,7 +320,7 @@ onMounted(async () => {
 
 h1 {
   margin: 10px 0 14px;
-  font-size: 40px;
+  font-size: 38px;
   line-height: 1.08;
 }
 

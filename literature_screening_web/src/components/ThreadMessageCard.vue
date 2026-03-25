@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import dayjs from 'dayjs'
-import { ArrowRight, Download, FileClock, FileSearch, FileText } from 'lucide-vue-next'
+import { ArrowRight, Compass, Download, FileClock, FileSearch, FileText } from 'lucide-vue-next'
 import { NButton, NCard, NProgress, NSpace, NTag, NText } from 'naive-ui'
 import StatusPill from '@/components/StatusPill.vue'
 import type { ThreadAction, ThreadMessage } from '@/types/thread'
@@ -17,6 +17,7 @@ function progressOf(message: ThreadMessage) {
 }
 
 function iconFor(kind: ThreadMessage['kind']) {
+  if (kind === 'strategy') return Compass
   return kind === 'screening' ? FileSearch : FileText
 }
 

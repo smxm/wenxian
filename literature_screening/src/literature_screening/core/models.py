@@ -32,7 +32,7 @@ class DedupConfig(BaseModel):
 
 
 class ScreeningConfig(BaseModel):
-    batch_size: int = Field(default=20, ge=1, le=100)
+    batch_size: int = Field(default=10, ge=1, le=100)
     target_include_count: int = Field(ge=1)
     stop_when_target_reached: bool = True
     allow_uncertain: bool = True

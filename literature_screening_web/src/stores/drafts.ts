@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import type { ModelSettings, ProviderName, ReferenceStyle } from '@/types/api'
+import type { ModelSettings, ProviderName, ReferenceStyle, StrategyDatabase } from '@/types/api'
 
 const STORAGE_KEY = 'literature-screening-studio:drafts'
 
@@ -32,8 +32,21 @@ export interface ReportDraftState {
   projectTopic: string
   reportName: string
   referenceStyle: ReferenceStyle
+  sourceMode: 'original' | 'reviewed'
   retryTimes: number
   timeoutSeconds: number
+}
+
+export interface StrategyDraftState {
+  projectId: string | null
+  newProjectName: string
+  newProjectDescription: string
+  title: string
+  projectTopic: string
+  researchNeed: string
+  selectedDatabases: StrategyDatabase[]
+  timeoutSeconds: number
+  retryTimes: number
 }
 
 type ApiKeyMap = Partial<Record<ProviderName, string>>
@@ -61,7 +74,7 @@ function createDefaultScreeningDraft(): ScreeningDraftState {
       max_tokens: 1536,
       min_request_interval_seconds: 2
     },
-    batchSize: 20,
+    batchSize: 10,
     targetIncludeCount: 30,
     stopWhenReached: true,
     allowUncertain: true,
@@ -72,12 +85,27 @@ function createDefaultScreeningDraft(): ScreeningDraftState {
   }
 }
 
+function createDefaultStrategyDraft(): StrategyDraftState {
+  return {
+    projectId: null,
+    newProjectName: '',
+    newProjectDescription: '',
+    title: 'new-search-strategy',
+    projectTopic: '',
+    researchNeed: '',
+    selectedDatabases: ['scopus', 'wos', 'pubmed', 'cnki'],
+    timeoutSeconds: 180,
+    retryTimes: 4
+  }
+}
+
 function createDefaultReportDraft(screeningTaskId?: string): ReportDraftState {
   return {
     title: screeningTaskId ? `${screeningTaskId}-report` : 'report-task',
     projectTopic: '',
     reportName: 'simple_report',
     referenceStyle: 'gbt7714',
+    sourceMode: 'original',
     retryTimes: 6,
     timeoutSeconds: 240
   }
@@ -90,6 +118,7 @@ function readPersisted() {
   try {
     return JSON.parse(raw) as {
       screeningDraft?: Partial<ScreeningDraftState>
+      strategyDraft?: Partial<StrategyDraftState>
       reportDrafts?: Record<string, Partial<ReportDraftState>>
       apiKeys?: ApiKeyMap
     }
@@ -102,12 +131,14 @@ export const useDraftsStore = defineStore('drafts', {
   state: (): {
     hydrated: boolean
     screeningDraft: ScreeningDraftState
+    strategyDraft: StrategyDraftState
     screeningFiles: File[]
     reportDrafts: Record<string, ReportDraftState>
     apiKeys: ApiKeyMap
   } => ({
     hydrated: false,
     screeningDraft: createDefaultScreeningDraft(),
+    strategyDraft: createDefaultStrategyDraft(),
     screeningFiles: [],
     reportDrafts: {},
     apiKeys: {}
@@ -139,6 +170,15 @@ export const useDraftsStore = defineStore('drafts', {
           fileNames: persisted.screeningDraft.fileNames ?? []
         }
       }
+      if (persisted?.strategyDraft) {
+        this.strategyDraft = {
+          ...createDefaultStrategyDraft(),
+          ...persisted.strategyDraft,
+          selectedDatabases: persisted.strategyDraft.selectedDatabases?.length
+            ? persisted.strategyDraft.selectedDatabases
+            : createDefaultStrategyDraft().selectedDatabases
+        }
+      }
       if (persisted?.reportDrafts) {
         this.reportDrafts = Object.fromEntries(
           Object.entries(persisted.reportDrafts).map(([taskId, draft]) => [
@@ -164,6 +204,7 @@ export const useDraftsStore = defineStore('drafts', {
         STORAGE_KEY,
         JSON.stringify({
           screeningDraft: this.screeningDraft,
+          strategyDraft: this.strategyDraft,
           reportDrafts: this.reportDrafts,
           apiKeys: this.apiKeys
         })
@@ -191,6 +232,18 @@ export const useDraftsStore = defineStore('drafts', {
     clearScreeningDraft() {
       this.screeningDraft = createDefaultScreeningDraft()
       this.screeningFiles = []
+      this.persist()
+    },
+    updateStrategyDraft(patch: Partial<StrategyDraftState>) {
+      this.strategyDraft = {
+        ...this.strategyDraft,
+        ...patch,
+        selectedDatabases: patch.selectedDatabases ?? this.strategyDraft.selectedDatabases
+      }
+      this.persist()
+    },
+    clearStrategyDraft() {
+      this.strategyDraft = createDefaultStrategyDraft()
       this.persist()
     },
     getReportDraft(screeningTaskId: string) {

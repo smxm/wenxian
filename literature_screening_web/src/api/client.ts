@@ -6,6 +6,7 @@ import type {
   ProjectSnapshot,
   ReportFormPayload,
   ScreeningFormPayload,
+  StrategyFormPayload,
   TaskDetail,
   TaskSnapshot,
   TaskTemplateRecord
@@ -51,6 +52,14 @@ export async function applyReviewOverride(taskId: string, payload: { paper_id: s
   return data
 }
 
+export async function applyBulkReviewOverride(
+  taskId: string,
+  payload: { entries_text: string; decision: 'include' | 'exclude' | 'uncertain'; reason: string }
+) {
+  const { data } = await http.post<TaskDetail>(`/tasks/${taskId}/review-overrides/bulk`, payload)
+  return data
+}
+
 export async function applyReferenceOverride(taskId: string, payload: { references_text: string }) {
   const { data } = await http.post<TaskDetail>(`/tasks/${taskId}/reference-overrides`, payload)
   return data
@@ -64,6 +73,7 @@ export async function createScreeningTask(payload: ScreeningFormPayload) {
   if (payload.parent_task_id) formData.append('parent_task_id', payload.parent_task_id)
   formData.append('title', payload.title)
   formData.append('topic', payload.topic)
+  if (payload.criteria_markdown) formData.append('criteria_markdown', payload.criteria_markdown)
   formData.append('inclusion_json', JSON.stringify(payload.inclusion))
   formData.append('exclusion_json', JSON.stringify(payload.exclusion))
   formData.append('source_dataset_ids_json', JSON.stringify(payload.source_dataset_ids))
@@ -94,6 +104,11 @@ export async function createReportTask(payload: ReportFormPayload) {
   return data
 }
 
+export async function createStrategyTask(payload: StrategyFormPayload) {
+  const { data } = await http.post<TaskSnapshot>('/strategy/tasks', payload)
+  return data
+}
+
 export async function fetchProjects() {
   const { data } = await http.get<ProjectSnapshot[]>('/projects')
   return data
@@ -106,6 +121,24 @@ export async function fetchProject(projectId: string) {
 
 export async function createProject(payload: { name: string; topic: string; description: string }) {
   const { data } = await http.post<ProjectSnapshot>('/projects', payload)
+  return data
+}
+
+export async function rebuildFulltextQueue(projectId: string, payload: { source_dataset_ids: string[] }) {
+  const { data } = await http.post<ProjectDetail>(`/projects/${projectId}/fulltext/rebuild`, payload)
+  return data
+}
+
+export async function updateFulltextStatus(
+  projectId: string,
+  payload: { paper_id: string; status: 'pending' | 'ready' | 'unavailable' | 'deferred'; note: string }
+) {
+  const { data } = await http.post<ProjectDetail>(`/projects/${projectId}/fulltext/status`, payload)
+  return data
+}
+
+export async function enrichFulltextQueue(projectId: string) {
+  const { data } = await http.post<ProjectDetail>(`/projects/${projectId}/fulltext/enrich`)
   return data
 }
 

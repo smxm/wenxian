@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
-import { applyReferenceOverride, applyReviewOverride, cancelTask, createReportTask, createScreeningTask, fetchTask, fetchTasks, retryTask } from '@/api/client'
-import type { ReportFormPayload, ScreeningFormPayload, TaskDetail, TaskSnapshot } from '@/types/api'
+import { applyBulkReviewOverride, applyReferenceOverride, applyReviewOverride, cancelTask, createReportTask, createScreeningTask, createStrategyTask, fetchTask, fetchTasks, retryTask } from '@/api/client'
+import type { ReportFormPayload, ScreeningFormPayload, StrategyFormPayload, TaskDetail, TaskSnapshot } from '@/types/api'
 
 export const useTasksStore = defineStore('tasks', {
   state: (): {
@@ -73,6 +73,17 @@ export const useTasksStore = defineStore('tasks', {
         this.submitting = false
       }
     },
+    async submitStrategy(payload: StrategyFormPayload) {
+      this.submitting = true
+      try {
+        const task = await createStrategyTask(payload)
+        await this.refreshList()
+        this.startPolling()
+        return task
+      } finally {
+        this.submitting = false
+      }
+    },
     async submitReport(payload: ReportFormPayload) {
       this.submitting = true
       try {
@@ -110,7 +121,40 @@ export const useTasksStore = defineStore('tasks', {
     async review(taskId: string, payload: { paper_id: string; decision: 'include' | 'exclude' | 'uncertain'; reason: string }) {
       this.submitting = true
       try {
+        if (this.currentTask?.id === taskId && this.currentTask.kind === 'screening') {
+          const nextRecords = this.currentTask.records.map((row) =>
+            row.paper_id === payload.paper_id
+              ? {
+                  ...row,
+                  decision: payload.decision,
+                  reason: payload.reason
+                }
+              : row
+          )
+          const nextSummary = {
+            ...(this.currentTask.summary ?? {}),
+            included_count: nextRecords.filter((row) => row.decision === 'include').length,
+            excluded_count: nextRecords.filter((row) => row.decision === 'exclude').length,
+            uncertain_count: nextRecords.filter((row) => row.decision === 'uncertain').length,
+            processed_count: nextRecords.length
+          }
+          this.currentTask = {
+            ...this.currentTask,
+            records: nextRecords,
+            summary: nextSummary
+          }
+        }
         this.currentTask = await applyReviewOverride(taskId, payload)
+        await this.refreshList()
+        return this.currentTask
+      } finally {
+        this.submitting = false
+      }
+    },
+    async bulkReview(taskId: string, payload: { entries_text: string; decision: 'include' | 'exclude' | 'uncertain'; reason: string }) {
+      this.submitting = true
+      try {
+        this.currentTask = await applyBulkReviewOverride(taskId, payload)
         await this.refreshList()
         return this.currentTask
       } finally {

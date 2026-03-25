@@ -57,6 +57,27 @@ class ModelDraft:
 
 
 @dataclass(slots=True)
+class StrategyJobRequest:
+    project_name: str
+    project_topic: str
+    research_need: str
+    selected_databases: list[str]
+    model: ModelDraft
+    runs_root: Path = DEFAULT_RUNS_ROOT
+    run_root_override: Path | None = None
+    timeout_seconds: int = 180
+
+
+@dataclass(slots=True)
+class StrategyJobResult:
+    run_root: Path
+    output_dir: Path
+    summary: dict[str, Any]
+    markdown: str
+    artifacts: dict[str, Path]
+
+
+@dataclass(slots=True)
 class ScreeningJobRequest:
     project_name: str
     input_paths: list[Path]
@@ -64,7 +85,7 @@ class ScreeningJobRequest:
     model: ModelDraft
     runs_root: Path = DEFAULT_RUNS_ROOT
     run_root_override: Path | None = None
-    batch_size: int = 5
+    batch_size: int = 10
     target_include_count: int = 9999
     stop_when_target_reached: bool = False
     allow_uncertain: bool = True
@@ -104,6 +125,7 @@ class ReportJobRequest:
     report_name: str = "simple_report"
     runs_root: Path = DEFAULT_RUNS_ROOT
     report_output_dir_override: Path | None = None
+    shared_notes_cache_dir: Path | None = None
     timeout_seconds: int = 240
     retry_times: int = 6
     reference_style: str = "gbt7714"
@@ -276,6 +298,68 @@ def run_screening_job(
     )
 
 
+def generate_strategy_job(
+    request: StrategyJobRequest,
+    progress_callback: ProgressCallback | None = None,
+) -> StrategyJobResult:
+    bootstrap_project_paths()
+
+    from literature_screening.core.models import ModelConfig
+    from literature_screening.strategy.generator import generate_search_strategy
+
+    run_root = request.run_root_override or (request.runs_root / _build_run_slug(request.project_name))
+    output_dir = run_root / "strategy_output"
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    _emit_progress(
+        progress_callback,
+        "building-strategy",
+        "Building strategy",
+        0,
+        None,
+        "Generating search syntax and reusable screening criteria",
+    )
+
+    plan = generate_search_strategy(
+        research_need=request.research_need,
+        selected_databases=request.selected_databases,
+        model_config=ModelConfig(
+            provider=request.model.provider,
+            model_name=request.model.model_name,
+            api_base_url=request.model.api_base_url,
+            api_key_env=request.model.api_key_env,
+            api_key=request.model.api_key,
+            temperature=request.model.temperature,
+            max_tokens=request.model.max_tokens,
+            min_request_interval_seconds=request.model.min_request_interval_seconds,
+        ),
+        timeout_seconds=request.timeout_seconds,
+        output_dir=output_dir,
+    )
+
+    strategy_md = output_dir / "strategy_plan.md"
+    strategy_json = output_dir / "strategy_plan.json"
+    raw_response = output_dir / "strategy_raw_response.txt"
+    return StrategyJobResult(
+        run_root=run_root,
+        output_dir=output_dir,
+        summary={
+            "topic": plan.topic,
+            "screening_topic": plan.screening_topic,
+            "selected_databases": request.selected_databases,
+            "database_count": len(plan.search_blocks),
+            "inclusion_count": len(plan.inclusion),
+            "exclusion_count": len(plan.exclusion),
+        },
+        markdown=strategy_md.read_text(encoding="utf-8") if strategy_md.exists() else "",
+        artifacts={
+            "strategy_plan": strategy_md,
+            "strategy_plan_json": strategy_json,
+            "strategy_raw_response": raw_response,
+        },
+    )
+
+
 def generate_simple_report_job(
     request: ReportJobRequest,
     progress_callback: ProgressCallback | None = None,
@@ -310,6 +394,7 @@ def generate_simple_report_job(
     generate_simple_report(
         screening_output_dir=request.screening_output_dir,
         report_output_dir=report_output_dir,
+        shared_notes_cache_dir=request.shared_notes_cache_dir,
         project_topic=request.project_topic,
         model_config=model_config,
         timeout_seconds=request.timeout_seconds,

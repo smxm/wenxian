@@ -1,6 +1,6 @@
-<script setup lang="ts">
+﻿<script setup lang="ts">
 import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
-import { useRoute, useRouter, RouterLink } from 'vue-router'
+import { RouterLink, useRoute, useRouter } from 'vue-router'
 import dayjs from 'dayjs'
 import { FileSearch, FileText, GitBranchPlus, Pencil, RefreshCw, Trash2, WandSparkles } from 'lucide-vue-next'
 import {
@@ -24,7 +24,7 @@ import { useDraftsStore } from '@/stores/drafts'
 import { useMetaStore } from '@/stores/meta'
 import { useProjectsStore } from '@/stores/projects'
 import { useTasksStore } from '@/stores/tasks'
-import type { DatasetRecord, TaskArtifact, TaskSnapshot } from '@/types/api'
+import type { DatasetRecord, FulltextQueueItem, TaskSnapshot } from '@/types/api'
 import type { ThreadAction, ThreadMessage, ThreadMetric } from '@/types/thread'
 
 const route = useRoute()
@@ -43,9 +43,11 @@ const reportTopic = ref('')
 const reportName = ref('simple_report')
 const reportDatasetIds = ref<string[]>([])
 const reportReferenceStyle = ref<'gbt7714' | 'apa7'>('gbt7714')
-const pollTimer = ref<number | null>(null)
+const fulltextSourceDatasetIds = ref<string[]>([])
+const fulltextNotes = ref<Record<string, string>>({})
 const editingThread = ref(false)
 const editForm = ref({ name: '', topic: '', description: '' })
+const pollTimer = ref<number | null>(null)
 
 const datasetMap = computed(() => {
   const map = new Map<string, DatasetRecord>()
@@ -55,45 +57,55 @@ const datasetMap = computed(() => {
   return map
 })
 
-const taskMap = computed(() => {
-  const map = new Map<string, TaskSnapshot>()
-  for (const task of project.value?.tasks ?? []) {
-    map.set(task.id, task)
-  }
-  return map
-})
-
-const screeningRounds = computed(() =>
-  (project.value?.tasks ?? [])
-    .filter((task) => task.kind === 'screening')
-    .sort((left, right) => dayjs(left.created_at).valueOf() - dayjs(right.created_at).valueOf())
-)
-
-const reportTasks = computed(() =>
-  (project.value?.tasks ?? [])
-    .filter((task) => task.kind === 'report')
-    .sort((left, right) => dayjs(left.created_at).valueOf() - dayjs(right.created_at).valueOf())
-)
-
-const sortedTasks = computed(() =>
-  [...(project.value?.tasks ?? [])].sort((left, right) => dayjs(left.created_at).valueOf() - dayjs(right.created_at).valueOf())
-)
+const tasks = computed(() => [...(project.value?.tasks ?? [])].sort((a, b) => dayjs(a.created_at).valueOf() - dayjs(b.created_at).valueOf()))
+const strategyTasks = computed(() => tasks.value.filter((task) => task.kind === 'strategy'))
+const screeningRounds = computed(() => tasks.value.filter((task) => task.kind === 'screening'))
+const reportTasks = computed(() => tasks.value.filter((task) => task.kind === 'report'))
 
 const cumulativeIncludedDataset = computed(() =>
   (project.value?.datasets ?? []).find((dataset) => dataset.kind === 'cumulative_included') ?? null
 )
-
-const latestSucceededScreening = computed(() =>
-  [...screeningRounds.value].reverse().find((task) => task.status === 'succeeded') ?? null
+const fulltextReadyDataset = computed(() =>
+  (project.value?.datasets ?? []).find((dataset) => dataset.kind === 'fulltext_ready') ?? null
 )
+const fulltextQueue = computed<FulltextQueueItem[]>(() => project.value?.fulltext_queue ?? [])
+
+const latestSucceededScreening = computed(() => [...screeningRounds.value].reverse().find((task) => task.status === 'succeeded') ?? null)
+
+function latestMatchingDataset(task: TaskSnapshot, kinds: string[]) {
+  const matches = task.output_dataset_ids
+    .map((datasetId) => datasetMap.value.get(datasetId) ?? null)
+    .filter((dataset): dataset is DatasetRecord => Boolean(dataset && kinds.includes(dataset.kind)))
+  return matches.length ? matches[matches.length - 1] : null
+}
 
 const latestUnusedDataset = computed(() => {
   const task = latestSucceededScreening.value
   if (!task) return null
-  return task.output_dataset_ids
-    .map((datasetId) => datasetMap.value.get(datasetId) ?? null)
-    .find((dataset) => dataset?.kind === 'unused') ?? null
+  return latestMatchingDataset(task, ['unused'])
 })
+
+function friendlyDatasetLabel(dataset: DatasetRecord | null | undefined) {
+  if (!dataset) return '未知来源'
+  switch (dataset.kind) {
+    case 'included':
+      return '本轮纳入文献'
+    case 'included_reviewed':
+      return '人工复核后纳入文献'
+    case 'excluded':
+      return '本轮剔除文献'
+    case 'excluded_reviewed':
+      return '人工复核后剔除文献'
+    case 'unused':
+      return '本轮未使用文献'
+    case 'cumulative_included':
+      return '项目累计纳入'
+    case 'fulltext_ready':
+      return '仅已获取全文'
+    default:
+      return dataset.label
+  }
+}
 
 const quickReportDatasetOptions = computed(() => {
   const options: Array<{ label: string; value: string }> = []
@@ -107,47 +119,55 @@ const quickReportDatasetOptions = computed(() => {
   }
   pushOnce(cumulativeIncludedDataset.value, '项目累计纳入')
   for (const round of [...screeningRounds.value].reverse()) {
-    const includedDataset =
-      round.output_dataset_ids
-        .map((datasetId) => datasetMap.value.get(datasetId) ?? null)
-        .find((dataset) => dataset?.kind === 'included') ?? null
+    const includedDataset = latestMatchingDataset(round, ['included_reviewed', 'included'])
     pushOnce(includedDataset, `第 ${screeningRounds.value.findIndex((item) => item.id === round.id) + 1} 轮纳入`)
   }
   return options
 })
 
-function friendlyDatasetLabel(dataset: DatasetRecord | null | undefined) {
-  if (!dataset) return '未知来源'
-  switch (dataset.kind) {
-    case 'included':
-      return '本轮纳入文献'
-    case 'excluded':
-      return '本轮剔除文献'
-    case 'unused':
-      return '本轮未使用文献'
-    case 'cumulative_included':
-      return '项目累计纳入文献'
-    case 'included_reviewed':
-      return '人工修正后的纳入文献'
-    case 'excluded_reviewed':
-      return '人工修正后的剔除文献'
-    default:
-      return dataset.label
+const fulltextSourceOptions = computed(() => quickReportDatasetOptions.value.filter((item) => item.value !== fulltextReadyDataset.value?.id))
+
+const reportDatasetOptions = computed(() => {
+  const options: Array<{ label: string; value: string }> = []
+  if (fulltextReadyDataset.value && (fulltextReadyDataset.value.record_count ?? 0) > 0) {
+    options.push({
+      label: `仅已获取全文 · ${fulltextReadyDataset.value.record_count ?? '-'} 篇`,
+      value: fulltextReadyDataset.value.id
+    })
   }
-}
+  for (const option of quickReportDatasetOptions.value) {
+    if (!options.some((item) => item.value === option.value)) {
+      options.push(option)
+    }
+  }
+  return options
+})
+
+const fulltextCounts = computed(() => {
+  const counts = { pending: 0, ready: 0, unavailable: 0, deferred: 0 }
+  for (const item of fulltextQueue.value) counts[item.status] += 1
+  return counts
+})
+
+const threadStats = computed(() => ({
+  strategies: strategyTasks.value.length,
+  rounds: screeningRounds.value.length,
+  reports: reportTasks.value.length,
+  cumulativeIncluded: cumulativeIncludedDataset.value?.record_count ?? 0,
+  running: tasks.value.filter((task) => task.status === 'running' || task.status === 'pending').length
+}))
 
 function sourceLabelOf(task: TaskSnapshot) {
   if (task.input_dataset_ids.length) {
     const labels = task.input_dataset_ids
       .map((datasetId) => friendlyDatasetLabel(datasetMap.value.get(datasetId)))
       .filter(Boolean)
-    if (labels.length) return `延续自 ${labels.join(' + ')}`
+    if (labels.length) return `来源：${labels.join(' + ')}`
   }
-  if (task.parent_task_id && taskMap.value.get(task.parent_task_id)) {
-    return `延续自上一轮：${taskMap.value.get(task.parent_task_id)?.title}`
-  }
-  if (task.kind === 'report') return '基于当前线程内的筛选结果生成报告'
-  return '从新上传的文献开始这一轮筛选'
+  if (task.parent_task_id) return '来源：延续上一轮'
+  if (task.kind === 'report') return '来源：选中的报告来源集合'
+  if (task.kind === 'strategy') return '来源：研究需求生成检索与筛选方案'
+  return '来源：新上传文献'
 }
 
 function firstLine(text: string | null | undefined) {
@@ -170,18 +190,35 @@ function artifactByKey(task: TaskSnapshot, key: string) {
   return task.artifacts.find((artifact) => artifact.key === key) ?? null
 }
 
+function buildStrategyActions(task: TaskSnapshot): ThreadAction[] {
+  const actions: ThreadAction[] = [
+    { id: `${task.id}-detail`, label: '查看方案详情', kind: 'route', to: `/tasks/${task.id}`, emphasis: 'ghost' }
+  ]
+  const markdownArtifact = artifactByKey(task, 'strategy_plan')
+  if (markdownArtifact) {
+    actions.push({
+      id: `${task.id}-download-markdown`,
+      label: '下载方案 Markdown',
+      kind: 'download',
+      href: getArtifactUrl(task.id, markdownArtifact.key),
+      emphasis: 'ghost'
+    })
+  }
+  actions.push({
+    id: `${task.id}-screening`,
+    label: '带入初筛',
+    kind: 'route',
+    to: `/screening/new?projectId=${projectId.value}&strategyTaskId=${task.id}`,
+    emphasis: 'primary'
+  })
+  return actions
+}
+
 function buildScreeningActions(task: TaskSnapshot): ThreadAction[] {
   const actions: ThreadAction[] = [
-    {
-      id: `${task.id}-detail`,
-      label: '查看本轮详情',
-      kind: 'route',
-      to: `/tasks/${task.id}`,
-      emphasis: 'ghost'
-    }
+    { id: `${task.id}-detail`, label: '查看本轮详情', kind: 'route', to: `/tasks/${task.id}`, emphasis: 'ghost' }
   ]
-
-  const includedArtifact = artifactByKey(task, 'included_ris') ?? artifactByKey(task, 'reviewed_included_ris')
+  const includedArtifact = artifactByKey(task, 'reviewed_included_ris') ?? artifactByKey(task, 'included_ris')
   if (includedArtifact) {
     actions.push({
       id: `${task.id}-download-included`,
@@ -191,10 +228,7 @@ function buildScreeningActions(task: TaskSnapshot): ThreadAction[] {
       emphasis: 'ghost'
     })
   }
-
-  const unusedDataset = task.output_dataset_ids
-    .map((datasetId) => datasetMap.value.get(datasetId) ?? null)
-    .find((dataset) => dataset?.kind === 'unused') ?? null
+  const unusedDataset = latestMatchingDataset(task, ['unused'])
   if (unusedDataset) {
     actions.push({
       id: `${task.id}-continue-unused`,
@@ -204,10 +238,7 @@ function buildScreeningActions(task: TaskSnapshot): ThreadAction[] {
       emphasis: 'primary'
     })
   }
-
-  const includedDataset = task.output_dataset_ids
-    .map((datasetId) => datasetMap.value.get(datasetId) ?? null)
-    .find((dataset) => dataset?.kind === 'included') ?? null
+  const includedDataset = latestMatchingDataset(task, ['included_reviewed', 'included'])
   if (includedDataset) {
     actions.push({
       id: `${task.id}-report`,
@@ -222,17 +253,9 @@ function buildScreeningActions(task: TaskSnapshot): ThreadAction[] {
 
 function buildReportActions(task: TaskSnapshot): ThreadAction[] {
   const actions: ThreadAction[] = [
-    {
-      id: `${task.id}-detail`,
-      label: '查看报告详情',
-      kind: 'route',
-      to: `/tasks/${task.id}`,
-      emphasis: 'ghost'
-    }
+    { id: `${task.id}-detail`, label: '查看报告详情', kind: 'route', to: `/tasks/${task.id}`, emphasis: 'ghost' }
   ]
-  const reportArtifact =
-    artifactByKey(task, 'literature_report_reviewed') ??
-    artifactByKey(task, 'literature_report')
+  const reportArtifact = artifactByKey(task, 'literature_report')
   if (reportArtifact) {
     actions.push({
       id: `${task.id}-download-report`,
@@ -246,19 +269,44 @@ function buildReportActions(task: TaskSnapshot): ThreadAction[] {
 }
 
 function buildThreadMessage(task: TaskSnapshot): ThreadMessage {
-  if (task.kind === 'screening') {
+  if (task.kind === 'strategy') {
     const summary = task.summary ?? {}
-    const included = Number(summary.included_count ?? 0)
-    const excluded = Number(summary.excluded_count ?? 0)
-    const uncertain = Number(summary.uncertain_count ?? 0)
-    const unused = Number(summary.unused_count ?? 0)
+    const databaseCount = Number(summary.database_count ?? 0)
     const body =
       task.status === 'succeeded'
-        ? `这一轮初筛已完成。纳入 ${included} 篇，剔除 ${excluded} 篇，不确定 ${uncertain} 篇，未使用 ${unused} 篇。`
+        ? '检索与筛选方案已生成。可以直接带入初筛。'
         : task.status === 'failed'
-          ? `这一轮执行失败。${firstLine(task.error) || task.progress_message || '请进入详情页查看错误并继续执行。'}`
-          : task.progress_message || '正在执行这一轮初筛。'
+          ? `方案生成失败。${firstLine(task.error) || task.progress_message || '请进入详情页查看错误。'}`
+          : task.progress_message || '正在生成检索与筛选方案。'
+    return {
+      id: task.id,
+      taskId: task.id,
+      kind: task.kind,
+      status: task.status,
+      title: task.title,
+      eyebrow: 'Strategy Task',
+      body,
+      sourceLabel: sourceLabelOf(task),
+      note: task.status === 'succeeded' ? '方案结果会保存在当前主题中，可直接带入初筛。' : undefined,
+      createdAt: task.created_at,
+      updatedAt: task.updated_at,
+      phaseLabel: task.phase_label,
+      progressCurrent: task.progress_current,
+      progressTotal: task.progress_total,
+      progressMessage: task.progress_message,
+      metrics: [{ label: '数据库', value: databaseCount }],
+      actions: buildStrategyActions(task)
+    }
+  }
 
+  if (task.kind === 'screening') {
+    const summary = task.summary ?? {}
+    const body =
+      task.status === 'succeeded'
+        ? `本轮初筛完成。纳入 ${Number(summary.included_count ?? 0)} 篇，剔除 ${Number(summary.excluded_count ?? 0)} 篇，不确定 ${Number(summary.uncertain_count ?? 0)} 篇，未使用 ${Number(summary.unused_count ?? 0)} 篇。`
+        : task.status === 'failed'
+          ? `本轮执行失败。${firstLine(task.error) || task.progress_message || '请进入详情页查看错误。'}`
+          : task.progress_message || '正在执行这一轮初筛。'
     return {
       id: task.id,
       taskId: task.id,
@@ -268,7 +316,7 @@ function buildThreadMessage(task: TaskSnapshot): ThreadMessage {
       eyebrow: 'Screening Round',
       body,
       sourceLabel: sourceLabelOf(task),
-      note: task.status === 'failed' ? '失败后可以从详情页继续执行，不需要重新建主题。' : undefined,
+      note: task.status === 'failed' ? '失败后可以在详情页继续执行。' : undefined,
       createdAt: task.created_at,
       updatedAt: task.updated_at,
       phaseLabel: task.phase_label,
@@ -290,13 +338,12 @@ function buildThreadMessage(task: TaskSnapshot): ThreadMessage {
     eyebrow: 'Report Task',
     body:
       task.status === 'succeeded'
-        ? `报告已生成。当前参考样式为 ${referenceStyle}，你可以继续修正参考列表，或直接下载报告。`
+        ? `报告已生成。当前参考样式为 ${referenceStyle}。`
         : task.status === 'failed'
-          ? `报告生成失败。${firstLine(task.error) || task.progress_message || '请进入详情页查看错误并继续执行。'}`
-          : task.progress_message || '正在整理逐篇总结、总体概览和参考列表。'
-    ,
+          ? `报告生成失败。${firstLine(task.error) || task.progress_message || '请进入详情页查看错误。'}`
+          : task.progress_message || '正在生成报告。',
     sourceLabel: sourceLabelOf(task),
-    note: task.status === 'succeeded' ? '如果参考列表不完整，可以在详情页粘贴修正后的版本并自动重排。' : undefined,
+    note: task.status === 'succeeded' ? '如果参考列表不完整，可在报告详情页粘贴修正版自动重排。' : undefined,
     createdAt: task.created_at,
     updatedAt: task.updated_at,
     phaseLabel: task.phase_label,
@@ -308,14 +355,7 @@ function buildThreadMessage(task: TaskSnapshot): ThreadMessage {
   }
 }
 
-const threadMessages = computed(() => sortedTasks.value.map(buildThreadMessage))
-
-const threadStats = computed(() => ({
-  rounds: screeningRounds.value.length,
-  reports: reportTasks.value.length,
-  cumulativeIncluded: cumulativeIncludedDataset.value?.record_count ?? 0,
-  running: sortedTasks.value.filter((task) => task.status === 'running' || task.status === 'pending').length
-}))
+const threadMessages = computed(() => tasks.value.map(buildThreadMessage))
 
 function initializeReportDefaults() {
   if (!project.value) return
@@ -323,13 +363,27 @@ function initializeReportDefaults() {
   reportTopic.value = project.value.topic
   reportName.value = 'simple_report'
   reportReferenceStyle.value = 'gbt7714'
-  if (cumulativeIncludedDataset.value) {
+  if (fulltextReadyDataset.value && (fulltextReadyDataset.value.record_count ?? 0) > 0) {
+    reportDatasetIds.value = [fulltextReadyDataset.value.id]
+  } else if (cumulativeIncludedDataset.value) {
     reportDatasetIds.value = [cumulativeIncludedDataset.value.id]
-  } else if (quickReportDatasetOptions.value.length) {
-    reportDatasetIds.value = [quickReportDatasetOptions.value[0].value]
+  } else if (reportDatasetOptions.value.length) {
+    reportDatasetIds.value = [reportDatasetOptions.value[0].value]
   } else {
     reportDatasetIds.value = []
   }
+}
+
+function initializeFulltextDefaults() {
+  if (!project.value) return
+  if ((project.value.fulltext_source_dataset_ids ?? []).length) {
+    fulltextSourceDatasetIds.value = [...project.value.fulltext_source_dataset_ids]
+  } else if (fulltextSourceOptions.value.length) {
+    fulltextSourceDatasetIds.value = [fulltextSourceOptions.value[0].value]
+  } else {
+    fulltextSourceDatasetIds.value = []
+  }
+  fulltextNotes.value = Object.fromEntries(fulltextQueue.value.map((item) => [item.paper_id, item.note ?? '']))
 }
 
 function openEditThread() {
@@ -337,89 +391,159 @@ function openEditThread() {
   editForm.value = {
     name: project.value.name,
     topic: project.value.topic,
-    description: project.value.description ?? ''
+    description: project.value.description
   }
   editingThread.value = true
 }
 
-async function saveThreadEdit() {
+async function saveThreadEdits() {
   if (!project.value) return
-  if (!editForm.value.name.trim() || !editForm.value.topic.trim()) {
-    message.warning('Thread name and topic are required')
-    return
-  }
   await projectsStore.updateProject(project.value.id, {
-    name: editForm.value.name.trim(),
-    topic: editForm.value.topic.trim(),
+    name: editForm.value.name.trim() || project.value.name,
+    topic: editForm.value.topic.trim() || project.value.topic,
     description: editForm.value.description.trim()
   })
   editingThread.value = false
-  message.success('Thread updated')
+  message.success('主题已更新')
 }
 
 async function removeThread() {
   if (!project.value) return
-  if (!window.confirm(`Delete thread "${project.value.name}"? This will also remove related screening and report tasks.`)) {
-    return
-  }
-  const deletedProjectId = project.value.id
-  await projectsStore.deleteProject(deletedProjectId)
-  await tasksStore.refreshList()
-  message.success('Thread deleted')
+  const currentId = project.value.id
+  await projectsStore.deleteProject(currentId)
+  message.success('主题已删除')
   await router.push('/')
 }
 
 watch(projectId, async (nextProjectId) => {
   if (!nextProjectId) return
+  reportDatasetIds.value = []
+  fulltextSourceDatasetIds.value = []
+  fulltextNotes.value = {}
   await tasksStore.refreshList()
   await projectsStore.loadProject(nextProjectId)
   initializeReportDefaults()
+  initializeFulltextDefaults()
 }, { immediate: true })
 
 watch(
   () => route.query.reportDatasetId,
   (datasetId) => {
-    if (typeof datasetId === 'string' && quickReportDatasetOptions.value.some((item) => item.value === datasetId)) {
+    if (typeof datasetId === 'string' && reportDatasetOptions.value.some((item) => item.value === datasetId)) {
       reportDatasetIds.value = [datasetId]
     }
   },
   { immediate: true }
 )
 
+watch(reportDatasetOptions, (options) => {
+  const validIds = new Set(options.map((item) => item.value))
+  const nextIds = reportDatasetIds.value.filter((datasetId) => validIds.has(datasetId))
+  if (nextIds.length !== reportDatasetIds.value.length) {
+    reportDatasetIds.value = nextIds
+  }
+  if (!reportDatasetIds.value.length && options.length) {
+    reportDatasetIds.value = [options[0].value]
+  }
+}, { deep: true })
+
 async function submitThreadReport() {
   if (!project.value || !reportDatasetIds.value.length) {
     message.warning('先选择一组可用于报告的纳入结果')
     return
   }
-  const preset = metaStore.providerPresets.find((item) => item.provider === 'deepseek') ?? metaStore.providerPresets[0]
-  const task = await tasksStore.submitReport({
-    title: reportTitle.value.trim() || `${project.value.name}-report`,
-    screening_task_id: null,
-    dataset_ids: reportDatasetIds.value,
-    project_topic: reportTopic.value.trim() || project.value.topic,
-    report_name: reportName.value.trim() || 'simple_report',
-    retry_times: 6,
-    timeout_seconds: 240,
-    reference_style: reportReferenceStyle.value,
-    model: {
-      provider: preset.provider,
-      model_name: preset.defaultModel,
-      api_base_url: preset.defaultBaseUrl,
-      api_key_env: preset.defaultApiKeyEnv,
-      api_key: draftsStore.getProviderApiKey(preset.provider),
-      temperature: 0,
-      max_tokens: 1536,
-      min_request_interval_seconds: 2
+  const validIds = new Set(reportDatasetOptions.value.map((item) => item.value))
+  const selectedIds = reportDatasetIds.value.filter((datasetId) => validIds.has(datasetId))
+  if (!selectedIds.length) {
+    message.warning('当前选择的报告来源已失效，请重新选择后再生成报告')
+    if (reportDatasetOptions.value.length) {
+      reportDatasetIds.value = [reportDatasetOptions.value[0].value]
     }
+    return
+  }
+  const preset = metaStore.providerPresets.find((item) => item.provider === 'deepseek') ?? metaStore.providerPresets[0]
+  try {
+    const task = await tasksStore.submitReport({
+      title: reportTitle.value.trim() || `${project.value.name}-report`,
+      screening_task_id: null,
+      dataset_ids: selectedIds,
+      project_topic: reportTopic.value.trim() || project.value.topic,
+      report_name: reportName.value.trim() || 'simple_report',
+      retry_times: 6,
+      timeout_seconds: 240,
+      reference_style: reportReferenceStyle.value,
+      model: {
+        provider: preset.provider,
+        model_name: preset.defaultModel,
+        api_base_url: preset.defaultBaseUrl,
+        api_key_env: preset.defaultApiKeyEnv,
+        api_key: draftsStore.getProviderApiKey(preset.provider),
+        temperature: 0,
+        max_tokens: 1536,
+        min_request_interval_seconds: 2
+      }
+    })
+    message.success('报告任务已创建')
+    await router.push(`/tasks/${task.id}`)
+  } catch (error: any) {
+    const detail = error?.response?.data?.detail
+    message.error(typeof detail === 'string' && detail ? detail : '报告创建失败，请检查报告来源后重试')
+  }
+}
+
+async function rebuildThreadFulltextQueue() {
+  if (!project.value) return
+  await projectsStore.rebuildFulltextQueue(project.value.id, fulltextSourceDatasetIds.value)
+  initializeFulltextDefaults()
+  initializeReportDefaults()
+  message.success('全文获取队列已更新')
+}
+
+async function enrichThreadFulltextQueue() {
+  if (!project.value) return
+  await projectsStore.enrichFulltextQueue(project.value.id)
+  initializeFulltextDefaults()
+  message.success('已刷新 DOI 落地页和 OA 链接')
+}
+
+async function updateThreadFulltextStatus(item: FulltextQueueItem, status: 'pending' | 'ready' | 'unavailable' | 'deferred') {
+  if (!project.value) return
+  await projectsStore.updateFulltextStatus(project.value.id, {
+    paper_id: item.paper_id,
+    status,
+    note: fulltextNotes.value[item.paper_id] ?? item.note ?? ''
   })
-  message.success('报告任务已创建')
-  await router.push(`/tasks/${task.id}`)
+  initializeFulltextDefaults()
+  initializeReportDefaults()
+}
+
+async function copyDoi(item: FulltextQueueItem) {
+  if (!item.doi) return
+  if (navigator.clipboard?.writeText) {
+    await navigator.clipboard.writeText(item.doi)
+  } else {
+    const input = document.createElement('input')
+    input.value = item.doi
+    document.body.appendChild(input)
+    input.select()
+    document.execCommand('copy')
+    document.body.removeChild(input)
+  }
+  message.success('DOI 已复制')
+}
+
+function openExternal(url?: string | null) {
+  if (!url) return
+  window.open(url, '_blank', 'noopener')
 }
 
 function startProjectPolling() {
   if (typeof window === 'undefined' || pollTimer.value !== null) return
   pollTimer.value = window.setInterval(async () => {
-    await Promise.all([tasksStore.refreshList(), projectsStore.loadProject(projectId.value)])
+    if (!project.value) return
+    await Promise.all([tasksStore.refreshList(), projectsStore.loadProject(project.value.id)])
+    initializeReportDefaults()
+    initializeFulltextDefaults()
   }, 4000)
 }
 
@@ -431,14 +555,14 @@ function stopProjectPolling() {
 }
 
 onMounted(async () => {
-  draftsStore.hydrate()
   await metaStore.ensureLoaded()
   await Promise.all([tasksStore.refreshList(), projectsStore.loadProject(projectId.value)])
   initializeReportDefaults()
+  initializeFulltextDefaults()
 })
 
 watch(
-  () => sortedTasks.value.some((task) => task.status === 'running' || task.status === 'pending'),
+  () => tasks.value.some((task) => task.status === 'running' || task.status === 'pending'),
   (hasRunning) => {
     if (hasRunning) startProjectPolling()
     else stopProjectPolling()
@@ -460,36 +584,35 @@ onUnmounted(() => {
         <p>{{ project.topic }}</p>
       </div>
       <NSpace>
-        <NButton quaternary @click="openEditThread">
-          <template #icon>
-            <Pencil :size="16" />
-          </template>
+        <NButton secondary @click="openEditThread">
+          <template #icon><Pencil :size="16" /></template>
           Edit Thread
         </NButton>
-        <NButton quaternary @click="removeThread">
-          <template #icon>
-            <Trash2 :size="16" />
-          </template>
+        <NButton tertiary @click="removeThread">
+          <template #icon><Trash2 :size="16" /></template>
           Delete Thread
         </NButton>
+        <RouterLink :to="{ path: '/strategy/new', query: { projectId: project.id } }">
+          <NButton secondary>
+            <template #icon><WandSparkles :size="16" /></template>
+            生成检索与筛选方案
+          </NButton>
+        </RouterLink>
         <RouterLink :to="{ path: '/screening/new', query: { projectId: project.id } }">
           <NButton type="primary">
-            <template #icon>
-              <GitBranchPlus :size="16" />
-            </template>
+            <template #icon><GitBranchPlus :size="16" /></template>
             开始新一轮筛选
           </NButton>
         </RouterLink>
         <NButton tertiary @click="projectsStore.loadProject(project.id)">
-          <template #icon>
-            <RefreshCw :size="16" />
-          </template>
-          刷新线程
+          <template #icon><RefreshCw :size="16" /></template>
+          刷新主题
         </NButton>
       </NSpace>
     </section>
 
     <section class="thread-metrics">
+      <OverviewMetric label="策略任务" :value="threadStats.strategies" />
       <OverviewMetric label="初筛轮次" :value="threadStats.rounds" />
       <OverviewMetric label="报告任务" :value="threadStats.reports" />
       <OverviewMetric label="累计纳入" :value="threadStats.cumulativeIncluded" />
@@ -500,30 +623,29 @@ onUnmounted(() => {
       <section class="thread-stream">
         <NCard class="panel-surface intro-card" embedded>
           <div class="intro-eyebrow">Thread Context</div>
-          <div class="intro-title">这个主题里的所有筛选轮次和报告都会按时间顺序沉淀在这里。</div>
-          <div class="intro-copy">
-            你不需要再管理 dataset。只需要看每一轮留下了什么结果，以及下一步是“继续筛选未使用文献”还是“基于当前纳入生成报告”。
-          </div>
+          <div class="intro-title">这个主题里的筛选轮次、全文获取与报告都会按时间顺序沉淀在这里。</div>
+          <div class="intro-copy">只需要关心每一轮留下了什么结果，以及下一步是继续筛选、做全文获取，还是基于当前结果生成报告。</div>
         </NCard>
 
         <div v-if="threadMessages.length" class="message-stack">
-          <ThreadMessageCard
-            v-for="messageItem in threadMessages"
-            :key="messageItem.id"
-            :message="messageItem"
-          />
+          <ThreadMessageCard v-for="messageItem in threadMessages" :key="messageItem.id" :message="messageItem" />
         </div>
-        <NEmpty v-else class="panel-surface empty-thread" description="当前线程还没有任何轮次。先发起首轮初筛。" />
+        <NEmpty v-else class="panel-surface empty-thread" description="当前主题还没有任何轮次。先发起首轮初筛。" />
       </section>
 
       <aside class="thread-side">
         <NCard title="继续这个主题" class="panel-surface">
           <div class="quick-action-stack">
+            <RouterLink :to="{ path: '/strategy/new', query: { projectId: project.id } }">
+              <NButton secondary type="primary" block>
+                <template #icon><WandSparkles :size="16" /></template>
+                先生成检索与筛选方案
+              </NButton>
+            </RouterLink>
+
             <RouterLink :to="{ path: '/screening/new', query: { projectId: project.id } }">
               <NButton type="primary" block>
-                <template #icon>
-                  <FileSearch :size="16" />
-                </template>
+                <template #icon><FileSearch :size="16" /></template>
                 上传新文献并开始下一轮
               </NButton>
             </RouterLink>
@@ -539,10 +661,8 @@ onUnmounted(() => {
                 }
               }"
             >
-              <NButton secondary type="success" block>
-                <template #icon>
-                  <GitBranchPlus :size="16" />
-                </template>
+              <NButton secondary block>
+                <template #icon><GitBranchPlus :size="16" /></template>
                 从最近一轮未使用文献继续筛选
               </NButton>
             </RouterLink>
@@ -552,40 +672,81 @@ onUnmounted(() => {
             </RouterLink>
           </div>
           <NAlert v-if="!latestUnusedDataset" type="info" :show-icon="false" class="side-note">
-            最近一轮还没有可继续使用的“未使用文献”。先完成一轮初筛，或直接上传新文献开始下一轮。
+            最近一轮还没有可继续使用的未使用文献。先完成一轮初筛，或直接上传新文献开始下一轮。
           </NAlert>
         </NCard>
 
         <NCard title="在线生成报告" class="panel-surface">
           <NForm label-placement="top">
             <NFormItem label="报告任务名称">
-              <NInput v-model:value="reportTitle" placeholder="例如：猫咪交互文献整理报告" />
+              <NInput v-model:value="reportTitle" placeholder="例如：某主题文献整理报告" />
             </NFormItem>
             <NFormItem label="报告主题">
               <NInput v-model:value="reportTopic" type="textarea" :autosize="{ minRows: 3, maxRows: 5 }" />
             </NFormItem>
             <NFormItem label="报告来源">
-              <NSelect v-model:value="reportDatasetIds" multiple :options="quickReportDatasetOptions" />
+              <NSelect v-model:value="reportDatasetIds" multiple :options="reportDatasetOptions" />
             </NFormItem>
             <NFormItem label="参考样式">
-              <NSelect
-                v-model:value="reportReferenceStyle"
-                :options="metaStore.referenceStyles.map((item) => ({ label: item.label, value: item.value }))"
-              />
+              <NSelect v-model:value="reportReferenceStyle" :options="metaStore.referenceStyles.map((item) => ({ label: item.label, value: item.value }))" />
             </NFormItem>
             <NFormItem label="输出目录名">
               <NInput v-model:value="reportName" placeholder="simple_report" />
             </NFormItem>
           </NForm>
           <NButton type="primary" block :disabled="!reportDatasetIds.length" @click="submitThreadReport">
-            <template #icon>
-              <WandSparkles :size="16" />
-            </template>
+            <template #icon><WandSparkles :size="16" /></template>
             基于选中结果生成报告
           </NButton>
         </NCard>
 
-        <NCard title="线程概览" class="panel-surface">
+        <NCard title="全文获取队列" class="panel-surface">
+          <NForm label-placement="top">
+            <NFormItem label="来源">
+              <NSelect v-model:value="fulltextSourceDatasetIds" multiple :options="fulltextSourceOptions" />
+            </NFormItem>
+          </NForm>
+          <div class="fulltext-toolbar">
+            <NButton secondary @click="rebuildThreadFulltextQueue">更新队列</NButton>
+            <NButton tertiary @click="enrichThreadFulltextQueue">刷新 OA / 链接</NButton>
+          </div>
+          <div class="fulltext-summary">
+            <NTag round>未处理 {{ fulltextCounts.pending }}</NTag>
+            <NTag round type="success">已获取 {{ fulltextCounts.ready }}</NTag>
+            <NTag round type="error">无权限 {{ fulltextCounts.unavailable }}</NTag>
+            <NTag round type="warning">暂缓 {{ fulltextCounts.deferred }}</NTag>
+          </div>
+          <div v-if="fulltextQueue.length" class="fulltext-list">
+            <div v-for="item in fulltextQueue" :key="item.paper_id" class="fulltext-item">
+              <div class="fulltext-item-head">
+                <strong>{{ item.title }}</strong>
+                <NTag size="small" round>{{ item.year ?? '----' }}</NTag>
+              </div>
+              <div class="fulltext-meta">{{ item.journal || '未知期刊' }}</div>
+              <div class="fulltext-links">
+                <NButton text size="small" :disabled="!item.doi_url" @click="openExternal(item.doi_url)">打开 DOI</NButton>
+                <NButton text size="small" :disabled="!item.doi" @click="copyDoi(item)">复制 DOI</NButton>
+                <NButton text size="small" :disabled="!item.landing_url" @click="openExternal(item.landing_url)">打开落地页</NButton>
+                <NButton text size="small" :disabled="!item.pdf_url" @click="openExternal(item.pdf_url)">打开 PDF</NButton>
+              </div>
+              <NInput
+                v-model:value="fulltextNotes[item.paper_id]"
+                type="textarea"
+                placeholder="备注：例如已在 Zotero 保存 / 无权限下载"
+                :autosize="{ minRows: 1, maxRows: 3 }"
+              />
+              <div class="fulltext-actions">
+                <NButton size="small" @click="updateThreadFulltextStatus(item, 'pending')">未处理</NButton>
+                <NButton size="small" type="success" @click="updateThreadFulltextStatus(item, 'ready')">已获取全文</NButton>
+                <NButton size="small" type="error" @click="updateThreadFulltextStatus(item, 'unavailable')">无权限获取</NButton>
+                <NButton size="small" type="warning" @click="updateThreadFulltextStatus(item, 'deferred')">暂缓</NButton>
+              </div>
+            </div>
+          </div>
+          <NEmpty v-else description="先选择一组纳入结果并更新全文获取队列" />
+        </NCard>
+
+        <NCard title="主题概览" class="panel-surface">
           <div class="summary-list">
             <div class="summary-row">
               <span>最近更新</span>
@@ -604,26 +765,27 @@ onUnmounted(() => {
       </aside>
     </div>
 
-    <NModal v-model:show="editingThread" preset="card" style="max-width: 640px" title="Edit Thread">
+    <NModal v-model:show="editingThread" preset="card" title="编辑主题" style="max-width: 720px">
       <NForm label-placement="top">
-        <NFormItem label="Thread Name">
+        <NFormItem label="主题名称">
           <NInput v-model:value="editForm.name" />
         </NFormItem>
-        <NFormItem label="Topic">
-          <NInput v-model:value="editForm.topic" type="textarea" :autosize="{ minRows: 3, maxRows: 6 }" />
+        <NFormItem label="研究主题">
+          <NInput v-model:value="editForm.topic" type="textarea" :autosize="{ minRows: 3, maxRows: 5 }" />
         </NFormItem>
-        <NFormItem label="Description">
-          <NInput v-model:value="editForm.description" type="textarea" :autosize="{ minRows: 2, maxRows: 4 }" />
+        <NFormItem label="补充说明">
+          <NInput v-model:value="editForm.description" type="textarea" :autosize="{ minRows: 4, maxRows: 8 }" />
         </NFormItem>
       </NForm>
-      <template #footer>
+      <template #action>
         <NSpace justify="end">
-          <NButton @click="editingThread = false">Cancel</NButton>
-          <NButton type="primary" @click="saveThreadEdit">Save</NButton>
+          <NButton @click="editingThread = false">取消</NButton>
+          <NButton type="primary" @click="saveThreadEdits">保存</NButton>
         </NSpace>
       </template>
     </NModal>
   </div>
+  <NEmpty v-else description="主题不存在或仍在加载中" class="panel-surface empty-thread" />
 </template>
 
 <style scoped>
@@ -634,42 +796,33 @@ onUnmounted(() => {
 }
 
 .thread-hero {
-  padding: 24px;
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 18px;
-  align-items: flex-start;
 }
 
-.eyebrow,
-.intro-eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-size: 12px;
-  color: #6a776c;
-}
-
-h1 {
+.thread-hero h1 {
   margin: 8px 0 10px;
+  font-size: 28px;
+  line-height: 1.2;
 }
 
-p {
+.thread-hero p {
   margin: 0;
-  color: #526055;
-  line-height: 1.7;
+  color: #5e6d62;
 }
 
 .thread-metrics {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 14px;
 }
 
 .thread-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.65fr) minmax(320px, 0.95fr);
+  grid-template-columns: minmax(0, 1.8fr) minmax(320px, 0.95fr);
   gap: 18px;
-  align-items: start;
 }
 
 .thread-stream,
@@ -679,75 +832,113 @@ p {
   gap: 18px;
 }
 
-.thread-side {
-  position: sticky;
-  top: 22px;
+.intro-card {
+  border-radius: 22px;
 }
 
-.intro-card {
-  padding: 18px;
+.intro-eyebrow,
+.eyebrow {
+  font-size: 12px;
+  color: #6a776c;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
 }
 
 .intro-title {
   margin-top: 8px;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 700;
+  line-height: 1.35;
 }
 
 .intro-copy {
   margin-top: 10px;
-  color: #526055;
-  line-height: 1.75;
+  color: #4d5c51;
+  line-height: 1.7;
 }
 
-.message-stack {
+.message-stack,
+.quick-action-stack,
+.summary-list,
+.fulltext-list {
   display: flex;
   flex-direction: column;
-  gap: 18px;
-}
-
-.quick-action-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .side-note {
   margin-top: 14px;
 }
 
-.summary-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
 .summary-row {
   display: flex;
   justify-content: space-between;
-  gap: 16px;
+  gap: 12px;
+  color: #506055;
+}
+
+.summary-row strong {
+  color: #223126;
+}
+
+.fulltext-toolbar,
+.fulltext-summary,
+.fulltext-links,
+.fulltext-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.fulltext-summary {
+  margin: 12px 0;
+}
+
+.fulltext-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid rgba(90, 107, 93, 0.12);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.fulltext-item-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
   align-items: flex-start;
-  color: #516055;
+}
+
+.fulltext-meta {
+  color: #526055;
+  font-size: 13px;
 }
 
 .empty-thread {
-  padding: 30px;
+  min-height: 180px;
+  display: grid;
+  place-items: center;
 }
 
 @media (max-width: 1200px) {
-  .thread-layout,
-  .thread-metrics {
+  .thread-layout {
     grid-template-columns: 1fr;
   }
 
-  .thread-side {
-    position: static;
+  .thread-metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .thread-hero {
+    flex-direction: column;
   }
 }
 
-@media (max-width: 860px) {
-  .thread-hero {
-    flex-direction: column;
+@media (max-width: 720px) {
+  .thread-metrics {
+    grid-template-columns: 1fr;
   }
 }
 </style>

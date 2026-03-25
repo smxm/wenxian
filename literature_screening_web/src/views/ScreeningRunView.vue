@@ -23,6 +23,7 @@ import { useMetaStore } from '@/stores/meta'
 import { useProjectsStore } from '@/stores/projects'
 import { useTasksStore } from '@/stores/tasks'
 import { parseCriteriaMarkdown } from '@/utils/criteria'
+import { strategyPlanToCriteriaMarkdown } from '@/utils/strategy'
 import type { ModelSettings, ProviderName } from '@/types/api'
 
 const router = useRouter()
@@ -57,7 +58,7 @@ const model = ref<ModelSettings>({
   max_tokens: 1536,
   min_request_interval_seconds: 2
 })
-const batchSize = ref(20)
+const batchSize = ref(10)
 const targetIncludeCount = ref(30)
 const stopWhenReached = ref(true)
 const allowUncertain = ref(true)
@@ -116,6 +117,41 @@ function applyDraft() {
   requestTimeout.value = draft.requestTimeout
   encoding.value = draft.encoding
   files.value = [...draftsStore.screeningFiles]
+}
+
+function resetToFreshForm(nextProjectId: string | null = null) {
+  selectedProjectId.value = nextProjectId
+  newProjectName.value = ''
+  newProjectDescription.value = ''
+  sourceDatasetIds.value = []
+  parentTaskId.value = null
+  selectedTemplateId.value = null
+  templateName.value = ''
+  title.value = 'new-screening-run'
+  topic.value = ''
+  criteriaMarkdown.value = ''
+  inclusion.value = ['']
+  exclusion.value = ['']
+  provider.value = 'deepseek'
+  model.value = {
+    provider: 'deepseek',
+    model_name: 'deepseek-chat',
+    api_base_url: 'https://api.deepseek.com/v1',
+    api_key_env: 'DEEPSEEK_API_KEY',
+    api_key: draftsStore.getProviderApiKey('deepseek'),
+    temperature: 0,
+    max_tokens: 1536,
+    min_request_interval_seconds: 2
+  }
+  batchSize.value = 10
+  targetIncludeCount.value = 30
+  stopWhenReached.value = true
+  allowUncertain.value = true
+  retryTimes.value = 6
+  requestTimeout.value = 240
+  encoding.value = 'auto'
+  files.value = []
+  draftsStore.setScreeningFiles([])
 }
 
 function persistDraft() {
@@ -227,10 +263,87 @@ function parseCriteria() {
   else message.success('已解析到结构化字段。')
 }
 
+function buildCriteriaMarkdownFromStructured(nextTopic: string, nextInclusion: string[], nextExclusion: string[]) {
+  const parts = ['# 主题', nextTopic || '', '', '# 纳入标准']
+  for (const item of nextInclusion.filter(Boolean)) parts.push(`- ${item}`)
+  parts.push('', '# 排除标准')
+  for (const item of nextExclusion.filter(Boolean)) parts.push(`- ${item}`)
+  return parts.join('\n').trim()
+}
+
+function applyStrategyPrefill(taskPayload: { title?: string | null; project_id?: string | null; project_topic?: string | null; strategy_plan?: { screening_topic: string; inclusion: string[]; exclusion: string[] } | null }) {
+  if (!taskPayload.strategy_plan) return
+  const plan = taskPayload.strategy_plan
+  topic.value = plan.screening_topic || taskPayload.project_topic || topic.value
+  inclusion.value = plan.inclusion.length ? [...plan.inclusion] : inclusion.value
+  exclusion.value = plan.exclusion.length ? [...plan.exclusion] : exclusion.value
+  criteriaMarkdown.value = strategyPlanToCriteriaMarkdown(plan)
+  if (taskPayload.project_id) selectedProjectId.value = taskPayload.project_id
+  if (!title.value || title.value === 'new-screening-run') {
+    title.value = `${taskPayload.title || 'strategy'}-screening`
+  }
+}
+
+function applyParentTaskPrefill(taskPayload: { title?: string | null; request_payload?: Record<string, unknown> | null; project_id?: string | null }) {
+  const payload = taskPayload.request_payload ?? {}
+  const inheritedTopic = typeof payload.topic === 'string' ? payload.topic : ''
+  const inheritedInclusion = Array.isArray(payload.inclusion) ? payload.inclusion.filter((item): item is string => typeof item === 'string') : []
+  const inheritedExclusion = Array.isArray(payload.exclusion) ? payload.exclusion.filter((item): item is string => typeof item === 'string') : []
+  const inheritedProvider = typeof payload.provider === 'string' ? (payload.provider as ProviderName) : provider.value
+
+  if (taskPayload.project_id) selectedProjectId.value = taskPayload.project_id
+  if (!title.value || title.value === 'new-screening-run') {
+    title.value = `${taskPayload.title || 'screening'}-continue`
+  }
+  if (inheritedTopic) topic.value = inheritedTopic
+  if (typeof payload.criteria_markdown === 'string' && payload.criteria_markdown.trim()) {
+    criteriaMarkdown.value = payload.criteria_markdown
+  } else if (inheritedTopic || inheritedInclusion.length || inheritedExclusion.length) {
+    criteriaMarkdown.value = buildCriteriaMarkdownFromStructured(inheritedTopic, inheritedInclusion, inheritedExclusion)
+  }
+  if (inheritedInclusion.length) inclusion.value = inheritedInclusion
+  if (inheritedExclusion.length) exclusion.value = inheritedExclusion
+
+  provider.value = inheritedProvider
+  model.value = {
+    ...model.value,
+    provider: inheritedProvider,
+    model_name: typeof payload.model_name === 'string' ? payload.model_name : model.value.model_name,
+    api_base_url: typeof payload.api_base_url === 'string' ? payload.api_base_url : model.value.api_base_url,
+    api_key_env: typeof payload.api_key_env === 'string' ? payload.api_key_env : model.value.api_key_env,
+    temperature: typeof payload.temperature === 'number' ? payload.temperature : model.value.temperature,
+    max_tokens: typeof payload.max_tokens === 'number' ? payload.max_tokens : model.value.max_tokens,
+    min_request_interval_seconds:
+      typeof payload.min_request_interval_seconds === 'number'
+        ? payload.min_request_interval_seconds
+        : model.value.min_request_interval_seconds,
+    api_key: draftsStore.getProviderApiKey(inheritedProvider)
+  }
+  if (typeof payload.batch_size === 'number') batchSize.value = payload.batch_size
+  if (typeof payload.target_include_count === 'number') targetIncludeCount.value = payload.target_include_count
+  if (typeof payload.stop_when_target_reached === 'boolean') stopWhenReached.value = payload.stop_when_target_reached
+  if (typeof payload.allow_uncertain === 'boolean') allowUncertain.value = payload.allow_uncertain
+  if (typeof payload.retry_times === 'number') retryTimes.value = payload.retry_times
+  if (typeof payload.request_timeout_seconds === 'number') requestTimeout.value = payload.request_timeout_seconds
+  if (typeof payload.encoding === 'string') encoding.value = payload.encoding
+}
+
 function setFiles(nextFiles: File[]) {
   files.value = nextFiles
   draftsStore.setScreeningFiles(nextFiles)
   if (nextFiles.length) message.success(`已选择 ${nextFiles.length} 个文件。`)
+}
+
+function mergeFiles(currentFiles: File[], incomingFiles: File[]) {
+  const merged = [...currentFiles]
+  const seen = new Set(currentFiles.map((file) => `${file.name}::${file.size}::${file.lastModified}`))
+  for (const file of incomingFiles) {
+    const key = `${file.name}::${file.size}::${file.lastModified}`
+    if (seen.has(key)) continue
+    seen.add(key)
+    merged.push(file)
+  }
+  return merged
 }
 
 function removeFile(index: number) {
@@ -244,7 +357,10 @@ function clearFiles() {
 
 function handleFileChange(event: Event) {
   const input = event.target as HTMLInputElement
-  setFiles(Array.from(input.files ?? []))
+  const selectedFiles = Array.from(input.files ?? [])
+  if (!selectedFiles.length) return
+  setFiles(mergeFiles(files.value, selectedFiles))
+  input.value = ''
 }
 
 function handleDrop(event: DragEvent) {
@@ -252,7 +368,7 @@ function handleDrop(event: DragEvent) {
   isDragging.value = false
   const droppedFiles = Array.from(event.dataTransfer?.files ?? [])
   if (!droppedFiles.length) return
-  setFiles(droppedFiles)
+  setFiles(mergeFiles(files.value, droppedFiles))
 }
 
 function handleDragOver(event: DragEvent) {
@@ -302,6 +418,7 @@ async function submit() {
     parent_task_id: parentTaskId.value,
     title: title.value,
     topic: topic.value,
+    criteria_markdown: criteriaMarkdown.value,
     inclusion: inclusion.value.filter(Boolean),
     exclusion: exclusion.value.filter(Boolean),
     model: model.value,
@@ -332,22 +449,44 @@ const canSubmit = computed(() => {
 onMounted(async () => {
   draftsStore.hydrate()
   await Promise.all([metaStore.ensureLoaded(), projectsStore.refreshProjects()])
-  hydratingDraft.value = true
-  applyDraft()
-  if (!model.value.api_key) {
-    model.value.api_key = draftsStore.getProviderApiKey(provider.value)
-  }
-
   const queryProjectId = typeof route.query.projectId === 'string' ? route.query.projectId : null
   const querySourceDatasetId = typeof route.query.sourceDatasetId === 'string' ? route.query.sourceDatasetId : null
   const queryParentTaskId = typeof route.query.parentTaskId === 'string' ? route.query.parentTaskId : null
-  if (queryProjectId) selectedProjectId.value = queryProjectId
-  if (querySourceDatasetId && !sourceDatasetIds.value.includes(querySourceDatasetId)) sourceDatasetIds.value = [querySourceDatasetId]
-  if (queryParentTaskId) parentTaskId.value = queryParentTaskId
+  const queryStrategyTaskId = typeof route.query.strategyTaskId === 'string' ? route.query.strategyTaskId : null
+
+  const launchedFromThreadContext = Boolean(queryProjectId || querySourceDatasetId || queryParentTaskId || queryStrategyTaskId)
+
+  hydratingDraft.value = true
+  if (launchedFromThreadContext) {
+    resetToFreshForm(queryProjectId)
+    if (querySourceDatasetId) sourceDatasetIds.value = [querySourceDatasetId]
+    if (queryParentTaskId) parentTaskId.value = queryParentTaskId
+  } else {
+    applyDraft()
+    if (!model.value.api_key) {
+      model.value.api_key = draftsStore.getProviderApiKey(provider.value)
+    }
+  }
   hydratingDraft.value = false
 
   if (selectedProjectId.value) {
     await projectsStore.loadProject(selectedProjectId.value)
+  }
+
+  if (queryStrategyTaskId) {
+    const strategyTask = await tasksStore.loadTask(queryStrategyTaskId, true)
+    if (strategyTask?.kind === 'strategy' && strategyTask.strategy_plan) {
+      applyStrategyPrefill(strategyTask)
+      message.success('已从检索与筛选方案带入研究主题和筛选标准')
+    }
+  }
+
+  if (queryParentTaskId) {
+    const parentTask = await tasksStore.loadTask(queryParentTaskId, true)
+    if (parentTask?.kind === 'screening') {
+      applyParentTaskPrefill(parentTask)
+      message.success('已自动继承上一轮筛选配置')
+    }
   }
 
   if (!files.value.length && rememberedFileNames.value.length) {
