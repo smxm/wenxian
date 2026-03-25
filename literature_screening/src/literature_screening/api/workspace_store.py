@@ -223,10 +223,29 @@ class WorkspaceStore:
                 if selected:
                     selected = [selected[-1]]
 
+        derived_dir = self._project_root(project_id) / "derived"
+        derived_dir.mkdir(parents=True, exist_ok=True)
+        queue_path = derived_dir / "fulltext_queue.json"
+        ready_path = derived_dir / "fulltext_ready.ris"
+        selected_ids = [item["id"] for item in selected]
         paths = [Path(item["path"]) for item in selected if Path(item["path"]).exists()]
         if not paths:
-            payload = {"source_dataset_ids": source_dataset_ids or [], "items": []}
-            self._write(self._project_root(project_id) / "derived" / "fulltext_queue.json", payload)
+            payload = {"source_dataset_ids": selected_ids, "items": []}
+            self._write(queue_path, payload)
+            export_ris([], ready_path)
+            self.register_dataset(
+                project_id=project_id,
+                task_id=None,
+                kind="fulltext_ready",
+                label="Fulltext ready records",
+                path=ready_path,
+                record_count=0,
+                file_format="ris",
+                source_dataset_ids=selected_ids,
+                metadata={"generated": True, "status_counts": self._count_fulltext_statuses([])},
+                dataset_id="fulltext-ready",
+            )
+            self.update_project(project_id)
             return payload
 
         records = deduplicate_records(parse_bibtex_files(paths, encoding="auto"))
@@ -256,16 +275,12 @@ class WorkspaceStore:
             if item["status"] == "ready":
                 ready_records.append(record)
 
-        derived_dir = self._project_root(project_id) / "derived"
-        derived_dir.mkdir(parents=True, exist_ok=True)
-        queue_path = derived_dir / "fulltext_queue.json"
         payload = {
-            "source_dataset_ids": [item["id"] for item in selected],
+            "source_dataset_ids": selected_ids,
             "items": items,
         }
         self._write(queue_path, payload)
 
-        ready_path = derived_dir / "fulltext_ready.ris"
         export_ris(ready_records, ready_path)
         self.register_dataset(
             project_id=project_id,
@@ -275,7 +290,7 @@ class WorkspaceStore:
             path=ready_path,
             record_count=len(ready_records),
             file_format="ris",
-            source_dataset_ids=[item["id"] for item in selected],
+            source_dataset_ids=selected_ids,
             metadata={"generated": True, "status_counts": self._count_fulltext_statuses(items)},
             dataset_id="fulltext-ready",
         )

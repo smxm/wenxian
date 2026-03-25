@@ -193,6 +193,7 @@ export interface ScreeningFormPayload {
 
 export interface ReportFormPayload {
   title: string
+  project_id?: string | null
   screening_task_id?: string | null
   dataset_ids: string[]
   project_topic: string

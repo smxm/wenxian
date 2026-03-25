@@ -23,21 +23,32 @@ function iconFor(kind: ThreadMessage['kind']) {
 
 function buttonType(action: ThreadAction) {
   if (action.emphasis === 'primary') return 'primary'
+  if (action.emphasis === 'report') return 'warning'
   if (action.emphasis === 'secondary') return 'success'
   return 'default'
+}
+
+function buttonSecondary(action: ThreadAction) {
+  return action.emphasis !== 'primary' && action.emphasis !== 'report'
+}
+
+function actionIcon(action: ThreadAction) {
+  if (action.kind === 'download') return Download
+  if (action.emphasis === 'report') return FileText
+  return ArrowRight
 }
 </script>
 
 <template>
   <div class="thread-message">
     <div class="message-rail">
-      <div class="message-dot">
+      <div class="message-dot" :class="`kind-${message.kind}`">
         <component :is="iconFor(message.kind)" :size="18" />
       </div>
       <div class="message-line" />
     </div>
 
-    <NCard class="message-card panel-surface" embedded>
+    <NCard class="message-card panel-surface" :class="`kind-${message.kind}`" embedded>
       <template #header>
         <div class="message-header">
           <div>
@@ -80,9 +91,9 @@ function buttonType(action: ThreadAction) {
         <NSpace wrap>
           <template v-for="action in message.actions" :key="action.id">
             <RouterLink v-if="action.kind === 'route' && action.to" :to="action.to">
-              <NButton :type="buttonType(action)" secondary :disabled="action.disabled">
+              <NButton :type="buttonType(action)" :secondary="buttonSecondary(action)" :disabled="action.disabled">
                 <template #icon>
-                  <ArrowRight :size="15" />
+                  <component :is="actionIcon(action)" :size="15" />
                 </template>
                 {{ action.label }}
               </NButton>
@@ -90,7 +101,7 @@ function buttonType(action: ThreadAction) {
             <NButton
               v-else-if="action.kind === 'download' && action.href"
               :type="buttonType(action)"
-              secondary
+              :secondary="buttonSecondary(action)"
               :disabled="action.disabled"
               tag="a"
               :href="action.href"
@@ -133,6 +144,16 @@ function buttonType(action: ThreadAction) {
   box-shadow: 0 10px 22px rgba(45, 106, 79, 0.24);
 }
 
+.message-dot.kind-strategy {
+  background: linear-gradient(135deg, #46677a 0%, #8ea7b5 100%);
+  box-shadow: 0 10px 22px rgba(70, 103, 122, 0.2);
+}
+
+.message-dot.kind-report {
+  background: linear-gradient(135deg, #9a6a17 0%, #d2a34e 100%);
+  box-shadow: 0 10px 22px rgba(154, 106, 23, 0.2);
+}
+
 .message-line {
   flex: 1;
   width: 2px;
@@ -142,6 +163,15 @@ function buttonType(action: ThreadAction) {
 
 .message-card {
   border-radius: 22px;
+}
+
+.message-card.kind-screening {
+  border-color: rgba(45, 106, 79, 0.16);
+}
+
+.message-card.kind-report {
+  border-color: rgba(196, 137, 29, 0.26);
+  background: rgba(255, 250, 241, 0.9);
 }
 
 .message-header {

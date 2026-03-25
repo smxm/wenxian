@@ -11,7 +11,7 @@ export interface ThreadAction {
   kind: 'route' | 'download'
   to?: string
   href?: string
-  emphasis?: 'primary' | 'secondary' | 'ghost'
+  emphasis?: 'primary' | 'secondary' | 'report' | 'ghost'
   disabled?: boolean
 }
 

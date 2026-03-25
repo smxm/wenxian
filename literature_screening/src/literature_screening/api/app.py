@@ -847,14 +847,19 @@ def create_report_task(request: ReportTaskCreate) -> TaskSnapshot:
         if not source_dataset_ids:
             source_dataset_ids = screening_task.get("output_dataset_ids", [])
     elif source_dataset_ids:
-        datasets = [_require_dataset(dataset_id) for dataset_id in source_dataset_ids]
+        datasets = [_resolve_report_dataset(request, dataset_id) for dataset_id in source_dataset_ids]
         project_ids = {item["project_id"] for item in datasets}
         if len(project_ids) != 1:
             raise HTTPException(status_code=400, detail="Selected datasets must belong to the same project")
         project_id = next(iter(project_ids))
-        if any(item["kind"] == "fulltext_ready" for item in datasets):
-            WORKSPACE_STORE.rebuild_fulltext_queue(project_id)
-            datasets = [_require_dataset(dataset_id) for dataset_id in source_dataset_ids]
+        fulltext_ready_dataset = next((item for item in datasets if item["kind"] == "fulltext_ready"), None)
+        if fulltext_ready_dataset is not None:
+            rebuild_source_dataset_ids = (
+                fulltext_ready_dataset.get("source_dataset_ids")
+                or WORKSPACE_STORE.load_fulltext_queue(project_id).get("source_dataset_ids", [])
+            )
+            WORKSPACE_STORE.rebuild_fulltext_queue(project_id, source_dataset_ids=rebuild_source_dataset_ids)
+            datasets = [_resolve_report_dataset(request, dataset_id, project_id=project_id) for dataset_id in source_dataset_ids]
         if not any((item.get("record_count") or 0) > 0 for item in datasets):
             raise HTTPException(
                 status_code=400,
@@ -977,6 +982,16 @@ def _require_dataset(dataset_id: str) -> dict:
     if dataset is None:
         raise HTTPException(status_code=404, detail=f"Dataset not found: {dataset_id}")
     return dataset
+
+
+def _resolve_report_dataset(request: ReportTaskCreate, dataset_id: str, *, project_id: str | None = None) -> dict:
+    scoped_project_id = project_id or request.project_id
+    if scoped_project_id:
+        try:
+            return WORKSPACE_STORE.load_dataset(scoped_project_id, dataset_id)
+        except FileNotFoundError:
+            raise HTTPException(status_code=404, detail=f"Dataset not found in current project: {dataset_id}") from None
+    return _require_dataset(dataset_id)
 
 
 def _register_screening_datasets(

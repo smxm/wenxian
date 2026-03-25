@@ -52,6 +52,7 @@ class ScreeningTaskCreate(BaseModel):
 
 class ReportTaskCreate(BaseModel):
     title: str
+    project_id: str | None = None
     screening_task_id: str | None = None
     dataset_ids: list[str] = Field(default_factory=list)
     project_topic: str

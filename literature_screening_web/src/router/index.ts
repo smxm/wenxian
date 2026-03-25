@@ -34,6 +34,12 @@ export const router = createRouter({
       props: true
     },
     {
+      path: '/threads/:projectId/fulltext',
+      name: 'thread-fulltext',
+      component: () => import('@/views/FulltextQueueView.vue'),
+      props: true
+    },
+    {
       path: '/tasks/:taskId',
       name: 'task-detail',
       component: () => import('@/views/TaskDetailView.vue'),

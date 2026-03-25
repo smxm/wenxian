@@ -38,9 +38,6 @@ const activeKey = computed(() => {
 })
 
 const allRecentThreads = computed(() => projectsStore.list)
-const visibleRecentThreads = computed(() =>
-  expandAllThreads.value ? allRecentThreads.value : allRecentThreads.value.slice(0, 5)
-)
 
 onMounted(() => {
   draftsStore.hydrate()
@@ -76,7 +73,6 @@ onUnmounted(() => {
           <div class="section-header">
             <div>
               <div class="status-title">最近主题</div>
-              <div class="section-subtitle">默认显示 5 条，可滚动查看，也可展开全部。</div>
             </div>
             <NButton
               v-if="allRecentThreads.length > 5"
@@ -93,12 +89,12 @@ onUnmounted(() => {
           </div>
 
           <div
-            v-if="visibleRecentThreads.length"
+            v-if="allRecentThreads.length"
             class="thread-list"
             :class="{ expanded: expandAllThreads }"
           >
             <RouterLink
-              v-for="project in visibleRecentThreads"
+              v-for="project in allRecentThreads"
               :key="project.id"
               :to="`/threads/${project.id}`"
               class="thread-item"
@@ -246,13 +242,6 @@ onUnmounted(() => {
 .status-title,
 .running-title {
   font-weight: 700;
-}
-
-.section-subtitle {
-  margin-top: 4px;
-  font-size: 12px;
-  color: #6b776d;
-  line-height: 1.5;
 }
 
 .toggle-button {

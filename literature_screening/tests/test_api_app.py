@@ -387,3 +387,188 @@ def test_report_task_rejects_empty_fulltext_ready_source(tmp_path: Path, monkeyp
     )
     assert response.status_code == 400
     assert "Selected report source is empty" in response.json()["detail"]
+
+
+def test_fulltext_queue_rebuild_clears_ready_dataset_when_source_file_disappears(tmp_path: Path, monkeypatch) -> None:
+    task_store = TaskStore(tmp_path / "api_runs")
+    workspace_store = WorkspaceStore(tmp_path / "api_runs")
+    monkeypatch.setattr(app_module, "TASK_STORE", task_store)
+    monkeypatch.setattr(app_module, "WORKSPACE_STORE", workspace_store)
+
+    project = workspace_store.create_project(name="fulltext-project", topic="topic", description="")
+    ris_path = tmp_path / "included.ris"
+    ris_path.write_text(
+        "\n".join(
+            [
+                "TY  - JOUR",
+                "TI  - Paper One",
+                "JO  - Journal A",
+                "PY  - 2024",
+                "DO  - 10.1000/paper-one",
+                "ER  - ",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    dataset = workspace_store.register_dataset(
+        project_id=project["id"],
+        task_id=None,
+        kind="included_reviewed",
+        label="Reviewed included records",
+        path=ris_path,
+        record_count=1,
+        file_format="ris",
+    )
+
+    rebuild = client.post(
+        f"/api/projects/{project['id']}/fulltext/rebuild",
+        json={"source_dataset_ids": [dataset["id"]]},
+    )
+    assert rebuild.status_code == 200
+    queue_item = rebuild.json()["fulltext_queue"][0]
+
+    update = client.post(
+        f"/api/projects/{project['id']}/fulltext/status",
+        json={"paper_id": queue_item["paper_id"], "status": "ready", "note": "downloaded"},
+    )
+    assert update.status_code == 200
+    ready_dataset = next(item for item in update.json()["datasets"] if item["kind"] == "fulltext_ready")
+    assert ready_dataset["record_count"] == 1
+
+    ris_path.unlink()
+
+    rebuild_after_missing_source = client.post(
+        f"/api/projects/{project['id']}/fulltext/rebuild",
+        json={"source_dataset_ids": [dataset["id"]]},
+    )
+    assert rebuild_after_missing_source.status_code == 200
+    payload = rebuild_after_missing_source.json()
+    assert payload["fulltext_queue"] == []
+    ready_dataset = next(item for item in payload["datasets"] if item["kind"] == "fulltext_ready")
+    assert ready_dataset["record_count"] == 0
+    assert ready_dataset["source_dataset_ids"] == [dataset["id"]]
+
+
+def test_report_task_rebuilds_fulltext_ready_from_its_own_source_selection(tmp_path: Path, monkeypatch) -> None:
+    task_store = TaskStore(tmp_path / "api_runs")
+    workspace_store = WorkspaceStore(tmp_path / "api_runs")
+    monkeypatch.setattr(app_module, "TASK_STORE", task_store)
+    monkeypatch.setattr(app_module, "WORKSPACE_STORE", workspace_store)
+    monkeypatch.setattr(task_store, "run_in_background", lambda task, worker: None)
+
+    project = workspace_store.create_project(name="report-project", topic="topic", description="")
+    source_a = tmp_path / "included_a.ris"
+    source_a.write_text(
+        "\n".join(
+            [
+                "TY  - JOUR",
+                "TI  - Paper One",
+                "JO  - Journal A",
+                "PY  - 2024",
+                "DO  - 10.1000/paper-one",
+                "ER  - ",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    source_b = tmp_path / "included_b.ris"
+    source_b.write_text(
+        "\n".join(
+            [
+                "TY  - JOUR",
+                "TI  - Paper Two",
+                "JO  - Journal B",
+                "PY  - 2025",
+                "DO  - 10.1000/paper-two",
+                "ER  - ",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    dataset_a = workspace_store.register_dataset(
+        project_id=project["id"],
+        task_id=None,
+        kind="included_reviewed",
+        label="Reviewed included records A",
+        path=source_a,
+        record_count=1,
+        file_format="ris",
+    )
+    dataset_b = workspace_store.register_dataset(
+        project_id=project["id"],
+        task_id=None,
+        kind="included_reviewed",
+        label="Reviewed included records B",
+        path=source_b,
+        record_count=1,
+        file_format="ris",
+    )
+
+    rebuild = client.post(
+        f"/api/projects/{project['id']}/fulltext/rebuild",
+        json={"source_dataset_ids": [dataset_a["id"]]},
+    )
+    assert rebuild.status_code == 200
+    queue_item = rebuild.json()["fulltext_queue"][0]
+
+    update = client.post(
+        f"/api/projects/{project['id']}/fulltext/status",
+        json={"paper_id": queue_item["paper_id"], "status": "ready", "note": "downloaded"},
+    )
+    assert update.status_code == 200
+
+    other_project = workspace_store.create_project(name="other-project", topic="other", description="")
+    other_ready_path = tmp_path / "other_fulltext_ready.ris"
+    other_ready_path.write_text("", encoding="utf-8")
+    workspace_store.register_dataset(
+        project_id=other_project["id"],
+        task_id=None,
+        kind="fulltext_ready",
+        label="Fulltext ready records",
+        path=other_ready_path,
+        record_count=0,
+        file_format="ris",
+        dataset_id="fulltext-ready",
+    )
+
+    original_find_dataset = workspace_store.find_dataset
+
+    def _find_dataset_preferring_other(dataset_id: str):
+        if dataset_id == "fulltext-ready":
+            return workspace_store.load_dataset(other_project["id"], dataset_id)
+        return original_find_dataset(dataset_id)
+
+    monkeypatch.setattr(workspace_store, "find_dataset", _find_dataset_preferring_other)
+
+    response = client.post(
+        "/api/report/tasks",
+        json={
+            "title": "report",
+            "project_id": project["id"],
+            "screening_task_id": None,
+            "dataset_ids": ["fulltext-ready"],
+            "project_topic": "topic",
+            "report_name": "simple_report",
+            "retry_times": 1,
+            "timeout_seconds": 30,
+            "reference_style": "gbt7714",
+            "model": {
+                "provider": "deepseek",
+                "model_name": "deepseek-chat",
+                "api_base_url": "https://api.deepseek.com/v1",
+                "api_key_env": "DEEPSEEK_API_KEY",
+                "api_key": "",
+                "temperature": 0,
+                "max_tokens": 256,
+                "min_request_interval_seconds": 1,
+            },
+        },
+    )
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["input_dataset_ids"] == ["fulltext-ready"]
+
+    ready_dataset = workspace_store.load_dataset(project["id"], "fulltext-ready")
+    assert ready_dataset["record_count"] == 1
+    assert ready_dataset["source_dataset_ids"] == [dataset_a["id"]]
+    assert ready_dataset["source_dataset_ids"] != [dataset_b["id"]]

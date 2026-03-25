@@ -1,5 +1,5 @@
 ﻿<script setup lang="ts">
-import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
+import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 import { RouterLink, useRoute, useRouter } from 'vue-router'
 import dayjs from 'dayjs'
 import { FileSearch, FileText, GitBranchPlus, Pencil, RefreshCw, Trash2, WandSparkles } from 'lucide-vue-next'
@@ -24,7 +24,7 @@ import { useDraftsStore } from '@/stores/drafts'
 import { useMetaStore } from '@/stores/meta'
 import { useProjectsStore } from '@/stores/projects'
 import { useTasksStore } from '@/stores/tasks'
-import type { DatasetRecord, FulltextQueueItem, TaskSnapshot } from '@/types/api'
+import type { DatasetRecord, TaskSnapshot } from '@/types/api'
 import type { ThreadAction, ThreadMessage, ThreadMetric } from '@/types/thread'
 
 const route = useRoute()
@@ -43,11 +43,13 @@ const reportTopic = ref('')
 const reportName = ref('simple_report')
 const reportDatasetIds = ref<string[]>([])
 const reportReferenceStyle = ref<'gbt7714' | 'apa7'>('gbt7714')
-const fulltextSourceDatasetIds = ref<string[]>([])
-const fulltextNotes = ref<Record<string, string>>({})
 const editingThread = ref(false)
 const editForm = ref({ name: '', topic: '', description: '' })
 const pollTimer = ref<number | null>(null)
+const reportPanelRef = ref<HTMLElement | null>(null)
+const reportFocusNote = ref('')
+const reportPanelHighlighted = ref(false)
+let reportFocusTimer: number | null = null
 
 const datasetMap = computed(() => {
   const map = new Map<string, DatasetRecord>()
@@ -68,7 +70,6 @@ const cumulativeIncludedDataset = computed(() =>
 const fulltextReadyDataset = computed(() =>
   (project.value?.datasets ?? []).find((dataset) => dataset.kind === 'fulltext_ready') ?? null
 )
-const fulltextQueue = computed<FulltextQueueItem[]>(() => project.value?.fulltext_queue ?? [])
 
 const latestSucceededScreening = computed(() => [...screeningRounds.value].reverse().find((task) => task.status === 'succeeded') ?? null)
 
@@ -125,8 +126,6 @@ const quickReportDatasetOptions = computed(() => {
   return options
 })
 
-const fulltextSourceOptions = computed(() => quickReportDatasetOptions.value.filter((item) => item.value !== fulltextReadyDataset.value?.id))
-
 const reportDatasetOptions = computed(() => {
   const options: Array<{ label: string; value: string }> = []
   if (fulltextReadyDataset.value && (fulltextReadyDataset.value.record_count ?? 0) > 0) {
@@ -145,7 +144,7 @@ const reportDatasetOptions = computed(() => {
 
 const fulltextCounts = computed(() => {
   const counts = { pending: 0, ready: 0, unavailable: 0, deferred: 0 }
-  for (const item of fulltextQueue.value) counts[item.status] += 1
+  for (const item of project.value?.fulltext_queue ?? []) counts[item.status] += 1
   return counts
 })
 
@@ -241,11 +240,18 @@ function buildScreeningActions(task: TaskSnapshot): ThreadAction[] {
   const includedDataset = latestMatchingDataset(task, ['included_reviewed', 'included'])
   if (includedDataset) {
     actions.push({
-      id: `${task.id}-report`,
-      label: '基于本轮纳入生成报告',
+      id: `${task.id}-fulltext`,
+      label: '进入全文获取',
       kind: 'route',
-      to: `/threads/${projectId.value}?reportDatasetId=${includedDataset.id}`,
+      to: `/threads/${projectId.value}/fulltext`,
       emphasis: 'secondary'
+    })
+    actions.push({
+      id: `${task.id}-report`,
+      label: '带入报告工作台',
+      kind: 'route',
+      to: `/threads/${projectId.value}?reportDatasetId=${includedDataset.id}&focusPanel=report`,
+      emphasis: 'report'
     })
   }
   return actions
@@ -374,18 +380,6 @@ function initializeReportDefaults() {
   }
 }
 
-function initializeFulltextDefaults() {
-  if (!project.value) return
-  if ((project.value.fulltext_source_dataset_ids ?? []).length) {
-    fulltextSourceDatasetIds.value = [...project.value.fulltext_source_dataset_ids]
-  } else if (fulltextSourceOptions.value.length) {
-    fulltextSourceDatasetIds.value = [fulltextSourceOptions.value[0].value]
-  } else {
-    fulltextSourceDatasetIds.value = []
-  }
-  fulltextNotes.value = Object.fromEntries(fulltextQueue.value.map((item) => [item.paper_id, item.note ?? '']))
-}
-
 function openEditThread() {
   if (!project.value) return
   editForm.value = {
@@ -418,12 +412,9 @@ async function removeThread() {
 watch(projectId, async (nextProjectId) => {
   if (!nextProjectId) return
   reportDatasetIds.value = []
-  fulltextSourceDatasetIds.value = []
-  fulltextNotes.value = {}
   await tasksStore.refreshList()
   await projectsStore.loadProject(nextProjectId)
   initializeReportDefaults()
-  initializeFulltextDefaults()
 }, { immediate: true })
 
 watch(
@@ -434,6 +425,29 @@ watch(
     }
   },
   { immediate: true }
+)
+
+watch(
+  [() => route.query.reportDatasetId, () => route.query.focusPanel, reportDatasetOptions],
+  async ([datasetId, focusPanel, options]) => {
+    if (focusPanel !== 'report' || typeof datasetId !== 'string') {
+      reportFocusNote.value = ''
+      reportPanelHighlighted.value = false
+      return
+    }
+    if (!options.some((item) => item.value === datasetId)) return
+    reportFocusNote.value = '已为你带入当前轮次的纳入结果。下一步只需要确认报告主题和参考样式，然后点击生成。'
+    reportPanelHighlighted.value = true
+    await nextTick()
+    reportPanelRef.value?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    if (typeof window !== 'undefined') {
+      if (reportFocusTimer !== null) window.clearTimeout(reportFocusTimer)
+      reportFocusTimer = window.setTimeout(() => {
+        reportPanelHighlighted.value = false
+      }, 2600)
+    }
+  },
+  { immediate: true, deep: true }
 )
 
 watch(reportDatasetOptions, (options) => {
@@ -465,6 +479,7 @@ async function submitThreadReport() {
   try {
     const task = await tasksStore.submitReport({
       title: reportTitle.value.trim() || `${project.value.name}-report`,
+      project_id: project.value.id,
       screening_task_id: null,
       dataset_ids: selectedIds,
       project_topic: reportTopic.value.trim() || project.value.topic,
@@ -491,59 +506,12 @@ async function submitThreadReport() {
   }
 }
 
-async function rebuildThreadFulltextQueue() {
-  if (!project.value) return
-  await projectsStore.rebuildFulltextQueue(project.value.id, fulltextSourceDatasetIds.value)
-  initializeFulltextDefaults()
-  initializeReportDefaults()
-  message.success('全文获取队列已更新')
-}
-
-async function enrichThreadFulltextQueue() {
-  if (!project.value) return
-  await projectsStore.enrichFulltextQueue(project.value.id)
-  initializeFulltextDefaults()
-  message.success('已刷新 DOI 落地页和 OA 链接')
-}
-
-async function updateThreadFulltextStatus(item: FulltextQueueItem, status: 'pending' | 'ready' | 'unavailable' | 'deferred') {
-  if (!project.value) return
-  await projectsStore.updateFulltextStatus(project.value.id, {
-    paper_id: item.paper_id,
-    status,
-    note: fulltextNotes.value[item.paper_id] ?? item.note ?? ''
-  })
-  initializeFulltextDefaults()
-  initializeReportDefaults()
-}
-
-async function copyDoi(item: FulltextQueueItem) {
-  if (!item.doi) return
-  if (navigator.clipboard?.writeText) {
-    await navigator.clipboard.writeText(item.doi)
-  } else {
-    const input = document.createElement('input')
-    input.value = item.doi
-    document.body.appendChild(input)
-    input.select()
-    document.execCommand('copy')
-    document.body.removeChild(input)
-  }
-  message.success('DOI 已复制')
-}
-
-function openExternal(url?: string | null) {
-  if (!url) return
-  window.open(url, '_blank', 'noopener')
-}
-
 function startProjectPolling() {
   if (typeof window === 'undefined' || pollTimer.value !== null) return
   pollTimer.value = window.setInterval(async () => {
     if (!project.value) return
     await Promise.all([tasksStore.refreshList(), projectsStore.loadProject(project.value.id)])
     initializeReportDefaults()
-    initializeFulltextDefaults()
   }, 4000)
 }
 
@@ -558,7 +526,6 @@ onMounted(async () => {
   await metaStore.ensureLoaded()
   await Promise.all([tasksStore.refreshList(), projectsStore.loadProject(projectId.value)])
   initializeReportDefaults()
-  initializeFulltextDefaults()
 })
 
 watch(
@@ -572,18 +539,21 @@ watch(
 
 onUnmounted(() => {
   stopProjectPolling()
+  if (reportFocusTimer !== null && typeof window !== 'undefined') {
+    window.clearTimeout(reportFocusTimer)
+  }
 })
 </script>
 
 <template>
   <div v-if="project" class="thread-view">
-    <section class="thread-hero panel-surface">
-      <div>
+    <section class="thread-hero">
+      <div class="thread-hero-copy">
         <div class="eyebrow">Topic Thread</div>
         <h1>{{ project.name }}</h1>
         <p>{{ project.topic }}</p>
       </div>
-      <NSpace>
+      <NSpace class="thread-hero-actions">
         <NButton secondary @click="openEditThread">
           <template #icon><Pencil :size="16" /></template>
           Edit Thread
@@ -670,13 +640,30 @@ onUnmounted(() => {
             <RouterLink v-if="latestSucceededScreening" :to="`/tasks/${latestSucceededScreening.id}`">
               <NButton tertiary block>进入最近一轮做人工复核</NButton>
             </RouterLink>
+
+            <RouterLink :to="`/threads/${project.id}/fulltext`">
+              <NButton tertiary block>进入全文获取工作台</NButton>
+            </RouterLink>
           </div>
           <NAlert v-if="!latestUnusedDataset" type="info" :show-icon="false" class="side-note">
             最近一轮还没有可继续使用的未使用文献。先完成一轮初筛，或直接上传新文献开始下一轮。
           </NAlert>
         </NCard>
 
-        <NCard title="在线生成报告" class="panel-surface">
+        <NCard ref="reportPanelRef" title="报告工作台" class="panel-surface report-workspace-card" :class="{ highlighted: reportPanelHighlighted }">
+          <NAlert v-if="reportFocusNote" type="warning" :show-icon="false" class="report-workspace-alert">
+            {{ reportFocusNote }}
+          </NAlert>
+          <div class="report-workspace-copy">
+            <span>这里是报告阶段，不是继续筛选。</span>
+            <strong>当前会基于你选中的纳入结果或“仅已获取全文”来生成综述报告。</strong>
+          </div>
+          <div class="report-workspace-status">
+            <NTag round type="warning">报告来源 {{ reportDatasetIds.length }} 组</NTag>
+            <NTag v-if="fulltextReadyDataset && (fulltextReadyDataset.record_count ?? 0) > 0" round type="success">
+              已获取全文 {{ fulltextReadyDataset.record_count ?? 0 }} 篇
+            </NTag>
+          </div>
           <NForm label-placement="top">
             <NFormItem label="报告任务名称">
               <NInput v-model:value="reportTitle" placeholder="例如：某主题文献整理报告" />
@@ -700,50 +687,41 @@ onUnmounted(() => {
           </NButton>
         </NCard>
 
-        <NCard title="全文获取队列" class="panel-surface">
-          <NForm label-placement="top">
-            <NFormItem label="来源">
-              <NSelect v-model:value="fulltextSourceDatasetIds" multiple :options="fulltextSourceOptions" />
-            </NFormItem>
-          </NForm>
-          <div class="fulltext-toolbar">
-            <NButton secondary @click="rebuildThreadFulltextQueue">更新队列</NButton>
-            <NButton tertiary @click="enrichThreadFulltextQueue">刷新 OA / 链接</NButton>
-          </div>
-          <div class="fulltext-summary">
-            <NTag round>未处理 {{ fulltextCounts.pending }}</NTag>
-            <NTag round type="success">已获取 {{ fulltextCounts.ready }}</NTag>
-            <NTag round type="error">无权限 {{ fulltextCounts.unavailable }}</NTag>
-            <NTag round type="warning">暂缓 {{ fulltextCounts.deferred }}</NTag>
-          </div>
-          <div v-if="fulltextQueue.length" class="fulltext-list">
-            <div v-for="item in fulltextQueue" :key="item.paper_id" class="fulltext-item">
-              <div class="fulltext-item-head">
-                <strong>{{ item.title }}</strong>
-                <NTag size="small" round>{{ item.year ?? '----' }}</NTag>
-              </div>
-              <div class="fulltext-meta">{{ item.journal || '未知期刊' }}</div>
-              <div class="fulltext-links">
-                <NButton text size="small" :disabled="!item.doi_url" @click="openExternal(item.doi_url)">打开 DOI</NButton>
-                <NButton text size="small" :disabled="!item.doi" @click="copyDoi(item)">复制 DOI</NButton>
-                <NButton text size="small" :disabled="!item.landing_url" @click="openExternal(item.landing_url)">打开落地页</NButton>
-                <NButton text size="small" :disabled="!item.pdf_url" @click="openExternal(item.pdf_url)">打开 PDF</NButton>
-              </div>
-              <NInput
-                v-model:value="fulltextNotes[item.paper_id]"
-                type="textarea"
-                placeholder="备注：例如已在 Zotero 保存 / 无权限下载"
-                :autosize="{ minRows: 1, maxRows: 3 }"
-              />
-              <div class="fulltext-actions">
-                <NButton size="small" @click="updateThreadFulltextStatus(item, 'pending')">未处理</NButton>
-                <NButton size="small" type="success" @click="updateThreadFulltextStatus(item, 'ready')">已获取全文</NButton>
-                <NButton size="small" type="error" @click="updateThreadFulltextStatus(item, 'unavailable')">无权限获取</NButton>
-                <NButton size="small" type="warning" @click="updateThreadFulltextStatus(item, 'deferred')">暂缓</NButton>
-              </div>
+        <NCard title="全文获取工作台" class="panel-surface">
+          <div class="fulltext-summary-card">
+            <div class="fulltext-summary-copy">
+              <strong>把全文标记、筛选和链接检查放到单独页面处理。</strong>
+              <span>这里保留摘要和入口，避免和报告表单挤在同一块区域。</span>
+            </div>
+            <div class="fulltext-summary">
+              <RouterLink :to="{ path: `/threads/${project.id}/fulltext` }">
+                <NTag round :bordered="false" class="summary-tag">全部 {{ project.fulltext_queue.length }}</NTag>
+              </RouterLink>
+              <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { status: 'pending' } }">
+                <NTag round :bordered="false" class="summary-tag">未处理 {{ fulltextCounts.pending }}</NTag>
+              </RouterLink>
+              <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { status: 'ready' } }">
+                <NTag round type="success" :bordered="false" class="summary-tag">已获取 {{ fulltextCounts.ready }}</NTag>
+              </RouterLink>
+              <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { status: 'unavailable' } }">
+                <NTag round type="error" :bordered="false" class="summary-tag">无权限 {{ fulltextCounts.unavailable }}</NTag>
+              </RouterLink>
+              <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { status: 'deferred' } }">
+                <NTag round type="warning" :bordered="false" class="summary-tag">暂缓 {{ fulltextCounts.deferred }}</NTag>
+              </RouterLink>
+            </div>
+            <div class="fulltext-entry-actions">
+              <RouterLink :to="`/threads/${project.id}/fulltext`">
+                <NButton type="primary" block>打开全文获取页</NButton>
+              </RouterLink>
+              <RouterLink
+                v-if="fulltextReadyDataset && (fulltextReadyDataset.record_count ?? 0) > 0"
+                :to="{ path: `/threads/${project.id}`, query: { reportDatasetId: fulltextReadyDataset.id, focusPanel: 'report' } }"
+              >
+                <NButton secondary block>用已获取全文生成报告</NButton>
+              </RouterLink>
             </div>
           </div>
-          <NEmpty v-else description="先选择一组纳入结果并更新全文获取队列" />
         </NCard>
 
         <NCard title="主题概览" class="panel-surface">
@@ -796,21 +774,34 @@ onUnmounted(() => {
 }
 
 .thread-hero {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 18px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 18px 24px;
+  align-items: end;
+  padding: 4px 0 2px;
+  border-bottom: 1px solid rgba(90, 107, 93, 0.12);
+}
+
+.thread-hero-copy {
+  min-width: 0;
+}
+
+.thread-hero-actions {
+  justify-self: end;
+  justify-content: flex-end;
 }
 
 .thread-hero h1 {
-  margin: 8px 0 10px;
-  font-size: 28px;
-  line-height: 1.2;
+  margin: 8px 0 8px;
+  font-size: 34px;
+  line-height: 1.12;
 }
 
 .thread-hero p {
   margin: 0;
   color: #5e6d62;
+  max-width: 860px;
+  line-height: 1.6;
 }
 
 .thread-metrics {
@@ -859,8 +850,7 @@ onUnmounted(() => {
 
 .message-stack,
 .quick-action-stack,
-.summary-list,
-.fulltext-list {
+.summary-list {
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -881,39 +871,64 @@ onUnmounted(() => {
   color: #223126;
 }
 
-.fulltext-toolbar,
-.fulltext-summary,
-.fulltext-links,
-.fulltext-actions {
+.report-workspace-card {
+  border-color: rgba(196, 137, 29, 0.22);
+  background: rgba(255, 250, 242, 0.9);
+  transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.report-workspace-card.highlighted {
+  border-color: rgba(196, 137, 29, 0.46);
+  box-shadow: 0 18px 40px rgba(196, 137, 29, 0.16);
+  transform: translateY(-1px);
+}
+
+.report-workspace-alert {
+  margin-bottom: 14px;
+}
+
+.report-workspace-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+  color: #665748;
+}
+
+.report-workspace-status {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  margin-bottom: 12px;
+}
+
+.fulltext-summary-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.fulltext-summary-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #506055;
 }
 
 .fulltext-summary {
-  margin: 12px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.fulltext-item {
+.summary-tag {
+  cursor: pointer;
+}
+
+.fulltext-entry-actions {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 12px;
-  border: 1px solid rgba(90, 107, 93, 0.12);
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.58);
-}
-
-.fulltext-item-head {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  align-items: flex-start;
-}
-
-.fulltext-meta {
-  color: #526055;
-  font-size: 13px;
+  gap: 10px;
 }
 
 .empty-thread {
@@ -932,7 +947,13 @@ onUnmounted(() => {
   }
 
   .thread-hero {
-    flex-direction: column;
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .thread-hero-actions {
+    justify-self: start;
+    justify-content: flex-start;
   }
 }
 
