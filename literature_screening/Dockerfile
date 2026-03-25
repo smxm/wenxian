@@ -3,6 +3,8 @@ FROM python:3.12-slim
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 ENV PYTHONPATH=/app/src
+ENV PIP_INDEX_URL=https://pypi.tuna.tsinghua.edu.cn/simple
+ENV PIP_DEFAULT_TIMEOUT=120
 
 WORKDIR /app
 
@@ -12,7 +14,8 @@ RUN apt-get update \
 
 COPY . /app
 
-RUN pip install --no-cache-dir -e .
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel \
+    && pip install --no-cache-dir --no-build-isolation -e .
 
 EXPOSE 8000
 
