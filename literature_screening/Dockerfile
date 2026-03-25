@@ -12,7 +12,8 @@ RUN apt-get update \
 
 COPY . /app
 
-RUN pip install --no-cache-dir -e .
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel \
+    && pip install --no-cache-dir --no-build-isolation -e .
 
 EXPOSE 8000
 
