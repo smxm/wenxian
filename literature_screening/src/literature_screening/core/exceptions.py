@@ -29,3 +29,6 @@ class SchemaValidationError(LiteratureScreeningError):
 class ReportExportError(LiteratureScreeningError):
     """Raised when report export fails."""
 
+
+class TaskCancelledError(LiteratureScreeningError):
+    """Raised when a running task is cancelled by the user."""

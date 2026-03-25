@@ -32,7 +32,7 @@ class DedupConfig(BaseModel):
 
 
 class ScreeningConfig(BaseModel):
-    batch_size: int = Field(default=20, ge=1, le=100)
+    batch_size: int = Field(default=10, ge=1, le=100)
     target_include_count: int = Field(ge=1)
     stop_when_target_reached: bool = True
     allow_uncertain: bool = True
@@ -51,6 +51,7 @@ class ModelConfig(BaseModel):
     model_name: str
     api_base_url: str
     api_key_env: str
+    api_key: str | None = Field(default=None, exclude=True, repr=False)
     temperature: float = Field(default=0.2, ge=0, le=2)
     max_tokens: int = Field(default=8192, ge=256, le=32768)
     min_request_interval_seconds: float = Field(default=0.0, ge=0, le=60)

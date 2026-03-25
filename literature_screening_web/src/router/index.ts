@@ -9,6 +9,11 @@ export const router = createRouter({
       component: () => import('@/views/DashboardView.vue')
     },
     {
+      path: '/strategy/new',
+      name: 'strategy-new',
+      component: () => import('@/views/StrategyRunView.vue')
+    },
+    {
       path: '/screening/new',
       name: 'screening-new',
       component: () => import('@/views/ScreeningRunView.vue')
@@ -20,8 +25,18 @@ export const router = createRouter({
     },
     {
       path: '/projects/:projectId',
-      name: 'project-detail',
+      redirect: to => ({ path: `/threads/${String(to.params.projectId)}` })
+    },
+    {
+      path: '/threads/:projectId',
+      name: 'thread-detail',
       component: () => import('@/views/ProjectDetailView.vue'),
+      props: true
+    },
+    {
+      path: '/threads/:projectId/fulltext',
+      name: 'thread-fulltext',
+      component: () => import('@/views/FulltextQueueView.vue'),
       props: true
     },
     {

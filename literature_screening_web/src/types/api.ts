@@ -1,8 +1,19 @@
 export type ProviderName = 'deepseek' | 'kimi'
-export type TaskKind = 'screening' | 'report'
-export type TaskStatus = 'pending' | 'running' | 'succeeded' | 'failed'
+export type TaskKind = 'strategy' | 'screening' | 'report'
+export type TaskStatus = 'pending' | 'running' | 'succeeded' | 'failed' | 'cancelled'
 export type ReferenceStyle = 'gbt7714' | 'apa7'
-export type DatasetKind = 'included' | 'excluded' | 'unused' | 'cumulative_included' | 'report_source' | string
+export type DatasetKind =
+  | 'included'
+  | 'excluded'
+  | 'unused'
+  | 'included_reviewed'
+  | 'excluded_reviewed'
+  | 'cumulative_included'
+  | 'fulltext_ready'
+  | 'report_source'
+  | string
+export type StrategyDatabase = 'scopus' | 'wos' | 'pubmed' | 'cnki'
+export type FulltextStatus = 'pending' | 'ready' | 'unavailable' | 'deferred'
 
 export interface ProviderPreset {
   provider: ProviderName
@@ -16,6 +27,16 @@ export interface MetaPayload {
   providers: ProviderPreset[]
   referenceStyles: Array<{ value: ReferenceStyle; label: string }>
   acceptedInputFormats: string[]
+  strategyDefaults: {
+    provider: ProviderName
+    model_name: string
+    api_base_url: string
+    api_key_env: string
+    temperature: number
+    max_tokens: number
+    min_request_interval_seconds: number
+    databases: Array<{ value: StrategyDatabase; label: string }>
+  }
 }
 
 export interface ProjectSnapshot {
@@ -42,6 +63,21 @@ export interface DatasetRecord {
   created_at: string
   updated_at: string
   metadata: Record<string, unknown>
+}
+
+export interface FulltextQueueItem {
+  paper_id: string
+  title: string
+  year?: number | null
+  journal?: string | null
+  doi?: string | null
+  doi_url?: string | null
+  landing_url?: string | null
+  pdf_url?: string | null
+  oa_status?: string | null
+  status: FulltextStatus
+  note: string
+  updated_at: string
 }
 
 export interface TaskTemplateRecord {
@@ -78,6 +114,7 @@ export interface ScreeningRecordRow {
   year?: number | null
   journal?: string | null
   doi?: string | null
+  abstract?: string | null
 }
 
 export interface TaskSnapshot {
@@ -110,11 +147,15 @@ export interface TaskDetail extends TaskSnapshot {
   records: ScreeningRecordRow[]
   markdown_preview?: string | null
   events: TaskEvent[]
+  strategy_plan?: StrategyPlan | null
+  request_payload?: Record<string, unknown> | null
 }
 
 export interface ProjectDetail extends ProjectSnapshot {
   tasks: TaskSnapshot[]
   datasets: DatasetRecord[]
+  fulltext_queue: FulltextQueueItem[]
+  fulltext_source_dataset_ids: string[]
 }
 
 export interface ModelSettings {
@@ -122,6 +163,7 @@ export interface ModelSettings {
   model_name: string
   api_base_url: string
   api_key_env: string
+  api_key?: string
   temperature: number
   max_tokens: number
   min_request_interval_seconds: number
@@ -135,6 +177,7 @@ export interface ScreeningFormPayload {
   parent_task_id?: string | null
   title: string
   topic: string
+  criteria_markdown?: string
   inclusion: string[]
   exclusion: string[]
   model: ModelSettings
@@ -150,6 +193,7 @@ export interface ScreeningFormPayload {
 
 export interface ReportFormPayload {
   title: string
+  project_id?: string | null
   screening_task_id?: string | null
   dataset_ids: string[]
   project_topic: string
@@ -158,4 +202,35 @@ export interface ReportFormPayload {
   retry_times: number
   timeout_seconds: number
   reference_style: ReferenceStyle
+}
+
+export interface StrategySearchBlock {
+  database: StrategyDatabase
+  title: string
+  query?: string | null
+  lines: string[]
+  notes: string[]
+}
+
+export interface StrategyPlan {
+  topic: string
+  intent_summary: string
+  screening_topic: string
+  inclusion: string[]
+  exclusion: string[]
+  search_blocks: StrategySearchBlock[]
+  caution_notes: string[]
+}
+
+export interface StrategyFormPayload {
+  title: string
+  project_id?: string | null
+  new_project_name?: string
+  new_project_description?: string
+  project_topic: string
+  research_need: string
+  selected_databases: StrategyDatabase[]
+  model: ModelSettings
+  retry_times: number
+  timeout_seconds: number
 }

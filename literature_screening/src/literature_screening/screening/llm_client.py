@@ -16,7 +16,7 @@ class ChatCompletionClient:
         self._last_request_finished_at = 0.0
 
     def chat(self, prompt: str) -> str:
-        api_key = os.getenv(self.config.api_key_env)
+        api_key = self.config.api_key or os.getenv(self.config.api_key_env)
         if not api_key:
             raise ModelRequestError(f"Missing API key in environment variable: {self.config.api_key_env}")
 

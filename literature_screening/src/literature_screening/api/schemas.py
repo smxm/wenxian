@@ -6,11 +6,22 @@ from typing import Literal
 from pydantic import BaseModel, Field
 
 
-TaskKind = Literal["screening", "report"]
-TaskStatus = Literal["pending", "running", "succeeded", "failed"]
+TaskKind = Literal["strategy", "screening", "report"]
+TaskStatus = Literal["pending", "running", "succeeded", "failed", "cancelled"]
 ProviderName = Literal["deepseek", "kimi"]
 ReferenceStyle = Literal["gbt7714", "apa7"]
-DatasetKind = Literal["included", "excluded", "unused", "cumulative_included", "report_source"]
+DatasetKind = Literal[
+    "included",
+    "excluded",
+    "unused",
+    "included_reviewed",
+    "excluded_reviewed",
+    "cumulative_included",
+    "fulltext_ready",
+    "report_source",
+]
+StrategyDatabase = Literal["scopus", "wos", "pubmed", "cnki"]
+FulltextStatus = Literal["pending", "ready", "unavailable", "deferred"]
 
 
 class ModelSettings(BaseModel):
@@ -18,6 +29,7 @@ class ModelSettings(BaseModel):
     model_name: str
     api_base_url: str
     api_key_env: str
+    api_key: str | None = None
     temperature: float = 0.0
     max_tokens: int = 1536
     min_request_interval_seconds: float = 2.0
@@ -29,7 +41,7 @@ class ScreeningTaskCreate(BaseModel):
     inclusion: list[str]
     exclusion: list[str]
     model: ModelSettings
-    batch_size: int = Field(default=20, ge=1, le=50)
+    batch_size: int = Field(default=10, ge=1, le=50)
     target_include_count: int = Field(default=9999, ge=1)
     stop_when_target_reached: bool = False
     allow_uncertain: bool = True
@@ -40,6 +52,7 @@ class ScreeningTaskCreate(BaseModel):
 
 class ReportTaskCreate(BaseModel):
     title: str
+    project_id: str | None = None
     screening_task_id: str | None = None
     dataset_ids: list[str] = Field(default_factory=list)
     project_topic: str
@@ -50,7 +63,26 @@ class ReportTaskCreate(BaseModel):
     reference_style: ReferenceStyle = "gbt7714"
 
 
+class StrategyTaskCreate(BaseModel):
+    title: str
+    project_id: str | None = None
+    new_project_name: str = ""
+    new_project_description: str = ""
+    project_topic: str
+    research_need: str
+    selected_databases: list[StrategyDatabase] = Field(default_factory=lambda: ["scopus", "wos", "pubmed", "cnki"])
+    model: ModelSettings
+    retry_times: int = Field(default=4, ge=0, le=10)
+    timeout_seconds: int = Field(default=180, ge=30, le=600)
+
+
 class ProjectCreate(BaseModel):
+    name: str
+    topic: str
+    description: str = ""
+
+
+class ProjectUpdate(BaseModel):
     name: str
     topic: str
     description: str = ""
@@ -72,6 +104,21 @@ class DatasetRecord(BaseModel):
     metadata: dict = Field(default_factory=dict)
 
 
+class FulltextQueueItem(BaseModel):
+    paper_id: str
+    title: str
+    year: int | None = None
+    journal: str | None = None
+    doi: str | None = None
+    doi_url: str | None = None
+    landing_url: str | None = None
+    pdf_url: str | None = None
+    oa_status: str | None = None
+    status: FulltextStatus = "pending"
+    note: str = ""
+    updated_at: datetime
+
+
 class ProjectSnapshot(BaseModel):
     id: str
     name: str
@@ -85,6 +132,8 @@ class ProjectSnapshot(BaseModel):
 class ProjectDetail(ProjectSnapshot):
     tasks: list["TaskSnapshot"] = Field(default_factory=list)
     datasets: list[DatasetRecord] = Field(default_factory=list)
+    fulltext_queue: list[FulltextQueueItem] = Field(default_factory=list)
+    fulltext_source_dataset_ids: list[str] = Field(default_factory=list)
 
 
 class TaskTemplateRecord(BaseModel):
@@ -118,6 +167,26 @@ class ReviewOverrideRequest(BaseModel):
     reason: str = ""
 
 
+class BulkReviewOverrideRequest(BaseModel):
+    entries_text: str
+    decision: Literal["include", "exclude", "uncertain"] = "exclude"
+    reason: str = ""
+
+
+class ReferenceOverrideRequest(BaseModel):
+    references_text: str
+
+
+class FulltextQueueRebuildRequest(BaseModel):
+    source_dataset_ids: list[str] = Field(default_factory=list)
+
+
+class FulltextStatusUpdateRequest(BaseModel):
+    paper_id: str
+    status: FulltextStatus
+    note: str = ""
+
+
 class RetryTaskRequest(BaseModel):
     mode: Literal["retry", "resume"] = "resume"
 
@@ -146,6 +215,24 @@ class TaskSnapshot(BaseModel):
     artifacts: list[TaskArtifact] = Field(default_factory=list)
 
 
+class StrategySearchBlock(BaseModel):
+    database: StrategyDatabase
+    title: str
+    query: str | None = None
+    lines: list[str] = Field(default_factory=list)
+    notes: list[str] = Field(default_factory=list)
+
+
+class StrategyPlan(BaseModel):
+    topic: str
+    intent_summary: str
+    screening_topic: str
+    inclusion: list[str] = Field(default_factory=list)
+    exclusion: list[str] = Field(default_factory=list)
+    search_blocks: list[StrategySearchBlock] = Field(default_factory=list)
+    caution_notes: list[str] = Field(default_factory=list)
+
+
 class ScreeningRecordRow(BaseModel):
     paper_id: str
     title: str
@@ -155,6 +242,7 @@ class ScreeningRecordRow(BaseModel):
     year: int | None = None
     journal: str | None = None
     doi: str | None = None
+    abstract: str | None = None
 
 
 class TaskDetail(TaskSnapshot):
@@ -163,6 +251,8 @@ class TaskDetail(TaskSnapshot):
     records: list[ScreeningRecordRow] = Field(default_factory=list)
     markdown_preview: str | None = None
     events: list[TaskEvent] = Field(default_factory=list)
+    strategy_plan: StrategyPlan | None = None
+    request_payload: dict | None = None
 
 
 ProjectDetail.model_rebuild()

@@ -8,6 +8,27 @@ export interface ParsedCriteriaDraft {
 
 type SectionType = 'inclusion' | 'exclusion' | null
 
+const TOPIC_PATTERNS = [
+  /关于\s*[“"'《](.+?)[”"'》]\s*的论文/,
+  /研究主题\s*[:：]\s*(.+)/i,
+  /论文主题\s*[:：]\s*(.+)/i,
+  /主题\s*[:：]\s*(.+)/i
+]
+
+const TOPIC_STOP_WORDS = [
+  'role',
+  'task',
+  'step 1',
+  'step 2',
+  'input data',
+  '格式化输出',
+  '情况 a',
+  '情况 b',
+  '核心总结',
+  '深度分析',
+  '参考价值'
+]
+
 function normalizeLine(input: string) {
   return input.replace(/\u3000/g, ' ').replace(/\s+/g, ' ').trim()
 }
@@ -17,79 +38,147 @@ function stripMarkdownDecoration(input: string) {
     .replace(/^\s*#+\s*/, '')
     .replace(/^\s*[-*+]\s+/, '')
     .replace(/^\s*\d+[.)、]\s+/, '')
+    .replace(/^\s*[（(]?\d+[）)]\s+/, '')
     .replace(/\*\*/g, '')
     .replace(/__/g, '')
     .replace(/`/g, '')
     .trim()
 }
 
-function isBulletLine(line: string) {
-  return /^[-*+]\s+/.test(line) || /^\d+[.)、]\s+/.test(line)
-}
-
-function stripBullet(line: string) {
-  return stripMarkdownDecoration(line)
-}
-
-function normalizeLabel(line: string) {
-  return stripMarkdownDecoration(line)
+function normalizeLabel(input: string) {
+  return stripMarkdownDecoration(input)
     .replace(/[()（）]/g, ' ')
+    .replace(/[：:]/g, ' : ')
     .replace(/\s+/g, ' ')
     .trim()
 }
 
+function isBulletLine(line: string) {
+  return /^[-*+]\s+/.test(line) || /^\d+[.)、]\s+/.test(line) || /^[（(]?\d+[）)]\s+/.test(line)
+}
+
 function detectSection(line: string): SectionType {
   const normalized = normalizeLabel(line).toLowerCase()
-  if (/(^| )纳入标准( |$)|(^| )inclusion criteria( |$)|(^| )inclusion( |$)/i.test(normalized)) {
+  if (/(^| )(纳入标准|inclusion criteria|inclusion)( |$)/i.test(normalized)) {
     return 'inclusion'
   }
-  if (/(^| )排除标准( |$)|(^| )exclusion criteria( |$)|(^| )exclusion( |$)/i.test(normalized)) {
+  if (/(^| )(排除标准|exclusion criteria|exclusion)( |$)/i.test(normalized)) {
     return 'exclusion'
   }
   return null
 }
 
+function looksLikeSectionHeader(line: string) {
+  const normalized = normalizeLabel(line)
+  return /^(纳入标准(\s+inclusion criteria)?|排除标准(\s+exclusion criteria)?|inclusion criteria|exclusion criteria|inclusion|exclusion)\s*[:：]?$/i.test(normalized)
+}
+
 function splitInlineCriteria(value: string) {
   return value
-    .split(/[；;]+/)
+    .split(/[;；]/)
     .map((item) => stripMarkdownDecoration(item))
     .filter(Boolean)
 }
 
 function parseInlineSection(line: string): { section: SectionType; items: string[] } | null {
-  const cleaned = stripMarkdownDecoration(line)
-  const normalized = normalizeLabel(cleaned)
-
-  const inclusionMatch = normalized.match(/^(纳入标准|inclusion criteria|inclusion)\s*[:：]\s*(.+)$/i)
+  const cleaned = normalizeLabel(line)
+  const inclusionMatch = cleaned.match(/^(纳入标准(\s+inclusion criteria)?|inclusion criteria|inclusion)\s*[:：]\s*(.*)$/i)
   if (inclusionMatch) {
-    return { section: 'inclusion', items: splitInlineCriteria(inclusionMatch[2]) }
+    return { section: 'inclusion', items: splitInlineCriteria(inclusionMatch[inclusionMatch.length - 1] || '') }
   }
 
-  const exclusionMatch = normalized.match(/^(排除标准|exclusion criteria|exclusion)\s*[:：]\s*(.+)$/i)
+  const exclusionMatch = cleaned.match(/^(排除标准(\s+exclusion criteria)?|exclusion criteria|exclusion)\s*[:：]\s*(.*)$/i)
   if (exclusionMatch) {
-    return { section: 'exclusion', items: splitInlineCriteria(exclusionMatch[2]) }
+    return { section: 'exclusion', items: splitInlineCriteria(exclusionMatch[exclusionMatch.length - 1] || '') }
   }
 
   return null
 }
 
-function looksLikeSectionHeader(line: string) {
-  const normalized = normalizeLabel(line)
-  return /^(纳入标准|排除标准|inclusion criteria|exclusion criteria|inclusion|exclusion)\s*[:：]?$/i.test(normalized)
+function isBoundaryLine(line: string) {
+  const normalized = normalizeLabel(line).toLowerCase()
+  if (!normalized) return false
+
+  return [
+    /^step\s*\d+/,
+    /^情况\s*[ab]/,
+    /^case\s*[ab]/,
+    /^input data$/,
+    /^格式化输出$/,
+    /^输出格式$/,
+    /^核心总结$/,
+    /^深度分析$/,
+    /^参考价值$/,
+    /^仅输出一行文字/,
+    /^请按以下结构输出/,
+    /^根据判读结果/,
+    /^重要指令/,
+    /^task$/,
+    /^role$/
+  ].some((pattern) => pattern.test(normalized))
 }
 
-function isMeaningfulTopicLine(line: string) {
+function isInstructionLine(line: string) {
   const normalized = normalizeLabel(line)
-  if (!normalized) return false
-  if (/^(role|task|step \d+|input data)$/i.test(normalized)) return false
-  if (/^(你是一位|我将提供|请根据|请按以下|重要指令)/.test(normalized)) return false
-  if (detectSection(normalized)) return false
-  return true
+  if (!normalized) return true
+
+  return [
+    /^你是一位/,
+    /^我将提供/,
+    /^请根据以下标准判断/,
+    /^请你逐一阅读/,
+    /^根据判读结果/,
+    /^绝对禁止/,
+    /^只输出纯文本/,
+    /^在此处粘贴/,
+    /^输出在markdown代码框内/,
+    /^不要使用任何形式/
+  ].some((pattern) => pattern.test(normalized))
+}
+
+function cleanupTopic(value: string) {
+  return value
+    .replace(/^关于\s*/, '')
+    .replace(/[。；;]+$/, '')
+    .trim()
+}
+
+function extractTopic(markdown: string, lines: string[]) {
+  for (const pattern of TOPIC_PATTERNS) {
+    const match = markdown.match(pattern)
+    if (match?.[1]) return cleanupTopic(match[1])
+  }
+
+  for (const rawLine of lines) {
+    const line = normalizeLabel(rawLine)
+    if (!line) continue
+    const lower = line.toLowerCase()
+    if (TOPIC_STOP_WORDS.some((word) => lower.includes(word))) continue
+    if (/^(你是一位|我正在撰写一篇关于)/.test(line)) {
+      for (const pattern of TOPIC_PATTERNS) {
+        const match = line.match(pattern)
+        if (match?.[1]) return cleanupTopic(match[1])
+      }
+    }
+  }
+
+  return ''
+}
+
+function pushUnique(target: string[], value: string) {
+  const cleaned = stripMarkdownDecoration(value)
+    .replace(/^核心要素（满足其一即可）$/, '')
+    .replace(/^排除标准 \(exclusion criteria\)$/i, '')
+    .replace(/^纳入标准 \(inclusion criteria\)$/i, '')
+    .trim()
+  if (!cleaned) return
+  if (!target.includes(cleaned)) target.push(cleaned)
 }
 
 export function parseCriteriaMarkdown(markdown: string): ParsedCriteriaDraft {
-  const lines = markdown.replace(/\r\n/g, '\n').split('\n').map(normalizeLine)
-  let topic = ''
+  const normalizedMarkdown = markdown.replace(/\r\n/g, '\n')
+  const lines = normalizedMarkdown.split('\n').map(normalizeLine)
+  const topic = extractTopic(normalizedMarkdown, lines)
   let section: SectionType = null
   const inclusion: string[] = []
   const exclusion: string[] = []
@@ -99,11 +188,17 @@ export function parseCriteriaMarkdown(markdown: string): ParsedCriteriaDraft {
     if (!rawLine) continue
 
     const line = rawLine.trim()
+
+    if (isBoundaryLine(line)) {
+      section = null
+      continue
+    }
+
     const inlineSection = parseInlineSection(line)
     if (inlineSection) {
       section = inlineSection.section
-      if (section === 'inclusion') inclusion.push(...inlineSection.items)
-      if (section === 'exclusion') exclusion.push(...inlineSection.items)
+      const target = section === 'inclusion' ? inclusion : exclusion
+      inlineSection.items.forEach((item) => pushUnique(target, item))
       continue
     }
 
@@ -116,39 +211,31 @@ export function parseCriteriaMarkdown(markdown: string): ParsedCriteriaDraft {
     if (line.startsWith('#')) {
       const heading = stripMarkdownDecoration(line)
       const headingSection = detectSection(heading)
-      if (headingSection) {
-        section = headingSection
-        continue
-      }
-      if (!topic && isMeaningfulTopicLine(heading)) {
-        topic = heading
-      }
+      section = headingSection ?? null
       continue
     }
 
-    if (!topic && !isBulletLine(line) && isMeaningfulTopicLine(line)) {
-      topic = stripMarkdownDecoration(line)
-      continue
-    }
-
-    if (sectionType) {
-      section = sectionType
-      continue
-    }
+    if (!section) continue
+    if (isInstructionLine(line)) continue
 
     if (isBulletLine(line)) {
-      const value = stripBullet(line)
-      if (!value) continue
-      if (section === 'inclusion') {
-        inclusion.push(value)
-      } else if (section === 'exclusion') {
-        exclusion.push(value)
-      }
+      const target = section === 'inclusion' ? inclusion : exclusion
+      pushUnique(target, line)
+      continue
+    }
+
+    const plainLine = stripMarkdownDecoration(line)
+    if (/^[（(]?(如|例如)/.test(plainLine)) continue
+    if (/^(情况\s*[ab]|case\s*[ab])/i.test(plainLine)) continue
+
+    if (plainLine && !/^#/.test(plainLine)) {
+      const target = section === 'inclusion' ? inclusion : exclusion
+      pushUnique(target, plainLine)
     }
   }
 
   if (!topic) {
-    warnings.push('未识别到主题，建议在 Markdown 中单独写一个一级标题或明确的主题行。')
+    warnings.push('未识别到研究主题，建议在 Role 中保留“关于《主题》”或单独写一行“研究主题：...”')
   }
   if (!inclusion.length) {
     warnings.push('未识别到纳入标准，建议使用“纳入标准”标题或“纳入标准：”写法。')

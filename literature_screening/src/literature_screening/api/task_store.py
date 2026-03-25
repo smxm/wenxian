@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import shutil
 import threading
 import traceback
 import uuid
@@ -33,6 +34,7 @@ class TaskStore:
             "id": task_id,
             "kind": kind,
             "status": "pending",
+            "cancel_requested": False,
             "title": title,
             "phase": "queued",
             "phase_label": "Queued",
@@ -57,6 +59,11 @@ class TaskStore:
 
     def load_task(self, task_id: str) -> dict[str, Any]:
         return self._read(self.tasks_dir / task_id / "task.json")
+
+    def delete_task(self, task_id: str) -> None:
+        task_root = self.tasks_dir / task_id
+        if task_root.exists():
+            shutil.rmtree(task_root)
 
     def list_tasks(self) -> list[dict[str, Any]]:
         tasks = []
@@ -123,6 +130,7 @@ class TaskStore:
         payload = self.update(
             task_id,
             status="pending",
+            cancel_requested=False,
             phase="queued",
             phase_label="Queued",
             progress_current=0,
@@ -136,9 +144,35 @@ class TaskStore:
         self.run_in_background(stored, worker)
         return payload
 
+    def cancel_task(self, task_id: str) -> dict[str, Any]:
+        payload = self.update(
+            task_id,
+            cancel_requested=True,
+            status="cancelled",
+            phase="cancelled",
+            phase_label="Cancelled",
+            progress_message="Cancellation requested. The current request may still finish in background.",
+        )
+        self.append_event(task_id, kind="task-cancel-requested", message="Cancellation requested")
+        return payload
+
+    def is_cancel_requested(self, task_id: str) -> bool:
+        payload = self.load_task(task_id)
+        return bool(payload.get("cancel_requested"))
+
     def _run_worker(self, task: StoredTask, worker: Callable[[StoredTask], dict[str, Any]]) -> None:
         current = self.load_task(task.task_id)
         attempt_count = int(current.get("attempt_count", 0)) or 1
+        if current.get("cancel_requested"):
+            self.update(
+                task.task_id,
+                status="cancelled",
+                phase="cancelled",
+                phase_label="Cancelled",
+                progress_message="Task cancelled before execution started",
+            )
+            self.append_event(task.task_id, kind="task-cancelled", message="Task cancelled before execution started")
+            return
         self.append_event(task.task_id, kind="task-started", message="Task execution started", metadata={"attempt_count": attempt_count})
         self.update(
             task.task_id,
@@ -152,6 +186,14 @@ class TaskStore:
         )
         try:
             result = worker(task)
+            latest = self.load_task(task.task_id)
+            if latest.get("cancel_requested") or latest.get("status") == "cancelled":
+                self.append_event(
+                    task.task_id,
+                    kind="task-cancelled",
+                    message="Task result discarded because cancellation was requested",
+                )
+                return
             self.update(
                 task.task_id,
                 status="succeeded",
@@ -162,6 +204,29 @@ class TaskStore:
             )
             self.append_event(task.task_id, kind="task-succeeded", message="Task completed successfully")
         except Exception as exc:
+            latest = self.load_task(task.task_id)
+            if latest.get("cancel_requested") or latest.get("status") == "cancelled":
+                self.update(
+                    task.task_id,
+                    status="cancelled",
+                    phase="cancelled",
+                    phase_label="Cancelled",
+                    progress_message="Task cancelled by user",
+                    error=None,
+                )
+                self.append_event(task.task_id, kind="task-cancelled", message="Task cancelled by user")
+                return
+            if exc.__class__.__name__ == "TaskCancelledError":
+                self.update(
+                    task.task_id,
+                    status="cancelled",
+                    phase="cancelled",
+                    phase_label="Cancelled",
+                    progress_message=str(exc),
+                    error=None,
+                )
+                self.append_event(task.task_id, kind="task-cancelled", message=str(exc))
+                return
             detail = "".join(traceback.format_exception(exc))
             self.update(
                 task.task_id,
