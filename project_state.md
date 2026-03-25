@@ -319,3 +319,33 @@ Important caveat:
 - server-side access to GitHub was unstable in practice
 - direct `git clone` / `curl github.com` on the Tencent Cloud server should not be treated as reliable
 - local packaging plus manual upload is the safer path right now
+
+## Deployment update note
+
+Important correction:
+
+- runtime data should not depend on `/opt/wenxian/server-data/api_runs` as the only persisted location
+- replacing `/opt/wenxian` during updates can otherwise wipe thread / task state if copy-forward fails
+
+Current recommended persistent paths on the server:
+
+- app data:
+  - `/opt/wenxian-data/api_runs`
+- Basic Auth file:
+  - `/opt/wenxian-secrets/.htpasswd`
+
+Current deployment config supports:
+
+- `APP_DATA_DIR`
+- `BASIC_AUTH_FILE`
+
+Recommended update path:
+
+1. package locally
+2. upload `.tar.gz` to the server
+3. run:
+   - `/opt/wenxian/deploy/server-update.sh /opt/wenxian-release.tar.gz`
+
+Local packaging helper:
+
+- `E:\wenxian\scripts\package-release.ps1`

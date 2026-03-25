@@ -1,126 +1,214 @@
-# 国内云服务器部署
+# 腾讯云部署与更新
 
-## 1. 服务器初始化
+## 1. 当前推荐部署形态
+
+- 服务器：腾讯云 Lighthouse / Ubuntu
+- 运行方式：Docker Compose
+- 站点保护：Basic Auth
+- 前端：Nginx 容器
+- 后端：FastAPI 容器
+
+## 2. 关键原则
+
+### 不要把运行数据放在项目目录里作为唯一副本
+
+之前“更新后主题线程全没了”的根因是：
+
+- 运行数据默认挂在 `/opt/wenxian/server-data/api_runs`
+- 更新时会整体替换 `/opt/wenxian`
+- 如果复制旧数据失败或漏掉，线程、任务、报告就会一起消失
+
+现在推荐改成仓库外的持久目录：
+
+- 运行数据：
+  - `/opt/wenxian-data/api_runs`
+- Basic Auth 文件：
+  - `/opt/wenxian-secrets/.htpasswd`
+
+这样即使替换 `/opt/wenxian`，已有主题和任务也不会丢。
+
+## 3. 服务器首次准备
 
 登录服务器后执行：
 
 ```bash
 apt update && apt upgrade -y
-apt install -y git
-```
-
-如果系统没有自带 Docker Compose 插件，安装：
-
-```bash
 apt install -y docker-compose-plugin
+mkdir -p /opt/wenxian-data/api_runs
+mkdir -p /opt/wenxian-secrets
 ```
 
-## 2. 拉代码
+## 4. 本地打包
+
+在本地 Windows 执行：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File E:\wenxian\scripts\package-release.ps1 -Branch codex/release-clean -OutputDir E:\ -Timestamped
+```
+
+输出示例：
+
+- `E:\wenxian-release-20260325-203000.tar.gz`
+
+## 5. 上传到服务器
+
+把本地打包好的 `.tar.gz` 上传到服务器，例如：
+
+- `/opt/wenxian-release.tar.gz`
+
+## 6. 服务器环境变量
+
+第一次部署时，在服务器项目目录创建：
 
 ```bash
-cd /opt
-git clone https://github.com/smxm/wenxian.git
-cd wenxian
+cp /opt/wenxian/.env.deploy.example /opt/wenxian/.env
 ```
 
-## 3. 配置 API Key
-
-复制模板：
-
-```bash
-cp .env.deploy.example .env
-```
-
-编辑 `.env`，至少填一个：
+或手动写入：
 
 ```env
 DEEPSEEK_API_KEY=你的真实DeepSeekKey
 KIMI_API_KEY=
+APP_DATA_DIR=/opt/wenxian-data/api_runs
+BASIC_AUTH_FILE=/opt/wenxian-secrets/.htpasswd
 ```
 
-## 4. 配置站点访问密码
+## 7. Basic Auth 文件
 
-先生成 `.htpasswd`：
+先生成密码 hash：
 
 ```bash
 openssl passwd -apr1
 ```
 
-系统会让你输入密码，并输出一行类似：
-
-```text
-$apr1$xxxxxxxx$xxxxxxxxxxxxxxxxxxxxxx
-```
-
 然后写入：
 
 ```bash
-cat > deploy/.htpasswd <<'EOF'
-friend:把上面那串完整hash贴到这里
+cat > /opt/wenxian-secrets/.htpasswd <<'EOF'
+friend:这里替换成完整hash
 EOF
 ```
 
-说明：
+## 8. 首次部署或后续更新
 
-- `friend` 是登录用户名，可以自己改
-- 冒号后面必须是完整 hash，不是明文密码
-- 之后你和朋友访问网站时都要先输入这个用户名和密码
-
-## 5. 启动
+推荐使用脚本：
 
 ```bash
-mkdir -p server-data/api_runs
-docker compose up -d --build
+chmod +x /opt/wenxian/deploy/server-update.sh
+/opt/wenxian/deploy/server-update.sh /opt/wenxian-release.tar.gz
 ```
 
-## 6. 查看状态
+## 8.1 已有线上实例的一次性迁移
+
+如果你当前线上版本已经有历史主题 / 任务，先执行一次：
 
 ```bash
+chmod +x /opt/wenxian/deploy/migrate-persistent-storage.sh
+/opt/wenxian/deploy/migrate-persistent-storage.sh
+```
+
+这一步会把旧目录中的：
+
+- `/opt/wenxian/server-data/api_runs`
+- `/opt/wenxian/deploy/.htpasswd`
+
+迁移到新的仓库外持久目录，并自动把 `.env` 补成：
+
+- `APP_DATA_DIR=/opt/wenxian-data/api_runs`
+- `BASIC_AUTH_FILE=/opt/wenxian-secrets/.htpasswd`
+
+如果是第一次部署，还没有 `/opt/wenxian`，先手动解压一次：
+
+```bash
+cd /opt
+rm -rf wenxian
+mkdir -p wenxian
+tar -xzf wenxian-release.tar.gz -C wenxian
+cd /opt/wenxian
+cp .env.deploy.example .env
+```
+
+填好 `.env` 以后，再执行：
+
+```bash
+chmod +x /opt/wenxian/deploy/server-update.sh
+/opt/wenxian/deploy/server-update.sh /opt/wenxian-release.tar.gz
+```
+
+## 9. 更新脚本做了什么
+
+`server-update.sh` 会：
+
+1. 解压新版本到临时目录
+2. 保留旧的 `.env`
+3. 把旧项目目录中的历史数据迁移到 `/opt/wenxian-data/api_runs`
+4. 保留 `/opt/wenxian-secrets/.htpasswd`
+5. 替换项目目录
+6. 重新执行：
+
+```bash
+docker compose up -d --build --force-recreate
+```
+
+## 10. 端口要求
+
+腾讯云安全组至少放行：
+
+- `22`
+- `80`
+
+如果以后加 HTTPS，再放行：
+
+- `443`
+
+## 11. 检查部署状态
+
+```bash
+cd /opt/wenxian
 docker compose ps
-docker compose logs -f api
-docker compose logs -f web
+docker compose logs --tail=100 api
+docker compose logs --tail=100 web
 ```
 
-## 7. 访问
+## 12. 访问地址
 
-浏览器打开：
+直接访问服务器公网 IP：
 
 ```text
-http://你的服务器公网IP
+http://你的服务器IP
 ```
 
-首次访问会先弹出浏览器用户名/密码框。
+浏览器会先弹出 Basic Auth 登录框。
 
-## 8. 腾讯云控制台要放行的端口
+## 13. 常见问题
 
-- 80
-- 22
+### 问题：更新后还是旧页面
 
-如果之后要上 HTTPS，再放行：
+通常是以下原因之一：
 
-- 443
+1. 上传的是旧压缩包
+2. 服务器解压的不是最新包
+3. 浏览器缓存了旧前端
 
-## 9. 停止与更新
+处理方式：
 
-停止：
+- 本地重新打包
+- 重新上传
+- 重新跑 `server-update.sh`
+- 浏览器 `Ctrl + F5` 强刷，或开无痕窗口
 
-```bash
-docker compose down
+### 问题：更新后主题线程消失
+
+根因通常是旧流程把数据留在了 `/opt/wenxian/server-data/api_runs`，然后更新时没正确复制。
+
+现在应统一使用：
+
+- `/opt/wenxian-data/api_runs`
+
+只要 `.env` 里设置了：
+
+```env
+APP_DATA_DIR=/opt/wenxian-data/api_runs
 ```
 
-更新代码后重建：
-
-```bash
-git pull
-docker compose up -d --build
-```
-
-## 10. 数据位置
-
-运行数据保存在：
-
-```text
-/opt/wenxian/server-data/api_runs
-```
-
-删容器不会丢这里的数据。
+后续更新就不会再因为替换项目目录而丢主题。
