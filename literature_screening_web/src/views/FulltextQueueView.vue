@@ -34,6 +34,8 @@ const updatingPaperId = ref<string | null>(null)
 const updatingStatus = ref<FulltextStatus | null>(null)
 const lastUpdatedPaperId = ref<string | null>(null)
 const lastActionText = ref('')
+const rebuildingQueue = ref(false)
+const enrichingQueue = ref(false)
 
 const datasetMap = computed(() => {
   const map = new Map<string, DatasetRecord>()
@@ -43,7 +45,11 @@ const datasetMap = computed(() => {
   return map
 })
 
-const screeningRounds = computed(() => (project.value?.tasks ?? []).filter((task) => task.kind === 'screening'))
+const screeningRounds = computed(() =>
+  [...(project.value?.tasks ?? [])]
+    .filter((task) => task.kind === 'screening')
+    .sort((a, b) => dayjs(a.created_at).valueOf() - dayjs(b.created_at).valueOf())
+)
 const cumulativeIncludedDataset = computed(() =>
   (project.value?.datasets ?? []).find((dataset) => dataset.kind === 'cumulative_included') ?? null
 )
@@ -164,6 +170,14 @@ function filterSummary() {
   return parts.join(' · ')
 }
 
+function extractErrorMessage(error: unknown, fallback: string) {
+  const detail = (error as { response?: { data?: { detail?: unknown } } } | null)?.response?.data?.detail
+  if (typeof detail === 'string' && detail) return detail
+  const messageText = (error as { message?: unknown } | null)?.message
+  if (typeof messageText === 'string' && messageText) return messageText
+  return fallback
+}
+
 async function loadProject() {
   await projectsStore.loadProject(projectId.value)
   initializeLocalState()
@@ -189,20 +203,34 @@ watch(project, () => {
 
 async function rebuildThreadFulltextQueue() {
   if (!project.value) return
-  await projectsStore.rebuildFulltextQueue(project.value.id, fulltextSourceDatasetIds.value)
-  initializeLocalState()
-  lastActionText.value = sourceSummary()
-    ? `已按“${sourceSummary()}”重建全文获取队列。`
-    : '全文获取队列已更新。'
-  message.success('全文获取队列已更新')
+  rebuildingQueue.value = true
+  try {
+    await projectsStore.rebuildFulltextQueue(project.value.id, [...fulltextSourceDatasetIds.value])
+    initializeLocalState()
+    lastActionText.value = sourceSummary()
+      ? `已按“${sourceSummary()}”重建全文获取队列。`
+      : '全文获取队列已更新。'
+    message.success('全文获取队列已更新')
+  } catch (error) {
+    message.error(extractErrorMessage(error, '全文获取队列更新失败'))
+  } finally {
+    rebuildingQueue.value = false
+  }
 }
 
 async function enrichThreadFulltextQueue() {
   if (!project.value) return
-  await projectsStore.enrichFulltextQueue(project.value.id)
-  initializeLocalState()
-  lastActionText.value = '已刷新 DOI 落地页与 OA / PDF 链接。'
-  message.success('已刷新 DOI 落地页和 OA 链接')
+  enrichingQueue.value = true
+  try {
+    await projectsStore.enrichFulltextQueue(project.value.id)
+    initializeLocalState()
+    lastActionText.value = '已刷新 DOI 落地页与 OA / PDF 链接。'
+    message.success('已刷新 DOI 落地页和 OA 链接')
+  } catch (error) {
+    message.error(extractErrorMessage(error, 'OA / 链接刷新失败'))
+  } finally {
+    enrichingQueue.value = false
+  }
 }
 
 async function updateThreadFulltextStatus(item: { paper_id: string; title: string; note?: string; status: FulltextStatus }, status: FulltextStatus) {
@@ -219,6 +247,8 @@ async function updateThreadFulltextStatus(item: { paper_id: string; title: strin
     lastUpdatedPaperId.value = item.paper_id
     lastActionText.value = `已将《${item.title}》标记为“${statusLabel(status)}”。`
     message.success(`${statusLabel(status)} 已保存`)
+  } catch (error) {
+    message.error(extractErrorMessage(error, '全文状态保存失败'))
   } finally {
     updatingPaperId.value = null
     updatingStatus.value = null
@@ -334,10 +364,10 @@ function openExternal(url?: string | null) {
                 <NSelect v-model:value="fulltextSourceDatasetIds" multiple :options="fulltextSourceOptions" />
               </NFormItem>
               <div class="control-actions">
-                <NButton :type="sourceSelectionDirty ? 'primary' : 'default'" @click="rebuildThreadFulltextQueue">
+                <NButton :type="sourceSelectionDirty ? 'primary' : 'default'" :loading="rebuildingQueue" :disabled="!fulltextSourceDatasetIds.length || enrichingQueue" @click="rebuildThreadFulltextQueue">
                   更新队列
                 </NButton>
-                <NButton secondary @click="enrichThreadFulltextQueue">
+                <NButton secondary :loading="enrichingQueue" :disabled="rebuildingQueue" @click="enrichThreadFulltextQueue">
                   <template #icon><RefreshCw :size="16" /></template>
                   刷新 OA / 链接
                 </NButton>

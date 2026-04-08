@@ -330,6 +330,78 @@ def test_fulltext_queue_rebuild_and_status_update(tmp_path: Path, monkeypatch) -
     assert ready_dataset["record_count"] == 1
 
 
+def test_fulltext_queue_rebuild_uses_project_scoped_cumulative_dataset(tmp_path: Path, monkeypatch) -> None:
+    task_store = TaskStore(tmp_path / "api_runs")
+    workspace_store = WorkspaceStore(tmp_path / "api_runs")
+    monkeypatch.setattr(app_module, "TASK_STORE", task_store)
+    monkeypatch.setattr(app_module, "WORKSPACE_STORE", workspace_store)
+
+    other_project = workspace_store.create_project(name="other-project", topic="topic", description="")
+    other_ris_path = tmp_path / "other-included.ris"
+    other_ris_path.write_text(
+        "\n".join(
+            [
+                "TY  - JOUR",
+                "TI  - Other Project Paper",
+                "JO  - Journal A",
+                "PY  - 2024",
+                "DO  - 10.1000/other-paper",
+                "ER  - ",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    other_dataset = workspace_store.register_dataset(
+        project_id=other_project["id"],
+        task_id=None,
+        kind="included_reviewed",
+        label="Reviewed included records",
+        path=other_ris_path,
+        record_count=1,
+        file_format="ris",
+    )
+    workspace_store.rebuild_cumulative_included_dataset(other_project["id"])
+
+    project = workspace_store.create_project(name="fulltext-project", topic="topic", description="")
+    ris_path = tmp_path / "included.ris"
+    ris_path.write_text(
+        "\n".join(
+            [
+                "TY  - JOUR",
+                "TI  - Current Project Paper",
+                "JO  - Journal B",
+                "PY  - 2025",
+                "DO  - 10.1000/current-paper",
+                "ER  - ",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    dataset = workspace_store.register_dataset(
+        project_id=project["id"],
+        task_id=None,
+        kind="included_reviewed",
+        label="Reviewed included records",
+        path=ris_path,
+        record_count=1,
+        file_format="ris",
+    )
+    cumulative_dataset = workspace_store.rebuild_cumulative_included_dataset(project["id"])
+    assert cumulative_dataset is not None
+    assert cumulative_dataset["id"] == "cumulative-included"
+    assert other_dataset["id"] != dataset["id"]
+
+    rebuild = client.post(
+        f"/api/projects/{project['id']}/fulltext/rebuild",
+        json={"source_dataset_ids": [cumulative_dataset["id"]]},
+    )
+    assert rebuild.status_code == 200
+    payload = rebuild.json()
+    assert payload["fulltext_source_dataset_ids"] == [cumulative_dataset["id"]]
+    assert len(payload["fulltext_queue"]) == 1
+    assert payload["fulltext_queue"][0]["title"] == "Current Project Paper"
+
+
 def test_report_task_rejects_empty_fulltext_ready_source(tmp_path: Path, monkeypatch) -> None:
     task_store = TaskStore(tmp_path / "api_runs")
     workspace_store = WorkspaceStore(tmp_path / "api_runs")
