@@ -158,9 +158,7 @@ def rebuild_fulltext_queue(project_id: str, request: FulltextQueueRebuildRequest
     WORKSPACE_STORE.load_project(project_id)
     if request.source_dataset_ids:
         for dataset_id in request.source_dataset_ids:
-            dataset = _require_dataset(dataset_id)
-            if dataset["project_id"] != project_id:
-                raise HTTPException(status_code=400, detail="Selected datasets must belong to the current thread")
+            _require_project_dataset(project_id, dataset_id)
     WORKSPACE_STORE.rebuild_fulltext_queue(project_id, source_dataset_ids=request.source_dataset_ids)
     return get_project(project_id)
 
@@ -538,7 +536,10 @@ def apply_reference_override(task_id: str, request: ReferenceOverrideRequest) ->
             reference_style=reference_style,
         )
     except ValueError as exc:
-        raise HTTPException(status_code=400, detail=str(exc)) from exc
+        detail = str(exc)
+        if not detail or "娌" in detail or "鏈" in detail or "锛" in detail or "鈥" in detail:
+            detail = "参考列表无法和当前报告中的文献标题顺序匹配，请确认你粘贴的是完整修正版参考列表。"
+        raise HTTPException(status_code=400, detail=detail) from exc
 
     original_markdown = report_path.read_text(encoding="utf-8")
     updated_markdown = _replace_reference_section(original_markdown, reordered_lines)
@@ -694,11 +695,7 @@ async def create_screening_task(
 
     input_paths: list[Path] = []
     for dataset_id in source_dataset_ids:
-        dataset = WORKSPACE_STORE.find_dataset(dataset_id)
-        if dataset is None:
-            raise HTTPException(status_code=404, detail=f"Dataset not found: {dataset_id}")
-        if dataset["project_id"] != project["id"]:
-            raise HTTPException(status_code=400, detail="All source datasets must belong to the selected project")
+        dataset = _require_project_dataset(project["id"], dataset_id, detail="All source datasets must belong to the selected project")
         input_paths.append(Path(dataset["path"]))
 
     secret_id = SECRET_STORE.put(api_key.strip()) if api_key.strip() else None
@@ -981,6 +978,19 @@ def _require_dataset(dataset_id: str) -> dict:
     dataset = WORKSPACE_STORE.find_dataset(dataset_id)
     if dataset is None:
         raise HTTPException(status_code=404, detail=f"Dataset not found: {dataset_id}")
+    return dataset
+
+
+def _require_project_dataset(project_id: str, dataset_id: str, *, detail: str | None = None) -> dict:
+    try:
+        dataset = WORKSPACE_STORE.load_dataset(project_id, dataset_id)
+    except FileNotFoundError:
+        scoped_detail = detail or f"Dataset not found in current project: {dataset_id}"
+        if detail:
+            raise HTTPException(status_code=400, detail=scoped_detail) from None
+        raise HTTPException(status_code=404, detail=scoped_detail) from None
+    if dataset["project_id"] != project_id:
+        raise HTTPException(status_code=400, detail=detail or "Selected datasets must belong to the current thread")
     return dataset
 
 

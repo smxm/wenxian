@@ -10,7 +10,7 @@ services:
       KIMI_API_KEY: ${KIMI_API_KEY:-}
       PYTHONUNBUFFERED: "1"
     volumes:
-      - ./server-data/api_runs:/app/data/api_runs
+      - ${APP_DATA_DIR:-./server-data/api_runs}:/app/data/api_runs
     expose:
       - "8000"
 
@@ -23,6 +23,6 @@ services:
     depends_on:
       - api
     volumes:
-      - ./deploy/.htpasswd:/etc/nginx/.htpasswd:ro
+      - ${BASIC_AUTH_FILE:-./deploy/.htpasswd}:/etc/nginx/.htpasswd:ro
     ports:
       - "80:80"
