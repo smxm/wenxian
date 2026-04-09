@@ -96,6 +96,7 @@ class DatasetRecord(BaseModel):
     label: str
     filename: str
     path: str
+    relative_path: str | None = None
     format: str
     record_count: int | None = None
     source_dataset_ids: list[str] = Field(default_factory=list)
@@ -247,7 +248,9 @@ class ScreeningRecordRow(BaseModel):
 
 class TaskDetail(TaskSnapshot):
     run_root: str | None = None
+    run_root_relative: str | None = None
     output_dir: str | None = None
+    output_dir_relative: str | None = None
     records: list[ScreeningRecordRow] = Field(default_factory=list)
     markdown_preview: str | None = None
     events: list[TaskEvent] = Field(default_factory=list)
@@ -256,4 +259,3 @@ class TaskDetail(TaskSnapshot):
 
 
 ProjectDetail.model_rebuild()
-

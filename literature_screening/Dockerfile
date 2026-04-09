@@ -15,8 +15,8 @@ RUN sed -i 's|http://deb.debian.org/debian|https://mirrors.cloud.tencent.com/deb
 
 COPY . /app
 
-RUN pip install --no-cache-dir --upgrade pip setuptools wheel \
-    && pip install --no-cache-dir --no-build-isolation -e .
+RUN python -m pip install --no-cache-dir --index-url https://pypi.org/simple setuptools wheel \
+    && python -m pip install --no-cache-dir --index-url https://pypi.org/simple .
 
 EXPOSE 8000
 

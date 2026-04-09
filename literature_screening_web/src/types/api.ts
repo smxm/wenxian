@@ -57,6 +57,7 @@ export interface DatasetRecord {
   label: string
   filename: string
   path: string
+  relative_path?: string | null
   format: string
   record_count?: number | null
   source_dataset_ids: string[]
@@ -143,7 +144,9 @@ export interface TaskSnapshot {
 
 export interface TaskDetail extends TaskSnapshot {
   run_root?: string | null
+  run_root_relative?: string | null
   output_dir?: string | null
+  output_dir_relative?: string | null
   records: ScreeningRecordRow[]
   markdown_preview?: string | null
   events: TaskEvent[]

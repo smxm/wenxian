@@ -19,6 +19,7 @@ from literature_screening.api.secret_store import SecretStore
 from literature_screening.api.task_store import StoredTask, TaskStore
 from literature_screening.api.template_store import TemplateStore
 from literature_screening.api.workspace_store import WorkspaceStore
+from literature_screening.storage_paths import is_storage_absolute_path, to_stored_path
 from literature_screening.studio.service import CriteriaDraft, ModelDraft, ReportJobRequest, StrategyJobRequest
 from literature_screening.studio.service import ScreeningJobRequest, generate_simple_report_job, generate_strategy_job
 from literature_screening.studio.service import prepare_virtual_screening_output_from_dataset_paths
@@ -128,11 +129,11 @@ def delete_project(project_id: str) -> dict[str, str]:
 def get_project(project_id: str) -> ProjectDetail:
     project = WORKSPACE_STORE.load_project(project_id)
     tasks = [_to_snapshot(task) for task in TASK_STORE.list_tasks() if _task_project_id(task) == project_id]
-    datasets = [DatasetRecord.model_validate(item) for item in WORKSPACE_STORE.list_project_datasets(project_id)]
+    datasets = [_to_dataset_record(item) for item in WORKSPACE_STORE.list_project_datasets(project_id)]
     fulltext_queue = WORKSPACE_STORE.load_fulltext_queue(project_id)
     if not fulltext_queue.get("items") and any(dataset.kind in {"cumulative_included", "included_reviewed", "included"} for dataset in datasets):
         fulltext_queue = WORKSPACE_STORE.rebuild_fulltext_queue(project_id)
-        datasets = [DatasetRecord.model_validate(item) for item in WORKSPACE_STORE.list_project_datasets(project_id)]
+        datasets = [_to_dataset_record(item) for item in WORKSPACE_STORE.list_project_datasets(project_id)]
     return ProjectDetail.model_validate(
         project
         | {
@@ -150,7 +151,7 @@ def get_dataset(dataset_id: str) -> DatasetRecord:
     dataset = WORKSPACE_STORE.find_dataset(dataset_id)
     if dataset is None:
         raise HTTPException(status_code=404, detail="Dataset not found")
-    return DatasetRecord.model_validate(dataset)
+    return _to_dataset_record(dataset)
 
 
 @app.post("/api/projects/{project_id}/fulltext/rebuild", response_model=ProjectDetail)
@@ -766,6 +767,7 @@ async def create_screening_task(
             min_request_interval_seconds=min_request_interval_seconds,
         ),
         runs_root=API_RUNS_ROOT / "runs",
+        storage_root=API_RUNS_ROOT,
         batch_size=batch_size,
         target_include_count=target_include_count,
         stop_when_target_reached=stop_when_target_reached,
@@ -1307,13 +1309,38 @@ def _to_detail(task: dict) -> TaskDetail:
     return TaskDetail(
         **snapshot.model_dump(),
         run_root=task.get("run_root"),
+        run_root_relative=_storage_relative_path(task.get("run_root"), storage_root=TASK_STORE.root_dir),
         output_dir=task.get("output_dir"),
+        output_dir_relative=_storage_relative_path(task.get("output_dir"), storage_root=TASK_STORE.root_dir),
         records=_resolve_task_records(task),
         markdown_preview=task.get("markdown_preview"),
         events=[TaskEvent.model_validate(item) for item in TASK_STORE.load_events(task["id"])],
         strategy_plan=_resolve_strategy_plan(task),
         request_payload=task.get("metadata", {}).get("request_payload"),
     )
+
+
+def _to_dataset_record(dataset: dict) -> DatasetRecord:
+    return DatasetRecord.model_validate(
+        dataset
+        | {
+            "relative_path": _storage_relative_path(dataset.get("path"), storage_root=WORKSPACE_STORE.root_dir),
+        }
+    )
+
+
+def _storage_relative_path(value: str | None, *, storage_root: Path) -> str | None:
+    if not value:
+        return None
+
+    relative = to_stored_path(value, storage_root=storage_root)
+    if relative is None:
+        return None
+
+    normalized = str(relative).strip()
+    if not normalized or is_storage_absolute_path(normalized):
+        return None
+    return normalized
 
 
 def _seed_report_note_cache_from_existing_reports(
@@ -1565,6 +1592,7 @@ def _screening_request_from_task(task: dict) -> ScreeningJobRequest:
             min_request_interval_seconds=payload["min_request_interval_seconds"],
         ),
         runs_root=API_RUNS_ROOT / "runs",
+        storage_root=API_RUNS_ROOT,
         run_root_override=(TASK_STORE.tasks_dir / task["id"] / "screening_run"),
         batch_size=payload["batch_size"],
         target_include_count=payload["target_include_count"],

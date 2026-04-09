@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 from pathlib import Path, PurePosixPath
 
 
@@ -29,20 +30,37 @@ def rewrite_json_value(value, old_root: str, new_root: str):
     return value
 
 
+def build_text_path_pattern(old_root: str) -> re.Pattern[str]:
+    normalized_old_root = normalize_prefix(old_root)
+    root_pattern = re.escape(normalized_old_root).replace("/", r"[\\/]")
+    return re.compile(rf"{root_pattern}(?P<suffix>(?:[\\/][^\s'\",]+)*)", re.IGNORECASE)
+
+
+def rewrite_text_value(value: str, old_root: str, new_root: str) -> str:
+    normalized_new_root = str(PurePosixPath(new_root))
+    pattern = build_text_path_pattern(old_root)
+
+    def replacer(match: re.Match[str]) -> str:
+        suffix = match.group("suffix").replace("\\", "/")
+        return normalized_new_root + suffix
+
+    return pattern.sub(replacer, value)
+
+
 def process_json_file(path: Path, old_root: str, new_root: str) -> bool:
     original_text = path.read_text(encoding="utf-8")
     payload = json.loads(original_text)
     updated = rewrite_json_value(payload, old_root, new_root)
-    updated_text = json.dumps(updated, indent=2, ensure_ascii=False)
+    updated_text = json.dumps(updated, indent=2, ensure_ascii=False) + "\n"
     if updated_text == original_text:
         return False
-    path.write_text(updated_text + "\n", encoding="utf-8")
+    path.write_text(updated_text, encoding="utf-8")
     return True
 
 
 def process_text_file(path: Path, old_root: str, new_root: str) -> bool:
     original_text = path.read_text(encoding="utf-8")
-    updated_text = original_text.replace(old_root, new_root).replace(old_root.replace("\\", "/"), new_root)
+    updated_text = rewrite_text_value(original_text, old_root, new_root)
     if updated_text == original_text:
         return False
     path.write_text(updated_text, encoding="utf-8")

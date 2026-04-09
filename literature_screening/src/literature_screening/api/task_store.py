@@ -10,6 +10,8 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Callable
 
+from literature_screening.storage_paths import rewrite_storage_payload
+
 
 @dataclass(slots=True)
 class StoredTask:
@@ -76,7 +78,7 @@ class TaskStore:
         events_path = self.tasks_dir / task_id / "events.json"
         if not events_path.exists():
             return []
-        return json.loads(events_path.read_text(encoding="utf-8"))
+        return self._read(events_path)
 
     def update(self, task_id: str, **changes: Any) -> dict[str, Any]:
         task_path = self.tasks_dir / task_id / "task.json"
@@ -238,11 +240,10 @@ class TaskStore:
             )
             self.append_event(task.task_id, kind="task-failed", message=str(exc), metadata={"error_type": exc.__class__.__name__})
 
-    @staticmethod
-    def _read(path: Path) -> dict[str, Any]:
-        return json.loads(path.read_text(encoding="utf-8"))
+    def _read(self, path: Path) -> Any:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        return rewrite_storage_payload(payload, storage_root=self.root_dir, mode="hydrate")
 
-    @staticmethod
-    def _write(path: Path, payload: dict[str, Any]) -> None:
-        path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
-
+    def _write(self, path: Path, payload: Any) -> None:
+        serialized = rewrite_storage_payload(payload, storage_root=self.root_dir, mode="dehydrate")
+        path.write_text(json.dumps(serialized, ensure_ascii=False, indent=2), encoding="utf-8")

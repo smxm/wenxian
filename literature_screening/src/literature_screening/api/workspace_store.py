@@ -10,6 +10,7 @@ from typing import Any
 from literature_screening.bibtex.deduper import deduplicate_records
 from literature_screening.bibtex.exporter import export_ris
 from literature_screening.bibtex.parser import parse_bibtex_files
+from literature_screening.storage_paths import rewrite_storage_payload
 
 
 class WorkspaceStore:
@@ -308,10 +309,10 @@ class WorkspaceStore:
     def _project_root(self, project_id: str) -> Path:
         return self.projects_dir / project_id
 
-    @staticmethod
-    def _read(path: Path) -> dict[str, Any]:
-        return json.loads(path.read_text(encoding="utf-8"))
+    def _read(self, path: Path) -> Any:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        return rewrite_storage_payload(payload, storage_root=self.root_dir, mode="hydrate")
 
-    @staticmethod
-    def _write(path: Path, payload: dict[str, Any]) -> None:
-        path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+    def _write(self, path: Path, payload: Any) -> None:
+        serialized = rewrite_storage_payload(payload, storage_root=self.root_dir, mode="dehydrate")
+        path.write_text(json.dumps(serialized, ensure_ascii=False, indent=2), encoding="utf-8")

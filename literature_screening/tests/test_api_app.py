@@ -9,6 +9,7 @@ from literature_screening.api import app as app_module
 from literature_screening.api.app import app
 from literature_screening.api.task_store import TaskStore
 from literature_screening.api.workspace_store import WorkspaceStore
+from literature_screening.core.config import load_run_config
 
 
 client = TestClient(app)
@@ -328,6 +329,154 @@ def test_fulltext_queue_rebuild_and_status_update(tmp_path: Path, monkeypatch) -
     assert ready_item["note"] == "downloaded"
     ready_dataset = next(item for item in updated_payload["datasets"] if item["kind"] == "fulltext_ready")
     assert ready_dataset["record_count"] == 1
+
+
+def test_workspace_store_persists_dataset_paths_relatively(tmp_path: Path) -> None:
+    workspace_store = WorkspaceStore(tmp_path / "api_runs")
+    project = workspace_store.create_project(name="relative-path-project", topic="topic", description="")
+    derived_dir = workspace_store.root_dir / "projects" / project["id"] / "derived"
+    derived_dir.mkdir(parents=True, exist_ok=True)
+    dataset_path = derived_dir / "included.ris"
+    dataset_path.write_text("TY  - JOUR\nTI  - Demo Paper\nER  - \n", encoding="utf-8")
+
+    dataset = workspace_store.register_dataset(
+        project_id=project["id"],
+        task_id=None,
+        kind="included_reviewed",
+        label="Reviewed included records",
+        path=dataset_path,
+        record_count=1,
+        file_format="ris",
+    )
+
+    raw_payload = json.loads(
+        (workspace_store.root_dir / "projects" / project["id"] / "datasets" / f"{dataset['id']}.json").read_text(encoding="utf-8")
+    )
+    assert raw_payload["path"] == f"projects/{project['id']}/derived/included.ris"
+
+    loaded = workspace_store.load_dataset(project["id"], dataset["id"])
+    assert loaded["path"] == str(dataset_path)
+
+
+def test_dataset_api_returns_absolute_and_relative_paths(tmp_path: Path, monkeypatch) -> None:
+    task_store = TaskStore(tmp_path / "api_runs")
+    workspace_store = WorkspaceStore(tmp_path / "api_runs")
+    monkeypatch.setattr(app_module, "TASK_STORE", task_store)
+    monkeypatch.setattr(app_module, "WORKSPACE_STORE", workspace_store)
+
+    project = workspace_store.create_project(name="relative-path-project", topic="topic", description="")
+    derived_dir = workspace_store.root_dir / "projects" / project["id"] / "derived"
+    derived_dir.mkdir(parents=True, exist_ok=True)
+    dataset_path = derived_dir / "included.ris"
+    dataset_path.write_text("TY  - JOUR\nTI  - Demo Paper\nER  - \n", encoding="utf-8")
+    dataset = workspace_store.register_dataset(
+        project_id=project["id"],
+        task_id=None,
+        kind="included_reviewed",
+        label="Reviewed included records",
+        path=dataset_path,
+        record_count=1,
+        file_format="ris",
+    )
+
+    response = client.get(f"/api/datasets/{dataset['id']}")
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["path"] == str(dataset_path)
+    assert payload["relative_path"] == f"projects/{project['id']}/derived/included.ris"
+
+    project_response = client.get(f"/api/projects/{project['id']}")
+    assert project_response.status_code == 200
+    project_payload = project_response.json()
+    dataset_payload = next(item for item in project_payload["datasets"] if item["id"] == dataset["id"])
+    assert dataset_payload["path"] == str(dataset_path)
+    assert dataset_payload["relative_path"] == f"projects/{project['id']}/derived/included.ris"
+
+
+def test_task_detail_api_returns_absolute_and_relative_task_paths(tmp_path: Path, monkeypatch) -> None:
+    task_store = TaskStore(tmp_path / "api_runs")
+    workspace_store = WorkspaceStore(tmp_path / "api_runs")
+    monkeypatch.setattr(app_module, "TASK_STORE", task_store)
+    monkeypatch.setattr(app_module, "WORKSPACE_STORE", workspace_store)
+
+    task = task_store.create_task(kind="screening", title="relative-task-paths")
+    run_root = task_store.tasks_dir / task.task_id / "screening_run"
+    output_dir = run_root / "screening_output"
+    task_store.update(
+        task.task_id,
+        status="succeeded",
+        phase="completed",
+        phase_label="Completed",
+        run_root=str(run_root),
+        output_dir=str(output_dir),
+    )
+
+    response = client.get(f"/api/tasks/{task.task_id}")
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["run_root"] == str(run_root)
+    assert payload["run_root_relative"] == f"tasks/{task.task_id}/screening_run"
+    assert payload["output_dir"] == str(output_dir)
+    assert payload["output_dir_relative"] == f"tasks/{task.task_id}/screening_run/screening_output"
+
+
+def test_load_run_config_resolves_api_runs_relative_paths_from_storage_root(tmp_path: Path) -> None:
+    api_runs_root = tmp_path / "api_runs"
+    run_root = api_runs_root / "tasks" / "task-1" / "screening_run"
+    config_path = run_root / "generated_screening_config.yaml"
+    config_path.parent.mkdir(parents=True, exist_ok=True)
+    config_path.write_text(
+        "\n".join(
+            [
+                "project:",
+                "  name: demo",
+                "  output_dir: tasks/task-1/screening_run/screening_output",
+                "input:",
+                "  input_files:",
+                "    - tasks/task-1/screening_run/inputs/demo.ris",
+                "dedup:",
+                "  enabled: true",
+                "screening:",
+                "  batch_size: 1",
+                "  target_include_count: 10",
+                "  stop_when_target_reached: false",
+                "  allow_uncertain: true",
+                "  retry_times: 1",
+                "  request_timeout_seconds: 60",
+                "criteria:",
+                "  topic: demo",
+                "  inclusion:",
+                "    - keep",
+                "  exclusion:",
+                "    - drop",
+                "model:",
+                "  provider: deepseek",
+                "  model_name: deepseek-chat",
+                "  api_base_url: https://api.deepseek.com/v1",
+                "  api_key_env: DEEPSEEK_API_KEY",
+                "  temperature: 0",
+                "  max_tokens: 256",
+                "  min_request_interval_seconds: 1",
+                "report:",
+                "  export_included_ris: true",
+                "  export_excluded_ris: false",
+                "  export_unused_ris: true",
+                "  export_included_bib: false",
+                "  export_excluded_bib: false",
+                "  export_unused_bib: false",
+                "  included_report_format: md",
+                "  excluded_report_format: md",
+                "  summary_format: json",
+            ]
+        ),
+        encoding="utf-8",
+    )
+
+    config = load_run_config(config_path)
+    expected_output_dir = (api_runs_root / "tasks" / "task-1" / "screening_run" / "screening_output").resolve()
+    expected_input_path = (api_runs_root / "tasks" / "task-1" / "screening_run" / "inputs" / "demo.ris").resolve()
+    assert config.project.output_dir == str(expected_output_dir)
+    assert config.input.input_files == [str(expected_input_path)]
 
 
 def test_fulltext_queue_rebuild_uses_project_scoped_cumulative_dataset(tmp_path: Path, monkeypatch) -> None:

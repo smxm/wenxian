@@ -9,6 +9,7 @@ from jsonschema import ValidationError, validate
 from literature_screening.core.exceptions import ConfigValidationError
 from literature_screening.core.models import RunConfig
 from literature_screening.core.schema import RUN_CONFIG_SCHEMA
+from literature_screening.storage_paths import find_named_ancestor, resolve_config_path
 
 
 def load_yaml_file(path: Path) -> dict[str, Any]:
@@ -37,17 +38,21 @@ def load_run_config(path: Path) -> RunConfig:
         raise ConfigValidationError(f"Configuration schema validation failed: {exc.message}") from exc
 
     config_dir = path.parent.resolve()
+    storage_root = find_named_ancestor(config_dir, name="api_runs")
 
     if "input" in raw_config and "input_files" in raw_config["input"]:
         raw_config["input"]["input_files"] = [
-            str((config_dir / input_file).resolve()) if not Path(input_file).is_absolute() else input_file
+            resolve_config_path(input_file, config_dir=config_dir, storage_root=storage_root)
             for input_file in raw_config["input"]["input_files"]
         ]
 
     if "project" in raw_config and "output_dir" in raw_config["project"]:
         output_dir = raw_config["project"]["output_dir"]
-        if not Path(output_dir).is_absolute():
-            raw_config["project"]["output_dir"] = str((config_dir / output_dir).resolve())
+        raw_config["project"]["output_dir"] = resolve_config_path(
+            output_dir,
+            config_dir=config_dir,
+            storage_root=storage_root,
+        )
 
     try:
         return RunConfig.model_validate(raw_config)

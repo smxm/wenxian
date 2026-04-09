@@ -11,6 +11,8 @@ from typing import Any, Callable
 
 import yaml
 
+from literature_screening.storage_paths import rewrite_storage_payload
+
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 MAIN_SRC = PROJECT_ROOT / "src"
@@ -84,6 +86,7 @@ class ScreeningJobRequest:
     criteria: CriteriaDraft
     model: ModelDraft
     runs_root: Path = DEFAULT_RUNS_ROOT
+    storage_root: Path | None = None
     run_root_override: Path | None = None
     batch_size: int = 10
     target_include_count: int = 9999
@@ -257,6 +260,12 @@ def run_screening_job(
             "summary_format": "json",
         },
     }
+    if request.storage_root is not None:
+        config_payload = rewrite_storage_payload(
+            config_payload,
+            storage_root=request.storage_root,
+            mode="dehydrate",
+        )
     config_path = run_root / "generated_screening_config.yaml"
     config_path.write_text(yaml.safe_dump(config_payload, sort_keys=False, allow_unicode=True), encoding="utf-8")
 
