@@ -61,7 +61,7 @@
   - `KIMI_API_KEY`
   - `DEEPSEEK_API_KEY`
 
-### 一键启动
+### macOS 一键启动
 
 在仓库根目录执行：
 
@@ -80,9 +80,34 @@
 ./stop-wenxian.command
 ```
 
-### Docker 手动启动
+### Windows 启动
 
-如果不使用脚本，也可以直接执行：
+当前仓库里没有提交 Windows 专用的一键脚本，但 Windows 上可以直接使用同一个 Docker Compose 文件启动。
+
+在仓库根目录执行：
+
+```powershell
+docker compose -f docker-compose.local.yml up -d --build
+```
+
+停止服务：
+
+```powershell
+docker compose -f docker-compose.local.yml down
+```
+
+如果你需要自定义运行数据目录或端口，可以在启动前先设置环境变量，例如：
+
+```powershell
+$env:APP_DATA_DIR = ".\literature_screening\data\api_runs"
+$env:API_PORT = "8000"
+$env:WEB_PORT = "8080"
+docker compose -f docker-compose.local.yml up -d --build
+```
+
+### 通用 Docker 手动启动
+
+如果不使用平台脚本，也可以直接执行下面这组命令；macOS、Linux、Windows PowerShell 都适用：
 
 ```bash
 docker compose -f docker-compose.local.yml up -d --build
