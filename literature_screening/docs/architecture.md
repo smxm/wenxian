@@ -8,67 +8,92 @@
 
 路径：
 
-- `E:\wenxian\literature_screening\src\literature_screening`
+- `literature_screening/`
 
 职责：
 
-- 输入解析
-- 标准化文献记录
-- 去重
-- 分批调用 LLM 初筛
-- 生成初筛报告
-- 导出 `RIS` / `BibTeX`
-- 提供项目 / 数据集 / 任务链 API
+- 输入解析与标准化
+- 合并与去重
+- 检索策略生成
+- 分批调用 LLM 执行标题 / 摘要级初筛
+- 任务、项目、数据集与模板 API
+- 全文队列与状态管理
+- 报告任务编排
 
 ### 独立报告模块
 
 路径：
 
-- `E:\wenxian\literature_screening\separated_modules\formal_report_module`
+- `literature_screening/separated_modules/formal_report_module/`
 
 职责：
 
-- 读取初筛结果或项目数据集
-- 生成简洁综述式报告
-- 生成参考列表
+- 读取已有筛选输出
+- 生成简洁报告或更正式的报告产物
+- 生成参考文献列表
 
 ### Web 工作台
 
 路径：
 
-- `E:\wenxian\literature_screening_web`
+- `literature_screening_web/`
 
 职责：
 
-- 提供现代化交互界面
-- 管理项目、任务、数据集和模板
+- 提供线程式项目界面
+- 管理任务、数据集、模板和全文工作台
 - 展示中间态、任务事件和产物下载
 
-## 2. 主项目结构
+## 2. 本地运行拓扑
+
+当前推荐使用 Docker 本地运行：
+
+- `api`
+  - FastAPI 服务
+  - 默认端口 `8000`
+- `web`
+  - Vue 构建产物 + nginx
+  - 默认端口 `8080`
+
+推荐入口：
+
+- 仓库根目录的 `./start-wenxian.command`
+- 仓库根目录的 `./stop-wenxian.command`
+- 或手动执行 `docker compose -f docker-compose.local.yml up -d --build`
+
+运行数据默认挂载到：
+
+- `literature_screening/data/api_runs`
+
+## 3. 主项目结构
 
 ```text
 src/literature_screening/
-  api/            本地 API 适配层
+  api/            FastAPI 入口、schema、任务与项目存储
   bibtex/         输入解析、标准化、去重、导出
-  core/           配置、模型、常量、异常、环境变量
-  pipeline/       主流程编排
+  core/           配置、模型、常量、环境变量
+  pipeline/       初筛主流程编排
   reporting/      初筛结果报告
   screening/      Prompt、批次、LLM 客户端、响应校验
-  studio/         前端/API 共用编排服务层
+  studio/         API / Web 共用服务编排层
+  storage_paths.py 持久化路径脱水/回填辅助
 ```
 
 ### `api/`
 
 - `app.py`
   - FastAPI 入口
+  - 项目、任务、全文、模板、报告相关接口
 - `schemas.py`
   - API 请求 / 响应模型
 - `task_store.py`
   - 任务状态、事件流、后台执行与重试
 - `workspace_store.py`
-  - Project / Dataset 存储
+  - `Project` / `Dataset` / 全文队列存储
 - `template_store.py`
   - 任务模板存储
+- `secret_store.py`
+  - API key 引用存储
 
 ### `bibtex/`
 
@@ -97,14 +122,14 @@ src/literature_screening/
 ### `studio/`
 
 - `service.py`
-  - Web 前端与旧 Streamlit 共用的编排层
-  - 这里负责把“项目任务请求”转成真正的初筛 / 报告执行
+  - 把策略、初筛、报告请求转成真正的执行任务
+  - 负责 API 与旧 Streamlit 兼容层共享的编排逻辑
 
-## 3. 核心工作流模型
+## 4. 核心工作流模型
 
-### Project
+### Thread / Project
 
-用于承载一个真实主题或委托项目：
+UI 现在更偏向“thread”概念，但持久化模型仍然是 `Project`：
 
 - `project_id`
 - `name`
@@ -113,8 +138,9 @@ src/literature_screening/
 
 ### Task
 
-用于记录一次具体执行：
+一次具体执行对应一个 `Task`，当前主要有三类：
 
+- `strategy`
 - `screening`
 - `report`
 
@@ -125,6 +151,8 @@ src/literature_screening/
 - `input_dataset_ids`
 - `output_dataset_ids`
 - `attempt_count`
+- `run_root`
+- `output_dir`
 
 ### Dataset
 
@@ -133,53 +161,83 @@ src/literature_screening/
 - `included`
 - `excluded`
 - `unused`
-- `cumulative_included`
 - `included_reviewed`
 - `excluded_reviewed`
+- `cumulative_included`
+- `fulltext_ready`
+- `report_source`
 
-## 4. 关键能力
+## 5. 路径持久化与存储策略
 
-### 结果合并策略
+运行数据保存在 `api_runs` 根目录下，主要包括：
 
-- 项目内会自动重建 `cumulative_included`
-- 该数据集用于跨轮次合并纳入结果
+- `projects/`
+- `tasks/`
+- `runs/`
+- `templates/`
 
-### 失败恢复 / 断点续跑
+当前磁盘存储策略是：
 
-- 初筛任务重试时复用同一 task 工作目录
-- 已完成 batch 会直接从现有输出恢复
-- 报告任务重试时复用同一 report 输出目录
+- 写盘时把 `path`、`run_root`、`output_dir` 等字段脱水为相对 `api_runs` 的路径
+- 读盘时再回填成当前机器可访问的绝对路径
 
-### 审核与人工修正
+这层能力由：
 
-- 可对单篇结果执行人工改判
-- 会生成 reviewed decisions 和 reviewed RIS
-- reviewed 产物会再次登记为 dataset
+- `src/literature_screening/storage_paths.py`
+- `api/task_store.py`
+- `api/workspace_store.py`
 
-### 审计与日志
+共同实现。
 
-- 每个任务都有事件流
-- 会记录创建、启动、成功、失败、重试、人工审核等操作
+为了兼容现有调用方，API 响应现在同时返回：
 
-## 5. 配置与隔离原则
+- dataset: `path` + `relative_path`
+- task detail: `run_root` + `run_root_relative`
+- task detail: `output_dir` + `output_dir_relative`
 
-- API Key 只保存在环境变量中
-- 任务元数据只记录环境变量名，不记录明文 key
-- 模板按项目隔离
-- 数据集和任务按项目归档
+因此：
 
-## 6. 发布分支保留内容
+- 磁盘格式以相对路径为准
+- 服务端运行逻辑继续使用 hydrated 绝对路径
+- 前端和外部调用方可以逐步迁移到相对路径字段
 
-发布分支只保留：
+## 6. 核心工作流边界
 
-- 主体代码
-- 最小测试
-- 示例配置
-- Prompt 和 Schema
-- 必要文档
+### 策略生成
 
-不保留：
+- 生成 Scopus、Web of Science、PubMed、CNKI 检索式草案
+- 产出结构化策略计划和 Markdown 结果
 
-- 试跑输入数据
-- 临时调试文件
-- 运行输出目录
+### 初筛
+
+- 多文件导入
+- 合并去重
+- 分批调用模型
+- 导出纳入、剔除、未使用结果
+
+### 人工复核
+
+- 单篇改判
+- 批量改判
+- 参考文献顺序重排
+- 复核后数据集再登记回项目
+
+### 全文工作台
+
+- 基于纳入数据集重建全文队列
+- 维护状态、备注、链接与 OA 信息
+- 生成 `fulltext_ready` 数据集供报告使用
+
+### 报告
+
+- 可直接基于某轮筛选结果生成
+- 也可基于项目内一个或多个 dataset 生成
+- 简洁报告主流程依赖独立报告模块
+
+## 7. 设计原则
+
+- API key 只从环境变量读取，不写入任务或项目数据
+- 项目、任务、数据集分层先于页面表达
+- 持久化格式优先考虑跨机器迁移稳定性
+- 前端只依赖 `/api/...` 与 artifact 下载端点，不直接依赖磁盘目录结构
+- 新功能优先扩 `studio/service.py`、`api/app.py` 和 store 层，再补 UI

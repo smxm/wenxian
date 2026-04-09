@@ -122,3 +122,24 @@ Append-only log for thread handoff. Add one new entry at the end of the file aft
   - `/Users/mao/Documents/langchain/literature_screening_web/src/types/api.ts`
   - `/Users/mao/Documents/langchain/project_state.md`
   - `/Users/mao/Documents/langchain/project_session_log.md`
+
+## Session 2026-04-09 - Documentation refresh for current workflow
+
+- Scope: refreshed the public-facing docs so GitHub-facing usage notes match the current Docker-first local runtime and thread-first product shape
+- Main changes:
+  - rewrote the root `README.md` to describe the current startup flow, data layout, and path-compatibility behavior
+  - updated `literature_screening/docs/architecture.md` to reflect strategy tasks, full-text workflow, `storage_paths.py`, and relative-path persistence
+  - updated `literature_screening/docs/web-workbench.md` to reflect current routes, full-text page, Docker startup, and API surface
+  - updated `literature_screening/separated_modules/formal_report_module/README.md` to document current simple/formal report entry points and module boundaries
+- Verification:
+  - `git diff --check README.md literature_screening/docs/architecture.md literature_screening/docs/web-workbench.md literature_screening/separated_modules/formal_report_module/README.md`
+- Outstanding follow-ups:
+  - if the Web UI starts consuming the new relative-path fields directly, update the web-workbench doc again to note that shift explicitly
+  - the nested `literature_screening/README.md` still contains older environment notes and can be refreshed later if needed
+- Files touched:
+  - `/Users/mao/Documents/langchain/README.md`
+  - `/Users/mao/Documents/langchain/literature_screening/docs/architecture.md`
+  - `/Users/mao/Documents/langchain/literature_screening/docs/web-workbench.md`
+  - `/Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module/README.md`
+  - `/Users/mao/Documents/langchain/project_state.md`
+  - `/Users/mao/Documents/langchain/project_session_log.md`

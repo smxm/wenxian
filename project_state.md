@@ -68,6 +68,11 @@ Date: 2026-04-09
   - task details now return `run_root` plus `run_root_relative`
   - task details now return `output_dir` plus `output_dir_relative`
 - Updated frontend API types in `/Users/mao/Documents/langchain/literature_screening_web/src/types/api.ts` to recognize the new relative-path response fields
+- Refreshed the public-facing documentation so GitHub docs now match the current Docker-first runtime and thread-first workflow:
+  - `/Users/mao/Documents/langchain/README.md`
+  - `/Users/mao/Documents/langchain/literature_screening/docs/architecture.md`
+  - `/Users/mao/Documents/langchain/literature_screening/docs/web-workbench.md`
+  - `/Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module/README.md`
 - Added a reusable Codex skill for future thread handoff updates at `/Users/mao/.codex/skills/project-handoff-sync/SKILL.md`
 
 ## Known Issues
@@ -98,6 +103,9 @@ Backend and persistence:
 - `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/core/config.py`
 - `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/studio/service.py`
 - `/Users/mao/Documents/langchain/literature_screening_web/src/types/api.ts`
+- `/Users/mao/Documents/langchain/literature_screening/docs/architecture.md`
+- `/Users/mao/Documents/langchain/literature_screening/docs/web-workbench.md`
+- `/Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module/README.md`
 
 Migration and runtime helpers:
 
@@ -127,6 +135,7 @@ Verified in this round:
 - `docker compose -f /Users/mao/Documents/langchain/docker-compose.local.yml up -d --build api`
 - `docker compose -f /Users/mao/Documents/langchain/docker-compose.local.yml ps`
 - `curl http://127.0.0.1:8000/api/health`
+- `git diff --check README.md literature_screening/docs/architecture.md literature_screening/docs/web-workbench.md literature_screening/separated_modules/formal_report_module/README.md`
 
 ## Run Shortcuts
 
