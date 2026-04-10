@@ -4,6 +4,7 @@ import type {
   MetaPayload,
   ProjectDetail,
   ProjectSnapshot,
+  ProjectWorkflowPayload,
   ReportFormPayload,
   ScreeningFormPayload,
   StrategyFormPayload,
@@ -60,6 +61,14 @@ export async function applyBulkReviewOverride(
   return data
 }
 
+export async function applySelectionReviewOverride(
+  taskId: string,
+  payload: { paper_ids: string[]; decision: 'include' | 'exclude' | 'uncertain'; reason: string }
+) {
+  const { data } = await http.post<TaskDetail>(`/tasks/${taskId}/review-overrides/selection`, payload)
+  return data
+}
+
 export async function applyReferenceOverride(taskId: string, payload: { references_text: string }) {
   const { data } = await http.post<TaskDetail>(`/tasks/${taskId}/reference-overrides`, payload)
   return data
@@ -86,7 +95,9 @@ export async function createScreeningTask(payload: ScreeningFormPayload) {
   formData.append('max_tokens', String(payload.model.max_tokens))
   formData.append('min_request_interval_seconds', String(payload.model.min_request_interval_seconds))
   formData.append('batch_size', String(payload.batch_size))
-  formData.append('target_include_count', String(payload.target_include_count))
+  if (payload.target_include_count !== null && payload.target_include_count !== undefined) {
+    formData.append('target_include_count', String(payload.target_include_count))
+  }
   formData.append('stop_when_target_reached', String(payload.stop_when_target_reached))
   formData.append('allow_uncertain', String(payload.allow_uncertain))
   formData.append('retry_times', String(payload.retry_times))
@@ -131,9 +142,17 @@ export async function rebuildFulltextQueue(projectId: string, payload: { source_
 
 export async function updateFulltextStatus(
   projectId: string,
-  payload: { paper_id: string; status: 'pending' | 'ready' | 'unavailable' | 'deferred'; note: string }
+  payload: { paper_id: string; status: 'pending' | 'ready' | 'excluded' | 'unavailable' | 'deferred'; note: string }
 ) {
   const { data } = await http.post<ProjectDetail>(`/projects/${projectId}/fulltext/status`, payload)
+  return data
+}
+
+export async function updateFulltextStatuses(
+  projectId: string,
+  payload: { paper_ids: string[]; status: 'pending' | 'ready' | 'excluded' | 'unavailable' | 'deferred'; note?: string | null }
+) {
+  const { data } = await http.post<ProjectDetail>(`/projects/${projectId}/fulltext/status/batch`, payload)
   return data
 }
 
@@ -144,6 +163,11 @@ export async function enrichFulltextQueue(projectId: string) {
 
 export async function updateProject(projectId: string, payload: { name: string; topic: string; description: string }) {
   const { data } = await http.put<ProjectSnapshot>(`/projects/${projectId}`, payload)
+  return data
+}
+
+export async function updateProjectWorkflow(projectId: string, payload: ProjectWorkflowPayload) {
+  const { data } = await http.put<ProjectDetail>(`/projects/${projectId}/workflow`, payload)
   return data
 }
 

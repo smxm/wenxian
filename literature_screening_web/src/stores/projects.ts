@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia'
-import { createProject, deleteProject, enrichFulltextQueue, fetchProject, fetchProjects, fetchTemplates, createTemplate, rebuildFulltextQueue, updateFulltextStatus, updateProject } from '@/api/client'
-import type { ProjectDetail, ProjectSnapshot, TaskTemplateRecord } from '@/types/api'
+import { createProject, deleteProject, enrichFulltextQueue, fetchProject, fetchProjects, fetchTemplates, createTemplate, rebuildFulltextQueue, updateFulltextStatus, updateFulltextStatuses, updateProject, updateProjectWorkflow } from '@/api/client'
+import type { ProjectDetail, ProjectSnapshot, ProjectWorkflowPayload, TaskTemplateRecord } from '@/types/api'
 
 export const useProjectsStore = defineStore('projects', {
   state: (): {
@@ -49,6 +49,11 @@ export const useProjectsStore = defineStore('projects', {
       }
       return project
     },
+    async updateProjectWorkflow(projectId: string, payload: ProjectWorkflowPayload) {
+      this.currentProject = await updateProjectWorkflow(projectId, payload)
+      await this.refreshProjects()
+      return this.currentProject
+    },
     async deleteProject(projectId: string) {
       await deleteProject(projectId)
       if (this.currentProject?.id === projectId) {
@@ -64,9 +69,17 @@ export const useProjectsStore = defineStore('projects', {
     },
     async updateFulltextStatus(
       projectId: string,
-      payload: { paper_id: string; status: 'pending' | 'ready' | 'unavailable' | 'deferred'; note: string }
+      payload: { paper_id: string; status: 'pending' | 'ready' | 'excluded' | 'unavailable' | 'deferred'; note: string }
     ) {
       this.currentProject = await updateFulltextStatus(projectId, payload)
+      await this.refreshProjects()
+      return this.currentProject
+    },
+    async updateFulltextStatuses(
+      projectId: string,
+      payload: { paper_ids: string[]; status: 'pending' | 'ready' | 'excluded' | 'unavailable' | 'deferred'; note?: string | null }
+    ) {
+      this.currentProject = await updateFulltextStatuses(projectId, payload)
       await this.refreshProjects()
       return this.currentProject
     },

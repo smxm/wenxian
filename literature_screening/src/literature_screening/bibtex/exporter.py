@@ -33,6 +33,8 @@ def _paper_record_to_ris(record: PaperRecord) -> str:
         lines.append(f"JO  - {record.journal}")
     if record.doi:
         lines.append(f"DO  - {record.doi}")
+    if record.url:
+        lines.append(f"UR  - {record.url}")
     if record.abstract:
         lines.append(f"AB  - {record.abstract}")
     for keyword in record.keywords:

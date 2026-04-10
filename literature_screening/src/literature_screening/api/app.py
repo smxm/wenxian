@@ -4,7 +4,9 @@ import difflib
 import json
 import re
 import sys
+from datetime import datetime
 from pathlib import Path
+from typing import Any
 from urllib.parse import quote
 
 import httpx
@@ -12,8 +14,9 @@ from fastapi import FastAPI, File, Form, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 
-from literature_screening.api.schemas import DatasetRecord, FulltextQueueItem, FulltextQueueRebuildRequest, FulltextStatusUpdateRequest, ProjectCreate, ProjectDetail, ProjectSnapshot, ProjectUpdate, StrategyPlan
-from literature_screening.api.schemas import BulkReviewOverrideRequest, ReferenceOverrideRequest, ReportTaskCreate, RetryTaskRequest, ReviewOverrideRequest, StrategyTaskCreate, TaskArtifact
+from literature_screening.bibtex.normalizer import normalize_title
+from literature_screening.api.schemas import DatasetRecord, FulltextBatchStatusUpdateRequest, FulltextQueueItem, FulltextQueueRebuildRequest, FulltextStatusUpdateRequest, ProjectCreate, ProjectDetail, ProjectSnapshot, ProjectUpdate, ProjectWorkflowUpdate, StrategyPlan
+from literature_screening.api.schemas import BulkReviewOverrideRequest, ReferenceOverrideRequest, ReportTaskCreate, RetryTaskRequest, ReviewOverrideRequest, SelectionReviewOverrideRequest, StrategyTaskCreate, TaskArtifact
 from literature_screening.api.schemas import TaskDetail, TaskEvent, TaskSnapshot, TaskTemplateRecord
 from literature_screening.api.secret_store import SecretStore
 from literature_screening.api.task_store import StoredTask, TaskStore
@@ -36,6 +39,33 @@ WORKSPACE_STORE = WorkspaceStore(API_RUNS_ROOT)
 TEMPLATE_STORE = TemplateStore(API_RUNS_ROOT)
 SECRET_STORE = SecretStore()
 
+STRATEGY_DATABASE_OPTIONS = [
+    {"value": "scopus", "label": "Scopus 高级检索"},
+    {"value": "wos", "label": "Web of Science 高级检索"},
+    {"value": "pubmed", "label": "PubMed 高级检索"},
+    {"value": "cnki", "label": "知网高级检索（篇关摘）"},
+]
+DEFAULT_STRATEGY_MODEL = {
+    "provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "api_base_url": "https://api.deepseek.com/v1",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "api_key": None,
+    "temperature": 0,
+    "max_tokens": 4096,
+    "min_request_interval_seconds": 2,
+}
+DEFAULT_SCREENING_MODEL = {
+    "provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "api_base_url": "https://api.deepseek.com/v1",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "api_key": None,
+    "temperature": 0,
+    "max_tokens": 1536,
+    "min_request_interval_seconds": 2,
+}
+
 app = FastAPI(title="Literature Screening Studio API", version="0.2.0")
 app.add_middleware(
     CORSMiddleware,
@@ -49,6 +79,181 @@ app.add_middleware(
 @app.get("/api/health")
 def health() -> dict[str, str]:
     return {"status": "ok"}
+
+
+def _default_strategy_model_payload() -> dict:
+    return dict(DEFAULT_STRATEGY_MODEL)
+
+
+def _default_screening_model_payload() -> dict:
+    return dict(DEFAULT_SCREENING_MODEL)
+
+
+def _criteria_to_markdown(topic: str, inclusion: list[str], exclusion: list[str]) -> str:
+    parts = ["# 研究主题", "", topic.strip(), "", "# 纳入标准", ""]
+    parts.extend(f"- {item}" for item in inclusion if str(item).strip())
+    parts.extend(["", "# 排除标准", ""])
+    parts.extend(f"- {item}" for item in exclusion if str(item).strip())
+    return "\n".join(parts).strip()
+
+
+def _base_thread_profile(project: dict) -> dict:
+    return {
+        "strategy": {
+            "research_need": "",
+            "selected_databases": [item["value"] for item in STRATEGY_DATABASE_OPTIONS],
+            "model": _default_strategy_model_payload(),
+            "latest_task_id": None,
+            "plan": None,
+        },
+        "screening": {
+            "topic": project.get("topic", "") or "",
+            "criteria_markdown": "",
+            "inclusion": [],
+            "exclusion": [],
+            "model": _default_screening_model_payload(),
+            "batch_size": 10,
+            "target_include_count": None,
+            "stop_when_target_reached": False,
+            "allow_uncertain": True,
+            "retry_times": 6,
+            "request_timeout_seconds": 240,
+            "encoding": "auto",
+        },
+        "last_updated_at": project.get("updated_at"),
+    }
+
+
+def _merge_model_settings(defaults: dict, payload: dict | None) -> dict:
+    merged = dict(defaults)
+    if isinstance(payload, dict):
+        merged.update({key: value for key, value in payload.items() if value is not None})
+    return merged
+
+
+def _latest_task_for_project(project_id: str, kind: str) -> dict | None:
+    tasks = [task for task in TASK_STORE.list_tasks() if _task_project_id(task) == project_id and task.get("kind") == kind]
+    if not tasks:
+        return None
+    tasks.sort(key=lambda item: item.get("updated_at", item.get("created_at", "")), reverse=True)
+    return tasks[0]
+
+
+def _effective_thread_profile(project: dict, *, project_tasks: list[dict] | None = None) -> dict:
+    profile = _base_thread_profile(project)
+    persisted = project.get("thread_profile") or {}
+    strategy_payload = persisted.get("strategy") if isinstance(persisted, dict) else {}
+    screening_payload = persisted.get("screening") if isinstance(persisted, dict) else {}
+
+    if isinstance(strategy_payload, dict):
+        for key in ("research_need", "selected_databases", "latest_task_id", "plan"):
+            if key in strategy_payload:
+                profile["strategy"][key] = strategy_payload.get(key)
+        profile["strategy"]["model"] = _merge_model_settings(_default_strategy_model_payload(), strategy_payload.get("model"))
+
+    if isinstance(screening_payload, dict):
+        for key in (
+            "topic",
+            "criteria_markdown",
+            "inclusion",
+            "exclusion",
+            "batch_size",
+            "target_include_count",
+            "stop_when_target_reached",
+            "allow_uncertain",
+            "retry_times",
+            "request_timeout_seconds",
+            "encoding",
+        ):
+            if key in screening_payload:
+                profile["screening"][key] = screening_payload.get(key)
+        profile["screening"]["model"] = _merge_model_settings(_default_screening_model_payload(), screening_payload.get("model"))
+
+    if isinstance(persisted, dict) and persisted.get("last_updated_at"):
+        profile["last_updated_at"] = persisted["last_updated_at"]
+
+    tasks = project_tasks if project_tasks is not None else [task for task in TASK_STORE.list_tasks() if _task_project_id(task) == project["id"]]
+    strategy_task = next((task for task in tasks if task.get("kind") == "strategy"), None)
+    screening_task = next((task for task in tasks if task.get("kind") == "screening"), None)
+
+    if strategy_task:
+        request_payload = strategy_task.get("metadata", {}).get("request_payload") or {}
+        if not strategy_payload or not strategy_payload.get("research_need"):
+            profile["strategy"]["research_need"] = request_payload.get("research_need", profile["strategy"]["research_need"])
+        if not strategy_payload or not strategy_payload.get("selected_databases"):
+            profile["strategy"]["selected_databases"] = request_payload.get("selected_databases", profile["strategy"]["selected_databases"])
+        if not strategy_payload or not strategy_payload.get("model"):
+            profile["strategy"]["model"] = _merge_model_settings(_default_strategy_model_payload(), request_payload.get("model"))
+        if not strategy_payload or not strategy_payload.get("latest_task_id"):
+            profile["strategy"]["latest_task_id"] = strategy_task["id"]
+        if not strategy_payload or not strategy_payload.get("plan"):
+            plan = _resolve_strategy_plan(strategy_task)
+            if plan is not None:
+                plan_payload = plan.model_dump(mode="json")
+                profile["strategy"]["plan"] = plan_payload
+                if not screening_payload or not screening_payload.get("topic"):
+                    profile["screening"]["topic"] = plan_payload.get("screening_topic") or plan_payload.get("topic") or profile["screening"]["topic"]
+                if not screening_payload or not screening_payload.get("inclusion"):
+                    profile["screening"]["inclusion"] = plan_payload.get("inclusion", [])
+                if not screening_payload or not screening_payload.get("exclusion"):
+                    profile["screening"]["exclusion"] = plan_payload.get("exclusion", [])
+
+    if screening_task:
+        request_payload = screening_task.get("metadata", {}).get("request_payload") or {}
+        if not screening_payload or not screening_payload.get("topic"):
+            profile["screening"]["topic"] = request_payload.get("topic", profile["screening"]["topic"])
+        if not screening_payload or not screening_payload.get("criteria_markdown"):
+            profile["screening"]["criteria_markdown"] = request_payload.get("criteria_markdown", profile["screening"]["criteria_markdown"])
+        if not screening_payload or not screening_payload.get("inclusion"):
+            profile["screening"]["inclusion"] = request_payload.get("inclusion", profile["screening"]["inclusion"])
+        if not screening_payload or not screening_payload.get("exclusion"):
+            profile["screening"]["exclusion"] = request_payload.get("exclusion", profile["screening"]["exclusion"])
+        if not screening_payload or not screening_payload.get("model"):
+            profile["screening"]["model"] = _merge_model_settings(_default_screening_model_payload(), {
+                "provider": request_payload.get("provider"),
+                "model_name": request_payload.get("model_name"),
+                "api_base_url": request_payload.get("api_base_url"),
+                "api_key_env": request_payload.get("api_key_env"),
+                "temperature": request_payload.get("temperature"),
+                "max_tokens": request_payload.get("max_tokens"),
+                "min_request_interval_seconds": request_payload.get("min_request_interval_seconds"),
+            })
+        for key in ("batch_size", "target_include_count", "stop_when_target_reached", "allow_uncertain", "retry_times", "request_timeout_seconds", "encoding"):
+            if (not screening_payload or key not in screening_payload) and key in request_payload:
+                profile["screening"][key] = request_payload.get(key)
+
+    if not profile["screening"]["topic"]:
+        profile["screening"]["topic"] = project.get("topic", "") or ""
+    if not profile["screening"]["criteria_markdown"] and (
+        profile["screening"]["topic"] or profile["screening"]["inclusion"] or profile["screening"]["exclusion"]
+    ):
+        profile["screening"]["criteria_markdown"] = _criteria_to_markdown(
+            profile["screening"]["topic"],
+            profile["screening"]["inclusion"],
+            profile["screening"]["exclusion"],
+        )
+    return profile
+
+
+def _persist_thread_profile(
+    project_id: str,
+    *,
+    thread_profile: dict,
+    name: str | None = None,
+    topic: str | None = None,
+    description: str | None = None,
+) -> dict:
+    now = datetime.now().astimezone().isoformat()
+    changes = {
+        "thread_profile": thread_profile | {"last_updated_at": now},
+    }
+    if name is not None:
+        changes["name"] = name
+    if topic is not None:
+        changes["topic"] = topic
+    if description is not None:
+        changes["description"] = description
+    return WORKSPACE_STORE.update_project(project_id, **changes)
 
 
 @app.get("/api/meta")
@@ -76,32 +281,27 @@ def meta() -> dict:
         ],
         "acceptedInputFormats": [".bib", ".ris", ".enw", ".txt"],
         "strategyDefaults": {
-            "provider": "deepseek",
-            "model_name": "deepseek-reasoner",
-            "api_base_url": "https://api.deepseek.com/v1",
-            "api_key_env": "DEEPSEEK_API_KEY",
-            "temperature": 0,
-            "max_tokens": 4096,
-            "min_request_interval_seconds": 2,
-            "databases": [
-                {"value": "scopus", "label": "Scopus 高级检索"},
-                {"value": "wos", "label": "Web of Science 高级检索"},
-                {"value": "pubmed", "label": "PubMed 高级检索"},
-                {"value": "cnki", "label": "知网高级检索（篇关摘）"},
-            ],
+            **_default_strategy_model_payload(),
+            "databases": STRATEGY_DATABASE_OPTIONS,
         },
     }
 
 
 @app.get("/api/projects", response_model=list[ProjectSnapshot])
 def list_projects() -> list[ProjectSnapshot]:
-    return [ProjectSnapshot.model_validate(item) for item in WORKSPACE_STORE.list_projects()]
+    projects = WORKSPACE_STORE.list_projects()
+    return [
+        ProjectSnapshot.model_validate(
+            item | {"thread_profile": _effective_thread_profile(item)}
+        )
+        for item in projects
+    ]
 
 
 @app.post("/api/projects", response_model=ProjectSnapshot)
 def create_project(request: ProjectCreate) -> ProjectSnapshot:
     project = WORKSPACE_STORE.create_project(name=request.name, topic=request.topic, description=request.description)
-    return ProjectSnapshot.model_validate(project | {"dataset_count": 0})
+    return ProjectSnapshot.model_validate(project | {"dataset_count": 0, "thread_profile": _effective_thread_profile(project)})
 
 
 @app.put("/api/projects/{project_id}", response_model=ProjectSnapshot)
@@ -112,7 +312,26 @@ def update_project(project_id: str, request: ProjectUpdate) -> ProjectSnapshot:
         topic=request.topic,
         description=request.description,
     )
-    return ProjectSnapshot.model_validate(project | {"dataset_count": len(WORKSPACE_STORE.list_project_datasets(project_id))})
+    return ProjectSnapshot.model_validate(
+        project | {"dataset_count": len(WORKSPACE_STORE.list_project_datasets(project_id)), "thread_profile": _effective_thread_profile(project)}
+    )
+
+
+@app.put("/api/projects/{project_id}/workflow", response_model=ProjectDetail)
+def update_project_workflow(project_id: str, request: ProjectWorkflowUpdate) -> ProjectDetail:
+    project = WORKSPACE_STORE.load_project(project_id)
+    effective_profile = _effective_thread_profile(project)
+    updated_profile = request.thread_profile.model_dump(mode="json")
+    updated_profile["last_updated_at"] = project.get("updated_at")
+    next_topic = request.topic if request.topic is not None else project.get("topic", "")
+    _persist_thread_profile(
+        project_id,
+        thread_profile=effective_profile | updated_profile,
+        name=request.name if request.name is not None else project.get("name"),
+        topic=next_topic,
+        description=request.description if request.description is not None else project.get("description"),
+    )
+    return get_project(project_id)
 
 
 @app.delete("/api/projects/{project_id}")
@@ -128,19 +347,22 @@ def delete_project(project_id: str) -> dict[str, str]:
 @app.get("/api/projects/{project_id}", response_model=ProjectDetail)
 def get_project(project_id: str) -> ProjectDetail:
     project = WORKSPACE_STORE.load_project(project_id)
-    tasks = [_to_snapshot(task) for task in TASK_STORE.list_tasks() if _task_project_id(task) == project_id]
+    project_tasks = [task for task in TASK_STORE.list_tasks() if _task_project_id(task) == project_id]
+    tasks = [_to_snapshot(task) for task in project_tasks]
     datasets = [_to_dataset_record(item) for item in WORKSPACE_STORE.list_project_datasets(project_id)]
     fulltext_queue = WORKSPACE_STORE.load_fulltext_queue(project_id)
     if not fulltext_queue.get("items") and any(dataset.kind in {"cumulative_included", "included_reviewed", "included"} for dataset in datasets):
         fulltext_queue = WORKSPACE_STORE.rebuild_fulltext_queue(project_id)
         datasets = [_to_dataset_record(item) for item in WORKSPACE_STORE.list_project_datasets(project_id)]
+    fulltext_items = _enrich_fulltext_queue_items(fulltext_queue.get("items", []), project_tasks)
     return ProjectDetail.model_validate(
         project
         | {
             "dataset_count": len(datasets),
+            "thread_profile": _effective_thread_profile(project, project_tasks=project_tasks),
             "tasks": tasks,
             "datasets": datasets,
-            "fulltext_queue": [FulltextQueueItem.model_validate(item) for item in fulltext_queue.get("items", [])],
+            "fulltext_queue": [FulltextQueueItem.model_validate(item) for item in fulltext_items],
             "fulltext_source_dataset_ids": fulltext_queue.get("source_dataset_ids", []),
         }
     )
@@ -173,6 +395,24 @@ def update_fulltext_status(project_id: str, request: FulltextStatusUpdateRequest
         status=request.status,
         note=request.note,
     )
+    queue = WORKSPACE_STORE.load_fulltext_queue(project_id)
+    WORKSPACE_STORE.rebuild_fulltext_queue(project_id, source_dataset_ids=queue.get("source_dataset_ids", []))
+    return get_project(project_id)
+
+
+@app.post("/api/projects/{project_id}/fulltext/status/batch", response_model=ProjectDetail)
+def update_fulltext_status_batch(project_id: str, request: FulltextBatchStatusUpdateRequest) -> ProjectDetail:
+    WORKSPACE_STORE.load_project(project_id)
+    paper_ids = list(dict.fromkeys(request.paper_ids))
+    if not paper_ids:
+        return get_project(project_id)
+    for paper_id in paper_ids:
+        WORKSPACE_STORE.update_fulltext_status(
+            project_id=project_id,
+            paper_id=paper_id,
+            status=request.status,
+            note=request.note,
+        )
     queue = WORKSPACE_STORE.load_fulltext_queue(project_id)
     WORKSPACE_STORE.rebuild_fulltext_queue(project_id, source_dataset_ids=queue.get("source_dataset_ids", []))
     return get_project(project_id)
@@ -445,6 +685,25 @@ def apply_bulk_review_override(task_id: str, request: BulkReviewOverrideRequest)
     return _to_detail(updated_task)
 
 
+@app.post("/api/tasks/{task_id}/review-overrides/selection", response_model=TaskDetail)
+def apply_selection_review_override(task_id: str, request: SelectionReviewOverrideRequest) -> TaskDetail:
+    if not request.paper_ids:
+        raise HTTPException(status_code=400, detail="At least one paper id is required")
+    overrides = [{"paper_id": paper_id, "decision": request.decision, "reason": request.reason} for paper_id in request.paper_ids]
+    updated_task, reviewed_dataset_ids = _apply_review_overrides(task_id, overrides)
+    TASK_STORE.append_event(
+        task_id,
+        kind="selection-manual-review",
+        message=f"Reviewed {len(request.paper_ids)} selected papers -> {request.decision}",
+        metadata={
+            "paper_ids": request.paper_ids,
+            "decision": request.decision,
+            "output_dataset_ids": reviewed_dataset_ids,
+        },
+    )
+    return _to_detail(updated_task)
+
+
 def _apply_review_overrides(task_id: str, overrides: list[dict[str, str]]) -> tuple[dict, list[str]]:
     task = _get_task_or_404(task_id)
     if task["kind"] != "screening" or task["status"] != "succeeded":
@@ -580,13 +839,18 @@ def apply_reference_override(task_id: str, request: ReferenceOverrideRequest) ->
 
 @app.post("/api/strategy/tasks", response_model=TaskSnapshot)
 def create_strategy_task(request: StrategyTaskCreate) -> TaskSnapshot:
+    requested_topic = (request.project_topic or "").strip()
+    research_need = request.research_need.strip()
+    seed_topic = requested_topic or research_need or request.title.strip()
+    requested_description = request.new_project_description.strip()
     project = _ensure_project(
         project_id=request.project_id,
         new_project_name=request.new_project_name or None,
-        topic=request.project_topic,
-        description=request.new_project_description,
+        topic=seed_topic,
+        description=requested_description or research_need,
         fallback_name=request.title,
     )
+    project_description = requested_description or project.get("description") or research_need
     api_key = (request.model.api_key or "").strip()
     secret_id = SECRET_STORE.put(api_key) if api_key else None
     task = TASK_STORE.create_task(
@@ -594,16 +858,33 @@ def create_strategy_task(request: StrategyTaskCreate) -> TaskSnapshot:
         title=request.title,
         metadata={
             "project_id": project["id"],
-            "project_topic": request.project_topic,
+            "project_topic": seed_topic,
             "model_provider": request.model.provider,
             "request_payload": request.model_dump(mode="json"),
             "model_secret_id": secret_id,
         },
     )
+    current_profile = _effective_thread_profile(project)
+    current_profile["strategy"] = {
+        **current_profile["strategy"],
+        "research_need": research_need,
+        "selected_databases": request.selected_databases,
+        "model": {
+            **_merge_model_settings(_default_strategy_model_payload(), request.model.model_dump(mode="json")),
+            "api_key": None,
+        },
+        "latest_task_id": task.task_id,
+    }
+    current_profile["last_updated_at"] = project.get("updated_at")
+    _persist_thread_profile(
+        project["id"],
+        thread_profile=current_profile,
+        description=project_description,
+    )
     payload = StrategyJobRequest(
         project_name=request.title,
-        project_topic=request.project_topic,
-        research_need=request.research_need,
+        project_topic=seed_topic,
+        research_need=research_need,
         selected_databases=request.selected_databases,
         model=ModelDraft(
             provider=request.model.provider,
@@ -632,10 +913,52 @@ def create_strategy_task(request: StrategyTaskCreate) -> TaskSnapshot:
                 progress_message=message,
             ),
         )
+        plan_payload = None
+        strategy_plan_path = Path(result.output_dir) / "strategy_plan.json"
+        if strategy_plan_path.exists():
+            try:
+                plan_payload = json.loads(strategy_plan_path.read_text(encoding="utf-8"))
+            except Exception:
+                plan_payload = None
+        latest_project = WORKSPACE_STORE.load_project(project["id"])
+        next_profile = _effective_thread_profile(latest_project)
+        generated_name = ((plan_payload or {}).get("topic") or "").strip()
+        next_topic = (plan_payload or {}).get("screening_topic") or generated_name or seed_topic
+        next_description = ((plan_payload or {}).get("intent_summary") or "").strip() or project_description
+        next_profile["strategy"] = {
+            **next_profile["strategy"],
+            "research_need": research_need,
+            "selected_databases": request.selected_databases,
+            "model": {
+                **_merge_model_settings(_default_strategy_model_payload(), request.model.model_dump(mode="json")),
+                "api_key": None,
+            },
+            "latest_task_id": stored_task.task_id,
+            "plan": plan_payload,
+        }
+        next_profile["screening"] = {
+            **next_profile["screening"],
+            "topic": next_topic,
+            "criteria_markdown": _criteria_to_markdown(
+                next_topic,
+                (plan_payload or {}).get("inclusion", []),
+                (plan_payload or {}).get("exclusion", []),
+            ),
+            "inclusion": (plan_payload or {}).get("inclusion", []),
+            "exclusion": (plan_payload or {}).get("exclusion", []),
+        }
+        next_profile["last_updated_at"] = latest_project.get("updated_at")
+        _persist_thread_profile(
+            project["id"],
+            thread_profile=next_profile,
+            name=generated_name or next_topic,
+            topic=next_topic,
+            description=next_description,
+        )
         return {
             "summary": result.summary,
             "project_id": project["id"],
-            "project_topic": request.project_topic,
+            "project_topic": next_topic,
             "model_provider": request.model.provider,
             "run_root": str(result.run_root),
             "output_dir": str(result.output_dir),
@@ -676,7 +999,7 @@ async def create_screening_task(
     max_tokens: int = Form(1536),
     min_request_interval_seconds: float = Form(2.0),
     batch_size: int = Form(10),
-    target_include_count: int = Form(9999),
+    target_include_count: str = Form(""),
     stop_when_target_reached: bool = Form(False),
     allow_uncertain: bool = Form(True),
     retry_times: int = Form(6),
@@ -692,7 +1015,26 @@ async def create_screening_task(
     inclusion = json.loads(inclusion_json)
     exclusion = json.loads(exclusion_json)
     source_dataset_ids = json.loads(source_dataset_ids_json)
-    project = _ensure_project(project_id=project_id, new_project_name=new_project_name, topic=topic, description=new_project_description, fallback_name=title)
+    target_include_count_value = int(target_include_count) if str(target_include_count).strip() else None
+    project = _ensure_project(
+        project_id=project_id,
+        new_project_name=new_project_name,
+        topic=topic,
+        description=new_project_description,
+        fallback_name=title,
+    )
+    effective_profile = _effective_thread_profile(project)
+    effective_topic = topic.strip() or effective_profile["screening"].get("topic") or project.get("topic", "")
+    effective_inclusion = inclusion or effective_profile["screening"].get("inclusion") or []
+    effective_exclusion = exclusion or effective_profile["screening"].get("exclusion") or []
+    effective_criteria_markdown = criteria_markdown.strip() or effective_profile["screening"].get("criteria_markdown") or _criteria_to_markdown(
+        effective_topic,
+        effective_inclusion,
+        effective_exclusion,
+    )
+    effective_batch_size = batch_size or effective_profile["screening"].get("batch_size") or 10
+    effective_target_include_count = target_include_count_value
+    effective_stop_when_target_reached = stop_when_target_reached and effective_target_include_count is not None
 
     input_paths: list[Path] = []
     for dataset_id in source_dataset_ids:
@@ -705,16 +1047,16 @@ async def create_screening_task(
         title=title,
         metadata={
             "project_id": project["id"],
-            "project_topic": topic,
+            "project_topic": effective_topic,
             "model_provider": provider,
             "parent_task_id": parent_task_id,
             "input_dataset_ids": source_dataset_ids,
             "request_payload": {
                 "title": title,
-                "topic": topic,
-                "criteria_markdown": criteria_markdown,
-                "inclusion": inclusion,
-                "exclusion": exclusion,
+                "topic": effective_topic,
+                "criteria_markdown": effective_criteria_markdown,
+                "inclusion": effective_inclusion,
+                "exclusion": effective_exclusion,
                 "provider": provider,
                 "model_name": model_name,
                 "api_base_url": api_base_url,
@@ -722,9 +1064,9 @@ async def create_screening_task(
                 "temperature": temperature,
                 "max_tokens": max_tokens,
                 "min_request_interval_seconds": min_request_interval_seconds,
-                "batch_size": batch_size,
-                "target_include_count": target_include_count,
-                "stop_when_target_reached": stop_when_target_reached,
+                "batch_size": effective_batch_size,
+                "target_include_count": effective_target_include_count,
+                "stop_when_target_reached": effective_stop_when_target_reached,
                 "allow_uncertain": allow_uncertain,
                 "retry_times": retry_times,
                 "request_timeout_seconds": request_timeout_seconds,
@@ -755,7 +1097,7 @@ async def create_screening_task(
     payload = ScreeningJobRequest(
         project_name=title,
         input_paths=input_paths,
-        criteria=CriteriaDraft(topic=topic, inclusion=inclusion, exclusion=exclusion),
+        criteria=CriteriaDraft(topic=effective_topic, inclusion=effective_inclusion, exclusion=effective_exclusion),
         model=ModelDraft(
             provider=provider,
             model_name=model_name,
@@ -768,9 +1110,9 @@ async def create_screening_task(
         ),
         runs_root=API_RUNS_ROOT / "runs",
         storage_root=API_RUNS_ROOT,
-        batch_size=batch_size,
-        target_include_count=target_include_count,
-        stop_when_target_reached=stop_when_target_reached,
+        batch_size=effective_batch_size,
+        target_include_count=effective_target_include_count or 9999,
+        stop_when_target_reached=effective_stop_when_target_reached,
         allow_uncertain=allow_uncertain,
         retry_times=retry_times,
         request_timeout_seconds=request_timeout_seconds,
@@ -810,7 +1152,7 @@ async def create_screening_task(
         return {
             "summary": result.summary,
             "project_id": project["id"],
-            "project_topic": topic,
+            "project_topic": effective_topic,
             "model_provider": provider,
             "parent_task_id": parent_task_id,
             "input_dataset_ids": source_dataset_ids,
@@ -1277,6 +1619,88 @@ def _task_project_id(task: dict) -> str | None:
     return task.get("project_id") or task.get("metadata", {}).get("project_id")
 
 
+def _safe_confidence(value: Any) -> float | str | None:
+    if value is None or value == "":
+        return None
+    if isinstance(value, (int, float)):
+        return float(value)
+    if isinstance(value, str):
+        stripped = value.strip()
+        if not stripped:
+            return None
+        try:
+            return float(stripped)
+        except ValueError:
+            return stripped
+    return None
+
+
+def _screening_context_doi(value: Any) -> str | None:
+    if value is None:
+        return None
+    text = str(value).strip()
+    if not text:
+        return None
+    normalized = re.sub(r"^https?://(?:dx\.)?doi\.org/", "", text, flags=re.IGNORECASE)
+    return normalized.lower()
+
+
+def _screening_context_keys(*, title: Any, doi: Any, year: Any) -> list[str]:
+    keys: list[str] = []
+    normalized_doi = _screening_context_doi(doi)
+    if normalized_doi:
+        keys.append(f"doi:{normalized_doi}")
+
+    title_text = str(title).strip() if title else ""
+    normalized_title = normalize_title(title_text) if title_text else ""
+    year_text = str(year).strip() if year not in (None, "") else ""
+    if normalized_title and year_text:
+        keys.append(f"title-year:{normalized_title}|{year_text}")
+    if normalized_title:
+        keys.append(f"title:{normalized_title}")
+    return keys
+
+
+def _latest_screening_record_context(project_tasks: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
+    screening_tasks = [task for task in project_tasks if task.get("kind") == "screening"]
+    screening_tasks.sort(key=lambda item: (item.get("updated_at") or item.get("created_at") or ""), reverse=True)
+
+    context: dict[str, dict[str, Any]] = {}
+    for task in screening_tasks:
+        for row in task.get("records", []) or []:
+            entry = {
+                "confidence": _safe_confidence(row.get("confidence")),
+                "screening_decision": row.get("decision"),
+                "screening_reason": row.get("reason") or "",
+            }
+            for key in _screening_context_keys(title=row.get("title"), doi=row.get("doi"), year=row.get("year")):
+                context.setdefault(key, entry)
+    return context
+
+
+def _enrich_fulltext_queue_items(items: list[dict[str, Any]], project_tasks: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    record_context = _latest_screening_record_context(project_tasks)
+    enriched: list[dict[str, Any]] = []
+    for item in items:
+        context: dict[str, Any] = {}
+        for key in _screening_context_keys(title=item.get("title"), doi=item.get("doi"), year=item.get("year")):
+            if key in record_context:
+                context = record_context[key]
+                break
+        latest_decision = context.get("screening_decision")
+        if latest_decision in {"exclude", "uncertain"}:
+            continue
+        enriched.append(
+            item
+            | {
+                "confidence": context.get("confidence", item.get("confidence")),
+                "screening_decision": context.get("screening_decision", item.get("screening_decision")),
+                "screening_reason": context.get("screening_reason", item.get("screening_reason", "")),
+            }
+        )
+    return enriched
+
+
 def _to_snapshot(task: dict) -> TaskSnapshot:
     artifacts = [_artifact_from_entry(key, value) for key, value in task.get("artifacts", {}).items()]
     return TaskSnapshot(
@@ -1569,6 +1993,9 @@ def _screening_request_from_task(task: dict) -> ScreeningJobRequest:
     metadata = task.get("metadata", {})
     payload = metadata.get("request_payload", {})
     api_key = SECRET_STORE.get(metadata.get("model_secret_id"))
+    target_include_count = payload.get("target_include_count")
+    effective_target_include_count = int(target_include_count) if target_include_count is not None else 9999
+    effective_stop_when_target_reached = bool(payload.get("stop_when_target_reached")) and target_include_count is not None
     input_paths = [Path(item) for item in metadata.get("uploaded_input_paths", [])]
     for dataset_id in payload.get("source_dataset_ids", []):
         dataset = _require_dataset(dataset_id)
@@ -1595,8 +2022,8 @@ def _screening_request_from_task(task: dict) -> ScreeningJobRequest:
         storage_root=API_RUNS_ROOT,
         run_root_override=(TASK_STORE.tasks_dir / task["id"] / "screening_run"),
         batch_size=payload["batch_size"],
-        target_include_count=payload["target_include_count"],
-        stop_when_target_reached=payload["stop_when_target_reached"],
+        target_include_count=effective_target_include_count,
+        stop_when_target_reached=effective_stop_when_target_reached,
         allow_uncertain=payload["allow_uncertain"],
         retry_times=payload["retry_times"],
         request_timeout_seconds=payload["request_timeout_seconds"],

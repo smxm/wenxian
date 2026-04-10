@@ -13,7 +13,7 @@ export type DatasetKind =
   | 'report_source'
   | string
 export type StrategyDatabase = 'scopus' | 'wos' | 'pubmed' | 'cnki'
-export type FulltextStatus = 'pending' | 'ready' | 'unavailable' | 'deferred'
+export type FulltextStatus = 'pending' | 'ready' | 'excluded' | 'unavailable' | 'deferred'
 
 export interface ProviderPreset {
   provider: ProviderName
@@ -32,6 +32,7 @@ export interface MetaPayload {
     model_name: string
     api_base_url: string
     api_key_env: string
+    api_key?: string | null
     temperature: number
     max_tokens: number
     min_request_interval_seconds: number
@@ -39,11 +40,41 @@ export interface MetaPayload {
   }
 }
 
+export interface ThreadStrategySettings {
+  research_need: string
+  selected_databases: StrategyDatabase[]
+  model?: ModelSettings | null
+  latest_task_id?: string | null
+  plan?: StrategyPlan | null
+}
+
+export interface ThreadScreeningSettings {
+  topic: string
+  criteria_markdown: string
+  inclusion: string[]
+  exclusion: string[]
+  model?: ModelSettings | null
+  batch_size: number
+  target_include_count?: number | null
+  stop_when_target_reached: boolean
+  allow_uncertain: boolean
+  retry_times: number
+  request_timeout_seconds: number
+  encoding: string
+}
+
+export interface ThreadProfile {
+  strategy: ThreadStrategySettings
+  screening: ThreadScreeningSettings
+  last_updated_at?: string | null
+}
+
 export interface ProjectSnapshot {
   id: string
   name: string
   topic: string
   description: string
+  thread_profile?: ThreadProfile | null
   created_at: string
   updated_at: string
   dataset_count: number
@@ -72,6 +103,9 @@ export interface FulltextQueueItem {
   year?: number | null
   journal?: string | null
   doi?: string | null
+  confidence?: number | string | null
+  screening_decision?: string | null
+  screening_reason?: string | null
   doi_url?: string | null
   landing_url?: string | null
   pdf_url?: string | null
@@ -185,7 +219,7 @@ export interface ScreeningFormPayload {
   exclusion: string[]
   model: ModelSettings
   batch_size: number
-  target_include_count: number
+  target_include_count?: number | null
   stop_when_target_reached: boolean
   allow_uncertain: boolean
   retry_times: number
@@ -230,10 +264,17 @@ export interface StrategyFormPayload {
   project_id?: string | null
   new_project_name?: string
   new_project_description?: string
-  project_topic: string
+  project_topic?: string
   research_need: string
   selected_databases: StrategyDatabase[]
   model: ModelSettings
   retry_times: number
   timeout_seconds: number
+}
+
+export interface ProjectWorkflowPayload {
+  name?: string | null
+  topic?: string | null
+  description?: string | null
+  thread_profile: ThreadProfile
 }

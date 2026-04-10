@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { applyBulkReviewOverride, applyReferenceOverride, applyReviewOverride, cancelTask, createReportTask, createScreeningTask, createStrategyTask, fetchTask, fetchTasks, retryTask } from '@/api/client'
+import { applyBulkReviewOverride, applyReferenceOverride, applyReviewOverride, applySelectionReviewOverride, cancelTask, createReportTask, createScreeningTask, createStrategyTask, fetchTask, fetchTasks, retryTask } from '@/api/client'
 import type { ReportFormPayload, ScreeningFormPayload, StrategyFormPayload, TaskDetail, TaskSnapshot } from '@/types/api'
 
 export const useTasksStore = defineStore('tasks', {
@@ -155,6 +155,16 @@ export const useTasksStore = defineStore('tasks', {
       this.submitting = true
       try {
         this.currentTask = await applyBulkReviewOverride(taskId, payload)
+        await this.refreshList()
+        return this.currentTask
+      } finally {
+        this.submitting = false
+      }
+    },
+    async bulkReviewSelection(taskId: string, payload: { paper_ids: string[]; decision: 'include' | 'exclude' | 'uncertain'; reason: string }) {
+      this.submitting = true
+      try {
+        this.currentTask = await applySelectionReviewOverride(taskId, payload)
         await this.refreshList()
         return this.currentTask
       } finally {

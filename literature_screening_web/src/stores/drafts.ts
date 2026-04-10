@@ -18,7 +18,7 @@ export interface ScreeningDraftState {
   provider: 'deepseek' | 'kimi'
   model: ModelSettings
   batchSize: number
-  targetIncludeCount: number
+  targetIncludeCount: number | null
   stopWhenReached: boolean
   allowUncertain: boolean
   retryTimes: number
@@ -75,8 +75,8 @@ function createDefaultScreeningDraft(): ScreeningDraftState {
       min_request_interval_seconds: 2
     },
     batchSize: 10,
-    targetIncludeCount: 30,
-    stopWhenReached: true,
+    targetIncludeCount: null,
+    stopWhenReached: false,
     allowUncertain: true,
     retryTimes: 6,
     requestTimeout: 240,
@@ -151,6 +151,15 @@ export const useDraftsStore = defineStore('drafts', {
           state.screeningDraft.inclusion.some(Boolean) ||
           state.screeningDraft.exclusion.some(Boolean) ||
           state.screeningFiles.length
+      ),
+    hasStrategyDraft: (state) =>
+      Boolean(
+        state.strategyDraft.newProjectName.trim() ||
+          state.strategyDraft.newProjectDescription.trim() ||
+          state.strategyDraft.researchNeed.trim() ||
+          state.strategyDraft.retryTimes !== createDefaultStrategyDraft().retryTimes ||
+          state.strategyDraft.timeoutSeconds !== createDefaultStrategyDraft().timeoutSeconds ||
+          state.strategyDraft.selectedDatabases.join('|') !== createDefaultStrategyDraft().selectedDatabases.join('|')
       )
   },
   actions: {

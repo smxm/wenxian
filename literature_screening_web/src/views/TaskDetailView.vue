@@ -1,36 +1,29 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
+import { RouterLink, useRoute, useRouter } from 'vue-router'
 import dayjs from 'dayjs'
-import { FileText, RefreshCw, RotateCcw, Square } from 'lucide-vue-next'
+import { ArrowLeft, BookOpenText, FileText, RefreshCw, RotateCcw, Square } from 'lucide-vue-next'
 import {
   NAlert,
   NButton,
   NCard,
-  NDivider,
-  NForm,
-  NFormItem,
-  NGrid,
-  NGridItem,
   NInput,
-  NInputNumber,
   NProgress,
-  NSelect,
   NSpace,
   NSpin,
+  NTag,
   NText,
   useMessage
 } from 'naive-ui'
 import ArtifactList from '@/components/ArtifactList.vue'
 import MarkdownArticle from '@/components/MarkdownArticle.vue'
 import OverviewMetric from '@/components/OverviewMetric.vue'
-import ScreeningRecordsTable from '@/components/ScreeningRecordsTable.vue'
 import StatusPill from '@/components/StatusPill.vue'
-import { useDraftsStore } from '@/stores/drafts'
 import { useMetaStore } from '@/stores/meta'
+import { useDraftsStore } from '@/stores/drafts'
 import { useProjectsStore } from '@/stores/projects'
 import { useTasksStore } from '@/stores/tasks'
-import type { ScreeningRecordRow } from '@/types/api'
+import type { DatasetRecord, ScreeningRecordRow } from '@/types/api'
 
 const route = useRoute()
 const router = useRouter()
@@ -44,44 +37,18 @@ const taskId = computed(() => String(route.params.taskId))
 const task = computed(() => tasksStore.currentTask)
 const isRunning = computed(() => task.value?.status === 'running' || task.value?.status === 'pending')
 const isRetriableTask = computed(() => task.value?.status === 'failed' || task.value?.status === 'cancelled')
-const reportDraft = computed(() => draftsStore.getReportDraft(taskId.value))
 const selectedRecord = ref<ScreeningRecordRow | null>(null)
+const selectedPaperIds = ref<string[]>([])
 const reviewDecision = ref<'include' | 'exclude' | 'uncertain'>('include')
 const reviewReason = ref('')
 const bulkReviewDecision = ref<'include' | 'exclude' | 'uncertain'>('exclude')
-const bulkReviewReason = ref('人工复核：批量剔除')
+const bulkReviewReason = ref('人工复核：批量修正')
 const bulkReviewText = ref('')
 const referenceOverrideText = ref('')
-const taskDatasetMap = computed(() => {
-  const map = new Map()
-  for (const dataset of projectsStore.currentProject?.datasets ?? []) {
-    map.set(dataset.id, dataset)
-  }
-  return map
-})
-const originalIncludedDataset = computed(() => {
-  if (task.value?.kind !== 'screening') return null
-  const matches = task.value.output_dataset_ids
-    .map((datasetId) => taskDatasetMap.value.get(datasetId) ?? null)
-    .filter((dataset) => dataset?.kind === 'included')
-  return matches.length ? matches[matches.length - 1] : null
-})
-const reviewedIncludedDataset = computed(() => {
-  if (task.value?.kind !== 'screening') return null
-  const matches = task.value.output_dataset_ids
-    .map((datasetId) => taskDatasetMap.value.get(datasetId) ?? null)
-    .filter((dataset) => dataset?.kind === 'included_reviewed')
-  return matches.length ? matches[matches.length - 1] : null
-})
-const reportSourceOptions = computed(() => {
-  const options: Array<{ label: string; value: 'original' | 'reviewed' }> = []
-  if (originalIncludedDataset.value) {
-    options.push({ label: `本轮原始纳入（${originalIncludedDataset.value.record_count ?? '-'} 篇）`, value: 'original' })
-  }
-  if (reviewedIncludedDataset.value) {
-    options.push({ label: `人工复核后纳入（${reviewedIncludedDataset.value.record_count ?? '-'} 篇）`, value: 'reviewed' })
-  }
-  return options
+
+const selectedRecords = computed(() => {
+  const map = new Map((task.value?.records ?? []).map((row) => [row.paper_id, row]))
+  return selectedPaperIds.value.map((paperId) => map.get(paperId)).filter((row): row is ScreeningRecordRow => Boolean(row))
 })
 
 const screeningSummary = computed<Record<string, number | string>>(() => {
@@ -102,29 +69,68 @@ const progressPercentage = computed(() => {
   if (!total || total <= 0 || current === null || current === undefined) return null
   return Math.max(0, Math.min(100, Math.round((current / total) * 100)))
 })
+const threadHomePath = computed(() => (task.value?.project_id ? `/threads/${task.value.project_id}` : null))
+const currentProject = computed(() => projectsStore.currentProject)
+const threadScreening = computed(() => currentProject.value?.thread_profile?.screening ?? null)
+
+const datasetMap = computed(() => {
+  const map = new Map<string, DatasetRecord>()
+  for (const dataset of currentProject.value?.datasets ?? []) {
+    map.set(dataset.id, dataset)
+  }
+  return map
+})
+
+function latestMatchingDataset(taskRecord: { output_dataset_ids: string[] }, kinds: string[]) {
+  const matches = taskRecord.output_dataset_ids
+    .map((datasetId) => datasetMap.value.get(datasetId) ?? null)
+    .filter((dataset): dataset is DatasetRecord => Boolean(dataset && kinds.includes(dataset.kind)))
+  return matches.length ? matches[matches.length - 1] : null
+}
+
+const includedDataset = computed(() => (task.value?.kind === 'screening' ? latestMatchingDataset(task.value, ['included_reviewed', 'included']) : null))
+const unusedDataset = computed(() => (task.value?.kind === 'screening' ? latestMatchingDataset(task.value, ['unused']) : null))
+const excludedDataset = computed(() => (task.value?.kind === 'screening' ? latestMatchingDataset(task.value, ['excluded_reviewed', 'excluded']) : null))
+
+const sourceSummary = computed(() => {
+  if (!task.value?.input_dataset_ids.length) return task.value?.parent_task_id ? '延续上一轮未处理文献' : '新上传文献'
+  return task.value.input_dataset_ids
+    .map((datasetId) => datasetMap.value.get(datasetId)?.label ?? datasetId)
+    .join(' + ')
+})
+
+const continueUnusedRoute = computed(() => {
+  if (!task.value?.project_id || !unusedDataset.value) return null
+  return `/threads/${task.value.project_id}/screening/new?sourceDatasetId=${unusedDataset.value.id}&parentTaskId=${task.value.id}`
+})
 
 watch(
   () => task.value,
   (nextTask) => {
     if (!nextTask || nextTask.kind !== 'screening') return
-    const draft = draftsStore.getReportDraft(nextTask.id)
-    if (!draft.projectTopic && nextTask.project_topic) {
-      draftsStore.updateReportDraft(nextTask.id, { projectTopic: nextTask.project_topic })
-    }
-    if (!draft.title || draft.title === `${nextTask.id}-report`) {
-      draftsStore.updateReportDraft(nextTask.id, { title: `${nextTask.title}-report` })
-    }
-    if (reviewedIncludedDataset.value && draft.sourceMode !== 'reviewed') {
-      draftsStore.updateReportDraft(nextTask.id, { sourceMode: 'reviewed' })
-    }
     if (!selectedRecord.value && nextTask.records.length) {
       selectedRecord.value = nextTask.records[0]
       reviewDecision.value = nextTask.records[0].decision as 'include' | 'exclude' | 'uncertain'
       reviewReason.value = nextTask.records[0].reason || ''
     }
+    if (!selectedPaperIds.value.length && nextTask.records.length) {
+      selectedPaperIds.value = [nextTask.records[0].paper_id]
+    }
   },
   { immediate: true }
 )
+
+watch(selectedPaperIds, (nextPaperIds) => {
+  if (!nextPaperIds.length) return
+  if (nextPaperIds.length === 1) {
+    const row = task.value?.records.find((item) => item.paper_id === nextPaperIds[0]) ?? null
+    if (row) {
+      selectedRecord.value = row
+      reviewDecision.value = row.decision as 'include' | 'exclude' | 'uncertain'
+      reviewReason.value = row.reason || ''
+    }
+  }
+})
 
 onMounted(async () => {
   draftsStore.hydrate()
@@ -138,6 +144,7 @@ onMounted(async () => {
 watch(taskId, async (nextTaskId, prevTaskId) => {
   if (!nextTaskId || nextTaskId === prevTaskId) return
   selectedRecord.value = null
+  selectedPaperIds.value = []
   await tasksStore.loadTask(nextTaskId)
   if (tasksStore.currentTask?.project_id) {
     await projectsStore.loadProject(tasksStore.currentTask.project_id)
@@ -148,6 +155,10 @@ function handleSelectRecord(row: ScreeningRecordRow) {
   selectedRecord.value = row
   reviewDecision.value = row.decision as 'include' | 'exclude' | 'uncertain'
   reviewReason.value = row.reason || ''
+}
+
+function handleSelectionChange(paperIds: string[]) {
+  selectedPaperIds.value = paperIds
 }
 
 async function refreshCurrentTask() {
@@ -166,6 +177,14 @@ async function cancelCurrentTask() {
   message.success('已请求停止当前任务')
 }
 
+async function reloadAfterReview() {
+  if (!task.value) return
+  await tasksStore.loadTask(task.value.id, true)
+  if (task.value.project_id) {
+    await projectsStore.loadProject(task.value.project_id)
+  }
+}
+
 async function submitReviewOverride() {
   if (!task.value || !selectedRecord.value) return
   await tasksStore.review(task.value.id, {
@@ -173,13 +192,19 @@ async function submitReviewOverride() {
     decision: reviewDecision.value,
     reason: reviewReason.value
   })
-  await tasksStore.loadTask(task.value.id, true)
-  if (task.value.project_id) {
-    await projectsStore.loadProject(task.value.project_id)
-  }
-  selectedRecord.value =
-    tasksStore.currentTask?.records.find((row) => row.paper_id === selectedRecord.value?.paper_id) ?? null
+  await reloadAfterReview()
   message.success('人工审核结果已保存')
+}
+
+async function submitSelectionReviewOverride() {
+  if (!task.value || !selectedPaperIds.value.length) return
+  await tasksStore.bulkReviewSelection(task.value.id, {
+    paper_ids: selectedPaperIds.value,
+    decision: bulkReviewDecision.value,
+    reason: bulkReviewReason.value
+  })
+  await reloadAfterReview()
+  message.success(`已批量更新 ${selectedPaperIds.value.length} 篇文献`)
 }
 
 async function submitBulkReviewOverride() {
@@ -189,50 +214,9 @@ async function submitBulkReviewOverride() {
     decision: bulkReviewDecision.value,
     reason: bulkReviewReason.value
   })
-  await tasksStore.loadTask(task.value.id, true)
-  if (task.value.project_id) {
-    await projectsStore.loadProject(task.value.project_id)
-  }
-  selectedRecord.value = tasksStore.currentTask?.records[0] ?? null
-  if (selectedRecord.value) {
-    reviewDecision.value = selectedRecord.value.decision as 'include' | 'exclude' | 'uncertain'
-    reviewReason.value = selectedRecord.value.reason || ''
-  }
+  await reloadAfterReview()
   bulkReviewText.value = ''
-  message.success('批量人工修正已应用')
-}
-
-async function submitReport() {
-  if (!task.value) return
-  const preset = metaStore.providerPresets.find((item) => item.provider === 'deepseek') ?? metaStore.providerPresets[0]
-  const useReviewedSource = reportDraft.value.sourceMode === 'reviewed' && Boolean(reviewedIncludedDataset.value?.id)
-  const created = await tasksStore.submitReport({
-    title: reportDraft.value.title,
-    screening_task_id: useReviewedSource ? null : task.value.id,
-    dataset_ids: useReviewedSource && reviewedIncludedDataset.value?.id ? [reviewedIncludedDataset.value.id] : [],
-    project_topic: reportDraft.value.projectTopic,
-    report_name: reportDraft.value.reportName,
-    retry_times: reportDraft.value.retryTimes,
-    timeout_seconds: reportDraft.value.timeoutSeconds,
-    reference_style: reportDraft.value.referenceStyle,
-    model: {
-      provider: preset.provider,
-      model_name: preset.defaultModel,
-      api_base_url: preset.defaultBaseUrl,
-      api_key_env: preset.defaultApiKeyEnv,
-      api_key: draftsStore.getProviderApiKey(preset.provider),
-      temperature: 0,
-      max_tokens: 1536,
-      min_request_interval_seconds: 2
-    }
-  })
-  draftsStore.clearReportDraft(task.value.id)
-  message.success('简洁报告任务已创建')
-  await router.push(`/tasks/${created.id}`)
-}
-
-function patchReportDraft(patch: Record<string, unknown>) {
-  draftsStore.updateReportDraft(taskId.value, patch)
+  message.success('按标题批量修正已应用')
 }
 
 async function submitReferenceOverride() {
@@ -240,9 +224,16 @@ async function submitReferenceOverride() {
   await tasksStore.reviewReferences(task.value.id, referenceOverrideText.value)
   message.success('参考列表已按报告顺序重排，并生成修正版报告')
 }
+
 async function useStrategyForScreening() {
   if (!task.value || task.value.kind !== 'strategy') return
-  await router.push(`/screening/new?projectId=${task.value.project_id ?? ''}&strategyTaskId=${task.value.id}`)
+  if (!task.value.project_id) return
+  await router.push(`/threads/${task.value.project_id}/screening/new?strategyTaskId=${task.value.id}`)
+}
+
+async function goToFulltextWorkspace() {
+  if (!task.value?.project_id) return
+  await router.push(`/threads/${task.value.project_id}/fulltext?screeningTaskId=${task.value.id}`)
 }
 </script>
 
@@ -250,34 +241,32 @@ async function useStrategyForScreening() {
   <div v-if="task" class="task-detail-view">
     <section class="task-hero panel-surface">
       <div>
-        <div class="eyebrow">{{ task.kind === 'strategy' ? 'Strategy Task' : task.kind === 'screening' ? 'Screening Task' : 'Report Task' }}</div>
+        <div class="eyebrow">{{ task.kind === 'strategy' ? 'Thread Plan' : task.kind === 'screening' ? 'Screening Round' : 'Report Task' }}</div>
         <h1>{{ task.title }}</h1>
         <div class="hero-meta">
           <StatusPill :status="task.status" />
           <NText depth="3">阶段：{{ task.phase_label || task.phase }}</NText>
           <NText depth="3">尝试次数：{{ task.attempt_count }}</NText>
           <NText depth="3">更新时间：{{ dayjs(task.updated_at).format('YYYY-MM-DD HH:mm:ss') }}</NText>
-          <NText depth="3" v-if="task.project_id">项目：{{ task.project_id }}</NText>
-          <NText depth="3" v-if="task.parent_task_id">父任务：{{ task.parent_task_id }}</NText>
         </div>
       </div>
       <NSpace>
+        <RouterLink v-if="threadHomePath" :to="threadHomePath">
+          <NButton tertiary>
+            <template #icon><ArrowLeft :size="16" /></template>
+            返回线程主页
+          </NButton>
+        </RouterLink>
         <NButton tertiary @click="refreshCurrentTask">
-          <template #icon>
-            <RefreshCw :size="16" />
-          </template>
+          <template #icon><RefreshCw :size="16" /></template>
           刷新
         </NButton>
         <NButton v-if="isRetriableTask" tertiary @click="retryCurrentTask">
-          <template #icon>
-            <RotateCcw :size="16" />
-          </template>
+          <template #icon><RotateCcw :size="16" /></template>
           继续执行
         </NButton>
         <NButton v-if="isRunning" tertiary @click="cancelCurrentTask">
-          <template #icon>
-            <Square :size="14" />
-          </template>
+          <template #icon><Square :size="14" /></template>
           停止当前任务
         </NButton>
       </NSpace>
@@ -291,9 +280,7 @@ async function useStrategyForScreening() {
       <div class="progress-stack">
         <div class="progress-head">
           <div class="progress-label">{{ task.phase_label || task.phase }}</div>
-          <div class="progress-meta" v-if="task.progress_total">
-            {{ task.progress_current || 0 }}/{{ task.progress_total }}
-          </div>
+          <div class="progress-meta" v-if="task.progress_total">{{ task.progress_current || 0 }}/{{ task.progress_total }}</div>
         </div>
         <NProgress
           type="line"
@@ -317,19 +304,15 @@ async function useStrategyForScreening() {
         <OverviewMetric label="排除标准" :value="task.strategy_plan?.exclusion.length ?? 0" />
       </section>
 
-      <NCard title="检索与筛选方案" class="panel-surface">
+      <NCard title="线程方案" class="panel-surface">
         <div v-if="task.strategy_plan" class="strategy-stack">
           <div class="strategy-section">
             <div class="lineage-label">研究主题</div>
             <div class="lineage-value">{{ task.strategy_plan.topic }}</div>
           </div>
           <div class="strategy-section">
-            <div class="lineage-label">建议用于初筛的研究主题</div>
+            <div class="lineage-label">建议用于初筛的线程主题</div>
             <div class="lineage-value">{{ task.strategy_plan.screening_topic }}</div>
-          </div>
-          <div class="strategy-section">
-            <div class="lineage-label">需求概括</div>
-            <div class="lineage-value">{{ task.strategy_plan.intent_summary }}</div>
           </div>
           <div class="strategy-grid">
             <div>
@@ -345,38 +328,15 @@ async function useStrategyForScreening() {
               </ul>
             </div>
           </div>
-          <div class="strategy-section">
-            <div class="lineage-label">数据库检索式</div>
-            <div class="search-blocks">
-              <div v-for="block in task.strategy_plan.search_blocks" :key="block.database" class="search-block">
-                <div class="search-block-head">{{ block.title }}</div>
-                <pre v-if="block.query" class="search-code">{{ block.query }}</pre>
-                <ul v-else class="bullet-list">
-                  <li v-for="line in block.lines" :key="line">{{ line }}</li>
-                </ul>
-                <ul v-if="block.notes.length" class="bullet-list note-list">
-                  <li v-for="note in block.notes" :key="note">{{ note }}</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div v-if="task.strategy_plan.caution_notes.length" class="strategy-section">
-            <div class="lineage-label">边界与注意事项</div>
-            <ul class="bullet-list">
-              <li v-for="note in task.strategy_plan.caution_notes" :key="note">{{ note }}</li>
-            </ul>
-          </div>
           <div class="report-action-row">
-            <div class="report-copy">方案确认后，可以直接把主题与筛选标准带入初筛模块继续执行。</div>
+            <div class="report-copy">如果要把当前方案直接作为新的筛选轮次起点，可以一键带入初筛页。</div>
             <NButton type="primary" @click="useStrategyForScreening">
-              <template #icon>
-                <FileText :size="16" />
-              </template>
+              <template #icon><FileText :size="16" /></template>
               带入初筛
             </NButton>
           </div>
         </div>
-        <NAlert v-else type="info" :show-icon="false">策略任务完成后，这里会展示研究主题、筛选标准和高级检索式。</NAlert>
+        <NAlert v-else type="info" :show-icon="false">线程方案完成后，这里会展示主题、筛选标准和检索式。</NAlert>
       </NCard>
 
       <MarkdownArticle v-if="task.markdown_preview" :source="task.markdown_preview" />
@@ -392,171 +352,102 @@ async function useStrategyForScreening() {
         <OverviewMetric label="已处理" :value="screeningSummary.processed_count ?? 0" />
       </section>
 
-      <NCard v-if="task.status === 'succeeded'" title="生成简洁报告" class="panel-surface">
-        <NForm label-placement="top">
-          <NGrid :cols="2" :x-gap="16" :y-gap="10" responsive="screen" item-responsive>
-            <NGridItem span="2">
-              <NFormItem label="报告任务名称">
-                <NInput
-                  :value="reportDraft.title"
-                  @update:value="(value) => patchReportDraft({ title: value })"
-                  placeholder="报告任务名称"
-                />
-              </NFormItem>
-            </NGridItem>
-            <NGridItem span="2">
-              <NFormItem label="报告主题">
-                <NInput
-                  :value="reportDraft.projectTopic"
-                  @update:value="(value) => patchReportDraft({ projectTopic: value })"
-                  placeholder="报告主题"
-                />
-              </NFormItem>
-            </NGridItem>
-            <NGridItem span="2 m:1">
-              <NFormItem label="输出目录名">
-                <NInput
-                  :value="reportDraft.reportName"
-                  @update:value="(value) => patchReportDraft({ reportName: value })"
-                  placeholder="simple_report"
-                />
-              </NFormItem>
-            </NGridItem>
-            <NGridItem span="2 m:1">
-              <NFormItem label="参考样式">
-                <NSelect
-                  :value="reportDraft.referenceStyle"
-                  @update:value="(value) => patchReportDraft({ referenceStyle: value })"
-                  :options="metaStore.referenceStyles.map((item) => ({ label: item.label, value: item.value }))"
-                />
-              </NFormItem>
-            </NGridItem>
-            <NGridItem span="2 m:1">
-              <NFormItem label="重试次数">
-                <NInputNumber
-                  :value="reportDraft.retryTimes"
-                  @update:value="(value) => patchReportDraft({ retryTimes: value ?? 6 })"
-                  :min="0"
-                  :max="10"
-                />
-              </NFormItem>
-            </NGridItem>
-            <NGridItem span="2 m:1">
-              <NFormItem label="超时（秒）">
-                <NInputNumber
-                  :value="reportDraft.timeoutSeconds"
-                  @update:value="(value) => patchReportDraft({ timeoutSeconds: value ?? 240 })"
-                  :min="60"
-                  :max="600"
-                />
-              </NFormItem>
-            </NGridItem>
-          </NGrid>
-        </NForm>
-
-        <NDivider />
-        <NFormItem label="报告来源" v-if="reportSourceOptions.length">
-          <NSelect
-            :value="reportDraft.sourceMode"
-            @update:value="(value) => patchReportDraft({ sourceMode: value })"
-            :options="reportSourceOptions"
-          />
-        </NFormItem>
+      <NCard title="下一步：进入统一复核工作台" class="panel-surface">
         <div class="report-action-row">
-          <div class="report-copy">报告任务会继承当前初筛结果，并在任务中心独立运行。</div>
-          <NButton type="primary" @click="submitReport">
-            <template #icon>
-              <FileText :size="16" />
-            </template>
-            创建简洁报告任务
+          <div class="report-copy">常规复核现在建议直接放到“统一复核工作台”里做。那里是一条连续流程，左边看候选文献流，右边直接处理筛选判定和全文状态，不再在这里重复维护筛选记录表。</div>
+          <NButton type="primary" @click="goToFulltextWorkspace" :disabled="!task.project_id">
+            <template #icon><BookOpenText :size="16" /></template>
+            去统一复核工作台
           </NButton>
         </div>
       </NCard>
 
-      <section class="review-grid">
-        <NCard title="筛选记录" class="panel-surface">
-          <ScreeningRecordsTable
-            :rows="task.records"
-            :selected-paper-id="selectedRecord?.paper_id ?? null"
-            @select="handleSelectRecord"
-          />
+      <section class="screening-overview-grid">
+        <NCard title="本轮筛选摘要" class="panel-surface">
+          <div class="screening-summary-stack">
+            <div class="summary-item">
+              <span>来源</span>
+              <strong>{{ sourceSummary }}</strong>
+            </div>
+            <div class="summary-item">
+              <span>模型</span>
+              <strong>{{ task.model_provider || '未记录' }}</strong>
+            </div>
+            <div class="summary-item">
+              <span>创建时间</span>
+              <strong>{{ dayjs(task.created_at).format('YYYY-MM-DD HH:mm:ss') }}</strong>
+            </div>
+            <div class="summary-item">
+              <span>最近更新</span>
+              <strong>{{ dayjs(task.updated_at).format('YYYY-MM-DD HH:mm:ss') }}</strong>
+            </div>
+            <div v-if="task.progress_message" class="summary-item full">
+              <span>运行备注</span>
+              <strong>{{ task.progress_message }}</strong>
+            </div>
+          </div>
+          <div class="tag-row">
+            <NTag round>纳入 {{ screeningSummary.included_count ?? 0 }}</NTag>
+            <NTag round>剔除 {{ screeningSummary.excluded_count ?? 0 }}</NTag>
+            <NTag round>不确定 {{ screeningSummary.uncertain_count ?? 0 }}</NTag>
+            <NTag v-if="includedDataset" round type="success">纳入集 {{ includedDataset.record_count ?? 0 }} 篇</NTag>
+            <NTag v-if="unusedDataset" round>未使用 {{ unusedDataset.record_count ?? 0 }} 篇</NTag>
+            <NTag v-if="excludedDataset" round type="error">剔除集 {{ excludedDataset.record_count ?? 0 }} 篇</NTag>
+          </div>
         </NCard>
 
-        <NCard title="人工审核与修正" class="panel-surface">
-          <template v-if="selectedRecord">
-            <div class="review-meta">
-              <div class="review-title">{{ selectedRecord.title }}</div>
-              <div class="review-submeta">
-                <span>{{ selectedRecord.year || '年份未知' }}</span>
-                <span>{{ selectedRecord.journal || '期刊未知' }}</span>
+        <NCard title="线程主题与标准" class="panel-surface">
+          <template v-if="threadScreening">
+            <div class="screening-summary-stack">
+              <div>
+                <div class="lineage-label">当前主题</div>
+                <div class="lineage-value">{{ threadScreening.topic }}</div>
               </div>
-            </div>
-            <div class="abstract-block">
-              <div class="abstract-label">摘要信息</div>
-              <div class="abstract-panel">
-                {{ selectedRecord.abstract || '当前记录没有可用摘要。' }}
+              <div class="strategy-grid">
+                <div>
+                  <div class="lineage-label">纳入标准</div>
+                  <ul class="bullet-list">
+                    <li v-for="item in threadScreening.inclusion" :key="item">{{ item }}</li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="lineage-label">排除标准</div>
+                  <ul class="bullet-list">
+                    <li v-for="item in threadScreening.exclusion" :key="item">{{ item }}</li>
+                  </ul>
+                </div>
               </div>
-            </div>
-            <NForm label-placement="top">
-              <NFormItem label="判定结果">
-                <NSelect
-                  v-model:value="reviewDecision"
-                  :options="[
-                    { label: '纳入', value: 'include' },
-                    { label: '剔除', value: 'exclude' },
-                    { label: '不确定', value: 'uncertain' }
-                  ]"
-                />
-              </NFormItem>
-              <NFormItem label="审核理由">
-                <NInput v-model:value="reviewReason" type="textarea" :autosize="{ minRows: 4, maxRows: 8 }" />
-              </NFormItem>
-            </NForm>
-            <NButton type="primary" @click="submitReviewOverride">保存人工审核结果</NButton>
-            <NDivider />
-            <div class="bulk-review-block">
-              <div class="abstract-label">批量人工修正</div>
-              <div class="report-copy">
-                支持整段参考文献列表，或一行一个标题。系统会自动匹配当前筛选记录并批量应用。
-              </div>
-              <NForm label-placement="top">
-                <NFormItem label="批量判定结果">
-                  <NSelect
-                    v-model:value="bulkReviewDecision"
-                    :options="[
-                      { label: '纳入', value: 'include' },
-                      { label: '剔除', value: 'exclude' },
-                      { label: '不确定', value: 'uncertain' }
-                    ]"
-                  />
-                </NFormItem>
-                <NFormItem label="批量审核理由">
-                  <NInput v-model:value="bulkReviewReason" />
-                </NFormItem>
-                <NFormItem label="标题或参考文献列表">
-                  <NInput
-                    v-model:value="bulkReviewText"
-                    type="textarea"
-                    :autosize="{ minRows: 6, maxRows: 12 }"
-                    placeholder="支持整段参考文献列表，或一行一个标题"
-                  />
-                </NFormItem>
-              </NForm>
-              <NButton type="primary" secondary @click="submitBulkReviewOverride" :disabled="!bulkReviewText.trim()">
-                一键批量应用
-              </NButton>
             </div>
           </template>
-          <NAlert v-else type="info" :show-icon="false">从左侧表格选择一篇文献后，可在这里做人工修正。</NAlert>
+          <NAlert v-else type="info" :show-icon="false">当前线程还没有固定的主题与标准快照，先回线程主页补全或重新生成线程方案。</NAlert>
         </NCard>
       </section>
+
+      <NCard title="本轮产出与后续动作" class="panel-surface">
+        <div class="summary-item">
+          <span>这页现在做什么</span>
+          <strong>这里只保留本轮摘要、主题标准和产出边界。真正的筛选改判与全文处理统一在“统一复核工作台”里完成，避免同一批记录在两个页面重复出现。</strong>
+        </div>
+        <div class="tag-row" style="margin-top: 14px;">
+          <NTag v-if="includedDataset" round type="success">可进入统一复核 {{ includedDataset.record_count ?? 0 }} 篇</NTag>
+          <NTag v-if="unusedDataset" round>可继续筛选 {{ unusedDataset.record_count ?? 0 }} 篇</NTag>
+          <NTag v-if="excludedDataset" round type="error">本轮已剔除 {{ excludedDataset.record_count ?? 0 }} 篇</NTag>
+        </div>
+        <div class="report-action-row" style="margin-top: 16px;">
+          <div class="report-copy">如果要继续处理本轮纳入文献，直接去统一复核工作台；如果这轮还有未使用文献，也可以从这里直接开启下一轮。</div>
+          <NSpace>
+            <RouterLink v-if="continueUnusedRoute" :to="continueUnusedRoute">
+              <NButton tertiary>继续筛选未使用文献</NButton>
+            </RouterLink>
+            <NButton type="primary" @click="goToFulltextWorkspace" :disabled="!task.project_id">打开统一复核工作台</NButton>
+          </NSpace>
+        </div>
+      </NCard>
     </template>
 
     <template v-else-if="task.kind === 'report'">
       <MarkdownArticle v-if="task.markdown_preview" :source="task.markdown_preview" />
-      <NAlert v-else type="info" :show-icon="false">
-        报告任务已创建。完成后这里会直接显示 Markdown 预览。
-      </NAlert>
+      <NAlert v-else type="info" :show-icon="false">报告任务已创建。完成后这里会直接显示 Markdown 预览。</NAlert>
 
       <NCard v-if="task.status === 'succeeded'" title="参考列表人工修正" class="panel-surface">
         <div class="report-copy">
@@ -580,33 +471,18 @@ async function useStrategyForScreening() {
       <ArtifactList :task-id="task.id" :artifacts="task.artifacts" />
     </NCard>
 
-    <section class="bottom-grid">
-      <NCard title="任务链与数据集" class="panel-surface">
-        <div class="lineage-grid">
-          <div>
-            <div class="lineage-label">输入数据集</div>
-            <div class="lineage-value">{{ task.input_dataset_ids.length ? task.input_dataset_ids.join('，') : '无' }}</div>
+    <NCard title="审计事件" class="panel-surface">
+      <div v-if="task.events.length" class="event-list">
+        <div v-for="event in task.events" :key="event.id" class="event-item">
+          <div class="event-head">
+            <strong>{{ event.kind }}</strong>
+            <span>{{ dayjs(event.created_at).format('YYYY-MM-DD HH:mm:ss') }}</span>
           </div>
-          <div>
-            <div class="lineage-label">输出数据集</div>
-            <div class="lineage-value">{{ task.output_dataset_ids.length ? task.output_dataset_ids.join('，') : '无' }}</div>
-          </div>
+          <div class="event-message">{{ event.message }}</div>
         </div>
-      </NCard>
-
-      <NCard title="审计事件" class="panel-surface">
-        <div v-if="task.events.length" class="event-list">
-          <div v-for="event in task.events" :key="event.id" class="event-item">
-            <div class="event-head">
-              <strong>{{ event.kind }}</strong>
-              <span>{{ dayjs(event.created_at).format('YYYY-MM-DD HH:mm:ss') }}</span>
-            </div>
-            <div class="event-message">{{ event.message }}</div>
-          </div>
-        </div>
-        <NAlert v-else type="info" :show-icon="false">当前任务还没有审计事件。</NAlert>
-      </NCard>
-    </section>
+      </div>
+      <NAlert v-else type="info" :show-icon="false">当前任务还没有审计事件。</NAlert>
+    </NCard>
   </div>
 </template>
 
@@ -649,31 +525,41 @@ h1 {
   gap: 16px;
 }
 
-.review-grid,
-.bottom-grid {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 18px;
-}
-
 .strategy-metrics {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
-.progress-stack {
+.screening-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 18px;
+}
+
+.progress-stack,
+.strategy-stack,
+.reference-override-form,
+.screening-summary-stack {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.progress-head {
+.progress-head,
+.report-action-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
 }
 
-.progress-label {
+.progress-label,
+.review-title {
   font-weight: 700;
 }
 
@@ -683,36 +569,45 @@ h1 {
   color: #5b665d;
 }
 
-.report-action-row {
+.summary-item {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-  align-items: center;
+  gap: 16px;
+  color: #5b665d;
 }
 
-.reference-override-form {
-  margin-top: 14px;
-  display: flex;
+.summary-item.full {
   flex-direction: column;
-  gap: 12px;
 }
 
-.strategy-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+.summary-item strong {
+  color: #223025;
+  text-align: right;
 }
 
-.strategy-section {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.summary-item.full strong {
+  text-align: left;
+  line-height: 1.7;
 }
 
 .strategy-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
+}
+
+.lineage-label,
+.abstract-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #708074;
+  margin-bottom: 8px;
+}
+
+.lineage-value {
+  white-space: pre-wrap;
+  line-height: 1.65;
 }
 
 .bullet-list {
@@ -722,90 +617,33 @@ h1 {
   line-height: 1.7;
 }
 
-.search-blocks {
+.review-meta,
+.bulk-review-block,
+.abstract-block {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-}
-
-.search-block {
-  padding: 14px;
-  border-radius: 14px;
-  background: rgba(241, 245, 240, 0.75);
-  border: 1px solid rgba(86, 112, 92, 0.12);
-}
-
-.search-block-head {
-  font-weight: 700;
-  margin-bottom: 8px;
-}
-
-.search-code {
-  margin: 0;
-  white-space: pre-wrap;
-  font-family: Consolas, monospace;
-  font-size: 13px;
-  line-height: 1.65;
-}
-
-.note-list {
-  margin-top: 10px;
-}
-
-.lineage-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.lineage-label {
-  font-weight: 700;
-}
-
-.lineage-value {
-  margin-top: 6px;
-  color: #5b665d;
-  word-break: break-word;
-}
-
-.review-meta {
-  margin-bottom: 12px;
-}
-
-.review-title {
-  font-weight: 700;
-  line-height: 1.5;
+  gap: 10px;
 }
 
 .review-submeta {
-  margin-top: 6px;
   display: flex;
-  gap: 12px;
-  color: #5b665d;
-  font-size: 13px;
-}
-
-.abstract-block {
-  margin-bottom: 14px;
-}
-
-.abstract-label {
-  margin-bottom: 8px;
-  font-size: 13px;
-  font-weight: 700;
-  color: #526054;
+  gap: 10px;
+  color: #6a776c;
 }
 
 .abstract-panel {
-  padding: 12px 14px;
   border-radius: 14px;
-  background: rgba(241, 245, 240, 0.85);
-  border: 1px solid rgba(86, 112, 92, 0.12);
-  color: #435046;
-  line-height: 1.7;
+  padding: 14px;
+  background: rgba(247, 249, 246, 0.94);
+  border: 1px solid rgba(71, 95, 76, 0.12);
+  line-height: 1.65;
   white-space: pre-wrap;
-  max-height: 220px;
-  overflow: auto;
+}
+
+.tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .event-list {
@@ -815,20 +653,15 @@ h1 {
 }
 
 .event-item {
-  padding-top: 12px;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-}
-
-.event-item:first-child {
-  padding-top: 0;
-  border-top: none;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgba(247, 249, 246, 0.94);
 }
 
 .event-head {
   display: flex;
   justify-content: space-between;
   gap: 12px;
-  color: #5b665d;
   font-size: 13px;
 }
 
@@ -838,24 +671,37 @@ h1 {
 
 .error-block {
   white-space: pre-wrap;
-  margin: 0;
-  font-family: Consolas, monospace;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1100px) {
   .metrics-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .review-grid,
-  .bottom-grid,
-  .task-hero,
-  .report-action-row,
-  .lineage-grid,
-  .strategy-grid {
+  .screening-overview-grid,
+  .review-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .task-hero,
+  .report-action-row {
     flex-direction: column;
     align-items: stretch;
+  }
+
+  .metrics-grid,
+  .strategy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-item {
+    flex-direction: column;
+  }
+
+  .summary-item strong {
+    text-align: left;
   }
 }
 </style>

@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+from types import SimpleNamespace
 
 from fastapi.testclient import TestClient
 
@@ -43,6 +44,177 @@ def test_project_create_and_list() -> None:
     listing = client.get("/api/projects")
     assert listing.status_code == 200
     assert any(item["id"] == project["id"] for item in listing.json())
+
+    detail = client.get(f"/api/projects/{project['id']}")
+    assert detail.status_code == 200
+    payload = detail.json()
+    assert payload["thread_profile"]["screening"]["topic"] == "api topic"
+    assert payload["thread_profile"]["strategy"]["selected_databases"] == ["scopus", "wos", "pubmed", "cnki"]
+
+
+def test_project_workflow_update_persists_thread_defaults(tmp_path: Path, monkeypatch) -> None:
+    task_store = TaskStore(tmp_path / "api_runs")
+    workspace_store = WorkspaceStore(tmp_path / "api_runs")
+    monkeypatch.setattr(app_module, "TASK_STORE", task_store)
+    monkeypatch.setattr(app_module, "WORKSPACE_STORE", workspace_store)
+
+    project = workspace_store.create_project(name="workflow-project", topic="old topic", description="old desc")
+
+    response = client.put(
+        f"/api/projects/{project['id']}/workflow",
+        json={
+            "name": "workflow-project-renamed",
+            "topic": "updated topic",
+            "description": "updated desc",
+            "thread_profile": {
+                "strategy": {
+                    "research_need": "find metabolomics screening studies",
+                    "selected_databases": ["scopus", "pubmed"],
+                    "model": {
+                        "provider": "deepseek",
+                        "model_name": "deepseek-reasoner",
+                        "api_base_url": "https://api.deepseek.com/v1",
+                        "api_key_env": "DEEPSEEK_API_KEY",
+                        "api_key": None,
+                        "temperature": 0,
+                        "max_tokens": 4096,
+                        "min_request_interval_seconds": 2,
+                    },
+                    "latest_task_id": None,
+                    "plan": None,
+                },
+                "screening": {
+                    "topic": "updated topic",
+                    "criteria_markdown": "# 研究主题\n\nupdated topic\n\n# 纳入标准\n\n- human\n\n# 排除标准\n\n- review",
+                    "inclusion": ["human"],
+                    "exclusion": ["review"],
+                    "model": {
+                        "provider": "kimi",
+                        "model_name": "moonshot-v1-auto",
+                        "api_base_url": "https://api.moonshot.cn/v1",
+                        "api_key_env": "KIMI_API_KEY",
+                        "api_key": None,
+                        "temperature": 0,
+                        "max_tokens": 1536,
+                        "min_request_interval_seconds": 2,
+                    },
+                    "batch_size": 12,
+                    "target_include_count": None,
+                    "stop_when_target_reached": False,
+                    "allow_uncertain": True,
+                    "retry_times": 6,
+                    "request_timeout_seconds": 240,
+                    "encoding": "auto",
+                },
+                "last_updated_at": None,
+            },
+        },
+    )
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["name"] == "workflow-project-renamed"
+    assert payload["topic"] == "updated topic"
+    assert payload["thread_profile"]["strategy"]["research_need"] == "find metabolomics screening studies"
+    assert payload["thread_profile"]["screening"]["batch_size"] == 12
+    assert payload["thread_profile"]["screening"]["target_include_count"] is None
+
+
+def test_strategy_task_updates_project_thread_profile(tmp_path: Path, monkeypatch) -> None:
+    task_store = TaskStore(tmp_path / "api_runs")
+    workspace_store = WorkspaceStore(tmp_path / "api_runs")
+    monkeypatch.setattr(app_module, "TASK_STORE", task_store)
+    monkeypatch.setattr(app_module, "WORKSPACE_STORE", workspace_store)
+
+    def run_immediately(task, worker):
+        task_store._run_worker(task, worker)
+
+    def fake_generate_strategy_job(request, progress_callback=None):
+        run_root = task_store.tasks_dir / "strategy-task" / "strategy_run"
+        output_dir = run_root / "strategy_output"
+        output_dir.mkdir(parents=True, exist_ok=True)
+        plan_payload = {
+            "topic": "脓毒症预后代谢组学研究",
+            "intent_summary": "聚焦用于脓毒症预后判断的代谢组学研究与生物标志物证据。",
+            "screening_topic": "脓毒症预后代谢组学相关研究",
+            "inclusion": ["人群脓毒症队列研究", "涉及代谢组学标志物"],
+            "exclusion": ["综述类文献", "动物实验研究"],
+            "search_blocks": [
+                {
+                    "database": "pubmed",
+                    "title": "PubMed 检索式",
+                    "query": "sepsis AND metabolomics",
+                    "lines": [],
+                    "notes": ["使用英文检索式直接检索。"],
+                }
+            ],
+            "caution_notes": ["注意区分死亡、重症和住院结局等不同预后定义。"],
+        }
+        (output_dir / "strategy_plan.json").write_text(json.dumps(plan_payload, ensure_ascii=False, indent=2), encoding="utf-8")
+        (output_dir / "strategy_plan.md").write_text("# strategy", encoding="utf-8")
+        (output_dir / "strategy_raw_response.txt").write_text("raw", encoding="utf-8")
+        return SimpleNamespace(
+            run_root=run_root,
+            output_dir=output_dir,
+            summary={
+                "topic": plan_payload["topic"],
+                "screening_topic": plan_payload["screening_topic"],
+                "selected_databases": ["pubmed"],
+                "database_count": 1,
+                "inclusion_count": 2,
+                "exclusion_count": 2,
+            },
+            markdown="# strategy",
+            artifacts={
+                "strategy_plan": output_dir / "strategy_plan.md",
+                "strategy_plan_json": output_dir / "strategy_plan.json",
+                "strategy_raw_response": output_dir / "strategy_raw_response.txt",
+            },
+        )
+
+    monkeypatch.setattr(app_module.TASK_STORE, "run_in_background", run_immediately)
+    monkeypatch.setattr(app_module, "generate_strategy_job", fake_generate_strategy_job)
+
+    response = client.post(
+        "/api/strategy/tasks",
+        json={
+            "title": "new-thread-kickoff",
+            "project_id": None,
+            "new_project_name": "Sepsis Thread",
+            "new_project_description": "",
+            "project_topic": "",
+            "research_need": "Find metabolomics studies for sepsis prognosis and generate screening criteria.",
+            "selected_databases": ["pubmed"],
+            "model": {
+                "provider": "deepseek",
+                "model_name": "deepseek-reasoner",
+                "api_base_url": "https://api.deepseek.com/v1",
+                "api_key_env": "DEEPSEEK_API_KEY",
+                "api_key": "",
+                "temperature": 0,
+                "max_tokens": 4096,
+                "min_request_interval_seconds": 2,
+            },
+            "retry_times": 2,
+            "timeout_seconds": 60,
+        },
+    )
+    assert response.status_code == 200
+    task_payload = response.json()
+    project_id = task_payload["project_id"]
+    assert project_id
+
+    project_response = client.get(f"/api/projects/{project_id}")
+    assert project_response.status_code == 200
+    payload = project_response.json()
+    assert payload["name"] == "脓毒症预后代谢组学研究"
+    assert payload["topic"] == "脓毒症预后代谢组学相关研究"
+    assert payload["description"] == "聚焦用于脓毒症预后判断的代谢组学研究与生物标志物证据。"
+    assert payload["thread_profile"]["strategy"]["research_need"].startswith("Find metabolomics studies")
+    assert payload["thread_profile"]["strategy"]["latest_task_id"] == task_payload["id"]
+    assert payload["thread_profile"]["strategy"]["plan"]["screening_topic"] == "脓毒症预后代谢组学相关研究"
+    assert payload["thread_profile"]["strategy"]["plan"]["intent_summary"] == "聚焦用于脓毒症预后判断的代谢组学研究与生物标志物证据。"
+    assert payload["thread_profile"]["screening"]["topic"] == "脓毒症预后代谢组学相关研究"
+    assert payload["thread_profile"]["screening"]["inclusion"] == ["人群脓毒症队列研究", "涉及代谢组学标志物"]
 
 
 def test_review_override_is_cumulative(tmp_path: Path, monkeypatch) -> None:
@@ -319,6 +491,36 @@ def test_fulltext_queue_rebuild_and_status_update(tmp_path: Path, monkeypatch) -
     assert len(payload["fulltext_queue"]) == 2
     assert {item["status"] for item in payload["fulltext_queue"]} == {"pending"}
 
+    screening_task = task_store.create_task(kind="screening", title="screening-review", metadata={"project_id": project["id"]})
+    task_store.update(
+        screening_task.task_id,
+        status="succeeded",
+        phase="completed",
+        phase_label="Completed",
+        records=[
+            {
+                "paper_id": payload["fulltext_queue"][0]["paper_id"],
+                "title": "Paper One",
+                "decision": "include",
+                "confidence": 0.91,
+                "reason": "高度相关，保留进入全文阶段",
+                "year": 2024,
+                "journal": "Journal A",
+                "doi": "10.1000/paper-one",
+            },
+            {
+                "paper_id": payload["fulltext_queue"][1]["paper_id"],
+                "title": "Paper Two",
+                "decision": "include",
+                "confidence": 0.67,
+                "reason": "相关性一般，待全文再确认",
+                "year": 2025,
+                "journal": "Journal B",
+                "doi": "10.1000/paper-two",
+            },
+        ],
+    )
+
     update = client.post(
         f"/api/projects/{project['id']}/fulltext/status",
         json={"paper_id": payload["fulltext_queue"][0]["paper_id"], "status": "ready", "note": "downloaded"},
@@ -327,8 +529,267 @@ def test_fulltext_queue_rebuild_and_status_update(tmp_path: Path, monkeypatch) -
     updated_payload = update.json()
     ready_item = next(item for item in updated_payload["fulltext_queue"] if item["status"] == "ready")
     assert ready_item["note"] == "downloaded"
+    assert ready_item["confidence"] == 0.91
+    assert ready_item["screening_reason"] == "高度相关，保留进入全文阶段"
     ready_dataset = next(item for item in updated_payload["datasets"] if item["kind"] == "fulltext_ready")
     assert ready_dataset["record_count"] == 1
+
+    exclude = client.post(
+        f"/api/projects/{project['id']}/fulltext/status",
+        json={"paper_id": payload["fulltext_queue"][1]["paper_id"], "status": "excluded", "note": "复审排除"},
+    )
+    assert exclude.status_code == 200
+    excluded_payload = exclude.json()
+    excluded_item = next(item for item in excluded_payload["fulltext_queue"] if item["paper_id"] == payload["fulltext_queue"][1]["paper_id"])
+    assert excluded_item["status"] == "excluded"
+    assert excluded_item["screening_reason"] == "相关性一般，待全文再确认"
+
+
+def test_fulltext_queue_uses_imported_url_when_doi_missing(tmp_path: Path, monkeypatch) -> None:
+    task_store = TaskStore(tmp_path / "api_runs")
+    workspace_store = WorkspaceStore(tmp_path / "api_runs")
+    monkeypatch.setattr(app_module, "TASK_STORE", task_store)
+    monkeypatch.setattr(app_module, "WORKSPACE_STORE", workspace_store)
+
+    project = workspace_store.create_project(name="url-fallback-project", topic="topic", description="")
+    ris_path = tmp_path / "url-fallback.ris"
+    ris_path.write_text(
+        "\n".join(
+            [
+                "TY  - JOUR",
+                "TI  - CNKI Style Record",
+                "JO  - Journal C",
+                "PY  - 2022",
+                "UR  - https://kns.cnki.net/example-record",
+                "ER  - ",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    dataset = workspace_store.register_dataset(
+        project_id=project["id"],
+        task_id=None,
+        kind="included_reviewed",
+        label="Reviewed included records",
+        path=ris_path,
+        record_count=1,
+        file_format="ris",
+    )
+
+    rebuild = client.post(
+        f"/api/projects/{project['id']}/fulltext/rebuild",
+        json={"source_dataset_ids": [dataset["id"]]},
+    )
+    assert rebuild.status_code == 200
+    payload = rebuild.json()
+    assert len(payload["fulltext_queue"]) == 1
+    assert payload["fulltext_queue"][0]["doi"] is None
+    assert payload["fulltext_queue"][0]["landing_url"] == "https://kns.cnki.net/example-record"
+
+
+def test_fulltext_queue_batch_status_update(tmp_path: Path, monkeypatch) -> None:
+    task_store = TaskStore(tmp_path / "api_runs")
+    workspace_store = WorkspaceStore(tmp_path / "api_runs")
+    monkeypatch.setattr(app_module, "TASK_STORE", task_store)
+    monkeypatch.setattr(app_module, "WORKSPACE_STORE", workspace_store)
+
+    project = workspace_store.create_project(name="batch-fulltext-project", topic="topic", description="")
+    ris_path = tmp_path / "batch-fulltext.ris"
+    ris_path.write_text(
+        "\n".join(
+            [
+                "TY  - JOUR",
+                "TI  - Paper One",
+                "JO  - Journal A",
+                "PY  - 2024",
+                "DO  - 10.1000/paper-one",
+                "ER  - ",
+                "TY  - JOUR",
+                "TI  - Paper Two",
+                "JO  - Journal B",
+                "PY  - 2022",
+                "DO  - 10.1000/paper-two",
+                "ER  - ",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    dataset = workspace_store.register_dataset(
+        project_id=project["id"],
+        task_id=None,
+        kind="included_reviewed",
+        label="Reviewed included records",
+        path=ris_path,
+        record_count=2,
+        file_format="ris",
+    )
+
+    rebuild = client.post(
+        f"/api/projects/{project['id']}/fulltext/rebuild",
+        json={"source_dataset_ids": [dataset["id"]]},
+    )
+    assert rebuild.status_code == 200
+    payload = rebuild.json()
+    paper_ids = [item["paper_id"] for item in payload["fulltext_queue"]]
+
+    response = client.post(
+        f"/api/projects/{project['id']}/fulltext/status/batch",
+        json={"paper_ids": paper_ids, "status": "excluded", "note": "批量复审排除"},
+    )
+    assert response.status_code == 200
+    updated = response.json()
+    assert all(item["status"] == "excluded" for item in updated["fulltext_queue"])
+    assert all(item["note"] == "批量复审排除" for item in updated["fulltext_queue"])
+
+
+def test_fulltext_queue_context_ignores_collision_from_excluded_other_round(tmp_path: Path, monkeypatch) -> None:
+    task_store = TaskStore(tmp_path / "api_runs")
+    workspace_store = WorkspaceStore(tmp_path / "api_runs")
+    monkeypatch.setattr(app_module, "TASK_STORE", task_store)
+    monkeypatch.setattr(app_module, "WORKSPACE_STORE", workspace_store)
+
+    project = workspace_store.create_project(name="context-project", topic="topic", description="")
+    ris_path = tmp_path / "context-fulltext.ris"
+    ris_path.write_text(
+        "\n".join(
+            [
+                "TY  - JOUR",
+                "TI  - Matching Paper",
+                "JO  - Journal A",
+                "PY  - 2024",
+                "DO  - 10.1000/matching-paper",
+                "ER  - ",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    dataset = workspace_store.register_dataset(
+        project_id=project["id"],
+        task_id=None,
+        kind="included_reviewed",
+        label="Reviewed included records",
+        path=ris_path,
+        record_count=1,
+        file_format="ris",
+    )
+
+    rebuild = client.post(
+        f"/api/projects/{project['id']}/fulltext/rebuild",
+        json={"source_dataset_ids": [dataset["id"]]},
+    )
+    assert rebuild.status_code == 200
+    payload = rebuild.json()
+    paper_id = payload["fulltext_queue"][0]["paper_id"]
+
+    matching_task = task_store.create_task(kind="screening", title="matching-round", metadata={"project_id": project["id"]})
+    task_store.update(
+        matching_task.task_id,
+        status="succeeded",
+        phase="completed",
+        phase_label="Completed",
+        records=[
+            {
+                "paper_id": "raw_999999",
+                "title": "Matching Paper",
+                "decision": "include",
+                "confidence": 0.93,
+                "reason": "高相关，建议进入全文阶段",
+                "year": 2024,
+                "journal": "Journal A",
+                "doi": "10.1000/matching-paper",
+            }
+        ],
+    )
+
+    collision_task = task_store.create_task(kind="screening", title="collision-round", metadata={"project_id": project["id"]})
+    task_store.update(
+        collision_task.task_id,
+        status="succeeded",
+        phase="completed",
+        phase_label="Completed",
+        records=[
+            {
+                "paper_id": paper_id,
+                "title": "Other Paper",
+                "decision": "exclude",
+                "confidence": 0.08,
+                "reason": "这是另一轮里不相关的记录",
+                "year": 2021,
+                "journal": "Other Journal",
+                "doi": "10.9999/other-paper",
+            }
+        ],
+    )
+
+    detail = client.get(f"/api/projects/{project['id']}")
+    assert detail.status_code == 200
+    item = detail.json()["fulltext_queue"][0]
+    assert item["screening_decision"] == "include"
+    assert item["screening_reason"] == "高相关，建议进入全文阶段"
+    assert item["confidence"] == 0.93
+
+
+def test_fulltext_queue_skips_items_later_marked_excluded_or_uncertain(tmp_path: Path, monkeypatch) -> None:
+    task_store = TaskStore(tmp_path / "api_runs")
+    workspace_store = WorkspaceStore(tmp_path / "api_runs")
+    monkeypatch.setattr(app_module, "TASK_STORE", task_store)
+    monkeypatch.setattr(app_module, "WORKSPACE_STORE", workspace_store)
+
+    project = workspace_store.create_project(name="latest-decision-project", topic="topic", description="")
+    ris_path = tmp_path / "latest-decision.ris"
+    ris_path.write_text(
+        "\n".join(
+            [
+                "TY  - JOUR",
+                "TI  - Paper To Remove",
+                "JO  - Journal Z",
+                "PY  - 2023",
+                "DO  - 10.1000/remove-me",
+                "ER  - ",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    dataset = workspace_store.register_dataset(
+        project_id=project["id"],
+        task_id=None,
+        kind="included_reviewed",
+        label="Reviewed included records",
+        path=ris_path,
+        record_count=1,
+        file_format="ris",
+    )
+
+    rebuild = client.post(
+        f"/api/projects/{project['id']}/fulltext/rebuild",
+        json={"source_dataset_ids": [dataset["id"]]},
+    )
+    assert rebuild.status_code == 200
+    assert len(rebuild.json()["fulltext_queue"]) == 1
+
+    latest_task = task_store.create_task(kind="screening", title="latest-round", metadata={"project_id": project["id"]})
+    task_store.update(
+        latest_task.task_id,
+        status="succeeded",
+        phase="completed",
+        phase_label="Completed",
+        records=[
+            {
+                "paper_id": "raw_111111",
+                "title": "Paper To Remove",
+                "decision": "exclude",
+                "confidence": 0.11,
+                "reason": "后续轮次确认不纳入全文阶段",
+                "year": 2023,
+                "journal": "Journal Z",
+                "doi": "10.1000/remove-me",
+            }
+        ],
+    )
+
+    detail = client.get(f"/api/projects/{project['id']}")
+    assert detail.status_code == 200
+    assert detail.json()["fulltext_queue"] == []
 
 
 def test_workspace_store_persists_dataset_paths_relatively(tmp_path: Path) -> None:

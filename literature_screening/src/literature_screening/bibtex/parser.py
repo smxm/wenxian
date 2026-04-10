@@ -214,6 +214,7 @@ def _entry_to_paper_record(entry: dict[str, str], file_path: Path, paper_id: str
             or entry.get("publisher")
         ),
         doi=_normalize_doi(entry.get("doi")),
+        url=_clean_field(entry.get("url")),
         abstract=_clean_field(
             entry.get("abstract")
             or entry.get("summary")

@@ -47,6 +47,7 @@ def _merge_record_into(target: PaperRecord, incoming: PaperRecord) -> None:
     target.journal = _pick_better_text(target.journal, incoming.journal)
     target.abstract = _pick_better_text(target.abstract, incoming.abstract)
     target.doi = target.doi or incoming.doi
+    target.url = target.url or incoming.url
     target.year = target.year or incoming.year
     target.normalized_title = target.normalized_title or incoming.normalized_title or normalize_title(target.title)
     target.raw_bibtex = _pick_longer_text(target.raw_bibtex, incoming.raw_bibtex)

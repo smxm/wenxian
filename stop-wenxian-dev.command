@@ -3,7 +3,7 @@ set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$SCRIPT_DIR"
-LOCAL_PROJECT_NAME="literature-screening-local"
+DEV_PROJECT_NAME="literature-screening-dev"
 
 stop_legacy_stacks() {
   docker compose -f docker-compose.local.yml down >/dev/null 2>&1 || true
@@ -20,7 +20,7 @@ if ! docker info >/dev/null 2>&1; then
   exit 1
 fi
 
-echo "正在停止文献工作台..."
+echo "正在停止文献工作台开发模式..."
 stop_legacy_stacks
-docker compose -p "$LOCAL_PROJECT_NAME" -f docker-compose.local.yml down
-echo "文献工作台已经停止。"
+docker compose -p "$DEV_PROJECT_NAME" -f docker-compose.dev.yml down
+echo "文献工作台开发模式已经停止。"

@@ -13,6 +13,9 @@ def test_build_strategy_prompt_includes_cnki_constraints() -> None:
     assert "关键词 + 关键词 + 关键词" in prompt
     assert "知网高级检索的篇关摘" in prompt
     assert "Scopus advanced search" in prompt
+    assert '"topic" 必须是简体中文' in prompt
+    assert 'Scopus、Web of Science、PubMed 的检索式必须使用英文专业检索表达' in prompt
+    assert '"search_blocks" 中的 "title" 和 "notes" 必须使用简体中文' in prompt
 
 
 def test_render_strategy_markdown_outputs_sections() -> None:

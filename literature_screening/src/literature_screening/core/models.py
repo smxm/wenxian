@@ -87,6 +87,7 @@ class PaperRecord(BaseModel):
     year: int | None = None
     journal: str | None = None
     doi: str | None = None
+    url: str | None = None
     abstract: str | None = None
     keywords: list[str] = Field(default_factory=list)
     normalized_title: str | None = None

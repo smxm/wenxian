@@ -1,30 +1,26 @@
 <script setup lang="ts">
 import { computed, onMounted, ref, watch } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import { CircleDashed, FileUp, Save, WandSparkles, X } from 'lucide-vue-next'
+import { RouterLink, useRoute, useRouter } from 'vue-router'
+import { ArrowLeft, CircleDashed, FileUp, X } from 'lucide-vue-next'
 import {
   NAlert,
   NButton,
   NCard,
-  NCheckbox,
   NDynamicInput,
   NForm,
   NFormItem,
-  NGrid,
-  NGridItem,
   NInput,
   NInputNumber,
   NSelect,
-  NText,
+  NTag,
   useMessage
 } from 'naive-ui'
 import { useDraftsStore } from '@/stores/drafts'
 import { useMetaStore } from '@/stores/meta'
 import { useProjectsStore } from '@/stores/projects'
 import { useTasksStore } from '@/stores/tasks'
-import { parseCriteriaMarkdown } from '@/utils/criteria'
-import { strategyPlanToCriteriaMarkdown } from '@/utils/strategy'
-import type { ModelSettings, ProviderName } from '@/types/api'
+import { buildCriteriaMarkdown, strategyPlanToCriteriaMarkdown } from '@/utils/strategy'
+import type { ModelSettings, ProjectDetail, ProviderName } from '@/types/api'
 
 const router = useRouter()
 const route = useRoute()
@@ -39,14 +35,12 @@ const newProjectName = ref('')
 const newProjectDescription = ref('')
 const sourceDatasetIds = ref<string[]>([])
 const parentTaskId = ref<string | null>(null)
-const selectedTemplateId = ref<string | null>(null)
-const templateName = ref('')
 
-const title = ref('new-screening-run')
 const topic = ref('')
 const inclusion = ref<string[]>([''])
 const exclusion = ref<string[]>([''])
 const criteriaMarkdown = ref('')
+const overrideThreadCriteria = ref(false)
 const provider = ref<ProviderName>('deepseek')
 const model = ref<ModelSettings>({
   provider: 'deepseek',
@@ -59,8 +53,8 @@ const model = ref<ModelSettings>({
   min_request_interval_seconds: 2
 })
 const batchSize = ref(10)
-const targetIncludeCount = ref(30)
-const stopWhenReached = ref(true)
+const targetIncludeCount = ref<number | null>(null)
+const stopWhenReached = ref(false)
 const allowUncertain = ref(true)
 const retryTimes = ref(6)
 const requestTimeout = ref(240)
@@ -69,11 +63,25 @@ const files = ref<File[]>([])
 const isDragging = ref(false)
 const fileInputRef = ref<HTMLInputElement | null>(null)
 const hydratingDraft = ref(false)
+const routeProjectId = computed(() => {
+  if (typeof route.params.projectId === 'string') return route.params.projectId
+  if (typeof route.query.projectId === 'string') return route.query.projectId
+  return null
+})
 
-const selectedPreset = computed(() => metaStore.providerPresets.find((item) => item.provider === provider.value))
-const rememberedFileNames = computed(() => draftsStore.screeningDraft.fileNames)
-const currentProject = computed(() =>
+const currentProject = computed<ProjectDetail | null>(() =>
   projectsStore.currentProject?.id === selectedProjectId.value ? projectsStore.currentProject : null
+)
+const isThreadScoped = computed(() => Boolean(routeProjectId.value))
+const threadHomePath = computed(() => (selectedProjectId.value ? `/threads/${selectedProjectId.value}` : null))
+const threadDefaults = computed(() => currentProject.value?.thread_profile?.screening ?? null)
+const rememberedFileNames = computed(() => draftsStore.screeningDraft.fileNames)
+const selectedPreset = computed(() => metaStore.providerPresets.find((item) => item.provider === provider.value))
+const pageTitle = computed(() => (isThreadScoped.value ? '开始本线程的新一轮初筛' : '先选择线程，再开始新的初筛轮次'))
+const pageCopy = computed(() =>
+  isThreadScoped.value
+    ? '你现在已经在线程内部，主题与筛选标准会默认继承，不需要再次选择线程。这里只处理本轮来源、输入文件和运行设置。'
+    : '初筛永远属于某一条线程。先选中要继续的线程，再决定这一轮的来源、文件和运行设置。'
 )
 const projectOptions = computed(() =>
   projectsStore.list.map((item) => ({
@@ -81,28 +89,43 @@ const projectOptions = computed(() =>
     value: item.id
   }))
 )
+
+function friendlyDatasetLabel(kind: string) {
+  switch (kind) {
+    case 'included_reviewed':
+      return '人工复核后纳入'
+    case 'included':
+      return '本轮纳入'
+    case 'unused':
+      return '上一轮未使用'
+    case 'cumulative_included':
+      return '线程累计纳入'
+    case 'fulltext_ready':
+      return '已获取全文'
+    default:
+      return kind
+  }
+}
+
 const datasetOptions = computed(() =>
   (currentProject.value?.datasets ?? []).map((item) => ({
-    label: `${item.label} · ${item.record_count ?? '-'} 篇 · ${item.kind}`,
-    value: item.id
-  }))
-)
-const templateOptions = computed(() =>
-  projectsStore.templates.map((item) => ({
-    label: item.name,
+    label: `${friendlyDatasetLabel(item.kind)} · ${item.record_count ?? '-'} 篇`,
     value: item.id
   }))
 )
 
+const hasInputSource = computed(() => files.value.length > 0 || sourceDatasetIds.value.length > 0)
+const canSubmit = computed(() => {
+  return Boolean(selectedProjectId.value) && hasInputSource.value && Boolean(topic.value.trim()) && inclusion.value.some(Boolean) && exclusion.value.some(Boolean)
+})
+
 function applyDraft() {
   const draft = draftsStore.screeningDraft
-  selectedProjectId.value = draft.projectId
-  newProjectName.value = draft.newProjectName
-  newProjectDescription.value = draft.newProjectDescription
+  selectedProjectId.value = routeProjectId.value ?? draft.projectId
+  newProjectName.value = ''
+  newProjectDescription.value = ''
   sourceDatasetIds.value = [...draft.sourceDatasetIds]
   parentTaskId.value = draft.parentTaskId
-  selectedTemplateId.value = draft.selectedTemplateId
-  title.value = draft.title
   topic.value = draft.topic
   criteriaMarkdown.value = draft.criteriaMarkdown
   inclusion.value = draft.inclusion.length ? [...draft.inclusion] : ['']
@@ -125,13 +148,11 @@ function resetToFreshForm(nextProjectId: string | null = null) {
   newProjectDescription.value = ''
   sourceDatasetIds.value = []
   parentTaskId.value = null
-  selectedTemplateId.value = null
-  templateName.value = ''
-  title.value = 'new-screening-run'
   topic.value = ''
   criteriaMarkdown.value = ''
   inclusion.value = ['']
   exclusion.value = ['']
+  overrideThreadCriteria.value = false
   provider.value = 'deepseek'
   model.value = {
     provider: 'deepseek',
@@ -144,8 +165,8 @@ function resetToFreshForm(nextProjectId: string | null = null) {
     min_request_interval_seconds: 2
   }
   batchSize.value = 10
-  targetIncludeCount.value = 30
-  stopWhenReached.value = true
+  targetIncludeCount.value = null
+  stopWhenReached.value = false
   allowUncertain.value = true
   retryTimes.value = 6
   requestTimeout.value = 240
@@ -161,8 +182,8 @@ function persistDraft() {
     newProjectDescription: newProjectDescription.value,
     sourceDatasetIds: sourceDatasetIds.value,
     parentTaskId: parentTaskId.value,
-    selectedTemplateId: selectedTemplateId.value,
-    title: title.value,
+    selectedTemplateId: null,
+    title: buildTaskTitle(),
     topic: topic.value,
     criteriaMarkdown: criteriaMarkdown.value,
     inclusion: inclusion.value,
@@ -179,6 +200,71 @@ function persistDraft() {
   })
 }
 
+function applyThreadDefaults(project: ProjectDetail) {
+  const defaults = project.thread_profile?.screening
+  if (!defaults) return
+  topic.value = defaults.topic || project.topic
+  inclusion.value = defaults.inclusion.length ? [...defaults.inclusion] : ['']
+  exclusion.value = defaults.exclusion.length ? [...defaults.exclusion] : ['']
+  criteriaMarkdown.value = defaults.criteria_markdown || buildCriteriaMarkdown(topic.value, inclusion.value, exclusion.value)
+  if (defaults.model) {
+    provider.value = defaults.model.provider
+    model.value = {
+      ...model.value,
+      ...defaults.model,
+      api_key: draftsStore.getProviderApiKey(defaults.model.provider)
+    }
+  }
+  batchSize.value = defaults.batch_size ?? 10
+  targetIncludeCount.value = defaults.target_include_count ?? null
+  stopWhenReached.value = defaults.target_include_count ? defaults.stop_when_target_reached : false
+  allowUncertain.value = defaults.allow_uncertain
+  retryTimes.value = defaults.retry_times
+  requestTimeout.value = defaults.request_timeout_seconds
+  encoding.value = defaults.encoding
+  overrideThreadCriteria.value = false
+}
+
+function buildTaskTitle() {
+  if (selectedProjectId.value && currentProject.value) {
+    const roundCount = currentProject.value.tasks.filter((task) => task.kind === 'screening').length + 1
+    return `${currentProject.value.name}-round-${roundCount}`
+  }
+  return `${newProjectName.value.trim() || 'new-thread'}-screening`
+}
+
+function refreshCriteriaMarkdown() {
+  criteriaMarkdown.value = buildCriteriaMarkdown(topic.value, inclusion.value.filter(Boolean), exclusion.value.filter(Boolean))
+}
+
+function applyStrategyPrefill(taskPayload: { title?: string | null; project_id?: string | null; project_topic?: string | null; strategy_plan?: { screening_topic: string; inclusion: string[]; exclusion: string[] } | null }) {
+  if (!taskPayload.strategy_plan) return
+  overrideThreadCriteria.value = true
+  topic.value = taskPayload.strategy_plan.screening_topic || taskPayload.project_topic || topic.value
+  inclusion.value = taskPayload.strategy_plan.inclusion.length ? [...taskPayload.strategy_plan.inclusion] : inclusion.value
+  exclusion.value = taskPayload.strategy_plan.exclusion.length ? [...taskPayload.strategy_plan.exclusion] : exclusion.value
+  criteriaMarkdown.value = strategyPlanToCriteriaMarkdown(taskPayload.strategy_plan)
+  if (taskPayload.project_id) selectedProjectId.value = taskPayload.project_id
+}
+
+function applyParentTaskPrefill(taskPayload: { request_payload?: Record<string, unknown> | null; project_id?: string | null }) {
+  const payload = taskPayload.request_payload ?? {}
+  const inheritedTopic = typeof payload.topic === 'string' ? payload.topic : ''
+  const inheritedInclusion = Array.isArray(payload.inclusion) ? payload.inclusion.filter((item): item is string => typeof item === 'string') : []
+  const inheritedExclusion = Array.isArray(payload.exclusion) ? payload.exclusion.filter((item): item is string => typeof item === 'string') : []
+  overrideThreadCriteria.value = true
+  if (taskPayload.project_id) selectedProjectId.value = taskPayload.project_id
+  if (inheritedTopic) topic.value = inheritedTopic
+  if (typeof payload.criteria_markdown === 'string' && payload.criteria_markdown.trim()) {
+    criteriaMarkdown.value = payload.criteria_markdown
+  }
+  if (inheritedInclusion.length) inclusion.value = inheritedInclusion
+  if (inheritedExclusion.length) exclusion.value = inheritedExclusion
+  if (typeof payload.batch_size === 'number') batchSize.value = payload.batch_size
+  if (typeof payload.target_include_count === 'number') targetIncludeCount.value = payload.target_include_count
+  if (typeof payload.stop_when_target_reached === 'boolean') stopWhenReached.value = payload.stop_when_target_reached
+}
+
 watch(provider, (nextProvider) => {
   if (hydratingDraft.value) return
   const preset = metaStore.providerPresets.find((item) => item.provider === nextProvider)
@@ -193,33 +279,21 @@ watch(provider, (nextProvider) => {
   }
 })
 
-watch(selectedProjectId, async (nextProjectId) => {
-  if (nextProjectId) {
-    await projectsStore.loadProject(nextProjectId)
+watch(selectedProjectId, async (nextProjectId, previousProjectId) => {
+  if (!nextProjectId) {
+    if (previousProjectId) sourceDatasetIds.value = []
+    return
   }
-  if (!hydratingDraft.value && !nextProjectId) {
-    sourceDatasetIds.value = []
-    selectedTemplateId.value = null
+  const project = await projectsStore.loadProject(nextProjectId)
+  if (project && !hydratingDraft.value) {
+    applyThreadDefaults(project)
   }
 })
 
-watch(selectedTemplateId, (nextTemplateId) => {
-  if (!nextTemplateId) return
-  const template = projectsStore.templates.find((item) => item.id === nextTemplateId)
-  if (!template) return
-  const payload = template.payload as Record<string, unknown>
-  if (typeof payload.topic === 'string') topic.value = payload.topic
-  if (Array.isArray(payload.inclusion)) inclusion.value = payload.inclusion as string[]
-  if (Array.isArray(payload.exclusion)) exclusion.value = payload.exclusion as string[]
-  if (typeof payload.criteriaMarkdown === 'string') criteriaMarkdown.value = payload.criteriaMarkdown
-  if (typeof payload.batchSize === 'number') batchSize.value = payload.batchSize
-  if (typeof payload.targetIncludeCount === 'number') targetIncludeCount.value = payload.targetIncludeCount
-  if (typeof payload.stopWhenReached === 'boolean') stopWhenReached.value = payload.stopWhenReached
-  if (typeof payload.allowUncertain === 'boolean') allowUncertain.value = payload.allowUncertain
-  if (typeof payload.retryTimes === 'number') retryTimes.value = payload.retryTimes
-  if (typeof payload.requestTimeout === 'number') requestTimeout.value = payload.requestTimeout
-  message.success(`已应用模板：${template.name}`)
-})
+watch([topic, inclusion, exclusion], () => {
+  if (!overrideThreadCriteria.value) return
+  refreshCriteriaMarkdown()
+}, { deep: true })
 
 watch(
   [
@@ -228,8 +302,6 @@ watch(
     newProjectDescription,
     sourceDatasetIds,
     parentTaskId,
-    selectedTemplateId,
-    title,
     topic,
     criteriaMarkdown,
     inclusion,
@@ -247,86 +319,6 @@ watch(
   () => persistDraft(),
   { deep: true }
 )
-
-function parseCriteria() {
-  const draft = parseCriteriaMarkdown(criteriaMarkdown.value)
-  if (draft.topic) topic.value = draft.topic
-  if (draft.inclusion.length) inclusion.value = draft.inclusion
-  if (draft.exclusion.length) exclusion.value = draft.exclusion
-
-  if (!draft.inclusion.length && !draft.exclusion.length) {
-    message.warning('没有识别出纳入/排除标准。请检查 Markdown 是否包含“纳入标准”“排除标准”标题或对应的冒号写法。')
-    return
-  }
-
-  if (draft.warnings.length) message.info(draft.warnings[0])
-  else message.success('已解析到结构化字段。')
-}
-
-function buildCriteriaMarkdownFromStructured(nextTopic: string, nextInclusion: string[], nextExclusion: string[]) {
-  const parts = ['# 主题', nextTopic || '', '', '# 纳入标准']
-  for (const item of nextInclusion.filter(Boolean)) parts.push(`- ${item}`)
-  parts.push('', '# 排除标准')
-  for (const item of nextExclusion.filter(Boolean)) parts.push(`- ${item}`)
-  return parts.join('\n').trim()
-}
-
-function applyStrategyPrefill(taskPayload: { title?: string | null; project_id?: string | null; project_topic?: string | null; strategy_plan?: { screening_topic: string; inclusion: string[]; exclusion: string[] } | null }) {
-  if (!taskPayload.strategy_plan) return
-  const plan = taskPayload.strategy_plan
-  topic.value = plan.screening_topic || taskPayload.project_topic || topic.value
-  inclusion.value = plan.inclusion.length ? [...plan.inclusion] : inclusion.value
-  exclusion.value = plan.exclusion.length ? [...plan.exclusion] : exclusion.value
-  criteriaMarkdown.value = strategyPlanToCriteriaMarkdown(plan)
-  if (taskPayload.project_id) selectedProjectId.value = taskPayload.project_id
-  if (!title.value || title.value === 'new-screening-run') {
-    title.value = `${taskPayload.title || 'strategy'}-screening`
-  }
-}
-
-function applyParentTaskPrefill(taskPayload: { title?: string | null; request_payload?: Record<string, unknown> | null; project_id?: string | null }) {
-  const payload = taskPayload.request_payload ?? {}
-  const inheritedTopic = typeof payload.topic === 'string' ? payload.topic : ''
-  const inheritedInclusion = Array.isArray(payload.inclusion) ? payload.inclusion.filter((item): item is string => typeof item === 'string') : []
-  const inheritedExclusion = Array.isArray(payload.exclusion) ? payload.exclusion.filter((item): item is string => typeof item === 'string') : []
-  const inheritedProvider = typeof payload.provider === 'string' ? (payload.provider as ProviderName) : provider.value
-
-  if (taskPayload.project_id) selectedProjectId.value = taskPayload.project_id
-  if (!title.value || title.value === 'new-screening-run') {
-    title.value = `${taskPayload.title || 'screening'}-continue`
-  }
-  if (inheritedTopic) topic.value = inheritedTopic
-  if (typeof payload.criteria_markdown === 'string' && payload.criteria_markdown.trim()) {
-    criteriaMarkdown.value = payload.criteria_markdown
-  } else if (inheritedTopic || inheritedInclusion.length || inheritedExclusion.length) {
-    criteriaMarkdown.value = buildCriteriaMarkdownFromStructured(inheritedTopic, inheritedInclusion, inheritedExclusion)
-  }
-  if (inheritedInclusion.length) inclusion.value = inheritedInclusion
-  if (inheritedExclusion.length) exclusion.value = inheritedExclusion
-
-  provider.value = inheritedProvider
-  model.value = {
-    ...model.value,
-    provider: inheritedProvider,
-    model_name: typeof payload.model_name === 'string' ? payload.model_name : model.value.model_name,
-    api_base_url: typeof payload.api_base_url === 'string' ? payload.api_base_url : model.value.api_base_url,
-    api_key_env: typeof payload.api_key_env === 'string' ? payload.api_key_env : model.value.api_key_env,
-    temperature: typeof payload.temperature === 'number' ? payload.temperature : model.value.temperature,
-    max_tokens: typeof payload.max_tokens === 'number' ? payload.max_tokens : model.value.max_tokens,
-    min_request_interval_seconds:
-      typeof payload.min_request_interval_seconds === 'number'
-        ? payload.min_request_interval_seconds
-        : model.value.min_request_interval_seconds,
-    api_key: draftsStore.getProviderApiKey(inheritedProvider)
-  }
-  if (typeof payload.batch_size === 'number') batchSize.value = payload.batch_size
-  if (typeof payload.target_include_count === 'number') targetIncludeCount.value = payload.target_include_count
-  if (typeof payload.stop_when_target_reached === 'boolean') stopWhenReached.value = payload.stop_when_target_reached
-  if (typeof payload.allow_uncertain === 'boolean') allowUncertain.value = payload.allow_uncertain
-  if (typeof payload.retry_times === 'number') retryTimes.value = payload.retry_times
-  if (typeof payload.request_timeout_seconds === 'number') requestTimeout.value = payload.request_timeout_seconds
-  if (typeof payload.encoding === 'string') encoding.value = payload.encoding
-}
 
 function setFiles(nextFiles: File[]) {
   files.value = nextFiles
@@ -384,39 +376,21 @@ function openFilePicker() {
   fileInputRef.value?.click()
 }
 
-async function saveCurrentAsTemplate() {
-  if (!selectedProjectId.value || !templateName.value.trim()) {
-    message.warning('先选择项目并填写模板名称。')
-    return
-  }
-  await projectsStore.saveTemplate({
-    name: templateName.value.trim(),
-    project_id: selectedProjectId.value,
-    payload: {
-      topic: topic.value,
-      inclusion: inclusion.value.filter(Boolean),
-      exclusion: exclusion.value.filter(Boolean),
-      criteriaMarkdown: criteriaMarkdown.value,
-      batchSize: batchSize.value,
-      targetIncludeCount: targetIncludeCount.value,
-      stopWhenReached: stopWhenReached.value,
-      allowUncertain: allowUncertain.value,
-      retryTimes: retryTimes.value,
-      requestTimeout: requestTimeout.value
-    }
-  })
-  message.success('模板已保存。')
-  templateName.value = ''
+function resetCriteriaToThreadDefaults() {
+  if (!currentProject.value) return
+  applyThreadDefaults(currentProject.value)
+  message.success('已恢复线程默认主题与筛选标准')
 }
 
 async function submit() {
+  refreshCriteriaMarkdown()
   const task = await tasksStore.submitScreening({
     project_id: selectedProjectId.value,
-    new_project_name: selectedProjectId.value ? '' : newProjectName.value,
-    new_project_description: selectedProjectId.value ? '' : newProjectDescription.value,
+    new_project_name: '',
+    new_project_description: '',
     source_dataset_ids: sourceDatasetIds.value,
     parent_task_id: parentTaskId.value,
-    title: title.value,
+    title: buildTaskTitle(),
     topic: topic.value,
     criteria_markdown: criteriaMarkdown.value,
     inclusion: inclusion.value.filter(Boolean),
@@ -424,7 +398,7 @@ async function submit() {
     model: model.value,
     batch_size: batchSize.value,
     target_include_count: targetIncludeCount.value,
-    stop_when_target_reached: stopWhenReached.value,
+    stop_when_target_reached: Boolean(targetIncludeCount.value && stopWhenReached.value),
     allow_uncertain: allowUncertain.value,
     retry_times: retryTimes.value,
     request_timeout_seconds: requestTimeout.value,
@@ -432,7 +406,7 @@ async function submit() {
     files: files.value
   })
   draftsStore.clearScreeningDraft()
-  message.success('初筛任务已创建。')
+  message.success('初筛任务已创建')
   if (task.project_id) {
     await router.push(`/threads/${task.project_id}`)
     return
@@ -440,25 +414,18 @@ async function submit() {
   await router.push(`/tasks/${task.id}`)
 }
 
-const hasInputSource = computed(() => files.value.length > 0 || sourceDatasetIds.value.length > 0)
-const canSubmit = computed(() => {
-  const hasProject = Boolean(selectedProjectId.value || newProjectName.value.trim())
-  return hasProject && Boolean(topic.value.trim()) && inclusion.value.some(Boolean) && exclusion.value.some(Boolean) && hasInputSource.value
-})
-
 onMounted(async () => {
   draftsStore.hydrate()
   await Promise.all([metaStore.ensureLoaded(), projectsStore.refreshProjects()])
-  const queryProjectId = typeof route.query.projectId === 'string' ? route.query.projectId : null
   const querySourceDatasetId = typeof route.query.sourceDatasetId === 'string' ? route.query.sourceDatasetId : null
   const queryParentTaskId = typeof route.query.parentTaskId === 'string' ? route.query.parentTaskId : null
   const queryStrategyTaskId = typeof route.query.strategyTaskId === 'string' ? route.query.strategyTaskId : null
 
-  const launchedFromThreadContext = Boolean(queryProjectId || querySourceDatasetId || queryParentTaskId || queryStrategyTaskId)
+  const launchedFromThreadContext = Boolean(routeProjectId.value || querySourceDatasetId || queryParentTaskId || queryStrategyTaskId)
 
   hydratingDraft.value = true
   if (launchedFromThreadContext) {
-    resetToFreshForm(queryProjectId)
+    resetToFreshForm(routeProjectId.value)
     if (querySourceDatasetId) sourceDatasetIds.value = [querySourceDatasetId]
     if (queryParentTaskId) parentTaskId.value = queryParentTaskId
   } else {
@@ -470,14 +437,15 @@ onMounted(async () => {
   hydratingDraft.value = false
 
   if (selectedProjectId.value) {
-    await projectsStore.loadProject(selectedProjectId.value)
+    const project = await projectsStore.loadProject(selectedProjectId.value)
+    if (project) applyThreadDefaults(project)
   }
 
   if (queryStrategyTaskId) {
     const strategyTask = await tasksStore.loadTask(queryStrategyTaskId, true)
     if (strategyTask?.kind === 'strategy' && strategyTask.strategy_plan) {
       applyStrategyPrefill(strategyTask)
-      message.success('已从检索与筛选方案带入研究主题和筛选标准')
+      message.success('已带入方案生成的主题与筛选标准')
     }
   }
 
@@ -485,7 +453,7 @@ onMounted(async () => {
     const parentTask = await tasksStore.loadTask(queryParentTaskId, true)
     if (parentTask?.kind === 'screening') {
       applyParentTaskPrefill(parentTask)
-      message.success('已自动继承上一轮筛选配置')
+      message.success('已继承上一轮筛选设置')
     }
   }
 
@@ -499,79 +467,102 @@ onMounted(async () => {
   <div class="screening-view">
     <section class="screening-hero panel-surface">
       <div>
-        <div class="eyebrow">Screening Composer</div>
-        <h1>围绕项目、数据集和任务链创建新的初筛任务</h1>
-        <p>同一个项目下的任务可以复用已有数据集。你可以直接从上一轮的 unused 数据集继续筛，也可以上传新文件补充输入源。</p>
+        <div class="eyebrow">Screening Round</div>
+        <h1>{{ pageTitle }}</h1>
+        <p>{{ pageCopy }}</p>
       </div>
-      <NAlert type="info" :show-icon="false">当前页面会自动保存为草稿；项目内模板可用于快速复用一套筛选标准。</NAlert>
+      <div class="hero-actions">
+        <RouterLink v-if="threadHomePath" :to="threadHomePath">
+          <NButton tertiary>
+            <template #icon><ArrowLeft :size="16" /></template>
+            返回线程主页
+          </NButton>
+        </RouterLink>
+        <NAlert type="info" :show-icon="false">
+          生成报告已经从初筛页移走，改为和全文获取串联。先完成初筛，再去全文工作台继续推进。
+        </NAlert>
+      </div>
     </section>
 
     <div class="screening-grid">
-      <NCard title="项目与来源" class="panel-surface card-span-2">
-        <NGrid :cols="2" :x-gap="18" :y-gap="12" responsive="screen" item-responsive>
-          <NGridItem span="2 m:1">
-            <NFormItem label="选择已有项目">
-              <NSelect v-model:value="selectedProjectId" clearable :options="projectOptions" placeholder="选择项目，或留空后新建项目" />
-            </NFormItem>
-          </NGridItem>
-          <NGridItem span="2 m:1">
-            <NFormItem label="来源数据集">
-              <NSelect
-                v-model:value="sourceDatasetIds"
-                multiple
-                clearable
-                :disabled="!selectedProjectId"
-                :options="datasetOptions"
-                placeholder="可从 unused / included / cumulative 数据集继续"
-              />
-            </NFormItem>
-          </NGridItem>
-          <NGridItem span="2 m:1" v-if="!selectedProjectId">
-            <NFormItem label="新建项目名称">
-              <NInput v-model:value="newProjectName" placeholder="例如：SCAP-BALF-病毒谱-免疫-预后" />
-            </NFormItem>
-          </NGridItem>
-          <NGridItem span="2 m:1" v-if="!selectedProjectId">
-            <NFormItem label="项目说明">
-              <NInput v-model:value="newProjectDescription" placeholder="可选，用于记录项目范围和交付背景" />
-            </NFormItem>
-          </NGridItem>
-          <NGridItem span="2">
-            <NFormItem label="任务模板">
-              <NGrid :cols="3" :x-gap="12" responsive="screen" item-responsive>
-                <NGridItem span="2">
-                  <NSelect
-                    v-model:value="selectedTemplateId"
-                    clearable
-                    :disabled="!selectedProjectId"
-                    :options="templateOptions"
-                    placeholder="选择项目模板后自动填充筛选配置"
-                  />
-                </NGridItem>
-                <NGridItem span="1">
-                  <NInput v-model:value="templateName" :disabled="!selectedProjectId" placeholder="模板名称" />
-                </NGridItem>
-              </NGrid>
-            </NFormItem>
-            <NButton tertiary :disabled="!selectedProjectId" @click="saveCurrentAsTemplate">
-              <template #icon>
-                <Save :size="16" />
-              </template>
-              保存当前配置为模板
-            </NButton>
-          </NGridItem>
-        </NGrid>
-      </NCard>
+      <NCard :title="isThreadScoped ? '当前线程与来源' : '选择线程与来源'" class="panel-surface">
+        <div v-if="isThreadScoped && currentProject" class="thread-context-block">
+          <div class="thread-context-title">{{ currentProject.name }}</div>
+          <div class="thread-context-copy">{{ currentProject.description || '这轮初筛会直接归入当前线程。' }}</div>
+          <div class="thread-context-tags">
+            <NTag round>当前主题：{{ currentProject.thread_profile?.screening.topic || currentProject.topic }}</NTag>
+            <NTag round type="success">已有 {{ currentProject.tasks.filter((task) => task.kind === 'screening').length }} 轮初筛</NTag>
+          </div>
+        </div>
 
-      <NCard title="任务基本信息" class="panel-surface">
         <NForm label-placement="top">
-          <NFormItem label="任务名称">
-            <NInput v-model:value="title" />
+          <NFormItem v-if="!isThreadScoped" label="选择要继续的线程">
+            <NSelect
+              v-model:value="selectedProjectId"
+              clearable
+              :options="projectOptions"
+              placeholder="先选一条线程，再开始这一轮初筛"
+            />
           </NFormItem>
-          <NFormItem label="研究主题">
-            <NInput v-model:value="topic" placeholder="例如：SCAP 患者 BALF 病毒谱与免疫调控研究" />
+          <NFormItem label="继续使用已有结果">
+            <NSelect
+              v-model:value="sourceDatasetIds"
+              multiple
+              clearable
+              :disabled="!selectedProjectId"
+              :options="datasetOptions"
+              placeholder="可选；如果同时上传文件，系统会把两部分合并后一起筛选"
+            />
           </NFormItem>
         </NForm>
+
+        <NAlert v-if="!selectedProjectId" type="warning" :show-icon="false">
+          初筛必须归属于某一条线程。先选线程；如果还没有线程，请先去“新建线程”页创建。
+        </NAlert>
+        <NAlert v-else-if="!isThreadScoped" type="info" :show-icon="false">
+          当前是全局入口。更推荐从线程主页进入，这样用户会始终知道自己正在推进哪一条线程。
+        </NAlert>
+      </NCard>
+
+      <NCard title="当前主题与筛选标准" class="panel-surface">
+        <div v-if="threadDefaults" class="criteria-preview">
+          <div class="criteria-head">
+            <div>
+              <div class="criteria-title">{{ threadDefaults.topic || currentProject?.topic || '未设置线程主题' }}</div>
+              <div class="criteria-copy">当前线程默认会把这套主题和标准带入本轮筛选。</div>
+            </div>
+            <div class="criteria-actions">
+              <NButton tertiary size="small" @click="overrideThreadCriteria = !overrideThreadCriteria">
+                {{ overrideThreadCriteria ? '收起临时修改' : '本轮临时修改' }}
+              </NButton>
+              <NButton v-if="overrideThreadCriteria" tertiary size="small" @click="resetCriteriaToThreadDefaults">恢复默认</NButton>
+            </div>
+          </div>
+
+          <div class="criteria-tags">
+            <NTag round type="success">纳入 {{ threadDefaults.inclusion.length }}</NTag>
+            <NTag round type="warning">排除 {{ threadDefaults.exclusion.length }}</NTag>
+            <NTag round>{{ currentProject?.thread_profile?.strategy.selected_databases.length || 0 }} 个数据库检索式</NTag>
+          </div>
+        </div>
+
+        <NAlert v-else type="warning" :show-icon="false">
+          这个线程还没有固定的主题与筛选标准。你可以先在这里填写，也可以先回到线程主页生成线程方案。
+        </NAlert>
+
+        <div v-if="overrideThreadCriteria || !threadDefaults" class="criteria-editor">
+          <NForm label-placement="top">
+            <NFormItem label="本轮主题">
+              <NInput v-model:value="topic" placeholder="本轮筛选使用的主题" />
+            </NFormItem>
+            <NFormItem label="纳入标准">
+              <NDynamicInput v-model:value="inclusion" :min="1" />
+            </NFormItem>
+            <NFormItem label="排除标准">
+              <NDynamicInput v-model:value="exclusion" :min="1" />
+            </NFormItem>
+          </NForm>
+        </div>
       </NCard>
 
       <NCard title="输入文件" class="panel-surface">
@@ -607,132 +598,66 @@ onMounted(async () => {
         </div>
       </NCard>
 
-      <NCard title="筛选标准" class="panel-surface card-span-2">
-        <NGrid :cols="2" :x-gap="18" responsive="screen" item-responsive>
-          <NGridItem span="2 m:1">
-            <NForm label-placement="top">
-              <NFormItem label="原始 Markdown 标准">
-                <NInput v-model:value="criteriaMarkdown" type="textarea" :rows="14" placeholder="# 主题 / 纳入标准 / 排除标准" />
-              </NFormItem>
-              <NButton secondary type="primary" @click="parseCriteria">
-                <template #icon>
-                  <WandSparkles :size="16" />
-                </template>
-                解析到结构化字段
-              </NButton>
-            </NForm>
-          </NGridItem>
+      <NCard title="模型与批次" class="panel-surface">
+        <NForm label-placement="top">
+          <NFormItem label="模型提供商">
+            <NSelect
+              v-model:value="provider"
+              :options="metaStore.providerPresets.map((item) => ({ label: item.label, value: item.provider }))"
+            />
+          </NFormItem>
+          <NFormItem label="模型名称">
+            <NInput v-model:value="model.model_name" />
+          </NFormItem>
+          <NFormItem label="API Key">
+            <NInput
+              type="password"
+              show-password-on="click"
+              :value="model.api_key || ''"
+              @update:value="(value) => { model.api_key = value; draftsStore.setProviderApiKey(provider, value) }"
+              placeholder="仅保存在当前浏览器本地"
+            />
+          </NFormItem>
+          <NFormItem label="批次大小">
+            <NInputNumber v-model:value="batchSize" :min="1" :max="50" />
+          </NFormItem>
+          <NFormItem label="目标纳入数">
+            <NInputNumber
+              v-model:value="targetIncludeCount"
+              clearable
+              :min="1"
+              :max="9999"
+              placeholder="留空表示整批全部筛选"
+            />
+          </NFormItem>
+        </NForm>
 
-          <NGridItem span="2 m:1">
-            <NForm label-placement="top">
-              <NFormItem label="纳入标准">
-                <NDynamicInput v-model:value="inclusion" :min="1" />
-              </NFormItem>
-              <NFormItem label="排除标准">
-                <NDynamicInput v-model:value="exclusion" :min="1" />
-              </NFormItem>
-            </NForm>
-          </NGridItem>
-        </NGrid>
-      </NCard>
-
-      <NCard title="模型与批处理" class="panel-surface card-span-2">
-        <NGrid :cols="4" :x-gap="18" :y-gap="12" responsive="screen" item-responsive>
-          <NGridItem span="2 m:1">
-            <NFormItem label="模型提供商">
-              <NSelect
-                v-model:value="provider"
-                :options="metaStore.providerPresets.map((item) => ({ label: item.label, value: item.provider }))"
-              />
-            </NFormItem>
-          </NGridItem>
-          <NGridItem span="2 m:1">
-            <NFormItem label="默认预设">
-              <NText depth="3">{{ selectedPreset?.label || '-' }}</NText>
-            </NFormItem>
-          </NGridItem>
-          <NGridItem span="2 m:1">
-            <NFormItem label="模型名称">
-              <NInput v-model:value="model.model_name" />
-            </NFormItem>
-          </NGridItem>
-<NGridItem span="2 m:1">
-            <NFormItem label="API Key 变量名">
-              <NInput v-model:value="model.api_key_env" placeholder="例如：DEEPSEEK_API_KEY" />
-            </NFormItem>
-          </NGridItem>
-          <NGridItem span="2 m:1">
-            <NFormItem label="API Key（本地缓存）">
-              <NInput
-                type="password"
-                show-password-on="click"
-                :value="model.api_key || ''"
-                @update:value="(value) => { model.api_key = value; draftsStore.setProviderApiKey(provider, value) }"
-                placeholder="可直接填写，仅保存在当前浏览器本地"
-              />
-            </NFormItem>
-          </NGridItem>
-          <NGridItem span="4">
-            <NFormItem label="API Base URL">
-              <NInput v-model:value="model.api_base_url" />
-            </NFormItem>
-          </NGridItem>
-          <NGridItem span="2 m:1">
-            <NFormItem label="Batch size">
-              <NInputNumber v-model:value="batchSize" :min="1" :max="50" />
-            </NFormItem>
-          </NGridItem>
-          <NGridItem span="2 m:1">
-            <NFormItem label="目标纳入数">
-              <NInputNumber v-model:value="targetIncludeCount" :min="1" :max="9999" />
-            </NFormItem>
-          </NGridItem>
-          <NGridItem span="2 m:1">
-            <NFormItem label="最大 tokens">
-              <NInputNumber v-model:value="model.max_tokens" :min="512" :max="8192" />
-            </NFormItem>
-          </NGridItem>
-          <NGridItem span="2 m:1">
-            <NFormItem label="最小请求间隔（秒）">
-              <NInputNumber v-model:value="model.min_request_interval_seconds" :min="0" :max="30" />
-            </NFormItem>
-          </NGridItem>
-          <NGridItem span="2 m:1">
-            <NFormItem label="重试次数">
-              <NInputNumber v-model:value="retryTimes" :min="0" :max="10" />
-            </NFormItem>
-          </NGridItem>
-          <NGridItem span="2 m:1">
-            <NFormItem label="请求超时（秒）">
-              <NInputNumber v-model:value="requestTimeout" :min="60" :max="600" />
-            </NFormItem>
-          </NGridItem>
-          <NGridItem span="2 m:1">
-            <NFormItem label="输入编码">
-              <NInput v-model:value="encoding" />
-            </NFormItem>
-          </NGridItem>
-          <NGridItem span="2 m:1">
-            <div class="toggles">
-              <NCheckbox v-model:checked="stopWhenReached">达到目标后停止</NCheckbox>
-              <NCheckbox v-model:checked="allowUncertain">保留 uncertain</NCheckbox>
-            </div>
-          </NGridItem>
-        </NGrid>
+        <div class="setting-tags">
+          <NTag round>{{ selectedPreset?.label || provider }}</NTag>
+          <NTag round type="success">Batch {{ batchSize }}</NTag>
+          <NTag round type="warning">{{ targetIncludeCount ? `目标纳入 ${targetIncludeCount}` : '全部筛选' }}</NTag>
+        </div>
       </NCard>
     </div>
 
     <div class="action-bar panel-surface">
       <div>
-        <div class="action-title">提交为后台任务</div>
-        <div class="action-copy">本任务将归属于一个项目，并记录其来源数据集、父任务和输出数据集，供后续继续筛选或生成报告。</div>
+        <div class="action-title">提交为新的初筛轮次</div>
+        <div class="action-copy">
+          本轮会记录输入来源、继承的线程主题与筛选标准，以及运行设置。完成后可以返回线程主页继续看阶段进展，或者进入全文获取工作台。
+        </div>
       </div>
-      <NButton :disabled="!canSubmit || tasksStore.submitting" type="primary" size="large" @click="submit">
-        <template #icon>
-          <CircleDashed :size="16" />
-        </template>
-        创建初筛任务
-      </NButton>
+      <NSpace>
+        <RouterLink v-if="threadHomePath" :to="threadHomePath">
+          <NButton tertiary>返回线程主页</NButton>
+        </RouterLink>
+        <NButton :disabled="!canSubmit || tasksStore.submitting" type="primary" size="large" @click="submit">
+          <template #icon>
+            <CircleDashed :size="16" />
+          </template>
+          创建初筛任务
+        </NButton>
+      </NSpace>
     </div>
   </div>
 </template>
@@ -749,65 +674,98 @@ onMounted(async () => {
   padding: 24px;
 }
 
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .screening-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
 }
 
-.card-span-2 {
-  grid-column: span 2;
+.thread-context-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 18px;
 }
 
-.eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-size: 12px;
-  color: #6a776c;
+.thread-context-title,
+.criteria-title,
+.action-title {
+  font-weight: 700;
 }
 
-h1 {
-  margin: 8px 0 12px;
-  font-size: 34px;
+.thread-context-copy,
+.criteria-copy,
+.action-copy {
+  color: #5b665d;
 }
 
-p {
-  color: #516056;
-  line-height: 1.7;
+.thread-context-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.criteria-preview,
+.criteria-editor {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.criteria-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.criteria-actions,
+.criteria-tags,
+.setting-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .dropzone {
+  border: 1px dashed rgba(71, 95, 76, 0.22);
+  border-radius: 18px;
+  padding: 26px 20px;
   display: grid;
-  place-items: center;
-  gap: 10px;
-  min-height: 200px;
-  border-radius: 20px;
-  border: 1px dashed #b0a38b;
-  background: linear-gradient(180deg, rgba(255, 253, 248, 0.8), rgba(236, 232, 220, 0.8));
+  justify-items: center;
+  gap: 8px;
   cursor: pointer;
-  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+  background: rgba(247, 249, 246, 0.92);
+  transition: all 0.2s ease;
 }
 
 .dropzone-active {
-  transform: translateY(-2px);
-  border-color: #2d6a4f;
-  background: linear-gradient(180deg, rgba(233, 246, 236, 0.95), rgba(221, 238, 226, 0.95));
+  border-color: rgba(45, 106, 79, 0.46);
+  background: rgba(232, 242, 234, 0.96);
+}
+
+.dropzone-title {
+  font-weight: 700;
+}
+
+.dropzone-copy {
+  color: #6a776c;
 }
 
 .hidden-input {
   display: none;
 }
 
-.dropzone-title {
-  font-size: 18px;
-  font-weight: 700;
+.draft-alert {
+  margin-top: 14px;
 }
 
-.dropzone-copy {
-  color: #69736a;
-}
-
-.draft-alert,
 .file-toolbar {
   margin-top: 14px;
 }
@@ -825,52 +783,32 @@ p {
   gap: 8px;
   padding: 8px 12px;
   border-radius: 999px;
-  background: rgba(45, 106, 79, 0.12);
-  color: #28513e;
-  font-size: 13px;
+  background: rgba(232, 242, 234, 0.96);
+  border: 1px solid rgba(45, 106, 79, 0.16);
 }
 
 .file-pill-remove {
-  border: none;
+  border: 0;
   background: transparent;
-  color: inherit;
-  padding: 0;
   display: inline-flex;
+  align-items: center;
   cursor: pointer;
-}
-
-.toggles {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding-top: 26px;
+  padding: 0;
 }
 
 .action-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 18px;
+  gap: 20px;
 }
 
-.action-title {
-  font-weight: 700;
-}
-
-.action-copy {
-  color: #667368;
-  margin-top: 6px;
-}
-
-@media (max-width: 1100px) {
+@media (max-width: 960px) {
   .screening-grid {
     grid-template-columns: 1fr;
   }
 
-  .card-span-2 {
-    grid-column: span 1;
-  }
-
+  .criteria-head,
   .action-bar {
     flex-direction: column;
     align-items: stretch;

@@ -27,6 +27,30 @@ class WorkspaceStore:
             "name": name,
             "topic": topic,
             "description": description or "",
+            "thread_profile": {
+                "strategy": {
+                    "research_need": "",
+                    "selected_databases": ["scopus", "wos", "pubmed", "cnki"],
+                    "model": None,
+                    "latest_task_id": None,
+                    "plan": None,
+                },
+                "screening": {
+                    "topic": topic,
+                    "criteria_markdown": "",
+                    "inclusion": [],
+                    "exclusion": [],
+                    "model": None,
+                    "batch_size": 10,
+                    "target_include_count": None,
+                    "stop_when_target_reached": False,
+                    "allow_uncertain": True,
+                    "retry_times": 6,
+                    "request_timeout_seconds": 240,
+                    "encoding": "auto",
+                },
+                "last_updated_at": now,
+            },
             "created_at": now,
             "updated_at": now,
         }
@@ -187,7 +211,7 @@ class WorkspaceStore:
         project_id: str,
         paper_id: str,
         status: str,
-        note: str = "",
+        note: str | None = None,
         landing_url: str | None = None,
         pdf_url: str | None = None,
         oa_status: str | None = None,
@@ -195,7 +219,8 @@ class WorkspaceStore:
         statuses = self.load_fulltext_statuses(project_id)
         current = statuses.get(paper_id, {})
         current["status"] = status
-        current["note"] = note
+        if note is not None:
+            current["note"] = note
         if landing_url is not None:
             current["landing_url"] = landing_url
         if pdf_url is not None:
@@ -264,8 +289,11 @@ class WorkspaceStore:
                 "year": record.year,
                 "journal": record.journal,
                 "doi": record.doi,
+                "confidence": state.get("confidence"),
+                "screening_decision": state.get("screening_decision"),
+                "screening_reason": state.get("screening_reason", ""),
                 "doi_url": doi_url,
-                "landing_url": state.get("landing_url") or doi_url,
+                "landing_url": state.get("landing_url") or doi_url or record.url,
                 "pdf_url": state.get("pdf_url"),
                 "oa_status": state.get("oa_status"),
                 "status": state.get("status", "pending"),
@@ -300,7 +328,7 @@ class WorkspaceStore:
 
     @staticmethod
     def _count_fulltext_statuses(items: list[dict[str, Any]]) -> dict[str, int]:
-        counts = {"pending": 0, "ready": 0, "unavailable": 0, "deferred": 0}
+        counts = {"pending": 0, "ready": 0, "excluded": 0, "unavailable": 0, "deferred": 0}
         for item in items:
             status = item.get("status", "pending")
             counts[status] = counts.get(status, 0) + 1

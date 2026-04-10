@@ -21,7 +21,7 @@ DatasetKind = Literal[
     "report_source",
 ]
 StrategyDatabase = Literal["scopus", "wos", "pubmed", "cnki"]
-FulltextStatus = Literal["pending", "ready", "unavailable", "deferred"]
+FulltextStatus = Literal["pending", "ready", "excluded", "unavailable", "deferred"]
 
 
 class ModelSettings(BaseModel):
@@ -42,7 +42,7 @@ class ScreeningTaskCreate(BaseModel):
     exclusion: list[str]
     model: ModelSettings
     batch_size: int = Field(default=10, ge=1, le=50)
-    target_include_count: int = Field(default=9999, ge=1)
+    target_include_count: int | None = Field(default=None, ge=1)
     stop_when_target_reached: bool = False
     allow_uncertain: bool = True
     retry_times: int = Field(default=6, ge=0, le=10)
@@ -68,7 +68,7 @@ class StrategyTaskCreate(BaseModel):
     project_id: str | None = None
     new_project_name: str = ""
     new_project_description: str = ""
-    project_topic: str
+    project_topic: str = ""
     research_need: str
     selected_databases: list[StrategyDatabase] = Field(default_factory=lambda: ["scopus", "wos", "pubmed", "cnki"])
     model: ModelSettings
@@ -86,6 +86,42 @@ class ProjectUpdate(BaseModel):
     name: str
     topic: str
     description: str = ""
+
+
+class ThreadStrategySettings(BaseModel):
+    research_need: str = ""
+    selected_databases: list[StrategyDatabase] = Field(default_factory=lambda: ["scopus", "wos", "pubmed", "cnki"])
+    model: ModelSettings | None = None
+    latest_task_id: str | None = None
+    plan: StrategyPlan | None = None
+
+
+class ThreadScreeningSettings(BaseModel):
+    topic: str = ""
+    criteria_markdown: str = ""
+    inclusion: list[str] = Field(default_factory=list)
+    exclusion: list[str] = Field(default_factory=list)
+    model: ModelSettings | None = None
+    batch_size: int = Field(default=10, ge=1, le=50)
+    target_include_count: int | None = Field(default=None, ge=1)
+    stop_when_target_reached: bool = False
+    allow_uncertain: bool = True
+    retry_times: int = Field(default=6, ge=0, le=10)
+    request_timeout_seconds: int = Field(default=240, ge=30, le=600)
+    encoding: str = "auto"
+
+
+class ThreadProfile(BaseModel):
+    strategy: ThreadStrategySettings = Field(default_factory=ThreadStrategySettings)
+    screening: ThreadScreeningSettings = Field(default_factory=ThreadScreeningSettings)
+    last_updated_at: datetime | None = None
+
+
+class ProjectWorkflowUpdate(BaseModel):
+    name: str | None = None
+    topic: str | None = None
+    description: str | None = None
+    thread_profile: ThreadProfile
 
 
 class DatasetRecord(BaseModel):
@@ -111,6 +147,9 @@ class FulltextQueueItem(BaseModel):
     year: int | None = None
     journal: str | None = None
     doi: str | None = None
+    confidence: float | str | None = None
+    screening_decision: str | None = None
+    screening_reason: str = ""
     doi_url: str | None = None
     landing_url: str | None = None
     pdf_url: str | None = None
@@ -125,6 +164,7 @@ class ProjectSnapshot(BaseModel):
     name: str
     topic: str
     description: str = ""
+    thread_profile: ThreadProfile | None = None
     created_at: datetime
     updated_at: datetime
     dataset_count: int = 0
@@ -174,6 +214,12 @@ class BulkReviewOverrideRequest(BaseModel):
     reason: str = ""
 
 
+class SelectionReviewOverrideRequest(BaseModel):
+    paper_ids: list[str] = Field(default_factory=list)
+    decision: Literal["include", "exclude", "uncertain"] = "exclude"
+    reason: str = ""
+
+
 class ReferenceOverrideRequest(BaseModel):
     references_text: str
 
@@ -186,6 +232,12 @@ class FulltextStatusUpdateRequest(BaseModel):
     paper_id: str
     status: FulltextStatus
     note: str = ""
+
+
+class FulltextBatchStatusUpdateRequest(BaseModel):
+    paper_ids: list[str] = Field(default_factory=list)
+    status: FulltextStatus
+    note: str | None = None
 
 
 class RetryTaskRequest(BaseModel):

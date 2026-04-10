@@ -63,6 +63,8 @@
 
 ### macOS 一键启动
 
+稳定模式，适合直接使用、演示或验证生产构建效果：
+
 在仓库根目录执行：
 
 ```bash
@@ -79,6 +81,31 @@
 ```bash
 ./stop-wenxian.command
 ```
+
+### macOS 开发热更新
+
+开发模式，适合频繁改前端布局和后端接口，不需要每次改完都重建镜像：
+
+```bash
+./start-wenxian-dev.command
+```
+
+默认地址不变：
+
+- Web: `http://127.0.0.1:8080`
+- API health: `http://127.0.0.1:8000/api/health`
+
+停止服务：
+
+```bash
+./stop-wenxian-dev.command
+```
+
+开发模式下：
+
+- 前端使用 Vite，保存后自动热更新
+- 后端使用 `uvicorn --reload`，Python 改动后自动重载
+- 只有改了依赖、`package-lock.json`、Dockerfile，或者首次拉起缺少镜像时，才需要手动执行带 `--build` 的 compose 命令
 
 ### Windows 启动
 
@@ -127,6 +154,7 @@ docker compose -f docker-compose.local.yml down
 ## 前端开发说明
 
 - 日常本地使用推荐走 Docker
+- 如果你要高频改界面，优先用根目录的 `./start-wenxian-dev.command`
 - 如果你要直接做前端开发，再进入 `literature_screening_web/` 使用 Node 工具链执行 `npm run dev`、`npm run typecheck`
 - 仓库里的 Docker Web 构建也会在容器内执行 `npm run build`
 

@@ -2,9 +2,8 @@
 import { computed, onMounted, reactive, ref } from 'vue'
 import { useRouter, RouterLink } from 'vue-router'
 import dayjs from 'dayjs'
-import { ArrowRight, Bot, FilePlus2, FolderOpenDot, Pencil, Sparkles, Trash2 } from 'lucide-vue-next'
-import { NButton, NCard, NEmpty, NForm, NFormItem, NInput, NModal, NSpace, NTag, useMessage } from 'naive-ui'
-import OverviewMetric from '@/components/OverviewMetric.vue'
+import { ArrowRight, Bot, FolderOpenDot, MoreHorizontal, Sparkles } from 'lucide-vue-next'
+import { NButton, NCard, NDropdown, NEmpty, NForm, NFormItem, NInput, NModal, NSpace, NTag, useMessage } from 'naive-ui'
 import StatusPill from '@/components/StatusPill.vue'
 import { useDraftsStore } from '@/stores/drafts'
 import { useMetaStore } from '@/stores/meta'
@@ -18,19 +17,46 @@ const tasksStore = useTasksStore()
 const draftsStore = useDraftsStore()
 const projectsStore = useProjectsStore()
 
-const showCreateModal = ref(false)
-
-const createForm = reactive({
-  title: '',
-  content: ''
-})
-
 const editingProjectId = ref<string | null>(null)
 const editForm = reactive({
   name: '',
   topic: '',
   description: ''
 })
+
+const workflowSteps = [
+  {
+    step: '01',
+    title: '研究需求',
+    summary: '先用自然语言说明你要解决的问题。',
+    detail: '系统会据此生成线程主题、筛选标准和数据库检索式。'
+  },
+  {
+    step: '02',
+    title: '线程内初筛',
+    summary: '后续轮次都沿着同一条线程推进。',
+    detail: '每轮初筛默认继承顶部固定的主题和纳排标准。'
+  },
+  {
+    step: '03',
+    title: '全文复核',
+    summary: '只处理已经纳入、值得继续拿全文的记录。',
+    detail: '按年份和相关度继续取舍，同时支持批量标记已获取、排除或暂缓。'
+  },
+  {
+    step: '04',
+    title: '生成报告',
+    summary: '全文就绪后，直接从当前线程生成报告。',
+    detail: '同一条线程会保留完整上下文，便于回看和继续扩展。'
+  }
+]
+
+const threadActionOptions = [
+  { label: '打开线程', key: 'open' },
+  { label: '编辑主题', key: 'edit' },
+  { type: 'divider', key: 'divider' },
+  { label: '删除线程', key: 'delete' }
+]
 
 const stats = computed(() => {
   const tasks = tasksStore.list
@@ -43,38 +69,31 @@ const stats = computed(() => {
 })
 
 const threadCards = computed(() =>
-  projectsStore.list.map((project) => {
-    const relatedTasks = tasksStore.list.filter((task) => task.project_id === project.id)
-    return {
-      ...project,
-      screeningCount: relatedTasks.filter((task) => task.kind === 'screening').length,
-      reportCount: relatedTasks.filter((task) => task.kind === 'report').length,
-      running: relatedTasks.some((task) => task.status === 'running' || task.status === 'pending'),
-      latestTask: relatedTasks[0] ?? null
-    }
-  })
+  [...projectsStore.list]
+    .sort((left, right) => new Date(right.updated_at).getTime() - new Date(left.updated_at).getTime())
+    .map((project) => {
+      const relatedTasks = tasksStore.list.filter((task) => task.project_id === project.id)
+      return {
+        ...project,
+        screeningCount: relatedTasks.filter((task) => task.kind === 'screening').length,
+        reportCount: relatedTasks.filter((task) => task.kind === 'report').length,
+        running: relatedTasks.some((task) => task.status === 'running' || task.status === 'pending'),
+        latestTask: relatedTasks[0] ?? null
+      }
+    })
 )
 
-function resetCreateForm() {
-  createForm.title = ''
-  createForm.content = ''
-}
-
-async function createThread() {
-  if (!createForm.title.trim() || !createForm.content.trim()) {
-    message.warning('主题和内容不能为空')
-    return
-  }
-  const project = await projectsStore.createProject({
-    name: createForm.title.trim(),
-    topic: createForm.content.trim(),
-    description: createForm.content.trim()
-  })
-  resetCreateForm()
-  showCreateModal.value = false
-  message.success('主题线程已创建')
-  await router.push(`/threads/${project.id}`)
-}
+const featuredThreads = computed(() => threadCards.value.slice(0, 8))
+const hiddenThreadCount = computed(() => Math.max(threadCards.value.length - featuredThreads.value.length, 0))
+const workspaceSignals = computed(() => [
+  { label: '主题线程', value: stats.value.threads, tone: 'emerald' },
+  { label: '运行中任务', value: stats.value.running, tone: 'amber' },
+  { label: '初筛轮次', value: stats.value.screening, tone: 'stone' },
+  { label: '报告任务', value: stats.value.reports, tone: 'olive' }
+])
+const screeningEntryRoute = computed(() =>
+  draftsStore.screeningDraft.projectId ? `/threads/${draftsStore.screeningDraft.projectId}/screening/new` : '/screening/new'
+)
 
 function openEditThread(project: { id: string; name: string; topic: string; description: string }) {
   editingProjectId.value = project.id
@@ -107,6 +126,20 @@ async function removeThread(project: { id: string; name: string }) {
   message.success('主题线程已删除')
 }
 
+async function handleThreadAction(action: string, thread: { id: string; name: string; topic: string; description: string }) {
+  if (action === 'open') {
+    await router.push(`/threads/${thread.id}`)
+    return
+  }
+  if (action === 'edit') {
+    openEditThread(thread)
+    return
+  }
+  if (action === 'delete') {
+    await removeThread(thread)
+  }
+}
+
 onMounted(async () => {
   draftsStore.hydrate()
   await Promise.all([metaStore.ensureLoaded(), tasksStore.refreshList(), projectsStore.refreshProjects()])
@@ -118,90 +151,117 @@ onMounted(async () => {
     <section class="hero-grid">
       <div class="hero-copy panel-surface">
         <div class="eyebrow">Thread-first Workflow</div>
-        <h1>按主题建立线程，在同一条线里推进检索方案、初筛、复核和报告</h1>
+        <h1>按主题建立线程，在同一条线里推进检索方案、初筛、全文复核和报告</h1>
         <p>
-          这里不再要求先理解项目、数据集或任务类型。先建一个主题线程，在线程里逐步新增初筛轮次、
-          基于剩余文献继续筛选，最后生成报告。
+          默认路径已经收成一条主线：先输入研究需求生成线程方案，再在同一条线程里按“初筛、全文、报告”顺序推进。
+          线程顶部会一直固定当前主题和筛选标准，避免每一轮都重新填写。
         </p>
-        <NSpace>
-          <NButton type="primary" size="large" @click="showCreateModal = true">
-            <template #icon>
-              <FilePlus2 :size="16" />
-            </template>
-            新建线程
-          </NButton>
-          <RouterLink to="/screening/new">
-            <NButton secondary size="large">
-              {{ draftsStore.hasScreeningDraft ? '继续未提交的初筛草稿' : '打开高级初筛入口' }}
+        <div class="hero-actions">
+          <RouterLink to="/threads/new">
+            <NButton type="primary" size="large">
+              新建线程
               <template #icon>
                 <ArrowRight :size="16" />
               </template>
             </NButton>
           </RouterLink>
-          <RouterLink to="/strategy/new">
+          <RouterLink :to="screeningEntryRoute">
+            <NButton secondary size="large">
+              {{ draftsStore.hasScreeningDraft ? '继续线程内初筛草稿' : '从已有线程继续初筛' }}
+              <template #icon>
+                <ArrowRight :size="16" />
+              </template>
+            </NButton>
+          </RouterLink>
+          <RouterLink to="/threads/new">
             <NButton tertiary size="large">
               <template #icon>
                 <Sparkles :size="16" />
               </template>
-              生成检索与筛选方案
+              新建线程方案
             </NButton>
           </RouterLink>
-        </NSpace>
+        </div>
+        <div class="hero-flow">
+          <div v-for="step in workflowSteps" :key="step.step" class="flow-card">
+            <div class="flow-step">{{ step.step }}</div>
+            <div class="flow-title">{{ step.title }}</div>
+            <div class="flow-copy">{{ step.summary }}</div>
+          </div>
+        </div>
       </div>
 
-      <div class="hero-side panel-surface">
-        <div class="hero-side-title">当前能力</div>
-        <div class="support-grid">
-          <div class="support-item">
-            <FolderOpenDot :size="18" />
-            <span>{{ metaStore.acceptedInputFormats.join(' / ') || '.bib / .ris / .enw / .txt' }}</span>
+      <div class="hero-side-stack">
+        <div class="hero-side panel-surface">
+          <div class="hero-side-title">当前能力</div>
+          <div class="support-grid">
+            <div class="support-item">
+              <FolderOpenDot :size="18" />
+              <span>{{ metaStore.acceptedInputFormats.join(' / ') || '.bib / .ris / .enw / .txt' }}</span>
+            </div>
+            <div class="support-item">
+              <Bot :size="18" />
+              <span>{{ metaStore.providerPresets.map((item) => item.label).join(' / ') || 'DeepSeek / Kimi' }}</span>
+            </div>
+            <div class="support-item">
+              <Sparkles :size="18" />
+              <span>线程方案会统一沉淀主题、筛选标准和数据库检索式，后续筛选默认继承</span>
+            </div>
           </div>
-          <div class="support-item">
-            <Bot :size="18" />
-            <span>{{ metaStore.providerPresets.map((item) => item.label).join(' / ') || 'DeepSeek / Kimi' }}</span>
+        </div>
+
+        <div class="hero-side panel-surface snapshot-panel">
+          <div class="hero-side-title">工作台概览</div>
+          <div class="snapshot-grid">
+            <div
+              v-for="signal in workspaceSignals"
+              :key="signal.label"
+              class="snapshot-item"
+              :class="`snapshot-${signal.tone}`"
+            >
+              <div class="snapshot-label">{{ signal.label }}</div>
+              <div class="snapshot-value">{{ signal.value }}</div>
+            </div>
           </div>
-          <div class="support-item">
-            <Sparkles :size="18" />
-            <span>线程内可继续筛剩余文献、人工复核，并基于复核结果直接生成报告</span>
+          <div class="snapshot-note">
+            {{ draftsStore.hasScreeningDraft ? '检测到未提交初筛草稿，可直接从上方入口回到对应线程继续。' : '没有未提交草稿时，推荐从“新建线程”开始，或从最近线程继续推进。' }}
           </div>
         </div>
       </div>
     </section>
 
-    <section class="metric-grid">
-      <OverviewMetric label="主题线程" :value="stats.threads" />
-      <OverviewMetric label="运行中任务" :value="stats.running" />
-      <OverviewMetric label="初筛轮次" :value="stats.screening" />
-      <OverviewMetric label="报告任务" :value="stats.reports" />
-    </section>
-
     <section class="dashboard-grid">
-      <NCard title="如何使用" class="panel-surface">
-        <ol class="principles">
-          <li>先新建一个主题线程，只填主题和内容说明。</li>
-          <li>进入线程后，按需要先生成检索与筛选方案，或直接发起第一轮初筛。</li>
-          <li>每一轮初筛完成后，都能继续筛未使用文献、进入人工复核或直接生成报告。</li>
-          <li>报告和复核结果都会回到同一条线程里，不需要单独管理底层数据集。</li>
-        </ol>
+      <NCard title="默认工作方式" class="panel-surface">
+        <div class="principle-grid">
+          <div v-for="step in workflowSteps" :key="`${step.step}-detail`" class="principle-card">
+            <div class="principle-step">{{ step.step }}</div>
+            <div class="principle-title">{{ step.title }}</div>
+            <div class="principle-copy">{{ step.detail }}</div>
+          </div>
+        </div>
+        <div class="guide-note">
+          线程首页负责固定主题和标准；最近线程这里只展示最近一部分，完整列表可在左侧边栏继续查看，并支持右键操作。
+        </div>
       </NCard>
 
       <NCard title="最近主题线程" class="panel-surface">
-        <div v-if="threadCards.length" class="thread-list">
-          <RouterLink v-for="thread in threadCards" :key="thread.id" :to="`/threads/${thread.id}`" class="thread-card">
+        <div v-if="featuredThreads.length" class="thread-panel-head">
+          <div class="thread-panel-copy">优先展示最近更新的线程，方便快速回到正在推进的任务。</div>
+          <div class="thread-panel-meta">共 {{ threadCards.length }} 条线程</div>
+        </div>
+        <div v-if="featuredThreads.length" class="thread-grid">
+          <RouterLink v-for="thread in featuredThreads" :key="thread.id" :to="`/threads/${thread.id}`" class="thread-card">
             <div class="thread-card-header">
               <div class="thread-card-title">{{ thread.name }}</div>
               <div class="thread-card-actions">
                 <StatusPill :status="thread.running ? 'running' : (thread.latestTask?.status ?? 'succeeded')" />
-                <NButton quaternary circle size="small" @click.prevent="openEditThread(thread)">
-                  <template #icon>
-                    <Pencil :size="14" />
-                  </template>
-                </NButton>
-                <NButton quaternary circle size="small" @click.prevent="removeThread(thread)">
-                  <template #icon>
-                    <Trash2 :size="14" />
-                  </template>
-                </NButton>
+                <NDropdown :options="threadActionOptions" trigger="click" @select="(key) => handleThreadAction(String(key), thread)">
+                  <NButton quaternary circle size="small" @click.prevent>
+                    <template #icon>
+                      <MoreHorizontal :size="15" />
+                    </template>
+                  </NButton>
+                </NDropdown>
               </div>
             </div>
             <div class="thread-card-topic">{{ thread.topic }}</div>
@@ -213,40 +273,12 @@ onMounted(async () => {
             <div class="thread-card-tail" v-if="thread.latestTask">最近动作：{{ thread.latestTask.title }}</div>
           </RouterLink>
         </div>
+        <div v-if="hiddenThreadCount > 0" class="thread-panel-footnote">
+          还有 {{ hiddenThreadCount }} 条线程没有在这里展开，左侧“最近主题”列表支持继续浏览和右键操作。
+        </div>
         <NEmpty v-else description="还没有主题线程" />
       </NCard>
     </section>
-
-    <NModal
-      :show="showCreateModal"
-      preset="card"
-      style="max-width: 720px"
-      title="新建主题线程"
-      @update:show="(value) => { showCreateModal = value; if (!value) resetCreateForm() }"
-    >
-      <NForm label-placement="top">
-        <NFormItem label="主题">
-          <NInput
-            v-model:value="createForm.title"
-            placeholder="例如：机器学习在场地效应（Site Effects）评估与预测中的应用"
-          />
-        </NFormItem>
-        <NFormItem label="内容">
-          <NInput
-            v-model:value="createForm.content"
-            type="textarea"
-            :autosize="{ minRows: 5, maxRows: 10 }"
-            placeholder="简要说明这条线程要解决什么问题、筛什么文献、最后要形成什么交付。"
-          />
-        </NFormItem>
-      </NForm>
-      <template #footer>
-        <NSpace justify="end">
-          <NButton @click="showCreateModal = false">取消</NButton>
-          <NButton type="primary" @click="createThread">创建线程</NButton>
-        </NSpace>
-      </template>
-    </NModal>
 
     <NModal
       :show="editingProjectId !== null"
@@ -284,22 +316,19 @@ onMounted(async () => {
 }
 
 .hero-grid,
-.dashboard-grid,
-.metric-grid {
+.dashboard-grid {
   display: grid;
   gap: 18px;
 }
 
 .hero-grid {
-  grid-template-columns: 1.45fr 1fr;
-}
-
-.metric-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: 1.35fr 0.92fr;
+  align-items: stretch;
 }
 
 .dashboard-grid {
   grid-template-columns: 0.9fr 1.1fr;
+  align-items: start;
 }
 
 .hero-copy,
@@ -307,15 +336,19 @@ onMounted(async () => {
   padding: 24px;
 }
 
+.hero-copy {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top right, rgba(163, 177, 138, 0.22), transparent 34%),
+    linear-gradient(135deg, rgba(45, 106, 79, 0.09), rgba(255, 255, 255, 0.96) 48%, rgba(248, 246, 239, 0.94));
+}
+
 .eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.16em;
   font-size: 12px;
   color: #6a776c;
-}
-
-.hero-side-title {
-  font-weight: 700;
 }
 
 h1 {
@@ -330,40 +363,162 @@ p {
   line-height: 1.7;
 }
 
-.support-grid {
-  display: grid;
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
   gap: 12px;
+}
+
+.hero-flow {
+  margin-top: 22px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.flow-card {
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(45, 106, 79, 0.08);
+}
+
+.flow-step,
+.principle-step {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #7d897f;
+}
+
+.flow-title,
+.principle-title {
+  margin-top: 8px;
+  font-weight: 700;
+  color: #233026;
+}
+
+.flow-copy,
+.principle-copy,
+.thread-panel-copy,
+.guide-note,
+.snapshot-note {
+  margin-top: 8px;
+  color: #526055;
+  line-height: 1.65;
+}
+
+.hero-side-stack {
+  display: grid;
+  gap: 18px;
+}
+
+.hero-side-title {
+  font-weight: 700;
+}
+
+.support-grid,
+.snapshot-grid,
+.principle-grid,
+.thread-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.support-grid {
   margin-top: 12px;
 }
 
 .support-item {
   display: flex;
   gap: 12px;
-  align-items: center;
+  align-items: flex-start;
   padding: 12px 14px;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 16px;
 }
 
-.principles {
-  margin: 0;
-  padding-left: 18px;
-  color: #4e5b51;
-  line-height: 1.8;
+.snapshot-grid,
+.principle-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 12px;
 }
 
-.thread-list {
+.snapshot-item,
+.principle-card {
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.56);
+  border: 1px solid rgba(45, 106, 79, 0.08);
+}
+
+.snapshot-label {
+  color: #738176;
+  font-size: 12px;
+}
+
+.snapshot-value {
+  margin-top: 10px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #203025;
+}
+
+.snapshot-emerald {
+  background: linear-gradient(135deg, rgba(45, 106, 79, 0.14), rgba(255, 255, 255, 0.7));
+}
+
+.snapshot-amber {
+  background: linear-gradient(135deg, rgba(196, 137, 29, 0.14), rgba(255, 255, 255, 0.7));
+}
+
+.snapshot-stone {
+  background: linear-gradient(135deg, rgba(108, 117, 125, 0.12), rgba(255, 255, 255, 0.7));
+}
+
+.snapshot-olive {
+  background: linear-gradient(135deg, rgba(163, 177, 138, 0.18), rgba(255, 255, 255, 0.72));
+}
+
+.guide-note {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(45, 106, 79, 0.08);
+}
+
+.thread-panel-head {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.thread-panel-meta {
+  color: #738176;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.thread-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .thread-card {
   display: block;
   padding: 18px;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.42);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.58)),
+    linear-gradient(135deg, rgba(45, 106, 79, 0.06), transparent 60%);
   border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.thread-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px rgba(45, 106, 79, 0.08);
+  border-color: rgba(45, 106, 79, 0.16);
 }
 
 .thread-card-header {
@@ -382,6 +537,7 @@ p {
 .thread-card-title {
   font-size: 18px;
   font-weight: 700;
+  color: #223126;
 }
 
 .thread-card-topic {
@@ -404,11 +560,32 @@ p {
   color: #3d4b40;
 }
 
+.thread-panel-footnote {
+  margin-top: 16px;
+  color: #667469;
+  line-height: 1.6;
+}
+
 @media (max-width: 1100px) {
   .hero-grid,
-  .dashboard-grid,
-  .metric-grid {
+  .dashboard-grid {
     grid-template-columns: 1fr;
+  }
+
+  .thread-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero-flow,
+  .snapshot-grid,
+  .principle-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .thread-panel-head {
+    flex-direction: column;
   }
 }
 </style>

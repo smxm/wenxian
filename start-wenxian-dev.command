@@ -35,7 +35,7 @@ wait_for_url() {
   done
 
   echo "$name 启动超时，请运行下面命令查看日志："
-  echo "cd \"$SCRIPT_DIR\" && docker compose -f docker-compose.local.yml logs --tail=100"
+  echo "cd \"$SCRIPT_DIR\" && docker compose -p \"$DEV_PROJECT_NAME\" -f docker-compose.dev.yml logs --tail=100"
   return 1
 }
 
@@ -72,14 +72,14 @@ if [[ -z "${KIMI_API_KEY:-}" && -z "${DEEPSEEK_API_KEY:-}" ]]; then
   echo "项目可以启动并查看已有数据，但新建 AI 任务前需要先配置 API Key。"
 fi
 
-echo "正在启动文献工作台 Docker 前后端..."
+echo "正在启动文献工作台开发模式..."
 echo "数据目录：$APP_DATA_DIR"
-echo "前端地址：http://127.0.0.1:$WEB_PORT"
-echo "后端地址：http://127.0.0.1:$API_PORT/api/health"
+echo "前端热更新地址：http://127.0.0.1:$WEB_PORT"
+echo "后端热重载地址：http://127.0.0.1:$API_PORT/api/health"
 
 stop_legacy_stacks
-docker compose -p "$DEV_PROJECT_NAME" -f docker-compose.dev.yml down >/dev/null 2>&1 || true
-docker compose -p "$LOCAL_PROJECT_NAME" -f docker-compose.local.yml up -d --build
+docker compose -p "$LOCAL_PROJECT_NAME" -f docker-compose.local.yml down >/dev/null 2>&1 || true
+docker compose -p "$DEV_PROJECT_NAME" -f docker-compose.dev.yml up -d
 
 wait_for_url "http://127.0.0.1:$API_PORT/api/health" "后端 API"
 wait_for_url "http://127.0.0.1:$WEB_PORT" "前端页面"
@@ -87,8 +87,8 @@ wait_for_url "http://127.0.0.1:$WEB_PORT" "前端页面"
 open "http://127.0.0.1:$WEB_PORT"
 
 echo
-echo "文献工作台已经启动。"
-echo "这是稳定模式：会重建镜像，适合演示和固定版本验证。"
-echo "日常改界面或接口建议双击 start-wenxian-dev.command 使用热更新模式。"
-echo "停止服务请双击 stop-wenxian.command"
-echo "查看日志：cd \"$SCRIPT_DIR\" && docker compose -p \"$LOCAL_PROJECT_NAME\" -f docker-compose.local.yml logs -f"
+echo "文献工作台开发模式已经启动。"
+echo "前端源码保存后会自动热更新，后端 Python 改动会自动重载。"
+echo "只有改依赖或 Dockerfile 时，才需要手动执行带 --build 的 compose 命令。"
+echo "停止服务请双击 stop-wenxian-dev.command"
+echo "查看日志：cd \"$SCRIPT_DIR\" && docker compose -p \"$DEV_PROJECT_NAME\" -f docker-compose.dev.yml logs -f"
