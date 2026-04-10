@@ -413,3 +413,20 @@ Append-only log for thread handoff. Add one new entry at the end of the file aft
   - `/Users/mao/Documents/langchain/literature_screening/tests/test_api_app.py`
   - `/Users/mao/Documents/langchain/project_state.md`
   - `/Users/mao/Documents/langchain/project_session_log.md`
+
+## Session 2026-04-11 - Rename active branch to thread-first workflow refresh
+
+- Scope: renamed the long-lived working branch so its name matches the current product scope instead of the older relative-path-only backend fix
+- Main changes:
+  - renamed the local git branch from `codex/relative-path-api-compat` to `codex/thread-first-workflow-refresh`
+  - pushed the renamed branch to GitHub and removed the old remote branch name to keep the remote clean
+  - updated `/Users/mao/Documents/langchain/project_state.md` so current-branch and remote-tracking references now point at the renamed branch
+- Verification:
+  - `git branch --show-current`
+  - `git push -u origin codex/thread-first-workflow-refresh`
+  - `git push origin --delete codex/relative-path-api-compat`
+- Outstanding follow-ups:
+  - if a later PR is opened from this work, use `codex/thread-first-workflow-refresh` as the head branch name
+- Files touched:
+  - `/Users/mao/Documents/langchain/project_state.md`
+  - `/Users/mao/Documents/langchain/project_session_log.md`

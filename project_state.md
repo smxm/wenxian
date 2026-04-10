@@ -5,8 +5,8 @@ Last updated: 2026-04-10
 ## Project Overview
 
 - Workspace root: `/Users/mao/Documents/langchain`
-- Git branch: `codex/relative-path-api-compat`
-- Remote tracking branch: `origin/codex/relative-path-api-compat`
+- Git branch: `codex/thread-first-workflow-refresh`
+- Remote tracking branch: `origin/codex/thread-first-workflow-refresh`
 - Backend: `/Users/mao/Documents/langchain/literature_screening`
 - Frontend: `/Users/mao/Documents/langchain/literature_screening_web`
 - Report module: `/Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module`
@@ -75,7 +75,7 @@ Date: 2026-04-10
   - `/Users/mao/Documents/langchain/literature_screening/docs/web-workbench.md`
   - `/Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module/README.md`
 - Clarified the root README so startup instructions now distinguish macOS `.command` helpers from Windows manual `docker compose -f docker-compose.local.yml up -d --build`
-- Pushed the active work to `origin/codex/relative-path-api-compat`, so the current thread can be resumed from a remote branch instead of only local workspace state
+- Pushed the active work to `origin/codex/thread-first-workflow-refresh`, so the current thread can be resumed from a remote branch instead of only local workspace state
 - Current tracked worktree is effectively clean; remaining local-only items are untracked environment artifacts such as `.DS_Store`, `.venv/`, and `firstagent/`
 - Added a reusable Codex skill for future thread handoff updates at `/Users/mao/.codex/skills/project-handoff-sync/SKILL.md`
 - Added persisted thread-level workflow context in project metadata so each thread can now store:
@@ -143,7 +143,7 @@ Date: 2026-04-10
 
 ## Next Thread Suggestions
 
-1. Continue on `codex/relative-path-api-compat` unless the next thread intentionally needs a different branch
+1. Continue on `codex/thread-first-workflow-refresh` unless the next thread intentionally needs a different branch
 2. Decide whether to add an explicit migration that writes derived `thread_profile` data into all older project JSON files instead of deriving it on read
 3. Consider reducing the frontend production bundle size warning by adding manual chunking or more route-level splitting
 4. Break `/Users/mao/Documents/langchain/literature_screening_web/src/views/FulltextQueueView.vue` into smaller review/full-text subcomponents once the interaction model stabilizes
@@ -209,7 +209,7 @@ Verified in this round:
 - `docker compose -f /Users/mao/Documents/langchain/docker-compose.local.yml ps`
 - `curl http://127.0.0.1:8000/api/health`
 - `git diff --check README.md literature_screening/docs/architecture.md literature_screening/docs/web-workbench.md literature_screening/separated_modules/formal_report_module/README.md`
-- `git push origin codex/relative-path-api-compat`
+- `git push origin codex/thread-first-workflow-refresh`
 - `PYTHONPATH=/Users/mao/Documents/langchain/literature_screening/src ./.venv/bin/python -m pytest literature_screening/tests/test_api_app.py -q`
 - `./.venv/bin/python -m compileall literature_screening/src/literature_screening/api/app.py literature_screening/src/literature_screening/api/schemas.py literature_screening/src/literature_screening/api/workspace_store.py literature_screening/tests/test_api_app.py`
 - `docker run --rm -v /Users/mao/Documents/langchain/literature_screening_web:/work -w /work node:20 sh -lc 'npm ci >/tmp/npm-ci.log && npm run build >/tmp/npm-build.log && cat /tmp/npm-build.log'`
@@ -272,7 +272,7 @@ Windows manual startup uses the same `docker-compose.local.yml` commands in Powe
 
 - Read this file first for the current summary
 - Then read the latest one or two entries in `/Users/mao/Documents/langchain/project_session_log.md`
-- Continue from `codex/relative-path-api-compat` by default; latest pushed remote commit is `cc462c9`
+- Continue from `codex/thread-first-workflow-refresh` by default; latest pushed remote commit is `95bc711`
 - For local execution on this Mac, assume Docker first; for Windows, use the manual `docker compose -f docker-compose.local.yml up -d --build` flow documented in the root README
 - Use `./start-wenxian-dev.command` for daily UI or API iteration; use `./start-wenxian.command` when you need the built nginx bundle behavior
 - The main product flow is now explicitly: thread kickoff -> screening -> full text -> report
