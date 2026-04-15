@@ -430,3 +430,42 @@ Append-only log for thread handoff. Add one new entry at the end of the file aft
 - Files touched:
   - `/Users/mao/Documents/langchain/project_state.md`
   - `/Users/mao/Documents/langchain/project_session_log.md`
+
+## Session 2026-04-15 - Windows startup, legacy data compatibility, and handoff sync
+
+- Scope: stabilized the Windows local runtime, fixed old/new project data compatibility issues in the unified review flow, refreshed repo docs, and corrected the handoff records to match the actual `E:\wenxian_new` workspace
+- Main changes:
+  - added Windows start/stop helpers for both dev and build flows in `E:\wenxian_new\start-wenxian-dev.ps1`, `E:\wenxian_new\start-wenxian.ps1`, `E:\wenxian_new\stop-wenxian-dev.ps1`, and `E:\wenxian_new\stop-wenxian.ps1` with matching `.cmd` wrappers
+  - made Docker readiness checks more robust and added automatic port probing so the dev launcher can survive harmless `docker info` warnings and common `8080` conflicts
+  - fixed old-data path resolution in `E:\wenxian_new\literature_screening\src\literature_screening\storage_paths.py` so persisted `.../api_runs/...` Windows absolute paths from older workspaces are remapped into the current repo storage root
+  - fixed `cumulative_included` and full-text queue rebuild behavior in `E:\wenxian_new\literature_screening\src\literature_screening\api\workspace_store.py` so queue regeneration preserves original `paper_id` values and imported landing-page links by preferring task outputs over RIS-only reconstruction
+  - added related compatibility support in `E:\wenxian_new\literature_screening\src\literature_screening\bibtex\parser.py`, `E:\wenxian_new\literature_screening\src\literature_screening\bibtex\exporter.py`, `E:\wenxian_new\literature_screening\src\literature_screening\bibtex\deduper.py`, and `E:\wenxian_new\literature_screening\src\literature_screening\studio\service.py`
+  - updated `E:\wenxian_new\README.md` and `E:\wenxian_new\literature_screening\docs\architecture.md` to document Windows startup, `.env` precedence, API-key troubleshooting, old-data compatibility, and report fallback behavior
+  - pushed the implementation branch to `origin/codex/thread-first-workflow-refresh` at commit `d9c5230`
+  - refreshed `E:\wenxian_new\project_state.md` so future threads read the actual Windows workspace state instead of stale macOS handoff notes
+- Verification:
+  - `cd E:\wenxian_new\literature_screening && cmd /c "set PYTHONPATH=E:\wenxian_new\literature_screening\src&& python -m pytest -q tests\test_storage_paths.py"`
+  - `cd E:\wenxian_new\literature_screening && cmd /c "set PYTHONPATH=E:\wenxian_new\literature_screening\src&& python -m pytest -q tests\test_api_app.py -k fulltext_queue"`
+  - `cd E:\wenxian_new && git push -u origin codex/thread-first-workflow-refresh`
+- Outstanding follow-ups:
+  - decide whether daily Windows development should continue on Docker or move to direct host execution for speed
+  - consider reducing configuration confusion by making only one `.env` file authoritative
+  - if report output still lacks substance with a valid API key, inspect report prompt quality and fallback-note behavior separately from data-queue logic
+- Files touched:
+  - `E:\wenxian_new\README.md`
+  - `E:\wenxian_new\literature_screening\docs\architecture.md`
+  - `E:\wenxian_new\literature_screening\src\literature_screening\api\app.py`
+  - `E:\wenxian_new\literature_screening\src\literature_screening\api\workspace_store.py`
+  - `E:\wenxian_new\literature_screening\src\literature_screening\bibtex\deduper.py`
+  - `E:\wenxian_new\literature_screening\src\literature_screening\bibtex\exporter.py`
+  - `E:\wenxian_new\literature_screening\src\literature_screening\bibtex\parser.py`
+  - `E:\wenxian_new\literature_screening\src\literature_screening\storage_paths.py`
+  - `E:\wenxian_new\literature_screening\src\literature_screening\studio\service.py`
+  - `E:\wenxian_new\literature_screening\tests\test_api_app.py`
+  - `E:\wenxian_new\literature_screening\tests\test_storage_paths.py`
+  - `E:\wenxian_new\start-wenxian-dev.ps1`
+  - `E:\wenxian_new\start-wenxian.ps1`
+  - `E:\wenxian_new\stop-wenxian-dev.ps1`
+  - `E:\wenxian_new\stop-wenxian.ps1`
+  - `E:\wenxian_new\project_state.md`
+  - `E:\wenxian_new\project_session_log.md`
