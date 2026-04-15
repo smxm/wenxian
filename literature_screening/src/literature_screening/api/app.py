@@ -290,9 +290,16 @@ def meta() -> dict:
 @app.get("/api/projects", response_model=list[ProjectSnapshot])
 def list_projects() -> list[ProjectSnapshot]:
     projects = WORKSPACE_STORE.list_projects()
+    tasks = TASK_STORE.list_tasks()
+    tasks_by_project: dict[str, list[dict]] = {}
+    for task in tasks:
+        project_id = _task_project_id(task)
+        if not project_id:
+            continue
+        tasks_by_project.setdefault(project_id, []).append(task)
     return [
         ProjectSnapshot.model_validate(
-            item | {"thread_profile": _effective_thread_profile(item)}
+            item | {"thread_profile": _effective_thread_profile(item, project_tasks=tasks_by_project.get(item["id"], []))}
         )
         for item in projects
     ]

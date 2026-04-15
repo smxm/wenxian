@@ -25,10 +25,22 @@ def parse_bibtex_files(file_paths: list[Path], encoding: str = "utf-8") -> list[
 
         for entry in entries:
             raw_counter += 1
-            paper_id = f"raw_{raw_counter:06d}"
+            paper_id = _extract_internal_paper_id(entry) or f"raw_{raw_counter:06d}"
             records.append(_entry_to_paper_record(entry, file_path=file_path, paper_id=paper_id))
 
     return records
+
+
+_INTERNAL_PAPER_ID_PATTERN = re.compile(r"^(raw|paper)_\d{6}$")
+
+
+def _extract_internal_paper_id(entry: dict[str, str]) -> str | None:
+    candidate = (entry.get("paper_id") or entry.get("ID") or "").strip()
+    if not candidate:
+        return None
+    if _INTERNAL_PAPER_ID_PATTERN.match(candidate):
+        return candidate
+    return None
 
 
 def _strip_leading_text(text: str) -> str:
@@ -492,9 +504,10 @@ def _finalize_ris_record(raw_record: dict[str, list[str]], sequence: int) -> dic
         pages = first("SP", "EP")
 
     title_value = first("TI", "T1", "CT", "BT") or f"RIS record {sequence}"
+    entry_id = first("ID", "AN") or doi_value or f"ris_{sequence:06d}"
     entry = {
         "ENTRYTYPE": _map_ris_type(ris_type),
-        "ID": doi_value or first("ID", "AN") or f"ris_{sequence:06d}",
+        "ID": entry_id,
         "author": " and ".join([value for value in raw_record.get("AU", []) + raw_record.get("A1", []) if value]),
         "title": title_value,
         "journal": first("JO", "JF", "JA", "T2", "T3", "PB"),

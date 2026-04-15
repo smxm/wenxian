@@ -109,7 +109,21 @@
 
 ### Windows 启动
 
-当前仓库里没有提交 Windows 专用的一键脚本，但 Windows 上可以直接使用同一个 Docker Compose 文件启动。
+Windows 上可以直接双击仓库根目录的脚本一键启动（需要先安装并启动 Docker Desktop）：
+
+- 稳定模式（构建镜像后启动）：`start-wenxian.cmd`
+- 开发热更新模式：`start-wenxian-dev.cmd`
+- 停止服务：`stop-wenxian.cmd` / `stop-wenxian-dev.cmd`
+
+如果 `8080` 端口被占用（例如 qBittorrent WebUI），可以先设置 `WEB_PORT`（如 `8081`）；脚本在未显式设置时也会自动尝试可用端口。
+
+环境变量加载顺序：
+
+- 先读取仓库根目录 `.env`
+- 再读取 `literature_screening/.env`
+- 如果两个文件都定义了同名变量，以 `literature_screening/.env` 为准
+
+这意味着如果根目录 `.env` 已经写入真实 `DEEPSEEK_API_KEY` / `KIMI_API_KEY`，但 `literature_screening/.env` 里仍保留 `your_deepseek_api_key_here` 之类占位符，启动脚本最终会把真实值覆盖掉，容器内请求会返回 `401 invalid api key`
 
 在仓库根目录执行：
 
@@ -145,11 +159,26 @@ docker compose -f docker-compose.local.yml down
 
 - 当前本地运行数据默认在 `literature_screening/data/api_runs`
 - 持久化文件现在按 `api_runs` 根目录存储相对路径，降低跨机器迁移时的绝对路径漂移问题
+- 对于旧项目或从其他工作目录迁移过来的数据，如果磁盘里仍残留 `.../api_runs/...` 形式的 Windows 绝对路径，服务端会在读取时尝试自动重映射到当前仓库的 `literature_screening/data/api_runs`
 - API 为兼容现有调用方，仍保留绝对路径字段，同时新增了相对路径字段：
   - dataset: `path` + `relative_path`
   - task detail: `run_root` + `run_root_relative`
   - task detail: `output_dir` + `output_dir_relative`
 - 如果导入的是旧机器导出的数据，先运行 `scripts/repair-api-runs-paths.py`，再运行 `scripts/relativize-api-runs-paths.py`
+
+- 兼容旧数据时，`cumulative_included` 和全文队列会优先尝试从任务产物里的 `deduped_records.json` / `screening_decisions.json` 恢复记录，这样可以保留原始 `paper_id`、导入链接和筛选上下文，避免“已纳入但没进入全文队列”或多轮筛选累计纳入丢失的问题
+
+## 常见排障
+
+- `401 invalid api key`
+  - 先检查根目录 `.env` 和 `literature_screening/.env` 是否存在重复定义
+  - 再确认修改后已经执行 `stop-wenxian*.ps1` + `start-wenxian*.ps1` 重新创建容器
+- 报告里反复出现 `Selected from reusable project dataset.`
+  - 这通常不是模型真的只输出了这句，而是逐篇生成笔记时模型请求失败，系统退回到了兜底模板
+  - 优先查看对应报告任务目录下 `report_output/logs/paper_note_errors.log`
+- 旧项目迁移后“项目累计纳入”或全文队列数量不对
+  - 先同步全文队列，系统会连带重建 `cumulative_included`
+  - 如果旧数据来自不同工作目录，优先确认 `api_runs` 数据是否已经复制到当前仓库的 `literature_screening/data/api_runs`
 
 ## 前端开发说明
 

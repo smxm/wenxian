@@ -47,6 +47,9 @@ def resolve_stored_path(value: str | Path | None, *, storage_root: Path) -> Path
         return None
 
     if is_storage_absolute_path(text):
+        remapped = _remap_foreign_api_runs_absolute_path(text, storage_root=storage_root)
+        if remapped is not None:
+            return remapped
         return Path(text)
 
     return storage_root / Path(PurePosixPath(normalize_relative_storage_path(text)))
@@ -100,3 +103,40 @@ def _rewrite_storage_scalar(value: Any, *, storage_root: Path, mode: str) -> Any
         return str(resolved) if resolved is not None else value
 
     raise ValueError(f"Unsupported storage rewrite mode: {mode}")
+
+
+def _remap_foreign_api_runs_absolute_path(value: str, *, storage_root: Path) -> Path | None:
+    """Map an absolute path from another workspace into the current storage root.
+
+    This supports Windows absolute paths like:
+      E:\\old\\literature_screening\\data\\api_runs\\tasks\\<id>\\...
+    which are not accessible inside the container, but whose data has been migrated to the
+    current storage root (e.g. storage_root/tasks/<id>/...).
+    """
+    text = str(value).strip()
+    if not text:
+        return None
+
+    try:
+        parts = PureWindowsPath(text).parts if PureWindowsPath(text).is_absolute() else PurePosixPath(text).parts
+    except Exception:
+        return None
+
+    lowered = [part.lower() for part in parts]
+    if "api_runs" not in lowered:
+        return None
+    api_index = lowered.index("api_runs")
+    if api_index + 1 >= len(parts):
+        return None
+
+    suffix_parts = [part for part in parts[api_index + 1 :] if part not in ("/", "\\")]
+    if not suffix_parts:
+        return None
+    top = suffix_parts[0].replace("\\", "/").strip("/")
+    if top not in API_RUNS_TOP_LEVEL_DIRS:
+        return None
+
+    candidate = storage_root / Path(PurePosixPath("/".join([p.replace("\\", "/") for p in suffix_parts])))
+    if candidate.exists() or candidate.parent.exists():
+        return candidate
+    return None

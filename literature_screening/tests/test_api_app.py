@@ -11,6 +11,7 @@ from literature_screening.api.app import app
 from literature_screening.api.task_store import TaskStore
 from literature_screening.api.workspace_store import WorkspaceStore
 from literature_screening.core.config import load_run_config
+from literature_screening.core.models import PaperRecord
 
 
 client = TestClient(app)
@@ -584,6 +585,72 @@ def test_fulltext_queue_uses_imported_url_when_doi_missing(tmp_path: Path, monke
     payload = rebuild.json()
     assert len(payload["fulltext_queue"]) == 1
     assert payload["fulltext_queue"][0]["doi"] is None
+    assert payload["fulltext_queue"][0]["landing_url"] == "https://kns.cnki.net/example-record"
+
+
+def test_fulltext_queue_rebuild_uses_task_outputs_when_available(tmp_path: Path, monkeypatch) -> None:
+    task_store = TaskStore(tmp_path / "api_runs")
+    workspace_store = WorkspaceStore(tmp_path / "api_runs")
+    monkeypatch.setattr(app_module, "TASK_STORE", task_store)
+    monkeypatch.setattr(app_module, "WORKSPACE_STORE", workspace_store)
+
+    project = workspace_store.create_project(name="task-fulltext-project", topic="topic", description="")
+    task = task_store.create_task(kind="screening", title="screening", metadata={})
+    output_dir = task_store.tasks_dir / task.task_id / "screening_run"
+    output_dir.mkdir(parents=True, exist_ok=True)
+    task_store.update(task.task_id, output_dir=str(output_dir))
+
+    record = PaperRecord(
+        paper_id="paper_000042",
+        title="CNKI Record",
+        year=2024,
+        journal="Journal",
+        url="https://kns.cnki.net/example-record",
+        authors=[],
+        keywords=[],
+        source_files=[],
+        source_keys=[],
+        merged_from=[],
+        entry_type="article",
+        status="included",
+    )
+    (output_dir / "deduped_records.json").write_text(
+        json.dumps([record.model_dump(mode="json")], ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    (output_dir / "screening_decisions.json").write_text(
+        json.dumps([{"paper_id": "paper_000042", "decision": "include"}], ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+
+    ris_path = output_dir / "included.ris"
+    ris_path.write_text(
+        "\n".join(
+            [
+                "TY  - JOUR",
+                "TI  - Some other title",
+                "ER  - ",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    dataset = workspace_store.register_dataset(
+        project_id=project["id"],
+        task_id=task.task_id,
+        kind="included",
+        label="Included records",
+        path=ris_path,
+        record_count=1,
+        file_format="ris",
+    )
+
+    rebuild = client.post(
+        f"/api/projects/{project['id']}/fulltext/rebuild",
+        json={"source_dataset_ids": [dataset["id"]]},
+    )
+    assert rebuild.status_code == 200
+    payload = rebuild.json()
+    assert payload["fulltext_queue"][0]["paper_id"] == "paper_000042"
     assert payload["fulltext_queue"][0]["landing_url"] == "https://kns.cnki.net/example-record"
 
 

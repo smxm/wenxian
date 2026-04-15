@@ -21,6 +21,8 @@ def export_ris(records: list[PaperRecord], output_path: Path) -> None:
 
 def _paper_record_to_ris(record: PaperRecord) -> str:
     lines: list[str] = [f"TY  - {_map_entry_type_to_ris(record.entry_type)}"]
+    if record.paper_id:
+        lines.append(f"ID  - {record.paper_id}")
 
     for author in record.authors:
         if author:

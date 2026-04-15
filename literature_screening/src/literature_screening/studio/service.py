@@ -260,14 +260,14 @@ def run_screening_job(
             "summary_format": "json",
         },
     }
-    if request.storage_root is not None:
-        config_payload = rewrite_storage_payload(
-            config_payload,
-            storage_root=request.storage_root,
-            mode="dehydrate",
-        )
+
+    snapshot_payload = (
+        rewrite_storage_payload(config_payload, storage_root=request.storage_root, mode="dehydrate")
+        if request.storage_root is not None
+        else config_payload
+    )
     config_path = run_root / "generated_screening_config.yaml"
-    config_path.write_text(yaml.safe_dump(config_payload, sort_keys=False, allow_unicode=True), encoding="utf-8")
+    config_path.write_text(yaml.safe_dump(snapshot_payload, sort_keys=False, allow_unicode=True), encoding="utf-8")
 
     run_config = RunConfig(
         project=ProjectConfig(**config_payload["project"]),

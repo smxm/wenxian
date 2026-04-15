@@ -4,7 +4,7 @@ from literature_screening.bibtex.normalizer import normalize_title
 from literature_screening.core.models import PaperRecord
 
 
-def deduplicate_records(records: list[PaperRecord]) -> list[PaperRecord]:
+def deduplicate_records(records: list[PaperRecord], *, preserve_paper_ids: bool = False) -> list[PaperRecord]:
     canonical_records: list[PaperRecord] = []
     seen_by_doi: dict[str, PaperRecord] = {}
     seen_by_title: dict[str, PaperRecord] = {}
@@ -35,8 +35,9 @@ def deduplicate_records(records: list[PaperRecord]) -> list[PaperRecord]:
         if title_key and title_key not in seen_by_title:
             seen_by_title[title_key] = canonical
 
-    for index, record in enumerate(canonical_records, start=1):
-        record.paper_id = f"paper_{index:06d}"
+    if not preserve_paper_ids:
+        for index, record in enumerate(canonical_records, start=1):
+            record.paper_id = f"paper_{index:06d}"
 
     return canonical_records
 

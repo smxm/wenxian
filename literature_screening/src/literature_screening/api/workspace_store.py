@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 import shutil
 import uuid
 from datetime import datetime
@@ -10,6 +11,7 @@ from typing import Any
 from literature_screening.bibtex.deduper import deduplicate_records
 from literature_screening.bibtex.exporter import export_ris
 from literature_screening.bibtex.parser import parse_bibtex_files
+from literature_screening.core.models import PaperRecord
 from literature_screening.storage_paths import rewrite_storage_payload
 
 
@@ -139,6 +141,86 @@ class WorkspaceStore:
         self.update_project(project_id)
         return payload
 
+    _INTERNAL_PAPER_ID_PATTERN = re.compile(r"^(raw|paper)_\d{6}$")
+
+    def _looks_like_internal_paper_id(self, value: str | None) -> bool:
+        if not value:
+            return False
+        return bool(self._INTERNAL_PAPER_ID_PATTERN.match(str(value).strip()))
+
+    def _load_task(self, task_id: str) -> dict[str, Any] | None:
+        task_path = self.root_dir / "tasks" / task_id / "task.json"
+        if not task_path.exists():
+            return None
+        return self._read(task_path)
+
+    def _load_task_output_dir(self, task_id: str) -> Path | None:
+        task = self._load_task(task_id)
+        if not task:
+            return None
+        output_dir = task.get("output_dir")
+        if not output_dir:
+            return None
+        try:
+            return Path(output_dir)
+        except TypeError:
+            return None
+
+    def _load_task_included_records(self, task_id: str) -> list[PaperRecord] | None:
+        output_dir = self._load_task_output_dir(task_id)
+        if output_dir is None:
+            return None
+
+        records_path = output_dir / "deduped_records.json"
+        decisions_path = output_dir / "reviewed" / "screening_decisions.reviewed.json"
+        if not decisions_path.exists():
+            decisions_path = output_dir / "screening_decisions.json"
+        if not records_path.exists() or not decisions_path.exists():
+            return None
+
+        try:
+            record_payload = json.loads(records_path.read_text(encoding="utf-8"))
+            decision_payload = json.loads(decisions_path.read_text(encoding="utf-8"))
+        except Exception:
+            return None
+
+        records = [PaperRecord.model_validate(item) for item in record_payload if isinstance(item, dict)]
+        record_map = {record.paper_id: record for record in records}
+        included_records: list[PaperRecord] = []
+        for decision in decision_payload:
+            if not isinstance(decision, dict):
+                continue
+            if str(decision.get("decision", "")).strip() != "include":
+                continue
+            paper_id = str(decision.get("paper_id", "")).strip()
+            record = record_map.get(paper_id)
+            if record is not None:
+                included_records.append(record)
+        return included_records
+
+    def _collect_included_records_for_dataset(self, project_id: str, dataset: dict[str, Any]) -> list[PaperRecord]:
+        if dataset.get("kind") == "cumulative_included":
+            collected: list[PaperRecord] = []
+            for dataset_id in dataset.get("source_dataset_ids") or []:
+                try:
+                    source = self.load_dataset(project_id, dataset_id)
+                except FileNotFoundError:
+                    continue
+                collected.extend(self._collect_included_records_for_dataset(project_id, source))
+            if collected:
+                return collected
+
+        task_id = dataset.get("task_id")
+        if task_id:
+            included = self._load_task_included_records(str(task_id))
+            if included:
+                return included
+
+        path = Path(str(dataset.get("path", "")))
+        if path.exists():
+            return parse_bibtex_files([path], encoding="auto")
+        return []
+
     def rebuild_cumulative_included_dataset(self, project_id: str) -> dict[str, Any] | None:
         all_datasets = [
             item
@@ -165,12 +247,14 @@ class WorkspaceStore:
                 chosen_by_task[task_id] = item
 
         datasets = [*chosen_by_task.values(), *fallback_datasets]
-        paths = [Path(item["path"]) for item in datasets if Path(item["path"]).exists()]
-        if not paths:
+        records: list[PaperRecord] = []
+        for dataset in datasets:
+            records.extend(self._collect_included_records_for_dataset(project_id, dataset))
+        if not records:
             return None
 
-        records = parse_bibtex_files(paths, encoding="auto")
-        deduped = deduplicate_records(records)
+        preserve_ids = any(self._looks_like_internal_paper_id(record.paper_id) for record in records)
+        deduped = deduplicate_records(records, preserve_paper_ids=preserve_ids) if preserve_ids else deduplicate_records(records)
         derived_dir = self._project_root(project_id) / "derived"
         derived_dir.mkdir(parents=True, exist_ok=True)
         output_path = derived_dir / "cumulative_included.ris"
@@ -238,6 +322,11 @@ class WorkspaceStore:
         *,
         source_dataset_ids: list[str] | None = None,
     ) -> dict[str, Any]:
+        if not source_dataset_ids:
+            # Keep cumulative included in sync so "项目累计纳入" reflects all rounds, including
+            # migrated tasks whose dataset paths may have been rewritten on load.
+            self.rebuild_cumulative_included_dataset(project_id)
+
         datasets = self.list_project_datasets(project_id)
         if source_dataset_ids:
             selected = [item for item in datasets if item["id"] in source_dataset_ids]
@@ -254,8 +343,10 @@ class WorkspaceStore:
         queue_path = derived_dir / "fulltext_queue.json"
         ready_path = derived_dir / "fulltext_ready.ris"
         selected_ids = [item["id"] for item in selected]
-        paths = [Path(item["path"]) for item in selected if Path(item["path"]).exists()]
-        if not paths:
+        records: list[PaperRecord] = []
+        for dataset in selected:
+            records.extend(self._collect_included_records_for_dataset(project_id, dataset))
+        if not records:
             payload = {"source_dataset_ids": selected_ids, "items": []}
             self._write(queue_path, payload)
             export_ris([], ready_path)
@@ -274,7 +365,8 @@ class WorkspaceStore:
             self.update_project(project_id)
             return payload
 
-        records = deduplicate_records(parse_bibtex_files(paths, encoding="auto"))
+        preserve_ids = any(self._looks_like_internal_paper_id(record.paper_id) for record in records)
+        records = deduplicate_records(records, preserve_paper_ids=True) if preserve_ids else deduplicate_records(records)
         statuses = self.load_fulltext_statuses(project_id)
         items: list[dict[str, Any]] = []
         ready_records = []

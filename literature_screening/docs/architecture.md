@@ -241,3 +241,8 @@ UI 现在更偏向“thread”概念，但持久化模型仍然是 `Project`：
 - 持久化格式优先考虑跨机器迁移稳定性
 - 前端只依赖 `/api/...` 与 artifact 下载端点，不直接依赖磁盘目录结构
 - 新功能优先扩 `studio/service.py`、`api/app.py` 和 store 层，再补 UI
+## 8. 旧数据兼容补充
+
+- 读取持久化路径时，如果遇到旧工作目录留下的 `.../api_runs/...` Windows 绝对路径，服务端会优先尝试映射到当前仓库的 `literature_screening/data/api_runs`
+- `cumulative_included` 和全文队列在兼容旧数据时，优先读取任务产物里的 `deduped_records.json` 与 `screening_decisions.json`
+- 这样可以保留原始 `paper_id`、导入链接和多轮筛选上下文，避免累计纳入、全文队列和原始筛选记录脱节
