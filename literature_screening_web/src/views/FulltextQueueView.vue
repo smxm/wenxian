@@ -32,6 +32,7 @@ import {
 import { useProjectsStore } from '@/stores/projects'
 import { useTasksStore } from '@/stores/tasks'
 import type {
+  ProjectDetail,
   TaskDetail,
   WorkbenchAccessStatus,
   WorkbenchCandidateItem,

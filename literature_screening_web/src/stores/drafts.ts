@@ -224,7 +224,7 @@ export const useDraftsStore = defineStore('drafts', {
           Object.entries(persisted.reportDrafts).map(([taskId, draft]) => [
             taskId,
             {
-              ...createDefaultReportDraft(taskId),
+              ...createDefaultReportDraft(),
               ...draft
             }
           ])

@@ -373,9 +373,11 @@ function openEditThread() {
 function openThreadAssist() {
   const strategyModel = threadProfile.value?.strategy.model
   assistForm.value = {
-    selectedDatabases: threadProfile.value?.strategy.selected_databases.length
-      ? [...threadProfile.value.strategy.selected_databases]
-      : metaStore.strategyDefaults.databases.map((item) => item.value),
+    selectedDatabases: (
+      threadProfile.value?.strategy.selected_databases.length
+        ? [...threadProfile.value.strategy.selected_databases]
+        : metaStore.strategyDefaults.databases.map((item) => item.value)
+    ) as StrategyDatabase[],
     provider: (strategyModel?.provider ?? metaStore.strategyDefaults.provider) as ProviderName,
     modelName: strategyModel?.model_name ?? metaStore.strategyDefaults.model_name,
     apiBaseUrl: strategyModel?.api_base_url ?? metaStore.strategyDefaults.api_base_url,
