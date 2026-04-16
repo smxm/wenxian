@@ -63,13 +63,16 @@ pip install -e .[dev,ui]
 环境变量：
 
 ```bash
-copy .env.example .env
+cd ..
+cp .env.example .env
 ```
 
-然后在 `.env` 或系统环境变量中设置至少一个：
+然后优先在仓库根目录 `.env` 或系统环境变量中设置至少一个：
 
 - `KIMI_API_KEY`
 - `DEEPSEEK_API_KEY`
+
+`literature_screening/.env.example` 仅保留给旧流程兼容；当前启动脚本和 Python 入口默认都优先读取仓库根目录 `.env`。
 
 命令行运行：
 

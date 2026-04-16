@@ -132,11 +132,16 @@ def _ensure_terminal_punctuation(text: str) -> str:
 
 
 def _extract_bibliographic_details(record: PaperRecord) -> tuple[str | None, str | None, str | None]:
+    values: dict[str, str | None] = {
+        "volume": normalize_text(record.volume) if getattr(record, "volume", None) else None,
+        "number": normalize_text(record.number) if getattr(record, "number", None) else None,
+        "pages": normalize_text(record.pages) if getattr(record, "pages", None) else None,
+    }
     raw = record.raw_bibtex or ""
-    values: dict[str, str | None] = {}
     for key, pattern in _FIELD_PATTERNS.items():
         match = pattern.search(raw)
-        values[key] = normalize_text(match.group(1)) if match else None
+        if match and not values[key]:
+            values[key] = normalize_text(match.group(1))
     return values["volume"], values["number"], values["pages"]
 
 

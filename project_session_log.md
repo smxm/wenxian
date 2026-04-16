@@ -469,3 +469,99 @@ Append-only log for thread handoff. Add one new entry at the end of the file aft
   - `E:\wenxian_new\stop-wenxian.ps1`
   - `E:\wenxian_new\project_state.md`
   - `E:\wenxian_new\project_session_log.md`
+
+## Session 2026-04-16 - Workbench stabilization, thread-first flow cleanup, report polish, and handoff refresh
+
+- Scope: fixed the newly reworked candidate workbench so status actions and migrated states behave correctly again, simplified the thread-first creation/detail flow, refined report-stage behavior, and refreshed the handoff docs for the current macOS workspace
+- Main changes:
+  - fixed the candidate workbench action path end to end by updating `/Users/mao/Documents/langchain/literature_screening_web/src/views/FulltextQueueView.vue`, `/Users/mao/Documents/langchain/literature_screening_web/src/stores/projects.ts`, and `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/api/app.py` so single-item and batch status changes no longer fail on an undefined store action or a misrouted backend `batch` path
+  - added legacy workbench reconciliation in `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/api/workspace_store.py` so old `fulltext_queue.json` and `fulltext_statuses.json` restore acquired/full-report decisions and preserved links into the new project-level workbench
+  - simplified new-thread behavior so `/threads/new` creates the thread from the research need first, while later thread-page actions handle manual criteria editing, AI-assisted extraction, or full search-strategy generation; added backend helper coverage for `POST /api/threads/prefill`
+  - reworked `/Users/mao/Documents/langchain/literature_screening_web/src/views/ProjectDetailView.vue` and `/Users/mao/Documents/langchain/literature_screening_web/src/components/ThreadMessageCard.vue` so the thread header keeps only the edit entry, the lower action row owns the four stage buttons, duplicate stage-card buttons are removed, and the report stage stays visible even when included records are `0`
+  - added report model-selection inputs on the thread page and fixed formal-report GB/T 7714 page extraction by reading structured `volume` / `number` / `pages` fields in `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/core/models.py` and `/Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module/src/literature_screening/formal_report/reference_list.py`
+  - shortened verbose explanatory copy across the current production frontend so the main workflow pages emphasize the next action instead of long guidance text
+- Verification:
+  - `git -C /Users/mao/Documents/langchain diff --check`
+  - `PYTHONPATH=/Users/mao/Documents/langchain/literature_screening/src /Users/mao/Documents/langchain/literature_screening/.venv311-codex/bin/python -m pytest -q /Users/mao/Documents/langchain/literature_screening/tests /Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module/tests/test_simple_report.py`
+  - result: `51 passed`
+- Outstanding follow-ups:
+  - run frontend build/typecheck on a machine with `node` / `npm` / `pnpm`
+  - browser-test real threads with migrated data to verify the new workbench reconciliation and report model-selection flows
+  - split `/Users/mao/Documents/langchain/literature_screening_web/src/views/ProjectDetailView.vue` and `/Users/mao/Documents/langchain/literature_screening_web/src/views/FulltextQueueView.vue` into smaller components now that the page direction is clearer
+  - decide later whether `POST /api/threads/prefill` should stay as an internal helper or come back as a visible post-creation assist action
+- Files touched:
+  - `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/api/app.py`
+  - `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/api/workspace_store.py`
+  - `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/api/schemas.py`
+  - `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/core/models.py`
+  - `/Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module/src/literature_screening/formal_report/reference_list.py`
+  - `/Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module/tests/test_simple_report.py`
+  - `/Users/mao/Documents/langchain/literature_screening/tests/test_api_app.py`
+  - `/Users/mao/Documents/langchain/literature_screening_web/src/components/ThreadMessageCard.vue`
+  - `/Users/mao/Documents/langchain/literature_screening_web/src/stores/projects.ts`
+  - `/Users/mao/Documents/langchain/literature_screening_web/src/views/DashboardView.vue`
+  - `/Users/mao/Documents/langchain/literature_screening_web/src/views/FulltextQueueView.vue`
+  - `/Users/mao/Documents/langchain/literature_screening_web/src/views/ProjectDetailView.vue`
+  - `/Users/mao/Documents/langchain/literature_screening_web/src/views/ScreeningRunView.vue`
+  - `/Users/mao/Documents/langchain/literature_screening_web/src/views/StrategyRunView.vue`
+  - `/Users/mao/Documents/langchain/literature_screening_web/src/views/TaskDetailView.vue`
+  - `/Users/mao/Documents/langchain/literature_screening_web/src/views/ThreadNewView.vue`
+  - `/Users/mao/Documents/langchain/project_state.md`
+  - `/Users/mao/Documents/langchain/project_session_log.md`
+  - `/Users/mao/Documents/langchain/docs/project_history/index.md`
+
+## Session 2026-04-16 - Report-generation diagnosis, reasoner hardening, and bibliography metadata repair
+
+- Scope: traced the current simple-report generation path for `asks`/task `cd13976ef17e`, compared `deepseek-reasoner` and `deepseek-chat` behavior on the same project, fixed the actual GB/T 7714 page-loss chain, and hardened the fallback/report-token behavior for humanities-style report runs
+- Main changes:
+  - confirmed from `/Users/mao/Documents/langchain/literature_screening/data/api_runs/tasks/cd13976ef17e/report_output/raw/report_overview.txt` and `/Users/mao/Documents/langchain/literature_screening/data/api_runs/tasks/cd13976ef17e/report_output/logs/report_overview_errors.log` that the `deepseek-reasoner` report did not produce overview JSON at all, so the backend fell back instead of using model-generated categories
+  - verified that the report path itself is not chat-only: `/Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module/src/literature_screening/formal_report/simple_report.py` calls the same `ChatCompletionClient` for both `deepseek-chat` and `deepseek-reasoner`, but the frontend had still been hardcoding `max_tokens: 1536` for report submission while DeepSeek’s reasoning model counts CoT and final answer together
+  - updated `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/api/app.py`, `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/screening/llm_client.py`, and `/Users/mao/Documents/langchain/literature_screening_web/src/views/ProjectDetailView.vue` so report tasks normalize `deepseek-reasoner` to at least `4096` tokens and emit a clearer error when reasoning content is returned without final answer text
+  - fixed the real bibliography bug by populating `PaperRecord.volume` / `number` / `pages` in `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/bibtex/parser.py`, preserving them in `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/bibtex/deduper.py`, and exporting them from `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/bibtex/exporter.py` with a `raw_bibtex` fallback so old stored records can be repaired too
+  - refined `/Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module/src/literature_screening/formal_report/fallback.py` and `/Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module/src/literature_screening/formal_report/simple_report.py` so report fallback for Chinese humanities topics no longer defaults to a single “相关机制研究” bucket, and bumped the shared note-cache version to avoid reusing the old bad classification cache
+  - rebuilt `/Users/mao/Documents/langchain/literature_screening/data/api_runs/projects/6e2959b2aa63/derived/report_source.ris` after the exporter repair and confirmed that the current project’s report source now carries `VL` / `IS` / `SP` / `EP` lines again
+- Verification:
+  - `PYTHONPATH=/Users/mao/Documents/langchain/literature_screening/src /Users/mao/Documents/langchain/literature_screening/.venv311-codex/bin/python -m pytest -q /Users/mao/Documents/langchain/literature_screening/tests/test_api_app.py /Users/mao/Documents/langchain/literature_screening/tests/test_screening_pipeline.py /Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module/tests/test_simple_report.py`
+  - result: `50 passed`
+  - `git -C /Users/mao/Documents/langchain diff --check -- literature_screening/src/literature_screening/bibtex/exporter.py literature_screening/src/literature_screening/bibtex/parser.py literature_screening/src/literature_screening/bibtex/deduper.py literature_screening/src/literature_screening/screening/llm_client.py literature_screening/src/literature_screening/api/app.py literature_screening/separated_modules/formal_report_module/src/literature_screening/formal_report/simple_report.py literature_screening/separated_modules/formal_report_module/src/literature_screening/formal_report/fallback.py literature_screening_web/src/views/ProjectDetailView.vue literature_screening/tests/test_screening_pipeline.py literature_screening/tests/test_api_app.py literature_screening/separated_modules/formal_report_module/tests/test_simple_report.py`
+  - rebuilt current project workbench/report-source dataset locally and confirmed `/Users/mao/Documents/langchain/literature_screening/data/api_runs/projects/6e2959b2aa63/derived/report_source.ris` contains page-related RIS tags again
+- Outstanding follow-ups:
+  - rerun the repaired report flow with a valid `DEEPSEEK_API_KEY`, because this shell currently reports `DEEPSEEK_API_KEY` as missing and therefore could not perform a live model-backed report regeneration
+  - validate in the real UI that a fresh `deepseek-reasoner` report on project `6e2959b2aa63` now keeps multiple humanities categories and auto-generated GB/T 7714 page ranges without requiring manual reference override
+  - consider exposing model-specific token guidance in the report UI so reasoning models are not silently sent with chat-oriented token budgets again
+- Files touched:
+  - `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/api/app.py`
+  - `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/bibtex/deduper.py`
+  - `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/bibtex/exporter.py`
+  - `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/bibtex/parser.py`
+  - `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/screening/llm_client.py`
+  - `/Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module/src/literature_screening/formal_report/fallback.py`
+  - `/Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module/src/literature_screening/formal_report/simple_report.py`
+  - `/Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module/tests/test_simple_report.py`
+  - `/Users/mao/Documents/langchain/literature_screening/tests/test_api_app.py`
+  - `/Users/mao/Documents/langchain/literature_screening/tests/test_screening_pipeline.py`
+  - `/Users/mao/Documents/langchain/literature_screening_web/src/views/ProjectDetailView.vue`
+  - `/Users/mao/Documents/langchain/project_state.md`
+  - `/Users/mao/Documents/langchain/project_session_log.md`
+  - `/Users/mao/Documents/langchain/docs/project_history/index.md`
+
+## Session 2026-04-16 - Tencent Cloud update-path review and handoff refresh
+
+- Scope: refreshed the reusable handoff with the current deployment guidance, then read the Tencent Cloud deployment docs and scripts to extract the exact server update flow for this repo
+- Main changes:
+  - verified that `/Users/mao/Documents/langchain/project_state.md` already captured the report-generation fixes from the previous session, then refreshed it so future threads can immediately find the Tencent Cloud deployment docs alongside the recent report fixes
+  - cross-checked `/Users/mao/Documents/langchain/deploy/cloud-server.md`, `/Users/mao/Documents/langchain/deploy/server-update.sh`, `/Users/mao/Documents/langchain/deploy/migrate-persistent-storage.sh`, and `/Users/mao/Documents/langchain/docker-compose.yml`; the intended update path is still “local tarball -> upload to `/opt` -> run `deploy/server-update.sh`”, with runtime data mounted from `/opt/wenxian-data/api_runs` and Basic Auth read from `/opt/wenxian-secrets/.htpasswd`
+  - noted one documentation caveat for follow-up: the repo root currently does not contain `.env.deploy.example`, so a first deployment may need a manually created `/opt/wenxian/.env` even though the markdown examples reference copying a template
+- Verification:
+  - `sed -n '1,260p' /Users/mao/Documents/langchain/deploy/cloud-server.md`
+  - `sed -n '1,260p' /Users/mao/Documents/langchain/deploy/server-update.sh`
+  - `sed -n '1,220p' /Users/mao/Documents/langchain/deploy/migrate-persistent-storage.sh`
+  - `sed -n '1,220p' /Users/mao/Documents/langchain/docker-compose.yml`
+  - `sed -n '1,220p' /Users/mao/Documents/langchain/README.md`
+- Outstanding follow-ups:
+  - add back a checked-in deploy-env template or update the Tencent Cloud doc to state clearly that `/opt/wenxian/.env` may need to be written by hand on first deploy
+  - perform one live cloud update rehearsal after the next packaged release so the documented server path is validated end to end on the actual Tencent Cloud instance
+- Files touched:
+  - `/Users/mao/Documents/langchain/project_state.md`
+  - `/Users/mao/Documents/langchain/project_session_log.md`
+  - `/Users/mao/Documents/langchain/docs/project_history/index.md`

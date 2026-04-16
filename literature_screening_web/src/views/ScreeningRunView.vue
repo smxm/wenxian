@@ -80,8 +80,8 @@ const selectedPreset = computed(() => metaStore.providerPresets.find((item) => i
 const pageTitle = computed(() => (isThreadScoped.value ? '开始本线程的新一轮初筛' : '先选择线程，再开始新的初筛轮次'))
 const pageCopy = computed(() =>
   isThreadScoped.value
-    ? '你现在已经在线程内部，主题与筛选标准会默认继承，不需要再次选择线程。这里只处理本轮来源、输入文件和运行设置。'
-    : '初筛永远属于某一条线程。先选中要继续的线程，再决定这一轮的来源、文件和运行设置。'
+    ? '设置本轮来源、文件和运行参数。'
+    : '先选线程，再设置本轮来源和文件。'
 )
 const projectOptions = computed(() =>
   projectsStore.list.map((item) => ({
@@ -102,6 +102,8 @@ function friendlyDatasetLabel(kind: string) {
       return '线程累计纳入'
     case 'fulltext_ready':
       return '已获取全文'
+    case 'report_source':
+      return '报告源文献'
     default:
       return kind
   }
@@ -479,7 +481,7 @@ onMounted(async () => {
           </NButton>
         </RouterLink>
         <NAlert type="info" :show-icon="false">
-          生成报告已经从初筛页移走，改为和全文获取串联。先完成初筛，再去全文工作台继续推进。
+          报告改到统一复核后生成。
         </NAlert>
       </div>
     </section>
@@ -488,7 +490,7 @@ onMounted(async () => {
       <NCard :title="isThreadScoped ? '当前线程与来源' : '选择线程与来源'" class="panel-surface">
         <div v-if="isThreadScoped && currentProject" class="thread-context-block">
           <div class="thread-context-title">{{ currentProject.name }}</div>
-          <div class="thread-context-copy">{{ currentProject.description || '这轮初筛会直接归入当前线程。' }}</div>
+          <div class="thread-context-copy">{{ currentProject.description || '当前线程' }}</div>
           <div class="thread-context-tags">
             <NTag round>当前主题：{{ currentProject.thread_profile?.screening.topic || currentProject.topic }}</NTag>
             <NTag round type="success">已有 {{ currentProject.tasks.filter((task) => task.kind === 'screening').length }} 轮初筛</NTag>
@@ -517,10 +519,10 @@ onMounted(async () => {
         </NForm>
 
         <NAlert v-if="!selectedProjectId" type="warning" :show-icon="false">
-          初筛必须归属于某一条线程。先选线程；如果还没有线程，请先去“新建线程”页创建。
+          先选择线程。
         </NAlert>
         <NAlert v-else-if="!isThreadScoped" type="info" :show-icon="false">
-          当前是全局入口。更推荐从线程主页进入，这样用户会始终知道自己正在推进哪一条线程。
+          也可以从线程主页进入。
         </NAlert>
       </NCard>
 
@@ -529,7 +531,7 @@ onMounted(async () => {
           <div class="criteria-head">
             <div>
               <div class="criteria-title">{{ threadDefaults.topic || currentProject?.topic || '未设置线程主题' }}</div>
-              <div class="criteria-copy">当前线程默认会把这套主题和标准带入本轮筛选。</div>
+              <div class="criteria-copy">本轮默认沿用这套主题和标准。</div>
             </div>
             <div class="criteria-actions">
               <NButton tertiary size="small" @click="overrideThreadCriteria = !overrideThreadCriteria">
@@ -547,7 +549,7 @@ onMounted(async () => {
         </div>
 
         <NAlert v-else type="warning" :show-icon="false">
-          这个线程还没有固定的主题与筛选标准。你可以先在这里填写，也可以先回到线程主页生成线程方案。
+          当前线程还没有主题和标准。
         </NAlert>
 
         <div v-if="overrideThreadCriteria || !threadDefaults" class="criteria-editor">
@@ -643,9 +645,7 @@ onMounted(async () => {
     <div class="action-bar panel-surface">
       <div>
         <div class="action-title">提交为新的初筛轮次</div>
-        <div class="action-copy">
-          本轮会记录输入来源、继承的线程主题与筛选标准，以及运行设置。完成后可以返回线程主页继续看阶段进展，或者进入全文获取工作台。
-        </div>
+        <div class="action-copy">提交后会生成新的初筛轮次。</div>
       </div>
       <NSpace>
         <RouterLink v-if="threadHomePath" :to="threadHomePath">

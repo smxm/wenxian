@@ -28,6 +28,9 @@ export interface ScreeningDraftState {
 }
 
 export interface ReportDraftState {
+  projectId: string | null
+  screeningTaskId: string | null
+  datasetIds: string[]
   title: string
   projectTopic: string
   reportName: string
@@ -35,6 +38,10 @@ export interface ReportDraftState {
   sourceMode: 'original' | 'reviewed'
   retryTimes: number
   timeoutSeconds: number
+  provider: ProviderName
+  modelName: string
+  apiBaseUrl: string
+  apiKeyEnv: string
 }
 
 export interface StrategyDraftState {
@@ -44,6 +51,11 @@ export interface StrategyDraftState {
   title: string
   projectTopic: string
   researchNeed: string
+  kickoffMode: 'quick' | 'plan'
+  screeningTopic: string
+  inclusion: string[]
+  exclusion: string[]
+  intentSummary: string
   selectedDatabases: StrategyDatabase[]
   timeoutSeconds: number
   retryTimes: number
@@ -93,21 +105,33 @@ function createDefaultStrategyDraft(): StrategyDraftState {
     title: 'new-search-strategy',
     projectTopic: '',
     researchNeed: '',
+    kickoffMode: 'quick',
+    screeningTopic: '',
+    inclusion: [''],
+    exclusion: [''],
+    intentSummary: '',
     selectedDatabases: ['scopus', 'wos', 'pubmed', 'cnki'],
     timeoutSeconds: 180,
     retryTimes: 4
   }
 }
 
-function createDefaultReportDraft(screeningTaskId?: string): ReportDraftState {
+function createDefaultReportDraft(): ReportDraftState {
   return {
-    title: screeningTaskId ? `${screeningTaskId}-report` : 'report-task',
+    projectId: null,
+    screeningTaskId: null,
+    datasetIds: [],
+    title: 'report-task',
     projectTopic: '',
     reportName: 'simple_report',
     referenceStyle: 'gbt7714',
     sourceMode: 'original',
     retryTimes: 6,
-    timeoutSeconds: 240
+    timeoutSeconds: 240,
+    provider: 'deepseek',
+    modelName: 'deepseek-reasoner',
+    apiBaseUrl: 'https://api.deepseek.com/v1',
+    apiKeyEnv: 'DEEPSEEK_API_KEY'
   }
 }
 
@@ -157,6 +181,11 @@ export const useDraftsStore = defineStore('drafts', {
         state.strategyDraft.newProjectName.trim() ||
           state.strategyDraft.newProjectDescription.trim() ||
           state.strategyDraft.researchNeed.trim() ||
+          state.strategyDraft.screeningTopic.trim() ||
+          state.strategyDraft.intentSummary.trim() ||
+          state.strategyDraft.inclusion.some(Boolean) ||
+          state.strategyDraft.exclusion.some(Boolean) ||
+          state.strategyDraft.kickoffMode !== createDefaultStrategyDraft().kickoffMode ||
           state.strategyDraft.retryTimes !== createDefaultStrategyDraft().retryTimes ||
           state.strategyDraft.timeoutSeconds !== createDefaultStrategyDraft().timeoutSeconds ||
           state.strategyDraft.selectedDatabases.join('|') !== createDefaultStrategyDraft().selectedDatabases.join('|')
@@ -183,6 +212,8 @@ export const useDraftsStore = defineStore('drafts', {
         this.strategyDraft = {
           ...createDefaultStrategyDraft(),
           ...persisted.strategyDraft,
+          inclusion: persisted.strategyDraft.inclusion?.length ? persisted.strategyDraft.inclusion : [''],
+          exclusion: persisted.strategyDraft.exclusion?.length ? persisted.strategyDraft.exclusion : [''],
           selectedDatabases: persisted.strategyDraft.selectedDatabases?.length
             ? persisted.strategyDraft.selectedDatabases
             : createDefaultStrategyDraft().selectedDatabases
@@ -247,6 +278,8 @@ export const useDraftsStore = defineStore('drafts', {
       this.strategyDraft = {
         ...this.strategyDraft,
         ...patch,
+        inclusion: patch.inclusion ?? this.strategyDraft.inclusion,
+        exclusion: patch.exclusion ?? this.strategyDraft.exclusion,
         selectedDatabases: patch.selectedDatabases ?? this.strategyDraft.selectedDatabases
       }
       this.persist()
@@ -255,22 +288,22 @@ export const useDraftsStore = defineStore('drafts', {
       this.strategyDraft = createDefaultStrategyDraft()
       this.persist()
     },
-    getReportDraft(screeningTaskId: string) {
-      if (!this.reportDrafts[screeningTaskId]) {
-        this.reportDrafts[screeningTaskId] = createDefaultReportDraft(screeningTaskId)
+    getReportDraft(draftKey: string) {
+      if (!this.reportDrafts[draftKey]) {
+        this.reportDrafts[draftKey] = createDefaultReportDraft()
       }
-      return this.reportDrafts[screeningTaskId]
+      return this.reportDrafts[draftKey]
     },
-    updateReportDraft(screeningTaskId: string, patch: Partial<ReportDraftState>) {
-      const current = this.getReportDraft(screeningTaskId)
-      this.reportDrafts[screeningTaskId] = {
+    updateReportDraft(draftKey: string, patch: Partial<ReportDraftState>) {
+      const current = this.getReportDraft(draftKey)
+      this.reportDrafts[draftKey] = {
         ...current,
         ...patch
       }
       this.persist()
     },
-    clearReportDraft(screeningTaskId: string) {
-      delete this.reportDrafts[screeningTaskId]
+    clearReportDraft(draftKey: string) {
+      delete this.reportDrafts[draftKey]
       this.persist()
     },
     setProviderApiKey(provider: ProviderName, apiKey: string) {

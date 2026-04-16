@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import re
 
 from literature_screening.core.models import PaperRecord
 
@@ -29,10 +30,17 @@ def _paper_record_to_ris(record: PaperRecord) -> str:
             lines.append(f"AU  - {author}")
     lines.append(f"TI  - {record.title}")
 
+    volume, number, pages = _extract_bibliographic_details(record)
     if record.year is not None:
         lines.append(f"PY  - {record.year}")
     if record.journal:
         lines.append(f"JO  - {record.journal}")
+    if volume:
+        lines.append(f"VL  - {volume}")
+    if number:
+        lines.append(f"IS  - {number}")
+    for tag, value in _pages_to_ris_tags(pages):
+        lines.append(f"{tag}  - {value}")
     if record.doi:
         lines.append(f"DO  - {record.doi}")
     if record.url:
@@ -61,3 +69,44 @@ def _map_entry_type_to_ris(entry_type: str | None) -> str:
         "misc": "GEN",
     }
     return mapping.get(normalized, "GEN")
+
+
+def _pages_to_ris_tags(pages: str | None) -> list[tuple[str, str]]:
+    if not pages:
+        return []
+    cleaned = str(pages).strip()
+    if not cleaned:
+        return []
+    if "-" not in cleaned:
+        return [("SP", cleaned)]
+    start, end = cleaned.split("-", 1)
+    start = start.strip()
+    end = end.strip()
+    if start and end:
+        return [("SP", start), ("EP", end)]
+    if start:
+        return [("SP", start)]
+    if end:
+        return [("EP", end)]
+    return []
+
+
+_FIELD_PATTERNS = {
+    "volume": re.compile(r"(?im)^\s*volume\s*=\s*[{\\\"]([^}\\\"]+)[}\\\"],?\s*$"),
+    "number": re.compile(r"(?im)^\s*number\s*=\s*[{\\\"]([^}\\\"]+)[}\\\"],?\s*$"),
+    "pages": re.compile(r"(?im)^\s*pages\s*=\s*[{\\\"]([^}\\\"]+)[}\\\"],?\s*$"),
+}
+
+
+def _extract_bibliographic_details(record: PaperRecord) -> tuple[str | None, str | None, str | None]:
+    values: dict[str, str | None] = {
+        "volume": record.volume.strip() if record.volume else None,
+        "number": record.number.strip() if record.number else None,
+        "pages": record.pages.strip() if record.pages else None,
+    }
+    raw = record.raw_bibtex or ""
+    for key, pattern in _FIELD_PATTERNS.items():
+        match = pattern.search(raw)
+        if match and not values[key]:
+            values[key] = match.group(1).strip()
+    return values["volume"], values["number"], values["pages"]

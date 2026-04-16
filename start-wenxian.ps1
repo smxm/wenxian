@@ -55,8 +55,44 @@ function Import-DotEnvFile {
       if ($value.Length -ge 2) { $value = $value.Substring(1, $value.Length - 2) }
     }
 
+    if ([string]::IsNullOrWhiteSpace($value)) { return }
+    if (Test-IsPlaceholderEnvValue -Value $value) { return }
+    if (Test-HasEffectiveEnvValue -Key $key) { return }
+
     [Environment]::SetEnvironmentVariable($key, $value, 'Process')
   }
+}
+
+function Test-IsPlaceholderEnvValue {
+  param([string]$Value)
+
+  if ([string]::IsNullOrWhiteSpace($Value)) { return $false }
+
+  $normalized = $Value.Trim().ToLowerInvariant()
+  return (
+    $normalized -like 'your_*' -or
+    $normalized -like '*_here' -or
+    $normalized -eq 'example' -or
+    $normalized -like 'example_*' -or
+    $normalized -eq 'sample' -or
+    $normalized -like 'sample_*' -or
+    $normalized -eq 'placeholder' -or
+    $normalized -like 'placeholder_*' -or
+    $normalized -eq 'changeme' -or
+    $normalized -eq 'change_me' -or
+    $normalized -eq 'replace_me' -or
+    $normalized -like 'replace_with_*' -or
+    $normalized.Contains('your_kimi_api_key_here') -or
+    $normalized.Contains('your_deepseek_api_key_here')
+  )
+}
+
+function Test-HasEffectiveEnvValue {
+  param([Parameter(Mandatory = $true)][string]$Key)
+
+  $current = [Environment]::GetEnvironmentVariable($Key, 'Process')
+  if ([string]::IsNullOrWhiteSpace($current)) { return $false }
+  return -not (Test-IsPlaceholderEnvValue -Value $current)
 }
 
 function Stop-LegacyStacks {
@@ -232,10 +268,23 @@ function Copy-DataIfMissing {
 
 Ensure-DockerReady
 
-Import-DotEnvFile -Path (Join-Path $scriptDir '.env')
-Import-DotEnvFile -Path (Join-Path $scriptDir 'literature_screening\.env')
+$rootEnv = Join-Path $scriptDir '.env'
+$rootEnvExample = Join-Path $scriptDir '.env.example'
+$legacyEnv = Join-Path $scriptDir 'literature_screening\.env'
 
-if ($env:MOONSHOT_API_KEY -and -not $env:KIMI_API_KEY) {
+if (!(Test-Path -LiteralPath $rootEnv) -and (Test-Path -LiteralPath $rootEnvExample)) {
+  Copy-Item -Force -LiteralPath $rootEnvExample -Destination $rootEnv
+  Write-Host 'Created repo-root .env (fill in API keys there).'
+}
+
+Import-DotEnvFile -Path $rootEnv
+Import-DotEnvFile -Path $legacyEnv
+
+if (Test-Path -LiteralPath $legacyEnv) {
+  Write-Host 'Note: literature_screening/.env is now legacy fallback only; prefer repo-root .env.'
+}
+
+if ($env:MOONSHOT_API_KEY -and -not (Test-HasEffectiveEnvValue -Key 'KIMI_API_KEY')) {
   $env:KIMI_API_KEY = $env:MOONSHOT_API_KEY
 }
 
@@ -246,11 +295,6 @@ Ensure-OrPickFreePort -EnvVarName 'API_PORT' -DefaultPort 8000 -FallbackPorts @(
 Ensure-OrPickFreePort -EnvVarName 'WEB_PORT' -DefaultPort 8080 -FallbackPorts @(8080, 8081, 8082, 18080, 28080)
 
 New-Item -ItemType Directory -Force -Path $env:APP_DATA_DIR | Out-Null
-
-if (!(Test-Path -LiteralPath (Join-Path $scriptDir 'literature_screening\.env'))) {
-  Copy-Item -Force -LiteralPath (Join-Path $scriptDir 'literature_screening\.env.example') -Destination (Join-Path $scriptDir 'literature_screening\.env')
-  Write-Host 'Created literature_screening/.env (fill in API keys if needed).'
-}
 
 if (-not $env:KIMI_API_KEY -and -not $env:DEEPSEEK_API_KEY) {
   Write-Host 'Note: no KIMI_API_KEY / DEEPSEEK_API_KEY found. The app can start, but creating new AI tasks requires an API key.'

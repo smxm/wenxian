@@ -11,7 +11,7 @@ export const router = createRouter({
     {
       path: '/threads/new',
       name: 'thread-new',
-      component: () => import('@/views/StrategyRunView.vue')
+      component: () => import('@/views/ThreadNewView.vue')
     },
     {
       path: '/threads/:projectId/plan/new',

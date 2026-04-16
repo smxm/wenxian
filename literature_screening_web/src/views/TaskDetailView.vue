@@ -23,7 +23,7 @@ import { useMetaStore } from '@/stores/meta'
 import { useDraftsStore } from '@/stores/drafts'
 import { useProjectsStore } from '@/stores/projects'
 import { useTasksStore } from '@/stores/tasks'
-import type { DatasetRecord, ScreeningRecordRow } from '@/types/api'
+import type { DatasetRecord, ProviderName, ReferenceStyle, ScreeningRecordRow, TaskDetail as TaskDetailPayload } from '@/types/api'
 
 const route = useRoute()
 const router = useRouter()
@@ -91,6 +91,7 @@ function latestMatchingDataset(taskRecord: { output_dataset_ids: string[] }, kin
 const includedDataset = computed(() => (task.value?.kind === 'screening' ? latestMatchingDataset(task.value, ['included_reviewed', 'included']) : null))
 const unusedDataset = computed(() => (task.value?.kind === 'screening' ? latestMatchingDataset(task.value, ['unused']) : null))
 const excludedDataset = computed(() => (task.value?.kind === 'screening' ? latestMatchingDataset(task.value, ['excluded_reviewed', 'excluded']) : null))
+const canReturnToEdit = computed(() => isRetriableTask.value && (task.value?.kind === 'screening' || task.value?.kind === 'report'))
 
 const sourceSummary = computed(() => {
   if (!task.value?.input_dataset_ids.length) return task.value?.parent_task_id ? '延续上一轮未处理文献' : '新上传文献'
@@ -103,6 +104,109 @@ const continueUnusedRoute = computed(() => {
   if (!task.value?.project_id || !unusedDataset.value) return null
   return `/threads/${task.value.project_id}/screening/new?sourceDatasetId=${unusedDataset.value.id}&parentTaskId=${task.value.id}`
 })
+
+function asRecord(value: unknown): Record<string, unknown> | null {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return null
+  return value as Record<string, unknown>
+}
+
+function asString(value: unknown, fallback = ''): string {
+  return typeof value === 'string' ? value : fallback
+}
+
+function asStringArray(value: unknown): string[] {
+  return Array.isArray(value) ? value.filter((item): item is string => typeof item === 'string') : []
+}
+
+function asBoolean(value: unknown, fallback = false): boolean {
+  return typeof value === 'boolean' ? value : fallback
+}
+
+function asNumber(value: unknown, fallback: number | null): number | null {
+  if (typeof value === 'number' && Number.isFinite(value)) return value
+  if (typeof value === 'string' && value.trim()) {
+    const parsed = Number(value)
+    if (Number.isFinite(parsed)) return parsed
+  }
+  return fallback
+}
+
+function asProvider(value: unknown, fallback: ProviderName = 'deepseek'): ProviderName {
+  return value === 'kimi' || value === 'deepseek' ? value : fallback
+}
+
+function asReferenceStyle(value: unknown, fallback: ReferenceStyle = 'gbt7714'): ReferenceStyle {
+  return value === 'apa7' || value === 'gbt7714' ? value : fallback
+}
+
+function ensureDynamicList(items: string[]): string[] {
+  return items.length ? items : ['']
+}
+
+function restoreScreeningDraftFromTask(taskDetail: TaskDetailPayload): boolean {
+  const payload = asRecord(taskDetail.request_payload)
+  if (!payload) return false
+
+  const provider = asProvider(payload.provider)
+  draftsStore.setScreeningFiles([])
+  draftsStore.updateScreeningDraft({
+    projectId: taskDetail.project_id || asString(payload.project_id) || null,
+    newProjectName: '',
+    newProjectDescription: '',
+    sourceDatasetIds: asStringArray(payload.source_dataset_ids),
+    parentTaskId: asString(payload.parent_task_id) || taskDetail.parent_task_id || null,
+    selectedTemplateId: null,
+    title: asString(payload.title) || taskDetail.title,
+    topic: asString(payload.topic) || taskDetail.project_topic || '',
+    criteriaMarkdown: asString(payload.criteria_markdown),
+    inclusion: ensureDynamicList(asStringArray(payload.inclusion)),
+    exclusion: ensureDynamicList(asStringArray(payload.exclusion)),
+    provider,
+    model: {
+      provider,
+      model_name: asString(payload.model_name, provider === 'kimi' ? 'moonshot-v1-auto' : 'deepseek-chat'),
+      api_base_url: asString(payload.api_base_url, provider === 'kimi' ? 'https://api.moonshot.cn/v1' : 'https://api.deepseek.com/v1'),
+      api_key_env: asString(payload.api_key_env, provider === 'kimi' ? 'KIMI_API_KEY' : 'DEEPSEEK_API_KEY'),
+      api_key: draftsStore.getProviderApiKey(provider),
+      temperature: asNumber(payload.temperature, 0) ?? 0,
+      max_tokens: asNumber(payload.max_tokens, 1536) ?? 1536,
+      min_request_interval_seconds: asNumber(payload.min_request_interval_seconds, 2) ?? 2,
+    },
+    batchSize: asNumber(payload.batch_size, 10) ?? 10,
+    targetIncludeCount: asNumber(payload.target_include_count, null),
+    stopWhenReached: asBoolean(payload.stop_when_target_reached, false),
+    allowUncertain: asBoolean(payload.allow_uncertain, true),
+    retryTimes: asNumber(payload.retry_times, 6) ?? 6,
+    requestTimeout: asNumber(payload.request_timeout_seconds, 240) ?? 240,
+    encoding: asString(payload.encoding, 'auto'),
+    fileNames: asStringArray(payload.uploaded_file_names),
+  })
+  return true
+}
+
+function restoreReportDraftFromTask(taskDetail: TaskDetailPayload): boolean {
+  const payload = asRecord(taskDetail.request_payload)
+  if (!payload || !taskDetail.project_id) return false
+
+  const modelPayload = asRecord(payload.model)
+  const provider = asProvider(modelPayload?.provider)
+  draftsStore.updateReportDraft(taskDetail.project_id, {
+    projectId: taskDetail.project_id,
+    screeningTaskId: asString(payload.screening_task_id) || null,
+    datasetIds: asStringArray(payload.dataset_ids),
+    title: asString(payload.title) || taskDetail.title,
+    projectTopic: asString(payload.project_topic) || taskDetail.project_topic || '',
+    reportName: asString(payload.report_name, 'simple_report'),
+    referenceStyle: asReferenceStyle(payload.reference_style, 'gbt7714'),
+    retryTimes: asNumber(payload.retry_times, 6) ?? 6,
+    timeoutSeconds: asNumber(payload.timeout_seconds, 240) ?? 240,
+    provider,
+    modelName: asString(modelPayload?.model_name, provider === 'kimi' ? 'moonshot-v1-auto' : 'deepseek-reasoner'),
+    apiBaseUrl: asString(modelPayload?.api_base_url, provider === 'kimi' ? 'https://api.moonshot.cn/v1' : 'https://api.deepseek.com/v1'),
+    apiKeyEnv: asString(modelPayload?.api_key_env, provider === 'kimi' ? 'KIMI_API_KEY' : 'DEEPSEEK_API_KEY'),
+  })
+  return true
+}
 
 watch(
   () => task.value,
@@ -171,6 +275,36 @@ async function retryCurrentTask() {
   message.success('任务已重新启动')
 }
 
+async function returnTaskToEdit() {
+  if (!task.value) return
+
+  if (task.value.kind === 'screening') {
+    if (!restoreScreeningDraftFromTask(task.value)) {
+      message.error('当前任务缺少可恢复的编辑参数')
+      return
+    }
+    const targetPath = task.value.project_id ? `/threads/${task.value.project_id}/screening/new` : '/screening/new'
+    await router.push(targetPath)
+    message.success('已返回初筛编辑页，请重新选择文件后再提交')
+    return
+  }
+
+  if (task.value.kind === 'report') {
+    if (!task.value.project_id || !restoreReportDraftFromTask(task.value)) {
+      message.error('当前报告任务缺少可恢复的编辑参数')
+      return
+    }
+    await router.push({
+      path: `/threads/${task.value.project_id}`,
+      query: {
+        focusPanel: 'report',
+        reportDatasetId: task.value.input_dataset_ids[0] ?? undefined,
+      },
+    })
+    message.success('已返回报告编辑区，可以修改参数后重新提交')
+  }
+}
+
 async function cancelCurrentTask() {
   if (!task.value) return
   await tasksStore.cancel(task.value.id)
@@ -233,7 +367,7 @@ async function useStrategyForScreening() {
 
 async function goToFulltextWorkspace() {
   if (!task.value?.project_id) return
-  await router.push(`/threads/${task.value.project_id}/fulltext?screeningTaskId=${task.value.id}`)
+  await router.push(`/threads/${task.value.project_id}/fulltext?tab=rounds&screeningTaskId=${task.value.id}`)
 }
 </script>
 
@@ -264,6 +398,10 @@ async function goToFulltextWorkspace() {
         <NButton v-if="isRetriableTask" tertiary @click="retryCurrentTask">
           <template #icon><RotateCcw :size="16" /></template>
           继续执行
+        </NButton>
+        <NButton v-if="canReturnToEdit" tertiary type="warning" @click="returnTaskToEdit">
+          <template #icon><FileText :size="16" /></template>
+          返回编辑
         </NButton>
         <NButton v-if="isRunning" tertiary @click="cancelCurrentTask">
           <template #icon><Square :size="14" /></template>
@@ -354,7 +492,7 @@ async function goToFulltextWorkspace() {
 
       <NCard title="下一步：进入统一复核工作台" class="panel-surface">
         <div class="report-action-row">
-          <div class="report-copy">常规复核现在建议直接放到“统一复核工作台”里做。那里是一条连续流程，左边看候选文献流，右边直接处理筛选判定和全文状态，不再在这里重复维护筛选记录表。</div>
+          <div class="report-copy">后续处理直接在统一复核工作台完成。</div>
           <NButton type="primary" @click="goToFulltextWorkspace" :disabled="!task.project_id">
             <template #icon><BookOpenText :size="16" /></template>
             去统一复核工作台
@@ -419,14 +557,14 @@ async function goToFulltextWorkspace() {
               </div>
             </div>
           </template>
-          <NAlert v-else type="info" :show-icon="false">当前线程还没有固定的主题与标准快照，先回线程主页补全或重新生成线程方案。</NAlert>
+          <NAlert v-else type="info" :show-icon="false">当前线程还没有主题与标准。</NAlert>
         </NCard>
       </section>
 
       <NCard title="本轮产出与后续动作" class="panel-surface">
         <div class="summary-item">
           <span>这页现在做什么</span>
-          <strong>这里只保留本轮摘要、主题标准和产出边界。真正的筛选改判与全文处理统一在“统一复核工作台”里完成，避免同一批记录在两个页面重复出现。</strong>
+          <strong>这里展示本轮摘要和产出。</strong>
         </div>
         <div class="tag-row" style="margin-top: 14px;">
           <NTag v-if="includedDataset" round type="success">可进入统一复核 {{ includedDataset.record_count ?? 0 }} 篇</NTag>
@@ -434,7 +572,7 @@ async function goToFulltextWorkspace() {
           <NTag v-if="excludedDataset" round type="error">本轮已剔除 {{ excludedDataset.record_count ?? 0 }} 篇</NTag>
         </div>
         <div class="report-action-row" style="margin-top: 16px;">
-          <div class="report-copy">如果要继续处理本轮纳入文献，直接去统一复核工作台；如果这轮还有未使用文献，也可以从这里直接开启下一轮。</div>
+          <div class="report-copy">继续处理纳入文献或开启下一轮。</div>
           <NSpace>
             <RouterLink v-if="continueUnusedRoute" :to="continueUnusedRoute">
               <NButton tertiary>继续筛选未使用文献</NButton>

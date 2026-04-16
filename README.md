@@ -57,9 +57,15 @@
 ### 前置条件
 
 - 已安装并启动 Docker Desktop
-- 在环境变量或 `.env` 中设置至少一个模型密钥：
+- 推荐在仓库根目录 `.env` 中设置至少一个模型密钥：
   - `KIMI_API_KEY`
   - `DEEPSEEK_API_KEY`
+
+首次配置可以在仓库根目录执行：
+
+```bash
+cp .env.example .env
+```
 
 ### macOS 一键启动
 
@@ -117,13 +123,12 @@ Windows 上可以直接双击仓库根目录的脚本一键启动（需要先安
 
 如果 `8080` 端口被占用（例如 qBittorrent WebUI），可以先设置 `WEB_PORT`（如 `8081`）；脚本在未显式设置时也会自动尝试可用端口。
 
-环境变量加载顺序：
+环境变量规则：
 
-- 先读取仓库根目录 `.env`
-- 再读取 `literature_screening/.env`
-- 如果两个文件都定义了同名变量，以 `literature_screening/.env` 为准
-
-这意味着如果根目录 `.env` 已经写入真实 `DEEPSEEK_API_KEY` / `KIMI_API_KEY`，但 `literature_screening/.env` 里仍保留 `your_deepseek_api_key_here` 之类占位符，启动脚本最终会把真实值覆盖掉，容器内请求会返回 `401 invalid api key`
+- 推荐只维护仓库根目录 `.env`
+- `literature_screening/.env` 仍会被读取，但只作为旧配置兼容补缺
+- 如果两个文件都定义了同名变量，根目录 `.env` 优先
+- 占位符值（例如 `your_deepseek_api_key_here`）不会覆盖真实值
 
 在仓库根目录执行：
 
@@ -171,7 +176,8 @@ docker compose -f docker-compose.local.yml down
 ## 常见排障
 
 - `401 invalid api key`
-  - 先检查根目录 `.env` 和 `literature_screening/.env` 是否存在重复定义
+  - 先检查仓库根目录 `.env` 里的 `KIMI_API_KEY` / `DEEPSEEK_API_KEY`
+  - 如果还保留了 `literature_screening/.env`，确认里面没有误导性的旧值；这个文件现在只做兼容补缺
   - 再确认修改后已经执行 `stop-wenxian*.ps1` + `start-wenxian*.ps1` 重新创建容器
 - 报告里反复出现 `Selected from reusable project dataset.`
   - 这通常不是模型真的只输出了这句，而是逐篇生成笔记时模型请求失败，系统退回到了兜底模板

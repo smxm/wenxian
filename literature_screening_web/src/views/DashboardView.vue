@@ -2,7 +2,7 @@
 import { computed, onMounted, reactive, ref } from 'vue'
 import { useRouter, RouterLink } from 'vue-router'
 import dayjs from 'dayjs'
-import { ArrowRight, Bot, FolderOpenDot, MoreHorizontal, Sparkles } from 'lucide-vue-next'
+import { ArrowRight, Bot, FolderOpenDot, MoreHorizontal } from 'lucide-vue-next'
 import { NButton, NCard, NDropdown, NEmpty, NForm, NFormItem, NInput, NModal, NSpace, NTag, useMessage } from 'naive-ui'
 import StatusPill from '@/components/StatusPill.vue'
 import { useDraftsStore } from '@/stores/drafts'
@@ -28,26 +28,26 @@ const workflowSteps = [
   {
     step: '01',
     title: '研究需求',
-    summary: '先用自然语言说明你要解决的问题。',
-    detail: '系统会据此生成线程主题、筛选标准和数据库检索式。'
+    summary: '先创建线程。',
+    detail: '后续再补主题、标准和方案。'
   },
   {
     step: '02',
     title: '线程内初筛',
-    summary: '后续轮次都沿着同一条线程推进。',
-    detail: '每轮初筛默认继承顶部固定的主题和纳排标准。'
+    summary: '在线程里继续初筛。',
+    detail: '每轮沿用当前主题和标准。'
   },
   {
     step: '03',
     title: '全文复核',
-    summary: '只处理已经纳入、值得继续拿全文的记录。',
-    detail: '按年份和相关度继续取舍，同时支持批量标记已获取、排除或暂缓。'
+    summary: '处理候选文献。',
+    detail: '标记获取状态和最终去留。'
   },
   {
     step: '04',
     title: '生成报告',
-    summary: '全文就绪后，直接从当前线程生成报告。',
-    detail: '同一条线程会保留完整上下文，便于回看和继续扩展。'
+    summary: '从线程生成报告。',
+    detail: '直接使用已纳入文献。'
   }
 ]
 
@@ -151,11 +151,8 @@ onMounted(async () => {
     <section class="hero-grid">
       <div class="hero-copy panel-surface">
         <div class="eyebrow">Thread-first Workflow</div>
-        <h1>按主题建立线程，在同一条线里推进检索方案、初筛、全文复核和报告</h1>
-        <p>
-          默认路径已经收成一条主线：先输入研究需求生成线程方案，再在同一条线程里按“初筛、全文、报告”顺序推进。
-          线程顶部会一直固定当前主题和筛选标准，避免每一轮都重新填写。
-        </p>
+        <h1>先建线程，再继续初筛、复核和报告</h1>
+        <p>输入研究需求创建线程，后续步骤都在线程里完成。</p>
         <div class="hero-actions">
           <RouterLink to="/threads/new">
             <NButton type="primary" size="large">
@@ -171,14 +168,6 @@ onMounted(async () => {
               <template #icon>
                 <ArrowRight :size="16" />
               </template>
-            </NButton>
-          </RouterLink>
-          <RouterLink to="/threads/new">
-            <NButton tertiary size="large">
-              <template #icon>
-                <Sparkles :size="16" />
-              </template>
-              新建线程方案
             </NButton>
           </RouterLink>
         </div>
@@ -205,7 +194,7 @@ onMounted(async () => {
             </div>
             <div class="support-item">
               <Sparkles :size="18" />
-              <span>线程方案会统一沉淀主题、筛选标准和数据库检索式，后续筛选默认继承</span>
+              <span>主题、标准和检索式都会保存在同一条线程里</span>
             </div>
           </div>
         </div>
@@ -224,14 +213,14 @@ onMounted(async () => {
             </div>
           </div>
           <div class="snapshot-note">
-            {{ draftsStore.hasScreeningDraft ? '检测到未提交初筛草稿，可直接从上方入口回到对应线程继续。' : '没有未提交草稿时，推荐从“新建线程”开始，或从最近线程继续推进。' }}
+            {{ draftsStore.hasScreeningDraft ? '检测到未提交初筛草稿。' : '从新建线程开始，或继续最近线程。' }}
           </div>
         </div>
       </div>
     </section>
 
     <section class="dashboard-grid">
-      <NCard title="默认工作方式" class="panel-surface">
+      <NCard title="默认流程" class="panel-surface">
         <div class="principle-grid">
           <div v-for="step in workflowSteps" :key="`${step.step}-detail`" class="principle-card">
             <div class="principle-step">{{ step.step }}</div>
@@ -240,7 +229,7 @@ onMounted(async () => {
           </div>
         </div>
         <div class="guide-note">
-          线程首页负责固定主题和标准；最近线程这里只展示最近一部分，完整列表可在左侧边栏继续查看，并支持右键操作。
+          线程页负责维护主题和标准。最近线程只显示最近一部分。
         </div>
       </NCard>
 

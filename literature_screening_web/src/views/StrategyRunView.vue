@@ -243,7 +243,7 @@ onMounted(async () => {
           </NButton>
         </RouterLink>
         <NAlert type="info" :show-icon="false">
-          生成完成后，这条线程会固定展示当前主题、筛选标准和对应检索式。后续新建筛选轮次时会默认继承这些内容。
+          生成后会更新当前线程的主题、标准和检索式。
         </NAlert>
       </div>
     </section>
@@ -253,7 +253,7 @@ onMounted(async () => {
         <template v-if="pageMode === 'update'">
           <div v-if="currentProject" class="thread-summary-block">
             <div class="thread-summary-title">{{ currentProject.name }}</div>
-            <div class="thread-summary-copy">{{ currentProject.description || '当前线程会承接新的方案并更新主页顶部固定上下文。' }}</div>
+            <div class="thread-summary-copy">{{ currentProject.description || '当前线程会承接这次方案。' }}</div>
             <div class="thread-summary">
               <NTag round size="small">当前主题：{{ currentProject.thread_profile?.screening.topic || currentProject.topic }}</NTag>
               <NTag round size="small" type="success">已有 {{ currentProject.tasks.filter((task) => task.kind === 'screening').length }} 轮初筛</NTag>
@@ -265,7 +265,7 @@ onMounted(async () => {
           <NFormItem label="线程名称">
             <NInput
               v-model:value="newProjectName"
-              placeholder="不填也可以，系统会先按你的需求创建线程，生成方案后再显示更清晰的主题"
+              placeholder="可选，不填会自动生成"
             />
           </NFormItem>
           <NFormItem label="线程备注">
@@ -273,16 +273,16 @@ onMounted(async () => {
               v-model:value="newProjectDescription"
               type="textarea"
               :autosize="{ minRows: 3, maxRows: 5 }"
-              placeholder="可选，记录这条线程的背景、交付目标或委托信息"
+              placeholder="可选"
             />
           </NFormItem>
         </NForm>
         <NAlert v-if="pageMode === 'create'" type="info" :show-icon="false" class="thread-help-alert">
-          新线程在这里创建。如果你要更新某条已有线程的方案，请先进入那条线程主页再操作。
+          新线程会在这里创建。
         </NAlert>
         <div v-if="pageMode === 'create' && draftsStore.hasStrategyDraft && !draftNoticeDismissed" class="draft-restore-block">
           <NAlert type="warning" :show-icon="false">
-            检测到浏览器里还保留着上次未提交的新线程草稿。现在默认不会再自动带入，避免你一打开“新建线程”就看到旧内容。
+            发现未提交草稿。
           </NAlert>
           <div class="draft-restore-actions">
             <NButton tertiary @click="restoreDraft">恢复旧草稿</NButton>
@@ -298,7 +298,7 @@ onMounted(async () => {
               v-model:value="researchNeed"
               type="textarea"
               :autosize="{ minRows: 12, maxRows: 18 }"
-              placeholder="可以比较模糊。写清研究对象、人群/场景、方法或技术、希望纳入的证据类型、明显想排除的方向，系统会据此生成线程主题、筛选标准和各数据库检索式。"
+              placeholder="直接描述你的研究需求"
             />
           </NFormItem>
         </NForm>
@@ -354,7 +354,7 @@ onMounted(async () => {
       <div>
         <div class="action-title">{{ pageMode === 'update' ? '刷新线程方案' : '创建线程并生成方案' }}</div>
         <div class="action-copy">
-          系统会先生成检索词、线程主题和筛选标准；之后这个线程里的新筛选任务会默认继承这些内容。
+          会生成检索词、主题和筛选标准。
         </div>
       </div>
       <NSpace>

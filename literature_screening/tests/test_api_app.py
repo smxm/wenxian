@@ -33,6 +33,58 @@ def test_meta_endpoint() -> None:
     assert {item["value"] for item in payload["strategyDefaults"]["databases"]} == {"scopus", "wos", "pubmed", "cnki"}
 
 
+def test_thread_prefill_returns_strategy_plan_without_creating_thread(tmp_path: Path, monkeypatch) -> None:
+    task_store = TaskStore(tmp_path / "api_runs")
+    workspace_store = WorkspaceStore(tmp_path / "api_runs")
+    monkeypatch.setattr(app_module, "TASK_STORE", task_store)
+    monkeypatch.setattr(app_module, "WORKSPACE_STORE", workspace_store)
+
+    def fake_generate_strategy_job(request, progress_callback=None):
+        output_dir = request.run_root_override / "strategy_output"
+        output_dir.mkdir(parents=True, exist_ok=True)
+        plan_payload = {
+            "topic": "混凝土结构工程研究",
+            "intent_summary": "聚焦混凝土结构工程中的施工管理与质量控制证据。",
+            "screening_topic": "混凝土结构工程施工管理研究",
+            "inclusion": ["研究对象为混凝土结构工程项目", "涉及施工管理或质量控制"],
+            "exclusion": ["纯材料机理论文", "与工程管理无关"],
+            "search_blocks": [],
+            "caution_notes": ["注意区分设计类与施工管理类研究。"],
+        }
+        (output_dir / "strategy_plan.json").write_text(json.dumps(plan_payload, ensure_ascii=False, indent=2), encoding="utf-8")
+        (output_dir / "strategy_plan.md").write_text("# strategy", encoding="utf-8")
+        (output_dir / "strategy_raw_response.txt").write_text("raw", encoding="utf-8")
+        return SimpleNamespace(run_root=request.run_root_override, output_dir=output_dir, summary={}, markdown="# strategy", artifacts={})
+
+    monkeypatch.setattr(app_module, "generate_strategy_job", fake_generate_strategy_job)
+
+    response = client.post(
+        "/api/threads/prefill",
+        json={
+            "research_need": "想研究混凝土结构工程中的施工管理与质量控制文献",
+            "selected_databases": ["cnki", "wos"],
+            "timeout_seconds": 120,
+            "model": {
+                "provider": "deepseek",
+                "model_name": "deepseek-reasoner",
+                "api_base_url": "https://api.deepseek.com/v1",
+                "api_key_env": "DEEPSEEK_API_KEY",
+                "api_key": "",
+                "temperature": 0,
+                "max_tokens": 4096,
+                "min_request_interval_seconds": 2,
+            },
+        },
+    )
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["strategy_plan"]["screening_topic"] == "混凝土结构工程施工管理研究"
+    assert payload["strategy_plan"]["inclusion"] == ["研究对象为混凝土结构工程项目", "涉及施工管理或质量控制"]
+    assert "混凝土结构工程施工管理研究" in payload["criteria_markdown"]
+    assert workspace_store.list_projects() == []
+    assert task_store.list_tasks() == []
+
+
 def test_project_create_and_list() -> None:
     created = client.post(
         "/api/projects",
@@ -651,7 +703,116 @@ def test_fulltext_queue_rebuild_uses_task_outputs_when_available(tmp_path: Path,
     assert rebuild.status_code == 200
     payload = rebuild.json()
     assert payload["fulltext_queue"][0]["paper_id"] == "paper_000042"
+    assert payload["fulltext_queue"][0]["candidate_id"].startswith("cand_")
     assert payload["fulltext_queue"][0]["landing_url"] == "https://kns.cnki.net/example-record"
+
+
+def test_workbench_keeps_links_separate_when_source_tasks_reuse_paper_ids(tmp_path: Path, monkeypatch) -> None:
+    task_store = TaskStore(tmp_path / "api_runs")
+    workspace_store = WorkspaceStore(tmp_path / "api_runs")
+    monkeypatch.setattr(app_module, "TASK_STORE", task_store)
+    monkeypatch.setattr(app_module, "WORKSPACE_STORE", workspace_store)
+
+    project = workspace_store.create_project(name="collision-project", topic="topic", description="")
+
+    def seed_screening_task(
+        *,
+        title: str,
+        journal: str,
+        year: int,
+        paper_id: str,
+        doi: str | None,
+        url: str | None,
+    ) -> dict:
+        task = task_store.create_task(kind="screening", title=title, metadata={"project_id": project["id"]})
+        output_dir = task_store.tasks_dir / task.task_id / "screening_run"
+        output_dir.mkdir(parents=True, exist_ok=True)
+        task_store.update(task.task_id, output_dir=str(output_dir))
+        record = PaperRecord(
+            paper_id=paper_id,
+            title=title,
+            year=year,
+            journal=journal,
+            doi=doi,
+            url=url,
+            authors=[],
+            keywords=[],
+            source_files=[],
+            source_keys=[],
+            merged_from=[],
+            entry_type="article",
+            status="included",
+        )
+        (output_dir / "deduped_records.json").write_text(
+            json.dumps([record.model_dump(mode="json")], ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+        (output_dir / "screening_decisions.json").write_text(
+            json.dumps([{"paper_id": paper_id, "decision": "include"}], ensure_ascii=False, indent=2),
+            encoding="utf-8",
+        )
+        ris_path = output_dir / "included.ris"
+        ris_path.write_text(
+            "\n".join(
+                [
+                    "TY  - JOUR",
+                    f"TI  - {title}",
+                    "ER  - ",
+                ]
+            ),
+            encoding="utf-8",
+        )
+        return workspace_store.register_dataset(
+            project_id=project["id"],
+            task_id=task.task_id,
+            kind="included",
+            label=f"Included {title}",
+            path=ris_path,
+            record_count=1,
+            file_format="ris",
+        )
+
+    english_dataset = seed_screening_task(
+        title="Effects of Project Management Challenges on the Use of Sustainable Construction Materials: Evidence from Construction Industry Practitioners",
+        journal="Construction Management Review",
+        year=2024,
+        paper_id="paper_000023",
+        doi="10.1000/effects-project-management",
+        url=None,
+    )
+    chinese_dataset = seed_screening_task(
+        title="住宅建筑工程管理中的安全隐患及防范策略探讨",
+        journal="建筑安全与管理",
+        year=2023,
+        paper_id="paper_000023",
+        doi=None,
+        url="https://kns.cnki.net/kcms2/article/example",
+    )
+
+    rebuild = client.post(
+        f"/api/projects/{project['id']}/workbench/rebuild",
+        json={"source_dataset_ids": [english_dataset["id"], chinese_dataset["id"]]},
+    )
+    assert rebuild.status_code == 200
+    payload = rebuild.json()
+    items = payload["workbench"]["items"]
+    assert len(items) == 2
+
+    by_title = {item["title"]: item for item in items}
+    english_item = by_title[
+        "Effects of Project Management Challenges on the Use of Sustainable Construction Materials: Evidence from Construction Industry Practitioners"
+    ]
+    chinese_item = by_title["住宅建筑工程管理中的安全隐患及防范策略探讨"]
+
+    assert english_item["candidate_id"] != chinese_item["candidate_id"]
+    assert english_item["preferred_open_url"] == "https://doi.org/10.1000/effects-project-management"
+    assert chinese_item["preferred_open_url"] == "https://kns.cnki.net/kcms2/article/example"
+    assert english_item["source_record_refs"][0]["paper_id"] == "paper_000023"
+    assert chinese_item["source_record_refs"][0]["paper_id"] == "paper_000023"
+
+    legacy_queue = payload["fulltext_queue"]
+    assert len({item["paper_id"] for item in legacy_queue}) == 2
+    assert {item["candidate_id"] for item in legacy_queue} == {english_item["candidate_id"], chinese_item["candidate_id"]}
 
 
 def test_fulltext_queue_batch_status_update(tmp_path: Path, monkeypatch) -> None:
@@ -948,6 +1109,48 @@ def test_task_detail_api_returns_absolute_and_relative_task_paths(tmp_path: Path
     assert payload["output_dir_relative"] == f"tasks/{task.task_id}/screening_run/screening_output"
 
 
+def test_screening_task_detail_exposes_uploaded_file_names_for_edit_restore(tmp_path: Path, monkeypatch) -> None:
+    task_store = TaskStore(tmp_path / "api_runs")
+    workspace_store = WorkspaceStore(tmp_path / "api_runs")
+    monkeypatch.setattr(app_module, "TASK_STORE", task_store)
+    monkeypatch.setattr(app_module, "WORKSPACE_STORE", workspace_store)
+    monkeypatch.setattr(app_module.TASK_STORE, "run_in_background", lambda task, worker: None)
+
+    response = client.post(
+        "/api/screening/tasks",
+        data={
+            "title": "restore-edit-task",
+            "topic": "robot screening",
+            "criteria_markdown": "# 研究主题\n\nrobot screening",
+            "inclusion_json": json.dumps(["robot"]),
+            "exclusion_json": json.dumps(["review"]),
+            "source_dataset_ids_json": "[]",
+            "provider": "deepseek",
+            "model_name": "deepseek-chat",
+            "api_base_url": "https://api.deepseek.com/v1",
+            "api_key_env": "DEEPSEEK_API_KEY",
+            "api_key": "",
+            "temperature": "0",
+            "max_tokens": "512",
+            "min_request_interval_seconds": "1",
+            "batch_size": "10",
+            "stop_when_target_reached": "false",
+            "allow_uncertain": "true",
+            "retry_times": "2",
+            "request_timeout_seconds": "60",
+            "encoding": "auto",
+        },
+        files=[("files", ("CNKI-restore.net", b"%0 Journal Article\n%T example\n", "text/plain"))],
+    )
+    assert response.status_code == 200
+    task_id = response.json()["id"]
+
+    detail_response = client.get(f"/api/tasks/{task_id}")
+    assert detail_response.status_code == 200
+    payload = detail_response.json()
+    assert payload["request_payload"]["uploaded_file_names"] == ["CNKI-restore.net"]
+
+
 def test_load_run_config_resolves_api_runs_relative_paths_from_storage_root(tmp_path: Path) -> None:
     api_runs_root = tmp_path / "api_runs"
     run_root = api_runs_root / "tasks" / "task-1" / "screening_run"
@@ -1136,6 +1339,297 @@ def test_report_task_rejects_empty_fulltext_ready_source(tmp_path: Path, monkeyp
     )
     assert response.status_code == 400
     assert "Selected report source is empty" in response.json()["detail"]
+
+
+def test_workbench_report_source_tracks_final_includes(tmp_path: Path, monkeypatch) -> None:
+    task_store = TaskStore(tmp_path / "api_runs")
+    workspace_store = WorkspaceStore(tmp_path / "api_runs")
+    monkeypatch.setattr(app_module, "TASK_STORE", task_store)
+    monkeypatch.setattr(app_module, "WORKSPACE_STORE", workspace_store)
+
+    project = workspace_store.create_project(name="report-source-project", topic="topic", description="")
+    ris_path = tmp_path / "report-source.ris"
+    ris_path.write_text(
+        "\n".join(
+            [
+                "TY  - JOUR",
+                "TI  - Candidate For Report",
+                "JO  - Journal A",
+                "PY  - 2024",
+                "VL  - 36",
+                "IS  - 3",
+                "SP  - 89",
+                "EP  - 93",
+                "DO  - 10.1000/report-candidate",
+                "ER  - ",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    dataset = workspace_store.register_dataset(
+        project_id=project["id"],
+        task_id=None,
+        kind="included_reviewed",
+        label="Reviewed included records",
+        path=ris_path,
+        record_count=1,
+        file_format="ris",
+    )
+
+    rebuild = client.post(
+        f"/api/projects/{project['id']}/workbench/rebuild",
+        json={"source_dataset_ids": [dataset["id"]]},
+    )
+    assert rebuild.status_code == 200
+    candidate_id = rebuild.json()["workbench"]["items"][0]["candidate_id"]
+
+    update = client.post(
+        f"/api/projects/{project['id']}/workbench/items/{candidate_id}",
+        json={"access_status": "ready", "final_decision": "include", "access_note": "downloaded"},
+    )
+    assert update.status_code == 200
+    payload = update.json()
+
+    assert payload["workbench"]["summary"]["report_included"] == 1
+    ready_dataset = next(item for item in payload["datasets"] if item["kind"] == "fulltext_ready")
+    report_dataset = next(item for item in payload["datasets"] if item["kind"] == "report_source")
+    assert ready_dataset["record_count"] == 1
+    assert report_dataset["record_count"] == 1
+    report_content = Path(report_dataset["path"]).read_text(encoding="utf-8")
+    assert "Candidate For Report" in report_content
+    assert "VL  - 36" in report_content
+    assert "IS  - 3" in report_content
+    assert "SP  - 89" in report_content
+    assert "EP  - 93" in report_content
+
+
+def test_report_task_normalizes_reasoner_max_tokens(tmp_path: Path, monkeypatch) -> None:
+    task_store = TaskStore(tmp_path / "api_runs")
+    workspace_store = WorkspaceStore(tmp_path / "api_runs")
+    monkeypatch.setattr(app_module, "TASK_STORE", task_store)
+    monkeypatch.setattr(app_module, "WORKSPACE_STORE", workspace_store)
+    monkeypatch.setattr(task_store, "run_in_background", lambda task, worker: None)
+
+    project = workspace_store.create_project(name="report-project", topic="topic", description="")
+    ris_path = tmp_path / "included.ris"
+    ris_path.write_text(
+        "\n".join(
+            [
+                "TY  - JOUR",
+                "TI  - Paper One",
+                "JO  - Journal A",
+                "PY  - 2024",
+                "DO  - 10.1000/paper-one",
+                "ER  - ",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    dataset = workspace_store.register_dataset(
+        project_id=project["id"],
+        task_id=None,
+        kind="included_reviewed",
+        label="Reviewed included records",
+        path=ris_path,
+        record_count=1,
+        file_format="ris",
+    )
+
+    rebuild = client.post(
+        f"/api/projects/{project['id']}/workbench/rebuild",
+        json={"source_dataset_ids": [dataset["id"]]},
+    )
+    assert rebuild.status_code == 200
+    candidate_id = rebuild.json()["workbench"]["items"][0]["candidate_id"]
+
+    update = client.post(
+        f"/api/projects/{project['id']}/workbench/items/{candidate_id}",
+        json={"access_status": "ready", "final_decision": "include"},
+    )
+    assert update.status_code == 200
+
+    response = client.post(
+        "/api/report/tasks",
+        json={
+            "title": "report",
+            "project_id": project["id"],
+            "screening_task_id": None,
+            "dataset_ids": ["report-source"],
+            "project_topic": "topic",
+            "report_name": "simple_report",
+            "retry_times": 1,
+            "timeout_seconds": 30,
+            "reference_style": "gbt7714",
+            "model": {
+                "provider": "deepseek",
+                "model_name": "deepseek-reasoner",
+                "api_base_url": "https://api.deepseek.com/v1",
+                "api_key_env": "DEEPSEEK_API_KEY",
+                "api_key": "",
+                "temperature": 0,
+                "max_tokens": 256,
+                "min_request_interval_seconds": 1,
+            },
+        },
+    )
+
+    assert response.status_code == 200
+    stored_task = task_store.load_task(response.json()["id"])
+    assert stored_task["metadata"]["request_payload"]["model"]["max_tokens"] == 4096
+
+
+def test_workbench_batch_patch_updates_selected_candidates(tmp_path: Path, monkeypatch) -> None:
+    task_store = TaskStore(tmp_path / "api_runs")
+    workspace_store = WorkspaceStore(tmp_path / "api_runs")
+    monkeypatch.setattr(app_module, "TASK_STORE", task_store)
+    monkeypatch.setattr(app_module, "WORKSPACE_STORE", workspace_store)
+
+    project = workspace_store.create_project(name="workbench-batch-project", topic="topic", description="")
+    ris_path = tmp_path / "workbench-batch.ris"
+    ris_path.write_text(
+        "\n".join(
+            [
+                "TY  - JOUR",
+                "TI  - Batch Candidate One",
+                "JO  - Journal A",
+                "PY  - 2024",
+                "DO  - 10.1000/batch-one",
+                "ER  - ",
+                "TY  - JOUR",
+                "TI  - Batch Candidate Two",
+                "JO  - Journal B",
+                "PY  - 2023",
+                "DO  - 10.1000/batch-two",
+                "ER  - ",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    dataset = workspace_store.register_dataset(
+        project_id=project["id"],
+        task_id=None,
+        kind="included_reviewed",
+        label="Reviewed included records",
+        path=ris_path,
+        record_count=2,
+        file_format="ris",
+    )
+
+    rebuild = client.post(
+        f"/api/projects/{project['id']}/workbench/rebuild",
+        json={"source_dataset_ids": [dataset["id"]]},
+    )
+    assert rebuild.status_code == 200
+    candidate_ids = [item["candidate_id"] for item in rebuild.json()["workbench"]["items"]]
+
+    update = client.post(
+        f"/api/projects/{project['id']}/workbench/items/batch",
+        json={"candidate_ids": candidate_ids, "access_status": "ready", "final_decision": "include", "access_note": "batch updated"},
+    )
+    assert update.status_code == 200
+    payload = update.json()
+
+    assert payload["workbench"]["summary"]["report_included"] == 2
+    assert payload["workbench"]["summary"]["ready_for_decision"] == 0
+    for item in payload["workbench"]["items"]:
+        assert item["access_status"] == "ready"
+        assert item["final_decision"] == "include"
+        assert item["access_note"] == "batch updated"
+
+
+def test_workbench_load_recovers_legacy_ready_state_from_stale_workbench_file(tmp_path: Path, monkeypatch) -> None:
+    task_store = TaskStore(tmp_path / "api_runs")
+    workspace_store = WorkspaceStore(tmp_path / "api_runs")
+    monkeypatch.setattr(app_module, "TASK_STORE", task_store)
+    monkeypatch.setattr(app_module, "WORKSPACE_STORE", workspace_store)
+
+    project = workspace_store.create_project(name="legacy-recovery-project", topic="topic", description="")
+    ris_path = tmp_path / "legacy-recovery.ris"
+    ris_path.write_text(
+        "\n".join(
+            [
+                "TY  - JOUR",
+                "TI  - Legacy Recovery Candidate",
+                "JO  - Journal A",
+                "PY  - 2024",
+                "DO  - 10.1000/legacy-recovery",
+                "ER  - ",
+            ]
+        ),
+        encoding="utf-8",
+    )
+    dataset = workspace_store.register_dataset(
+        project_id=project["id"],
+        task_id=None,
+        kind="included_reviewed",
+        label="Reviewed included records",
+        path=ris_path,
+        record_count=1,
+        file_format="ris",
+    )
+
+    rebuild = client.post(
+        f"/api/projects/{project['id']}/workbench/rebuild",
+        json={"source_dataset_ids": [dataset["id"]]},
+    )
+    assert rebuild.status_code == 200
+    rebuilt_payload = rebuild.json()
+    rebuilt_item = rebuilt_payload["workbench"]["items"][0]
+
+    stale_workbench = workspace_store.load_workbench(project["id"])
+    stale_workbench["items"][0]["access_status"] = "pending"
+    stale_workbench["items"][0]["access_note"] = ""
+    stale_workbench["items"][0]["manual_pdf_url"] = None
+    workspace_store.save_workbench(project["id"], stale_workbench)
+
+    derived_dir = tmp_path / "api_runs" / "projects" / project["id"] / "derived"
+    (derived_dir / "fulltext_queue.json").write_text(
+        json.dumps(
+            {
+                "source_dataset_ids": [dataset["id"]],
+                "items": [
+                    {
+                        "paper_id": "paper_000001",
+                        "candidate_id": rebuilt_item["candidate_id"],
+                        "title": "Legacy Recovery Candidate",
+                        "journal": "Journal A",
+                        "year": 2024,
+                        "doi": "10.1000/legacy-recovery",
+                        "status": "ready",
+                        "note": "legacy recovered",
+                        "source_url": None,
+                        "pdf_url": "https://downloads.example.com/10.1000/legacy-recovery.pdf",
+                    }
+                ],
+            },
+            ensure_ascii=False,
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+    (derived_dir / "fulltext_statuses.json").write_text(
+        json.dumps(
+            {
+                "paper_000001": {
+                    "status": "ready",
+                    "note": "legacy recovered",
+                    "pdf_url": "https://downloads.example.com/10.1000/legacy-recovery.pdf",
+                    "updated_at": "2026-04-15T18:00:00+08:00",
+                }
+            },
+            ensure_ascii=False,
+            indent=2,
+        ),
+        encoding="utf-8",
+    )
+
+    detail = client.get(f"/api/projects/{project['id']}")
+    assert detail.status_code == 200
+    item = detail.json()["workbench"]["items"][0]
+
+    assert item["access_status"] == "ready"
+    assert item["access_note"] == "legacy recovered"
+    assert item["preferred_pdf_url"] == "https://downloads.example.com/10.1000/legacy-recovery.pdf"
 
 
 def test_fulltext_queue_rebuild_clears_ready_dataset_when_source_file_disappears(tmp_path: Path, monkeypatch) -> None:

@@ -136,6 +136,50 @@ def test_export_ris_writes_journal_type(tmp_path: Path) -> None:
     assert "DO  - 10.1000/example" in content
 
 
+def test_export_ris_preserves_structured_bibliographic_fields(tmp_path: Path) -> None:
+    record = PaperRecord(
+        paper_id="paper_000001",
+        entry_type="article",
+        title="Example Article",
+        authors=["Alice Example"],
+        year=2026,
+        journal="Journal of Testing",
+        volume="36",
+        number="3",
+        pages="89-93",
+    )
+
+    output_path = tmp_path / "included.ris"
+    export_ris([record], output_path)
+    content = output_path.read_text(encoding="utf-8")
+
+    assert "VL  - 36" in content
+    assert "IS  - 3" in content
+    assert "SP  - 89" in content
+    assert "EP  - 93" in content
+
+
+def test_export_ris_falls_back_to_raw_bibtex_bibliographic_fields(tmp_path: Path) -> None:
+    record = PaperRecord(
+        paper_id="paper_000001",
+        entry_type="article",
+        title="Example Article",
+        authors=["Alice Example"],
+        year=2026,
+        journal="Journal of Testing",
+        raw_bibtex="@ARTICLE{example,\n volume = {36},\n number = {3},\n pages = {89-93},\n}",
+    )
+
+    output_path = tmp_path / "included.ris"
+    export_ris([record], output_path)
+    content = output_path.read_text(encoding="utf-8")
+
+    assert "VL  - 36" in content
+    assert "IS  - 3" in content
+    assert "SP  - 89" in content
+    assert "EP  - 93" in content
+
+
 def test_build_screening_prompt_contains_ids_and_missing_markers() -> None:
     template_path = Path(__file__).resolve().parents[1] / "prompts" / "screening_prompt.md"
     criteria = CriteriaConfig(topic="test topic", inclusion=["keep relevant"], exclusion=["drop irrelevant"])

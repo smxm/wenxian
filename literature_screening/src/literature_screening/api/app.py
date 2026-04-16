@@ -4,6 +4,7 @@ import difflib
 import json
 import re
 import sys
+import tempfile
 from datetime import datetime
 from pathlib import Path
 from typing import Any
@@ -15,7 +16,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 
 from literature_screening.bibtex.normalizer import normalize_title
-from literature_screening.api.schemas import DatasetRecord, FulltextBatchStatusUpdateRequest, FulltextQueueItem, FulltextQueueRebuildRequest, FulltextStatusUpdateRequest, ProjectCreate, ProjectDetail, ProjectSnapshot, ProjectUpdate, ProjectWorkflowUpdate, StrategyPlan
+from literature_screening.api.schemas import DatasetRecord, FulltextBatchStatusUpdateRequest, FulltextQueueItem, FulltextQueueRebuildRequest, FulltextStatusUpdateRequest, ProjectCreate, ProjectDetail, ProjectSnapshot, ProjectUpdate, ProjectWorkbench, ProjectWorkflowUpdate, StrategyPlan, ThreadPrefillRequest, ThreadPrefillResponse, WorkbenchBatchPatchRequest, WorkbenchCandidateItem, WorkbenchItemPatchRequest, WorkbenchLink, WorkbenchRebuildRequest, WorkbenchScreeningEvent, WorkbenchSummary
 from literature_screening.api.schemas import BulkReviewOverrideRequest, ReferenceOverrideRequest, ReportTaskCreate, RetryTaskRequest, ReviewOverrideRequest, SelectionReviewOverrideRequest, StrategyTaskCreate, TaskArtifact
 from literature_screening.api.schemas import TaskDetail, TaskEvent, TaskSnapshot, TaskTemplateRecord
 from literature_screening.api.secret_store import SecretStore
@@ -87,6 +88,12 @@ def _default_strategy_model_payload() -> dict:
 
 def _default_screening_model_payload() -> dict:
     return dict(DEFAULT_SCREENING_MODEL)
+
+
+def _effective_max_tokens(provider: str, model_name: str, requested: int) -> int:
+    if provider == "deepseek" and model_name == "deepseek-reasoner":
+        return max(int(requested), 4096)
+    return int(requested)
 
 
 def _criteria_to_markdown(topic: str, inclusion: list[str], exclusion: list[str]) -> str:
@@ -287,6 +294,48 @@ def meta() -> dict:
     }
 
 
+@app.post("/api/threads/prefill", response_model=ThreadPrefillResponse)
+def prefill_thread_from_research_need(request: ThreadPrefillRequest) -> ThreadPrefillResponse:
+    research_need = request.research_need.strip()
+    if not research_need:
+        raise HTTPException(status_code=400, detail="Research need is required")
+
+    with tempfile.TemporaryDirectory(prefix="thread-prefill-") as temp_dir:
+        result = generate_strategy_job(
+            StrategyJobRequest(
+                project_name="thread-prefill",
+                project_topic=research_need,
+                research_need=research_need,
+                selected_databases=request.selected_databases,
+                model=ModelDraft(
+                    provider=request.model.provider,
+                    model_name=request.model.model_name,
+                    api_base_url=request.model.api_base_url,
+                    api_key_env=request.model.api_key_env,
+                    api_key=(request.model.api_key or "").strip() or None,
+                    temperature=request.model.temperature,
+                    max_tokens=request.model.max_tokens,
+                    min_request_interval_seconds=request.model.min_request_interval_seconds,
+                ),
+                runs_root=API_RUNS_ROOT / "runs",
+                run_root_override=Path(temp_dir),
+                timeout_seconds=request.timeout_seconds,
+            )
+        )
+        strategy_plan_path = Path(result.output_dir) / "strategy_plan.json"
+        if not strategy_plan_path.exists():
+            raise HTTPException(status_code=500, detail="Strategy prefill output is missing")
+        try:
+            plan = StrategyPlan.model_validate(json.loads(strategy_plan_path.read_text(encoding="utf-8")))
+        except Exception as exc:
+            raise HTTPException(status_code=500, detail=f"Failed to parse strategy prefill output: {exc}") from exc
+
+    return ThreadPrefillResponse(
+        strategy_plan=plan,
+        criteria_markdown=_criteria_to_markdown(plan.screening_topic or plan.topic, plan.inclusion, plan.exclusion),
+    )
+
+
 @app.get("/api/projects", response_model=list[ProjectSnapshot])
 def list_projects() -> list[ProjectSnapshot]:
     projects = WORKSPACE_STORE.list_projects()
@@ -357,11 +406,12 @@ def get_project(project_id: str) -> ProjectDetail:
     project_tasks = [task for task in TASK_STORE.list_tasks() if _task_project_id(task) == project_id]
     tasks = [_to_snapshot(task) for task in project_tasks]
     datasets = [_to_dataset_record(item) for item in WORKSPACE_STORE.list_project_datasets(project_id)]
-    fulltext_queue = WORKSPACE_STORE.load_fulltext_queue(project_id)
-    if not fulltext_queue.get("items") and any(dataset.kind in {"cumulative_included", "included_reviewed", "included"} for dataset in datasets):
-        fulltext_queue = WORKSPACE_STORE.rebuild_fulltext_queue(project_id)
+    workbench = _build_project_workbench(project_id, project_tasks)
+    if not workbench["items"] and any(dataset.kind in {"cumulative_included", "included_reviewed", "included"} for dataset in datasets):
+        WORKSPACE_STORE.rebuild_workbench(project_id)
         datasets = [_to_dataset_record(item) for item in WORKSPACE_STORE.list_project_datasets(project_id)]
-    fulltext_items = _enrich_fulltext_queue_items(fulltext_queue.get("items", []), project_tasks)
+        workbench = _build_project_workbench(project_id, project_tasks)
+    fulltext_items = _workbench_to_fulltext_items(workbench["items"])
     return ProjectDetail.model_validate(
         project
         | {
@@ -369,8 +419,9 @@ def get_project(project_id: str) -> ProjectDetail:
             "thread_profile": _effective_thread_profile(project, project_tasks=project_tasks),
             "tasks": tasks,
             "datasets": datasets,
+            "workbench": ProjectWorkbench.model_validate(workbench),
             "fulltext_queue": [FulltextQueueItem.model_validate(item) for item in fulltext_items],
-            "fulltext_source_dataset_ids": fulltext_queue.get("source_dataset_ids", []),
+            "fulltext_source_dataset_ids": workbench.get("source_dataset_ids", []),
         }
     )
 
@@ -389,7 +440,7 @@ def rebuild_fulltext_queue(project_id: str, request: FulltextQueueRebuildRequest
     if request.source_dataset_ids:
         for dataset_id in request.source_dataset_ids:
             _require_project_dataset(project_id, dataset_id)
-    WORKSPACE_STORE.rebuild_fulltext_queue(project_id, source_dataset_ids=request.source_dataset_ids)
+    WORKSPACE_STORE.rebuild_workbench(project_id, source_dataset_ids=request.source_dataset_ids)
     return get_project(project_id)
 
 
@@ -402,8 +453,6 @@ def update_fulltext_status(project_id: str, request: FulltextStatusUpdateRequest
         status=request.status,
         note=request.note,
     )
-    queue = WORKSPACE_STORE.load_fulltext_queue(project_id)
-    WORKSPACE_STORE.rebuild_fulltext_queue(project_id, source_dataset_ids=queue.get("source_dataset_ids", []))
     return get_project(project_id)
 
 
@@ -420,24 +469,22 @@ def update_fulltext_status_batch(project_id: str, request: FulltextBatchStatusUp
             status=request.status,
             note=request.note,
         )
-    queue = WORKSPACE_STORE.load_fulltext_queue(project_id)
-    WORKSPACE_STORE.rebuild_fulltext_queue(project_id, source_dataset_ids=queue.get("source_dataset_ids", []))
     return get_project(project_id)
 
 
 @app.post("/api/projects/{project_id}/fulltext/enrich", response_model=ProjectDetail)
 def enrich_fulltext_links(project_id: str) -> ProjectDetail:
     WORKSPACE_STORE.load_project(project_id)
-    queue = WORKSPACE_STORE.load_fulltext_queue(project_id)
-    items = queue.get("items", [])
+    workbench = WORKSPACE_STORE.load_workbench(project_id)
+    items = workbench.get("items", [])
     for item in items:
         doi = (item.get("doi") or "").strip()
         if not doi:
             continue
-        if item.get("oa_status") and item.get("landing_url"):
+        if item.get("oa_status") and item.get("oa_landing_url"):
             continue
-        landing_url = item.get("doi_url")
-        pdf_url = item.get("pdf_url")
+        landing_url = next((link.get("url") for link in item.get("links", []) if link.get("kind") == "doi"), None)
+        pdf_url = item.get("oa_pdf_url")
         oa_status = item.get("oa_status") or "unknown"
         try:
             response = httpx.get(
@@ -452,23 +499,77 @@ def enrich_fulltext_links(project_id: str) -> ProjectDetail:
                 landing_url = (
                     primary_location.get("landing_page_url")
                     or open_access.get("oa_url")
-                    or item.get("doi_url")
+                    or landing_url
                 )
                 pdf_url = open_access.get("oa_url") or pdf_url
                 oa_status = "oa" if open_access.get("is_oa") else "closed"
         except Exception:
-            landing_url = landing_url or item.get("doi_url")
-        WORKSPACE_STORE.update_fulltext_status(
-            project_id=project_id,
-            paper_id=item["paper_id"],
-            status=item.get("status", "pending"),
-            note=item.get("note", ""),
-            landing_url=landing_url,
-            pdf_url=pdf_url,
-            oa_status=oa_status,
-        )
-    WORKSPACE_STORE.rebuild_fulltext_queue(project_id, source_dataset_ids=queue.get("source_dataset_ids", []))
+            landing_url = landing_url or next((link.get("url") for link in item.get("links", []) if link.get("kind") == "doi"), None)
+        for stored_item in workbench.get("items", []):
+            if stored_item.get("candidate_id") != item.get("candidate_id"):
+                continue
+            stored_item["oa_landing_url"] = landing_url
+            stored_item["oa_pdf_url"] = pdf_url
+            stored_item["oa_status"] = oa_status
+            stored_item["updated_at"] = datetime.now().astimezone().isoformat()
+            break
+    WORKSPACE_STORE.save_workbench(project_id, workbench)
+    WORKSPACE_STORE.rebuild_workbench(project_id, source_dataset_ids=workbench.get("source_dataset_ids", []))
     return get_project(project_id)
+
+
+@app.post("/api/projects/{project_id}/workbench/rebuild", response_model=ProjectDetail)
+def rebuild_project_workbench(project_id: str, request: WorkbenchRebuildRequest) -> ProjectDetail:
+    WORKSPACE_STORE.load_project(project_id)
+    if request.source_dataset_ids:
+        for dataset_id in request.source_dataset_ids:
+            _require_project_dataset(project_id, dataset_id)
+    WORKSPACE_STORE.rebuild_workbench(project_id, source_dataset_ids=request.source_dataset_ids)
+    return get_project(project_id)
+
+
+@app.post("/api/projects/{project_id}/workbench/items/batch", response_model=ProjectDetail)
+def patch_workbench_items(project_id: str, request: WorkbenchBatchPatchRequest) -> ProjectDetail:
+    WORKSPACE_STORE.load_project(project_id)
+    candidate_ids = list(dict.fromkeys(request.candidate_ids))
+    if not candidate_ids:
+        return get_project(project_id)
+    changes: dict[str, Any] = {}
+    if "access_status" in request.model_fields_set:
+        changes["access_status"] = request.access_status
+    if "final_decision" in request.model_fields_set:
+        changes["final_decision"] = request.final_decision
+    if "access_note" in request.model_fields_set:
+        changes["access_note"] = request.access_note
+    if "final_note" in request.model_fields_set:
+        changes["final_note"] = request.final_note
+    WORKSPACE_STORE.patch_workbench_items(project_id, candidate_ids, changes)
+    return get_project(project_id)
+
+
+@app.post("/api/projects/{project_id}/workbench/items/{candidate_id}", response_model=ProjectDetail)
+def patch_workbench_item(project_id: str, candidate_id: str, request: WorkbenchItemPatchRequest) -> ProjectDetail:
+    WORKSPACE_STORE.load_project(project_id)
+    changes: dict[str, Any] = {}
+    if "access_status" in request.model_fields_set:
+        changes["access_status"] = request.access_status
+    if "final_decision" in request.model_fields_set:
+        changes["final_decision"] = request.final_decision
+    if "access_note" in request.model_fields_set:
+        changes["access_note"] = request.access_note
+    if "final_note" in request.model_fields_set:
+        changes["final_note"] = request.final_note
+    if "preferred_open_url" in request.model_fields_set:
+        changes["manual_preferred_url"] = request.preferred_open_url
+    if "preferred_pdf_url" in request.model_fields_set:
+        changes["manual_pdf_url"] = request.preferred_pdf_url
+    WORKSPACE_STORE.patch_workbench_items(project_id, [candidate_id], changes)
+    return get_project(project_id)
+
+
+@app.post("/api/projects/{project_id}/workbench/enrich", response_model=ProjectDetail)
+def enrich_project_workbench(project_id: str) -> ProjectDetail:
+    return enrich_fulltext_links(project_id)
 
 
 @app.get("/api/templates", response_model=list[TaskTemplateRecord])
@@ -1048,6 +1149,7 @@ async def create_screening_task(
         dataset = _require_project_dataset(project["id"], dataset_id, detail="All source datasets must belong to the selected project")
         input_paths.append(Path(dataset["path"]))
 
+    uploaded_file_names = [(upload.filename or "upload.bin") for upload in (files or [])]
     secret_id = SECRET_STORE.put(api_key.strip()) if api_key.strip() else None
     task = TASK_STORE.create_task(
         kind="screening",
@@ -1081,6 +1183,7 @@ async def create_screening_task(
                 "project_id": project["id"],
                 "parent_task_id": parent_task_id,
                 "source_dataset_ids": source_dataset_ids,
+                "uploaded_file_names": uploaded_file_names,
             },
             "model_secret_id": secret_id,
         },
@@ -1200,18 +1303,21 @@ def create_report_task(request: ReportTaskCreate) -> TaskSnapshot:
         if len(project_ids) != 1:
             raise HTTPException(status_code=400, detail="Selected datasets must belong to the same project")
         project_id = next(iter(project_ids))
-        fulltext_ready_dataset = next((item for item in datasets if item["kind"] == "fulltext_ready"), None)
-        if fulltext_ready_dataset is not None:
+        managed_workbench_dataset = next(
+            (item for item in datasets if item["kind"] in {"report_source", "fulltext_ready"}),
+            None,
+        )
+        if managed_workbench_dataset is not None:
             rebuild_source_dataset_ids = (
-                fulltext_ready_dataset.get("source_dataset_ids")
-                or WORKSPACE_STORE.load_fulltext_queue(project_id).get("source_dataset_ids", [])
+                managed_workbench_dataset.get("source_dataset_ids")
+                or WORKSPACE_STORE.load_workbench(project_id).get("source_dataset_ids", [])
             )
-            WORKSPACE_STORE.rebuild_fulltext_queue(project_id, source_dataset_ids=rebuild_source_dataset_ids)
+            WORKSPACE_STORE.rebuild_workbench(project_id, source_dataset_ids=rebuild_source_dataset_ids)
             datasets = [_resolve_report_dataset(request, dataset_id, project_id=project_id) for dataset_id in source_dataset_ids]
         if not any((item.get("record_count") or 0) > 0 for item in datasets):
             raise HTTPException(
                 status_code=400,
-                detail="Selected report source is empty. Mark papers as 已获取全文 first, or choose a non-empty source.",
+                detail="Selected report source is empty. Mark papers as 纳入报告 first, or choose a non-empty source.",
             )
         dataset_paths = [Path(item["path"]) for item in datasets]
         source_task_ids = [item.get("task_id") for item in datasets if item.get("task_id")]
@@ -1226,6 +1332,14 @@ def create_report_task(request: ReportTaskCreate) -> TaskSnapshot:
     if project_id is None:
         raise HTTPException(status_code=400, detail="Project context is missing")
 
+    effective_max_tokens = _effective_max_tokens(
+        request.model.provider,
+        request.model.model_name,
+        request.model.max_tokens,
+    )
+    request_payload = request.model_dump(mode="json", exclude={"model": {"api_key"}})
+    request_payload["model"]["max_tokens"] = effective_max_tokens
+
     task = TASK_STORE.create_task(
         kind="report",
         title=request.title,
@@ -1235,7 +1349,7 @@ def create_report_task(request: ReportTaskCreate) -> TaskSnapshot:
             "model_provider": request.model.provider,
             "source_screening_task_id": source_screening_task_id,
             "input_dataset_ids": source_dataset_ids,
-            "request_payload": request.model_dump(mode="json", exclude={"model": {"api_key"}}),
+            "request_payload": request_payload,
             "virtual_dataset_paths": [str(path) for path in dataset_paths],
             "model_secret_id": SECRET_STORE.put(request.model.api_key.strip()) if (request.model.api_key or "").strip() else None,
         },
@@ -1250,7 +1364,7 @@ def create_report_task(request: ReportTaskCreate) -> TaskSnapshot:
             api_key_env=request.model.api_key_env,
             api_key=(request.model.api_key or "").strip() or None,
             temperature=request.model.temperature,
-            max_tokens=request.model.max_tokens,
+            max_tokens=effective_max_tokens,
             min_request_interval_seconds=request.model.min_request_interval_seconds,
         ),
         report_name=request.report_name,
@@ -1668,44 +1782,221 @@ def _screening_context_keys(*, title: Any, doi: Any, year: Any) -> list[str]:
     return keys
 
 
-def _latest_screening_record_context(project_tasks: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
-    screening_tasks = [task for task in project_tasks if task.get("kind") == "screening"]
-    screening_tasks.sort(key=lambda item: (item.get("updated_at") or item.get("created_at") or ""), reverse=True)
+def _screening_event_context(project_tasks: list[dict[str, Any]]) -> dict[str, list[dict[str, Any]]]:
+    screening_tasks = [task for task in project_tasks if task.get("kind") == "screening" and task.get("records")]
+    screening_tasks.sort(key=lambda item: (item.get("created_at") or item.get("updated_at") or ""))
+    round_index_by_task = {task["id"]: index for index, task in enumerate(screening_tasks, start=1)}
 
-    context: dict[str, dict[str, Any]] = {}
+    context: dict[str, list[dict[str, Any]]] = {}
     for task in screening_tasks:
         for row in task.get("records", []) or []:
-            entry = {
+            event = {
+                "event_id": f"{task['id']}::{row.get('paper_id')}",
+                "task_id": task["id"],
+                "task_title": task.get("title"),
+                "round_index": round_index_by_task.get(task["id"]),
+                "paper_id": row.get("paper_id"),
+                "decision": row.get("decision"),
+                "reason": row.get("reason") or "",
                 "confidence": _safe_confidence(row.get("confidence")),
-                "screening_decision": row.get("decision"),
-                "screening_reason": row.get("reason") or "",
+                "created_at": task.get("created_at"),
+                "updated_at": task.get("updated_at"),
             }
             for key in _screening_context_keys(title=row.get("title"), doi=row.get("doi"), year=row.get("year")):
-                context.setdefault(key, entry)
+                context.setdefault(key, []).append(event)
     return context
 
 
-def _enrich_fulltext_queue_items(items: list[dict[str, Any]], project_tasks: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    record_context = _latest_screening_record_context(project_tasks)
+def _workbench_stage(
+    *,
+    latest_screening_decision: str | None,
+    access_status: str,
+    final_decision: str,
+    preferred_open_url: str | None,
+    preferred_pdf_url: str | None,
+) -> str:
+    if final_decision == "include":
+        return "report-included"
+    if final_decision == "exclude":
+        return "report-excluded"
+    if final_decision == "deferred" or access_status == "deferred":
+        return "deferred"
+    if access_status == "unavailable":
+        return "unavailable"
+    if access_status == "ready":
+        return "ready-for-decision"
+    if latest_screening_decision == "exclude":
+        return "screened-out"
+    if latest_screening_decision in {None, "", "uncertain"}:
+        return "needs-screening"
+    if not preferred_open_url and not preferred_pdf_url:
+        return "needs-link"
+    return "needs-access"
+
+
+def _enrich_workbench_items(items: list[dict[str, Any]], project_tasks: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    event_context = _screening_event_context(project_tasks)
     enriched: list[dict[str, Any]] = []
     for item in items:
-        context: dict[str, Any] = {}
+        matched_events: list[dict[str, Any]] = []
+        seen_event_ids: set[str] = set()
         for key in _screening_context_keys(title=item.get("title"), doi=item.get("doi"), year=item.get("year")):
-            if key in record_context:
-                context = record_context[key]
-                break
-        latest_decision = context.get("screening_decision")
-        if latest_decision in {"exclude", "uncertain"}:
-            continue
+            for event in event_context.get(key, []):
+                event_id = str(event.get("event_id"))
+                if event_id in seen_event_ids:
+                    continue
+                seen_event_ids.add(event_id)
+                matched_events.append(event)
+
+        matched_events.sort(
+            key=lambda event: (event.get("updated_at") or event.get("created_at") or "", event.get("round_index") or 0),
+            reverse=True,
+        )
+        latest_event = matched_events[0] if matched_events else {}
+        history = [
+            event | {"latest": index == 0}
+            for index, event in enumerate(matched_events)
+        ]
+        source_round_labels = [
+            f"第 {event.get('round_index')} 轮"
+            for event in sorted(matched_events, key=lambda current: current.get("round_index") or 0)
+            if event.get("round_index")
+        ]
+        stage = _workbench_stage(
+            latest_screening_decision=latest_event.get("decision"),
+            access_status=str(item.get("access_status") or "pending"),
+            final_decision=str(item.get("final_decision") or "undecided"),
+            preferred_open_url=item.get("preferred_open_url"),
+            preferred_pdf_url=item.get("preferred_pdf_url"),
+        )
         enriched.append(
             item
             | {
-                "confidence": context.get("confidence", item.get("confidence")),
-                "screening_decision": context.get("screening_decision", item.get("screening_decision")),
-                "screening_reason": context.get("screening_reason", item.get("screening_reason", "")),
+                "latest_screening_decision": latest_event.get("decision"),
+                "latest_screening_reason": latest_event.get("reason") or "",
+                "latest_screening_confidence": latest_event.get("confidence"),
+                "screening_history": [
+                    WorkbenchScreeningEvent.model_validate(
+                        {
+                            key: value
+                            for key, value in event.items()
+                            if key in {"task_id", "task_title", "round_index", "paper_id", "decision", "reason", "confidence", "created_at", "updated_at", "latest"}
+                        }
+                    ).model_dump(mode="json")
+                    for event in history
+                ],
+                "source_round_labels": list(dict.fromkeys(source_round_labels)),
+                "stage": stage,
+                "links": [WorkbenchLink.model_validate(link).model_dump(mode="json") for link in item.get("links", [])],
             }
         )
     return enriched
+
+
+def _summarize_workbench(items: list[dict[str, Any]]) -> dict[str, int]:
+    summary = {
+        "total_candidates": len(items),
+        "actionable_candidates": 0,
+        "needs_screening": 0,
+        "screened_out": 0,
+        "needs_link": 0,
+        "needs_access": 0,
+        "ready_for_decision": 0,
+        "report_included": 0,
+        "report_excluded": 0,
+        "unavailable": 0,
+        "deferred": 0,
+    }
+    key_map = {
+        "needs-screening": "needs_screening",
+        "screened-out": "screened_out",
+        "needs-link": "needs_link",
+        "needs-access": "needs_access",
+        "ready-for-decision": "ready_for_decision",
+        "report-included": "report_included",
+        "report-excluded": "report_excluded",
+        "unavailable": "unavailable",
+        "deferred": "deferred",
+    }
+    for item in items:
+        stage = str(item.get("stage") or "needs-screening")
+        mapped = key_map.get(stage)
+        if mapped:
+            summary[mapped] += 1
+        if stage not in {"needs-screening", "screened-out"}:
+            summary["actionable_candidates"] += 1
+    return summary
+
+
+def _build_project_workbench(project_id: str, project_tasks: list[dict[str, Any]]) -> dict[str, Any]:
+    payload = WORKSPACE_STORE.load_workbench(project_id)
+    enriched_items = _enrich_workbench_items(payload.get("items", []), project_tasks)
+    summary = _summarize_workbench(enriched_items)
+    return {
+        "source_dataset_ids": list(payload.get("source_dataset_ids") or []),
+        "generated_at": payload.get("generated_at"),
+        "summary": WorkbenchSummary.model_validate(summary).model_dump(mode="json"),
+        "items": [WorkbenchCandidateItem.model_validate(item).model_dump(mode="json") for item in enriched_items],
+    }
+
+
+def _workbench_to_fulltext_items(items: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    legacy_id_counts: dict[str, int] = {}
+    for item in items:
+        legacy_paper_id = str(item.get("candidate_id") or "").strip()
+        refs = item.get("source_record_refs") or []
+        if isinstance(refs, list):
+            for ref in refs:
+                if not isinstance(ref, dict):
+                    continue
+                candidate_paper_id = str(ref.get("paper_id") or "").strip()
+                if candidate_paper_id:
+                    legacy_paper_id = candidate_paper_id
+                    break
+        if legacy_paper_id:
+            legacy_id_counts[legacy_paper_id] = legacy_id_counts.get(legacy_paper_id, 0) + 1
+    converted: list[dict[str, Any]] = []
+    for item in items:
+        latest_screening_decision = item.get("latest_screening_decision")
+        if latest_screening_decision in {"exclude", "uncertain"}:
+            continue
+        status = item.get("access_status", "pending")
+        note = item.get("access_note", "")
+        if item.get("final_decision") == "exclude":
+            status = "excluded"
+            note = item.get("final_note", note)
+        legacy_paper_id = str(item.get("candidate_id") or "").strip()
+        refs = item.get("source_record_refs") or []
+        if isinstance(refs, list):
+            for ref in refs:
+                if not isinstance(ref, dict):
+                    continue
+                candidate_paper_id = str(ref.get("paper_id") or "").strip()
+                if candidate_paper_id:
+                    legacy_paper_id = candidate_paper_id
+                    break
+        display_paper_id = legacy_paper_id if legacy_id_counts.get(legacy_paper_id, 0) == 1 else str(item.get("candidate_id") or "").strip()
+        converted.append(
+            {
+                "paper_id": display_paper_id,
+                "candidate_id": item.get("candidate_id"),
+                "title": item.get("title"),
+                "year": item.get("year"),
+                "journal": item.get("journal"),
+                "doi": item.get("doi"),
+                "confidence": item.get("latest_screening_confidence"),
+                "screening_decision": latest_screening_decision,
+                "screening_reason": item.get("latest_screening_reason", ""),
+                "doi_url": next((link.get("url") for link in item.get("links", []) if link.get("kind") == "doi"), None),
+                "landing_url": item.get("preferred_open_url"),
+                "pdf_url": item.get("preferred_pdf_url"),
+                "oa_status": item.get("oa_status"),
+                "status": status,
+                "note": note,
+                "updated_at": item.get("updated_at"),
+            }
+        )
+    return converted
 
 
 def _to_snapshot(task: dict) -> TaskSnapshot:
@@ -2062,7 +2353,11 @@ def _report_request_from_task(task: dict) -> ReportJobRequest:
             api_key_env=payload["model"]["api_key_env"],
             api_key=api_key,
             temperature=payload["model"]["temperature"],
-            max_tokens=payload["model"]["max_tokens"],
+            max_tokens=_effective_max_tokens(
+                payload["model"]["provider"],
+                payload["model"]["model_name"],
+                payload["model"]["max_tokens"],
+            ),
             min_request_interval_seconds=payload["model"]["min_request_interval_seconds"],
         ),
         report_name=payload["report_name"],

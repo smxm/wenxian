@@ -86,6 +86,9 @@ class PaperRecord(BaseModel):
     authors: list[str] = Field(default_factory=list)
     year: int | None = None
     journal: str | None = None
+    volume: str | None = None
+    number: str | None = None
+    pages: str | None = None
     doi: str | None = None
     url: str | None = None
     abstract: str | None = None

@@ -7,6 +7,7 @@ import type { ThreadAction, ThreadMessage } from '@/types/thread'
 
 const props = defineProps<{
   message: ThreadMessage
+  hideActions?: boolean
 }>()
 
 function progressOf(message: ThreadMessage) {
@@ -87,7 +88,7 @@ function actionIcon(action: ThreadAction) {
         processing
       />
 
-      <div class="message-actions" v-if="message.actions.length">
+      <div class="message-actions" v-if="!props.hideActions && message.actions.length">
         <NSpace wrap>
           <template v-for="action in message.actions" :key="action.id">
             <RouterLink v-if="action.kind === 'route' && action.to" :to="action.to">

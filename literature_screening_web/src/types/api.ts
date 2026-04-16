@@ -14,6 +14,18 @@ export type DatasetKind =
   | string
 export type StrategyDatabase = 'scopus' | 'wos' | 'pubmed' | 'cnki'
 export type FulltextStatus = 'pending' | 'ready' | 'excluded' | 'unavailable' | 'deferred'
+export type WorkbenchAccessStatus = 'pending' | 'ready' | 'unavailable' | 'deferred'
+export type WorkbenchFinalDecision = 'undecided' | 'include' | 'exclude' | 'deferred'
+export type WorkbenchStage =
+  | 'needs-screening'
+  | 'screened-out'
+  | 'needs-link'
+  | 'needs-access'
+  | 'ready-for-decision'
+  | 'report-included'
+  | 'report-excluded'
+  | 'unavailable'
+  | 'deferred'
 
 export interface ProviderPreset {
   provider: ProviderName
@@ -99,6 +111,7 @@ export interface DatasetRecord {
 
 export interface FulltextQueueItem {
   paper_id: string
+  candidate_id?: string | null
   title: string
   year?: number | null
   journal?: string | null
@@ -113,6 +126,85 @@ export interface FulltextQueueItem {
   status: FulltextStatus
   note: string
   updated_at: string
+}
+
+export interface WorkbenchLink {
+  kind: string
+  label: string
+  url: string
+  source: string
+  primary: boolean
+}
+
+export interface WorkbenchScreeningEvent {
+  task_id: string
+  task_title?: string | null
+  round_index?: number | null
+  paper_id: string
+  decision: string
+  reason: string
+  confidence?: number | string | null
+  created_at?: string | null
+  updated_at?: string | null
+  latest: boolean
+}
+
+export interface WorkbenchSourceRecordRef {
+  paper_id: string
+  task_id?: string | null
+  dataset_id?: string | null
+  dataset_label?: string | null
+}
+
+export interface WorkbenchCandidateItem {
+  candidate_id: string
+  fingerprint: string
+  title: string
+  year?: number | null
+  journal?: string | null
+  doi?: string | null
+  source_url?: string | null
+  language: string
+  latest_screening_decision?: string | null
+  latest_screening_reason: string
+  latest_screening_confidence?: number | string | null
+  access_status: WorkbenchAccessStatus
+  final_decision: WorkbenchFinalDecision
+  stage: WorkbenchStage
+  access_note: string
+  final_note: string
+  oa_status?: string | null
+  preferred_open_url?: string | null
+  preferred_pdf_url?: string | null
+  links: WorkbenchLink[]
+  screening_history: WorkbenchScreeningEvent[]
+  source_record_refs: WorkbenchSourceRecordRef[]
+  source_dataset_ids: string[]
+  source_dataset_labels: string[]
+  source_task_ids: string[]
+  source_round_labels: string[]
+  updated_at: string
+}
+
+export interface WorkbenchSummary {
+  total_candidates: number
+  actionable_candidates: number
+  needs_screening: number
+  screened_out: number
+  needs_link: number
+  needs_access: number
+  ready_for_decision: number
+  report_included: number
+  report_excluded: number
+  unavailable: number
+  deferred: number
+}
+
+export interface ProjectWorkbench {
+  source_dataset_ids: string[]
+  generated_at?: string | null
+  summary: WorkbenchSummary
+  items: WorkbenchCandidateItem[]
 }
 
 export interface TaskTemplateRecord {
@@ -191,6 +283,7 @@ export interface TaskDetail extends TaskSnapshot {
 export interface ProjectDetail extends ProjectSnapshot {
   tasks: TaskSnapshot[]
   datasets: DatasetRecord[]
+  workbench: ProjectWorkbench
   fulltext_queue: FulltextQueueItem[]
   fulltext_source_dataset_ids: string[]
 }
@@ -270,6 +363,18 @@ export interface StrategyFormPayload {
   model: ModelSettings
   retry_times: number
   timeout_seconds: number
+}
+
+export interface ThreadPrefillPayload {
+  research_need: string
+  selected_databases: StrategyDatabase[]
+  model: ModelSettings
+  timeout_seconds: number
+}
+
+export interface ThreadPrefillResponse {
+  strategy_plan: StrategyPlan
+  criteria_markdown: string
 }
 
 export interface ProjectWorkflowPayload {

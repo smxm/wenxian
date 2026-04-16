@@ -180,6 +180,10 @@ def _build_core_problem(title: str, abstract: str | None, focus_phrase: str) -> 
 
 
 def _infer_study_type(text: str) -> str:
+    if any(token in text for token in ["比较", "对读", "互文", "同一性", "娜拉", "艾玛", "包法利夫人"]):
+        return "比较研究"
+    if any(token in text for token in ["视域", "视角", "审视", "解读", "再思考", "分析", "阐释", "批评", "存在论", "女性主义"]):
+        return "理论阐释与文本分析"
     if any(token in text for token in ["review", "survey", "overview"]):
         return "综述研究"
     if any(token in text for token in ["simulation", "numerical", "finite element", "dem", "model", "analysis"]):
@@ -192,6 +196,14 @@ def _infer_study_type(text: str) -> str:
 
 
 def _infer_primary_category(text: str, study_type: str) -> str:
+    if any(token in text for token in ["伦理", "自由意志", "存在论", "伦理选择", "主体意识", "主体性", "自我意识"]):
+        return "自由意志与主体性困境"
+    if any(token in text for token in ["比较", "娜拉", "艾玛", "包法利夫人", "同一性", "互文性", "形象的比较"]):
+        return "比较文学与女性形象研究"
+    if any(token in text for token in ["凝视", "他者", "意识形态", "目光"]):
+        return "凝视、他者与意识形态批评"
+    if any(token in text for token in ["女性主义", "女性意识", "死亡意象", "悲剧命运", "男权", "女性根源"]):
+        return "女性主义视角下的悲剧分析"
     if any(token in text for token in ["review", "survey", "overview", "scoping review", "narrative review"]):
         return "综述与证据整合"
     if any(token in text for token in ["microbiota", "microbiome", "gut bacteria", "gut microbiota", "microbial", "microbiome"]):
@@ -285,6 +297,28 @@ def _infer_primary_category(text: str, study_type: str) -> str:
 
 
 def _infer_secondary_category(text: str, primary_category: str) -> str | None:
+    if primary_category == "自由意志与主体性困境":
+        if "伦理" in text:
+            return "伦理选择与自由意志"
+        if "主体" in text or "自我" in text:
+            return "主体意识与自我追求"
+        return "主体性困境"
+    if primary_category == "比较文学与女性形象研究":
+        if "娜拉" in text:
+            return "安娜与娜拉比较"
+        if "艾玛" in text or "包法利夫人" in text:
+            return "安娜与艾玛比较"
+        return "跨文本女性形象比较"
+    if primary_category == "凝视、他者与意识形态批评":
+        if "凝视" in text or "目光" in text:
+            return "凝视理论批评"
+        if "他者" in text:
+            return "他者身份分析"
+        return "意识形态批评"
+    if primary_category == "女性主义视角下的悲剧分析":
+        if "死亡意象" in text:
+            return "死亡意象分析"
+        return "女性主义悲剧阐释"
     if primary_category == "综述与证据整合":
         if "clinical" in text:
             return "机制与临床证据综述"

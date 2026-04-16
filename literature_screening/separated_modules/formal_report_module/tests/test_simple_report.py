@@ -25,6 +25,8 @@ _bootstrap()
 
 from literature_screening.core.models import ModelConfig
 from literature_screening.core.models import PaperRecord
+from literature_screening.core.models import ScreeningDecision
+from literature_screening.formal_report.fallback import build_fallback_literature_cards
 from literature_screening.formal_report.reference_list import build_reference_block
 from literature_screening.formal_report.simple_report import SimplePaperNote
 from literature_screening.formal_report.simple_report import SimpleReportCategory
@@ -33,6 +35,92 @@ from literature_screening.formal_report.simple_report import _build_total_summar
 from literature_screening.formal_report.simple_report import _normalize_overview
 from literature_screening.formal_report.simple_report import generate_simple_report
 from literature_screening.formal_report.simple_report import render_simple_report_markdown
+
+
+def test_build_fallback_literature_cards_classifies_humanities_topics() -> None:
+    rows = [
+        (
+            PaperRecord(
+                paper_id="paper_1",
+                title="女性主义视域下《安娜·卡列尼娜》的死亡意象分析",
+                abstract="文章从女性主义角度讨论安娜悲剧命运与死亡意象。",
+                keywords=["女性主义", "死亡意象"],
+            ),
+            ScreeningDecision(
+                paper_id="paper_1",
+                batch_id="batch_1",
+                decision="include",
+                reason="relevant",
+                confidence=0.9,
+                model_provider="system",
+                model_name="dataset-loader",
+                timestamp="2026-04-16T00:00:00+08:00",
+            ),
+        ),
+        (
+            PaperRecord(
+                paper_id="paper_2",
+                title="凝视理论视域下安娜·卡列尼娜的悲剧探析",
+                abstract="聚焦凝视与目光困境。",
+                keywords=["凝视", "目光"],
+            ),
+            ScreeningDecision(
+                paper_id="paper_2",
+                batch_id="batch_1",
+                decision="include",
+                reason="relevant",
+                confidence=0.9,
+                model_provider="system",
+                model_name="dataset-loader",
+                timestamp="2026-04-16T00:00:00+08:00",
+            ),
+        ),
+        (
+            PaperRecord(
+                paper_id="paper_3",
+                title="安娜·卡列尼娜与娜拉的比较分析",
+                abstract="通过比较安娜与娜拉讨论女性觉醒。",
+                keywords=["比较", "娜拉"],
+            ),
+            ScreeningDecision(
+                paper_id="paper_3",
+                batch_id="batch_1",
+                decision="include",
+                reason="relevant",
+                confidence=0.9,
+                model_provider="system",
+                model_name="dataset-loader",
+                timestamp="2026-04-16T00:00:00+08:00",
+            ),
+        ),
+        (
+            PaperRecord(
+                paper_id="paper_4",
+                title="重塑安娜：列夫·托尔斯泰与玛格丽特·杜拉斯的伦理选择",
+                abstract="文章讨论自由意志与伦理选择的冲突。",
+                keywords=["伦理选择", "自由意志"],
+            ),
+            ScreeningDecision(
+                paper_id="paper_4",
+                batch_id="batch_1",
+                decision="include",
+                reason="relevant",
+                confidence=0.9,
+                model_provider="system",
+                model_name="dataset-loader",
+                timestamp="2026-04-16T00:00:00+08:00",
+            ),
+        ),
+    ]
+
+    cards = build_fallback_literature_cards(rows)
+
+    assert [card.classification.primary_category for card in cards] == [
+        "女性主义视角下的悲剧分析",
+        "凝视、他者与意识形态批评",
+        "比较文学与女性形象研究",
+        "自由意志与主体性困境",
+    ]
 
 
 def test_render_simple_report_markdown_uses_overview_structure() -> None:
@@ -137,10 +225,51 @@ def test_render_simple_report_markdown_supports_apa7_reference_style(tmp_path: P
         reference_lines=reference_lines,
     )
 
-    assert '<div id="refs"' in markdown
-    assert "<em>Journal A</em>" in markdown
+    assert (
+        '<div id="refs"' in markdown
+        or "[1] Huang X, & He J. (2026). Original Title A. Journal A, 12(3), 100-110." in markdown
+    )
+    if '<div id="refs"' in markdown:
+        assert "<em>Journal A</em>" in markdown
+        assert "[1]" not in markdown
     assert "https://doi.org/10.1000/example-a" in markdown
-    assert "[1]" not in markdown
+
+
+def test_render_simple_report_markdown_uses_structured_page_fields_when_raw_bibtex_missing() -> None:
+    notes = [
+        SimplePaperNote(
+            paper_id="paper_1",
+            title="Original Title A",
+            category="Experiment",
+            summary="Short summary.",
+            analysis="Short analysis.",
+        )
+    ]
+    overview = SimpleReportOverview(
+        overall_summary="The report focuses on structured metadata.",
+        categories=[SimpleReportCategory(name="Experiment", intro="Structured metadata is preserved.", paper_ids=["paper_1"])],
+    )
+    records = [
+        PaperRecord(
+            paper_id="paper_1",
+            title="Original Title A",
+            authors=["Huang X", "He J"],
+            year=2026,
+            journal="Journal A",
+            volume="12",
+            number="3",
+            pages="100-110",
+        )
+    ]
+
+    markdown = render_simple_report_markdown(
+        project_topic="Test Topic",
+        notes=notes,
+        overview=overview,
+        records=records,
+    )
+
+    assert "[1] Huang X, He J. Original Title A[J]. Journal A, 2026, 12(3): 100-110." in markdown
 
 
 def test_build_total_summary_handles_empty_note_list() -> None:

@@ -6,14 +6,63 @@ cd "$SCRIPT_DIR"
 LOCAL_PROJECT_NAME="literature-screening-local"
 DEV_PROJECT_NAME="literature-screening-dev"
 
+trim_whitespace() {
+  local value="$1"
+  value="${value#"${value%%[![:space:]]*}"}"
+  value="${value%"${value##*[![:space:]]}"}"
+  printf '%s' "$value"
+}
+
+strip_matching_quotes() {
+  local value="$1"
+  if [[ ${#value} -ge 2 ]]; then
+    if [[ "$value" == \"*\" && "$value" == *\" ]]; then
+      value="${value:1:${#value}-2}"
+    elif [[ "$value" == \'*\' && "$value" == *\' ]]; then
+      value="${value:1:${#value}-2}"
+    fi
+  fi
+  printf '%s' "$value"
+}
+
+is_placeholder_value() {
+  local normalized
+  normalized="$(printf '%s' "$1" | tr '[:upper:]' '[:lower:]')"
+  case "$normalized" in
+    your_*|*_here|example|example_*|sample|sample_*|placeholder|placeholder_*|changeme|change_me|replace_me|replace_with_*)
+      return 0
+      ;;
+  esac
+  [[ "$normalized" == *"your_kimi_api_key_here"* || "$normalized" == *"your_deepseek_api_key_here"* ]]
+}
+
+has_effective_env_value() {
+  local key="$1"
+  local current="${!key-}"
+  [[ -n "$current" ]] || return 1
+  is_placeholder_value "$current" && return 1
+  return 0
+}
+
 load_env_file() {
   local env_file="$1"
-  if [[ -f "$env_file" ]]; then
-    set -a
-    # shellcheck disable=SC1090
-    source "$env_file"
-    set +a
-  fi
+  [[ -f "$env_file" ]] || return
+
+  while IFS= read -r raw_line || [[ -n "$raw_line" ]]; do
+    local line key value
+    line="$(trim_whitespace "$raw_line")"
+    [[ -z "$line" || "$line" == \#* ]] && continue
+    [[ "$line" == export\ * ]] && line="${line#export }"
+    [[ "$line" != *=* ]] && continue
+
+    key="$(trim_whitespace "${line%%=*}")"
+    value="$(strip_matching_quotes "$(trim_whitespace "${line#*=}")")"
+    [[ -n "$key" && -n "$value" ]] || continue
+    is_placeholder_value "$value" && continue
+    has_effective_env_value "$key" && continue
+
+    export "$key=$value"
+  done < "$env_file"
 }
 
 stop_legacy_stacks() {
@@ -49,10 +98,19 @@ if ! docker info >/dev/null 2>&1; then
   exit 1
 fi
 
+if [[ ! -f "$SCRIPT_DIR/.env" && -f "$SCRIPT_DIR/.env.example" ]]; then
+  cp "$SCRIPT_DIR/.env.example" "$SCRIPT_DIR/.env"
+  echo "已创建仓库根目录 .env，请在其中填写 API Key。"
+fi
+
 load_env_file "$SCRIPT_DIR/.env"
 load_env_file "$SCRIPT_DIR/literature_screening/.env"
 
-if [[ -n "${MOONSHOT_API_KEY:-}" && -z "${KIMI_API_KEY:-}" ]]; then
+if [[ -f "$SCRIPT_DIR/literature_screening/.env" ]]; then
+  echo "提示：literature_screening/.env 现在只作为旧配置兼容补缺；推荐统一改到仓库根目录 .env。"
+fi
+
+if [[ -n "${MOONSHOT_API_KEY:-}" ]] && ! has_effective_env_value KIMI_API_KEY; then
   export KIMI_API_KEY="$MOONSHOT_API_KEY"
 fi
 
@@ -61,11 +119,6 @@ export API_PORT="${API_PORT:-8000}"
 export WEB_PORT="${WEB_PORT:-8080}"
 
 mkdir -p "$APP_DATA_DIR"
-
-if [[ ! -f "$SCRIPT_DIR/literature_screening/.env" ]]; then
-  cp "$SCRIPT_DIR/literature_screening/.env.example" "$SCRIPT_DIR/literature_screening/.env"
-  echo "已创建 literature_screening/.env，可按需补充 API Key。"
-fi
 
 if [[ -z "${KIMI_API_KEY:-}" && -z "${DEEPSEEK_API_KEY:-}" ]]; then
   echo "提示：当前没有检测到 KIMI_API_KEY 或 DEEPSEEK_API_KEY。"

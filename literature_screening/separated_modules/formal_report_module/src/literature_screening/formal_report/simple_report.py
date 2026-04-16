@@ -18,7 +18,7 @@ from literature_screening.screening.response_parser import parse_model_json
 
 DEFAULT_SIMPLE_REPORT_FILENAME = "literature_report.md"
 LEGACY_SIMPLE_REPORT_FILENAME = "simple_report.md"
-NOTE_CACHE_VERSION = "v1"
+NOTE_CACHE_VERSION = "v2"
 ProgressCallback = Callable[[str, str, int | None, int | None, str | None], None]
 
 
@@ -474,7 +474,7 @@ def _build_total_summary(*, project_topic: str, ordered_groups: list[tuple[str, 
     top_name, _ = ordered_groups[0]
     return (
         f"本次纳入文献共 {total_count} 篇，整体主要分布在{main_categories}等类型。"
-        "从逐篇整理结果看，现有文献主要围绕机制阐释、实验验证、应用评估或综述性整合展开，"
+        "从逐篇整理结果看，现有文献主要围绕理论阐释、比较分析、案例讨论、实证/实验研究或综述性整合展开，"
         f"其中“{top_name}”相关文献数量最多，说明这一方向在当前主题下受到较多关注。"
     )
 

@@ -46,6 +46,9 @@ def _merge_record_into(target: PaperRecord, incoming: PaperRecord) -> None:
     target.title = _pick_better_text(target.title, incoming.title)
     target.entry_type = target.entry_type or incoming.entry_type
     target.journal = _pick_better_text(target.journal, incoming.journal)
+    target.volume = _pick_better_text(target.volume, incoming.volume)
+    target.number = _pick_better_text(target.number, incoming.number)
+    target.pages = _pick_better_text(target.pages, incoming.pages)
     target.abstract = _pick_better_text(target.abstract, incoming.abstract)
     target.doi = target.doi or incoming.doi
     target.url = target.url or incoming.url

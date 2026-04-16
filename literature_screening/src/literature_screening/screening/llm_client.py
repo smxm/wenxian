@@ -60,7 +60,23 @@ class ChatCompletionClient:
         data = response.json()
         self._last_request_finished_at = time.monotonic()
         try:
-            return data["choices"][0]["message"]["content"]
+            choice = data["choices"][0]
+            message = choice["message"]
+            content = message.get("content")
+            if isinstance(content, str) and content:
+                return content
+
+            finish_reason = choice.get("finish_reason")
+            reasoning_content = message.get("reasoning_content")
+            if self.config.provider == "deepseek" and self.config.model_name == "deepseek-reasoner":
+                if finish_reason == "length":
+                    raise ModelRequestError(
+                        "deepseek-reasoner returned no final content before hitting the token limit; "
+                        "max_tokens may be too low because DeepSeek counts reasoning tokens and answer tokens together."
+                    )
+                if isinstance(reasoning_content, str) and reasoning_content.strip():
+                    raise ModelRequestError("deepseek-reasoner returned reasoning_content but no final answer content.")
+            raise ModelRequestError(f"{self.config.provider} API response did not contain assistant message content.")
         except (KeyError, IndexError, TypeError) as exc:
             raise ModelRequestError(f"{self.config.provider} API response did not contain a valid assistant message.") from exc
 

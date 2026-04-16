@@ -22,6 +22,19 @@ DatasetKind = Literal[
 ]
 StrategyDatabase = Literal["scopus", "wos", "pubmed", "cnki"]
 FulltextStatus = Literal["pending", "ready", "excluded", "unavailable", "deferred"]
+WorkbenchAccessStatus = Literal["pending", "ready", "unavailable", "deferred"]
+WorkbenchFinalDecision = Literal["undecided", "include", "exclude", "deferred"]
+WorkbenchStage = Literal[
+    "needs-screening",
+    "screened-out",
+    "needs-link",
+    "needs-access",
+    "ready-for-decision",
+    "report-included",
+    "report-excluded",
+    "unavailable",
+    "deferred",
+]
 
 
 class ModelSettings(BaseModel):
@@ -73,6 +86,13 @@ class StrategyTaskCreate(BaseModel):
     selected_databases: list[StrategyDatabase] = Field(default_factory=lambda: ["scopus", "wos", "pubmed", "cnki"])
     model: ModelSettings
     retry_times: int = Field(default=4, ge=0, le=10)
+    timeout_seconds: int = Field(default=180, ge=30, le=600)
+
+
+class ThreadPrefillRequest(BaseModel):
+    research_need: str
+    selected_databases: list[StrategyDatabase] = Field(default_factory=lambda: ["scopus", "wos", "pubmed", "cnki"])
+    model: ModelSettings
     timeout_seconds: int = Field(default=180, ge=30, le=600)
 
 
@@ -143,6 +163,7 @@ class DatasetRecord(BaseModel):
 
 class FulltextQueueItem(BaseModel):
     paper_id: str
+    candidate_id: str | None = None
     title: str
     year: int | None = None
     journal: str | None = None
@@ -159,6 +180,85 @@ class FulltextQueueItem(BaseModel):
     updated_at: datetime
 
 
+class WorkbenchLink(BaseModel):
+    kind: str
+    label: str
+    url: str
+    source: str
+    primary: bool = False
+
+
+class WorkbenchScreeningEvent(BaseModel):
+    task_id: str
+    task_title: str | None = None
+    round_index: int | None = None
+    paper_id: str
+    decision: str
+    reason: str = ""
+    confidence: float | str | None = None
+    created_at: datetime | None = None
+    updated_at: datetime | None = None
+    latest: bool = False
+
+
+class WorkbenchSourceRecordRef(BaseModel):
+    paper_id: str
+    task_id: str | None = None
+    dataset_id: str | None = None
+    dataset_label: str | None = None
+
+
+class WorkbenchCandidateItem(BaseModel):
+    candidate_id: str
+    fingerprint: str
+    title: str
+    year: int | None = None
+    journal: str | None = None
+    doi: str | None = None
+    source_url: str | None = None
+    language: str = "unknown"
+    latest_screening_decision: str | None = None
+    latest_screening_reason: str = ""
+    latest_screening_confidence: float | str | None = None
+    access_status: WorkbenchAccessStatus = "pending"
+    final_decision: WorkbenchFinalDecision = "undecided"
+    stage: WorkbenchStage
+    access_note: str = ""
+    final_note: str = ""
+    oa_status: str | None = None
+    preferred_open_url: str | None = None
+    preferred_pdf_url: str | None = None
+    links: list[WorkbenchLink] = Field(default_factory=list)
+    screening_history: list[WorkbenchScreeningEvent] = Field(default_factory=list)
+    source_record_refs: list[WorkbenchSourceRecordRef] = Field(default_factory=list)
+    source_dataset_ids: list[str] = Field(default_factory=list)
+    source_dataset_labels: list[str] = Field(default_factory=list)
+    source_task_ids: list[str] = Field(default_factory=list)
+    source_round_labels: list[str] = Field(default_factory=list)
+    updated_at: datetime
+
+
+class WorkbenchSummary(BaseModel):
+    total_candidates: int = 0
+    actionable_candidates: int = 0
+    needs_screening: int = 0
+    screened_out: int = 0
+    needs_link: int = 0
+    needs_access: int = 0
+    ready_for_decision: int = 0
+    report_included: int = 0
+    report_excluded: int = 0
+    unavailable: int = 0
+    deferred: int = 0
+
+
+class ProjectWorkbench(BaseModel):
+    source_dataset_ids: list[str] = Field(default_factory=list)
+    generated_at: datetime | None = None
+    summary: WorkbenchSummary = Field(default_factory=WorkbenchSummary)
+    items: list[WorkbenchCandidateItem] = Field(default_factory=list)
+
+
 class ProjectSnapshot(BaseModel):
     id: str
     name: str
@@ -173,6 +273,7 @@ class ProjectSnapshot(BaseModel):
 class ProjectDetail(ProjectSnapshot):
     tasks: list["TaskSnapshot"] = Field(default_factory=list)
     datasets: list[DatasetRecord] = Field(default_factory=list)
+    workbench: ProjectWorkbench = Field(default_factory=ProjectWorkbench)
     fulltext_queue: list[FulltextQueueItem] = Field(default_factory=list)
     fulltext_source_dataset_ids: list[str] = Field(default_factory=list)
 
@@ -240,6 +341,27 @@ class FulltextBatchStatusUpdateRequest(BaseModel):
     note: str | None = None
 
 
+class WorkbenchRebuildRequest(BaseModel):
+    source_dataset_ids: list[str] = Field(default_factory=list)
+
+
+class WorkbenchItemPatchRequest(BaseModel):
+    access_status: WorkbenchAccessStatus | None = None
+    final_decision: WorkbenchFinalDecision | None = None
+    access_note: str | None = None
+    final_note: str | None = None
+    preferred_open_url: str | None = None
+    preferred_pdf_url: str | None = None
+
+
+class WorkbenchBatchPatchRequest(BaseModel):
+    candidate_ids: list[str] = Field(default_factory=list)
+    access_status: WorkbenchAccessStatus | None = None
+    final_decision: WorkbenchFinalDecision | None = None
+    access_note: str | None = None
+    final_note: str | None = None
+
+
 class RetryTaskRequest(BaseModel):
     mode: Literal["retry", "resume"] = "resume"
 
@@ -284,6 +406,11 @@ class StrategyPlan(BaseModel):
     exclusion: list[str] = Field(default_factory=list)
     search_blocks: list[StrategySearchBlock] = Field(default_factory=list)
     caution_notes: list[str] = Field(default_factory=list)
+
+
+class ThreadPrefillResponse(BaseModel):
+    strategy_plan: StrategyPlan
+    criteria_markdown: str
 
 
 class ScreeningRecordRow(BaseModel):

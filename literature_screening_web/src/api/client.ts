@@ -4,6 +4,8 @@ import type {
   MetaPayload,
   ProjectDetail,
   ProjectSnapshot,
+  ThreadPrefillPayload,
+  ThreadPrefillResponse,
   ProjectWorkflowPayload,
   ReportFormPayload,
   ScreeningFormPayload,
@@ -120,6 +122,11 @@ export async function createStrategyTask(payload: StrategyFormPayload) {
   return data
 }
 
+export async function prefillThreadSetup(payload: ThreadPrefillPayload) {
+  const { data } = await http.post<ThreadPrefillResponse>('/threads/prefill', payload)
+  return data
+}
+
 export async function fetchProjects() {
   const { data } = await http.get<ProjectSnapshot[]>('/projects')
   return data
@@ -158,6 +165,46 @@ export async function updateFulltextStatuses(
 
 export async function enrichFulltextQueue(projectId: string) {
   const { data } = await http.post<ProjectDetail>(`/projects/${projectId}/fulltext/enrich`)
+  return data
+}
+
+export async function rebuildWorkbench(projectId: string, payload: { source_dataset_ids: string[] }) {
+  const { data } = await http.post<ProjectDetail>(`/projects/${projectId}/workbench/rebuild`, payload)
+  return data
+}
+
+export async function patchWorkbenchItem(
+  projectId: string,
+  candidateId: string,
+  payload: {
+    access_status?: 'pending' | 'ready' | 'unavailable' | 'deferred' | null
+    final_decision?: 'undecided' | 'include' | 'exclude' | 'deferred' | null
+    access_note?: string | null
+    final_note?: string | null
+    preferred_open_url?: string | null
+    preferred_pdf_url?: string | null
+  }
+) {
+  const { data } = await http.post<ProjectDetail>(`/projects/${projectId}/workbench/items/${candidateId}`, payload)
+  return data
+}
+
+export async function patchWorkbenchItems(
+  projectId: string,
+  payload: {
+    candidate_ids: string[]
+    access_status?: 'pending' | 'ready' | 'unavailable' | 'deferred' | null
+    final_decision?: 'undecided' | 'include' | 'exclude' | 'deferred' | null
+    access_note?: string | null
+    final_note?: string | null
+  }
+) {
+  const { data } = await http.post<ProjectDetail>(`/projects/${projectId}/workbench/items/batch`, payload)
+  return data
+}
+
+export async function enrichWorkbench(projectId: string) {
+  const { data } = await http.post<ProjectDetail>(`/projects/${projectId}/workbench/enrich`)
   return data
 }
 

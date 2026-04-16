@@ -2,7 +2,7 @@
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 import { RouterLink, useRoute, useRouter } from 'vue-router'
 import dayjs from 'dayjs'
-import { BookOpenText, FileSearch, FileText, Pencil, Sparkles, Trash2 } from 'lucide-vue-next'
+import { BookOpenText, FileSearch, FileText, Pencil, Sparkles, Trash2, Wand2 } from 'lucide-vue-next'
 import {
   NAlert,
   NButton,
@@ -12,6 +12,7 @@ import {
   NForm,
   NFormItem,
   NInput,
+  NInputNumber,
   NModal,
   NSelect,
   NSpace,
@@ -19,14 +20,13 @@ import {
   useMessage
 } from 'naive-ui'
 import ThreadMessageCard from '@/components/ThreadMessageCard.vue'
-import OverviewMetric from '@/components/OverviewMetric.vue'
-import { getArtifactUrl } from '@/api/client'
+import { getArtifactUrl, prefillThreadSetup } from '@/api/client'
 import { useDraftsStore } from '@/stores/drafts'
 import { useMetaStore } from '@/stores/meta'
 import { useProjectsStore } from '@/stores/projects'
 import { useTasksStore } from '@/stores/tasks'
 import { buildCriteriaMarkdown } from '@/utils/strategy'
-import type { DatasetRecord, StrategyDatabase, TaskSnapshot, ThreadProfile } from '@/types/api'
+import type { DatasetRecord, ProviderName, StrategyDatabase, TaskSnapshot, ThreadProfile } from '@/types/api'
 import type { ThreadAction, ThreadMessage, ThreadMetric } from '@/types/thread'
 
 const route = useRoute()
@@ -45,7 +45,16 @@ const reportTitle = ref('')
 const reportTopic = ref('')
 const reportName = ref('simple_report')
 const reportReferenceStyle = ref<'gbt7714' | 'apa7'>('gbt7714')
+const reportModelForm = ref({
+  provider: 'deepseek' as ProviderName,
+  modelName: 'deepseek-reasoner',
+  apiBaseUrl: 'https://api.deepseek.com/v1',
+  apiKeyEnv: 'DEEPSEEK_API_KEY',
+  apiKey: ''
+})
 const editingThread = ref(false)
+const assistingThread = ref(false)
+const assistSubmitting = ref(false)
 const editForm = ref({
   name: '',
   description: '',
@@ -54,6 +63,15 @@ const editForm = ref({
   inclusion: [''],
   exclusion: [''],
   selectedDatabases: ['scopus', 'wos', 'pubmed', 'cnki'] as StrategyDatabase[]
+})
+const assistForm = ref({
+  selectedDatabases: ['scopus', 'wos', 'pubmed', 'cnki'] as StrategyDatabase[],
+  provider: 'deepseek' as ProviderName,
+  modelName: 'deepseek-reasoner',
+  apiBaseUrl: 'https://api.deepseek.com/v1',
+  apiKeyEnv: 'DEEPSEEK_API_KEY',
+  apiKey: '',
+  timeoutSeconds: 180
 })
 const pollTimer = ref<number | null>(null)
 const reportPanelRef = ref<HTMLElement | null>(null)
@@ -70,39 +88,35 @@ const datasetMap = computed(() => {
 })
 
 const tasks = computed(() => [...(project.value?.tasks ?? [])].sort((a, b) => dayjs(a.created_at).valueOf() - dayjs(b.created_at).valueOf()))
-const strategyTasks = computed(() => tasks.value.filter((task) => task.kind === 'strategy'))
 const screeningRounds = computed(() => tasks.value.filter((task) => task.kind === 'screening'))
-const reportTasks = computed(() => tasks.value.filter((task) => task.kind === 'report'))
-const latestStrategyTask = computed(() => [...strategyTasks.value].reverse()[0] ?? null)
-const latestSucceededScreening = computed(() => [...screeningRounds.value].reverse().find((task) => task.status === 'succeeded') ?? null)
 
 const screeningDefaults = computed(() => threadProfile.value?.screening ?? null)
 const strategyContext = computed(() => threadProfile.value?.strategy ?? null)
-const cumulativeIncludedDataset = computed(() =>
-  (project.value?.datasets ?? []).find((dataset) => dataset.kind === 'cumulative_included') ?? null
-)
-const fulltextReadyDataset = computed(() =>
-  (project.value?.datasets ?? []).find((dataset) => dataset.kind === 'fulltext_ready') ?? null
+const reportDraftKey = computed(() => project.value?.id ?? null)
+const reportSourceDataset = computed(() =>
+  (project.value?.datasets ?? []).find((dataset) => dataset.kind === 'report_source')
+  ?? (project.value?.datasets ?? []).find((dataset) => dataset.kind === 'fulltext_ready')
+  ?? null
 )
 
-const fulltextCounts = computed(() => {
-  const counts = { pending: 0, ready: 0, excluded: 0, unavailable: 0, deferred: 0 }
-  for (const item of project.value?.fulltext_queue ?? []) counts[item.status] += 1
-  return counts
+const workbenchSummary = computed(() => project.value?.workbench.summary ?? {
+  total_candidates: 0,
+  actionable_candidates: 0,
+  needs_screening: 0,
+  screened_out: 0,
+  needs_link: 0,
+  needs_access: 0,
+  ready_for_decision: 0,
+  report_included: 0,
+  report_excluded: 0,
+  unavailable: 0,
+  deferred: 0
 })
-
-const threadStats = computed(() => ({
-  strategies: strategyTasks.value.length,
-  rounds: screeningRounds.value.length,
-  reports: reportTasks.value.length,
-  cumulativeIncluded: cumulativeIncludedDataset.value?.record_count ?? 0,
-  running: tasks.value.filter((task) => task.status === 'running' || task.status === 'pending').length
-}))
 
 const stageCards = computed(() => [
   {
     title: '线程方案',
-    description: strategyContext.value?.plan ? '已生成检索式、主题和标准' : '先生成线程主题与筛选标准',
+    description: strategyContext.value?.plan ? '已生成' : '待生成',
     value: strategyContext.value?.plan ? strategyContext.value.selected_databases.length : 0,
     unit: '个数据库',
     emphasis: strategyContext.value?.plan ? 'ready' : 'pending'
@@ -116,17 +130,17 @@ const stageCards = computed(() => [
   },
   {
     title: '统一复核',
-    description: project.value?.fulltext_queue.length ? '在同一页处理筛选复核与全文状态' : '初筛完成后会自动汇入这里',
-    value: fulltextCounts.value.ready,
-    unit: '篇已获取',
-    emphasis: fulltextCounts.value.ready ? 'ready' : 'pending'
+    description: workbenchSummary.value.total_candidates ? '项目级候选池与轮次复核已拆开，按阶段推进全文处理' : '初筛完成后候选文献会进入这里',
+    value: workbenchSummary.value.actionable_candidates,
+    unit: '篇候选',
+    emphasis: workbenchSummary.value.actionable_candidates ? 'ready' : 'pending'
   },
   {
     title: '生成报告',
-    description: (fulltextReadyDataset.value?.record_count ?? 0) > 0 ? '可以基于已获取全文生成报告' : '先把需要的全文标记为已获取',
-    value: fulltextReadyDataset.value?.record_count ?? 0,
-    unit: '篇全文',
-    emphasis: (fulltextReadyDataset.value?.record_count ?? 0) > 0 ? 'ready' : 'pending'
+    description: (reportSourceDataset.value?.record_count ?? 0) > 0 ? '可生成报告' : '暂无报告源',
+    value: reportSourceDataset.value?.record_count ?? 0,
+    unit: '篇报告源',
+    emphasis: (reportSourceDataset.value?.record_count ?? 0) > 0 ? 'ready' : 'pending'
   }
 ])
 
@@ -145,7 +159,7 @@ function sourceLabelOf(task: TaskSnapshot) {
     if (labels.length) return `来源：${labels.join(' + ')}`
   }
   if (task.parent_task_id) return '来源：延续上一轮'
-  if (task.kind === 'report') return '来源：已获取全文'
+  if (task.kind === 'report') return '来源：候选池报告源'
   if (task.kind === 'strategy') return '来源：研究需求生成线程方案'
   return '来源：新上传文献'
 }
@@ -210,9 +224,9 @@ function buildScreeningActions(task: TaskSnapshot): ThreadAction[] {
   if (includedDataset) {
     actions.push({
       id: `${task.id}-fulltext`,
-      label: '进入统一复核',
+      label: '进入候选工作台',
       kind: 'route',
-      to: `/threads/${projectId.value}/fulltext`,
+      to: `/threads/${projectId.value}/fulltext?tab=rounds&screeningTaskId=${task.id}`,
       emphasis: 'secondary'
     })
   }
@@ -322,10 +336,22 @@ const threadMessages = computed(() => tasks.value.slice().reverse().map(buildThr
 
 function initializeReportDefaults() {
   if (!project.value) return
-  reportTitle.value = `${project.value.name}-report`
-  reportTopic.value = screeningDefaults.value?.topic || project.value.topic
-  reportName.value = 'simple_report'
-  reportReferenceStyle.value = 'gbt7714'
+  const preferredProvider = (threadProfile.value?.strategy.model?.provider ?? metaStore.strategyDefaults.provider) as ProviderName
+  const preset = metaStore.providerPresets.find((item) => item.provider === preferredProvider)
+  const draft = reportDraftKey.value ? draftsStore.reportDrafts[reportDraftKey.value] ?? null : null
+  const nextProvider = (draft?.provider ?? preferredProvider) as ProviderName
+  const nextPreset = metaStore.providerPresets.find((item) => item.provider === nextProvider) ?? preset
+  reportTitle.value = draft?.title?.trim() || `${project.value.name}-report`
+  reportTopic.value = draft?.projectTopic?.trim() || screeningDefaults.value?.topic || project.value.topic
+  reportName.value = draft?.reportName?.trim() || 'simple_report'
+  reportReferenceStyle.value = draft?.referenceStyle ?? 'gbt7714'
+  reportModelForm.value = {
+    provider: nextProvider,
+    modelName: draft?.modelName?.trim() || threadProfile.value?.strategy.model?.model_name || nextPreset?.defaultModel || metaStore.strategyDefaults.model_name,
+    apiBaseUrl: draft?.apiBaseUrl?.trim() || threadProfile.value?.strategy.model?.api_base_url || nextPreset?.defaultBaseUrl || metaStore.strategyDefaults.api_base_url,
+    apiKeyEnv: draft?.apiKeyEnv?.trim() || threadProfile.value?.strategy.model?.api_key_env || nextPreset?.defaultApiKeyEnv || metaStore.strategyDefaults.api_key_env,
+    apiKey: draftsStore.getProviderApiKey(nextProvider)
+  }
 }
 
 function openEditThread() {
@@ -334,7 +360,7 @@ function openEditThread() {
     name: project.value.name,
     description: project.value.description ?? '',
     researchNeed: threadProfile.value.strategy.research_need ?? '',
-    topic: threadProfile.value.screening.topic || project.value.topic,
+    topic: threadProfile.value.screening.topic || '',
     inclusion: threadProfile.value.screening.inclusion.length ? [...threadProfile.value.screening.inclusion] : [''],
     exclusion: threadProfile.value.screening.exclusion.length ? [...threadProfile.value.screening.exclusion] : [''],
     selectedDatabases: threadProfile.value.strategy.selected_databases.length
@@ -342,6 +368,47 @@ function openEditThread() {
       : ['scopus', 'wos', 'pubmed', 'cnki']
   }
   editingThread.value = true
+}
+
+function openThreadAssist() {
+  const strategyModel = threadProfile.value?.strategy.model
+  assistForm.value = {
+    selectedDatabases: threadProfile.value?.strategy.selected_databases.length
+      ? [...threadProfile.value.strategy.selected_databases]
+      : metaStore.strategyDefaults.databases.map((item) => item.value),
+    provider: (strategyModel?.provider ?? metaStore.strategyDefaults.provider) as ProviderName,
+    modelName: strategyModel?.model_name ?? metaStore.strategyDefaults.model_name,
+    apiBaseUrl: strategyModel?.api_base_url ?? metaStore.strategyDefaults.api_base_url,
+    apiKeyEnv: strategyModel?.api_key_env ?? metaStore.strategyDefaults.api_key_env,
+    apiKey: draftsStore.getProviderApiKey((strategyModel?.provider ?? metaStore.strategyDefaults.provider) as ProviderName),
+    timeoutSeconds: 180
+  }
+  assistingThread.value = true
+}
+
+function applyAssistProviderPreset(nextProvider: ProviderName) {
+  const preset = metaStore.providerPresets.find((item) => item.provider === nextProvider)
+  if (!preset) return
+  assistForm.value = {
+    ...assistForm.value,
+    provider: nextProvider,
+    modelName: nextProvider === 'deepseek' ? metaStore.strategyDefaults.model_name : preset.defaultModel,
+    apiBaseUrl: preset.defaultBaseUrl,
+    apiKeyEnv: preset.defaultApiKeyEnv,
+    apiKey: draftsStore.getProviderApiKey(nextProvider)
+  }
+}
+
+function applyReportProviderPreset(nextProvider: ProviderName) {
+  const preset = metaStore.providerPresets.find((item) => item.provider === nextProvider)
+  if (!preset) return
+  reportModelForm.value = {
+    provider: nextProvider,
+    modelName: preset.defaultModel,
+    apiBaseUrl: preset.defaultBaseUrl,
+    apiKeyEnv: preset.defaultApiKeyEnv,
+    apiKey: draftsStore.getProviderApiKey(nextProvider)
+  }
 }
 
 async function saveThreadEdits() {
@@ -375,6 +442,76 @@ async function saveThreadEdits() {
   message.success('线程上下文已更新')
 }
 
+async function applyAiThreadAssist() {
+  if (!project.value || !threadProfile.value) return
+  const researchNeed = threadProfile.value.strategy.research_need?.trim()
+  if (!researchNeed) {
+    message.warning('这个线程还没有研究需求，先手动补上研究需求，再使用 AI 识别主题与筛选条件。')
+    return
+  }
+  if (!assistForm.value.selectedDatabases.length) {
+    message.warning('至少保留一个数据库，AI 才能结合检索场景识别主题与筛选条件。')
+    return
+  }
+  assistSubmitting.value = true
+  try {
+    const response = await prefillThreadSetup({
+      research_need: researchNeed,
+      selected_databases: [...assistForm.value.selectedDatabases],
+      timeout_seconds: assistForm.value.timeoutSeconds || 180,
+      model: {
+        provider: assistForm.value.provider,
+        model_name: assistForm.value.modelName,
+        api_base_url: assistForm.value.apiBaseUrl,
+        api_key_env: assistForm.value.apiKeyEnv,
+        api_key: assistForm.value.apiKey,
+        temperature: 0,
+        max_tokens: 4096,
+        min_request_interval_seconds: 2
+      }
+    })
+    draftsStore.setProviderApiKey(assistForm.value.provider, assistForm.value.apiKey)
+    const nextTopic = response.strategy_plan.screening_topic || response.strategy_plan.topic || project.value.topic
+    const nextDescription = project.value.description?.trim() || response.strategy_plan.intent_summary
+    await projectsStore.updateProjectWorkflow(project.value.id, {
+      name: project.value.name,
+      topic: nextTopic,
+      description: nextDescription,
+      thread_profile: {
+        ...threadProfile.value,
+        strategy: {
+          ...threadProfile.value.strategy,
+          selected_databases: [...assistForm.value.selectedDatabases],
+          model: {
+            provider: assistForm.value.provider,
+            model_name: assistForm.value.modelName,
+            api_base_url: assistForm.value.apiBaseUrl,
+            api_key_env: assistForm.value.apiKeyEnv,
+            temperature: 0,
+            max_tokens: 4096,
+            min_request_interval_seconds: 2
+          }
+        },
+        screening: {
+          ...threadProfile.value.screening,
+          topic: nextTopic,
+          inclusion: [...response.strategy_plan.inclusion],
+          exclusion: [...response.strategy_plan.exclusion],
+          criteria_markdown: response.criteria_markdown
+        }
+      }
+    })
+    assistingThread.value = false
+    initializeReportDefaults()
+    message.success('AI 已经把主题与筛选条件写回当前线程')
+  } catch (error) {
+    const detail = (error as { response?: { data?: { detail?: unknown } } } | null)?.response?.data?.detail
+    message.error(typeof detail === 'string' && detail ? detail : 'AI 识别主题与筛选条件失败')
+  } finally {
+    assistSubmitting.value = false
+  }
+}
+
 async function removeCurrentThread() {
   if (!project.value) return
   if (!window.confirm(`确认删除主题“${project.value.name}”？相关初筛和报告任务也会一起删除。`)) {
@@ -398,12 +535,15 @@ watch(projectId, async (nextProjectId) => {
 watch(
   [() => route.query.reportDatasetId, () => route.query.focusPanel],
   async ([datasetId, focusPanel]) => {
-    if (focusPanel !== 'report' || typeof datasetId !== 'string' || datasetId !== fulltextReadyDataset.value?.id) {
+    if (focusPanel !== 'report') {
       reportFocusNote.value = ''
       reportPanelHighlighted.value = false
       return
     }
-    reportFocusNote.value = '全文已经准备好，下一步只需要确认报告主题和样式，然后生成报告。'
+    reportFocusNote.value =
+      typeof datasetId === 'string' && datasetId === reportSourceDataset.value?.id
+        ? '报告源已经准备好，下一步只需要确认报告主题和样式，然后生成报告。'
+        : '已恢复上一次报告任务的参数。确认主题、模型和样式后，可以重新提交。'
     reportPanelHighlighted.value = true
     await nextTick()
     reportPanelRef.value?.scrollIntoView({ behavior: 'smooth', block: 'center' })
@@ -417,33 +557,85 @@ watch(
   { immediate: true, deep: true }
 )
 
+watch(
+  [
+    reportTitle,
+    reportTopic,
+    reportName,
+    reportReferenceStyle,
+    () => reportModelForm.value.provider,
+    () => reportModelForm.value.modelName,
+    () => reportModelForm.value.apiBaseUrl,
+    () => reportModelForm.value.apiKeyEnv,
+  ],
+  () => {
+    if (!reportDraftKey.value) return
+    draftsStore.updateReportDraft(reportDraftKey.value, {
+      projectId: project.value?.id ?? null,
+      screeningTaskId: null,
+      datasetIds: reportSourceDataset.value ? [reportSourceDataset.value.id] : [],
+      title: reportTitle.value,
+      projectTopic: reportTopic.value,
+      reportName: reportName.value,
+      referenceStyle: reportReferenceStyle.value,
+      provider: reportModelForm.value.provider,
+      modelName: reportModelForm.value.modelName,
+      apiBaseUrl: reportModelForm.value.apiBaseUrl,
+      apiKeyEnv: reportModelForm.value.apiKeyEnv,
+    })
+  }
+)
+
+async function focusReportPanel(note = '确认报告主题、样式和模型后，就可以开始生成报告。') {
+  reportFocusNote.value = note
+  reportPanelHighlighted.value = true
+  await nextTick()
+  reportPanelRef.value?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  if (typeof window !== 'undefined') {
+    if (reportFocusTimer !== null) window.clearTimeout(reportFocusTimer)
+    reportFocusTimer = window.setTimeout(() => {
+      reportPanelHighlighted.value = false
+    }, 2600)
+  }
+}
+
+function reportMaxTokens(modelName: string) {
+  return modelName.trim() === 'deepseek-reasoner' ? 4096 : 1536
+}
+
 async function submitThreadReport() {
-  if (!project.value || !fulltextReadyDataset.value || (fulltextReadyDataset.value.record_count ?? 0) <= 0) {
-    message.warning('先到全文获取工作台把需要的文献标记为“已获取全文”')
+  if (!project.value) return
+  const reportSourceCount = reportSourceDataset.value?.record_count ?? 0
+  if (!reportSourceDataset.value || reportSourceCount <= 0) {
+    message.warning('当前纳入文献为 0，无法生成报告。')
+    await focusReportPanel('当前报告源为 0。先去统一复核纳入文献。')
     return
   }
-  const preset = metaStore.providerPresets.find((item) => item.provider === 'deepseek') ?? metaStore.providerPresets[0]
+  draftsStore.setProviderApiKey(reportModelForm.value.provider, reportModelForm.value.apiKey)
   const task = await tasksStore.submitReport({
     title: reportTitle.value.trim() || `${project.value.name}-report`,
     project_id: project.value.id,
     screening_task_id: null,
-    dataset_ids: [fulltextReadyDataset.value.id],
+    dataset_ids: [reportSourceDataset.value.id],
     project_topic: reportTopic.value.trim() || screeningDefaults.value?.topic || project.value.topic,
     report_name: reportName.value.trim() || 'simple_report',
     retry_times: 6,
     timeout_seconds: 240,
     reference_style: reportReferenceStyle.value,
     model: {
-      provider: preset.provider,
-      model_name: preset.defaultModel,
-      api_base_url: preset.defaultBaseUrl,
-      api_key_env: preset.defaultApiKeyEnv,
-      api_key: draftsStore.getProviderApiKey(preset.provider),
+      provider: reportModelForm.value.provider,
+      model_name: reportModelForm.value.modelName.trim() || metaStore.strategyDefaults.model_name,
+      api_base_url: reportModelForm.value.apiBaseUrl,
+      api_key_env: reportModelForm.value.apiKeyEnv,
+      api_key: reportModelForm.value.apiKey,
       temperature: 0,
-      max_tokens: 1536,
+      max_tokens: reportMaxTokens(reportModelForm.value.modelName),
       min_request_interval_seconds: 2
     }
   })
+  if (reportDraftKey.value) {
+    draftsStore.clearReportDraft(reportDraftKey.value)
+  }
   message.success('报告任务已创建')
   await router.push(`/tasks/${task.id}`)
 }
@@ -493,22 +685,12 @@ onUnmounted(() => {
         <div>
           <div class="eyebrow">Thread Context</div>
           <h1>{{ project.name }}</h1>
-          <p>{{ project.description || '这条线程会固定维护当前研究主题、筛选标准和各阶段进展。' }}</p>
+          <p>{{ project.description || '在线程里继续维护主题、标准和进度。' }}</p>
         </div>
         <NSpace>
-          <RouterLink :to="`/threads/${project.id}/plan/new`">
-            <NButton tertiary>
-              <template #icon><Sparkles :size="16" /></template>
-              重新生成线程方案
-            </NButton>
-          </RouterLink>
           <NButton tertiary @click="openEditThread">
             <template #icon><Pencil :size="16" /></template>
-            编辑主题与标准
-          </NButton>
-          <NButton tertiary type="error" @click="removeCurrentThread">
-            <template #icon><Trash2 :size="16" /></template>
-            删除线程
+            手动编辑主题与标准
           </NButton>
         </NSpace>
       </div>
@@ -520,7 +702,9 @@ onUnmounted(() => {
         </div>
         <div class="brief-block">
           <div class="brief-label">当前主题</div>
-          <div class="brief-value">{{ screeningDefaults?.topic || project.topic }}</div>
+          <div class="brief-value">
+            {{ screeningDefaults?.topic || `尚未固定主题（当前先用线程标题占位：${project.topic}）` }}
+          </div>
         </div>
         <div class="brief-block">
           <div class="brief-label">纳入标准</div>
@@ -542,9 +726,15 @@ onUnmounted(() => {
         <div class="brief-tags">
           <NTag v-for="database in strategyContext?.selected_databases ?? []" :key="database" round>{{ database }}</NTag>
           <NTag round type="success">初筛 {{ screeningRounds.length }} 轮</NTag>
-          <NTag round type="warning">全文已获取 {{ fulltextCounts.ready }} 篇</NTag>
+          <NTag round type="warning">候选文献 {{ workbenchSummary.actionable_candidates }} 篇</NTag>
         </div>
         <NSpace>
+          <RouterLink :to="`/threads/${project.id}/plan/new`">
+            <NButton tertiary>
+              <template #icon><Sparkles :size="16" /></template>
+              生成检索方案
+            </NButton>
+          </RouterLink>
           <RouterLink :to="`/threads/${project.id}/screening/new`">
             <NButton type="primary">
               <template #icon><FileSearch :size="16" /></template>
@@ -557,6 +747,10 @@ onUnmounted(() => {
               进入统一复核
             </NButton>
           </RouterLink>
+          <NButton tertiary type="warning" @click="focusReportPanel()">
+            <template #icon><FileText :size="16" /></template>
+            生成报告
+          </NButton>
         </NSpace>
       </div>
     </section>
@@ -569,19 +763,14 @@ onUnmounted(() => {
       </div>
     </section>
 
-    <section class="metrics-grid">
-      <OverviewMetric label="线程方案" :value="threadStats.strategies" />
-      <OverviewMetric label="初筛轮次" :value="threadStats.rounds" />
-      <OverviewMetric label="报告任务" :value="threadStats.reports" />
-      <OverviewMetric label="累计纳入" :value="threadStats.cumulativeIncluded" />
-      <OverviewMetric label="运行中" :value="threadStats.running" />
-    </section>
-
     <div class="thread-layout">
       <section class="thread-main">
         <NCard title="阶段 1：线程方案" class="panel-surface">
           <template v-if="strategyContext?.plan">
             <div class="section-stack">
+              <NAlert type="info" :show-icon="false">
+                这里显示当前检索方案。
+              </NAlert>
               <div class="strategy-summary">
                 <div class="summary-block">
                   <div class="brief-label">需求概括</div>
@@ -601,18 +790,9 @@ onUnmounted(() => {
                   </ul>
                 </div>
               </div>
-              <RouterLink v-if="latestStrategyTask" :to="`/tasks/${latestStrategyTask.id}`">
-                <NButton tertiary>查看完整线程方案详情</NButton>
-              </RouterLink>
             </div>
           </template>
-          <NEmpty v-else description="还没有线程方案。先输入研究需求生成主题、标准和检索式。">
-            <template #extra>
-              <RouterLink :to="`/threads/${project.id}/plan/new`">
-                <NButton type="primary">生成线程方案</NButton>
-              </RouterLink>
-            </template>
-          </NEmpty>
+          <NEmpty v-else description="还没有检索方案" />
         </NCard>
 
         <NCard title="阶段 2：初筛轮次" class="panel-surface">
@@ -621,59 +801,59 @@ onUnmounted(() => {
               v-for="messageItem in threadMessages.filter((item) => item.kind === 'screening')"
               :key="messageItem.id"
               :message="messageItem"
+              :hide-actions="true"
             />
           </div>
-          <NEmpty v-else description="当前线程还没有初筛轮次。生成线程方案后，就可以直接开始第一轮初筛。">
-            <template #extra>
-              <RouterLink :to="`/threads/${project.id}/screening/new`">
-                <NButton type="primary">开始第一轮初筛</NButton>
-              </RouterLink>
-            </template>
-          </NEmpty>
+          <NEmpty v-else description="还没有初筛轮次" />
         </NCard>
 
         <NCard title="阶段 3：统一复核工作台" class="panel-surface">
           <div class="fulltext-summary-card">
             <div class="fulltext-summary-copy">
-              这个工作台把“筛选复核”和“全文获取”收在同一页里。你可以先修正当前筛选结论，再只对仍然纳入的记录处理全文状态。
+              先处理全文获取，再做最终去留。
             </div>
             <div class="fulltext-summary">
               <RouterLink :to="{ path: `/threads/${project.id}/fulltext` }">
-                <NTag round :bordered="false" class="summary-tag">全部 {{ project.fulltext_queue.length }}</NTag>
+                <NTag round :bordered="false" class="summary-tag">全部 {{ workbenchSummary.total_candidates }}</NTag>
               </RouterLink>
-              <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { status: 'pending' } }">
-                <NTag round :bordered="false" class="summary-tag">未处理 {{ fulltextCounts.pending }}</NTag>
+              <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { stage: 'needs-screening' } }">
+                <NTag round :bordered="false" class="summary-tag">待补筛选 {{ workbenchSummary.needs_screening }}</NTag>
               </RouterLink>
-              <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { status: 'ready' } }">
-                <NTag round type="success" :bordered="false" class="summary-tag">已获取 {{ fulltextCounts.ready }}</NTag>
+              <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { workflow: 'needs-retrieval' } }">
+                <NTag round :bordered="false" class="summary-tag">待获取 {{ workbenchSummary.needs_link + workbenchSummary.needs_access }}</NTag>
               </RouterLink>
-              <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { status: 'excluded' } }">
-                <NTag round type="error" :bordered="false" class="summary-tag">最终排除 {{ fulltextCounts.excluded }}</NTag>
+              <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { workflow: 'ready-for-decision' } }">
+                <NTag round type="success" :bordered="false" class="summary-tag">待终判 {{ workbenchSummary.ready_for_decision }}</NTag>
               </RouterLink>
-              <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { status: 'unavailable' } }">
-                <NTag round type="error" :bordered="false" class="summary-tag">无权限 {{ fulltextCounts.unavailable }}</NTag>
+              <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { stage: 'report-included' } }">
+                <NTag round type="success" :bordered="false" class="summary-tag">已纳入报告 {{ workbenchSummary.report_included }}</NTag>
               </RouterLink>
-              <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { status: 'deferred' } }">
-                <NTag round type="warning" :bordered="false" class="summary-tag">暂缓 {{ fulltextCounts.deferred }}</NTag>
+              <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { stage: 'report-excluded' } }">
+                <NTag round type="error" :bordered="false" class="summary-tag">最终排除 {{ workbenchSummary.report_excluded }}</NTag>
+              </RouterLink>
+              <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { stage: 'deferred' } }">
+                <NTag round type="warning" :bordered="false" class="summary-tag">暂缓 {{ workbenchSummary.deferred }}</NTag>
               </RouterLink>
             </div>
-            <RouterLink :to="`/threads/${project.id}/fulltext`">
-              <NButton type="primary">打开统一复核工作台</NButton>
-            </RouterLink>
           </div>
         </NCard>
 
-        <NCard ref="reportPanelRef" title="阶段 4：生成报告" class="panel-surface report-workspace-card" :class="{ highlighted: reportPanelHighlighted }">
-          <NAlert v-if="reportFocusNote" type="warning" :show-icon="false" class="report-workspace-alert">
-            {{ reportFocusNote }}
-          </NAlert>
-          <template v-if="fulltextReadyDataset && (fulltextReadyDataset.record_count ?? 0) > 0">
+        <div ref="reportPanelRef">
+          <NCard title="阶段 4：生成报告" class="panel-surface report-workspace-card" :class="{ highlighted: reportPanelHighlighted }">
+            <NAlert v-if="reportFocusNote" type="warning" :show-icon="false" class="report-workspace-alert">
+              {{ reportFocusNote }}
+            </NAlert>
             <div class="report-workspace-copy">
-              报告现在只接在全文获取之后。系统会默认使用当前线程里已标记为“已获取全文”的文献。
+              基于已纳入报告的文献生成。
             </div>
             <div class="report-workspace-status">
-              <NTag round type="success">已获取全文 {{ fulltextReadyDataset.record_count ?? 0 }} 篇</NTag>
+              <NTag round :type="(reportSourceDataset?.record_count ?? 0) > 0 ? 'success' : 'warning'">
+                报告源 {{ reportSourceDataset?.record_count ?? 0 }} 篇
+              </NTag>
             </div>
+            <NAlert v-if="(reportSourceDataset?.record_count ?? 0) <= 0" type="info" :show-icon="false">
+              当前纳入文献为 0。
+            </NAlert>
             <NForm label-placement="top" class="report-form">
               <NFormItem label="报告任务名称">
                 <NInput v-model:value="reportTitle" placeholder="例如：某主题文献整理报告" />
@@ -681,25 +861,44 @@ onUnmounted(() => {
               <NFormItem label="报告主题">
                 <NInput v-model:value="reportTopic" type="textarea" :autosize="{ minRows: 3, maxRows: 5 }" />
               </NFormItem>
-              <NFormItem label="参考样式">
-                <NSelect
-                  v-model:value="reportReferenceStyle"
-                  :options="metaStore.referenceStyles.map((item) => ({ label: item.label, value: item.value }))"
+              <div class="report-model-grid">
+                <NFormItem label="模型提供商">
+                  <NSelect
+                    v-model:value="reportModelForm.provider"
+                    :options="metaStore.providerPresets.map((item) => ({ label: item.label, value: item.provider }))"
+                    @update:value="(value) => applyReportProviderPreset(value as ProviderName)"
+                  />
+                </NFormItem>
+                <NFormItem label="模型名称">
+                  <NInput v-model:value="reportModelForm.modelName" placeholder="例如：deepseek-chat / deepseek-reasoner" />
+                </NFormItem>
+              </div>
+              <NFormItem label="API Key">
+                <NInput
+                  type="password"
+                  show-password-on="click"
+                  v-model:value="reportModelForm.apiKey"
+                  placeholder="仅保存在当前浏览器本地"
                 />
               </NFormItem>
-              <NFormItem label="输出目录名">
-                <NInput v-model:value="reportName" placeholder="simple_report" />
-              </NFormItem>
+              <div class="report-model-grid">
+                <NFormItem label="参考样式">
+                  <NSelect
+                    v-model:value="reportReferenceStyle"
+                    :options="metaStore.referenceStyles.map((item) => ({ label: item.label, value: item.value }))"
+                  />
+                </NFormItem>
+                <NFormItem label="输出目录名">
+                  <NInput v-model:value="reportName" placeholder="simple_report" />
+                </NFormItem>
+              </div>
             </NForm>
             <NButton type="primary" block @click="submitThreadReport">
               <template #icon><FileText :size="16" /></template>
-              基于已获取全文生成报告
+              基于报告源生成报告
             </NButton>
-          </template>
-          <NAlert v-else type="info" :show-icon="false">
-            先到全文获取工作台把需要的文献标记为“已获取全文”，这里才会开放报告生成。
-          </NAlert>
-        </NCard>
+          </NCard>
+        </div>
       </section>
 
       <aside class="thread-side">
@@ -752,8 +951,65 @@ onUnmounted(() => {
             <template #icon><Trash2 :size="16" /></template>
             删除线程
           </NButton>
-          <NButton @click="editingThread = false">取消</NButton>
-          <NButton type="primary" @click="saveThreadEdits">保存线程上下文</NButton>
+          <NSpace>
+            <NButton tertiary @click="editingThread = false; openThreadAssist()">
+              <template #icon><Wand2 :size="16" /></template>
+              AI 识别填入
+            </NButton>
+            <NButton @click="editingThread = false">取消</NButton>
+            <NButton type="primary" @click="saveThreadEdits">保存线程上下文</NButton>
+          </NSpace>
+        </NSpace>
+      </template>
+    </NModal>
+
+    <NModal
+      :show="assistingThread"
+      preset="card"
+      style="max-width: 760px"
+      title="AI 识别主题与筛选条件"
+      @update:show="(value) => { assistingThread = value }"
+    >
+      <NAlert type="info" :show-icon="false" class="assist-alert">
+        根据研究需求识别主题与标准，并写回当前线程。
+      </NAlert>
+      <NForm label-placement="top">
+        <NFormItem label="当前研究需求">
+          <NInput :value="strategyContext?.research_need || ''" type="textarea" :autosize="{ minRows: 4, maxRows: 7 }" readonly />
+        </NFormItem>
+        <NFormItem label="模型提供商">
+          <NSelect
+            v-model:value="assistForm.provider"
+            :options="metaStore.providerPresets.map((item) => ({ label: item.label, value: item.provider }))"
+            @update:value="(value) => applyAssistProviderPreset(value as ProviderName)"
+          />
+        </NFormItem>
+        <NFormItem label="模型名称">
+          <NInput v-model:value="assistForm.modelName" />
+        </NFormItem>
+        <NFormItem label="API Key">
+          <NInput
+            type="password"
+            show-password-on="click"
+            v-model:value="assistForm.apiKey"
+            placeholder="仅保存在当前浏览器本地"
+          />
+        </NFormItem>
+        <NFormItem label="超时时间（秒）">
+          <NInputNumber v-model:value="assistForm.timeoutSeconds" :min="30" :max="600" />
+        </NFormItem>
+        <NFormItem label="数据库范围">
+          <NSelect
+            v-model:value="assistForm.selectedDatabases"
+            multiple
+            :options="metaStore.strategyDefaults.databases.map((item) => ({ label: item.label, value: item.value }))"
+          />
+        </NFormItem>
+      </NForm>
+      <template #footer>
+        <NSpace justify="end">
+          <NButton @click="assistingThread = false">取消</NButton>
+          <NButton type="primary" :loading="assistSubmitting" @click="applyAiThreadAssist">识别并写回线程</NButton>
         </NSpace>
       </template>
     </NModal>
@@ -848,18 +1104,13 @@ onUnmounted(() => {
   gap: 10px;
 }
 
-.stage-grid,
-.metrics-grid {
+.stage-grid {
   display: grid;
   gap: 16px;
 }
 
 .stage-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.metrics-grid {
-  grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
 .stage-card {
@@ -966,8 +1217,15 @@ onUnmounted(() => {
 }
 
 .report-workspace-alert,
-.report-workspace-status {
+.report-workspace-status,
+.assist-alert {
   margin-bottom: 14px;
+}
+
+.report-model-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
 }
 
 .empty-thread {
@@ -975,8 +1233,7 @@ onUnmounted(() => {
 }
 
 @media (max-width: 1200px) {
-  .stage-grid,
-  .metrics-grid {
+  .stage-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -995,7 +1252,7 @@ onUnmounted(() => {
   .thread-brief-grid,
   .strategy-summary,
   .stage-grid,
-  .metrics-grid {
+  .report-model-grid {
     grid-template-columns: 1fr;
   }
 }
