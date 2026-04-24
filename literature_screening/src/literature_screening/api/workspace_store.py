@@ -108,6 +108,42 @@ class WorkspaceStore:
             return self._read(path)
         return None
 
+    def delete_dataset(self, project_id: str, dataset_id: str, *, remove_file: bool = False) -> bool:
+        dataset_path = self._project_root(project_id) / "datasets" / f"{dataset_id}.json"
+        if not dataset_path.exists():
+            return False
+
+        artifact_path: Path | None = None
+        try:
+            payload = self._read(dataset_path)
+        except Exception:
+            payload = None
+        if remove_file and isinstance(payload, dict):
+            raw_path = payload.get("path")
+            if raw_path:
+                artifact_path = Path(str(raw_path))
+
+        dataset_path.unlink(missing_ok=True)
+        if remove_file and artifact_path is not None:
+            self._delete_dataset_artifact(project_id, artifact_path)
+        self.update_project(project_id)
+        return True
+
+    def delete_task_datasets(self, project_id: str, task_id: str) -> list[str]:
+        deleted_ids: list[str] = []
+        for dataset in self.list_project_datasets(project_id):
+            if str(dataset.get("task_id") or "").strip() != task_id:
+                continue
+            dataset_id = str(dataset.get("id") or "").strip()
+            if not dataset_id:
+                continue
+            dataset_path = self._project_root(project_id) / "datasets" / f"{dataset_id}.json"
+            dataset_path.unlink(missing_ok=True)
+            deleted_ids.append(dataset_id)
+        if deleted_ids:
+            self.update_project(project_id)
+        return deleted_ids
+
     def register_dataset(
         self,
         *,
@@ -255,6 +291,7 @@ class WorkspaceStore:
         for dataset in datasets:
             records.extend(self._collect_included_records_for_dataset(project_id, dataset))
         if not records:
+            self.delete_dataset(project_id, "cumulative-included", remove_file=True)
             return None
 
         preserve_ids = any(self._looks_like_internal_paper_id(record.paper_id) for record in records)
@@ -327,6 +364,7 @@ class WorkspaceStore:
                 if value is None:
                     continue
                 item[key] = value.strip() if isinstance(value, str) else value
+            self._sync_access_driven_report_state(item)
             item["updated_at"] = now
         self.save_workbench(project_id, workbench)
         return self.rebuild_workbench(project_id, source_dataset_ids=workbench.get("source_dataset_ids") or [])
@@ -414,6 +452,7 @@ class WorkspaceStore:
             for key, value in changes_by_candidate[candidate_id].items():
                 if value is not None:
                     item[key] = value
+            self._sync_access_driven_report_state(item)
             item["updated_at"] = now
         self.save_workbench(project_id, workbench)
         self.rebuild_workbench(project_id, source_dataset_ids=workbench.get("source_dataset_ids") or [])
@@ -487,7 +526,11 @@ class WorkspaceStore:
                 "items": [],
             }
             self.save_workbench(project_id, payload)
-            self._write_report_datasets(project_id, selected_ids, [], [])
+            if selected_ids:
+                self._write_report_datasets(project_id, selected_ids, [], [])
+            else:
+                self.delete_dataset(project_id, self._FULLTEXT_READY_DATASET_ID, remove_file=True)
+                self.delete_dataset(project_id, self._REPORT_SOURCE_DATASET_ID, remove_file=True)
             self.update_project(project_id)
             return payload
 
@@ -512,7 +555,6 @@ class WorkspaceStore:
         items: list[dict[str, Any]] = []
         ready_records: list[PaperRecord] = []
         report_records: list[PaperRecord] = []
-        latest_screening_context = self._latest_project_screening_context(project_id)
         for record in canonical_records:
             fingerprint = self._candidate_fingerprint(record)
             candidate_id = self._candidate_id_for_fingerprint(fingerprint)
@@ -527,14 +569,9 @@ class WorkspaceStore:
                 updated_at=previous_state.get("updated_at") or now,
             )
             items.append(item)
-            latest_screening_decision = self._latest_screening_decision_for_record(record, latest_screening_context)
-            if item.get("access_status") == "ready" and latest_screening_decision not in {"exclude", "uncertain"}:
+            if item.get("access_status") == "ready":
                 ready_records.append(record)
-            if (
-                item.get("access_status") == "ready"
-                and item.get("final_decision") == "include"
-                and latest_screening_decision not in {"exclude", "uncertain"}
-            ):
+            if item.get("access_status") == "ready" and item.get("final_decision") not in {"exclude", "deferred"}:
                 report_records.append(record)
 
         payload = {
@@ -601,6 +638,10 @@ class WorkspaceStore:
             final_decision = "undecided"
         if access_status not in {"pending", "ready", "unavailable", "deferred"}:
             access_status = "pending"
+        if access_status == "ready" and final_decision == "undecided":
+            final_decision = "include"
+        elif access_status != "ready" and final_decision == "include":
+            final_decision = "undecided"
 
         links, preferred_open_url, preferred_pdf_url = self._build_candidate_links(record, previous_state)
         dataset_ids = [str(ref.get("dataset_id")) for ref in source_refs if ref.get("dataset_id")]
@@ -644,6 +685,15 @@ class WorkspaceStore:
             "source_task_ids": list(dict.fromkeys(task_ids)),
             "updated_at": updated_at,
         }
+
+    def _sync_access_driven_report_state(self, item: dict[str, Any]) -> None:
+        access_status = str(item.get("access_status") or "pending")
+        final_decision = str(item.get("final_decision") or "undecided")
+        if access_status == "ready" and final_decision in {"", "undecided", "include"}:
+            item["final_decision"] = "include"
+            return
+        if access_status != "ready" and final_decision == "include":
+            item["final_decision"] = "undecided"
 
     def _build_candidate_links(
         self,
@@ -700,6 +750,16 @@ class WorkspaceStore:
                 item["primary"] = True
                 break
         return links, preferred_open_url, preferred_pdf_url
+
+    def _delete_dataset_artifact(self, project_id: str, artifact_path: Path) -> None:
+        derived_dir = (self._project_root(project_id) / "derived").resolve()
+        resolved_path = artifact_path.resolve(strict=False)
+        if not resolved_path.is_relative_to(derived_dir):
+            return
+        if resolved_path.is_dir():
+            shutil.rmtree(resolved_path, ignore_errors=True)
+            return
+        resolved_path.unlink(missing_ok=True)
 
     def _migrate_legacy_workbench_state(self, project_id: str) -> dict[str, dict[str, Any]]:
         queue_path = self._project_root(project_id) / "derived" / "fulltext_queue.json"

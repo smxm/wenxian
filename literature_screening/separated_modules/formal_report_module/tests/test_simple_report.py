@@ -31,8 +31,11 @@ from literature_screening.formal_report.reference_list import build_reference_bl
 from literature_screening.formal_report.simple_report import SimplePaperNote
 from literature_screening.formal_report.simple_report import SimpleReportCategory
 from literature_screening.formal_report.simple_report import SimpleReportOverview
+from literature_screening.formal_report.simple_report import _build_overview_prompt
 from literature_screening.formal_report.simple_report import _build_total_summary
+from literature_screening.formal_report.simple_report import _infer_simple_category_hint
 from literature_screening.formal_report.simple_report import _normalize_overview
+from literature_screening.formal_report.simple_report import _normalize_simple_category
 from literature_screening.formal_report.simple_report import generate_simple_report
 from literature_screening.formal_report.simple_report import render_simple_report_markdown
 
@@ -277,6 +280,50 @@ def test_build_total_summary_handles_empty_note_list() -> None:
 
     assert "暂未形成可供整理的纳入文献" in summary
     assert "Test Topic" in summary
+
+
+def test_build_overview_prompt_does_not_leak_local_category_hints(tmp_path: Path) -> None:
+    prompt_path = tmp_path / "overview_prompt.md"
+    prompt_path.write_text("{{ input_payload }}\n{{ output_schema }}", encoding="utf-8")
+    notes = [
+        SimplePaperNote(
+            paper_id="paper_1",
+            title="Share pledge and earnings persistence",
+            category="机器人控制与作业辅助",
+            summary="该研究探讨股权质押对企业盈利持续性的影响。",
+            analysis="可用于分析企业治理风险与盈利持续性。",
+        )
+    ]
+
+    prompt = _build_overview_prompt(prompt_path=prompt_path, project_topic="ROE and earnings persistence", notes=notes)
+
+    assert "Share pledge and earnings persistence" in prompt
+    assert "category_hint" not in prompt
+    assert "机器人控制与作业辅助" not in prompt
+
+
+def test_simple_report_category_hint_uses_domain_neutral_labels() -> None:
+    paper = PaperRecord(
+        paper_id="paper_1",
+        title="Share pledge and earnings persistence: evidence from China",
+        abstract="This paper studies the effect of share pledges on earnings persistence and the mechanism that explains the effect.",
+        keywords=["Share pledge", "earnings persistence", "corporate governance"],
+    )
+    decision = ScreeningDecision(
+        paper_id="paper_1",
+        batch_id="batch_1",
+        decision="include",
+        reason="Selected from reusable project dataset.",
+        confidence=0.9,
+        model_provider="system",
+        model_name="dataset-loader",
+        timestamp="2026-04-24T00:00:00+08:00",
+    )
+
+    hint = _infer_simple_category_hint(paper=paper, decision=decision)
+
+    assert hint == "实证检验与影响因素"
+    assert _normalize_simple_category("机器人控制与作业辅助") == "主题相关研究"
 
 
 def test_normalize_overview_assigns_missing_notes() -> None:

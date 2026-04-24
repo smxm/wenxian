@@ -307,6 +307,189 @@ def run_screening_job(
     )
 
 
+def recover_screening_job_result(
+    run_root: Path,
+    *,
+    project_name: str = "",
+    criteria_topic: str = "",
+    stop_reason: str = "manual_stop",
+) -> ScreeningJobResult | None:
+    bootstrap_project_paths()
+
+    from literature_screening.bibtex.exporter import export_bibtex
+    from literature_screening.bibtex.exporter import export_ris
+    from literature_screening.core.constants import STATUS_EXCLUDED
+    from literature_screening.core.constants import STATUS_INCLUDED
+    from literature_screening.core.constants import STATUS_UNCERTAIN
+    from literature_screening.core.constants import STATUS_UNPROCESSED
+    from literature_screening.core.constants import STATUS_UNUSED
+    from literature_screening.core.models import PaperRecord
+    from literature_screening.core.models import ScreeningDecision
+    from literature_screening.reporting.report_generator import write_screening_markdown_report
+    from literature_screening.reporting.writers import write_json
+
+    output_dir = run_root / "screening_output"
+    batch_dir = output_dir / "batches"
+    records_path = output_dir / "deduped_records.json"
+    snapshot_path = output_dir / "config.snapshot.json"
+    config_path = run_root / "generated_screening_config.yaml"
+    summary_path = output_dir / "run_summary.json"
+
+    if not batch_dir.exists() or not records_path.exists() or not snapshot_path.exists():
+        return None
+
+    batch_output_paths = sorted(batch_dir.glob("batch_*_output.json"))
+    if not batch_output_paths:
+        return None
+
+    records_payload = _load_json(records_path)
+    config_payload = _load_json(snapshot_path)
+    summary_payload = _load_json(summary_path) if summary_path.exists() else {}
+
+    record_map = {
+        item["paper_id"]: PaperRecord.model_validate(item)
+        for item in records_payload
+        if isinstance(item, dict) and item.get("paper_id")
+    }
+    model_payload = config_payload.get("model", {}) if isinstance(config_payload, dict) else {}
+    report_payload = config_payload.get("report", {}) if isinstance(config_payload, dict) else {}
+
+    decisions: list[ScreeningDecision] = []
+    for batch_output_path in batch_output_paths:
+        payload = _load_json(batch_output_path)
+        batch_id = str(payload.get("batch_id") or batch_output_path.stem.removesuffix("_output"))
+        timestamp = datetime.fromtimestamp(batch_output_path.stat().st_mtime).astimezone()
+        for result in payload.get("results", []):
+            paper_id = str(result.get("paper_id") or "").strip()
+            if not paper_id or paper_id not in record_map:
+                continue
+            decision = ScreeningDecision(
+                paper_id=paper_id,
+                batch_id=batch_id,
+                decision=result["decision"],
+                reason=str(result.get("reason") or ""),
+                evidence=list(result.get("evidence") or []),
+                confidence=float(result["confidence"]),
+                model_provider=str(model_payload.get("provider") or "system"),
+                model_name=str(model_payload.get("model_name") or "partial-recovery"),
+                timestamp=timestamp,
+            )
+            decisions.append(decision)
+            if decision.decision == "include":
+                record_map[paper_id].status = STATUS_INCLUDED
+            elif decision.decision == "exclude":
+                record_map[paper_id].status = STATUS_EXCLUDED
+            elif decision.decision == "uncertain":
+                record_map[paper_id].status = STATUS_UNCERTAIN
+
+    if not decisions:
+        return None
+
+    for record in record_map.values():
+        if record.status == STATUS_UNPROCESSED:
+            record.status = STATUS_UNUSED
+
+    included_rows = [(record_map[decision.paper_id], decision) for decision in decisions if record_map[decision.paper_id].status == STATUS_INCLUDED]
+    excluded_rows = [(record_map[decision.paper_id], decision) for decision in decisions if record_map[decision.paper_id].status == STATUS_EXCLUDED]
+    uncertain_rows = [(record_map[decision.paper_id], decision) for decision in decisions if record_map[decision.paper_id].status == STATUS_UNCERTAIN]
+
+    decisions_path = output_dir / "screening_decisions.json"
+    included_report_path = output_dir / "included_report.md"
+    excluded_report_path = output_dir / "excluded_report.md"
+    uncertain_report_path = output_dir / "uncertain_report.md"
+    included_ris_path = output_dir / "included.ris"
+    excluded_ris_path = output_dir / "excluded.ris"
+    unused_ris_path = output_dir / "unused_remaining.ris"
+    included_bib_path = output_dir / "included.bib"
+    excluded_bib_path = output_dir / "excluded.bib"
+    unused_bib_path = output_dir / "unused_remaining.bib"
+
+    write_json([decision.model_dump(mode="json") for decision in decisions], decisions_path)
+    write_screening_markdown_report(included_rows, "Included Papers", included_report_path)
+    write_screening_markdown_report(excluded_rows, "Excluded Papers", excluded_report_path)
+    if uncertain_rows:
+        write_screening_markdown_report(uncertain_rows, "Uncertain Papers", uncertain_report_path)
+    elif uncertain_report_path.exists():
+        uncertain_report_path.unlink()
+
+    included_records = [record for record in record_map.values() if record.status == STATUS_INCLUDED]
+    excluded_records = [record for record in record_map.values() if record.status == STATUS_EXCLUDED]
+    unused_records = [record for record in record_map.values() if record.status == STATUS_UNUSED]
+
+    if report_payload.get("export_included_ris", True):
+        export_ris(included_records, included_ris_path)
+    elif included_ris_path.exists():
+        included_ris_path.unlink()
+
+    if report_payload.get("export_excluded_ris", False):
+        export_ris(excluded_records, excluded_ris_path)
+    elif excluded_ris_path.exists():
+        excluded_ris_path.unlink()
+
+    if report_payload.get("export_unused_ris", True):
+        export_ris(unused_records, unused_ris_path)
+    elif unused_ris_path.exists():
+        unused_ris_path.unlink()
+
+    if report_payload.get("export_included_bib", False):
+        export_bibtex(included_records, included_bib_path)
+    elif included_bib_path.exists():
+        included_bib_path.unlink()
+
+    if report_payload.get("export_excluded_bib", False):
+        export_bibtex(excluded_records, excluded_bib_path)
+    elif excluded_bib_path.exists():
+        excluded_bib_path.unlink()
+
+    if report_payload.get("export_unused_bib", False):
+        export_bibtex(unused_records, unused_bib_path)
+    elif unused_bib_path.exists():
+        unused_bib_path.unlink()
+
+    started_at = str(summary_payload.get("started_at") or datetime.now().astimezone().isoformat())
+    final_summary = {
+        "run_id": summary_payload.get("run_id") or f"run_{datetime.now().astimezone().strftime('%Y%m%d_%H%M%S')}",
+        "input_files_count": int(summary_payload.get("input_files_count") or 0),
+        "raw_entries_count": int(summary_payload.get("raw_entries_count") or len(records_payload)),
+        "deduped_entries_count": int(summary_payload.get("deduped_entries_count") or len(record_map)),
+        "processed_count": len(decisions),
+        "included_count": len(included_records),
+        "excluded_count": len(excluded_records),
+        "uncertain_count": len(uncertain_rows),
+        "unused_count": len(unused_records),
+        "batch_count": len(batch_output_paths),
+        "api_call_count": len(batch_output_paths),
+        "stop_reason": stop_reason,
+        "started_at": started_at,
+        "finished_at": datetime.now().astimezone().isoformat(),
+    }
+    write_json(final_summary, summary_path)
+
+    reports = {
+        "included_report": included_report_path,
+        "excluded_report": excluded_report_path,
+        "uncertain_report": uncertain_report_path,
+        "included_ris": included_ris_path,
+        "excluded_ris": excluded_ris_path,
+        "unused_ris": unused_ris_path,
+        "included_bib": included_bib_path,
+        "excluded_bib": excluded_bib_path,
+        "unused_bib": unused_bib_path,
+    }
+    return ScreeningJobResult(
+        run_slug=run_root.name,
+        run_root=run_root,
+        config_path=config_path,
+        output_dir=output_dir,
+        summary=final_summary,
+        records=load_screening_records(output_dir),
+        reports=reports,
+        project_name=project_name,
+        criteria_topic=criteria_topic,
+        copied_input_paths=sorted((run_root / "inputs").glob("*")),
+    )
+
+
 def generate_strategy_job(
     request: StrategyJobRequest,
     progress_callback: ProgressCallback | None = None,

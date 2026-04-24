@@ -189,12 +189,30 @@ class TaskStore:
         try:
             result = worker(task)
             latest = self.load_task(task.task_id)
+            preserve_cancelled_result = bool(result.pop("_cancelled_with_result", False)) if isinstance(result, dict) else False
+            cancelled_progress_message = (
+                str(result.pop("_cancelled_progress_message"))
+                if isinstance(result, dict) and result.get("_cancelled_progress_message")
+                else "Task cancelled by user"
+            )
             if latest.get("cancel_requested") or latest.get("status") == "cancelled":
-                self.append_event(
-                    task.task_id,
-                    kind="task-cancelled",
-                    message="Task result discarded because cancellation was requested",
-                )
+                if preserve_cancelled_result:
+                    self.update(
+                        task.task_id,
+                        status="cancelled",
+                        phase="cancelled",
+                        phase_label="Cancelled",
+                        progress_message=cancelled_progress_message,
+                        error=None,
+                        **result,
+                    )
+                    self.append_event(task.task_id, kind="task-cancelled", message=cancelled_progress_message)
+                else:
+                    self.append_event(
+                        task.task_id,
+                        kind="task-cancelled",
+                        message="Task result discarded because cancellation was requested",
+                    )
                 return
             self.update(
                 task.task_id,

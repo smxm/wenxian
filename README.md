@@ -208,6 +208,8 @@ python literature_screening/separated_modules/formal_report_module/scripts/run_s
 
 ## 说明文档
 
+- [项目导航 Atlas](./docs/project_atlas/index.md)
+- [改动路由表](./docs/project_atlas/change-routing.md)
 - [主项目说明](./literature_screening/README.md)
 - [架构说明](./literature_screening/docs/architecture.md)
 - [Web 工作台说明](./literature_screening/docs/web-workbench.md)

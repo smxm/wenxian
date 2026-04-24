@@ -12,6 +12,7 @@ import {
   NInput,
   NInputNumber,
   NSelect,
+  NSwitch,
   NTag,
   useMessage
 } from 'naive-ui'
@@ -35,6 +36,7 @@ const newProjectName = ref('')
 const newProjectDescription = ref('')
 const sourceDatasetIds = ref<string[]>([])
 const parentTaskId = ref<string | null>(null)
+const screeningTitle = ref('')
 
 const topic = ref('')
 const inclusion = ref<string[]>([''])
@@ -55,6 +57,7 @@ const model = ref<ModelSettings>({
 const batchSize = ref(10)
 const targetIncludeCount = ref<number | null>(null)
 const stopWhenReached = ref(false)
+const syncingTargetControls = ref(false)
 const allowUncertain = ref(true)
 const retryTimes = ref(6)
 const requestTimeout = ref(240)
@@ -89,6 +92,14 @@ const projectOptions = computed(() =>
     value: item.id
   }))
 )
+const defaultTaskTitle = computed(() => {
+  if (selectedProjectId.value && currentProject.value) {
+    const roundCount = currentProject.value.tasks.filter((task) => task.kind === 'screening').length + 1
+    return `${currentProject.value.name}-round-${roundCount}`
+  }
+  return `${newProjectName.value.trim() || 'new-thread'}-screening`
+})
+const effectiveTaskTitle = computed(() => screeningTitle.value.trim() || defaultTaskTitle.value)
 
 function friendlyDatasetLabel(kind: string) {
   switch (kind) {
@@ -121,6 +132,13 @@ const canSubmit = computed(() => {
   return Boolean(selectedProjectId.value) && hasInputSource.value && Boolean(topic.value.trim()) && inclusion.value.some(Boolean) && exclusion.value.some(Boolean)
 })
 
+function syncTargetControls(nextTargetIncludeCount: number | null, nextStopWhenReached = false) {
+  syncingTargetControls.value = true
+  targetIncludeCount.value = nextTargetIncludeCount
+  stopWhenReached.value = nextTargetIncludeCount ? nextStopWhenReached : false
+  syncingTargetControls.value = false
+}
+
 function applyDraft() {
   const draft = draftsStore.screeningDraft
   selectedProjectId.value = routeProjectId.value ?? draft.projectId
@@ -128,6 +146,7 @@ function applyDraft() {
   newProjectDescription.value = ''
   sourceDatasetIds.value = [...draft.sourceDatasetIds]
   parentTaskId.value = draft.parentTaskId
+  screeningTitle.value = draft.title
   topic.value = draft.topic
   criteriaMarkdown.value = draft.criteriaMarkdown
   inclusion.value = draft.inclusion.length ? [...draft.inclusion] : ['']
@@ -135,8 +154,7 @@ function applyDraft() {
   provider.value = draft.provider
   model.value = { ...draft.model }
   batchSize.value = draft.batchSize
-  targetIncludeCount.value = draft.targetIncludeCount
-  stopWhenReached.value = draft.stopWhenReached
+  syncTargetControls(draft.targetIncludeCount, draft.stopWhenReached)
   allowUncertain.value = draft.allowUncertain
   retryTimes.value = draft.retryTimes
   requestTimeout.value = draft.requestTimeout
@@ -150,6 +168,7 @@ function resetToFreshForm(nextProjectId: string | null = null) {
   newProjectDescription.value = ''
   sourceDatasetIds.value = []
   parentTaskId.value = null
+  screeningTitle.value = ''
   topic.value = ''
   criteriaMarkdown.value = ''
   inclusion.value = ['']
@@ -167,8 +186,7 @@ function resetToFreshForm(nextProjectId: string | null = null) {
     min_request_interval_seconds: 2
   }
   batchSize.value = 10
-  targetIncludeCount.value = null
-  stopWhenReached.value = false
+  syncTargetControls(null, false)
   allowUncertain.value = true
   retryTimes.value = 6
   requestTimeout.value = 240
@@ -185,7 +203,7 @@ function persistDraft() {
     sourceDatasetIds: sourceDatasetIds.value,
     parentTaskId: parentTaskId.value,
     selectedTemplateId: null,
-    title: buildTaskTitle(),
+    title: screeningTitle.value,
     topic: topic.value,
     criteriaMarkdown: criteriaMarkdown.value,
     inclusion: inclusion.value,
@@ -218,21 +236,12 @@ function applyThreadDefaults(project: ProjectDetail) {
     }
   }
   batchSize.value = defaults.batch_size ?? 10
-  targetIncludeCount.value = defaults.target_include_count ?? null
-  stopWhenReached.value = defaults.target_include_count ? defaults.stop_when_target_reached : false
+  syncTargetControls(defaults.target_include_count ?? null, defaults.stop_when_target_reached)
   allowUncertain.value = defaults.allow_uncertain
   retryTimes.value = defaults.retry_times
   requestTimeout.value = defaults.request_timeout_seconds
   encoding.value = defaults.encoding
   overrideThreadCriteria.value = false
-}
-
-function buildTaskTitle() {
-  if (selectedProjectId.value && currentProject.value) {
-    const roundCount = currentProject.value.tasks.filter((task) => task.kind === 'screening').length + 1
-    return `${currentProject.value.name}-round-${roundCount}`
-  }
-  return `${newProjectName.value.trim() || 'new-thread'}-screening`
 }
 
 function refreshCriteriaMarkdown() {
@@ -263,8 +272,11 @@ function applyParentTaskPrefill(taskPayload: { request_payload?: Record<string, 
   if (inheritedInclusion.length) inclusion.value = inheritedInclusion
   if (inheritedExclusion.length) exclusion.value = inheritedExclusion
   if (typeof payload.batch_size === 'number') batchSize.value = payload.batch_size
-  if (typeof payload.target_include_count === 'number') targetIncludeCount.value = payload.target_include_count
-  if (typeof payload.stop_when_target_reached === 'boolean') stopWhenReached.value = payload.stop_when_target_reached
+  const inheritedTargetIncludeCount = typeof payload.target_include_count === 'number' ? payload.target_include_count : null
+  const inheritedStopWhenReached = typeof payload.stop_when_target_reached === 'boolean' ? payload.stop_when_target_reached : false
+  if (inheritedTargetIncludeCount !== null || typeof payload.stop_when_target_reached === 'boolean') {
+    syncTargetControls(inheritedTargetIncludeCount, inheritedStopWhenReached)
+  }
 }
 
 watch(provider, (nextProvider) => {
@@ -297,6 +309,17 @@ watch([topic, inclusion, exclusion], () => {
   refreshCriteriaMarkdown()
 }, { deep: true })
 
+watch(targetIncludeCount, (nextValue, previousValue) => {
+  if (syncingTargetControls.value) return
+  if (nextValue === null) {
+    stopWhenReached.value = false
+    return
+  }
+  if (previousValue === null) {
+    stopWhenReached.value = true
+  }
+}, { flush: 'sync' })
+
 watch(
   [
     selectedProjectId,
@@ -304,6 +327,7 @@ watch(
     newProjectDescription,
     sourceDatasetIds,
     parentTaskId,
+    screeningTitle,
     topic,
     criteriaMarkdown,
     inclusion,
@@ -392,7 +416,7 @@ async function submit() {
     new_project_description: '',
     source_dataset_ids: sourceDatasetIds.value,
     parent_task_id: parentTaskId.value,
-    title: buildTaskTitle(),
+    title: effectiveTaskTitle.value,
     topic: topic.value,
     criteria_markdown: criteriaMarkdown.value,
     inclusion: inclusion.value.filter(Boolean),
@@ -481,7 +505,7 @@ onMounted(async () => {
           </NButton>
         </RouterLink>
         <NAlert type="info" :show-icon="false">
-          报告改到统一复核后生成。
+          报告改到全文工作台确认后生成。
         </NAlert>
       </div>
     </section>
@@ -515,6 +539,10 @@ onMounted(async () => {
               :options="datasetOptions"
               placeholder="可选；如果同时上传文件，系统会把两部分合并后一起筛选"
             />
+          </NFormItem>
+          <NFormItem label="初筛名称">
+            <NInput v-model:value="screeningTitle" :placeholder="`留空则自动命名为 ${defaultTaskTitle}`" />
+            <div class="field-hint">当前将保存为：{{ effectiveTaskTitle }}</div>
           </NFormItem>
         </NForm>
 
@@ -632,12 +660,27 @@ onMounted(async () => {
               placeholder="留空表示整批全部筛选"
             />
           </NFormItem>
+          <NFormItem label="达到目标后停止">
+            <div class="target-stop-row">
+              <NSwitch v-model:value="stopWhenReached" :disabled="!targetIncludeCount" />
+              <span class="field-hint inline-hint">
+                {{
+                  targetIncludeCount
+                    ? (stopWhenReached ? `累计纳入达到 ${targetIncludeCount} 篇后提前结束本轮` : `即使达到 ${targetIncludeCount} 篇也继续筛完整个输入集`)
+                    : '先填写目标纳入数，再决定是否提前停止'
+                }}
+              </span>
+            </div>
+          </NFormItem>
         </NForm>
 
         <div class="setting-tags">
           <NTag round>{{ selectedPreset?.label || provider }}</NTag>
           <NTag round type="success">Batch {{ batchSize }}</NTag>
           <NTag round type="warning">{{ targetIncludeCount ? `目标纳入 ${targetIncludeCount}` : '全部筛选' }}</NTag>
+          <NTag v-if="targetIncludeCount" round :type="stopWhenReached ? 'success' : 'info'">
+            {{ stopWhenReached ? '达到目标后停止' : '达到目标后继续筛选' }}
+          </NTag>
         </div>
       </NCard>
     </div>
@@ -718,6 +761,16 @@ onMounted(async () => {
   gap: 14px;
 }
 
+.field-hint {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #6a776c;
+}
+
+.inline-hint {
+  margin-top: 0;
+}
+
 .criteria-head {
   display: flex;
   justify-content: space-between;
@@ -731,6 +784,12 @@ onMounted(async () => {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.target-stop-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .dropzone {

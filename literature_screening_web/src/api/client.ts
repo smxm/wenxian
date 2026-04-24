@@ -50,6 +50,11 @@ export async function cancelTask(taskId: string) {
   return data
 }
 
+export async function deleteTask(taskId: string) {
+  const { data } = await http.delete<{ status: string; task_id: string; project_id?: string | null }>(`/tasks/${taskId}`)
+  return data
+}
+
 export async function applyReviewOverride(taskId: string, payload: { paper_id: string; decision: 'include' | 'exclude' | 'uncertain'; reason: string }) {
   const { data } = await http.post<TaskDetail>(`/tasks/${taskId}/review-overrides`, payload)
   return data

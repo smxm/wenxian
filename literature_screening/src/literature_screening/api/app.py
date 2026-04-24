@@ -27,7 +27,7 @@ from literature_screening.storage_paths import is_storage_absolute_path, to_stor
 from literature_screening.studio.service import CriteriaDraft, ModelDraft, ReportJobRequest, StrategyJobRequest
 from literature_screening.studio.service import ScreeningJobRequest, generate_simple_report_job, generate_strategy_job
 from literature_screening.studio.service import prepare_virtual_screening_output_from_dataset_paths
-from literature_screening.studio.service import load_screening_records, run_screening_job, save_uploaded_file_bytes
+from literature_screening.studio.service import load_screening_records, recover_screening_job_result, run_screening_job, save_uploaded_file_bytes
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
@@ -626,6 +626,39 @@ def get_task(task_id: str) -> TaskDetail:
     return _to_detail(task)
 
 
+@app.delete("/api/tasks/{task_id}")
+def delete_task(task_id: str) -> dict[str, Any]:
+    task = _get_task_or_404(task_id)
+    if task["kind"] != "screening":
+        raise HTTPException(status_code=400, detail="只有初筛任务支持删除")
+    if task["status"] in {"pending", "running"}:
+        raise HTTPException(status_code=400, detail="请先停止正在运行的初筛任务，再执行删除")
+
+    dependent_tasks = _find_dependent_tasks_for_deletion(task)
+    if dependent_tasks:
+        preview = "；".join(f"{item['title']}（{item['id']}）" for item in dependent_tasks[:3])
+        suffix = " 等" if len(dependent_tasks) > 3 else ""
+        raise HTTPException(status_code=400, detail=f"请先停止仍在使用这轮初筛结果的任务：{preview}{suffix}")
+
+    project_id = _task_project_id(task)
+    deleted_dataset_ids: list[str] = []
+    if project_id:
+        WORKSPACE_STORE.load_project(project_id)
+        deleted_dataset_ids = WORKSPACE_STORE.delete_task_datasets(project_id, task_id)
+
+    TASK_STORE.delete_task(task_id)
+
+    if project_id:
+        WORKSPACE_STORE.rebuild_workbench(project_id)
+
+    return {
+        "status": "deleted",
+        "task_id": task_id,
+        "project_id": project_id,
+        "deleted_dataset_ids": deleted_dataset_ids,
+    }
+
+
 @app.post("/api/tasks/{task_id}/cancel", response_model=TaskSnapshot)
 def cancel_task(task_id: str) -> TaskSnapshot:
     task = _get_task_or_404(task_id)
@@ -670,49 +703,56 @@ def retry_task(task_id: str, request: RetryTaskRequest) -> TaskSnapshot:
 
     elif kind == "screening":
         payload = _screening_request_from_task(task)
+        project_id = _task_project_id(task)
+        source_dataset_ids = task.get("input_dataset_ids") or task.get("metadata", {}).get("input_dataset_ids", [])
 
         def worker(stored_task: StoredTask) -> dict:
-            result = run_screening_job(
-                payload,
-                progress_callback=lambda phase, label, current=None, total=None, message=None: TASK_STORE.update(
-                    stored_task.task_id,
-                    phase=phase,
-                    phase_label=label,
-                    progress_current=current,
-                    progress_total=total,
-                    progress_message=message,
-                ),
-                cancel_callback=lambda: TASK_STORE.is_cancel_requested(stored_task.task_id),
-            )
-            artifacts = _collect_screening_artifacts(result)
-            output_dataset_ids = _register_screening_datasets(
-                project_id=_task_project_id(task),
-                task_id=stored_task.task_id,
-                result=result,
-                artifacts=artifacts,
-                source_dataset_ids=task.get("input_dataset_ids") or task.get("metadata", {}).get("input_dataset_ids", []),
-            )
-            WORKSPACE_STORE.rebuild_cumulative_included_dataset(_task_project_id(task))
-            WORKSPACE_STORE.rebuild_fulltext_queue(_task_project_id(task))
-            TASK_STORE.append_event(
-                stored_task.task_id,
-                kind="datasets-registered",
-                message="Registered screening output datasets",
-                metadata={"output_dataset_ids": output_dataset_ids},
-            )
-            return {
-                "summary": result.summary,
-                "project_id": _task_project_id(task),
-                "project_topic": task.get("project_topic") or task.get("metadata", {}).get("project_topic"),
-                "model_provider": task.get("model_provider") or task.get("metadata", {}).get("model_provider"),
-                "parent_task_id": task.get("parent_task_id") or task.get("metadata", {}).get("parent_task_id"),
-                "input_dataset_ids": task.get("input_dataset_ids") or task.get("metadata", {}).get("input_dataset_ids", []),
-                "output_dataset_ids": output_dataset_ids,
-                "run_root": str(result.run_root),
-                "output_dir": str(result.output_dir),
-                "records": result.records,
-                "artifacts": artifacts,
-            }
+            try:
+                result = run_screening_job(
+                    payload,
+                    progress_callback=lambda phase, label, current=None, total=None, message=None: TASK_STORE.update(
+                        stored_task.task_id,
+                        phase=phase,
+                        phase_label=label,
+                        progress_current=current,
+                        progress_total=total,
+                        progress_message=message,
+                    ),
+                    cancel_callback=lambda: TASK_STORE.is_cancel_requested(stored_task.task_id),
+                )
+                return _build_screening_task_result_payload(
+                    project_id=project_id,
+                    task_id=stored_task.task_id,
+                    task=task,
+                    result=result,
+                    source_dataset_ids=source_dataset_ids,
+                )
+            except Exception as exc:
+                if exc.__class__.__name__ == "TaskCancelledError":
+                    recovered = recover_screening_job_result(
+                        payload.run_root_override or (TASK_STORE.tasks_dir / stored_task.task_id / "screening_run"),
+                        project_name=payload.project_name,
+                        criteria_topic=payload.criteria.topic,
+                    )
+                    if recovered and recovered.summary.get("processed_count"):
+                        TASK_STORE.append_event(
+                            stored_task.task_id,
+                            kind="screening-partial-recovered",
+                            message="Recovered completed screening batches after cancellation",
+                            metadata={
+                                "processed_count": recovered.summary.get("processed_count"),
+                                "included_count": recovered.summary.get("included_count"),
+                            },
+                        )
+                        return _build_screening_task_result_payload(
+                            project_id=project_id,
+                            task_id=stored_task.task_id,
+                            task=task,
+                            result=recovered,
+                            source_dataset_ids=source_dataset_ids,
+                            cancelled=True,
+                        )
+                raise
 
     elif kind == "report":
         payload = _report_request_from_task(task)
@@ -1231,47 +1271,62 @@ async def create_screening_task(
     payload.run_root_override = task.root_dir / "screening_run"
 
     def worker(stored_task: StoredTask) -> dict:
-        result = run_screening_job(
-            payload,
-            progress_callback=lambda phase, label, current=None, total=None, message=None: TASK_STORE.update(
-                stored_task.task_id,
-                phase=phase,
-                phase_label=label,
-                progress_current=current,
-                progress_total=total,
-                progress_message=message,
-            ),
-            cancel_callback=lambda: TASK_STORE.is_cancel_requested(stored_task.task_id),
-        )
-        artifacts = _collect_screening_artifacts(result)
-        output_dataset_ids = _register_screening_datasets(
-            project_id=project["id"],
-            task_id=stored_task.task_id,
-            result=result,
-            artifacts=artifacts,
-            source_dataset_ids=source_dataset_ids,
-        )
-        WORKSPACE_STORE.rebuild_cumulative_included_dataset(project["id"])
-        WORKSPACE_STORE.rebuild_fulltext_queue(project["id"])
-        TASK_STORE.append_event(
-            stored_task.task_id,
-            kind="datasets-registered",
-            message="Registered screening output datasets",
-            metadata={"output_dataset_ids": output_dataset_ids},
-        )
-        return {
-            "summary": result.summary,
-            "project_id": project["id"],
-            "project_topic": effective_topic,
-            "model_provider": provider,
-            "parent_task_id": parent_task_id,
-            "input_dataset_ids": source_dataset_ids,
-            "output_dataset_ids": output_dataset_ids,
-            "run_root": str(result.run_root),
-            "output_dir": str(result.output_dir),
-            "records": result.records,
-            "artifacts": artifacts,
-        }
+        try:
+            result = run_screening_job(
+                payload,
+                progress_callback=lambda phase, label, current=None, total=None, message=None: TASK_STORE.update(
+                    stored_task.task_id,
+                    phase=phase,
+                    phase_label=label,
+                    progress_current=current,
+                    progress_total=total,
+                    progress_message=message,
+                ),
+                cancel_callback=lambda: TASK_STORE.is_cancel_requested(stored_task.task_id),
+            )
+            return _build_screening_task_result_payload(
+                project_id=project["id"],
+                task_id=stored_task.task_id,
+                task={
+                    "project_topic": effective_topic,
+                    "model_provider": provider,
+                    "parent_task_id": parent_task_id,
+                    "input_dataset_ids": source_dataset_ids,
+                },
+                result=result,
+                source_dataset_ids=source_dataset_ids,
+            )
+        except Exception as exc:
+            if exc.__class__.__name__ == "TaskCancelledError":
+                recovered = recover_screening_job_result(
+                    payload.run_root_override or (TASK_STORE.tasks_dir / stored_task.task_id / "screening_run"),
+                    project_name=payload.project_name,
+                    criteria_topic=payload.criteria.topic,
+                )
+                if recovered and recovered.summary.get("processed_count"):
+                    TASK_STORE.append_event(
+                        stored_task.task_id,
+                        kind="screening-partial-recovered",
+                        message="Recovered completed screening batches after cancellation",
+                        metadata={
+                            "processed_count": recovered.summary.get("processed_count"),
+                            "included_count": recovered.summary.get("included_count"),
+                        },
+                    )
+                    return _build_screening_task_result_payload(
+                        project_id=project["id"],
+                        task_id=stored_task.task_id,
+                        task={
+                            "project_topic": effective_topic,
+                            "model_provider": provider,
+                            "parent_task_id": parent_task_id,
+                            "input_dataset_ids": source_dataset_ids,
+                        },
+                        result=recovered,
+                        source_dataset_ids=source_dataset_ids,
+                        cancelled=True,
+                    )
+            raise
 
     TASK_STORE.run_in_background(task, worker)
     return _to_snapshot(TASK_STORE.load_task(task.task_id))
@@ -1740,6 +1795,53 @@ def _task_project_id(task: dict) -> str | None:
     return task.get("project_id") or task.get("metadata", {}).get("project_id")
 
 
+def _task_output_dataset_ids(task: dict) -> list[str]:
+    return task.get("output_dataset_ids") or task.get("metadata", {}).get("output_dataset_ids", [])
+
+
+def _find_dependent_tasks_for_deletion(task: dict) -> list[dict[str, str]]:
+    task_id = str(task.get("id") or "").strip()
+    project_id = _task_project_id(task)
+    output_dataset_ids = set(_task_output_dataset_ids(task))
+    dependents: list[dict[str, str]] = []
+
+    for other in TASK_STORE.list_tasks():
+        other_id = str(other.get("id") or "").strip()
+        if not other_id or other_id == task_id:
+            continue
+        if project_id and _task_project_id(other) != project_id:
+            continue
+        if other.get("status") not in {"pending", "running"}:
+            continue
+
+        other_parent_task_id = str(other.get("parent_task_id") or other.get("metadata", {}).get("parent_task_id") or "").strip()
+        other_input_dataset_ids = set(other.get("input_dataset_ids") or other.get("metadata", {}).get("input_dataset_ids", []))
+        request_payload = other.get("metadata", {}).get("request_payload") or {}
+        request_screening_task_id = (
+            str(request_payload.get("screening_task_id") or "").strip()
+            if isinstance(request_payload, dict)
+            else ""
+        )
+
+        if (
+            other_parent_task_id != task_id
+            and request_screening_task_id != task_id
+            and not (output_dataset_ids and other_input_dataset_ids & output_dataset_ids)
+        ):
+            continue
+
+        dependents.append(
+            {
+                "id": other_id,
+                "title": str(other.get("title") or other_id),
+                "kind": str(other.get("kind") or "task"),
+            }
+        )
+
+    dependents.sort(key=lambda item: (item["kind"], item["title"], item["id"]))
+    return dependents
+
+
 def _safe_confidence(value: Any) -> float | str | None:
     if value is None or value == "":
         return None
@@ -1824,11 +1926,7 @@ def _workbench_stage(
     if access_status == "unavailable":
         return "unavailable"
     if access_status == "ready":
-        return "ready-for-decision"
-    if latest_screening_decision == "exclude":
-        return "screened-out"
-    if latest_screening_decision in {None, "", "uncertain"}:
-        return "needs-screening"
+        return "report-included"
     if not preferred_open_url and not preferred_pdf_url:
         return "needs-link"
     return "needs-access"
@@ -1958,8 +2056,6 @@ def _workbench_to_fulltext_items(items: list[dict[str, Any]]) -> list[dict[str, 
     converted: list[dict[str, Any]] = []
     for item in items:
         latest_screening_decision = item.get("latest_screening_decision")
-        if latest_screening_decision in {"exclude", "uncertain"}:
-            continue
         status = item.get("access_status", "pending")
         note = item.get("access_note", "")
         if item.get("final_decision") == "exclude":
@@ -2127,7 +2223,7 @@ def _seed_report_note_cache_from_existing_reports(
 def _report_notes_cache_path(shared_notes_cache_dir: Path, *, provider: str, model_name: str) -> Path:
     provider_slug = re.sub(r"[^a-zA-Z0-9_-]+", "-", provider).strip("-").lower() or "provider"
     model_slug = re.sub(r"[^a-zA-Z0-9_-]+", "-", model_name).strip("-").lower() or "model"
-    return shared_notes_cache_dir / f"paper_notes_cache_{provider_slug}_{model_slug}_v1.json"
+    return shared_notes_cache_dir / f"paper_notes_cache_{provider_slug}_{model_slug}_v2.json"
 
 
 def _artifact_from_entry(key: str, payload: dict) -> TaskArtifact:
@@ -2184,6 +2280,50 @@ def _resolve_strategy_plan(task: dict) -> StrategyPlan | None:
         return StrategyPlan.model_validate(payload)
     except Exception:
         return None
+
+
+def _build_screening_task_result_payload(
+    *,
+    project_id: str,
+    task_id: str,
+    task: dict,
+    result,
+    source_dataset_ids: list[str],
+    cancelled: bool = False,
+) -> dict:
+    artifacts = _collect_screening_artifacts(result)
+    output_dataset_ids = _register_screening_datasets(
+        project_id=project_id,
+        task_id=task_id,
+        result=result,
+        artifacts=artifacts,
+        source_dataset_ids=source_dataset_ids,
+    )
+    WORKSPACE_STORE.rebuild_cumulative_included_dataset(project_id)
+    WORKSPACE_STORE.rebuild_fulltext_queue(project_id)
+    TASK_STORE.append_event(
+        task_id,
+        kind="datasets-registered",
+        message="Registered screening output datasets",
+        metadata={"output_dataset_ids": output_dataset_ids},
+    )
+    payload = {
+        "summary": result.summary,
+        "project_id": project_id,
+        "project_topic": task.get("project_topic") or task.get("metadata", {}).get("project_topic"),
+        "model_provider": task.get("model_provider") or task.get("metadata", {}).get("model_provider"),
+        "parent_task_id": task.get("parent_task_id") or task.get("metadata", {}).get("parent_task_id"),
+        "input_dataset_ids": task.get("input_dataset_ids") or task.get("metadata", {}).get("input_dataset_ids", []),
+        "output_dataset_ids": output_dataset_ids,
+        "run_root": str(result.run_root),
+        "output_dir": str(result.output_dir),
+        "records": result.records,
+        "artifacts": artifacts,
+    }
+    if cancelled:
+        payload["_cancelled_with_result"] = True
+        payload["_cancelled_progress_message"] = "Task cancelled by user; preserved completed screening batches"
+    return payload
 
 
 def _collect_screening_artifacts(result) -> dict:

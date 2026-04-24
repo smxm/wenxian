@@ -9,7 +9,6 @@ from typing import Callable
 from pydantic import BaseModel
 
 from literature_screening.core.models import ModelConfig, PaperRecord, ScreeningDecision
-from literature_screening.formal_report.fallback import build_fallback_literature_cards
 from literature_screening.formal_report.pipeline import load_included_rows
 from literature_screening.formal_report.reference_list import ReferenceStyle, build_reference_block
 from literature_screening.formal_report.text_utils import normalize_text
@@ -70,9 +69,6 @@ def generate_simple_report(
         f"Loaded {len(included_rows)} included papers",
     )
 
-    cards = build_fallback_literature_cards(included_rows)
-    category_hint_map = {card.paper_id: card.classification.primary_category for card in cards}
-
     client = ChatCompletionClient(model_config, timeout_seconds=timeout_seconds)
     notes_path = report_output_dir / "paper_notes.json"
     overview_path = report_output_dir / "report_overview.json"
@@ -100,7 +96,7 @@ def generate_simple_report(
             len(included_rows),
             f"Generating note for {paper.title}",
         )
-        category_hint = category_hint_map.get(paper.paper_id, "相关研究")
+        category_hint = _infer_simple_category_hint(paper=paper, decision=decision)
         try:
             note = _request_note_with_retries(
                 client=client,
@@ -346,7 +342,6 @@ def _build_overview_prompt(*, prompt_path: Path, project_topic: str, notes: list
                 "title": note.title,
                 "summary": note.summary,
                 "analysis": note.analysis,
-                "category_hint": note.category,
             }
             for note in notes
         ],
@@ -402,7 +397,7 @@ def _fallback_analysis(*, reason: str | None, category_hint: str, project_topic:
 def _fallback_overview(*, project_topic: str, notes: list[SimplePaperNote]) -> SimpleReportOverview:
     grouped: dict[str, list[SimplePaperNote]] = {}
     for note in notes:
-        grouped.setdefault(note.category or "其他相关研究", []).append(note)
+        grouped.setdefault(_normalize_simple_category(note.category), []).append(note)
     ordered_groups = sorted(grouped.items(), key=lambda item: (-len(item[1]), item[0]))
     return SimpleReportOverview(
         overall_summary=_build_total_summary(project_topic=project_topic, ordered_groups=ordered_groups),
@@ -415,6 +410,54 @@ def _fallback_overview(*, project_topic: str, notes: list[SimplePaperNote]) -> S
             for name, items in ordered_groups
         ],
     )
+
+
+def _infer_simple_category_hint(*, paper: PaperRecord, decision: ScreeningDecision) -> str:
+    text = " ".join(
+        item
+        for item in [
+            normalize_text(paper.title),
+            normalize_text(paper.abstract),
+            " ".join(normalize_text(keyword) or "" for keyword in paper.keywords),
+            normalize_text(decision.reason),
+        ]
+        if item
+    ).lower()
+    if any(token in text for token in ["review", "survey", "overview", "综述", "系统评价", "meta-analysis"]):
+        return "综述与证据整合"
+    if any(token in text for token in ["empirical", "evidence", "regression", "panel", "survey", "questionnaire", "pls-sem", "fsqca", "样本", "实证", "问卷", "回归"]):
+        return "实证检验与影响因素"
+    if any(token in text for token in ["theory", "framework", "mechanism", "mediating", "moderating", "path", "机制", "理论", "框架", "中介", "调节", "路径"]):
+        return "理论框架与机制路径"
+    if any(token in text for token in ["measurement", "estimate", "indicator", "index", "dupont", "roe", "测度", "指标", "评价"]):
+        return "测度方法与评价指标"
+    if any(token in text for token in ["application", "industry", "firm", "performance", "supply chain", "scenario", "应用", "企业", "绩效", "供应链", "场景"]):
+        return "应用场景与绩效影响"
+    return "主题相关研究"
+
+
+def _normalize_simple_category(category: str) -> str:
+    cleaned = category.strip()
+    stale_categories = {
+        "肠道菌群与代谢调控",
+        "脂肪细胞分化与脂质代谢",
+        "免疫炎症与组织微环境",
+        "代谢组学与机制分析",
+        "天然产物与营养干预",
+        "分子机制与信号通路",
+        "冲击与贯入机制",
+        "钻进与螺旋推进",
+        "仿生与软体掘进",
+        "介质响应与相互作用",
+        "机器人控制与作业辅助",
+        "自由意志与主体性困境",
+        "比较文学与女性形象研究",
+        "凝视、他者与意识形态批评",
+        "女性主义视角下的悲剧分析",
+    }
+    if not cleaned or cleaned in stale_categories:
+        return "主题相关研究"
+    return cleaned
 
 
 def _normalize_overview(*, overview: SimpleReportOverview, notes: list[SimplePaperNote], project_topic: str) -> SimpleReportOverview:

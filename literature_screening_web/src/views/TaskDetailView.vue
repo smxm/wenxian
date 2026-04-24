@@ -2,7 +2,7 @@
 import { computed, onMounted, ref, watch } from 'vue'
 import { RouterLink, useRoute, useRouter } from 'vue-router'
 import dayjs from 'dayjs'
-import { ArrowLeft, BookOpenText, FileText, RefreshCw, RotateCcw, Square } from 'lucide-vue-next'
+import { ArrowLeft, BookOpenText, FileText, Pencil, RefreshCw, RotateCcw, Square, Trash2 } from 'lucide-vue-next'
 import {
   NAlert,
   NButton,
@@ -37,6 +37,7 @@ const taskId = computed(() => String(route.params.taskId))
 const task = computed(() => tasksStore.currentTask)
 const isRunning = computed(() => task.value?.status === 'running' || task.value?.status === 'pending')
 const isRetriableTask = computed(() => task.value?.status === 'failed' || task.value?.status === 'cancelled')
+const canDeleteTask = computed(() => task.value?.kind === 'screening' && !isRunning.value)
 const selectedRecord = ref<ScreeningRecordRow | null>(null)
 const selectedPaperIds = ref<string[]>([])
 const reviewDecision = ref<'include' | 'exclude' | 'uncertain'>('include')
@@ -70,6 +71,11 @@ const progressPercentage = computed(() => {
   return Math.max(0, Math.min(100, Math.round((current / total) * 100)))
 })
 const threadHomePath = computed(() => (task.value?.project_id ? `/threads/${task.value.project_id}` : null))
+const threadEditPath = computed(() => (
+  task.value?.project_id
+    ? { path: `/threads/${task.value.project_id}`, query: { editThread: '1' } }
+    : null
+))
 const currentProject = computed(() => projectsStore.currentProject)
 const threadScreening = computed(() => currentProject.value?.thread_profile?.screening ?? null)
 
@@ -93,18 +99,6 @@ const unusedDataset = computed(() => (task.value?.kind === 'screening' ? latestM
 const excludedDataset = computed(() => (task.value?.kind === 'screening' ? latestMatchingDataset(task.value, ['excluded_reviewed', 'excluded']) : null))
 const canReturnToEdit = computed(() => isRetriableTask.value && (task.value?.kind === 'screening' || task.value?.kind === 'report'))
 
-const sourceSummary = computed(() => {
-  if (!task.value?.input_dataset_ids.length) return task.value?.parent_task_id ? '延续上一轮未处理文献' : '新上传文献'
-  return task.value.input_dataset_ids
-    .map((datasetId) => datasetMap.value.get(datasetId)?.label ?? datasetId)
-    .join(' + ')
-})
-
-const continueUnusedRoute = computed(() => {
-  if (!task.value?.project_id || !unusedDataset.value) return null
-  return `/threads/${task.value.project_id}/screening/new?sourceDatasetId=${unusedDataset.value.id}&parentTaskId=${task.value.id}`
-})
-
 function asRecord(value: unknown): Record<string, unknown> | null {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return null
   return value as Record<string, unknown>
@@ -117,6 +111,28 @@ function asString(value: unknown, fallback = ''): string {
 function asStringArray(value: unknown): string[] {
   return Array.isArray(value) ? value.filter((item): item is string => typeof item === 'string') : []
 }
+
+const taskPayload = computed(() => asRecord(task.value?.request_payload))
+const uploadedFileNames = computed(() => asStringArray(taskPayload.value?.uploaded_file_names))
+const taskScreeningCriteria = computed(() => {
+  const payload = taskPayload.value
+  if (!payload) return null
+  const topic = asString(payload.topic).trim()
+  const inclusion = asStringArray(payload.inclusion)
+  const exclusion = asStringArray(payload.exclusion)
+  if (!topic && !inclusion.length && !exclusion.length) return null
+  return { topic, inclusion, exclusion }
+})
+
+const sourceSummary = computed(() => {
+  const datasetSummary = (task.value?.input_dataset_ids ?? [])
+    .map((datasetId) => datasetMap.value.get(datasetId)?.label ?? datasetId)
+    .join(' + ')
+  if (datasetSummary && uploadedFileNames.value.length) return `${datasetSummary} + 本轮上传文件`
+  if (datasetSummary) return datasetSummary
+  if (uploadedFileNames.value.length) return task.value?.parent_task_id ? '延续上一轮并补充上传文件' : '新上传文献'
+  return task.value?.parent_task_id ? '延续上一轮未处理文献' : '新上传文献'
+})
 
 function asBoolean(value: unknown, fallback = false): boolean {
   return typeof value === 'boolean' ? value : fallback
@@ -311,6 +327,33 @@ async function cancelCurrentTask() {
   message.success('已请求停止当前任务')
 }
 
+function requestErrorMessage(error: unknown, fallback: string) {
+  if (!error || typeof error !== 'object') return fallback
+  const response = (error as { response?: { data?: { detail?: unknown } } }).response
+  return typeof response?.data?.detail === 'string' ? response.data.detail : fallback
+}
+
+async function deleteCurrentTask() {
+  if (!task.value || !canDeleteTask.value) return
+  const confirmed = window.confirm('删除这轮初筛后，它产生的纳入/剔除/未使用结果会一并移除，并从全文工作台回收。这个操作不能撤销。确定继续吗？')
+  if (!confirmed) return
+
+  const projectId = task.value.project_id
+  const targetTaskId = task.value.id
+  try {
+    await tasksStore.delete(targetTaskId)
+    if (projectId) {
+      await projectsStore.loadProject(projectId)
+      await router.push(`/threads/${projectId}`)
+    } else {
+      await router.push('/tasks')
+    }
+    message.success('初筛轮次已删除')
+  } catch (error) {
+    message.error(requestErrorMessage(error, '删除初筛轮次失败'))
+  }
+}
+
 async function reloadAfterReview() {
   if (!task.value) return
   await tasksStore.loadTask(task.value.id, true)
@@ -367,7 +410,7 @@ async function useStrategyForScreening() {
 
 async function goToFulltextWorkspace() {
   if (!task.value?.project_id) return
-  await router.push(`/threads/${task.value.project_id}/fulltext?tab=rounds&screeningTaskId=${task.value.id}`)
+  await router.push(`/threads/${task.value.project_id}/fulltext?screeningTaskId=${task.value.id}`)
 }
 </script>
 
@@ -380,6 +423,7 @@ async function goToFulltextWorkspace() {
         <div class="hero-meta">
           <StatusPill :status="task.status" />
           <NText depth="3">阶段：{{ task.phase_label || task.phase }}</NText>
+          <NText v-if="currentProject?.name" depth="3">线程：{{ currentProject.name }}</NText>
           <NText depth="3">尝试次数：{{ task.attempt_count }}</NText>
           <NText depth="3">更新时间：{{ dayjs(task.updated_at).format('YYYY-MM-DD HH:mm:ss') }}</NText>
         </div>
@@ -389,6 +433,12 @@ async function goToFulltextWorkspace() {
           <NButton tertiary>
             <template #icon><ArrowLeft :size="16" /></template>
             返回线程主页
+          </NButton>
+        </RouterLink>
+        <RouterLink v-if="threadEditPath" :to="threadEditPath">
+          <NButton tertiary type="warning">
+            <template #icon><Pencil :size="16" /></template>
+            编辑线程信息
           </NButton>
         </RouterLink>
         <NButton tertiary @click="refreshCurrentTask">
@@ -406,6 +456,10 @@ async function goToFulltextWorkspace() {
         <NButton v-if="isRunning" tertiary @click="cancelCurrentTask">
           <template #icon><Square :size="14" /></template>
           停止当前任务
+        </NButton>
+        <NButton v-if="canDeleteTask" tertiary type="error" @click="deleteCurrentTask">
+          <template #icon><Trash2 :size="14" /></template>
+          删除本轮初筛
         </NButton>
       </NSpace>
     </section>
@@ -490,12 +544,12 @@ async function goToFulltextWorkspace() {
         <OverviewMetric label="已处理" :value="screeningSummary.processed_count ?? 0" />
       </section>
 
-      <NCard title="下一步：进入统一复核工作台" class="panel-surface">
+      <NCard title="下一步：进入全文工作台" class="panel-surface">
         <div class="report-action-row">
-          <div class="report-copy">后续处理直接在统一复核工作台完成。</div>
+          <div class="report-copy">后续处理直接在全文工作台完成；拿到全文后会自动进入报告源。</div>
           <NButton type="primary" @click="goToFulltextWorkspace" :disabled="!task.project_id">
             <template #icon><BookOpenText :size="16" /></template>
-            去统一复核工作台
+            去全文工作台
           </NButton>
         </div>
       </NCard>
@@ -507,9 +561,22 @@ async function goToFulltextWorkspace() {
               <span>来源</span>
               <strong>{{ sourceSummary }}</strong>
             </div>
+            <div v-if="uploadedFileNames.length" class="summary-item full">
+              <span>上传文件</span>
+              <div class="summary-tag-row">
+                <NTag v-for="fileName in uploadedFileNames" :key="fileName" round>{{ fileName }}</NTag>
+              </div>
+            </div>
             <div class="summary-item">
               <span>模型</span>
               <strong>{{ task.model_provider || '未记录' }}</strong>
+            </div>
+            <div v-if="asNumber(taskPayload?.target_include_count, null)" class="summary-item">
+              <span>目标纳入</span>
+              <strong>
+                {{ asNumber(taskPayload?.target_include_count, null) }} 篇
+                {{ asBoolean(taskPayload?.stop_when_target_reached, false) ? '，达到后停止' : '，达到后继续筛选' }}
+              </strong>
             </div>
             <div class="summary-item">
               <span>创建时间</span>
@@ -528,13 +595,46 @@ async function goToFulltextWorkspace() {
             <NTag round>纳入 {{ screeningSummary.included_count ?? 0 }}</NTag>
             <NTag round>剔除 {{ screeningSummary.excluded_count ?? 0 }}</NTag>
             <NTag round>不确定 {{ screeningSummary.uncertain_count ?? 0 }}</NTag>
+            <NTag
+              v-if="asNumber(taskPayload?.target_include_count, null)"
+              round
+              :type="asBoolean(taskPayload?.stop_when_target_reached, false) ? 'success' : 'warning'"
+            >
+              {{ asBoolean(taskPayload?.stop_when_target_reached, false) ? '提前停止已启用' : '提前停止未启用' }}
+            </NTag>
             <NTag v-if="includedDataset" round type="success">纳入集 {{ includedDataset.record_count ?? 0 }} 篇</NTag>
             <NTag v-if="unusedDataset" round>未使用 {{ unusedDataset.record_count ?? 0 }} 篇</NTag>
             <NTag v-if="excludedDataset" round type="error">剔除集 {{ excludedDataset.record_count ?? 0 }} 篇</NTag>
           </div>
         </NCard>
 
-        <NCard title="线程主题与标准" class="panel-surface">
+        <NCard title="本轮实际使用的主题与标准" class="panel-surface">
+          <template v-if="taskScreeningCriteria">
+            <div class="screening-summary-stack">
+              <div>
+                <div class="lineage-label">本轮主题</div>
+                <div class="lineage-value">{{ taskScreeningCriteria.topic || '未记录' }}</div>
+              </div>
+              <div class="strategy-grid">
+                <div>
+                  <div class="lineage-label">纳入标准</div>
+                  <ul class="bullet-list">
+                    <li v-for="item in taskScreeningCriteria.inclusion" :key="item">{{ item }}</li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="lineage-label">排除标准</div>
+                  <ul class="bullet-list">
+                    <li v-for="item in taskScreeningCriteria.exclusion" :key="item">{{ item }}</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </template>
+          <NAlert v-else type="info" :show-icon="false">当前任务没有记录独立的筛选标准快照。</NAlert>
+        </NCard>
+
+        <NCard title="当前线程默认主题与标准" class="panel-surface">
           <template v-if="threadScreening">
             <div class="screening-summary-stack">
               <div>
@@ -560,27 +660,6 @@ async function goToFulltextWorkspace() {
           <NAlert v-else type="info" :show-icon="false">当前线程还没有主题与标准。</NAlert>
         </NCard>
       </section>
-
-      <NCard title="本轮产出与后续动作" class="panel-surface">
-        <div class="summary-item">
-          <span>这页现在做什么</span>
-          <strong>这里展示本轮摘要和产出。</strong>
-        </div>
-        <div class="tag-row" style="margin-top: 14px;">
-          <NTag v-if="includedDataset" round type="success">可进入统一复核 {{ includedDataset.record_count ?? 0 }} 篇</NTag>
-          <NTag v-if="unusedDataset" round>可继续筛选 {{ unusedDataset.record_count ?? 0 }} 篇</NTag>
-          <NTag v-if="excludedDataset" round type="error">本轮已剔除 {{ excludedDataset.record_count ?? 0 }} 篇</NTag>
-        </div>
-        <div class="report-action-row" style="margin-top: 16px;">
-          <div class="report-copy">继续处理纳入文献或开启下一轮。</div>
-          <NSpace>
-            <RouterLink v-if="continueUnusedRoute" :to="continueUnusedRoute">
-              <NButton tertiary>继续筛选未使用文献</NButton>
-            </RouterLink>
-            <NButton type="primary" @click="goToFulltextWorkspace" :disabled="!task.project_id">打开统一复核工作台</NButton>
-          </NSpace>
-        </div>
-      </NCard>
     </template>
 
     <template v-else-if="task.kind === 'report'">
@@ -694,6 +773,12 @@ h1 {
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+}
+
+.summary-tag-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .progress-label,

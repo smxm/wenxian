@@ -510,6 +510,44 @@ Append-only log for thread handoff. Add one new entry at the end of the file aft
   - `/Users/mao/Documents/langchain/project_session_log.md`
   - `/Users/mao/Documents/langchain/docs/project_history/index.md`
 
+## Session 2026-04-18 - Project atlas navigation layer
+
+- Scope: redesigned the handoff docs so new threads can navigate by module ownership and change-entry points instead of relying on chronology alone
+- Main changes:
+  - created `/Users/mao/Documents/langchain/docs/project_atlas/index.md` as a repo navigation layer that separates current state, history, and module ownership
+  - added `/Users/mao/Documents/langchain/docs/project_atlas/change-routing.md` to map common change requests to the first files and downstream modules that usually matter
+  - added `/Users/mao/Documents/langchain/docs/project_atlas/invariants.md` plus module cards for backend API/storage, orchestration, screening pipeline, strategy, reporting, frontend shell/stores, frontend views, and runtime/ops
+  - updated `/Users/mao/Documents/langchain/README.md` and `/Users/mao/Documents/langchain/project_state.md` so the next thread is directed into the atlas first
+  - archived the previous state file into `/Users/mao/Documents/langchain/docs/project_history/state_snapshots/2026-04-18_1430_project_state.md` and appended the redesign to the history index
+- Verification:
+  - `git -C /Users/mao/Documents/langchain diff --check -- README.md project_state.md project_session_log.md docs/project_history/index.md docs/project_atlas/index.md docs/project_atlas/change-routing.md docs/project_atlas/invariants.md docs/project_atlas/modules/backend-api-and-storage.md docs/project_atlas/modules/workflow-orchestration.md docs/project_atlas/modules/screening-and-data-pipeline.md docs/project_atlas/modules/strategy-generation.md docs/project_atlas/modules/reporting-and-formal-report.md docs/project_atlas/modules/frontend-shell-and-stores.md docs/project_atlas/modules/frontend-thread-and-task-views.md docs/project_atlas/modules/runtime-and-operations.md`
+  - `find /Users/mao/Documents/langchain/docs/project_atlas -maxdepth 2 -type f | sort`
+  - `rg -n "Reading Order|Change Routing|Invariants|Module Cards" /Users/mao/Documents/langchain/docs/project_atlas/index.md /Users/mao/Documents/langchain/docs/project_atlas/change-routing.md /Users/mao/Documents/langchain/docs/project_atlas/invariants.md`
+  - `node -v`
+  - `npm -v`
+  - result: atlas files are in place and `diff --check` should stay clean; `node` is present locally, but frontend typecheck is still blocked on missing local `npm`
+- Outstanding follow-ups:
+  - decide whether to update the shared `/Users/mao/.codex/skills/update-project-state/SKILL.md` so atlas maintenance becomes part of the reusable skill itself
+  - keep the relevant module card and change-routing row updated whenever a new feature changes ownership boundaries
+  - use the atlas to support the next pass of splitting the largest Vue views into smaller components
+- Files touched:
+  - `/Users/mao/Documents/langchain/README.md`
+  - `/Users/mao/Documents/langchain/project_state.md`
+  - `/Users/mao/Documents/langchain/project_session_log.md`
+  - `/Users/mao/Documents/langchain/docs/project_history/index.md`
+  - `/Users/mao/Documents/langchain/docs/project_history/state_snapshots/2026-04-18_1430_project_state.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/index.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/change-routing.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/invariants.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/modules/backend-api-and-storage.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/modules/workflow-orchestration.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/modules/screening-and-data-pipeline.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/modules/strategy-generation.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/modules/reporting-and-formal-report.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/modules/frontend-shell-and-stores.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/modules/frontend-thread-and-task-views.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/modules/runtime-and-operations.md`
+
 ## Session 2026-04-16 - Report-generation diagnosis, reasoner hardening, and bibliography metadata repair
 
 - Scope: traced the current simple-report generation path for `asks`/task `cd13976ef17e`, compared `deepseek-reasoner` and `deepseek-chat` behavior on the same project, fixed the actual GB/T 7714 page-loss chain, and hardened the fallback/report-token behavior for humanities-style report runs
@@ -565,3 +603,93 @@ Append-only log for thread handoff. Add one new entry at the end of the file aft
   - `/Users/mao/Documents/langchain/project_state.md`
   - `/Users/mao/Documents/langchain/project_session_log.md`
   - `/Users/mao/Documents/langchain/docs/project_history/index.md`
+
+## Session 2026-04-18 - Screening naming, detail-summary cleanup, and handoff refresh
+
+- Scope: caught up on the current thread-first workflow state, then refined the screening UI so new rounds can be named explicitly and screening detail pages better expose source context
+- Main changes:
+  - updated `/Users/mao/Documents/langchain/literature_screening_web/src/views/ScreeningRunView.vue` to add an optional “初筛名称” input when creating a screening round; leaving it blank still falls back to the existing auto-generated `${thread}-round-${n}` pattern
+  - preserved the new custom-name field through draft persistence and submission so reruns and “返回编辑” flows can keep the chosen screening title instead of forcing a regenerated default
+  - updated `/Users/mao/Documents/langchain/literature_screening_web/src/views/TaskDetailView.vue` so “本轮筛选摘要” now shows uploaded file names from `request_payload.uploaded_file_names`, and the source text better reflects mixed lineage when a round combines prior datasets with fresh uploads
+  - removed the redundant “本轮产出与后续动作” block from the screening detail page because the next-step handoff to unified review is already shown elsewhere on the page
+  - archived the previous `/Users/mao/Documents/langchain/project_state.md` snapshot and refreshed the handoff docs for the current macOS workspace
+- Verification:
+  - `git -C /Users/mao/Documents/langchain diff --check -- literature_screening_web/src/views/ScreeningRunView.vue literature_screening_web/src/views/TaskDetailView.vue`
+  - `rg -n "buildTaskTitle|continueUnusedRoute" /Users/mao/Documents/langchain/literature_screening_web/src/views/ScreeningRunView.vue /Users/mao/Documents/langchain/literature_screening_web/src/views/TaskDetailView.vue`
+  - `node -v`
+  - `npm -v`
+  - `cd /Users/mao/Documents/langchain/literature_screening_web && npm run typecheck`
+  - result: `diff --check` clean, the stale helper references are gone, but `node` / `npm` are not installed on this machine so frontend typecheck could not run locally
+- Outstanding follow-ups:
+  - browser-test the new custom screening-name flow and confirm the chosen title reads well on the thread page and task detail page
+  - decide whether historical screening tasks need a metadata backfill if uploaded file names should appear consistently in old detail pages too
+  - run frontend build/typecheck on a machine with `node` / `npm`
+- Files touched:
+  - `/Users/mao/Documents/langchain/literature_screening_web/src/views/ScreeningRunView.vue`
+  - `/Users/mao/Documents/langchain/literature_screening_web/src/views/TaskDetailView.vue`
+  - `/Users/mao/Documents/langchain/project_state.md`
+  - `/Users/mao/Documents/langchain/project_session_log.md`
+  - `/Users/mao/Documents/langchain/docs/project_history/index.md`
+  - `/Users/mao/Documents/langchain/docs/project_history/state_snapshots/2026-04-18_1045_project_state.md`
+
+## Session 2026-04-24 - Screening/fulltext workbench refresh and simple-report taxonomy fix
+
+- Scope: refreshed the reusable docs for the latest screening and fulltext-workbench changes, then investigated why two `deepseek-chat` simple reports reused old type-classification templates.
+- Main changes:
+  - documented the recent screening controls: target included-paper stop, manual stop with partial-output preservation, per-round criteria snapshots, screening task deletion, and task/thread edit affordances.
+  - documented the fulltext workbench redesign: full-width candidate overview, left-side Scopus/WoS-style filters, 10-record pagination, relevance/year sorting, temporary screening-round selection, range/page/all multi-select, and inline single-paper actions.
+  - inspected report tasks `a914285f8030` and `0a0365ee1ca1`; both had valid `deepseek-chat` JSON in `report_output/raw/report_overview.txt`, but their `paper_notes.json` categories already contained stale local fallback labels such as “机器人控制与作业辅助”, “分子机制与信号通路”, and “冲击与贯入机制”.
+  - fixed `/Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module/src/literature_screening/formal_report/simple_report.py` so simple-report note generation uses neutral category hints instead of `build_fallback_literature_cards`, overview prompts no longer include `category_hint`, fallback grouping normalizes stale cached categories, and API-side report note-cache seeding now targets the same `v2` cache generation.
+  - tightened `/Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module/prompts/simple_report_overview_prompt.md` so overview categories must be supported by the current notes and must not reuse unrelated historical domain names.
+  - archived the previous `/Users/mao/Documents/langchain/project_state.md` snapshot and updated `project_state.md`, the history index, and relevant atlas module cards/routing notes.
+- Verification:
+  - `PYTHONPATH=/Users/mao/Documents/langchain/literature_screening/src /Users/mao/Documents/langchain/literature_screening/.venv311-codex/bin/python -m pytest -q literature_screening/separated_modules/formal_report_module/tests/test_simple_report.py`
+  - result: `9 passed`
+  - `PYTHONPATH=/Users/mao/Documents/langchain/literature_screening/src /Users/mao/Documents/langchain/literature_screening/.venv311-codex/bin/python -m pytest -q literature_screening/tests/test_api_app.py -k 'report_task or report_source'`
+  - result: `4 passed, 24 deselected`
+  - `PYTHONPATH=/Users/mao/Documents/langchain/literature_screening/src /Users/mao/Documents/langchain/literature_screening/.venv311-codex/bin/python -m py_compile literature_screening/src/literature_screening/api/app.py literature_screening/separated_modules/formal_report_module/src/literature_screening/formal_report/simple_report.py literature_screening/separated_modules/formal_report_module/tests/test_simple_report.py`
+  - checked regenerated overview prompts for `a914285f8030` and `0a0365ee1ca1`; neither includes `category_hint` nor the stale old-category terms.
+  - `git -C /Users/mao/Documents/langchain diff --check -- literature_screening/src/literature_screening/api/app.py literature_screening/separated_modules/formal_report_module/src/literature_screening/formal_report/simple_report.py literature_screening/separated_modules/formal_report_module/prompts/simple_report_overview_prompt.md literature_screening/separated_modules/formal_report_module/tests/test_simple_report.py`
+- Outstanding follow-ups:
+  - rerun the two affected report tasks or create fresh report tasks to regenerate markdown with clean type headings; existing completed report artifacts will not rewrite themselves.
+  - browser-test the new fulltext workbench states, especially long round names, one selected record, multiple selected records, and temporary rounds.
+  - separately review DeepSeek model defaults if the live account stops accepting `deepseek-chat`; the observed stale categories were local prompt contamination, not a JSON-output parse failure.
+- Files touched:
+  - `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/api/app.py`
+  - `/Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module/src/literature_screening/formal_report/simple_report.py`
+  - `/Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module/prompts/simple_report_overview_prompt.md`
+  - `/Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module/tests/test_simple_report.py`
+  - `/Users/mao/Documents/langchain/project_state.md`
+  - `/Users/mao/Documents/langchain/project_session_log.md`
+  - `/Users/mao/Documents/langchain/docs/project_history/index.md`
+  - `/Users/mao/Documents/langchain/docs/project_history/incident_notes/2026-04-24_report-category-hints.md`
+  - `/Users/mao/Documents/langchain/docs/project_history/state_snapshots/2026-04-24_report-and-workbench_state.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/change-routing.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/modules/frontend-thread-and-task-views.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/modules/frontend-shell-and-stores.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/modules/backend-api-and-storage.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/modules/workflow-orchestration.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/modules/reporting-and-formal-report.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/modules/screening-and-data-pipeline.md`
+
+## Session 2026-04-24 - Pre-push verification and handoff refresh
+
+- Scope: refreshed the current handoff with the latest verification results, archived the pre-push project state, and prepared the current feature branch for GitHub publishing.
+- Main changes:
+  - archived `/Users/mao/Documents/langchain/project_state.md` into `/Users/mao/Documents/langchain/docs/project_history/state_snapshots/2026-04-24_1841_project_state.md` before updating the live state snapshot.
+  - updated `/Users/mao/Documents/langchain/project_state.md` so future threads see the direct Vue typecheck command that works on this machine despite `npm` being unavailable.
+  - kept local runtime artifacts out of the intended publish scope, including `.venv/`, `literature_screening/data/`, `build/`, and `.DS_Store` files.
+- Verification:
+  - `PYTHONPATH=/Users/mao/Documents/langchain/literature_screening/src /Users/mao/Documents/langchain/literature_screening/.venv311-codex/bin/python -m pytest -q literature_screening/tests/test_api_app.py literature_screening/tests/test_task_store.py literature_screening/separated_modules/formal_report_module/tests/test_simple_report.py`
+  - result: `40 passed`
+  - `cd /Users/mao/Documents/langchain/literature_screening_web && /Applications/Codex.app/Contents/Resources/node node_modules/vue-tsc/bin/vue-tsc.js --noEmit`
+  - result: passed
+  - `git -C /Users/mao/Documents/langchain diff --check`
+- Outstanding follow-ups:
+  - perform a real browser walkthrough after pulling the pushed branch elsewhere, especially the fulltext workbench and screening stop/delete flows.
+  - rerun affected report tasks to regenerate clean type headings in existing completed reports.
+- Files touched:
+  - `/Users/mao/Documents/langchain/project_state.md`
+  - `/Users/mao/Documents/langchain/project_session_log.md`
+  - `/Users/mao/Documents/langchain/docs/project_history/index.md`
+  - `/Users/mao/Documents/langchain/docs/project_history/state_snapshots/2026-04-24_1841_project_state.md`

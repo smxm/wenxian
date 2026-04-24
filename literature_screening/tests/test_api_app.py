@@ -957,7 +957,7 @@ def test_fulltext_queue_context_ignores_collision_from_excluded_other_round(tmp_
     assert item["confidence"] == 0.93
 
 
-def test_fulltext_queue_skips_items_later_marked_excluded_or_uncertain(tmp_path: Path, monkeypatch) -> None:
+def test_fulltext_queue_keeps_items_after_later_screening_exclusion(tmp_path: Path, monkeypatch) -> None:
     task_store = TaskStore(tmp_path / "api_runs")
     workspace_store = WorkspaceStore(tmp_path / "api_runs")
     monkeypatch.setattr(app_module, "TASK_STORE", task_store)
@@ -1017,7 +1017,13 @@ def test_fulltext_queue_skips_items_later_marked_excluded_or_uncertain(tmp_path:
 
     detail = client.get(f"/api/projects/{project['id']}")
     assert detail.status_code == 200
-    assert detail.json()["fulltext_queue"] == []
+    payload = detail.json()
+    assert len(payload["fulltext_queue"]) == 1
+    assert payload["workbench"]["summary"]["total_candidates"] == 1
+    queue_item = payload["fulltext_queue"][0]
+    assert queue_item["status"] == "pending"
+    assert queue_item["screening_decision"] == "exclude"
+    assert queue_item["screening_reason"] == "后续轮次确认不纳入全文阶段"
 
 
 def test_workspace_store_persists_dataset_paths_relatively(tmp_path: Path) -> None:

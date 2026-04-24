@@ -129,8 +129,8 @@ const stageCards = computed(() => [
     emphasis: screeningRounds.value.length ? 'ready' : 'pending'
   },
   {
-    title: '统一复核',
-    description: workbenchSummary.value.total_candidates ? '项目级候选池与轮次复核已拆开，按阶段推进全文处理' : '初筛完成后候选文献会进入这里',
+    title: '全文获取',
+    description: workbenchSummary.value.total_candidates ? '在这里打开链接、标记全文状态；已获取全文会自动进入报告源' : '初筛完成后候选文献会进入这里',
     value: workbenchSummary.value.actionable_candidates,
     unit: '篇候选',
     emphasis: workbenchSummary.value.actionable_candidates ? 'ready' : 'pending'
@@ -224,9 +224,9 @@ function buildScreeningActions(task: TaskSnapshot): ThreadAction[] {
   if (includedDataset) {
     actions.push({
       id: `${task.id}-fulltext`,
-      label: '进入候选工作台',
+      label: '进入全文工作台',
       kind: 'route',
-      to: `/threads/${projectId.value}/fulltext?tab=rounds&screeningTaskId=${task.id}`,
+      to: `/threads/${projectId.value}/fulltext?screeningTaskId=${task.id}`,
       emphasis: 'secondary'
     })
   }
@@ -295,7 +295,7 @@ function buildThreadMessage(task: TaskSnapshot): ThreadMessage {
             ? `本轮执行失败。${firstLine(task.error) || task.progress_message || '请进入详情页查看错误。'}`
             : task.progress_message || '正在执行这一轮初筛。',
       sourceLabel: sourceLabelOf(task),
-      note: task.status === 'succeeded' ? '下一步建议去全文获取工作台确认需要保留的全文。' : undefined,
+      note: task.status === 'succeeded' ? '下一步建议去全文工作台打开链接并标记已获取全文。' : undefined,
       createdAt: task.created_at,
       updatedAt: task.updated_at,
       phaseLabel: task.phase_label,
@@ -368,6 +368,13 @@ function openEditThread() {
       : ['scopus', 'wos', 'pubmed', 'cnki']
   }
   editingThread.value = true
+}
+
+function clearThreadEditorQueryFlag() {
+  if (!('editThread' in route.query)) return
+  const nextQuery = { ...route.query }
+  delete nextQuery.editThread
+  void router.replace({ path: route.path, query: nextQuery })
 }
 
 function openThreadAssist() {
@@ -535,6 +542,16 @@ watch(projectId, async (nextProjectId) => {
 }, { immediate: true })
 
 watch(
+  [project, threadProfile, () => route.query.editThread],
+  ([currentProject, currentProfile, editThreadQuery]) => {
+    if (!currentProject || !currentProfile || !editThreadQuery || editingThread.value) return
+    openEditThread()
+    clearThreadEditorQueryFlag()
+  },
+  { immediate: true }
+)
+
+watch(
   [() => route.query.reportDatasetId, () => route.query.focusPanel],
   async ([datasetId, focusPanel]) => {
     if (focusPanel !== 'report') {
@@ -610,7 +627,7 @@ async function submitThreadReport() {
   const reportSourceCount = reportSourceDataset.value?.record_count ?? 0
   if (!reportSourceDataset.value || reportSourceCount <= 0) {
     message.warning('当前纳入文献为 0，无法生成报告。')
-    await focusReportPanel('当前报告源为 0。先去统一复核纳入文献。')
+    await focusReportPanel('当前报告源为 0。先去全文工作台把已拿到全文的文献纳入报告源。')
     return
   }
   draftsStore.setProviderApiKey(reportModelForm.value.provider, reportModelForm.value.apiKey)
@@ -692,7 +709,7 @@ onUnmounted(() => {
         <NSpace>
           <NButton tertiary @click="openEditThread">
             <template #icon><Pencil :size="16" /></template>
-            手动编辑主题与标准
+            编辑线程信息
           </NButton>
         </NSpace>
       </div>
@@ -744,11 +761,11 @@ onUnmounted(() => {
             </NButton>
           </RouterLink>
           <RouterLink :to="`/threads/${project.id}/fulltext`">
-            <NButton secondary>
-              <template #icon><BookOpenText :size="16" /></template>
-              进入统一复核
-            </NButton>
-          </RouterLink>
+              <NButton secondary>
+                <template #icon><BookOpenText :size="16" /></template>
+              进入全文工作台
+              </NButton>
+            </RouterLink>
           <NButton tertiary type="warning" @click="focusReportPanel()">
             <template #icon><FileText :size="16" /></template>
             生成报告
@@ -809,29 +826,23 @@ onUnmounted(() => {
           <NEmpty v-else description="还没有初筛轮次" />
         </NCard>
 
-        <NCard title="阶段 3：统一复核工作台" class="panel-surface">
+        <NCard title="阶段 3：全文获取工作台" class="panel-surface">
           <div class="fulltext-summary-card">
             <div class="fulltext-summary-copy">
-              先处理全文获取，再做最终去留。
+              拿到全文就会自动进入报告源；只有特殊情况才需要手动移出。
             </div>
             <div class="fulltext-summary">
               <RouterLink :to="{ path: `/threads/${project.id}/fulltext` }">
                 <NTag round :bordered="false" class="summary-tag">全部 {{ workbenchSummary.total_candidates }}</NTag>
               </RouterLink>
-              <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { stage: 'needs-screening' } }">
-                <NTag round :bordered="false" class="summary-tag">待补筛选 {{ workbenchSummary.needs_screening }}</NTag>
-              </RouterLink>
               <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { workflow: 'needs-retrieval' } }">
                 <NTag round :bordered="false" class="summary-tag">待获取 {{ workbenchSummary.needs_link + workbenchSummary.needs_access }}</NTag>
-              </RouterLink>
-              <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { workflow: 'ready-for-decision' } }">
-                <NTag round type="success" :bordered="false" class="summary-tag">待终判 {{ workbenchSummary.ready_for_decision }}</NTag>
               </RouterLink>
               <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { stage: 'report-included' } }">
                 <NTag round type="success" :bordered="false" class="summary-tag">已纳入报告 {{ workbenchSummary.report_included }}</NTag>
               </RouterLink>
-              <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { stage: 'report-excluded' } }">
-                <NTag round type="error" :bordered="false" class="summary-tag">最终排除 {{ workbenchSummary.report_excluded }}</NTag>
+              <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { stage: 'unavailable' } }">
+                <NTag round type="error" :bordered="false" class="summary-tag">无权限 {{ workbenchSummary.unavailable }}</NTag>
               </RouterLink>
               <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { stage: 'deferred' } }">
                 <NTag round type="warning" :bordered="false" class="summary-tag">暂缓 {{ workbenchSummary.deferred }}</NTag>
@@ -917,7 +928,7 @@ onUnmounted(() => {
       :show="editingThread"
       preset="card"
       style="max-width: 880px"
-      title="编辑线程固定上下文"
+      title="编辑线程信息"
       @update:show="(value) => { editingThread = value }"
     >
       <NForm label-placement="top">
