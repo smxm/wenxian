@@ -1,0 +1,85 @@
+{
+  "id": "f243e670b3f6",
+  "kind": "report",
+  "status": "succeeded",
+  "cancel_requested": false,
+  "title": "隐球菌-report",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 7,
+  "progress_total": 7,
+  "progress_message": "Task completed",
+  "created_at": "2026-04-09T07:24:53.843609+00:00",
+  "updated_at": "2026-04-09T07:33:26.803954+00:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "6de7c6c79052",
+    "project_topic": "构建脑膜",
+    "model_provider": "deepseek",
+    "source_screening_task_id": null,
+    "input_dataset_ids": [
+      "fulltext-ready"
+    ],
+    "request_payload": {
+      "title": "隐球菌-report",
+      "project_id": "6de7c6c79052",
+      "screening_task_id": null,
+      "dataset_ids": [
+        "fulltext-ready"
+      ],
+      "project_topic": "构建脑膜",
+      "model": {
+        "provider": "deepseek",
+        "model_name": "deepseek-chat",
+        "api_base_url": "https://api.deepseek.com/v1",
+        "api_key_env": "DEEPSEEK_API_KEY",
+        "temperature": 0.0,
+        "max_tokens": 1536,
+        "min_request_interval_seconds": 2.0
+      },
+      "report_name": "simple_report",
+      "retry_times": 6,
+      "timeout_seconds": 240,
+      "reference_style": "gbt7714"
+    },
+    "virtual_dataset_paths": [
+      "projects/6de7c6c79052/derived/fulltext_ready.ris"
+    ],
+    "model_secret_id": null
+  },
+  "summary": {
+    "report_name": "simple_report",
+    "reference_style": "gbt7714"
+  },
+  "error": null,
+  "artifacts": {
+    "literature_report": {
+      "path": "tasks/f243e670b3f6/report_output/literature_report.md",
+      "filename": "literature_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 8041
+    },
+    "paper_notes": {
+      "path": "tasks/f243e670b3f6/report_output/paper_notes.json",
+      "filename": "paper_notes.json",
+      "content_type": "application/json",
+      "size_bytes": 5167
+    },
+    "report_overview": {
+      "path": "tasks/f243e670b3f6/report_output/report_overview.json",
+      "filename": "report_overview.json",
+      "content_type": "application/json",
+      "size_bytes": 1945
+    }
+  },
+  "run_root": "tasks/f243e670b3f6",
+  "output_dir": "tasks/f243e670b3f6/report_output",
+  "markdown_preview": "# 一、相关文献总体情况\n\n本次纳入文献共 7 篇，整体主要分布在代谢组学与机制分析、免疫炎症与组织微环境、介质响应与相互作用、分子机制与信号通路等类型。从逐篇整理结果看，现有文献主要围绕机制阐释、实验验证、应用评估或综述性整合展开，其中“代谢组学与机制分析”相关文献数量最多，说明这一方向在当前主题下受到较多关注。\n\n# 二、类型划分\n\n## 代谢组学与机制分析\n\n该类文献共 3 篇，主要围绕“代谢组学与机制分析”这一方向展开。就“构建脑膜”而言，这一类型文献可用于梳理该方向的核心问题、常见研究路径及其参考价值。\n\n- An organ-chip model of sporadic ALS using iPSC-derived spinal cord motor neurons and an integrated blood-brain-like barrier\n- Modeling blood-brain barrier formation and cerebral cavernous malformations in human PSC-derived organoids\n- A fully iPS-cell-derived 3D model of the human blood–brain barrier for exploring neurovascular disease mechanisms and therapeutic interventions\n\n## 免疫炎症与组织微环境\n\n该类文献共 2 篇，主要围绕“免疫炎症与组织微环境”这一方向展开。就“构建脑膜”而言，这一类型文献可用于梳理该方向的核心问题、常见研究路径及其参考价值。\n\n- Intrinsic antiviral immunity of barrier cells revealed by an iPSC-derived blood-brain barrier cellular model\n- The contribution of inflammatory astrocytes to BBB impairments in a brain-chip model of Parkinson’s disease\n\n## 介质响应与相互作用\n\n该类文献共 1 篇，主要围绕“介质响应与相互作用”这一方向展开。就“构建脑膜”而言，这一类型文献可用于梳理该方向的核心问题、常见研究路径及其参考价值。\n\n- Typhoid toxin causes neuropathology by disrupting the blood–brain barrier\n\n## 分子机制与信号通路\n\n该类文献共 1 篇，主要围绕“分子机制与信号通路”这一方向展开。就“构建脑膜”而言，这一类型文献可用于梳理该方向的核心问题、常见研究路径及其参考价值。\n\n- Bioengineered perfused human brain microvascular networks enhance neural progenitor cell survival, neurogenesis, and maturation\n\n# 三、逐篇文献总结分析\n\n## An organ-chip model of sporadic ALS using iPSC-derived spinal cord motor neurons and an integrated blood-brain-like barrier\n\n总结：\n该文献围绕“An organ-chip model of sporadic ALS using iPSC-derived spinal cord motor neurons and an integrated blood-brain-like barrier”展开，当前可归入“代谢组学与机制分析”相关研究。摘要显示其重点涉及Amyotrophic lateral sclerosis (ALS) is a fatal neurodegenerative disorder in which motor neurons (MNs) of the brain and…。\n\n分析：\n结合当前主题“构建脑膜”，这篇文献的参考价值主要体现在：Selected from reusable project dataset.\n\n## Modeling blood-brain barrier formation and cerebral cavernous malformations in human PSC-derived organoids\n\n总结：\n该文献围绕“Modeling blood-brain barrier formation and cerebral cavernous malformations in human PSC-derived organoids”展开，当前可归入“代谢组学与机制分析”相关研究。摘要显示其重点涉及The human blood-brain barrier (hBBB) is a highly specialized structure that regulates passage across blood and central…。\n\n分析：\n结合当前主题“构建脑膜”，这篇文献的参考价值主要体现在：Selected from reusable project dataset.\n\n## A fully iPS-cell-derived 3D model of the human blood–brain barrier for exploring neurovascular disease mechanisms and therapeutic interventions\n\n总结：\n该文献围绕“A fully iPS-cell-derived 3D model of the human blood–brain barrier for exploring neurovascular disease mechanisms and therapeutic interventions”展开，当前可归入“代谢组学与机制分析”相关研究。摘要显示其重点涉及Blood–brain barrier (BBB) integrity is critical for brain homeostasis, with malfunctions contributing to neurovascular…。\n\n分析：\n结合当前主题“构建脑膜”，这篇文献的参考价值主要体现在：Selected from reusable project dataset.\n\n## Typhoid toxin causes neuropathology by disrupting the blood–brain barrier\n\n总结：\n该文献围绕“Typhoid toxin causes neuropathology by disrupting the blood–brain barrier”展开，当前可归入“介质响应与相互作用”相关研究。摘要显示其重点涉及Typhoid fever, primarily caused by Salmonella Typhi, can result in severe life-threatening complications such as enceph…。\n\n分析：\n结合当前主题“构建脑膜”，这篇文献的参考价值主要体现在：Selected from reusable project dataset.\n\n## Bioengineered perfused human brain microvascular networks enhance neural progenitor cell survival, neurogenesis, and maturation\n\n总结：\n该文献围绕“Bioengineered perfused human brain microvascular networks enhance neural progenitor cell survival, neurogenesis, and maturation”展开，当前可归入“分子机制与信号通路”相关研究。摘要显示其重点涉及Neural progenitor cells (NPCs) have the capability to self-renew and differentiate into neurons and glial cells。\n\n分析：\n结合当前主题“构建脑膜”，这篇文献的参考价值主要体现在：Selected from reusable project dataset.\n\n## Intrinsic antiviral immunity of barrier cells revealed by an iPSC-derived blood-brain barrier cellular model\n\n总结：\n该文献围绕“Intrinsic antiviral immunity of barrier cells revealed by an iPSC-derived blood-brain barrier cellular model”展开，当前可归入“免疫炎症与组织微环境”相关研究。摘要显示其重点涉及Physiological blood-tissue barriers play a critical role in separating the circulation from immune-privileged sites and…。\n\n分析：\n结合当前主题“构建脑膜”，这篇文献的参考价值主要体现在：Selected from reusable project dataset.\n\n## The contribution of inflammatory astrocytes to BBB impairments in a brain-chip model of Parkinson’s disease\n\n总结：\n该文献围绕“The contribution of inflammatory astrocytes to BBB impairments in a brain-chip model of Parkinson’s disease”展开，当前可归入“免疫炎症与组织微环境”相关研究。摘要显示其重点涉及Astrocyte dysfunction has previously been linked to multiple neurodegenerative disorders including Parkinson’s disease…。\n\n分析：\n结合当前主题“构建脑膜”，这篇文献的参考价值主要体现在：Selected from reusable project dataset.\n\n# 参考列表\n\n[1] Lall, D, Workman, M.J, Sances, S, et al. An organ-chip model of sporadic ALS using iPSC-derived spinal cord motor neurons and an integrated blood-brain-like barrier[J]. Cell Stem Cell, 2025.\n[2] Dao, L, You, Z, Lu, L, et al. Modeling blood-brain barrier formation and cerebral cavernous malformations in human PSC-derived organoids[J]. Cell Stem Cell, 2024.\n[3] González-Gallego, J, Todorov-Völgyi, K, Müller, S.A, et al. A fully iPS-cell-derived 3D model of the human blood–brain barrier for exploring neurovascular disease mechanisms and therapeutic interventions[J]. Nature Neuroscience, 2026.\n[4] Zhao, H, Catarino, J, Stack, G, et al. Typhoid toxin causes neuropathology by disrupting the blood–brain barrier[J]. Nature Microbiology, 2025.\n[5] Winkelman, M.A, Dai, G. Bioengineered perfused human brain microvascular networks enhance neural progenitor cell survival, neurogenesis, and maturation[J]. Science Advances, 2023.\n[6] Cheng, Y, Medina, A, Yao, Z, et al. Intrinsic antiviral immunity of barrier cells revealed by an iPSC-derived blood-brain barrier cellular model[J]. Cell Reports, 2022.\n[7] de Rus Jacquet, A, Alpaugh, M, Denis, H.L, et al. The contribution of inflammatory astrocytes to BBB impairments in a brain-chip model of Parkinson’s disease[J]. Nature Communications, 2023.\n",
+  "records": [],
+  "project_id": "6de7c6c79052",
+  "project_topic": "构建脑膜",
+  "model_provider": "deepseek",
+  "input_dataset_ids": [
+    "fulltext-ready"
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "batch_id": "batch_0011",
+  "results": [
+    {
+      "paper_id": "paper_000101",
+      "decision": "include",
+      "reason": "标题和摘要明确涉及弓网电弧对电气特性的影响，并建立了Cassie与Mayr结合的电弧模型，符合纳入标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000102",
+      "decision": "uncertain",
+      "reason": "摘要提到弓网电弧仿真和过电压研究，但未明确说明是否包含电弧数学模型或MATLAB仿真，信息不足。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    }
+  ]
+}

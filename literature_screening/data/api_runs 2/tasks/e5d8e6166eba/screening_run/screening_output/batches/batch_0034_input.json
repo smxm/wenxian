@@ -1,0 +1,373 @@
+{
+  "batch_id": "batch_0034",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000331",
+    "paper_000332",
+    "paper_000333",
+    "paper_000334",
+    "paper_000335",
+    "paper_000336",
+    "paper_000337",
+    "paper_000338",
+    "paper_000339",
+    "paper_000340"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000331",
+      "entry_type": "article",
+      "title": "Interpretable machine learning models for failure cause prediction in imbalanced oil pipeline data",
+      "authors": [
+        "Awuku, B",
+        "Huang, Y",
+        "Yodo, N",
+        "Asa, E"
+      ],
+      "year": 2024,
+      "journal": "MEASUREMENT SCIENCE AND TECHNOLOGY",
+      "doi": "10.1088/1361-6501/ad3570",
+      "abstract": "Pipelines are critical arteries in the oil and gas industry and require massive capital investment to safely construct networks that transport hydrocarbons across diverse environments. However, these pipeline systems are prone to integrity failure, which results in significant economic losses and environmental damage. Accurate prediction of pipeline failure events using historical oil pipeline accident data enables asset managers to plan sufficient maintenance, rehabilitation, and repair activities to prevent catastrophic failures. However, learning the complex interdependencies between pipeline attributes and rare failure events presents several analytical challenges. This study proposes a novel machine learning (ML) framework to accurately predict pipeline failure causes on highly class-imbalanced data compiled by the United States Pipeline and Hazardous Materials Safety Administration. Natural language processing techniques were leveraged to extract informative features from unstructured text data. Furthermore, class imbalance in the dataset was addressed via oversampling and intrinsic cost-sensitive learning (CSL) strategies adapted for the multi-class case. Nine machine and deep learning architectures were benchmarked, with LightGBM demonstrating superior performance. The integration of CSL yielded an 86% F1 score and a 0.82 Cohen kappa score, significantly advancing prior research. This study leveraged a comprehensive Shapley Additive explanation analysis to interpret the predictions from the LightGBM algorithm, revealing the key factors driving failure probabilities. Leveraging sentiment analysis allowed the models to capture a richer, more multifaceted representation of the textual data. This study developed a novel CSL approach that integrates domain knowledge regarding the varying cost impacts of misclassifying different failure types into ML models. This research demonstrated an effective fusion of text insights from inspection reports with structured pipeline data that enhances model interpretability. The resulting AI modeling framework generated data-driven predictions of the causes of failure that could enable transportation agencies with actionable insights. These insights enable tailored preventative maintenance decisions to proactively mitigate emerging pipeline failures.",
+      "keywords": [
+        "energy",
+        "oil",
+        "machine learning",
+        "deep learning",
+        "interpretability",
+        "pipeline",
+        "failure"
+      ],
+      "normalized_title": "interpretable machine learning models for failure cause prediction in imbalanced oil pipeline data",
+      "raw_bibtex": "@ARTICLE{10.1088/1361-6501/ad3570,\n\tauthor = {Awuku, B and Huang, Y and Yodo, N and Asa, E},\n\ttitle = {Interpretable machine learning models for failure cause prediction in imbalanced oil pipeline data},\n\tjournal = {MEASUREMENT SCIENCE AND TECHNOLOGY},\n\tyear = {2024},\n\tkeywords = {energy; oil; machine learning; deep learning; interpretability; pipeline; failure},\n\tabstract = {Pipelines are critical arteries in the oil and gas industry and require massive capital investment to safely construct networks that transport hydrocarbons across diverse environments. However, these pipeline systems are prone to integrity failure, which results in significant economic losses and environmental damage. Accurate prediction of pipeline failure events using historical oil pipeline accident data enables asset managers to plan sufficient maintenance, rehabilitation, and repair activities to prevent catastrophic failures. However, learning the complex interdependencies between pipeline attributes and rare failure events presents several analytical challenges. This study proposes a novel machine learning (ML) framework to accurately predict pipeline failure causes on highly class-imbalanced data compiled by the United States Pipeline and Hazardous Materials Safety Administration. Natural language processing techniques were leveraged to extract informative features from unstructured text data. Furthermore, class imbalance in the dataset was addressed via oversampling and intrinsic cost-sensitive learning (CSL) strategies adapted for the multi-class case. Nine machine and deep learning architectures were benchmarked, with LightGBM demonstrating superior performance. The integration of CSL yielded an 86% F1 score and a 0.82 Cohen kappa score, significantly advancing prior research. This study leveraged a comprehensive Shapley Additive explanation analysis to interpret the predictions from the LightGBM algorithm, revealing the key factors driving failure probabilities. Leveraging sentiment analysis allowed the models to capture a richer, more multifaceted representation of the textual data. This study developed a novel CSL approach that integrates domain knowledge regarding the varying cost impacts of misclassifying different failure types into ML models. This research demonstrated an effective fusion of text insights from inspection reports with structured pipeline data that enhances model interpretability. The resulting AI modeling framework generated data-driven predictions of the causes of failure that could enable transportation agencies with actionable insights. These insights enable tailored preventative maintenance decisions to proactively mitigate emerging pipeline failures.},\n\tdoi = {10.1088/1361-6501/ad3570},\n\tvolume = {35},\n\tnumber = {7},\n\tissn = {0957-0233},\n\tnote = {Times Cited in Web of Science Core Collection: 11 Total Times Cited: 11 Cited Reference Count: 53 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1088/1361-6501/ad3570"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000332",
+      "entry_type": "article",
+      "title": "Characterizing player's playing styles based on player vectors for each playing position in the Chinese Football Super League",
+      "authors": [
+        "Li, YS",
+        "Zong, SX",
+        "Shen, YF",
+        "Pu, ZQ",
+        "Gómez, MA",
+        "Cui, YX"
+      ],
+      "year": 2022,
+      "journal": "JOURNAL OF SPORTS SCIENCES",
+      "doi": "10.1080/02640414.2022.2096771",
+      "abstract": "Characterizing playing style is important for football clubs on scouting, monitoring and match preparation. Previous studies considered a player's style as a combination of technical performances, failing to consider the spatial information. Therefore, this study aimed to characterize the playing styles of each playing position in the Chinese Football Super League (CSL) matches, integrating a recently adopted Player Vectors framework. Data of 960 matches from 2016-2019 CSL were used. Match ratings, and 10 types of match events with the corresponding coordinates for all the line-up players whose on-pitch time exceeded 45 minutes were extracted. Players were first clustered into eight positions. A player vector was constructed for each player in each match based on the Player Vectors using Nonnegative Matrix Factorization (NMF). Another NMF process was run on the player vectors to extract different types of playing styles. The resulting player vectors discovered 18 different playing styles in the CSL. Six performance indicators of each style were investigated to observe their contributions. In general, the playing styles of forwards and midfielders are in line with football performance evolution trends, while the styles of defenders should be reconsidered. Multifunctional playing styles were also found in high-rated CSL players.",
+      "keywords": [
+        "Soccer",
+        "match analysis",
+        "style of play",
+        "performance profile",
+        "machine learning",
+        "NETWORK ANALYSIS",
+        "SOCCER",
+        "TEAMS",
+        "BEHAVIOR",
+        "SPANISH"
+      ],
+      "normalized_title": "characterizing player s playing styles based on player vectors for each playing position in the chinese football super league",
+      "raw_bibtex": "@ARTICLE{10.1080/02640414.2022.2096771,\n\tauthor = {Li, YS and Zong, SX and Shen, YF and Pu, ZQ and Gómez, MA and Cui, YX},\n\ttitle = {Characterizing player's playing styles based on player vectors for each playing position in the Chinese Football Super League},\n\tjournal = {JOURNAL OF SPORTS SCIENCES},\n\tyear = {2022},\n\tkeywords = {Soccer; match analysis; style of play; performance profile; machine learning; NETWORK ANALYSIS; SOCCER; TEAMS; BEHAVIOR; SPANISH},\n\tabstract = {Characterizing playing style is important for football clubs on scouting, monitoring and match preparation. Previous studies considered a player's style as a combination of technical performances, failing to consider the spatial information. Therefore, this study aimed to characterize the playing styles of each playing position in the Chinese Football Super League (CSL) matches, integrating a recently adopted Player Vectors framework. Data of 960 matches from 2016-2019 CSL were used. Match ratings, and 10 types of match events with the corresponding coordinates for all the line-up players whose on-pitch time exceeded 45 minutes were extracted. Players were first clustered into eight positions. A player vector was constructed for each player in each match based on the Player Vectors using Nonnegative Matrix Factorization (NMF). Another NMF process was run on the player vectors to extract different types of playing styles. The resulting player vectors discovered 18 different playing styles in the CSL. Six performance indicators of each style were investigated to observe their contributions. In general, the playing styles of forwards and midfielders are in line with football performance evolution trends, while the styles of defenders should be reconsidered. Multifunctional playing styles were also found in high-rated CSL players.},\n\tdoi = {10.1080/02640414.2022.2096771},\n\tvolume = {40},\n\tnumber = {14},\n\tpages = {1629-1640},\n\tissn = {0264-0414},\n\tnote = {Times Cited in Web of Science Core Collection: 9 Total Times Cited: 13 Cited Reference Count: 47 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1080/02640414.2022.2096771"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000333",
+      "entry_type": "article",
+      "title": "Cost-sensitive learning with modified Stein loss function",
+      "authors": [
+        "Fu, SJ",
+        "Tian, YJ",
+        "Tang, JJ",
+        "Liu, XH"
+      ],
+      "year": 2023,
+      "journal": "NEUROCOMPUTING",
+      "doi": "10.1016/j.neucom.2023.01.052",
+      "abstract": "Cost-sensitive learning (CSL), which has gained widespread attention in class imbalance learning (CIL), can be implemented either by tuning penalty parameters or by designing new loss functions. In this paper, we propose a cost-sensitive learning method with a modified Stein loss function (CSMS) and a robust CSMS (RCSMS). Specifically, CSMS is flexible, as it realizes CSL from above two aspects simultane-ously. In contrast, RCSMS merely achieves CSL by tuning penalty parameters, but the adopted loss func-tion makes it insensitive to noise. To our best knowledge, it is the first time for Stein loss function derived from statistics to be applied in machine learning, which not only offers two alternative class imbalance solutions but also provides a novel idea for the design of loss functions in CIL. The mini-batch stochastic sub-gradient descent (MBGD) approach is employed to optimize CSMS and RCSMS. Meanwhile, the Rademacher complexity is used to analyze their generalization error bounds. Extensive experiments pro-foundly confirm the superiority of both models over benchmarks.(c) 2023 Elsevier B.V. All rights reserved.",
+      "keywords": [
+        "Class imbalance learning",
+        "Cost-sensitive learning",
+        "Stein loss function",
+        "Penalty parameter",
+        "Support vector machine",
+        "SUPPORT VECTOR MACHINE",
+        "CLASS-IMBALANCE",
+        "CLASSIFICATION",
+        "SMOTE"
+      ],
+      "normalized_title": "cost sensitive learning with modified stein loss function",
+      "raw_bibtex": "@ARTICLE{10.1016/j.neucom.2023.01.052,\n\tauthor = {Fu, SJ and Tian, YJ and Tang, JJ and Liu, XH},\n\ttitle = {Cost-sensitive learning with modified Stein loss function},\n\tjournal = {NEUROCOMPUTING},\n\tyear = {2023},\n\tkeywords = {Class imbalance learning; Cost-sensitive learning; Stein loss function; Penalty parameter; Support vector machine; SUPPORT VECTOR MACHINE; CLASS-IMBALANCE; CLASSIFICATION; SMOTE},\n\tabstract = {Cost-sensitive learning (CSL), which has gained widespread attention in class imbalance learning (CIL), can be implemented either by tuning penalty parameters or by designing new loss functions. In this paper, we propose a cost-sensitive learning method with a modified Stein loss function (CSMS) and a robust CSMS (RCSMS). Specifically, CSMS is flexible, as it realizes CSL from above two aspects simultane-ously. In contrast, RCSMS merely achieves CSL by tuning penalty parameters, but the adopted loss func-tion makes it insensitive to noise. To our best knowledge, it is the first time for Stein loss function derived from statistics to be applied in machine learning, which not only offers two alternative class imbalance solutions but also provides a novel idea for the design of loss functions in CIL. The mini-batch stochastic sub-gradient descent (MBGD) approach is employed to optimize CSMS and RCSMS. Meanwhile, the Rademacher complexity is used to analyze their generalization error bounds. Extensive experiments pro-foundly confirm the superiority of both models over benchmarks.(c) 2023 Elsevier B.V. All rights reserved.},\n\tdoi = {10.1016/j.neucom.2023.01.052},\n\tvolume = {525},\n\tpages = {57-75},\n\tissn = {0925-2312},\n\tnote = {Times Cited in Web of Science Core Collection: 27 Total Times Cited: 28 Cited Reference Count: 66 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.neucom.2023.01.052"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000334",
+      "entry_type": "article",
+      "title": "Development of an Algorithm for Determining Defects in Cast-in-Place Piles Based on the Data Analysis of Low Strain Integrity Testing",
+      "authors": [
+        "Koteleva, N",
+        "Loseva, E"
+      ],
+      "year": 2022,
+      "journal": "APPLIED SCIENCES-BASEL",
+      "doi": "10.3390/app122010636",
+      "abstract": "Low strain integrity testing for pile quality control, based on the analysis of elastic waves, is one of the most common methods, due to its high efficiency. However, it also has a number of limitations that should be taken into account during pile testing. For additional study of the method and its effectiveness, an experimental site was constructed, consisting of ten cast-in-place piles with embedded defects. When analyzing field data, pile defects were not identified. For further analysis of the problem, as well as for interpreting the results and identifying pile defects, a cluster analysis method, the so-called ANN-classifier, is proposed. This paper describes the results of creating an algorithm for the recognition of defects and their localization in cast-in-place piles. It is proposed that use of the characteristic points of the spectrum of the signal as the input vector of the ANN classifier, and the type of pile defect as the output vector, is optimal. The results of the study led to the conclusion that the ANN-classifier can be used as the main tool for automatic interpretation of the results obtained by low strain integrity testing.",
+      "keywords": [
+        "piles",
+        "cast-in-place piles",
+        "CFA piles",
+        "low strain integrity test",
+        "pile integrity test",
+        "non-destructive testing",
+        "ANN classifier"
+      ],
+      "normalized_title": "development of an algorithm for determining defects in cast in place piles based on the data analysis of low strain integrity testing",
+      "raw_bibtex": "@ARTICLE{10.3390/app122010636,\n\tauthor = {Koteleva, N and Loseva, E},\n\ttitle = {Development of an Algorithm for Determining Defects in Cast-in-Place Piles Based on the Data Analysis of Low Strain Integrity Testing},\n\tjournal = {APPLIED SCIENCES-BASEL},\n\tyear = {2022},\n\tkeywords = {piles; cast-in-place piles; CFA piles; low strain integrity test; pile integrity test; non-destructive testing; ANN classifier},\n\tabstract = {Low strain integrity testing for pile quality control, based on the analysis of elastic waves, is one of the most common methods, due to its high efficiency. However, it also has a number of limitations that should be taken into account during pile testing. For additional study of the method and its effectiveness, an experimental site was constructed, consisting of ten cast-in-place piles with embedded defects. When analyzing field data, pile defects were not identified. For further analysis of the problem, as well as for interpreting the results and identifying pile defects, a cluster analysis method, the so-called ANN-classifier, is proposed. This paper describes the results of creating an algorithm for the recognition of defects and their localization in cast-in-place piles. It is proposed that use of the characteristic points of the spectrum of the signal as the input vector of the ANN classifier, and the type of pile defect as the output vector, is optimal. The results of the study led to the conclusion that the ANN-classifier can be used as the main tool for automatic interpretation of the results obtained by low strain integrity testing.},\n\tdoi = {10.3390/app122010636},\n\tvolume = {12},\n\tnumber = {20},\n\tissn = {2076-3417},\n\tnote = {Times Cited in Web of Science Core Collection: 15 Total Times Cited: 16 Cited Reference Count: 55 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/app122010636"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000335",
+      "entry_type": "article",
+      "title": "Modelling the evolving critical state of crushable soils and parameter optimization with an improved genetic algorithm (AIS-RCGA)",
+      "authors": [
+        "Zhang, S",
+        "Xiong, HB",
+        "Tong, CX",
+        "He, XZ",
+        "Sheng, DC"
+      ],
+      "year": 2025,
+      "journal": "CANADIAN GEOTECHNICAL JOURNAL",
+      "doi": "10.1139/cgj-2024-0131",
+      "abstract": "The critical state line (CSL) plays an essential role in the constitutive modelling of granular soils. It serves as a reference line for the measurement of the state parameter. The critical state of crushable soils cannot accurately be determined from experimental data because of the ever-changing soil properties due to particle breakage. In this study, two new parameters eB and eb are introduced, which account for the final position and the evolution of CSL of crushable soils during shearing, respectively. To identify the optimal CSL-related parameters from experimental data, a hybrid genetic algorithm combining artificial immune system (AIS) and real-coded genetic algorithm (RCGA), namely AIS-RCGA is adopted. The fitness is defined to minimize the prediction error of both void ratio (or pore water pressure) and deviatoric stress. We have refined the tuning methods for several hyperparameters of AIS-RCGA and proposed a novel method to assess the similarity of individuals within AIS-RCGA. Results show that the new method is more efficient in finding the global optimal for our problem. With optimized model parameters, the new constitutive model can accurately predict the response of crushable soil, outperforming other constitutive model reported in the literature.",
+      "keywords": [
+        "granular soil",
+        "particle breakage",
+        "critical state line",
+        "parameter optimization",
+        "machine learning",
+        "PARTICLE BREAKAGE",
+        "CONSTITUTIVE MODEL",
+        "AXISYMMETRICAL TESTS",
+        "GRANULAR SOILS",
+        "SAND BEHAVIOR",
+        "IDENTIFICATION",
+        "PLASTICITY",
+        "DILATANCY"
+      ],
+      "normalized_title": "modelling the evolving critical state of crushable soils and parameter optimization with an improved genetic algorithm ais rcga",
+      "raw_bibtex": "@ARTICLE{10.1139/cgj-2024-0131,\n\tauthor = {Zhang, S and Xiong, HB and Tong, CX and He, XZ and Sheng, DC},\n\ttitle = {Modelling the evolving critical state of crushable soils and parameter optimization with an improved genetic algorithm (AIS-RCGA)},\n\tjournal = {CANADIAN GEOTECHNICAL JOURNAL},\n\tyear = {2025},\n\tkeywords = {granular soil; particle breakage; critical state line; parameter optimization; machine learning; PARTICLE BREAKAGE; CONSTITUTIVE MODEL; AXISYMMETRICAL TESTS; GRANULAR SOILS; SAND BEHAVIOR; IDENTIFICATION; PLASTICITY; DILATANCY},\n\tabstract = {The critical state line (CSL) plays an essential role in the constitutive modelling of granular soils. It serves as a reference line for the measurement of the state parameter. The critical state of crushable soils cannot accurately be determined from experimental data because of the ever-changing soil properties due to particle breakage. In this study, two new parameters eB and eb are introduced, which account for the final position and the evolution of CSL of crushable soils during shearing, respectively. To identify the optimal CSL-related parameters from experimental data, a hybrid genetic algorithm combining artificial immune system (AIS) and real-coded genetic algorithm (RCGA), namely AIS-RCGA is adopted. The fitness is defined to minimize the prediction error of both void ratio (or pore water pressure) and deviatoric stress. We have refined the tuning methods for several hyperparameters of AIS-RCGA and proposed a novel method to assess the similarity of individuals within AIS-RCGA. Results show that the new method is more efficient in finding the global optimal for our problem. With optimized model parameters, the new constitutive model can accurately predict the response of crushable soil, outperforming other constitutive model reported in the literature.},\n\tdoi = {10.1139/cgj-2024-0131},\n\tvolume = {62},\n\tissn = {0008-3674},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 55 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1139/cgj-2024-0131"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000336",
+      "entry_type": "article",
+      "title": "Predicting the damage to cementitious composites due to acid attack and evaluating the effectiveness of eggshell powder using interpretable artificial intelligence models",
+      "authors": [
+        "Jin, CH",
+        "Qian, YJ",
+        "Khan, K",
+        "Ahmad, A",
+        "Amin, MN",
+        "Althoey, F",
+        "Nawaz, R"
+      ],
+      "year": 2023,
+      "journal": "MATERIALS TODAY COMMUNICATIONS",
+      "doi": "10.1016/j.mtcomm.2023.107333",
+      "abstract": "The resistance of cement-based composites (CBCs) to the intervention of aggressive ions is the primary deter-minant of their durability. H2SO4 is a highly corrosive acid capable of causing structural damage. The corrosive properties of H2SO4 can pose a significant threat to building materials, resulting in accelerated deterioration and structural failure. This study employed advanced computing tools to assess the compressive strength loss (CSL) in mortar modified with eggshell powder (ESP-CM) subjected to acid conditions. The modeling process utilized an experimental dataset of six different raw materials as inputs, and the output variable was the CSL. ESP-CM samples were subjected to a 5% H2SO4 solution during the experimental work. Two machine learning inter-pretable models, including gene-expression programming (GEP) and multi-expression programming (MEP), were developed for the said purpose. In addition, sensitivity analysis (SA) and SHapley Additive exPlanations (SHAP) analysis were used to assess the influence and correlation of raw inputs. The established models for predicting the CSL of ESP-CM due to acid attack corresponded well with the actual results. The accuracy of constructed models was evaluated using statistical analyses and analyzing the difference amongst target and model-estimated results. Comparing the R2 of the models, it was determined that the MEP model performed better than the GEP model in predicting the CSL of ESP-CM after an acid attack, with an R2 of 0.90 versus 0.87. The interaction diagrams derived from the SHAP study exhibited that a replacement level of ESP between 40 and 60 kg/m3 provided the greatest resistance to acid attack.",
+      "keywords": [
+        "Artificial intelligence",
+        "Compressive strength",
+        "Eggshell powder",
+        "Acid attack",
+        "Sensitivity analysis",
+        "SHAP analysis",
+        "FIBER-REINFORCED CONCRETE",
+        "COMPRESSIVE STRENGTH",
+        "STEEL"
+      ],
+      "normalized_title": "predicting the damage to cementitious composites due to acid attack and evaluating the effectiveness of eggshell powder using interpretable artificial intelligence models",
+      "raw_bibtex": "@ARTICLE{10.1016/j.mtcomm.2023.107333,\n\tauthor = {Jin, CH and Qian, YJ and Khan, K and Ahmad, A and Amin, MN and Althoey, F and Nawaz, R},\n\ttitle = {Predicting the damage to cementitious composites due to acid attack and evaluating the effectiveness of eggshell powder using interpretable artificial intelligence models},\n\tjournal = {MATERIALS TODAY COMMUNICATIONS},\n\tyear = {2023},\n\tkeywords = {Artificial intelligence; Compressive strength; Eggshell powder; Acid attack; Sensitivity analysis; SHAP analysis; FIBER-REINFORCED CONCRETE; COMPRESSIVE STRENGTH; STEEL},\n\tabstract = {The resistance of cement-based composites (CBCs) to the intervention of aggressive ions is the primary deter-minant of their durability. H2SO4 is a highly corrosive acid capable of causing structural damage. The corrosive properties of H2SO4 can pose a significant threat to building materials, resulting in accelerated deterioration and structural failure. This study employed advanced computing tools to assess the compressive strength loss (CSL) in mortar modified with eggshell powder (ESP-CM) subjected to acid conditions. The modeling process utilized an experimental dataset of six different raw materials as inputs, and the output variable was the CSL. ESP-CM samples were subjected to a 5% H2SO4 solution during the experimental work. Two machine learning inter-pretable models, including gene-expression programming (GEP) and multi-expression programming (MEP), were developed for the said purpose. In addition, sensitivity analysis (SA) and SHapley Additive exPlanations (SHAP) analysis were used to assess the influence and correlation of raw inputs. The established models for predicting the CSL of ESP-CM due to acid attack corresponded well with the actual results. The accuracy of constructed models was evaluated using statistical analyses and analyzing the difference amongst target and model-estimated results. Comparing the R2 of the models, it was determined that the MEP model performed better than the GEP model in predicting the CSL of ESP-CM after an acid attack, with an R2 of 0.90 versus 0.87. The interaction diagrams derived from the SHAP study exhibited that a replacement level of ESP between 40 and 60 kg/m3 provided the greatest resistance to acid attack.},\n\tdoi = {10.1016/j.mtcomm.2023.107333},\n\tvolume = {37},\n\tissn = {2352-4928},\n\tnote = {Times Cited in Web of Science Core Collection: 5 Total Times Cited: 5 Cited Reference Count: 66 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.mtcomm.2023.107333"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000337",
+      "entry_type": "article",
+      "title": "Atomic energy in grain boundaries studied by machine learning",
+      "authors": [
+        "Song, XY",
+        "Deng, C"
+      ],
+      "year": 2022,
+      "journal": "PHYSICAL REVIEW MATERIALS",
+      "doi": "10.1103/physrevmaterials.6.043601",
+      "abstract": "Grain boundaries (GBs) have been studied for decades, but it remains a challenging task to describe characteristic GB properties by simple structural descriptors, especially at the local atomic level. In this paper, we use the atomic descriptor based on the smooth overlap of atomic positions (SOAP) to study the atomic energy at GBs by using machine learning and propose a route to simplify it. It is found that, compared with conventional local atomic descriptors such as the Voronoi index, excess volume, centrosymmetry, or local entropy, the SOAP vector shows excellent predictive performance for the atomic energy among the 172 Al and 388 Ni coincidence site lattice (CSL) GBs as well as general GBs in the nanocrystalline model. Additionally, we successfully used the datasets of GBs and amorphous models to predict the atomic energy of one another, which proves the similarity between the local atomic environments (LAEs) in GBs and the amorphous state. Furthermore, the distribution of local distortion factors based on the SOAP vector shows the transition in atomic pack ordering from special CSL GBs to general GBs and the amorphous structures. The simplified descriptor we propose can reduce the original SOAP vector from >1000 features to only a few yet still shows the superior predictive performance of the atomic energy at GBs in all cases than the conventional descriptors combined. It is expected that the simplification process can be adapted to study more complex GB behaviors. A simple and efficient descriptor of the LAEs should allow us to have a clearer picture of the structure-property correlation in GBs, which is essential for GB engineering.",
+      "keywords": [
+        "OPTIMIZATION",
+        "IMPROVEMENT",
+        "DUCTILITY",
+        "METALS"
+      ],
+      "normalized_title": "atomic energy in grain boundaries studied by machine learning",
+      "raw_bibtex": "@ARTICLE{10.1103/PhysRevMaterials.6.043601,\n\tauthor = {Song, XY and Deng, C},\n\ttitle = {Atomic energy in grain boundaries studied by machine learning},\n\tjournal = {PHYSICAL REVIEW MATERIALS},\n\tyear = {2022},\n\tkeywords = {OPTIMIZATION; IMPROVEMENT; DUCTILITY; METALS},\n\tabstract = {Grain boundaries (GBs) have been studied for decades, but it remains a challenging task to describe characteristic GB properties by simple structural descriptors, especially at the local atomic level. In this paper, we use the atomic descriptor based on the smooth overlap of atomic positions (SOAP) to study the atomic energy at GBs by using machine learning and propose a route to simplify it. It is found that, compared with conventional local atomic descriptors such as the Voronoi index, excess volume, centrosymmetry, or local entropy, the SOAP vector shows excellent predictive performance for the atomic energy among the 172 Al and 388 Ni coincidence site lattice (CSL) GBs as well as general GBs in the nanocrystalline model. Additionally, we successfully used the datasets of GBs and amorphous models to predict the atomic energy of one another, which proves the similarity between the local atomic environments (LAEs) in GBs and the amorphous state. Furthermore, the distribution of local distortion factors based on the SOAP vector shows the transition in atomic pack ordering from special CSL GBs to general GBs and the amorphous structures. The simplified descriptor we propose can reduce the original SOAP vector from >1000 features to only a few yet still shows the superior predictive performance of the atomic energy at GBs in all cases than the conventional descriptors combined. It is expected that the simplification process can be adapted to study more complex GB behaviors. A simple and efficient descriptor of the LAEs should allow us to have a clearer picture of the structure-property correlation in GBs, which is essential for GB engineering.},\n\tdoi = {10.1103/PhysRevMaterials.6.043601},\n\tvolume = {6},\n\tnumber = {4},\n\tissn = {2475-9953},\n\tnote = {Times Cited in Web of Science Core Collection: 17 Total Times Cited: 17 Cited Reference Count: 48 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1103/PhysRevMaterials.6.043601"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000338",
+      "entry_type": "article",
+      "title": "NEW HYBRID DATA PREPROCESSING TECHNIQUE FOR HIGHLY IMBALANCED DATASET",
+      "authors": [
+        "Malik, EF",
+        "Khaw, KW",
+        "Chew, X"
+      ],
+      "year": 2022,
+      "journal": "COMPUTING AND INFORMATICS",
+      "doi": "10.31577/cai20224981",
+      "abstract": "One of the most challenging problems in the real-world dataset is the rising numbers of imbalanced data. The fact that the ratio of the majorities is higher than the minorities will lead to misleading results as conventional machine learning algorithms were designed on the assumption of equal class distribution. The purpose of this study is to build a hybrid data preprocessing approach to deal with the class imbalance issue by applying resampling approaches and CSL for fraud detection using a real-world dataset. The proposed hybrid approach consists of two steps in which the first step is to compare several resampling approaches to find the optimum technique with the highest performance in the validation set. While the second method used CSL with optimal weight ratio on the resampled data from the first step. The hybrid technique was found to have a positive impact of 0.987, 0.974, 0.847, 0.853 F2-measure for RF, DT, XGBOOST and LGBM, respectively. Addi-tionally, relative to the conventional methods, it obtained the highest performance for prediction.",
+      "keywords": [
+        "Cost-sensitive learning",
+        "hybrid",
+        "imbalance dataset",
+        "resampling tech-niques",
+        "SMOTE",
+        "SELECTION"
+      ],
+      "normalized_title": "new hybrid data preprocessing technique for highly imbalanced dataset",
+      "raw_bibtex": "@ARTICLE{10.31577/cai20224981,\n\tauthor = {Malik, EF and Khaw, KW and Chew, X},\n\ttitle = {NEW HYBRID DATA PREPROCESSING TECHNIQUE FOR HIGHLY IMBALANCED DATASET},\n\tjournal = {COMPUTING AND INFORMATICS},\n\tyear = {2022},\n\tkeywords = {Cost-sensitive learning; hybrid; imbalance dataset; resampling tech-niques; SMOTE; SELECTION},\n\tabstract = {One of the most challenging problems in the real-world dataset is the rising numbers of imbalanced data. The fact that the ratio of the majorities is higher than the minorities will lead to misleading results as conventional machine learning algorithms were designed on the assumption of equal class distribution. The purpose of this study is to build a hybrid data preprocessing approach to deal with the class imbalance issue by applying resampling approaches and CSL for fraud detection using a real-world dataset. The proposed hybrid approach consists of two steps in which the first step is to compare several resampling approaches to find the optimum technique with the highest performance in the validation set. While the second method used CSL with optimal weight ratio on the resampled data from the first step. The hybrid technique was found to have a positive impact of 0.987, 0.974, 0.847, 0.853 F2-measure for RF, DT, XGBOOST and LGBM, respectively. Addi-tionally, relative to the conventional methods, it obtained the highest performance for prediction.},\n\tdoi = {10.31577/cai20224981},\n\tvolume = {41},\n\tnumber = {4},\n\tpages = {981-1001},\n\tissn = {1335-9150},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 51 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.31577/cai20224981"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000339",
+      "entry_type": "article",
+      "title": "Controlling Wasserstein Distances by Kernel Norms with Application to Compressive Statistical Learning",
+      "authors": [
+        "Vayer, T",
+        "Gribonval, R"
+      ],
+      "year": 2023,
+      "journal": "JOURNAL OF MACHINE LEARNING RESEARCH",
+      "doi": null,
+      "abstract": "Comparing probability distributions is at the crux of many machine learning algorithms. Maximum Mean Discrepancies (MMD) and Wasserstein distances are two classes of distances between probability distributions that have attracted abundant attention in past years. This paper establishes some conditions under which the Wasserstein distance can be controlled by MMD norms. Our work is motivated by the compressive statistical learning (CSL) theory, a general framework for resource-efficient large scale learning in which the training data is summarized in a single vector (called sketch) that captures the information relevant to the considered learning task. Inspired by existing results in CSL, we introduce the Holder Lower Restricted Isometric Property and show that this property comes with interesting guarantees for compressive statistical learning. Based on the relations between the MMD and the Wasserstein distances, we provide guarantees for compressive statistical learning by introducing and studying the concept of Wasserstein regularity of the learning task, that is when some task-specific metric between probability distributions can be bounded by a Wasserstein distance.",
+      "keywords": [
+        "optimal transport",
+        "maximum mean discrepancy",
+        "statistical learning",
+        "compressive learning",
+        "kernel methods",
+        "inverse problems",
+        "POSITIVE-DEFINITE FUNCTIONS",
+        "ROOTS"
+      ],
+      "normalized_title": "controlling wasserstein distances by kernel norms with application to compressive statistical learning",
+      "raw_bibtex": "@ARTICLE{WOS:001125261200001,\n\tauthor = {Vayer, T and Gribonval, R},\n\ttitle = {Controlling Wasserstein Distances by Kernel Norms with Application to Compressive Statistical Learning},\n\tjournal = {JOURNAL OF MACHINE LEARNING RESEARCH},\n\tyear = {2023},\n\tkeywords = {optimal transport; maximum mean discrepancy; statistical learning; compressive learning; kernel methods; inverse problems; POSITIVE-DEFINITE FUNCTIONS; ROOTS},\n\tabstract = {Comparing probability distributions is at the crux of many machine learning algorithms. Maximum Mean Discrepancies (MMD) and Wasserstein distances are two classes of distances between probability distributions that have attracted abundant attention in past years. This paper establishes some conditions under which the Wasserstein distance can be controlled by MMD norms. Our work is motivated by the compressive statistical learning (CSL) theory, a general framework for resource-efficient large scale learning in which the training data is summarized in a single vector (called sketch) that captures the information relevant to the considered learning task. Inspired by existing results in CSL, we introduce the Holder Lower Restricted Isometric Property and show that this property comes with interesting guarantees for compressive statistical learning. Based on the relations between the MMD and the Wasserstein distances, we provide guarantees for compressive statistical learning by introducing and studying the concept of Wasserstein regularity of the learning task, that is when some task-specific metric between probability distributions can be bounded by a Wasserstein distance.},\n\tvolume = {24},\n\tissn = {1532-4435},\n\tnote = {Times Cited in Web of Science Core Collection: 6 Total Times Cited: 6 Cited Reference Count: 83 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "WOS:001125261200001"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000340",
+      "entry_type": "article",
+      "title": "CSSG: A cost-sensitive stacked generalization approach for software defect prediction",
+      "authors": [
+        "Eivazpour, Z",
+        "Keyvanpour, MR"
+      ],
+      "year": 2021,
+      "journal": "SOFTWARE TESTING VERIFICATION & RELIABILITY",
+      "doi": "10.1002/stvr.1761",
+      "abstract": "The prediction of software artifacts on defect-prone (DP) or non-defect-prone (NDP) classes during the testing phase helps minimize software business costs, which is a classification task in software defect prediction (SDP) field. Machine learning methods are helpful for the task, although they face the challenge of data imbalance distribution. The challenge leads to serious misclassification of artifacts, which will disrupt the predictor's performance. The previously developed stacking ensemble methods do not consider the cost issue to handle the class imbalance problem (CIP) over the training dataset in the SDP field. To bridge this research gap, in the cost-sensitive stacked generalization (CSSG) approach, we try to combine the staking ensemble learning method with cost-sensitive learning (CSL) since the CSL purpose is to reduce misclassification costs. In the cost-sensitive stacked generalization (CSSG) approach, logistic regression (LR) and extremely randomized trees classifiers in cases of CSL and cost-insensitive are used as a final classifier of stacking scheme. To evaluate the performance of CSSG, we use six performance measures. Several experiments are carried out to compare the CSSG with some cost-sensitive ensemble methods on 15 benchmark datasets with different imbalance levels. The results indicate that the CSSG can be an effective solution to the CIP than other compared methods.",
+      "keywords": [
+        "class imbalance learning",
+        "cost of misclassification",
+        "cost&#8208",
+        "sensitive learning",
+        "data imbalance",
+        "ensemble learning",
+        "software defect prediction",
+        "CLASSIFICATION ALGORITHMS",
+        "STATISTICAL COMPARISONS",
+        "DECISION TREES",
+        "ENSEMBLE",
+        "QUALITY",
+        "CLASSIFIERS",
+        "SYSTEM",
+        "FAULTS"
+      ],
+      "normalized_title": "cssg a cost sensitive stacked generalization approach for software defect prediction",
+      "raw_bibtex": "@ARTICLE{10.1002/stvr.1761,\n\tauthor = {Eivazpour, Z and Keyvanpour, MR},\n\ttitle = {CSSG: A cost-sensitive stacked generalization approach for software defect prediction},\n\tjournal = {SOFTWARE TESTING VERIFICATION & RELIABILITY},\n\tyear = {2021},\n\tkeywords = {class imbalance learning; cost of misclassification; cost&#8208; sensitive learning; data imbalance; ensemble learning; software defect prediction; CLASSIFICATION ALGORITHMS; STATISTICAL COMPARISONS; DECISION TREES; ENSEMBLE; QUALITY; CLASSIFIERS; SYSTEM; FAULTS},\n\tabstract = {The prediction of software artifacts on defect-prone (DP) or non-defect-prone (NDP) classes during the testing phase helps minimize software business costs, which is a classification task in software defect prediction (SDP) field. Machine learning methods are helpful for the task, although they face the challenge of data imbalance distribution. The challenge leads to serious misclassification of artifacts, which will disrupt the predictor's performance. The previously developed stacking ensemble methods do not consider the cost issue to handle the class imbalance problem (CIP) over the training dataset in the SDP field. To bridge this research gap, in the cost-sensitive stacked generalization (CSSG) approach, we try to combine the staking ensemble learning method with cost-sensitive learning (CSL) since the CSL purpose is to reduce misclassification costs. In the cost-sensitive stacked generalization (CSSG) approach, logistic regression (LR) and extremely randomized trees classifiers in cases of CSL and cost-insensitive are used as a final classifier of stacking scheme. To evaluate the performance of CSSG, we use six performance measures. Several experiments are carried out to compare the CSSG with some cost-sensitive ensemble methods on 15 benchmark datasets with different imbalance levels. The results indicate that the CSSG can be an effective solution to the CIP than other compared methods.},\n\tdoi = {10.1002/stvr.1761},\n\tvolume = {31},\n\tnumber = {5},\n\tissn = {0960-0833},\n\tnote = {Times Cited in Web of Science Core Collection: 11 Total Times Cited: 13 Cited Reference Count: 159 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1002/stvr.1761"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

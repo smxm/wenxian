@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0005",
+    "results": [
+        {
+            "paper_id": "paper_000041",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究主题是精准医疗决策感知，未涉及赋能教育干预。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000042",
+            "decision": "exclude",
+            "reason": "研究对象包含多发性骨髓瘤和慢性淋巴细胞白血病患者，未明确限定为成人白血病患者。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000043",
+            "decision": "include",
+            "reason": "标题和摘要明确针对白血病患者，研究健康促进策略对自我效能的影响，符合赋能教育主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000044",
+            "decision": "uncertain",
+            "reason": "标题和摘要提到康复项目包含自我管理平台，但未明确说明是否针对成人白血病患者或具体赋能教育内容。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000045",
+            "decision": "exclude",
+            "reason": "研究主题是阿片类药物感知和疼痛管理，未涉及赋能教育干预。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000046",
+            "decision": "exclude",
+            "reason": "标题和摘要显示是药物不良反应管理指南，非教育干预研究。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000047",
+            "decision": "include",
+            "reason": "标题和摘要明确针对慢性粒细胞白血病患者，研究数字平台对患者赋能的影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000048",
+            "decision": "include",
+            "reason": "标题和摘要明确针对急性髓系白血病患者，研究心理移动应用对自我效能的影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000049",
+            "decision": "uncertain",
+            "reason": "标题提到治疗教育和身体活动，但摘要未明确说明是否针对成人白血病患者或具体赋能教育内容。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000050",
+            "decision": "exclude",
+            "reason": "研究对象包含多种癌症患者，未限定为成人白血病患者，且研究主题是医疗不平等而非赋能教育干预。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        }
+    ]
+}

@@ -1,0 +1,113 @@
+{
+  "id": "3226faf3e0fa",
+  "name": "南京芳草国际旅行社IP形象设计与研学结合研究",
+  "topic": "旅行社IP形象设计与研学主题初筛",
+  "description": "研究南京芳草国际旅行社的IP形象设计，结合研学旅行特色、建筑元素、插画与海报应用，以提升品牌识别和用户体验。",
+  "thread_profile": {
+    "strategy": {
+      "research_need": "您的论文标题（可不填）：“小芳草”南京芳草国际旅行社IP设计\n\n\n\n英文文献or中文文献：中文\n\n查找文献的主题：设计类IP形象类 旅行社ip形象研学特色建筑与IP形象结合插画 海报 \n\n关键词：芳草国际旅行社 IP形象 研学\n\n作者（机构）国籍（属地）要求：外国\n\n文章篇幅要求（字数or页数）：无\n\n发表期刊要求 无\n\n\n\n文献年份：2020到现在\n\n需要的文献数量：4\n\n其他要求：无",
+      "selected_databases": [
+        "scopus",
+        "wos"
+      ],
+      "model": {
+        "provider": "deepseek",
+        "model_name": "deepseek-reasoner",
+        "api_base_url": "https://api.deepseek.com/v1",
+        "api_key_env": "DEEPSEEK_API_KEY",
+        "api_key": null,
+        "temperature": 0.0,
+        "max_tokens": 4096,
+        "min_request_interval_seconds": 2.0
+      },
+      "latest_task_id": "de742828cc90",
+      "plan": {
+        "topic": "南京芳草国际旅行社IP形象设计与研学结合研究",
+        "intent_summary": "研究南京芳草国际旅行社的IP形象设计，结合研学旅行特色、建筑元素、插画与海报应用，以提升品牌识别和用户体验。",
+        "screening_topic": "旅行社IP形象设计与研学主题初筛",
+        "inclusion": [
+          "文献涉及IP形象、品牌设计或视觉识别系统",
+          "与旅行社、旅游品牌或研学旅行相关",
+          "包含建筑、插画、海报或图形设计元素",
+          "发表年份为2020年或以后",
+          "语言为中文"
+        ],
+        "exclusion": [
+          "纯理论、非设计类或技术实现文献",
+          "与旅行社无关的IP设计案例",
+          "非中文文献",
+          "发表年份早于2020年",
+          "仅讨论市场营销而非设计概念的文献"
+        ],
+        "search_blocks": [
+          {
+            "database": "scopus",
+            "title": "Scopus高级检索方案",
+            "query": "TITLE-ABS-KEY(\"IP design\" OR \"IP image\" OR \"brand mascot\" OR \"character design\") AND TITLE-ABS-KEY(\"travel agency\" OR \"tourism\" OR \"tour operator\") AND TITLE-ABS-KEY(\"study tour\" OR \"educational travel\" OR \"architecture\" OR \"illustration\" OR \"poster\") AND PUBYEAR > 2019 AND LANGUAGE(chinese)",
+            "lines": [],
+            "notes": [
+              "检索式使用英文关键词，针对中文文献进行高级检索",
+              "可根据结果数量调整AND/OR操作符，例如放宽建筑或插画条件",
+              "注意验证文献作者国籍是否为外国，可在检索后手动筛选"
+            ]
+          },
+          {
+            "database": "wos",
+            "title": "Web of Science高级检索方案",
+            "query": "TS=(\"IP design\" OR \"IP image\" OR \"brand character\" OR \"mascot\") AND TS=(\"travel agency\" OR \"tourism\" OR \"tourist agency\") AND TS=(\"study tour\" OR \"educational travel\" OR \"architecture\" OR \"illustration\" OR \"poster design\") AND PY>=2020 AND LA=Chinese",
+            "lines": [],
+            "notes": [
+              "使用主题字段检索，覆盖标题、摘要、关键词",
+              "年份范围设置为2020年至今，可根据当前年份更新",
+              "由于主题较窄，结果可能有限，建议扩展检索词如\"visual identity\"或\"graphic design\""
+            ]
+          }
+        ],
+        "caution_notes": [
+          "检索关键词基于英文翻译，可能遗漏特定中文术语，建议检索后检查相关性",
+          "外国作者国籍要求需在检索结果中手动验证，因数据库检索式难直接限制",
+          "若文献数量不足4篇，可尝试放宽排除标准或增加检索词",
+          "确保初筛时仔细阅读摘要，避免纳入不相关文献"
+        ]
+      }
+    },
+    "screening": {
+      "topic": "旅行社IP形象设计与研学主题初筛",
+      "criteria_markdown": "# 研究主题\n\n旅行社IP形象设计与研学主题初筛\n\n# 纳入标准\n\n- 文献涉及IP形象、品牌设计或视觉识别系统\n- 与旅行社、旅游品牌或研学旅行相关\n- 包含建筑、插画、海报或图形设计元素\n- 发表年份为2020年或以后\n- 语言为中文\n\n# 排除标准\n\n- 纯理论、非设计类或技术实现文献\n- 与旅行社无关的IP设计案例\n- 非中文文献\n- 发表年份早于2020年\n- 仅讨论市场营销而非设计概念的文献",
+      "inclusion": [
+        "文献涉及IP形象、品牌设计或视觉识别系统",
+        "与旅行社、旅游品牌或研学旅行相关",
+        "包含建筑、插画、海报或图形设计元素",
+        "发表年份为2020年或以后",
+        "语言为中文"
+      ],
+      "exclusion": [
+        "纯理论、非设计类或技术实现文献",
+        "与旅行社无关的IP设计案例",
+        "非中文文献",
+        "发表年份早于2020年",
+        "仅讨论市场营销而非设计概念的文献"
+      ],
+      "model": {
+        "provider": "deepseek",
+        "model_name": "deepseek-chat",
+        "api_base_url": "https://api.deepseek.com/v1",
+        "api_key_env": "DEEPSEEK_API_KEY",
+        "api_key": null,
+        "temperature": 0,
+        "max_tokens": 1536,
+        "min_request_interval_seconds": 2
+      },
+      "batch_size": 10,
+      "target_include_count": null,
+      "stop_when_target_reached": false,
+      "allow_uncertain": true,
+      "retry_times": 6,
+      "request_timeout_seconds": 240,
+      "encoding": "auto"
+    },
+    "last_updated_at": "2026-04-10T06:36:52.681950+00:00"
+  },
+  "created_at": "2026-04-10T06:35:47.727197+00:00",
+  "updated_at": "2026-04-10T06:36:52.682061+00:00"
+}

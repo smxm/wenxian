@@ -1,0 +1,98 @@
+{
+  "id": "1d28f568bbbd",
+  "kind": "report",
+  "status": "succeeded",
+  "cancel_requested": false,
+  "title": "白血病赋能-report",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 6,
+  "progress_total": 6,
+  "progress_message": "Task completed",
+  "created_at": "2026-03-29T16:13:49.117646+08:00",
+  "updated_at": "2026-03-29T16:18:39.319584+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "12dceae68395",
+    "project_topic": "成人白血病患者赋能教育（Empowerment Education）",
+    "model_provider": "deepseek",
+    "source_screening_task_id": null,
+    "input_dataset_ids": [
+      "fulltext-ready"
+    ],
+    "request_payload": {
+      "title": "白血病赋能-report",
+      "project_id": "12dceae68395",
+      "screening_task_id": null,
+      "dataset_ids": [
+        "fulltext-ready"
+      ],
+      "project_topic": "成人白血病患者赋能教育（Empowerment Education）",
+      "model": {
+        "provider": "deepseek",
+        "model_name": "deepseek-chat",
+        "api_base_url": "https://api.deepseek.com/v1",
+        "api_key_env": "DEEPSEEK_API_KEY",
+        "temperature": 0.0,
+        "max_tokens": 1536,
+        "min_request_interval_seconds": 2.0
+      },
+      "report_name": "simple_report",
+      "retry_times": 6,
+      "timeout_seconds": 240,
+      "reference_style": "gbt7714"
+    },
+    "virtual_dataset_paths": [
+      "projects/12dceae68395/derived/fulltext_ready.ris"
+    ],
+    "model_secret_id": "cff58824ff6447da"
+  },
+  "summary": {
+    "report_name": "simple_report",
+    "reference_style": "gbt7714",
+    "reference_override_applied": true
+  },
+  "error": null,
+  "artifacts": {
+    "literature_report": {
+      "path": "tasks/1d28f568bbbd/report_output/literature_report.md",
+      "filename": "literature_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 9750
+    },
+    "paper_notes": {
+      "path": "tasks/1d28f568bbbd/report_output/paper_notes.json",
+      "filename": "paper_notes.json",
+      "content_type": "application/json",
+      "size_bytes": 6583
+    },
+    "report_overview": {
+      "path": "tasks/1d28f568bbbd/report_output/report_overview.json",
+      "filename": "report_overview.json",
+      "content_type": "application/json",
+      "size_bytes": 1912
+    },
+    "literature_report_reviewed": {
+      "path": "tasks/1d28f568bbbd/report_output/reviewed/literature_report.reviewed.md",
+      "filename": "literature_report.reviewed.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 9796
+    },
+    "references_reviewed": {
+      "path": "tasks/1d28f568bbbd/report_output/reviewed/references.reviewed.txt",
+      "filename": "references.reviewed.txt",
+      "content_type": "text/plain; charset=utf-8",
+      "size_bytes": 1425
+    }
+  },
+  "run_root": "tasks/1d28f568bbbd",
+  "output_dir": "tasks/1d28f568bbbd/report_output",
+  "markdown_preview": "# 一、相关文献总体情况\n\n这批文献聚焦于成人白血病患者的赋能教育，主要关注通过不同干预方式提升患者的自我管理能力、健康素养和心理状态。研究涵盖了多模块整合干预、数字平台应用、感染控制实践、信息需求分析、平台开发方法和心理干预等多个方面，其中数字平台（特别是CMyLife）和综合干预方案是主要研究方向。文献多采用实证研究方法，如随机对照试验、患者偏好试验和前瞻性干预研究，旨在优化患者教育策略并支持临床护理。\n\n# 二、类型划分\n\n## 综合干预方案评估\n\n这类文献关注多模块整合的赋能教育干预方案，通过患者导航、社会法律与心理辅导、支持性课程及知识数据库等综合手段，旨在提升患者的健康相关生活质量、自我效能和健康素养，并评估其可行性和效果。\n\n- Patient information, communication and competence empowerment in oncology: Results and learnings from the PIKKO study\n\n## 数字平台开发与应用\n\n这类文献聚焦于数字护理平台（如CMyLife）的开发和应用，通过设计思维方法构建以患者为中心的网络工具，整合可靠信息、个人医疗记录和定制反馈等功能，以增强患者的健康信息知识、赋能感和自我管理能力。\n\n- Effectiveness of digital care platform CMyLife for patients with chronic myeloid leukemia: results of a patient-preference trial\n- Filling the gaps of patient information needs and information perception in chronic myeloid leukemia with the patient-physician co-produced web-based platform CMyLife\n- The development of a web-based, patient-centered intervention for patients with chronic myeloid leukemia (CMyLife): Design thinking development approach\n\n## 特定临床实践干预\n\n这类文献探讨赋能教育在具体临床实践中的应用，如通过教育工具提升患者手卫生、导管冲洗等自我管理实践以降低感染风险，或结合赋能理论进行心理干预以缓解化疗期间的焦虑、抑郁和癌因性疲乏。\n\n- Impact of empowerment of onco-hematological patients on the incidence of catheter-related bloodstream infections\n- Effect of cag regimen chemotherapy combined with empowerment theory on anxiety and depression and cancer-related fatigue in leukemia patients\n\n# 三、逐篇文献总结分析\n\n## Patient information, communication and competence empowerment in oncology: Results and learnings from the PIKKO study\n\n总结：\n该研究评估了PIKKO干预方案在肿瘤学中的应用，该方案整合了患者导航、社会法律与心理辅导、支持性课程及知识数据库，旨在提升患者的健康相关生活质量、自我效能和健康素养，并减少心理困扰。通过干预组与对照组的比较，研究发现尽管在主要指标上未观察到显著差异，但各模块使用频繁且获得患者积极评价，且数据库使用强度与健康素养、辅导使用强度与心理健康生活质量呈正相关趋势。\n\n分析：\n该文献为成人白血病患者赋能教育主题提供了实证参考，展示了多模块整合干预的设计思路，适合支撑综合支持系统的机制研究。其结果表明，即使效果未达统计显著，患者参与度和满意度仍可验证干预的可行性，有助于在类似应用场景中优化教育策略，强调长期跟踪和样本同质性的重要性。\n\n## Effectiveness of digital care platform CMyLife for patients with chronic myeloid leukemia: results of a patient-preference trial\n\n总结：\n该研究通过患者偏好试验评估了数字护理平台CMyLife对慢性粒细胞白血病患者的有效性。研究发现，使用该平台能显著提升患者的健康信息知识和赋能感，但在药物依从性和分子监测方面未发现显著改善，因为这两项指标在基线时已表现优异。患者自我报告显示，平台有助于改善药物依从性和管理症状，支持医院外护理的可行性。\n\n分析：\n该文献为成人白血病患者赋能教育主题提供了实证案例，展示了数字平台如何通过信息提供和患者参与来增强自我管理能力。它适合支撑基于eHealth的赋能机制设计，特别是在慢性病护理场景中，为优化患者教育和提升护理可持续性提供参考。\n\n## Impact of empowerment of onco-hematological patients on the incidence of catheter-related bloodstream infections\n\n总结：\n该研究评估了患者赋权对降低中心静脉导管相关血流感染（CLABSI）发生率的影响，通过开发和应用评估导管处理良好实践的工具进行前瞻性干预研究。结果显示，干预后患者手卫生、导管冲洗和日常评估等实践依从性显著提高，CLABSI发生率在造血干细胞移植单位有所下降。研究强调了患者参与作为预防CLABSI的补充策略的潜力。\n\n分析：\n该文献为成人白血病患者赋能教育主题提供了实证支持，展示了患者赋权在感染控制中的具体应用机制，如通过教育工具提升自我管理实践。它适合支撑医疗系统中患者参与的设计，特别是在高风险人群如造血干细胞移植患者中，可作为减少CLABSI的干预策略参考。\n\n## Filling the gaps of patient information needs and information perception in chronic myeloid leukemia with the patient-physician co-produced web-based platform CMyLife\n\n总结：\n该研究评估了慢性粒细胞白血病患者在使用CMyLife网络平台前的信息提供与需求情况，发现信息感知存在不足，特别是康复、心理支持和治疗对性功能影响等方面。研究通过横断面调查和回归分析，识别出年龄、诊断时间和教育水平是影响信息感知的关键因素，并指出平台需个性化调整内容、方式和时机以填补缺口。\n\n分析：\n这篇文献对于成人白血病患者赋能教育主题具有参考价值，它展示了患者-医生共同开发的网络平台如何针对低电子健康素养患者提供可靠信息，支撑了基于个体差异的赋能机制设计。研究结果可用于指导类似教育系统的内容定制和时机安排，特别是在康复和心理支持等应用场景中，有助于优化患者教育策略。\n\n## The development of a web-based, patient-centered intervention for patients with chronic myeloid leukemia (CMyLife): Design thinking development approach\n\n总结：\n该研究采用设计思维方法，为慢性髓系白血病患者开发了一个名为CMyLife的以患者为中心的在线干预平台。通过多阶段设计过程，平台整合了可靠信息、个人医疗记录、症状日志和定制反馈等功能，旨在提升患者对疾病的理解和自我管理能力。研究初步构建了多功能的网络工具，以支持患者监测结果并优化护理流程。\n\n分析：\n该文献对于成人白血病患者赋能教育主题具有参考价值，展示了如何通过设计思维开发患者中心化工具来增强自我管理。它适合支撑基于网络平台的干预机制，应用于慢性疾病管理场景，为系统设计提供了整合信息、反馈和远程护理的范例。这有助于理解如何通过技术手段促进患者参与和护理协调。\n\n## Effect of cag regimen chemotherapy combined with empowerment theory on anxiety and depression and cancer-related fatigue in leukemia patients\n\n总结：\n该研究探讨了在白血病患者接受CAG方案化疗期间，结合赋能理论的心理干预对焦虑、抑郁及癌因性疲乏的影响。通过随机对照试验，比较了常规护理与赋能干预的效果，结果显示干预组在心理状态、疲乏症状和生活质量方面均有显著改善。结论表明，赋能理论支持的心理干预能有效缓解患者负面情绪，提升临床护理满意度。\n\n分析：\n这篇文献为成人白血病患者赋能教育主题提供了实证支持，展示了赋能理论在心理干预中的具体应用机制。它适合支撑医疗系统中患者心理支持系统的设计，特别是在化疗期间的辅助护理场景。研究结果可参考用于优化患者教育项目，强调心理因素在疾病管理中的重要性。\n\n# 参考列表\n\n[1] SCHNEIDER N, BÄCKER A, STRAUSS B, et al. Patient information, communication and competence empowerment in oncology: results and learnings from the PIKKO study[J]. Supportive Care in Cancer, 2023, 31(6): 327.\n[2] VERWEIJ L, ECTOR G I C G, SMIT Y, et al. Effectiveness of digital care platform CMyLife for patients with chronic myeloid leukemia: results of a patient-preference trial[J]. BMC Health Services Research, 2023, 23(1): 228.\n[3] REGHINI R, SILVA I L A F e, COSTA S F, et al. Impact of empowerment of onco-hematological patients on the incidence of catheter-related bloodstream infections[J]. American Journal of Infection Control, 2025, 53(9): 957-961.\n[4] ECTOR G I, VERWEIJ L, HERMENS R P, et al. Filling the gaps of patient information needs and information perception in chronic myeloid leukemia with the patient-physician co-produced web-based platform CMyLife[J]. Patient Education and Counseling, 2022, 105(3): 686-694.\n[5] ECTOR G I, WESTERWEEL P E, HERMENS R P, et al. The development of a web-based, patient-centered intervention for patients with chronic myeloid leukemia (CMyLife): design thinking development approach[J]. Journal of Medical Internet Research, 2020, 22(5): e15895.\n[6] YOUCHENG W, YU L. Effect of cag regimen chemotherapy combined with empowerment theory on anxiety and depression and cancer-related fatigue in leukemia patients[J]. Revista de Psiquiatria Clinica, 2023: 1-7.\n",
+  "records": [],
+  "project_id": "12dceae68395",
+  "project_topic": "成人白血病患者赋能教育（Empowerment Education）",
+  "model_provider": "deepseek",
+  "input_dataset_ids": [
+    "fulltext-ready"
+  ]
+}

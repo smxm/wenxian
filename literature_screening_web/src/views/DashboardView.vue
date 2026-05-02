@@ -39,15 +39,15 @@ const workflowSteps = [
   },
   {
     step: '03',
-    title: '全文复核',
+    title: '复核与全文',
     summary: '处理候选文献。',
-    detail: '标记获取状态和最终去留。'
+    detail: '复核去留并标记全文获取状态。'
   },
   {
     step: '04',
-    title: '生成报告',
-    summary: '从线程生成报告。',
-    detail: '直接使用已纳入文献。'
+    title: '报告生成',
+    summary: '从已获取全文生成报告。',
+    detail: '选择批次后提交报告生成任务。'
   }
 ]
 
@@ -89,7 +89,7 @@ const workspaceSignals = computed(() => [
   { label: '主题线程', value: stats.value.threads, tone: 'emerald' },
   { label: '运行中任务', value: stats.value.running, tone: 'amber' },
   { label: '初筛轮次', value: stats.value.screening, tone: 'stone' },
-  { label: '报告任务', value: stats.value.reports, tone: 'olive' }
+  { label: '报告生成', value: stats.value.reports, tone: 'olive' }
 ])
 const screeningEntryRoute = computed(() =>
   draftsStore.screeningDraft.projectId ? `/threads/${draftsStore.screeningDraft.projectId}/screening/new` : '/screening/new'
@@ -118,7 +118,7 @@ async function saveThreadEdit() {
 }
 
 async function removeThread(project: { id: string; name: string }) {
-  if (!window.confirm(`确认删除主题“${project.name}”？相关初筛和报告任务也会一起删除。`)) {
+  if (!window.confirm(`确认删除主题“${project.name}”？相关初筛和报告生成任务也会一起删除。`)) {
     return
   }
   await projectsStore.deleteProject(project.id)
@@ -150,7 +150,7 @@ onMounted(async () => {
   <div class="view-stack">
     <section class="hero-grid">
       <div class="hero-copy panel-surface">
-        <div class="eyebrow">Thread-first Workflow</div>
+        <div class="eyebrow">Literature Review Workflow</div>
         <h1>先建线程，再继续初筛、复核和报告</h1>
         <p>输入研究需求创建线程，后续步骤都在线程里完成。</p>
         <div class="hero-actions">
@@ -256,7 +256,7 @@ onMounted(async () => {
             <div class="thread-card-topic">{{ thread.topic }}</div>
             <div class="thread-card-meta">
               <NTag size="small" round>{{ thread.screeningCount }} 轮初筛</NTag>
-              <NTag size="small" round>{{ thread.reportCount }} 个报告</NTag>
+              <NTag size="small" round>{{ thread.reportCount }} 次报告生成</NTag>
               <span>更新于 {{ dayjs(thread.updated_at).format('YYYY-MM-DD HH:mm') }}</span>
             </div>
             <div class="thread-card-tail" v-if="thread.latestTask">最近动作：{{ thread.latestTask.title }}</div>

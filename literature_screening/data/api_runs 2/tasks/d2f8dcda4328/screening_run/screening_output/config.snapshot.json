@@ -1,0 +1,61 @@
+{
+  "project": {
+    "name": "new-screening-run",
+    "output_dir": "tasks/d2f8dcda4328/screening_run/screening_output",
+    "save_raw_response": true,
+    "save_intermediate_files": true
+  },
+  "input": {
+    "input_files": [
+      "tasks/d2f8dcda4328/screening_run/inputs/included (1).ris"
+    ],
+    "encoding": "auto"
+  },
+  "dedup": {
+    "enabled": true,
+    "strict_doi_match": true,
+    "normalized_title_exact_match": true,
+    "fuzzy_title_match": false
+  },
+  "screening": {
+    "batch_size": 10,
+    "target_include_count": 30,
+    "stop_when_target_reached": true,
+    "allow_uncertain": true,
+    "retry_times": 6,
+    "request_timeout_seconds": 240
+  },
+  "criteria": {
+    "topic": "下一代益生菌（Akkermansia muciniphila/AKK）、发酵工艺及乳制品应用",
+    "inclusion": [
+      "明确的食品基质应用：研究必须将AKK（活菌或灭活状态）实际添加到具体的食品基质中（重点是乳制品，如奶酪、酸奶、发酵乳等），作为食品成分或发酵菌株。",
+      "食品工程与理化特性评估：探讨含AKK食品的加工、储藏或感官特性。例如：评估食品基质在有氧/冷藏环境对AKK活力的保护作用、对流变学/质构/pH值的影响、或者在模拟胃肠道消化(GI tract)中的存活率。",
+      "功能性食品表征：研究搭载AKK后，该新型食品整体表现出的生物活性（如抗氧化、降血压、降糖等）。"
+    ],
+    "exclusion": [
+      "纯临床/动物医学机制研究：仅探讨直接给小鼠或人类喂食AKK以治疗某种疾病（如肥胖、肠炎、糖尿病）的生理机制，完全没有涉及具体的“食品基质载体”或“食品加工过程”。",
+      "纯基础培养基研究：仅在实验室常规培养基（如BHI或固定液体培养基）中研究AKK的生长曲线或代谢物，没有真正应用到真实食品模型中。",
+      "不含AKK的常规研究：仅讨论传统益生菌（双歧杆菌、乳酸杆菌）在食品中的应用，未涉及Akkermansia muciniphila。"
+    ]
+  },
+  "model": {
+    "provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "api_base_url": "https://api.deepseek.com/v1",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 1536,
+    "min_request_interval_seconds": 2.0
+  },
+  "report": {
+    "export_included_ris": true,
+    "export_excluded_ris": false,
+    "export_unused_ris": true,
+    "export_included_bib": false,
+    "export_excluded_bib": false,
+    "export_unused_bib": false,
+    "included_report_format": "md",
+    "excluded_report_format": "md",
+    "summary_format": "json"
+  }
+}

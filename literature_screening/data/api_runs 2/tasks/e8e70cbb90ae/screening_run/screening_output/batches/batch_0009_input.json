@@ -1,0 +1,377 @@
+{
+  "batch_id": "batch_0009",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000081",
+    "paper_000082",
+    "paper_000083",
+    "paper_000084",
+    "paper_000085",
+    "paper_000086",
+    "paper_000087",
+    "paper_000088",
+    "paper_000089",
+    "paper_000090"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000081",
+      "entry_type": "article",
+      "title": "Cloud-Based Self-Triggered Cooperative Path Following of Underactuated USVs With Multimodel Extended State Observers",
+      "authors": [
+        "Liu, L",
+        "Zhang, JS",
+        "Sun, RH",
+        "Peng, ZH",
+        "Wang, D",
+        "Shi, Y"
+      ],
+      "year": 2025,
+      "journal": "IEEE TRANSACTIONS ON INDUSTRIAL ELECTRONICS",
+      "doi": "10.1109/tie.2024.3503633",
+      "abstract": "This article addresses the cooperative path following problem for multiple underactuated unmanned surface vehicles (USVs) in the presence of limited cloud communication and various sailing conditions. The USVs are only able to communicate with their neighbors intermittently through a cloud server. At the kinematic level, a self-triggered cooperative guidance law is proposed to allow all USVs to communicate with the cloud only when necessary rather than at a fixed period. Each USV estimates the states of its neighbors in real-time and autonomously determines the next communication time, such that it can stay disconnected from the cloud for longer periods of time and no listening is needed. At the dynamic level, a model-free kinetic controller is proposed based on multimodel extended state observers (ESOs). Multiple ESOs with different nominal control input parameter values are synthesized and a monitoring mechanism is designed to select the most suitable one at one time instant. Simulation results demonstrate the effectiveness of the proposed cloud-based self-triggered cooperative path following for multiple USVs with multimodel ESOs.",
+      "keywords": [
+        "Cloud-based self-triggered communication",
+        "cooperative path following",
+        "multimodel extended state observers",
+        "MARINE SURFACE VEHICLES",
+        "INPUT SATURATION",
+        "ADAPTIVE-CONTROL",
+        "OCEAN",
+        "SYSTEMS"
+      ],
+      "normalized_title": "cloud based self triggered cooperative path following of underactuated usvs with multimodel extended state observers",
+      "raw_bibtex": "@ARTICLE{10.1109/TIE.2024.3503633,\n\tauthor = {Liu, L and Zhang, JS and Sun, RH and Peng, ZH and Wang, D and Shi, Y},\n\ttitle = {Cloud-Based Self-Triggered Cooperative Path Following of Underactuated USVs With Multimodel Extended State Observers},\n\tjournal = {IEEE TRANSACTIONS ON INDUSTRIAL ELECTRONICS},\n\tyear = {2025},\n\tkeywords = {Cloud-based self-triggered communication; cooperative path following; multimodel extended state observers; Cloud-based self-triggered communication; cooperative path following; multimodel extended state observers; MARINE SURFACE VEHICLES; INPUT SATURATION; ADAPTIVE-CONTROL; OCEAN; SYSTEMS},\n\tabstract = {This article addresses the cooperative path following problem for multiple underactuated unmanned surface vehicles (USVs) in the presence of limited cloud communication and various sailing conditions. The USVs are only able to communicate with their neighbors intermittently through a cloud server. At the kinematic level, a self-triggered cooperative guidance law is proposed to allow all USVs to communicate with the cloud only when necessary rather than at a fixed period. Each USV estimates the states of its neighbors in real-time and autonomously determines the next communication time, such that it can stay disconnected from the cloud for longer periods of time and no listening is needed. At the dynamic level, a model-free kinetic controller is proposed based on multimodel extended state observers (ESOs). Multiple ESOs with different nominal control input parameter values are synthesized and a monitoring mechanism is designed to select the most suitable one at one time instant. Simulation results demonstrate the effectiveness of the proposed cloud-based self-triggered cooperative path following for multiple USVs with multimodel ESOs.},\n\tdoi = {10.1109/TIE.2024.3503633},\n\tvolume = {72},\n\tnumber = {7},\n\tpages = {7363-7372},\n\tissn = {0278-0046},\n\tnote = {Times Cited in Web of Science Core Collection: 6 Total Times Cited: 6 Cited Reference Count: 40 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TIE.2024.3503633"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000082",
+      "entry_type": "article",
+      "title": "Trajectory tracking control for autonomous underwater vehicles under quantized state feedback and ocean disturbances",
+      "authors": [
+        "Zhou, B",
+        "Su, YM",
+        "Huang, B",
+        "Wang, WK",
+        "Zhang, EH"
+      ],
+      "year": 2022,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2022.111500",
+      "abstract": "For the autonomous underwater vehicle (AUV) platform, state quantization is a widely existing phenomenon as the result of I/O signal conversion between hardware module and control module. This article considers such an adaptive trajectory tracking control problem for AUVs with the effects of quantized state feedback and ocean disturbances. To ensure the stability of the closed-looped system under quantized states and unmeasurable ocean disturbances, a novel quantized extended state observer (QESO) is firstly proposed. Then, an adaptive anti -disturbance control scheme is developed to achieve the trajectory tracking control goal. The main advantage of the proposed algorithm paper lies in that the resulted controller is established without any usage of continuous states. Besides, rigorous stability analysis validates the uniformly ultimately boundedness of the resulting closed -loop system under quantized states. Simulation experiments demonstrate the effectiveness and robustness of the proposed algorithms.",
+      "keywords": [
+        "State quantization",
+        "Autonomous underwater vehicle",
+        "Extended state observer",
+        "Adaptive control",
+        "SLIDING MODE CONTROL",
+        "UNCERTAIN SYSTEMS",
+        "MOTION CONTROL",
+        "ATTITUDE"
+      ],
+      "normalized_title": "trajectory tracking control for autonomous underwater vehicles under quantized state feedback and ocean disturbances",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2022.111500,\n\tauthor = {Zhou, B and Su, YM and Huang, B and Wang, WK and Zhang, EH},\n\ttitle = {Trajectory tracking control for autonomous underwater vehicles under quantized state feedback and ocean disturbances},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2022},\n\tkeywords = {State quantization; Autonomous underwater vehicle; Extended state observer; Adaptive control; SLIDING MODE CONTROL; UNCERTAIN SYSTEMS; MOTION CONTROL; ATTITUDE},\n\tabstract = {For the autonomous underwater vehicle (AUV) platform, state quantization is a widely existing phenomenon as the result of I/O signal conversion between hardware module and control module. This article considers such an adaptive trajectory tracking control problem for AUVs with the effects of quantized state feedback and ocean disturbances. To ensure the stability of the closed-looped system under quantized states and unmeasurable ocean disturbances, a novel quantized extended state observer (QESO) is firstly proposed. Then, an adaptive anti -disturbance control scheme is developed to achieve the trajectory tracking control goal. The main advantage of the proposed algorithm paper lies in that the resulted controller is established without any usage of continuous states. Besides, rigorous stability analysis validates the uniformly ultimately boundedness of the resulting closed -loop system under quantized states. Simulation experiments demonstrate the effectiveness and robustness of the proposed algorithms.},\n\tdoi = {10.1016/j.oceaneng.2022.111500},\n\tvolume = {256},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 19 Total Times Cited: 19 Cited Reference Count: 46 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2022.111500"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000083",
+      "entry_type": "article",
+      "title": "Event-Triggered-Based Distributed Formation Cooperative Tracking Control of Under-Actuated Unmanned Surface Vehicles With Input and State Quantization",
+      "authors": [
+        "Ning, J",
+        "Ma, YF",
+        "Chen, CLP"
+      ],
+      "year": 2025,
+      "journal": "IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS",
+      "doi": "10.1109/tits.2024.3524442",
+      "abstract": "For the maritime environment with limited communication bandwidth at sea, this paper investigates the distributed unmanned surface vehicles (USVs) formation tracking control problem with input and state quantization based on a time-varying threshold event-triggered mechanism. While ensuring that each follower USV can quickly form a formation and follow the virtual leader on the desired trajectory, it reduces the execution frequency of the controller, decreases the control amplitude, and saves communication resources. Firstly, a distributed event-triggered extended state observer (ESO) is designed to observe the virtual leader's position information, and another ESO is used to estimate the quantized state information of each USV and the uncertainty terms existing in the model. Subsequently, the kinematic guidance law and the kinetic control laws based on a time-varying threshold event-triggered mechanism are proposed in quantized environment using the hierarchical design approach. In addition, the linear splitting of the input quantization makes the designed controller no longer require a priori information on the quantization parameters. Finally, the stability of the designed distributed USV formation tracking control system with input and state quantization based on the time-varying threshold event-triggered mechanism is demonstrated by input-to-state stability theory, and the absence of Zeno behavior in the proposed control strategy is also verified. Three sets of simulation experiments demonstrate the effectiveness and scientific validity of the proposed method.",
+      "keywords": [
+        "Quantization (signal)",
+        "Event detection",
+        "Control systems",
+        "Trajectory",
+        "Navigation",
+        "Time-varying systems",
+        "Sea surface",
+        "Process control",
+        "Kinetic theory",
+        "Kinematics",
+        "Unmanned surface vehicles",
+        "cooperative tracking control",
+        "distributed event-triggered ESO",
+        "input and state quantization",
+        "event-triggered mechanism",
+        "NONLINEAR-SYSTEMS"
+      ],
+      "normalized_title": "event triggered based distributed formation cooperative tracking control of under actuated unmanned surface vehicles with input and state quantization",
+      "raw_bibtex": "@ARTICLE{10.1109/TITS.2024.3524442,\n\tauthor = {Ning, J and Ma, YF and Chen, CLP},\n\ttitle = {Event-Triggered-Based Distributed Formation Cooperative Tracking Control of Under-Actuated Unmanned Surface Vehicles With Input and State Quantization},\n\tjournal = {IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS},\n\tyear = {2025},\n\tkeywords = {Quantization (signal); Event detection; Control systems; Trajectory; Navigation; Time-varying systems; Sea surface; Process control; Kinetic theory; Kinematics; Unmanned surface vehicles; cooperative tracking control; distributed event-triggered ESO; input and state quantization; event-triggered mechanism; NONLINEAR-SYSTEMS},\n\tabstract = {For the maritime environment with limited communication bandwidth at sea, this paper investigates the distributed unmanned surface vehicles (USVs) formation tracking control problem with input and state quantization based on a time-varying threshold event-triggered mechanism. While ensuring that each follower USV can quickly form a formation and follow the virtual leader on the desired trajectory, it reduces the execution frequency of the controller, decreases the control amplitude, and saves communication resources. Firstly, a distributed event-triggered extended state observer (ESO) is designed to observe the virtual leader's position information, and another ESO is used to estimate the quantized state information of each USV and the uncertainty terms existing in the model. Subsequently, the kinematic guidance law and the kinetic control laws based on a time-varying threshold event-triggered mechanism are proposed in quantized environment using the hierarchical design approach. In addition, the linear splitting of the input quantization makes the designed controller no longer require a priori information on the quantization parameters. Finally, the stability of the designed distributed USV formation tracking control system with input and state quantization based on the time-varying threshold event-triggered mechanism is demonstrated by input-to-state stability theory, and the absence of Zeno behavior in the proposed control strategy is also verified. Three sets of simulation experiments demonstrate the effectiveness and scientific validity of the proposed method.},\n\tdoi = {10.1109/TITS.2024.3524442},\n\tvolume = {26},\n\tnumber = {5},\n\tpages = {7081-7097},\n\tissn = {1524-9050},\n\tnote = {Times Cited in Web of Science Core Collection: 32 Total Times Cited: 32 Cited Reference Count: 51 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TITS.2024.3524442"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000084",
+      "entry_type": "article",
+      "title": "Improved line-of-sight nonlinear trajectory tracking control of autonomous underwater vehicle exposed to high variable speed ocean currents",
+      "authors": [
+        "Chen, W",
+        "Liu, XL",
+        "Feng, Z",
+        "Tian, YQ",
+        "Leng, JX",
+        "Zhu, RH"
+      ],
+      "year": 2023,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2023.114149",
+      "abstract": "In this paper, a new controller is proposed to help AUV (Autonomous Underwater Vehicle) track ideal trajectory in the high speed and variable speed ocean current environment. The kinematic and dynamic model of AUV under current interference is derived in the defined coordinate system. For the observation of variable speed current, the proposed controller proposes an improved extended state observer based on ADCP (Acoustic Doppler Current Profiler) sensor and fuzzy control. In order to resist the interference of high speed current, the proposed controller introduces an auxiliary lateral thruster to improve the anti-current capability of AUV. In order to coordinate the path tracking performance and current interference resistance of AUV, the proposed controller proposes an improved line of sight method, where observer gain is selected through fuzzy control. The improved line of sight method compensates for the prediction error of the state observer and the error in the AUV speed regulation process through the switching symbol function term in the sliding film control. The AUV's speed gradually reaches the ideal speed calculated by the navigation law through the dynamic controller, which is designed based on the backstepping method. Finally, the proposed controller is theoretically proved by the Lyapunov stability criterion and tested by comparison simulation in various working environments and controllers.",
+      "keywords": [
+        "Improved line-of-sight",
+        "Autonomous underwater vehicle",
+        "Trajectory tracking",
+        "Improved extended disturbance observer",
+        "Fuzzy control",
+        "AUV",
+        "GUIDANCE",
+        "PATHS"
+      ],
+      "normalized_title": "improved line of sight nonlinear trajectory tracking control of autonomous underwater vehicle exposed to high variable speed ocean currents",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2023.114149,\n\tauthor = {Chen, W and Liu, XL and Feng, Z and Tian, YQ and Leng, JX and Zhu, RH},\n\ttitle = {Improved line-of-sight nonlinear trajectory tracking control of autonomous underwater vehicle exposed to high variable speed ocean currents},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2023},\n\tkeywords = {Improved line-of-sight; Autonomous underwater vehicle; Trajectory tracking; Improved extended disturbance observer; Fuzzy control; AUV; GUIDANCE; PATHS},\n\tabstract = {In this paper, a new controller is proposed to help AUV (Autonomous Underwater Vehicle) track ideal trajectory in the high speed and variable speed ocean current environment. The kinematic and dynamic model of AUV under current interference is derived in the defined coordinate system. For the observation of variable speed current, the proposed controller proposes an improved extended state observer based on ADCP (Acoustic Doppler Current Profiler) sensor and fuzzy control. In order to resist the interference of high speed current, the proposed controller introduces an auxiliary lateral thruster to improve the anti-current capability of AUV. In order to coordinate the path tracking performance and current interference resistance of AUV, the proposed controller proposes an improved line of sight method, where observer gain is selected through fuzzy control. The improved line of sight method compensates for the prediction error of the state observer and the error in the AUV speed regulation process through the switching symbol function term in the sliding film control. The AUV's speed gradually reaches the ideal speed calculated by the navigation law through the dynamic controller, which is designed based on the backstepping method. Finally, the proposed controller is theoretically proved by the Lyapunov stability criterion and tested by comparison simulation in various working environments and controllers.},\n\tdoi = {10.1016/j.oceaneng.2023.114149},\n\tvolume = {277},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 8 Total Times Cited: 10 Cited Reference Count: 38 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2023.114149"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000085",
+      "entry_type": "article",
+      "title": "Global Fixed-Time Path-Following Control with Prescribed Performance for an Unmanned Surface Vehicle under Lumped Uncertainties and Input Saturation: Simulations and Experiments",
+      "authors": [
+        "Song, BJ",
+        "Fan, YS",
+        "Mu, DD",
+        "Wang, GF",
+        "Liu, P",
+        "Wang, YX"
+      ],
+      "year": 2026,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2025.124024",
+      "abstract": "A global fixed-time path-following controller with prescribed performance is proposed for an underactuated unmanned surface vehicle (USV), accounting for unmeasurable velocity, input saturation, and lumped uncertainties. First, a fixed-time extended state observer (FTESO) is developed to estimate and compensate for the unmeasurable velocity and lumped uncertainties, which originate from model parameter uncertainties and external time-varying disturbances. Subsequently, a novel fixed-time prescribed-performance line-of-sight (FTPPLOS) guidance law is proposed to ensure that the position tracking error satisfies prescribed performance constraints within a fixed time. In response to complex marine environments, a fixed-time surge controller and a fixed-time integral sliding mode heading controller with prescribed performance are developed. In addition, a fixed-time auxiliary dynamic system and a fixed-time differentiator are integrated into the control framework to address input saturation and prevent derivative explosion during the differentiation process, respectively. Based on Lyapunov fixed-time stability theory, the proposed control scheme is proven to achieve uniformly global fixed-time stability (UGFTS) of the closed-loop system. Simulation results verify the effectiveness and demonstrate the superiority of the proposed method. Additionally, experimental evaluations confirm the proposed FTPPLOS guidance law to be both effective and applicable in real scenarios.",
+      "keywords": [
+        "Unmanned surface vehicle",
+        "Path-folowing",
+        "Fixed-time theory",
+        "prescribed performance",
+        "LOS guidance",
+        "TRACKING"
+      ],
+      "normalized_title": "global fixed time path following control with prescribed performance for an unmanned surface vehicle under lumped uncertainties and input saturation simulations and experiments",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2025.124024,\n\tauthor = {Song, BJ and Fan, YS and Mu, DD and Wang, GF and Liu, P and Wang, YX},\n\ttitle = {Global Fixed-Time Path-Following Control with Prescribed Performance for an Unmanned Surface Vehicle under Lumped Uncertainties and Input Saturation: Simulations and Experiments},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2026},\n\tkeywords = {Unmanned surface vehicle; Path-folowing; Fixed-time theory; prescribed performance; LOS guidance; TRACKING},\n\tabstract = {A global fixed-time path-following controller with prescribed performance is proposed for an underactuated unmanned surface vehicle (USV), accounting for unmeasurable velocity, input saturation, and lumped uncertainties. First, a fixed-time extended state observer (FTESO) is developed to estimate and compensate for the unmeasurable velocity and lumped uncertainties, which originate from model parameter uncertainties and external time-varying disturbances. Subsequently, a novel fixed-time prescribed-performance line-of-sight (FTPPLOS) guidance law is proposed to ensure that the position tracking error satisfies prescribed performance constraints within a fixed time. In response to complex marine environments, a fixed-time surge controller and a fixed-time integral sliding mode heading controller with prescribed performance are developed. In addition, a fixed-time auxiliary dynamic system and a fixed-time differentiator are integrated into the control framework to address input saturation and prevent derivative explosion during the differentiation process, respectively. Based on Lyapunov fixed-time stability theory, the proposed control scheme is proven to achieve uniformly global fixed-time stability (UGFTS) of the closed-loop system. Simulation results verify the effectiveness and demonstrate the superiority of the proposed method. Additionally, experimental evaluations confirm the proposed FTPPLOS guidance law to be both effective and applicable in real scenarios.},\n\tdoi = {10.1016/j.oceaneng.2025.124024},\n\tvolume = {351},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 32 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2025.124024"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000086",
+      "entry_type": "article",
+      "title": "Lyapunov-based model predictive control for path-following of an autonomous underwater vehicle using line-of-sight guidance",
+      "authors": [
+        "Yang, GH",
+        "Li, L",
+        "Zhang, K",
+        "Liu, WD"
+      ],
+      "year": 2026,
+      "journal": "MECHATRONICS",
+      "doi": "10.1016/j.mechatronics.2026.103464",
+      "abstract": "This paper studies the path-following problem of an underactuated autonomous underwater vehicle (AUV) with the ocean current disturbances. A line-of-sight (LOS) guidance law is employed at the outer loop, while a Lyapunov-based model predictive controller (LMPC) is developed at the inner loop to ensure that the AUV can accomplish the path-following task under ocean current disturbances. The proposed LOS-LMPC inherits the stability and robustness of the extended state observer (ESO)-based auxiliary control law and utilizes online optimization to enhance the path-following performance of the AUV system. Simulations and hardware experiments conducted on the \"Qilin\" AUV demonstrate the effectiveness of the proposed method.",
+      "keywords": [
+        "Autonomous underwater vehicle (AUV)",
+        "Line-of-sight (LOS)",
+        "Path-following",
+        "Lyapunov-based model predictive control",
+        "(LMPC)",
+        "STABILITY",
+        "SYSTEMS"
+      ],
+      "normalized_title": "lyapunov based model predictive control for path following of an autonomous underwater vehicle using line of sight guidance",
+      "raw_bibtex": "@ARTICLE{10.1016/j.mechatronics.2026.103464,\n\tauthor = {Yang, GH and Li, L and Zhang, K and Liu, WD},\n\ttitle = {Lyapunov-based model predictive control for path-following of an autonomous underwater vehicle using line-of-sight guidance},\n\tjournal = {MECHATRONICS},\n\tyear = {2026},\n\tkeywords = {Autonomous underwater vehicle (AUV); Line-of-sight (LOS); Path-following; Lyapunov-based model predictive control; (LMPC); STABILITY; SYSTEMS},\n\tabstract = {This paper studies the path-following problem of an underactuated autonomous underwater vehicle (AUV) with the ocean current disturbances. A line-of-sight (LOS) guidance law is employed at the outer loop, while a Lyapunov-based model predictive controller (LMPC) is developed at the inner loop to ensure that the AUV can accomplish the path-following task under ocean current disturbances. The proposed LOS-LMPC inherits the stability and robustness of the extended state observer (ESO)-based auxiliary control law and utilizes online optimization to enhance the path-following performance of the AUV system. Simulations and hardware experiments conducted on the \"Qilin\" AUV demonstrate the effectiveness of the proposed method.},\n\tdoi = {10.1016/j.mechatronics.2026.103464},\n\tvolume = {115},\n\tissn = {0957-4158},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 54 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.mechatronics.2026.103464"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000087",
+      "entry_type": "article",
+      "title": "Double-loop LQR depth tracking control of underactuated AUV: Methodology and comparative experiments",
+      "authors": [
+        "Duan, Y",
+        "Xiang, XB",
+        "Liu, C",
+        "Yang, LC"
+      ],
+      "year": 2024,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2024.117410",
+      "abstract": "In this paper, a double -loop depth tracking control scheme based on linear quadratic regulator (LQR) is proposed for underactuated autonomous underwater vehicles (AUV). The motivation is to address the problem that the classic single -loop LQR depth controller which is easy to use in practice yet cannot effectively overcome the underactuated AUV features and complex disturbances. First, a double -loop depth control framework is proposed which divides complex disturbances into outer -loop kinematic disturbances and inner -loop dynamic disturbances. Second, the adaptive line -of -sight (ALOS) guidance law is designed in the outer loop to account for the underactuated characteristics. The depth tracking error is converted to the desired pitch and the kinematic disturbance caused by the unknown angle of attack is compensated. Furthermore, based on the linear model in the inner -loop, a concise LQR method is designed to track the desired pitch. Meanwhile, an extended state observer (ESO) is introduced to estimate dynamic disturbances such as model nonlinearity, uncertainty and external environmental disturbances. Finally, the proposed scheme is validated by tank test and compared with the single -loop LQR method. The experiment results show that the proposed double -loop depth tracking method can effectively overcome complex disturbances and the depth tracking accuracy is increased by 83%.",
+      "keywords": [
+        "Underactuated AUV",
+        "LQR controller",
+        "Depth tracking",
+        "Adaptive line-of-sight",
+        "Double-loop control",
+        "AUTONOMOUS UNDERWATER VEHICLE",
+        "SYSTEMS"
+      ],
+      "normalized_title": "double loop lqr depth tracking control of underactuated auv methodology and comparative experiments",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2024.117410,\n\tauthor = {Duan, Y and Xiang, XB and Liu, C and Yang, LC},\n\ttitle = {Double-loop LQR depth tracking control of underactuated AUV: Methodology and comparative experiments},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2024},\n\tkeywords = {Underactuated AUV; LQR controller; Depth tracking; Adaptive line-of-sight; Double-loop control; AUTONOMOUS UNDERWATER VEHICLE; SYSTEMS},\n\tabstract = {In this paper, a double -loop depth tracking control scheme based on linear quadratic regulator (LQR) is proposed for underactuated autonomous underwater vehicles (AUV). The motivation is to address the problem that the classic single -loop LQR depth controller which is easy to use in practice yet cannot effectively overcome the underactuated AUV features and complex disturbances. First, a double -loop depth control framework is proposed which divides complex disturbances into outer -loop kinematic disturbances and inner -loop dynamic disturbances. Second, the adaptive line -of -sight (ALOS) guidance law is designed in the outer loop to account for the underactuated characteristics. The depth tracking error is converted to the desired pitch and the kinematic disturbance caused by the unknown angle of attack is compensated. Furthermore, based on the linear model in the inner -loop, a concise LQR method is designed to track the desired pitch. Meanwhile, an extended state observer (ESO) is introduced to estimate dynamic disturbances such as model nonlinearity, uncertainty and external environmental disturbances. Finally, the proposed scheme is validated by tank test and compared with the single -loop LQR method. The experiment results show that the proposed double -loop depth tracking method can effectively overcome complex disturbances and the depth tracking accuracy is increased by 83%.},\n\tdoi = {10.1016/j.oceaneng.2024.117410},\n\tvolume = {300},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 11 Total Times Cited: 11 Cited Reference Count: 52 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2024.117410"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000088",
+      "entry_type": "article",
+      "title": "Constrained LOS guidance for path following of underactuated marine vehicle with input saturation",
+      "authors": [
+        "Liu, C",
+        "Sun, T",
+        "Wang, XG"
+      ],
+      "year": 2024,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2024.118217",
+      "abstract": "The constraints, input and output, are both important for path following in practical applications; unfortunately, few works have reported the results for path following with both the input and output constraints. A feasible solution for path following with the input and output constraints is presented in this paper, that is the constrained line of sight (LOS) guidance-based model predictive control (MPC) methodology. It contains two layers: the guidance layer and the control layer. The guidance layer is the barrier Lyapunov function-based LOS guidance for handling output constraints. The control layer is the MPC for handling input constraints. The design intent is that the output constraints are handled in the guidance layer, and the input constraints are handled in the control layer, relaxing the complexity of controller. Furthermore, the extended state observer (ESO) is also incorporated into MPC for approximation, minimizing the discrepancy between predicted model and plant. The effectiveness and superiority of the constrained LOS guidance-based MPC methodology are demonstrated by the simulation experiments.",
+      "keywords": [
+        "Path following",
+        "Marine surface vehicle",
+        "LOS",
+        "MPC",
+        "AUTONOMOUS UNDERWATER VEHICLES",
+        "DISTURBANCE REJECTION CONTROL",
+        "SLIDING-MODE"
+      ],
+      "normalized_title": "constrained los guidance for path following of underactuated marine vehicle with input saturation",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2024.118217,\n\tauthor = {Liu, C and Sun, T and Wang, XG},\n\ttitle = {Constrained LOS guidance for path following of underactuated marine vehicle with input saturation},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2024},\n\tkeywords = {Path following; Marine surface vehicle; LOS; MPC; AUTONOMOUS UNDERWATER VEHICLES; DISTURBANCE REJECTION CONTROL; SLIDING-MODE},\n\tabstract = {The constraints, input and output, are both important for path following in practical applications; unfortunately, few works have reported the results for path following with both the input and output constraints. A feasible solution for path following with the input and output constraints is presented in this paper, that is the constrained line of sight (LOS) guidance-based model predictive control (MPC) methodology. It contains two layers: the guidance layer and the control layer. The guidance layer is the barrier Lyapunov function-based LOS guidance for handling output constraints. The control layer is the MPC for handling input constraints. The design intent is that the output constraints are handled in the guidance layer, and the input constraints are handled in the control layer, relaxing the complexity of controller. Furthermore, the extended state observer (ESO) is also incorporated into MPC for approximation, minimizing the discrepancy between predicted model and plant. The effectiveness and superiority of the constrained LOS guidance-based MPC methodology are demonstrated by the simulation experiments.},\n\tdoi = {10.1016/j.oceaneng.2024.118217},\n\tvolume = {307},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 8 Total Times Cited: 9 Cited Reference Count: 27 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2024.118217"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000089",
+      "entry_type": "article",
+      "title": "Active Vision-Based Finite-Time Trajectory-Tracking Control of an Unmanned Surface Vehicle Without Direct Position Measurements",
+      "authors": [
+        "He, HK",
+        "Wang, N",
+        "Huang, DZ",
+        "Han, B"
+      ],
+      "year": 2024,
+      "journal": "IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS",
+      "doi": "10.1109/tits.2024.3364770",
+      "abstract": "In this paper, a two-level visual servo strategy is elaborately devised for an unmanned surface vehicle (USV) equipped with a pan-tilt camera, so as to exactly track the desired trajectory around a visual target without direct position measurements. In the lower level, a barrier function-based adaptive pseudo-inverse (BFAP) controller is specially designed for the camera to keep the target in sight. Together with a finite-time position observer (FPO) and a finite-time extended state observer (FESO), a model-free finite-time trajectory-tracking control (MFTC) scheme is naturally synthesized for the USV on the higher level. Prominent advantages are presented as follows: 1) The BFAP controller can not only circumvent the singularity issue in a simpler manner, but also solve the field-of-view problem thoroughly in spite of unknown image depth; 2) The FPO provides a new vision-based method to locate the USV by rapidly calibrating a constant extrinsic parameter of the camera online, achieving higher positioning accuracy; and 3) The MFTC scheme allows all model information of the USV to be unknown, which is more favorable to practical implementations. Stability analyses are strictly made by the Lyapunov theory, and simulation studies conducted on the prototype CyberShip II comprehensively demonstrate remarkable performance of the proposed BFAP controller and MFTC scheme.",
+      "keywords": [
+        "Cameras",
+        "Visualization",
+        "Target tracking",
+        "Position measurement",
+        "Observers",
+        "Trajectory",
+        "Control systems",
+        "Pan-tilt camera",
+        "unmanned surface vehicle (USV)",
+        "field-of-view (FOV) problem",
+        "finite-time position observer (FPO)",
+        "model-free control method"
+      ],
+      "normalized_title": "active vision based finite time trajectory tracking control of an unmanned surface vehicle without direct position measurements",
+      "raw_bibtex": "@ARTICLE{10.1109/TITS.2024.3364770,\n\tauthor = {He, HK and Wang, N and Huang, DZ and Han, B},\n\ttitle = {Active Vision-Based Finite-Time Trajectory-Tracking Control of an Unmanned Surface Vehicle Without Direct Position Measurements},\n\tjournal = {IEEE TRANSACTIONS ON INTELLIGENT TRANSPORTATION SYSTEMS},\n\tyear = {2024},\n\tkeywords = {Cameras; Visualization; Target tracking; Position measurement; Observers; Trajectory; Control systems; Pan-tilt camera; unmanned surface vehicle (USV); field-of-view (FOV) problem; finite-time position observer (FPO); model-free control method},\n\tabstract = {In this paper, a two-level visual servo strategy is elaborately devised for an unmanned surface vehicle (USV) equipped with a pan-tilt camera, so as to exactly track the desired trajectory around a visual target without direct position measurements. In the lower level, a barrier function-based adaptive pseudo-inverse (BFAP) controller is specially designed for the camera to keep the target in sight. Together with a finite-time position observer (FPO) and a finite-time extended state observer (FESO), a model-free finite-time trajectory-tracking control (MFTC) scheme is naturally synthesized for the USV on the higher level. Prominent advantages are presented as follows: 1) The BFAP controller can not only circumvent the singularity issue in a simpler manner, but also solve the field-of-view problem thoroughly in spite of unknown image depth; 2) The FPO provides a new vision-based method to locate the USV by rapidly calibrating a constant extrinsic parameter of the camera online, achieving higher positioning accuracy; and 3) The MFTC scheme allows all model information of the USV to be unknown, which is more favorable to practical implementations. Stability analyses are strictly made by the Lyapunov theory, and simulation studies conducted on the prototype CyberShip II comprehensively demonstrate remarkable performance of the proposed BFAP controller and MFTC scheme.},\n\tdoi = {10.1109/TITS.2024.3364770},\n\tvolume = {25},\n\tnumber = {9},\n\tpages = {12151-12162},\n\tissn = {1524-9050},\n\tnote = {Times Cited in Web of Science Core Collection: 41 Total Times Cited: 44 Cited Reference Count: 50 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TITS.2024.3364770"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000090",
+      "entry_type": "article",
+      "title": "Distributed extended state observer based formation tracking control of under-actuated unmanned surface vehicles with input and state quantization",
+      "authors": [
+        "Ma, YF",
+        "Ning, J",
+        "Li, TS",
+        "Liu, L"
+      ],
+      "year": 2024,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2024.118872",
+      "abstract": "This paper delves into the distributed formation control of unmanned surface vehicles (USVs) under conditions of simultaneous input and state quantization. The primary objective is to ensure that USVs in the formation can effectively follow the specified trajectory in a bandwidth-limited communication environment. A distributed extended state observer (ESO) is proposed to observe the state information of the virtual leader in the USV formation. Furthermore, another ESO is introduced to address the impact of uncertainty terms in the ship model and quantized state variables during communication on the formation control system. Subsequently, the USVs formation guidance laws are formulated in the kinematics subsystem. In addition, the quantized control laws are described linearly in the kinetics subsystem so that the USVs distributed formation controller does not need to anticipate specific information about the quantization parameters. Meanwhile, the USVs formation tracking underlying control laws are designed in the quantized environment to achieve the tracking of the desired kinematic guidance signal. Then, the stability of the designed distributed formation tracking control system for USVs is proved using Lyapunov stability theory. Finally, the effectiveness of the proposed strategy is validated through two sets of simulation experiments, providing empirical evidence of its practical applicability.",
+      "keywords": [
+        "Unmanned surface vehicles",
+        "Formation tracking control",
+        "Distributed extended state observer",
+        "Input and state quantization",
+        "Adaptive quantized feedback control"
+      ],
+      "normalized_title": "distributed extended state observer based formation tracking control of under actuated unmanned surface vehicles with input and state quantization",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2024.118872,\n\tauthor = {Ma, YF and Ning, J and Li, TS and Liu, L},\n\ttitle = {Distributed extended state observer based formation tracking control of under-actuated unmanned surface vehicles with input and state quantization},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2024},\n\tkeywords = {Unmanned surface vehicles; Formation tracking control; Distributed extended state observer; Input and state quantization; Adaptive quantized feedback control},\n\tabstract = {This paper delves into the distributed formation control of unmanned surface vehicles (USVs) under conditions of simultaneous input and state quantization. The primary objective is to ensure that USVs in the formation can effectively follow the specified trajectory in a bandwidth-limited communication environment. A distributed extended state observer (ESO) is proposed to observe the state information of the virtual leader in the USV formation. Furthermore, another ESO is introduced to address the impact of uncertainty terms in the ship model and quantized state variables during communication on the formation control system. Subsequently, the USVs formation guidance laws are formulated in the kinematics subsystem. In addition, the quantized control laws are described linearly in the kinetics subsystem so that the USVs distributed formation controller does not need to anticipate specific information about the quantization parameters. Meanwhile, the USVs formation tracking underlying control laws are designed in the quantized environment to achieve the tracking of the desired kinematic guidance signal. Then, the stability of the designed distributed formation tracking control system for USVs is proved using Lyapunov stability theory. Finally, the effectiveness of the proposed strategy is validated through two sets of simulation experiments, providing empirical evidence of its practical applicability.},\n\tdoi = {10.1016/j.oceaneng.2024.118872},\n\tvolume = {311},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 14 Total Times Cited: 15 Cited Reference Count: 41 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2024.118872"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

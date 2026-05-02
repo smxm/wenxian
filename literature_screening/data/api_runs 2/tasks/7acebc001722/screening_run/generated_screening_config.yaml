@@ -1,0 +1,51 @@
+project:
+  name: 人工智能（AI）与扩展现实（XR）技术在猫咪及动物交互中的应用（涵盖虚拟宠物与实体动物交互）
+  output_dir: tasks/7acebc001722/screening_run/screening_output
+  save_raw_response: true
+  save_intermediate_files: true
+input:
+  input_files:
+  - tasks/7acebc001722/screening_run/inputs/scopus_export_Mar 23-2026_4b691fab-b2df-482d-b600-58da2748e039.ris
+  encoding: auto
+dedup:
+  enabled: true
+  strict_doi_match: true
+  normalized_title_exact_match: true
+  fuzzy_title_match: false
+screening:
+  batch_size: 20
+  target_include_count: 999
+  stop_when_target_reached: true
+  allow_uncertain: true
+  retry_times: 6
+  request_timeout_seconds: 240
+criteria:
+  topic: 'Step 1: 筛选判读'
+  inclusion:
+  - 必须明确涉及人工智能技术（如机器学习、生成式AI、计算机视觉、行为树等）。
+  - 必须涉及 XR 技术（VR、AR、MR）或元宇宙、3D虚拟空间。
+  - 核心研究对象或应用场景必须包含动物（特别是猫咪/Feline）或虚拟宠物（Virtual Pets/Companions）。
+  - 重点关注“交互”层面（如人宠互动、动物行为分析、虚拟伴侣的情感反馈）。
+  exclusion:
+  - 纯兽医学或动物生物学研究，无前沿计算机技术（AI/XR）介入。
+  - 纯 AI 算法理论或纯 XR 硬件研究，未结合动物交互或虚拟宠物场景。
+  - 传统的2D宠物游戏开发（无 AI 自主性或 XR 沉浸感）。
+  - 非英语或非学术类文章（如纯商业新闻报道）。
+model:
+  provider: deepseek
+  model_name: deepseek-chat
+  api_base_url: https://api.deepseek.com/v1
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.0
+  max_tokens: 1536
+  min_request_interval_seconds: 2.0
+report:
+  export_included_ris: true
+  export_excluded_ris: false
+  export_unused_ris: true
+  export_included_bib: false
+  export_excluded_bib: false
+  export_unused_bib: false
+  included_report_format: md
+  excluded_report_format: md
+  summary_format: json

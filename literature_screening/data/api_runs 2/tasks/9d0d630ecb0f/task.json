@@ -1,0 +1,462 @@
+{
+  "id": "9d0d630ecb0f",
+  "kind": "screening",
+  "status": "succeeded",
+  "cancel_requested": false,
+  "title": "new-screening-run",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 3,
+  "progress_total": 6,
+  "progress_message": "Task completed",
+  "created_at": "2026-04-07T23:53:21.559039+08:00",
+  "updated_at": "2026-04-07T23:54:24.939237+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "eece0bbf0e80",
+    "project_topic": "自身炎症及自身免疫性疾病（重点包含VKH、SLE等）的眼底及其他眼部表现",
+    "model_provider": "deepseek",
+    "parent_task_id": null,
+    "input_dataset_ids": [],
+    "request_payload": {
+      "title": "new-screening-run",
+      "topic": "自身炎症及自身免疫性疾病（重点包含VKH、SLE等）的眼底及其他眼部表现",
+      "criteria_markdown": "# Role\r\n\r\n你是一位医学与免疫学交叉领域的资深学术研究员，正在协助我筛选参考文献。我正在撰写一篇关于【自身炎症及自身免疫性疾病（重点包含VKH、SLE等）的眼底及其他眼部表现】的论文，需要你帮我找出具有高度参考价值的文献。\r\n\r\n# Task\r\n\r\n我将提供一批文献的元数据（标题、摘要等）。请逐一阅读，并严格按照以下流程处理：\r\n\r\n## Step 1: 筛选判读\r\n\r\n请根据以下标准判断该文献是否符合我的研究需求：\r\n\r\n* 纳入标准 (Inclusion Criteria)：\r\n  1. 全身性疾病背景：必须涉及自身炎症性疾病（Autoinflammatory）或自身免疫性疾病（Autoimmune），特别是明确提及 VKH（小柳原田综合征）、SLE（系统性红斑狼疮）或其他相关免疫介导疾病。\r\n  2. 临床表型：必须探讨上述疾病引起的眼部受累表现。重点关注眼底、葡萄膜、视网膜、脉络膜或视神经的病变（如全葡萄膜炎、视网膜血管炎、渗出性视网膜脱离、棉絮斑等）。\r\n\r\n* 排除标准 (Exclusion Criteria)：\r\n  1. 纯全身性免疫疾病研究，完全没有提及眼部/眼底表现的文献。\r\n  2. 纯眼科局部疾病，缺乏全身性自身免疫/自身炎症背景的文献（例如：年龄相关性黄斑变性、糖尿病视网膜病变、单纯的机械性眼外伤等）。\r\n  3. 仅作为流行病学数据一笔带过，缺乏对眼部特征、机制或影像学进行实质性探讨的低信息量文献。\r\n\r\n## Step 2: 格式化输出\r\n\r\n根据判读结果，执行不同的输出逻辑（所有输出必须全部包裹在 markdown 代码框内，绝对禁止触发或生成任何形式的来源标记、脚注或外部引用格式）：\r\n\r\n情况 A：如果不符合要求\r\n* 仅输出一行文字：\r\n  `❌ [剔除]：<Title>`\r\n\r\n情况 B：如果符合要求\r\n* 请按以下结构输出：\r\n\r\n# <Title>\r\n(<Title_CN>)\r\n\r\n核心总结\r\n(用中文简练概括：文章研究了哪种自身免疫/炎症性疾病？发现了哪些核心眼底/眼部表型或机制？主要结论是什么？)\r\n\r\n深度分析\r\n* 参考价值：针对【自身免疫/炎症性疾病的眼部表现】这一主题，明确指出该文献可以为我的论文提供哪些具体素材（例如：可用于归纳 VKH 脉络膜增厚的 OCT 影像特征，或总结 SLE 视网膜血管病变的发生率等）。\r\n\r\n---\r\n\r\n# Input Data\r\n\r\n[在此处粘贴你的文献元数据]",
+      "inclusion": [
+        "全身性疾病背景：必须涉及自身炎症性疾病（Autoinflammatory）或自身免疫性疾病（Autoimmune），特别是明确提及 VKH（小柳原田综合征）、SLE（系统性红斑狼疮）或其他相关免疫介导疾病。",
+        "临床表型：必须探讨上述疾病引起的眼部受累表现。重点关注眼底、葡萄膜、视网膜、脉络膜或视神经的病变（如全葡萄膜炎、视网膜血管炎、渗出性视网膜脱离、棉絮斑等）。"
+      ],
+      "exclusion": [
+        "纯全身性免疫疾病研究，完全没有提及眼部/眼底表现的文献。",
+        "纯眼科局部疾病，缺乏全身性自身免疫/自身炎症背景的文献（例如：年龄相关性黄斑变性、糖尿病视网膜病变、单纯的机械性眼外伤等）。",
+        "仅作为流行病学数据一笔带过，缺乏对眼部特征、机制或影像学进行实质性探讨的低信息量文献。"
+      ],
+      "provider": "deepseek",
+      "model_name": "deepseek-chat",
+      "api_base_url": "https://api.deepseek.com/v1",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.0,
+      "max_tokens": 1536,
+      "min_request_interval_seconds": 2.0,
+      "batch_size": 10,
+      "target_include_count": 15,
+      "stop_when_target_reached": true,
+      "allow_uncertain": true,
+      "retry_times": 6,
+      "request_timeout_seconds": 240,
+      "encoding": "auto",
+      "project_id": "eece0bbf0e80",
+      "parent_task_id": null,
+      "source_dataset_ids": []
+    },
+    "model_secret_id": "f8705bf316eb4a50",
+    "uploaded_input_paths": [
+      "tasks/9d0d630ecb0f/uploads/abstract-LupusEryth-set.txt"
+    ]
+  },
+  "summary": {
+    "run_id": "run_20260407_235321",
+    "input_files_count": 1,
+    "raw_entries_count": 59,
+    "deduped_entries_count": 59,
+    "processed_count": 30,
+    "included_count": 21,
+    "excluded_count": 6,
+    "uncertain_count": 3,
+    "unused_count": 29,
+    "batch_count": 3,
+    "api_call_count": 3,
+    "stop_reason": "target_include_count_reached",
+    "started_at": "2026-04-07T23:53:21.641412+08:00",
+    "finished_at": "2026-04-07T23:54:24.909105+08:00"
+  },
+  "error": null,
+  "artifacts": {
+    "included_report": {
+      "path": "tasks/9d0d630ecb0f/screening_run/screening_output/included_report.md",
+      "filename": "included_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 8994
+    },
+    "excluded_report": {
+      "path": "tasks/9d0d630ecb0f/screening_run/screening_output/excluded_report.md",
+      "filename": "excluded_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 2550
+    },
+    "uncertain_report": {
+      "path": "tasks/9d0d630ecb0f/screening_run/screening_output/uncertain_report.md",
+      "filename": "uncertain_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 1359
+    },
+    "included_ris": {
+      "path": "tasks/9d0d630ecb0f/screening_run/screening_output/included.ris",
+      "filename": "included.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 44788
+    },
+    "unused_ris": {
+      "path": "tasks/9d0d630ecb0f/screening_run/screening_output/unused_remaining.ris",
+      "filename": "unused_remaining.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 56078
+    },
+    "run_summary": {
+      "path": "tasks/9d0d630ecb0f/screening_run/screening_output/run_summary.json",
+      "filename": "run_summary.json",
+      "content_type": "application/json",
+      "size_bytes": 451
+    },
+    "screening_decisions": {
+      "path": "tasks/9d0d630ecb0f/screening_run/screening_output/screening_decisions.json",
+      "filename": "screening_decisions.json",
+      "content_type": "application/json",
+      "size_bytes": 14805
+    }
+  },
+  "run_root": "tasks/9d0d630ecb0f/screening_run",
+  "output_dir": "tasks/9d0d630ecb0f/screening_run/screening_output",
+  "markdown_preview": null,
+  "records": [
+    {
+      "paper_id": "paper_000001",
+      "title": "First case of TREX1 mutation-driven retinal vasculopathy with cerebral leukoencephalopathy and systemic manifestations coexisting with lupus nephritis: a case report and mechanistic discussion.",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确提及SLE（系统性红斑狼疮）和视网膜血管病变，符合全身性自身免疫疾病背景及眼部表现研究主题。",
+      "year": 2026,
+      "journal": "Front Immunol",
+      "doi": "10.3389/fimmu.2026.1758743",
+      "abstract": "BACKGROUND: The TREX1 gene is fundamental for the removal of cytosolic DNA and the preservation of immune tolerance. Mutations within this gene are implicated in a range of disorders, such as Retinal Vasculopathy with Cerebral Leukoencephalopathy and Systemic Manifestations (RVCL-S), Aicardi-Goutières syndrome (AGS), familial chilblain lupus, and systemic lupus erythematosus (SLE). To the best of our knowledge, this report documents the rare coexistence of TREX1-associated RVCL-S and biopsy-proven lupus nephritis in a single patient. CASE PRESENTATION: We report a case involving a middle-aged woman diagnosed with lupus nephritis, confirmed through renal biopsy, who later experienced progressive neurological deficits. Brain imaging demonstrated typical signs of cerebral leukoencephalopathy. Whole-exome sequencing uncovered a pathogenic TREX1 mutation (c.811_812dup, p.Asp272Argfs*6), resulting in a diagnosis of genetically confirmed TREX1-associated RVCL-S with an incomplete phenotype, coexisting with lupus nephritis. This case underscores a significant clinical challenge: the use of immunosuppressive therapy for lupus nephritis is hypothesized to potentially exacerbate the vascular complications associated with RVCL-S. CONCLUSION: To the best of our knowledge, this case represents the first documented instance of the TREX1 p.Asp272Argfs*6 mutation contributing to the coexistence of RVCL-S and lupus nephritis. This discovery broadens the recognized phenotypic spectrum associated with TREX1-related disorders and underscores a distinct therapeutic challenge in their management. It is important for clinicians to be aware of this new phenotype to ensure prompt diagnosis and tailored treatment strategies."
+    },
+    {
+      "paper_id": "paper_000002",
+      "title": "Novel application for the JAK inhibitor baricitinib in the treatment of Vogt-Koyanagi-Harada disease: a prospective cohort study.",
+      "decision": "include",
+      "confidence": 0.98,
+      "reason": "标题和摘要明确研究VKH（小柳原田综合征）的治疗，重点关注脉络膜炎症和视网膜下液等眼部表现。",
+      "year": 2026,
+      "journal": "Front Immunol",
+      "doi": "10.3389/fimmu.2026.1736522",
+      "abstract": "PURPOSE: The purpose of this study was to prospectively evaluate the clinical efficacy and safety of baricitinib, a selective Janus kinase (JAK)1/JAK2 inhibitor, in the treatment of patients with Vogt-Koyanagi-Harada (VKH) disease. DESIGN: The study was designed as a prospective, open-label, longitudinal, single-center cohort study. METHODS: We enrolled 38 patients (76 eyes) with VKH disease (including both initial-onset and recurrent/chronic cases) at Tongji Hospital, Wuhan, China, between 2022 and 2024. Patients were assigned to one of two treatment protocols based on disease severity and prior treatment history: group A received oral baricitinib (4 mg/day) combined with systemic methylprednisolone, and group B received oral baricitinib monotherapy. Clinical assessments were performed at baseline and at 1, 3, 6, 12, and 18 months. Primary outcome measures included best-corrected visual acuity (BCVA), anterior chamber (AC) cell and flare grades, subfoveal choroidal thickness (SFCT), subretinal fluid (SRF) height, and angiographic inflammatory scores (fluorescein angiography [FA]/indocyanine green angiography [ICGA]). Secondary outcomes included quality-of-life scores (25-item version of the Visual Function Questionnaire [VFQ-25], SF-36), adverse drug reactions (ADRs), and recurrence rates. RESULTS: The cohort included 44 eyes with early-stage (initial-onset) and 32 eyes with late-stage (recurrent) VKH disease (mean age: 43.1 years ± 12.3 years; follow-up: 6-18 months). Inflammation control was achieved in all patients in both groups. In group A, the combination therapy led to rapid resolution of inflammation. In group B (monotherapy), significant improvements were observed from baseline to the final visit, including improved BCVA (0.12 to 0.68, p < 0.001), reduced AC cell grade (1.54 to 0.05, p = 0.007), decreased SFCT (537.6 to 252.4 μm, p = 0.007), and complete resolution of SRF (p < 0.001). FA and ICGA scores significantly decreased (p < 0.05), and VFQ-25 scores improved (82.6 to 92.9, p < 0.001). No severe ADRs or disease recurrences were observed during the follow-up period. CONCLUSION: This study demonstrates that baricitinib is a promising therapeutic option for both early- and late-stage VKH disease. It effectively controls choroidal inflammation, improves visual function, and allows for a substantial reduction in corticosteroid burden with a favorable safety profile. CLINICAL TRIAL REGISTRATION: http://www.chictr.org.cn, identifier ChiCTR2100048030."
+    },
+    {
+      "paper_id": "paper_000003",
+      "title": "Optical Coherence Tomography Angiography in Patients with Mixed Connective Tissue Disease.",
+      "decision": "include",
+      "confidence": 0.92,
+      "reason": "标题和摘要研究混合性结缔组织病（MCTD）的视网膜微血管异常，涉及SLE等自身免疫疾病背景及眼部血管病变。",
+      "year": 2026,
+      "journal": "Biomedicines",
+      "doi": "10.3390/biomedicines14030612",
+      "abstract": "Background: Mixed connective tissue disease (MCTD) is a rare systemic autoimmune disease which presents with clinical features that overlap with at least two connective tissue disorders, including systemic lupus erythematosus (SLE), systemic sclerosis (SSc), polymyositis (PM), dermatomyositis (DM), and rheumatoid arthritis (RA). It is characterized by the presence of anti-ribonucleoprotein (anti-U1RNP) antibodies. The mechanism of the vasculopathy associated with MCTD remains largely unknown. Optical coherence tomography angiography (OCTA) is a non-invasive imaging method of the microvasculature of the retina and choroid, providing the assessment of retinal perfusion. Objectives: The aim of the study was to evaluate the optical coherence tomography angiography (OCTA) parameters in patients with mixed connective tissue disease compared to healthy individuals. Methods: In this study, we compared the following parameters between patients with MCTD and healthy subjects: foveal avascular zone (FAZ), FAZ perimeter (PERIM), flow density (FD), choriocapillaris flow area (CCFA), outer retina flow area (ORFA), and foveal and parafoveal mean superficial and deep vessel density. Results: Parafoveal mean superficial vessel density and parafoveal mean deep vessel density were significantly lower in the MCTD group than in controls. The FAZ, FAZ PERIM, and FD values in the patients with MCTD were lower than in the control group and statistically significant for all parameters. Conclusions: The present study's findings suggest the presence of ocular vascular abnormalities in patients suffering from MCTD. These abnormalities are characterized by decreased retinal vessel density and lower choriocapillaris flow. The results of the study demonstrate the significant role of OCTA in the diagnosis and monitoring of microvascular changes in patients with MCTD."
+    },
+    {
+      "paper_id": "paper_000004",
+      "title": "Serum epitope-specific anti-recoverin autoantibodies as biomarkers for lupus retinopathy.",
+      "decision": "uncertain",
+      "confidence": 0.45,
+      "reason": "标题提及狼疮视网膜病变的生物标志物研究，但摘要缺失，无法确认是否实质性探讨眼部特征或机制。",
+      "year": 2026,
+      "journal": "Arthritis Res Ther",
+      "doi": "10.1186/s13075-026-03793-y",
+      "abstract": null
+    },
+    {
+      "paper_id": "paper_000005",
+      "title": "Correlation between anti-retinal antibodies and lupus retinopathy in systemic lupus erythematosus.",
+      "decision": "include",
+      "confidence": 0.96,
+      "reason": "标题和摘要明确研究SLE患者的狼疮视网膜病变，探讨抗视网膜抗体与眼部并发症的关联。",
+      "year": 2026,
+      "journal": "Sci Rep",
+      "doi": "10.1038/s41598-026-44125-z",
+      "abstract": "Lupus retinopathy (LR) is one of the most frequent and serious ocular complications of systemic lupus erythematosus (SLE), because it may cause irreversible visual impairment. The aim of this study was to evaluate the association between serum anti-retinal antibodies levels of SLE patients and the incidence of LR. Levels of serum anti-α-enolase antibody (Ab), anti-arrestin Ab, anti-recoverin Ab and anti-IRBP3 Ab were detected in 89 SLE patients (divided into LR group and non-LR group) and 81 healthy controls by enzyme-linked immunosorbent assay (ELISA). The correlation between these four anti-retinal Ab, SLE activity and the incidence of LR was evaluated. LR group had a higher SLE disease activity index (average SLEDAI score, 18 (7) versus 9 (5), P < 0.001), higher frequency of pleurisy (40% versus 20.4%, P = 0.044) and lower level of hemoglobin (102.343 ± 23.157 versus 112.759 ± 19.678, P = 0.025) comparing to non-LR group. LR group had higher levels of anti-α-enolase than non-LR group (P = 0.033) and control group (P < 0.0001). The levels of anti-recoverin in LR group was higher than non-LR group (P = 0.036) and control group (P < 0.0001), while the difference was not significant between non-LR group and control group (P = 0.109). Using combination of anti-α-enolase Ab and anti-recoverin Ab to diagnose LR in SLE patients is more effective (with area under the receiver operating characteristic curve (AUC): 72.68%) than use anti-α-enolase Ab (AUC: 65.65%) or anti-recoverin (AUC: 61.96%) only. Our results suggested that anti-α-enolase and anti-recoverin may be used as potential biomarkers of lupus retinopathy in SLE patients."
+    },
+    {
+      "paper_id": "paper_000006",
+      "title": "Optic neuropathies induced by immune checkpoint inhibitors: A case series and systematic review of the literature.",
+      "decision": "include",
+      "confidence": 0.88,
+      "reason": "摘要提及免疫检查点抑制剂诱发的视神经病变与VKH样综合征相关，涉及自身免疫背景及眼部神经受累。",
+      "year": 2026,
+      "journal": "Eur J Cancer",
+      "doi": "10.1016/j.ejca.2026.116594",
+      "abstract": "INTRODUCTION: Immune checkpoint inhibitor (ICI)-related optic neuritis is rare but clinically significant as visual sequelae are reported in around half of affected patients. MATERIALS AND METHODS: We retrospectively collected all cases of ICI-related optic neuropathy referred to two tertiary centers. A systematic review of PubMed, Embase, and Medline was conducted following PRISMA guidelines. Cases were classified into: i) optic neuritis, defined by the presence of consistent symptoms (visual loss, dyschromatopsia, afferent pupillary defect) and optic nerve abnormalities on MRI or visual evoked potentials (VEPs); ii) papillitis, defined by any visual disturbance associated with optic disc oedema and absence of optic neuropathy signs on MRI imaging or VEPs. RESULTS: Fifty cases were identified. The most common presentation was bilateral, painless visual acuity reduction with papilledema. All optic neuritis cases involved vision loss compared to 60 % of papillitis patients, who also reported scotomas, photopsia, or floaters. Papillitis was frequently associated with uveitis, either isolated or as part of Vogt-Koyanagi-Harada-like syndrome, whereas optic neuritis was more often associated with immune-related neurological toxicities, including neuromyelitis optica spectrum disorder. Despite immunomodulatory treatment, visual deficits persisted in 60 % of cases - rising to nearly 80 % in optic neuritis cases. Seven patients with papillitis and one with optic neuropathy resumed ICIs without recurrence. CONCLUSIONS: Two distinct patterns of ICI-induced optic neuropathy emerge: papillitis, usually associated with uveitis and Vogt-Koyanagi-Harada syndrome, and optic neuritis, linked to broader immune-related neurological toxicities and poorer outcomes. Our findings suggest that ICIs may be safely reintroduced after full recovery from ICI-related papillitis."
+    },
+    {
+      "paper_id": "paper_000007",
+      "title": "Increased Risk of Incident Uveitis Among Patients with Psoriasis: A Nationwide Population-Based Cohort Study.",
+      "decision": "exclude",
+      "confidence": 0.82,
+      "reason": "摘要研究银屑病与葡萄膜炎的流行病学关联，但未提及自身炎症或自身免疫疾病引起的特定眼部表现如眼底病变。",
+      "year": 2026,
+      "journal": "Diagnostics (Basel)",
+      "doi": "10.3390/diagnostics16040627",
+      "abstract": "Background: Psoriasis is a chronic systemic inflammatory disease with established extra-cutaneous manifestations. While the association between uveitis and spondyloarthritis (SpA)-related disorders is well recognized, the incident risk of uveitis among broader psoriasis populations remains inadequately defined due to methodological limitations and inconsistent findings across previous studies. We aimed to estimate the incidence of uveitis in a large, nationwide population-based cohort and identify specific clinical and treatment-related predictors of ocular inflammation. Methods: This retrospective cohort study utilised electronic health records from Clalit Health Services, Israel's largest health maintenance organization (2002-2024). We identified 157,360 patients with dermatologist-confirmed psoriasis and 156,927 age- and sex-matched controls. The primary outcome was incident uveitis, with risk estimated using Cox proportional hazards models. Within the psoriasis cohort, multivariable logistic regression was employed to identify predictors of uveitis, ensuring appropriate temporal sequencing between psoriasis treatment exposure and outcome. Results: Over a median follow-up of 12.6 years, psoriasis was associated with a significantly higher risk of incident uveitis (adjusted Hazard Ratio [aHR] 1.80; 95% CI, 1.50-2.15). Stratified analysis revealed a graded risk pattern: mild psoriasis showed no increased risk (aHR 1.01; 95% CI, 0.91-1.13), whereas severe disease (aHR 1.59; 95% CI, 1.25-2.03) and concomitant SpA (aHR 2.21; 95% CI, 1.87-2.61) demonstrated markedly elevated risks. Within the psoriasis cohort, independent predictors included SpA, diabetes mellitus, systemic lupus erythematosus, and sarcoidosis. Exposure to biologics, particularly etanercept (OR 3.37; 95% CI, 2.42-4.54), was associated with higher odds of uveitis, potentially reflecting higher disease severity. Conclusions: Incident uveitis risk in psoriasis is primarily driven by the magnitude of systemic inflammatory burden, with the highest risk observed in severe disease and those with concomitant SpA. Clinicians should maintain heightened vigilance for ocular symptoms in these high-risk subgroups to ensure timely intervention."
+    },
+    {
+      "paper_id": "paper_000008",
+      "title": "Case Report: Vogt-Koyanagi-Harada syndrome complicated by secondary glaucoma: diagnostic insights and mechanistic correlations in uveitic ocular hypertension.",
+      "decision": "include",
+      "confidence": 0.97,
+      "reason": "标题和摘要明确研究VKH综合征并发继发性青光眼，涉及自身免疫性葡萄膜炎及视网膜脱离等眼部表现。",
+      "year": 2026,
+      "journal": "Front Med (Lausanne)",
+      "doi": "10.3389/fmed.2026.1755451",
+      "abstract": "INTRODUCTION: This case highlights an uncommon presentation of Vogt-Koyanagi-Harada (VKH) syndrome, in which acute angle-closure glaucoma (AACG) served as the initial ocular manifestation. This atypical onset may lead to misdiagnosis as primary angle-closure glaucoma. This report adds to the existing literature by emphasizing the diagnostic value of ciliary body imaging and the mechanistic link between inflammatory ciliary body detachment and secondary angle closure. CASE PRESENTATION: A 27-year-old woman presented with acute ocular pain, vision loss, and markedly elevated intraocular pressure (IOP). Important clinical findings included conjunctival congestion, corneal edema, medium-depth anterior chambers, and the absence of keratic precipitates or aqueous flare. Ultrasound biomicroscopy revealed a ciliary body detachment, whereas optical coherence tomography revealed multiple serous retinal detachments. The patient was initially misdiagnosed with glaucoma before a revised diagnosis of VKH syndrome-associated secondary AACG was made. INTERVENTIONS AND OUTCOMES: The patient was treated with intravenous methylprednisolone pulse therapy combined with topical corticosteroids, mydriatic agents, and IOP-lowering agents. Visual acuity and IOP gradually improved, and subretinal fluid completely resolved during follow-up. CONCLUSION: VKH syndrome rarely presents with AACG as the initial manifestation. Awareness of this presentation and careful imaging evaluation are essential to avoid misdiagnosis. Early and aggressive anti-inflammatory therapy remains key to reversing both angle closure and retinal pathology. This case highlights the importance of considering autoimmune uveitis in patients with atypical angle-closure glaucoma."
+    },
+    {
+      "paper_id": "paper_000009",
+      "title": "Reduced retinal microvascular density in patients with mixed connective tissue disease: an exploratory pilot study on the interplay between aging, renal function, and complement system.",
+      "decision": "include",
+      "confidence": 0.93,
+      "reason": "标题和摘要研究混合性结缔组织病（MCTD）的视网膜微血管密度降低，涉及SLE等自身免疫背景及眼部微血管病变。",
+      "year": 2026,
+      "journal": "Front Immunol",
+      "doi": "10.3389/fimmu.2026.1724780",
+      "abstract": "BACKGROUND: Mixed connective tissue disease (MCTD) is a systemic autoimmune disease with overlapping features with systemic lupus erythematosus, systemic sclerosis, and inflammatory idiopathic myopathies, characterized by anti-U1-RNP antibodies. Although subclinical retinal microvascular changes have been described in other connective tissue diseases, such data are lacking in patients with MCTD. METHODS: We performed a cross-sectional exploratory pilot study including patients with a defined diagnosis of MCTD according to one of the sets of classification criteria and age- and sex-matched healthy controls (HC), with elderly individuals equally distributed. Data on disease duration, renal function (creatinine and eGFR), and complement levels (C3 and C4) were recorded. All participants underwent optical coherence tomography angiography (OCT-A) to evaluate retinal vessel density (VD) using parafoveal, perifoveal, and foveal scans, whole images, and foveal avascular zones (FAZs). Nailfold videocapillaroscopy (NVC) was performed in patients with MCTD on four fingers of both hands to assess microangiopathy patterns. RESULTS: Patients with MCTD (n = 20, mean age 60.6 ± 11.4 years, 85% females) showed a significant reduction in both superficial and deep retinal VD across all evaluated regions compared with 20 HC. In patients with MCTD, deep retinal VD was inversely correlated with disease duration (r = -0.6, P = 0.0003) and directly correlated with eGFR (r = 0.4, P = 0.05). In patients with MCTD, C3 levels were positively correlated with age (r = 0.4, P = 0.03) and superficial parafoveal VD (r = 0.5, P = 0.008). In MCTD, NVC abnormalities, including non-specific microangiopathy and scleroderma patterns, occurred in 60% (n = 12) of cases and did not correlated with OCT-A findings. CONCLUSION: Patients with MCTD present subclinical retinal microvascular abnormalities detectable by OCT-A. Our hypothesis-generating study suggests that retinal vascular changes may be linked to disease duration, renal function, and complement levels. OCT-A may be a useful tool for assessing MCTD."
+    },
+    {
+      "paper_id": "paper_000010",
+      "title": "Contrast Sensitivity and Colour Vision Tests for Early Detection and Monitoring of Hydroxychloroquine Retinal Toxicity: A Preliminary Study.",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "摘要研究羟氯喹视网膜毒性的早期检测方法，属于药物副作用监测，而非自身免疫疾病引起的眼部表现。",
+      "year": 2026,
+      "journal": "J Clin Med",
+      "doi": "10.3390/jcm15031309",
+      "abstract": "Background/Objectives: Hydroxychloroquine (HCQ) is used to manage various autoimmune diseases, including systemic lupus erythematosus. The prolonged use of HCQ is associated with retinopathy and irreversible visual loss due to retinal toxicity. Despite adherence to dosage regimens, patients may develop functional rather than structural changes, without detectable abnormalities on routine examination using visual acuity and optical coherence tomography (OCT). The study aimed to detect early signs of retinopathy in patients with autoimmune diseases treated with HCQ. Methods: This cross-sectional study included patients (n = 36) with autoimmune diseases who were treated with HCQ. The control group (n = 35) comprised healthy volunteers matched for age and sex. All participants were screened using colour vision tests (Ishihara, Konan ColourDX high definition [HD]), and retinal thickness was evaluated using OCT. Results: Our findings suggest a significant reduction in the contrast threshold of the L and M-cone photoreceptors compared with that of the control using Konan ColourDX HD. The OCT measurements revealed no statistically significant difference in retinal thickness between patients and controls; however, the contrast sensitivity test showed a significant reduction at all spatial frequencies (p < 0.0001). Conclusions: The current study suggests that the Konan ColourDX cone contrast test HD and contrast sensitivity testing may be valuable for periodic monitoring of patients receiving HCQ, potentially enabling earlier detection of toxicity. However, longitudinal studies with larger cohorts are needed to confirm these findings and to further establish the clinical value of these functional visual tests."
+    },
+    {
+      "paper_id": "paper_000011",
+      "title": "Vogt-Koyanagi-Harada disease under the lens: Insights from multimodal ocular imaging.",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确聚焦VKH病的眼部影像学表现，符合纳入标准。",
+      "year": 2026,
+      "journal": "Prog Retin Eye Res",
+      "doi": "10.1016/j.preteyeres.2026.101445",
+      "abstract": "Vogt-Koyanagi-Harada (VKH) disease is a multisystem autoimmune condition targeting melanocyte-rich ocular tissues, with inflammation primarily affecting the choroid. Despite advances in diagnostic criteria, disease staging and therapeutic decisions still rely heavily on clinical observation, with limited integration of imaging biomarkers. This review examines the evolving role of multimodal ocular imaging (MMI) in the diagnosis, monitoring, and prognostication of VKH. We critically appraise the utility and limitations of color fundus photography, fluorescein angiography (FFA), indocyanine green angiography (ICGA), optical coherence tomography (OCT), OCT angiography (OCTA), fundus autofluorescence, B-scan ultrasonography, ultrasound biomicroscopy and anterior segment photography. These modalities provide complementary insights into disease activity, from subclinical choroiditis and retinal pigment epithelium disruption to chronic sequelae such as subretinal fibrosis and choroidal atrophy. Key imaging features-such as choroidal thickening, hypofluorescent dark dots, RPE undulations, and flow voids-are described in the context of VKH pathophysiology and disease stage. We identify critical gaps in current practice, including the lack of standardized imaging-based definitions for relapse and remission, limited use of anterior segment imaging, and variability in access to advanced modalities. To address these challenges, we propose a stage-specific imaging framework to guide VKH assessment from prodromal to chronic phases. MMI has transitioned from a supportive to a central role in VKH management. Future efforts should prioritize the development of quantitative imaging biomarkers, standardization of grading systems, and integration of imaging into therapeutic algorithms to support timely, personalized care and prevent irreversible visual loss."
+    },
+    {
+      "paper_id": "paper_000012",
+      "title": "Sex-Related Effects on the Clinical Presentation of Uveitis.",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "摘要明确提及VKH综合征等葡萄膜炎实体，探讨其眼部表现和并发症，符合纳入标准。",
+      "year": 2026,
+      "journal": "Am J Ophthalmol",
+      "doi": "10.1016/j.ajo.2025.10.028",
+      "abstract": "OBJECTIVE/PURPOSE: The primary aim of this study was to determine sex-related patterns of uveitic entities. Secondary aims included sex-related patterns of uveitic complications. DESIGN: Retrospective clinical cohort study. PARTICIPANTS: 5703 participants presenting with uveitis from January 2009 to December 2023 were included. MAIN OUTCOME MEASURES: uveitis entities and complications. RESULTS: 2870 (50.3%) participants were female and 2831 (49.6%) were male. Males presented at a significantly younger age than females (42.2 vs 45.0). Significant sex-based differences were observed in the prevalence of specific uveitic conditions. Females were more likely to develop multifocal choroiditis (female: male ratio 1.818:1), Vogt-Koyanagi-Harada syndrome (female: male ratio 2.136:1), birdshot chorioretinopathy (female: male ratio 2.800:1, punctate inner choroidopathy (female: male ratio 6.571:1), drug-induced uveitis (female: male ratio 2.833:1), Crohn's disease (female: male ratio 3.714:1) and multiple evanescent white dot syndrome (female: male ratio 5.000:1). In contrast, males were more likely to develop acute posterior multifocal placoid pigment epitheliopathy (female: male ratio 0.364:1), sympathetic ophthalmia (female: male ratio 0.353:1) and syphilis (female: male ratio 0.404:1). Cataract was significantly more common in females, and this remained significant after adjusting for age at presentation, anatomical location and bilaterality. Cystoid macular edema and epiretinal membrane were more frequent in females, whereas retinal detachment occurred more often in males. Bilateral vision loss occurred in 238 patients (4.2%) and was significantly more common in females (4.9% vs 3.5%). CONCLUSIONS: Sex appears to be a key factor influencing the underlying etiology and clinical course of uveitis. These findings underscore the importance of considering sex as a biological variable in the diagnosis, monitoring, and management of uveitis."
+    },
+    {
+      "paper_id": "paper_000013",
+      "title": "Co-occurrence of Vogt-Koyanagi-Harada disease, diabetic retinopathy, and advanced chronic kidney disease: a case report.",
+      "decision": "include",
+      "confidence": 0.92,
+      "reason": "标题和摘要明确报告VKH病病例，描述其眼部表现如浆液性视网膜脱离，符合纳入标准。",
+      "year": 2026,
+      "journal": "Front Med (Lausanne)",
+      "doi": "10.3389/fmed.2026.1733153",
+      "abstract": "OBJECTIVE: This study aimed to report a case of Vogt-Koyanagi-Harada (VKH) disease in a 53-year-old man with renal failure and diabetes, highlighting the challenges in diagnosing VKH amidst complex systemic comorbidities. METHODS: A case report was conducted through a retrospective review of the patient's medical history, clinical presentations, diagnostic workup, and treatment course. RESULTS: A 53-year-old man with renal failure, hypoalbuminemia, and diabetes presented with blurred vision. Initial findings included bilateral serous retinal detachment with subretinal septa, choroidal thickening, and left eye vitreous hemorrhage, without anterior chamber inflammation. Subsequent anterior segment inflammation and a positive response to combined corticosteroids and adalimumab confirmed VKH. CONCLUSION: This case underscores the diagnostic complexity of VKH in patients with multiple systemic conditions. Corticosteroid management in such individuals requires meticulous attention, emphasizing the need for close monitoring of blood glucose and overall systemic status during treatment."
+    },
+    {
+      "paper_id": "paper_000014",
+      "title": "Full-field electroretinogram (ffERG) over 48 months correlates with baseline retinal dysfunction in Vogt-Koyanagi-Harada disease: a longitudinal study.",
+      "decision": "uncertain",
+      "confidence": 0.45,
+      "reason": "标题和摘要信息不足，仅提及VKH病和视网膜功能，但未明确描述眼部表现细节。",
+      "year": 2026,
+      "journal": "Doc Ophthalmol",
+      "doi": "10.1007/s10633-025-10080-9",
+      "abstract": "Collaborators: da Nóbrega PFC, Gusmão CC, Cunningham E, Hirata CE."
+    },
+    {
+      "paper_id": "paper_000015",
+      "title": "Advancements in understanding neuropsychiatric lupus: deciphering immune heterogeneity with single-cell resolution.",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要聚焦神经精神性狼疮的全身免疫机制，未提及眼部或眼底表现。",
+      "year": 2026,
+      "journal": "Front Med (Lausanne)",
+      "doi": "10.3389/fmed.2025.1732805",
+      "abstract": "Neuropsychiatric Systemic Lupus Erythematosus (NPSLE) represents one of the most severe and enigmatic manifestations of SLE, contributing significantly to disease morbidity and mortality. Its clinical presentation is profoundly heterogeneous, encompassing 19 distinct syndromes that pose considerable diagnostic and therapeutic challenges. While historical estimates of its prevalence varied widely, contemporary prospective studies suggest that approximately 56% of SLE patients experience a neuropsychiatric event, with 30-50% of these events being directly attributable to SLE-related pathogenic mechanisms. A comprehensive understanding of its multifactorial pathogenesis is critical for developing targeted therapies. The pathogenesis of NPSLE is an integrated neuroimmune process initiated by the disruption of the blood-brain and blood-CSF barriers. This breach permits peripheral autoimmune mediators-including pathogenic autoantibodies (e.g., anti-NMDAR, anti-ribosomal P), pro-inflammatory cytokines (e.g., Type I IFN, IL-6), and innate immune cells such as neutrophils forming Neutrophil Extracellular Traps (NETs)-to enter the central nervous system (CNS). Within the CNS, these insults trigger a robust response from resident glial cells. Microglia polarize to a pro-inflammatory M1 phenotype, driving neuroinflammation and pathological synaptic stripping, while astrocytes transition to a neurotoxic A1 phenotype, losing their neurosupportive functions. These inflammatory pathways are intricately linked with an ischemic/thrombotic pathway, often mediated by antiphospholipid antibodies, creating a complex pathogenic landscape. The adaptive immune system plays a crucial role in perpetuating the autoimmune attack within the CNS compartment. This involves the infiltration of pathogenic T cell subsets, as identified in animal models like the MRL/lpr strain, including T follicular helper (Tfh)-like cells in the choroid plexus and senescent/exhausted Eomes+ double-negative T cells within the brain parenchyma. Furthermore, the CNS can become an active site for B cell responses, supporting the intrathecal clonal expansion of B cells and plasma cells, leading to local production of pathogenic autoantibodies. Deconstructing this cellular and molecular complexity requires high-resolution technologies. Single-cell genomics (scRNA-seq, CITE-seq, scBCR-seq) and spatial transcriptomics are providing unprecedented insights into the specific cell types and states driving the disease. While direct analysis of human NPSLE brain tissue remains rare, a powerful framework is emerging from synthesizing mechanistic data from diverse animal models (e.g., MRL/lpr and NZB/W F1) with findings from human CSF in related neuroinflammatory conditions. The translation of these molecular insights into clinical practice is the ultimate goal. This research paves the way for moving beyond descriptive syndromic classifications toward a mechanism-based stratification using \"immune endophenotypes.\" Such an approach promises to enhance biomarker discovery (e.g., NfL, GFAP, CXCL13) and guide the development of targeted therapies, such as Type I IFN receptor blockade and specific B cell-directed agents. By bridging high-resolution discovery with clinical reality, we can advance toward an era of precision medicine for the management of NPSLE."
+    },
+    {
+      "paper_id": "paper_000016",
+      "title": "Retinal structure and function recovery over five years in Vogt-Koyanagi-Harada disease using adaptive optics and microperimetry.",
+      "decision": "include",
+      "confidence": 0.93,
+      "reason": "标题和摘要明确研究VKH病的视网膜结构和功能恢复，符合纳入标准。",
+      "year": 2026,
+      "journal": "Sci Rep",
+      "doi": "10.1038/s41598-025-34652-6",
+      "abstract": "Vogt-Koyanagi-Harada (VKH) disease recovery patterns remain inadequately characterized over extended periods. This study evaluated retinal changes in VKH patients across 5 years using adaptive optics imaging and microperimetry. Twenty-five eyes from 13 patients were monitored longitudinally. Macular cone density gradually increased throughout the observation period but remained below healthy control levels. Eyes with pretreatment cystoid spaces initially showed lower cone density values, but this disparity disappeared after 3 years. Average threshold values improved consistently from baseline, while macular integrity values significantly decreased after 2 years. Cone density correlated significantly with retinal sensitivity. These findings indicate that with appropriate treatment, VKH disease demonstrates progressive improvement in both retinal structure and function over time, though complete structural recovery may not occur. Pretreatment cystoid spaces influence early outcomes but do not significantly affect long-term recovery. SUPPLEMENTARY INFORMATION: The online version contains supplementary material available at 10.1038/s41598-025-34652-6."
+    },
+    {
+      "paper_id": "paper_000017",
+      "title": "Evaluation of Melanin Changes in Acute Vogt-Koyanagi-Harada Disease Using Polarization-Sensitive Optical Coherence Tomography.",
+      "decision": "include",
+      "confidence": 0.94,
+      "reason": "标题和摘要明确研究急性VKH病的眼部黑色素变化，使用眼部成像技术，符合纳入标准。",
+      "year": 2026,
+      "journal": "Invest Ophthalmol Vis Sci",
+      "doi": "10.1167/iovs.67.1.7",
+      "abstract": "PURPOSE: To examine melanin changes in the RPE and choroid during the acute phase of Vogt-Koyanagi-Harada (VKH) disease using polarization-sensitive optical coherence tomography (PS-OCT). METHODS: This study included 15 eyes of 8 patients with new-onset VKH disease and 5 eyes of 3 patients with posterior scleritis. PS-OCT captured a 12 × 12 mm area centered on the fovea, and en face images were created for the RPE and choroid. Polarimetric entropy within a 6-mm diameter circle centered on the fovea was calculated and compared between groups. RESULTS: Choroidal polarimetric entropy was significantly lower in eyes with VKH disease than in those with posterior scleritis at baseline (0.296 ± 0.047 vs. 0.392 ± 0.050; P = 0.005; r = 0.64; 95% confidence interval, 0.42-0.74). One month after starting treatment, eyes with VKH disease showed a significant increase in choroidal polarimetric entropy (0.296 ± 0.047 to 0.350 ± 0.075; P = 0.001; r = 0.85; 95% confidence interval, 0.61-0.95), whereas no significant change was observed in eyes with posterior scleritis. RPE polarimetric entropy showed no significant changes between baseline and 1 month, with no differences between groups. CONCLUSIONS: PS-OCT revealed that choroidal melanin density decreased during the acute phase of VKH disease and significantly increased after treatment. PS-OCT provides a noninvasive method for observing melanin dynamics in VKH disease and aids in differentiating it from posterior scleritis. PS-OCT could offer valuable insights into the pathology of VKH disease and its potential implications for management."
+    },
+    {
+      "paper_id": "paper_000018",
+      "title": "Exploring the Association Between Autoimmune and Inflammatory Diseases and Uveitis.",
+      "decision": "include",
+      "confidence": 0.88,
+      "reason": "标题和摘要探讨自身免疫性疾病与葡萄膜炎的关联，明确提及SLE等疾病，符合纳入标准。",
+      "year": 2026,
+      "journal": "Am J Ophthalmol",
+      "doi": "10.1016/j.ajo.2026.01.004",
+      "abstract": "OBJECTIVE: To evaluate the association between immune-mediated inflammatory diseases (IMIDs) and uveitis. DESIGN: Retrospective cohort and case-control study using electronic health record data. METHODS: The study included patients diagnosed with uveitis and/or one of the following 12 IMIDs: rheumatoid arthritis (RA), systemic lupus erythematosus (SLE), sarcoidosis, scleroderma, inflammatory bowel disease (IBD), multiple sclerosis (MS), ankylosing spondylitis, psoriasis, juvenile idiopathic arthritis (JIA), and giant cell arteritis (GCA), anti-neutrophil cytoplasmic antibody (ANCA)-associated vasculitis, and other systemic vasculitis. Controls were patients without prior uveitis diagnosis or any IMIDs. The risk of developing uveitis in patients with each IMID, the odds of prior IMID diagnoses among patients with uveitis, and the risk of developing an IMID following a uveitis diagnosis were calculated. The main outcome measures were the risk ratio (RR) and odds ratio (OR) estimates with 95% confidence intervals for associations between IMIDs and uveitis. RESULTS: Patients with all 12 IMIDs had a significantly increased risk of developing uveitis. The highest risks were observed in ankylosing spondylitis (RR = 7.71, 95% CI = 5.84-10.19), JIA (RR = 5.13, 95% CI = 3.51-7.49), and systemic vasculitis (RR = 4.61, 95% CI = 3.73-5.69). Increased risk was also found in sarcoidosis (RR = 3.67, 95% CI = 3.02-4.47), GCA (RR = 3.24, 95% CI = 2.58-4.07), and ANCA vasculitis (RR = 3.18, 95% CI = 1.84-5.48). In addition, in patients with uveitis, both the odds of a prior IMID diagnosis and the risk of a future IMID diagnosis were significantly increased for all 12 IMIDs. CONCLUSIONS: IMIDs are strongly associated with uveitis, with significant bidirectional risk. Patients with uveitis should be monitored for potential IMID development, and those with IMIDs should undergo ophthalmologic evaluation when appropriate."
+    },
+    {
+      "paper_id": "paper_000019",
+      "title": "En Face Optical Coherence Tomography and OCT Angiography in the Pathoanatomy of Inflammatory Macular Disease.",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "摘要明确提及VKH病等炎症性黄斑疾病，探讨其眼部影像学表现，符合纳入标准。",
+      "year": 2026,
+      "journal": "Am J Ophthalmol",
+      "doi": "10.1016/j.ajo.2025.12.031",
+      "abstract": "PURPOSE: To review the pivotal role of en face optical coherence tomography (OCT) and OCT angiography (OCTA) in elucidating the pathoanatomy, diagnostic markers, and clinical management of inflammatory macular diseases. These noninvasive modalities provide depth-resolved, layer-specific visualization of structural and vascular alterations, enhancing our understanding of disease mechanisms and facilitating monitoring of disease activity and therapeutic response. METHODS: This perspective article synthesizes recent advances in multimodal imaging (MMI) with emphasis on en face OCT and OCTA across the spectrum of posterior noninfectious and infectious uveitic disorders. Representative diseases include multiple evanescent white dot syndrome (MEWDS), punctate inner choroidopathy (PIC), and idiopathic multifocal choroiditis (iMFC), acute zonal occult outer retinopathy (AZOOR), acute posterior multifocal placoid pigment epitheliopathy (APMPPE) and its chronic variants, serpiginous choroiditis (SC), acute syphilitic posterior placoid chorioretinopathy (ASPPC), and Vogt-Koyanagi-Harada (VKH) disease. Imaging signatures were reviewed in relation to pathophysiology, differential diagnosis, and clinical management. RESULTS: En face OCT delineates disease-specific topographic patterns: \"dots and spots\" in MEWDS, hyperreflective plaques in PIC/iMFC, trizonal maps in AZOOR, sharply demarcated placoid lesions in APMPPE, geographic patterns in SC, and concentric hyperreflective \"fingerprint\" rings in VKH. OCTA provides complementary vascular insights, distinguishing preserved vs impaired choriocapillaris (CC) flow and revealing disease-driven ischemia. MEWDS typically demonstrates preserved CC perfusion, in contrast to the flow deficits of APMPPE, relentless placoid chorioretinitis, and SC. In PIC/iMFC, OCTA enables detection of inflammatory choroidal neovascularization (iCNV), while in ASPPC and VKH, it captures reversible or persistent CC flow voids following appropriate systemic therapy. Structural-vascular correlation permits differentiation between ischemic and nonischemic disorders, recognition of masquerades, and monitoring of subclinical disease activity. CONCLUSIONS: En face OCT and OCTA have redefined the diagnostic and management landscape of inflammatory macular diseases by providing rapid, reproducible, and layer-specific structural-vascular information. Their disease-specific signatures enhance accuracy, support treatment decisions, and improve monitoring of progression and complications such as inflammatory CNV. Integration of these tools into routine multimodal imaging protocols is essential, while future research should prioritize standardization of acquisition and interpretation criteria, quantitative biomarkers, and expanded use of widefield technologies to capture peripheral and longitudinal disease dynamics."
+    },
+    {
+      "paper_id": "paper_000020",
+      "title": "Lactylation: the metabolic-immune hub in autoimmune diseases.",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "标题和摘要聚焦自身免疫疾病的全身代谢免疫机制，仅提及实验性自身免疫性葡萄膜炎作为例子，未实质性探讨眼部表现。",
+      "year": 2025,
+      "journal": "Front Immunol",
+      "doi": "10.3389/fimmu.2025.1651923",
+      "abstract": "In recent years, lactate modification, as an emerging post-translational modification mechanism, has attracted increasing attention for its role in the regulation of the immune system. Autoimmune diseases are a category of complex disorders characterized by abnormal attacks of the immune system on self-tissues. The limitations of traditional treatments have made the search for new therapeutic targets a hot topic in research. Lactate modification plays a significant role in the development and progression of autoimmune diseases. It can modulate the activation and function of T cells, B cells, macrophages, and dendritic cells, thereby influencing inflammatory and autoimmune responses. In diseases such as experimental autoimmune uveitis (EAU), rheumatoid arthritis (RA), and systemic lupus erythematosus (SLE), lactate modification is closely related to disease progression and can exert its effects by regulating key signaling pathways and cytokine networks. Research on lactate modification as a therapeutic target has also made certain progress, providing new ideas for the treatment of autoimmune diseases. However, there are still many challenges to be faced, such as the development of specific inhibitors, the evaluation of potential side effects, and the feasibility of clinical application. The important regulatory role of lactate modification in autoimmune diseases offers a new target for treatment. Future research needs to further explore its specific mechanisms in the immune system, optimize therapeutic strategies, and assess its clinical application prospects, in order to bring breakthrough progress to the treatment of autoimmune diseases."
+    },
+    {
+      "paper_id": "paper_000021",
+      "title": "Case Report: Tislelizumab-induced panuveitis: a report of two cases.",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确提及免疫检查点抑制剂诱导的葡萄膜炎，类似VKH综合征，符合自身免疫性疾病背景和眼部表现主题。",
+      "year": 2025,
+      "journal": "Front Pharmacol",
+      "doi": "10.3389/fphar.2025.1678663",
+      "abstract": "BACKGROUND: Tislelizumab, an increasingly utilized immunotherapy for a range of malignancies, can induce a rare ocular immune-related adverse event resembling Vogt-Koyanagi-Harada-like syndrome (VKHLS). Management of complication requires careful balancing with ongoing systemic anti-tumor therapy. CASE PRESENTATION: This report describes two cancer patients who developed severe bilateral vision loss following Tislelizumab treatment. Multimodal ocular imaging confirmed the diagnosis of immune checkpoint inhibitors (ICIs)-associated uveitis, specifically a VKHLS. Both patients were managed with discontinuation of Tislelizumab and local corticosteroid therapy-transcutaneous periocular injection of triamcinolone acetonide (TA) and topical steroid eye drops, without systemic corticosteroids. Their uveitis resolved rapidly, with recovery of visual acuity. CONCLUSION: Prompt Tislelizumab discontinuation combined with local corticosteroid therapy-transcutaneous periocular TA injections, and topical steroid eye drops may constitute an effective management strategy for ICIs-induced uveitis. This approach is particularly valuable for cancer patients in whom systemic corticosteroids are contraindicated or unsuitable."
+    },
+    {
+      "paper_id": "paper_000022",
+      "title": "Single-Cell RNA sequencing identifies NAMPT as a potential therapeutic target in autoimmune uveitis.",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确研究自身免疫性葡萄膜炎，并使用VKH患者样本，符合纳入标准。",
+      "year": 2025,
+      "journal": "J Adv Res",
+      "doi": "10.1016/j.jare.2025.12.030",
+      "abstract": "INTRODUCTION: Autoimmune uveitis (AU) is an autoimmune disease of the eye that can lead to irreversible vision loss. Current therapies are limited by suboptimal efficacy and substantial side effects, highlighting the urgent need for the discovery of novel therapeutic targets. Nicotinamide phosphoribosyltransferase (NAMPT) is a key enzyme controlling the NAD+ salvage pathway and also exerts immunoregulatory and anti-inflammatory effects. However, its role in AU remains unclear. OBJECTIVE: To investigate NAMPT's effects on AU and underlying mechanisms. METHODS: Single-cell RNA sequencing (scRNA-seq) was performed on cervical draining lymph node (CDLN) cells from normal, experimental autoimmune uveitis (EAU), and NAMPT inhibitor-treated EAU mice. The influence of NAMPT inhibition on immune cell subsets, transcriptional programs, and intercellular communication networks was comprehensively analyzed. Additionally, scRNA-seq was performed on peripheral blood mononuclear cells (PBMCs) collected from Vogt-Koyanagi-Harada (VKH) disease patients and healthy controls (HC) to assess NAMPT expression and its modulation in human CD4+ T cells. In vivo and in vitro experiments, flow cytometry, and adoptive transfer experiments confirmed NAMPT's role in uveitis. RESULTS: NAMPT inhibition significantly ameliorated the clinical and histopathological manifestations of EAU. scRNA-seq revealed that NAMPT blockade reshaped immune cell composition and reversed disease-associated transcriptional programs, particularly within CD4+ T cells. It suppressed pro-inflammatory T helper (Th)-17 and Th1 responses while promoting regulatory T cell (Treg) populations. Mechanistically, NAMPT inhibition modulated the Th17/Treg balance by downregulation of Hif1α expression. In VKH patients, CD4+ T cells exhibited elevated NAMPT expression, which led to increased Th17 and Th1 cells and reduced Tregs. NAMPT knockdown reproduced the protective phenotype observed with FK866 treatment, suggesting a conserved NAMPT-Hif1α axis in human uveitis. CONCLUSIONS: Inhibiting NAMPT can reverse the imbalance of effector T (Teff)/Treg cells by suppressing the expression of Hif1α in CD4+T cells, thereby effectively alleviating the symptoms of EAU. Therefore, NAMPT might be a potential target for AU."
+    },
+    {
+      "paper_id": "paper_000023",
+      "title": "Efficacy of Tumor Necrosis Factor-α Inhibitor Adalimumab in Chronic Recurrent Vogt-Koyanagi-Harada Disease.",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究VKH疾病，探讨阿达木单抗对慢性复发性VKH的疗效，符合纳入标准。",
+      "year": 2025,
+      "journal": "Pharmaceuticals (Basel)",
+      "doi": "10.3390/ph18121848",
+      "abstract": "Background/Objectives: Vogt-Koyanagi-Harada (VKH) disease is a bilateral granulomatous panuveitis that can progress to a chronic, relapsing phase. Patients refractory or intolerant to systemic corticosteroids and conventional immunomodulatory therapy pose a major therapeutic challenge, as persistent inflammation can lead to cumulative ocular damage and permanent vision loss. This study assessed the efficacy of tumor necrosis factor-α (TNF-α) inhibitor adalimumab in chronic recurrent VKH disease. Methods: We retrospectively reviewed 16 eyes from 8 patients with chronic recurrent VKH disease who had persistent inflammation despite treatment with corticosteroids and conventional immunomodulatory therapy, and subsequently received adalimumab. Primary outcomes were changes in subfoveal choroidal thickness (SFCT) and systemic corticosteroid dose reduction. Secondary outcomes included visual acuity, inflammatory parameters (anterior chamber cell, flare, and vitreous haze), and central macular thickness (CMT). All outcomes were compared between baseline and 6 months after adalimumab initiation using the Wilcoxon signed-rank test. Results: Mean patient age was 47.6 years and mean follow-up was 31.8 months. SFCT decreased from 326.7 ± 129.1 μm to 231.6 ± 72.9 μm at 6 months (p < 0.001). Systemic steroid dose decreased from 14.7 ± 14.0 mg to 4.1 ± 3.8 mg (p = 0.027). Mean annualized relapse rate decreased from 3.61 to 0.08 episodes/year (p = 0.012). Anterior chamber cell grade decreased from 0.81 ± 0.66 to 0.09 ± 0.20 (p < 0.001). Visual acuity, flare, vitreous haze, and CMT showed no significant change. No serious adverse events occurred. Conclusions: TNF-α inhibition with adalimumab appears effective as steroid-sparing therapy for controlling recurrent inflammation and reducing steroid dependence in patients with chronic recurrent VKH disease refractory to conventional treatment."
+    },
+    {
+      "paper_id": "paper_000024",
+      "title": "Autoimmune thyroid disease and human health: a systematic review of Mendelian randomization studies.",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要仅涉及自身免疫性甲状腺疾病与全身健康结局的系统综述，未提及眼部表现。",
+      "year": 2025,
+      "journal": "Front Immunol",
+      "doi": "10.3389/fimmu.2025.1689498",
+      "abstract": "We systematically summarized current Mendelian randomization (MR) evidence on the causal relationships between autoimmune thyroid disease (AITD) and a wide range of human health outcomes. Original MR studies related to AITD published up to March 1, 2025, were retrieved from PubMed and Embase. For studies investigating the same exposure-outcome associations, meta-analyses were performed to synthesize the evidence after excluding overlapping samples where applicable. The methodological quality of the included studies was assessed using the STROBE-MR checklist. A total of 123 MR publications met the inclusion criteria. MR analyses indicated that AITD significantly increased the risk of coronary atherosclerosis, deep venous thrombosis, chronic obstructive pulmonary disease, major depression, diabetic neuropathy, carpal tunnel syndrome, neuromyelitis optica spectrum disorder, diabetic retinopathy, childhood absence epilepsy, rheumatoid arthritis, systemic lupus erythematosus, psoriatic arthritis, inflammatory bowel disease, crohn's disease, vitiligo, myasthenia gravis, alopecia areata, type 1 and type 2 diabetes, sarcoidosis, frozen shoulder, drug eruptions, cataract, early age-related macular degeneration, pernicious anemia, Helicobacter pylori infection, temporomandibular disorders, migraine, frailty, primary biliary cholangitis, knee osteoarthritis, gout, and osteoporosis, while decreasing the risk of lung cancer, polyneuropathies, allergic rhinitis, telomere length, and serum vitamin A levels. The included MR studies were of high methodological quality and provided robust evidence supporting the bidirectional relationships between AITD and various health outcomes. These findings emphasize the importance and necessity of preventing and managing AITD while offering new perspectives and directions for future research on its prevention and treatment. SYSTEMATIC REVIEW REGISTRATION: https://www.crd.york.ac.uk/prospero/, identifier CRD42023469038."
+    },
+    {
+      "paper_id": "paper_000025",
+      "title": "Weighing Dose-Related Benefits and Risks of Hydroxychloroquine Treatment in Patients With Systemic Lupus Erythematosus.",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确研究SLE患者，并探讨羟氯喹视网膜病变，符合自身免疫性疾病背景和眼部表现主题。",
+      "year": 2025,
+      "journal": "Arthritis Rheumatol",
+      "doi": "10.1002/art.70022",
+      "abstract": "OBJECTIVE: To weigh higher-dose hydroxychloroquine (HCQ; ≥400 mg/day) and lower-dose HCQ (<400 mg/day) for effectiveness and safety among patients with systemic lupus erythematosus (SLE). METHODS: This nationwide study retrieved data from Taiwan's National Health Insurance Research Database from 2010 to 2021. We included patients with SLE aged over 10 years and initiating HCQ who had no other systemic autoimmune disease at baseline and no historical outcomes of interest. Patients were classified into higher-dose (≥400 mg/day) or lower-dose (<400 mg/day) treatment strategies based on the dosage of their first HCQ prescription. The outcomes were coronary artery disease (CAD), ischemic stroke, venous thromboembolism (VTE), end-stage renal disease, malignancy, and HCQ retinopathy. RESULTS: Eight hundred seventy-eight (3.77%) patients taking higher-dose HCQ and 22,405 (96.22%) taking lower-dose HCQ were included. After inverse probability weighting, higher-dose HCQ was associated with lower risks of CAD (hazard ratio [HR] 0.86, 95% confidence interval [CI] 0.80-0.93) and VTE (HR 0.40, 95% CI 0.33-0.49). We found no dose-related difference in the risk of ischemic stroke, end-stage renal disease, malignancy, and HCQ retinopathy through a mean follow-up of six years, except for the HCQ retinopathy among patients with SLE aged over 45 years (HR 1.87, 95% CI 1.45-2.42). CONCLUSION: For patients with SLE, higher-dose HCQ improves effectiveness, with reduced risks of CAD and VTE. There was no dose-related difference in the risk of HCQ retinopathy for patients with SLE aged younger than 45 years. Our study emphasizes the need for weighing the benefits and risks of optimal HCQ dosage in managing SLE."
+    },
+    {
+      "paper_id": "paper_000026",
+      "title": "Single Cell RNAseq Analysis of Thyroid Hormone Effects on Retinal Glial Cells.",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "标题和摘要研究甲状腺激素对视网膜胶质细胞的影响，缺乏明确的自身免疫或自身炎症性疾病背景。",
+      "year": 2025,
+      "journal": "Aging Dis",
+      "doi": "10.14336/ad.2025.1221",
+      "abstract": "Thyroid hormone (TH) signaling regulates cellular metabolism and stress response in the retina. Increased TH levels in circulation are associated with a higher incidence of age-related macular degeneration. Furthermore, stimulation of TH signaling induces retinal degeneration in mice, which is accompanied by the activation of retinal glial cells. Here, we investigated the transcriptional changes induced by triiodothyronine (T3) in retinal glial cells using single-cell RNA sequencing (scRNAseq) and bioinformatic analyses. One-month-old C57BL/6 mice were given T3 (20 μg/ml in drinking water) for four weeks, after which their retinal cells were collected to assess viability and undergo scRNAseq. The resulting data were analyzed using the Seurat package, visualized by the Loupe Browser, and Ingenuity Pathway Analysis. Analyses of differentially expressed genes (DEGs) in Müller cells, astrocytes, and microglia revealed significant enrichment in pathways associated with stress, immune response, and degeneration. Müller cells exhibited upregulation of mitochondrial dysfunction, acute-phase response, and sirtuin signaling pathways. Astrocytes displayed downregulation of synaptogenesis, neurovascular coupling, cAMP response elements, and calcium signaling. Microglia showed upregulation of coordinated lysosomal expression and regulation signaling, systemic lupus erythematosus in T cells, and multiple sclerosis signaling, and downregulation of actin-binding Rho activating signaling, retinoic acid receptor activation signaling, and IL-17 signaling. The distinct and overlapping transcriptional responses suggest that each retinal glial cell type plays a specific and coordinated role in adapting to stress. This study offers new insights into TH-induced retinal stress and degeneration at the transcriptional and pathway-level responses of retinal glial cells."
+    },
+    {
+      "paper_id": "paper_000027",
+      "title": "Systemic Lupus Erythematosus: Ophthalmological Safety Considerations of Emerging and Conventional Therapeutic Agents.",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确综述SLE治疗药物的眼科安全性，符合自身免疫性疾病背景和眼部表现主题。",
+      "year": 2025,
+      "journal": "Int J Mol Sci",
+      "doi": "10.3390/ijms262311744",
+      "abstract": "Systemic lupus erythematosus (SLE) is a chronic multisystem autoimmune disorder in which ocular involvement represents a clinically significant yet frequently underrecognized contributor to morbidity. Ocular manifestations in SLE may arise from disease activity itself, but also as adverse effects of long-term pharmacological therapy. With the advent of targeted immunomodulatory agents, the therapeutic landscape of SLE has expanded beyond conventional drugs such as hydroxychloroquine and corticosteroids toward biologics and small molecules designed to interfere with specific immunological pathways. These advances have improved systemic disease control and survival; however, their ophthalmological safety profiles remain only partially defined. This review synthesizes current evidence on ocular adverse events associated with both traditional and emerging SLE therapies. Established agents, particularly hydroxychloroquine and corticosteroids, are consistently linked to complications including retinopathy, posterior subcapsular cataracts, steroid-induced glaucoma, and central serous chorioretinopathy. In contrast, recently approved or investigational therapies-such as belimumab, anifrolumab, voclosporin, dual BAFF/APRIL inhibitors, rituximab, JAK inhibitors, CD40/CD40L blockade, CD38 inhibition, and mesenchymal stromal cell-based strategies-have limited but evolving safety data, with potential ocular adverse events spanning inflammatory, vascular, neuro-ophthalmic, and structural domains. Although ocular complications appear infrequent in clinical trials, underdetection in real-world practice and insufficient long-term monitoring may underestimate their true incidence. These findings highlight the need for systematic ophthalmological surveillance in patients receiving immunomodulatory therapies for SLE. Early recognition and timely management of ocular toxicity are crucial to safeguarding visual function and optimizing long-term therapeutic outcomes in this vulnerable patient population."
+    },
+    {
+      "paper_id": "paper_000028",
+      "title": "Natural experiment on neuroinflammatory disease incidence and infection links pre- and post-COVID-19.",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "摘要明确提及VKH疾病作为研究对象，探讨感染与神经炎症疾病的关系，符合纳入标准。",
+      "year": 2026,
+      "journal": "Brain",
+      "doi": "10.1093/brain/awaf458",
+      "abstract": "Infections are recognized triggers for several neuroinflammatory disorders. The coronavirus disease 2019 (COVID-19) pandemic's non-pharmaceutical interventions sharply curtailed pathogen exposure, creating a natural experiment to test infection-disease links. Using Japan's National Claims Database, we first validated the nationwide decline with two strictly infection-dependent conditions-epidemic keratoconjunctivitis and influenza-associated encephalopathy-whose monthly incidences fell by >60% after April 2020. Next, we applied an interrupted time series design, a causal-inference method for longitudinal data, to nine immune-mediated inflammatory diseases. Unsupervised clustering of model-derived level and slope changes identified three data-driven clusters. The first cluster, comprising Guillain-Barré syndrome and acute disseminated encephalomyelitis, showed large, statistically significant level reductions (P < 0.001), particularly in women, consistent with infection-susceptible pathophysiology. The second cluster, including myasthenia gravis and optic neuritis, exhibited transient declines followed by significant positive post-intervention slopes (P < 0.001), suggesting deferred diagnosis, treatment interruption or immune rebound. The third cluster, consisting of sarcoidosis, neuromyelitis optica, multiple sclerosis, Vogt-Koyanagi-Harada disease and Behçet's disease, remained stable, suggesting limited or complex infectious links. These data-driven trajectories mirror clinical pathophysiology and demonstrate that reduced pathogen exposure affects neuroinflammatory disease onset to varying degrees. This framework supports infection-related risk stratification, preventive strategies and continuity planning in neuroimmunology practice."
+    },
+    {
+      "paper_id": "paper_000029",
+      "title": "Bioinformatics analysis of Rickettsia typhi autoimmune associations and screening of Streptomyces-derived inhibitors.",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "摘要提及立克次体与自身免疫疾病（包括葡萄膜炎和SLE）的关联，但研究焦点是生物信息学分析和抑制剂筛选，眼部表现信息不足。",
+      "year": 2025,
+      "journal": "BioData Min",
+      "doi": "10.1186/s13040-025-00499-w",
+      "abstract": "BACKGROUND: Rickettsia typhi is the causative agent of epidemic murine typhus and Rocky Mountain spotted fever. The infection can affect multiple vital organs, including the heart, lungs, kidneys, and brain. Doxycycline is the recommended treatment but inflammation, mal-response, and drug resistance may arise. No natural product inhibitors have been reported against this bacterium. AIM: The objective of this study was to establish a potential connection between autoimmune disorders triggered by R. typhi, identify therapeutic targets within its core proteome, and explore novel natural product inhibitors from Streptomyces spp. that could potentially inhibit it. METHODOLOGY: Complete proteomes of four publicly available R. typhi strains were used for pan-proteomic analysis. The fni gene product (Isopentenyl pyrophosphate isomerase) was selected as the potential drug target. Molecular docking of 607 Streptomyces-derived metabolites was performed, with top hits validated using DiffDock and Vinardo scoring. Additionally, the Absorption, Distribution, Metabolism, Excretion, and Toxicity properties of the leading compounds were assessed via pkCSM, and formulation characteristics optimized using FormulationAI. RESULTS: Out of the 803 core proteins, associations between 14 proteins were mined for autoimmune diseases (including psoriasis, rheumatoid arthritis, optic atrophy, uveitis, even-plus syndrome, Sjogren syndrome, inflammatory bowel disease, allergic rhinitis, systemic lupus erythematosus, sclerosis, Stevens-Johnson syndrome, toxic epidermal necrolysis, colitis etc.). 17 core proteins were predicted as druggable. ZINC01482946 demonstrated the strongest inhibitory potential, as confirmed by DiffDock scoring, convolutional neural network-based ranking, and Vinardo scoring. It demonstrated a stable configuration and exhibited a favorable pharmacokinetic profile, with bioavailability enhanced through cyclodextrin complexation. CONCLUSION: To the best of our knowledge, this is the first report identifying human autoimmune associations with R. typhi and natural product inhibitors targeting the pathogen. ZINC01482946 shows potential as an effective inhibitor of R. typhi, while SBE-β-CD appears to be a promising cyclodextrin for improving its solubility and bioavailability. CLINICAL TRIAL NUMBER: Not applicable."
+    },
+    {
+      "paper_id": "paper_000030",
+      "title": "Collagen IV and laminin-1 as key macromolecules in ocular structure and pathology: A review.",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "摘要明确提及胶原IV和层粘连蛋白-1在自身免疫性疾病（如SLE）引起的眼部并发症中的作用，符合纳入标准。",
+      "year": 2025,
+      "journal": "Int J Biol Macromol",
+      "doi": "10.1016/j.ijbiomac.2025.149013",
+      "abstract": "The extracellular matrix (ECM), particularly the basement membrane (BM), is critical for the structural organization and functionality of ocular tissues. Among its core components, type IV collagen and laminin-1 play central roles in cell adhesion, polarity, differentiation, and survival. These macromolecules are ubiquitously expressed in the cornea, lens, retina, and optic nerve, forming tissue-specific BMs that support development and homeostasis. In this review, findings on the spatial distribution and molecular roles of collagen IV and laminin-1 in the eye under physiological and pathological conditions, are summarized. Mutations in COL4A1, COL4A2, and laminin-encoding genes (LAMA1, LAMB1, LAMC1) are associated with a range of ocular disorders, including anterior segment dysgenesis, lens dystrophy, optic nerve hypoplasia, and retinal abnormalities. Furthermore, autoimmune responses targeting these BM proteins have been implicated in systemic diseases such as rheumatoid arthritis, systemic lupus erythematosus, systemic sclerosis, and Sjögren's syndrome, often leading to serious ocular complications. This review emphasizes the importance of ECM macromolecules in maintaining ocular integrity and highlights their potential as diagnostic biomarkers and therapeutic targets in both inherited and immune-mediated eye diseases."
+    }
+  ],
+  "project_id": "eece0bbf0e80",
+  "project_topic": "自身炎症及自身免疫性疾病（重点包含VKH、SLE等）的眼底及其他眼部表现",
+  "model_provider": "deepseek",
+  "parent_task_id": null,
+  "input_dataset_ids": [],
+  "output_dataset_ids": [
+    "1c14fab7bb44",
+    "82182cbd7376"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0014",
+    "results": [
+        {
+            "paper_id": "paper_000131",
+            "decision": "exclude",
+            "reason": "标题和摘要明确讨论金融领域的对冲策略，严格命中排除标准。",
+            "evidence": ["title", "abstract", "journal"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000132",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论植物生物学中的bet-hedging策略，属于生物学概念，与语言学研究无关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000133",
+            "decision": "exclude",
+            "reason": "摘要明确提到使用模糊逻辑进行决策分析，属于计算机算法中的模糊控制，严格命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000134",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论农产品进口的汇率风险对冲，属于金融经济领域，严格命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000135",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论航空公司的燃油对冲策略，属于金融经济领域，严格命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000136",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论电力市场的价格风险对冲策略，属于金融经济领域，严格命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000137",
+            "decision": "include",
+            "reason": "标题和摘要明确研究自然语言中的数值模糊语，涉及语言使用分析，符合研究主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000138",
+            "decision": "uncertain",
+            "reason": "标题和摘要分析学术摘要中的元话语，与模糊语相关但未明确提及模糊语或语用分析，信息不足。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000139",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论股票指数的对冲策略，属于金融经济领域，严格命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000140",
+            "decision": "exclude",
+            "reason": "摘要明确讨论医学诊断中的模糊逻辑和模糊推理，属于计算机算法中的模糊控制，严格命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        }
+    ]
+}

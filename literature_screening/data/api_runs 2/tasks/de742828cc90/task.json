@@ -1,0 +1,84 @@
+{
+  "id": "de742828cc90",
+  "kind": "strategy",
+  "status": "succeeded",
+  "cancel_requested": false,
+  "title": "您的论文标题（可不填）：“小芳草”南京芳草国际旅-thread-plan",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 0,
+  "progress_total": null,
+  "progress_message": "Task completed",
+  "created_at": "2026-04-10T06:35:47.729001+00:00",
+  "updated_at": "2026-04-10T06:36:52.682476+00:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "3226faf3e0fa",
+    "project_topic": "您的论文标题（可不填）：“小芳草”南京芳草国际旅行社IP设计\n\n\n\n英文文献or中文文献：中文\n\n查找文献的主题：设计类IP形象类 旅行社ip形象研学特色建筑与IP形象结合插画 海报 \n\n关键词：芳草国际旅行社 IP形象 研学\n\n作者（机构）国籍（属地）要求：外国\n\n文章篇幅要求（字数or页数）：无\n\n发表期刊要求 无\n\n\n\n文献年份：2020到现在\n\n需要的文献数量：4\n\n其他要求：无",
+    "model_provider": "deepseek",
+    "request_payload": {
+      "title": "您的论文标题（可不填）：“小芳草”南京芳草国际旅-thread-plan",
+      "project_id": null,
+      "new_project_name": "",
+      "new_project_description": "",
+      "project_topic": "",
+      "research_need": "您的论文标题（可不填）：“小芳草”南京芳草国际旅行社IP设计\n\n\n\n英文文献or中文文献：中文\n\n查找文献的主题：设计类IP形象类 旅行社ip形象研学特色建筑与IP形象结合插画 海报 \n\n关键词：芳草国际旅行社 IP形象 研学\n\n作者（机构）国籍（属地）要求：外国\n\n文章篇幅要求（字数or页数）：无\n\n发表期刊要求 无\n\n\n\n文献年份：2020到现在\n\n需要的文献数量：4\n\n其他要求：无",
+      "selected_databases": [
+        "scopus",
+        "wos"
+      ],
+      "model": {
+        "provider": "deepseek",
+        "model_name": "deepseek-reasoner",
+        "api_base_url": "https://api.deepseek.com/v1",
+        "api_key_env": "DEEPSEEK_API_KEY",
+        "api_key": "",
+        "temperature": 0.0,
+        "max_tokens": 4096,
+        "min_request_interval_seconds": 2.0
+      },
+      "retry_times": 4,
+      "timeout_seconds": 180
+    },
+    "model_secret_id": null
+  },
+  "summary": {
+    "topic": "南京芳草国际旅行社IP形象设计与研学结合研究",
+    "screening_topic": "旅行社IP形象设计与研学主题初筛",
+    "selected_databases": [
+      "scopus",
+      "wos"
+    ],
+    "database_count": 2,
+    "inclusion_count": 5,
+    "exclusion_count": 5
+  },
+  "error": null,
+  "artifacts": {
+    "strategy_plan": {
+      "path": "tasks/de742828cc90/strategy_run/strategy_output/strategy_plan.md",
+      "filename": "strategy_plan.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 2369
+    },
+    "strategy_plan_json": {
+      "path": "tasks/de742828cc90/strategy_run/strategy_output/strategy_plan.json",
+      "filename": "strategy_plan.json",
+      "content_type": "application/json",
+      "size_bytes": 2645
+    },
+    "strategy_raw_response": {
+      "path": "tasks/de742828cc90/strategy_run/strategy_output/strategy_raw_response.txt",
+      "filename": "strategy_raw_response.txt",
+      "content_type": "text/plain; charset=utf-8",
+      "size_bytes": 2645
+    }
+  },
+  "run_root": "tasks/de742828cc90/strategy_run",
+  "output_dir": "tasks/de742828cc90/strategy_run/strategy_output",
+  "markdown_preview": "# 检索与筛选方案\n\n## 研究主题\n\n南京芳草国际旅行社IP形象设计与研学结合研究\n\n## 需求概括\n\n研究南京芳草国际旅行社的IP形象设计，结合研学旅行特色、建筑元素、插画与海报应用，以提升品牌识别和用户体验。\n\n## 建议用于初筛的研究主题\n\n旅行社IP形象设计与研学主题初筛\n\n## 纳入标准\n\n- 文献涉及IP形象、品牌设计或视觉识别系统\n- 与旅行社、旅游品牌或研学旅行相关\n- 包含建筑、插画、海报或图形设计元素\n- 发表年份为2020年或以后\n- 语言为中文\n\n## 排除标准\n\n- 纯理论、非设计类或技术实现文献\n- 与旅行社无关的IP设计案例\n- 非中文文献\n- 发表年份早于2020年\n- 仅讨论市场营销而非设计概念的文献\n\n## 检索词与高级检索式\n\n### Scopus高级检索方案\n\n```text\nTITLE-ABS-KEY(\"IP design\" OR \"IP image\" OR \"brand mascot\" OR \"character design\") AND TITLE-ABS-KEY(\"travel agency\" OR \"tourism\" OR \"tour operator\") AND TITLE-ABS-KEY(\"study tour\" OR \"educational travel\" OR \"architecture\" OR \"illustration\" OR \"poster\") AND PUBYEAR > 2019 AND LANGUAGE(chinese)\n```\n\n- 说明：检索式使用英文关键词，针对中文文献进行高级检索\n- 说明：可根据结果数量调整AND/OR操作符，例如放宽建筑或插画条件\n- 说明：注意验证文献作者国籍是否为外国，可在检索后手动筛选\n\n### Web of Science高级检索方案\n\n```text\nTS=(\"IP design\" OR \"IP image\" OR \"brand character\" OR \"mascot\") AND TS=(\"travel agency\" OR \"tourism\" OR \"tourist agency\") AND TS=(\"study tour\" OR \"educational travel\" OR \"architecture\" OR \"illustration\" OR \"poster design\") AND PY>=2020 AND LA=Chinese\n```\n\n- 说明：使用主题字段检索，覆盖标题、摘要、关键词\n- 说明：年份范围设置为2020年至今，可根据当前年份更新\n- 说明：由于主题较窄，结果可能有限，建议扩展检索词如\"visual identity\"或\"graphic design\"\n\n## 检索边界与注意事项\n\n- 检索关键词基于英文翻译，可能遗漏特定中文术语，建议检索后检查相关性\n- 外国作者国籍要求需在检索结果中手动验证，因数据库检索式难直接限制\n- 若文献数量不足4篇，可尝试放宽排除标准或增加检索词\n- 确保初筛时仔细阅读摘要，避免纳入不相关文献\n",
+  "records": [],
+  "project_id": "3226faf3e0fa",
+  "project_topic": "旅行社IP形象设计与研学主题初筛",
+  "model_provider": "deepseek"
+}

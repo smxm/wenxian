@@ -1,0 +1,363 @@
+{
+  "batch_id": "batch_0035",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000341",
+    "paper_000342",
+    "paper_000343",
+    "paper_000344",
+    "paper_000345",
+    "paper_000346",
+    "paper_000347",
+    "paper_000348",
+    "paper_000349",
+    "paper_000350"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000341",
+      "entry_type": "article",
+      "title": "An ensemble-based machine learning solution for imbalanced multiclass dataset during lithology log generation",
+      "authors": [
+        "Gohari, MSJ",
+        "Niri, ME",
+        "Sadeghnejad, S",
+        "Ghiasi-Freez, J"
+      ],
+      "year": 2023,
+      "journal": "SCIENTIFIC REPORTS",
+      "doi": "10.1038/s41598-023-49080-7",
+      "abstract": "The lithology log, an integral component of the master log, graphically portrays the encountered lithological sequence during drilling operations. In addition to offering real-time cross-sectional insights, lithology logs greatly aid in correlating and evaluating multiple sections efficiently. This paper introduces a novel workflow reliant on an enhanced weighted average ensemble approach for producing high-resolution lithology logs. The research contends with a challenging multiclass imbalanced lithofacies distribution emerging from substantial heterogeneities within subsurface geological structures. Typically, methods to handle imbalanced data, e.g., cost-sensitive learning (CSL), are tailored for issues encountered in binary classification. Error correcting output code (ECOC) originates from decomposition strategies, effectively breaking down multiclass problems into numerous binary subproblems. The database comprises conventional well logs and lithology logs obtained from five proximate wells within a Middle Eastern oilfield. Utilizing well-known machine learning (ML) algorithms, such as support vector machine (SVM), random forest (RF), decision tree (DT), logistic regression (LR), and extreme gradient boosting (XGBoost), as baseline classifiers, this study aims to enhance the accurate prediction of underground lithofacies. Upon recognizing a blind well, the data from the remaining four wells are utilized to train the ML algorithms. After integrating ECOC and CSL techniques with the baseline classifiers, they undergo evaluation. In the initial assessment, both RF and SVM demonstrated superior performance, prompting the development of an enhanced weighted average ensemble based on them. The comprehensive numerical and visual analysis corroborates the outstanding performance of the developed ensemble. The average Kappa statistic of 84.50%, signifying almost-perfect agreement, and mean F-measures of 91.04% emphasize the robustness of the designed ensemble-based workflow during the evaluation of blind well data.",
+      "keywords": [
+        "WIRELINE LOGS",
+        "FACIES",
+        "PREDICTION",
+        "ALGORITHM"
+      ],
+      "normalized_title": "an ensemble based machine learning solution for imbalanced multiclass dataset during lithology log generation",
+      "raw_bibtex": "@ARTICLE{10.1038/s41598-023-49080-7,\n\tauthor = {Gohari, MSJ and Niri, ME and Sadeghnejad, S and Ghiasi-Freez, J},\n\ttitle = {An ensemble-based machine learning solution for imbalanced multiclass dataset during lithology log generation},\n\tjournal = {SCIENTIFIC REPORTS},\n\tyear = {2023},\n\tkeywords = {WIRELINE LOGS; FACIES; PREDICTION; ALGORITHM},\n\tabstract = {The lithology log, an integral component of the master log, graphically portrays the encountered lithological sequence during drilling operations. In addition to offering real-time cross-sectional insights, lithology logs greatly aid in correlating and evaluating multiple sections efficiently. This paper introduces a novel workflow reliant on an enhanced weighted average ensemble approach for producing high-resolution lithology logs. The research contends with a challenging multiclass imbalanced lithofacies distribution emerging from substantial heterogeneities within subsurface geological structures. Typically, methods to handle imbalanced data, e.g., cost-sensitive learning (CSL), are tailored for issues encountered in binary classification. Error correcting output code (ECOC) originates from decomposition strategies, effectively breaking down multiclass problems into numerous binary subproblems. The database comprises conventional well logs and lithology logs obtained from five proximate wells within a Middle Eastern oilfield. Utilizing well-known machine learning (ML) algorithms, such as support vector machine (SVM), random forest (RF), decision tree (DT), logistic regression (LR), and extreme gradient boosting (XGBoost), as baseline classifiers, this study aims to enhance the accurate prediction of underground lithofacies. Upon recognizing a blind well, the data from the remaining four wells are utilized to train the ML algorithms. After integrating ECOC and CSL techniques with the baseline classifiers, they undergo evaluation. In the initial assessment, both RF and SVM demonstrated superior performance, prompting the development of an enhanced weighted average ensemble based on them. The comprehensive numerical and visual analysis corroborates the outstanding performance of the developed ensemble. The average Kappa statistic of 84.50%, signifying almost-perfect agreement, and mean F-measures of 91.04% emphasize the robustness of the designed ensemble-based workflow during the evaluation of blind well data.},\n\tdoi = {10.1038/s41598-023-49080-7},\n\tvolume = {13},\n\tnumber = {1},\n\tissn = {2045-2322},\n\tnote = {Times Cited in Web of Science Core Collection: 13 Total Times Cited: 14 Cited Reference Count: 78 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1038/s41598-023-49080-7"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000342",
+      "entry_type": "article",
+      "title": "Collaborative Split Learning-Based Dynamic Bandwidth Allocation for 6G-Grade TDM-PON Systems",
+      "authors": [
+        "Mohammed, AFY",
+        "Allawi, YM",
+        "Moneer, EM",
+        "Widaa, LO"
+      ],
+      "year": 2025,
+      "journal": "SENSORS",
+      "doi": "10.3390/s25144300",
+      "abstract": "Dynamic Bandwidth Allocation (DBA) techniques enable Time Division Multiplexing Passive Optical Network (TDM-PON) systems to efficiently manage upstream bandwidth by allowing the centralized Optical Line Terminal (OLT) to coordinate resource allocation among distributed Optical Network Units (ONUs). Conventional DBA techniques struggle to adapt to dynamic traffic conditions, resulting in suboptimal performance under varying load scenarios. This work suggests a Collaborative Split Learning-Based DBA (CSL-DBA) framework that utilizes the recently emerging Split Learning (SL) technique between the OLT and ONUs for the objective of optimizing predictive traffic adaptation and reducing communication overhead. Instead of requiring centralized learning at the OLT, the proposed approach decentralizes the process by enabling ONUs to perform local traffic analysis and transmit only model updates to the OLT. This cooperative strategy guarantees rapid responsiveness to fluctuating traffic conditions. We show by extensive simulations spanning several traffic scenarios, including low, fluctuating, and high traffic load conditions, that our proposed CSL-DBA achieves at least 99% traffic prediction accuracy, with minimal inference latency and scalable learning performance, and it reduces communication overhead by approximately 60% compared to traditional federated learning approaches, making it a strong candidate for next-generation 6G-grade TDM-PON systems.",
+      "keywords": [
+        "6G",
+        "TDM-PON",
+        "DBA",
+        "split learning",
+        "machine learning",
+        "traffic prediction"
+      ],
+      "normalized_title": "collaborative split learning based dynamic bandwidth allocation for 6g grade tdm pon systems",
+      "raw_bibtex": "@ARTICLE{10.3390/s25144300,\n\tauthor = {Mohammed, AFY and Allawi, YM and Moneer, EM and Widaa, LO},\n\ttitle = {Collaborative Split Learning-Based Dynamic Bandwidth Allocation for 6G-Grade TDM-PON Systems},\n\tjournal = {SENSORS},\n\tyear = {2025},\n\tkeywords = {6G; TDM-PON; DBA; split learning; machine learning; traffic prediction},\n\tabstract = {Dynamic Bandwidth Allocation (DBA) techniques enable Time Division Multiplexing Passive Optical Network (TDM-PON) systems to efficiently manage upstream bandwidth by allowing the centralized Optical Line Terminal (OLT) to coordinate resource allocation among distributed Optical Network Units (ONUs). Conventional DBA techniques struggle to adapt to dynamic traffic conditions, resulting in suboptimal performance under varying load scenarios. This work suggests a Collaborative Split Learning-Based DBA (CSL-DBA) framework that utilizes the recently emerging Split Learning (SL) technique between the OLT and ONUs for the objective of optimizing predictive traffic adaptation and reducing communication overhead. Instead of requiring centralized learning at the OLT, the proposed approach decentralizes the process by enabling ONUs to perform local traffic analysis and transmit only model updates to the OLT. This cooperative strategy guarantees rapid responsiveness to fluctuating traffic conditions. We show by extensive simulations spanning several traffic scenarios, including low, fluctuating, and high traffic load conditions, that our proposed CSL-DBA achieves at least 99% traffic prediction accuracy, with minimal inference latency and scalable learning performance, and it reduces communication overhead by approximately 60% compared to traditional federated learning approaches, making it a strong candidate for next-generation 6G-grade TDM-PON systems.},\n\tdoi = {10.3390/s25144300},\n\tvolume = {25},\n\tnumber = {14},\n\tissn = {1424-8220},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 32 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/s25144300"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000343",
+      "entry_type": "article",
+      "title": "On the contribution of the Gulf stream to high frequency coastal sea level variability",
+      "authors": [
+        "Ezer, T"
+      ],
+      "year": 2026,
+      "journal": "OCEAN DYNAMICS",
+      "doi": "10.1007/s10236-026-01776-w",
+      "abstract": "Long-term Atlantic Ocean and Gulf Stream (GS) variability were linked in past studies to coastal sea level (CSL) change along the U.S. East Coast - a weakening GS can lead to rise in CSL and increased coastal flooding. However, high frequency variability (HFV) in CSL is, in most cases, attributed to atmospheric weather events. This study is focused on HFV (intraseasonal variations with periods between similar to 1 week and similar to 2 months) in the GS and in CSL. First, wavelet and spectral analysis of observations of the Florida Current transport and CSL characterized the HFV in the data, and then idealized numerical simulations were conducted to study the response of CSL to imposed GS variations with known frequencies. Three experiments were conducted: a control run with constant surface and boundary forcing, and two experiments with imposed oscillations in the Florida Current transport into the model domain- a \"high-frequency experiment\" (HFE) and a \"low-frequency experiment\" (LFE), where the period of the GS oscillations were similar to 1-2 weeks and similar to 1-2 months, respectively. The observations and the model show statistically significant anticorrelation between the GS flow and the CSL, but the LFE resulted in higher GS-CSL correlations and was more like the observations than the HFE was. The results also show large spatial differences in the CSL response to GS variations - the South-Atlantic Bight (SAB) responded more strongly to the LFE while the Mid-Atlantic Bight (MAB) responded more strongly to the HFE. Power spectra of the model simulations show that even small, imposed GS oscillations at high frequency, can interact with natural variability to excite unpredictable CSL variabilities over a wide range of frequencies, including oscillations at much longer time scales than the forcing. The variability in the Florida Current flow generated a northward propagating signal along the GS path and a southward propagating sea level signal along the coast. However, the topography near Cape Hatteras seems to partly block communication between the MAB and the SAB. The study demonstrates the important contribution of high frequency GS variability to CSL variability - better understanding of the role of remote forcing on coastal sea level can help to improve prediction of coastal sea level variations and associated flooding.",
+      "keywords": [
+        "Gulf stream",
+        "Florida current",
+        "Coastal sea level",
+        "Ocean variability",
+        "US EAST-COAST",
+        "FLORIDA CURRENT TRANSPORT",
+        "OVERTURNING CIRCULATION",
+        "ATLANTIC-OCEAN",
+        "FLUCTUATIONS",
+        "RISE",
+        "DYNAMICS",
+        "IMPACT",
+        "INDICATOR",
+        "HURRICANE"
+      ],
+      "normalized_title": "on the contribution of the gulf stream to high frequency coastal sea level variability",
+      "raw_bibtex": "@ARTICLE{10.1007/s10236-026-01776-w,\n\tauthor = {Ezer, T},\n\ttitle = {On the contribution of the Gulf stream to high frequency coastal sea level variability},\n\tjournal = {OCEAN DYNAMICS},\n\tyear = {2026},\n\tkeywords = {Gulf stream; Florida current; Coastal sea level; Ocean variability; US EAST-COAST; FLORIDA CURRENT TRANSPORT; OVERTURNING CIRCULATION; ATLANTIC-OCEAN; FLUCTUATIONS; RISE; DYNAMICS; IMPACT; INDICATOR; HURRICANE},\n\tabstract = {Long-term Atlantic Ocean and Gulf Stream (GS) variability were linked in past studies to coastal sea level (CSL) change along the U.S. East Coast - a weakening GS can lead to rise in CSL and increased coastal flooding. However, high frequency variability (HFV) in CSL is, in most cases, attributed to atmospheric weather events. This study is focused on HFV (intraseasonal variations with periods between similar to 1 week and similar to 2 months) in the GS and in CSL. First, wavelet and spectral analysis of observations of the Florida Current transport and CSL characterized the HFV in the data, and then idealized numerical simulations were conducted to study the response of CSL to imposed GS variations with known frequencies. Three experiments were conducted: a control run with constant surface and boundary forcing, and two experiments with imposed oscillations in the Florida Current transport into the model domain- a \"high-frequency experiment\" (HFE) and a \"low-frequency experiment\" (LFE), where the period of the GS oscillations were similar to 1-2 weeks and similar to 1-2 months, respectively. The observations and the model show statistically significant anticorrelation between the GS flow and the CSL, but the LFE resulted in higher GS-CSL correlations and was more like the observations than the HFE was. The results also show large spatial differences in the CSL response to GS variations - the South-Atlantic Bight (SAB) responded more strongly to the LFE while the Mid-Atlantic Bight (MAB) responded more strongly to the HFE. Power spectra of the model simulations show that even small, imposed GS oscillations at high frequency, can interact with natural variability to excite unpredictable CSL variabilities over a wide range of frequencies, including oscillations at much longer time scales than the forcing. The variability in the Florida Current flow generated a northward propagating signal along the GS path and a southward propagating sea level signal along the coast. However, the topography near Cape Hatteras seems to partly block communication between the MAB and the SAB. The study demonstrates the important contribution of high frequency GS variability to CSL variability - better understanding of the role of remote forcing on coastal sea level can help to improve prediction of coastal sea level variations and associated flooding.},\n\tdoi = {10.1007/s10236-026-01776-w},\n\tvolume = {76},\n\tnumber = {3},\n\tissn = {1616-7341},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 55 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s10236-026-01776-w"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000344",
+      "entry_type": "article",
+      "title": "Grain boundary engineering in Nickel-rich cathode: A combination of high-throughput first-principles and interpretable machine learning study",
+      "authors": [
+        "Hu, YX",
+        "Zhang, YM",
+        "Wen, B",
+        "Dai, FZ"
+      ],
+      "year": 2024,
+      "journal": "ACTA MATERIALIA",
+      "doi": "10.1016/j.actamat.2024.120144",
+      "abstract": "One of the primary challenges in commercializing nickel (Ni)-rich layered cathodes for lithium-ion batteries (LIBs) is addressing the problem of crack formation during cell cycling. These cracks quickly spread along grain boundaries (GBs), causing capacity and voltage degradation. GB engineering, a classical technique for strengthening materials that has been largely unexplored in LIBs, could potentially inhibit intergranular fractures and significantly extend battery life. In this study, we employed a synergistic approach that combined highthroughput first-principles calculations and an interpretable machine learning (ML) framework to assess the feasibility of enhancing GBs through segregation-induced strengthening via doping. As a result, we generated a comprehensive database containing 64 elements doped at 4 sites in & sum;3 [100](012) GB of LiNiO 2 , representing the largest database for first-principle-aided GB engineering in LIBs to date. This database further enabled the implementation of an interpretable ML workflow to uncover the fundamental principles governing dopant segregation and GB strengthening. Based on the insights gained from this research, we provide practical and promising recommendations for dopant elements that can effectively anchor and reinforce GBs, such as Mg, Al, Si, Ti, Cr, Mn, Fe, Cu, Zn, Hf, and Ce, with some already demonstrated success in experiments. This work on GB engineering serves as a foundation for the development of advanced, doped cathode materials for nextgeneration batteries.",
+      "keywords": [
+        "Ni-rich cathode",
+        "First-principles calculation",
+        "Machine learning",
+        "Grain boundary engineering",
+        "Doping",
+        "SOLUTE ATOMS",
+        "SEGREGATION",
+        "ENERGY",
+        "CHEMISTRY",
+        "BATTERY",
+        "ALUMINA",
+        "CSL",
+        "MG"
+      ],
+      "normalized_title": "grain boundary engineering in nickel rich cathode a combination of high throughput first principles and interpretable machine learning study",
+      "raw_bibtex": "@ARTICLE{10.1016/j.actamat.2024.120144,\n\tauthor = {Hu, YX and Zhang, YM and Wen, B and Dai, FZ},\n\ttitle = {Grain boundary engineering in Nickel-rich cathode: A combination of high-throughput first-principles and interpretable machine learning study},\n\tjournal = {ACTA MATERIALIA},\n\tyear = {2024},\n\tkeywords = {Ni-rich cathode; First-principles calculation; Machine learning; Grain boundary engineering; Doping; SOLUTE ATOMS; SEGREGATION; ENERGY; CHEMISTRY; BATTERY; ALUMINA; CSL; MG},\n\tabstract = {One of the primary challenges in commercializing nickel (Ni)-rich layered cathodes for lithium-ion batteries (LIBs) is addressing the problem of crack formation during cell cycling. These cracks quickly spread along grain boundaries (GBs), causing capacity and voltage degradation. GB engineering, a classical technique for strengthening materials that has been largely unexplored in LIBs, could potentially inhibit intergranular fractures and significantly extend battery life. In this study, we employed a synergistic approach that combined highthroughput first-principles calculations and an interpretable machine learning (ML) framework to assess the feasibility of enhancing GBs through segregation-induced strengthening via doping. As a result, we generated a comprehensive database containing 64 elements doped at 4 sites in & sum;3 [100](012) GB of LiNiO 2 , representing the largest database for first-principle-aided GB engineering in LIBs to date. This database further enabled the implementation of an interpretable ML workflow to uncover the fundamental principles governing dopant segregation and GB strengthening. Based on the insights gained from this research, we provide practical and promising recommendations for dopant elements that can effectively anchor and reinforce GBs, such as Mg, Al, Si, Ti, Cr, Mn, Fe, Cu, Zn, Hf, and Ce, with some already demonstrated success in experiments. This work on GB engineering serves as a foundation for the development of advanced, doped cathode materials for nextgeneration batteries.},\n\tdoi = {10.1016/j.actamat.2024.120144},\n\tvolume = {276},\n\tissn = {1359-6454},\n\tnote = {Times Cited in Web of Science Core Collection: 9 Total Times Cited: 11 Cited Reference Count: 57 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.actamat.2024.120144"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000345",
+      "entry_type": "article",
+      "title": "Influence of sea stratification and troposphere stability over the coastal squall lines of eastern Amazon",
+      "authors": [
+        "da Silva, DV",
+        "Silva, TLD",
+        "de Camargo, R",
+        "Veleda, D"
+      ],
+      "year": 2024,
+      "journal": "CLIMATE DYNAMICS",
+      "doi": "10.1007/s00382-024-07499-2",
+      "abstract": "This study investigates the relationship between oceanic and atmospheric parameters and their relation with the occurrence of Coastal Squall Lines (CSL) in the Eastern Amazon. Utilizing a minimalist set of stability and stratification parameters, results indicate a significant coherence in the 8 and 12-month period in bulk parameters, potentially linked to the discharge of the Amazon River and the convective regime of Western Tropical Atlantic. A cross-wavelet analysis shed light on the relation of CSL frequency with the local and remote oceanic stratification and atmosphere stability parameters. Additionally, composite analyses reveal shifts in the distributions of these parameters during CSL occurrences, highlighting the sensitivity of CSL to environmental variables. The environmental variables rely on local and remote drivers, whose interactions still need to be fully addressed. Our results indirectly quantify how these drivers can explain the CSL frequency, with the advantage of bypassing a full assessment of submesoscale processes. These outcomes reveal the need to consider the influence of local shelf sea stratification to enhance the precision of CSL characterization, what can be used to improve the setup of atmospheric models. While this study covers this gap, further research considering the mechanistic approach is needed to improve the understanding of mesoscale convection at the Eastern Amazon.",
+      "keywords": [
+        "Coastal squall lines",
+        "Eastern Amazon",
+        "Stratification",
+        "Stability",
+        "RIVER PLUME",
+        "LAYER",
+        "PRECIPITATION",
+        "IMPACT"
+      ],
+      "normalized_title": "influence of sea stratification and troposphere stability over the coastal squall lines of eastern amazon",
+      "raw_bibtex": "@ARTICLE{10.1007/s00382-024-07499-2,\n\tauthor = {da Silva, DV and Silva, TLD and de Camargo, R and Veleda, D},\n\ttitle = {Influence of sea stratification and troposphere stability over the coastal squall lines of eastern Amazon},\n\tjournal = {CLIMATE DYNAMICS},\n\tyear = {2024},\n\tkeywords = {Coastal squall lines; Eastern Amazon; Stratification; Stability; RIVER PLUME; LAYER; PRECIPITATION; IMPACT},\n\tabstract = {This study investigates the relationship between oceanic and atmospheric parameters and their relation with the occurrence of Coastal Squall Lines (CSL) in the Eastern Amazon. Utilizing a minimalist set of stability and stratification parameters, results indicate a significant coherence in the 8 and 12-month period in bulk parameters, potentially linked to the discharge of the Amazon River and the convective regime of Western Tropical Atlantic. A cross-wavelet analysis shed light on the relation of CSL frequency with the local and remote oceanic stratification and atmosphere stability parameters. Additionally, composite analyses reveal shifts in the distributions of these parameters during CSL occurrences, highlighting the sensitivity of CSL to environmental variables. The environmental variables rely on local and remote drivers, whose interactions still need to be fully addressed. Our results indirectly quantify how these drivers can explain the CSL frequency, with the advantage of bypassing a full assessment of submesoscale processes. These outcomes reveal the need to consider the influence of local shelf sea stratification to enhance the precision of CSL characterization, what can be used to improve the setup of atmospheric models. While this study covers this gap, further research considering the mechanistic approach is needed to improve the understanding of mesoscale convection at the Eastern Amazon.},\n\tdoi = {10.1007/s00382-024-07499-2},\n\tvolume = {63},\n\tnumber = {1},\n\tissn = {0930-7575},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 57 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s00382-024-07499-2"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000346",
+      "entry_type": "article",
+      "title": "Analyzing Ogurja Island's shoreline changes in response to the Caspian Sea water level decline",
+      "authors": [
+        "Shamsaie, R",
+        "Ghaderi, D"
+      ],
+      "year": 2025,
+      "journal": "OCEANOLOGIA",
+      "doi": "10.5697/qpun2882",
+      "abstract": "Shorelines are vital and dynamic components of the coastal zone, constantly changing due to various environmental factors. These areas hold significant recreational, economic, and ecological importance, making the understanding of shoreline alterations critical. Unlike open oceans, the Caspian Sea (CS) has experienced a noticeable decline in water level since the late 1990s due to a combination of climatic variability, reduced riverine inflow, increased evaporation, and anthropogenic factors. This decline in water level is expected to drive morphological changes in the shorelines, with an overall trend of shorelines retreating seaward. In this study, the shoreline changes of Ogurja Island, the largest island in the CS, were analyzed using Sentinel-2 satellite imagery from 2015 to 2023, covering a total of 9 images, and the Digital Shoreline Analysis System tool. The study aimed to establish a relationship between these shoreline changes and the decline in the Caspian Sea water level (CSL). The results reveal a strong correlation, with shoreline movements reaching up to 80 m/year in some areas, and significant changes are expected with the projected CSL decline. This research offers an initial attempt to connect shoreline dynamics with water level fluctuations, highlighting the importance of considering shoreline changes in future water level predictions. The study recommends that future research focus on integrating advanced models, such as hydrodynamic simulations and machine learning techniques, to refine shoreline predictions and enhance understanding of the CS's dynamic coastal environment.",
+      "keywords": [
+        "Ogur Chinsky",
+        "Caspian Sea",
+        "Shoreline Changes",
+        "Decreasing Water Levels",
+        "DSAS",
+        "SATELLITE",
+        "IMPACT"
+      ],
+      "normalized_title": "analyzing ogurja island s shoreline changes in response to the caspian sea water level decline",
+      "raw_bibtex": "@ARTICLE{10.5697/QPUN2882,\n\tauthor = {Shamsaie, R and Ghaderi, D},\n\ttitle = {Analyzing Ogurja Island's shoreline changes in response to the Caspian Sea water level decline},\n\tjournal = {OCEANOLOGIA},\n\tyear = {2025},\n\tkeywords = {Ogur Chinsky; Caspian Sea; Shoreline Changes; Decreasing Water Levels; DSAS; SATELLITE; IMPACT},\n\tabstract = {Shorelines are vital and dynamic components of the coastal zone, constantly changing due to various environmental factors. These areas hold significant recreational, economic, and ecological importance, making the understanding of shoreline alterations critical. Unlike open oceans, the Caspian Sea (CS) has experienced a noticeable decline in water level since the late 1990s due to a combination of climatic variability, reduced riverine inflow, increased evaporation, and anthropogenic factors. This decline in water level is expected to drive morphological changes in the shorelines, with an overall trend of shorelines retreating seaward. In this study, the shoreline changes of Ogurja Island, the largest island in the CS, were analyzed using Sentinel-2 satellite imagery from 2015 to 2023, covering a total of 9 images, and the Digital Shoreline Analysis System tool. The study aimed to establish a relationship between these shoreline changes and the decline in the Caspian Sea water level (CSL). The results reveal a strong correlation, with shoreline movements reaching up to 80 m/year in some areas, and significant changes are expected with the projected CSL decline. This research offers an initial attempt to connect shoreline dynamics with water level fluctuations, highlighting the importance of considering shoreline changes in future water level predictions. The study recommends that future research focus on integrating advanced models, such as hydrodynamic simulations and machine learning techniques, to refine shoreline predictions and enhance understanding of the CS's dynamic coastal environment.},\n\tdoi = {10.5697/QPUN2882},\n\tvolume = {67},\n\tnumber = {2},\n\tissn = {0078-3234},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 74 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.5697/QPUN2882"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000347",
+      "entry_type": "article",
+      "title": "A 50 Gb/s 0.42 pJ/b Non-Return-to-Zero Transmitter for Extra-Short-Reach SerDes",
+      "authors": [
+        "Sun, LL",
+        "Jin, ZX",
+        "Liu, YC",
+        "Yu, XH",
+        "Ni, RH"
+      ],
+      "year": 2025,
+      "journal": "ELECTRONICS",
+      "doi": "10.3390/electronics14101955",
+      "abstract": "An energy- and area-efficient non-return-to-zero (NRZ) transmitter with feedforward equalization (FFE) is proposed for an extra-short-reach (XSR) data interface in chiplet-based system in packages (SiPs) and multi-chip modules (MCMs). At the system level, the final-stage 2:1 multiplexer (MUX) in the transmitter is combined with the driver to reduce the hardware and power consumption; at the circuit level, charge-steering-based moderate-swing signal processing further reduces the circuit power consumption and inter-symbol interference. Fabricated in a 28 nm CMOS process with a core area of 0.032 mm2, the prototype NRZ transmitter demonstrates an energy efficiency of 0.42 pJ/b at a data rate of 50 Gb/s with an insertion loss of 10 dB, which makes it a promising candidate for XSR die-to-die (D2D) interfaces.",
+      "keywords": [
+        "wireline transmitter",
+        "non-return-to-zero (NRZ)",
+        "extra short range (XSR)",
+        "energy efficient",
+        "feedforward equalization (FFE)",
+        "multiplexer (MUX)",
+        "charge steering logic (CSL)",
+        "FFE"
+      ],
+      "normalized_title": "a 50 gb s 0 42 pj b non return to zero transmitter for extra short reach serdes",
+      "raw_bibtex": "@ARTICLE{10.3390/electronics14101955,\n\tauthor = {Sun, LL and Jin, ZX and Liu, YC and Yu, XH and Ni, RH},\n\ttitle = {A 50 Gb/s 0.42 pJ/b Non-Return-to-Zero Transmitter for Extra-Short-Reach SerDes},\n\tjournal = {ELECTRONICS},\n\tyear = {2025},\n\tkeywords = {wireline transmitter; non-return-to-zero (NRZ); extra short range (XSR); energy efficient; feedforward equalization (FFE); multiplexer (MUX); charge steering logic (CSL); FFE},\n\tabstract = {An energy- and area-efficient non-return-to-zero (NRZ) transmitter with feedforward equalization (FFE) is proposed for an extra-short-reach (XSR) data interface in chiplet-based system in packages (SiPs) and multi-chip modules (MCMs). At the system level, the final-stage 2:1 multiplexer (MUX) in the transmitter is combined with the driver to reduce the hardware and power consumption; at the circuit level, charge-steering-based moderate-swing signal processing further reduces the circuit power consumption and inter-symbol interference. Fabricated in a 28 nm CMOS process with a core area of 0.032 mm2, the prototype NRZ transmitter demonstrates an energy efficiency of 0.42 pJ/b at a data rate of 50 Gb/s with an insertion loss of 10 dB, which makes it a promising candidate for XSR die-to-die (D2D) interfaces.},\n\tdoi = {10.3390/electronics14101955},\n\tvolume = {14},\n\tnumber = {10},\n\tissn = {2079-9292},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 19 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/electronics14101955"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000348",
+      "entry_type": "article",
+      "title": "Real-time multi-class signal quality assessment of photoplethysmography using machine learning technique",
+      "authors": [
+        "Prasun, P",
+        "Mukhopadhyay, S",
+        "Gupta, R"
+      ],
+      "year": 2022,
+      "journal": "MEASUREMENT SCIENCE AND TECHNOLOGY",
+      "doi": "10.1088/1361-6501/ac2d5b",
+      "abstract": "Photoplethysmography (PPG) signal quality assessment (SQA) ensures improved measurements of various surrogate cardiovascular measurements like heart rate, SpO(2), blood pressure, cardiac output and many more and as well reduces false alrams in ambulatory measurements. Although PPG SQA (PSQA) is a well researched area, but multiclass prediction of signal quality and its hardware implementation is limited. In this paper, a new non-segmenting approach for multiclass PSQA is presented with an optimal set of seven time-frequency domain features in conjuction with supervised classifiers to identify clean, partly clean and corrupted PPG data. The present work was carried out in three major stages- signal (dataset) acquisition, feature extraction and 3-class classification using random forest classifier. The technique was evaluated with volunteers' data, MIMIC-III data from PhysioNet, CSL data, and combined data and achieved an overall average accuracy of 96.8% with good (0.98 or above) sensitivity, specificity, F1 score, precision and recall. On-device implementation of the proposed PSQA was accomplished using 7.2 h of PPG dataset on a quad-core Broadcom BCM 2837 controller with 1.2 GHz, supported by 1 GB RAM-based standalone device, with an accuracy of 97.09%. The latency and the peak memory requirement of the implementation was 0.81 s and 19 kB respectively to process 3 s PPG data. The present technique may be integrated as a part of a remote healthcare system using wearable sensors.",
+      "keywords": [
+        "photoplethysmography",
+        "signal quality assessment",
+        "machine learning",
+        "supervised classification",
+        "hardware prototyping",
+        "ARTIFACT DETECTION",
+        "ALGORITHM",
+        "SYSTEM"
+      ],
+      "normalized_title": "real time multi class signal quality assessment of photoplethysmography using machine learning technique",
+      "raw_bibtex": "@ARTICLE{10.1088/1361-6501/ac2d5b,\n\tauthor = {Prasun, P and Mukhopadhyay, S and Gupta, R},\n\ttitle = {Real-time multi-class signal quality assessment of photoplethysmography using machine learning technique},\n\tjournal = {MEASUREMENT SCIENCE AND TECHNOLOGY},\n\tyear = {2022},\n\tkeywords = {photoplethysmography; signal quality assessment; machine learning; supervised classification; hardware prototyping; ARTIFACT DETECTION; ALGORITHM; SYSTEM},\n\tabstract = {Photoplethysmography (PPG) signal quality assessment (SQA) ensures improved measurements of various surrogate cardiovascular measurements like heart rate, SpO(2), blood pressure, cardiac output and many more and as well reduces false alrams in ambulatory measurements. Although PPG SQA (PSQA) is a well researched area, but multiclass prediction of signal quality and its hardware implementation is limited. In this paper, a new non-segmenting approach for multiclass PSQA is presented with an optimal set of seven time-frequency domain features in conjuction with supervised classifiers to identify clean, partly clean and corrupted PPG data. The present work was carried out in three major stages- signal (dataset) acquisition, feature extraction and 3-class classification using random forest classifier. The technique was evaluated with volunteers' data, MIMIC-III data from PhysioNet, CSL data, and combined data and achieved an overall average accuracy of 96.8% with good (0.98 or above) sensitivity, specificity, F1 score, precision and recall. On-device implementation of the proposed PSQA was accomplished using 7.2 h of PPG dataset on a quad-core Broadcom BCM 2837 controller with 1.2 GHz, supported by 1 GB RAM-based standalone device, with an accuracy of 97.09%. The latency and the peak memory requirement of the implementation was 0.81 s and 19 kB respectively to process 3 s PPG data. The present technique may be integrated as a part of a remote healthcare system using wearable sensors.},\n\tdoi = {10.1088/1361-6501/ac2d5b},\n\tvolume = {33},\n\tnumber = {1},\n\tissn = {0957-0233},\n\tnote = {Times Cited in Web of Science Core Collection: 13 Total Times Cited: 15 Cited Reference Count: 23 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1088/1361-6501/ac2d5b"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000349",
+      "entry_type": "article",
+      "title": "Continuous Sign Language Recognition System Using Deep Learning with MediaPipe Holistic",
+      "authors": [
+        "Srivastava, S",
+        "Singh, S",
+        "Pooja",
+        "Prakash, S"
+      ],
+      "year": 2024,
+      "journal": "WIRELESS PERSONAL COMMUNICATIONS",
+      "doi": "10.1007/s11277-024-11356-0",
+      "abstract": "Sign languages are the language of hearing-impaired people who use visuals like the hand, facial, and body movements for communication. There are different signs and gestures representing alphabets, words, and phrases. Nowadays approximately 300 sign languages are being practiced worldwide such as American Sign Language (ASL), Chinese Sign Language (CSL), Indian Sign Language (ISL), and many more. Sign languages are dependent on the vocal language of a place. Unlike vocal or spoken languages, there are no helping words in sign language like is, am, are, was, were, will, be, etc. As only a limited population is well-versed in sign language, this lack of familiarity of sign language hinders hearing-impaired people from communicating freely and easily with everyone. This issue can be addressed by a sign language recognition (SLR) system which has the capability to translate the sign language into vocal language. In this paper, a continuous SLR system is proposed using a deep learning model employing Long Short-Term Memory (LSTM), trained and tested on an ISL primary dataset. This dataset is created using MediaPipe Holistic pipeline for tracking face, hand, and body movements and collecting landmarks. The system recognizes the signs and gestures in real-time with 88.23% accuracy.",
+      "keywords": [
+        "Sign language recognition (SLR)",
+        "Continuous sign language",
+        "Indian sign language (ISL)",
+        "Machine learning",
+        "Computer vision",
+        "Long short-term memory (LSTM)"
+      ],
+      "normalized_title": "continuous sign language recognition system using deep learning with mediapipe holistic",
+      "raw_bibtex": "@ARTICLE{10.1007/s11277-024-11356-0,\n\tauthor = {Srivastava, S and Singh, S and Pooja and Prakash, S},\n\ttitle = {Continuous Sign Language Recognition System Using Deep Learning with MediaPipe Holistic},\n\tjournal = {WIRELESS PERSONAL COMMUNICATIONS},\n\tyear = {2024},\n\tkeywords = {Sign language recognition (SLR); Continuous sign language; Indian sign language (ISL); Machine learning; Computer vision; Long short-term memory (LSTM)},\n\tabstract = {Sign languages are the language of hearing-impaired people who use visuals like the hand, facial, and body movements for communication. There are different signs and gestures representing alphabets, words, and phrases. Nowadays approximately 300 sign languages are being practiced worldwide such as American Sign Language (ASL), Chinese Sign Language (CSL), Indian Sign Language (ISL), and many more. Sign languages are dependent on the vocal language of a place. Unlike vocal or spoken languages, there are no helping words in sign language like is, am, are, was, were, will, be, etc. As only a limited population is well-versed in sign language, this lack of familiarity of sign language hinders hearing-impaired people from communicating freely and easily with everyone. This issue can be addressed by a sign language recognition (SLR) system which has the capability to translate the sign language into vocal language. In this paper, a continuous SLR system is proposed using a deep learning model employing Long Short-Term Memory (LSTM), trained and tested on an ISL primary dataset. This dataset is created using MediaPipe Holistic pipeline for tracking face, hand, and body movements and collecting landmarks. The system recognizes the signs and gestures in real-time with 88.23% accuracy.},\n\tdoi = {10.1007/s11277-024-11356-0},\n\tvolume = {137},\n\tnumber = {3},\n\tpages = {1455-1468},\n\tissn = {0929-6212},\n\tnote = {Times Cited in Web of Science Core Collection: 5 Total Times Cited: 9 Cited Reference Count: 44 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s11277-024-11356-0"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000350",
+      "entry_type": "article",
+      "title": "Air-CSL: Chinese Sign Language Recognition Based on the Commercial WiFi Devices",
+      "authors": [
+        "Chen, HH",
+        "Feng, DY",
+        "Hao, ZJ",
+        "Dang, XC",
+        "Niu, J",
+        "Qiao, ZQ"
+      ],
+      "year": 2022,
+      "journal": "WIRELESS COMMUNICATIONS & MOBILE COMPUTING",
+      "doi": "10.1155/2022/5885475",
+      "abstract": "Artificial intelligence and Internet of Things (IoT) devices are experiencing explosive growth. Currently, the commonly used gesture recognition methods are difficult to deploy and expensive, so this paper uses the Channel State Information (CSI) for Chinese sign language recognition. Aiming at the problems of current gesture recognition methods, such as strong personnel dependence, high computational resource consumption, and low robustness, we proposed a Chinese sign language gesture recognition method named Air-CSL. In this method, the Local Outlier Factor (LOF) removal algorithm and the Discrete Wavelet Transform (DWT) are used to reduce the noise in the data, and the subcarriers that best represent the gesture data are selected by principal component analysis. After denoising, mathematical statistics were extracted from the gesture waveform as the eigenvalues, and the features were fused by the Deep Restricted Boltzmann Machine (DBM). Finally, the result of gesture classification and recognition is obtained by the Gated Recurrent Unit (GRU). In this way, the prediction model realizes as well as the classification of sign language gestures. The results show that the proposed method can effectively recognize Chinese sign language gestures of different people in different environments and has good robustness.",
+      "keywords": [
+        "GESTURE",
+        "INTELLIGENCE",
+        "DIRECTION",
+        "SYSTEM"
+      ],
+      "normalized_title": "air csl chinese sign language recognition based on the commercial wifi devices",
+      "raw_bibtex": "@ARTICLE{10.1155/2022/5885475,\n\tauthor = {Chen, HH and Feng, DY and Hao, ZJ and Dang, XC and Niu, J and Qiao, ZQ},\n\ttitle = {Air-CSL: Chinese Sign Language Recognition Based on the Commercial WiFi Devices},\n\tjournal = {WIRELESS COMMUNICATIONS & MOBILE COMPUTING},\n\tyear = {2022},\n\tkeywords = {GESTURE; INTELLIGENCE; DIRECTION; SYSTEM},\n\tabstract = {Artificial intelligence and Internet of Things (IoT) devices are experiencing explosive growth. Currently, the commonly used gesture recognition methods are difficult to deploy and expensive, so this paper uses the Channel State Information (CSI) for Chinese sign language recognition. Aiming at the problems of current gesture recognition methods, such as strong personnel dependence, high computational resource consumption, and low robustness, we proposed a Chinese sign language gesture recognition method named Air-CSL. In this method, the Local Outlier Factor (LOF) removal algorithm and the Discrete Wavelet Transform (DWT) are used to reduce the noise in the data, and the subcarriers that best represent the gesture data are selected by principal component analysis. After denoising, mathematical statistics were extracted from the gesture waveform as the eigenvalues, and the features were fused by the Deep Restricted Boltzmann Machine (DBM). Finally, the result of gesture classification and recognition is obtained by the Gated Recurrent Unit (GRU). In this way, the prediction model realizes as well as the classification of sign language gestures. The results show that the proposed method can effectively recognize Chinese sign language gestures of different people in different environments and has good robustness.},\n\tdoi = {10.1155/2022/5885475},\n\tvolume = {2022},\n\tissn = {1530-8669},\n\tnote = {Times Cited in Web of Science Core Collection: 2 Total Times Cited: 2 Cited Reference Count: 40 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1155/2022/5885475"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

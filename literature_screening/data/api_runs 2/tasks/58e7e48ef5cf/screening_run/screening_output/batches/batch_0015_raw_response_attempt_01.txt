@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0015",
+    "results": [
+        {
+            "paper_id": "paper_000141",
+            "decision": "include",
+            "reason": "标题和摘要明确探讨专业科学文章中的模糊语（hedging）现象，并分析其功能，符合理工科学术写作主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000142",
+            "decision": "exclude",
+            "reason": "标题和摘要中的“hedging”指植物修剪技术，属于园艺领域，与语言学的模糊语无关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000143",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论金融市场的“delta hedging”，属于金融领域的对冲策略，严格排除。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000144",
+            "decision": "uncertain",
+            "reason": "标题和摘要讨论会计概念框架中的模糊性（vagueness），但未明确涉及学术写作或语用分析，主题相关性不足。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000145",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦结直肠癌的纳米药物治疗，属于医学实验研究，未涉及学术写作或模糊语分析。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000146",
+            "decision": "exclude",
+            "reason": "标题和摘要仅为勘误声明，内容与学术写作或模糊语无关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000147",
+            "decision": "exclude",
+            "reason": "标题和摘要综述结直肠癌的药物治疗机制，属于医学研究，未涉及学术写作或模糊语。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000148",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论结直肠癌的纳米药物递送系统，属于生物医学工程，未涉及学术写作或模糊语。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000149",
+            "decision": "exclude",
+            "reason": "标题和摘要仅为关注声明，内容与学术写作或模糊语无关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000150",
+            "decision": "exclude",
+            "reason": "标题和摘要综述肝癌的免疫治疗和胞外囊泡机制，属于医学研究，未涉及学术写作或模糊语。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        }
+    ]
+}

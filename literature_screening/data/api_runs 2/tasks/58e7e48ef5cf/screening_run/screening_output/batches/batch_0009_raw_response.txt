@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0009",
+    "results": [
+        {
+            "paper_id": "paper_000081",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论电力市场中的金融对冲，严格排除金融领域的hedging。",
+            "evidence": ["title", "abstract"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000082",
+            "decision": "include",
+            "reason": "标题和摘要分析工程、医学和语言学数字学术期刊中的元话语，包含学科对比和语用分析。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000083",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论随机规划中的渐进对冲算法，属于数学/运筹学优化方法，排除模糊逻辑/控制相关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000084",
+            "decision": "include",
+            "reason": "标题和摘要明确讨论科学语篇中的hedging，涉及对比语言学视角。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000085",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论贸易和货币期权对冲模型，严格排除金融领域的hedging。",
+            "evidence": ["title", "abstract"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000086",
+            "decision": "include",
+            "reason": "标题和摘要明确分析科学研究文章中的hedging形式、功能和分布，属于学术写作语用分析。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000087",
+            "decision": "include",
+            "reason": "摘要提到工程和人文学科本科论文中hedging与boosting的对比，涉及学科对比和学术写作分析。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000088",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论供应链管理中的对冲策略，属于运营管理领域，不符合学术写作主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000089",
+            "decision": "uncertain",
+            "reason": "标题讨论精神病学分类中的语义模糊性，但摘要未明确涉及学术写作或语用分析，信息不足。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000090",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论水库防洪操作中的对冲规则，属于水利工程优化问题，排除模糊逻辑/控制相关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 1.0
+        }
+    ]
+}

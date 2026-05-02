@@ -1,0 +1,50 @@
+project:
+  name: new-screening-run
+  output_dir: tasks/208b47c78f83/screening_run/screening_output
+  save_raw_response: true
+  save_intermediate_files: true
+input:
+  input_files:
+  - tasks/208b47c78f83/screening_run/inputs/scopus_export_Mar 29-2026_cb85e59c-911c-4f1a-9617-a91ac90d2760.ris
+  encoding: auto
+dedup:
+  enabled: true
+  strict_doi_match: true
+  normalized_title_exact_match: true
+  fuzzy_title_match: false
+screening:
+  batch_size: 10
+  target_include_count: 30
+  stop_when_target_reached: false
+  allow_uncertain: true
+  retry_times: 6
+  request_timeout_seconds: 240
+criteria:
+  topic: 成人白血病患者赋能教育（Empowerment Education）
+  inclusion:
+  - 必须以成人白血病患者为研究对象
+  - 核心干预措施必须直接涉及“赋能教育” Empowerment/授权教育
+  - 文献发表年份必须在2016年及以后。
+  exclusion:
+  - 研究对象包含儿童 Child/Pediatric 或未成年人
+  - 干预对象包含患者家属、父母或照顾者 Caregiver/Family
+  - 纯粹的临床病理机制或药物实验
+  - 发表年份在2016年以前。
+model:
+  provider: deepseek
+  model_name: deepseek-chat
+  api_base_url: https://api.deepseek.com/v1
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.0
+  max_tokens: 1536
+  min_request_interval_seconds: 2.0
+report:
+  export_included_ris: true
+  export_excluded_ris: false
+  export_unused_ris: true
+  export_included_bib: false
+  export_excluded_bib: false
+  export_unused_bib: false
+  included_report_format: md
+  excluded_report_format: md
+  summary_format: json

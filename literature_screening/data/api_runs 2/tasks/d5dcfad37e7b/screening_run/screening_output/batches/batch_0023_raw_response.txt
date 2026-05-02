@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0023",
+    "results": [
+        {
+            "paper_id": "paper_000221",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及纳米囊泡、肠道菌群和天然产物，但未提及肿瘤研究。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000222",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及天然产物、肠道-肝脏轴，但研究疾病为酒精性肝损伤，与肿瘤无关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000223",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及天然产物、肠道菌群，但研究疾病为结肠炎，未提及肿瘤。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000224",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及番茄红素、纳米制剂、癌症和肠道微生物组，符合核心要素。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000225",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及植物外泌体样纳米颗粒和肠道菌群，但研究疾病为肠道炎症，未提及肿瘤。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000226",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及多糖、肠道菌群和免疫增强，但研究模型为环磷酰胺诱导的免疫抑制，未提及肿瘤。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000227",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及天然产物多糖和肠道-肝脏轴，但研究疾病为酒精性脂肪肝病，与肿瘤无关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000228",
+            "decision": "include",
+            "reason": "标题和摘要涉及天然产物、肠道菌群和转移性结直肠癌，但未提及纳米材料。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.7
+        },
+        {
+            "paper_id": "paper_000229",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及蜂胶和衰老标志物，但未明确涉及肿瘤、纳米材料或脑肠轴。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000230",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及天然产物多糖和肠道菌群，但研究疾病为抑郁症，与肿瘤无关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        }
+    ]
+}

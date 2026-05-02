@@ -40,15 +40,15 @@ mkdir -p /opt/wenxian-secrets
 
 ## 4. 本地打包
 
-在本地 Windows 执行：
+在本地仓库根目录执行。Windows PowerShell 示例：
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File E:\wenxian\scripts\package-release.ps1 -Branch codex/release-clean -OutputDir E:\ -Timestamped
+powershell -ExecutionPolicy Bypass -File .\scripts\package-release.ps1 -Branch codex/release-clean -OutputDir . -Timestamped
 ```
 
 输出示例：
 
-- `E:\wenxian-release-20260325-203000.tar.gz`
+- `.\wenxian-release-20260325-203000.tar.gz`
 
 ## 5. 上传到服务器
 

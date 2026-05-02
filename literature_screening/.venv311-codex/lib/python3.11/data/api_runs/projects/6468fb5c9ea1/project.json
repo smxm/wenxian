@@ -1,0 +1,37 @@
+{
+  "id": "6468fb5c9ea1",
+  "name": "api-test-project",
+  "topic": "api topic",
+  "description": "desc",
+  "thread_profile": {
+    "strategy": {
+      "research_need": "",
+      "selected_databases": [
+        "scopus",
+        "wos",
+        "pubmed",
+        "cnki"
+      ],
+      "model": null,
+      "latest_task_id": null,
+      "plan": null
+    },
+    "screening": {
+      "topic": "api topic",
+      "criteria_markdown": "",
+      "inclusion": [],
+      "exclusion": [],
+      "model": null,
+      "batch_size": 10,
+      "target_include_count": null,
+      "stop_when_target_reached": false,
+      "allow_uncertain": true,
+      "retry_times": 6,
+      "request_timeout_seconds": 240,
+      "encoding": "auto"
+    },
+    "last_updated_at": "2026-04-15T16:48:03.976400+08:00"
+  },
+  "created_at": "2026-04-15T16:48:03.976400+08:00",
+  "updated_at": "2026-04-15T16:48:03.976400+08:00"
+}

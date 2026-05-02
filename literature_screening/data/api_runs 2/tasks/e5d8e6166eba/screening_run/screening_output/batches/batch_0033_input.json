@@ -1,0 +1,386 @@
+{
+  "batch_id": "batch_0033",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000321",
+    "paper_000322",
+    "paper_000323",
+    "paper_000324",
+    "paper_000325",
+    "paper_000326",
+    "paper_000327",
+    "paper_000328",
+    "paper_000329",
+    "paper_000330"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000321",
+      "entry_type": "article",
+      "title": "Pile Damage Detection Using Machine Learning with the Multipoint Traveling Wave Decomposition Method",
+      "authors": [
+        "Wu, JT",
+        "El Naggar, MH",
+        "Wang, KH"
+      ],
+      "year": 2023,
+      "journal": "SENSORS",
+      "doi": "10.3390/s23198308",
+      "abstract": "The in-hole multipoint traveling wave decomposition (MPTWD) method is developed for detecting and characterizing the damage of cast in situ reinforced concrete (RC) piles. Compared with the results of MPTWD, the results of the in-hole MPTWD reconstruction technique are found ideal for evaluating the lower-part pile integrity and are further utilized to establish a data-driven machine-learning framework to detect and quantify the degree of damage. Considering the relatively small number of field test samples of the in-hole MPTWD method at this stage, an analytical solution is employed to generate sufficient samples to verify the feasibility and optimize the performance of the machine learning modeling framework. Two types of features extracted by the distributed sampling and statistical and signal processing techniques are applied to three machine-learning classifiers, i.e., logistic regression (LR), extreme gradient boosting (XGBoost) and multilayer perceptron (MLP). The performance of the data-driven machine-learning framework is then evaluated through a specific case study. The results demonstrate that all three classifiers perform better when employing the statistical and signal processing techniques, and the total of 24 extracted features are sufficient for the machine-learning algorithms.",
+      "keywords": [
+        "pile integrity test",
+        "traveling wave decomposition",
+        "data-driven modeling",
+        "machine learning",
+        "damage characterization",
+        "VERTICAL DYNAMIC-RESPONSE",
+        "LONGITUDINAL VIBRATION",
+        "MODEL",
+        "IDENTIFICATION"
+      ],
+      "normalized_title": "pile damage detection using machine learning with the multipoint traveling wave decomposition method",
+      "raw_bibtex": "@ARTICLE{10.3390/s23198308,\n\tauthor = {Wu, JT and El Naggar, MH and Wang, KH},\n\ttitle = {Pile Damage Detection Using Machine Learning with the Multipoint Traveling Wave Decomposition Method},\n\tjournal = {SENSORS},\n\tyear = {2023},\n\tkeywords = {pile integrity test; traveling wave decomposition; data-driven modeling; machine learning; damage characterization; VERTICAL DYNAMIC-RESPONSE; LONGITUDINAL VIBRATION; MODEL; IDENTIFICATION},\n\tabstract = {The in-hole multipoint traveling wave decomposition (MPTWD) method is developed for detecting and characterizing the damage of cast in situ reinforced concrete (RC) piles. Compared with the results of MPTWD, the results of the in-hole MPTWD reconstruction technique are found ideal for evaluating the lower-part pile integrity and are further utilized to establish a data-driven machine-learning framework to detect and quantify the degree of damage. Considering the relatively small number of field test samples of the in-hole MPTWD method at this stage, an analytical solution is employed to generate sufficient samples to verify the feasibility and optimize the performance of the machine learning modeling framework. Two types of features extracted by the distributed sampling and statistical and signal processing techniques are applied to three machine-learning classifiers, i.e., logistic regression (LR), extreme gradient boosting (XGBoost) and multilayer perceptron (MLP). The performance of the data-driven machine-learning framework is then evaluated through a specific case study. The results demonstrate that all three classifiers perform better when employing the statistical and signal processing techniques, and the total of 24 extracted features are sufficient for the machine-learning algorithms.},\n\tdoi = {10.3390/s23198308},\n\tvolume = {23},\n\tnumber = {19},\n\tissn = {1424-8220},\n\tnote = {Times Cited in Web of Science Core Collection: 10 Total Times Cited: 10 Cited Reference Count: 38 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/s23198308"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000322",
+      "entry_type": "article",
+      "title": "Everything Has Its Price: Foundations of Cost-Sensitive Machine Learning and Its Application in Psychology",
+      "authors": [
+        "Sterner, P",
+        "Goretzko, D",
+        "Pargent, F"
+      ],
+      "year": 2025,
+      "journal": "PSYCHOLOGICAL METHODS",
+      "doi": "10.1037/met0000586",
+      "abstract": "Psychology has seen an increase in the use of machine learning (ML) methods. In many applications, observations are classified into one of two groups (binary classification). Off-the-shelf classification algorithms assume that the costs of a misclassification (false positive or false negative) are equal. Because this is often not reasonable (e.g., in clinical psychology), cost-sensitive machine learning (CSL) methods can take different cost ratios into account. We present the mathematical foundations and introduce a taxonomy of the most commonly used CSL methods, before demonstrating their application and usefulness on psychological data, that is, the drug consumption data set (N = 1, 885) from the University of California Irvine ML Repository. In our example, all demonstrated CSL methods noticeably reduced mean misclassification costs compared to regular ML algorithms. We discuss the necessity for researchers to perform small benchmarks of CSL methods for their own practical application. Thus, our open materials provide R code, demonstrating how CSL methods can be applied within the mlr3 framework (https://osf.io/cvks7/).",
+      "keywords": [
+        "cost-sensitive learning",
+        "machine learning",
+        "misclassification costs",
+        "tutorial",
+        "PUBLIC STIGMA",
+        "MENTAL-ILLNESS",
+        "DRUG-ADDICTION",
+        "PREDICTION",
+        "CLASSIFICATION",
+        "CLASSIFIERS",
+        "PEOPLE",
+        "UPDATE",
+        "MODEL",
+        "SCALE"
+      ],
+      "normalized_title": "everything has its price foundations of cost sensitive machine learning and its application in psychology",
+      "raw_bibtex": "@ARTICLE{10.1037/met0000586,\n\tauthor = {Sterner, P and Goretzko, D and Pargent, F},\n\ttitle = {Everything Has Its Price: Foundations of Cost-Sensitive Machine Learning and Its Application in Psychology},\n\tjournal = {PSYCHOLOGICAL METHODS},\n\tyear = {2025},\n\tkeywords = {cost-sensitive learning; machine learning; misclassification costs; tutorial; PUBLIC STIGMA; MENTAL-ILLNESS; DRUG-ADDICTION; PREDICTION; CLASSIFICATION; CLASSIFIERS; PEOPLE; UPDATE; MODEL; SCALE},\n\tabstract = {Psychology has seen an increase in the use of machine learning (ML) methods. In many applications, observations are classified into one of two groups (binary classification). Off-the-shelf classification algorithms assume that the costs of a misclassification (false positive or false negative) are equal. Because this is often not reasonable (e.g., in clinical psychology), cost-sensitive machine learning (CSL) methods can take different cost ratios into account. We present the mathematical foundations and introduce a taxonomy of the most commonly used CSL methods, before demonstrating their application and usefulness on psychological data, that is, the drug consumption data set (N = 1, 885) from the University of California Irvine ML Repository. In our example, all demonstrated CSL methods noticeably reduced mean misclassification costs compared to regular ML algorithms. We discuss the necessity for researchers to perform small benchmarks of CSL methods for their own practical application. Thus, our open materials provide R code, demonstrating how CSL methods can be applied within the mlr3 framework (https://osf.io/cvks7/).},\n\tdoi = {10.1037/met0000586},\n\tvolume = {30},\n\tnumber = {1},\n\tpages = {112-127},\n\tissn = {1082-989X},\n\tnote = {Times Cited in Web of Science Core Collection: 6 Total Times Cited: 7 Cited Reference Count: 102 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1037/met0000586"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000323",
+      "entry_type": "article",
+      "title": "Machine learning-assisted determination of critical solids loading in PBT-alumina composites with spherical and non-spherical powder morphologies",
+      "authors": [
+        "Munjuluri, KSA",
+        "Moktadir, M",
+        "Soltani, H",
+        "Barui, S",
+        "Atre, S",
+        "Bajaj, D",
+        "Kate, KH"
+      ],
+      "year": 2026,
+      "journal": "POWDER TECHNOLOGY",
+      "doi": "10.1016/j.powtec.2026.122373",
+      "abstract": "In powder-polymer composite processing, determining Critical Solids Loading (CSL) is crucial for identifying the maximum powder loading at which a continuous polymer phase can still wet and disperse all particles before particle-particle contacts dominate and powder-binder separation and void formation occur, leading to parts with defects and reduced mechanical properties. CSL thus marks a transition from polymer-controlled viscous flow to contact-mechanical interactions governed by inter-particle friction and packing. Traditional CSL estimation relies on manual interpretation of torque mixing curves, which introduces subjectivity and reproducibility challenges. This study interprets CSL through this physical transition framework and uses an unsupervised machine learning technique, K-means clustering, to objectively locate the transition point by iteratively clustering torque mixing data for PBT-alumina composites with spherical and non-spherical alumina morphologies. The integrated approach identifies CSL values of 52 vol% for spherical alumina and 48 vol% for non-spherical alumina, with the earlier transition in non-spherical systems reflecting a more rapid loss of polymer phase continuity and the onset of particle-dominated contact networks. Beyond CSL, torque values diverge sharply between morphologies: non-spherical alumina exhibits erratic fluctuations, whereas spherical alumina shows a more gradual, near-linear increase, as confirmed through linear fitting of the clustered regions. A complementary CSL estimation method based on energy dissipation-quantified by totalized torque at incremental powder loadings-corroborates these findings. Microstructural validation using SEM and density measurements reveals distinct polymer-particle interactions at the identified CSL points and highlights different powder-binder separation mechanisms beyond CSL, illustrating the strong influence of particle morphology on composite flow behavior.",
+      "keywords": [
+        "Critical solids loading",
+        "Polymer-ceramic composites",
+        "Machine learning",
+        "Powder morphology",
+        "MECHANICAL-PROPERTIES",
+        "THERMAL-CONDUCTIVITY",
+        "TI-6AL-4V ALLOY",
+        "FEEDSTOCK",
+        "BEHAVIOR"
+      ],
+      "normalized_title": "machine learning assisted determination of critical solids loading in pbt alumina composites with spherical and non spherical powder morphologies",
+      "raw_bibtex": "@ARTICLE{10.1016/j.powtec.2026.122373,\n\tauthor = {Munjuluri, KSA and Moktadir, M and Soltani, H and Barui, S and Atre, S and Bajaj, D and Kate, KH},\n\ttitle = {Machine learning-assisted determination of critical solids loading in PBT-alumina composites with spherical and non-spherical powder morphologies},\n\tjournal = {POWDER TECHNOLOGY},\n\tyear = {2026},\n\tkeywords = {Critical solids loading; Polymer-ceramic composites; Machine learning; Powder morphology; MECHANICAL-PROPERTIES; THERMAL-CONDUCTIVITY; TI-6AL-4V ALLOY; FEEDSTOCK; BEHAVIOR},\n\tabstract = {In powder-polymer composite processing, determining Critical Solids Loading (CSL) is crucial for identifying the maximum powder loading at which a continuous polymer phase can still wet and disperse all particles before particle-particle contacts dominate and powder-binder separation and void formation occur, leading to parts with defects and reduced mechanical properties. CSL thus marks a transition from polymer-controlled viscous flow to contact-mechanical interactions governed by inter-particle friction and packing. Traditional CSL estimation relies on manual interpretation of torque mixing curves, which introduces subjectivity and reproducibility challenges. This study interprets CSL through this physical transition framework and uses an unsupervised machine learning technique, K-means clustering, to objectively locate the transition point by iteratively clustering torque mixing data for PBT-alumina composites with spherical and non-spherical alumina morphologies. The integrated approach identifies CSL values of 52 vol% for spherical alumina and 48 vol% for non-spherical alumina, with the earlier transition in non-spherical systems reflecting a more rapid loss of polymer phase continuity and the onset of particle-dominated contact networks. Beyond CSL, torque values diverge sharply between morphologies: non-spherical alumina exhibits erratic fluctuations, whereas spherical alumina shows a more gradual, near-linear increase, as confirmed through linear fitting of the clustered regions. A complementary CSL estimation method based on energy dissipation-quantified by totalized torque at incremental powder loadings-corroborates these findings. Microstructural validation using SEM and density measurements reveals distinct polymer-particle interactions at the identified CSL points and highlights different powder-binder separation mechanisms beyond CSL, illustrating the strong influence of particle morphology on composite flow behavior.},\n\tdoi = {10.1016/j.powtec.2026.122373},\n\tvolume = {476},\n\tissn = {0032-5910},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 69 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.powtec.2026.122373"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000324",
+      "entry_type": "article",
+      "title": "Observation of Collective Resonance Modes in a Chiral Spin Soliton Lattice with Tunable Magnon Dispersion",
+      "authors": [
+        "Shimamoto, Y",
+        "Matsushima, Y",
+        "Hasegawa, T",
+        "Kousaka, Y",
+        "Proskurin,",
+        "Kishine, J",
+        "Ovchinnikov, AS",
+        "Goncalves, FJT",
+        "Togawa, Y"
+      ],
+      "year": 2022,
+      "journal": "PHYSICAL REVIEW LETTERS",
+      "doi": "10.1103/physrevlett.128.247203",
+      "abstract": "A chiral spin soliton lattice (CSL), one of the representative systems of a magnetic superstructure, exhibits reconfigurability in periodicity over a macroscopic length scale. Such coherent and tunable characteristics of the CSL lead to an emergence of elementary excitation of the CSL as phononlike modes due to translational symmetry breaking and bring a controllability of the dispersion relation of the CSL phonon. Using a broadband microwave spectroscopy technique, we directly found that higher-order magnetic resonance modes appear in the CSL phase of a chiral helimagnet CrNb3S6, which is ascribed to the CSL phonon response. The resonance frequency of the CSL phonon can be tuned between 16 and 40 GHz in the vicinity of the critical field, where the CSL period alters rapidly. The frequency range of the CSL phonon is expected to extend over 100 GHz as extrapolated on the basis of the theoretical model. The present results indicate that chiral helimagnets could work as materials useful for broadband signal processing in the millimeter-wave band.",
+      "keywords": [
+        "WAVES",
+        "BAND"
+      ],
+      "normalized_title": "observation of collective resonance modes in a chiral spin soliton lattice with tunable magnon dispersion",
+      "raw_bibtex": "@ARTICLE{10.1103/PhysRevLett.128.247203,\n\tauthor = {Shimamoto, Y and Matsushima, Y and Hasegawa, T and Kousaka, Y and Proskurin, and Kishine, J and Ovchinnikov, AS and Goncalves, FJT and Togawa, Y},\n\ttitle = {Observation of Collective Resonance Modes in a Chiral Spin Soliton Lattice with Tunable Magnon Dispersion},\n\tjournal = {PHYSICAL REVIEW LETTERS},\n\tyear = {2022},\n\tkeywords = {WAVES; BAND},\n\tabstract = {A chiral spin soliton lattice (CSL), one of the representative systems of a magnetic superstructure, exhibits reconfigurability in periodicity over a macroscopic length scale. Such coherent and tunable characteristics of the CSL lead to an emergence of elementary excitation of the CSL as phononlike modes due to translational symmetry breaking and bring a controllability of the dispersion relation of the CSL phonon. Using a broadband microwave spectroscopy technique, we directly found that higher-order magnetic resonance modes appear in the CSL phase of a chiral helimagnet CrNb3S6, which is ascribed to the CSL phonon response. The resonance frequency of the CSL phonon can be tuned between 16 and 40 GHz in the vicinity of the critical field, where the CSL period alters rapidly. The frequency range of the CSL phonon is expected to extend over 100 GHz as extrapolated on the basis of the theoretical model. The present results indicate that chiral helimagnets could work as materials useful for broadband signal processing in the millimeter-wave band.},\n\tdoi = {10.1103/PhysRevLett.128.247203},\n\tvolume = {128},\n\tnumber = {24},\n\tissn = {0031-9007},\n\tnote = {Times Cited in Web of Science Core Collection: 15 Total Times Cited: 15 Cited Reference Count: 38 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1103/PhysRevLett.128.247203"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000325",
+      "entry_type": "article",
+      "title": "Malicious Traffic Compression and Classification Technique for Secure Internet of Things",
+      "authors": [
+        "Lee, YR",
+        "Park, NE",
+        "Kim, SY",
+        "Lee, IG"
+      ],
+      "year": 2023,
+      "journal": "CMC-COMPUTERS MATERIALS & CONTINUA",
+      "doi": "10.32604/cmc.2023.041196",
+      "abstract": "With the introduction of 5G technology, the application of Internet of Things (IoT) devices is expanding to various industrial fields. However, introducing a robust, lightweight, low-cost, and low-power security solution to the IoT environment is challenging. Therefore, this study proposes two methods using a data compression technique to detect malicious traffic efficiently and accurately for a secure IoT environment. The first method, compressed sensing and learning (CSL), compresses an event log in a bitmap format to quickly detect attacks. Then, the attack log is detected using a machine-learning classification model. The second method, precise re-learning after CSL (Ra-CSL), comprises a two-step training. It uses CSL as the 1st step analyzer, and the 2nd step analyzer is applied using the original dataset for a log that is detected as an attack in the 1st step analyzer. In the experiment, the bitmap rule was set based on the boundary value, which was 99.6% true positive on average for the attack and benign data found by analyzing the training data. Experimental results showed that the CSL was effective in reducing the training and detection time, and Ra-CSL was effective in increasing the detection rate. According to the experimental results, the data compression technique reduced the memory size by up to 20% and the training and detection times by 67% when compared with the conventional technique. In addition, the proposed technique improves the detection accuracy; the Naive Bayes model with the highest performance showed a detection rate of approximately 99%.",
+      "keywords": [
+        "IoT security",
+        "intrusion detection",
+        "machine learning",
+        "traffic classification",
+        "UNSW-NB15 DATA SET",
+        "5G"
+      ],
+      "normalized_title": "malicious traffic compression and classification technique for secure internet of things",
+      "raw_bibtex": "@ARTICLE{10.32604/cmc.2023.041196,\n\tauthor = {Lee, YR and Park, NE and Kim, SY and Lee, IG},\n\ttitle = {Malicious Traffic Compression and Classification Technique for Secure Internet of Things},\n\tjournal = {CMC-COMPUTERS MATERIALS & CONTINUA},\n\tyear = {2023},\n\tkeywords = {IoT security; intrusion detection; machine learning; traffic classification; UNSW-NB15 DATA SET; 5G},\n\tabstract = {With the introduction of 5G technology, the application of Internet of Things (IoT) devices is expanding to various industrial fields. However, introducing a robust, lightweight, low-cost, and low-power security solution to the IoT environment is challenging. Therefore, this study proposes two methods using a data compression technique to detect malicious traffic efficiently and accurately for a secure IoT environment. The first method, compressed sensing and learning (CSL), compresses an event log in a bitmap format to quickly detect attacks. Then, the attack log is detected using a machine-learning classification model. The second method, precise re-learning after CSL (Ra-CSL), comprises a two-step training. It uses CSL as the 1st step analyzer, and the 2nd step analyzer is applied using the original dataset for a log that is detected as an attack in the 1st step analyzer. In the experiment, the bitmap rule was set based on the boundary value, which was 99.6% true positive on average for the attack and benign data found by analyzing the training data. Experimental results showed that the CSL was effective in reducing the training and detection time, and Ra-CSL was effective in increasing the detection rate. According to the experimental results, the data compression technique reduced the memory size by up to 20% and the training and detection times by 67% when compared with the conventional technique. In addition, the proposed technique improves the detection accuracy; the Naive Bayes model with the highest performance showed a detection rate of approximately 99%.},\n\tdoi = {10.32604/cmc.2023.041196},\n\tvolume = {76},\n\tnumber = {3},\n\tpages = {3465-3482},\n\tissn = {1546-2218},\n\tnote = {Times Cited in Web of Science Core Collection: 4 Total Times Cited: 5 Cited Reference Count: 31 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.32604/cmc.2023.041196"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000326",
+      "entry_type": "article",
+      "title": "Subterahertz collective spin-resonance modes and field-adaptive reservoir computing in the chiral helimagnet Cr1/3TaS2",
+      "authors": [
+        "Li, ZS",
+        "Zhang, S",
+        "Gao, ZY",
+        "Meng, FY",
+        "Cui, J",
+        "Liu, W",
+        "Tong, W",
+        "Li, LY",
+        "Chen, LN",
+        "Wang, HZ",
+        "Xiao, X",
+        "Hou, MY",
+        "Gao, SB",
+        "Zhang, Q",
+        "Zhang, L",
+        "Liu, RH"
+      ],
+      "year": 2025,
+      "journal": "PHYSICAL REVIEW APPLIED",
+      "doi": "10.1103/xbjs-pfhg",
+      "abstract": "Monoaxial chiral helimagnets (CHMs) host rich helical spin textures, including chiral soliton lattices (CSLs) with tunable periods, arising from the delicate interplay between Dzyaloshinskii-Moriya interaction (DMI), ferromagnetic exchange coupling, uniaxial magnetic anisotropy, and Zeeman energy. However, existing CHMs exhibit spin resonance modes in the gigahertz frequency range, limiting their potential for high-speed signal processing. Here, with the combination of ferromagnetic resonance, electron spin resonance, and magneto-Raman techniques, we gain access to uncover subterahertz CSL phonon modes in a typical CHM Cr1/3TaS2. Near the critical field, we identify nontrivial CSL phonon modes reaching 0.15 THz, while a uniform ferromagnetic resonance mode emerges at 0.375 THz in the forced ferromagnetic phase under 9 T. The CSL phonon frequency in Cr1/3TaS2 is a factor of five or six higher than that of isostructural Cr1/3NbS2 due to larger spin-orbit coupling-induced DMI. Through micromagnetic simulations, we obtain the frequency spectrum and resolve the spatial distribution of amplitudes, phases, and precession trajectories of the CSL modes, providing deep insight into the characteristics of each resonance mode. Furthermore, we demonstrate that physical reservoir computing (RC), which exploits the nonlinear collective spin dynamics and field-controlled hysteresis of these nontrivial spin textures, achieves exceptional performance in time-series prediction tasks. Our findings not only elucidate the intricate dynamic properties of CSL phases but also pave the way for exploring the potential application of CHM materials for subterahertz signal processing and neuromorphic computing.",
+      "keywords": [
+        "TEMPERATURE-DEPENDENCE",
+        "ANISOTROPY"
+      ],
+      "normalized_title": "subterahertz collective spin resonance modes and field adaptive reservoir computing in the chiral helimagnet cr1 3tas2",
+      "raw_bibtex": "@ARTICLE{10.1103/xbjs-pfhg,\n\tauthor = {Li, ZS and Zhang, S and Gao, ZY and Meng, FY and Cui, J and Liu, W and Tong, W and Li, LY and Chen, LN and Wang, HZ and Xiao, X and Hou, MY and Gao, SB and Zhang, Q and Zhang, L and Liu, RH},\n\ttitle = {Subterahertz collective spin-resonance modes and field-adaptive reservoir computing in the chiral helimagnet Cr1/3TaS2},\n\tjournal = {PHYSICAL REVIEW APPLIED},\n\tyear = {2025},\n\tkeywords = {TEMPERATURE-DEPENDENCE; ANISOTROPY},\n\tabstract = {Monoaxial chiral helimagnets (CHMs) host rich helical spin textures, including chiral soliton lattices (CSLs) with tunable periods, arising from the delicate interplay between Dzyaloshinskii-Moriya interaction (DMI), ferromagnetic exchange coupling, uniaxial magnetic anisotropy, and Zeeman energy. However, existing CHMs exhibit spin resonance modes in the gigahertz frequency range, limiting their potential for high-speed signal processing. Here, with the combination of ferromagnetic resonance, electron spin resonance, and magneto-Raman techniques, we gain access to uncover subterahertz CSL phonon modes in a typical CHM Cr1/3TaS2. Near the critical field, we identify nontrivial CSL phonon modes reaching 0.15 THz, while a uniform ferromagnetic resonance mode emerges at 0.375 THz in the forced ferromagnetic phase under 9 T. The CSL phonon frequency in Cr1/3TaS2 is a factor of five or six higher than that of isostructural Cr1/3NbS2 due to larger spin-orbit coupling-induced DMI. Through micromagnetic simulations, we obtain the frequency spectrum and resolve the spatial distribution of amplitudes, phases, and precession trajectories of the CSL modes, providing deep insight into the characteristics of each resonance mode. Furthermore, we demonstrate that physical reservoir computing (RC), which exploits the nonlinear collective spin dynamics and field-controlled hysteresis of these nontrivial spin textures, achieves exceptional performance in time-series prediction tasks. Our findings not only elucidate the intricate dynamic properties of CSL phases but also pave the way for exploring the potential application of CHM materials for subterahertz signal processing and neuromorphic computing.},\n\tdoi = {10.1103/xbjs-pfhg},\n\tvolume = {24},\n\tnumber = {5},\n\tissn = {2331-7019},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 73 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1103/xbjs-pfhg"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000327",
+      "entry_type": "article",
+      "title": "External Validation of Postpartum Hemorrhage Prediction Models Using Electronic Health Record Data",
+      "authors": [
+        "Meyer, SR",
+        "Carver, A",
+        "Joo, H",
+        "Venkatesh, KK",
+        "Jelovsek, JE",
+        "Klumpner, TT",
+        "Singh, K"
+      ],
+      "year": 2024,
+      "journal": "AMERICAN JOURNAL OF PERINATOLOGY",
+      "doi": "10.1055/a-1745-1348",
+      "abstract": "Objective A recent study leveraging machine learning methods found that postpartum hemorrhage (PPH) can be predicted accurately at the time of labor admission in the U.S. Consortium for Safe Labor (CSL) dataset, with a C-statistic as high as 0.93.These CSL models were developed in older data (2002-2008) and used an estimated blood loss (EBL) of >= 1,000mL to define PPH. We sought to externally validate these models using a more recent cohort of births where blood loss was measured using quantitative blood loss (QBL) methods. Study Design Using data from 5,261 deliveries between February 1, 2019 and May 11, 2020 at a single tertiary hospital, we mapped our electronic health record(EHR) data to the 55 predictors described in previously published CSL models. PPH was defined as QBL >= 1,000mL within 24hours after delivery. Model discrimination and calibration of the four CSL models were measured using our cohort. In a secondary analysis, we fit new models in our study cohort using the same predictors and algorithms as the original CSL models. Results The original study cohort had a substantially lower rate of PPH, 4.8%(7,279/228,438) versus 25% (1,321/5,261), possibly due to differences in measurement. The CSL models had lower discrimination in our study cohort, with a C-statistic as high as 0.57 (logistic regression). Models refit in our study cohort achieved better discrimination, with a C-statistic as high as0.64 (random forest). Calibration improved in the refit models as compared with the original models. Conclusion The CSL models' accuracy was lower in a contemporary EHR where PPH is assessed using QBL. As institutions continue to adopt QBL methods, further data are needed to understand the differences between EBL and QBL to enable accurate prediction of PPH.",
+      "keywords": [
+        "electronic health record",
+        "external validation",
+        "machine learning",
+        "postpartum hemorrhage",
+        "prediction model",
+        "RISK"
+      ],
+      "normalized_title": "external validation of postpartum hemorrhage prediction models using electronic health record data",
+      "raw_bibtex": "@ARTICLE{10.1055/a-1745-1348,\n\tauthor = {Meyer, SR and Carver, A and Joo, H and Venkatesh, KK and Jelovsek, JE and Klumpner, TT and Singh, K},\n\ttitle = {External Validation of Postpartum Hemorrhage Prediction Models Using Electronic Health Record Data},\n\tjournal = {AMERICAN JOURNAL OF PERINATOLOGY},\n\tyear = {2024},\n\tkeywords = {electronic health record; external validation; machine learning; postpartum hemorrhage; prediction model; RISK},\n\tabstract = {Objective A recent study leveraging machine learning methods found that postpartum hemorrhage (PPH) can be predicted accurately at the time of labor admission in the U.S. Consortium for Safe Labor (CSL) dataset, with a C-statistic as high as 0.93.These CSL models were developed in older data (2002-2008) and used an estimated blood loss (EBL) of >= 1,000mL to define PPH. We sought to externally validate these models using a more recent cohort of births where blood loss was measured using quantitative blood loss (QBL) methods. Study Design Using data from 5,261 deliveries between February 1, 2019 and May 11, 2020 at a single tertiary hospital, we mapped our electronic health record(EHR) data to the 55 predictors described in previously published CSL models. PPH was defined as QBL >= 1,000mL within 24hours after delivery. Model discrimination and calibration of the four CSL models were measured using our cohort. In a secondary analysis, we fit new models in our study cohort using the same predictors and algorithms as the original CSL models. Results The original study cohort had a substantially lower rate of PPH, 4.8%(7,279/228,438) versus 25% (1,321/5,261), possibly due to differences in measurement. The CSL models had lower discrimination in our study cohort, with a C-statistic as high as 0.57 (logistic regression). Models refit in our study cohort achieved better discrimination, with a C-statistic as high as0.64 (random forest). Calibration improved in the refit models as compared with the original models. Conclusion The CSL models' accuracy was lower in a contemporary EHR where PPH is assessed using QBL. As institutions continue to adopt QBL methods, further data are needed to understand the differences between EBL and QBL to enable accurate prediction of PPH.},\n\tdoi = {10.1055/a-1745-1348},\n\tvolume = {41},\n\tnumber = {05},\n\tpages = {598-605},\n\tissn = {0735-1631},\n\tnote = {Times Cited in Web of Science Core Collection: 8 Total Times Cited: 10 Cited Reference Count: 25 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1055/a-1745-1348"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000328",
+      "entry_type": "article",
+      "title": "Winning determinants between top and second division in Chinese professional football leagues: an interpretable machine learning approach",
+      "authors": [
+        "Yuan, B",
+        "Zhu, JX",
+        "Pan, PY",
+        "Ren, DM",
+        "Liang, Z",
+        "Song, HL",
+        "Liu, TB"
+      ],
+      "year": 2025,
+      "journal": "BMC SPORTS SCIENCE MEDICINE AND REHABILITATION",
+      "doi": "10.1186/s13102-025-01130-5",
+      "abstract": "This study investigated the impact of winning determinants in two professional soccer leagues. The sample was composed of 1,440 Chinese Super Football League (CSL) and Chinese Football Association China League (CFACL) matches (CSL matches = 720; CFACL matches = 720) during the 2017-2019 seasons. The study employed eXtreme Gradient Boosting (XGBoost) to assess the importance of 25 indicators exhibiting significant differences (p < 0.05) in their association with match outcomes, and the SHapley Additive explanations (SHAP) was utilized to interpret these findings. The results showed that scoring performance indicators, such as Shots On Target Inside Box (SOTIB), Shots, and Shots On Target (SOT), significantly influenced outcomes in both the CSL (S-G=37.854%) and CFACL (S-G=38.934%), with SOTIB being the most impactful. Additionally, this study found that defensive feature clearances were highly influential in both leagues, ranking second only to SOTIB of variable importance. Meanwhile, defensive feature fouls were a more significant factor in determining match outcomes in the CFACL than in the CSL. In both the CSL and CFACL, players must prioritize precision in shooting within the penalty area rather than merely increasing the frequency of shots. For CFACL teams, if consistent high-quality passing is unattainable, effective use of set pieces (e.g., free kicks) could serve as an alternative strategy to organize attacks. These findings can assist coaches in formulating tailored tactical strategies suited to the distinct demands of each league level.",
+      "keywords": [
+        "Soccer",
+        "Match performance",
+        "Winning determinants",
+        "Machine learning",
+        "Performance analysis",
+        "SHAP"
+      ],
+      "normalized_title": "winning determinants between top and second division in chinese professional football leagues an interpretable machine learning approach",
+      "raw_bibtex": "@ARTICLE{10.1186/s13102-025-01130-5,\n\tauthor = {Yuan, B and Zhu, JX and Pan, PY and Ren, DM and Liang, Z and Song, HL and Liu, TB},\n\ttitle = {Winning determinants between top and second division in Chinese professional football leagues: an interpretable machine learning approach},\n\tjournal = {BMC SPORTS SCIENCE MEDICINE AND REHABILITATION},\n\tyear = {2025},\n\tkeywords = {Soccer; Match performance; Winning determinants; Machine learning; Performance analysis; SHAP},\n\tabstract = {This study investigated the impact of winning determinants in two professional soccer leagues. The sample was composed of 1,440 Chinese Super Football League (CSL) and Chinese Football Association China League (CFACL) matches (CSL matches = 720; CFACL matches = 720) during the 2017-2019 seasons. The study employed eXtreme Gradient Boosting (XGBoost) to assess the importance of 25 indicators exhibiting significant differences (p < 0.05) in their association with match outcomes, and the SHapley Additive explanations (SHAP) was utilized to interpret these findings. The results showed that scoring performance indicators, such as Shots On Target Inside Box (SOTIB), Shots, and Shots On Target (SOT), significantly influenced outcomes in both the CSL (S-G=37.854%) and CFACL (S-G=38.934%), with SOTIB being the most impactful. Additionally, this study found that defensive feature clearances were highly influential in both leagues, ranking second only to SOTIB of variable importance. Meanwhile, defensive feature fouls were a more significant factor in determining match outcomes in the CFACL than in the CSL. In both the CSL and CFACL, players must prioritize precision in shooting within the penalty area rather than merely increasing the frequency of shots. For CFACL teams, if consistent high-quality passing is unattainable, effective use of set pieces (e.g., free kicks) could serve as an alternative strategy to organize attacks. These findings can assist coaches in formulating tailored tactical strategies suited to the distinct demands of each league level.},\n\tdoi = {10.1186/s13102-025-01130-5},\n\tvolume = {17},\n\tnumber = {1},\n\tissn = {2052-1847},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 43 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1186/s13102-025-01130-5"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000329",
+      "entry_type": "article",
+      "title": "The Conditional Super Learner",
+      "authors": [
+        "Valdes, G",
+        "Interian, Y",
+        "Gennatas, E",
+        "Van der Laan, M"
+      ],
+      "year": 2022,
+      "journal": "IEEE TRANSACTIONS ON PATTERN ANALYSIS AND MACHINE INTELLIGENCE",
+      "doi": "10.1109/tpami.2021.3131976",
+      "abstract": "Using cross validation to select the best model from a library is standard practice in machine learning. Similarly, meta learning is a widely used technique where models previously developed are combined (mainly linearly) with the expectation of improving performance with respect to individual models. In this article we consider the Conditional Super Learner (CSL), an algorithm that selects the best model candidate from a library of models conditional on the covariates. The CSL expands the idea of using cross validation to select the best model and merges it with meta learning. We propose an optimization algorithm that finds a local minimum to the problem posed and proves that it converges at a rate faster than O-p(n(-1/4)). We offer empirical evidence that: (1) CSL is an excellent candidate to substitute stacking and (2) CLS is suitable for the analysis of Hierarchical problems. Additionally, implications for global interpretability are emphasized.",
+      "keywords": [
+        "Cross-validation",
+        "meta learning",
+        "super learner",
+        "interpretability",
+        "nonparametric hierarchical models",
+        "REGRESSION"
+      ],
+      "normalized_title": "the conditional super learner",
+      "raw_bibtex": "@ARTICLE{10.1109/TPAMI.2021.3131976,\n\tauthor = {Valdes, G and Interian, Y and Gennatas, E and Van der Laan, M},\n\ttitle = {The Conditional Super Learner},\n\tjournal = {IEEE TRANSACTIONS ON PATTERN ANALYSIS AND MACHINE INTELLIGENCE},\n\tyear = {2022},\n\tkeywords = {Cross-validation; meta learning; super learner; interpretability; nonparametric hierarchical models; REGRESSION},\n\tabstract = {Using cross validation to select the best model from a library is standard practice in machine learning. Similarly, meta learning is a widely used technique where models previously developed are combined (mainly linearly) with the expectation of improving performance with respect to individual models. In this article we consider the Conditional Super Learner (CSL), an algorithm that selects the best model candidate from a library of models conditional on the covariates. The CSL expands the idea of using cross validation to select the best model and merges it with meta learning. We propose an optimization algorithm that finds a local minimum to the problem posed and proves that it converges at a rate faster than O-p(n(-1/4)). We offer empirical evidence that: (1) CSL is an excellent candidate to substitute stacking and (2) CLS is suitable for the analysis of Hierarchical problems. Additionally, implications for global interpretability are emphasized.},\n\tdoi = {10.1109/TPAMI.2021.3131976},\n\tvolume = {44},\n\tnumber = {12},\n\tpages = {10236-10243},\n\tissn = {0162-8828},\n\tnote = {Times Cited in Web of Science Core Collection: 6 Total Times Cited: 8 Cited Reference Count: 26 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TPAMI.2021.3131976"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000330",
+      "entry_type": "article",
+      "title": "Progressive Skeleton Learning for Effective Local-to-Global Causal Structure Learning",
+      "authors": [
+        "Guo, XJ",
+        "Yu, K",
+        "Liu, L",
+        "Li, JY",
+        "Liang, JY",
+        "Cao, FY",
+        "Wu, XD"
+      ],
+      "year": 2024,
+      "journal": "IEEE TRANSACTIONS ON KNOWLEDGE AND DATA ENGINEERING",
+      "doi": "10.1109/tkde.2024.3461832",
+      "abstract": "Causal structure learning (CSL) from observational data is a crucial objective in various machine learning applications. Recent advances in CSL have focused on local-to-global learning, which offers improved efficiency and accuracy. The local-to-global CSL algorithms first learn the local skeleton of each variable in a dataset, then construct the global skeleton by combining these local skeletons, and finally orient edges to infer causality. However, data quality issues such as noise and small samples often result in the presence of problematic asymmetric edges during global skeleton construction, hindering the creation of a high-quality global skeleton. To address this challenge, we propose a novel local-to-global CSL algorithm with a progressive enhancement strategy and make the following novel contributions: 1) To construct an accurate global skeleton, we design a novel strategy to iteratively correct asymmetric edges and progressively improve the accuracy of the global skeleton. 2) Based on the learned accurate global skeleton, we design an integrated global skeleton orientation strategy to infer the correct directions of edges for obtaining an accurate and reliable causal structure. Extensive experiments demonstrate that our method achieves better performance than the existing CSL methods.",
+      "keywords": [
+        "Asymmetric edges",
+        "local-to-global causal structure learning",
+        "progressive learning",
+        "skeleton learning",
+        "SUPPORT VECTOR MACHINES",
+        "RULE EXTRACTION",
+        "ALGORITHM",
+        "COEFFICIENT",
+        "SELECTION",
+        "TUTORIAL",
+        "SVM"
+      ],
+      "normalized_title": "progressive skeleton learning for effective local to global causal structure learning",
+      "raw_bibtex": "@ARTICLE{10.1109/TKDE.2024.3461832,\n\tauthor = {Guo, XJ and Yu, K and Liu, L and Li, JY and Liang, JY and Cao, FY and Wu, XD},\n\ttitle = {Progressive Skeleton Learning for Effective Local-to-Global Causal Structure Learning},\n\tjournal = {IEEE TRANSACTIONS ON KNOWLEDGE AND DATA ENGINEERING},\n\tyear = {2024},\n\tkeywords = {Asymmetric edges; local-to-global causal structure learning; progressive learning; progressive learning; skeleton learning; skeleton learning; progressive learning; skeleton learning; SUPPORT VECTOR MACHINES; RULE EXTRACTION; ALGORITHM; COEFFICIENT; SELECTION; TUTORIAL; SVM},\n\tabstract = {Causal structure learning (CSL) from observational data is a crucial objective in various machine learning applications. Recent advances in CSL have focused on local-to-global learning, which offers improved efficiency and accuracy. The local-to-global CSL algorithms first learn the local skeleton of each variable in a dataset, then construct the global skeleton by combining these local skeletons, and finally orient edges to infer causality. However, data quality issues such as noise and small samples often result in the presence of problematic asymmetric edges during global skeleton construction, hindering the creation of a high-quality global skeleton. To address this challenge, we propose a novel local-to-global CSL algorithm with a progressive enhancement strategy and make the following novel contributions: 1) To construct an accurate global skeleton, we design a novel strategy to iteratively correct asymmetric edges and progressively improve the accuracy of the global skeleton. 2) Based on the learned accurate global skeleton, we design an integrated global skeleton orientation strategy to infer the correct directions of edges for obtaining an accurate and reliable causal structure. Extensive experiments demonstrate that our method achieves better performance than the existing CSL methods.},\n\tdoi = {10.1109/TKDE.2024.3461832},\n\tvolume = {36},\n\tnumber = {12},\n\tpages = {9065-9079},\n\tissn = {1041-4347},\n\tnote = {Times Cited in Web of Science Core Collection: 5 Total Times Cited: 5 Cited Reference Count: 58 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TKDE.2024.3461832"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

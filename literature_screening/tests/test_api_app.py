@@ -33,6 +33,98 @@ def test_meta_endpoint() -> None:
     assert {item["value"] for item in payload["strategyDefaults"]["databases"]} == {"scopus", "wos", "pubmed", "cnki"}
 
 
+def test_model_options_endpoint_fetches_provider_models(monkeypatch) -> None:
+    captured: dict[str, object] = {}
+
+    class FakeResponse:
+        def raise_for_status(self) -> None:
+            return None
+
+        def json(self) -> dict:
+            return {
+                "data": [
+                    {"id": "deepseek-chat"},
+                    {"id": "deepseek-reasoner", "display_name": "DeepSeek Reasoner"},
+                ]
+            }
+
+    def fake_get(url: str, *, headers: dict, timeout: float):
+        captured["url"] = url
+        captured["headers"] = headers
+        captured["timeout"] = timeout
+        return FakeResponse()
+
+    monkeypatch.setattr(app_module.httpx, "get", fake_get)
+
+    response = client.post(
+        "/api/model-options",
+        json={
+            "provider": "deepseek",
+            "api_base_url": "https://api.deepseek.com/v1",
+            "api_key_env": "DEEPSEEK_API_KEY",
+            "api_key": "sk-test",
+        },
+    )
+
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["source"] == "provider"
+    assert payload["models"] == [
+        {"id": "deepseek-chat", "label": "deepseek-chat"},
+        {"id": "deepseek-reasoner", "label": "DeepSeek Reasoner"},
+    ]
+    assert captured["url"] == "https://api.deepseek.com/v1/models"
+    assert captured["headers"]["Authorization"] == "Bearer sk-test"
+
+
+def test_model_options_endpoint_falls_back_without_api_key(monkeypatch) -> None:
+    monkeypatch.delenv("DEEPSEEK_API_KEY", raising=False)
+
+    response = client.post(
+        "/api/model-options",
+        json={
+            "provider": "deepseek",
+            "api_base_url": "https://api.deepseek.com/v1",
+            "api_key_env": "DEEPSEEK_API_KEY",
+            "api_key": "",
+        },
+    )
+
+    assert response.status_code == 200
+    payload = response.json()
+    assert payload["source"] == "fallback"
+    assert {item["id"] for item in payload["models"]} == {"deepseek-chat", "deepseek-reasoner"}
+    assert "DEEPSEEK_API_KEY" in payload["error"]
+
+
+def test_screening_progress_callback_persists_live_summary(tmp_path: Path, monkeypatch) -> None:
+    task_store = TaskStore(tmp_path / "api_runs")
+    monkeypatch.setattr(app_module, "TASK_STORE", task_store)
+    task = task_store.create_task(kind="screening", title="live-screening")
+
+    output_dir = tmp_path / "screening_output"
+    output_dir.mkdir()
+    (output_dir / "run_summary.json").write_text(
+        json.dumps(
+            {
+                "processed_count": 12,
+                "included_count": 3,
+                "excluded_count": 8,
+                "uncertain_count": 1,
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    callback = app_module._screening_progress_callback(task.task_id, output_dir)
+    callback("screening", "Screening batches", 2, 5, "已筛选 12/30 篇，纳入 3 篇")
+
+    stored = task_store.load_task(task.task_id)
+    assert stored["progress_message"] == "已筛选 12/30 篇，纳入 3 篇"
+    assert stored["summary"]["processed_count"] == 12
+    assert stored["summary"]["included_count"] == 3
+
+
 def test_thread_prefill_returns_strategy_plan_without_creating_thread(tmp_path: Path, monkeypatch) -> None:
     task_store = TaskStore(tmp_path / "api_runs")
     workspace_store = WorkspaceStore(tmp_path / "api_runs")
@@ -154,6 +246,7 @@ def test_project_workflow_update_persists_thread_defaults(tmp_path: Path, monkey
                     "batch_size": 12,
                     "target_include_count": None,
                     "stop_when_target_reached": False,
+                    "min_include_confidence": 0.9,
                     "allow_uncertain": True,
                     "retry_times": 6,
                     "request_timeout_seconds": 240,
@@ -170,6 +263,7 @@ def test_project_workflow_update_persists_thread_defaults(tmp_path: Path, monkey
     assert payload["thread_profile"]["strategy"]["research_need"] == "find metabolomics screening studies"
     assert payload["thread_profile"]["screening"]["batch_size"] == 12
     assert payload["thread_profile"]["screening"]["target_include_count"] is None
+    assert payload["thread_profile"]["screening"]["min_include_confidence"] == 0.9
 
 
 def test_strategy_task_updates_project_thread_profile(tmp_path: Path, monkeypatch) -> None:
@@ -1140,6 +1234,7 @@ def test_screening_task_detail_exposes_uploaded_file_names_for_edit_restore(tmp_
             "max_tokens": "512",
             "min_request_interval_seconds": "1",
             "batch_size": "10",
+            "min_include_confidence": "0.9",
             "stop_when_target_reached": "false",
             "allow_uncertain": "true",
             "retry_times": "2",
@@ -1155,6 +1250,7 @@ def test_screening_task_detail_exposes_uploaded_file_names_for_edit_restore(tmp_
     assert detail_response.status_code == 200
     payload = detail_response.json()
     assert payload["request_payload"]["uploaded_file_names"] == ["CNKI-restore.net"]
+    assert payload["request_payload"]["min_include_confidence"] == 0.9
 
 
 def test_load_run_config_resolves_api_runs_relative_paths_from_storage_root(tmp_path: Path) -> None:

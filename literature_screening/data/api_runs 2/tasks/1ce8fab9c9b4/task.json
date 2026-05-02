@@ -1,0 +1,64 @@
+{
+  "id": "1ce8fab9c9b4",
+  "kind": "screening",
+  "status": "cancelled",
+  "cancel_requested": true,
+  "title": "new-screening-run",
+  "phase": "cancelled",
+  "phase_label": "Cancelled",
+  "progress_current": 0,
+  "progress_total": 3,
+  "progress_message": "Cancellation requested. The current request may still finish in background.",
+  "created_at": "2026-03-24T15:14:38.283942+08:00",
+  "updated_at": "2026-03-24T15:36:03.892656+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "904f18bf9fea",
+    "project_topic": "克雷伯氏菌（*Klebsiella*）中甘油途径的高效表达与代谢工程改造",
+    "model_provider": "deepseek",
+    "parent_task_id": null,
+    "input_dataset_ids": [],
+    "request_payload": {
+      "title": "new-screening-run",
+      "topic": "克雷伯氏菌（*Klebsiella*）中甘油途径的高效表达与代谢工程改造",
+      "inclusion": [
+        "研究对象涉及克雷伯氏菌 如 *Klebsiella pneumoniae*, *Klebsiella oxytoca* 等 。",
+        "核心围绕甘油代谢途径（如 1,3-丙二醇、3-羟基丙酸的合成）。",
+        "内容包含提高表达或产量的具体手段（如关键酶过表达、启动子/RBS优化、底盘细胞基因敲除、辅酶平衡、发酵工艺控制等）。"
+      ],
+      "exclusion": [
+        "纯临床医学/病理学文献 如克雷伯氏菌的致病机理、耐药性分析、医院感染控制 。",
+        "非甘油碳源的代谢研究（甘油仅作为背景或溶剂提及）。",
+        "缺乏实质性生物学改造或工艺优化数据的纯宏观综述（若为极高质量的专门综述可保留）。"
+      ],
+      "provider": "deepseek",
+      "model_name": "deepseek-chat",
+      "api_base_url": "https://api.deepseek.com/v1",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.0,
+      "max_tokens": 1536,
+      "min_request_interval_seconds": 2.0,
+      "batch_size": 20,
+      "target_include_count": 30,
+      "stop_when_target_reached": true,
+      "allow_uncertain": true,
+      "retry_times": 6,
+      "request_timeout_seconds": 240,
+      "encoding": "auto",
+      "project_id": "904f18bf9fea",
+      "parent_task_id": null,
+      "source_dataset_ids": []
+    },
+    "model_secret_id": "80ab35cb3df64b28",
+    "uploaded_input_paths": [
+      "tasks/1ce8fab9c9b4/uploads/scopus_export_Mar 24-2026_68b7ca3e-077d-460c-8c9e-d65d52f3cedb.ris"
+    ]
+  },
+  "summary": null,
+  "error": null,
+  "artifacts": {},
+  "run_root": null,
+  "output_dir": null,
+  "markdown_preview": null,
+  "records": []
+}

@@ -1,0 +1,701 @@
+TY  - JOUR
+AU  - Luo, GS
+AU  - Zhang, D
+AU  - Feng, W
+AU  - Jiang, Z
+AU  - Liu, XC
+TI  - Deep Reinforcement Learning Based Active Disturbance Rejection Control for ROV Position and Attitude Control
+PY  - 2025
+JO  - APPLIED SCIENCES-BASEL
+DO  - 10.3390/app15084443
+AB  - Remotely operated vehicles (ROVs) face challenges in achieving optimal trajectory tracking performance during underwater movement due to external disturbances and parameter uncertainties. To address this issue, this paper proposes a position and attitude control strategy for underwater robots based on a reinforcement learning active disturbance rejection controller. The linear active disturbance rejection controller has achieved satisfactory results in the field of underwater robot control. However, fixed-parameter controllers cannot achieve optimal control performance for the controlled object. Therefore, further exploration of the adaptive capability of control parameters based on the linear active disturbance rejection controller was conducted. The deep deterministic policy gradient (DDPG) algorithm was used to optimize the linear extended state observer (LESO). This strategy employs deep neural networks to adjust the LESO parameters online based on measured states, allowing for more accurate estimation of model uncertainties and environmental disturbances, and compensating the total disturbance into the control input online, resulting in better disturbance estimation and control performance. Simulation results show that the proposed control scheme, compared to PID and fixed parameter LADRC, as well as the double closed-loop sliding mode control method based on nonlinear observers (NESO-DSMC), significantly improves the disturbance estimation accuracy of the linear active disturbance rejection controller, leading to higher control precision and stronger robustness, thus demonstrating the effectiveness of the proposed control strategy.
+KW  - ROV
+KW  - linear active disturbance rejection control
+KW  - deep reinforcement learning
+KW  - deep deterministic policy gradient (DDPG) algorithm
+KW  - resilience to disturbance
+KW  - TRAJECTORY TRACKING CONTROL
+KW  - PID CONTROL
+KW  - SATURATION
+KW  - ALGORITHM
+KW  - VEHICLES ER -
+ER  -
+
+TY  - JOUR
+AU  - Wu, DF
+AU  - Yuan, KX
+AU  - Huang, YQ
+AU  - Yuan, ZM
+AU  - Hua, LS
+TI  - Design and test of an improved active disturbance rejection control system for water sampling unmanned surface vehicle
+PY  - 2022
+JO  - OCEAN ENGINEERING
+DO  - 10.1016/j.oceaneng.2021.110367
+AB  - Unmanned surface vehicles (USVs) have wide application prospects in military and civil fields. Motivated by the large demand for environmental protection equipment, a water-sampling USV (WS-USV) system is designed in this study. The software and hardware of the entire system are designed and developed independently. Two water sampling modes, a manual remote control mode and remote interface automatic control mode are designed for handling emergencies. The WS-USV is propelled by twin-propellers. These propellers have many input constraints owing to their inherent structure, making the design of the controller very difficult. In this study, an improved active disturbance rejection control (ADRC) method is proposed and a saturation function is introduced to design a path-following control system for the WS-USV. This enhances the anti-disturbance ability for addressing environmental disturbances by wind, waves and currents in the water sampling process. The stability of the system is improved. The feasibility, stability and performance superiority of the control system are proven by water sampling contrast experiments.
+KW  - Water sampling unmanned surface vehicle
+KW  - Active disturbance rejection control
+KW  - Extreme learning machine
+KW  - Input constraints
+KW  - Human machine interaction
+KW  - TRACKING CONTROL
+KW  - CONVERGENCE
+KW  - OBSERVER ER -
+ER  -
+
+TY  - JOUR
+AU  - Gao, SH
+AU  - Zhang, XK
+AU  - Zhang, HG
+AU  - Ma, DC
+TI  - ADRC based cooperative path following control for USV-UAV within restricted waters
+PY  - 2025
+JO  - ASIAN JOURNAL OF CONTROL
+DO  - 10.1002/asjc.70016
+AB  - This study proposes an enhanced cooperative path-following control strategy for unmanned surface vehicles (USVs) and unmanned aerial vehicles (UAVs) using linear active disturbance rejection control (LADRC). A genetic algorithm is integrated to optimize the parameters of the Extended State Observer (ESO) in real-time, addressing the challenge of complex parameter tuning. Additionally, a variable radius line of sight (LOS) algorithm is introduced to minimize tracking errors. Simulation results demonstrate that the proposed controller achieves robust cooperative path following even under environmental disturbances. Compared to traditional LOS, the root mean square error (RMSE) and mean absolute error (MAE) of variable radius LOS are reduced by 20.99% and 24.30%, respectively. The proposed controller also features simple parameter adjustment and improved observer accuracy, highlighting its effectiveness in enhancing the cooperative path following performance of USV-UAV systems in complex marine environments.
+KW  - active disturbance rejection control
+KW  - genetic algorithm
+KW  - heterogeneous system
+KW  - restricted water
+KW  - ship path following
+KW  - USV-UAV cooperative control ER -
+ER  -
+
+TY  - JOUR
+AU  - Zhang, HG
+AU  - Zhang, XK
+AU  - Gao, SH
+AU  - Ma, DC
+TI  - Path following of underactuated surface vessels based active disturbance rejection control considering lateral drift
+PY  - 2025
+JO  - PROCEEDINGS OF THE INSTITUTION OF MECHANICAL ENGINEERS PART M-JOURNAL OF ENGINEERING FOR THE MARITIME ENVIRONMENT
+DO  - 10.1177/14750902241266299
+AB  - To address the challenges posed by unmodeled dynamics, lateral drift, external disturbances, and the difficulty in measuring velocities in underactuated surface vessels (USVs) motion systems, an active disturbance rejection control (ADRC) with two linear extended state observers (LESO) is proposed for USV path following. Firstly, we employ the Backstepping technique to create a virtual heading angle while estimating lateral drift and unmodeled dynamics using LESO. Subsequently, the ADRC algorithm is employed to control the heading angle. Since measuring the velocities of USV is challenging, velocity observers are introduce to estimate surge and sway velocities. Finally, we utilize the MMG model with high precision to track straight-line and curved paths, respectively. Simulation results validate that our developed controller accurately follows the reference path even in the presence of disturbances, affirming the effectiveness of our proposed control strategy.
+KW  - USVs motion control
+KW  - path following
+KW  - active disturbance rejection control
+KW  - backstepping
+KW  - extended state observer
+KW  - ADAPTIVE NEURAL-CONTROL
+KW  - LINE-OF-SIGHT
+KW  - TRACKING CONTROL
+KW  - CONTROL-SYSTEM
+KW  - VEHICLES
+KW  - DESIGN ER -
+ER  -
+
+TY  - JOUR
+AU  - Zhao, Y
+AU  - Zhou, HF
+AU  - Xu, P
+AU  - Jin, YP
+AU  - Tian, ZF
+AU  - Zhao, Y
+TI  - Optimized Line-of-Sight Active Disturbance Rejection Control for Depth Tracking of Hybrid Underwater Gliders in Disturbed Environments
+PY  - 2025
+JO  - JOURNAL OF MARINE SCIENCE AND ENGINEERING
+DO  - 10.3390/jmse13101835
+AB  - Hybrid underwater gliders (HUGs) combine buoyancy-driven gliding with propeller-assisted propulsion, offering extended endurance and enhanced mobility for complex underwater missions. However, precise depth control remains challenging due to system uncertainties, environmental disturbances, and inadequate adaptability of conventional control methods. This study proposes a novel optimized line-of-sight active disturbance rejection control (OLOS-ADRC) strategy for HUG depth tracking in the vertical plane. First, an Optimized Line-of-Sight (OLOS) guidance dynamically adjusts the look-ahead distance based on real-time cross-track error and velocity, mitigating error accumulation during path following. Second, a Tangent Sigmoid-based Tracking Differentiator (TSTD) enhances the disturbance estimation capability of the Extended State Observer (ESO) within the Active Disturbance Rejection Control (ADRC) framework, improving robustness against unmodeled dynamics and ocean currents. As a critical step before costly sea trials, this study establishes a high-fidelity simulation environment to validate the proposed method. The comparative experiments under gliding and hybrid propulsion modes demonstrated that OLOS-ADRC has significant advantages: the root mean square error (RMSE) for depth tracking was reduced by 83% compared to traditional ADRC, the root mean square error for pitch angle was decreased by 32%, and the stabilization time was shortened by 14%. This method effectively handles ocean current interference through real-time disturbance compensation, providing a reliable solution for high-precision HUG motion control. The simulation results provide a convincing foundation for future field validation in oceanic environments. Despite these improvements, the study is limited to vertical plane control and simulations; future work will involve full ocean trials and 3D path tracking.
+KW  - hybrid-drive underwater glider
+KW  - dynamics
+KW  - ADRC
+KW  - LOS guidance
+KW  - MODEL
+KW  - STABILITY
+KW  - VEHICLES ER -
+ER  -
+
+TY  - JOUR
+AU  - Liu, C
+AU  - Xiang, XB
+AU  - Yang, LC
+AU  - Li, JJ
+AU  - Yang, SL
+TI  - A hierarchical disturbance rejection depth tracking control of underactuated AUV with experimental verification
+PY  - 2022
+JO  - OCEAN ENGINEERING
+DO  - 10.1016/j.oceaneng.2022.112458
+AB  - This paper presents a hierarchical disturbance rejection depth tracking control scheme for the underactuated autonomous underwater vehicle (AUV) with comparative experimental results. The proposed hierarchical control scheme is constructed by two layers in the kinematics and dynamics. First, the line-of-sight (LOS) guidance is adopted to transform the depth tracking problem of the underactuated AUV into the pitch tracking in the kinematics layer, and then the adaptive line-of-sight guidance (ALOS) is proposed to estimate online and compensate for the angle of attack neglected in the traditional LOS guidance or in the presence of disturbance. Second, in order to further enhance the capability of disturbance rejection, active disturbance rejection control (ADRC) is adopted to track the desired pitch angle in the dynamics layer. In addition, a modified velocity saturation tracking differentiator (VSTD) by considering the motion characteristics of the AUV is introduced to enable the easy tuning of the control parameters and the adaptability to varying conditions in practice. Finally, a small size underactuated AUV prototype named as ARMs-AUV 1.0 is used to implement the control algorithms. Comparative experimental results are illustrated to demonstrate the effectiveness and the remarkable performance of the proposed depth tracking control scheme.
+KW  - Autonomous underwater vehicle (AUV)
+KW  - Depth tracking
+KW  - Hierarchical disturbance rejection
+KW  - Adaptive line-of-sight (ALOS)
+KW  - Active disturbance rejection controller (ADRC)
+KW  - AUTONOMOUS UNDERWATER VEHICLE
+KW  - ATTITUDE ER -
+ER  -
+
+TY  - JOUR
+AU  - Geng, XL
+AU  - Yang, ZP
+AU  - Ming, C
+TI  - Three-Dimensional Trajectory Tracking Control Strategy for Underactuated UUVs Based on Improved ADRC
+PY  - 2025
+JO  - SYMMETRY-BASEL
+DO  - 10.3390/sym17081339
+AB  - To address the challenge of low trajectory tracking accuracy for underactuated unmanned underwater vehicles (UUVs) under external disturbances, this study proposes a method integrating backstepping control with improved active disturbance rejection control (IADRC), which enhances high-precision trajectory tracking performance for UUV systems. Firstly, a five-degree-of-freedom dynamic model is established according to the symmetrical structure characteristics of an underactuated UUV, and virtual control inputs are designed using the backstepping method to address the underactuated characteristics. To improve convergence speed and tracking accuracy, a nonsingular terminal sliding mode control (NTSMC) is incorporated into the ADRC framework. Additionally, a parameter-adaptive tracking differentiator (PATD) is developed to mitigate the "differential explosion" problem inherent in backstepping virtual control inputs. A model-assisted extended state observer (ESO) is also designed to accurately estimate system disturbances. Stability analysis, grounded in Lyapunov theory, rigorously proves that all tracking errors converge asymptotically to a small bounded neighborhood of the origin. Simulation results demonstrate the effectiveness and superiority of the proposed control strategy.
+KW  - underactuated UUV
+KW  - three-dimensional trajectory tracking
+KW  - backstepping
+KW  - improved active disturbance rejection control
+KW  - assisted extended state observer
+KW  - symmetrical structure
+KW  - AUTONOMOUS UNDERWATER VEHICLES
+KW  - SLIDING MODE CONTROL
+KW  - AUV ER -
+ER  -
+
+TY  - JOUR
+AU  - Liu, C
+AU  - Xiang, XB
+AU  - Duan, Y
+AU  - Yang, LC
+AU  - Yang, SL
+TI  - ADRC-SMC-based disturbance rejection depth-tracking control of underactuated AUV
+PY  - 2024
+JO  - JOURNAL OF FIELD ROBOTICS
+DO  - 10.1002/rob.22312
+AB  - The underactuated autonomous underwater vehicle (AUV) depth-tracking approach is presented in this research along with comparative field experiments. First, a model-free ADRC-SMC pitch autopilot method is proposed to eliminate dynamics-related disturbances. The active disturbance rejection control (ADRC) framework is adopted to compensate the complicated and unknown pitch dynamics into an approximate integral series type. Sliding mode control (SMC) feedback law is designed to further compensate for dynamic feedback linearization inaccuracy of the ADRC framework. Second, the disturbance rejection double-loop depth-tracking approach is suggested in conjunction with adaptive line-of-sight (ALOS), which converts depth tracking into pitch tracking. The ALOS not only estimates the actual angle of attack but also compensates the pitch-tracking inaccuracy from the ADRC-SMC in the inner loop. Then, the uniformly semiglobally exponential stability of the closed-loop depth controller is proved after a detailed analysis of the stability from the inner loop to the outer loop. Finally, comparative field experiments are conducted to verify the proposed method. The effectiveness and strong disturbance rejection capabilities of the ADRC-SMC pitch autopilot method and the suggested depth-tracking approach are demonstrated by experimental results.
+KW  - active disturbance rejection controller
+KW  - adaptive line-of-sight
+KW  - depth tracking
+KW  - pitch autopilot
+KW  - sliding mode control ER -
+ER  -
+
+TY  - JOUR
+AU  - Kong, SH
+AU  - Sun, JL
+AU  - Wang, J
+AU  - Zhou, ZY
+AU  - Shao, JY
+AU  - Yu, JZ
+TI  - Piecewise Compensation Model Predictive Governor Combined With Conditional Disturbance Negation for Underactuated AUV Tracking Control
+PY  - 2023
+JO  - IEEE TRANSACTIONS ON INDUSTRIAL ELECTRONICS
+DO  - 10.1109/tie.2022.3194637
+AB  - With respect to the accurate tracking control for autonomous underwater vehicles (AUVs), this article proposes a novel control architecture consisting of piecewise compensation model predictive governor and conditional disturbance negation-based active disturbance rejection controller. The designed piecewise compensation mechanism is implemented to eliminate the steady tracking errors resulting from the underactuation problem of AUVs, and the model predictive governor aims to generate reference tracking velocities satisfying the constraints. Concurrently, a finite-time extended state observer is designed to improve the convergence performance of the estimation errors. In addition, the concept of conditional disturbance negation is employed to endow AUVs with the capability of taking advantage of disturbances rather than only rejecting disturbances. Finally, comprehensive analyses of the simulations and the experiments demonstrate the impressive control performance, verifying the feasibility of potential applications on real AUVs.
+KW  - Underwater vehicles
+KW  - Predictive models
+KW  - Kinetic theory
+KW  - Trajectory
+KW  - Force
+KW  - Convergence
+KW  - Observers
+KW  - Autonomous underwater vehicle (AUV)
+KW  - conditional disturbance negation (CDN)
+KW  - finite-time extended state observer (ESO)
+KW  - piecewise compensation
+KW  - tracking control
+KW  - TRAJECTORY TRACKING
+KW  - UNDERWATER VEHICLE ER -
+ER  -
+
+TY  - JOUR
+AU  - Yu, JM
+AU  - Sun, H
+AU  - Sun, QL
+AU  - Sun, MW
+AU  - Chen, ZQ
+TI  - Dual-Loop Controller for Underwater Snake-Like Robot Based on Dynamic Inverse Solution
+PY  - 2026
+JO  - IEEE JOURNAL OF OCEANIC ENGINEERING
+DO  - 10.1109/joe.2025.3632469
+AB  - The underwater snake-like robot consists of a heterogeneous structure with multiple links, providing strong environmental adaptability and enabling flexible movement in complex and confined environments. However, the attitude of an underwater snake-like robot (the feasible range of the angle between the links) is often restricted by narrow terrain, and using a traditional controller without considering its dynamics can easily lead to problems, such as infeasible control inputs and slow system response. In response to this problem, considering a snake-like robot with three links as an example, this study proposes a dual-loop control method based on a dynamic inverse solution [DI-active disturbance rejection controller (ADRC)]. The outer loop analyzes the robot's dynamic characteristics and applies dynamic inversion to the desired yaw angular acceleration to compute the optimal joint angles for each link. The inner loop embeds an ADRC, which takes the outer-loop control inputs and outputs the joint rotational velocities. Compared to conventional dual-loop ADRC methods that estimate the total system disturbance, DI-ADRC only estimates the residual disturbance between the total system disturbance and the outer-loop inversion result, thereby greatly reducing the computational burden of the extended state observer. The experimental results verified the feasibility of this method for narrow terrain. Compared to the traditional controller, DI-ADRC has smaller overshoot and oscillation, significantly improving control accuracy and response speed, and can dynamically reduce or increase the time to reach the target attitude.
+KW  - Robots
+KW  - Robot sensing systems
+KW  - Kinematics
+KW  - Dynamics
+KW  - Vehicle dynamics
+KW  - Oceans
+KW  - Force
+KW  - Attitude control
+KW  - Autonomous underwater vehicles
+KW  - Adaptation models
+KW  - Active disturbance rejection control (ADRC)
+KW  - dual-loop controller
+KW  - dynamics inverse solution
+KW  - underwater snake-like robot
+KW  - PATH-FOLLOWING CONTROL
+KW  - TRAJECTORY TRACKING
+KW  - KINEMATICS SOLUTION
+KW  - LOCOMOTION
+KW  - MANIPULATORS
+KW  - MECHANISM ER -
+ER  -
+
+TY  - JOUR
+AU  - Zheng, YM
+AU  - Tao, J
+AU  - Sun, QL
+AU  - Sun, H
+AU  - Chen, ZQ
+AU  - Sun, MW
+AU  - Xie, GM
+TI  - Soft Actor-Critic based active disturbance rejection path following control for unmanned surface vessel under wind and wave disturbances
+PY  - 2022
+JO  - OCEAN ENGINEERING
+DO  - 10.1016/j.oceaneng.2022.110631
+AB  - The research of unmanned surface vessel (USV) path tracking has always been of great interest in maneuvering control. In the course of navigation, a USV will inevitably be affected by disturbances such as wind and waves, or the USV's operating conditions will suddenly change. To overcome the impact of these disturbances or uncertainties is of great significance to its safe and efficient navigation. In this paper, the three-degree-of freedom (DOF) manipulative modeling group (MMG) model is used to express the dynamic characteristics of a USV so that its motion process is closer to its real states. We consider the underactuated control problem of using rudder angles to realize the tracking control of the USV's position and heading angle. To this end, we propose a guidance law and design a linear active disturbance rejection controller (LADRC), and the stability of the guidance law and controller are analyzed. This paper combines control and decision-making in reinforcement learning and proposes an LADRC control strategy based on soft actor-critic (SAC) algorithm to realize the adaptive control of USV path tracking. The effectiveness of the proposed method is verified by line and circle under wind and wave environments.
+KW  - Path following control
+KW  - Wind and wave disturbances
+KW  - Linear active disturbance rejection control
+KW  - Soft Actor-Critic
+KW  - Reinforcement learning
+KW  - Parameter optimization
+KW  - SLIDING MODE CONTROL
+KW  - UNDERACTUATED SHIPS
+KW  - FIELDS ER -
+ER  -
+
+TY  - JOUR
+AU  - Yao, P
+AU  - Lou, YT
+AU  - Zhang, KM
+TI  - Multi-USV cooperative path planning by window update based self-organizing map and spectral clustering?
+PY  - 2023
+JO  - OCEAN ENGINEERING
+DO  - 10.1016/j.oceaneng.2023.114140
+AB  - Unmanned surface vehicles (USVs) have shown tremendous application prospects recently. In this paper, a hierarchical two-layer framework is proposed for the cooperative path planning of multi-USV system in complex marine environments. The whole framework incorporates the low-level layer planning the optimal path for each USV, and the high-level layer assigning targets for the multi-USV system. First, to avoid collisions and access multiple targets in the optimal sequence, an improved self-organizing map (SOM) based on window update is proposed. The energy cost is calculated to evaluate the path planning results and construct a similarity graph. Then, the spectral clustering method is utilized based on the customized graph to determine the allocated targets which each USV should access in the low-level layer. Finally, a double smoothing strategy based on B-spline is proposed, and the line-of-sight (LOS) guidance method and active disturbance rejection control (ADRC) controller are used to achieve accurate tracking of paths by USV. The simulation results in various scenarios validate the feasibility and effectiveness of our method for multi-USV cooperation, as well as path traceability.
+KW  - Unmanned surface vehicle (USV)
+KW  - Path planning
+KW  - Self-organizing map (SOM)
+KW  - Spectral clustering
+KW  - TASK ALLOCATION
+KW  - ALGORITHM
+KW  - SURFACE
+KW  - NAVIGATION
+KW  - ASSIGNMENT
+KW  - VEHICLES ER -
+ER  -
+
+TY  - JOUR
+AU  - He, WC
+AU  - Meng, ZC
+AU  - Li, YZ
+AU  - Xu, P
+AU  - Wan, XF
+AU  - Liu, JH
+AU  - Jin, H
+AU  - Zhang, KC
+AU  - Xie, GM
+AU  - Xu, MY
+TI  - LADRC-based wake tracking control via sideslip angle estimation for AUVs following the trajectories of near-surface targets
+PY  - 2026
+JO  - OCEAN ENGINEERING
+DO  - 10.1016/j.oceaneng.2026.124680
+AB  - Autonomous underwater vehicles (AUVs) face considerable challenges in tracking the trajectories of near-surface targets due to nonlinear couplings, environmental disturbances, and pronounced sideslip effects, all of which significantly degrade the stability and accuracy of their control systems. In this paper, a wake-tracking control method is proposed for AUVs following the trajectories of surface targets. The controller integrates sideslip angle estimation with active disturbance rejection. A reduced-order extended state observer is constructed to estimate the real-time sideslip angle, representing the deviation between the vehicle's heading and its actual motion direction caused by wake-induced disturbances. Furthermore, a sideslip-estimation-based line-of-sight (LOS) guidance law is developed to generate coordinated yaw angle and surge velocity commands, thereby improving both directional control and speed regulation during wake tracking. Two linear active disturbance rejection controllers are subsequently designed to achieve decoupled and robust control of the yaw and surge channels. Simulation results demonstrate that the proposed method surpasses conventional LOS guidance and PID controllers integrated with disturbance observers in trajectory accuracy, lateral deviation suppression, convergence rate, and energy efficiency, thereby enabling stable and reliable wake tracking for AUVs in complex near-surface marine environments.
+KW  - AUV
+KW  - LADRC
+KW  - Wake tracking
+KW  - Sideslip angle estimation
+KW  - AUTONOMOUS UNDERWATER VEHICLE
+KW  - SYSTEMS ER -
+ER  -
+
+TY  - JOUR
+AU  - Chen, TY
+AU  - Peng, HX
+AU  - Chang, XY
+AU  - Zhang, XN
+AU  - Wang, DD
+TI  - Co-Design of USV Control System Based on Fuzzy Satisfactory Optimization for Automatic Target Arriving and Berthing
+PY  - 2024
+JO  - IEEE ACCESS
+DO  - 10.1109/access.2024.3432868
+AB  - Most of the previous research about unmanned surface vehicle (USV) control system just focuses on reaching the target but not considers berthing. Moreover, computation cost is rarely concerned. For automatic target arriving and berthing of USV in presence of multi-shape convex obstacles and disturbances, this paper designs a composite control system including trajectory optimization and trajectory tracking. In order to generate a smooth and optimal trajectory, two objectives including minimum running time and energy consumption are proposed, and their priority requirement is presented. Fuzzy satisfactory optimization is introduced to reformulate the objective functions, and the membership degree difference is used to model priority between two objectives. The obstacle avoidance constraint is developed based on the improved P-criterion. The comprehensive optimization model is established to obtain the maximum membership degree. Further, the priority optimization model is proposed to expand the feasible domain by relaxing the comprehensive optimization result. Two models are discretized by Gaussian pseudospectral method to find the optimal solution. To achieve good trajectory tracking under disturbances, two first-order active disturbance rejection control (ADRC) controllers are designed to follow the desired longitudinal velocity and course angular velocity. All the velocities of USV can converge. The simulation proves the effectiveness of the proposed co-designed system by comparing with other methods.
+KW  - Underactuated surface vessels
+KW  - Trajectory optimization
+KW  - Trajectory tracking
+KW  - Control systems
+KW  - Optimization models
+KW  - Energy consumption
+KW  - Kinematics
+KW  - Gaussian processes
+KW  - USV
+KW  - trajectory optimization
+KW  - trajectory tracking
+KW  - Gaussian pseudospectral method
+KW  - ADRC
+KW  - TRAJECTORY TRACKING CONTROL ER -
+ER  -
+
+TY  - JOUR
+AU  - Zhang, J
+AU  - Hua, CC
+AU  - Luo, X
+AU  - Ning, PJ
+TI  - An Output Feedback Approach for 3-D Prescribed Time Stabilization Control of Unmanned Underwater Vehicles
+PY  - 2024
+JO  - IEEE TRANSACTIONS ON INDUSTRIAL ELECTRONICS
+DO  - 10.1109/tie.2023.3327518
+AB  - In this article, a prescribed time output feedback 3-D stabilization control scheme is proposed for unmanned underwater vehicles. Considering the problem of unmeasurable velocities, unknown hydrodynamic parameters, and external underwater perturbations, we construct a prescribed time extended state observer (PTESO) for the unmanned underwater vehicles based on a time-varying scaling function that can estimate the linear and angular velocities as well as unknown nonlinearities within a preset time. Then, a novel prescribed time output feedback controller is developed for the unmanned underwater vehicles with the aid of PTESO, which exhibits a simplified structure and allows for advance specification of the prescribed time. By using Lyapunov stability theory, it is strictly proven that the stabilization error converges to zero within a prescribed time. Finally, an experimental test is carried out on an open-frame unmanned underwater vehicle to verify the effectiveness of the proposed scheme.
+KW  - Autonomous underwater vehicles
+KW  - Output feedback
+KW  - Observers
+KW  - Hydrodynamics
+KW  - Vehicle dynamics
+KW  - Solid modeling
+KW  - Force
+KW  - Output feedback control
+KW  - prescribed time extended state observer (PTESO)
+KW  - unmanned underwater vehicles
+KW  - unmeasurable velocities
+KW  - TRAJECTORY TRACKING
+KW  - OBSERVER
+KW  - DESIGN ER -
+ER  -
+
+TY  - JOUR
+AU  - Zhang, X
+AU  - Chen, HJ
+AU  - Xing, W
+AU  - Feng, ZG
+AU  - Jiang, HL
+TI  - Collision-free trajectory tracking strategy of a UUV via finite-time extended state observer-based sliding mode predictive control
+PY  - 2024
+JO  - JOURNAL OF THE FRANKLIN INSTITUTE-ENGINEERING AND APPLIED MATHEMATICS
+DO  - 10.1016/j.jfranklin.2024.107245
+AB  - This paper focuses on a trajectory tracking problem for unmanned underwater vehicles (UUVs) subject to current disturbances and static obstacles. A double-loop framework is established. The kinematic governor employs model predictive control(MPC), which takes into account the UUV's kinematic characteristics as well as the conditions for obstacle avoidance when calculating the control command and provides an optimal velocity command input for the dynamic controller. Then, the dynamic controller is developed based on a fast finite-time extended state observer (FESO) and a fast adaptive integral terminal sliding mode controller (FAITSMC). The construction of the fast FESO integrates UUV's dynamics model, a proportional integral velocity variable, and a fractional order term of the output observation error, which can identify model uncertainties and external disturbances in finite time. By means of adaptive uncertainty compensation, the FAITSMC enables the error between actual speed and speed reference to converge to a minimum quickly. By applying Lyapunov stability theory and the finite-time analysis technique, sufficiency criteria are established to guide and keep the UUV on a reference trajectory via an inner-outer loop control structure. Finally, simulation examples in different scenarios are presented to verify the feasibility and effectiveness of the derived theoretical results.
+KW  - Unmanned underwater vehicles
+KW  - A double-loop architecture
+KW  - Model predictive control
+KW  - Sliding mode control
+KW  - Finite-time extended state observer
+KW  - AUTONOMOUS UNDERWATER VEHICLE
+KW  - AUVS
+KW  - UNCERTAINTIES
+KW  - SYSTEMS ER -
+ER  -
+
+TY  - JOUR
+AU  - Zheng, JQ
+AU  - Song, L
+AU  - Liu, LY
+AU  - Yu, WB
+AU  - Zhu, SY
+AU  - Wang, YY
+AU  - Chen, CL
+TI  - Fixed-time extended state observer-based trajectory tracking control for autonomous underwater vehicles
+PY  - 2022
+JO  - ASIAN JOURNAL OF CONTROL
+DO  - 10.1002/asjc.2624
+AB  - In this paper, we investigate the trajectory tracking control problem for autonomous underwater vehicles (AUVs) with time-varying external disturbances of currents and waves in the sea. To solve the problem, a fixed-time extended state observer (FTESO)-based tracking controller is proposed. Firstly, by using the extended state observer, the FTESO is proposed for estimating the external disturbances and the velocities of the AUV within the fixed convergence time. Based on the FTESO, the fixed-time controller is proposed for reducing the tracking errors and improving robustness performance. Theoretical analysis is given, which shows that the unknown external disturbances can be compensated and tracking error can converge to zero within the fixed time. Simulation results show that the proposed FTESO controller not only guarantees the fixed-time convergence but also reduces the trajectory tracking errors of the AUV.
+KW  - fixed-time extended state observer
+KW  - time-varying external disturbances
+KW  - trajectory tracking
+KW  - NONLINEAR-SYSTEMS
+KW  - SURFACE VEHICLES
+KW  - DESIGN
+KW  - STABILIZATION ER -
+ER  -
+
+TY  - JOUR
+AU  - Cui, RY
+AU  - Li, W
+AU  - Ning, J
+AU  - Liu, L
+TI  - Extended state observer based trajectory tracking control of underactuated unmanned surface vehicle with signal quantization
+PY  - 2026
+JO  - ASIAN JOURNAL OF CONTROL
+DO  - 10.1002/asjc.70068
+AB  - Aiming at the model uncertainty and the complexity of trajectory tracking control of underactuated unmanned surface vehicles (USVs) in complex marine environments, an underactuated USV trajectory tracking control strategy with signal quantization based on the extended state observers (ESOs) is proposed in this paper. According to the inner and outer loop control strategy, the guidance law is designed in the kinematic subsystem to solve the underactuated problem of the USV. In the kinetic subsystem, the ESOs are utilized to resolve the unknown terms in the system and smooth the quantized state signals. Moreover, the input quantization process is represented through a linear model, while the controller has not acquired any prior parameter knowledge of quantization. A Lyapunov-based stability analysis was conducted to demonstrate the stability of the entire closed-loop system. The effectiveness of the proposed strategy was validated through the simulation.
+KW  - extended state observer
+KW  - signal quantization
+KW  - trajectory tracking control
+KW  - underactuated unmanned surface vehicles
+KW  - NONLINEAR-SYSTEMS
+KW  - FEEDBACK
+KW  - USV ER -
+ER  -
+
+TY  - JOUR
+AU  - Thai, BH
+AU  - Ji, S
+AU  - Yoo, S
+AU  - Youn, W
+TI  - A novel combination between finite-time extended state observer and proportional-integral-derivative nonsingular fast terminal sliding mode controller for an autonomous underwater vehicle
+PY  - 2025
+JO  - NONLINEAR DYNAMICS
+DO  - 10.1007/s11071-024-10682-z
+AB  - This study investigates a novel finite-time extended state observer based on a proportional integral derivative-based nonsingular fast terminal sliding mode controller for an overactuated autonomous underwater vehicle. First, a finite-time extended state observer is designed to estimate the unknown lumped modeling uncertainties and high-frequency external disturbances. A new type of sliding surface-a proportional-integral-derivative nonsingular fast terminal sliding surface-is then proposed to guarantee the tracking performance of the system. Globally stable convergence in finite time is established via Lyapunov stability theory. Next, control allocation is utilized to distribute the forces and moments to the actuators. Finally, to verify our proposed approach, simulation results are provided to demonstrate its effectiveness. The results illustrate that the system performance is enhanced by at least 8.6%\documentclass[12pt]minimal \usepackageamsmath \usepackagewasysym \usepackageamsfonts \usepackageamssymb \usepackageamsbsy \usepackagemathrsfs \usepackageupgreek \setlength\oddsidemargin-69pt \begindocument$$8.6\%$$\enddocument compared with existing methods.
+KW  - Finite-time convergence
+KW  - Extended state observer
+KW  - Proportional-integral-derivative nonsingular fast terminal sliding mode controller
+KW  - Control allocation
+KW  - Autonomous underwater vehicle
+KW  - TRAJECTORY TRACKING
+KW  - CONTROL DESIGN
+KW  - MANIPULATORS ER -
+ER  -
+
+TY  - JOUR
+AU  - Feng, N
+AU  - Wu, DF
+AU  - Yu, HL
+AU  - You, Z
+AU  - Tu, WL
+TI  - Disturbance rejection event-triggered robust nonlinear model predictive control for underactuated unmanned surface vehicle against DoS attacks without velocity measurements
+PY  - 2025
+JO  - ISA TRANSACTIONS
+DO  - 10.1016/j.isatra.2025.08.031
+AB  - This paper presents a disturbance rejection event-triggered nonlinear model predictive control (DR-ETNMPC) method for underactuated unmanned surface vehicle (USV) subject to denial-of-service (DoS) attacks and lacking velocity measurements. A nonlinear extended state observer (NESO) is employed to estimate both unknown velocities and lumped disturbances, while a disturbance rejection nonlinear model predictive controller (DRNMPC) is designed to enforce actuator saturation constraints. To reduce computational load of the DRNMPC, an event triggered mechanism is introduced, and a DoS attack defense mechanism is introduced to guarantee that the USV maintains high-precision tracking performance under DoS attacks. Rigorous analysis is conducted to ensure recursive feasibility and closed-loop stability. Simulation results verify the method's effectiveness and superiority, demonstrating notable improvements in both control precision and computational efficiency.
+KW  - Unmanned surface vehicle
+KW  - Nonlinear model predictive control
+KW  - Event-triggered mechanism
+KW  - Nonlinear extended state observer
+KW  - TRAJECTORY TRACKING CONTROL
+KW  - SHIPS ER -
+ER  -
+
+TY  - JOUR
+AU  - Chen, GF
+AU  - Sheng, MW
+AU  - Wan, L
+AU  - Liu, YH
+AU  - Zhang, ZY
+AU  - Xu, YF
+TI  - Tracking control for small autonomous underwater vehicles in the Trans-Atlantic Geotraverse hydrothermal field based on the modeling trajectory
+PY  - 2022
+JO  - APPLIED OCEAN RESEARCH
+DO  - 10.1016/j.apor.2022.103281
+AB  - This paper investigates the fixed-time trajectory tracking problem of small autonomous underwater vehicles (S-AUVs) in the Trans-Atlantic Geotraverse (TAG) active mound with ocean current, unknown disturbances, model uncertainties, actuator faults, and input saturations. First, the effect of the near-bottom environment of the mound on S-AUVs is analyzed in detail from three issues. Without the upper bound and gradient of lumped uncertainties, a high-order adaptive extended state observer (ESO) is designed. Then, a continuous fixed-time sliding mode manifold is applied to obtain fast convergence performance. In order to realize the fixed-time convergence of tracking errors, an adaptive fault-tolerant trajectory tracking control law with an auxiliary dy-namic system (ADS) is proposed. In addition, the simulated topography of the TAG mound is constructed and the trajectory based on path points is modeled by cubic spline interpolation. The effectiveness and superiority of the proposed algorithm are validated by comprehensive simulations.
+KW  - TAG active hydrothermal mound
+KW  - Small autonomous underwater vehicle
+KW  - Fixed -time trajectory tracking control
+KW  - Adaptive extended state observer
+KW  - The modeled trajectory
+KW  - SPACECRAFT ER -
+ER  -
+
+TY  - JOUR
+AU  - Tong, YP
+AU  - Huang, B
+AU  - Wang, Y
+AU  - Wang, LM
+AU  - Pan, W
+AU  - Yan, XL
+AU  - He, B
+TI  - Robust motion control of four-vector-thruster AUV "Aurora" under disturbances: optimized ESO-FAISMC control with thrust allocation optimization
+PY  - 2025
+JO  - AIN SHAMS ENGINEERING JOURNAL
+DO  - 10.1016/j.asej.2025.103780
+AB  - Against challenges from internal model inaccuracies and external environmental disturbances affecting vector Autonomous Underwater Vehicles (AUVs) tracking, this paper focuses on the team-developed 4-vector AUV Aurora, establishing its kinematic/dynamic models. It proposes an optimized thrust allocation strategy and a control framework combining improved Extended State Observer (ESO) and Fuzzy Adaptive Integral Sliding Mode Control (FAISMC): the former reduces initial estimation errors for accurate disturbance estimation; the latter uses fuzzy inference to regulate gains, suppressing chattering. Lyapunov analysis verifies stability. Numerical simulations show that ESO-FAISMC reduces average errors by 79.09% vs Integral Sliding Mode Control (ISMC) and 51.36% vs Extended State Observer based Integral Sliding Mode Control (ESO-ISMC), and root mean square errors by 64.54% and 42.46% respectively. The proposed ESO-FAISMC can effectively counteract disturbances, achieving high-precision tracking, stable motion control. Experiments confirm it meets Aurora's underwater control needs.
+KW  - Vector autonomous underwater vehicle
+KW  - Trajectory tracking control
+KW  - Fuzzy adaptive
+KW  - Integral sliding mode control
+KW  - Extended state observer
+KW  - TRAJECTORY TRACKING CONTROL ER -
+ER  -
+
+TY  - JOUR
+AU  - Cao, G
+AU  - Yang, J
+AU  - Qiao, L
+AU  - Yang, ZH
+AU  - Zhang, WD
+TI  - Adaptive output feedback super twisting algorithm for trajectory tracking control of USVs with saturated constraints
+PY  - 2022
+JO  - OCEAN ENGINEERING
+DO  - 10.1016/j.oceaneng.2022.111507
+AB  - This article investigates the trajectory tracking control of fully actuated unmanned surface vehicles (USVs) in the presence of lumped system uncertainty and input saturation. To address this problem, an output feedback scheme, which combines the saturated adaptive super twisting algorithm and non-singular fast terminal sliding mode (SASTA-NFTSM) technique, is proposed. First, the velocities and lumped system uncertainty including external disturbances and model uncertainties, are estimated by a finite-time extended state observer (FTESO), simultaneously in finite time. Second, to deal with the saturation constraints on actuators, a novel sliding mode reaching law scheme, namely SASTA, that consists of an anti-windup compensator and a super twisting algorithm based on switching logic adaptive gains is proposed. Finally, the trajectory tracking control of USVs is solved with the non-trivial combination of SASTA and NFTSM. The chattering phenomenon can be effectively attenuated by virtue of the continuous control laws compared with the traditional NFTSM control (NFTSMC) approaches. The tracking errors are guaranteed to converge to zero in finite time. Comparative simulation results demonstrate the effectiveness and advantage of the proposed scheme.
+KW  - Finite-time extended state observer
+KW  - Non-singular fast terminal sliding mode
+KW  - Saturated adaptive super twisting algorithm
+KW  - Trajectory tracking
+KW  - Output feedback
+KW  - SLIDING MODE CONTROL
+KW  - AUTONOMOUS UNDERWATER VEHICLES
+KW  - EXTENDED STATE OBSERVER
+KW  - SURFACE VEHICLES
+KW  - SHIPS
+KW  - ORDER ER -
+ER  -
+
+TY  - JOUR
+AU  - Luo, QD
+AU  - Wang, HB
+AU  - Li, N
+AU  - Su, B
+AU  - Zheng, W
+TI  - Model-free Predictive Trajectory Tracking Control and Obstacle Avoidance for Unmanned Surface Vehicle With Uncertainty and Unknown Disturbances via Model-free Extended State Observer
+PY  - 2024
+JO  - INTERNATIONAL JOURNAL OF CONTROL AUTOMATION AND SYSTEMS
+DO  - 10.1007/s12555-023-0524-2
+AB  - The present paper proposes a model-free extended state observer (MFESO) based model and model-free predictive control (MPC-MFESO-MFPAC) approach for achieving trajectory tracking and obstacle avoidance of unmanned surface vehicle (USV) in complex environments. MFPAC is investigated for addressing the uncertainty in the kinetics modeling of USV system, eliminating the need for an accurate mathematical model of the USV. Additionally, the backstepping method is employed to eliminate rotational characteristics, enabling direct application of MFPAC in USV control. In the computation of the virtual control law, MPC is utilized for kinematics which can be easily modeled, while incorporating obstacle avoidance performance. By utilizing the model-free ESO for estimating additional unknown perturbations, this approach obviates the need for any prior knowledge of the system's dynamics. The stability analysis demonstrates that the proposed control strategy is bounded-input and bounded-output (BIBO) stable. The simulation results validate the effectiveness and advancement of the algorithm.
+KW  - BIBO stable
+KW  - model-free ESO
+KW  - model-free predictive control
+KW  - obstacle avoidance
+KW  - SYSTEM
+KW  - USV ER -
+ER  -
+
+TY  - JOUR
+AU  - Yan, ZP
+AU  - Zhang, MY
+AU  - Zhou, JJ
+AU  - Yue, LD
+TI  - Distributed Lyapunov-Based Model Predictive Control for AUV Formation Systems with Multiple Constraints
+PY  - 2024
+JO  - JOURNAL OF MARINE SCIENCE AND ENGINEERING
+DO  - 10.3390/jmse12030363
+AB  - This paper focuses on the formation tracking issue of autonomous underwater vehicles (AUVs) subject to multiple constraints in three-dimensional space. We developed a novel distributed Lyapunov-based model predictive controller (DLMPC) with a fast finite-time extended state observer (FFTESO). Initially, the external disturbances and internal uncertainties of each AUV were precisely compensated using the designed FFTESO. Subsequently, we proposed DLMPC-based position tracking and velocity tracking controllers, which solved an online optimization problem to determine optimal velocities and control forces. This hierarchical framework effectively managed system constraints, such as state constraints and actuator saturation. Additionally, the Lyapunov-based backstepping control law was applied to construct stability constraints in the distributed optimization problem, ensuring the recursive feasibility and closed-loop system stability of the proposed scheme. Sufficient conditions and attraction regions to ensure stability were explicitly provided. Finally, the simulation results demonstrated that the proposed method improved both the convergence speed and tracking accuracy by at least 30% compared to other methods.
+KW  - autonomous underwater vehicles
+KW  - finite-time extended state observer
+KW  - distributed Lyapunov-based model predictive control
+KW  - formation trajectory tracking
+KW  - multiple constraints
+KW  - AUTONOMOUS UNDERWATER VEHICLE ER -
+ER  -
+
+TY  - JOUR
+AU  - Sun, HB
+AU  - Zong, GD
+AU  - Cui, JW
+AU  - Shi, KB
+TI  - Fixed-time sliding mode output feedback tracking control for autonomous underwater vehicle with constraint
+PY  - 2022
+JO  - OCEAN ENGINEERING
+DO  - 10.1016/j.oceaneng.2022.110673
+AB  - This paper studies the trajectory tracking control problem for autonomous underwater vehicles (AUVs) subject to external disturbances and model uncertainties. To improve the tracking performance of the AUVs, a prescribed performance function is introduced to constrain the output tracking error. Then, a fixed-time extended state observer (FxTESO) is set up to estimate the unknown states and the lumped disturbances (including external disturbances and model uncertainties). With the outputs of the FxTESO, a novel dynamic fixed-time terminal sliding mode (FxTTSM) surface is constructed and then a fixed-time output feedback controller is designed to achieve trajectory tracking control for the AUVs. By employing Lyapunov function theory, the stability of the closed-loop system is analyzed. Simulation results are provided to verify the effectiveness of the developed control scheme.
+KW  - Autonomous underwater vehicles (AUVs)
+KW  - Dynamic fixed-time terminal sliding mode
+KW  - Fixed-time stability
+KW  - Output feedback
+KW  - Prescribed performance
+KW  - FAULT-TOLERANT CONTROL
+KW  - UNKNOWN DYNAMICS
+KW  - ADAPTIVE-CONTROL
+KW  - STABILIZATION
+KW  - REJECTION
+KW  - SYSTEMS
+KW  - AUVS ER -
+ER  -
+
+TY  - JOUR
+AU  - Gao, SN
+AU  - Peng, ZH
+AU  - Liu, L
+AU  - Wang, D
+AU  - Han, QL
+TI  - Fixed-Time Resilient Edge-Triggered Estimation and Control of Surface Vehicles for Cooperative Target Tracking Under Attacks
+PY  - 2023
+JO  - IEEE TRANSACTIONS ON INTELLIGENT VEHICLES
+DO  - 10.1109/tiv.2022.3184076
+AB  - This paper is concerned with the cooperative target tracking of under-actuated unmanned surface vehicles (USVs) with event-triggered communications subject to denial-of-service (DoS) attacks. The target position information can be sensed by a fraction of follower USVs only. A fixed-time resilient cooperative edge-triggered estimation and control architecture is presented for achieving cooperative target tracking under DoS attacks. Specifically, a distributed edge-triggered fixed-time extended state observer (ESO) is designed to recover the position and velocity of the target with a prescribed time regardless of the unreliable communication network subject to DoS attacks. Moreover, the communication burden of the network is reduced by the proposed edge-triggered mechanism. In the control law design, a fixed-time ESO is designed for estimating the model uncertainties and external disturbances in an earth-fixed reference frame. Then, a fixed-time target tracking control law is proposed for each follower USV based on the fixed-time ESO. It is proven that the error signals in the closed-loop control system of USVs are convergent to the origin in a fixed time. An example is provided to substantiate the effectiveness of the proposed fixed-time resilient cooperative edge-triggered estimation and control architecture for USVs.
+KW  - Target tracking
+KW  - Estimation
+KW  - Sea surface
+KW  - Intelligent vehicles
+KW  - Communication networks
+KW  - Stability analysis
+KW  - Denial-of-service attack
+KW  - Cooperative target tracking
+KW  - distributed edge-triggered fixed-time ESO
+KW  - DoS attacks
+KW  - fixed-time control
+KW  - under-actuated unmanned surface vehicles
+KW  - VARYING FORMATION TRACKING
+KW  - NEURAL-NETWORK CONTROL
+KW  - MULTIAGENT SYSTEMS
+KW  - MARINE VEHICLES
+KW  - GUIDANCE
+KW  - MODEL
+KW  - STATE ER -
+ER  -
+
+TY  - JOUR
+AU  - Cao, Y
+AU  - Cui, Y
+AU  - Liu, ZY
+AU  - Li, BY
+AU  - Wu, LP
+TI  - Improved line-of-sight path following for unmanned surface vehicle with exact compensation of sideslip angle
+PY  - 2025
+JO  - PROCEEDINGS OF THE INSTITUTION OF MECHANICAL ENGINEERS PART M-JOURNAL OF ENGINEERING FOR THE MARITIME ENVIRONMENT
+DO  - 10.1177/14750902241305692
+AB  - An improved line-of-sight guidance law is proposed for path following of under-actuated unmanned surface vehicles subjected to time-varying ocean currents. A reduced-order extended state observer is integrated with an adaptive measurement method to simultaneously and exactly estimate the unknown sideslip angle and external disturbance. Moreover, the desired surge velocity is designed to adaptively respond to changes in path curvature, look-ahead distance, and cross-track error. A cross-track error-based method is adopted to dynamically adjust the look-ahead distance. Upon verifying the stability of the improved guidance law, simulation results and comparative studies are provided to demonstrate the effectiveness in accelerating the convergence and enhancing the accuracy of path-following.
+KW  - Unmanned surface vehicle
+KW  - path following
+KW  - line-of-sight
+KW  - extended state observer
+KW  - sideslip angle
+KW  - TRAJECTORY TRACKING
+KW  - CONTROLLER-DESIGN
+KW  - GUIDANCE LAW
+KW  - MODEL ER -
+ER  -
+
+TY  - JOUR
+AU  - Li, MC
+AU  - Guo, C
+AU  - Yu, HM
+TI  - Extended state observer-based integral line-of-sight guidance law for path following of underactuated unmanned surface vehicles with uncertainties and ocean currents
+PY  - 2021
+JO  - INTERNATIONAL JOURNAL OF ADVANCED ROBOTIC SYSTEMS
+DO  - 10.1177/17298814211011035
+AB  - This article focuses on the problem of path following for underactuated unmanned surface vehicles (USVs) considering model uncertainties and time-varying ocean currents. An extended state observer (ESO)-based integral line-of-sight (ILOS) with an integral sliding mode adaptive fuzzy control scheme is proposed as the main control framework. First, a novel ESO is employed to estimate the surge and sway velocities based on the kinetic model, which are difficult to measure directly. Then, the adaptive ILOS guidance law is proposed, in which the integral vector is incorporated into the adaptive method to estimate the current velocities. Meanwhile, an improved fuzzy algorithm is introduced to optimize the look-ahead distance. Second, the controller is extended to deal with the USV yaw and surge velocity signal tracking using the integral sliding mode technique. The uncertainties of the USV are approximated via the adaptive fuzzy method, and an auxiliary dynamic system is presented to solve the problem of actuator saturation. Then, it is proved that all of the error signals in the closed-loop control system are uniformly ultimately bounded. Finally, a comparative simulation substantiates the availability and superiority of the proposed method for ESO-based ILOS path following of USV.
+KW  - Unmanned surface vehicles
+KW  - ocean currents
+KW  - line-of-sight
+KW  - path following
+KW  - actuator saturation
+KW  - SLIDING MODE CONTROL
+KW  - TRACKING CONTROL
+KW  - ROBOT MANIPULATORS
+KW  - NONLINEAR-SYSTEMS
+KW  - ROBUST-CONTROL
+KW  - MOBILE ROBOTS
+KW  - SIDESLIP
+KW  - CONTROLLABILITY ER -
+ER  -
+
+TY  - JOUR
+AU  - Zhang, H
+AU  - He, ZP
+AU  - Wang, GF
+AU  - Fan, YS
+AU  - Song, BJ
+TI  - Ocean Currents Compensation-Based IAILOS-ROESOs Guidance and Adaptive Sliding Mode Path Following Control for Unmanned Surface Vehicles
+PY  - 2025
+JO  - INTERNATIONAL JOURNAL OF ADAPTIVE CONTROL AND SIGNAL PROCESSING
+DO  - 10.1002/acs.3966
+AB  - This article studies the problem of path following for unmanned surface vehicles (USVs) with ocean currents and input saturation and proposes an ocean currents compensation-based improved adaptive integral line-of-sight with reduced-order expanded state observers (IAILOS-ROESOs) guidance and adaptive integral sliding mode control (AISMC) compound guidance-control method. In the guidance module, an IAILOS-ROESOs guidance law is presented to estimate ocean currents of varying strengths, compensating for the effects of ocean currents at the kinematics level. Then, the AISMC law with the RBF neural network and parameter update law are introduced to approximate the lumped disturbances and estimate their bounds of the estimation error in the control module. Meanwhile, integrating nonlinear differential estimators and improved auxiliary dynamic systems with a smoothly switching function, achieves the differential signal filtering and input saturation, and the hyperbolic tangent saturation function with adjustable parameters is further used to improve the robustness of the system. Theoretical analysis indicates that all errors converge to zero. Finally, the effectiveness of the control strategy is verified through comparative simulations.
+KW  - adjustable parameters
+KW  - improved adaptive integral line-of-sight guidance
+KW  - nonlinear differential estimators
+KW  - ocean currents
+KW  - path following
+KW  - reduced-order extended state observers
+KW  - unmanned surface vehicles
+KW  - LINE-OF-SIGHT
+KW  - UNDERACTUATED SHIPS
+KW  - UNKNOWN DYNAMICS
+KW  - TRACKING CONTROL
+KW  - DISTURBANCES
+KW  - SYSTEM ER -
+ER  -
+
+TY  - JOUR
+AU  - Yan, ZP
+AU  - Yan, JY
+AU  - Cai, SJ
+AU  - Yu, YY
+AU  - Wu, YF
+TI  - Robust MPC-based trajectory tracking of autonomous underwater vehicles with model uncertainty
+PY  - 2023
+JO  - OCEAN ENGINEERING
+DO  - 10.1016/j.oceaneng.2023.115617
+AB  - A robust model predictive control (MPC) method with dual closed-loops is presented to handle trajectory tracking of autonomous underwater vehicle (AUV) with uncertain model parameters and random external perturbations. First, constraint conditions are set for the motion state and control input of the underwater vehicle based on its motion characteristics. The position controller takes the velocity increment as input, thus providing a smoothly varying desired velocity for the velocity controller. The velocity controller comprises nominal MPC and a nonlinear auxiliary control law to overcome the effect of random perturbations on AUV tracking control. Then, a finite-time extended state observer (FTESO) is designed to compensate for dynamic model uncertainty. Furthermore, Lyapunov stability theory is employed to analyse the stability of the controller and FTESO. Ultimately, through comparative simulation experiments, the proposed control framework's effectiveness and robustness are verified, proving it to be a feasible AUV trajectory tracking control method.
+KW  - Autonomous underwater vehicle
+KW  - Trajectory tracking
+KW  - Robust model predictive control
+KW  - Extended state observer
+KW  - PREDICTIVE CONTROL
+KW  - CONTROLLER
+KW  - STABILIZATION
+KW  - CONSTRAINTS
+KW  - ATTITUDE
+KW  - ROBOTS ER -
+ER  -

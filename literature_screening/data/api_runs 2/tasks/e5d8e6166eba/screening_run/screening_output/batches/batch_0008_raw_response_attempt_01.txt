@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0008",
+    "results": [
+        {
+            "paper_id": "paper_000071",
+            "decision": "exclude",
+            "reason": "研究对象为复合材料层压板，未涉及基桩、深基础或混凝土结构检测。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000072",
+            "decision": "exclude",
+            "reason": "研究对象为钢材内部夹杂物，未涉及基桩、深基础或混凝土结构检测。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000073",
+            "decision": "exclude",
+            "reason": "研究对象为碳纤维复合材料，未涉及基桩、深基础或混凝土结构检测。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000074",
+            "decision": "exclude",
+            "reason": "研究对象为增材制造金属部件，未涉及基桩、深基础或混凝土结构检测。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000075",
+            "decision": "exclude",
+            "reason": "研究内容为深度学习模型基准测试，未涉及具体的误差修正或信号处理算法。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000076",
+            "decision": "uncertain",
+            "reason": "涉及混凝土结构腐蚀损伤检测和深度学习信号处理，但未明确提及超声波透射法或声波CT层析成像。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000077",
+            "decision": "exclude",
+            "reason": "研究对象为碳纤维增强塑料，未涉及基桩、深基础或混凝土结构检测。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000078",
+            "decision": "uncertain",
+            "reason": "涉及铁路轨道无损检测和神经网络信号处理，但未明确提及超声波透射法或声波CT层析成像。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000079",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及混凝土超声波层析成像，并提出了路径优化和时间飞行优化等误差修正方法。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000080",
+            "decision": "exclude",
+            "reason": "研究内容为合成数据生成方法，未涉及具体的误差修正或信号处理算法。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        }
+    ]
+}

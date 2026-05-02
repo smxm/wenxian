@@ -1,0 +1,140 @@
+# 一、相关文献总体情况
+
+这批文献系统探讨了精神疾病和心理应激对肿瘤患者预后的影响及相关机制。研究主要关注慢性心理应激（如抑郁、焦虑）通过神经内分泌系统、免疫炎症反应、代谢重编程及肠道菌群等多重途径影响肿瘤发生、发展和预后的复杂机制。文献类型以综述为主，整合了现有证据，同时包含实证研究，从分子机制到临床干预策略均有涉及，为理解心理因素在肿瘤生物学行为中的作用提供了全面框架。
+
+# 二、类型划分
+
+## 神经内分泌与应激信号通路
+
+这类文献共同关注慢性心理应激如何通过激活下丘脑-垂体-肾上腺轴、交感神经系统等神经内分泌通路，释放应激激素和神经递质，进而调控肿瘤细胞功能、代谢重编程和免疫逃逸，从而影响肿瘤预后。
+
+- Chronic Psychological Stress in Oncogenesis: Multisystem Crosstalk and Multimodal Interventions
+- Chronic stress in cancer development and progression
+- Depression remodels tumor microenvironment to drive tumor progression: Bio-behavioural signalling pathways and clinical interventions
+- Neurobiology of cancer: Adrenergic signaling and drug repurposing
+- Chronic stress in solid tumor development: from mechanisms to interventions
+- Chronic stress: a fourth etiology in tumorigenesis?
+
+## 免疫炎症与肿瘤微环境
+
+这类文献共同探讨精神疾病（如抑郁）如何通过促炎反应、细胞因子释放及神经免疫交互等机制，重塑肿瘤微环境，抑制抗肿瘤免疫，促进炎症级联反应，从而驱动肿瘤进展并影响患者生存期。
+
+- Depression in breast cancer patients: Immunopathogenesis and immunotherapy
+- Biomarker opportunities in the treatment of cancer-related depression
+- Is depression the missing link between inflammatory mediators and cancer?
+
+## 临床实证与预后关联
+
+这类文献基于临床数据或综述证据，分析精神障碍（如抑郁、焦虑）与肿瘤患者生存率、死亡风险等预后指标的具体关联，为心理应激影响肿瘤预后提供实证支持，并涉及高危人群识别。
+
+- The effects of pre-existing psychiatric disorders on gastric cancer survival.
+
+## 其他相关文献
+
+该类文献共 1 篇，主要围绕“其他相关文献”这一方向展开。就“精神疾病/心理应激（如抑郁、焦虑）对肿瘤患者预后（生存期、复发率、死亡率等）影响及相关机制”而言，这一类型文献可用于梳理该方向的核心问题、常见研究路径及其参考价值。
+
+- The role of psychological stress in cancer initiation: clinical relevance and potential molecular mechanisms
+
+# 三、逐篇文献总结分析
+
+## Chronic Psychological Stress in Oncogenesis: Multisystem Crosstalk and Multimodal Interventions
+
+总结：
+该文献综述了慢性心理应激在肿瘤发生中的作用机制及干预策略。研究发现，慢性心理应激通过神经内分泌介导的激素失调损害免疫监视，同时促进肿瘤代谢适应和炎症级联反应，并揭示肠道菌群扰动在肿瘤发生中的放大作用。干预策略包括药物靶向神经内分泌通路、心理行为干预及中医药制剂，但精准神经调控仍面临挑战。
+
+分析：
+该文献对报告主题具有重要参考价值，它系统阐述了慢性心理应激影响肿瘤预后的多系统交互机制，如神经内分泌失调和代谢重编程，适合支撑肿瘤患者预后机制的研究脉络。文献中关于干预策略的讨论，可为设计针对心理应激的临床干预方案提供理论依据，应用于肿瘤治疗中的综合管理场景。
+
+## The effects of pre-existing psychiatric disorders on gastric cancer survival.
+
+总结：
+该研究基于SEER-Medicare数据库，分析了老年胃癌患者中既往精神障碍（PD）与生存率的关系。通过多变量Cox回归模型发现，有PD病史的患者总体死亡风险增加12%，但胃癌特异性生存无显著关联；其中重度PD患者比轻度PD患者的总体死亡风险高43%，胃癌特异性死亡风险高26%。
+
+分析：
+该文献为报告主题提供了实证数据，支持精神疾病影响肿瘤患者预后的机制分析，特别是重度精神障碍与生存率下降的关联。它适用于支撑心理应激与癌症预后交互作用的研究脉络，并为针对高危人群的干预策略设计提供参考。
+
+## Chronic stress in cancer development and progression
+
+总结：
+该文献系统探讨了慢性应激在癌症发生发展中的作用机制。研究分析了慢性应激的不同来源、影响癌症进展的分子机制以及涉及的应激介质，并讨论了慢性应激对癌症的多重影响及现有干预策略。结果表明慢性应激通过多种应激介质调节原发肿瘤和肿瘤微环境的不同组分，增加肿瘤负荷和死亡率，而管理慢性应激可减轻疾病负担并延长患者生存期。
+
+分析：
+该文献为报告主题提供了慢性应激影响肿瘤患者预后的直接分子机制证据，适合支撑心理应激通过调节肿瘤微环境影响预后的具体通路。文献中探讨的应激介质和干预策略可为开发针对肿瘤患者心理应激的临床管理方案提供理论依据，特别适用于构建精神心理因素与肿瘤生物学行为关联的研究框架。
+
+## Depression remodels tumor microenvironment to drive tumor progression: Bio-behavioural signalling pathways and clinical interventions
+
+总结：
+该文献综述探讨了抑郁和慢性应激如何通过激活下丘脑-垂体-肾上腺轴和交感神经系统等应激反应系统，重塑肿瘤微环境，从而促进肿瘤生长、血管生成、侵袭和转移。文章强调了应激相关介质通过多种信号通路抑制抗肿瘤免疫反应、增强炎症因子释放，并讨论了针对癌症相关抑郁患者的药理学干预策略，以抑制肿瘤进展并提升常规疗法和免疫疗法的疗效。
+
+分析：
+该文献对于当前报告主题具有重要参考价值，因为它系统整合了精神疾病与肿瘤预后之间的生物行为信号通路机制，适合支撑心理应激影响肿瘤患者预后的具体机制分析，如免疫抑制和炎症反应。此外，它提供了药理学干预的应用场景，有助于在系统设计中考虑结合行为干预和生物治疗，以改善癌症患者的临床结局。
+
+## Depression in breast cancer patients: Immunopathogenesis and immunotherapy
+
+总结：
+该综述探讨了乳腺癌患者抑郁的免疫发病机制，指出免疫细胞和细胞因子功能障碍通过影响色氨酸代谢、血清素水平和血脑屏障通透性导致抑郁。文章整合了肿瘤免疫学和神经免疫学的新证据，提出细胞因子或肠道菌群失调可能是抑郁与乳腺癌共有的病理基础，并展望了未来的研究方向与干预策略。
+
+分析：
+这篇文献对报告主题具有重要参考价值，它系统阐述了精神疾病（抑郁）影响肿瘤患者预后的免疫机制，特别是通过免疫失调介导的路径。它适合支撑机制研究，如免疫细胞和细胞因子在抑郁与乳腺癌交互中的作用，为理解心理应激如何恶化肿瘤预后提供了具体证据。此外，它提出的干预方向可应用于系统设计，例如开发针对免疫通路的心理-肿瘤整合治疗策略。
+
+## The role of psychological stress in cancer initiation: clinical relevance and potential molecular mechanisms
+
+总结：
+该文献综述探讨了心理应激在癌症发生中的作用，分析了其临床相关性及潜在的分子机制。文章提出应激反应可能通过特定生理和分子途径影响恶性细胞转化的早期阶段，为理解心理因素与癌症起始的关联提供了理论框架。
+
+分析：
+这篇文献对于报告主题具有重要参考价值，它系统梳理了心理应激与癌症起始的潜在机制，适合支撑精神疾病如抑郁、焦虑影响肿瘤患者预后的分子通路研究。文献中的综述证据可应用于探讨应激相关机制在肿瘤发生和预后中的作用，为设计干预策略提供理论基础。
+
+## Biomarker opportunities in the treatment of cancer-related depression
+
+总结：
+该综述探讨了癌症相关抑郁症的炎症机制，指出应激通过促炎反应诱发抑郁，并综述了炎症生物标志物与现有疗法的关联。文章强调需研究抗炎药物的抗抑郁作用，并认为调控神经免疫通路可减缓肿瘤进展。
+
+分析：
+该文献为报告主题提供了炎症机制的直接证据，支持精神应激通过免疫途径影响肿瘤预后的假设。它适用于支撑神经免疫交互在癌症抑郁中的作用，并提示生物标志物可用于诊断和治疗监测，为研究抗炎干预改善生存期提供参考。
+
+## Neurobiology of cancer: Adrenergic signaling and drug repurposing
+
+总结：
+该综述探讨了癌症神经科学中交感神经系统，特别是肾上腺素能信号在肿瘤细胞、微环境和宏观环境各层次调控肿瘤活动的作用。文章旨在总结肾上腺素能信号对癌症发展的影响，并评估干预该信号作为抗肿瘤治疗手段的现状与前景。
+
+分析：
+该文献为报告主题提供了机制层面的参考，通过阐述肾上腺素能信号在肿瘤进展中的关键作用，可支撑心理应激（如焦虑）通过神经通路影响肿瘤预后的研究脉络。它适合应用于探讨精神疾病如何通过交感神经系统调节肿瘤微环境，从而影响患者生存期或复发率的系统设计。
+
+## Chronic stress in solid tumor development: from mechanisms to interventions
+
+总结：
+该综述探讨了慢性应激通过神经内分泌系统影响肿瘤发展的机制，包括应激激素调控肿瘤细胞功能、代谢重编程和免疫逃逸等。文章还总结了针对慢性应激的药理和非药理干预方法，为癌症治疗提供了方向。
+
+分析：
+该文献对报告主题有重要参考价值，它系统阐述了慢性应激如何通过神经内分泌机制影响肿瘤微环境，适合支撑心理应激与肿瘤预后关联的机制研究。综述中总结的干预方法可为设计综合治疗策略提供依据，有助于整合精神疾病管理与肿瘤临床实践。
+
+## Chronic stress: a fourth etiology in tumorigenesis?
+
+总结：
+该文献探讨了慢性应激作为肿瘤发生潜在第四病因的可能性，指出其通过应激相关激素和神经递质影响肿瘤起始、促进与进展，并涉及肿瘤微环境重塑、微生物失调及耐药性促进等多重机制。研究认为缓解慢性应激影响可能成为癌症预防与治疗的有效途径，但将其评估为癌症病因仍面临挑战。
+
+分析：
+该文献为报告主题提供了慢性应激影响肿瘤预后的直接机制支持，特别是通过激素调控和肿瘤微环境变化解释精神疾病如何加剧癌症风险。它适用于支撑心理应激与肿瘤预后关联的研究脉络，如应激相关肥胖与癌症的机制通路，为设计针对应激的干预策略提供了理论依据。
+
+## Is depression the missing link between inflammatory mediators and cancer?
+
+总结：
+该文献探讨了癌症患者抑郁的潜在机制，提出炎症介质可能通过三条主要途径（如犬尿氨酸通路、下丘脑-垂体-肾上腺轴失调和谷氨酸能通路）连接抑郁与癌症，强调了神经炎症在其中的关键作用。研究旨在为癌症相关抑郁的治疗提供理论依据，以改善患者预后。
+
+分析：
+这篇文献对报告主题具有重要参考价值，它详细阐述了炎症机制如何介导抑郁与癌症的关联，适合支撑精神疾病影响肿瘤预后的病理生理学解释。其提出的三条通路可为研究肿瘤微环境中免疫炎症与心理应激的交互作用提供具体机制框架，有助于设计针对癌症患者抑郁的靶向干预策略。
+
+# 参考列表
+
+[1] Huang, B, An, H, Wu, H, et al. Chronic Psychological Stress in Oncogenesis: Multisystem Crosstalk and Multimodal Interventions[J]. Research, 2025.
+[2] Soddano, J, Ferris, J.S, Wagner, S, et al. The effects of pre-existing psychiatric disorders on gastric cancer survival.[J]. Journal of Clinical Oncology, 2024.
+[3] Niu, X, Wu, T, Zeng, L, et al. Chronic stress in cancer development and progression[J]. Science Bulletin, 2025.
+[4] Ge, M, Zhang, W, Zhang, W, et al. Depression remodels tumor microenvironment to drive tumor progression: Bio-behavioural signalling pathways and clinical interventions[J]. Journal of Advanced Research, 2025.
+[5] Yu, S, Li, W, Tang, L, et al. Depression in breast cancer patients: Immunopathogenesis and immunotherapy[J]. Cancer Letters, 2022.
+[6] Falcinelli, M, Thaker, P.H, Lutgendorf, S.K, et al. The role of psychological stress in cancer initiation: clinical relevance and potential molecular mechanisms[J]. Cancer Research, 2021.
+[7] Panjwani, A.A, Aguiar, S, Gascon, B, et al. Biomarker opportunities in the treatment of cancer-related depression[J]. Trends in Molecular Medicine, 2022.
+[8] Dong, Z.-K, Wang, Y.-F, Li, W.-P, et al. Neurobiology of cancer: Adrenergic signaling and drug repurposing[J]. Pharmacology and Therapeutics, 2024.
+[9] Yan, J, Chen, Y, Luo, M, et al. Chronic stress in solid tumor development: from mechanisms to interventions[J]. Journal of Biomedical Science, 2023.
+[10] khan, A, Song, M, Dong, Z. Chronic stress: a fourth etiology in tumorigenesis?[J]. Molecular Cancer, 2025.
+[11] Polityńska, B, Pokorska, O, Wojtukiewicz, A.M, et al. Is depression the missing link between inflammatory mediators and cancer?[J]. Pharmacology and Therapeutics, 2022.

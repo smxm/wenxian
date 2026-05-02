@@ -1,0 +1,400 @@
+{
+  "batch_id": "batch_0005",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000041",
+    "paper_000042",
+    "paper_000043",
+    "paper_000044",
+    "paper_000045",
+    "paper_000046",
+    "paper_000047",
+    "paper_000048",
+    "paper_000049",
+    "paper_000050"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000041",
+      "entry_type": "article",
+      "title": "Adaptive Disturbance-Observer-Based Continuous Sliding Mode Control for Small Autonomous Underwater Vehicles in the Trans-Atlantic Geotraverse Hydrothermal Field with Trajectory Modeling Based on the Path",
+      "authors": [
+        "Chen, GF",
+        "Liu, YH",
+        "Zhang, ZY",
+        "Xu, YF"
+      ],
+      "year": 2022,
+      "journal": "JOURNAL OF MARINE SCIENCE AND ENGINEERING",
+      "doi": "10.3390/jmse10060721",
+      "abstract": "Considering intense hydrothermal activities and rugged topography in a near-bottom environment of the trans-Atlantic geotraverse (TAG) hydrothermal mound, a small autonomous underwater vehicle (S-AUV) will suffer from time-varying disturbances, model uncertainties, actuator faults, and input saturations. To handle these issues, a fault-tolerant adaptive robust sliding mode control method is presented in this paper. Firstly, unknown disturbances, model uncertainties, and actuator faults of the S-AUV are synthesized into a lumped uncertain vector. Without requiring the upper bound and gradient of the uncertainties, a continuous adaptive finite-time extended state observer is designed to estimate the lumped uncertain vector. Then, an auxiliary dynamic system composed of continuous functions is introduced to deal with input saturations, thereby contributing to achieving fixed-time trajectory tracking control of S-AUVs. Based on a designed continuous fixed-time nonsingular fast sliding mode surface, the proposed continuous adaptive controller is chattering free. Simulated topography is built according to topographic data of the TAG mound, and a smooth trajectory model is constructed by cubic spline interpolation. Comprehensive simulations performed on an actual S-AUV model are given to validate the effectiveness and superiority of the presented algorithm.",
+      "keywords": [
+        "TAG hydrothermal mound",
+        "small autonomous underwater vehicle",
+        "fixed-time trajectory tracking control",
+        "adaptive extended state observer",
+        "fixed-time sliding mode surface",
+        "modeled trajectory",
+        "FAULT-TOLERANT CONTROL",
+        "TIME TRACKING CONTROL",
+        "SULFIDE",
+        "SYSTEM"
+      ],
+      "normalized_title": "adaptive disturbance observer based continuous sliding mode control for small autonomous underwater vehicles in the trans atlantic geotraverse hydrothermal field with trajectory modeling based on the path",
+      "raw_bibtex": "@ARTICLE{10.3390/jmse10060721,\n\tauthor = {Chen, GF and Liu, YH and Zhang, ZY and Xu, YF},\n\ttitle = {Adaptive Disturbance-Observer-Based Continuous Sliding Mode Control for Small Autonomous Underwater Vehicles in the Trans-Atlantic Geotraverse Hydrothermal Field with Trajectory Modeling Based on the Path},\n\tjournal = {JOURNAL OF MARINE SCIENCE AND ENGINEERING},\n\tyear = {2022},\n\tkeywords = {TAG hydrothermal mound; small autonomous underwater vehicle; fixed-time trajectory tracking control; adaptive extended state observer; fixed-time sliding mode surface; modeled trajectory; FAULT-TOLERANT CONTROL; TIME TRACKING CONTROL; SULFIDE; SYSTEM},\n\tabstract = {Considering intense hydrothermal activities and rugged topography in a near-bottom environment of the trans-Atlantic geotraverse (TAG) hydrothermal mound, a small autonomous underwater vehicle (S-AUV) will suffer from time-varying disturbances, model uncertainties, actuator faults, and input saturations. To handle these issues, a fault-tolerant adaptive robust sliding mode control method is presented in this paper. Firstly, unknown disturbances, model uncertainties, and actuator faults of the S-AUV are synthesized into a lumped uncertain vector. Without requiring the upper bound and gradient of the uncertainties, a continuous adaptive finite-time extended state observer is designed to estimate the lumped uncertain vector. Then, an auxiliary dynamic system composed of continuous functions is introduced to deal with input saturations, thereby contributing to achieving fixed-time trajectory tracking control of S-AUVs. Based on a designed continuous fixed-time nonsingular fast sliding mode surface, the proposed continuous adaptive controller is chattering free. Simulated topography is built according to topographic data of the TAG mound, and a smooth trajectory model is constructed by cubic spline interpolation. Comprehensive simulations performed on an actual S-AUV model are given to validate the effectiveness and superiority of the presented algorithm.},\n\tdoi = {10.3390/jmse10060721},\n\tvolume = {10},\n\tnumber = {6},\n\tissn = {2077-1312},\n\tnote = {Times Cited in Web of Science Core Collection: 5 Total Times Cited: 5 Cited Reference Count: 47 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/jmse10060721"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000042",
+      "entry_type": "article",
+      "title": "Finite-Time-Prescribed Performance-Based Platoon Formation Control for Unmanned Surface Vehicles Using Event-Triggered Extended State Observer",
+      "authors": [
+        "Wang, W",
+        "Shan, QH",
+        "Li, TS",
+        "Chen, CLP",
+        "Wang, Y"
+      ],
+      "year": 2024,
+      "journal": "IEEE TRANSACTIONS ON VEHICULAR TECHNOLOGY",
+      "doi": "10.1109/tvt.2024.3432742",
+      "abstract": "This article investigates the finite-time-prescribed performance-based (FTPP) platoon formation control problem of unmanned surface vehicles (USVs) with connectivity preservation and collision avoidance. Each vehicle is subject to unmeasured velocities, model uncertainties, external disturbances and actuator input delay. By introducing a finite-time performance function (FTPF), the desired transient and steady-state performances can be guaranteed in finite time, which makes the line-of-sight (LOS) error and angle error be limited within the desired constraints to achieve collision avoidance and connectivity maintenance. Furthermore, a relevant variable containing constrained upper and lower bounds is designed to further realize the FTPP with asymmetric properties. In order to recover unmeasured velocity information, estimate uncertain dynamics of the vehicle and compensate for external disturbances, an extended state observer (ESO) based on position-heading information is proposed. Thereinto, the event-triggered mechanism is introduced to reduce the communication burden from the sensor to the observer channel. The effects of actuator input delay are eliminated by using the Pade approximation transform. A second-order linear tracking differentiator (TD) is introduced into the kinematic design to avoid the measurement of acceleration in the dynamics control design. The stability analysis shows that the proposed control scheme ensures that all signals of the USVs are bounded, and the Zeno behavior will not occur. Moreover, the distance between the two neighboring USVs converges to the prescribed range, meanwhile, the tracking angle error limits to a desired arbitrarily small region within finite time. Finally, the simulation results further confirm the effectiveness of the proposed control scheme.",
+      "keywords": [
+        "Formation control",
+        "Actuators",
+        "Observers",
+        "Delays",
+        "Collision avoidance",
+        "Vehicle dynamics",
+        "Transient analysis",
+        "Finite-time-prescribed performance (FTPP)",
+        "unmanned surface vehicles (USVs)",
+        "connectivity preservation",
+        "collision avoidance",
+        "extended state observer (ESO)",
+        "TRACKING CONTROL",
+        "NONLINEAR-SYSTEMS",
+        "VESSELS"
+      ],
+      "normalized_title": "finite time prescribed performance based platoon formation control for unmanned surface vehicles using event triggered extended state observer",
+      "raw_bibtex": "@ARTICLE{10.1109/TVT.2024.3432742,\n\tauthor = {Wang, W and Shan, QH and Li, TS and Chen, CLP and Wang, Y},\n\ttitle = {Finite-Time-Prescribed Performance-Based Platoon Formation Control for Unmanned Surface Vehicles Using Event-Triggered Extended State Observer},\n\tjournal = {IEEE TRANSACTIONS ON VEHICULAR TECHNOLOGY},\n\tyear = {2024},\n\tkeywords = {Formation control; Actuators; Observers; Delays; Collision avoidance; Vehicle dynamics; Transient analysis; Finite-time-prescribed performance (FTPP); unmanned surface vehicles (USVs); connectivity preservation; collision avoidance; extended state observer (ESO); TRACKING CONTROL; NONLINEAR-SYSTEMS; VESSELS},\n\tabstract = {This article investigates the finite-time-prescribed performance-based (FTPP) platoon formation control problem of unmanned surface vehicles (USVs) with connectivity preservation and collision avoidance. Each vehicle is subject to unmeasured velocities, model uncertainties, external disturbances and actuator input delay. By introducing a finite-time performance function (FTPF), the desired transient and steady-state performances can be guaranteed in finite time, which makes the line-of-sight (LOS) error and angle error be limited within the desired constraints to achieve collision avoidance and connectivity maintenance. Furthermore, a relevant variable containing constrained upper and lower bounds is designed to further realize the FTPP with asymmetric properties. In order to recover unmeasured velocity information, estimate uncertain dynamics of the vehicle and compensate for external disturbances, an extended state observer (ESO) based on position-heading information is proposed. Thereinto, the event-triggered mechanism is introduced to reduce the communication burden from the sensor to the observer channel. The effects of actuator input delay are eliminated by using the Pade approximation transform. A second-order linear tracking differentiator (TD) is introduced into the kinematic design to avoid the measurement of acceleration in the dynamics control design. The stability analysis shows that the proposed control scheme ensures that all signals of the USVs are bounded, and the Zeno behavior will not occur. Moreover, the distance between the two neighboring USVs converges to the prescribed range, meanwhile, the tracking angle error limits to a desired arbitrarily small region within finite time. Finally, the simulation results further confirm the effectiveness of the proposed control scheme.},\n\tdoi = {10.1109/TVT.2024.3432742},\n\tvolume = {73},\n\tnumber = {12},\n\tpages = {18460-18471},\n\tissn = {0018-9545},\n\tnote = {Times Cited in Web of Science Core Collection: 14 Total Times Cited: 14 Cited Reference Count: 45 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TVT.2024.3432742"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000043",
+      "entry_type": "article",
+      "title": "Trajectory tracking control by PCH method for AUVs with input saturations",
+      "authors": [
+        "Chen, HN",
+        "Zhou, P",
+        "Yang, RM",
+        "Chen, Y"
+      ],
+      "year": 2025,
+      "journal": "INTERNATIONAL JOURNAL OF SYSTEMS SCIENCE",
+      "doi": "10.1080/00207721.2025.2470406",
+      "abstract": "This article is concerned with the three-dimensional (3D) trajectory tracking control (TTC) problem for a type of autonomous underwater vehicles (AUVs) subject to unknown time-varying disturbances, input saturations, and energy constraints. With the help of port-controlled Hamiltonian (PCH) method, the system model under consideration is firstly transformed into a Hamiltonian form, and a reduced-order extended state observer (ESO) is constructed to obtain the disturbance estimate. Then, a desired state-error controller is designed to guarantee the prescribed trajectory tracking performance. Subsequently, by introducing an auxiliary system enabling to decrease the effects of input saturations, the uniformly ultimate boundedness (UUB) is achieved for the closed-loop feedback system. Finally, a simulation example is given to demonstrate the effectiveness of the developed TTC approach.",
+      "keywords": [
+        "Trajectory tracking control (TTC)",
+        "autonomous underwater vehicle (AUV)",
+        "port-controlled Hamiltonian (PCH)",
+        "input saturation",
+        "uniformly ultimate boundedness (UUB)",
+        "AUTONOMOUS UNDERWATER VEHICLE",
+        "PASSIVITY-BASED CONTROL",
+        "INTERCONNECTION"
+      ],
+      "normalized_title": "trajectory tracking control by pch method for auvs with input saturations",
+      "raw_bibtex": "@ARTICLE{10.1080/00207721.2025.2470406,\n\tauthor = {Chen, HN and Zhou, P and Yang, RM and Chen, Y},\n\ttitle = {Trajectory tracking control by PCH method for AUVs with input saturations},\n\tjournal = {INTERNATIONAL JOURNAL OF SYSTEMS SCIENCE},\n\tyear = {2025},\n\tkeywords = {Trajectory tracking control (TTC); autonomous underwater vehicle (AUV); port-controlled Hamiltonian (PCH); input saturation; uniformly ultimate boundedness (UUB); AUTONOMOUS UNDERWATER VEHICLE; PASSIVITY-BASED CONTROL; INTERCONNECTION},\n\tabstract = {This article is concerned with the three-dimensional (3D) trajectory tracking control (TTC) problem for a type of autonomous underwater vehicles (AUVs) subject to unknown time-varying disturbances, input saturations, and energy constraints. With the help of port-controlled Hamiltonian (PCH) method, the system model under consideration is firstly transformed into a Hamiltonian form, and a reduced-order extended state observer (ESO) is constructed to obtain the disturbance estimate. Then, a desired state-error controller is designed to guarantee the prescribed trajectory tracking performance. Subsequently, by introducing an auxiliary system enabling to decrease the effects of input saturations, the uniformly ultimate boundedness (UUB) is achieved for the closed-loop feedback system. Finally, a simulation example is given to demonstrate the effectiveness of the developed TTC approach.},\n\tdoi = {10.1080/00207721.2025.2470406},\n\tvolume = {56},\n\tnumber = {14},\n\tpages = {3512-3527},\n\tissn = {0020-7721},\n\tnote = {Times Cited in Web of Science Core Collection: 2 Total Times Cited: 3 Cited Reference Count: 54 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1080/00207721.2025.2470406"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000044",
+      "entry_type": "article",
+      "title": "Fixed-Time Tracking Controller With Online Obstacle Avoiding Guidance for Unmanned Surface Vehicles",
+      "authors": [
+        "Zhu, KW",
+        "Kong, SH",
+        "Yu, GH",
+        "Li, YN",
+        "Wu, F",
+        "Li, ZK",
+        "Yu, JZ"
+      ],
+      "year": 2026,
+      "journal": "IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING",
+      "doi": "10.1109/tase.2026.3664064",
+      "abstract": "With respect to the accurate tracking control for unmanned surface vehicles (USVs), this paper proposes a novel hierarchical control structure consisting of a velocity planner and a tracking controller. With full consideration of control accuracy and tracking safety, a model predictive control planning method based on dynamic artificial potential field method (DAPF-MPC) is proposed, aiming to generate the current optimal reference tracking velocity and achieve online obstacle avoidance guidance. Simultaneously, a fixed-time generalized super-twisting controller based on an extended state observer (ESO-FiTGST) is proposed to restrict the convergence time and tackle the challenges resulting from the uncertain disturbances and model parameters. Noticeably, the design process of the proposed control law and its rigorous stability analysis, especially for the computable fixed-time convergence property, are detailed. Ultimately, the simulation and experimental results demonstrate the superiority and feasibility of the proposed method, providing a reliable and effective reference solution for tracking control tasks of USVs in aquatic scenarios with complex obstacles.",
+      "keywords": [
+        "Collision avoidance",
+        "Planning",
+        "Convergence",
+        "Safety",
+        "Target tracking",
+        "Vehicle dynamics",
+        "Cost function",
+        "Computational efficiency",
+        "Accuracy",
+        "Vectors",
+        "Unmanned surface vehicle",
+        "fixed-time stability",
+        "robust control",
+        "tracking control",
+        "model predictive control",
+        "COLLISION-AVOIDANCE",
+        "STATE"
+      ],
+      "normalized_title": "fixed time tracking controller with online obstacle avoiding guidance for unmanned surface vehicles",
+      "raw_bibtex": "@ARTICLE{10.1109/TASE.2026.3664064,\n\tauthor = {Zhu, KW and Kong, SH and Yu, GH and Li, YN and Wu, F and Li, ZK and Yu, JZ},\n\ttitle = {Fixed-Time Tracking Controller With Online Obstacle Avoiding Guidance for Unmanned Surface Vehicles},\n\tjournal = {IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING},\n\tyear = {2026},\n\tkeywords = {Collision avoidance; Planning; Convergence; Safety; Target tracking; Vehicle dynamics; Cost function; Computational efficiency; Accuracy; Vectors; Unmanned surface vehicle; fixed-time stability; robust control; tracking control; model predictive control; COLLISION-AVOIDANCE; STATE},\n\tabstract = {With respect to the accurate tracking control for unmanned surface vehicles (USVs), this paper proposes a novel hierarchical control structure consisting of a velocity planner and a tracking controller. With full consideration of control accuracy and tracking safety, a model predictive control planning method based on dynamic artificial potential field method (DAPF-MPC) is proposed, aiming to generate the current optimal reference tracking velocity and achieve online obstacle avoidance guidance. Simultaneously, a fixed-time generalized super-twisting controller based on an extended state observer (ESO-FiTGST) is proposed to restrict the convergence time and tackle the challenges resulting from the uncertain disturbances and model parameters. Noticeably, the design process of the proposed control law and its rigorous stability analysis, especially for the computable fixed-time convergence property, are detailed. Ultimately, the simulation and experimental results demonstrate the superiority and feasibility of the proposed method, providing a reliable and effective reference solution for tracking control tasks of USVs in aquatic scenarios with complex obstacles.},\n\tdoi = {10.1109/TASE.2026.3664064},\n\tvolume = {23},\n\tpages = {4770-4784},\n\tissn = {1545-5955},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 32 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TASE.2026.3664064"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000045",
+      "entry_type": "article",
+      "title": "Global fixed-time trajectory tracking control of underactuated USV based on fixed-time extended state observer",
+      "authors": [
+        "Fan, YS",
+        "Qiu, BB",
+        "Liu, L",
+        "Yang, Y"
+      ],
+      "year": 2023,
+      "journal": "ISA TRANSACTIONS",
+      "doi": "10.1016/j.isatra.2022.06.011",
+      "abstract": "This paper studies the trajectory tracking problem of unmanned surface vehicle subject to unmeasurable velocities and unknown disturbances. By combining a fixed-time extended state observer (FESO) and a fixed-time differentiator, a fixed-time sliding mode control (FTSMC) law is proposed, in which a saturation function is adopted to make the terminal sliding mode surface leave the singularity area. The value of this paper can be described: first, this paper designs a novel guidance law that can converge in a fixed time to reduce the convergence time of the error. Then, unmeasurable velocities and lumped disturbances are estimated by applying a FESO. Meanwhile, a fixed-time differentiator is used to obtain real-time differential signals, thus reducing the difficulty of controller design. Subsequently, a novel auxiliary dynamic system is designed to address actuator saturation. According to Lyapunov's theory, the entire closed-loop control system has uniformly global fixed-time stability (UGFTS). The superiority of the designed controller is demonstrated through numerical simulations. (c) 2022 ISA. Published by Elsevier Ltd. All rights reserved.",
+      "keywords": [
+        "Unmanned surface vehicle",
+        "Trajectory tracking",
+        "Fixed -time differentiator",
+        "FTSMC",
+        "FESO",
+        "SLIDING-MODE CONTROL",
+        "UNMANNED SURFACE VEHICLE",
+        "PREDICTIVE CONTROL",
+        "VESSELS",
+        "NAVIGATION",
+        "AVOIDANCE",
+        "GUIDANCE"
+      ],
+      "normalized_title": "global fixed time trajectory tracking control of underactuated usv based on fixed time extended state observer",
+      "raw_bibtex": "@ARTICLE{10.1016/j.isatra.2022.06.011,\n\tauthor = {Fan, YS and Qiu, BB and Liu, L and Yang, Y},\n\ttitle = {Global fixed-time trajectory tracking control of underactuated USV based on fixed-time extended state observer},\n\tjournal = {ISA TRANSACTIONS},\n\tyear = {2023},\n\tkeywords = {Unmanned surface vehicle; Trajectory tracking; Fixed -time differentiator; FTSMC; FESO; SLIDING-MODE CONTROL; UNMANNED SURFACE VEHICLE; PREDICTIVE CONTROL; VESSELS; NAVIGATION; AVOIDANCE; GUIDANCE},\n\tabstract = {This paper studies the trajectory tracking problem of unmanned surface vehicle subject to unmeasurable velocities and unknown disturbances. By combining a fixed-time extended state observer (FESO) and a fixed-time differentiator, a fixed-time sliding mode control (FTSMC) law is proposed, in which a saturation function is adopted to make the terminal sliding mode surface leave the singularity area. The value of this paper can be described: first, this paper designs a novel guidance law that can converge in a fixed time to reduce the convergence time of the error. Then, unmeasurable velocities and lumped disturbances are estimated by applying a FESO. Meanwhile, a fixed-time differentiator is used to obtain real-time differential signals, thus reducing the difficulty of controller design. Subsequently, a novel auxiliary dynamic system is designed to address actuator saturation. According to Lyapunov's theory, the entire closed-loop control system has uniformly global fixed-time stability (UGFTS). The superiority of the designed controller is demonstrated through numerical simulations. (c) 2022 ISA. Published by Elsevier Ltd. All rights reserved.},\n\tdoi = {10.1016/j.isatra.2022.06.011},\n\tvolume = {132},\n\tpages = {267-277},\n\tissn = {0019-0578},\n\tnote = {Times Cited in Web of Science Core Collection: 140 Total Times Cited: 147 Cited Reference Count: 43 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.isatra.2022.06.011"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000046",
+      "entry_type": "article",
+      "title": "Finite-Time Lyapunov-Based Model Predictive Control of Unmanned Surface Vehicles Against Denial-of-Service Attacks: An Independent of Prediction Horizon Approach",
+      "authors": [
+        "Zhou, YX",
+        "Hao, LY",
+        "Wang, RZ",
+        "Shen, C"
+      ],
+      "year": 2026,
+      "journal": "INTERNATIONAL JOURNAL OF ADAPTIVE CONTROL AND SIGNAL PROCESSING",
+      "doi": "10.1002/acs.4083",
+      "abstract": "The resilience and robustness of model predictive control are typically contingent upon an adequately extended prediction horizon, yet it is constrained in real-time applications by limited computational resources. To tackle this issue, this paper introduces a finite-time Lyapunov-based model predictive control (FTLMPC) approach, independent of the prediction horizon, for unmanned surface vehicles (USVs) subject to external disturbances and denial-of-service (DoS) attacks. Firstly, a finite-time auxiliary control system is integrated within the FTLMPC framework. This system incorporates a finite-time extended state observer (FTESO) for precise disturbance estimation and a finite-time backstepping control law to guarantee zero tracking errors. Consequently, FTLMPC ensures finite-time stability during each DoS attack interval, effectively preventing error accumulation despite the presence of disturbances and DoS attacks. Secondly, a novel compensation scheme is introduced to mitigate the information loss induced by DoS attacks, wherein the compensation signal is solely derived from the control signal at the moment of the last successful transmission, thus minimizing reliance on the prediction horizon. It enables flexible adaptation of the prediction horizon and control performance according to the available computational resources. Finally, the simulation results validate the superior control performance of the proposed strategy.",
+      "keywords": [
+        "actuator saturations",
+        "fault-tolerant control",
+        "Lyapunov-based model predictive control",
+        "trajectory tracking",
+        "unmanned surface vehicles",
+        "TRAJECTORY TRACKING CONTROL",
+        "MARINE VEHICLES",
+        "STATE",
+        "SYSTEMS"
+      ],
+      "normalized_title": "finite time lyapunov based model predictive control of unmanned surface vehicles against denial of service attacks an independent of prediction horizon approach",
+      "raw_bibtex": "@ARTICLE{10.1002/acs.4083,\n\tauthor = {Zhou, YX and Hao, LY and Wang, RZ and Shen, C},\n\ttitle = {Finite-Time Lyapunov-Based Model Predictive Control of Unmanned Surface Vehicles Against Denial-of-Service Attacks: An Independent of Prediction Horizon Approach},\n\tjournal = {INTERNATIONAL JOURNAL OF ADAPTIVE CONTROL AND SIGNAL PROCESSING},\n\tyear = {2026},\n\tkeywords = {actuator saturations; fault-tolerant control; Lyapunov-based model predictive control; trajectory tracking; unmanned surface vehicles; TRAJECTORY TRACKING CONTROL; MARINE VEHICLES; STATE; SYSTEMS},\n\tabstract = {The resilience and robustness of model predictive control are typically contingent upon an adequately extended prediction horizon, yet it is constrained in real-time applications by limited computational resources. To tackle this issue, this paper introduces a finite-time Lyapunov-based model predictive control (FTLMPC) approach, independent of the prediction horizon, for unmanned surface vehicles (USVs) subject to external disturbances and denial-of-service (DoS) attacks. Firstly, a finite-time auxiliary control system is integrated within the FTLMPC framework. This system incorporates a finite-time extended state observer (FTESO) for precise disturbance estimation and a finite-time backstepping control law to guarantee zero tracking errors. Consequently, FTLMPC ensures finite-time stability during each DoS attack interval, effectively preventing error accumulation despite the presence of disturbances and DoS attacks. Secondly, a novel compensation scheme is introduced to mitigate the information loss induced by DoS attacks, wherein the compensation signal is solely derived from the control signal at the moment of the last successful transmission, thus minimizing reliance on the prediction horizon. It enables flexible adaptation of the prediction horizon and control performance according to the available computational resources. Finally, the simulation results validate the superior control performance of the proposed strategy.},\n\tdoi = {10.1002/acs.4083},\n\tvolume = {40},\n\tnumber = {1},\n\tpages = {63-78},\n\tissn = {0890-6327},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 45 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1002/acs.4083"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000047",
+      "entry_type": "article",
+      "title": "Fuzzy Trajectory Tracking Control of Under-Actuated Unmanned Surface Vehicles With Ocean Current and Input Quantization",
+      "authors": [
+        "Ning, J",
+        "Wang, Y",
+        "Wang, EY",
+        "Liu, L",
+        "Philip Chen, CL",
+        "Tong, SC"
+      ],
+      "year": 2025,
+      "journal": "IEEE TRANSACTIONS ON SYSTEMS MAN CYBERNETICS-SYSTEMS",
+      "doi": "10.1109/tsmc.2024.3460370",
+      "abstract": "This article focuses on the trajectory tracking control of under-actuated unmanned surface vehicles subject to unknown ocean current and input quantization. Regarding kinematics, we devise an extended-state-observer-based guidance law capable of compensating for ocean currents to track the intended trajectory. Concerning kinetics, we propose an event-triggered adaptive fuzzy quantization control law using a linear analytical model to depict input quantization, eliminating the need for prior quantization parameter information. A notable aspect is the reduction in both execution frequency and magnitude, thereby mitigating communication burdens. The stability of this control strategy is proofed through input-to-state stability analysis. Simulation experiments are conducted to affirm the viability of the event-triggered adaptive fuzzy quantization control strategy.",
+      "keywords": [
+        "Event-triggered mechanism",
+        "extended state observer",
+        "fuzzy adaptive control",
+        "input quantization",
+        "ocean current",
+        "unmanned surface vehicles (USVs)",
+        "ADAPTIVE-CONTROL",
+        "SYSTEMS"
+      ],
+      "normalized_title": "fuzzy trajectory tracking control of under actuated unmanned surface vehicles with ocean current and input quantization",
+      "raw_bibtex": "@ARTICLE{10.1109/TSMC.2024.3460370,\n\tauthor = {Ning, J and Wang, Y and Wang, EY and Liu, L and Philip Chen, CL and Tong, SC},\n\ttitle = {Fuzzy Trajectory Tracking Control of Under-Actuated Unmanned Surface Vehicles With Ocean Current and Input Quantization},\n\tjournal = {IEEE TRANSACTIONS ON SYSTEMS MAN CYBERNETICS-SYSTEMS},\n\tyear = {2025},\n\tkeywords = {Event-triggered mechanism; extended state observer; fuzzy adaptive control; input quantization; ocean current; unmanned surface vehicles (USVs); ADAPTIVE-CONTROL; SYSTEMS},\n\tabstract = {This article focuses on the trajectory tracking control of under-actuated unmanned surface vehicles subject to unknown ocean current and input quantization. Regarding kinematics, we devise an extended-state-observer-based guidance law capable of compensating for ocean currents to track the intended trajectory. Concerning kinetics, we propose an event-triggered adaptive fuzzy quantization control law using a linear analytical model to depict input quantization, eliminating the need for prior quantization parameter information. A notable aspect is the reduction in both execution frequency and magnitude, thereby mitigating communication burdens. The stability of this control strategy is proofed through input-to-state stability analysis. Simulation experiments are conducted to affirm the viability of the event-triggered adaptive fuzzy quantization control strategy.},\n\tdoi = {10.1109/TSMC.2024.3460370},\n\tvolume = {55},\n\tnumber = {1},\n\tpages = {63-72},\n\tissn = {2168-2216},\n\tnote = {Times Cited in Web of Science Core Collection: 17 Total Times Cited: 18 Cited Reference Count: 51 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TSMC.2024.3460370"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000048",
+      "entry_type": "article",
+      "title": "Observer-Based Platoon Formation Control With Prescribed Performance Guarantees for Unmanned Surface Vehicles in Presence of Nonsmooth Input Characteristics",
+      "authors": [
+        "Wang, W",
+        "Gao, XY",
+        "Li, TS",
+        "Wang, Y",
+        "Chen, CLP"
+      ],
+      "year": 2024,
+      "journal": "IEEE TRANSACTIONS ON CIRCUITS AND SYSTEMS II-EXPRESS BRIEFS",
+      "doi": "10.1109/tcsii.2023.3315733",
+      "abstract": "This brief focuses on the platoon formation control for a fleet of unmanned surface vehicles (USVs) with uncertain kinetics, unmeasured velocities, input saturation and dead zone to ensure collision avoidance (CA) and connectivity maintenance (CM). The prescribed performance techniques are implemented to ensure that the formation errors between each USV and its leader are constrained within predefined ranges and angle errors. This enables CA and CM to ultimately remaining within the requested line-of-sight (LOS) range. Moreover, by combining a known smooth function with the extended state observers (ESOs), which cannot only recover relevant velocity information but also compensate for the effects caused by input saturation, dead zone, uncertain kinetics and external disturbances. Consequently, this brief presents a prescribed performance formation control scheme that guarantees uniformly ultimate boundedness of the closed-loop system. Based on the simulation results, it has been confirmed that the developed control strategy is effective.",
+      "keywords": [
+        "Formation control",
+        "Collision avoidance",
+        "Observers",
+        "Navigation",
+        "Maintenance engineering",
+        "Kinetic theory",
+        "Control design",
+        "Platoon formation control",
+        "unmanned surface vehicles",
+        "prescribed performance",
+        "extended state observers",
+        "nonsmooth input"
+      ],
+      "normalized_title": "observer based platoon formation control with prescribed performance guarantees for unmanned surface vehicles in presence of nonsmooth input characteristics",
+      "raw_bibtex": "@ARTICLE{10.1109/TCSII.2023.3315733,\n\tauthor = {Wang, W and Gao, XY and Li, TS and Wang, Y and Chen, CLP},\n\ttitle = {Observer-Based Platoon Formation Control With Prescribed Performance Guarantees for Unmanned Surface Vehicles in Presence of Nonsmooth Input Characteristics},\n\tjournal = {IEEE TRANSACTIONS ON CIRCUITS AND SYSTEMS II-EXPRESS BRIEFS},\n\tyear = {2024},\n\tkeywords = {Formation control; Collision avoidance; Observers; Navigation; Maintenance engineering; Kinetic theory; Control design; Platoon formation control; unmanned surface vehicles; prescribed performance; extended state observers; nonsmooth input},\n\tabstract = {This brief focuses on the platoon formation control for a fleet of unmanned surface vehicles (USVs) with uncertain kinetics, unmeasured velocities, input saturation and dead zone to ensure collision avoidance (CA) and connectivity maintenance (CM). The prescribed performance techniques are implemented to ensure that the formation errors between each USV and its leader are constrained within predefined ranges and angle errors. This enables CA and CM to ultimately remaining within the requested line-of-sight (LOS) range. Moreover, by combining a known smooth function with the extended state observers (ESOs), which cannot only recover relevant velocity information but also compensate for the effects caused by input saturation, dead zone, uncertain kinetics and external disturbances. Consequently, this brief presents a prescribed performance formation control scheme that guarantees uniformly ultimate boundedness of the closed-loop system. Based on the simulation results, it has been confirmed that the developed control strategy is effective.},\n\tdoi = {10.1109/TCSII.2023.3315733},\n\tvolume = {71},\n\tnumber = {3},\n\tpages = {1226-1230},\n\tissn = {1549-7747},\n\tnote = {Times Cited in Web of Science Core Collection: 21 Total Times Cited: 21 Cited Reference Count: 22 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TCSII.2023.3315733"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000049",
+      "entry_type": "article",
+      "title": "Trajectory tracking control of vectored thruster autonomous underwater vehicles based on deep reinforcement learning",
+      "authors": [
+        "Liu, T",
+        "Zhao, JT",
+        "Hu, YL",
+        "Huang, JH"
+      ],
+      "year": 2025,
+      "journal": "SHIPS AND OFFSHORE STRUCTURES",
+      "doi": "10.1080/17445302.2024.2391235",
+      "abstract": "Vectored thruster autonomous underwater vehicles (AUVs) offer superior manoeuvrability compared to traditional fin and rudder systems, especially at low or zero velocities. However, controlling these AUVs becomes challenging in the presence of unpredictable interference forces and external water flow velocities. This paper introduces a novel three-dimensional trajectory tracking method for vectored thruster AUVs using reinforcement learning, enabling the system to learn optimal control policies through environmental interaction. A 5-degree of freedom (5-DOF) model is developed from the kinematics and dynamics equations of the underactuated AUV. An extended state observer (ESO) is used to estimate the differential expansion state based on observed variables. A reinforcement learning-based trajectory tracking strategy is then implemented. Simulation experiments demonstrate the method's effectiveness in precisely controlling AUVs under varying environmental conditions, achieving exceptional tracking accuracy even in the presence of random interference forces and external water flow velocities.",
+      "keywords": [
+        "Reinforcement learning (RL)",
+        "autonomous underwater vehicle (AUV)",
+        "trajectory tracking",
+        "extended state observer (ESO)",
+        "environmental interference"
+      ],
+      "normalized_title": "trajectory tracking control of vectored thruster autonomous underwater vehicles based on deep reinforcement learning",
+      "raw_bibtex": "@ARTICLE{10.1080/17445302.2024.2391235,\n\tauthor = {Liu, T and Zhao, JT and Hu, YL and Huang, JH},\n\ttitle = {Trajectory tracking control of vectored thruster autonomous underwater vehicles based on deep reinforcement learning},\n\tjournal = {SHIPS AND OFFSHORE STRUCTURES},\n\tyear = {2025},\n\tkeywords = {Reinforcement learning (RL); autonomous underwater vehicle (AUV); trajectory tracking; extended state observer (ESO); environmental interference},\n\tabstract = {Vectored thruster autonomous underwater vehicles (AUVs) offer superior manoeuvrability compared to traditional fin and rudder systems, especially at low or zero velocities. However, controlling these AUVs becomes challenging in the presence of unpredictable interference forces and external water flow velocities. This paper introduces a novel three-dimensional trajectory tracking method for vectored thruster AUVs using reinforcement learning, enabling the system to learn optimal control policies through environmental interaction. A 5-degree of freedom (5-DOF) model is developed from the kinematics and dynamics equations of the underactuated AUV. An extended state observer (ESO) is used to estimate the differential expansion state based on observed variables. A reinforcement learning-based trajectory tracking strategy is then implemented. Simulation experiments demonstrate the method's effectiveness in precisely controlling AUVs under varying environmental conditions, achieving exceptional tracking accuracy even in the presence of random interference forces and external water flow velocities.},\n\tdoi = {10.1080/17445302.2024.2391235},\n\tvolume = {20},\n\tnumber = {9},\n\tpages = {1250-1263},\n\tissn = {1744-5302},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 35 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1080/17445302.2024.2391235"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000050",
+      "entry_type": "article",
+      "title": "Barrier Lyapunov Function-based adaptive prescribed-time extended state observers design for unmanned surface vehicles subject to unknown disturbances",
+      "authors": [
+        "Zhao, J",
+        "Cai, CT",
+        "Liu, YC"
+      ],
+      "year": 2023,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2023.113671",
+      "abstract": "This paper studies the prescribed-time observer design problem for unmanned surface vessels (USVs) in the presence of unknown ocean disturbances. An adaptive prescribed-time extended state observer (APESO) is designed to estimate the lumped disturbances consisting of model uncertainties and external disturbances due to wind, waves and ocean currents and reconstruct unmeasured velocities information for USVs. Different from existing finite/fixed-time extended state observers for USVs, the APESO can accomplish observations within a prescribed time with a tiny peaking observation errors. The upper bound of the settling time of the APESO is tightly and explicitly prescribed by only one design parameter, resulting in a simple and weakly conservative parameter tuning process for temporal demands. Moreover, the barrier Lyapunov function (BLF) and prescribed performance function (PPF)-based adaptive mechanism is introduced into the observer design, which can improve the transient performance by self-adjusting the observer correction term along with the ocean disturbance amplitude. Finally, the performance and ascendancy of the proposed APESO are exhibited by simulation comparisons.",
+      "keywords": [
+        "Unmanned surface vehicles",
+        "Prescribed-time",
+        "Extended state observers",
+        "Barrier Lyapunov function",
+        "Prescribed performance function",
+        "Adaptive mechanism",
+        "TRAJECTORY TRACKING",
+        "FEEDBACK",
+        "SYSTEMS",
+        "SHIPS"
+      ],
+      "normalized_title": "barrier lyapunov function based adaptive prescribed time extended state observers design for unmanned surface vehicles subject to unknown disturbances",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2023.113671,\n\tauthor = {Zhao, J and Cai, CT and Liu, YC},\n\ttitle = {Barrier Lyapunov Function-based adaptive prescribed-time extended state observers design for unmanned surface vehicles subject to unknown disturbances},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2023},\n\tkeywords = {Unmanned surface vehicles; Prescribed-time; Extended state observers; Barrier Lyapunov function; Prescribed performance function; Adaptive mechanism; TRAJECTORY TRACKING; FEEDBACK; SYSTEMS; SHIPS},\n\tabstract = {This paper studies the prescribed-time observer design problem for unmanned surface vessels (USVs) in the presence of unknown ocean disturbances. An adaptive prescribed-time extended state observer (APESO) is designed to estimate the lumped disturbances consisting of model uncertainties and external disturbances due to wind, waves and ocean currents and reconstruct unmeasured velocities information for USVs. Different from existing finite/fixed-time extended state observers for USVs, the APESO can accomplish observations within a prescribed time with a tiny peaking observation errors. The upper bound of the settling time of the APESO is tightly and explicitly prescribed by only one design parameter, resulting in a simple and weakly conservative parameter tuning process for temporal demands. Moreover, the barrier Lyapunov function (BLF) and prescribed performance function (PPF)-based adaptive mechanism is introduced into the observer design, which can improve the transient performance by self-adjusting the observer correction term along with the ocean disturbance amplitude. Finally, the performance and ascendancy of the proposed APESO are exhibited by simulation comparisons.},\n\tdoi = {10.1016/j.oceaneng.2023.113671},\n\tvolume = {270},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 50 Total Times Cited: 52 Cited Reference Count: 55 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2023.113671"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

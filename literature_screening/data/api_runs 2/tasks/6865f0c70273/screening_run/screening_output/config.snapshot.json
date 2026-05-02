@@ -1,0 +1,60 @@
+{
+  "project": {
+    "name": "new-screening-run",
+    "output_dir": "tasks/6865f0c70273/screening_run/screening_output",
+    "save_raw_response": true,
+    "save_intermediate_files": true
+  },
+  "input": {
+    "input_files": [
+      "tasks/6865f0c70273/screening_run/inputs/scopus_export_Mar 26-2026_3f19b690-c515-4a4f-b709-32f1db5bfd96.ris"
+    ],
+    "encoding": "auto"
+  },
+  "dedup": {
+    "enabled": true,
+    "strict_doi_match": true,
+    "normalized_title_exact_match": true,
+    "fuzzy_title_match": false
+  },
+  "screening": {
+    "batch_size": 10,
+    "target_include_count": 30,
+    "stop_when_target_reached": false,
+    "allow_uncertain": true,
+    "retry_times": 6,
+    "request_timeout_seconds": 240
+  },
+  "criteria": {
+    "topic": "隐球菌侵袭血脑屏障的深层机制及体外仿生血脑屏障模型构建",
+    "inclusion": [
+      "研究对象必须强相关“隐球菌（Cryptococcus）”与“血脑屏障（BBB/脑微血管内皮细胞等）”的互作；或专门针对“高级血脑屏障模型（微流控、器官芯片、iPSC衍生等）”的构建与应用。",
+      "必须是探讨深层分子机制（如穿胞作用、紧密连接破坏、特洛伊木马机制）或新型仿生模型开发的高质量研究/综述。"
+    ],
+    "exclusion": [
+      "仅涉及隐球菌肺部感染或其他器官感染，未深入探讨血脑屏障的文献。",
+      "纯常规药物疗效对比、流行病学统计或缺乏机制探索的单一临床病例报告。",
+      "传统的二维静态细胞培养且无明显方法学创新的研究。"
+    ]
+  },
+  "model": {
+    "provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "api_base_url": "https://api.deepseek.com/v1",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 1536,
+    "min_request_interval_seconds": 2.0
+  },
+  "report": {
+    "export_included_ris": true,
+    "export_excluded_ris": false,
+    "export_unused_ris": true,
+    "export_included_bib": false,
+    "export_excluded_bib": false,
+    "export_unused_bib": false,
+    "included_report_format": "md",
+    "excluded_report_format": "md",
+    "summary_format": "json"
+  }
+}

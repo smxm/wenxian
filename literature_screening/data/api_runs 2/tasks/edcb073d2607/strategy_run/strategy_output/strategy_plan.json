@@ -1,0 +1,44 @@
+{
+  "topic": "Vocal techniques in Western opera aria singing",
+  "intent_summary": "To investigate and synthesize research on singing techniques employed in arias within the context of Western opera.",
+  "screening_topic": "Western opera aria vocal techniques",
+  "inclusion": [
+    "Studies focusing on opera singing or vocal performance.",
+    "Specifically related to Western opera traditions.",
+    "Includes arias as the subject of study.",
+    "Addresses singing techniques, vocal pedagogy, or performance practice."
+  ],
+  "exclusion": [
+    "Excludes non-Western opera forms (e.g., Chinese opera, if not comparative).",
+    "Excludes instrumental music, composition, or non-singing aspects.",
+    "Excludes general music education not specific to opera.",
+    "Excludes popular music or non-classical vocal techniques."
+  ],
+  "search_blocks": [
+    {
+      "database": "scopus",
+      "title": "Scopus advanced search for Western opera aria singing techniques",
+      "query": "TITLE-ABS-KEY( ( opera OR \"Western opera\" ) AND ( aria OR arias ) AND ( \"singing technique*\" OR \"vocal technique*\" OR \"vocal pedagogy\" OR \"performance practice\" ) )",
+      "lines": [],
+      "notes": [
+        "Use this query in Scopus advanced search interface.",
+        "Adjust date range or language filters as needed."
+      ]
+    },
+    {
+      "database": "wos",
+      "title": "Web of Science advanced search for Western opera aria singing techniques",
+      "query": "TS=( ( opera OR \"Western opera\" ) AND ( aria OR arias ) AND ( \"singing technique*\" OR \"vocal technique*\" OR \"vocal pedagogy\" OR \"performance practice\" ) )",
+      "lines": [],
+      "notes": [
+        "Use this query in Web of Science advanced search interface.",
+        "Consider refining with additional fields if necessary."
+      ]
+    }
+  ],
+  "caution_notes": [
+    "Include synonyms like 'bel canto' if relevant to the research scope.",
+    "Be mindful of language variations in opera terminology.",
+    "Ensure screening for specific historical periods or composers if required."
+  ]
+}

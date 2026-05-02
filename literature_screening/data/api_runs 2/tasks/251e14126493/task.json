@@ -1,0 +1,352 @@
+{
+  "id": "251e14126493",
+  "kind": "screening",
+  "status": "succeeded",
+  "cancel_requested": false,
+  "title": "new-screening-run",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 2,
+  "progress_total": 5,
+  "progress_message": "Task completed",
+  "created_at": "2026-03-25T00:01:04.073923+08:00",
+  "updated_at": "2026-03-25T00:02:25.258427+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "bf103bd2a2cb",
+    "project_topic": "人工智能驱动下的智慧物流仓储系统优化",
+    "model_provider": "deepseek",
+    "parent_task_id": null,
+    "input_dataset_ids": [],
+    "request_payload": {
+      "title": "new-screening-run",
+      "topic": "人工智能驱动下的智慧物流仓储系统优化",
+      "inclusion": [
+        "研究内容必须直接涉及“智慧物流”的核心技术应用（如：物联网IoT、人工智能AI、大数据、数字孪生、区块链等）或其管理学影响（如：供应链韧性、绿色可持续发展）。",
+        "必须有具体的物流应用场景落地（如：仓储、配送、冷链、港口等）。",
+        "文献类型需为高质量的实证研究、案例分析或系统性综述。"
+      ],
+      "exclusion": [
+        "纯传统物流或供应链管理研究（缺乏数字化、智能化技术要素）。",
+        "纯计算机底层算法理论或纯硬件研发（未结合物流业务场景进行验证）。",
+        "缺乏实质性数据支持的低质量短文或非学术性新闻报道。"
+      ],
+      "provider": "deepseek",
+      "model_name": "deepseek-chat",
+      "api_base_url": "https://api.deepseek.com/v1",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.0,
+      "max_tokens": 1536,
+      "min_request_interval_seconds": 2.0,
+      "batch_size": 10,
+      "target_include_count": 10,
+      "stop_when_target_reached": true,
+      "allow_uncertain": true,
+      "retry_times": 6,
+      "request_timeout_seconds": 240,
+      "encoding": "auto",
+      "project_id": "bf103bd2a2cb",
+      "parent_task_id": null,
+      "source_dataset_ids": []
+    },
+    "model_secret_id": "c33b3366b5c74e88",
+    "uploaded_input_paths": [
+      "tasks/251e14126493/uploads/savedrecs (3).ris"
+    ]
+  },
+  "summary": {
+    "run_id": "run_20260325_000104",
+    "input_files_count": 1,
+    "raw_entries_count": 50,
+    "deduped_entries_count": 50,
+    "processed_count": 20,
+    "included_count": 16,
+    "excluded_count": 0,
+    "uncertain_count": 4,
+    "unused_count": 30,
+    "batch_count": 2,
+    "api_call_count": 2,
+    "stop_reason": "target_include_count_reached",
+    "started_at": "2026-03-25T00:01:04.161833+08:00",
+    "finished_at": "2026-03-25T00:02:25.246165+08:00"
+  },
+  "error": null,
+  "artifacts": {
+    "included_report": {
+      "path": "tasks/251e14126493/screening_run/screening_output/included_report.md",
+      "filename": "included_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 7686
+    },
+    "excluded_report": {
+      "path": "tasks/251e14126493/screening_run/screening_output/excluded_report.md",
+      "filename": "excluded_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 19
+    },
+    "uncertain_report": {
+      "path": "tasks/251e14126493/screening_run/screening_output/uncertain_report.md",
+      "filename": "uncertain_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 2009
+    },
+    "included_ris": {
+      "path": "tasks/251e14126493/screening_run/screening_output/included.ris",
+      "filename": "included.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 31342
+    },
+    "unused_ris": {
+      "path": "tasks/251e14126493/screening_run/screening_output/unused_remaining.ris",
+      "filename": "unused_remaining.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 62544
+    },
+    "run_summary": {
+      "path": "tasks/251e14126493/screening_run/screening_output/run_summary.json",
+      "filename": "run_summary.json",
+      "content_type": "application/json",
+      "size_bytes": 451
+    },
+    "screening_decisions": {
+      "path": "tasks/251e14126493/screening_run/screening_output/screening_decisions.json",
+      "filename": "screening_decisions.json",
+      "content_type": "application/json",
+      "size_bytes": 11149
+    }
+  },
+  "run_root": "tasks/251e14126493/screening_run",
+  "output_dir": "tasks/251e14126493/screening_run/screening_output",
+  "markdown_preview": null,
+  "records": [
+    {
+      "paper_id": "paper_000001",
+      "title": "Research on the impact of smart logistics on the the manufacturing industry chain resilience",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确研究智慧物流对制造业供应链韧性的影响，基于省级面板数据进行实证分析，符合智慧物流的管理学影响和实证研究要求。",
+      "year": 2025,
+      "journal": "SCIENTIFIC REPORTS",
+      "doi": "10.1038/s41598-025-93806-8",
+      "abstract": "The development history of smart logistics and smart manufacturing in China demonstrates a high degree of synergy. This study aims to analyze the impact, mechanisms, and heterogeneous performance of smart logistics on the manufacturing industry chain resilience. The analysis is based on panel data collected from 30 provinces in China, covering the period from 2012 to 2023. The empirical findings suggest a significant positive impact of smart logistics on the manufacturing industry chain resilience, and the research findings are relatively robust. This impact can be primarily attributed to the reduction of transaction costs and improvements in logistics efficiency. In a comparison of the impact relationships between the three different economic regions of the East, Center and West, it was found that the Eastern region had a stronger facilitating effect, the Central region had a less pronounced facilitating effect, and the Western region had a weaker facilitating effect relative to the Eastern region. Moreover, Intelligent logistics has a greater role in promoting the resistance and renewal of the manufacturing industry chain, and a relatively weaker role in promoting the recovery of the manufacturing industry chain. Futhermore, threshold test shows that, in terms of long-term dynamics, there is a threshold effect of smart logistics development on the enhancement of manufacturing industry chain toughness; at the same time, higher level of advanced industrial structure and innovation environment, smart logistics is conducive to the enhancement of manufacturing industry chain toughness level."
+    },
+    {
+      "paper_id": "paper_000002",
+      "title": "Resources and capabilities for logistics 4.0 and sustainable value creation: a study of logistics service providers in an emerging market",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "标题和摘要研究物流服务提供商的Logistics 4.0资源与能力，涉及可持续价值创造，基于多案例研究，符合智慧物流技术应用和案例研究要求。",
+      "year": 2025,
+      "journal": "INTERNATIONAL JOURNAL OF LOGISTICS MANAGEMENT",
+      "doi": "10.1108/ijlm-11-2023-0471",
+      "abstract": "Purpose - The present study aims to identify the resources and capabilities that enable logistics service providers (LSPs) to create sustainable value through Logistics 4.0. Design/methodology/approach - A multiple case study was conducted with five LSPs operating in an emerging market context. Data were analyzed using the content analysis technique with the support of NVivo software. Findings - Drawing on the resource-based view theory, the study elucidates the resources and capabilities necessary for the successful adoption of Logistics 4.0 by LSPs. The findings highlight the significance of integrating Logistics 4.0 technological resources with other organizational assets, including human capital, an innovative culture, leadership and strategic partnerships. This integration can enable companies to optimize the sustainable value derived from their digital transformation initiatives. Research limitations/implications - The present research focused on LSPs, potentially overlooking insights that could be gained from other segments of the supply chain. The study paves the way for future studies to examine resources and capabilities in a range of other supply chain management functions. Originality/value - The study offers unique theoretical and practical insights by identifying key resources for the adoption of Logistics 4.0 among LSPs, emphasizing its potential for sustainable value creation. It highlights the environmental, economic and societal impacts of 4.0 technologies, outlining the implications for policymakers to drive the successful adoption of Logistics 4.0 in emerging markets while also promoting social inclusion and professional development of logistics workers."
+    },
+    {
+      "paper_id": "paper_000003",
+      "title": "Logistics Service Provider Lifecycle Model in Industry 4.0: A Review",
+      "decision": "include",
+      "confidence": 0.8,
+      "reason": "标题和摘要进行系统文献综述，探讨Logistics 4.0下的物流服务提供商生命周期模型，符合智慧物流主题和系统性综述类型。",
+      "year": 2024,
+      "journal": "APPLIED SCIENCES-BASEL",
+      "doi": "10.3390/app14062324",
+      "abstract": "Supply chain and logistics management is of tremendous importance for multinational organizations. Logistics Service Providers (LSPs) provide logistics services and smooth logistics operations between suppliers, manufacturers, distributors, and customers. This paper uses a Systematic Literature Review (SLR) to identify the current trends and future developments of LSPs and the underlying (smart) logistics operations connected to the concept of lifecycle management. An SLR review was conducted to identify relevant research papers in the areas of LSPs and logistics lifecycle management. Out of 288 papers analyzed, 81 were identified as highly appropriate for in-depth analysis. The LSP Lifecycle Model (LSLM) was then developed by combining logistics service characteristics and the lifecycle management concept, including Product Lifecycle Management (PLM), Service Lifecycle Management (SLM), and Product Service System (PSS). The LSLM consists of three phases: The Beginning of Life (BOL), the Middle of Life (MOL), and the End of Life (EOL). The LSLM is characterized by three phases, eight criteria, and seventeen sub-criteria. This paper aims to fulfil customer requirements through a product or service in the whole lifecycle of the logistics service provider. The findings further present an adaptable LSLM by focusing on various logistics services and integrating sustainability factors to meet market trends. Logistics cost factors can also be used to evaluate logistics services in the MOL stage. The EOL shows the trend of risk management, evaluation, and decomposition, which is determined by new or re-designed logistics products and services."
+    },
+    {
+      "paper_id": "paper_000004",
+      "title": "City Logistics 4.0: a reconceptualization of the domain through a systematic literature review and an agenda for future research",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "标题和摘要通过系统文献综述探讨City Logistics 4.0，整合技术、可持续性和管理视角，符合智慧物流技术应用和系统性综述要求。",
+      "year": 2025,
+      "journal": "ANNALS OF OPERATIONS RESEARCH",
+      "doi": "10.1007/s10479-025-06835-x",
+      "abstract": "This study explores the evolution of City Logistics 4.0 (CL4.0) by systematically reviewing the literature to provide a structured framework integrating management practices with technology and sustainability perspectives. Using the PRISMA methodology, a scientometric analysis of 899 Scopus-indexed papers reveals key research trends, authorship networks, and thematic developments. The findings highlight three core disciplinary perspectives-logistics, technology, and sustainability-offering a unified definition of CL4.0 and outlining future research directions. Practical implications equip policymakers and logistics professionals with insights for implementing innovative technologies and sustainable practices, paving the way for City Logistics 5.0."
+    },
+    {
+      "paper_id": "paper_000005",
+      "title": "The Evaluation and Spatial Correlation Analysis of Smart Logistics: Evidence from 30 Provinces in China",
+      "decision": "include",
+      "confidence": 0.8,
+      "reason": "标题和摘要构建智慧物流评价体系并进行时空关联分析，基于中国省级数据，符合智慧物流主题和实证研究要求。",
+      "year": 2025,
+      "journal": "NETWORKS & SPATIAL ECONOMICS",
+      "doi": "10.1007/s11067-025-09695-x",
+      "abstract": "Intelligence is a key direction for the transformation of the logistics industry, and assessing the degree of smart logistics development is crucial for sustainable development. This paper constructs a smart logistics evaluation system in China. On this basis, it systematically analyzes the trend of change in the level of smart logistics development in cities, the spatial and temporal correlation and the formation of its spatial network from 2013 to 2021. The results show that China's smart logistics (CSLs) development level is growing rapidly, but there are large regional differences, showing club effects. CSLs development shows obvious spatial dependence and gradually forms a spatial association network, from sparse to close accompanied by the time lapse. The core province has a strong radiation scale and radiation intensity, which accelerates the development of smart logistics in the edge provinces. In the early stage of development, the formation of the association network relies on the economic scale effect; in the late stage of development, it relies on the promotion of high-quality factors such as invention and highly educated talents. The study provides an important decision-making basis for the development of smart logistics and a useful reference for building a more sustainable smart logistics industry in the future."
+    },
+    {
+      "paper_id": "paper_000006",
+      "title": "Smart Logistics, Industrial Structure Upgrading, and the Sustainable Development of Foreign Trade: Evidence from Chinese Cities",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "标题和摘要研究智慧物流对外贸可持续发展的影响，基于城市面板数据和中介效应模型，符合智慧物流的管理学影响和实证研究要求。",
+      "year": 2025,
+      "journal": "SUSTAINABILITY",
+      "doi": "10.3390/su17177804",
+      "abstract": "As a key component of new infrastructure, smart logistics is becoming an essential driver for reducing foreign trade costs and risks and promoting the sustainable development of foreign trade. Using panel data from 286 prefecture level and above cities from 2014 to 2023, this article attempts to refine the measurement of smart logistics level from provincial to municipal levels, construct a two-way fixed effect model and a mediation effect model, and deeply explore the inherent relationship between smart logistics, industrial structure upgrading, and sustainable development of foreign trade. The results reveal that: (1) smart logistics significantly promotes the sustainable development of foreign trade. (2) Rationalization and advancement of industrial structure play an intermediary role between the two. (3) Market integration has a positive moderating effect on the path of \"smart logistics-industrial structure rationalization\", but the moderating effect is not significant in other paths. It has been confirmed that there is a \"siphon effect\" in the advantageous regions. (4) Heterogeneity analysis shows that the effect of smart logistics on foreign trade promotion is more significant in the central and inland regions. This study provides a theoretical basis and practical inspiration for optimizing regional smart logistics layout and deepening industrial structure adjustment."
+    },
+    {
+      "paper_id": "paper_000007",
+      "title": "Tracing the technological trajectories of smart logistics domain based on citation analysis and topic modelling",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "标题和摘要基于专利分析追踪智慧物流技术轨迹，主题相关但未明确提及具体物流应用场景，信息不足以确认是否满足纳入标准。",
+      "year": 2025,
+      "journal": "INTERNATIONAL JOURNAL OF LOGISTICS-RESEARCH AND APPLICATIONS",
+      "doi": "10.1080/13675567.2024.2410787",
+      "abstract": "The emergence and development of intelligent technology are triggering major changes in the logistics industry, and relevant scientific and technological research on smart logistics (SL) is emerging endlessly. However, there is no research that systematically explores SL from the technological perspective. Therefore, this article selects 47,253 documents retrieved from the Derwent Innovation Index for systematic analysis and provides a comprehensive understanding of the SL domain. We combine main path analysis (MPA) and LDA topic modelling approaches to identify technological evolution trajectories. Through three main paths, the key technologies and technological evolution directions in the SL domain are revealed. Through topic identification and topic correlation calculation, global topic popularity trends and local topic evolution paths are identified. Finally, this study summarises our findings, contributions, and limitations. This is the first attempt to detect key technologies in the SL domain through MPA and topic analysis, thereby guiding relevant researchers and enterprises."
+    },
+    {
+      "paper_id": "paper_000008",
+      "title": "Critical Success Factors for Enhancing Intelligent Loading and Unloading in Urban Supply Chains: A Comprehensive Approach Based on Fuzzy DEMATEL-AISM-MICMAC",
+      "decision": "include",
+      "confidence": 0.8,
+      "reason": "标题和摘要研究城市供应链中智能装卸的关键成功因素，基于专家调查和模糊DEMATEL方法，符合智慧物流技术应用和实证研究要求。",
+      "year": 2025,
+      "journal": "SYSTEMS",
+      "doi": "10.3390/systems13040230",
+      "abstract": "With the development of the smart logistics industry, the demand for intelligent loading and unloading (ILU) within urban supply chains (USCs) is increasing. However, few studies have examined the critical success factors (CSFs) for enhancing ILU in USCs. This study establishes a CSF model to support ILU improvement. Specifically, it integrates stakeholder theory, resource-based view theory, and innovation diffusion theory. Through research conducted in collaboration with 16 logistics industry specialists in Korea, 19 critical factors were identified. Fuzzy DEMATEL and the Adversarial Interpretive Structure Model (AISM) were then applied to analyze the identified factors. The results indicate that stakeholder collaboration, government support, and regulatory compliance are the most important factors affecting ILU improvement within USCs. Finally, cross-impact matrix multiplication applied to classification (MICMAC) analysis further verifies that these factors have a high driving power and low dependence, making them independent driving factors of the entire system. Furthermore, this study emphasizes the role of market research and automated system design. This work contributes to the knowledge on the intelligent logistics management of supply chains."
+    },
+    {
+      "paper_id": "paper_000009",
+      "title": "Technological Convergence and Innovation Pathways in Sustainable Logistics Systems: An Integrated Graph Neural Network and Main Path Analysis",
+      "decision": "uncertain",
+      "confidence": 0.45,
+      "reason": "标题和摘要研究可持续物流系统的技术融合与创新路径，基于专利分析，主题相关但未明确提及仓储等具体应用场景，信息不足。",
+      "year": 2025,
+      "journal": "SUSTAINABILITY",
+      "doi": "10.3390/su172310507",
+      "abstract": "The sustainable transformation of logistics and supply chains increasingly depends on the convergence of digital and physical technologies. However, prior studies have often analyzed these domains in isolation, lacking a unified model that captures both structural interdependence and temporal evolution in technological innovation. We develop an integrated model which combines a Variational Graph Autoencoder (VGAE) for structural embedding with Main Path Analysis (MPA) for tracing the temporal diffusion of technologies. Using 4121 patents published between 2015 and 2024 across 46 IPC subclasses, the model identifies four major innovation pathways-autonomous vehicle coordination, AI-driven logistics platforms, electrified mobility, and IoT-based monitoring that characterize the evolution of Logistics 4.0. The proposed model achieves a 62.5% main path contribution ratio, a weighted modularity (Q) of 0.5439, and a temporal alignment score of 0.51, confirming both structural coherence and interpretability. Empirical cross-validation with global policy reports (2024) and industry outlook assessments demonstrated strong consistency between the patent-based diffusion trajectories and real-world industry trends. The results provide actionable insights for policymakers and industry leaders seeking to align technological innovation with industrial infrastructure development and sustainable urban logistics transformation."
+    },
+    {
+      "paper_id": "paper_000010",
+      "title": "How Does Smart Logistics Influence Enterprise Innovation? Evidence from China",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "标题和摘要研究智慧物流对企业创新的影响，基于城市政府工作报告数据和上市公司数据，符合智慧物流的管理学影响和实证研究要求。",
+      "year": 2025,
+      "journal": "SYSTEMS",
+      "doi": "10.3390/systems13121076",
+      "abstract": "In the current external environment characterized by intensified supply chain uncertainties, promoting supply chain digitalization has become a critical pathway for enterprises to enhance their innovation capabilities. As a core component of digital supply chains, studying the role of smart logistics in enterprise innovation holds significant theoretical value and practical importance. Based on the government work reports of prefecture-level cities in China from 2013 to 2022, this study employs a keyword frequency statistics approach to construct a city-level indicator for the development level of smart logistics. It examines the effect of smart logistics on innovation in China's A-share listed companies, along with its underlying mechanisms and heterogeneity. The empirical results show that smart logistics can significantly promote enterprise innovation capability. The mechanism analysis indicates that smart logistics drives enterprise innovation by leveraging the talent effect, the organizational slack optimization effect, and the data element multiplier effect. Further heterogeneity analysis reveals that the innovation-promoting effect of smart logistics is more significant for enterprises in industries with high competition intensity. Moreover, in enterprises with high information transparency, the promoting effect of smart logistics on innovation is more pronounced. The research conclusions provide theoretical support and policy implications for integrating smart logistics into regional innovation ecosystems and for designing differentiated policies."
+    },
+    {
+      "paper_id": "paper_000011",
+      "title": "Smart Logistics Facing Industry 5.0: Research on Key Enablers and Strategic Roadmap",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确研究智慧物流在工业5.0背景下的关键使能因素和战略路线图，涉及人工智能等核心技术应用，属于系统性综述研究。",
+      "year": 2024,
+      "journal": "SUSTAINABILITY",
+      "doi": "10.3390/su16219183",
+      "abstract": "While Industry 4.0 has played a significant role in advancing smart logistics, it has yet to provide adequate solutions for widespread concerns such as human centricity, sustainability, and resilience. The emergence of Industry 5.0 addresses and complements these shortcomings of Industry 4.0. However, there is currently a notable gap in the research regarding how Industry 5.0 can drive the transformation of smart logistics. To address this gap, this study develops a strategic roadmap that offers a solution to this issue. The research is initiated by conducting a comprehensive literature review with a focus on content, identifying 13 key enablers crucial for realizing smart logistics in Industry 5.0. Subsequently, this study establishes the hierarchical relationship among these key enablers through the application of the Fuzzy Interpretative Structural Model (FISM). Following this, the study employs the Matrices Impacts Croises-Multiplication Appliance Classement (MICMAC) to compute the driving force and dependence of each enabler. The results underscore the significant roles of \"Active support from the government\" and \"Human-centric manufacturing and logistics\" as the most critical enablers for Industry 5.0. The strategic roadmap, informed by expert opinions, provides valuable insights for policymakers and implementers while explaining the methods and strategies needed to drive Industry 5.0 transformation in smart logistics. Furthermore, it determines the impact relationship between enablers and the optimal development order, facilitating their synergistic alignment. Ultimately, this strategic roadmap serves as an actionable guide for the logistics industry, steering it toward achieving smart logistics and fortifying competitiveness in the industry 5.0 era."
+    },
+    {
+      "paper_id": "paper_000012",
+      "title": "A Systematic Literature Review of Digital Supply Chains and Logistics 4.0 for Sustainability and Circular Economy",
+      "decision": "include",
+      "confidence": 0.88,
+      "reason": "标题和摘要表明这是关于数字供应链和物流4.0的系统性文献综述，明确探讨人工智能、物联网等技术在可持续物流中的应用。",
+      "year": 2026,
+      "journal": "SUSTAINABILITY",
+      "doi": "10.3390/su18052318",
+      "abstract": "This study presents a systematic review of the role of key technologies in advancing sustainable logistics and supply chain management. Specifically, it explores the integration of Industry 4.0 (I4.0), logistics 4.0, and digital supply chains, focusing on technologies such as artificial intelligence (AI), augmented reality (AR), big data analytics (BDA), blockchain, cloud computing (CC), industrial internet of things (IIoT), machine learning (ML), robotics, virtual reality (VR), and internet of things (IoT). The aim is to examine how these technologies contribute to green logistics (GL), green supply chain management, sustainability, and the circular economy (CE). Data were collected from the Scopus database, covering studies published between 2019 and 2024. A total of 1471 publications were initially identified, and 39 studies met the selection criteria. The PRISMA approach was employed for the systematic review, revealing that leading research on I4.0 is concentrated in top-tier journals, with a significant number of publications from Italy focusing on digitalization in the agriculture and food sectors. Systematic literature reviews and resource-based theory are predominant, yet there is a notable gap in aligning research with the United Nations Agenda 2030 Sustainable Development Goals (SDGs). This paper provides insights into technological adoption trends and offers recommendations for industry leaders seeking to enhance sustainability, eco-friendliness, and alignment with the SDGs within their supply chains."
+    },
+    {
+      "paper_id": "paper_000013",
+      "title": "The Impact of Intelligent Logistics on Logistics Performance Improvement",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "标题和摘要明确研究智能物流对物流绩效的影响，采用自动化、数据分析和物联网技术，基于中国省级面板数据进行实证分析。",
+      "year": 2025,
+      "journal": "SUSTAINABILITY",
+      "doi": "10.3390/su17020659",
+      "abstract": "The logistics industry is essential to global economic development but continues to grapple with challenges related to quality improvement, cost reduction, and efficiency enhancement. Addressing these issues is crucial for promoting high-quality growth within the sector. The emergence of intelligent logistics-leveraging automation, data analytics, and Internet of Things (IoT) technologies-offers a promising approach to transforming traditional logistics operations. This study develops a theoretical framework that integrates these intelligent logistics components to investigate their mechanisms and limitations in influencing logistics performance. Using an empirical analysis of Chinese provincial panel data, we identify significant disparities in logistics industry performance across the provinces, with most regions exhibiting an initial improvement followed by a subsequent decline. Our findings reveal a notable spatial interaction effect between intelligent logistics and logistics performance, indicating that intelligent logistics substantially enhance performance. However, the impact varies by region: it significantly promotes performance in the eastern and western regions but has a limited effect in the central and northeastern regions, potentially due to distortions in production factors and other regional specificities. Additionally, the degree of openness to the outside world positively influences logistics performance in the western region. The proposed mechanisms are validated in all regions except the eastern region. This study provides valuable insights for policymakers on leveraging intelligent logistics to improve logistics industry performance, highlighting the need for region-specific strategies to maximize the benefits of intelligent logistics technologies."
+    },
+    {
+      "paper_id": "paper_000014",
+      "title": "Digital logistics, supply chain finance, and supply chain efficiency",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "标题和摘要提到数字物流对供应链效率的影响，但未明确说明具体技术应用场景，信息不足以判断是否满足智慧物流的核心技术要求。",
+      "year": 2025,
+      "journal": "FINANCE RESEARCH LETTERS",
+      "doi": "10.1016/j.frl.2025.108324",
+      "abstract": "Against the backdrop of the logistics industry's acceleration toward digital transformation, the impact of digital logistics on supply chain efficiency is analyzed in this study using panel data from 2014 to 2023 of 30 Chinese provinces. The results of robustness tests indicate that digital logistics significantly enhances supply chain efficiency, with supply chain finance playing a significant mediating role by alleviating corporate financing constraints. Supply chain efficiency through digital logistics varies across regions, showing significant improvements in the eastern and central regions, but none in the western region."
+    },
+    {
+      "paper_id": "paper_000015",
+      "title": "Capabilities influencing retailers' smart logistics performance: a theoretical framework from a smart supply chain perspective",
+      "decision": "include",
+      "confidence": 0.82,
+      "reason": "标题和摘要研究零售商智能物流绩效的影响因素，基于智能供应链视角，采用多案例研究方法，涉及大数据等技术应用。",
+      "year": 2025,
+      "journal": "INDUSTRIAL MANAGEMENT & DATA SYSTEMS",
+      "doi": "10.1108/imds-03-2025-0326",
+      "abstract": "PurposeThe rapid development of smart supply chain (SSC) provides a strategic and operational foundation for retailers' smart logistics. Against this background, this study reveals the influential mechanisms of SSC strategic and operational capability on retailers' smart logistics performance (SLP).Design/methodology/approachWe conduct a multi-case study of four retail giants in China and explore how the SLP is affected by SSC strategic capabilities and operational capabilities.FindingsSeveral findings were obtained. First, in terms of SSC strategy capabilities, both strategic precise positioning and matching capabilities will promote SLP. Second, in terms of SSC operation capabilities, flexible management, rapid response and intelligent collaboration capabilities will promote SLP. Third, policy support can promote the positive relationship between SSC strategic capabilities and SLP, and technology changes can promote the positive relationship between SSC operational capabilities and SLP.Originality/valueBy establishing a collaborative development relationship between SSC and smart logistics, we contribute to the literature focusing on the capabilities influencing logistics performance and the literature of SSC. Specifically, we provide not only a theoretical basis but also empirical evidence for the practice of improving SLP."
+    },
+    {
+      "paper_id": "paper_000016",
+      "title": "'Logistics 4.0' technologies in the 3PL industry: a maturity model",
+      "decision": "include",
+      "confidence": 0.86,
+      "reason": "标题和摘要明确研究物流4.0技术在第三方物流行业的成熟度模型，涉及具体物流应用场景和技术实施，属于实证研究。",
+      "year": 2025,
+      "journal": "PRODUCTION PLANNING & CONTROL",
+      "doi": "10.1080/09537287.2024.2405717",
+      "abstract": "Logistics 4.0 is a recent paradigm derived from the Industry 4.0 paradigm applied to the logistics sector. Several new technologies have been developed to improve logistics performance. The present research aims to build a maturity model to support 3PL providers in assessing their level of maturity and identifying the areas in which to invest to improve the logistics service offered through the implementation of Logistics 4.0 technologies. The maturity model was developed using a structured framework of four main steps: the definition of the model scope; the model design (literature review on Logistics 4.0 and the existing maturity models); the model composition and validation; and pilot tests in three relevant 3PL providers. The proposed maturity model has four constructs (i.e. strategic outcomes, requirements, Logistics 4.0 technologies, managerial and capability supporters) and four maturity levels (i.e. initial, intermediate, advanced, cutting-edge)."
+    },
+    {
+      "paper_id": "paper_000017",
+      "title": "Industry 5.0 Drivers Analysis Using Grey-DEMATEL: A Logistics Case in Emerging Economies",
+      "decision": "include",
+      "confidence": 0.84,
+      "reason": "标题和摘要研究工业5.0在智慧物流中的驱动因素，采用Grey-DEMATEL方法分析，明确聚焦物流行业的技术应用。",
+      "year": 2024,
+      "journal": "MATHEMATICS",
+      "doi": "10.3390/math12223588",
+      "abstract": "The terms \"Industry 5.0\" and \"smart logistics\" have recently emerged as key concepts within the field of logistics. Nevertheless, the interconnection between these two concepts has been less extensively examined in academic literature, particularly in the context of emerging economies. In the contemporary business context, the logistics industry is seeking to advance sustainable development through the implementation of Industry 5.0. However, the industry is still in its nascent stages of realizing the transformation of smart logistics. Accordingly, the objective of this study is to identify the key drivers of Industry 5.0 in relation to the advancement of smart logistics in the logistics industry in emerging economies. In this study, the initial screening and identification of 15 core drivers was conducted using the fuzzy Delphi method. This involved the collation of the relevant literature and the collection of opinions from experts in the field. The identified drivers were then classified into three groups: sustainability, people-centricity, and resilience. Subsequently, the study adopted the Grey-DEMATEL method, which combines grey system theory with the decision making trial and evaluation laboratory (DEMATEL) technology. This approach enables the effective resolution of complex system issues characterized by uncertainty and incomplete information, facilitating the identification of causal relationships between the drivers and the construction of a centrality-causality outcome diagram. The study identified two key drivers: \"government support policies\" and \"logistics standardization and infrastructure development\". This study represents a preliminary investigation into the ways managers, practitioners and policy makers can leverage Industry 5.0 to advance the field of smart logistics within the logistics industry."
+    },
+    {
+      "paper_id": "paper_000018",
+      "title": "Smart logistics nodes: concept and classification",
+      "decision": "include",
+      "confidence": 0.83,
+      "reason": "标题和摘要提出智能物流节点概念，结合物理基础设施和数字系统，涉及物联网、数字孪生等技术在港口等场景的应用。",
+      "year": 2024,
+      "journal": "INTERNATIONAL JOURNAL OF LOGISTICS-RESEARCH AND APPLICATIONS",
+      "doi": "10.1080/13675567.2024.2327394",
+      "abstract": "This paper presents the Smart Logistics Node concept, which combines the physical infrastructure of logistics nodes with digital systems to enhance collaboration. The Smart Logistics Node benefits from data sharing, supporting infrastructure, and Connected and Automated Transport (CAT) technologies. Based on a literature review on logistics nodes and CAT, we propose a general classification of Smart Logistics Nodes distinguishing upon the node function, degree of organisational (de-)centralisation, digital integration, and infrastructure support for automated driving. Then, we classify sixteen logistics nodes and find that high digital integration is common while automation is lacking. Further automation entails mixed traffic on public roads and requires organisational changes that do not always align with current business models. Our work supports the adoption of emerging technology at logistics nodes and the comparability of business cases. Ultimately, node authorities can use our concept and classification to draw a roadmap to develop CAT capabilities."
+    },
+    {
+      "paper_id": "paper_000019",
+      "title": "The Intelligent Upgrading of Logistics between an Internet Enterprise and a Logistics Enterprise Based on Differential Game Theory",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "标题和摘要研究基于微分博弈的物流智能升级，涉及互联网企业与物流企业合作，但技术细节和实证数据支持信息不足。",
+      "year": 2024,
+      "journal": "SUSTAINABILITY",
+      "doi": "10.3390/su16198556",
+      "abstract": "At the background of \"Internet + Logistics\", intelligent logistics has high operational efficiency and provides a superior customer experience, meeting the requirements of sustainable development. It also plays a crucial role in promoting the modernization of the industrial chain in China. This paper develops a mathematic model based on differential game theory, which sets the intelligent level of logistics and the goodwill of intelligent logistics as state variables. The research reveals the collaborative strategies between a logistics enterprise and an Internet enterprise for the intelligent upgrading of logistics, and separately calculates the optimal effort levels and optimal revenues of participating enterprises under the non-cooperative mechanism, the cost-sharing mechanism, and the cooperative mechanism. This paper also observes the crucial parameters that affect the optimal revenue for the intelligent upgrading of logistics. The research findings are as follows: (1) Cost-sharing mechanism and cooperative mechanism can motivate the Internet enterprise and the logistics enterprise to improve their effort levels and increase the total revenue, which achieves the Pareto improvement. Under the cooperative mechanism, the intelligent level of logistics and the goodwill of intelligent logistics are the highest. (2) Participating enterprises can promote the intelligent upgrading of logistics by accumulating innovative resources for intelligent logistics, attaining cost-conversion efficiency, and cultivating customer preferences for intelligent logistics services. (3) When the revenue-sharing ratio of the logistics enterprise is relatively low, although the cost-sharing mechanism can continuously motivate a logistics enterprise to make an effort in the intelligent upgrading of logistics, it is not conducive to enhance the goodwill of intelligent logistics. This paper highlights the pivotal role of enterprise collaboration in the intelligent upgrading of logistics, and proposes practical recommendations."
+    },
+    {
+      "paper_id": "paper_000020",
+      "title": "Assessing the co-evolution of intermodal freight transport research and patenting technology trends for advancing green and intelligent logistics",
+      "decision": "include",
+      "confidence": 0.87,
+      "reason": "标题和摘要评估多式联运研究中绿色智能物流的技术趋势，明确分析人工智能、物联网、区块链等技术的应用，属于高质量研究。",
+      "year": 2026,
+      "journal": "RESEARCH IN TRANSPORTATION BUSINESS AND MANAGEMENT",
+      "doi": "10.1016/j.rtbm.2025.101553",
+      "abstract": "Green and intelligent freight logistics play a crucial role in driving sustainable development and are increasingly recognised as innovations within Logistics 5.0. This research examines the dynamics of knowledge transfer between academia and industry, focusing on intermodal transport and sustainability. By analyzing academic publications from Scopus and patents from PATENTSCOPE (2014-2024), this research employs advanced methodologies, including transformer-based keyword extraction and multilayer network analysis, to investigate indicators of knowledge transfer. Findings reveal distinct phases of technological innovation, including acceleration driven by AI, IoT, and blockchain technologies, followed by stabilization and consolidation in logistical operations. A patent surge after 2018 highlights industry-led advancements, contrasting with academia's focus on theoretical sustainability frameworks. However, cross-layer analyses highlight the declining industry adoption of academic findings, revealing gaps in the effective transfer of knowledge. The integration of mature innovations into logistical practices reflects the emergence of a consolidation phase. The findings underline the criticality of aligning academic discoveries with industrial applications, fostering mutual collaboration to drive the evolution of green logistics. By uncovering the dynamics underpinning sustainable innovation, the research contributes to the discourse on the twin transition towards greener and more intelligent freight logistics, offering pathways to strengthen academia-industry collaborations."
+    }
+  ],
+  "project_id": "bf103bd2a2cb",
+  "project_topic": "人工智能驱动下的智慧物流仓储系统优化",
+  "model_provider": "deepseek",
+  "parent_task_id": null,
+  "input_dataset_ids": [],
+  "output_dataset_ids": [
+    "36efcaa0547e",
+    "1d1b53602704"
+  ]
+}

@@ -1,0 +1,403 @@
+{
+  "batch_id": "batch_0008",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000071",
+    "paper_000072",
+    "paper_000073",
+    "paper_000074",
+    "paper_000075",
+    "paper_000076",
+    "paper_000077",
+    "paper_000078",
+    "paper_000079",
+    "paper_000080"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000071",
+      "entry_type": "article",
+      "title": "Automated Detection of Delamination Defects in Composite Laminates from Ultrasonic Images Based on Object Detection Networks",
+      "authors": [
+        "Cheng, XY",
+        "Qi, HD",
+        "Wu, ZY",
+        "Zhao, L",
+        "Cech, M",
+        "Hu, XD"
+      ],
+      "year": 2024,
+      "journal": "JOURNAL OF NONDESTRUCTIVE EVALUATION",
+      "doi": "10.1007/s10921-024-01116-2",
+      "abstract": "Ultrasonic testing (UT) is a commonly used method to detect internal damage in composite materials, and the test data are commonly analyzed by manual determination, relying on a priori knowledge to assess the status of the specimen. In this work, A method for the automatic detection of delamination defects based on improved EfficientDet was proposed. The Swin Transformer block was adopted in the Backbone part of the network to capture the global information of the feature map and improve the feature extraction capability of the whole model. Meanwhile, a custom block was added to prompt the model to extract object features from different receptive fields, which enriches the feature information. In the Neck part of the network, the adaptive weighting was used to keep the features that were more conductive to the prediction object, and desert or give smaller weights to those features that were not desirable for the prediction object. Two kinds of specimens were prepared with embedded artificial delamination defects and delamination damage caused by low-velocity impacts. Ultrasonic phased array technology was employed to investigate the specimens and the amount of data was increased by the sliding window approach. The object detection model proposed in this work was evaluated on the obtained dataset and delamination in the composites was effectively detected. The proposed model achieved 98.97% of mean average precision, which is more accurate compared to ultrasonic testing methods.",
+      "keywords": [
+        "Ultrasonic testing",
+        "Automated defect detection",
+        "Object detection network",
+        "Delamination",
+        "Composite laminates",
+        "DAMAGE EVALUATION",
+        "IMPACT DAMAGE",
+        "CFRP",
+        "WAVELET",
+        "SYSTEM"
+      ],
+      "normalized_title": "automated detection of delamination defects in composite laminates from ultrasonic images based on object detection networks",
+      "raw_bibtex": "@ARTICLE{10.1007/s10921-024-01116-2,\n\tauthor = {Cheng, XY and Qi, HD and Wu, ZY and Zhao, L and Cech, M and Hu, XD},\n\ttitle = {Automated Detection of Delamination Defects in Composite Laminates from Ultrasonic Images Based on Object Detection Networks},\n\tjournal = {JOURNAL OF NONDESTRUCTIVE EVALUATION},\n\tyear = {2024},\n\tkeywords = {Ultrasonic testing; Automated defect detection; Object detection network; Delamination; Composite laminates; DAMAGE EVALUATION; IMPACT DAMAGE; CFRP; WAVELET; SYSTEM},\n\tabstract = {Ultrasonic testing (UT) is a commonly used method to detect internal damage in composite materials, and the test data are commonly analyzed by manual determination, relying on a priori knowledge to assess the status of the specimen. In this work, A method for the automatic detection of delamination defects based on improved EfficientDet was proposed. The Swin Transformer block was adopted in the Backbone part of the network to capture the global information of the feature map and improve the feature extraction capability of the whole model. Meanwhile, a custom block was added to prompt the model to extract object features from different receptive fields, which enriches the feature information. In the Neck part of the network, the adaptive weighting was used to keep the features that were more conductive to the prediction object, and desert or give smaller weights to those features that were not desirable for the prediction object. Two kinds of specimens were prepared with embedded artificial delamination defects and delamination damage caused by low-velocity impacts. Ultrasonic phased array technology was employed to investigate the specimens and the amount of data was increased by the sliding window approach. The object detection model proposed in this work was evaluated on the obtained dataset and delamination in the composites was effectively detected. The proposed model achieved 98.97% of mean average precision, which is more accurate compared to ultrasonic testing methods.},\n\tdoi = {10.1007/s10921-024-01116-2},\n\tvolume = {43},\n\tnumber = {3},\n\tissn = {0195-9298},\n\tnote = {Times Cited in Web of Science Core Collection: 7 Total Times Cited: 8 Cited Reference Count: 29 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s10921-024-01116-2"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000072",
+      "entry_type": "article",
+      "title": "The detection and classification method of sub-macroscopic defects inside steel with an ultrasonic testing and CatBoost-based stacking model",
+      "authors": [
+        "Zhang, NQ",
+        "Wang, YZ",
+        "Chen, X"
+      ],
+      "year": 2023,
+      "journal": "MEASUREMENT SCIENCE AND TECHNOLOGY",
+      "doi": "10.1088/1361-6501/acd1a5",
+      "abstract": "With the increasing demand for advanced steel, the internal cleanness of steel becomes an important evaluation indicator of material quality. Sub-macroscopic defects are randomly distributed inside steel materials, which have seriously affected material stability and fatigue life because they are not covered by existing testing standards. Besides, the existing detection methods generally have problems such as low efficiency and complexity. In this paper, we propose a non-destructive inclusion testing and classification framework based on ultrasonic testing experiments, signal feature extraction and machine-learning methods. Under the optimal experimental detection conditions we found through experiments, a large-scale sub-macroscopic inclusion signal data set is established to realize the classification of defects. Moreover, empirical mode decomposition (EMD) and other feature extraction algorithms are applied to further boost the model performance. We propose a CatBoost-based stacking fused model named Stacked-CBT, which obtains state-of-the-art experimental results with an accuracy rate of 86.65% and demonstrates that the proposed framework is feasible to classify the sub-macroscopic inclusion signals. To the best of our knowledge, there is no previous study in this field that has acquired such a large amount of experimental sub-macroscopic signal data while taking into consideration classification-specific designs.",
+      "keywords": [
+        "ultrasonic testing",
+        "sub-macroscopic inclusion classification",
+        "signal processing",
+        "model fusion",
+        "categorical boosting",
+        "INCLUSIONS"
+      ],
+      "normalized_title": "the detection and classification method of sub macroscopic defects inside steel with an ultrasonic testing and catboost based stacking model",
+      "raw_bibtex": "@ARTICLE{10.1088/1361-6501/acd1a5,\n\tauthor = {Zhang, NQ and Wang, YZ and Chen, X},\n\ttitle = {The detection and classification method of sub-macroscopic defects inside steel with an ultrasonic testing and CatBoost-based stacking model},\n\tjournal = {MEASUREMENT SCIENCE AND TECHNOLOGY},\n\tyear = {2023},\n\tkeywords = {ultrasonic testing; sub-macroscopic inclusion classification; signal processing; model fusion; categorical boosting; INCLUSIONS},\n\tabstract = {With the increasing demand for advanced steel, the internal cleanness of steel becomes an important evaluation indicator of material quality. Sub-macroscopic defects are randomly distributed inside steel materials, which have seriously affected material stability and fatigue life because they are not covered by existing testing standards. Besides, the existing detection methods generally have problems such as low efficiency and complexity. In this paper, we propose a non-destructive inclusion testing and classification framework based on ultrasonic testing experiments, signal feature extraction and machine-learning methods. Under the optimal experimental detection conditions we found through experiments, a large-scale sub-macroscopic inclusion signal data set is established to realize the classification of defects. Moreover, empirical mode decomposition (EMD) and other feature extraction algorithms are applied to further boost the model performance. We propose a CatBoost-based stacking fused model named Stacked-CBT, which obtains state-of-the-art experimental results with an accuracy rate of 86.65% and demonstrates that the proposed framework is feasible to classify the sub-macroscopic inclusion signals. To the best of our knowledge, there is no previous study in this field that has acquired such a large amount of experimental sub-macroscopic signal data while taking into consideration classification-specific designs.},\n\tdoi = {10.1088/1361-6501/acd1a5},\n\tvolume = {34},\n\tnumber = {9},\n\tissn = {0957-0233},\n\tnote = {Times Cited in Web of Science Core Collection: 5 Total Times Cited: 5 Cited Reference Count: 56 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1088/1361-6501/acd1a5"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000073",
+      "entry_type": "article",
+      "title": "Three-Dimensional Residual Neural Architecture Search for Ultrasonic Defect Detection",
+      "authors": [
+        "McKnight, S",
+        "MacKinnon, C",
+        "Pierce, SG",
+        "Mohseni, E",
+        "Tunukovic, V",
+        "MacLeod, CN",
+        "Vithanage, RKW",
+        "O'Hare, T"
+      ],
+      "year": 2024,
+      "journal": "IEEE TRANSACTIONS ON ULTRASONICS FERROELECTRICS AND FREQUENCY CONTROL",
+      "doi": "10.1109/tuffc.2024.3353408",
+      "abstract": "This study presents a deep-learning (DL) methodology using 3-D convolutional neural networks (CNNs) to detect defects in carbon fiber-reinforced polymer (CFRP) composites through volumetric ultrasonic testing (UT) data. Acquiring large amounts of ultrasonic training data experimentally is expensive and time-consuming. To address this issue, a synthetic data generation method was extended to incorporate volumetric data. By preserving the complete volumetric data, complex preprocessing is reduced, and the model can utilize spatial and temporal information that is lost during imaging. This enables the model to utilize important features that might be overlooked otherwise. The performance of three architectures was compared. The first architecture is prevalent in the literature for the classification of volumetric datasets. The second demonstrated a hand-designed approach to architecture design, with modifications to the first architecture to address the challenges of this specific task. A key modification was the use of cuboidal kernels to account for the large aspect ratios seen in ultrasonic data. The third architecture was discovered through neural architecture search (NAS) from a modified 3-D residual neural network (ResNet) search space. In addition, domain-specific augmentation methods were incorporated during training, resulting in significant improvements in model performance, with a mean accuracy improvement of 22.4% on the discovered architecture. The discovered architecture demonstrated the best performance with a mean accuracy increase of 7.9% over the second-best model. It was able to consistently detect all defects while maintaining a model size smaller than most 2-D ResNets. Each model had an inference time of less than 0.5 s, making them efficient for the interpretation of large amounts of data. [GRAPHICS]",
+      "keywords": [
+        "Image processing and computer vision",
+        "neural architecture search (NAS)",
+        "nondestructive evaluation (NDE)",
+        "synthetic data",
+        "ultrasonic testing (UT)",
+        "volumetric"
+      ],
+      "normalized_title": "three dimensional residual neural architecture search for ultrasonic defect detection",
+      "raw_bibtex": "@ARTICLE{10.1109/TUFFC.2024.3353408,\n\tauthor = {McKnight, S and MacKinnon, C and Pierce, SG and Mohseni, E and Tunukovic, V and MacLeod, CN and Vithanage, RKW and O'Hare, T},\n\ttitle = {Three-Dimensional Residual Neural Architecture Search for Ultrasonic Defect Detection},\n\tjournal = {IEEE TRANSACTIONS ON ULTRASONICS FERROELECTRICS AND FREQUENCY CONTROL},\n\tyear = {2024},\n\tkeywords = {Image processing and computer vision; neural architecture search (NAS); nondestructive evaluation (NDE); synthetic data; ultrasonic testing (UT); volumetric},\n\tabstract = {This study presents a deep-learning (DL) methodology using 3-D convolutional neural networks (CNNs) to detect defects in carbon fiber-reinforced polymer (CFRP) composites through volumetric ultrasonic testing (UT) data. Acquiring large amounts of ultrasonic training data experimentally is expensive and time-consuming. To address this issue, a synthetic data generation method was extended to incorporate volumetric data. By preserving the complete volumetric data, complex preprocessing is reduced, and the model can utilize spatial and temporal information that is lost during imaging. This enables the model to utilize important features that might be overlooked otherwise. The performance of three architectures was compared. The first architecture is prevalent in the literature for the classification of volumetric datasets. The second demonstrated a hand-designed approach to architecture design, with modifications to the first architecture to address the challenges of this specific task. A key modification was the use of cuboidal kernels to account for the large aspect ratios seen in ultrasonic data. The third architecture was discovered through neural architecture search (NAS) from a modified 3-D residual neural network (ResNet) search space. In addition, domain-specific augmentation methods were incorporated during training, resulting in significant improvements in model performance, with a mean accuracy improvement of 22.4% on the discovered architecture. The discovered architecture demonstrated the best performance with a mean accuracy increase of 7.9% over the second-best model. It was able to consistently detect all defects while maintaining a model size smaller than most 2-D ResNets. Each model had an inference time of less than 0.5 s, making them efficient for the interpretation of large amounts of data. [GRAPHICS]},\n\tdoi = {10.1109/TUFFC.2024.3353408},\n\tvolume = {71},\n\tnumber = {3},\n\tpages = {423-436},\n\tissn = {0885-3010},\n\tnote = {Times Cited in Web of Science Core Collection: 8 Total Times Cited: 8 Cited Reference Count: 52 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TUFFC.2024.3353408"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000074",
+      "entry_type": "article",
+      "title": "High-Resolution Imaging for Additive Manufactured Metals Using Laser Ultrasonics With Hybrid GNN-OCSVM Algorithm",
+      "authors": [
+        "Chen, D",
+        "Kang, XF",
+        "Gong, T",
+        "Yin, AM",
+        "Guo, SF",
+        "Liang, ZF",
+        "Zhou, H",
+        "Yang, M",
+        "Zhang, WX"
+      ],
+      "year": 2025,
+      "journal": "IEEE TRANSACTIONS ON INSTRUMENTATION AND MEASUREMENT",
+      "doi": "10.1109/tim.2025.3627338",
+      "abstract": "The coupling of multimodal ultrasonic waves generated by pulsed lasers, combined with wave scattering caused by surface roughness and randomly distributed pores, presents significant challenges for achieving high-resolution defect imaging in metal additive manufacturing (MAM) components using conventional ultrasonic methods. This article proposes a probabilistic imaging strategy based on a hybrid deep learning algorithm, namely a graph neural network integrated with a one-class support vector machine (GNN-OCSVM), for subsurface defect characterization using laser ultrasonics. The graph neural network (GNN)-based denoising module enhances the signal-to-noise ratio (SNR) by aggregating correlated features through topological relationships among ultrasonic signals. Subsequently, the one-class support vector machine (OCSVM) algorithm estimates the probability of defect presence from the denoised signals, enabling probabilistic reconstruction of C-scan images of subsurface defects. Laser ultrasonic experiments were conducted on AlSi10Mg and TC4 MAM specimens containing subsurface defects of varying sizes and geometries. The experimental results demonstrate that the GNN-OCSVM algorithm: 1) achieves superior defect boundary definition compared to scanning acoustic microscopy (SAM); 2) maintains a relative dimensional error of merely 2%-6% when benchmarked against X-ray imaging; and 3) outperforms other anomaly detection algorithms (ADAs), including Deep Isolation Forest, K-Means and TimesNet, in both defect shape reconstruction accuracy and size measurement precision. These findings demonstrate that the proposed AI algorithm, combined with laser ultrasonics, provides enhanced imaging accuracy for subsurface defect detection under challenging multimodal wave coupling conditions, offering a viable solution for nondestructive evaluation of additive-manufactured components.",
+      "keywords": [
+        "Acoustics",
+        "Noise reduction",
+        "Graph neural networks",
+        "Signal to noise ratio",
+        "Imaging",
+        "Feature extraction",
+        "Scattering",
+        "Surface waves",
+        "Laser noise",
+        "Surface roughness",
+        "Anomaly detection",
+        "graph neural network (GNN)",
+        "laser ultrasonic testing (LUT)",
+        "multimodal coupling",
+        "subsurface defects",
+        "INFORMATION",
+        "SIGNALS"
+      ],
+      "normalized_title": "high resolution imaging for additive manufactured metals using laser ultrasonics with hybrid gnn ocsvm algorithm",
+      "raw_bibtex": "@ARTICLE{10.1109/TIM.2025.3627338,\n\tauthor = {Chen, D and Kang, XF and Gong, T and Yin, AM and Guo, SF and Liang, ZF and Zhou, H and Yang, M and Zhang, WX},\n\ttitle = {High-Resolution Imaging for Additive Manufactured Metals Using Laser Ultrasonics With Hybrid GNN-OCSVM Algorithm},\n\tjournal = {IEEE TRANSACTIONS ON INSTRUMENTATION AND MEASUREMENT},\n\tyear = {2025},\n\tkeywords = {Acoustics; Noise reduction; Graph neural networks; Signal to noise ratio; Imaging; Feature extraction; Scattering; Surface waves; Laser noise; Surface roughness; Anomaly detection; graph neural network (GNN); laser ultrasonic testing (LUT); multimodal coupling; subsurface defects; INFORMATION; SIGNALS},\n\tabstract = {The coupling of multimodal ultrasonic waves generated by pulsed lasers, combined with wave scattering caused by surface roughness and randomly distributed pores, presents significant challenges for achieving high-resolution defect imaging in metal additive manufacturing (MAM) components using conventional ultrasonic methods. This article proposes a probabilistic imaging strategy based on a hybrid deep learning algorithm, namely a graph neural network integrated with a one-class support vector machine (GNN-OCSVM), for subsurface defect characterization using laser ultrasonics. The graph neural network (GNN)-based denoising module enhances the signal-to-noise ratio (SNR) by aggregating correlated features through topological relationships among ultrasonic signals. Subsequently, the one-class support vector machine (OCSVM) algorithm estimates the probability of defect presence from the denoised signals, enabling probabilistic reconstruction of C-scan images of subsurface defects. Laser ultrasonic experiments were conducted on AlSi10Mg and TC4 MAM specimens containing subsurface defects of varying sizes and geometries. The experimental results demonstrate that the GNN-OCSVM algorithm: 1) achieves superior defect boundary definition compared to scanning acoustic microscopy (SAM); 2) maintains a relative dimensional error of merely 2%-6% when benchmarked against X-ray imaging; and 3) outperforms other anomaly detection algorithms (ADAs), including Deep Isolation Forest, K-Means and TimesNet, in both defect shape reconstruction accuracy and size measurement precision. These findings demonstrate that the proposed AI algorithm, combined with laser ultrasonics, provides enhanced imaging accuracy for subsurface defect detection under challenging multimodal wave coupling conditions, offering a viable solution for nondestructive evaluation of additive-manufactured components.},\n\tdoi = {10.1109/TIM.2025.3627338},\n\tvolume = {74},\n\tissn = {0018-9456},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 40 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TIM.2025.3627338"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000075",
+      "entry_type": "article",
+      "title": "Benchmarking Deep Learning Models for Automatic Ultrasonic Imaging Inspection",
+      "authors": [
+        "Ye, JX",
+        "Toyama, N"
+      ],
+      "year": 2021,
+      "journal": "IEEE ACCESS",
+      "doi": "10.1109/access.2021.3062860",
+      "abstract": "The success of deep neural networks in carrying out a wide variety of cognitive tasks also raised expectations regarding the advent of AI for the ultrasonic testing (UT) data interpretation in the Non-destructive evaluation (NDE) field. Though it is a growing area of research, we identify two main barriers that hinder research in the field: the lack of real-world, annotated datasets accessible to the public and the scarceness of benchmarked performance of the state-of-the-art deep learning models. To address these issues, we first introduce a new dataset called \"USimgAIST\" which contains more than 7000 real ultrasonic inspection images with both normal cases and defective ones from 17 types of flaws. Using the dataset, we performed a comprehensive evaluation of representative deep learning models. Through the study, we expect to validate whether existing AI models can achieve human-level ultrasonic image understanding for defect characterization. Besides, all detailed benchmarking comparisons, including defect detection accuracy, model complexity, memory usage, and inference time, are shown. We hope this study exhibits an overview of performances of advanced learning models working for ultrasonic image analysis and lays the groundwork for prospective practitioners to compare their methods and results fairly.",
+      "keywords": [
+        "Acoustics",
+        "Inspection",
+        "Deep learning",
+        "Data models",
+        "Computational modeling",
+        "Task analysis",
+        "Neural networks",
+        "Anomaly detection",
+        "computer vision",
+        "deep learning",
+        "non-destructive evaluation",
+        "ultrasonic inspection",
+        "DEFECTS"
+      ],
+      "normalized_title": "benchmarking deep learning models for automatic ultrasonic imaging inspection",
+      "raw_bibtex": "@ARTICLE{10.1109/ACCESS.2021.3062860,\n\tauthor = {Ye, JX and Toyama, N},\n\ttitle = {Benchmarking Deep Learning Models for Automatic Ultrasonic Imaging Inspection},\n\tjournal = {IEEE ACCESS},\n\tyear = {2021},\n\tkeywords = {Acoustics; Inspection; Deep learning; Data models; Computational modeling; Task analysis; Neural networks; Anomaly detection; computer vision; deep learning; non-destructive evaluation; ultrasonic inspection; DEFECTS},\n\tabstract = {The success of deep neural networks in carrying out a wide variety of cognitive tasks also raised expectations regarding the advent of AI for the ultrasonic testing (UT) data interpretation in the Non-destructive evaluation (NDE) field. Though it is a growing area of research, we identify two main barriers that hinder research in the field: the lack of real-world, annotated datasets accessible to the public and the scarceness of benchmarked performance of the state-of-the-art deep learning models. To address these issues, we first introduce a new dataset called \"USimgAIST\" which contains more than 7000 real ultrasonic inspection images with both normal cases and defective ones from 17 types of flaws. Using the dataset, we performed a comprehensive evaluation of representative deep learning models. Through the study, we expect to validate whether existing AI models can achieve human-level ultrasonic image understanding for defect characterization. Besides, all detailed benchmarking comparisons, including defect detection accuracy, model complexity, memory usage, and inference time, are shown. We hope this study exhibits an overview of performances of advanced learning models working for ultrasonic image analysis and lays the groundwork for prospective practitioners to compare their methods and results fairly.},\n\tdoi = {10.1109/ACCESS.2021.3062860},\n\tvolume = {9},\n\tpages = {36986-36994},\n\tissn = {2169-3536},\n\tnote = {Times Cited in Web of Science Core Collection: 28 Total Times Cited: 33 Cited Reference Count: 37 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/ACCESS.2021.3062860"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000076",
+      "entry_type": "article",
+      "title": "Evaluation of Early Concrete Damage Caused by Chloride-Induced Steel Corrosion Using a Deep Learning Approach Based on RNN for Ultrasonic Pulse Waves",
+      "authors": [
+        "Mukhti, JA",
+        "Robles, KPV",
+        "Lee, KH",
+        "Kee, SH"
+      ],
+      "year": 2023,
+      "journal": "MATERIALS",
+      "doi": "10.3390/ma16093502",
+      "abstract": "The objective of this study is to explore the feasibility of using ultrasonic pulse wave measurements as an early detection method for corrosion-induced concrete damages. A series of experiments are conducted using concrete cube specimens, at a size of 200 mm, with a reinforcing steel bar (rebar) embedded in the center. The main variables include the water-to-cement ratio of the concrete (0.4, 0.5, and 0.6), the diameter of the rebar (10 mm, 13 mm, 19 mm, and 22 mm), and the corrosion level (ranging from 0% to 20% depending on rebar diameter). The impressed current technique is used to accelerate corrosion of rebars in concrete immersed in a 3% NaCl solution. Ultrasonic pulse waves are collected from the concrete specimens using a pair of 50 kHz P-wave transducers in the through-transmission configuration before and after the accelerated corrosion test. Deep learning techniques, specifically three recurrent neural network (RNN) models (long short-term memory, gated recurrent unit, and bidirectional long short-term memory), are utilized to develop a classification model for early detection of concrete damage due to rebar corrosion. The performance of the RNN models is compared to conventional ultrasonic testing parameters, namely ultrasonic pulse velocity and signal consistency. The results demonstrate that the RNN method outperforms the other two methods. Among the RNN methods, the bidirectional long short-term memory RNN model had the best performance, achieving an accuracy of 74% and a Cohen's kappa coefficient of 0.48. This study establishes the potentiality of utilizing deep learning of ultrasonic pulse waves with RNN models for early detection of concrete damage associated with steel corrosion.",
+      "keywords": [
+        "concrete deterioration",
+        "non-destructive evaluation",
+        "ultrasonic testing",
+        "deep learning",
+        "recurrent neural network",
+        "REINFORCED-CONCRETE",
+        "CYCLIC RESPONSE",
+        "PREDICTION"
+      ],
+      "normalized_title": "evaluation of early concrete damage caused by chloride induced steel corrosion using a deep learning approach based on rnn for ultrasonic pulse waves",
+      "raw_bibtex": "@ARTICLE{10.3390/ma16093502,\n\tauthor = {Mukhti, JA and Robles, KPV and Lee, KH and Kee, SH},\n\ttitle = {Evaluation of Early Concrete Damage Caused by Chloride-Induced Steel Corrosion Using a Deep Learning Approach Based on RNN for Ultrasonic Pulse Waves},\n\tjournal = {MATERIALS},\n\tyear = {2023},\n\tkeywords = {concrete deterioration; non-destructive evaluation; ultrasonic testing; deep learning; recurrent neural network; REINFORCED-CONCRETE; CYCLIC RESPONSE; PREDICTION},\n\tabstract = {The objective of this study is to explore the feasibility of using ultrasonic pulse wave measurements as an early detection method for corrosion-induced concrete damages. A series of experiments are conducted using concrete cube specimens, at a size of 200 mm, with a reinforcing steel bar (rebar) embedded in the center. The main variables include the water-to-cement ratio of the concrete (0.4, 0.5, and 0.6), the diameter of the rebar (10 mm, 13 mm, 19 mm, and 22 mm), and the corrosion level (ranging from 0% to 20% depending on rebar diameter). The impressed current technique is used to accelerate corrosion of rebars in concrete immersed in a 3% NaCl solution. Ultrasonic pulse waves are collected from the concrete specimens using a pair of 50 kHz P-wave transducers in the through-transmission configuration before and after the accelerated corrosion test. Deep learning techniques, specifically three recurrent neural network (RNN) models (long short-term memory, gated recurrent unit, and bidirectional long short-term memory), are utilized to develop a classification model for early detection of concrete damage due to rebar corrosion. The performance of the RNN models is compared to conventional ultrasonic testing parameters, namely ultrasonic pulse velocity and signal consistency. The results demonstrate that the RNN method outperforms the other two methods. Among the RNN methods, the bidirectional long short-term memory RNN model had the best performance, achieving an accuracy of 74% and a Cohen's kappa coefficient of 0.48. This study establishes the potentiality of utilizing deep learning of ultrasonic pulse waves with RNN models for early detection of concrete damage associated with steel corrosion.},\n\tdoi = {10.3390/ma16093502},\n\tvolume = {16},\n\tnumber = {9},\n\tissn = {1996-1944},\n\tnote = {Times Cited in Web of Science Core Collection: 26 Total Times Cited: 28 Cited Reference Count: 55 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/ma16093502"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000077",
+      "entry_type": "article",
+      "title": "A study of machine learning object detection performance for phased array ultrasonic testing of carbon fibre reinforced plastics",
+      "authors": [
+        "Tunukovic, V",
+        "McKnight, S",
+        "Mohseni, E",
+        "Pierce, SG",
+        "Pyle, R",
+        "Duernberger, E",
+        "Loukas, C",
+        "Vithanage, RKW",
+        "Lines, D",
+        "Dobie, G",
+        "Macleod, CN",
+        "Cochran, S",
+        "O'Hare, T"
+      ],
+      "year": 2024,
+      "journal": "NDT & E INTERNATIONAL",
+      "doi": "10.1016/j.ndteint.2024.103094",
+      "abstract": "The growing adoption of Carbon Fibre Reinforced Plastics (CFRPs) in the aerospace industry has resulted in a significant reliance on Non-Destructive Evaluation (NDE) to ensure the quality and integrity of these materials. The interpretation of large amounts of data acquired from automated robotic ultrasonic scanning by expert operators is often time consuming, tedious, and prone to human error creating a bottleneck in the manufacturing process. However, with ever growing trend of computing power and digitally stored NDE data, intelligent Machine Learning (ML) algorithms have been gaining more traction than before for NDE data analysis. In this study, the performance of ML object detection models, statistical methods for defect detection, and traditional amplitude thresholding approaches for defect detection in CFRPs were compared. A novel augmentation technique was used to enhance synthetically generated datasets used for ML model training. All approaches were tested on real data obtained from an experimental setup mimicking industrial conditions, with ML models showing improvement over amplitude thresholding and statistical thresholding techniques. The advantages and limitations of all methods are reported and discussed.",
+      "keywords": [
+        "Automated defect detection",
+        "Machine learning",
+        "Deep learning in ultrasonic testing",
+        "Non-destructive evaluation",
+        "Carbon fibre reinforced polymers",
+        "Aerospace composites",
+        "COMPOSITE-MATERIALS",
+        "NEURAL-NETWORK",
+        "CLASSIFICATION",
+        "NDE"
+      ],
+      "normalized_title": "a study of machine learning object detection performance for phased array ultrasonic testing of carbon fibre reinforced plastics",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ndteint.2024.103094,\n\tauthor = {Tunukovic, V and McKnight, S and Mohseni, E and Pierce, SG and Pyle, R and Duernberger, E and Loukas, C and Vithanage, RKW and Lines, D and Dobie, G and Macleod, CN and Cochran, S and O'Hare, T},\n\ttitle = {A study of machine learning object detection performance for phased array ultrasonic testing of carbon fibre reinforced plastics},\n\tjournal = {NDT & E INTERNATIONAL},\n\tyear = {2024},\n\tkeywords = {Automated defect detection; Machine learning; Deep learning in ultrasonic testing; Non-destructive evaluation; Carbon fibre reinforced polymers; Aerospace composites; COMPOSITE-MATERIALS; NEURAL-NETWORK; CLASSIFICATION; NDE},\n\tabstract = {The growing adoption of Carbon Fibre Reinforced Plastics (CFRPs) in the aerospace industry has resulted in a significant reliance on Non-Destructive Evaluation (NDE) to ensure the quality and integrity of these materials. The interpretation of large amounts of data acquired from automated robotic ultrasonic scanning by expert operators is often time consuming, tedious, and prone to human error creating a bottleneck in the manufacturing process. However, with ever growing trend of computing power and digitally stored NDE data, intelligent Machine Learning (ML) algorithms have been gaining more traction than before for NDE data analysis. In this study, the performance of ML object detection models, statistical methods for defect detection, and traditional amplitude thresholding approaches for defect detection in CFRPs were compared. A novel augmentation technique was used to enhance synthetically generated datasets used for ML model training. All approaches were tested on real data obtained from an experimental setup mimicking industrial conditions, with ML models showing improvement over amplitude thresholding and statistical thresholding techniques. The advantages and limitations of all methods are reported and discussed.},\n\tdoi = {10.1016/j.ndteint.2024.103094},\n\tvolume = {144},\n\tissn = {0963-8695},\n\tnote = {Times Cited in Web of Science Core Collection: 20 Total Times Cited: 22 Cited Reference Count: 74 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ndteint.2024.103094"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000078",
+      "entry_type": "article",
+      "title": "Nonlinear autoregression-based non-destructive evaluation approach for railway tracks using an ultrasonic fiber bragg grating array",
+      "authors": [
+        "Dang, DZ",
+        "Wang, YW",
+        "Ni, YQ"
+      ],
+      "year": 2024,
+      "journal": "CONSTRUCTION AND BUILDING MATERIALS",
+      "doi": "10.1016/j.conbuildmat.2023.134728",
+      "abstract": "The safe operation of railway systems relies on rapid and accurate non-destructive damage detection and evaluation techniques to help rule out potential threats brought by rail track damages. In this paper, an innovative fiber Bragg grating (FBG) array-based sensing system is developed for rail defect inspection by integrating the ultrasonic testing technology, and a nonlinear autoregressive neural network with exogenous inputs (NARX) is proposed for rail damage detection based on measured ultrasonic signals. The developed sensing system can realize the high-speed and multiplexed ultrasonic signals demodulation. The NARX is proposed to process the ultrasonic signals obtained by the developed sensing system, and a specified probabilistic damage sensitive feature (DSF) is tailored to indicate rail health status, derived from the probability density function (PDF) of NARX prediction errors. To verify the proposed sensing system and damage identification algorithm, experimental studies considering four rail conditions (i.e., intact, cracked, bump, and welded conditions) are conducted in this study. First, baseline NARX models are priorly trained using ultrasonic signals acquired on an intact rail segment; then, DSFs corresponding to each condition are calculated enabling effective rail damage diagnosis. To optimize the training parameters of NARX models, three different training functions are utilized to select the most appropriate parameters that are sensitive to rail damages. Last, large-scale testing is conducted, further proving the applicability and reliability of the proposed rail damage evaluation approach. Through this study, it is suggested that integrating high-performance sensing technologies with effective data processing tools would maximumly enable efficient and robust non-destructive testing, especially on important infrastructures such as rails.",
+      "keywords": [
+        "Rail damage detection",
+        "Fiber Bragg grating array",
+        "Nonlinear autoregression",
+        "Non-destructive evaluation",
+        "Ultrasonic testing",
+        "NARX NEURAL-NETWORK",
+        "FRAMEWORK",
+        "DAMAGE",
+        "MODEL"
+      ],
+      "normalized_title": "nonlinear autoregression based non destructive evaluation approach for railway tracks using an ultrasonic fiber bragg grating array",
+      "raw_bibtex": "@ARTICLE{10.1016/j.conbuildmat.2023.134728,\n\tauthor = {Dang, DZ and Wang, YW and Ni, YQ},\n\ttitle = {Nonlinear autoregression-based non-destructive evaluation approach for railway tracks using an ultrasonic fiber bragg grating array},\n\tjournal = {CONSTRUCTION AND BUILDING MATERIALS},\n\tyear = {2024},\n\tkeywords = {Rail damage detection; Fiber Bragg grating array; Nonlinear autoregression; Non-destructive evaluation; Ultrasonic testing; NARX NEURAL-NETWORK; FRAMEWORK; DAMAGE; MODEL},\n\tabstract = {The safe operation of railway systems relies on rapid and accurate non-destructive damage detection and evaluation techniques to help rule out potential threats brought by rail track damages. In this paper, an innovative fiber Bragg grating (FBG) array-based sensing system is developed for rail defect inspection by integrating the ultrasonic testing technology, and a nonlinear autoregressive neural network with exogenous inputs (NARX) is proposed for rail damage detection based on measured ultrasonic signals. The developed sensing system can realize the high-speed and multiplexed ultrasonic signals demodulation. The NARX is proposed to process the ultrasonic signals obtained by the developed sensing system, and a specified probabilistic damage sensitive feature (DSF) is tailored to indicate rail health status, derived from the probability density function (PDF) of NARX prediction errors. To verify the proposed sensing system and damage identification algorithm, experimental studies considering four rail conditions (i.e., intact, cracked, bump, and welded conditions) are conducted in this study. First, baseline NARX models are priorly trained using ultrasonic signals acquired on an intact rail segment; then, DSFs corresponding to each condition are calculated enabling effective rail damage diagnosis. To optimize the training parameters of NARX models, three different training functions are utilized to select the most appropriate parameters that are sensitive to rail damages. Last, large-scale testing is conducted, further proving the applicability and reliability of the proposed rail damage evaluation approach. Through this study, it is suggested that integrating high-performance sensing technologies with effective data processing tools would maximumly enable efficient and robust non-destructive testing, especially on important infrastructures such as rails.},\n\tdoi = {10.1016/j.conbuildmat.2023.134728},\n\tvolume = {411},\n\tissn = {0950-0618},\n\tnote = {Times Cited in Web of Science Core Collection: 4 Total Times Cited: 5 Cited Reference Count: 50 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.conbuildmat.2023.134728"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000079",
+      "entry_type": "article",
+      "title": "Imaging of inclusions in concrete with enhanced low-frequency ultrasound tomography",
+      "authors": [
+        "Zhang, L",
+        "Qiao, C",
+        "Jia, SD",
+        "Zeng, JJ",
+        "Li, HY",
+        "Zhang, TH",
+        "Wu, SF"
+      ],
+      "year": 2025,
+      "journal": "SENSORS AND ACTUATORS A-PHYSICAL",
+      "doi": "10.1016/j.sna.2025.116324",
+      "abstract": "Ultrasonic Testing (UT) is widely used to identify surface and sub-surface defects/flaws in various materials. Especially for a concrete structure, the visualization of the interior using ultrasound tomography allows for the quantitative description of defects. However, imaging error errors in concrete are inevitable due to the nature of ray-trace-based tomography and material, whose detectability can be influenced by many factors (e.g., wave propagation, the existence of aggregates, pores, heterogeneity, etc.). In order to enhance the imaging quality, a proper selection of abnormal path imaging methods based on the average ultrasonic velocity is proposed. The defective and imperfect zones in concrete can be identified by plotting intersection zones formed with multiple paths of ultrasound propagation. To illustrate the proposed strategy, both numerical and experimental analyses were conducted; furthermore, the reliability and efficiency have been confirmed accordingly. Compared with the conventional tomography method, the path optimization imaging method can effectively enhance the detect- ability and reduce the deployment of transducers and the number of measurements. In addition, an optimization method for determining the time of flight (TOF) is presented to obtain a more accurate arrival time for each ultrasound path with a noise outlier-based method. Low-frequency ultrasonic testing schemes were proposed to ensure sufficient ultrasonic energy penetration and reduce signal attenuation. This work offers a practical solution for high-quality ultrasonic imaging in concrete and further provides an idea for cost-effective and in-situ evaluations.",
+      "keywords": [
+        "Ultrasonic testing",
+        "Ultrasound path",
+        "Tomography",
+        "Ray-trace method",
+        "Heterogeneous material",
+        "Concrete",
+        "WAVE-PROPAGATION"
+      ],
+      "normalized_title": "imaging of inclusions in concrete with enhanced low frequency ultrasound tomography",
+      "raw_bibtex": "@ARTICLE{10.1016/j.sna.2025.116324,\n\tauthor = {Zhang, L and Qiao, C and Jia, SD and Zeng, JJ and Li, HY and Zhang, TH and Wu, SF},\n\ttitle = {Imaging of inclusions in concrete with enhanced low-frequency ultrasound tomography},\n\tjournal = {SENSORS AND ACTUATORS A-PHYSICAL},\n\tyear = {2025},\n\tkeywords = {Ultrasonic testing; Ultrasound path; Tomography; Ray-trace method; Heterogeneous material; Concrete; WAVE-PROPAGATION},\n\tabstract = {Ultrasonic Testing (UT) is widely used to identify surface and sub-surface defects/flaws in various materials. Especially for a concrete structure, the visualization of the interior using ultrasound tomography allows for the quantitative description of defects. However, imaging error errors in concrete are inevitable due to the nature of ray-trace-based tomography and material, whose detectability can be influenced by many factors (e.g., wave propagation, the existence of aggregates, pores, heterogeneity, etc.). In order to enhance the imaging quality, a proper selection of abnormal path imaging methods based on the average ultrasonic velocity is proposed. The defective and imperfect zones in concrete can be identified by plotting intersection zones formed with multiple paths of ultrasound propagation. To illustrate the proposed strategy, both numerical and experimental analyses were conducted; furthermore, the reliability and efficiency have been confirmed accordingly. Compared with the conventional tomography method, the path optimization imaging method can effectively enhance the detect- ability and reduce the deployment of transducers and the number of measurements. In addition, an optimization method for determining the time of flight (TOF) is presented to obtain a more accurate arrival time for each ultrasound path with a noise outlier-based method. Low-frequency ultrasonic testing schemes were proposed to ensure sufficient ultrasonic energy penetration and reduce signal attenuation. This work offers a practical solution for high-quality ultrasonic imaging in concrete and further provides an idea for cost-effective and in-situ evaluations.},\n\tdoi = {10.1016/j.sna.2025.116324},\n\tvolume = {386},\n\tissn = {0924-4247},\n\tnote = {Times Cited in Web of Science Core Collection: 5 Total Times Cited: 5 Cited Reference Count: 32 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.sna.2025.116324"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000080",
+      "entry_type": "article",
+      "title": "A comparison of methods for generating synthetic training data for domain adaption of deep learning models in ultrasonic non-destructive evaluation",
+      "authors": [
+        "Mcknight, S",
+        "Pierce, SG",
+        "Mohseni, E",
+        "Mackinnon, C",
+        "Macleod, C",
+        "'Hare, T",
+        "Loukas, C"
+      ],
+      "year": 2024,
+      "journal": "NDT & E INTERNATIONAL",
+      "doi": "10.1016/j.ndteint.2023.102978",
+      "abstract": "This work provides a solution to the challenge of small amounts of training data in Non-Destructive Ultrasonic Testing for composite components. It was demonstrated that direct simulation alone is ineffective at producing training data that was representative of the experimental domain due to poor noise reconstruction. Therefore, four unique synthetic data generation methods were proposed which use semi-analytical simulated data as a foundation. Each method was evaluated for its performance in the classification of real experimental images when trained on a Convolutional Neural Network which underwent hyperparameter optimization using a genetic algorithm. The first method introduced task specific modifications to CycleGAN, a generative network for image -to-image translation, to learn the mapping from physics-based simulations of defect indications to experimental indications in resulting ultrasound images. The second method was based on combining real experimental defect free images with simulated defect responses. The final two methods fully simulated the noise responses at an image and signal level respectively. The purely simulated data produced a mean classification F1 score of 0.394. However, when trained on the new synthetic datasets, a significant improvement in classification performance on experimental data was realized, with mean classification F1 scores of 0.843, 0.688, 0.629, and 0.738 for the respective approaches.",
+      "keywords": [
+        "Deep Learning",
+        "Ultrasonic Testing",
+        "Synthetic Data Generation",
+        "Generative Adversarial Networks",
+        "Image Processing and Computer Vision",
+        "Genetic Algorithms",
+        "Non-Destructive Testing"
+      ],
+      "normalized_title": "a comparison of methods for generating synthetic training data for domain adaption of deep learning models in ultrasonic non destructive evaluation",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ndteint.2023.102978,\n\tauthor = {Mcknight, S and Pierce, SG and Mohseni, E and Mackinnon, C and Macleod, C and 'Hare, T and Loukas, C},\n\ttitle = {A comparison of methods for generating synthetic training data for domain adaption of deep learning models in ultrasonic non-destructive evaluation},\n\tjournal = {NDT & E INTERNATIONAL},\n\tyear = {2024},\n\tkeywords = {Deep Learning; Ultrasonic Testing; Synthetic Data Generation; Generative Adversarial Networks; Image Processing and Computer Vision; Genetic Algorithms; Non-Destructive Testing},\n\tabstract = {This work provides a solution to the challenge of small amounts of training data in Non-Destructive Ultrasonic Testing for composite components. It was demonstrated that direct simulation alone is ineffective at producing training data that was representative of the experimental domain due to poor noise reconstruction. Therefore, four unique synthetic data generation methods were proposed which use semi-analytical simulated data as a foundation. Each method was evaluated for its performance in the classification of real experimental images when trained on a Convolutional Neural Network which underwent hyperparameter optimization using a genetic algorithm. The first method introduced task specific modifications to CycleGAN, a generative network for image -to-image translation, to learn the mapping from physics-based simulations of defect indications to experimental indications in resulting ultrasound images. The second method was based on combining real experimental defect free images with simulated defect responses. The final two methods fully simulated the noise responses at an image and signal level respectively. The purely simulated data produced a mean classification F1 score of 0.394. However, when trained on the new synthetic datasets, a significant improvement in classification performance on experimental data was realized, with mean classification F1 scores of 0.843, 0.688, 0.629, and 0.738 for the respective approaches.},\n\tdoi = {10.1016/j.ndteint.2023.102978},\n\tvolume = {141},\n\tissn = {0963-8695},\n\tnote = {Times Cited in Web of Science Core Collection: 28 Total Times Cited: 30 Cited Reference Count: 43 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ndteint.2023.102978"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

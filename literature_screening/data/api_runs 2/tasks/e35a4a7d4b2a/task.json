@@ -1,0 +1,464 @@
+{
+  "id": "e35a4a7d4b2a",
+  "kind": "screening",
+  "status": "succeeded",
+  "cancel_requested": false,
+  "title": "数字设备使用与学生福祉（Digital device use and well-being among students）",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 3,
+  "progress_total": 10,
+  "progress_message": "Task completed",
+  "created_at": "2026-03-25T19:13:38.284163+08:00",
+  "updated_at": "2026-03-25T19:14:58.578243+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "b41972a19412",
+    "project_topic": "数字设备使用与学生福祉（Digital device use and well-being among students）",
+    "model_provider": "deepseek",
+    "parent_task_id": null,
+    "input_dataset_ids": [],
+    "request_payload": {
+      "title": "数字设备使用与学生福祉（Digital device use and well-being among students）",
+      "topic": "数字设备使用与学生福祉（Digital device use and well-being among students）",
+      "criteria_markdown": "以下是针对“数字设备使用与学生福祉”主题定制的最终文献筛选提示词（Prompt）。我已经根据该领域的学术特点，为你细化了具体的纳入（Inclusion）和排除（Exclusion）标准，并强化了你要求的格式与无引用标记的绝对指令。\r\n\r\n你可以直接复制以下内容并在新的对话中使用：\r\n\r\n***\r\n\r\n# Role\r\n\r\n你是一位专门研究教育心理学和公共健康的资深学术研究员，正在协助我筛选参考文献。我正在撰写一篇关于“数字设备使用与学生福祉（Digital device use and well-being among students）”的论文，我需要你帮我找出我能用到的参考文献。\r\n\r\n# Task\r\n\r\n我将提供一批文献的元数据（标题、摘要等）。请你逐一阅读，并严格按照以下流程处理：\r\n\r\n## Step 1: 筛选判读\r\n\r\n请根据以下标准判断该文献是否符合我的研究需求：\r\n\r\n* **纳入标准 (Inclusion Criteria)：**\r\n  1. 研究对象必须是学生群体（如青少年、中学生、大学生等）。\r\n  2. 自变量必须包含明确的数字设备或媒介使用行为（如智能手机成瘾、社交媒体使用频率、整体屏幕时间）。\r\n  3. 因变量必须涉及福祉的具体测量（如抑郁、焦虑、睡眠质量、孤独感、主观幸福感或学业倦怠）。\r\n  4. 必须是高质量的实证研究（定量、定性或混合方法）或系统性综述/元分析。\r\n\r\n* **排除标准 (Exclusion Criteria)：**\r\n  1. 纯探讨数字设备硬件技术、通信协议或底层算法（无人类心理/行为测量）。\r\n  2. 研究对象主要为非学生群体（如学龄前婴幼儿、老年人、全职职场人士）。\r\n  3. 仅探讨数字设备在特定疾病临床治疗中的应用（如利用VR技术治疗特定恐惧症），而非日常使用习惯对普遍福祉的影响。\r\n\r\n## Step 2: 格式化输出\r\n\r\n根据判读结果，执行不同的输出逻辑。\r\n**(绝对指令：所有输出必须完整包含在 markdown 代码框内，并且绝对禁止使用任何形式的来源标记或网络搜索引用标识！)**\r\n\r\n情况 A：如果不符合要求\r\n\r\n* 仅输出一行文字：\r\n  `❌ [剔除]：<文献完整标题>`\r\n\r\n情况 B：如果符合要求\r\n\r\n* 请按以下结构输出（不要使用任何来源引用功能，只输出文字）：\r\n\r\n# <文献完整标题>\r\n(中文翻译标题)\r\n\r\n核心总结\r\n(请用中文概括文章研究了什么具体问题，使用了什么核心方法和样本，得出了关于“设备使用”与“福祉”之间关系的什么主要结论。)\r\n\r\n深度分析\r\n* 参考价值：针对我的论文主题（数字设备使用与学生福祉），这篇文章提供了哪些具体的素材？（例如：是否提供了可靠的测量量表、揭示了特定的中介/调节变量、或是提供了可以直接引用的背景数据？）\r\n---\r\n\r\n# Input Data\r\n\r\n[在此处粘贴你导出的文献信息，可以是 BibTeX 格式，或者 Excel/CSV 中的标题+摘要文本]\r\n\r\n***\r\n\r\n### 调整建议\r\n\r\n这套筛选标准目前是全口径的。如果你的最终论文只聚焦于某个细分方向（例如只写“睡眠”或只写“大学生”），你需要将 Prompt 中的纳入标准进行收窄。\r\n\r\n需要我针对某个具体的细分方向（如：社交媒体与大学生心理焦虑）为你重新修改上述的纳入和排除标准吗？",
+      "inclusion": [
+        "研究对象必须是学生群体（如青少年、中学生、大学生等）。",
+        "自变量必须包含明确的数字设备或媒介使用行为（如智能手机成瘾、社交媒体使用频率、整体屏幕时间）。",
+        "因变量必须涉及福祉的具体测量（如抑郁、焦虑、睡眠质量、孤独感、主观幸福感或学业倦怠）。",
+        "必须是高质量的实证研究（定量、定性或混合方法）或系统性综述/元分析。"
+      ],
+      "exclusion": [
+        "纯探讨数字设备硬件技术、通信协议或底层算法（无人类心理/行为测量）。",
+        "研究对象主要为非学生群体（如学龄前婴幼儿、老年人、全职职场人士）。",
+        "仅探讨数字设备在特定疾病临床治疗中的应用（如利用VR技术治疗特定恐惧症），而非日常使用习惯对普遍福祉的影响。"
+      ],
+      "provider": "deepseek",
+      "model_name": "deepseek-chat",
+      "api_base_url": "https://api.deepseek.com/v1",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.0,
+      "max_tokens": 1536,
+      "min_request_interval_seconds": 2.0,
+      "batch_size": 10,
+      "target_include_count": 20,
+      "stop_when_target_reached": true,
+      "allow_uncertain": true,
+      "retry_times": 6,
+      "request_timeout_seconds": 240,
+      "encoding": "auto",
+      "project_id": "b41972a19412",
+      "parent_task_id": null,
+      "source_dataset_ids": []
+    },
+    "model_secret_id": "7696a5e1608d4992",
+    "uploaded_input_paths": [
+      "tasks/e35a4a7d4b2a/uploads/savedrecs.ris"
+    ]
+  },
+  "summary": {
+    "run_id": "run_20260325_191338",
+    "input_files_count": 1,
+    "raw_entries_count": 100,
+    "deduped_entries_count": 99,
+    "processed_count": 30,
+    "included_count": 26,
+    "excluded_count": 0,
+    "uncertain_count": 4,
+    "unused_count": 69,
+    "batch_count": 3,
+    "api_call_count": 3,
+    "stop_reason": "target_include_count_reached",
+    "started_at": "2026-03-25T19:13:38.522138+08:00",
+    "finished_at": "2026-03-25T19:14:58.549435+08:00"
+  },
+  "error": null,
+  "artifacts": {
+    "included_report": {
+      "path": "tasks/e35a4a7d4b2a/screening_run/screening_output/included_report.md",
+      "filename": "included_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 12452
+    },
+    "excluded_report": {
+      "path": "tasks/e35a4a7d4b2a/screening_run/screening_output/excluded_report.md",
+      "filename": "excluded_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 19
+    },
+    "uncertain_report": {
+      "path": "tasks/e35a4a7d4b2a/screening_run/screening_output/uncertain_report.md",
+      "filename": "uncertain_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 1852
+    },
+    "included_ris": {
+      "path": "tasks/e35a4a7d4b2a/screening_run/screening_output/included.ris",
+      "filename": "included.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 57300
+    },
+    "unused_ris": {
+      "path": "tasks/e35a4a7d4b2a/screening_run/screening_output/unused_remaining.ris",
+      "filename": "unused_remaining.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 142196
+    },
+    "run_summary": {
+      "path": "tasks/e35a4a7d4b2a/screening_run/screening_output/run_summary.json",
+      "filename": "run_summary.json",
+      "content_type": "application/json",
+      "size_bytes": 452
+    },
+    "screening_decisions": {
+      "path": "tasks/e35a4a7d4b2a/screening_run/screening_output/screening_decisions.json",
+      "filename": "screening_decisions.json",
+      "content_type": "application/json",
+      "size_bytes": 15611
+    }
+  },
+  "run_root": "tasks/e35a4a7d4b2a/screening_run",
+  "output_dir": "tasks/e35a4a7d4b2a/screening_run/screening_output",
+  "markdown_preview": null,
+  "records": [
+    {
+      "paper_id": "paper_000001",
+      "title": "Cross-lagged analysis of mobile phone addiction, bedtime procrastination, and exercise self-efficacy among university students",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究大学生手机成瘾与睡前拖延、运动自我效能的关系，涉及数字设备使用和福祉测量。",
+      "year": 2025,
+      "journal": "JOURNAL OF EXERCISE SCIENCE & FITNESS",
+      "doi": "10.1016/j.jesf.2025.07.003",
+      "abstract": "Purpose: Exercise self-efficacy refers to an individual's cognitive ability to believe that they can accomplish the goals and tasks of physical activity, which is particularly important for developing physical and mental health. Therefore, this study aimed to investigate the association between mobile phone addiction, bedtime procrastination, and exercise self-efficacy among college students, and to provide intervention directions and theoretical insights for developing college students' physical and mental health. Methods: Using the College Students' Mobile Phone Addiction Scale, the Bedtime Procrastination Scale, and the Exercise Self-Efficacy Scale, a longitudinal follow-up survey of 407 college students in provinces X and Y was conducted at 3-month intervals in May 2024 (T1) and August 2024 (T2) to analyze the mechanism of the interaction between the College Students' Mobile Phone Addiction Scale, the Bedtime Procrastination Scale and the exercise self-efficacy using cross-lagging. Results: There was no significant difference between mobile phone addiction, bedtime procrastination, and exercise self-efficacy among college students in terms of gender, academic year, and age. It was found that T1 mobile phone addiction positively predicted T2 bedtime procrastination (beta = 0.15, p < 0.05), while T1 bedtime procrastination positively predicted T2 mobile phone addiction (beta = 0.15, p < 0.001), indicating that mobile phone addiction and bedtime procrastination predicted each other temporally. In addition, T1 bedtime procrastination negatively predicted T2 exercise self-efficacy (beta = -0.10, p <0.05) and T1 mobile phone addiction negatively predicted T2 exercise self-efficacy (beta = -0.12, p < 0.05). Conclusion: There was a longitudinal predictive relationship between cell phone addiction, bedtime procrastination, and exercise self-efficacy; cell phone addiction and bedtime procrastination predicted each other; bedtime procrastination predicted exercise self-efficacy; and cell phone addiction predicted exercise self-efficacy."
+    },
+    {
+      "paper_id": "paper_000002",
+      "title": "Effects of physical exercise on mindfulness level among female college students: the mediating effect of mobile phone addiction",
+      "decision": "include",
+      "confidence": 0.92,
+      "reason": "标题和摘要研究女大学生体育锻炼、手机成瘾与正念水平的关系，符合学生群体、数字设备使用和福祉测量标准。",
+      "year": 2025,
+      "journal": "FRONTIERS IN PSYCHOLOGY",
+      "doi": "10.3389/fpsyg.2025.1667868",
+      "abstract": "Background: This study explores the impact of physical exercise on female college students' trait mindfulness levels and examines the mediating role of mobile phone addiction in this relationship. Methods: The empirical study employs stratified random cluster sampling. The Physical Activity Rating Scale-3 (PARS-3), Mindful Awareness Attention Scale (MAAS), and Mobile Phone Addiction Tendency Scale (MPATS) were used to conduct a questionnaire survey. The participants of the study were 554 female college students from 5 universities in Fujian Province, China. Results: The scores for physical exercise, trait mindfulness, and mobile phone addiction among female college students were 16.04 +/- 15.92, 53.79 +/- 11.45, and 47.93 +/- 9.76, respectively. Physical exercise and trait mindfulness had a significant positive correlation (r = 0.20, p < 0.01), while physical exercise and mobile phone addiction had a significant negative correlation (r = -0.17, p < 0.01). Also, a significant negative correlation was found between mobile phone addiction and trait mindfulness (r = -0.45, p < 0.01). The structural equation model analysis showed that the direct effect of physical exercise on trait mindfulness was 0.071 (p < 0.01), and mobile phone addiction played a significant indirect mediating role in it, with the indirect effect being 0.044, accounting for 35.77% of the total effect. Conclusion: The findings indicate that physical exercise can enhance female college students' trait mindfulness directly and indirectly by reducing mobile phone addiction. This implies the importance of promoting physical exercise and managing mobile phone use in universities, while combining mindfulness training with physical exercise may greatly benefit their comprehensive mental development. The cross-sectional design of this study can only reflect the co-occurrence of variables and cannot determine the causal direction. Using self-report scales, while accounting for potential social expectation biases and recall biases, future studies can further validate the conclusions through longitudinal tracking and multi-dimensional assessment."
+    },
+    {
+      "paper_id": "paper_000003",
+      "title": "How mobile phone addiction leads to college students' learning burnout: the role of depression as a mediator and fear of missing out as a moderator",
+      "decision": "include",
+      "confidence": 0.96,
+      "reason": "标题和摘要明确研究大学生手机成瘾如何导致学习倦怠，以抑郁为中介变量，涉及数字设备使用和福祉测量。",
+      "year": 2025,
+      "journal": "FRONTIERS IN PSYCHIATRY",
+      "doi": "10.3389/fpsyt.2025.1569340",
+      "abstract": "Background: With the widespread use of smartphones, mobile phone addiction is becoming increasingly common among college students, which has a negative impact on their learning. This study aims to explore how mobile phone addiction leads to college students' learning burnout, with a focus on the mediating role of depression and the moderating role of FOMO (Fear of Missing Out). Methods: Convenient sampling was used to collect 1862 valid questionnaires from over 10 universities in China. A moderated mediation model was constructed to analyze the relationship and mechanism among mobile phone addiction, learning burnout, depression and FOMO through structural equation modeling. Results: (1) Mobile phone addiction has a significant positive impact on college students' learning burnout (beta=0.4767, p < 0.001); (2) Depression plays a partial mediating role between mobile phone addiction and learning burnout (95% CI= [0.0706,0.1145]), with the mediating effect accounting for 19.34% of the total effect; (3) FOMO moderates the relationship between depression and learning burnout. Specifically, depression has a stronger impact on learning burnout among college students with low FOMO. Conclusion: This study reveals the mechanism of mobile phone addiction on college students' learning burnout, and confirms the mediating role of depression and the moderating role of FOMO. By integrating Self-Determination Theory, we further explain the specific mechanisms of FOMO's moderating role. This offers a which provides a new perspective for understanding the impact of mobile phone addiction on college students' learning burnout. It also provides a theoretical basis for colleges and universities to carry out mental health education and intervention."
+    },
+    {
+      "paper_id": "paper_000004",
+      "title": "The Influence of Negative Emotions on Mobile Phone Addiction Among Chinese College Students: The Mediating Role of Negative Coping Styles and the Moderating Role of Gender",
+      "decision": "include",
+      "confidence": 0.94,
+      "reason": "标题和摘要研究大学生负性情绪与手机成瘾的关系，涉及抑郁、焦虑等福祉测量，符合纳入标准。",
+      "year": 2025,
+      "journal": "PSYCHOLOGY RESEARCH AND BEHAVIOR MANAGEMENT",
+      "doi": "10.2147/prbm.s497255",
+      "abstract": "Background: Negative emotions (depression and anxiety) are highly correlated with mobile phone addiction among college students, but the underlying mechanisms between variables need further exploration. The aim of this study is to further elucidate the relationship between negative emotions and mobile phone addiction among college students, with negative coping styles as the mediating variable and gender as the moderating variable. Methods: A survey was conducted on 509 college students from two universities in Anhui Province, China, covering topics such as mobile phone addiction, depression, anxiety, and negative coping styles. SPSS software was used to analyze the relationship between variables. Results: Depression, anxiety, negative coping styles, and mobile phone addiction are all significantly positively correlated. Negative coping styles mediate the relationship between depression, anxiety, and mobile phone addiction among college students. Gender regulates the relationship between depression/anxiety and mobile phone addiction. Specifically, the impact of negative emotions (depression and anxiety) on mobile phone addiction is greater in the male group than in the female group. Conclusion: This study further reveals the psychological mechanisms behind the relationship between negative emotions (depression and anxiety) and mobile phone addiction. Negative coping styles are the mediating factor in this relationship, while gender is the moderating factor in this relationship."
+    },
+    {
+      "paper_id": "paper_000005",
+      "title": "Negative parenting styles and problematic mobile phone use in university students: adult attachment and fear of missing out as chain mediators",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要研究大学生消极教养方式与问题性手机使用的关系，涉及数字设备使用，研究对象为学生群体。",
+      "year": 2024,
+      "journal": "CURRENT PSYCHOLOGY",
+      "doi": "10.1007/s12144-024-06651-9",
+      "abstract": "This study aimed to investigate the impact of negative parenting styles on problematic mobile phone use among college students, as well as the chain mediating role of adult attachment and fear of missing out (FoMO). The short-form EMBU, Experience in Close Relationship Inventory, Fear of Missing Out Scale, and Mobile Phone Addiction Index Scale were completed by 1002 college students. Results showed that parental rejection and overprotection were positively correlated with college students' problematic mobile phone use. The chain mediating effect of attachment anxiety(or attachment avoidance) and FoMO between negative parenting styles and problematic mobile phone use was significant. These findings suggest that negative parenting styles are closely associated with problematic mobile phone use among college students, and that adult attachment and FoMO play important roles in this relationship."
+    },
+    {
+      "paper_id": "paper_000006",
+      "title": "Mobile phone addiction and academic burnout: the mediating role of technology conflict and the protective role of mindfulness",
+      "decision": "include",
+      "confidence": 0.93,
+      "reason": "标题和摘要研究大学生手机成瘾与学业倦怠的关系，涉及数字设备使用和福祉测量，符合纳入标准。",
+      "year": 2024,
+      "journal": "FRONTIERS IN PSYCHIATRY",
+      "doi": "10.3389/fpsyt.2024.1365914",
+      "abstract": "With the rapid development of Internet technology, more and more college students are facing the threat of mobile phone addiction. However, the relationship and underlying mechanism between mobile phone addiction and academic burnout haven't been explored in depth. This study proves the mediating role of technology conflict and the moderating role of mindfulness in the relation between mobile phone addiction and academic burnout. 752 college students were recruited to complete the questionnaire of mobile phone addiction, technology conflict, mindfulness and academic burnout. Results showed that mobile phone addiction was significantly and positively associated with academic burnout, and this relationship could be mediated by technology conflict. Besides, the direct effect of mobile phone addiction on academic burnout and the indirect effect of technology conflict in this link were moderated by mindfulness. Both these two effects are stronger for college students with lower level of mindfulness. Our findings enrich our understanding of how and when mobile phone addiction was related to academic burnout. Educational professionals and parents should take timely measure to the academic burnout of college students suffering from mobile phone addiction, particularly for those with lower level of mindfulness."
+    },
+    {
+      "paper_id": "paper_000007",
+      "title": "Exploring the underlying mechanisms linking mobile phone addiction to impaired sleep in Chinese college students",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究大学生手机成瘾与睡眠质量的关系，涉及数字设备使用和福祉测量。",
+      "year": 2025,
+      "journal": "SCIENTIFIC REPORTS",
+      "doi": "10.1038/s41598-025-31807-3",
+      "abstract": "Adequate sleep is the basic guarantee for college students to complete daily study tasks and a normal life. The quality of sleep is directly related to the physical and mental health of college students, schools and society should pay attention to the sleep problems of college students. In order to explore the relationship between mobile phone addiction and sleep quality of college students and the mediating roles of social anxiety and physical activity between the two, this study used the Mobile Phone Addiction Scale, the Pittsburgh Sleep Quality Index Scale, the Physical Activity Scale, and the Social Anxiety Scale for Adolescents to investigate and analyze the data from 3781 college students. This study was conducted by the Declaration of Helsinki and the Guidelines for the Construction of Ethical Review Committees for Clinical Research Involving Human Subjects (China, 2023). All experimental protocols of this study were approved the Henan University Institutional Review Board (IRB), and written informed consent was obtained from all participants before participation in the study. The results show that mobile phone addiction significantly and positively predicts sleep quality of college students.Social anxiety and physical activity, respectively, independently play mediating roles between mobile phone addiction and sleep quality of college students, and the competitive mediation are significant and the effect sizes are 242.6% and 21.5%, respectively. Social anxiety and physical activity play chain mediating roles between mobile phone addiction and sleep quality of college students, and the competitive mediation is significant and the effect size is 6.1%. This study helps to clarify the mechanism of mobile phone addiction on sleep quality and provides a new theoretical perspective to enhance and optimize the sleep quality of adolescents."
+    },
+    {
+      "paper_id": "paper_000008",
+      "title": "Healthy Fitness Is Associated With Sleep Behavior And Mobile Phone Addition In College Students In China",
+      "decision": "uncertain",
+      "confidence": 0.45,
+      "reason": "摘要缺失，仅从标题和期刊信息难以确认是否明确涉及福祉的具体测量。",
+      "year": 2025,
+      "journal": "MEDICINE & SCIENCE IN SPORTS & EXERCISE",
+      "doi": "10.1249/01.mss.0001159408.37888.86",
+      "abstract": null
+    },
+    {
+      "paper_id": "paper_000009",
+      "title": "Physical exercise and bedtime procrastination among college students: mediating roles of self-control and mobile phone addiction",
+      "decision": "include",
+      "confidence": 0.91,
+      "reason": "标题和摘要研究大学生体育锻炼、手机成瘾与睡前拖延的关系，涉及数字设备使用和睡眠相关福祉。",
+      "year": 2025,
+      "journal": "FRONTIERS IN PSYCHOLOGY",
+      "doi": "10.3389/fpsyg.2025.1630326",
+      "abstract": "Background Sleep is a crucial foundation for maintaining both physical and mental health. Bedtime procrastination has been identified as a significant behavioral factor contributing to decreased sleep quality. Research has identified bedtime procrastination as a prevalent issue among college students, posing significant challenges to their overall health. Regular physical exercise, as a positive lifestyle intervention, may mitigate procrastination behaviors. However, the specific effects of physical exercise on bedtime procrastination among college students, as well as the underlying mechanisms, remain unclear and warrant further investigation.Objective This study aims to examine the effects of physical exercise on bedtime procrastination in college students and to analyze the mediating roles of self-control and mobile phone addiction.Methods A total of 1,000 college students from four universities were surveyed using the Physical Activity Rating Scale (PARS-3), the Bedtime Procrastination Scale (BPS), the College Student Self-Control Scale (CSSCS), and the Mobile Phone Addiction Index (MPAI) through online questionnaires.Results (1) Physical exercise was positively correlated with self-control (p < 0.001) and negatively correlated with mobile phone addiction (p < 0.001). Moreover, a significant negative association was identified between self-control and both mobile phone addiction and bedtime procrastination among college students (p < 0.001). Furthermore, mobile phone addiction was positively correlated with bedtime procrastination (p < 0.001). (2) The total effect of physical exercise on bedtime procrastination was significant (beta = -0.137, 95% CI = [-0.191, -0.083]); moreover, physical exercise alleviated bedtime procrastination through a chain mediation effect involving self-control and mobile phone addiction (beta = -0.019, 95% CI = [-0.032, -0.010]), indicating that physical exercise mitigated mobile phone addiction by fostering self-control, thereby alleviating bedtime procrastination.Conclusion Physical exercise significantly reduces bedtime procrastination among college students. Self-control and mobile phone addiction serve as mediators in the relationship between physical exercise and bedtime procrastination."
+    },
+    {
+      "paper_id": "paper_000010",
+      "title": "Changes in Chinese college students' mobile phone addiction over recent decade: The perspective of cross-temporal meta-analysis",
+      "decision": "include",
+      "confidence": 0.88,
+      "reason": "标题和摘要为关于大学生手机成瘾的元分析，涉及福祉相关因素如焦虑、抑郁、孤独感等，符合系统性综述标准。",
+      "year": 2024,
+      "journal": "HELIYON",
+      "doi": "10.1016/j.heliyon.2024.e32327",
+      "abstract": "In recent years, with the rapid advancement of Internet technology and the impact of the COVID19 pandemic, mobile phones have been used more frequently, the development trend of mobile phone addiction among Chinese college students is a concern to society. This cross-temporal meta-analysis provides compelling evidence of the rising trend of mobile phone addiction in Chinese college students based on data from 42 independent studies (Sample Size = 49,544) over the past decade (2013-2022), and discuss the three important rising periods. Furthermore, extended research has revealed correlated factors of mobile phone addiction among Chinese college students, including gender, anxiety, depression, loneliness, stress, well-being, social support, and resilience. Additionally, the study identified the National internet penetration rate and the National GDP index as significant predictors of mobile phone addiction in Chinese college students. These findings not only reveal the changing trends of mobile phone addiction among Chinese college students, but also enrich the understanding of mobile phone addiction among this population and provide a reference for improving mobile phone addiction among in the future."
+    },
+    {
+      "paper_id": "paper_000011",
+      "title": "The Effect of Perceived Stress on Insomnia Symptoms Among College Students: A Moderated Mediation Model",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "研究对象为大学生，自变量包含手机依赖，因变量涉及失眠症状（睡眠质量），符合纳入标准。",
+      "year": 2024,
+      "journal": "PSYCHOLOGY RESEARCH AND BEHAVIOR MANAGEMENT",
+      "doi": "10.2147/prbm.s471776",
+      "abstract": "Background: College students' insomnia symptoms is a topic of growing interest and studies have begun to explore the factors that influence college students' insomnia symptoms. This study investigated the relationship between perceived stress and college students' insomnia symptoms, as well as the chain mediating roles of fear of missing out and mobile phone dependence, and the moderating roles of environmental sensitivity. Methods: In this study, 748 college students (M = 20.59, SD = 2.65) as a sample for cross-sectional study. The Perceived Stress Questionnaire, Brief Fear of Missing Out Scale, Self-Rating Questionnaire for Adolescent Problematic Mobile Phone Use, Athens Insomnia Scale and Highly Sensitive Child Scale were used. Results: (1) Perceived stress significantly positively predicts the insomnia symptoms of college students; (2) Fear of missing out and mobile phone dependence play a chain mediating role between perceived stress and the insomnia symptoms of college students; (3) environmental sensitivity moderated the pathways of mobile phone dependence on insomnia symptoms. Conclusion: We revealed the underlying mechanisms between perceived stress and insomnia symptoms. The findings highlight the importance of interventions for fear of missing out and mobile phone dependence, as well as the role of environmental sensitivity in influencing insomnia symptoms."
+    },
+    {
+      "paper_id": "paper_000012",
+      "title": "The relationship between childhood trauma and mobile phone addiction: A chain mediated model",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "研究对象为大学生，自变量为手机成瘾，因变量虽未明确福祉测量，但关键词包含抑郁、焦虑等福祉相关概念。",
+      "year": 2025,
+      "journal": "SOCIAL BEHAVIOR AND PERSONALITY",
+      "doi": "10.2224/sbp.14539",
+      "abstract": "Mobile phone addiction has become a prominent social issue. This study investigated the association between childhood trauma and mobile phone addiction, using a sample of 728 Chinese college students who completed the Gratification Scale, and Mobile Phone Addiction Scale. The results indicated that childhood trauma had a positive correlation with mobile phone addiction, and negative correlations with life history strategy and delayed gratification. Life history strategy exhibited a positive correlation with delayed gratification and a negative correlation with mobile phone addiction. Delayed gratification demonstrated a negative correlation with mobile phone addiction. Furthermore, childhood trauma positively predicted mobile phone addiction, with life history strategy and delay of gratification serving as chain mediators in this relationship. This study provides important insights for developing strategies to prevent mobile phone addiction among college students."
+    },
+    {
+      "paper_id": "paper_000013",
+      "title": "How does adolescents and college students' personal relative deprivation affect mobile phone dependence? The mediating roles of stress and fear of missing out",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "研究对象为青少年和大学生，自变量为手机依赖，因变量涉及心理健康危害，符合主题。",
+      "year": 2024,
+      "journal": "CURRENT PSYCHOLOGY",
+      "doi": "10.1007/s12144-024-06744-5",
+      "abstract": "Problematic mobile phone use is a common phenomenon for adolescents and college students, which seriously harms students` physical and mental health. Why were students caught in problematic mobile phone use? Some subtle psychology process which involves personal relative deprivation, stress, and fear of missing out, may be crucial. To reveal the psychological process, this study used a cross-sectional survey design to explore the associations among variables mentioned above and problematic mobile phone use of adolescents and college students in China. We recruited 863 participants (Mage = 18.70, SD = 2.15) which contain 330 middle school students (Mage = 16.33, SD = 1.36) and 533 college students (Mage = 20.06, SD = 1.06) in the study. The results shown that: (1) personal relative deprivation can predict problematic mobile phone use; (2) stress and fear of missing out serve as parallel mediating roles between personal relative deprivation and problematic mobile phone use. These findings demonstrate the psychological process through which personal relative deprivation contributes to problematic mobile phone use, suggesting that managing stress and alleviating fear of missing out may be beneficial countermeasures to prevent and/or intervene in problematic mobile phone use of adolescents and college students."
+    },
+    {
+      "paper_id": "paper_000014",
+      "title": "The impact of regular physical exercise on mobile phone addiction tendency among Chinese college students: the mediating role of trait boredom and the moderating role of self-control",
+      "decision": "include",
+      "confidence": 0.8,
+      "reason": "研究对象为大学生，自变量为手机成瘾倾向，因变量虽未直接测量福祉，但关键词包含睡眠质量、抑郁、焦虑等。",
+      "year": 2025,
+      "journal": "FRONTIERS IN PSYCHOLOGY",
+      "doi": "10.3389/fpsyg.2025.1671836",
+      "abstract": "Introduction This study explores the relationship between regular physical exercise and mobile phone addiction tendency among college students, with a focus on the mediating role of trait boredom and the moderating role of self-control.Methods A total of 560 students from three universities in Shanghai were surveyed using the Revised Physical Activity Rating Scale, the Exercise Stage Scale, the Trait Boredom Scale, the Brief Self-control Scale, and the College Students' Mobile Phone Addiction Tendency Scale.Results (1) regular physical exercise is significantly negatively correlated with mobile phone addiction tendency, suggesting that students who engage in more regular physical exercise exhibit lower levels of mobile phone addiction tendency; (2) trait boredom mediates the relationship between regular physical exercise and mobile phone addiction tendency; (3) self-control moderates the effect of trait boredom on mobile phone addiction tendency, such that higher levels of self-control weaken the positive association between trait boredom and mobile phone addiction tendency, whereas lower levels of self-control strengthen this association; (4) the moderating effect of self-control on the direct relationship between regular physical exercise and mobile phone addiction tendency is not significant.Discussion This study reveals the underlying mechanisms through which regular physical exercise affects mobile phone addiction tendency and provides theoretical and practical implications for the design of intervention strategies and the cultivation of self-control among college students."
+    },
+    {
+      "paper_id": "paper_000015",
+      "title": "The mediating effect of rumination and fear of missing out between mobile phone addiction and sleep quality among college students",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "研究对象为大学生，自变量为手机成瘾，因变量为睡眠质量，明确符合纳入标准。",
+      "year": 2024,
+      "journal": "SCIENTIFIC REPORTS",
+      "doi": "10.1038/s41598-024-79235-z",
+      "abstract": "The impact of mobile phone addiction (MPA) on college students' sleep quality (SQ) has received increasing attention in recent years. On this basis, the mediating roles of rumination and FOMO (fear of missing out) on MPA and SQ were examined in this study. In a cross-sectional study, preliminary data were gathered via questionnaires from 1401 college students (19.35 +/- 0.81) from 5 universities in Jiangxi Province, China. Mobile Phone Addiction Tendency Scale, Rumination Response Scale, Fear of Missing Out Scale and Sleep Quality Scale were employed in the research. The mediation model was tested using SPSS 26.0, with FOMO and rumination acting as the mediating variables. Between MPA and SQ, rumination and FOMO each had their own unique mediation effect. Furthermore, rumination and FOMO function as a chain of mediators between college students' MPA and SQ. This study provided confirmation and clarification that in college students, the association between MPA and SQ was mediated by rumination and FOMO. This study improves our understanding of MPA, SQ and how MPA may affect SQ in college students. It also shows that the impact of MPA and SQ of college students should be given more consideration by educators, parents, and college students themselves."
+    },
+    {
+      "paper_id": "paper_000016",
+      "title": "Left-behind experience and mobile phone addiction among college students: A moderated mediation of social anxiety and sex",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "研究对象为大学生，自变量为手机成瘾，因变量涉及社会焦虑（心理健康），符合主题。",
+      "year": 2024,
+      "journal": "HELIYON",
+      "doi": "10.1016/j.heliyon.2024.e35452",
+      "abstract": "Background: With the popularity of smartphone among Chinese college students, mobile phone addiction (MPA) is emerging a remarkable behavior problem in this population. Thus, the present study was aimed at investigating a moderated mediation model of left-behind experience (LBE) affecting MPA via social anxiety moderated by sex difference. Methods: A total of 1268 college students (Mage = 20.74, SD = 2.21) were recruited to complete self-administered questionnaires of mobile phone addiction index (MPAI) and interaction anxiousness scale (IAS). The participants also reported their sex, grade, and childhood and juvenile LBE. Results: The results indicated that LBE increased the level of MPA among college students via mediation by social anxiety. Furthermore, sex moderated the influence of social anxiety on MPA in the mediating model. Specifically, social anxiety affects male college students more strongly than female ones in terms of MPA. Conclusion: Our findings support that LBE, social anxiety, and sex difference should be critically included into consideration when performing interventions to buffer MPA among college students."
+    },
+    {
+      "paper_id": "paper_000017",
+      "title": "A Study of Nomophobia and its Relationship with Screen Time among Medical and Paramedical students of Malwanchal university",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "摘要缺失，仅从标题和关键词看涉及无手机恐惧症和屏幕时间，但无法确认是否测量福祉具体指标。",
+      "year": 2025,
+      "journal": "INDIAN JOURNAL OF PSYCHIATRY",
+      "doi": null,
+      "abstract": null
+    },
+    {
+      "paper_id": "paper_000018",
+      "title": "Impact of Mobile Phone Use on College Students' Self-perceived Health During the Epidemic in China: The Mediating Role of Sleep Quality",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "研究对象为大学生，自变量为手机使用，因变量为自感健康和睡眠质量，符合福祉测量。",
+      "year": 2024,
+      "journal": "AMERICAN JOURNAL OF HEALTH BEHAVIOR",
+      "doi": "10.5993/ajhb.48.3.21",
+      "abstract": "Objectives: The soaring rate of Internet usage among college and university students during the pandemic became an abuse more than a necessity, turning the mobile phone usage as an addiction. However, the impact of using mobile phones on the perceived health of college students is still a controversial topic. The purpose of this study was to reveal the influencing factors of mobile phone usage on college students' self-perceived health during the pandemic. Methods: This study used data from 230 college students who had participated in the China Comprehensive Social Survey (CGSS) in March 2021. A multiple linear regression model was used to conduct data analysis, considering the influence of multiple independent variables on the dependent variable. The hypothesis testing and predictive analytics were done to validate research hypotheses. Results: The study found that mobile phone usage has a positive impact on college students' self-perception of health. However, this positive impact does not exist in isolation and is significantly mediated by sleep quality. Further analysis of the data of urban and rural college students found that the mobile phone utilization by urban college students has a more significant impact on self-perceived health than by rural college students. Conclusions: In the context of public health emergencies, rational use of mobile phones can effectively alleviate the negative emotions of college students. Therefore, it is imperative that students are guided towards healthy and rational utilization of mobile phones, to reduce potential negative effects and maintain a good mental state."
+    },
+    {
+      "paper_id": "paper_000019",
+      "title": "The Effect of Physical Exercise on Academic Burnout Among College Students: The Chain Mediating Role of Psychological Distress and Mobile Phone Addiction",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "研究对象为大学生，自变量包含手机成瘾，因变量为学业倦怠，符合纳入标准。",
+      "year": 2025,
+      "journal": "PERCEPTUAL AND MOTOR SKILLS",
+      "doi": "10.1177/00315125251338554",
+      "abstract": "Background: Academic burnout (AB) among college students is a negative psychological state that can lead to serious psychological and behavioral issues. Thus, a deep understanding of its contributing factors and mechanisms is crucial for promoting healthy development and a positive learning attitude. Method: This study explores the mitigating effects of physical exercise (PE) on academic burnout among college students, examining the mediating roles of psychological distress (PD) and mobile phone addiction (MPA). The study employed a cross-sectional design with 986 university students (M age = 20.2, SD = 1.5) from diverse academic disciplines across China, including 489 (49.6%) males and 497 (50.4%) females. Results: Findings suggest that regular physical exercise significantly reduces academic burnout, with psychological distress and mobile phone addiction serving as key mediators. Physical exercise was negatively correlated with academic burnout and psychological distress, while psychological distress positively influenced both mobile phone addiction and academic burnout. Additionally, mobile phone addiction positively correlated with increased academic burnout. The structural equation model indicated that the pathways from physical exercise to academic burnout through psychological distress and mobile phone addiction are significant, revealing a chained mediation effect. Conclusion: These results underscore the importance of physical exercises in mitigating academic burnout through psychological and behavioral mechanisms."
+    },
+    {
+      "paper_id": "paper_000020",
+      "title": "The Effect of Self-Esteem on Mobile Phone Addiction Among College Students: Sequential Mediating Effects of Online Upward Social Comparison and Social Anxiety",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "研究对象为大学生，自变量为手机成瘾，因变量涉及社会焦虑（心理健康），符合主题。",
+      "year": 2025,
+      "journal": "PSYCHOLOGY RESEARCH AND BEHAVIOR MANAGEMENT",
+      "doi": "10.2147/prbm.s508668",
+      "abstract": "Purpose: Mobile phone addiction threatens individuals' physiological, psychological, and social functions, particularly among college students. While existing theories suggest a strong link between self-esteem and mobile phone addiction, the underlying mechanism remains unclear. This study aims to examine the relationship between self-esteem and mobile phone addiction in Chinese college students, exploring the chain mediation effects of online upward social comparison and social anxiety. Participants and Methods: A cross-sectional study was conducted using an offline questionnaire survey with 789 Chinese college students, employing convenience sampling in Shaanxi Province, China. Four validated instruments were employed: Self-Esteem Scale, Mobile Phone Addiction Index, Online Upward Social Comparison Scale, and Social Anxiety Scale. Descriptive analysis, correlation analysis, and mediation testing were performed to analyze the data. Results: The results showed that self-esteem influences mobile phone addiction through three pathways: (1) self-esteem-* online upward social comparison-* mobile phone addiction, with a 95% confidence interval of [-0.048, -0.010], indicating a significant mediation effect (effect value = -0.027, accounting for 14.86% of the total effect); (2) self-esteem-* social anxiety-* mobile phone addiction, with a 95% confidence interval of [-0.182, -0.106], indicating a significant mediation effect (effect value = -0.143, accounting for 78.57% of the total effect); (3) self-esteem-* online upward social comparison-* social anxiety-* mobile phone addiction, with a 95% confidence interval of [-0.016, -0.003], suggesting a significant mediation effect (effect value = -0.009, accounting for 4.95% of the total effect). Conclusion: These findings indicate that online upward social comparison and social anxiety serially mediate the relationship between self-esteem and mobile phone addiction. The study reveals how self-esteem contributes to mobile phone addiction among college students and provides insights for prevention and intervention strategies."
+    },
+    {
+      "paper_id": "paper_000021",
+      "title": "The relationship between mobile phone dependence and academic burnout in Chinese college students: a moderated mediator model",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确显示研究对象为大学生，自变量为手机依赖，因变量为学业倦怠，符合纳入标准。",
+      "year": 2024,
+      "journal": "FRONTIERS IN PSYCHIATRY",
+      "doi": "10.3389/fpsyt.2024.1382264",
+      "abstract": "Objective: The aim of this study was to examine the correlation between the level of mobile phone dependence among college students and their experience of academic burnout. Additionally, the study sought to explore the potential mediating effect of study engagement and the moderating role of love. Methods: During October and December 2023, a cross-sectional study measuring mobile phone dependence, academic burnout, and study engagement among Chinese college students, using the UtrechtWork Engagement Scale-student (UWES-S), College Student Mobile Phone Dependence Questionnaire (CSMPDQ), and Academic Burnout Questionnaire (ABQ). To examine the hypothesis of mediating and moderating effect, SPSS PROCESS was utilized. Results: The predictive effect of mobile phone dependence on academic burnout was significant (beta = 0.410, t = 14.236, p < 0.001), and the predictive effect of mobile phone dependence on academic burnout remained significant when the mediating variable study engagement was introduced (beta = 0.308, t = 10.288, p < 0.001), mobile phone dependence had a significant predictive effect on study engagement (beta = -0.292, t = -11.639, p < 0.001), and study engagement had a significant positive predictive effect on academic burnout (beta = -0.270, t = -9.028, p < 0.001). Love significantly negatively predicted study engagement (beta = -0.564, t = -9.641, p < 0.001); and the interaction term for mobile phone dependence and love was significant (beta = -0.211, t = -3.688, p < 0.001), indicating a significant moderating effect of love between mobile phone dependence and study engagement. Conclusion: Mobile phones among college students has been found to have a direct correlation with academic burnout. It can also indirectly contribute to academic burnout by diminishing levels of academic engagement. This indirect relationship is further influenced by love. These findings can help researchers and educators better understand the underlying mechanisms between smartphone dependence and learning burnout in undergraduates."
+    },
+    {
+      "paper_id": "paper_000022",
+      "title": "The relationship between fear of missing out and mobile phone addiction among college students: the mediating role of depression and the moderating role of loneliness",
+      "decision": "include",
+      "confidence": 0.92,
+      "reason": "标题和摘要明确显示研究对象为大学生，自变量为手机成瘾，因变量涉及抑郁和孤独感，符合纳入标准。",
+      "year": 2024,
+      "journal": "FRONTIERS IN PUBLIC HEALTH",
+      "doi": "10.3389/fpubh.2024.1374522",
+      "abstract": "Background Mobile phone addiction has adverse influences on the physical and mental health of college students. However, few studies shed light on the effect of fear of missing out on mobile phone addiction and the underlying mechanisms among college students.Methods To explore their associations, the present study used the Fear of Missing Out Scales (FoMOS), Loneliness Scale (USL-8), Mobile Phone Addiction Index Scale (MPAI), and Depression-Anxiety-Stress Questionnaire (DASS-21) to investigate 750 college students.Results The results suggested that fear of missing out significantly positively predicted mobile phone addiction. This direct effect could be mediated by depression, and the indirect effect of fear of missing out on mobile phone addiction could be moderated by loneliness. Specifically, the indirect effect was stronger for students with high levels of loneliness.Conclusion This study provides a theoretical basis for developing future interventions for mobile phone addiction in higher education students."
+    },
+    {
+      "paper_id": "paper_000023",
+      "title": "Trialing a simple mobile phone dependency intervention strategy among Chinese college students",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "标题和摘要显示研究对象为大学生，自变量为手机依赖，但未明确测量福祉相关因变量，信息不足。",
+      "year": 2025,
+      "journal": "SCIENTIFIC REPORTS",
+      "doi": "10.1038/s41598-025-09864-5",
+      "abstract": "A global problem, mobile phone dependence causes physical and psychological problems for college students. We trial and assess a simple intervention strategy, the daily recording of mobile phone use to mitigate mobile phone dependency among Chinese college students. A randomized controlled trial was conducted among 110 college students, with the daily recording of mobile phone use over two weeks in the intervention group. Using Wilcoxon rank sum test and multivariate linear regression analysis, the effect of the daily recording intervention on reducing mobile phone dependence was assessed. After the daily recording intervention, the mobile phone dependence score of the intervention group decreased from 30.64 +/- 9.9 to 24.44 +/- 10.31, significantly lower than the control group (32.11 +/- 8.51, P < 0.01). The total mobile phone using time declined from 6.22 +/- 2.81 to 5.05 +/- 2.85 h and was also lower than that of the control group (6.83 +/- 2.98, P < 0.05). The mobile phone time watching videos and playing games dropped from 1.96 +/- 1.70 to 1.09 +/- 1.35 h and was lower than that of the control group (1.96 +/- 1.4, P < 0.01). The results of linear regression indicate that daily recording intervention and regular exercise reduced mobile phone dependence significantly (P < 0.05). Daily recording of mobile phone use was a simple, but highly effective, effective intervention strategy reducing mobile phone dependence among Chinese college students. Daily exercise also reduced mobile phone dependence."
+    },
+    {
+      "paper_id": "paper_000024",
+      "title": "Effects of parental psychological control on mobile phone addiction among college students: the mediation of loneliness and the moderation of physical activity",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确显示研究对象为大学生，自变量为手机成瘾，因变量涉及孤独感，符合纳入标准。",
+      "year": 2025,
+      "journal": "BMC PSYCHOLOGY",
+      "doi": "10.1186/s40359-025-02385-w",
+      "abstract": "ObjectivePrior studies have shown that parental psychological control is linked to an increased risk of mobile phone addiction. Nevertheless, few studies have analyzed the potential mechanisms that may mediate or moderate this association. This study aims to investigate the role of loneliness as a mediator in the relationship between parental psychological control and mobile phone addiction, as well as the potential moderating effect of physical activity on this mediation process.MethodsA survey involving 268 Chinese college students (mean age = 20.58 years, SD = 5.23) utilized the Parental Psychological Control Questionnaire, Mobile Phone Addiction Tendency Scale, Physical Activity Level Scale, and Loneliness Scale. In terms of data analysis, descriptive analysis, Pearson correlation analysis, and moderated mediation effect tests were conducted sequentially.ResultsThe results indicated that, after controlling for gender and age, parental psychological control positively predicted mobile phone addiction among college students (B = 0.083, p = 0.034). Loneliness played a partial mediating role in the association between parental psychological control and mobile phone addiction among college students. Additionally, physical activity moderated the impact of loneliness on mobile phone addiction in college students (B = -0.010, p = 0.035).ConclusionThis study deepens our understanding of how parental psychological control leads to mobile phone addiction. Concurrently, it underscores the importance of enhancing physical activity to mitigate the adverse effects of loneliness."
+    },
+    {
+      "paper_id": "paper_000025",
+      "title": "Influence of smartphone addiction on sleep quality of college students: The regulatory effect of physical exercise behavior",
+      "decision": "include",
+      "confidence": 0.93,
+      "reason": "标题和摘要明确显示研究对象为大学生，自变量为智能手机成瘾，因变量为睡眠质量，符合纳入标准。",
+      "year": 2024,
+      "journal": "PLOS ONE",
+      "doi": "10.1371/journal.pone.0307162",
+      "abstract": "Due to the high incidence of smartphone addiction and its harmful effects on health in recent years, it has received widespread attention from society. This study aims to examine the association between smartphone addiction and sleep quality among college students, and assess the correlation with physical exercise in a non-interventional, cross-sectional study design. The study utilized data from the 2022 Chinese College Health Tracking Survey. A total of 4670 students participated in and completed the questionnaire. The test tools comprised the smartphone addiction tendency scale, the Pittsburgh Sleep Quality Index, and the physical activity rating scale. The average score of the college students' smartphone addiction was 39.230 +/- 14.931, and the proportion of college students with average and or very poor sleep quality was 52.6%. Mobile phone addiction among college students is negatively correlated with physical exercise (r = -0.101, p<0.01), and positively correlated with sleep quality (r = 0.287, p<0.01. Physical exercise had a significant regulatory effect on the behavior relationship between smartphone addiction and sleep quality (Delta R-2 = 0.194, p<0.001). Smartphone addiction has a significant impact on college students' sleep quality. The higher the tendency towards smartphone addiction, the poorer the sleep quality of college students. Physical exercise plays a regulatory role in the relationship between smartphone addiction and sleep quality of college students."
+    },
+    {
+      "paper_id": "paper_000026",
+      "title": "The relationship between anxiety and problematic mobile phone use among Chinese college students: a moderated mediation model",
+      "decision": "include",
+      "confidence": 0.91,
+      "reason": "标题和摘要明确显示研究对象为大学生，自变量为问题性手机使用，因变量为焦虑，符合纳入标准。",
+      "year": 2025,
+      "journal": "BMC PSYCHOLOGY",
+      "doi": "10.1186/s40359-025-03336-1",
+      "abstract": "BackgroundMobile phones have emerged as a pivotal medium for internet access among college students in China. However, excessive usage of mobile phones, leading to problematic mobile phone use (PMPU), has adverse effects on both their physical and mental health. Anxiety is associated with PMPU among college students, yet the mechanisms remain unclear. This study examines whether the fear of missing out on social media (FoMO-SM) and physical exercise mediates this relationship.MethodsThis study utilized a convenience sampling method to assess anxiety, PMPU, FoMO-SM, and physical exercise among 3,857 Chinese college students. The measurements included the Depression Anxiety Stress Scale-21 (DASS-21) - Anxiety Sub-scale, the Mobile Phone Dependence Scale, the Fear of Missing Out Scale, and the Physical Exercise Rating Scale (PARS-3). AMOS software was used to perform structural equation model fit tests and research hypothesis path analysis. Data statistics were analyzed using SPSS 29.0 for descriptive, correlation, and common bias test methods.ResultsAnxiety, PMPU, and FoMO-SM respectively, undertook a significant positive correlation (r = 0.722, r = 0.460), PMPU and FoMO-SM were significantly positively correlated (r = 0.510). FoMO-SM independently mediated the association between anxiety and PMPU, with an effect value of 0.022, 3% of the total effect, 95% CI [0.0097, 0.0344]. Physical exercise also played an independent mediating role between anxiety and PMPU, with an effect value of 0.266, accounting for 36.8% of the total effect, 95% CI [0.2494, 0.2831]. Chain mediation between FoMO-SM and physical exercise was significant between anxiety and PMPU, with an effect value of 0.082,11.4% of the total effect, 95% CI [0.0761, 0.0886].ConclusionThis study further elucidates the intrinsic psychological mechanism underlying the relationship between college students' anxiety and problematic mobile phone use, determining that FoMO-SM and physical exercise play a mediating role in this relationship. This finding provides a substantial reference point for developing targeted and timely intervention strategies to address problematic mobile phone use among college students."
+    },
+    {
+      "paper_id": "paper_000027",
+      "title": "The relationship between mobile phone addiction and cognitive failure among Chinese college students: the chain mediating effects of fear of missing out and core self-evaluation",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "标题和摘要显示研究对象为大学生，自变量为手机成瘾，但认知失败是否属于福祉测量不够明确，信息不足。",
+      "year": 2025,
+      "journal": "PSYCHOLOGY HEALTH & MEDICINE",
+      "doi": "10.1080/13548506.2025.2591857",
+      "abstract": "The state of cognitive failure (CF) among college students is not encouraging and poses a risk to their physical as well as their mental health. The aim of this study is intended to investigate the effects of mobile phone addictive (MPA) on CF and potential path relationships among Chinese college students. Participants completed the Mobile Phone Addiction Scale (MPAS), Fear of Missing Out Scale (FoMOS), Core Self-Evaluation Scale (CSES), and Cognitive Failure Questionnaire (CFQ). The study's participant pool comprised a valid sample of one thousand and eighty-five (N = 1,085) college students. MPA and fear of missing out (FoMO) were positively correlated with CF. In contrast, core self-evaluation showed a significant negative correlation with it. MPA directly predicted CF, while FoMO and core self-evaluation (CSE) acted as both independent and serial mediators in this relationship. This research provides a foundation for developing effective interventions for CF and other psychological issues among college students."
+    },
+    {
+      "paper_id": "paper_000028",
+      "title": "Associations between mobile phone addiction and depressive symptoms in college students: A conditional process model",
+      "decision": "include",
+      "confidence": 0.94,
+      "reason": "标题和摘要明确显示研究对象为大学生，自变量为手机成瘾，因变量为抑郁症状和睡眠质量，符合纳入标准。",
+      "year": 2024,
+      "journal": "ANNALES MEDICO-PSYCHOLOGIQUES",
+      "doi": "10.1016/j.amp.2023.09.012",
+      "abstract": "Depression is a prominent mental health problem facing college students today. Mobile phone addiction is a potential factor that may affect depression. However, the precise relationship between mobile phone addiction and depression is still unclear, which limits the optimization and further application of intervention programs aimed at alleviating mobile phone addiction. Previous studies have shown that poor sleep quality can significantly increase depressive symptoms. According to the ''theory of diathesis-stress'', neuroticism as a susceptibility quality can affect the occurrence of depression. Therefore, this study aimed to investigate how sleep quality and neuroticism may influence the relationship between mobile phone addiction and depressive symptoms. These relationships were studied in 850 Chinese college students by building a conditional process model, which involved mobile phone addiction as the focal predictors, depressive symptoms as the outcome, sleep quality as the mediator, and neuroticism as the moderator. Correlational analyses indicated that both mobile phone addiction and depressive symptoms were significantly and negatively associated with sleep quality, and mobile phone addiction was significantly and positively associated with depressive symptoms. Additionally, sleep quality mediated the association between mobile phone addiction and depressive symptoms. Moreover, a neurotic personality respectively moderated the relationships between mobile phone addiction and depressive symptoms, and between sleep quality and depressive symptoms. These findings suggest that intervention in mobile phone addiction and improvement of sleep quality are potentially effective means to directly or indirectly prevent symptoms of depression. This study provides a basis for predicting individual differences in response to reducing the risk of depression among college students. (c) 2023 Elsevier Masson SAS. All rights reserved."
+    },
+    {
+      "paper_id": "paper_000029",
+      "title": "The effects of mobile phone addiction on bedtime procrastination in university students: the masking effect of physical activity and anxiety",
+      "decision": "include",
+      "confidence": 0.92,
+      "reason": "标题和摘要明确显示研究对象为大学生，自变量为手机成瘾，因变量涉及睡前拖延和焦虑，符合纳入标准。",
+      "year": 2024,
+      "journal": "BMC PSYCHOLOGY",
+      "doi": "10.1186/s40359-024-01899-z",
+      "abstract": "Purpose Good sleep is one of the necessary conditions to ensure the normal performance of the physiological and psychological functions of college students. This study aimed to explore the relationship between mobile phone addiction and bedtime procrastination among Chinese college students and the mediating mechanisms of physical exercise and anxiety between the two, with a view to seek ways to prevent and intervene in college students' sleep procrastination and improve their sleep quality. Methods Using SPSS 29.0 analysis with Bootstrap's method, 3,800 first-year students, sophomores, and juniors were given the Mobile Phone Addiction Tendency Scale, Bedtime Procrastination Scale, Physical Activity Scale, and Anxiety Scale. The results of the analyses included mediation tests and effect analyses of anxiety and physical activity. Results The correlation analysis revealed significant positive correlations between mobile phone addiction and bedtime procrastination (r = 0.149, p < 0.01) as well as anxiety (r = 0.497, p < 0.01). Additionally, there was a significant negative correlation between mobile phone addiction and physical activity (r = -0.447, p < 0.01). Physical activity was also found to have significant negative correlations with anxiety (r = -0.506, p < 0.01) and bedtime procrastination (r = -0.424, p < 0.01). Furthermore, anxiety showed a significant positive correlation with bedtime procrastination (r = 0.334, p < 0.01). Physical activity and anxiety acted as substantial mediators between mobile phone addiction and nighttime procrastination. Both mediators had considerable masking effects, with the mediating effect amounting to 50.3% and 25.1%, respectively. Physical exercise and anxiety played a chain mediating role between mobile phone addiction and bedtime procrastination, and the masking effect was also significant, with a mediating effect size of 13.4%. Conclusions This study reveals the special characteristics of the influencing factors and pathways of bedtime procrastination in this group of college students, providing targeted evidence for the prevention and intervention of bedtime procrastination in college students. It also has an important reference value for the effects of exercise and comprehensive intervention to improve bedtime procrastination and enhance the quality of sleep in college students."
+    },
+    {
+      "paper_id": "paper_000030",
+      "title": "The Double-Edged Sword Effect of Interaction Frequency with AI on College Students: The Moderating Role of Peer Support",
+      "decision": "include",
+      "confidence": 0.88,
+      "reason": "标题和摘要明确显示研究对象为大学生，自变量涉及AI交互频率和问题性手机使用，因变量涉及孤独感，符合纳入标准。",
+      "year": 2025,
+      "journal": "BEHAVIORAL SCIENCES",
+      "doi": "10.3390/bs15091267",
+      "abstract": "Generative artificial intelligence (AI) has become an indispensable resource in contemporary higher education, providing substantial benefits to both students and institutions. As its adoption accelerates, it is important to balance these advantages against potential risks that may arise from students' varying levels of interaction with AI. Whereas most prior studies have focused on the favorable outcomes of AI for college students, the present research investigates its \"double-edged sword\" effects. Guided by social affiliation theory, a new model has been developed and empirically tested to clarify how and under what conditions the frequency of student-AI interaction influences social needs and behaviors. Longitudinal data obtained from 388 undergraduates showed that AI interaction frequency can shape prosocial behavior and problematic mobile phone use through a dual pathway involving the need for affiliation and feelings of loneliness. Furthermore, peer support moderates the indirect effect of AI interaction frequency on college students' prosocial behavior via their need for affiliation. The results showed that peer support did not significantly moderate the indirect relationship between AI interaction frequency and problematic mobile phone use through loneliness. Overall, our study extends the framework of the social affiliation theory and provides practical insights that guide the appropriate use of AI by college students, thereby supporting the development of healthy social skills and technology engagement in the age of AI."
+    }
+  ],
+  "project_id": "b41972a19412",
+  "project_topic": "数字设备使用与学生福祉（Digital device use and well-being among students）",
+  "model_provider": "deepseek",
+  "parent_task_id": null,
+  "input_dataset_ids": [],
+  "output_dataset_ids": [
+    "9e4f48b51946",
+    "887d9c53075a"
+  ]
+}

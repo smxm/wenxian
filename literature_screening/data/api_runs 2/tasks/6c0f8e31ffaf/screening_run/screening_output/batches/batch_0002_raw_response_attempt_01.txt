@@ -1,0 +1,61 @@
+{
+    "batch_id": "batch_0002",
+    "results": [
+        {
+            "paper_id": "paper_000011",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及急性肾损伤向慢性肾病进展，研究肾小管上皮细胞凋亡机制及纳米干预策略。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000012",
+            "decision": "exclude",
+            "reason": "标题和摘要明确研究巨噬细胞焦亡而非凋亡，且未提及凋亡机制。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000013",
+            "decision": "uncertain",
+            "reason": "摘要同时提及细胞焦亡和凋亡，但未明确区分凋亡在慢性肾病进展中的具体机制。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000014",
+            "decision": "include",
+            "reason": "标题和摘要明确研究肾缺血再灌注损伤，涉及肾小管细胞凋亡及纳米干预策略。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000015",
+            "decision": "include",
+            "reason": "标题和摘要明确研究肾小管上皮细胞衰老与抗凋亡蛋白MCL-1在慢性肾病进展中的作用及干预。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000016",
+            "decision": "exclude",
+            "reason": "标题和摘要明确研究慢性肾病引起的骨骼肌萎缩，而非肾脏固有细胞的凋亡机制。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.87
+        },
+        {
+            "paper_id": "paper_000017",
+            "decision": "exclude",
+            "reason": "标题和摘要明确研究慢性肾病中的心力衰竭，涉及心肌细胞凋亡而非肾脏固有细胞凋亡。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.86
+        },
+        {
+            "paper_id": "paper_000018",
+            "decision": "include",
+            "reason": "标题和摘要明确研究肾小管上皮细胞凋亡与线粒体稳态在急性肾损伤向慢性肾病进展中的作用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.91
+        }
+    ]
+}

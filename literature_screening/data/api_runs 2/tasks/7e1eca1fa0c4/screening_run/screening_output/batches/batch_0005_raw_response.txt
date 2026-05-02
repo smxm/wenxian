@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0005",
+    "results": [
+        {
+            "paper_id": "paper_000041",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究主题为虚拟现实在物理和职业治疗中的应用，完全不涉及音乐教育或游戏化教学。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000042",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及音频游戏用于音乐间隔训练，属于游戏化机制在音乐感知教育中的应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000043",
+            "decision": "uncertain",
+            "reason": "摘要提到移动技术应用于音乐理论教学，但未明确提及游戏化机制，仅描述为移动应用，相关性不够明确。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000044",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于教育方法分类模型的技术开发，虽提及音乐教育数据，但未涉及游戏化教学或音乐鉴赏课的具体应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.90
+        },
+        {
+            "paper_id": "paper_000045",
+            "decision": "exclude",
+            "reason": "标题和摘要描述虚拟现实毕业庆祝活动，完全不涉及音乐教育或游戏化教学，属于非音乐领域的应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000046",
+            "decision": "exclude",
+            "reason": "摘要提到游戏化教学法（ludicization）的研究，但应用学科为英语学习（CET-6），属于非音乐领域。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.90
+        },
+        {
+            "paper_id": "paper_000047",
+            "decision": "uncertain",
+            "reason": "摘要详细讨论游戏化训练模型，但未明确提及音乐教育，仅泛泛提及教育、艺术等领域，与音乐鉴赏课的相关性不足。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.50
+        },
+        {
+            "paper_id": "paper_000048",
+            "decision": "exclude",
+            "reason": "标题和摘要研究数字教学模拟游戏对师范生的影响，应用领域为教师教育，完全不涉及音乐教育。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000049",
+            "decision": "exclude",
+            "reason": "标题和摘要描述计算机干预用于阅读障碍儿童，聚焦于识字技能，完全不涉及音乐教育或游戏化教学。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000050",
+            "decision": "exclude",
+            "reason": "标题和摘要描述棋盘游戏用于护理导师培训，应用领域为护理教育，属于非音乐学科。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        }
+    ]
+}

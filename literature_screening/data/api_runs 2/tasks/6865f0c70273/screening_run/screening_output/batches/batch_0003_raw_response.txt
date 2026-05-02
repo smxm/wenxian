@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0003",
+    "results": [
+        {
+            "paper_id": "paper_000021",
+            "decision": "exclude",
+            "reason": "标题和摘要未提及血脑屏障或相关模型，主要关注全局表型分析而非特定BBB机制。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000022",
+            "decision": "exclude",
+            "reason": "摘要明确为临床试验的社会科学研究，不涉及隐球菌与血脑屏障的机制或模型构建。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000023",
+            "decision": "include",
+            "reason": "标题和摘要明确研究隐球菌血脑屏障穿越机制，涉及血管内增殖和子细胞迁移等深层机制。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000024",
+            "decision": "exclude",
+            "reason": "摘要为法医病理学病例报告，未深入探讨血脑屏障机制或模型构建。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000025",
+            "decision": "exclude",
+            "reason": "摘要聚焦CO2适应性微进化，未提及血脑屏障或相关模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000026",
+            "decision": "exclude",
+            "reason": "摘要研究TOR通路与磷脂不对称性，涉及宿主适应但未明确针对血脑屏障机制或模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.75
+        },
+        {
+            "paper_id": "paper_000027",
+            "decision": "exclude",
+            "reason": "摘要研究小鼠模型中的超毒力表型，未涉及血脑屏障机制或体外模型构建。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000028",
+            "decision": "exclude",
+            "reason": "摘要为糖尿病与隐球菌脑膜炎预后的临床回顾研究，不涉及机制探索或模型构建。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000029",
+            "decision": "exclude",
+            "reason": "摘要研究ERMES复合体与毒力关系，未提及血脑屏障或相关模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000030",
+            "decision": "uncertain",
+            "reason": "摘要提到脑葡萄糖感知影响药物耐受，可能与血脑屏障环境相关，但信息不足确认是否涉及BBB机制或模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        }
+    ]
+}

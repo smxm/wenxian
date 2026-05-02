@@ -1,0 +1,633 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "发表年份为2010年，早于纳入标准要求的2016年。",
+    "evidence": [
+      "year"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:02:30.442258+08:00"
+  },
+  {
+    "paper_id": "paper_000002",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "研究对象为儿童癌症幸存者，不符合成人白血病患者的要求。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:02:30.442258+08:00"
+  },
+  {
+    "paper_id": "paper_000003",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "摘要未提及赋能教育干预，主要关注临床路径和护理角色。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:02:30.442258+08:00"
+  },
+  {
+    "paper_id": "paper_000004",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "研究涉及白血病患者和叙事医学，患者报告感到赋能，但未明确说明干预措施是否为赋能教育。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:02:30.442258+08:00"
+  },
+  {
+    "paper_id": "paper_000005",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "标题和摘要提到CLL患者赋能计划，但研究对象是医生沟通经验，而非直接对患者进行赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:02:30.442258+08:00"
+  },
+  {
+    "paper_id": "paper_000006",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "研究对象为白血病儿童的家属，不符合成人白血病患者的要求。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:02:30.442258+08:00"
+  },
+  {
+    "paper_id": "paper_000007",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "发表年份为2004年，早于纳入标准要求的2016年。",
+    "evidence": [
+      "year"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:02:30.442258+08:00"
+  },
+  {
+    "paper_id": "paper_000008",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "研究对象为青少年和年轻成人癌症患者，未明确限定为白血病。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:02:30.442258+08:00"
+  },
+  {
+    "paper_id": "paper_000009",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "发表年份为2015年，早于纳入标准要求的2016年。",
+    "evidence": [
+      "year"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:02:30.442258+08:00"
+  },
+  {
+    "paper_id": "paper_000010",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题表明研究对象为儿科患者，且发表年份为2011年早于2016年。",
+    "evidence": [
+      "title",
+      "year"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:02:30.442258+08:00"
+  },
+  {
+    "paper_id": "paper_000011",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确提及针对癌症患者的“competence empowerment”干预，研究对象为成人癌症患者，年份符合要求。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:02:55.874053+08:00"
+  },
+  {
+    "paper_id": "paper_000012",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要描述的是针对异基因骨髓移植患者的康复计划，未提及“赋能教育”作为核心干预措施。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:02:55.874053+08:00"
+  },
+  {
+    "paper_id": "paper_000013",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要明确研究对象为儿童白血病患者，命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:02:55.874053+08:00"
+  },
+  {
+    "paper_id": "paper_000014",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "发表年份为2013年，早于2016年，不符合纳入标准。",
+    "evidence": [
+      "year"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:02:55.874053+08:00"
+  },
+  {
+    "paper_id": "paper_000015",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要明确研究对象为儿科肿瘤患者，命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:02:55.874053+08:00"
+  },
+  {
+    "paper_id": "paper_000016",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要明确研究对象为儿童白血病患者的父母，干预对象包含照顾者，命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:02:55.874053+08:00"
+  },
+  {
+    "paper_id": "paper_000017",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "摘要提及癌症患者和低患者赋能，但未明确研究对象是否为成人白血病患者，也未说明核心干预措施是否为赋能教育。",
+    "evidence": [
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:02:55.874053+08:00"
+  },
+  {
+    "paper_id": "paper_000018",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要研究对象为儿科血液肿瘤专科医生，与成人白血病患者赋能教育主题无关。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:02:55.874053+08:00"
+  },
+  {
+    "paper_id": "paper_000019",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要明确研究对象为儿童白血病患者，命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:02:55.874053+08:00"
+  },
+  {
+    "paper_id": "paper_000020",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要描述针对慢性髓系白血病患者的数字护理平台，明确提及“patient empowerment”作为干预目标，研究对象为成人患者，年份符合要求。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:02:55.874053+08:00"
+  },
+  {
+    "paper_id": "paper_000021",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究内容为白血病诊断技术，未涉及赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:03:20.373809+08:00"
+  },
+  {
+    "paper_id": "paper_000022",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究内容为血癌药物分子描述符，未涉及赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:03:20.373809+08:00"
+  },
+  {
+    "paper_id": "paper_000023",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "发表年份为2014年，不符合2016年及以后的纳入标准。",
+    "evidence": [
+      "year"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:03:20.373809+08:00"
+  },
+  {
+    "paper_id": "paper_000024",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要明确研究赋能对血液肿瘤患者的影响，研究对象为成人患者，发表年份符合要求。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:03:20.373809+08:00"
+  },
+  {
+    "paper_id": "paper_000025",
+    "batch_id": "batch_0003",
+    "decision": "uncertain",
+    "reason": "摘要提到白血病患者和社会阶层对赋能的影响，但未明确说明核心干预措施是否为赋能教育。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:03:20.373809+08:00"
+  },
+  {
+    "paper_id": "paper_000026",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "发表年份为2015年，不符合2016年及以后的纳入标准。",
+    "evidence": [
+      "year"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:03:20.373809+08:00"
+  },
+  {
+    "paper_id": "paper_000027",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "发表年份为2013年，不符合2016年及以后的纳入标准。",
+    "evidence": [
+      "year"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:03:20.373809+08:00"
+  },
+  {
+    "paper_id": "paper_000028",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "发表年份为1998年，不符合2016年及以后的纳入标准。",
+    "evidence": [
+      "year"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:03:20.373809+08:00"
+  },
+  {
+    "paper_id": "paper_000029",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "发表年份为2009年，不符合2016年及以后的纳入标准。",
+    "evidence": [
+      "year"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:03:20.373809+08:00"
+  },
+  {
+    "paper_id": "paper_000030",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "发表年份为2013年，不符合2016年及以后的纳入标准。",
+    "evidence": [
+      "year"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:03:20.373809+08:00"
+  },
+  {
+    "paper_id": "paper_000031",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "标题和摘要明确针对成人慢性髓系白血病患者，并提及平台旨在增强患者赋能，年份符合要求。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:03:45.912431+08:00"
+  },
+  {
+    "paper_id": "paper_000032",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "研究对象为多发性骨髓瘤等M蛋白疾病患者，非白血病，且未提及赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:03:45.912431+08:00"
+  },
+  {
+    "paper_id": "paper_000033",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "研究对象为儿童癌症幸存者，明确命中排除标准，且发表年份过早。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:03:45.912431+08:00"
+  },
+  {
+    "paper_id": "paper_000034",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "标题和摘要明确针对成人慢性髓系白血病患者，开发以患者为中心的赋能平台，年份符合要求。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:03:45.912431+08:00"
+  },
+  {
+    "paper_id": "paper_000035",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "发表年份在2016年以前，且摘要未明确针对白血病患者或赋能教育干预。",
+    "evidence": [
+      "year",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:03:45.912431+08:00"
+  },
+  {
+    "paper_id": "paper_000036",
+    "batch_id": "batch_0004",
+    "decision": "uncertain",
+    "reason": "摘要提及慢性髓系白血病患者，但研究主题为故意不依从行为，未明确涉及赋能教育干预。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:03:45.912431+08:00"
+  },
+  {
+    "paper_id": "paper_000037",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "干预对象为白血病患儿的母亲，明确命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:03:45.912431+08:00"
+  },
+  {
+    "paper_id": "paper_000038",
+    "batch_id": "batch_0004",
+    "decision": "uncertain",
+    "reason": "摘要提及血液癌症患者和赋能，但未明确是否为白血病，且干预为远程监测系统，是否直接涉及赋能教育不够明确。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:03:45.912431+08:00"
+  },
+  {
+    "paper_id": "paper_000039",
+    "batch_id": "batch_0004",
+    "decision": "uncertain",
+    "reason": "标题和摘要针对成人毛细胞白血病患者，提及赋能，但研究焦点为护理场合，是否核心干预为赋能教育信息不足。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.45,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:03:45.912431+08:00"
+  },
+  {
+    "paper_id": "paper_000040",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "研究对象为血液癌症患者，非特指白血病，且干预为同伴支持，未明确涉及赋能教育。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:03:45.912431+08:00"
+  },
+  {
+    "paper_id": "paper_000041",
+    "batch_id": "batch_0005",
+    "decision": "uncertain",
+    "reason": "摘要提到赋能慢性粒细胞白血病患者，但未明确说明研究对象是否为成人，且干预措施为数字护理平台而非直接赋能教育。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:03:56.140955+08:00"
+  },
+  {
+    "paper_id": "paper_000042",
+    "batch_id": "batch_0005",
+    "decision": "include",
+    "reason": "标题和摘要明确以白血病患者为研究对象，干预措施基于赋能理论，发表年份符合要求。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T16:03:56.140955+08:00"
+  }
+]

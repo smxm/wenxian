@@ -1,0 +1,105 @@
+{
+  "batch_id": "batch_0001",
+  "results": [
+    {
+      "paper_id": "paper_000001",
+      "decision": "exclude",
+      "reason": "研究聚焦虚拟现实技术而非智能手机，摘要提到使用手机但核心是VR技术评估。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000002",
+      "decision": "exclude",
+      "reason": "研究场景是语言学习应用开发，未涉及课堂环境中的手机双重角色探讨。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "paper_id": "paper_000003",
+      "decision": "include",
+      "reason": "标题和摘要明确研究护理学生智能手机依赖及其负面影响，涉及教育环境和AI挑战。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000004",
+      "decision": "exclude",
+      "reason": "研究聚焦课堂行为识别技术，属于计算机视觉领域，未实质性探讨手机使用的影响。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000005",
+      "decision": "include",
+      "reason": "标题和摘要直接比较课堂手机使用与禁用对学生焦虑和参与度的影响，符合辩证视角。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000006",
+      "decision": "uncertain",
+      "reason": "摘要提到教师用手机录像进行反思，但未明确探讨手机在课堂中的双重角色或影响。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000007",
+      "decision": "uncertain",
+      "reason": "摘要描述使用手机扫描二维码的教学活动，但未深入讨论手机在课堂中的正面或负面影响。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000008",
+      "decision": "include",
+      "reason": "标题和摘要研究留守儿童手机使用通过学校参与影响社会情感发展，涉及教育环境和负面影响。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000009",
+      "decision": "exclude",
+      "reason": "研究聚焦新型学习设备开发以解决数字鸿沟，未实质性探讨智能手机在课堂中的双重角色。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "paper_id": "paper_000010",
+      "decision": "include",
+      "reason": "标题和摘要直接研究课堂发短信与问题性手机使用的关系，明确涉及负面影响和媒体多任务处理。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    }
+  ]
+}

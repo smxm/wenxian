@@ -1,0 +1,381 @@
+{
+  "batch_id": "batch_0015",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000141",
+    "paper_000142",
+    "paper_000143",
+    "paper_000144",
+    "paper_000145",
+    "paper_000146",
+    "paper_000147",
+    "paper_000148",
+    "paper_000149",
+    "paper_000150"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000141",
+      "entry_type": "article",
+      "title": "Deep learning meta architecture to detect spatially coherent coarse grain regions in ultrasonic data",
+      "authors": [
+        "Elischberger, F",
+        "Jiang, XY"
+      ],
+      "year": 2025,
+      "journal": "NDT & E INTERNATIONAL",
+      "doi": "10.1016/j.ndteint.2025.103342",
+      "abstract": "This study introduces a novel methodology for detecting coarse grain volumina in ultrasonic data. The approach is based on the premise that the grain structure in metals produces ultrasonic grain noise, which can then be utilized to extract information about the grain structure. To achieve the detection of coarse grain fully embedded in finer grain material, three distinct deep learning models based on convolutional neural networks, recurrent neural networks and transformers, all derived from a shared meta architecture, were implemented and trained using ultrasonic Full-A-scan data. The proposed method was applied to a substantial dataset of synthetically manufactured coarse grain volumina, collected using a conventional single probe ultrasonic immersion system. Additionally, two baseline approaches were implemented and compared against the deep learning methods for experimental evaluation. The uncertainty of the deep learning approach was quantified using the model agnostic Monte Carlo Dropout technique, enabling the classification of predictions into high- and low-confidence categories. This research highlights the potential of deep learning in enhancing safety-critical systems and emphasizes the necessity for explainability in such domains.",
+      "keywords": [
+        "Segregations",
+        "Ultrasonic testing",
+        "Meta architecture",
+        "Monte Carlo Dropout",
+        "Grain scattering",
+        "Coarse grain",
+        "Clean white spot",
+        "UNCERTAINTY"
+      ],
+      "normalized_title": "deep learning meta architecture to detect spatially coherent coarse grain regions in ultrasonic data",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ndteint.2025.103342,\n\tauthor = {Elischberger, F and Jiang, XY},\n\ttitle = {Deep learning meta architecture to detect spatially coherent coarse grain regions in ultrasonic data},\n\tjournal = {NDT & E INTERNATIONAL},\n\tyear = {2025},\n\tkeywords = {Segregations; Ultrasonic testing; Meta architecture; Monte Carlo Dropout; Grain scattering; Coarse grain; Clean white spot; UNCERTAINTY},\n\tabstract = {This study introduces a novel methodology for detecting coarse grain volumina in ultrasonic data. The approach is based on the premise that the grain structure in metals produces ultrasonic grain noise, which can then be utilized to extract information about the grain structure. To achieve the detection of coarse grain fully embedded in finer grain material, three distinct deep learning models based on convolutional neural networks, recurrent neural networks and transformers, all derived from a shared meta architecture, were implemented and trained using ultrasonic Full-A-scan data. The proposed method was applied to a substantial dataset of synthetically manufactured coarse grain volumina, collected using a conventional single probe ultrasonic immersion system. Additionally, two baseline approaches were implemented and compared against the deep learning methods for experimental evaluation. The uncertainty of the deep learning approach was quantified using the model agnostic Monte Carlo Dropout technique, enabling the classification of predictions into high- and low-confidence categories. This research highlights the potential of deep learning in enhancing safety-critical systems and emphasizes the necessity for explainability in such domains.},\n\tdoi = {10.1016/j.ndteint.2025.103342},\n\tvolume = {153},\n\tissn = {0963-8695},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 33 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ndteint.2025.103342"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000142",
+      "entry_type": "article",
+      "title": "Impurity gas detection for SNF canisters using probabilistic deep learning and acoustic sensing",
+      "authors": [
+        "Zhuang, BZ",
+        "Gencturk, B",
+        "Oberai, AA",
+        "Ramaswamy, H",
+        "Meyer, R",
+        "Sinkov, A",
+        "Good, M"
+      ],
+      "year": 2024,
+      "journal": "MEASUREMENT SCIENCE AND TECHNOLOGY",
+      "doi": "10.1088/1361-6501/ad730d",
+      "abstract": "Monitoring impurity gases in spent nuclear fuel (SNF) canisters is a novel structural health monitoring approach for SNF in dry storage. The SNF canisters are sealed containers that do not facilitate visual access to the inside. Acoustic sensing can be deployed by taking advantage of the pathways unobstructed by internal hardware. Although the ultrasonic time-of-flight measurement can provide valuable information, it is limited in its ability to discern the concentration of only one impurity gas. As such, deep learning algorithms, particularly convolutional neural networks (CNNs), offer a promising solution. In this study, CNN-based probabilistic deep learning models were implemented to detect and quantify multiple impurity gases in helium. An experimental platform was established to simulate canister conditions, and ultrasonic test data were collected. The presence of argon and air in helium at concentrations ranging from 0% to 1.2% at increments of 0.05% was considered. The multi-layer perceptron, decision tree, and logistic regression classifiers achieved high accuracies when distinguishing pure helium from helium with impurities. CNN with dropout layers and CNN using maximum likelihood estimation showed a similar performance, indicating their ability to capture uncertainties. The ensemble CNN model exhibited improved predictions and the ability to balance individual gas concentration by integrating 1D- and 2D-CNN models. These findings contribute probabilistic deep learning solutions for impurity gas detection and analysis within SNF canisters, thus ensuring safe storage and management of SNFs.",
+      "keywords": [
+        "impurity gas detection",
+        "spent nuclear fuel (SNF)",
+        "acoustic sensing",
+        "probabilistic deep learning",
+        "convolutional neural networks (CNNs)",
+        "STRESS-CORROSION CRACKING",
+        "CONCRETE CASK STORAGE",
+        "SPENT NUCLEAR-FUEL",
+        "MIXTURE",
+        "SENSOR",
+        "IMPACT"
+      ],
+      "normalized_title": "impurity gas detection for snf canisters using probabilistic deep learning and acoustic sensing",
+      "raw_bibtex": "@ARTICLE{10.1088/1361-6501/ad730d,\n\tauthor = {Zhuang, BZ and Gencturk, B and Oberai, AA and Ramaswamy, H and Meyer, R and Sinkov, A and Good, M},\n\ttitle = {Impurity gas detection for SNF canisters using probabilistic deep learning and acoustic sensing},\n\tjournal = {MEASUREMENT SCIENCE AND TECHNOLOGY},\n\tyear = {2024},\n\tkeywords = {impurity gas detection; spent nuclear fuel (SNF); acoustic sensing; probabilistic deep learning; convolutional neural networks (CNNs); STRESS-CORROSION CRACKING; CONCRETE CASK STORAGE; SPENT NUCLEAR-FUEL; MIXTURE; SENSOR; IMPACT},\n\tabstract = {Monitoring impurity gases in spent nuclear fuel (SNF) canisters is a novel structural health monitoring approach for SNF in dry storage. The SNF canisters are sealed containers that do not facilitate visual access to the inside. Acoustic sensing can be deployed by taking advantage of the pathways unobstructed by internal hardware. Although the ultrasonic time-of-flight measurement can provide valuable information, it is limited in its ability to discern the concentration of only one impurity gas. As such, deep learning algorithms, particularly convolutional neural networks (CNNs), offer a promising solution. In this study, CNN-based probabilistic deep learning models were implemented to detect and quantify multiple impurity gases in helium. An experimental platform was established to simulate canister conditions, and ultrasonic test data were collected. The presence of argon and air in helium at concentrations ranging from 0% to 1.2% at increments of 0.05% was considered. The multi-layer perceptron, decision tree, and logistic regression classifiers achieved high accuracies when distinguishing pure helium from helium with impurities. CNN with dropout layers and CNN using maximum likelihood estimation showed a similar performance, indicating their ability to capture uncertainties. The ensemble CNN model exhibited improved predictions and the ability to balance individual gas concentration by integrating 1D- and 2D-CNN models. These findings contribute probabilistic deep learning solutions for impurity gas detection and analysis within SNF canisters, thus ensuring safe storage and management of SNFs.},\n\tdoi = {10.1088/1361-6501/ad730d},\n\tvolume = {35},\n\tnumber = {12},\n\tissn = {0957-0233},\n\tnote = {Times Cited in Web of Science Core Collection: 7 Total Times Cited: 7 Cited Reference Count: 60 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1088/1361-6501/ad730d"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000143",
+      "entry_type": "article",
+      "title": "A denoising method for ultrasonic testing of rubber composites based on improved symplectic geometric mode decomposition",
+      "authors": [
+        "Zhu, JX",
+        "Wang, GY",
+        "Huang, Y",
+        "Zhang, XF",
+        "He, RX",
+        "Chen, F"
+      ],
+      "year": 2023,
+      "journal": "APPLIED ACOUSTICS",
+      "doi": "10.1016/j.apacoust.2023.109428",
+      "abstract": "Ultrasonic nondestructive testing is widely used in industry due to its wide detection range and high detection efficiency. However, for multi-layer stacked rubber materials, ultrasound is easily affected by noise interference, it is a challenge work to reduce or separate the noise via signal processing. Therefore, a new ultrasonic echo denoising method based on symplectic geometry mode decomposition is proposed. It can fully decompose the useful components and noise components in the signal, and has a good screening effect on the useful components and noise components. In order to verify the effective-ness and robustness of the method, we conduct experimental research on the model with simulated and measured signals. The analysis results show that our method outperforms other noise reduction methods.(c) 2023 Elsevier Ltd. All rights reserved.",
+      "keywords": [
+        "Ultrasonic echo signal model denoising",
+        "Symplectic geometric mode decomposition",
+        "Signal decomposition",
+        "Ultrasonic nondestructive testing of rubber",
+        "composites"
+      ],
+      "normalized_title": "a denoising method for ultrasonic testing of rubber composites based on improved symplectic geometric mode decomposition",
+      "raw_bibtex": "@ARTICLE{10.1016/j.apacoust.2023.109428,\n\tauthor = {Zhu, JX and Wang, GY and Huang, Y and Zhang, XF and He, RX and Chen, F},\n\ttitle = {A denoising method for ultrasonic testing of rubber composites based on improved symplectic geometric mode decomposition},\n\tjournal = {APPLIED ACOUSTICS},\n\tyear = {2023},\n\tkeywords = {Ultrasonic echo signal model denoising; Symplectic geometric mode decomposition; Signal decomposition; Ultrasonic nondestructive testing of rubber; composites},\n\tabstract = {Ultrasonic nondestructive testing is widely used in industry due to its wide detection range and high detection efficiency. However, for multi-layer stacked rubber materials, ultrasound is easily affected by noise interference, it is a challenge work to reduce or separate the noise via signal processing. Therefore, a new ultrasonic echo denoising method based on symplectic geometry mode decomposition is proposed. It can fully decompose the useful components and noise components in the signal, and has a good screening effect on the useful components and noise components. In order to verify the effective-ness and robustness of the method, we conduct experimental research on the model with simulated and measured signals. The analysis results show that our method outperforms other noise reduction methods.(c) 2023 Elsevier Ltd. All rights reserved.},\n\tdoi = {10.1016/j.apacoust.2023.109428},\n\tvolume = {209},\n\tissn = {0003-682X},\n\tnote = {Times Cited in Web of Science Core Collection: 11 Total Times Cited: 13 Cited Reference Count: 39 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.apacoust.2023.109428"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000144",
+      "entry_type": "article",
+      "title": "Classification and Sizing of Surface Defects in Pipelines Based on the Results of Combined Diagnostics by Ultrasonic, Eddy Current, and Visual Inspection Methods of Nondestructive Testing",
+      "authors": [
+        "Krysko, NV",
+        "Skrynnikov, SV",
+        "Shchipakov, NA",
+        "Kozlov, DM",
+        "Kusyy, AG"
+      ],
+      "year": 2023,
+      "journal": "RUSSIAN JOURNAL OF NONDESTRUCTIVE TESTING",
+      "doi": "10.1134/s1061830923601022",
+      "abstract": "The issues of classification and characterization of surface operational defects according to the results of ultrasonic, eddy current, and visual inspection methods of nondestructive testing are considered. At the same time, the visual inspection method was realized with the use of a television inspection camera equipped with a computer vision function and a laser triangulation sensor. The paper presents a dataset containing 5760 images of pipelines with and without pitting corrosion. A convolutional neural network (CNN) is presented that was applied to classify the images obtained from the TV inspection camera into images without corrosion and images with pitting corrosion. The paper presents a dataset containing 269 measurements of planar and volumetric surface defects. A model for surface defect sizing based on gradient boosting is presented. The paper develops an algorithm for classification and sizing of surface defects in complex diagnostics in which the obtained models are applied, and determines the accuracy of this algorithm in the RMSE metric, which was calculated within the studied test dataset and amounted to 0.011 mm.",
+      "keywords": [
+        "energy",
+        "natural resources",
+        "surface defect",
+        "ultrasonic testing",
+        "eddy current testing",
+        "energy transfer",
+        "industry and innovation",
+        "laser scanning",
+        "complex diagnostics",
+        "combined data evaluation",
+        "machine learning",
+        "deep learning",
+        "convolutional neural network",
+        "life cycle assessment"
+      ],
+      "normalized_title": "classification and sizing of surface defects in pipelines based on the results of combined diagnostics by ultrasonic eddy current and visual inspection methods of nondestructive testing",
+      "raw_bibtex": "@ARTICLE{10.1134/S1061830923601022,\n\tauthor = {Krysko, NV and Skrynnikov, SV and Shchipakov, NA and Kozlov, DM and Kusyy, AG},\n\ttitle = {Classification and Sizing of Surface Defects in Pipelines Based on the Results of Combined Diagnostics by Ultrasonic, Eddy Current, and Visual Inspection Methods of Nondestructive Testing},\n\tjournal = {RUSSIAN JOURNAL OF NONDESTRUCTIVE TESTING},\n\tyear = {2023},\n\tkeywords = {energy; natural resources; surface defect; ultrasonic testing; eddy current testing; energy transfer; industry and innovation; laser scanning; complex diagnostics; combined data evaluation; machine learning; deep learning; convolutional neural network; life cycle assessment},\n\tabstract = {The issues of classification and characterization of surface operational defects according to the results of ultrasonic, eddy current, and visual inspection methods of nondestructive testing are considered. At the same time, the visual inspection method was realized with the use of a television inspection camera equipped with a computer vision function and a laser triangulation sensor. The paper presents a dataset containing 5760 images of pipelines with and without pitting corrosion. A convolutional neural network (CNN) is presented that was applied to classify the images obtained from the TV inspection camera into images without corrosion and images with pitting corrosion. The paper presents a dataset containing 269 measurements of planar and volumetric surface defects. A model for surface defect sizing based on gradient boosting is presented. The paper develops an algorithm for classification and sizing of surface defects in complex diagnostics in which the obtained models are applied, and determines the accuracy of this algorithm in the RMSE metric, which was calculated within the studied test dataset and amounted to 0.011 mm.},\n\tdoi = {10.1134/S1061830923601022},\n\tvolume = {59},\n\tnumber = {12},\n\tpages = {1315-1323},\n\tissn = {1061-8309},\n\tnote = {Times Cited in Web of Science Core Collection: 5 Total Times Cited: 5 Cited Reference Count: 31 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1134/S1061830923601022"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000145",
+      "entry_type": "article",
+      "title": "A transfer learning approach to the prediction of porosity in additively manufactured metallic components",
+      "authors": [
+        "Skiadopoulos, M",
+        "Kifer, D",
+        "Shokouhi, P"
+      ],
+      "year": 2026,
+      "journal": "NDT & E INTERNATIONAL",
+      "doi": "10.1016/j.ndteint.2025.103531",
+      "abstract": "We implement a physics-informed neural network (PINN) pretrained on a synthetic dataset to quantify distributed porosity in additively manufactured AlSi10Mg components using experimental ultrasonic pulse-echo data. The proposed PINN framework directly processes raw ultrasonic data to estimate volumetric porosity and average pore size. Due to the significant data requirements of neural network (NN) models, training is initially conducted on a dataset generated through finite element simulations. Then the pretrained PINN is transferred to the experimental data after using a portion of them for retraining. The PINN integrates physics constraints based on Sayers scattering model, which relates wave speed to porosity and pore radius. Notably, the two material-dependent constants in the model are treated as learnable parameters, which converge to their true values during the training process. Results indicate that the PINN achieves superb prediction accuracy, reflected in high r2-scores and low RMSEs. Additionally, a performance evaluation study is conducted by varying training set sizes; the PINN consistently outperforms the corresponding data-driven model (without physics constraint) across all training set sizes, with its advantage becoming more pronounced as the training set size decreases. Our findings suggest that a feed-forward neural network informed by wave physics can accurately quantify the porosity and pore radius within our samples from their raw ultrasonic responses even when the amount of labelled data for training is limited.",
+      "keywords": [
+        "Physics-informed machine learning",
+        "Transfer learning",
+        "Ultrasonic testing",
+        "Porosity",
+        "Additive manufacturing",
+        "ELASTIC-WAVES",
+        "SCATTERING"
+      ],
+      "normalized_title": "a transfer learning approach to the prediction of porosity in additively manufactured metallic components",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ndteint.2025.103531,\n\tauthor = {Skiadopoulos, M and Kifer, D and Shokouhi, P},\n\ttitle = {A transfer learning approach to the prediction of porosity in additively manufactured metallic components},\n\tjournal = {NDT & E INTERNATIONAL},\n\tyear = {2026},\n\tkeywords = {Physics-informed machine learning; Transfer learning; Ultrasonic testing; Porosity; Additive manufacturing; ELASTIC-WAVES; SCATTERING},\n\tabstract = {We implement a physics-informed neural network (PINN) pretrained on a synthetic dataset to quantify distributed porosity in additively manufactured AlSi10Mg components using experimental ultrasonic pulse-echo data. The proposed PINN framework directly processes raw ultrasonic data to estimate volumetric porosity and average pore size. Due to the significant data requirements of neural network (NN) models, training is initially conducted on a dataset generated through finite element simulations. Then the pretrained PINN is transferred to the experimental data after using a portion of them for retraining. The PINN integrates physics constraints based on Sayers scattering model, which relates wave speed to porosity and pore radius. Notably, the two material-dependent constants in the model are treated as learnable parameters, which converge to their true values during the training process. Results indicate that the PINN achieves superb prediction accuracy, reflected in high r2-scores and low RMSEs. Additionally, a performance evaluation study is conducted by varying training set sizes; the PINN consistently outperforms the corresponding data-driven model (without physics constraint) across all training set sizes, with its advantage becoming more pronounced as the training set size decreases. Our findings suggest that a feed-forward neural network informed by wave physics can accurately quantify the porosity and pore radius within our samples from their raw ultrasonic responses even when the amount of labelled data for training is limited.},\n\tdoi = {10.1016/j.ndteint.2025.103531},\n\tvolume = {157},\n\tissn = {0963-8695},\n\tnote = {Times Cited in Web of Science Core Collection: 2 Total Times Cited: 2 Cited Reference Count: 66 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ndteint.2025.103531"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000146",
+      "entry_type": "article",
+      "title": "The Effect of Different Flaw Data to Machine Learning Powered Ultrasonic Inspection",
+      "authors": [
+        "Koskinen, T",
+        "Virkkunen, I",
+        "Siljama, O",
+        "Jessen-Juhler, O"
+      ],
+      "year": 2021,
+      "journal": "JOURNAL OF NONDESTRUCTIVE EVALUATION",
+      "doi": "10.1007/s10921-021-00757-x",
+      "abstract": "Previous research (Li et al., Understanding the disharmony between dropout and batch normalization by variance shift. CoRR abs/1801.05134 (2018). http://arxiv.org/abs/1801.05134arXiv:1801.05134) has shown the plausibility of using a modern deep convolutional neural network to detect flaws from phased-array ultrasonic data. This brings the repeatability and effectiveness of automated systems to complex ultrasonic signal evaluation, previously done exclusively by human inspectors. The major breakthrough was to use virtual flaws to generate ample flaw data for the teaching of the algorithm. This enabled the use of raw ultrasonic scan data for detection and to leverage some of the approaches used in machine learning for image recognition. Unlike traditional image recognition, training data for ultrasonic inspection is scarce. While virtual flaws allow us to broaden the data considerably, original flaws with proper flaw-size distribution are still required. This is of course the same for training human inspectors. The training of human inspectors is usually done with easily manufacturable flaws such as side-drilled holes and EDM notches. While the difference between these easily manufactured artificial flaws and real flaws is obvious, human inspectors still manage to train with them and perform well in real inspection scenarios. In the present work, we use a modern, deep convolutional neural network to detect flaws from phased-array ultrasonic data and compare the results achieved from different training data obtained from various artificial flaws. The model demonstrated good generalization capability toward flaw sizes larger than the original training data, and the effect of the minimum flaw size in the data set affects the a90/95 value. This work also demonstrates how different artificial flaws, solidification cracks, EDM notch and simple simulated flaws generalize differently.",
+      "keywords": [
+        "NDT",
+        "Ultrasonic testing",
+        "Machine Learning",
+        "Image classification",
+        "SAMPLING STRATEGY"
+      ],
+      "normalized_title": "the effect of different flaw data to machine learning powered ultrasonic inspection",
+      "raw_bibtex": "@ARTICLE{10.1007/s10921-021-00757-x,\n\tauthor = {Koskinen, T and Virkkunen, I and Siljama, O and Jessen-Juhler, O},\n\ttitle = {The Effect of Different Flaw Data to Machine Learning Powered Ultrasonic Inspection},\n\tjournal = {JOURNAL OF NONDESTRUCTIVE EVALUATION},\n\tyear = {2021},\n\tkeywords = {NDT; Ultrasonic testing; Machine Learning; Image classification; SAMPLING STRATEGY},\n\tabstract = {Previous research (Li et al., Understanding the disharmony between dropout and batch normalization by variance shift. CoRR abs/1801.05134 (2018). http://arxiv.org/abs/1801.05134arXiv:1801.05134) has shown the plausibility of using a modern deep convolutional neural network to detect flaws from phased-array ultrasonic data. This brings the repeatability and effectiveness of automated systems to complex ultrasonic signal evaluation, previously done exclusively by human inspectors. The major breakthrough was to use virtual flaws to generate ample flaw data for the teaching of the algorithm. This enabled the use of raw ultrasonic scan data for detection and to leverage some of the approaches used in machine learning for image recognition. Unlike traditional image recognition, training data for ultrasonic inspection is scarce. While virtual flaws allow us to broaden the data considerably, original flaws with proper flaw-size distribution are still required. This is of course the same for training human inspectors. The training of human inspectors is usually done with easily manufacturable flaws such as side-drilled holes and EDM notches. While the difference between these easily manufactured artificial flaws and real flaws is obvious, human inspectors still manage to train with them and perform well in real inspection scenarios. In the present work, we use a modern, deep convolutional neural network to detect flaws from phased-array ultrasonic data and compare the results achieved from different training data obtained from various artificial flaws. The model demonstrated good generalization capability toward flaw sizes larger than the original training data, and the effect of the minimum flaw size in the data set affects the a90/95 value. This work also demonstrates how different artificial flaws, solidification cracks, EDM notch and simple simulated flaws generalize differently.},\n\tdoi = {10.1007/s10921-021-00757-x},\n\tvolume = {40},\n\tnumber = {1},\n\tissn = {0195-9298},\n\tnote = {Times Cited in Web of Science Core Collection: 14 Total Times Cited: 16 Cited Reference Count: 26 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s10921-021-00757-x"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000147",
+      "entry_type": "article",
+      "title": "Evaluation of material degradation using phased array ultrasonic technique with full matrix capture",
+      "authors": [
+        "Sampath, S",
+        "Dhayalan, R",
+        "Kumar, A",
+        "Kishore, NN",
+        "Sohn, H"
+      ],
+      "year": 2021,
+      "journal": "ENGINEERING FAILURE ANALYSIS",
+      "doi": "10.1016/j.engfailanal.2020.105118",
+      "abstract": "This paper presents a new approach based on phased array ultrasonic technique (PAUT) with full matrix capture (FMC) to effectively measure acoustic properties such as ultrasonic wave velocity and attenuation coefficient and to evaluate material degradation. This paper also proposes the use of PAUT with FMC, to simultaneously generate and detect ultrasonic waves such as longitudinal, shear, and Rayleigh waves in the material. A theoretical model is developed to derive the analytical solution of ultrasonic waves induced in the material by an ultrasonic phased array probe. Based on the theoretical prediction, experiments are carried out on AISI 316L stainless steel specimen of 3 mm thickness, and a 2D finite element model is built to verify the generation and detection of these waves. Furthermore, measurements of acoustic properties are carried out on the specimen using the proposed approach as well as the conventional ultrasonic testing (CUT) technique and their sensitivities are compared. The measurements of time-of-flight and back-wall echo amplitude are more accurate with the proposed approach than the CUT technique, which makes the former technique better than the latter for the evaluation of material degradation. Finally, experiments are performed on AISI 316L specimen degraded with different levels of tensile stress to verify the capability of PAUT with FMC. The results show that the velocities and attenuation coefficient increase with an increase in tensile stress until material fracture. This phenomenon is interpreted as resulting from microstructural changes such as dislocations during material degradation. From the experimental results, it is proposed that PAUT with FMC can potentially be used to evaluate early-stage materials degradation. ABSTRACT This paper presents a new approach based on phased array ultrasonic technique (PAUT) with full matrix capture (FMC) to effectively measure acoustic properties such as ultrasonic wave velocity and attenuation coefficient and to evaluate material degradation. This paper also proposes the use of PAUT with FMC, to simultaneously generate and detect ultrasonic waves such as longitudinal, shear, and Rayleigh waves in the material. A theoretical model is developed to derive the analytical solution of ultrasonic waves induced in the material by an ultrasonic phased array probe. Based on the theoretical prediction, experiments are carried out on AISI 316L stainless steel specimen of 3 mm thickness, and a 2D finite element model is built to verify the generation and detection of these waves. Furthermore, measurements of acoustic properties are carried out on the specimen using the proposed approach as well as the conventional ultrasonic testing (CUT) technique and their sensitivities are compared. The measurements of time-of-flight and back-wall echo amplitude are more accurate with the proposed approach than the CUT technique, which makes the former technique better than the latter for the evaluation of material degradation. Finally, experiments are performed on AISI 316L specimen degraded with different levels of tensile stress to verify the capability of PAUT with FMC. The results show that the velocities and attenuation coefficient increase with an increase in tensile stress until material fracture. This phenomenon is interpreted as resulting from microstructural changes such as dislocations during material degradation. From the experimental results, it is proposed that PAUT with FMC can potentially be used to evaluate early-stage materials degradation.",
+      "keywords": [
+        "Material degradation",
+        "Phased array ultrasonic testing",
+        "Full matrix capture",
+        "Acoustic properties",
+        "Ultrasonics",
+        "PLASTIC-DEFORMATION",
+        "WAVELET TRANSFORM",
+        "HEAT-TREATMENT",
+        "STEEL",
+        "VELOCITY",
+        "MICROSTRUCTURE",
+        "ATTENUATION",
+        "COMPOSITES",
+        "RECOVERY"
+      ],
+      "normalized_title": "evaluation of material degradation using phased array ultrasonic technique with full matrix capture",
+      "raw_bibtex": "@ARTICLE{10.1016/j.engfailanal.2020.105118,\n\tauthor = {Sampath, S and Dhayalan, R and Kumar, A and Kishore, NN and Sohn, H},\n\ttitle = {Evaluation of material degradation using phased array ultrasonic technique with full matrix capture},\n\tjournal = {ENGINEERING FAILURE ANALYSIS},\n\tyear = {2021},\n\tkeywords = {Material degradation; Phased array ultrasonic testing; Full matrix capture; Acoustic properties; Ultrasonics; PLASTIC-DEFORMATION; WAVELET TRANSFORM; HEAT-TREATMENT; STEEL; VELOCITY; MICROSTRUCTURE; ATTENUATION; COMPOSITES; RECOVERY},\n\tabstract = {This paper presents a new approach based on phased array ultrasonic technique (PAUT) with full matrix capture (FMC) to effectively measure acoustic properties such as ultrasonic wave velocity and attenuation coefficient and to evaluate material degradation. This paper also proposes the use of PAUT with FMC, to simultaneously generate and detect ultrasonic waves such as longitudinal, shear, and Rayleigh waves in the material. A theoretical model is developed to derive the analytical solution of ultrasonic waves induced in the material by an ultrasonic phased array probe. Based on the theoretical prediction, experiments are carried out on AISI 316L stainless steel specimen of 3 mm thickness, and a 2D finite element model is built to verify the generation and detection of these waves. Furthermore, measurements of acoustic properties are carried out on the specimen using the proposed approach as well as the conventional ultrasonic testing (CUT) technique and their sensitivities are compared. The measurements of time-of-flight and back-wall echo amplitude are more accurate with the proposed approach than the CUT technique, which makes the former technique better than the latter for the evaluation of material degradation. Finally, experiments are performed on AISI 316L specimen degraded with different levels of tensile stress to verify the capability of PAUT with FMC. The results show that the velocities and attenuation coefficient increase with an increase in tensile stress until material fracture. This phenomenon is interpreted as resulting from microstructural changes such as dislocations during material degradation. From the experimental results, it is proposed that PAUT with FMC can potentially be used to evaluate early-stage materials degradation. ABSTRACT This paper presents a new approach based on phased array ultrasonic technique (PAUT) with full matrix capture (FMC) to effectively measure acoustic properties such as ultrasonic wave velocity and attenuation coefficient and to evaluate material degradation. This paper also proposes the use of PAUT with FMC, to simultaneously generate and detect ultrasonic waves such as longitudinal, shear, and Rayleigh waves in the material. A theoretical model is developed to derive the analytical solution of ultrasonic waves induced in the material by an ultrasonic phased array probe. Based on the theoretical prediction, experiments are carried out on AISI 316L stainless steel specimen of 3 mm thickness, and a 2D finite element model is built to verify the generation and detection of these waves. Furthermore, measurements of acoustic properties are carried out on the specimen using the proposed approach as well as the conventional ultrasonic testing (CUT) technique and their sensitivities are compared. The measurements of time-of-flight and back-wall echo amplitude are more accurate with the proposed approach than the CUT technique, which makes the former technique better than the latter for the evaluation of material degradation. Finally, experiments are performed on AISI 316L specimen degraded with different levels of tensile stress to verify the capability of PAUT with FMC. The results show that the velocities and attenuation coefficient increase with an increase in tensile stress until material fracture. This phenomenon is interpreted as resulting from microstructural changes such as dislocations during material degradation. From the experimental results, it is proposed that PAUT with FMC can potentially be used to evaluate early-stage materials degradation.},\n\tdoi = {10.1016/j.engfailanal.2020.105118},\n\tvolume = {120},\n\tissn = {1350-6307},\n\tnote = {Times Cited in Web of Science Core Collection: 23 Total Times Cited: 26 Cited Reference Count: 68 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.engfailanal.2020.105118"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000148",
+      "entry_type": "article",
+      "title": "Method for hybrid materials diagnosis based on ultrasonic testing signal analysis through Dynamic Time Warping and machine learning combination",
+      "authors": [
+        "Janek, A",
+        "Jakubczak, P"
+      ],
+      "year": 2025,
+      "journal": "MEASUREMENT",
+      "doi": "10.1016/j.measurement.2025.117779",
+      "abstract": "Ultrasonic testing is one of the most commonly used non-destructive testing (NDT) techniques due to its low cost and wide applicability. Automation and artificial intelligence (AI) are utilised to enhance performance and efficiency, often in high-tech solutions or specifically for monolithic materials. Consequently, a new method for testing fibre-metal laminates (FML) using A-scans is proposed. The approach employs AI-supported signal analysis to compare measurements with those from undamaged areas. The XGBoost library was used to develop the model, and Dynamic Time Warping (DTW) was employed to assess signal similarity, including shape-based analysis (DTWz). The method was tested on undamaged samples, increased gain scenarios, delamination, and bottom recess. Chosen threshold values were not exceeded in healthy cases. In the increased gain scenario, despite DTW exceeding the threshold fourfold, the signal shape confirmed structural integrity. For delamination and holes, DTW thresholds were exceeded by up to 21%, while for DTWz, were exceeded by 3% and 7%, respectively. Additional distance matrices can also visualise the changes reflected in the shape of optimal alignment paths. When focusing on the most variable signal regions, DTW reached 140% of the threshold value, while DTWz attained 136% and 175% of their thresholds for delamination and cutouts. Furthermore, applying constraints improved detection accuracy and reduced processing time, increasing average DTW values from 28% to 36% for delamination and from 60% to 88% for recess, while the average DTWz increased from 19.3% to 20.8% and from 26.1% to 29.6%, respectively.",
+      "keywords": [
+        "NDT",
+        "UT",
+        "A-scan Analysis",
+        "Laminates",
+        "FML",
+        "DTW",
+        "FIBER",
+        "PROPAGATION"
+      ],
+      "normalized_title": "method for hybrid materials diagnosis based on ultrasonic testing signal analysis through dynamic time warping and machine learning combination",
+      "raw_bibtex": "@ARTICLE{10.1016/j.measurement.2025.117779,\n\tauthor = {Janek, A and Jakubczak, P},\n\ttitle = {Method for hybrid materials diagnosis based on ultrasonic testing signal analysis through Dynamic Time Warping and machine learning combination},\n\tjournal = {MEASUREMENT},\n\tyear = {2025},\n\tkeywords = {NDT; UT; A-scan Analysis; Laminates; FML; DTW; FIBER; PROPAGATION},\n\tabstract = {Ultrasonic testing is one of the most commonly used non-destructive testing (NDT) techniques due to its low cost and wide applicability. Automation and artificial intelligence (AI) are utilised to enhance performance and efficiency, often in high-tech solutions or specifically for monolithic materials. Consequently, a new method for testing fibre-metal laminates (FML) using A-scans is proposed. The approach employs AI-supported signal analysis to compare measurements with those from undamaged areas. The XGBoost library was used to develop the model, and Dynamic Time Warping (DTW) was employed to assess signal similarity, including shape-based analysis (DTWz). The method was tested on undamaged samples, increased gain scenarios, delamination, and bottom recess. Chosen threshold values were not exceeded in healthy cases. In the increased gain scenario, despite DTW exceeding the threshold fourfold, the signal shape confirmed structural integrity. For delamination and holes, DTW thresholds were exceeded by up to 21%, while for DTWz, were exceeded by 3% and 7%, respectively. Additional distance matrices can also visualise the changes reflected in the shape of optimal alignment paths. When focusing on the most variable signal regions, DTW reached 140% of the threshold value, while DTWz attained 136% and 175% of their thresholds for delamination and cutouts. Furthermore, applying constraints improved detection accuracy and reduced processing time, increasing average DTW values from 28% to 36% for delamination and from 60% to 88% for recess, while the average DTWz increased from 19.3% to 20.8% and from 26.1% to 29.6%, respectively.},\n\tdoi = {10.1016/j.measurement.2025.117779},\n\tvolume = {253},\n\tissn = {0263-2241},\n\tnote = {Times Cited in Web of Science Core Collection: 2 Total Times Cited: 2 Cited Reference Count: 66 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.measurement.2025.117779"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000149",
+      "entry_type": "article",
+      "title": "Human-machine collaborative automation strategies for ultrasonic phased array data analysis of carbon fibre reinforced plastics",
+      "authors": [
+        "Tunukovic, V",
+        "McKnight, S",
+        "Hifi, A",
+        "Mohseni, E",
+        "Pierce, SG",
+        "Vithanage, RKW",
+        "Dobie, G",
+        "MacLeod, CN",
+        "Cochran, S",
+        "O'Hare, T"
+      ],
+      "year": 2025,
+      "journal": "NDT & E INTERNATIONAL",
+      "doi": "10.1016/j.ndteint.2025.103392",
+      "abstract": "NDE 4.0 represents the integration of recent advancements in robotics, sensor technology, and Artificial Intelligence (AI), transforming and automating traditional NDE in line with Industry 4.0 principles. Despite these advancements, data analysis in NDE is still largely performed manually or with traditional rule-based tools such as signal thresholding. These tools often struggle to effectively manage complex data patterns or high noise levels, leading to unreliable defect detection. Additionally, they require frequent manual adjustments to set appropriate parameters for varying inspection conditions, which can be inefficient and error-prone in dynamic or fast paced environments. In contrast, AI-based analysis tools have demonstrated improvements over traditional methods, offering greater accuracy in defect detection and adaptability to higher variability within captured signals. However, their adoption in industrial settings remains limited due to challenges associated with model trust and their \"black box\" nature. Additionally, practical guidelines for implementing AI tools into NDE workflow are rarely discussed, motivating this work to explore various integration strategies across different automation levels. Three levels of automation were explored, ranging from basic AI-assisted workflows, where tools provide suggestions, to advanced applications where multiple AI models simultaneously process data in a comprehensive analysis, shifting human operators to a supervisory role. Proposed strategies of AI integration into the NDE automation workflow were evaluated on inspection of two defective complex-geometry carbon fibrereinforced plastics components, commonly used in aerospace and energy sectors for safety-critical structures such as aircraft fuselages and wind turbine blades. The experimental scans were conducted using a phased array ultrasonic testing roller probe mounted on an industrial manipulator, closely replicating industrial practices, and successfully identifying 36 manufactured defects through a combination of supervised object detection on amplitude C-scans, unsupervised anomaly detection on ultrasonic B-scans, and a self-supervised AI model for processing full volumetric ultrasonic data. This inclusion of multiple AI models led to an improvement of up to 17.2 % in the F1 score compared to single-model approaches. Unlike manual inspections, which take hours for larger components, the proposed approach completes the analysis in 94.03 and 57.01 s for the two inspected samples, respectively.",
+      "keywords": [
+        "Automated phased array inspection and data interpretation",
+        "Machine learning for phased array ultrasonic testing",
+        "Non-destructive evaluation of aerospace composites",
+        "Carbon fibre reinforced polymers",
+        "Multi model machine learning for full non-destructive evaluation automation",
+        "COMPOSITE-MATERIALS",
+        "ALGORITHMS"
+      ],
+      "normalized_title": "human machine collaborative automation strategies for ultrasonic phased array data analysis of carbon fibre reinforced plastics",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ndteint.2025.103392,\n\tauthor = {Tunukovic, V and McKnight, S and Hifi, A and Mohseni, E and Pierce, SG and Vithanage, RKW and Dobie, G and MacLeod, CN and Cochran, S and O'Hare, T},\n\ttitle = {Human-machine collaborative automation strategies for ultrasonic phased array data analysis of carbon fibre reinforced plastics},\n\tjournal = {NDT & E INTERNATIONAL},\n\tyear = {2025},\n\tkeywords = {Automated phased array inspection and data interpretation; Machine learning for phased array ultrasonic testing; Non-destructive evaluation of aerospace composites; Carbon fibre reinforced polymers; Multi model machine learning for full non-destructive evaluation automation; COMPOSITE-MATERIALS; ALGORITHMS},\n\tabstract = {NDE 4.0 represents the integration of recent advancements in robotics, sensor technology, and Artificial Intelligence (AI), transforming and automating traditional NDE in line with Industry 4.0 principles. Despite these advancements, data analysis in NDE is still largely performed manually or with traditional rule-based tools such as signal thresholding. These tools often struggle to effectively manage complex data patterns or high noise levels, leading to unreliable defect detection. Additionally, they require frequent manual adjustments to set appropriate parameters for varying inspection conditions, which can be inefficient and error-prone in dynamic or fast paced environments. In contrast, AI-based analysis tools have demonstrated improvements over traditional methods, offering greater accuracy in defect detection and adaptability to higher variability within captured signals. However, their adoption in industrial settings remains limited due to challenges associated with model trust and their \"black box\" nature. Additionally, practical guidelines for implementing AI tools into NDE workflow are rarely discussed, motivating this work to explore various integration strategies across different automation levels. Three levels of automation were explored, ranging from basic AI-assisted workflows, where tools provide suggestions, to advanced applications where multiple AI models simultaneously process data in a comprehensive analysis, shifting human operators to a supervisory role. Proposed strategies of AI integration into the NDE automation workflow were evaluated on inspection of two defective complex-geometry carbon fibrereinforced plastics components, commonly used in aerospace and energy sectors for safety-critical structures such as aircraft fuselages and wind turbine blades. The experimental scans were conducted using a phased array ultrasonic testing roller probe mounted on an industrial manipulator, closely replicating industrial practices, and successfully identifying 36 manufactured defects through a combination of supervised object detection on amplitude C-scans, unsupervised anomaly detection on ultrasonic B-scans, and a self-supervised AI model for processing full volumetric ultrasonic data. This inclusion of multiple AI models led to an improvement of up to 17.2 % in the F1 score compared to single-model approaches. Unlike manual inspections, which take hours for larger components, the proposed approach completes the analysis in 94.03 and 57.01 s for the two inspected samples, respectively.},\n\tdoi = {10.1016/j.ndteint.2025.103392},\n\tvolume = {154},\n\tissn = {0963-8695},\n\tnote = {Times Cited in Web of Science Core Collection: 3 Total Times Cited: 3 Cited Reference Count: 60 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ndteint.2025.103392"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000150",
+      "entry_type": "article",
+      "title": "Generating ultrasonic images indistinguishable from real images using Generative Adversarial Networks",
+      "authors": [
+        "Posilovic, L",
+        "Medak, D",
+        "Subasic, M",
+        "Budimir, M",
+        "Loncaric, S"
+      ],
+      "year": 2022,
+      "journal": "ULTRASONICS",
+      "doi": "10.1016/j.ultras.2021.106610",
+      "abstract": "Ultrasonic imaging is widely used for non-destructive evaluation in various industry applications. Early detection of defects in materials is the key to keeping the integrity of inspected structures. Currently, there have been some attempts to develop models for automated defect detection on ultrasonic data. To push the performance of these models even further more data is needed to train deep convolutional neural networks. A lot of data is also needed for training human experts. However, gathering a sufficient amount of data for training is a challenge due to the rare occurrence of defects in real inspection scenarios. This is why inspection results heavily depend on the inspector's previous experience. To overcome these challenges, we propose the use of Generative Adversarial Networks for generating realistic ultrasonic images. To the best of our knowledge, this work is the first one to show that a Generative Adversarial Network is able to generate images indistinguishable from real ultrasonic images. The most thorough statistical quality analysis to date of generated ultrasonic images has been conducted with the participation of human expert inspectors. The experimental results show that images generated using our Generative Adversarial Network provide the highest quality images compared to other published methods.",
+      "keywords": [
+        "Non-destructive testing",
+        "Ultrasonic testing",
+        "Synthetic data generation",
+        "Generative Adversarial Network",
+        "Deep learning"
+      ],
+      "normalized_title": "generating ultrasonic images indistinguishable from real images using generative adversarial networks",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ultras.2021.106610,\n\tauthor = {Posilovic, L and Medak, D and Subasic, M and Budimir, M and Loncaric, S},\n\ttitle = {Generating ultrasonic images indistinguishable from real images using Generative Adversarial Networks},\n\tjournal = {ULTRASONICS},\n\tyear = {2022},\n\tkeywords = {Non-destructive testing; Ultrasonic testing; Synthetic data generation; Generative Adversarial Network; Deep learning},\n\tabstract = {Ultrasonic imaging is widely used for non-destructive evaluation in various industry applications. Early detection of defects in materials is the key to keeping the integrity of inspected structures. Currently, there have been some attempts to develop models for automated defect detection on ultrasonic data. To push the performance of these models even further more data is needed to train deep convolutional neural networks. A lot of data is also needed for training human experts. However, gathering a sufficient amount of data for training is a challenge due to the rare occurrence of defects in real inspection scenarios. This is why inspection results heavily depend on the inspector's previous experience. To overcome these challenges, we propose the use of Generative Adversarial Networks for generating realistic ultrasonic images. To the best of our knowledge, this work is the first one to show that a Generative Adversarial Network is able to generate images indistinguishable from real ultrasonic images. The most thorough statistical quality analysis to date of generated ultrasonic images has been conducted with the participation of human expert inspectors. The experimental results show that images generated using our Generative Adversarial Network provide the highest quality images compared to other published methods.},\n\tdoi = {10.1016/j.ultras.2021.106610},\n\tvolume = {119},\n\tissn = {0041-624X},\n\tnote = {Times Cited in Web of Science Core Collection: 29 Total Times Cited: 33 Cited Reference Count: 28 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ultras.2021.106610"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

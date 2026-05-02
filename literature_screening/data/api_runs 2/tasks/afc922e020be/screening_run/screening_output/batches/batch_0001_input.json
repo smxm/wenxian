@@ -1,0 +1,322 @@
+{
+  "batch_id": "batch_0001",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000001",
+    "paper_000002",
+    "paper_000003",
+    "paper_000004",
+    "paper_000005",
+    "paper_000006",
+    "paper_000007",
+    "paper_000008",
+    "paper_000009",
+    "paper_000010"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000001",
+      "entry_type": "article",
+      "title": "Automated GI Tract Segmentation with U-Net: A Comparative Study of Loss Functions",
+      "authors": [
+        "Tummala, B.M.",
+        "Chavva, S.R.",
+        "Yallamandaiah, S.",
+        "Radhika, A.",
+        "Veeraiah, D.C.",
+        "Jaladi, R.",
+        "Peruri, A.K."
+      ],
+      "year": 2024,
+      "journal": "Journal of Advances in Information Technology",
+      "doi": "10.12720/jait.15.12.1304-1314",
+      "abstract": "Medical image processing has significantly transformed the landscape of healthcare, particularly in the diagnosis and treatment of various diseases. Gastrointestinal (GI) cancer has emerged as a rapidly growing concern, with an estimated 5 million new cases reported annually. To achieve this precision, healthcare professionals now leverage the cutting-edge Magnetic Resonance Imaging (MRI) modality known as MR-Linacs, which provides a daily view of tumor positions. However, a bottleneck in this process arises during the manual segmentation of healthy organs at risk, such as the stomach and intestines, from the obtained medical images. This task, performed by radiologists, is time-consuming and can significantly prolong treatment times, consequently amplifying the suffering of patients. Thus, automation of the GI tract segmentation helps oncologists seamlessly. Our research proposes a model that automates the segmentation of the GI tract. This study presents a U-Net model that segments the stomach and intestines from MRI scans. The dataset, sourced from the UW-Madison Carbone Cancer Center, comprises RLE-encoded masks for training annotations alongside 16-bit grayscale PNG images. Each case consists of multiple scan slices, split either by time or the entire case. Our approach used various combinations of loss functions on U-Net to improve the accuracy and efficiency of the automated segmentation of the gastrointestinal tract. Our model achieves high accuracy with the Dice+BCE loss function when compared with other loss functions. On the training dataset, the U-Net model with Dice+BCE loss function received the highest dice score of 0.9082 and IOU score of 0.8594. On the validation dataset, the model obtained a dice score of 0.8974 and an Intersection over Union (IoU) score of 0.8181. This research contributes to addressing the challenges associated with manual GI tract segmentation, offering a viable solution through automated segmentation using deep learning techniques. © 2024 by the authors.",
+      "keywords": [],
+      "normalized_title": "automated gi tract segmentation with u net a comparative study of loss functions",
+      "raw_bibtex": "@ARTICLE{10.12720/jait.15.12.1304-1314,\n\tauthor = {Tummala, B.M. and Chavva, S.R. and Yallamandaiah, S. and Radhika, A. and Veeraiah, D.C. and Jaladi, R. and Peruri, A.K.},\n\ttitle = {Automated GI Tract Segmentation with U-Net: A Comparative Study of Loss Functions},\n\tjournal = {Journal of Advances in Information Technology},\n\tyear = {2024},\n\tabstract = {Medical image processing has significantly transformed the landscape of healthcare, particularly in the diagnosis and treatment of various diseases. Gastrointestinal (GI) cancer has emerged as a rapidly growing concern, with an estimated 5 million new cases reported annually. To achieve this precision, healthcare professionals now leverage the cutting-edge Magnetic Resonance Imaging (MRI) modality known as MR-Linacs, which provides a daily view of tumor positions. However, a bottleneck in this process arises during the manual segmentation of healthy organs at risk, such as the stomach and intestines, from the obtained medical images. This task, performed by radiologists, is time-consuming and can significantly prolong treatment times, consequently amplifying the suffering of patients. Thus, automation of the GI tract segmentation helps oncologists seamlessly. Our research proposes a model that automates the segmentation of the GI tract. This study presents a U-Net model that segments the stomach and intestines from MRI scans. The dataset, sourced from the UW-Madison Carbone Cancer Center, comprises RLE-encoded masks for training annotations alongside 16-bit grayscale PNG images. Each case consists of multiple scan slices, split either by time or the entire case. Our approach used various combinations of loss functions on U-Net to improve the accuracy and efficiency of the automated segmentation of the gastrointestinal tract. Our model achieves high accuracy with the Dice+BCE loss function when compared with other loss functions. On the training dataset, the U-Net model with Dice+BCE loss function received the highest dice score of 0.9082 and IOU score of 0.8594. On the validation dataset, the model obtained a dice score of 0.8974 and an Intersection over Union (IoU) score of 0.8181. This research contributes to addressing the challenges associated with manual GI tract segmentation, offering a viable solution through automated segmentation using deep learning techniques. © 2024 by the authors.},\n\tdoi = {10.12720/jait.15.12.1304-1314},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85211948669&doi=10.12720%2Fjait.15.12.1304-1314&partnerID=40&md5=5f9be4f735c7acfb9e8deeec1b5941dc},\n\tvolume = {15},\n\tnumber = {12},\n\tpages = {1304-1314},\n\tnote = {Export Date: 26 March 2026; Cited By: 3 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 26-2026_6db3994d-95a4-4980-a82f-a01d00b04aea.ris"
+      ],
+      "source_keys": [
+        "10.12720/jait.15.12.1304-1314"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000002",
+      "entry_type": "article",
+      "title": "Standardized diagnosis of gastrointestinal tumors: An update regarding the situation in Germany",
+      "authors": [
+        "Gerwing, M.",
+        "Ristow, I.",
+        "Afat, S.",
+        "Juchems, M.S.",
+        "Wessling, J.",
+        "Schreyer, A.G.",
+        "Ringe, K.I.",
+        "Othman, A.",
+        "Paul, R.",
+        "Persigehl, T.",
+        "Eisenblätter, M."
+      ],
+      "year": 2024,
+      "journal": "RoFo Fortschritte auf dem Gebiet der Rontgenstrahlen und der Bildgebenden Verfahren",
+      "doi": "10.1055/a-2378-6451",
+      "abstract": "Purpose To evaluate the current status of the diagnosis of gastrointestinal tumors in Germany by means of a survey of the oncological imaging working group of the German Radiological Society (DRG) with a focus on the CT protocols being used. Materials and Method Radiologists working in outpatient or inpatient care in Germany were invited. The survey was conducted between 10/2022 and 06/2023 using the SurveyMonkey web tool. Questions related to gastrointestinal cancer were asked with regard to the commonly used imaging modalities, body coverage, and contrast agent phases in CT as well as the use of oral or rectal contrast. The results of the survey were analyzed using descriptive statistics. Results Clear differences were identified regarding the acquired contrast phases in relation to the place of work - outpatient care, smaller hospitals, maximum care hospitals, or university hospitals. Variances were also recognized regarding oral and rectal contrast. Based on the results and international guidelines, proposals for CT protocols were derived. Conclusion CT protocols in Germany show a heterogeneous picture regarding acquired contrast phases, as well as oral and rectal contrast for the staging of gastrointestinal cancer. Clear recommendations in the respective guidelines would aid in quality assurance and comparability between different centers. Key Points The examination protocols for the staging of gastrointestinal tumors are heterogeneous in Germany. The application of oral and rectal contrast is handled differently at the various radiological centers. Standardization of imaging should be targeted. Citation Format Gerwing M, Ristow I, Afat S et al. Standardized diagnosis of gastrointestinal tumors: an update regarding the situation in Germany. Rofo 2025; 197: 657-668. © 2024. Thieme. All rights reserved.",
+      "keywords": [],
+      "normalized_title": "standardized diagnosis of gastrointestinal tumors an update regarding the situation in germany",
+      "raw_bibtex": "@ARTICLE{10.1055/a-2378-6451,\n\tauthor = {Gerwing, M. and Ristow, I. and Afat, S. and Juchems, M.S. and Wessling, J. and Schreyer, A.G. and Ringe, K.I. and Othman, A. and Paul, R. and Persigehl, T. and Eisenblätter, M.},\n\ttitle = {Standardized diagnosis of gastrointestinal tumors: An update regarding the situation in Germany},\n\tjournal = {RoFo Fortschritte auf dem Gebiet der Rontgenstrahlen und der Bildgebenden Verfahren},\n\tyear = {2024},\n\tabstract = {Purpose To evaluate the current status of the diagnosis of gastrointestinal tumors in Germany by means of a survey of the oncological imaging working group of the German Radiological Society (DRG) with a focus on the CT protocols being used. Materials and Method Radiologists working in outpatient or inpatient care in Germany were invited. The survey was conducted between 10/2022 and 06/2023 using the SurveyMonkey web tool. Questions related to gastrointestinal cancer were asked with regard to the commonly used imaging modalities, body coverage, and contrast agent phases in CT as well as the use of oral or rectal contrast. The results of the survey were analyzed using descriptive statistics. Results Clear differences were identified regarding the acquired contrast phases in relation to the place of work - outpatient care, smaller hospitals, maximum care hospitals, or university hospitals. Variances were also recognized regarding oral and rectal contrast. Based on the results and international guidelines, proposals for CT protocols were derived. Conclusion CT protocols in Germany show a heterogeneous picture regarding acquired contrast phases, as well as oral and rectal contrast for the staging of gastrointestinal cancer. Clear recommendations in the respective guidelines would aid in quality assurance and comparability between different centers. Key Points The examination protocols for the staging of gastrointestinal tumors are heterogeneous in Germany. The application of oral and rectal contrast is handled differently at the various radiological centers. Standardization of imaging should be targeted. Citation Format Gerwing M, Ristow I, Afat S et al. Standardized diagnosis of gastrointestinal tumors: an update regarding the situation in Germany. Rofo 2025; 197: 657-668. © 2024. Thieme. All rights reserved.},\n\tdoi = {10.1055/a-2378-6451},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85207429662&doi=10.1055%2Fa-2378-6451&partnerID=40&md5=1be96c0d1c645d7cb7b0feb72b391faf},\n\tvolume = {197},\n\tnumber = {6},\n\tpages = {657-668},\n\tnote = {Export Date: 26 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 26-2026_6db3994d-95a4-4980-a82f-a01d00b04aea.ris"
+      ],
+      "source_keys": [
+        "10.1055/a-2378-6451"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000003",
+      "entry_type": "article",
+      "title": "Identifying small bowel gastrointestinal stromal tumor as the culprit lesion in obscure gastrointestinal bleeding: Emphasis on angiographic findings",
+      "authors": [
+        "Choi, H.I.",
+        "Choi, M.J.",
+        "Kim, B.M.",
+        "Namgung, H.",
+        "Choi, S.K."
+      ],
+      "year": 2021,
+      "journal": "Journal of the Korean Society of Radiology",
+      "doi": "10.3348/jksr.2021.0029",
+      "abstract": "Gastrointestinal stromal tumors (GISTs) are not uncommon and often cause gastrointestinal bleeding. GISTs occurring in the small intestine are occasionally difficult to identify by endoscopy and CT. In this case, the patient underwent CT three times before surgery, and the lesion was found to be located in a different area of the abdominal cavity on each CT scan. Moreover, the lesion was missed in the first two CT images because it was difficult to distinguish it from the nearby collapsed small intestine. The lesion was eventually detected through angiography; however, the correct diagnosis and treatment were delayed for 3 years because it was mistaken for a vascular malformation, which is the most common cause of obscure GI bleeding in elderly patients. This report emphasizes the need for interventional radiologists to be updated and vigilant of the angiographic features of GISTs to make an accurate diagnosis and establish a management strategy. © Journal of the Korean Society of Radiology.All right reserved.",
+      "keywords": [],
+      "normalized_title": "identifying small bowel gastrointestinal stromal tumor as the culprit lesion in obscure gastrointestinal bleeding emphasis on angiographic findings",
+      "raw_bibtex": "@ARTICLE{10.3348/jksr.2021.0029,\n\tauthor = {Choi, H.I. and Choi, M.J. and Kim, B.M. and Namgung, H. and Choi, S.K.},\n\ttitle = {Identifying small bowel gastrointestinal stromal tumor as the culprit lesion in obscure gastrointestinal bleeding: Emphasis on angiographic findings},\n\tjournal = {Journal of the Korean Society of Radiology},\n\tyear = {2021},\n\tabstract = {Gastrointestinal stromal tumors (GISTs) are not uncommon and often cause gastrointestinal bleeding. GISTs occurring in the small intestine are occasionally difficult to identify by endoscopy and CT. In this case, the patient underwent CT three times before surgery, and the lesion was found to be located in a different area of the abdominal cavity on each CT scan. Moreover, the lesion was missed in the first two CT images because it was difficult to distinguish it from the nearby collapsed small intestine. The lesion was eventually detected through angiography; however, the correct diagnosis and treatment were delayed for 3 years because it was mistaken for a vascular malformation, which is the most common cause of obscure GI bleeding in elderly patients. This report emphasizes the need for interventional radiologists to be updated and vigilant of the angiographic features of GISTs to make an accurate diagnosis and establish a management strategy. © Journal of the Korean Society of Radiology.All right reserved.},\n\tdoi = {10.3348/jksr.2021.0029},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85119974827&doi=10.3348%2Fjksr.2021.0029&partnerID=40&md5=1d934fe5017140bed2cb9d9fe49e6003},\n\tvolume = {82},\n\tnote = {Export Date: 26 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 26-2026_6db3994d-95a4-4980-a82f-a01d00b04aea.ris"
+      ],
+      "source_keys": [
+        "10.3348/jksr.2021.0029"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000004",
+      "entry_type": "article",
+      "title": "Intratumoral immunotherapy: A potential treatment for gastrointestinal malignancies",
+      "authors": [
+        "Savjani, R."
+      ],
+      "year": 2021,
+      "journal": "Radiology: Imaging Cancer",
+      "doi": "10.1148/rycan.2021219011",
+      "abstract": null,
+      "keywords": [],
+      "normalized_title": "intratumoral immunotherapy a potential treatment for gastrointestinal malignancies",
+      "raw_bibtex": "@ARTICLE{10.1148/rycan.2021219011,\n\tauthor = {Savjani, R.},\n\ttitle = {Intratumoral immunotherapy: A potential treatment for gastrointestinal malignancies},\n\tjournal = {Radiology: Imaging Cancer},\n\tyear = {2021},\n\tdoi = {10.1148/rycan.2021219011},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85121749449&doi=10.1148%2Frycan.2021219011&partnerID=40&md5=ab0c254ca9b81acf495e8ec41678f424},\n\tvolume = {3},\n\tnumber = {3},\n\tnote = {Export Date: 26 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 26-2026_6db3994d-95a4-4980-a82f-a01d00b04aea.ris"
+      ],
+      "source_keys": [
+        "10.1148/rycan.2021219011"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000005",
+      "entry_type": "article",
+      "title": "Imaging Review of Gastrointestinal Motility Disorders",
+      "authors": [
+        "Nehra, A.K.",
+        "Sheedy, S.P.",
+        "Johnson, C.D.",
+        "Flicek, K.T.",
+        "Venkatesh, S.K.",
+        "Heiken, J.P.",
+        "Wells, M.L.",
+        "Ehman, E.C.",
+        "Barlow, J.M.",
+        "Fletcher, J.G.",
+        "Olson, M.C.",
+        "Bharucha, A.E.",
+        "Katzka, D.A.",
+        "Fidler, J.L."
+      ],
+      "year": 2022,
+      "journal": "Radiographics",
+      "doi": "10.1148/rg.220052",
+      "abstract": "The motor function of the gastrointestinal tract relies on the enteric nervous system, which includes neurons spanning from the esophagus to the internal anal sphincter. Disorders of gastrointestinal motility arise as a result of disease within the affected portion of the enteric nervous system and may be caused by a wide array of underlying diseases. The etiology of motility disorders may be primary or due to secondary causes related to infection or inflammation, congenital abnormalities, metabolic disturbances, systemic illness, or medication-related side effects. The symptoms of gastrointestinal dysmotility tend to be nonspecific and may cause diagnostic dif-ficulty. Therefore, evaluation of motility disorders requires a combination of clinical, radiologic, and endoscopic or manometric test-ing. Radiologic studies including fluoroscopy, CT, MRI, and nuclear scintigraphy allow exclusion of alternative pathologic conditions and serve as adjuncts to endoscopy and manometry to determine the appropriate diagnosis. Additionally, radiologist understanding of clinical evaluation of motility disorders is necessary for guiding re-ferring clinicians and appropriately imaging patients. New develop-ments and advances in imaging techniques have allowed improved assessment and diagnosis of motility disorders, which will continue to improve patient treatment options. © RSNA, 2022.",
+      "keywords": [],
+      "normalized_title": "imaging review of gastrointestinal motility disorders",
+      "raw_bibtex": "@ARTICLE{10.1148/rg.220052,\n\tauthor = {Nehra, A.K. and Sheedy, S.P. and Johnson, C.D. and Flicek, K.T. and Venkatesh, S.K. and Heiken, J.P. and Wells, M.L. and Ehman, E.C. and Barlow, J.M. and Fletcher, J.G. and Olson, M.C. and Bharucha, A.E. and Katzka, D.A. and Fidler, J.L.},\n\ttitle = {Imaging Review of Gastrointestinal Motility Disorders},\n\tjournal = {Radiographics},\n\tyear = {2022},\n\tabstract = {The motor function of the gastrointestinal tract relies on the enteric nervous system, which includes neurons spanning from the esophagus to the internal anal sphincter. Disorders of gastrointestinal motility arise as a result of disease within the affected portion of the enteric nervous system and may be caused by a wide array of underlying diseases. The etiology of motility disorders may be primary or due to secondary causes related to infection or inflammation, congenital abnormalities, metabolic disturbances, systemic illness, or medication-related side effects. The symptoms of gastrointestinal dysmotility tend to be nonspecific and may cause diagnostic dif-ficulty. Therefore, evaluation of motility disorders requires a combination of clinical, radiologic, and endoscopic or manometric test-ing. Radiologic studies including fluoroscopy, CT, MRI, and nuclear scintigraphy allow exclusion of alternative pathologic conditions and serve as adjuncts to endoscopy and manometry to determine the appropriate diagnosis. Additionally, radiologist understanding of clinical evaluation of motility disorders is necessary for guiding re-ferring clinicians and appropriately imaging patients. New develop-ments and advances in imaging techniques have allowed improved assessment and diagnosis of motility disorders, which will continue to improve patient treatment options. © RSNA, 2022.},\n\tdoi = {10.1148/rg.220052},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85140967597&doi=10.1148%2Frg.220052&partnerID=40&md5=29d89ddbc8138ac0f7536037883cfaf0},\n\tvolume = {42},\n\tnumber = {7},\n\tpages = {2014-2036},\n\tnote = {Export Date: 26 March 2026; Cited By: 12 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 26-2026_6db3994d-95a4-4980-a82f-a01d00b04aea.ris"
+      ],
+      "source_keys": [
+        "10.1148/rg.220052"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000006",
+      "entry_type": "article",
+      "title": "Correlation of gastrointestinal perforation location and amount of free air and ascites on CT imaging",
+      "authors": [
+        "Drakopoulos, D.",
+        "Arcon, J.",
+        "Freitag, P.",
+        "El-Ashmawy, M.",
+        "Lourens, S.",
+        "Beldi, G.",
+        "Obmann, V.C.",
+        "Ebner, L.",
+        "Huber, A.T.",
+        "Christe, A."
+      ],
+      "year": 2021,
+      "journal": "Abdominal Radiology",
+      "doi": "10.1007/s00261-021-03128-2",
+      "abstract": "Purpose: To analyze the amount of free abdominal gas and ascites on computed tomography (CT) images relative to the location of a perforation. Methods: We retrospectively included 172 consecutive patients (93:79 = m:f) with GIT perforation, who underwent abdominal surgery (ground truth for perforation location). The volume of free air and ascites were quantified on CT images by 4 radiologists and a semiautomated software. The relation of the perforation location (upper/lower GIT) and amount of free air and ascites was analyzed by the Mann–Whitney test. Furthermore, best volume cutoff for upper and lower GIT perforation, areas under the curve (AUC), and interreader volume agreement were assessed. Results: There was significantly more abdominal ascites with upper GIT perforation (333 ml, range 5 to 2000 ml) than with lower GIT perforation (100 ml, range 5 to 2000 ml, p = 0.022). The highest volume of free air was found with perforations of the stomach, descending colon and sigmoid colon. Significantly less free air was found with perforations of the small bowel and ascending colon compared to the aforementioned. An ascites volume > 333 ml was associated with an upper GIT perforation demonstrating an AUC of 0.63 ± 0.04. Conclusion: Using a two-step process based on the volumes of free air and free fluid can help localizing the site of perforation to the upper, middle or lower GI tract. Graphic abstract: [Figure not available: see fulltext.]. © 2021, The Author(s).",
+      "keywords": [],
+      "normalized_title": "correlation of gastrointestinal perforation location and amount of free air and ascites on ct imaging",
+      "raw_bibtex": "@ARTICLE{10.1007/s00261-021-03128-2,\n\tauthor = {Drakopoulos, D. and Arcon, J. and Freitag, P. and El-Ashmawy, M. and Lourens, S. and Beldi, G. and Obmann, V.C. and Ebner, L. and Huber, A.T. and Christe, A.},\n\ttitle = {Correlation of gastrointestinal perforation location and amount of free air and ascites on CT imaging},\n\tjournal = {Abdominal Radiology},\n\tyear = {2021},\n\tabstract = {Purpose: To analyze the amount of free abdominal gas and ascites on computed tomography (CT) images relative to the location of a perforation. Methods: We retrospectively included 172 consecutive patients (93:79 = m:f) with GIT perforation, who underwent abdominal surgery (ground truth for perforation location). The volume of free air and ascites were quantified on CT images by 4 radiologists and a semiautomated software. The relation of the perforation location (upper/lower GIT) and amount of free air and ascites was analyzed by the Mann–Whitney test. Furthermore, best volume cutoff for upper and lower GIT perforation, areas under the curve (AUC), and interreader volume agreement were assessed. Results: There was significantly more abdominal ascites with upper GIT perforation (333 ml, range 5 to 2000 ml) than with lower GIT perforation (100 ml, range 5 to 2000 ml, p = 0.022). The highest volume of free air was found with perforations of the stomach, descending colon and sigmoid colon. Significantly less free air was found with perforations of the small bowel and ascending colon compared to the aforementioned. An ascites volume > 333 ml was associated with an upper GIT perforation demonstrating an AUC of 0.63 ± 0.04. Conclusion: Using a two-step process based on the volumes of free air and free fluid can help localizing the site of perforation to the upper, middle or lower GI tract. Graphic abstract: [Figure not available: see fulltext.]. © 2021, The Author(s).},\n\tdoi = {10.1007/s00261-021-03128-2},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85107477327&doi=10.1007%2Fs00261-021-03128-2&partnerID=40&md5=b8aaeb9cc0f8d78be7166c6347c52b8c},\n\tvolume = {46},\n\tnumber = {10},\n\tpages = {4536-4547},\n\tnote = {Export Date: 26 March 2026; Cited By: 13 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 26-2026_6db3994d-95a4-4980-a82f-a01d00b04aea.ris"
+      ],
+      "source_keys": [
+        "10.1007/s00261-021-03128-2"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000007",
+      "entry_type": "article",
+      "title": "Massive intestinal mesenteric portal vein ischemia: Percutaneous endovascular thrombolysis as minimally invasive step-up approach",
+      "authors": [
+        "Gomes, C.A.",
+        "de Souza Filgueiras, T.",
+        "Carvalho, A.M.",
+        "Sartelli, M.",
+        "De Simone, B.",
+        "Catena, F."
+      ],
+      "year": 2025,
+      "journal": "Turkish Journal of Surgery",
+      "doi": "10.47717/turkjsurg.2021.5209",
+      "abstract": "Acute mesenteric ischemia represents a group of diseases, which lead to an abrupt interruption of blood flow to the small intestine resulting in intestinal necrosis. Its first symptoms are vague and in the majority of cases nonspecific, so the diagnostic suspicion is of the utmost importance to establish the correct diagnostic and prompt treatment. It is a complex and difficult event, that needs a multidisciplinary approach involving different specialties such as gastrointestinal and vascular surgeons, interventional radiologists, and expertise from the acute care unit team. The fundamental aspect is the precocity of diagnostic based on abdominal computed angio-tomography and the immediate re-establishment of blood supply to the affected areas. In this report, we introduce a case of a patient with mesenteric venous thrombosis, who has beenundergone a percutaneous endovascular treatment (portal-mesenteric mechanical thrombectomy, besides an intravenous thrombolytic infusion), due to poor clinical response after anticoagulation approach that needed mechanical ventilation. Copyright © 2025 The Author.",
+      "keywords": [],
+      "normalized_title": "massive intestinal mesenteric portal vein ischemia percutaneous endovascular thrombolysis as minimally invasive step up approach",
+      "raw_bibtex": "@ARTICLE{10.47717/turkjsurg.2021.5209,\n\tauthor = {Gomes, C.A. and de Souza Filgueiras, T. and Carvalho, A.M. and Sartelli, M. and De Simone, B. and Catena, F.},\n\ttitle = {Massive intestinal mesenteric portal vein ischemia: Percutaneous endovascular thrombolysis as minimally invasive step-up approach},\n\tjournal = {Turkish Journal of Surgery},\n\tyear = {2025},\n\tabstract = {Acute mesenteric ischemia represents a group of diseases, which lead to an abrupt interruption of blood flow to the small intestine resulting in intestinal necrosis. Its first symptoms are vague and in the majority of cases nonspecific, so the diagnostic suspicion is of the utmost importance to establish the correct diagnostic and prompt treatment. It is a complex and difficult event, that needs a multidisciplinary approach involving different specialties such as gastrointestinal and vascular surgeons, interventional radiologists, and expertise from the acute care unit team. The fundamental aspect is the precocity of diagnostic based on abdominal computed angio-tomography and the immediate re-establishment of blood supply to the affected areas. In this report, we introduce a case of a patient with mesenteric venous thrombosis, who has beenundergone a percutaneous endovascular treatment (portal-mesenteric mechanical thrombectomy, besides an intravenous thrombolytic infusion), due to poor clinical response after anticoagulation approach that needed mechanical ventilation. Copyright © 2025 The Author.},\n\tdoi = {10.47717/turkjsurg.2021.5209},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85219545017&doi=10.47717%2Fturkjsurg.2021.5209&partnerID=40&md5=631f81f77a3e7f284be71422d6097716},\n\tvolume = {41},\n\tnumber = {1},\n\tpages = {98-101},\n\tnote = {Export Date: 26 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 26-2026_6db3994d-95a4-4980-a82f-a01d00b04aea.ris"
+      ],
+      "source_keys": [
+        "10.47717/turkjsurg.2021.5209"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000008",
+      "entry_type": "article",
+      "title": "Vitamin D status in children with intestinal failure who have achieved enteral autonomy",
+      "authors": [
+        "Lepus, C.A.",
+        "Samela, K.",
+        "Emerick, K.M.",
+        "Mokha, J.S."
+      ],
+      "year": 2021,
+      "journal": "Nutrition in Clinical Practice",
+      "doi": "10.1002/ncp.10685",
+      "abstract": "Background: Vitamin D deficiency is highly prevalent in children with intestinal failure (IF) who receive parenteral nutrition (PN), but data on vitamin D status after achieving enteral autonomy (EA) are limited. We aimed to evaluate the prevalence of vitamin D deficiency in this population while exploring clinical variables that may be associated with its development. Methods: A retrospective review was performed on 29 children with IF who had achieved EA. Deficiency was defined as a mean serum 25-hydroxyvitamin D <30 ng/ml. Data Results: Sixty-six percent of children had at least one deficient level during the study period, with 38% being deficient based on the mean vitamin D levels. Eighty-four percent had radiologic evidence of osteopenia. Compared with the sufficient group (n=18), the deficient group (n=11) received higher daily mean vitamin D doses (2246 vs 920 IU; P=.02), had shorter remnant small-bowel length (53.8 vs 82.1 cm; P=.03), and were PN dependent for a longer duration (1.3 vs 0.58 years; P=.01). Univariate analyses revealed longer remnant gut length (odds ratio [OR] = 1.03; P=.04) and shorter duration of PN (OR = 0.26; P=.04) to be significantly associated with sufficient vitamin D status. Conclusion: Vitamin D deficiency and osteopenia are highly prevalent in pediatric patients with a history of IF who have achieved EA, despite enteral supplementation with higher than standard doses. Shorter remnant small-bowel length and longer duration of PN were associated with vitamin D deficiency. These findings emphasize the importance of prolonged surveillance and highlight the need for alternate dosing regimens. © 2021 American Society for Parenteral and Enteral Nutrition",
+      "keywords": [],
+      "normalized_title": "vitamin d status in children with intestinal failure who have achieved enteral autonomy",
+      "raw_bibtex": "@ARTICLE{10.1002/ncp.10685,\n\tauthor = {Lepus, C.A. and Samela, K. and Emerick, K.M. and Mokha, J.S.},\n\ttitle = {Vitamin D status in children with intestinal failure who have achieved enteral autonomy},\n\tjournal = {Nutrition in Clinical Practice},\n\tyear = {2021},\n\tabstract = {Background: Vitamin D deficiency is highly prevalent in children with intestinal failure (IF) who receive parenteral nutrition (PN), but data on vitamin D status after achieving enteral autonomy (EA) are limited. We aimed to evaluate the prevalence of vitamin D deficiency in this population while exploring clinical variables that may be associated with its development. Methods: A retrospective review was performed on 29 children with IF who had achieved EA. Deficiency was defined as a mean serum 25-hydroxyvitamin D <30 ng/ml. Data Results: Sixty-six percent of children had at least one deficient level during the study period, with 38% being deficient based on the mean vitamin D levels. Eighty-four percent had radiologic evidence of osteopenia. Compared with the sufficient group (n=18), the deficient group (n=11) received higher daily mean vitamin D doses (2246 vs 920 IU; P=.02), had shorter remnant small-bowel length (53.8 vs 82.1 cm; P=.03), and were PN dependent for a longer duration (1.3 vs 0.58 years; P=.01). Univariate analyses revealed longer remnant gut length (odds ratio [OR] = 1.03; P=.04) and shorter duration of PN (OR = 0.26; P=.04) to be significantly associated with sufficient vitamin D status. Conclusion: Vitamin D deficiency and osteopenia are highly prevalent in pediatric patients with a history of IF who have achieved EA, despite enteral supplementation with higher than standard doses. Shorter remnant small-bowel length and longer duration of PN were associated with vitamin D deficiency. These findings emphasize the importance of prolonged surveillance and highlight the need for alternate dosing regimens. © 2021 American Society for Parenteral and Enteral Nutrition},\n\tdoi = {10.1002/ncp.10685},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85108358287&doi=10.1002%2Fncp.10685&partnerID=40&md5=1d3fe764c2468a3478b75c1412798837},\n\tvolume = {36},\n\tnumber = {6},\n\tpages = {1284-1289},\n\tnote = {Export Date: 26 March 2026; Cited By: 8 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 26-2026_6db3994d-95a4-4980-a82f-a01d00b04aea.ris"
+      ],
+      "source_keys": [
+        "10.1002/ncp.10685"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000009",
+      "entry_type": "article",
+      "title": "Expert Position Statement: Defining the Role of Intestinal Ultrasound in Assessing Constipation and Faecal Loading",
+      "authors": [
+        "Mathias, R.M.",
+        "Goodsall, T.M.",
+        "Parker, C.E.",
+        "Day, A.S.",
+        "An, Y.K.",
+        "Baraty, B.",
+        "Basnayake, C.",
+        "Begun, J.",
+        "Boyapati, R.K.",
+        "Burgell, R.",
+        "Dolinger, M.T.",
+        "Maconi, G.",
+        "Novak, K.L.",
+        "Sagami, S.",
+        "Smith, R.L.",
+        "Srinivasan, A.R.",
+        "Taylor, S.A.",
+        "Jairath, V.",
+        "Ma, C.",
+        "Bryant, R.V."
+      ],
+      "year": 2025,
+      "journal": "Alimentary Pharmacology and Therapeutics",
+      "doi": "10.1111/apt.70250",
+      "abstract": "Background: Intestinal ultrasound has been proposed as a tool to assess non-inflammatory functional gastrointestinal disorders, including constipation and faecal loading. However, well-defined sonographic criteria for these conditions are currently lacking. Aim: To identify and establish specific sonographic parameters that could be used to assess constipation and faecal loading with intestinal ultrasound. Methods: We conducted a Research and Development/University of California Los Angeles appropriateness method exercise. A multidisciplinary, international panel comprising 14 experts in adult and paediatric gastroenterology and one radiologist experienced in gastrointestinal imaging rated the appropriateness of 57 statements using a 9-point Likert scale over two rounds of voting. Based on the median panel rating and level of disagreement, statements were categorised as appropriate, inappropriate or uncertain. Results: 43 statements were deemed appropriate after two rounds of voting, while three were rated as inappropriate and five as uncertain. Intestinal ultrasound was determined to be an appropriate modality for the assessment of faecal loading. Posterior acoustic shadowing and echogenic reflections were considered important sonographic parameters for the assessment of faecal loading. A rectal diameter of 30 mm was considered appropriate to define faecal loading in paediatric patients, although no recommendation was made for adult patients due to a paucity of data. Conclusion: The expert panel considered intestinal ultrasound an appropriate modality for evaluating constipation and faecal loading. Further prospective research is required, especially in adult patients, to define sonographic metrics of luminal contents to broaden its application in the assessment of functional gastrointestinal disorders. © 2025 The Author(s). Alimentary Pharmacology & Therapeutics published by John Wiley & Sons Ltd.",
+      "keywords": [],
+      "normalized_title": "expert position statement defining the role of intestinal ultrasound in assessing constipation and faecal loading",
+      "raw_bibtex": "@ARTICLE{10.1111/apt.70250,\n\tauthor = {Mathias, R.M. and Goodsall, T.M. and Parker, C.E. and Day, A.S. and An, Y.K. and Baraty, B. and Basnayake, C. and Begun, J. and Boyapati, R.K. and Burgell, R. and Dolinger, M.T. and Maconi, G. and Novak, K.L. and Sagami, S. and Smith, R.L. and Srinivasan, A.R. and Taylor, S.A. and Jairath, V. and Ma, C. and Bryant, R.V.},\n\ttitle = {Expert Position Statement: Defining the Role of Intestinal Ultrasound in Assessing Constipation and Faecal Loading},\n\tjournal = {Alimentary Pharmacology and Therapeutics},\n\tyear = {2025},\n\tabstract = {Background: Intestinal ultrasound has been proposed as a tool to assess non-inflammatory functional gastrointestinal disorders, including constipation and faecal loading. However, well-defined sonographic criteria for these conditions are currently lacking. Aim: To identify and establish specific sonographic parameters that could be used to assess constipation and faecal loading with intestinal ultrasound. Methods: We conducted a Research and Development/University of California Los Angeles appropriateness method exercise. A multidisciplinary, international panel comprising 14 experts in adult and paediatric gastroenterology and one radiologist experienced in gastrointestinal imaging rated the appropriateness of 57 statements using a 9-point Likert scale over two rounds of voting. Based on the median panel rating and level of disagreement, statements were categorised as appropriate, inappropriate or uncertain. Results: 43 statements were deemed appropriate after two rounds of voting, while three were rated as inappropriate and five as uncertain. Intestinal ultrasound was determined to be an appropriate modality for the assessment of faecal loading. Posterior acoustic shadowing and echogenic reflections were considered important sonographic parameters for the assessment of faecal loading. A rectal diameter of 30 mm was considered appropriate to define faecal loading in paediatric patients, although no recommendation was made for adult patients due to a paucity of data. Conclusion: The expert panel considered intestinal ultrasound an appropriate modality for evaluating constipation and faecal loading. Further prospective research is required, especially in adult patients, to define sonographic metrics of luminal contents to broaden its application in the assessment of functional gastrointestinal disorders. © 2025 The Author(s). Alimentary Pharmacology & Therapeutics published by John Wiley & Sons Ltd.},\n\tdoi = {10.1111/apt.70250},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105009282137&doi=10.1111%2Fapt.70250&partnerID=40&md5=07a0e287958fc5045e6b820950088e51},\n\tvolume = {62},\n\tnumber = {8},\n\tpages = {799-808},\n\tnote = {Export Date: 26 March 2026; Cited By: 3 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 26-2026_6db3994d-95a4-4980-a82f-a01d00b04aea.ris"
+      ],
+      "source_keys": [
+        "10.1111/apt.70250"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000010",
+      "entry_type": "article",
+      "title": "Chronic constipation that resulted in fecal impaction and colon perforation: A case report",
+      "authors": [
+        "Alburakan, A.",
+        "Alshunaifi, A.",
+        "Alrabah, R.",
+        "Alshammari, S.",
+        "Alnasser, S.",
+        "Nouh, T."
+      ],
+      "year": 2022,
+      "journal": "Medicine (United States)",
+      "doi": "10.1097/md.0000000000030206",
+      "abstract": "Rationale: Gastrointestinal (GI) motility disorders represent a set of variable presentations caused by an abnormal functioning enteric neuromusculature. Any part of the GI tract can be affected, and depending on the organ involved, the patient presentation will differ. Patient concerns: A 26-years old female who had a history of laparoscopic Heller myotomy 15 years ago for progressive dysphagia. She presented with peritonitis and sigmoid colon perforation secondary to severe chronic constipation. Later after undergoing Hartman procedure, she continued to have significant constipation. In addition, she reported progressive dysphagia and regurgitation to both solids and liquids. Diagnosis: An esophageal manometry revealed Achalasia type 3, and stomach motility nuclear study showed mild delay in gastric emptying. Interventions: Initially, Hartmann procedure was performed. Afterward, we performed a reversal of Hartman, robotic redo of Heller myotomy, and Dor fundoplication was performed. Outcomes: The patient had an uneventful postoperative course and was discharged in good condition. Lessons: Our case highlights an unusual presentation of GI motility disorder resulting in peritonitis from sigmoid colon perforation. Early recognition and prompt treatment of GI motility disorders are essential to avoid severe complications. © 2022 Lippincott Williams and Wilkins. All rights reserved.",
+      "keywords": [],
+      "normalized_title": "chronic constipation that resulted in fecal impaction and colon perforation a case report",
+      "raw_bibtex": "@ARTICLE{10.1097/MD.0000000000030206,\n\tauthor = {Alburakan, A. and Alshunaifi, A. and Alrabah, R. and Alshammari, S. and Alnasser, S. and Nouh, T.},\n\ttitle = {Chronic constipation that resulted in fecal impaction and colon perforation: A case report},\n\tjournal = {Medicine (United States)},\n\tyear = {2022},\n\tabstract = {Rationale: Gastrointestinal (GI) motility disorders represent a set of variable presentations caused by an abnormal functioning enteric neuromusculature. Any part of the GI tract can be affected, and depending on the organ involved, the patient presentation will differ. Patient concerns: A 26-years old female who had a history of laparoscopic Heller myotomy 15 years ago for progressive dysphagia. She presented with peritonitis and sigmoid colon perforation secondary to severe chronic constipation. Later after undergoing Hartman procedure, she continued to have significant constipation. In addition, she reported progressive dysphagia and regurgitation to both solids and liquids. Diagnosis: An esophageal manometry revealed Achalasia type 3, and stomach motility nuclear study showed mild delay in gastric emptying. Interventions: Initially, Hartmann procedure was performed. Afterward, we performed a reversal of Hartman, robotic redo of Heller myotomy, and Dor fundoplication was performed. Outcomes: The patient had an uneventful postoperative course and was discharged in good condition. Lessons: Our case highlights an unusual presentation of GI motility disorder resulting in peritonitis from sigmoid colon perforation. Early recognition and prompt treatment of GI motility disorders are essential to avoid severe complications. © 2022 Lippincott Williams and Wilkins. All rights reserved.},\n\tdoi = {10.1097/MD.0000000000030206},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85136937098&doi=10.1097%2FMD.0000000000030206&partnerID=40&md5=4ef46c39f902d770bfd079c44d53bda6},\n\tvolume = {101},\n\tnumber = {34},\n\tpages = {E30206},\n\tnote = {Export Date: 26 March 2026; Cited By: 5 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 26-2026_6db3994d-95a4-4980-a82f-a01d00b04aea.ris"
+      ],
+      "source_keys": [
+        "10.1097/MD.0000000000030206"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

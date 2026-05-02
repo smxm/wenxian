@@ -1,0 +1,105 @@
+{
+  "batch_id": "batch_0003",
+  "results": [
+    {
+      "paper_id": "paper_000021",
+      "decision": "uncertain",
+      "reason": "标题和摘要提到使用神经网络开发地震动模型并考虑场地放大效应，但未明确说明是否专门针对场地放大进行量化评估或预测。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000022",
+      "decision": "include",
+      "reason": "标题和摘要明确使用神经网络预测地形放大因子，直接针对场地放大效应进行量化预测。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000023",
+      "decision": "exclude",
+      "reason": "标题和摘要显示研究重点是地震脆弱性评估，使用放大因子作为输入参数之一，而非专门针对场地放大进行预测。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "paper_id": "paper_000024",
+      "decision": "include",
+      "reason": "标题和摘要明确使用深度神经网络和迁移学习技术估计场地放大因子，直接针对场地放大进行量化预测。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000025",
+      "decision": "uncertain",
+      "reason": "标题和摘要提到使用关联规则挖掘预测土壤放大，但未明确说明是否基于实际地震动记录数据或验证的数值模拟数据集。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000026",
+      "decision": "include",
+      "reason": "标题和摘要明确使用深度神经网络基于微动数据评估场地放大因子，直接针对场地放大进行量化评估。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "paper_id": "paper_000027",
+      "decision": "exclude",
+      "reason": "标题和摘要显示研究重点是垂直地震动对人行桥振动的影响，放大因子针对上部结构而非场地土体放大效应。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000028",
+      "decision": "include",
+      "reason": "标题和摘要明确使用机器学习技术估计地震场地放大，并基于实际测量数据绘制放大图，直接针对场地放大进行量化评估。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.88
+    },
+    {
+      "paper_id": "paper_000029",
+      "decision": "exclude",
+      "reason": "标题和摘要显示研究重点是建立场地数据库并估算VS30和场地类别，未明确针对场地放大进行量化预测。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.82
+    },
+    {
+      "paper_id": "paper_000030",
+      "decision": "exclude",
+      "reason": "标题和摘要显示研究重点是地震诱发滑坡预测，虽然提到地形放大，但主要目标是滑坡而非场地放大效应本身。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.78
+    }
+  ]
+}

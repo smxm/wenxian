@@ -1,0 +1,105 @@
+{
+  "batch_id": "batch_0001",
+  "results": [
+    {
+      "paper_id": "paper_000001",
+      "decision": "exclude",
+      "reason": "标题和摘要显示为纯动物医学机制研究，仅探讨牛奶对小鼠肠道菌群的影响，未涉及AKK作为食品成分添加到具体食品基质中。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000002",
+      "decision": "exclude",
+      "reason": "标题和摘要研究乳脂球对肠道菌群的影响，虽提及Akkermansia，但未涉及AKK作为食品成分添加到乳制品中或相关食品加工过程。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000003",
+      "decision": "include",
+      "reason": "标题和摘要明确研究功能性瑞士奶酪对小鼠肠道菌群的影响，提到Emmental奶酪摄入增加了Akkermansia muciniphila，涉及乳制品应用和功能性表征。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "paper_id": "paper_000004",
+      "decision": "exclude",
+      "reason": "标题和摘要研究薏米乳发酵对小鼠肠道菌群的影响，虽提及Akkermansia，但未涉及AKK作为食品成分添加到食品基质中，且非乳制品应用。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000005",
+      "decision": "exclude",
+      "reason": "标题和摘要研究大豆酸奶对糖尿病小鼠的影响，虽提及Akkermansia muciniphila，但未涉及AKK作为食品成分添加到食品基质中，且非乳制品应用。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000006",
+      "decision": "exclude",
+      "reason": "标题和摘要研究棕色酸奶对健康成人肠道菌群的影响，虽提及Akkermansia muciniphila，但未涉及AKK作为食品成分添加到酸奶中，仅讨论酸奶本身成分。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000007",
+      "decision": "exclude",
+      "reason": "标题和摘要研究富含菊粉的酸奶对PCOS小鼠的影响，虽提及Akkermansia，但未涉及AKK作为食品成分添加到酸奶中，仅讨论酸奶本身。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000008",
+      "decision": "exclude",
+      "reason": "标题和摘要研究乳清对认知障碍小鼠的影响，虽提及Akkermansia，但未涉及AKK作为食品成分添加到乳制品中，且非AKK相关食品应用。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000009",
+      "decision": "uncertain",
+      "reason": "标题和摘要研究AKK的α-半乳糖苷酶表达与纯化，提及该酶在乳制品工业的潜在应用，但未明确将AKK添加到具体食品基质中或评估食品特性。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000010",
+      "decision": "exclude",
+      "reason": "标题和摘要研究乳制品消费与人类肠道菌群的关联，虽提及Akkermansia，但未涉及AKK作为食品成分添加到乳制品中，仅为观察性研究。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    }
+  ]
+}

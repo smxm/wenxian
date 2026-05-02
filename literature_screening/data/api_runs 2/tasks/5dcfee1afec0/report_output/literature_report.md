@@ -1,0 +1,85 @@
+# 一、相关文献总体情况
+
+这批文献围绕职业性低剂量电离辐射暴露对人群肠道健康状况的影响展开研究，主要关注点包括辐射暴露与肠道疾病（特别是癌症）风险的流行病学关联、辐射通过肠道菌群-肠-脑轴或代谢通路影响全身健康的分子机制，以及针对辐射相关肠道损伤的临床干预与管理策略。研究分布上，既有基于职业人群队列的长期随访和剂量-反应关系分析，也有动物实验和细胞机制探索，同时涉及临床干预效果评估，整体上覆盖了从基础机制到临床应用的多个层面。
+
+# 二、类型划分
+
+## 肠道菌群与代谢调控机制
+
+这类文献共同关注低剂量辐射如何通过影响肠道菌群及其代谢产物（如SCFAs、PA-PYCR1轴）来调控肠道屏障功能、炎症反应或代谢通路（如Akt/mTOR信号），进而解释辐射暴露导致的认知损伤、代谢功能障碍等全身性健康效应。
+
+- Long-term LDR exposure may induce cognitive impairments: A possible association through targeting gut microbiota-gut-brain axis
+- Low-dose radiation exaggerates HFD-induced metabolic dysfunction by gut microbiota through PA-PYCR1 axis
+
+## 职业暴露与癌症风险流行病学
+
+这类文献基于职业人群（如放射技师、航空机组人员、电离辐射暴露工人）的队列研究，采用泊松回归等统计方法，评估长期低剂量辐射暴露与胃肠道癌症（如结直肠癌、胃癌）发病率或死亡率的剂量-反应关系，并强调混杂因素（如年龄、性别、吸烟）控制的重要性。
+
+- Low-dose occupational ionising radiation exposure and gastrointestinal cancer mortality among US radiologic technologists, 1983-2021
+- Health Effects Associated with Occupational Exposure to Gamma Radiation in Aircrew: A Case Study on Mehrabad Airport in 2021
+- THE RISK OF COLORECTAL CANCER INCIDENCE IN A COHORT OF INDIVIDUALS OCCUPATIONALLY EXPOSED TO IONIZING RADIATION
+
+## 临床干预与健康管理策略
+
+这类文献关注针对辐射暴露相关肠道损伤（如盆腔放射病）的临床干预措施，通过前瞻性研究评估专科胃肠病学服务在改善患者生活质量、症状管理等方面的效果，并探讨医疗资源使用和可持续性等应用挑战。
+
+- The impact of specialised gastroenterology services for pelvic radiation disease (PRD): Results from the prospective multi-centre EAGLE study
+
+# 三、逐篇文献总结分析
+
+## Long-term LDR exposure may induce cognitive impairments: A possible association through targeting gut microbiota-gut-brain axis
+
+总结：
+该文献研究了长期低剂量辐射暴露对认知功能的影响，通过小鼠实验发现暴露后认知能力下降，伴随肠道菌群失调、炎症蛋白增加和肠道屏障损伤。机制上，它揭示了LPS和SCFAs通过Akt/mTOR信号通路调控海马体功能，从而影响认知。
+
+分析：
+这篇文献对报告主题有重要参考价值，因为它直接关联职业性低剂量辐射暴露与肠道健康，通过肠道菌群-肠-脑轴机制解释认知损伤。它适合支撑辐射暴露如何通过肠道代谢物和屏障完整性影响全身健康的机制研究，为评估职业风险提供实验依据。
+
+## Low-dose occupational ionising radiation exposure and gastrointestinal cancer mortality among US radiologic technologists, 1983-2021
+
+总结：
+该研究通过美国放射技师队列，评估了长期低至中剂量职业电离辐射暴露与胃肠道癌症死亡率的关系。采用泊松回归分析，以结肠吸收剂量为指标，调整了年龄、性别等混杂因素。结果显示，在随访期间未观察到特定胃肠道癌症死亡率与辐射暴露的显著剂量-反应关系，仅胃癌症死亡率在部分模型中呈非显著正相关。
+
+分析：
+该文献对职业性低剂量电离辐射暴露影响的研究提供了实证数据，适用于支撑辐射安全评估和职业健康风险建模。其队列设计和统计方法可参考用于类似低剂量暴露场景的机制分析，如其他职业群体或环境辐射研究。结果强调了长期随访和混杂因素控制的重要性，有助于完善相关健康影响评估的系统设计。
+
+## The impact of specialised gastroenterology services for pelvic radiation disease (PRD): Results from the prospective multi-centre EAGLE study
+
+总结：
+该研究通过前瞻性多中心EAGLE研究，评估了针对前列腺癌根治性放疗后盆腔放射病（PRD）患者的专科胃肠病学服务效果。研究采用混合方法，为患者提供基于筛查工具和算法的管理方案，结果显示患者在生活质量、性功能和特定症状方面有所改善。研究还分析了医疗资源使用情况，并指出专科服务虽受患者和医护人员欢迎，但长期资金和可持续性仍存挑战。
+
+分析：
+该文献为职业性低剂量电离辐射暴露对肠道健康影响的研究提供了临床干预机制的证据。它展示了专科服务在改善放疗后肠道晚期效应患者生活质量方面的应用场景，适合支撑辐射暴露人群健康管理系统的设计。研究中的混合方法评估框架可为类似职业暴露健康结局研究提供参考脉络。
+
+## Health Effects Associated with Occupational Exposure to Gamma Radiation in Aircrew: A Case Study on Mehrabad Airport in 2021
+
+总结：
+本研究通过分析2021年伊朗航空公司机组人员的职业暴露情况，发现高海拔飞行导致伽马辐射年均有效剂量增加约1.5毫西弗，且与胃肠道、皮肤和心血管疾病风险显著相关。研究采用横断面设计，使用剂量计测量辐射剂量，并通过医疗记录分析疾病史，证实了高海拔飞行与职业疾病风险升高之间的联系。
+
+分析：
+该文献为职业性低剂量电离辐射暴露对肠道健康影响的研究提供了实证数据，支持辐射剂量与疾病风险之间的剂量-反应关系机制。它适用于航空业职业健康防护的应用场景，可支撑系统设计中辐射监测和预防措施的制定，并丰富了电离辐射长期健康效应的研究脉络。
+
+## Low-dose radiation exaggerates HFD-induced metabolic dysfunction by gut microbiota through PA-PYCR1 axis
+
+总结：
+该研究探讨了高脂饮食与低剂量辐射共同暴露如何通过肠道菌群及其代谢物加剧代谢功能障碍。研究发现，共同暴露导致肠道菌群中Parasutterella丰度增加和吡咯烷羧酸水平升高，进而通过PA-PYCR1轴破坏肠道屏障并抑制胰岛素Akt/mTOR信号通路。结果表明，这一机制为干预西方饮食与低剂量辐射驱动的代谢损伤提供了新思路。
+
+分析：
+该文献对报告主题具有参考价值，因为它揭示了低剂量辐射与高脂饮食协同作用通过肠道菌群影响代谢的具体机制，适合支撑职业暴露下肠道健康受损的病理研究。它点明了PA-PYCR1轴在代谢调控中的作用，可应用于评估辐射暴露人群的代谢风险或设计干预策略。
+
+## THE RISK OF COLORECTAL CANCER INCIDENCE IN A COHORT OF INDIVIDUALS OCCUPATIONALLY EXPOSED TO IONIZING RADIATION
+
+总结：
+该研究通过扩展随访期和改进剂量估算，评估了职业性电离辐射暴露与结直肠癌发病风险的关系，并考虑了性别、年龄、吸烟等非辐射因素的影响。研究使用泊松回归和线性模型分析剂量-反应关系，发现结直肠癌风险在女性中较低，直肠癌风险与肠道息肉相关，但未观察到与职业性辐射剂量的显著关联。
+
+分析：
+该文献为职业性低剂量电离辐射暴露对肠道健康影响的研究提供了实证数据，支持了辐射暴露与结直肠癌风险无直接关联的结论，适用于探讨非辐射因素在癌症风险机制中的作用。它可应用于职业健康风险评估场景，为系统设计中的风险因素分层和干预策略提供参考。
+
+# 参考列表
+
+[1] Guo, P, Lei, M, Hu, S, et al. Long-term LDR exposure may induce cognitive impairments: A possible association through targeting gut microbiota-gut-brain axis[J]. Ecotoxicology and Environmental Safety, 2023, 249.
+[2] Mai, J.Z, Velazquez-Kronen, R, Linet, M.S, et al. Low-dose occupational ionising radiation exposure and gastrointestinal cancer mortality among US radiologic technologists, 1983-2021[J]. Occupational and Environmental Medicine, 2025, 82(10): 485-493.
+[3] Staffurth, J.N, Sivell, S, Baddeley, E, et al. The impact of specialised gastroenterology services for pelvic radiation disease (PRD): Results from the prospective multi-centre EAGLE study[J]. PLoS ONE, 2025, 20(1 January).
+[4] Mortazavi, M, Ahmadinejad, P, Arjmand, S, et al. Health Effects Associated with Occupational Exposure to Gamma Radiation in Aircrew: A Case Study on Mehrabad Airport in 2021[J]. Journal of Environmental Health and Sustainable Development, 2024, 9(1): 2214-2224.
+[5] Ju, Z, Guo, P, Xiang, J, et al. Low-dose radiation exaggerates HFD-induced metabolic dysfunction by gut microbiota through PA-PYCR1 axis[J]. Communications Biology, 2022, 5(1).
+[6] Zhuntova, G.V, Bannikova, M.V, Azizova, T.V. THE RISK OF COLORECTAL CANCER INCIDENCE IN A COHORT OF INDIVIDUALS OCCUPATIONALLY EXPOSED TO IONIZING RADIATION[J]. Health Risk Analysis, 2024, 2024(1): 90-99.

@@ -1,0 +1,105 @@
+{
+  "batch_id": "batch_0001",
+  "results": [
+    {
+      "paper_id": "paper_000001",
+      "decision": "exclude",
+      "reason": "标题和摘要明确研究河源花朝戏，属于非西方歌剧形式。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000002",
+      "decision": "include",
+      "reason": "标题和摘要明确包含意大利歌剧演唱的声学分析，研究歌唱技巧。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000003",
+      "decision": "exclude",
+      "reason": "标题和摘要聚焦歌剧作品分析，未提及演唱技巧或声乐教学。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000004",
+      "decision": "include",
+      "reason": "标题和摘要明确研究歌剧教师在线培训未来歌剧歌手的媒体能力，涉及声乐教学。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.88
+    },
+    {
+      "paper_id": "paper_000005",
+      "decision": "exclude",
+      "reason": "标题和摘要明确研究中国戏曲，属于非西方歌剧形式。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000006",
+      "decision": "uncertain",
+      "reason": "摘要提到斯坦尼斯拉夫斯基的声乐训练，但未明确是否针对歌剧演唱。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000007",
+      "decision": "exclude",
+      "reason": "摘要主要研究音乐训练对记忆的影响，仅提及歌剧训练作为例子，不聚焦歌剧演唱技巧。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "paper_id": "paper_000008",
+      "decision": "include",
+      "reason": "标题和摘要明确研究歌剧演唱的颤音分析，涉及声乐技巧和训练。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "paper_id": "paper_000009",
+      "decision": "exclude",
+      "reason": "标题和摘要明确研究民族歌剧，属于非西方歌剧形式。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000010",
+      "decision": "include",
+      "reason": "标题和摘要明确研究歌剧宣叙调的教学方法，涉及歌剧演唱技巧和声乐教学。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    }
+  ]
+}

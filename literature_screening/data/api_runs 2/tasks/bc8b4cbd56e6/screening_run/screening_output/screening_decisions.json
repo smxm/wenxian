@@ -1,0 +1,585 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确探讨慢性心理应激对癌症进展的影响及其神经内分泌免疫机制，符合研究主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:33:47.535046+08:00"
+  },
+  {
+    "paper_id": "paper_000002",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要显示研究精神疾病对胃癌患者生存期的影响，明确涉及心理因素与肿瘤预后的关联。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:33:47.535046+08:00"
+  },
+  {
+    "paper_id": "paper_000003",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "摘要显示研究焦点是精神健康疾病的复发恐惧，未涉及肿瘤或癌症，不符合研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:33:47.535046+08:00"
+  },
+  {
+    "paper_id": "paper_000004",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "摘要提到早发性结直肠癌的挑战，但仅提及心理社会挑战，未探讨心理因素如何影响肿瘤预后。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:33:47.535046+08:00"
+  },
+  {
+    "paper_id": "paper_000005",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于氯胺酮辅助心理治疗对精神障碍的疗效，未涉及肿瘤或癌症，不符合研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:33:47.535046+08:00"
+  },
+  {
+    "paper_id": "paper_000006",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "摘要讨论妇科癌症长期生存者的健康问题，包括心理健康，但未探讨心理因素如何影响肿瘤预后或生存结局。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:33:47.535046+08:00"
+  },
+  {
+    "paper_id": "paper_000007",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于皮肤病学的姑息护理，未涉及精神疾病或心理应激对肿瘤患者预后的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:33:47.535046+08:00"
+  },
+  {
+    "paper_id": "paper_000008",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "摘要提到MASLD与抑郁焦虑相关，并可能增加癌症风险，但未明确探讨心理因素如何影响肿瘤预后或机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.75,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:33:47.535046+08:00"
+  },
+  {
+    "paper_id": "paper_000009",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "摘要提到银屑病与精神疾病共病，但未涉及肿瘤或癌症，不符合研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:33:47.535046+08:00"
+  },
+  {
+    "paper_id": "paper_000010",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要缺失，仅从标题无法判断是否涉及精神疾病或心理应激对睾丸癌患者预后的影响。",
+    "evidence": [
+      "title"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:33:47.535046+08:00"
+  },
+  {
+    "paper_id": "paper_000011",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确探讨慢性应激对癌症发展和预后的影响，包括增加肿瘤负荷和死亡率，并涉及神经内分泌等机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:13.414986+08:00"
+  },
+  {
+    "paper_id": "paper_000012",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究对象为患有严重疾病的父母的年轻后代，未涉及肿瘤患者或心理因素对肿瘤预后的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:13.414986+08:00"
+  },
+  {
+    "paper_id": "paper_000013",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "主题为神经退行性疾病，未涉及肿瘤或心理因素对肿瘤预后的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:13.414986+08:00"
+  },
+  {
+    "paper_id": "paper_000014",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "主题为心力衰竭患者报告结局，未涉及肿瘤或心理因素对肿瘤预后的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:13.414986+08:00"
+  },
+  {
+    "paper_id": "paper_000015",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "摘要提到犬尿氨酸通路在癌症中的作用，但未明确涉及心理因素对肿瘤预后的影响，信息不足。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:13.414986+08:00"
+  },
+  {
+    "paper_id": "paper_000016",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "主题为元认知信念在心理治疗中的作用，未涉及肿瘤或心理因素对肿瘤预后的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:13.414986+08:00"
+  },
+  {
+    "paper_id": "paper_000017",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "摘要提到多病共存簇预测癌症死亡率，但未明确涉及心理因素，信息不足以判断是否符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.45,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:13.414986+08:00"
+  },
+  {
+    "paper_id": "paper_000018",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "主题为精神疾病生物传感器，未涉及肿瘤或心理因素对肿瘤预后的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:13.414986+08:00"
+  },
+  {
+    "paper_id": "paper_000019",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确探讨抑郁通过HPA轴等机制重塑肿瘤微环境并驱动肿瘤进展，符合主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.98,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:13.414986+08:00"
+  },
+  {
+    "paper_id": "paper_000020",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "主题为肠道微生物组在抑郁症中的作用，未涉及肿瘤或心理因素对肿瘤预后的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:13.414986+08:00"
+  },
+  {
+    "paper_id": "paper_000021",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要明确探讨乳腺癌患者抑郁的免疫发病机制及其对预后的影响，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:37.893417+08:00"
+  },
+  {
+    "paper_id": "paper_000022",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦脂质运载蛋白家族在心血管疾病中的作用，未涉及心理因素与肿瘤预后的关联。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:37.893417+08:00"
+  },
+  {
+    "paper_id": "paper_000023",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "摘要综述慢性疾病中抑郁焦虑轨迹，未专门探讨肿瘤预后或机制，不符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:37.893417+08:00"
+  },
+  {
+    "paper_id": "paper_000024",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要明确讨论心理应激在癌症发生中的作用及潜在分子机制，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.92,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:37.893417+08:00"
+  },
+  {
+    "paper_id": "paper_000025",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "摘要综述癌症患者的心理反应和干预措施，未涉及心理因素如何影响肿瘤预后或机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:37.893417+08:00"
+  },
+  {
+    "paper_id": "paper_000026",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "摘要聚焦慢性疾病的互联网认知行为疗法，未专门探讨心理因素与肿瘤预后的关联。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.87,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:37.893417+08:00"
+  },
+  {
+    "paper_id": "paper_000027",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论乳腺癌的PI3K-AKT和mTOR靶向治疗，未涉及心理因素或其对预后的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:37.893417+08:00"
+  },
+  {
+    "paper_id": "paper_000028",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "摘要讨论早期癌症试验中的姑息护理作用，未涉及心理因素如何影响肿瘤预后或机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.86,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:37.893417+08:00"
+  },
+  {
+    "paper_id": "paper_000029",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦多不饱和脂肪酸在抑郁症和自杀风险中的神经生物学作用，未涉及肿瘤。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.91,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:37.893417+08:00"
+  },
+  {
+    "paper_id": "paper_000030",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要明确探讨癌症相关抑郁的生物标志物，涉及炎症机制及其对肿瘤进展的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.93,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:37.893417+08:00"
+  },
+  {
+    "paper_id": "paper_000031",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究数字心理干预对癌症患者心理困扰和生活质量的效果，未涉及心理因素对肿瘤预后的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:59.408728+08:00"
+  },
+  {
+    "paper_id": "paper_000032",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论生物年龄框架在癌症护理中的应用，未涉及心理/精神因素对肿瘤预后的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:59.408728+08:00"
+  },
+  {
+    "paper_id": "paper_000033",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要系统综述失志症的临床效用，涉及多种人群包括癌症患者，但未探讨心理因素对肿瘤预后的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.75,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:59.408728+08:00"
+  },
+  {
+    "paper_id": "paper_000034",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要研究外科肿瘤患者焦虑抑郁的患病率及其与术后结局的关联，但结果显示焦虑抑郁与术后结局无显著关联。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:59.408728+08:00"
+  },
+  {
+    "paper_id": "paper_000035",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要综述蛋白激酶CK2作为多种人类疾病的潜在治疗靶点，包括癌症，但未涉及心理/精神因素。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:59.408728+08:00"
+  },
+  {
+    "paper_id": "paper_000036",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要评估肿瘤护士主导的初级姑息护理干预对晚期癌症患者的影响，未涉及心理因素对肿瘤预后的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:59.408728+08:00"
+  },
+  {
+    "paper_id": "paper_000037",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要综述新型组蛋白修饰与疾病的交叉，包括癌症和精神疾病，但未探讨心理因素对肿瘤预后的影响机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.75,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:59.408728+08:00"
+  },
+  {
+    "paper_id": "paper_000038",
+    "batch_id": "batch_0004",
+    "decision": "uncertain",
+    "reason": "标题和摘要系统综述预后意识与焦虑、抑郁和生活质量的关联，涉及癌症患者心理因素，但未明确探讨对肿瘤预后的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:59.408728+08:00"
+  },
+  {
+    "paper_id": "paper_000039",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题讨论儿科肿瘤临床研究中患者报告结局的理由，摘要缺失，无法判断是否涉及心理因素对肿瘤预后的影响。",
+    "evidence": [
+      "title"
+    ],
+    "confidence": 0.7,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-27T12:34:59.408728+08:00"
+  }
+]

@@ -1,0 +1,86 @@
+[
+  {
+    "id": "e1b6e425c8ee",
+    "kind": "task-created",
+    "message": "Created screening task",
+    "metadata": {
+      "title": "new-screening-run"
+    },
+    "created_at": "2026-03-30T15:54:58.006058+08:00"
+  },
+  {
+    "id": "6276883d7329",
+    "kind": "task-started",
+    "message": "Task execution started",
+    "metadata": {
+      "attempt_count": 1
+    },
+    "created_at": "2026-03-30T15:54:58.011277+08:00"
+  },
+  {
+    "id": "fda8b57737d8",
+    "kind": "datasets-registered",
+    "message": "Registered screening output datasets",
+    "metadata": {
+      "output_dataset_ids": [
+        "01091783a892",
+        "b68e55f2001c"
+      ]
+    },
+    "created_at": "2026-03-30T15:59:39.810344+08:00"
+  },
+  {
+    "id": "3f8dfb1b0f53",
+    "kind": "task-succeeded",
+    "message": "Task completed successfully",
+    "metadata": {},
+    "created_at": "2026-03-30T15:59:39.814342+08:00"
+  },
+  {
+    "id": "4543fd082a81",
+    "kind": "bulk-manual-review",
+    "message": "Bulk reviewed 17 papers -> exclude",
+    "metadata": {
+      "paper_ids": [
+        "paper_000080",
+        "paper_000102",
+        "paper_000009",
+        "paper_000028",
+        "paper_000072",
+        "paper_000101",
+        "paper_000070",
+        "paper_000085",
+        "paper_000063",
+        "paper_000055",
+        "paper_000100",
+        "paper_000032",
+        "paper_000029",
+        "paper_000026",
+        "paper_000024",
+        "paper_000013",
+        "paper_000099"
+      ],
+      "decision": "exclude",
+      "unmatched_titles": [],
+      "output_dataset_ids": [
+        "6a1b9e252f9b",
+        "74a31997219c"
+      ]
+    },
+    "created_at": "2026-03-30T16:13:23.659688+08:00"
+  },
+  {
+    "id": "f88bdeb48749",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000051 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000051",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "348c0c9cc210",
+        "5c6c08e6be7f"
+      ]
+    },
+    "created_at": "2026-03-30T16:15:26.944364+08:00"
+  }
+]

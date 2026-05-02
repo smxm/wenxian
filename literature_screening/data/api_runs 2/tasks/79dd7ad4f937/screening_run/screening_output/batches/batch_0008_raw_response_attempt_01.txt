@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0008",
+    "results": [
+        {
+            "paper_id": "paper_000071",
+            "decision": "uncertain",
+            "reason": "标题和摘要涉及弓网系统电弧放电与磨损，但未明确提及电气特性变化或电弧模型，信息不足。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000072",
+            "decision": "include",
+            "reason": "标题和摘要明确研究弓网放电的瞬态扰动特性，涉及电流脉冲和电磁场分析，符合电气特性研究主题。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000073",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及弓网电弧的理论建模，基于Habedank模型，并使用PSCAD软件进行仿真验证。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000074",
+            "decision": "exclude",
+            "reason": "标题和摘要仅研究轨道故障对弓网动力学的影响，未提及电气特性或电弧模型，纯机械动力学研究。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000075",
+            "decision": "exclude",
+            "reason": "标题和摘要研究侧风下弓网动力学模型和参数影响，未涉及电气特性或电弧模型，纯机械动力学研究。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000076",
+            "decision": "uncertain",
+            "reason": "标题和摘要涉及刚性接触网弓网耦合动力学模型，提到电弧和电气磨损，但未明确电气特性变化或电弧模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000077",
+            "decision": "uncertain",
+            "reason": "标题和摘要研究受电弓滑板磨损模型，提到电弧影响，但未明确电气特性变化或电弧模型，信息不足。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.45
+        },
+        {
+            "paper_id": "paper_000078",
+            "decision": "uncertain",
+            "reason": "标题和摘要研究移动接触网的电磁环境，提到弓网电弧和电场模拟，但未明确电气特性变化或电弧模型细节。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000079",
+            "decision": "include",
+            "reason": "标题和摘要明确研究弓网电弧温度场仿真，建立数学模型并使用COMSOL Multiphysics进行模拟，符合电弧建模主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000080",
+            "decision": "include",
+            "reason": "标题和摘要明确研究弓网电火花放电，提出放电模型并进行计算验证，涉及电气接触和电弧现象。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.88
+        }
+    ]
+}

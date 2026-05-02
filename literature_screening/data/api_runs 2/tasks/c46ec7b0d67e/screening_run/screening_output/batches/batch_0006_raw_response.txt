@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0006",
+    "results": [
+        {
+            "paper_id": "paper_000051",
+            "decision": "include",
+            "reason": "摘要明确提到在工程课程中使用基于手机或平板的课堂应答系统，研究其对课堂参与度和注意力的正面影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000052",
+            "decision": "include",
+            "reason": "标题和摘要直接研究大学课堂中手机使用的分心问题，并探讨“技术休息”这一辩证管理策略以减少手机使用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000053",
+            "decision": "exclude",
+            "reason": "研究场景是医学教育，但摘要仅提及使用手机进行自主学习活动，未实质性探讨手机在课堂中的双重角色或影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000054",
+            "decision": "exclude",
+            "reason": "摘要讨论移动设备与文学经典改编，但未聚焦教育环境中手机的具体使用行为、影响或管理，主题不符。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000055",
+            "decision": "include",
+            "reason": "标题和摘要直接研究大学生课堂手机使用与人格特质的关系，涉及媒体多任务处理这一负面影响维度。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000056",
+            "decision": "include",
+            "reason": "标题和摘要探讨在数学教育中使用手机进行移动学习，属于手机作为教学工具的正面影响，并提及需设计教学策略。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000057",
+            "decision": "include",
+            "reason": "摘要明确描述在自然地理学教学中使用智能手机LiDAR系统作为教学工具，提升学习效果，属于正面影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.87
+        },
+        {
+            "paper_id": "paper_000058",
+            "decision": "uncertain",
+            "reason": "摘要探讨野外教学中“自带设备”的益处与挑战，涉及移动设备使用，但未明确聚焦手机，且与标准课堂环境略有不同。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000059",
+            "decision": "exclude",
+            "reason": "研究场景为驾驶安全预防项目，非教育环境，明显命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000060",
+            "decision": "include",
+            "reason": "摘要研究在国际关系课程中使用基于手机等设备的互动应答系统，并讨论其正面影响与可能的分心问题，涵盖辩证视角。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.89
+        }
+    ]
+}

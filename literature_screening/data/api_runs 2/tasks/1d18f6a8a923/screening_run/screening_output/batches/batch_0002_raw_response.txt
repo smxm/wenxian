@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0002",
+    "results": [
+        {
+            "paper_id": "paper_000011",
+            "decision": "include",
+            "reason": "标题和摘要明确讨论企业分布式电子档案系统的架构设计、功能模块和全文检索技术，符合数字档案系统建设主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000012",
+            "decision": "uncertain",
+            "reason": "摘要聚焦高等教育机构的电子记录系统采用和应用，研究对象是机构档案，但未明确涉及系统架构设计或数据化开发等核心内容。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000013",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论面向知识生产的信息系统参考模型，未明确涉及企业或机构的档案/电子记录管理。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000014",
+            "decision": "exclude",
+            "reason": "标题和摘要研究行政秘书的电子记录管理技能，属于人力资源培训范畴，未涉及数字档案系统建设或数据化开发利用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000015",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦心理健康护理中的电子临床决策支持系统，属于医疗信息技术，未涉及企业档案系统或数据化开发。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000016",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论急诊科数据收集工具的适应，属于医疗数据管理，未涉及企业档案系统或电子记录全生命周期管理。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000017",
+            "decision": "exclude",
+            "reason": "标题和摘要研究重型设备公司的客户关系管理系统定制，属于业务系统优化，未涉及档案管理或数据化开发利用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000018",
+            "decision": "exclude",
+            "reason": "标题和摘要综述约旦医疗信息系统的实施，属于医疗信息技术，未涉及企业档案系统或数据化开发。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000019",
+            "decision": "exclude",
+            "reason": "标题和摘要探讨质量管理中可持续性和数字化的纳入，属于质量管理研究，未涉及档案系统建设或数据化开发。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000020",
+            "decision": "uncertain",
+            "reason": "标题和摘要描述孟加拉国墓地数字死亡记录系统的设计实施，涉及数字记录管理，但研究对象是公共墓地而非企业/政府档案，且未明确涉及系统架构或数据化开发。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        }
+    ]
+}

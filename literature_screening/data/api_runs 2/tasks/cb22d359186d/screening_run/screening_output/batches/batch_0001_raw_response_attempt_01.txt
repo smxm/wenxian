@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0001",
+    "results": [
+        {
+            "paper_id": "paper_000001",
+            "decision": "include",
+            "reason": "摘要和关键词明确提及生态翻译学（Eco-translatology）作为核心理论框架之一，与筛选主题直接相关。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000002",
+            "decision": "include",
+            "reason": "标题和摘要明确基于生态翻译学理论进行案例分析，符合纳入标准。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000003",
+            "decision": "uncertain",
+            "reason": "标题直接涉及生态翻译学，但摘要和关键词缺失，无法确认具体内容是否以胡庚申理论为核心。",
+            "evidence": ["title"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000004",
+            "decision": "include",
+            "reason": "摘要明确使用生态翻译学框架分析文学作品翻译，作者包括胡庚申，符合核心理论要求。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000005",
+            "decision": "uncertain",
+            "reason": "标题提及生态翻译学，但摘要缺失，无法确认是否以胡庚申理论为核心或是否有实质性内容。",
+            "evidence": ["title"],
+            "confidence": 0.45
+        },
+        {
+            "paper_id": "paper_000006",
+            "decision": "include",
+            "reason": "摘要和关键词明确使用生态翻译学框架分析文学翻译，符合研究主题和纳入标准。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.93
+        },
+        {
+            "paper_id": "paper_000007",
+            "decision": "include",
+            "reason": "摘要和关键词明确基于胡庚申的生态翻译学理论构建模型，符合核心理论要求。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.94
+        },
+        {
+            "paper_id": "paper_000008",
+            "decision": "include",
+            "reason": "摘要和关键词明确将生态翻译学理论应用于SSC模型构建，符合纳入标准。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.94
+        },
+        {
+            "paper_id": "paper_000009",
+            "decision": "include",
+            "reason": "摘要和关键词明确基于胡庚申的生态翻译学理论发展策略分类，符合核心理论要求。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.93
+        },
+        {
+            "paper_id": "paper_000010",
+            "decision": "uncertain",
+            "reason": "摘要提及生态翻译学但作为次要理论，主要基于目的论，是否以胡庚申理论为核心不明确。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        }
+    ]
+}

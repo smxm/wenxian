@@ -1,0 +1,47 @@
+{
+    "batch_id": "batch_0007",
+    "results": [
+        {
+            "paper_id": "paper_000061",
+            "decision": "include",
+            "reason": "标题和摘要明确针对医疗机构的电子健康记录管理系统，提出了基于区块链的安全框架，涉及系统架构设计和数据安全，符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000062",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于预测无家可归者的算法比较，研究对象是社会服务而非企业或机构的档案/电子记录管理，不符合筛选主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000063",
+            "decision": "include",
+            "reason": "标题和摘要研究国有企业数字记录与数字风险治理，涉及保护性数据策略和创新记录实践，符合企业数字档案系统建设主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000064",
+            "decision": "uncertain",
+            "reason": "摘要比较不同电子记录类型在患者招募系统中的应用，虽涉及电子记录但侧重于医疗临床试验，与企业数字档案系统主题相关性不够明确。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000065",
+            "decision": "include",
+            "reason": "标题和摘要描述局域网组织电子文档管理系统的设计与开发，涉及文档数字化、存储、检索和共享，符合数字档案系统架构设计纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000066",
+            "decision": "uncertain",
+            "reason": "摘要探讨电子交易法律对商业合同的影响，提及电子记录效率但侧重于法律框架而非档案系统建设，与主题相关性不足。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.45
+        }
+    ]
+}

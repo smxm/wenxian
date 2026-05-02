@@ -28,6 +28,7 @@
 | Strategy generation | search-plan prompt building and rendering | `literature_screening/src/literature_screening/strategy/` | research-need extraction, database selection, or strategy markdown is wrong |
 | Reporting | project report preparation and detached report generation | `literature_screening/src/literature_screening/reporting/`, `literature_screening/separated_modules/formal_report_module/` | report source selection, bibliography output, or report text generation is wrong |
 | Runtime and operations | local startup, Docker topology, deployment, migration helpers | repo root scripts, `deploy/`, `scripts/` | the app will not start, migrate, or deploy cleanly |
+| Documentation and skills | current handoff, historical index, module atlas, archive policy, local Codex skills | `project_state.md`, `project_session_log.md`, `docs/project_history/`, `docs/project_atlas/`, `docs/archive/`, `skills/` | future threads need faster orientation, path hygiene, or reusable skill workflows |
 
 ## Cross-Module Flows
 
@@ -61,6 +62,7 @@
 - [Frontend Shell and Stores](./modules/frontend-shell-and-stores.md)
 - [Frontend Thread and Task Views](./modules/frontend-thread-and-task-views.md)
 - [Runtime and Operations](./modules/runtime-and-operations.md)
+- [Documentation, Handoff, and Skills](./modules/documentation-handoff-and-skills.md)
 
 ## Maintenance Rules
 

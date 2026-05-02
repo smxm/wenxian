@@ -1,0 +1,452 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要明确研究河源花朝戏，属于非西方歌剧形式。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:10:40.212356+08:00"
+  },
+  {
+    "paper_id": "paper_000002",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确包含意大利歌剧演唱的声学分析，研究歌唱技巧。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:10:40.212356+08:00"
+  },
+  {
+    "paper_id": "paper_000003",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦歌剧作品分析，未提及演唱技巧或声乐教学。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:10:40.212356+08:00"
+  },
+  {
+    "paper_id": "paper_000004",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确研究歌剧教师在线培训未来歌剧歌手的媒体能力，涉及声乐教学。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:10:40.212356+08:00"
+  },
+  {
+    "paper_id": "paper_000005",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要明确研究中国戏曲，属于非西方歌剧形式。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:10:40.212356+08:00"
+  },
+  {
+    "paper_id": "paper_000006",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要提到斯坦尼斯拉夫斯基的声乐训练，但未明确是否针对歌剧演唱。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:10:40.212356+08:00"
+  },
+  {
+    "paper_id": "paper_000007",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "摘要主要研究音乐训练对记忆的影响，仅提及歌剧训练作为例子，不聚焦歌剧演唱技巧。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:10:40.212356+08:00"
+  },
+  {
+    "paper_id": "paper_000008",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确研究歌剧演唱的颤音分析，涉及声乐技巧和训练。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.92,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:10:40.212356+08:00"
+  },
+  {
+    "paper_id": "paper_000009",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要明确研究民族歌剧，属于非西方歌剧形式。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:10:40.212356+08:00"
+  },
+  {
+    "paper_id": "paper_000010",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确研究歌剧宣叙调的教学方法，涉及歌剧演唱技巧和声乐教学。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:10:40.212356+08:00"
+  },
+  {
+    "paper_id": "paper_000011",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确聚焦歌剧演唱教学法，涉及声乐技巧和训练工具。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:11:10.525690+08:00"
+  },
+  {
+    "paper_id": "paper_000012",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要直接研究歌剧歌手的颤音分析，与声乐技巧和教学相关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:11:10.525690+08:00"
+  },
+  {
+    "paper_id": "paper_000013",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "摘要讨论歌剧声乐美学和歌手共振峰，但主要批判研究方法而非直接研究声乐技巧。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:11:10.525690+08:00"
+  },
+  {
+    "paper_id": "paper_000014",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要研究专业歌唱的解剖学适应，明确涉及歌剧歌手和声乐训练。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:11:10.525690+08:00"
+  },
+  {
+    "paper_id": "paper_000015",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "摘要涵盖多种歌唱流派，包括古典和音乐剧，但未明确聚焦歌剧或咏叹调。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:11:10.525690+08:00"
+  },
+  {
+    "paper_id": "paper_000016",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要明确研究中国昆曲歌剧，属于非西方歌剧形式。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:11:10.525690+08:00"
+  },
+  {
+    "paper_id": "paper_000017",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要直接研究歌剧歌手的神经活动，涉及歌剧声乐和颤音技巧。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.87,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:11:10.525690+08:00"
+  },
+  {
+    "paper_id": "paper_000018",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要明确研究中国京剧元素在钢琴作品中的应用，属于非西方歌剧且聚焦器乐。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.96,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:11:10.525690+08:00"
+  },
+  {
+    "paper_id": "paper_000019",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "标题提到美声唱法技巧，但摘要未明确说明研究歌剧咏叹调或西方歌剧传统。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:11:10.525690+08:00"
+  },
+  {
+    "paper_id": "paper_000020",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要直接比较歌剧、轻歌剧等流派的颤音特征，与歌剧声乐技巧和教学相关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.86,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:11:10.525690+08:00"
+  },
+  {
+    "paper_id": "paper_000021",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于美国后极简主义音乐剧中的“女性歌剧”，未明确涉及西方歌剧咏叹调演唱技巧。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:11:42.093451+08:00"
+  },
+  {
+    "paper_id": "paper_000022",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要主要探讨歌剧《4.48 Psychosis》中音乐与剧本的互动，未明确涉及咏叹调演唱技巧。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.75,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:11:42.093451+08:00"
+  },
+  {
+    "paper_id": "paper_000023",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要明确研究京剧中的嗓音特征，属于非西方歌剧形式，不符合筛选主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:11:42.093451+08:00"
+  },
+  {
+    "paper_id": "paper_000024",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要直接比较歌剧演唱与其他大声演唱技巧的声道尺寸，明确涉及歌剧演唱技术。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:11:42.093451+08:00"
+  },
+  {
+    "paper_id": "paper_000025",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要研究粤剧演唱的非正式学习，属于非西方歌剧形式，不符合筛选主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:11:42.093451+08:00"
+  },
+  {
+    "paper_id": "paper_000026",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要研究中国傩戏，属于非西方歌剧形式，不符合筛选主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:11:42.093451+08:00"
+  },
+  {
+    "paper_id": "paper_000027",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要研究卡契尼声乐作品中的装饰音，涉及西方歌剧传统的演唱技巧与表演实践。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:11:42.093451+08:00"
+  },
+  {
+    "paper_id": "paper_000028",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题明确研究19世纪意大利喜歌剧中女主角的声乐技巧，摘要提到结合演唱经验分析主要唱段。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:11:42.093451+08:00"
+  },
+  {
+    "paper_id": "paper_000029",
+    "batch_id": "batch_0003",
+    "decision": "uncertain",
+    "reason": "标题和摘要研究古典歌手演唱非古典风格的能力，虽涉及歌剧演唱训练，但未明确聚焦咏叹调技巧。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:11:42.093451+08:00"
+  },
+  {
+    "paper_id": "paper_000030",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要介绍瓦格纳《指环》数据集，聚焦音乐信息检索和计算音乐学，未涉及演唱技巧。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T00:11:42.093451+08:00"
+  }
+]

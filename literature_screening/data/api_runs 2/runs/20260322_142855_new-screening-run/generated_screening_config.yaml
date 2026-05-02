@@ -1,0 +1,53 @@
+project:
+  name: new-screening-run
+  output_dir: runs/20260322_142855_new-screening-run/screening_output
+  save_raw_response: true
+  save_intermediate_files: true
+input:
+  input_files:
+  - runs/20260322_142855_new-screening-run/inputs/abstract-SevereComm-set.txt
+  encoding: auto
+dedup:
+  enabled: true
+  strict_doi_match: true
+  normalized_title_exact_match: true
+  fuzzy_title_match: false
+screening:
+  batch_size: 20
+  target_include_count: 15
+  stop_when_target_reached: true
+  allow_uncertain: true
+  retry_times: 6
+  request_timeout_seconds: 240
+criteria:
+  topic: BALF基线病毒谱经免疫调控影响SCAP患者预后的机制及预测研究
+  inclusion:
+  - 疾病对象：必须涉及 重症社区获得性肺炎 (SCAP)、重症肺炎、脓毒症 (Sepsis) 或 ARDS。
+  - 核心要素（满足其一即可）：
+  - 样本/技术：涉及 肺泡灌洗液 (BALF) 且使用了 mNGS/tNGS 或病毒谱分析。
+  - 病原学：讨论了 病毒感染（含混合感染、病毒再激活，如CMV/EBV/流感/腺病毒）。
+  - 机制/指标：涉及 免疫调控、细胞因子风暴、炎症指标（如IL-6, IL-10, SAA, 淋巴细胞亚群）。
+  - 结局：涉及 预后分析、死亡率预测、预测模型构建。
+  - 人群：优先成人，但如果儿童研究涉及高质量的“mNGS应用”或“免疫机制/预测模型”，也请纳入（需在分析中注明是儿科）。
+  exclusion:
+  - 纯护理类文章（无生理/病理机制探讨）。
+  - 纯药物疗效对比（无免疫/病原学深度分析）。
+  - 与肺部感染/重症医学完全无关的文献。
+model:
+  provider: deepseek
+  model_name: deepseek-chat
+  api_base_url: https://api.deepseek.com/v1
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.0
+  max_tokens: 1536
+  min_request_interval_seconds: 2.0
+report:
+  export_included_ris: true
+  export_excluded_ris: false
+  export_unused_ris: true
+  export_included_bib: false
+  export_excluded_bib: false
+  export_unused_bib: false
+  included_report_format: md
+  excluded_report_format: md
+  summary_format: json

@@ -1,0 +1,374 @@
+{
+  "batch_id": "batch_0003",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000021",
+    "paper_000022",
+    "paper_000023",
+    "paper_000024",
+    "paper_000025",
+    "paper_000026",
+    "paper_000027",
+    "paper_000028",
+    "paper_000029",
+    "paper_000030"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000021",
+      "entry_type": "article",
+      "title": "Experimental Evaluation of the Scale of Fluctuations in Rock Using Ultrasonic Tests",
+      "authors": [
+        "Liu, J",
+        "Jiang, Q",
+        "Xu, DP",
+        "Zheng, H",
+        "Chen, T",
+        "Liu, Q",
+        "Chen, PF"
+      ],
+      "year": 2023,
+      "journal": "INTERNATIONAL JOURNAL OF GEOMECHANICS",
+      "doi": "10.1061/ijgnai.gmeng-7846",
+      "abstract": "The properties of rock vary with spatial location, and spatial variability is a critical source of uncertainty that affects the safety of rock engineering. However, the key parameter characterizing spatial variability-the scale of fluctuation-is rarely studied in rock engineering. One of the reasons for this phenomenon is the lack of a simple and practical test method to determine the scale of fluctuation of rock. This deficiency hinders the development of reliability-based design in rock engineering. An evaluation method of the scale of fluctuation in rocks based on the compressive wave velocity of drilling cores is proposed to address this problem. First, drilling cores at the Yingliangbao hydropower station were collected, and the wave velocities were measured based on ultrasonic tests. Then, three different statistical methods, namely, the method of moments, maximum likelihood estimation, and Bayesian analysis, were used to evaluate the scale of fluctuation in rocks based on measured wave velocities. Results show that the optimal autocorrelation models that describe the autocorrelation structures of Yingliangbao granite are a single exponential function or cosine exponential function, and that the corresponding scales of fluctuation of Yingliangbao granite range from 6.33 to 12.44 m. In addition, the stationarity of the wave velocity is verified by the modified Bartlett test, and the scale of fluctuation based on in situ ultrasonic tests and the treatment of wave velocities at joint locations is discussed. This study presents a practical and reliable method to evaluate the scale of fluctuation in rocks and provide a reference for reliability evaluations in rock engineering projects.",
+      "keywords": [
+        "Scale of fluctuation",
+        "Ultrasonic test",
+        "Spatial variability",
+        "Rock mass",
+        "Granite",
+        "SLOPE RELIABILITY-ANALYSIS",
+        "RANDOM-FIELD CHARACTERIZATION",
+        "NEURAL-NETWORK",
+        "SOIL",
+        "VARIABILITY",
+        "STRENGTH",
+        "QUANTIFICATION",
+        "MODULUS"
+      ],
+      "normalized_title": "experimental evaluation of the scale of fluctuations in rock using ultrasonic tests",
+      "raw_bibtex": "@ARTICLE{10.1061/IJGNAI.GMENG-7846,\n\tauthor = {Liu, J and Jiang, Q and Xu, DP and Zheng, H and Chen, T and Liu, Q and Chen, PF},\n\ttitle = {Experimental Evaluation of the Scale of Fluctuations in Rock Using Ultrasonic Tests},\n\tjournal = {INTERNATIONAL JOURNAL OF GEOMECHANICS},\n\tyear = {2023},\n\tkeywords = {Scale of fluctuation; Ultrasonic test; Spatial variability; Rock mass; Granite; SLOPE RELIABILITY-ANALYSIS; RANDOM-FIELD CHARACTERIZATION; NEURAL-NETWORK; SOIL; VARIABILITY; STRENGTH; QUANTIFICATION; MODULUS},\n\tabstract = {The properties of rock vary with spatial location, and spatial variability is a critical source of uncertainty that affects the safety of rock engineering. However, the key parameter characterizing spatial variability-the scale of fluctuation-is rarely studied in rock engineering. One of the reasons for this phenomenon is the lack of a simple and practical test method to determine the scale of fluctuation of rock. This deficiency hinders the development of reliability-based design in rock engineering. An evaluation method of the scale of fluctuation in rocks based on the compressive wave velocity of drilling cores is proposed to address this problem. First, drilling cores at the Yingliangbao hydropower station were collected, and the wave velocities were measured based on ultrasonic tests. Then, three different statistical methods, namely, the method of moments, maximum likelihood estimation, and Bayesian analysis, were used to evaluate the scale of fluctuation in rocks based on measured wave velocities. Results show that the optimal autocorrelation models that describe the autocorrelation structures of Yingliangbao granite are a single exponential function or cosine exponential function, and that the corresponding scales of fluctuation of Yingliangbao granite range from 6.33 to 12.44 m. In addition, the stationarity of the wave velocity is verified by the modified Bartlett test, and the scale of fluctuation based on in situ ultrasonic tests and the treatment of wave velocities at joint locations is discussed. This study presents a practical and reliable method to evaluate the scale of fluctuation in rocks and provide a reference for reliability evaluations in rock engineering projects.},\n\tdoi = {10.1061/IJGNAI.GMENG-7846},\n\tvolume = {23},\n\tnumber = {5},\n\tissn = {1532-3641},\n\tnote = {Times Cited in Web of Science Core Collection: 3 Total Times Cited: 4 Cited Reference Count: 44 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1061/IJGNAI.GMENG-7846"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000022",
+      "entry_type": "article",
+      "title": "Defect detection in wind turbine blades applying Convolutional Neural Networks to Ultrasonic Testing",
+      "authors": [
+        "Mendikute, J",
+        "Carmona, I",
+        "Aizpurua, I",
+        "Bediaga, I",
+        "Castro, I",
+        "Galdos, L",
+        "Lanzagorta, JL"
+      ],
+      "year": 2025,
+      "journal": "NDT & E INTERNATIONAL",
+      "doi": "10.1016/j.ndteint.2025.103359",
+      "abstract": "The significance of wind-turbine blade safety operation has risen in the context of recent advances in wind energy generation. In this context, Non-Destructive Inspection Technologies (NDT), in particular those derived from Ultrasonic Testing (UT) methods, have proven to be key. Non-destructive evaluation (NDE) analysis has traditionally been performed by a qualified inspector who interprets the acquired signal. However, the emerging digital revolution has brought with it many advances in Artificial Intelligence (AI) and has demonstrated its potential in the field of NDE. AI has allowed to automate and improve traditional techniques in the tasks of data pre-processing, defect detection, defect characterization, and property measurement. Moreover, it has proven to be highly valuable in situations where it is not possible to apply traditional gate methods. In this paper, the feasibility of using Deep Learning (DL) techniques for the detection of defects in wind-turbine blades (in the Cap zone and in the Cap-Web zone) is analyzed. For this purpose, supervised learning techniques have been used and three case studies were analyzed: two-class classifications for Cap zone, two-class classifications for Cap-Web zone, and four-class classifications have been performed. Several Convolutional Neural Network (CNN) architectures have been proposed, reaching 90% accuracy in all three case studies. These results lay the groundwork for the initial steps in applying AI techniques during the automated inspection of complex wind blade components.",
+      "keywords": [
+        "Non-destructive evaluation",
+        "Ultrasonic testing",
+        "Deep learning",
+        "Defects",
+        "CLASSIFICATION",
+        "RECONSTRUCTION",
+        "SYSTEM"
+      ],
+      "normalized_title": "defect detection in wind turbine blades applying convolutional neural networks to ultrasonic testing",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ndteint.2025.103359,\n\tauthor = {Mendikute, J and Carmona, I and Aizpurua, I and Bediaga, I and Castro, I and Galdos, L and Lanzagorta, JL},\n\ttitle = {Defect detection in wind turbine blades applying Convolutional Neural Networks to Ultrasonic Testing},\n\tjournal = {NDT & E INTERNATIONAL},\n\tyear = {2025},\n\tkeywords = {Non-destructive evaluation; Ultrasonic testing; Deep learning; Defects; CLASSIFICATION; RECONSTRUCTION; SYSTEM},\n\tabstract = {The significance of wind-turbine blade safety operation has risen in the context of recent advances in wind energy generation. In this context, Non-Destructive Inspection Technologies (NDT), in particular those derived from Ultrasonic Testing (UT) methods, have proven to be key. Non-destructive evaluation (NDE) analysis has traditionally been performed by a qualified inspector who interprets the acquired signal. However, the emerging digital revolution has brought with it many advances in Artificial Intelligence (AI) and has demonstrated its potential in the field of NDE. AI has allowed to automate and improve traditional techniques in the tasks of data pre-processing, defect detection, defect characterization, and property measurement. Moreover, it has proven to be highly valuable in situations where it is not possible to apply traditional gate methods. In this paper, the feasibility of using Deep Learning (DL) techniques for the detection of defects in wind-turbine blades (in the Cap zone and in the Cap-Web zone) is analyzed. For this purpose, supervised learning techniques have been used and three case studies were analyzed: two-class classifications for Cap zone, two-class classifications for Cap-Web zone, and four-class classifications have been performed. Several Convolutional Neural Network (CNN) architectures have been proposed, reaching 90% accuracy in all three case studies. These results lay the groundwork for the initial steps in applying AI techniques during the automated inspection of complex wind blade components.},\n\tdoi = {10.1016/j.ndteint.2025.103359},\n\tvolume = {154},\n\tissn = {0963-8695},\n\tnote = {Times Cited in Web of Science Core Collection: 8 Total Times Cited: 8 Cited Reference Count: 36 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ndteint.2025.103359"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000023",
+      "entry_type": "article",
+      "title": "A novel air-coupled ultrasonic technique for assessing the weathering degree of sandstone heritage",
+      "authors": [
+        "Cheng, Y",
+        "Xia, GP",
+        "Zhang, RY",
+        "Zhang, Y",
+        "Li, YC",
+        "Huang, JZ"
+      ],
+      "year": 2025,
+      "journal": "JOURNAL OF CULTURAL HERITAGE",
+      "doi": "10.1016/j.culher.2025.06.005",
+      "abstract": "In the realm of stone cultural heritage weathering detection, both gel-coupled and non-coupled contact ultrasonic testing are prevalently employed. However, these techniques harbor inherent challenges, such as potential contamination from coupled and the risk of relic damage during contact ultrasonic testing. The advent of air-coupled ultrasonic testing presents a safer alternative for weathering detection of stone cultural heritage, though its stability and applicability in weathering degree detection require further validation. In this research, using sandstone samples from the Yungang Grottoes, we conducted simulated weathering tests under freeze-thaw cycles and acid soaking conditions. An air-coupled ultrasonic test system was set up, and the ultrasonic velocity of sandstone samples was calculated based on the obtained original waveforms. Meanwhile, the samples of sandstone with different weathering degrees were tested by gel-coupled, contact ultrasonic testing and many common non-destructive testing techniques; the value of ultrasonic wave velocity and its change trend with weathering process were analyzed by means of least square regression model and correlation analysis. The results revealed that the wave velocity dispersion of air-coupled ultrasonic in repeated detection is significantly lower than that of the other two traditional ultrasonic detection techniques; the obtained wave velocity is more consistent with the change trend of weathering degree, which has high applicability in the weathering degree detection of stone cultural heritage; the correlation with other non-destructive testing results is stronger. In summary, the air-coupled ultrasonic test technology can provide more accurate, safe, and effective weathering detection data, showcasing strong applicability and broad application prospects in the detection of stone cultural heritage, thus offering important support for their protection. (c) 2025 Elsevier Masson SAS. All rights are reserved, including those for text and data mining, AI training, and similar technologies.",
+      "keywords": [
+        "Air-coupled ultrasonic testing",
+        "Machine learning",
+        "Sandstone cultural heritage",
+        "Yungang Grottoes",
+        "Weathering detection"
+      ],
+      "normalized_title": "a novel air coupled ultrasonic technique for assessing the weathering degree of sandstone heritage",
+      "raw_bibtex": "@ARTICLE{10.1016/j.culher.2025.06.005,\n\tauthor = {Cheng, Y and Xia, GP and Zhang, RY and Zhang, Y and Li, YC and Huang, JZ},\n\ttitle = {A novel air-coupled ultrasonic technique for assessing the weathering degree of sandstone heritage},\n\tjournal = {JOURNAL OF CULTURAL HERITAGE},\n\tyear = {2025},\n\tkeywords = {Air-coupled ultrasonic testing; Machine learning; Sandstone cultural heritage; Yungang Grottoes; Weathering detection},\n\tabstract = {In the realm of stone cultural heritage weathering detection, both gel-coupled and non-coupled contact ultrasonic testing are prevalently employed. However, these techniques harbor inherent challenges, such as potential contamination from coupled and the risk of relic damage during contact ultrasonic testing. The advent of air-coupled ultrasonic testing presents a safer alternative for weathering detection of stone cultural heritage, though its stability and applicability in weathering degree detection require further validation. In this research, using sandstone samples from the Yungang Grottoes, we conducted simulated weathering tests under freeze-thaw cycles and acid soaking conditions. An air-coupled ultrasonic test system was set up, and the ultrasonic velocity of sandstone samples was calculated based on the obtained original waveforms. Meanwhile, the samples of sandstone with different weathering degrees were tested by gel-coupled, contact ultrasonic testing and many common non-destructive testing techniques; the value of ultrasonic wave velocity and its change trend with weathering process were analyzed by means of least square regression model and correlation analysis. The results revealed that the wave velocity dispersion of air-coupled ultrasonic in repeated detection is significantly lower than that of the other two traditional ultrasonic detection techniques; the obtained wave velocity is more consistent with the change trend of weathering degree, which has high applicability in the weathering degree detection of stone cultural heritage; the correlation with other non-destructive testing results is stronger. In summary, the air-coupled ultrasonic test technology can provide more accurate, safe, and effective weathering detection data, showcasing strong applicability and broad application prospects in the detection of stone cultural heritage, thus offering important support for their protection. (c) 2025 Elsevier Masson SAS. All rights are reserved, including those for text and data mining, AI training, and similar technologies.},\n\tdoi = {10.1016/j.culher.2025.06.005},\n\tvolume = {74},\n\tpages = {204-213},\n\tissn = {1296-2074},\n\tnote = {Times Cited in Web of Science Core Collection: 3 Total Times Cited: 3 Cited Reference Count: 34 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.culher.2025.06.005"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000024",
+      "entry_type": "article",
+      "title": "Automated data evaluation in phased-array ultrasonic testing based on A-scan and feature training",
+      "authors": [
+        "Kim, YH",
+        "Lee, JR"
+      ],
+      "year": 2024,
+      "journal": "NDT & E INTERNATIONAL",
+      "doi": "10.1016/j.ndteint.2023.102974",
+      "abstract": "In this study, a training dataset and neural network were newly configured to develop a diagnostic artificial intelligence (AI) for phased-array ultrasonic testing (PAUT), and three experiments were conducted to verify its performance. The main problem of this study is to properly classify the suspicious normal signal and defect signal, which is difficult because the welding boundary and geometry signal must be considered together. First, in order to collect high-quality data necessary for training neural network, 40 welding specimens were manufactured and a total of 120 defects were included in the specimens. Then, the neural network was trained using data from 120 defects inspection. Through the first experiment, it was determined that three convolutional layers are sufficient to learn the A-scan signals. In the second experiment, a comparison experiment was performed by adding four features to the training dataset, and it was confirmed that the classification accuracy was significantly improved. Finally, in the third experiment, the trained network was utilized to perform data evaluation for each inspection result file. As a result, the evaluation results by diagnostic AI were mostly consistent with the reference expert's results, while the other expert were unable to properly identify the defect types. In conclusion, the proposed method in this study remarkably improved the classification accuracy of the signals and led to successful data evaluation, which is expected to help the PAUT experts make more accurate data evaluation.",
+      "keywords": [
+        "Data evaluation",
+        "Defect detection",
+        "Phased-array ultrasonic testing",
+        "Neural network"
+      ],
+      "normalized_title": "automated data evaluation in phased array ultrasonic testing based on a scan and feature training",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ndteint.2023.102974,\n\tauthor = {Kim, YH and Lee, JR},\n\ttitle = {Automated data evaluation in phased-array ultrasonic testing based on A-scan and feature training},\n\tjournal = {NDT & E INTERNATIONAL},\n\tyear = {2024},\n\tkeywords = {Data evaluation; Defect detection; Phased-array ultrasonic testing; Neural network},\n\tabstract = {In this study, a training dataset and neural network were newly configured to develop a diagnostic artificial intelligence (AI) for phased-array ultrasonic testing (PAUT), and three experiments were conducted to verify its performance. The main problem of this study is to properly classify the suspicious normal signal and defect signal, which is difficult because the welding boundary and geometry signal must be considered together. First, in order to collect high-quality data necessary for training neural network, 40 welding specimens were manufactured and a total of 120 defects were included in the specimens. Then, the neural network was trained using data from 120 defects inspection. Through the first experiment, it was determined that three convolutional layers are sufficient to learn the A-scan signals. In the second experiment, a comparison experiment was performed by adding four features to the training dataset, and it was confirmed that the classification accuracy was significantly improved. Finally, in the third experiment, the trained network was utilized to perform data evaluation for each inspection result file. As a result, the evaluation results by diagnostic AI were mostly consistent with the reference expert's results, while the other expert were unable to properly identify the defect types. In conclusion, the proposed method in this study remarkably improved the classification accuracy of the signals and led to successful data evaluation, which is expected to help the PAUT experts make more accurate data evaluation.},\n\tdoi = {10.1016/j.ndteint.2023.102974},\n\tvolume = {141},\n\tissn = {0963-8695},\n\tnote = {Times Cited in Web of Science Core Collection: 21 Total Times Cited: 25 Cited Reference Count: 10 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ndteint.2023.102974"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000025",
+      "entry_type": "article",
+      "title": "Study on prediction of tensile-shear strength of weld spot based on an improved neural network algorithm",
+      "authors": [
+        "Wu, G",
+        "Chen, T",
+        "Zhang, DD"
+      ],
+      "year": 2023,
+      "journal": "WELDING IN THE WORLD",
+      "doi": "10.1007/s40194-022-01406-1",
+      "abstract": "Spot welding is one of the main connection methods of automobile parts. The tensile-shear strength of spot welding joint is the most important factor to evaluate the quality of spot weld. In this paper, a large number of spot welding tests and tensile-shear tests of weld samples are carried out. According to the results of destructive tests, the failure forms of weld samples are divided into base metal tear (a), nugget pull out (b), and interface tear (c). The internal relationship between tensile-shear strength and failure forms of weld samples is established. According to the author's previous research work, the characteristic values of ultrasonic signals in time domain, frequency domain, and wavelet packet of weld samples were obtained. A neural network algorithm based on particle swarm optimization support vector machine (PSO-SVM) was designed according to these characteristics of ultrasonic signal characteristics of weld samples. Finally, the traditional back propagation (BP) neural network algorithm and PSO-SVM neural network algorithm are used to predict the tensile-shear strength of weld samples according to the data in the ultrasonic testing signal test set. The experimental results show that the PSO-SVM neural network combined with 9 ultrasonic signal characteristics has higher prediction accuracy than that of traditional BP neural network.",
+      "keywords": [
+        "Spot welding",
+        "Ultrasonic testing",
+        "BP neural network",
+        "PSO-SVM",
+        "OPTIMIZATION"
+      ],
+      "normalized_title": "study on prediction of tensile shear strength of weld spot based on an improved neural network algorithm",
+      "raw_bibtex": "@ARTICLE{10.1007/s40194-022-01406-1,\n\tauthor = {Wu, G and Chen, T and Zhang, DD},\n\ttitle = {Study on prediction of tensile-shear strength of weld spot based on an improved neural network algorithm},\n\tjournal = {WELDING IN THE WORLD},\n\tyear = {2023},\n\tkeywords = {Spot welding; Ultrasonic testing; BP neural network; PSO-SVM; OPTIMIZATION},\n\tabstract = {Spot welding is one of the main connection methods of automobile parts. The tensile-shear strength of spot welding joint is the most important factor to evaluate the quality of spot weld. In this paper, a large number of spot welding tests and tensile-shear tests of weld samples are carried out. According to the results of destructive tests, the failure forms of weld samples are divided into base metal tear (a), nugget pull out (b), and interface tear (c). The internal relationship between tensile-shear strength and failure forms of weld samples is established. According to the author's previous research work, the characteristic values of ultrasonic signals in time domain, frequency domain, and wavelet packet of weld samples were obtained. A neural network algorithm based on particle swarm optimization support vector machine (PSO-SVM) was designed according to these characteristics of ultrasonic signal characteristics of weld samples. Finally, the traditional back propagation (BP) neural network algorithm and PSO-SVM neural network algorithm are used to predict the tensile-shear strength of weld samples according to the data in the ultrasonic testing signal test set. The experimental results show that the PSO-SVM neural network combined with 9 ultrasonic signal characteristics has higher prediction accuracy than that of traditional BP neural network.},\n\tdoi = {10.1007/s40194-022-01406-1},\n\tvolume = {67},\n\tnumber = {3},\n\tpages = {741-752},\n\tissn = {0043-2288},\n\tnote = {Times Cited in Web of Science Core Collection: 4 Total Times Cited: 4 Cited Reference Count: 22 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s40194-022-01406-1"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000026",
+      "entry_type": "article",
+      "title": "Machine learning-based phased array ultrasonic testing for graded materials: A comprehensive defect detection and quantification framework",
+      "authors": [
+        "Zhang, YQ",
+        "Zhou, H",
+        "Li, PB",
+        "Lu, YX",
+        "Shen, G"
+      ],
+      "year": 2026,
+      "journal": "NDT & E INTERNATIONAL",
+      "doi": "10.1016/j.ndteint.2025.103594",
+      "abstract": "Functionally graded materials (FGMs) are widely used in high-end fields like aerospace and energy for their customizable gradient properties, yet accurate detection of subtle defects in their inhomogeneous structures remains a key challenge for conventional non-destructive testing (NDT) techniques. To address this, this study proposes a multi-task learning-based phased array ultrasonic testing (PAUT) system for FGM defect inspection, featuring a multi-task neural network integrating CNN, RNN, and ensemble learning, plus gradient-corrected acoustic modeling, multi-scale feature extraction, and 3D reconstruction. A physic dataset was built based on Ti6Al4V-ZrO2 FGM acoustic properties, incorporating gradient-induced wave distortion and Gaussian/speckle synthetic noise. The system's CNN extracts B-scan spatial features and LSTM captures A-scan temporal dependencies, enabling synergistic defect localization and quantification via a combined loss function optimized by Pareto multi-objective strategy. Experimental results show high detection accuracy for different size defects. Transfer learning adapts it to Al2O3-Ni FGMs and trained/validated on 5 defect types with Bayesian uncertainty quantification ensuring reliability. This work provides a physics-informed solution for FGM inspection, overcoming single-modal NDT and homogeneous-material model limitations, and supports intelligent testing system generalization in FGM-based high-end manufacturing.",
+      "keywords": [
+        "Graded materials",
+        "Phased array ultrasonic testing",
+        "Machine learning",
+        "Defect detection",
+        "ANISOTROPIC MEDIA",
+        "WAVE-PROPAGATION",
+        "TRANSFER-MATRIX"
+      ],
+      "normalized_title": "machine learning based phased array ultrasonic testing for graded materials a comprehensive defect detection and quantification framework",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ndteint.2025.103594,\n\tauthor = {Zhang, YQ and Zhou, H and Li, PB and Lu, YX and Shen, G},\n\ttitle = {Machine learning-based phased array ultrasonic testing for graded materials: A comprehensive defect detection and quantification framework},\n\tjournal = {NDT & E INTERNATIONAL},\n\tyear = {2026},\n\tkeywords = {Graded materials; Phased array ultrasonic testing; Machine learning; Defect detection; ANISOTROPIC MEDIA; WAVE-PROPAGATION; TRANSFER-MATRIX},\n\tabstract = {Functionally graded materials (FGMs) are widely used in high-end fields like aerospace and energy for their customizable gradient properties, yet accurate detection of subtle defects in their inhomogeneous structures remains a key challenge for conventional non-destructive testing (NDT) techniques. To address this, this study proposes a multi-task learning-based phased array ultrasonic testing (PAUT) system for FGM defect inspection, featuring a multi-task neural network integrating CNN, RNN, and ensemble learning, plus gradient-corrected acoustic modeling, multi-scale feature extraction, and 3D reconstruction. A physic dataset was built based on Ti6Al4V-ZrO2 FGM acoustic properties, incorporating gradient-induced wave distortion and Gaussian/speckle synthetic noise. The system's CNN extracts B-scan spatial features and LSTM captures A-scan temporal dependencies, enabling synergistic defect localization and quantification via a combined loss function optimized by Pareto multi-objective strategy. Experimental results show high detection accuracy for different size defects. Transfer learning adapts it to Al2O3-Ni FGMs and trained/validated on 5 defect types with Bayesian uncertainty quantification ensuring reliability. This work provides a physics-informed solution for FGM inspection, overcoming single-modal NDT and homogeneous-material model limitations, and supports intelligent testing system generalization in FGM-based high-end manufacturing.},\n\tdoi = {10.1016/j.ndteint.2025.103594},\n\tvolume = {158},\n\tissn = {0963-8695},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 56 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ndteint.2025.103594"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000027",
+      "entry_type": "article",
+      "title": "Quantitative ultrasonic testing for near-surface defects of large ring forgings using feature extraction and GA-SVM",
+      "authors": [
+        "Guan, SY",
+        "Wang, XK",
+        "Hua, L",
+        "Li, L"
+      ],
+      "year": 2021,
+      "journal": "APPLIED ACOUSTICS",
+      "doi": "10.1016/j.apacoust.2020.107714",
+      "abstract": "Water immersion ultrasonic testing technology is widely used in non-destructive testing of large ring forgings, but near-surface defects are difficult to identify in near-surface blind zone, because the defect echo always overlaps with interface echo. In this article, a method combining signal feature extraction with genetic algorithm optimization support vector machine (GA-SVM) was proposed to realize quantitatively testing of near-surface defects. Firstly, the near-surface artificial defects were machined on the test specimens from the large ring forgings, and a total of 160 signal samples were obtained by water immersion ultrasonic experiments. Then the time-domain features of ultrasonic signals were extracted, the spectrum features were obtained by fast Fourier transform. And the ultrasonic signals were processed by intrinsic time-scale decomposition, and the statistical features of the rotating components with different frequencies were extracted. Finally, three kinds of neural network classifiers were used to identify the size and depth of defects by the features database. The experimental results showed that the identification error of the GA-SVM classifier with the different number of sample databases was always minimal. The ultrasonic testing experiment of near-surface notch defects further verified the correctness and feasibility of the GA-SVM classifier. (C) 2020 Elsevier Ltd. All rights reserved.",
+      "keywords": [
+        "Ultrasonic testing",
+        "Near-surface blind",
+        "Feature extraction",
+        "GA-SVM"
+      ],
+      "normalized_title": "quantitative ultrasonic testing for near surface defects of large ring forgings using feature extraction and ga svm",
+      "raw_bibtex": "@ARTICLE{10.1016/j.apacoust.2020.107714,\n\tauthor = {Guan, SY and Wang, XK and Hua, L and Li, L},\n\ttitle = {Quantitative ultrasonic testing for near-surface defects of large ring forgings using feature extraction and GA-SVM},\n\tjournal = {APPLIED ACOUSTICS},\n\tyear = {2021},\n\tkeywords = {Ultrasonic testing; Near-surface blind; Feature extraction; GA-SVM},\n\tabstract = {Water immersion ultrasonic testing technology is widely used in non-destructive testing of large ring forgings, but near-surface defects are difficult to identify in near-surface blind zone, because the defect echo always overlaps with interface echo. In this article, a method combining signal feature extraction with genetic algorithm optimization support vector machine (GA-SVM) was proposed to realize quantitatively testing of near-surface defects. Firstly, the near-surface artificial defects were machined on the test specimens from the large ring forgings, and a total of 160 signal samples were obtained by water immersion ultrasonic experiments. Then the time-domain features of ultrasonic signals were extracted, the spectrum features were obtained by fast Fourier transform. And the ultrasonic signals were processed by intrinsic time-scale decomposition, and the statistical features of the rotating components with different frequencies were extracted. Finally, three kinds of neural network classifiers were used to identify the size and depth of defects by the features database. The experimental results showed that the identification error of the GA-SVM classifier with the different number of sample databases was always minimal. The ultrasonic testing experiment of near-surface notch defects further verified the correctness and feasibility of the GA-SVM classifier. (C) 2020 Elsevier Ltd. All rights reserved.},\n\tdoi = {10.1016/j.apacoust.2020.107714},\n\tvolume = {173},\n\tissn = {0003-682X},\n\tnote = {Times Cited in Web of Science Core Collection: 48 Total Times Cited: 54 Cited Reference Count: 34 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.apacoust.2020.107714"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000028",
+      "entry_type": "article",
+      "title": "Deep-Learning-Based Detection of Segregations for Ultrasonic Testing",
+      "authors": [
+        "Elischberger, F",
+        "Bamberg, J",
+        "Jiang, XY"
+      ],
+      "year": 2022,
+      "journal": "IEEE TRANSACTIONS ON INSTRUMENTATION AND MEASUREMENT",
+      "doi": "10.1109/tim.2022.3144728",
+      "abstract": "Ultrasonic testing (UT) has been used in the industry for many years to successfully detect internal defects in bulk material. This study focuses on the inspection of materials made out of the superalloy IN718 which is often used for manufacturing turbine components. A recent accident in 2016 with a turbine engine failure led to the incorporation of a new type of defect into the portfolio of defect types that UT might be able to detect. This defect called discrete Clean White Spot Segregation poses new challenges to the conventional UT due to its very different material characteristic in comparison to traditional defects such as cracks or voids. Its reliable detection in an industrial setup remains unsolved and requires new nondestructive techniques. To our best knowledge, our work is the first study that uses deep learning techniques in combination with conventional UT for the detection of this kind of defect. For the new approach presented in this article, artificial defects with similar material characteristics as real ones are defined and successfully manufactured. Then a Recurrent Convolutional Neural Network with Attention and Spectral representations (RCAS) is trained and compared with a convolutional neural network and the conventional UT. In the executed experiments, RCAS proves its superior capability of detection with an AUC(ROC)=0.93 in comparison to conventional UT with an AUC(ROC)=0.16 over the course of six measurements with three different types of ultrasonic probes.",
+      "keywords": [
+        "Acoustics",
+        "Testing",
+        "Feature extraction",
+        "Inspection",
+        "Deep learning",
+        "Convolutional neural networks",
+        "Industries",
+        "Attention",
+        "clean white spot",
+        "deep learning (DL)",
+        "grain scattering",
+        "nondestructive testing",
+        "segregation",
+        "sound event detection (SED)",
+        "ultrasonic testing (UT)",
+        "NEURAL-NETWORKS",
+        "GENETIC ALGORITHM",
+        "CLASSIFICATION",
+        "SCATTERING",
+        "SYSTEM"
+      ],
+      "normalized_title": "deep learning based detection of segregations for ultrasonic testing",
+      "raw_bibtex": "@ARTICLE{10.1109/TIM.2022.3144728,\n\tauthor = {Elischberger, F and Bamberg, J and Jiang, XY},\n\ttitle = {Deep-Learning-Based Detection of Segregations for Ultrasonic Testing},\n\tjournal = {IEEE TRANSACTIONS ON INSTRUMENTATION AND MEASUREMENT},\n\tyear = {2022},\n\tkeywords = {Acoustics; Testing; Feature extraction; Inspection; Deep learning; Convolutional neural networks; Industries; Attention; clean white spot; deep learning (DL); grain scattering; nondestructive testing; segregation; sound event detection (SED); ultrasonic testing (UT); NEURAL-NETWORKS; GENETIC ALGORITHM; CLASSIFICATION; SCATTERING; SYSTEM},\n\tabstract = {Ultrasonic testing (UT) has been used in the industry for many years to successfully detect internal defects in bulk material. This study focuses on the inspection of materials made out of the superalloy IN718 which is often used for manufacturing turbine components. A recent accident in 2016 with a turbine engine failure led to the incorporation of a new type of defect into the portfolio of defect types that UT might be able to detect. This defect called discrete Clean White Spot Segregation poses new challenges to the conventional UT due to its very different material characteristic in comparison to traditional defects such as cracks or voids. Its reliable detection in an industrial setup remains unsolved and requires new nondestructive techniques. To our best knowledge, our work is the first study that uses deep learning techniques in combination with conventional UT for the detection of this kind of defect. For the new approach presented in this article, artificial defects with similar material characteristics as real ones are defined and successfully manufactured. Then a Recurrent Convolutional Neural Network with Attention and Spectral representations (RCAS) is trained and compared with a convolutional neural network and the conventional UT. In the executed experiments, RCAS proves its superior capability of detection with an AUC(ROC)=0.93 in comparison to conventional UT with an AUC(ROC)=0.16 over the course of six measurements with three different types of ultrasonic probes.},\n\tdoi = {10.1109/TIM.2022.3144728},\n\tvolume = {71},\n\tissn = {0018-9456},\n\tnote = {Times Cited in Web of Science Core Collection: 18 Total Times Cited: 18 Cited Reference Count: 63 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TIM.2022.3144728"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000029",
+      "entry_type": "article",
+      "title": "Ultrasonic Testing of Corrosion in Aircraft Rivet Using Spiking Neural Network",
+      "authors": [
+        "Le, M",
+        "Lee, J"
+      ],
+      "year": 2023,
+      "journal": "JOURNAL OF NONDESTRUCTIVE EVALUATION",
+      "doi": "10.1007/s10921-023-00990-6",
+      "abstract": "This paper proposes a nondestructive testing (NDT) method for the inspection of corrosion in rivets used in an aircraft. The NDT system uses an ultrasonic sensor coupling with a membrane that allows the ultrasonic wave propagates through to the inspecting rivet. The measured signal is then analyzed by a spiking neural network (SNN), a neural network that mimics the biological neurons for efficient detection of the corrosion in rivet. Compared to the conventional deep neural network, SNN is low energy consumption and can be implemented on a compact SNN accelerator chip, making them better run on a compact NDT system and general edge computing applications. We have tested the proposed SNN model on different sizes of corrosion in rivets (i.e., 30-70% of cross-section area) and at different depths from the surface (i.e., 1.0-2.0 mm). The proposed SNN model achieves about 95.4% accuracy with a small number of rivet samples (i.e., four rivet with corrosion) for training.",
+      "keywords": [
+        "Ultrasonic testing",
+        "Rivet's corrosion",
+        "Aging aircraft",
+        "Multilayer structure",
+        "Spiking neural network",
+        "CRACKS",
+        "FASTENER",
+        "DAMAGE"
+      ],
+      "normalized_title": "ultrasonic testing of corrosion in aircraft rivet using spiking neural network",
+      "raw_bibtex": "@ARTICLE{10.1007/s10921-023-00990-6,\n\tauthor = {Le, M and Lee, J},\n\ttitle = {Ultrasonic Testing of Corrosion in Aircraft Rivet Using Spiking Neural Network},\n\tjournal = {JOURNAL OF NONDESTRUCTIVE EVALUATION},\n\tyear = {2023},\n\tkeywords = {Ultrasonic testing; Rivet's corrosion; Aging aircraft; Multilayer structure; Spiking neural network; CRACKS; FASTENER; DAMAGE},\n\tabstract = {This paper proposes a nondestructive testing (NDT) method for the inspection of corrosion in rivets used in an aircraft. The NDT system uses an ultrasonic sensor coupling with a membrane that allows the ultrasonic wave propagates through to the inspecting rivet. The measured signal is then analyzed by a spiking neural network (SNN), a neural network that mimics the biological neurons for efficient detection of the corrosion in rivet. Compared to the conventional deep neural network, SNN is low energy consumption and can be implemented on a compact SNN accelerator chip, making them better run on a compact NDT system and general edge computing applications. We have tested the proposed SNN model on different sizes of corrosion in rivets (i.e., 30-70% of cross-section area) and at different depths from the surface (i.e., 1.0-2.0 mm). The proposed SNN model achieves about 95.4% accuracy with a small number of rivet samples (i.e., four rivet with corrosion) for training.},\n\tdoi = {10.1007/s10921-023-00990-6},\n\tvolume = {42},\n\tnumber = {3},\n\tissn = {0195-9298},\n\tnote = {Times Cited in Web of Science Core Collection: 5 Total Times Cited: 5 Cited Reference Count: 41 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s10921-023-00990-6"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000030",
+      "entry_type": "article",
+      "title": "Analysis and denoising of electric noise in phased array ultrasonic testing system",
+      "authors": [
+        "Yang, WF",
+        "Wang, Q",
+        "Hou, YT",
+        "Yu, CJ",
+        "Shi, XQ",
+        "Hu, Y",
+        "Ke, YL"
+      ],
+      "year": 2024,
+      "journal": "NDT & E INTERNATIONAL",
+      "doi": "10.1016/j.ndteint.2024.103164",
+      "abstract": "Phased array ultrasonic testing (PAUT) is an advanced technique used for non-destructive testing (NDT) to detect and assess the integrity of materials or structures. In composite materials with significant acoustic attenuation, electrical noise significantly impacts PAUT detection accuracy, highlighting a crucial issue. This paper presents a comprehensive analysis of electrical noise, explains the relationship between electrical noise and inspection parameters, and proposes recommendations to reduce it. A time-varying filter empirical mode decomposition (TVF-EMD) joint wavelet thresholding method is proposed for denoising electrical noise after time-corrected gain (TCG). The ultrasonic echo signal goes through TVF-EMD decomposition, resulting in intrinsic mode functions (IMFs). Energy entropy is utilized to identify the signal-dominant IMFs, and wavelet thresholding is applied to further reduce noise within these selected IMFs. The proposed method effectively removes noise and ensures signal integrity by validating simulated and experimental signals.",
+      "keywords": [
+        "Electrical noise",
+        "Phased array ultrasonic testing",
+        "TVF-EMD",
+        "Wavelet",
+        "Denoising",
+        "EMPIRICAL MODE DECOMPOSITION",
+        "FILTER"
+      ],
+      "normalized_title": "analysis and denoising of electric noise in phased array ultrasonic testing system",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ndteint.2024.103164,\n\tauthor = {Yang, WF and Wang, Q and Hou, YT and Yu, CJ and Shi, XQ and Hu, Y and Ke, YL},\n\ttitle = {Analysis and denoising of electric noise in phased array ultrasonic testing system},\n\tjournal = {NDT & E INTERNATIONAL},\n\tyear = {2024},\n\tkeywords = {Electrical noise; Phased array ultrasonic testing; TVF-EMD; Wavelet; Denoising; EMPIRICAL MODE DECOMPOSITION; FILTER},\n\tabstract = {Phased array ultrasonic testing (PAUT) is an advanced technique used for non-destructive testing (NDT) to detect and assess the integrity of materials or structures. In composite materials with significant acoustic attenuation, electrical noise significantly impacts PAUT detection accuracy, highlighting a crucial issue. This paper presents a comprehensive analysis of electrical noise, explains the relationship between electrical noise and inspection parameters, and proposes recommendations to reduce it. A time-varying filter empirical mode decomposition (TVF-EMD) joint wavelet thresholding method is proposed for denoising electrical noise after time-corrected gain (TCG). The ultrasonic echo signal goes through TVF-EMD decomposition, resulting in intrinsic mode functions (IMFs). Energy entropy is utilized to identify the signal-dominant IMFs, and wavelet thresholding is applied to further reduce noise within these selected IMFs. The proposed method effectively removes noise and ensures signal integrity by validating simulated and experimental signals.},\n\tdoi = {10.1016/j.ndteint.2024.103164},\n\tvolume = {146},\n\tissn = {0963-8695},\n\tnote = {Times Cited in Web of Science Core Collection: 8 Total Times Cited: 10 Cited Reference Count: 38 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ndteint.2024.103164"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

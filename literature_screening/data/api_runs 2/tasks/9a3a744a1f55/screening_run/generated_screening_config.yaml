@@ -1,0 +1,49 @@
+project:
+  name: new-screening-run
+  output_dir: tasks/9a3a744a1f55/screening_run/screening_output
+  save_raw_response: true
+  save_intermediate_files: true
+input:
+  input_files:
+  - tasks/9a3a744a1f55/screening_run/inputs/scopus_export_Mar 29-2026_35e9992d-d8c9-4b75-8081-4e64598f033b.ris
+  encoding: auto
+dedup:
+  enabled: true
+  strict_doi_match: true
+  normalized_title_exact_match: true
+  fuzzy_title_match: false
+screening:
+  batch_size: 10
+  target_include_count: 30
+  stop_when_target_reached: true
+  allow_uncertain: true
+  retry_times: 6
+  request_timeout_seconds: 240
+criteria:
+  topic: AI虚拟主播与虚拟商品类型对消费者购买意愿的影响
+  inclusion:
+  - 必须涉及 AI 虚拟主播（Virtual Streamer/Influencer/Avatar）、数字人或虚拟代言人。
+  - 必须探讨消费者行为或心理学指标，特别是购买意愿（Purchase Intention）或感知价值。
+  - 研究背景最好包含虚拟电商、直播带货，或明确探讨了虚拟商品/数字产品（Virtual Goods/Digital Products）的分类与属性。
+  exclusion:
+  - 纯计算机视觉、图形渲染、大模型底层算法等纯技术类文献（无消费者实证数据）。
+  - 与电子商务、市场营销完全无关的场景（如：纯医学辅助数字人、工业孪生数字人）。
+  - 非学术期刊/会议的无深度新闻报道。
+model:
+  provider: deepseek
+  model_name: deepseek-chat
+  api_base_url: https://api.deepseek.com/v1
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.0
+  max_tokens: 1536
+  min_request_interval_seconds: 2.0
+report:
+  export_included_ris: true
+  export_excluded_ris: false
+  export_unused_ris: true
+  export_included_bib: false
+  export_excluded_bib: false
+  export_unused_bib: false
+  included_report_format: md
+  excluded_report_format: md
+  summary_format: json

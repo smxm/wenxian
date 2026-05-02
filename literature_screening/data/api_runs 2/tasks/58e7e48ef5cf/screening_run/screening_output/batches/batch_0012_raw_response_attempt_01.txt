@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0012",
+    "results": [
+        {
+            "paper_id": "paper_000111",
+            "decision": "exclude",
+            "reason": "标题和摘要明确讨论金融领域的对冲策略，严格命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000112",
+            "decision": "include",
+            "reason": "标题和摘要明确分析航空航天工程学术写作中的元话语特征，符合研究主题和纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000113",
+            "decision": "include",
+            "reason": "摘要明确探讨理工科博士论文写作中的元话语演变，符合研究主题和纳入标准。",
+            "evidence": ["abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000114",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论国际政治中的战略对冲，属于非学术语境分析，命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000115",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论能源风险管理中的对冲策略，属于金融经济领域，严格命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000116",
+            "decision": "exclude",
+            "reason": "摘要明确讨论工程中的模糊集理论，属于模糊逻辑/控制领域，严格命中排除标准。",
+            "evidence": ["abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000117",
+            "decision": "exclude",
+            "reason": "标题和摘要分析方言中的认识情态，属于日常会话分析，命中非学术语境排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000118",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论林业中的植物修剪技术，与模糊语研究主题完全无关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000119",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论随机规划中的渐进对冲算法，属于数学算法领域，严格命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000120",
+            "decision": "include",
+            "reason": "标题和摘要明确分析学术论文摘要中模糊语的使用，符合研究主题和纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        }
+    ]
+}

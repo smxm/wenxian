@@ -1,0 +1,33 @@
+{
+  "batch_id": "batch_0003",
+  "results": [
+    {
+      "paper_id": "paper_000021",
+      "decision": "exclude",
+      "reason": "摘要和关键词未提及研发支出或研发强度作为风险承担代理变量，不符合纳入标准。",
+      "evidence": ["abstract", "keywords"],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000022",
+      "decision": "uncertain",
+      "reason": "摘要提到风险承担渠道影响企业创新，但未明确研发支出作为风险承担代理变量，信息不足。",
+      "evidence": ["abstract"],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000023",
+      "decision": "include",
+      "reason": "摘要明确将研发投入作为企业创新投入指标，并探讨CEO风险偏好作为中介，符合纳入标准。",
+      "evidence": ["abstract", "keywords"],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000024",
+      "decision": "include",
+      "reason": "摘要明确将研发投入作为风险承担的影响路径，符合以研发支出衡量风险承担的主题。",
+      "evidence": ["abstract", "keywords"],
+      "confidence": 0.9
+    }
+  ]
+}

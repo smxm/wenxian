@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0001",
+    "results": [
+        {
+            "paper_id": "paper_000001",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究主题是游戏化对教师数字能力发展的影响，未涉及音乐教育领域。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000002",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究主题是角色扮演游戏化在管理学案例学习中的应用，未涉及音乐教育领域。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000003",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究主题是体验式学习在音乐教育中的文献计量分析，未涉及游戏化教学法。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000004",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及严肃游戏在音乐学习中的应用，系统综述了游戏机制和教学效果，符合核心交叉标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000005",
+            "decision": "include",
+            "reason": "标题和摘要明确研究教育音乐游戏的设计与学习效果，涉及游戏机制和不同年龄组的学习表现，符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000006",
+            "decision": "include",
+            "reason": "标题和摘要明确探讨游戏化材料设计对音乐学习的影响，涉及游戏机制和教学应用，符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.87
+        },
+        {
+            "paper_id": "paper_000007",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究主题是格斗游戏中的自适应背景音乐技术开发，属于纯技术开发，缺乏教育教学场景应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000008",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究主题是人工智能与虚拟现实在基础教育中的整合，未涉及音乐教育或游戏化教学法。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000009",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究主题是人工智能与虚拟现实平台支持大学阅读障碍学生，未涉及音乐教育或游戏化教学法。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000010",
+            "decision": "uncertain",
+            "reason": "标题和摘要显示研究涉及音乐技术教育项目评估，但未明确提及游戏化教学法，信息不足以判断是否满足纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        }
+    ]
+}

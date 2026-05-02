@@ -1,0 +1,62 @@
+[
+  {
+    "id": "54a59c5d3584",
+    "kind": "task-created",
+    "message": "Created screening task",
+    "metadata": {
+      "title": "new-screening-run"
+    },
+    "created_at": "2026-04-07T18:48:26.342160+08:00"
+  },
+  {
+    "id": "4e272fd0dfb8",
+    "kind": "task-started",
+    "message": "Task execution started",
+    "metadata": {
+      "attempt_count": 1
+    },
+    "created_at": "2026-04-07T18:48:26.347707+08:00"
+  },
+  {
+    "id": "ef1058a60f09",
+    "kind": "datasets-registered",
+    "message": "Registered screening output datasets",
+    "metadata": {
+      "output_dataset_ids": [
+        "8f3a1773d292",
+        "9af5d9f049d0"
+      ]
+    },
+    "created_at": "2026-04-07T18:49:07.630972+08:00"
+  },
+  {
+    "id": "b4c6dc72991b",
+    "kind": "task-succeeded",
+    "message": "Task completed successfully",
+    "metadata": {},
+    "created_at": "2026-04-07T18:49:07.632985+08:00"
+  },
+  {
+    "id": "c2bb68afa1b5",
+    "kind": "bulk-manual-review",
+    "message": "Bulk reviewed 7 papers -> exclude",
+    "metadata": {
+      "paper_ids": [
+        "paper_000014",
+        "paper_000004",
+        "paper_000010",
+        "paper_000018",
+        "paper_000012",
+        "paper_000002",
+        "paper_000008"
+      ],
+      "decision": "exclude",
+      "unmatched_titles": [],
+      "output_dataset_ids": [
+        "c9afdd0d58fb",
+        "9eca591fc6e2"
+      ]
+    },
+    "created_at": "2026-04-07T19:34:03.644403+08:00"
+  }
+]

@@ -1,0 +1,62 @@
+{
+  "project": {
+    "name": "new-screening-run",
+    "output_dir": "tasks/c2b690d61261/screening_run/screening_output",
+    "save_raw_response": true,
+    "save_intermediate_files": true
+  },
+  "input": {
+    "input_files": [
+      "tasks/c2b690d61261/screening_run/inputs/savedrecs.ris"
+    ],
+    "encoding": "auto"
+  },
+  "dedup": {
+    "enabled": true,
+    "strict_doi_match": true,
+    "normalized_title_exact_match": true,
+    "fuzzy_title_match": false
+  },
+  "screening": {
+    "batch_size": 20,
+    "target_include_count": 30,
+    "stop_when_target_reached": true,
+    "allow_uncertain": true,
+    "retry_times": 6,
+    "request_timeout_seconds": 240
+  },
+  "criteria": {
+    "topic": "人工智能（AI）与扩展现实（XR）技术在猫咪及动物交互中的应用（涵盖多模态感知、智能干预、XR界面与数字孪生设备）",
+    "inclusion": [
+      "研究对象必须涉及猫咪（Cat/Feline）、伴侣动物（Companion Animals）或虚拟宠物（Virtual Pets）。",
+      "核心技术必须明确包含人工智能（AI、机器学习、计算机视觉、多模态情感计算等）或扩展现实/物联网（XR、VR、AR、数字孪生、智能穿戴设备等）。",
+      "研究焦点落在“交互”或“干预”上（如行为识别、无聊干预、跨物种界面设计、人宠互动）。"
+    ],
+    "exclusion": [
+      "绝对排除医学影像与临床医学文献（如涉及正电子发射断层扫描 PET scans、PET-CT、PET-MRI、阿茨海默症、肿瘤学）。",
+      "绝对排除化工材料文献（如涉及聚对苯二甲酸乙二醇酯 PET 塑料）。",
+      "排除纯兽医基础科学、纯生物学、传统畜牧业研究，且无现代计算机技术（AI/XR/IoT）深度参与的文章。",
+      "排除纯算法理论或纯硬件底层开发，未结合具体动物交互场景的文章。"
+    ]
+  },
+  "model": {
+    "provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "api_base_url": "https://api.deepseek.com/v1",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 1536,
+    "min_request_interval_seconds": 2.0
+  },
+  "report": {
+    "export_included_ris": true,
+    "export_excluded_ris": false,
+    "export_unused_ris": true,
+    "export_included_bib": false,
+    "export_excluded_bib": false,
+    "export_unused_bib": false,
+    "included_report_format": "md",
+    "excluded_report_format": "md",
+    "summary_format": "json"
+  }
+}

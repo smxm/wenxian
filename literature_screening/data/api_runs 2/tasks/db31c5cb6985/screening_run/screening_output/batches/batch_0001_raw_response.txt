@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0001",
+    "results": [
+        {
+            "paper_id": "paper_000001",
+            "decision": "exclude",
+            "reason": "标题和摘要均表明研究对象为射频辐射，而非筛选主题要求的电离辐射。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000002",
+            "decision": "exclude",
+            "reason": "摘要明确研究对象为接受放疗的肿瘤患者，属于大剂量急性暴露，不符合职业性低剂量暴露特征。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000003",
+            "decision": "uncertain",
+            "reason": "研究涉及低剂量辐射与肠道菌群，但暴露对象为糖尿病模型小鼠，未明确是否为职业暴露或模拟职业暴露条件。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000004",
+            "decision": "exclude",
+            "reason": "标题和摘要表明文献主题为后生元制备技术及其益生效应综述，未涉及职业性辐射暴露。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000005",
+            "decision": "uncertain",
+            "reason": "摘要综述放射性肠损伤与肠道菌群，但未明确区分暴露类型（如职业性低剂量或大剂量急性），且为综述性文献。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000006",
+            "decision": "exclude",
+            "reason": "摘要描述为一次性全身X射线照射建立急性辐射损伤模型，不符合职业性低剂量慢性暴露特征。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000007",
+            "decision": "exclude",
+            "reason": "摘要明确为单次10 Gy全脑照射，属于大剂量急性暴露，不符合职业性低剂量暴露特征。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000008",
+            "decision": "exclude",
+            "reason": "摘要明确研究对象为接受放疗的肿瘤患者，属于大剂量急性暴露，不符合职业性低剂量暴露特征。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000009",
+            "decision": "exclude",
+            "reason": "摘要研究对象为接受放疗的宫颈癌患者，属于大剂量急性暴露，不符合职业性低剂量暴露特征。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000010",
+            "decision": "exclude",
+            "reason": "摘要描述为两天总计6 Gy的X射线照射，属于急性暴露模型，不符合职业性低剂量慢性暴露特征。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        }
+    ]
+}

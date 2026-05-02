@@ -1,0 +1,103 @@
+{
+  "batch_id": "batch_0002",
+  "results": [
+    {
+      "paper_id": "paper_000011",
+      "decision": "exclude",
+      "reason": "标题和摘要明确提及目标跟踪（Deep SORT），任务不符排除标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000012",
+      "decision": "include",
+      "reason": "标题明确提及UAV目标检测，摘要提到使用VisDrone数据集和YOLOv5改进模型，符合主题和轻量化意图。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000013",
+      "decision": "uncertain",
+      "reason": "摘要提到VisDrone数据集和目标检测，但未明确提及无人机视角或轻量化设计，信息不足。",
+      "evidence": [
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000014",
+      "decision": "include",
+      "reason": "标题和摘要明确提及UAV小目标检测，强调平衡精度与效率、轻量化架构，并使用VisDrone数据集。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "paper_id": "paper_000015",
+      "decision": "uncertain",
+      "reason": "标题提及光学航空遥感图像，摘要提到VisDrone数据集，但未明确提及无人机视角或轻量化意图。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000016",
+      "decision": "include",
+      "reason": "标题提及无人机实时目标检测，摘要强调嵌入式部署、轻量化优化（如TensorRT量化）并使用VisDrone数据集。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.88
+    },
+    {
+      "paper_id": "paper_000017",
+      "decision": "include",
+      "reason": "标题明确提及轻量化小目标检测，摘要强调计算效率、轻量化设计，并使用VisDrone数据集。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000018",
+      "decision": "exclude",
+      "reason": "标题和摘要明确提及车辆跟踪和计数，任务超出纯目标检测，命中排除标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000019",
+      "decision": "uncertain",
+      "reason": "摘要提及航空检测基准和轻量化框架，但未明确提及无人机视角、VisDrone数据集或具体轻量化网络。",
+      "evidence": [
+        "abstract"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "paper_id": "paper_000020",
+      "decision": "include",
+      "reason": "标题提及高效YOLOv12框架，摘要明确针对UAV/drone图像、强调轻量化、实时边缘部署，并使用VisDrone数据集。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    }
+  ]
+}

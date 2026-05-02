@@ -1,0 +1,351 @@
+{
+  "batch_id": "batch_0028",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000271",
+    "paper_000272",
+    "paper_000273",
+    "paper_000274",
+    "paper_000275",
+    "paper_000276",
+    "paper_000277",
+    "paper_000278",
+    "paper_000279",
+    "paper_000280"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000271",
+      "entry_type": "article",
+      "title": "A Shapelet-based Framework for Unsupervised Multivariate Time Series Representation Learning",
+      "authors": [
+        "Liang, ZY",
+        "Zhang, JF",
+        "Liang, C",
+        "Wang, HZ",
+        "Liang, Z",
+        "Pan, LJ"
+      ],
+      "year": 2023,
+      "journal": "PROCEEDINGS OF THE VLDB ENDOWMENT",
+      "doi": "10.14778/3632093.3632103",
+      "abstract": "Recent studies have shown great promise in unsupervised representation learning (URL) for multivariate time series, because URL has the capability in learning generalizable representation for many downstream tasks without using inaccessible labels. However, existing approaches usually adopt the models originally designed for other domains (e.g., computer vision) to encode the time series data and rely on strong assumptions to design learning objectives, which limits their ability to perform well. To deal with these problems, we propose a novel URL framework for multivariate time series by learning time-series-specific shapelet-based representation through a popular contrasting learning paradigm. To the best of our knowledge, this is the first work that explores the shapelet-based embedding in the unsupervised general-purpose representation learning. A unified shapelet-based encoder and a novel learning objective with multi-grained contrasting and multi-scale alignment are particularly designed to achieve our goal, and a data augmentation library is employed to improve the generalization. We conduct extensive experiments using tens of real-world datasets to assess the representation quality on many downstream tasks, including classification, clustering, and anomaly detection. The results demonstrate the superiority of our method against not only URL competitors, but also techniques specially designed for downstream tasks. Our code has been made publicly available at https://github.com/real2fish/CSL.",
+      "keywords": [],
+      "normalized_title": "a shapelet based framework for unsupervised multivariate time series representation learning",
+      "raw_bibtex": "@ARTICLE{10.14778/3632093.3632103,\n\tauthor = {Liang, ZY and Zhang, JF and Liang, C and Wang, HZ and Liang, Z and Pan, LJ},\n\ttitle = {A Shapelet-based Framework for Unsupervised Multivariate Time Series Representation Learning},\n\tjournal = {PROCEEDINGS OF THE VLDB ENDOWMENT},\n\tyear = {2023},\n\tabstract = {Recent studies have shown great promise in unsupervised representation learning (URL) for multivariate time series, because URL has the capability in learning generalizable representation for many downstream tasks without using inaccessible labels. However, existing approaches usually adopt the models originally designed for other domains (e.g., computer vision) to encode the time series data and rely on strong assumptions to design learning objectives, which limits their ability to perform well. To deal with these problems, we propose a novel URL framework for multivariate time series by learning time-series-specific shapelet-based representation through a popular contrasting learning paradigm. To the best of our knowledge, this is the first work that explores the shapelet-based embedding in the unsupervised general-purpose representation learning. A unified shapelet-based encoder and a novel learning objective with multi-grained contrasting and multi-scale alignment are particularly designed to achieve our goal, and a data augmentation library is employed to improve the generalization. We conduct extensive experiments using tens of real-world datasets to assess the representation quality on many downstream tasks, including classification, clustering, and anomaly detection. The results demonstrate the superiority of our method against not only URL competitors, but also techniques specially designed for downstream tasks. Our code has been made publicly available at https://github.com/real2fish/CSL.},\n\tdoi = {10.14778/3632093.3632103},\n\tvolume = {17},\n\tnumber = {3},\n\tpages = {386-399},\n\tissn = {2150-8097},\n\tnote = {Times Cited in Web of Science Core Collection: 6 Total Times Cited: 6 Cited Reference Count: 66 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.14778/3632093.3632103"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000272",
+      "entry_type": "article",
+      "title": "Comparative evaluation of bioethanol fermentation process parameters using RSM, ANN and ANFIS",
+      "authors": [
+        "Taiwo, AE",
+        "Musonge, P"
+      ],
+      "year": 2023,
+      "journal": "BIOFUELS BIOPRODUCTS & BIOREFINING-BIOFPR",
+      "doi": "10.1002/bbb.2490",
+      "abstract": "The drive for renewable energy as an alternative to fossil fuel is on the increase globally. Modeling a renewable energy process is crucial for increasing process monitoring and control of plant efficiency for the ultimate objective of optimal biorefinery operations. This study aims to develop and compare models that best predict the fermentation process parameters of bioethanol production using corn-steep liquor (CSL) as a media supplement. The response surface method (RSM), artificial neural networks (ANNs) and adaptive neuro-fuzzy inference system (ANFIS) were tested in the modeling of bioethanol fermentation processes. Box-Behnken design was used to investigate fermentation process parameters considering the effect of CSL (0.5-5.5 w/v), pH (4, 5), time (12-36 h), temperature (25-35 degrees C) and inoculum size (0.5-5.5 v/v). The results from the kinetics study show media formulation with corn steep liquor results in a comparable yield with that substituted with yeast extract. The study shows that, for CSL, a maximum ethanol concentration of 17.40 g L-1 was obtained after 48 h of fermentation while 21.53 g L-1 was attained after 6 h for the media formulation with yeast extract. Based on the model evaluation using statistical error indices, ANN predictability was better at R-2 = 0.90; R = 0.95; SEP = 1.73. The ANN models described the process better than ANFIS and RSM. This study shows the intelligent predictive ability of ANN that could be useful for the scale-up process of ethanol production in industry.",
+      "keywords": [
+        "adaptive neuro-fuzzy inference system",
+        "artificial neural network",
+        "bioethanol",
+        "corn steep liquor",
+        "fermentation",
+        "response surface method",
+        "RESPONSE-SURFACE METHODOLOGY",
+        "ETHANOL-PRODUCTION",
+        "OPTIMIZATION",
+        "ACID",
+        "SYNGAS",
+        "YEAST"
+      ],
+      "normalized_title": "comparative evaluation of bioethanol fermentation process parameters using rsm ann and anfis",
+      "raw_bibtex": "@ARTICLE{10.1002/bbb.2490,\n\tauthor = {Taiwo, AE and Musonge, P},\n\ttitle = {Comparative evaluation of bioethanol fermentation process parameters using RSM, ANN and ANFIS},\n\tjournal = {BIOFUELS BIOPRODUCTS & BIOREFINING-BIOFPR},\n\tyear = {2023},\n\tkeywords = {adaptive neuro-fuzzy inference system; artificial neural network; bioethanol; corn steep liquor; fermentation; response surface method; RESPONSE-SURFACE METHODOLOGY; ETHANOL-PRODUCTION; OPTIMIZATION; ACID; SYNGAS; YEAST},\n\tabstract = {The drive for renewable energy as an alternative to fossil fuel is on the increase globally. Modeling a renewable energy process is crucial for increasing process monitoring and control of plant efficiency for the ultimate objective of optimal biorefinery operations. This study aims to develop and compare models that best predict the fermentation process parameters of bioethanol production using corn-steep liquor (CSL) as a media supplement. The response surface method (RSM), artificial neural networks (ANNs) and adaptive neuro-fuzzy inference system (ANFIS) were tested in the modeling of bioethanol fermentation processes. Box-Behnken design was used to investigate fermentation process parameters considering the effect of CSL (0.5-5.5 w/v), pH (4, 5), time (12-36 h), temperature (25-35 degrees C) and inoculum size (0.5-5.5 v/v). The results from the kinetics study show media formulation with corn steep liquor results in a comparable yield with that substituted with yeast extract. The study shows that, for CSL, a maximum ethanol concentration of 17.40 g L-1 was obtained after 48 h of fermentation while 21.53 g L-1 was attained after 6 h for the media formulation with yeast extract. Based on the model evaluation using statistical error indices, ANN predictability was better at R-2 = 0.90; R = 0.95; SEP = 1.73. The ANN models described the process better than ANFIS and RSM. This study shows the intelligent predictive ability of ANN that could be useful for the scale-up process of ethanol production in industry.},\n\tdoi = {10.1002/bbb.2490},\n\tvolume = {17},\n\tnumber = {4},\n\tpages = {961-975},\n\tissn = {1932-104X},\n\tnote = {Times Cited in Web of Science Core Collection: 14 Total Times Cited: 16 Cited Reference Count: 52 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1002/bbb.2490"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000273",
+      "entry_type": "article",
+      "title": "A Fine-Grained Object Detection Model for Aerial Images Based on YOLOv5 Deep Neural Network",
+      "authors": [
+        "Zhang, R",
+        "Xie, C",
+        "Deng, LW"
+      ],
+      "year": 2023,
+      "journal": "CHINESE JOURNAL OF ELECTRONICS",
+      "doi": "10.23919/cje.2022.00.044",
+      "abstract": "Many advanced object detection algorithms are mainly based on natural scenes object and rarely dedicated to fine-grained objects. This seriously limits the application of these advanced detection algorithms in remote sensing object detection. How to apply horizontal detection in remote sensing images has important research significance. The mainstream remote sensing object detection algorithms achieve this task by angle regression, but the periodicity of angle leads to very large losses in this regression method, which increases the difficulty of model learning. Circular smooth label (CSL) solved this problem well by transforming the regression of angle into a classification form. YOLOv5 combines many excellent modules and methods in recent years, which greatly improves the detection accuracy of small objects. We use YOLOv5 as a baseline and combine the CSL method to learn the angle of arbitrarily oriented targets, and distinguish the fine-grained between instance classes by adding an attention mechanism module to accomplish the fine-grained target detection task for remote sensing images. Our improved model achieves an average category accuracy of 39.2% on the FAIR1M dataset. Although our method does not achieve satisfactory results, this approach is very efficient and simple, reducing the hardware requirements of the model.",
+      "keywords": [
+        "Deep learning",
+        "Neural networks",
+        "Object detection",
+        "Transformers",
+        "Hardware",
+        "Classification algorithms",
+        "Task analysis",
+        "Fine-grain object detection",
+        "High-resolution aerial images",
+        "Oriented object detection",
+        "YOLOv5"
+      ],
+      "normalized_title": "a fine grained object detection model for aerial images based on yolov5 deep neural network",
+      "raw_bibtex": "@ARTICLE{10.23919/cje.2022.00.044,\n\tauthor = {Zhang, R and Xie, C and Deng, LW},\n\ttitle = {A Fine-Grained Object Detection Model for Aerial Images Based on YOLOv5 Deep Neural Network},\n\tjournal = {CHINESE JOURNAL OF ELECTRONICS},\n\tyear = {2023},\n\tkeywords = {Deep learning; Neural networks; Object detection; Transformers; Hardware; Classification algorithms; Task analysis; Fine-grain object detection; High-resolution aerial images; Oriented object detection; YOLOv5},\n\tabstract = {Many advanced object detection algorithms are mainly based on natural scenes object and rarely dedicated to fine-grained objects. This seriously limits the application of these advanced detection algorithms in remote sensing object detection. How to apply horizontal detection in remote sensing images has important research significance. The mainstream remote sensing object detection algorithms achieve this task by angle regression, but the periodicity of angle leads to very large losses in this regression method, which increases the difficulty of model learning. Circular smooth label (CSL) solved this problem well by transforming the regression of angle into a classification form. YOLOv5 combines many excellent modules and methods in recent years, which greatly improves the detection accuracy of small objects. We use YOLOv5 as a baseline and combine the CSL method to learn the angle of arbitrarily oriented targets, and distinguish the fine-grained between instance classes by adding an attention mechanism module to accomplish the fine-grained target detection task for remote sensing images. Our improved model achieves an average category accuracy of 39.2% on the FAIR1M dataset. Although our method does not achieve satisfactory results, this approach is very efficient and simple, reducing the hardware requirements of the model.},\n\tdoi = {10.23919/cje.2022.00.044},\n\tvolume = {32},\n\tnumber = {1},\n\tpages = {51-63},\n\tissn = {1022-4653},\n\tnote = {Times Cited in Web of Science Core Collection: 16 Total Times Cited: 18 Cited Reference Count: 39 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.23919/cje.2022.00.044"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000274",
+      "entry_type": "article",
+      "title": "G-CSL: A GNN-based Client-Server-Link Prediction for Video in SDN",
+      "authors": [
+        "Bukhari, SMAH",
+        "Afaq, M",
+        "Song, WC"
+      ],
+      "year": 2025,
+      "journal": "JOURNAL OF COMMUNICATIONS AND NETWORKS",
+      "doi": "10.23919/jcn.2025.000057",
+      "abstract": "Video streaming has become one of the primary contributors to global Internet traffic, posing significant challenges to network infrastructures. Software-defined networking (SDN) offers a promising solution for managing such dynamic and bandwidth intensive services by enabling centralized control and realtime adaptability. However, decoupled decision making fails to account for the interplay between server workload and link congestion, often leading to suboptimal resource allocation. To address this issue, this paper presents a graph neural network (GNN)-based client-server-link (G-CSL) prediction model designed to optimize video streaming performance in SDN environments. G-CSL utilizes a machine learning model in conjunction with a GNN-based link estimation model. The machine learning predicts the video streaming server CPU utilization, which serves as input to the GNN model as node embeddings for link estimation between the client and server. For load forecasting, two machine learning and two deep learning models are evaluated, with random forest (RF) outperforming its counterpart. For the link estimation task, both traditional and GNN-based models are considered. GraphSAGE outperforms its counterparts by accurately estimating the existence of a link between the client and the video streaming server. A lightweight neighbor score heuristic then assigns each request to the least loaded server over the highest confidence path, maximizing a composite utility of computational headroom and bandwidth. An ablation study of the GraphSAGE model is presented highlighting the importance of architectural components, including batch normalization, bilinear decoders, temporal features, and threshold-based edge masking, in enhancing model robustness. The proposed model is evaluated under realistic video streaming scenarios involving 10,000 requests and compared with baselines. Experimental results show that G-CSL has achieved a 61% reduction in request drop rate, maintains an average delay of 22 ms per request, and improves system utility by 23%, demonstrating its effectiveness in balancing computational and bandwidth resources.",
+      "keywords": [
+        "Graph neural network",
+        "load prediction",
+        "machine learning",
+        "software-defined network",
+        "video streaming",
+        "GRAPH NEURAL-NETWORKS",
+        "ROUTING OPTIMIZATION"
+      ],
+      "normalized_title": "g csl a gnn based client server link prediction for video in sdn",
+      "raw_bibtex": "@ARTICLE{10.23919/JCN.2025.000057,\n\tauthor = {Bukhari, SMAH and Afaq, M and Song, WC},\n\ttitle = {G-CSL: A GNN-based Client-Server-Link Prediction for Video in SDN},\n\tjournal = {JOURNAL OF COMMUNICATIONS AND NETWORKS},\n\tyear = {2025},\n\tkeywords = {Graph neural network; load prediction; machine learning; software-defined network; video streaming; GRAPH NEURAL-NETWORKS; ROUTING OPTIMIZATION},\n\tabstract = {Video streaming has become one of the primary contributors to global Internet traffic, posing significant challenges to network infrastructures. Software-defined networking (SDN) offers a promising solution for managing such dynamic and bandwidth intensive services by enabling centralized control and realtime adaptability. However, decoupled decision making fails to account for the interplay between server workload and link congestion, often leading to suboptimal resource allocation. To address this issue, this paper presents a graph neural network (GNN)-based client-server-link (G-CSL) prediction model designed to optimize video streaming performance in SDN environments. G-CSL utilizes a machine learning model in conjunction with a GNN-based link estimation model. The machine learning predicts the video streaming server CPU utilization, which serves as input to the GNN model as node embeddings for link estimation between the client and server. For load forecasting, two machine learning and two deep learning models are evaluated, with random forest (RF) outperforming its counterpart. For the link estimation task, both traditional and GNN-based models are considered. GraphSAGE outperforms its counterparts by accurately estimating the existence of a link between the client and the video streaming server. A lightweight neighbor score heuristic then assigns each request to the least loaded server over the highest confidence path, maximizing a composite utility of computational headroom and bandwidth. An ablation study of the GraphSAGE model is presented highlighting the importance of architectural components, including batch normalization, bilinear decoders, temporal features, and threshold-based edge masking, in enhancing model robustness. The proposed model is evaluated under realistic video streaming scenarios involving 10,000 requests and compared with baselines. Experimental results show that G-CSL has achieved a 61% reduction in request drop rate, maintains an average delay of 22 ms per request, and improves system utility by 23%, demonstrating its effectiveness in balancing computational and bandwidth resources.},\n\tdoi = {10.23919/JCN.2025.000057},\n\tvolume = {27},\n\tnumber = {6},\n\tpages = {521-533},\n\tissn = {1229-2370},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 41 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.23919/JCN.2025.000057"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000275",
+      "entry_type": "article",
+      "title": "Recurrent neural network long short term memory model to detect the pile toe using raw data of pile integrity test",
+      "authors": [
+        "Samaan, RM",
+        "Saafan, MSA",
+        "Mokhtar, AA",
+        "Ebid, AM"
+      ],
+      "year": 2026,
+      "journal": "SCIENTIFIC REPORTS",
+      "doi": "10.1038/s41598-026-36732-7",
+      "abstract": "This article proposes a novel approach to automatically generate velocity reflectogram of Pile Integrity Testing using a Recurrent Neural Network with Long Short-Term Memory (RNN-LSTM) model. Conventional Low-Strain Integrity Testing (LSIT) accuracy relies significantly on expert interpretation of reflected wave signals and entails subjectivity as well as efficiency limitations. The purpose of this study is to develop an artificial intelligence system capable of learning wave propagation behavior from acceleration inputs and generating reflectogram that capture pile toe locations correctly, thereby reducing dependence on human experience. The proposed technique eliminates human error and increases both the reliability and efficiency of the model. The strategy involved the collection of LSIT data from several of Egypt's driven piles projects, followed by systematic preprocessing which converted raw acceleration signals into digitized velocity-time series. Several RNN-LSTM networks with various hidden layers and neurons were trained and optimized against performance including measures the coefficient of determination (R2), computational expense, and visual examination of reflectogram. The proposed six-layer, 32-neuron LSTM model achieved an optimum balance between accuracy and computational expense and yielded training and validation R2 of 0.9126 and 0.8778, respectively, and demonstrated satisfactory predictive generalization. Visual examinations also guaranteed the validity of the model, where \"Good\" predictions for toe location were up to 84% for the validation set and 89.5% for the training set, while \"Fair\" and \"Bad\" predictions had an average of only 10% and 5%, respectively. The experiments demonstrate that the RNN-LSTM model effectively mimics human-generated reflectogram with high accuracy and low mis-adoption risk. Lastly, this research describes how deep learning, namely RNN-LSTM, presents an excellent alternative to the conventional generated reflectogram, greater reliability, and reduced reliance on human experience.",
+      "keywords": [
+        "Pile integrity testing",
+        "Recurrent neural network",
+        "Long short-term memory",
+        "Reflectogram"
+      ],
+      "normalized_title": "recurrent neural network long short term memory model to detect the pile toe using raw data of pile integrity test",
+      "raw_bibtex": "@ARTICLE{10.1038/s41598-026-36732-7,\n\tauthor = {Samaan, RM and Saafan, MSA and Mokhtar, AA and Ebid, AM},\n\ttitle = {Recurrent neural network long short term memory model to detect the pile toe using raw data of pile integrity test},\n\tjournal = {SCIENTIFIC REPORTS},\n\tyear = {2026},\n\tkeywords = {Pile integrity testing; Recurrent neural network; Long short-term memory; Reflectogram},\n\tabstract = {This article proposes a novel approach to automatically generate velocity reflectogram of Pile Integrity Testing using a Recurrent Neural Network with Long Short-Term Memory (RNN-LSTM) model. Conventional Low-Strain Integrity Testing (LSIT) accuracy relies significantly on expert interpretation of reflected wave signals and entails subjectivity as well as efficiency limitations. The purpose of this study is to develop an artificial intelligence system capable of learning wave propagation behavior from acceleration inputs and generating reflectogram that capture pile toe locations correctly, thereby reducing dependence on human experience. The proposed technique eliminates human error and increases both the reliability and efficiency of the model. The strategy involved the collection of LSIT data from several of Egypt's driven piles projects, followed by systematic preprocessing which converted raw acceleration signals into digitized velocity-time series. Several RNN-LSTM networks with various hidden layers and neurons were trained and optimized against performance including measures the coefficient of determination (R2), computational expense, and visual examination of reflectogram. The proposed six-layer, 32-neuron LSTM model achieved an optimum balance between accuracy and computational expense and yielded training and validation R2 of 0.9126 and 0.8778, respectively, and demonstrated satisfactory predictive generalization. Visual examinations also guaranteed the validity of the model, where \"Good\" predictions for toe location were up to 84% for the validation set and 89.5% for the training set, while \"Fair\" and \"Bad\" predictions had an average of only 10% and 5%, respectively. The experiments demonstrate that the RNN-LSTM model effectively mimics human-generated reflectogram with high accuracy and low mis-adoption risk. Lastly, this research describes how deep learning, namely RNN-LSTM, presents an excellent alternative to the conventional generated reflectogram, greater reliability, and reduced reliance on human experience.},\n\tdoi = {10.1038/s41598-026-36732-7},\n\tvolume = {16},\n\tnumber = {1},\n\tissn = {2045-2322},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 45 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1038/s41598-026-36732-7"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000276",
+      "entry_type": "article",
+      "title": "Thermal Integrity Profiling of Cast-in-Place Piles with Defects: Insights from Numerical Modeling",
+      "authors": [
+        "Mahjoubi, S",
+        "Sun, M",
+        "Lin, C"
+      ],
+      "year": 2025,
+      "journal": "JOURNAL OF GEOTECHNICAL AND GEOENVIRONMENTAL ENGINEERING",
+      "doi": "10.1061/jggefk.gteng-13631",
+      "abstract": "Thermal integrity profiling (TIP) is one of the newest and most promising methods for assessing the integrity of cast-in-place concrete piles. Despite its growing application, TIP research remains limited. Current practices generally rely on nominal values, such as unchangeable default values in commonly used TIP software, for the thermal properties of soil and concrete, without sensitivity analyses that account for the wide range of possible values. This study demonstrates that using default values, instead of measured or variable values, can result in inaccurate interpretation of anomaly. Furthermore, there is limited knowledge regarding the relative importance of input parameters in TIP analysis, and research on advanced TIP modeling under multilayered soil conditions is scarce. To address these technical challenges, this study introduces a new modeling approach that includes a custom subroutine in Abaqus for simulating fully nonlinear, element-by-element time- and temperature-dependent heat generation from cement hydration. This finite-element (FE) model was validated against previous experimental data. Through a parametric study and analysis of variance on 70 FE pile models with predefined defects, the research identified concrete specific heat as the most critical input parameter for TIP, followed by concrete and soil thermal conductivity. It was inferred that ignoring the effect of layered soil can lead to false interpretation of defects. A flowchart was proposed to enhance accuracy in TIP interpretation and anomaly detection in practical applications.",
+      "keywords": [
+        "Thermal integrity profiling (TIP)",
+        "Cast-in-place piles",
+        "Pile integrity assessment",
+        "Advanced heat of hydration model",
+        "Three-dimensional finite-element modeling",
+        "CONDUCTIVITY",
+        "HYDRATION"
+      ],
+      "normalized_title": "thermal integrity profiling of cast in place piles with defects insights from numerical modeling",
+      "raw_bibtex": "@ARTICLE{10.1061/JGGEFK.GTENG-13631,\n\tauthor = {Mahjoubi, S and Sun, M and Lin, C},\n\ttitle = {Thermal Integrity Profiling of Cast-in-Place Piles with Defects: Insights from Numerical Modeling},\n\tjournal = {JOURNAL OF GEOTECHNICAL AND GEOENVIRONMENTAL ENGINEERING},\n\tyear = {2025},\n\tkeywords = {Thermal integrity profiling (TIP); Cast-in-place piles; Pile integrity assessment; Advanced heat of hydration model; Three-dimensional finite-element modeling; CONDUCTIVITY; HYDRATION},\n\tabstract = {Thermal integrity profiling (TIP) is one of the newest and most promising methods for assessing the integrity of cast-in-place concrete piles. Despite its growing application, TIP research remains limited. Current practices generally rely on nominal values, such as unchangeable default values in commonly used TIP software, for the thermal properties of soil and concrete, without sensitivity analyses that account for the wide range of possible values. This study demonstrates that using default values, instead of measured or variable values, can result in inaccurate interpretation of anomaly. Furthermore, there is limited knowledge regarding the relative importance of input parameters in TIP analysis, and research on advanced TIP modeling under multilayered soil conditions is scarce. To address these technical challenges, this study introduces a new modeling approach that includes a custom subroutine in Abaqus for simulating fully nonlinear, element-by-element time- and temperature-dependent heat generation from cement hydration. This finite-element (FE) model was validated against previous experimental data. Through a parametric study and analysis of variance on 70 FE pile models with predefined defects, the research identified concrete specific heat as the most critical input parameter for TIP, followed by concrete and soil thermal conductivity. It was inferred that ignoring the effect of layered soil can lead to false interpretation of defects. A flowchart was proposed to enhance accuracy in TIP interpretation and anomaly detection in practical applications.},\n\tdoi = {10.1061/JGGEFK.GTENG-13631},\n\tvolume = {151},\n\tnumber = {9},\n\tissn = {1090-0241},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 49 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1061/JGGEFK.GTENG-13631"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000277",
+      "entry_type": "article",
+      "title": "Transfer Learning-Based Detection of Pile Defects in Low-Strain Pile Integrity Testing",
+      "authors": [
+        "Öztürk, Ö",
+        "Özacar, T",
+        "Canbula, B"
+      ],
+      "year": 2025,
+      "journal": "APPLIED SCIENCES-BASEL",
+      "doi": "10.3390/app15158278",
+      "abstract": "Pile foundations are critical structural elements, and their integrity is essential for ensuring the stability and safety of construction projects. Low-strain pile integrity testing (LSPIT) is widely used for defect detection; however, conventional manual interpretation of reflectograms is both time-consuming and susceptible to human error. This study presents a deep learning-driven approach utilizing transfer learning with convolutional neural networks (CNNs) to automate pile defect detection. A dataset of 328 reflectograms collected from real construction sites, including 246 intact and 82 defective samples, was used to train and evaluate the model. To address class imbalance, oversampling techniques were applied. Several state-of-the-art pretrained CNN architectures were compared, with ConvNeXtLarge achieving the highest accuracy of 98.2%. The accuracy reported was achieved on a dedicated test set using real reflectogram data from actual construction sites, distinguishing this study from prior work relying primarily on synthetic data. The proposed novelty includes adapting pre-trained CNN architectures specifically for real-world pile integrity testing, addressing practical challenges such as data imbalance and limited dataset size through targeted oversampling techniques. The proposed approach demonstrates significant improvements in accuracy and efficiency compared to manual interpretation methods, making it a promising solution for practical applications in the construction industry. The proposed method demonstrates potential for generalization across varying pile lengths and geological conditions, though further validation with broader datasets is recommended.",
+      "keywords": [
+        "CNN",
+        "deep learning",
+        "pile integrity test",
+        "transfer learning",
+        "CONVOLUTIONAL NEURAL-NETWORKS"
+      ],
+      "normalized_title": "transfer learning based detection of pile defects in low strain pile integrity testing",
+      "raw_bibtex": "@ARTICLE{10.3390/app15158278,\n\tauthor = {Öztürk, Ö and Özacar, T and Canbula, B},\n\ttitle = {Transfer Learning-Based Detection of Pile Defects in Low-Strain Pile Integrity Testing},\n\tjournal = {APPLIED SCIENCES-BASEL},\n\tyear = {2025},\n\tkeywords = {CNN; deep learning; pile integrity test; transfer learning; CONVOLUTIONAL NEURAL-NETWORKS},\n\tabstract = {Pile foundations are critical structural elements, and their integrity is essential for ensuring the stability and safety of construction projects. Low-strain pile integrity testing (LSPIT) is widely used for defect detection; however, conventional manual interpretation of reflectograms is both time-consuming and susceptible to human error. This study presents a deep learning-driven approach utilizing transfer learning with convolutional neural networks (CNNs) to automate pile defect detection. A dataset of 328 reflectograms collected from real construction sites, including 246 intact and 82 defective samples, was used to train and evaluate the model. To address class imbalance, oversampling techniques were applied. Several state-of-the-art pretrained CNN architectures were compared, with ConvNeXtLarge achieving the highest accuracy of 98.2%. The accuracy reported was achieved on a dedicated test set using real reflectogram data from actual construction sites, distinguishing this study from prior work relying primarily on synthetic data. The proposed novelty includes adapting pre-trained CNN architectures specifically for real-world pile integrity testing, addressing practical challenges such as data imbalance and limited dataset size through targeted oversampling techniques. The proposed approach demonstrates significant improvements in accuracy and efficiency compared to manual interpretation methods, making it a promising solution for practical applications in the construction industry. The proposed method demonstrates potential for generalization across varying pile lengths and geological conditions, though further validation with broader datasets is recommended.},\n\tdoi = {10.3390/app15158278},\n\tvolume = {15},\n\tnumber = {15},\n\tissn = {2076-3417},\n\tnote = {Times Cited in Web of Science Core Collection: 2 Total Times Cited: 2 Cited Reference Count: 56 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/app15158278"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000278",
+      "entry_type": "article",
+      "title": "A dual-stream deep learning framework for continuous sign language recognition to enhance communication accessibility in the Ha'il region",
+      "authors": [
+        "Harrouch, H",
+        "Guesmi, H",
+        "Alalfy, H",
+        "Jebali, M"
+      ],
+      "year": 2026,
+      "journal": "SCIENTIFIC REPORTS",
+      "doi": "10.1038/s41598-026-38912-x",
+      "abstract": "Human-Computer Interaction (HCI) depends critically on hand gesture recognition, which also provides the basis of sign language communication for those with hearing problems. In automatic sign language identification systems, however, the contribution of non-manual elements like head posture and facial emotions has sometimes been disregarded. In order to fully capture the diversity of sign language modalities and to enhance the quality of life of deaf people in the region of Ha'il, we present in this study a dual-stream convolutional neural network (TS-CNN) that separately models hand motions and head positions. We provide fusion techniques that improve feature correlation and representation in order to guarantee efficient cooperation between the two streams. Moreover, we use a Feature Enhancement Module (FEM) to enhance gloss-level prediction accuracy and fine temporal alignment. Two benchmark datasets, RWTH-PHOENIX-Weather 2014 and CSL Split II, are used to assess the TS-CNN framework and show a notable increase in recognition performance. Competitive Word Error Rates (WER) obtained by TS-CNN from experimental data validate its performance in simulating the complicated multimodal character of continuous sign language recognition.",
+      "keywords": [],
+      "normalized_title": "a dual stream deep learning framework for continuous sign language recognition to enhance communication accessibility in the ha il region",
+      "raw_bibtex": "@ARTICLE{10.1038/s41598-026-38912-x,\n\tauthor = {Harrouch, H and Guesmi, H and Alalfy, H and Jebali, M},\n\ttitle = {A dual-stream deep learning framework for continuous sign language recognition to enhance communication accessibility in the Ha'il region},\n\tjournal = {SCIENTIFIC REPORTS},\n\tyear = {2026},\n\tabstract = {Human-Computer Interaction (HCI) depends critically on hand gesture recognition, which also provides the basis of sign language communication for those with hearing problems. In automatic sign language identification systems, however, the contribution of non-manual elements like head posture and facial emotions has sometimes been disregarded. In order to fully capture the diversity of sign language modalities and to enhance the quality of life of deaf people in the region of Ha'il, we present in this study a dual-stream convolutional neural network (TS-CNN) that separately models hand motions and head positions. We provide fusion techniques that improve feature correlation and representation in order to guarantee efficient cooperation between the two streams. Moreover, we use a Feature Enhancement Module (FEM) to enhance gloss-level prediction accuracy and fine temporal alignment. Two benchmark datasets, RWTH-PHOENIX-Weather 2014 and CSL Split II, are used to assess the TS-CNN framework and show a notable increase in recognition performance. Competitive Word Error Rates (WER) obtained by TS-CNN from experimental data validate its performance in simulating the complicated multimodal character of continuous sign language recognition.},\n\tdoi = {10.1038/s41598-026-38912-x},\n\tvolume = {16},\n\tnumber = {1},\n\tissn = {2045-2322},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 47 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1038/s41598-026-38912-x"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000279",
+      "entry_type": "article",
+      "title": "TCNN-KAN: Optimized CNN by Kolmogorov-Arnold Network and Pruning Techniques for sEMG Gesture Recognition",
+      "authors": [
+        "Al-qaness, MAA",
+        "Ni, SK"
+      ],
+      "year": 2025,
+      "journal": "IEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS",
+      "doi": "10.1109/jbhi.2024.3467065",
+      "abstract": "Surface electromyography (sEMG) is a non-invasive technique that records the electrical signals generated by muscle activity. sEMG signals are widely used in the field of biomedical and health informatics for diagnosing and monitoring neuromuscular disorders, as well as in fields such as motor control, rehabilitation, and human-computer interaction. In this paper, we propose a novel model called the Triple Convolutional Neural Network and Kolmogorov-Arnold Network (TCNN-KAN) for recognizing gesture signals based on sEMG. Our approach replaces the commonly used fully connected layer with the KAN, parameterizing it as a spline function to improve classification accuracy. Specifically, when using a KAN instead, generate the TCNN-KAN-1 model. When using two KAN layers, generate the TCNN-KAN-2 model and generate the TCNN-KAN-3 model when KAN replaces all fully connected layers. Firstly, to ensure the model learns universal features, we fuse gesture signals from different individuals and segment them to create uniform window sizes. Then, the processed signal is input into the basic convolution layer of different depths for training. In order to improve the accuracy, we convert the standard fully connected layer in the convolutional layer to the KAN layer so that it has a learnable activation function in weight. Finally, we introduce unstructured pruning to reduce computational complexity and minimize overfitting by removing channels with lower feature importance. We use three datasets, NinaPro DB1, NinaPro DB5, and CSL, for evaluation. The results show that on the TCNN-KAN-2 model, each dataset has achieved the highest accuracy. Specifically, when the pruning rates were 0.2, 0.1, and 0.4, the accuracy rates reached 98.38%, 93.81%, and 75.56%, respectively.",
+      "keywords": [
+        "Feature extraction",
+        "Accuracy",
+        "Convolutional neural networks",
+        "Electromyography",
+        "Support vector machines",
+        "Muscles",
+        "Gesture recognition",
+        "Health informatics",
+        "biomedical",
+        "humancomputer interaction",
+        "gesture recognition",
+        "deep learning",
+        "kolmogorov-arnold network",
+        "pruning techniques",
+        "surface electromyography(sEMG)",
+        "ARMBAND"
+      ],
+      "normalized_title": "tcnn kan optimized cnn by kolmogorov arnold network and pruning techniques for semg gesture recognition",
+      "raw_bibtex": "@ARTICLE{10.1109/JBHI.2024.3467065,\n\tauthor = {Al-qaness, MAA and Ni, SK},\n\ttitle = {TCNN-KAN: Optimized CNN by Kolmogorov-Arnold Network and Pruning Techniques for sEMG Gesture Recognition},\n\tjournal = {IEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS},\n\tyear = {2025},\n\tkeywords = {Feature extraction; Accuracy; Convolutional neural networks; Electromyography; Support vector machines; Muscles; Gesture recognition; Health informatics; biomedical; humancomputer interaction; gesture recognition; deep learning; kolmogorov-arnold network; pruning techniques; surface electromyography(sEMG); ARMBAND},\n\tabstract = {Surface electromyography (sEMG) is a non-invasive technique that records the electrical signals generated by muscle activity. sEMG signals are widely used in the field of biomedical and health informatics for diagnosing and monitoring neuromuscular disorders, as well as in fields such as motor control, rehabilitation, and human-computer interaction. In this paper, we propose a novel model called the Triple Convolutional Neural Network and Kolmogorov-Arnold Network (TCNN-KAN) for recognizing gesture signals based on sEMG. Our approach replaces the commonly used fully connected layer with the KAN, parameterizing it as a spline function to improve classification accuracy. Specifically, when using a KAN instead, generate the TCNN-KAN-1 model. When using two KAN layers, generate the TCNN-KAN-2 model and generate the TCNN-KAN-3 model when KAN replaces all fully connected layers. Firstly, to ensure the model learns universal features, we fuse gesture signals from different individuals and segment them to create uniform window sizes. Then, the processed signal is input into the basic convolution layer of different depths for training. In order to improve the accuracy, we convert the standard fully connected layer in the convolutional layer to the KAN layer so that it has a learnable activation function in weight. Finally, we introduce unstructured pruning to reduce computational complexity and minimize overfitting by removing channels with lower feature importance. We use three datasets, NinaPro DB1, NinaPro DB5, and CSL, for evaluation. The results show that on the TCNN-KAN-2 model, each dataset has achieved the highest accuracy. Specifically, when the pruning rates were 0.2, 0.1, and 0.4, the accuracy rates reached 98.38%, 93.81%, and 75.56%, respectively.},\n\tdoi = {10.1109/JBHI.2024.3467065},\n\tvolume = {29},\n\tnumber = {1},\n\tpages = {188-197},\n\tissn = {2168-2194},\n\tnote = {Times Cited in Web of Science Core Collection: 26 Total Times Cited: 27 Cited Reference Count: 31 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/JBHI.2024.3467065"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000280",
+      "entry_type": "article",
+      "title": "Automated diagnosis of cervical spine physiological curvature based on deep neural networks with transformer by using nmODE",
+      "authors": [
+        "Li, QT",
+        "Yang, Y",
+        "Xu, L",
+        "Shen, YW",
+        "Yi, NM",
+        "Yi, Z",
+        "Ergu, D",
+        "Cai, Y"
+      ],
+      "year": 2024,
+      "journal": "APPLIED INTELLIGENCE",
+      "doi": "10.1007/s10489-024-05736-z",
+      "abstract": "In this paper, we focus on the automated diagnosis of physiological curvature in the cervical spine, with an emphasis on feature point localization. Cervical spine deformity is prevalent, and the Cobb angle is widely recognized as the gold standard for diagnosing and treating it. However, manual measurement is time-consuming, labor-intensive, and heavily reliant on clinical experience. Therefore, there is an urgent need for a high-precision automatically detecting algorithm to meet the clinical requirements of orthopedic surgeons. Traditional methods are constrained by complex steps and limited data, which pose challenges. Therefore, we propose an efficient framework that formulates an automatic diagnosis of cervical spine physiological curvature based on a novel deep neural network. By leveraging the excellent properties of neural memory Ordinary Differential Equation (nmODE) in long-term memory retention and nonlinear representation capabilities, we effectively improve the network's performance in keypoint detection branching tasks. Additionally, we integrate a novel hybrid transformer based on residual structures and a multi-stage dilated dynamic convolution to alleviate false detections caused by X-ray obstruction and shadows, and the integration also captures the relationship between vertebrae and landmarks to compensate for the lack of detailed information. We constructed a dataset named CSL-947X, comprising 947 cervical spine lateral X-ray images of patients to train and evaluate our proposed model. Extensive experiments on CSL-947X demonstrate that our framework achieves higher accuracy and outperforms most state-of-the-art methods. These results highlight the effectiveness of the proposed architecture and its potential feasibility as a clinical decision-making tool for healthcare professionals.",
+      "keywords": [
+        "Cervical spine cobb angle",
+        "Neural memory ordinary differential equation",
+        "Hybrid transformer",
+        "Multi-stage dilated dynamic convolution",
+        "SEGMENTATION"
+      ],
+      "normalized_title": "automated diagnosis of cervical spine physiological curvature based on deep neural networks with transformer by using nmode",
+      "raw_bibtex": "@ARTICLE{10.1007/s10489-024-05736-z,\n\tauthor = {Li, QT and Yang, Y and Xu, L and Shen, YW and Yi, NM and Yi, Z and Ergu, D and Cai, Y},\n\ttitle = {Automated diagnosis of cervical spine physiological curvature based on deep neural networks with transformer by using nmODE},\n\tjournal = {APPLIED INTELLIGENCE},\n\tyear = {2024},\n\tkeywords = {Cervical spine cobb angle; Neural memory ordinary differential equation; Hybrid transformer; Multi-stage dilated dynamic convolution; SEGMENTATION},\n\tabstract = {In this paper, we focus on the automated diagnosis of physiological curvature in the cervical spine, with an emphasis on feature point localization. Cervical spine deformity is prevalent, and the Cobb angle is widely recognized as the gold standard for diagnosing and treating it. However, manual measurement is time-consuming, labor-intensive, and heavily reliant on clinical experience. Therefore, there is an urgent need for a high-precision automatically detecting algorithm to meet the clinical requirements of orthopedic surgeons. Traditional methods are constrained by complex steps and limited data, which pose challenges. Therefore, we propose an efficient framework that formulates an automatic diagnosis of cervical spine physiological curvature based on a novel deep neural network. By leveraging the excellent properties of neural memory Ordinary Differential Equation (nmODE) in long-term memory retention and nonlinear representation capabilities, we effectively improve the network's performance in keypoint detection branching tasks. Additionally, we integrate a novel hybrid transformer based on residual structures and a multi-stage dilated dynamic convolution to alleviate false detections caused by X-ray obstruction and shadows, and the integration also captures the relationship between vertebrae and landmarks to compensate for the lack of detailed information. We constructed a dataset named CSL-947X, comprising 947 cervical spine lateral X-ray images of patients to train and evaluate our proposed model. Extensive experiments on CSL-947X demonstrate that our framework achieves higher accuracy and outperforms most state-of-the-art methods. These results highlight the effectiveness of the proposed architecture and its potential feasibility as a clinical decision-making tool for healthcare professionals.},\n\tdoi = {10.1007/s10489-024-05736-z},\n\tvolume = {54},\n\tnumber = {21},\n\tpages = {10386-10400},\n\tissn = {0924-669X},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 34 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s10489-024-05736-z"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

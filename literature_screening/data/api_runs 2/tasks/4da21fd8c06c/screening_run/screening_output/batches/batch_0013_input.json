@@ -1,0 +1,389 @@
+{
+  "batch_id": "batch_0013",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000121",
+    "paper_000122",
+    "paper_000123",
+    "paper_000124",
+    "paper_000125",
+    "paper_000126",
+    "paper_000127",
+    "paper_000128",
+    "paper_000129",
+    "paper_000130"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000121",
+      "entry_type": "article",
+      "title": "Discontinuity Detection System in Marble: Analysis of the Time-Frequency Characteristics of Ultrasonic P-waves",
+      "authors": [
+        "Bicakci, S",
+        "Citak, H",
+        "Gunes, H",
+        "Coramik, M",
+        "Aydin, Y",
+        "Ege, Y"
+      ],
+      "year": 2023,
+      "journal": "JOURNAL OF TESTING AND EVALUATION",
+      "doi": "10.1520/jte20220415",
+      "abstract": "This study attempted to determine both the presence and the appearance of the surface of a crack artificially created in a marble block without axial loading or compression by FFT analysis of ultrasonic longitudinal sound waves by scanning the surface. In such respect, the study differs from other studies in the literature. The aim of the study was to minimize marble waste by determining the most appropriate slab cut direction based on the orientation of the fracture or discontinuity within the marble block. During location-controlled scanning of the marble surface, mean longitudinal wave velocity, Young modulus, Poisson ratio and longitudinal wave velocity variation data were obtained using a V-Meter Mark IVTM ultrasonic test device. For each location, longitudinal ultrasonic velocity data was taken at 250 kHz sampling rate and 256 data points were created. Data from the computer environment were subsequently reorganized using the MATLAB software and FFT conversions for such velocity data were obtained for each location. Then, the peaks of the FFT transformation components were determined by using the \"Findpeaks\" function in MATLAB's signal processing toolbox. The number of peaks in the 5060 kHz range was determined for each location. A single difference was determined between the peak numbers at the locations within the cracked and uncracked regions. By examining the FFT graphs, it was determined that such additional peak occurring in the cracked regions appeared as a second frequency component near the dominant frequency values. Points with secondary frequency were recorded as 1, while all other points were recorded as 0 in a new matrix. Such data matrices created for each sample were examined by visualization in the form of surface graphics. Using these graphics, the orientations of discontinuities within the marble block may be determined according to the scanning surface.",
+      "keywords": [
+        "marble",
+        "ultrasonic test",
+        "discontinuity",
+        "fast Fourier transform",
+        "MECHANICAL-PROPERTIES",
+        "FRACTURING PROCESS",
+        "VELOCITY",
+        "STRENGTH",
+        "BEHAVIOR",
+        "DRY"
+      ],
+      "normalized_title": "discontinuity detection system in marble analysis of the time frequency characteristics of ultrasonic p waves",
+      "raw_bibtex": "@ARTICLE{10.1520/JTE20220415,\n\tauthor = {Bicakci, S and Citak, H and Gunes, H and Coramik, M and Aydin, Y and Ege, Y},\n\ttitle = {Discontinuity Detection System in Marble: Analysis of the Time-Frequency Characteristics of Ultrasonic P-waves},\n\tjournal = {JOURNAL OF TESTING AND EVALUATION},\n\tyear = {2023},\n\tkeywords = {marble; ultrasonic test; discontinuity; fast Fourier transform; MECHANICAL-PROPERTIES; FRACTURING PROCESS; VELOCITY; STRENGTH; BEHAVIOR; DRY},\n\tabstract = {This study attempted to determine both the presence and the appearance of the surface of a crack artificially created in a marble block without axial loading or compression by FFT analysis of ultrasonic longitudinal sound waves by scanning the surface. In such respect, the study differs from other studies in the literature. The aim of the study was to minimize marble waste by determining the most appropriate slab cut direction based on the orientation of the fracture or discontinuity within the marble block. During location-controlled scanning of the marble surface, mean longitudinal wave velocity, Young modulus, Poisson ratio and longitudinal wave velocity variation data were obtained using a V-Meter Mark IVTM ultrasonic test device. For each location, longitudinal ultrasonic velocity data was taken at 250 kHz sampling rate and 256 data points were created. Data from the computer environment were subsequently reorganized using the MATLAB software and FFT conversions for such velocity data were obtained for each location. Then, the peaks of the FFT transformation components were determined by using the \"Findpeaks\" function in MATLAB's signal processing toolbox. The number of peaks in the 5060 kHz range was determined for each location. A single difference was determined between the peak numbers at the locations within the cracked and uncracked regions. By examining the FFT graphs, it was determined that such additional peak occurring in the cracked regions appeared as a second frequency component near the dominant frequency values. Points with secondary frequency were recorded as 1, while all other points were recorded as 0 in a new matrix. Such data matrices created for each sample were examined by visualization in the form of surface graphics. Using these graphics, the orientations of discontinuities within the marble block may be determined according to the scanning surface.},\n\tdoi = {10.1520/JTE20220415},\n\tvolume = {51},\n\tnumber = {5},\n\tpages = {2942-2961},\n\tissn = {0090-3973},\n\tnote = {Times Cited in Web of Science Core Collection: 2 Total Times Cited: 3 Cited Reference Count: 50 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1520/JTE20220415"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000122",
+      "entry_type": "article",
+      "title": "Towards using convolutional neural network to locate, identify and size defects in phased array ultrasonic testing",
+      "authors": [
+        "Latête, T",
+        "Gauthier, B",
+        "Belanger, P"
+      ],
+      "year": 2021,
+      "journal": "ULTRASONICS",
+      "doi": "10.1016/j.ultras.2021.106436",
+      "abstract": "Machine learning algorithms are widely used in image recognition. In Phased Array Ultrasonic Testing (PAUT), images are typically formed through constructive and destructive superpositions of signals backscattered from flaws or geometric features. However, all PAUT data acquisition schemes require several emissions and the duration of the acquisition may be too slow in high-speed manufacturing. In this study, the Faster R-CNN was used to identify, locate and size flat bottom holes (FBH) and side-drilled holes (SDH) in an immersed test specimen using a single plane wave insonification. The training was performed on segmented and classified data generated using GPU-accelerated finite element simulations. SDH and FBH of different diameters, depths and lateral positions were included in the training set. The thickness of the test specimen was also variable. An ultrasonic phased array probe of 64 elements was simulated. All elements of the phased array probe were fired at the same time and the time traces from each element were recorded. The individual time traces were concatenated to form a matrix, which was then used in the training. This inspection scenario enables fast acquisition of data at the expense of poor lateral resolution in the resulting image. The trained neural network was initially tested using finite element simulations. Results were assessed in terms of the intersection of the union (IoU) between the ground truth geometry and the predicted geometry. With the simulated cases, the thickness of the test specimen was detected in all cases. When using a 40% IoU threshold, the detection rate of the FBH was 87% while only 20% for the SDH. The smallest detected FBH had a 0.56 wavelength depth and a lateral extent of 1.04 wavelength. Drawing a box using the -6 dB drop method around the FBH always led to an IoU under 15%. On average, the lateral extent of the FBH using the -6 dB method was three times larger than the diameter predicted by the proposed method. Then, the training was continued with a small augmented dataset of experiments (equivalent to 3% of the simulated dataset). In experiments, the results show that the test specimen was always correctly identified. When using a 40% IoU threshold the experimental detection rate of the FBH was 70%. The smallest detected defect in experiments had a depth of 2 wavelengths.",
+      "keywords": [
+        "Non destructive testing",
+        "Ultrasound",
+        "Plane waves",
+        "Image recognition",
+        "Convolutional neural network",
+        "Faster-RCNN"
+      ],
+      "normalized_title": "towards using convolutional neural network to locate identify and size defects in phased array ultrasonic testing",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ultras.2021.106436,\n\tauthor = {Latête, T and Gauthier, B and Belanger, P},\n\ttitle = {Towards using convolutional neural network to locate, identify and size defects in phased array ultrasonic testing},\n\tjournal = {ULTRASONICS},\n\tyear = {2021},\n\tkeywords = {Non destructive testing; Ultrasound; Plane waves; Image recognition; Convolutional neural network; Faster-RCNN},\n\tabstract = {Machine learning algorithms are widely used in image recognition. In Phased Array Ultrasonic Testing (PAUT), images are typically formed through constructive and destructive superpositions of signals backscattered from flaws or geometric features. However, all PAUT data acquisition schemes require several emissions and the duration of the acquisition may be too slow in high-speed manufacturing. In this study, the Faster R-CNN was used to identify, locate and size flat bottom holes (FBH) and side-drilled holes (SDH) in an immersed test specimen using a single plane wave insonification. The training was performed on segmented and classified data generated using GPU-accelerated finite element simulations. SDH and FBH of different diameters, depths and lateral positions were included in the training set. The thickness of the test specimen was also variable. An ultrasonic phased array probe of 64 elements was simulated. All elements of the phased array probe were fired at the same time and the time traces from each element were recorded. The individual time traces were concatenated to form a matrix, which was then used in the training. This inspection scenario enables fast acquisition of data at the expense of poor lateral resolution in the resulting image. The trained neural network was initially tested using finite element simulations. Results were assessed in terms of the intersection of the union (IoU) between the ground truth geometry and the predicted geometry. With the simulated cases, the thickness of the test specimen was detected in all cases. When using a 40% IoU threshold, the detection rate of the FBH was 87% while only 20% for the SDH. The smallest detected FBH had a 0.56 wavelength depth and a lateral extent of 1.04 wavelength. Drawing a box using the -6 dB drop method around the FBH always led to an IoU under 15%. On average, the lateral extent of the FBH using the -6 dB method was three times larger than the diameter predicted by the proposed method. Then, the training was continued with a small augmented dataset of experiments (equivalent to 3% of the simulated dataset). In experiments, the results show that the test specimen was always correctly identified. When using a 40% IoU threshold the experimental detection rate of the FBH was 70%. The smallest detected defect in experiments had a depth of 2 wavelengths.},\n\tdoi = {10.1016/j.ultras.2021.106436},\n\tvolume = {115},\n\tissn = {0041-624X},\n\tnote = {Times Cited in Web of Science Core Collection: 51 Total Times Cited: 56 Cited Reference Count: 18 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ultras.2021.106436"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000123",
+      "entry_type": "article",
+      "title": "Creep strain prediction in power plant material via ANN modelling of nonlinear ultrasonic test results",
+      "authors": [
+        "Sahu, M",
+        "Ghosh, A",
+        "Dutta, C",
+        "Kumar, J",
+        "Sagar, SP"
+      ],
+      "year": 2025,
+      "journal": "NONDESTRUCTIVE TESTING AND EVALUATION",
+      "doi": "10.1080/10589759.2024.2335528",
+      "abstract": "Reliable and accurate prediction of the creep life of power plant components is crucial for both economic and safety reasons. Existing prediction models, based on creep test data, can be complex and time-consuming. Nonlinear ultrasonic (NLU) is a widely-accepted non-destructive testing (NDT) technique for evaluating damage progression in crept specimens. The information from NLU measurements alone is insufficient to forecast the life of any component. In real-time applications, intelligent NDT protocols are needed to enable fast and accurate life prediction of such components. A methodology for creep life prediction using artificial neural networks (ANN) has been introduced based on NLU test results of crept P92 steel specimens. The technique involved creep tests of P92 specimens exposed to a temperature of 625SUPERSCRIPT ZEROC with applied stress ranging from 120MPa to 160MPa, NLU measurements at each step load, and prediction of creep life of the material with a ANN trained with creep strain and NLU test data. The technique involves prediction from previously generated historical data, thus saving both cost and time of conducting continuous experiments. This approach for ANN modeling of NLU data can be considered a reliable, time-saving, and effective technique for assessing creep damage progression in power plant components.",
+      "keywords": [
+        "Non-linear ultrasonic",
+        "creep",
+        "P92 steel",
+        "artificial neural networks",
+        "NEURAL-NETWORKS",
+        "DAMAGE",
+        "FREQUENCY",
+        "DEFECTS",
+        "WAVELET",
+        "STEEL"
+      ],
+      "normalized_title": "creep strain prediction in power plant material via ann modelling of nonlinear ultrasonic test results",
+      "raw_bibtex": "@ARTICLE{10.1080/10589759.2024.2335528,\n\tauthor = {Sahu, M and Ghosh, A and Dutta, C and Kumar, J and Sagar, SP},\n\ttitle = {Creep strain prediction in power plant material via ANN modelling of nonlinear ultrasonic test results},\n\tjournal = {NONDESTRUCTIVE TESTING AND EVALUATION},\n\tyear = {2025},\n\tkeywords = {Non-linear ultrasonic; creep; P92 steel; artificial neural networks; NEURAL-NETWORKS; DAMAGE; FREQUENCY; DEFECTS; WAVELET; STEEL},\n\tabstract = {Reliable and accurate prediction of the creep life of power plant components is crucial for both economic and safety reasons. Existing prediction models, based on creep test data, can be complex and time-consuming. Nonlinear ultrasonic (NLU) is a widely-accepted non-destructive testing (NDT) technique for evaluating damage progression in crept specimens. The information from NLU measurements alone is insufficient to forecast the life of any component. In real-time applications, intelligent NDT protocols are needed to enable fast and accurate life prediction of such components. A methodology for creep life prediction using artificial neural networks (ANN) has been introduced based on NLU test results of crept P92 steel specimens. The technique involved creep tests of P92 specimens exposed to a temperature of 625SUPERSCRIPT ZEROC with applied stress ranging from 120MPa to 160MPa, NLU measurements at each step load, and prediction of creep life of the material with a ANN trained with creep strain and NLU test data. The technique involves prediction from previously generated historical data, thus saving both cost and time of conducting continuous experiments. This approach for ANN modeling of NLU data can be considered a reliable, time-saving, and effective technique for assessing creep damage progression in power plant components.},\n\tdoi = {10.1080/10589759.2024.2335528},\n\tvolume = {40},\n\tnumber = {3},\n\tpages = {932-953},\n\tissn = {1058-9759},\n\tnote = {Times Cited in Web of Science Core Collection: 7 Total Times Cited: 7 Cited Reference Count: 33 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1080/10589759.2024.2335528"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000124",
+      "entry_type": "article",
+      "title": "Defect estimation using surrogate-based Monte Carlo Bayesian optimization",
+      "authors": [
+        "Seo, H",
+        "Yu, Y"
+      ],
+      "year": 2025,
+      "journal": "MEASUREMENT",
+      "doi": "10.1016/j.measurement.2025.117449",
+      "abstract": "This study presents a novel composite AI approach that integrates Monte Carlo Bayesian optimization with a fast neural network surrogate of acoustic wave propagation to estimate the depth and width of defects in noisy nondestructive testing (NDT). The surrogate model, trained on finite element simulations, predicts von Mises stress from inputs of excitation width, material coordinates, and propagation time-delivering outputs more than 70,000 times faster than direct numerical analysis. By systematically adjusting the surrogate inputs to match arbitrarily given (target) outputs, the optimizer identifies the depth and width of the defect without relying on signal-processing algorithms. Experimental evaluations demonstrate over 98.5% and 90% accuracy in estimating defect depth and width (with less than 1 mm error, respectively), even in challenging low signal-to-noise conditions. Comparative evaluations using different similarity metrics (R2, r, cosine similarity, inverted MSE, or inverted MAE) indicate that Monte Carlo Bayesian optimization guided by the R2-metric consistently delivers robust and stable performance, underscoring its resilience to high noise levels. These results support the potential for real-time, high-accuracy ultrasonic testing for defects while simultaneously reducing computational demands and minimizing the need for specialized, domain-specific algorithm development.",
+      "keywords": [
+        "Acoustic wave propagation",
+        "Surrogate model",
+        "Bayesian optimization",
+        "Monte Carlo",
+        "Defect estimation",
+        "Deep neural networks",
+        "WAVE-PROPAGATION"
+      ],
+      "normalized_title": "defect estimation using surrogate based monte carlo bayesian optimization",
+      "raw_bibtex": "@ARTICLE{10.1016/j.measurement.2025.117449,\n\tauthor = {Seo, H and Yu, Y},\n\ttitle = {Defect estimation using surrogate-based Monte Carlo Bayesian optimization},\n\tjournal = {MEASUREMENT},\n\tyear = {2025},\n\tkeywords = {Acoustic wave propagation; Surrogate model; Bayesian optimization; Monte Carlo; Defect estimation; Deep neural networks; WAVE-PROPAGATION},\n\tabstract = {This study presents a novel composite AI approach that integrates Monte Carlo Bayesian optimization with a fast neural network surrogate of acoustic wave propagation to estimate the depth and width of defects in noisy nondestructive testing (NDT). The surrogate model, trained on finite element simulations, predicts von Mises stress from inputs of excitation width, material coordinates, and propagation time-delivering outputs more than 70,000 times faster than direct numerical analysis. By systematically adjusting the surrogate inputs to match arbitrarily given (target) outputs, the optimizer identifies the depth and width of the defect without relying on signal-processing algorithms. Experimental evaluations demonstrate over 98.5% and 90% accuracy in estimating defect depth and width (with less than 1 mm error, respectively), even in challenging low signal-to-noise conditions. Comparative evaluations using different similarity metrics (R2, r, cosine similarity, inverted MSE, or inverted MAE) indicate that Monte Carlo Bayesian optimization guided by the R2-metric consistently delivers robust and stable performance, underscoring its resilience to high noise levels. These results support the potential for real-time, high-accuracy ultrasonic testing for defects while simultaneously reducing computational demands and minimizing the need for specialized, domain-specific algorithm development.},\n\tdoi = {10.1016/j.measurement.2025.117449},\n\tvolume = {253},\n\tissn = {0263-2241},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 32 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.measurement.2025.117449"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000125",
+      "entry_type": "article",
+      "title": "Ultrasonic feature imaging of a multi-layered structure beyond a thin, highly reflective layer using a convolutional neural network",
+      "authors": [
+        "Lu, CY",
+        "Lu, MH",
+        "Chen, YT",
+        "Pan, YD"
+      ],
+      "year": 2021,
+      "journal": "INSIGHT",
+      "doi": "10.1784/insi.2021.63.4.219",
+      "abstract": "A helicopter propeller is a kind of multi-layered composite material bonding structure. Ensuring that composite structures are free from defects can reduce the risk of in-service failure and hence improve safety. As a common non-destructive testing (NDT) technology, ultrasonic testing is often used in the inspection of composite structures. However, a composite structure made of multiple thin-layer materials bonded together can cause a serious aliasing problem for echo signals when inspecting with ultrasound. In this study, the frequency-domain characteristics of an aliasing echo signal were analysed using the spectrum of the acoustic pressure reflection coefficient. Furthermore, the time-frequency joint analysis results of the echo signal were obtained using a continuous wavelet transform. Finally, the obtained time-frequency features of the echo signal were used to classify and image with a convolutional neural network (CNN). The results revealed that, as opposed to the direct imaging of the time- and frequency-domain features, the time-frequency wavelet map of a thin-walled multi-layered structure that was classified and imaged with a CNN exhibited greater clarity and better defect recognition ability. In addition, the training time of the CNN was 17 s and the classification accuracy of the verification set was high, reaching 97.8%.",
+      "keywords": [
+        "thin multi-layered structure",
+        "acoustic pressure reflection coefficient",
+        "continuous small wave transform",
+        "convolutional neural network",
+        "ultrasound signature imaging",
+        "SYSTEM"
+      ],
+      "normalized_title": "ultrasonic feature imaging of a multi layered structure beyond a thin highly reflective layer using a convolutional neural network",
+      "raw_bibtex": "@ARTICLE{10.1784/insi.2021.63.4.219,\n\tauthor = {Lu, CY and Lu, MH and Chen, YT and Pan, YD},\n\ttitle = {Ultrasonic feature imaging of a multi-layered structure beyond a thin, highly reflective layer using a convolutional neural network},\n\tjournal = {INSIGHT},\n\tyear = {2021},\n\tkeywords = {thin multi-layered structure; acoustic pressure reflection coefficient; continuous small wave transform; convolutional neural network; ultrasound signature imaging; SYSTEM},\n\tabstract = {A helicopter propeller is a kind of multi-layered composite material bonding structure. Ensuring that composite structures are free from defects can reduce the risk of in-service failure and hence improve safety. As a common non-destructive testing (NDT) technology, ultrasonic testing is often used in the inspection of composite structures. However, a composite structure made of multiple thin-layer materials bonded together can cause a serious aliasing problem for echo signals when inspecting with ultrasound. In this study, the frequency-domain characteristics of an aliasing echo signal were analysed using the spectrum of the acoustic pressure reflection coefficient. Furthermore, the time-frequency joint analysis results of the echo signal were obtained using a continuous wavelet transform. Finally, the obtained time-frequency features of the echo signal were used to classify and image with a convolutional neural network (CNN). The results revealed that, as opposed to the direct imaging of the time- and frequency-domain features, the time-frequency wavelet map of a thin-walled multi-layered structure that was classified and imaged with a CNN exhibited greater clarity and better defect recognition ability. In addition, the training time of the CNN was 17 s and the classification accuracy of the verification set was high, reaching 97.8%.},\n\tdoi = {10.1784/insi.2021.63.4.219},\n\tvolume = {63},\n\tnumber = {4},\n\tpages = {219-228},\n\tissn = {1354-2575},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 23 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1784/insi.2021.63.4.219"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000126",
+      "entry_type": "article",
+      "title": "Weld defect detection and severity assessment via phased array ultrasonic imaging and unsupervised anomaly segmentation",
+      "authors": [
+        "He, DQ",
+        "Ma, WK",
+        "Sun, HM",
+        "Jin, ZZ",
+        "Zhang, S"
+      ],
+      "year": 2025,
+      "journal": "NONDESTRUCTIVE TESTING AND EVALUATION",
+      "doi": "10.1080/10589759.2025.2590569",
+      "abstract": "The assessment of weld defect severity is critical for ensuring the safe operation of subway trains. However, existing weld defect detection methods suffer from low inspection efficiency, high costs, and the lack of a comprehensive defect severity assessment system. To address these challenges, this paper proposes a weld defect severity assessment framework that integrates phased array ultrasonic testing (PAUT) with an unsupervised anomaly segmentation network. The proposed framework enables end-to-end defect detection and localization using only normal samples for training. It employs a feature-space-based anomaly signal synthesis strategy to guide the model in distinguishing normal from abnormal features while suppressing interference from non-defect signals. In addition, a defect severity assessment and classification method based on anomaly maps is developed to quantify defect severity and establish mappings to actual defect types. Furthermore, an efficient unsupervised network is designed to address the challenges of sparse defect samples and high annotation costs in real-world scenarios. Experimental results demonstrate that the proposed method achieves detection accuracies of 99.76% at the image level and 99.94% at the pixel level, significantly outperforming seven mainstream unsupervised methods, and enables precise localization and rapid evaluation of weld defects.",
+      "keywords": [
+        "Weld defects",
+        "non-destructive testing",
+        "weld quality analysis",
+        "PAUT",
+        "unsupervised anomaly detection",
+        "NETWORK"
+      ],
+      "normalized_title": "weld defect detection and severity assessment via phased array ultrasonic imaging and unsupervised anomaly segmentation",
+      "raw_bibtex": "@ARTICLE{10.1080/10589759.2025.2590569,\n\tauthor = {He, DQ and Ma, WK and Sun, HM and Jin, ZZ and Zhang, S},\n\ttitle = {Weld defect detection and severity assessment via phased array ultrasonic imaging and unsupervised anomaly segmentation},\n\tjournal = {NONDESTRUCTIVE TESTING AND EVALUATION},\n\tyear = {2025},\n\tkeywords = {Weld defects; non-destructive testing; weld quality analysis; PAUT; unsupervised anomaly detection; NETWORK},\n\tabstract = {The assessment of weld defect severity is critical for ensuring the safe operation of subway trains. However, existing weld defect detection methods suffer from low inspection efficiency, high costs, and the lack of a comprehensive defect severity assessment system. To address these challenges, this paper proposes a weld defect severity assessment framework that integrates phased array ultrasonic testing (PAUT) with an unsupervised anomaly segmentation network. The proposed framework enables end-to-end defect detection and localization using only normal samples for training. It employs a feature-space-based anomaly signal synthesis strategy to guide the model in distinguishing normal from abnormal features while suppressing interference from non-defect signals. In addition, a defect severity assessment and classification method based on anomaly maps is developed to quantify defect severity and establish mappings to actual defect types. Furthermore, an efficient unsupervised network is designed to address the challenges of sparse defect samples and high annotation costs in real-world scenarios. Experimental results demonstrate that the proposed method achieves detection accuracies of 99.76% at the image level and 99.94% at the pixel level, significantly outperforming seven mainstream unsupervised methods, and enables precise localization and rapid evaluation of weld defects.},\n\tdoi = {10.1080/10589759.2025.2590569},\n\tissn = {1058-9759},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 38 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1080/10589759.2025.2590569"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000127",
+      "entry_type": "article",
+      "title": "An improved orthogonal matching pursuit method for denoising high-frequency ultrasonic detection signals of flip chips",
+      "authors": [
+        "Su, L",
+        "Tan, SH",
+        "Qi, Y",
+        "Gu, JF",
+        "Ji, Y",
+        "Wang, G",
+        "Ming, XF",
+        "Li, K",
+        "Pecht, M"
+      ],
+      "year": 2023,
+      "journal": "MECHANICAL SYSTEMS AND SIGNAL PROCESSING",
+      "doi": "10.1016/j.ymssp.2022.110030",
+      "abstract": "Noise suppression of an echo signal plays an important role in high-frequency ultrasonic testing of flip chips. This paper proposes an orthogonal matching pursuit (OMP) method optimized by an improved artificial bee colony (ABC) algorithm for denoising high-frequency ultrasonic testing signals of flip chips. We add adaptive learning factors to change the way the ABC randomly selects the search direction, which speeds up the convergence speed of the algorithm. The improved ABC, named adaptive artificial bee colony (AABC), replaces the greedy search process of OMP. Instead of searching for the atom that best matches the echo signal, the improved OMP algorithm searches for the optimal parameter and replaces the atom with a set of parameters with practical physical significance. The introduction of the AABC changes the search space of OMP from discrete dictionary space to continuous parameter space, which minimizes the error between the atom and echo signal and leads to an accurate approximation. Additionally, the AABC reduces the search times of OMP and improves the convergence speed. Then, the wavelet transform thresh-olding technology is combined with the attenuation characteristic of high-frequency ultrasound to eliminate the influence of error decomposition caused by noise and inaccurate sparsity setting. We present the noise suppression experimental results of high-frequency ultrasonic simulation and real testing signals of flip chips, including Gaussian white noise and correlated noise, and compare the proposed method with other sparse representation methods, including matching pursuit (MP) and OMP. The results demonstrate the superior performance of the proposed method.",
+      "keywords": [
+        "High -frequency ultrasound denoising",
+        "Flip chip",
+        "Artificial bee colony",
+        "Adaptive learning factor",
+        "Orthogonal matching pursuit",
+        "TIME-RESOLUTION",
+        "SPLIT-SPECTRUM",
+        "FLAW DETECTION",
+        "NOISE RATIO",
+        "RECONSTRUCTION",
+        "REPRESENTATION"
+      ],
+      "normalized_title": "an improved orthogonal matching pursuit method for denoising high frequency ultrasonic detection signals of flip chips",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ymssp.2022.110030,\n\tauthor = {Su, L and Tan, SH and Qi, Y and Gu, JF and Ji, Y and Wang, G and Ming, XF and Li, K and Pecht, M},\n\ttitle = {An improved orthogonal matching pursuit method for denoising high-frequency ultrasonic detection signals of flip chips},\n\tjournal = {MECHANICAL SYSTEMS AND SIGNAL PROCESSING},\n\tyear = {2023},\n\tkeywords = {High -frequency ultrasound denoising; Flip chip; Artificial bee colony; Adaptive learning factor; Orthogonal matching pursuit; TIME-RESOLUTION; SPLIT-SPECTRUM; FLAW DETECTION; NOISE RATIO; RECONSTRUCTION; REPRESENTATION},\n\tabstract = {Noise suppression of an echo signal plays an important role in high-frequency ultrasonic testing of flip chips. This paper proposes an orthogonal matching pursuit (OMP) method optimized by an improved artificial bee colony (ABC) algorithm for denoising high-frequency ultrasonic testing signals of flip chips. We add adaptive learning factors to change the way the ABC randomly selects the search direction, which speeds up the convergence speed of the algorithm. The improved ABC, named adaptive artificial bee colony (AABC), replaces the greedy search process of OMP. Instead of searching for the atom that best matches the echo signal, the improved OMP algorithm searches for the optimal parameter and replaces the atom with a set of parameters with practical physical significance. The introduction of the AABC changes the search space of OMP from discrete dictionary space to continuous parameter space, which minimizes the error between the atom and echo signal and leads to an accurate approximation. Additionally, the AABC reduces the search times of OMP and improves the convergence speed. Then, the wavelet transform thresh-olding technology is combined with the attenuation characteristic of high-frequency ultrasound to eliminate the influence of error decomposition caused by noise and inaccurate sparsity setting. We present the noise suppression experimental results of high-frequency ultrasonic simulation and real testing signals of flip chips, including Gaussian white noise and correlated noise, and compare the proposed method with other sparse representation methods, including matching pursuit (MP) and OMP. The results demonstrate the superior performance of the proposed method.},\n\tdoi = {10.1016/j.ymssp.2022.110030},\n\tvolume = {188},\n\tissn = {0888-3270},\n\tnote = {Times Cited in Web of Science Core Collection: 21 Total Times Cited: 24 Cited Reference Count: 42 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ymssp.2022.110030"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000128",
+      "entry_type": "article",
+      "title": "Detection of internal cracks in polyethylene pipes using ultrasonic imaging and deep learning",
+      "authors": [
+        "El-Hawwat, S",
+        "Shah, JK",
+        "Wang, H",
+        "Venkiteela, G"
+      ],
+      "year": 2025,
+      "journal": "MEASUREMENT",
+      "doi": "10.1016/j.measurement.2025.117491",
+      "abstract": "This study presents a two-stage ultrasonic testing (UT) approach for detecting and classifying internal cracks in polyethylene (PE) pipes. In the first stage, ultrasonic imaging is performed using a linear array of piezoelectric transducers to identify crack locations. A probabilistic triangulation imaging method is applied to successfully detect the cracks with the depths as small as 20 % of pipe wall thickness. In the second stage, a deep learning model is developed to classify crack severity using the paired transducer corresponding to the location of the imaged crack. A convolutional neural network (CNN) is trained on signal images converted from continuous wavelet transform (CWT). To generate a diverse training dataset, finite element modeling (FEM) is utilized based on preliminary UT experiments and the material damping properties are calibrated with experiments. The CNN model trained on the synthetic database achieves high classification accuracy when validated through laboratory-acquired signals. The results demonstrate that the proposed two-stage approach accurately locates cracks and enables automated severity classification, enhancing UT-based structural health monitoring of PE pipelines.",
+      "keywords": [
+        "Polyethylene pipes",
+        "Ultrasonic imaging",
+        "Deep learning",
+        "Finite element model",
+        "Crack detection"
+      ],
+      "normalized_title": "detection of internal cracks in polyethylene pipes using ultrasonic imaging and deep learning",
+      "raw_bibtex": "@ARTICLE{10.1016/j.measurement.2025.117491,\n\tauthor = {El-Hawwat, S and Shah, JK and Wang, H and Venkiteela, G},\n\ttitle = {Detection of internal cracks in polyethylene pipes using ultrasonic imaging and deep learning},\n\tjournal = {MEASUREMENT},\n\tyear = {2025},\n\tkeywords = {Polyethylene pipes; Ultrasonic imaging; Deep learning; Finite element model; Crack detection},\n\tabstract = {This study presents a two-stage ultrasonic testing (UT) approach for detecting and classifying internal cracks in polyethylene (PE) pipes. In the first stage, ultrasonic imaging is performed using a linear array of piezoelectric transducers to identify crack locations. A probabilistic triangulation imaging method is applied to successfully detect the cracks with the depths as small as 20 % of pipe wall thickness. In the second stage, a deep learning model is developed to classify crack severity using the paired transducer corresponding to the location of the imaged crack. A convolutional neural network (CNN) is trained on signal images converted from continuous wavelet transform (CWT). To generate a diverse training dataset, finite element modeling (FEM) is utilized based on preliminary UT experiments and the material damping properties are calibrated with experiments. The CNN model trained on the synthetic database achieves high classification accuracy when validated through laboratory-acquired signals. The results demonstrate that the proposed two-stage approach accurately locates cracks and enables automated severity classification, enhancing UT-based structural health monitoring of PE pipelines.},\n\tdoi = {10.1016/j.measurement.2025.117491},\n\tvolume = {253},\n\tissn = {0263-2241},\n\tnote = {Times Cited in Web of Science Core Collection: 5 Total Times Cited: 5 Cited Reference Count: 45 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.measurement.2025.117491"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000129",
+      "entry_type": "article",
+      "title": "Development of signal processing algorithms for delamination detection in composite laminates using non-contact excited Lamb waves",
+      "authors": [
+        "Lecointre, LAC",
+        "Higuchi, R",
+        "Yokozeki, T",
+        "Hosoya, N",
+        "Takeda, SI"
+      ],
+      "year": 2025,
+      "journal": "ULTRASONICS",
+      "doi": "10.1016/j.ultras.2024.107524",
+      "abstract": "A novel Signal Processing algorithm based on the combination of a Wavelet Transform Analysis and Image Processing techniques is designed for assessing the delamination detectability of Lamb Waves generated with an innovative fully non-contact system in CFRP plates. Several Damage Indexes are extracted from the wavefields in spatial-time-frequency domain and plotted as surface cartographies to visualise their ability to size and localise artificial delaminations. Results show that the algorithm is efficient for characterising the waves propagation and that sophisticated Image comparison indexes show better ability to detect the artificial defects and to recognise healthy zones despite signal measurement and calculation uncertainties.",
+      "keywords": [
+        "Ultrasonic testing (UT)",
+        "Lamb waves",
+        "CFRP",
+        "Signal processing",
+        "Wavelet transform",
+        "DAMAGE DETECTION",
+        "PROPAGATION",
+        "GENERATION"
+      ],
+      "normalized_title": "development of signal processing algorithms for delamination detection in composite laminates using non contact excited lamb waves",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ultras.2024.107524,\n\tauthor = {Lecointre, LAC and Higuchi, R and Yokozeki, T and Hosoya, N and Takeda, SI},\n\ttitle = {Development of signal processing algorithms for delamination detection in composite laminates using non-contact excited Lamb waves},\n\tjournal = {ULTRASONICS},\n\tyear = {2025},\n\tkeywords = {Ultrasonic testing (UT); Lamb waves; CFRP; Signal processing; Wavelet transform; DAMAGE DETECTION; PROPAGATION; GENERATION},\n\tabstract = {A novel Signal Processing algorithm based on the combination of a Wavelet Transform Analysis and Image Processing techniques is designed for assessing the delamination detectability of Lamb Waves generated with an innovative fully non-contact system in CFRP plates. Several Damage Indexes are extracted from the wavefields in spatial-time-frequency domain and plotted as surface cartographies to visualise their ability to size and localise artificial delaminations. Results show that the algorithm is efficient for characterising the waves propagation and that sophisticated Image comparison indexes show better ability to detect the artificial defects and to recognise healthy zones despite signal measurement and calculation uncertainties.},\n\tdoi = {10.1016/j.ultras.2024.107524},\n\tvolume = {147},\n\tissn = {0041-624X},\n\tnote = {Times Cited in Web of Science Core Collection: 5 Total Times Cited: 5 Cited Reference Count: 51 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ultras.2024.107524"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000130",
+      "entry_type": "article",
+      "title": "An Intelligent Monitoring System Based on Near-Infrared Spectroscopy for Renal Function Evaluation",
+      "authors": [
+        "Lin, CK",
+        "Lin, BS",
+        "Wang, YC",
+        "Lin, BS"
+      ],
+      "year": 2025,
+      "journal": "IEEE TRANSACTIONS ON INSTRUMENTATION AND MEASUREMENT",
+      "doi": "10.1109/tim.2025.3573006",
+      "abstract": "Severe sepsis can lead to renal dysfunction, which increases patient mortality. Assessing kidney function promptly and effectively is very important, in particular, in the intensive care unit (ICU). Several diagnostic methods have been developed to analyze renal state, including blood tests, urine tests, magnetic resonance angiography (MRA), ultrasonic testing (UT), and computed tomography angiography (CTA). However, the above approaches require longer testing time, experienced operators, and expensive costs, even the injection of special contrast media. Recently, near-infrared spectroscopy (NIRS) technology is utilized for continuously and non-invasively monitoring changes in tissue composition in many bio-applications. Since renal dysfunction may lead to peripheral vascular disease and limb edema, it may have the potential to indirectly assess renal status by detecting the changes in tissue hemoglobin and water content. Based on NIRS technology, this study proposed a smart system for renal function evaluation that indirectly assesses the renal status of patients with severe sepsis admitted to ICU. Here, several indexes, defined from the changes in tissue oxyhemoglobin, deoxyhemoglobin, and water content, were used to investigate the relationship between them and kidney status. Finally, a neural network technique was also applied in this system for effective classification of different kidney statuses. The experimental results indicated that kidney status was significantly reflected in some defined indexes and could be effectively evaluated by the designed system.",
+      "keywords": [
+        "Optical sensors",
+        "Wireless sensor networks",
+        "Wireless communication",
+        "Kidney",
+        "Blood",
+        "Sepsis",
+        "Indexes",
+        "Optical saturation",
+        "Training",
+        "Optical attenuators",
+        "Intensive care unit (ICU)",
+        "near-infrared spectroscopy (NIRS)",
+        "neural network",
+        "renal dysfunction",
+        "severe sepsis",
+        "PERIPHERAL-CIRCULATION",
+        "NEURAL-NETWORK",
+        "SEPSIS",
+        "ANGIOGRAPHY",
+        "PARAMETERS",
+        "ALGORITHM",
+        "RECOVERY",
+        "ARTERIES",
+        "FAILURE",
+        "INJURY"
+      ],
+      "normalized_title": "an intelligent monitoring system based on near infrared spectroscopy for renal function evaluation",
+      "raw_bibtex": "@ARTICLE{10.1109/TIM.2025.3573006,\n\tauthor = {Lin, CK and Lin, BS and Wang, YC and Lin, BS},\n\ttitle = {An Intelligent Monitoring System Based on Near-Infrared Spectroscopy for Renal Function Evaluation},\n\tjournal = {IEEE TRANSACTIONS ON INSTRUMENTATION AND MEASUREMENT},\n\tyear = {2025},\n\tkeywords = {Optical sensors; Wireless sensor networks; Wireless communication; Kidney; Blood; Sepsis; Indexes; Optical saturation; Training; Optical attenuators; Intensive care unit (ICU); near-infrared spectroscopy (NIRS); neural network; renal dysfunction; severe sepsis; PERIPHERAL-CIRCULATION; NEURAL-NETWORK; SEPSIS; ANGIOGRAPHY; PARAMETERS; ALGORITHM; RECOVERY; ARTERIES; FAILURE; INJURY},\n\tabstract = {Severe sepsis can lead to renal dysfunction, which increases patient mortality. Assessing kidney function promptly and effectively is very important, in particular, in the intensive care unit (ICU). Several diagnostic methods have been developed to analyze renal state, including blood tests, urine tests, magnetic resonance angiography (MRA), ultrasonic testing (UT), and computed tomography angiography (CTA). However, the above approaches require longer testing time, experienced operators, and expensive costs, even the injection of special contrast media. Recently, near-infrared spectroscopy (NIRS) technology is utilized for continuously and non-invasively monitoring changes in tissue composition in many bio-applications. Since renal dysfunction may lead to peripheral vascular disease and limb edema, it may have the potential to indirectly assess renal status by detecting the changes in tissue hemoglobin and water content. Based on NIRS technology, this study proposed a smart system for renal function evaluation that indirectly assesses the renal status of patients with severe sepsis admitted to ICU. Here, several indexes, defined from the changes in tissue oxyhemoglobin, deoxyhemoglobin, and water content, were used to investigate the relationship between them and kidney status. Finally, a neural network technique was also applied in this system for effective classification of different kidney statuses. The experimental results indicated that kidney status was significantly reflected in some defined indexes and could be effectively evaluated by the designed system.},\n\tdoi = {10.1109/TIM.2025.3573006},\n\tvolume = {74},\n\tissn = {0018-9456},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 53 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TIM.2025.3573006"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

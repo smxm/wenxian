@@ -1,0 +1,62 @@
+{
+  "project": {
+    "name": "精神疾病/心理应激（如抑郁、焦虑）对肿瘤患者预后（生存期、复发率、死亡率等）影响及相关机制-continue",
+    "output_dir": "tasks/c12dadd47e69/screening_run/screening_output",
+    "save_raw_response": true,
+    "save_intermediate_files": true
+  },
+  "input": {
+    "input_files": [
+      "tasks/c12dadd47e69/screening_run/inputs/scopus_export_Mar 27-2026_25976822-94ca-470d-a86e-d27610f0e8c1.ris"
+    ],
+    "encoding": "auto"
+  },
+  "dedup": {
+    "enabled": true,
+    "strict_doi_match": true,
+    "normalized_title_exact_match": true,
+    "fuzzy_title_match": false
+  },
+  "screening": {
+    "batch_size": 10,
+    "target_include_count": 30,
+    "stop_when_target_reached": false,
+    "allow_uncertain": true,
+    "retry_times": 6,
+    "request_timeout_seconds": 240
+  },
+  "criteria": {
+    "topic": "精神疾病/心理应激（如抑郁、焦虑）对肿瘤患者预后（生存期、复发率、死亡率等）影响及相关机制",
+    "inclusion": [
+      "必须同时涉及心理/精神因素（心理应激、抑郁、焦虑、精神障碍等）与肿瘤/癌症。",
+      "必须探讨上述因素对肿瘤预后的影响（如总生存期、无进展生存期、死亡率、复发率），或解释其背后的生物学/分子机制（如神经内分泌免疫调节、HPA轴等）。",
+      "文献类型需为高质量的综述 (Review)、大规模临床队列研究、荟萃分析 (Meta-analysis) 或高水平的机制探索性基础研究。"
+    ],
+    "exclusion": [
+      "仅研究心理因素或仅研究肿瘤，两者无交叉关联。",
+      "仅探讨确诊肿瘤后患者的心理状态或生活质量，但未涉及这些心理状态如何反过来影响“肿瘤预后/生存结局/肿瘤进展”。",
+      "研究对象仅为患者家属或医护人员的心理压力。",
+      "非英文文献。"
+    ]
+  },
+  "model": {
+    "provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "api_base_url": "https://api.deepseek.com/v1",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 1536,
+    "min_request_interval_seconds": 2.0
+  },
+  "report": {
+    "export_included_ris": true,
+    "export_excluded_ris": false,
+    "export_unused_ris": true,
+    "export_included_bib": false,
+    "export_excluded_bib": false,
+    "export_unused_bib": false,
+    "included_report_format": "md",
+    "excluded_report_format": "md",
+    "summary_format": "json"
+  }
+}

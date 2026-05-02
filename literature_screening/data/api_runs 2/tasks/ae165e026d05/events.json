@@ -1,0 +1,501 @@
+[
+  {
+    "id": "cb2e31c508ff",
+    "kind": "task-created",
+    "message": "Created screening task",
+    "metadata": {
+      "title": "机器学习在场地效应（Site Effects）评估与预测中的应用"
+    },
+    "created_at": "2026-03-25T15:20:16.328088+08:00"
+  },
+  {
+    "id": "7de3d0b99e64",
+    "kind": "task-started",
+    "message": "Task execution started",
+    "metadata": {
+      "attempt_count": 1
+    },
+    "created_at": "2026-03-25T15:20:16.334249+08:00"
+  },
+  {
+    "id": "80372b87fe7d",
+    "kind": "datasets-registered",
+    "message": "Registered screening output datasets",
+    "metadata": {
+      "output_dataset_ids": [
+        "76eb0470dc74",
+        "d0a94293b065"
+      ]
+    },
+    "created_at": "2026-03-25T15:22:35.079468+08:00"
+  },
+  {
+    "id": "d261e4f90d6a",
+    "kind": "task-succeeded",
+    "message": "Task completed successfully",
+    "metadata": {},
+    "created_at": "2026-03-25T15:22:35.084464+08:00"
+  },
+  {
+    "id": "68132ab49ce0",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000034 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000034",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "5f92cace1913",
+        "abc8e659ec1f"
+      ]
+    },
+    "created_at": "2026-03-25T16:18:37.432556+08:00"
+  },
+  {
+    "id": "2b6e5b305f5b",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000001 -> uncertain",
+    "metadata": {
+      "paper_id": "paper_000001",
+      "decision": "uncertain",
+      "output_dataset_ids": [
+        "e6ec65590e14",
+        "d39c551f981e"
+      ]
+    },
+    "created_at": "2026-03-25T16:18:52.627724+08:00"
+  },
+  {
+    "id": "19b0c71e9efa",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000001 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000001",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "10d64fcd87e7",
+        "35ce4d0894fc"
+      ]
+    },
+    "created_at": "2026-03-25T16:18:59.428143+08:00"
+  },
+  {
+    "id": "8b9e742f8ca4",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000017 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000017",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "0c1325fcb2c7",
+        "2e6db44db321"
+      ]
+    },
+    "created_at": "2026-03-25T16:19:07.709634+08:00"
+  },
+  {
+    "id": "8519ae6587d6",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000013 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000013",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "bf1eb24ed500",
+        "ea5df0c92685"
+      ]
+    },
+    "created_at": "2026-03-25T16:19:17.767648+08:00"
+  },
+  {
+    "id": "93543d76829d",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000014 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000014",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "b5e2993b0412",
+        "9f802e13a012"
+      ]
+    },
+    "created_at": "2026-03-25T16:19:24.178030+08:00"
+  },
+  {
+    "id": "9e5989870b5e",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000007 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000007",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "c3775c3f9f56",
+        "7004d8cd6701"
+      ]
+    },
+    "created_at": "2026-03-25T16:19:31.950975+08:00"
+  },
+  {
+    "id": "3c954b457d7c",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000034 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000034",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "47f947a212bd",
+        "56f6e3dcf0c9"
+      ]
+    },
+    "created_at": "2026-03-25T16:20:03.201165+08:00"
+  },
+  {
+    "id": "8b7d07b7a7cc",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000013 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000013",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "1e9ddd522378",
+        "e6b4ed8368a9"
+      ]
+    },
+    "created_at": "2026-03-25T16:21:09.265835+08:00"
+  },
+  {
+    "id": "99df6aa1b193",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000001 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000001",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "0653e258413f",
+        "15abb26bffb8"
+      ]
+    },
+    "created_at": "2026-03-25T16:21:21.225441+08:00"
+  },
+  {
+    "id": "e19d10fb30e9",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000001 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000001",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "ef37fd366b35",
+        "041ab7e888fd"
+      ]
+    },
+    "created_at": "2026-03-25T16:21:23.810059+08:00"
+  },
+  {
+    "id": "eadf3859f196",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000014 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000014",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "d452bc40fe09",
+        "1154cdb013d7"
+      ]
+    },
+    "created_at": "2026-03-25T16:21:27.408563+08:00"
+  },
+  {
+    "id": "cb26ed471844",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000034 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000034",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "641f2c40254f",
+        "be0499b2ca6f"
+      ]
+    },
+    "created_at": "2026-03-25T16:54:34.036149+08:00"
+  },
+  {
+    "id": "165678a62a75",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000001 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000001",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "7b7a5f900d11",
+        "6313662747c0"
+      ]
+    },
+    "created_at": "2026-03-25T16:55:17.237632+08:00"
+  },
+  {
+    "id": "0f2b538bd156",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000003 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000003",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "cd45db538446",
+        "40341ebc3f32"
+      ]
+    },
+    "created_at": "2026-03-25T16:55:39.943537+08:00"
+  },
+  {
+    "id": "05d5c1e40e2c",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000003 -> include",
+    "metadata": {
+      "paper_id": "paper_000003",
+      "decision": "include",
+      "output_dataset_ids": [
+        "2ba76448df46",
+        "b5ca2a90fa1f"
+      ]
+    },
+    "created_at": "2026-03-25T16:55:50.553185+08:00"
+  },
+  {
+    "id": "fc316602af59",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000002 -> include",
+    "metadata": {
+      "paper_id": "paper_000002",
+      "decision": "include",
+      "output_dataset_ids": [
+        "e8dceccf9462",
+        "af652fa0ead4"
+      ]
+    },
+    "created_at": "2026-03-25T16:56:00.373153+08:00"
+  },
+  {
+    "id": "01c1261554ad",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000002 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000002",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "04811c92a1ba",
+        "1a646affbf1f"
+      ]
+    },
+    "created_at": "2026-03-25T16:56:04.986896+08:00"
+  },
+  {
+    "id": "842af58645ad",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000001 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000001",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "3e3bc03b2713",
+        "6e8b94b307cc"
+      ]
+    },
+    "created_at": "2026-03-25T16:56:15.202797+08:00"
+  },
+  {
+    "id": "8b4f43a3cdd8",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000034 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000034",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "50183692d811",
+        "3595cf9733ba"
+      ]
+    },
+    "created_at": "2026-03-25T16:56:36.725275+08:00"
+  },
+  {
+    "id": "f45f2d30872a",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000007 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000007",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "52436b8802f2",
+        "389df522b5f7"
+      ]
+    },
+    "created_at": "2026-03-25T16:56:50.329815+08:00"
+  },
+  {
+    "id": "c37f9fe1b34b",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000001 -> uncertain",
+    "metadata": {
+      "paper_id": "paper_000001",
+      "decision": "uncertain",
+      "output_dataset_ids": [
+        "cd5493921597",
+        "e3450257f44d"
+      ]
+    },
+    "created_at": "2026-03-25T16:57:22.274672+08:00"
+  },
+  {
+    "id": "c0dbf42f325f",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000001 -> include",
+    "metadata": {
+      "paper_id": "paper_000001",
+      "decision": "include",
+      "output_dataset_ids": [
+        "a6f1a33e7941",
+        "d7c14bcd27cf"
+      ]
+    },
+    "created_at": "2026-03-25T16:57:36.610559+08:00"
+  },
+  {
+    "id": "8cfda116bd85",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000001 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000001",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "d8955a432beb",
+        "a8776f7f460b"
+      ]
+    },
+    "created_at": "2026-03-25T17:01:21.571144+08:00"
+  },
+  {
+    "id": "89f02a3fd50d",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000007 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000007",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "6882fb92b971",
+        "ba560bf994f7"
+      ]
+    },
+    "created_at": "2026-03-25T17:01:26.134360+08:00"
+  },
+  {
+    "id": "8106bab8df26",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000001 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000001",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "f0de3303bf6a",
+        "2c7f5a0168d4"
+      ]
+    },
+    "created_at": "2026-03-25T17:01:35.668897+08:00"
+  },
+  {
+    "id": "fca6560ae3f8",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000007 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000007",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "43207101369b",
+        "6f1693383678"
+      ]
+    },
+    "created_at": "2026-03-25T17:02:14.137989+08:00"
+  },
+  {
+    "id": "2cb176c239f7",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000001 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000001",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "e066283994e9",
+        "39b851397f95"
+      ]
+    },
+    "created_at": "2026-03-25T17:03:17.773061+08:00"
+  },
+  {
+    "id": "09d309c6e13e",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000007 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000007",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "a2a155aea62d",
+        "2f53a880674f"
+      ]
+    },
+    "created_at": "2026-03-25T17:10:29.813592+08:00"
+  },
+  {
+    "id": "9e7cd296ca0c",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000034 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000034",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "bec2eb7ece3f",
+        "dd6ffa3312ab"
+      ]
+    },
+    "created_at": "2026-03-25T17:10:45.602182+08:00"
+  },
+  {
+    "id": "3297dd00656c",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000017 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000017",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "d60477d6cc28",
+        "09594558620d"
+      ]
+    },
+    "created_at": "2026-03-25T17:11:31.240584+08:00"
+  },
+  {
+    "id": "116e7d667bed",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000013 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000013",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "55eb30ce3b82",
+        "5c127fbef988"
+      ]
+    },
+    "created_at": "2026-03-25T17:11:35.448996+08:00"
+  },
+  {
+    "id": "b31578971725",
+    "kind": "manual-review",
+    "message": "Reviewed paper_000014 -> exclude",
+    "metadata": {
+      "paper_id": "paper_000014",
+      "decision": "exclude",
+      "output_dataset_ids": [
+        "5a73bb505c34",
+        "ad11402e9661"
+      ]
+    },
+    "created_at": "2026-03-25T17:11:45.499056+08:00"
+  }
+]

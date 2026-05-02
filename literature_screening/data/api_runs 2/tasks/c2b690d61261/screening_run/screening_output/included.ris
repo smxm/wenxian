@@ -1,0 +1,185 @@
+TY  - JOUR
+AU  - Tsai, MF
+AU  - Huang, JY
+TI  - Sentiment analysis of pets using deep learning technologies in artificial intelligence of things system
+PY  - 2021
+JO  - SOFT COMPUTING
+DO  - 10.1007/s00500-021-06038-z
+AB  - This research paper proposes sentiment analysis of pets using deep learning technologies in the artificial intelligence of things system. Mask R-CNN is used to detect image objects and generate contour mask maps, pose analysis algorithms are used to obtain object posture information, and at the same time object sound signals are converted into spectrograms as features, using deep learning image recognition technology to obtain object emotion information. By using the fusion of object posture and emotional characteristics as the basis for pet emotion identification and analysis, the detected specific pet behaviour states will be actively notified to the owner for processing. Compared with traditional speech recognition, which uses mel-frequency cepstral coefficients for feature extraction, coupled with a Gaussian mixture model-hidden Markov model for voice recognition, the experimental method of this research paper effectively improves the accuracy by 70%. Prior work on the implementation of smart pet surveillance systems has used the pet's tail and mouth as features, and has combined these with sound features to analyse the pet's emotions. This research paper proposes a new method of sentiment analysis in pets, and our method is compared with previous related work. Experimental results show that our approach increases the accuracy rate by 70%.
+KW  - Sentiment analysis
+KW  - Deep learning
+KW  - Artificial intelligence of things
+KW  - FACIAL EXPRESSION
+ER  -
+
+TY  - JOUR
+AU  - Martvel, G
+AU  - Lazebnik, T
+AU  - Feighelstein, M
+AU  - Meller, S
+AU  - Shimshoni, I
+AU  - Finka, L
+AU  - Luna, SPL
+AU  - Mills, DS
+AU  - Volk, HA
+AU  - Zamansky, A
+TI  - Automated landmark-based cat facial analysis and its applications
+PY  - 2024
+JO  - FRONTIERS IN VETERINARY SCIENCE
+DO  - 10.3389/fvets.2024.1442634
+AB  - Facial landmarks, widely studied in human affective computing, are beginning to gain interest in the animal domain. Specifically, landmark-based geometric morphometric methods have been used to objectively assess facial expressions in cats, focusing on pain recognition and the impact of breed-specific morphology on facial signaling. These methods employed a 48-landmark scheme grounded in cat facial anatomy. Manually annotating these landmarks, however, is a labor-intensive process, deeming it impractical for generating sufficiently large amounts of data for machine learning purposes and for use in applied real-time contexts with cats. Our previous work introduced an AI pipeline for automated landmark detection, which showed good performance in standard machine learning metrics. Nonetheless, the effectiveness of fully automated, end-to-end landmark-based systems for practical cat facial analysis tasks remained underexplored. In this paper we develop AI pipelines for three benchmark tasks using two previously collected datasets of cat faces. The tasks include automated cat breed recognition, cephalic type recognition and pain recognition. Our fully automated end-to-end pipelines reached accuracy of 75% and 66% in cephalic type and pain recognition respectively, suggesting that landmark-based approaches hold promise for automated pain assessment and morphological explorations.
+KW  - artificial intelligence
+KW  - facial landmark
+KW  - cat behavior
+KW  - cat morphology
+KW  - pain assessment
+KW  - EMOTIONAL BEHAVIOR
+KW  - EQUINE PAIN
+KW  - EXPRESSION
+KW  - SCALE
+ER  -
+
+TY  - JOUR
+AU  - Chen, GY
+AU  - Takegawa, Y
+AU  - Matsumura, K
+AU  - Watanabe, H
+AU  - Hirata, K
+TI  - Cat and Dog Behavior Recognition Method Using Deep Learning Approach Based on Inertial Measurement Unit Sensor Data
+PY  - 2025
+JO  - SENSORS AND MATERIALS
+DO  - 10.18494/sam5359
+AB  - With the growing interest in enhancing the well-being of pets through advanced technology, in this study, we address the challenge of accurately recognizing animal behavior using wearable sensors and machine learning techniques. Existing methods are often restricted to recognizing behavior in a single species, limiting their potential for general application across different animal types. This shortcoming hinders broader applications in multi-species environments and results in inconsistent monitoring outcomes. In this research, we present an improved approach for animal behavior recognition by developing a 1D Convolutional Neural Network Long Short-Term Memory hybrid model specifically designed to process inertial measurement unit sensor data. By targeting the most relevant movement features using accelerometer, gyroscope, and magnetometer data, our model achieves a high degree of precision in classifying common activities among cats and dogs, with recognition accuracies of 89% for cats and 94% for dogs. The results validate the applicability of our model in diverse contexts, making it a promising tool for enhancing automated behavior monitoring in animal-computer interaction. This research contributes to the development of intelligent systems that improve pet care and lay the foundation for broader applications in animal welfare and behavioral studies.
+KW  - animal-computer interaction
+KW  - IoT
+KW  - wearable devices
+KW  - deep learning
+KW  - animal behavior recognition
+ER  -
+
+TY  - JOUR
+AU  - Tang, L
+AU  - Hu, SP
+AU  - Yang, CJ
+AU  - Deng, R
+AU  - Chen, AB
+AU  - Zhou, GX
+TI  - JL-TFMSFNet: A domestic cat sound emotion recognition method based on jointly learning the time-frequency domain and multi-scale features
+PY  - 2024
+JO  - EXPERT SYSTEMS WITH APPLICATIONS
+DO  - 10.1016/j.eswa.2024.124620
+AB  - There is a close biological relationship between cats and humans. Emotion recognition of domestic cat meows plays an essential role in human-animal relationships, animal-environment relationships, and animal conservation. This study proposed a deep learning network named JL-TFMSFNet. It jointly learns the time- frequency domain information and multi-scale features to recognize the sound emotions of domestic cats. Firstly, the Mel feature of the domestic cat's sound was extracted based on the Mel filter, using the proposed Multi-scale Feature Extraction Module (MFEM) to extract weighting information to generate a deeper one. Secondly, the semantic information in the spectrogram was learned from the time-frequency domain using the Time-Frequency Attention Mechanism (TFAM) proposed in the backbone network. Then, the Diverse Branch Block (DBB) module with the different receptive fields was added to improve the recognition performance. Finally, validation experiments were conducted on the self-built dataset Cat_Emotion_Sound (CES) nd the public dataset Urbansound8K. The experiments demonstrated that JL-TFMSFNet outperformed the state-of-the-art sound classification models. The average accuracies of the proposed model in this paper on these two datasets are 94.43% and 96.14%, and the F1-score are 94.01% and 95.65%.
+KW  - Sound emotion recognition (SER)
+KW  - Domestic cat
+KW  - Multi-scale feature extraction module (MFEM)
+KW  - EfficientNet
+KW  - Time-frequency attention mechanism (TFAM)
+KW  - CLASSIFICATION
+KW  - FUSION
+ER  -
+
+TY  - JOUR
+AU  - Martvel, G
+AU  - Lazebnik, T
+AU  - Feighelstein, M
+AU  - Henze, L
+AU  - Meller, S
+AU  - Shimshoni, I
+AU  - Twele, F
+AU  - Schütter, A
+AU  - Foraita, N
+AU  - Kästner, S
+AU  - Finka, L
+AU  - Luna, SPL
+AU  - Mills, DS
+AU  - Volk, HA
+AU  - Zamansky, A
+TI  - Automated video-based pain recognition in cats using facial landmarks
+PY  - 2024
+JO  - SCIENTIFIC REPORTS
+DO  - 10.1038/s41598-024-78406-2
+AB  - Affective states are reflected in the facial expressions of all mammals. Facial behaviors linked to pain have attracted most of the attention so far in non-human animals, leading to the development of numerous instruments for evaluating pain through facial expressions for various animal species. Nevertheless, manual facial expression analysis is susceptible to subjectivity and bias, is labor-intensive and often necessitates specialized expertise and training. This challenge has spurred a growing body of research into automated pain recognition, which has been explored for multiple species, including cats. In our previous studies, we have presented and studied artificial intelligence (AI) pipelines for automated pain recognition in cats using 48 facial landmarks grounded in cats' facial musculature, as well as an automated detector of these landmarks. However, so far automated recognition of pain in cats used solely static information obtained from hand-picked single images of good quality. This study takes a significant step forward in fully automated pain detection applications by presenting an end-to-end AI pipeline that requires no manual efforts in the selection of suitable images or their landmark annotation. By working with video rather than still images, this new pipeline approach also optimises the temporal dimension of visual information capture in a way that is not practical to preform manually. The presented pipeline reaches over 70% and 66% accuracy respectively in two different cat pain datasets, outperforming previous automated landmark-based approaches using single frames under similar conditions, indicating that dynamics matter in cat pain recognition. We further define metrics for measuring different dimensions of deficiencies in datasets with animal pain faces, and investigate their impact on the performance of the presented pain recognition AI pipeline.
+KW  - EQUINE PAIN
+KW  - EXPRESSION
+KW  - DYNAMICS
+KW  - HUMANS
+ER  -
+
+TY  - JOUR
+AU  - Feighelstein, M
+AU  - Henze, L
+AU  - Meller, S
+AU  - Shimshoni, I
+AU  - Hermoni, B
+AU  - Berko, M
+AU  - Twele, F
+AU  - Schütter, A
+AU  - Dorn, N
+AU  - Kästner, S
+AU  - Finka, L
+AU  - Luna, SPL
+AU  - Mills, DS
+AU  - Volk, HA
+AU  - Zamansky, A
+TI  - Explainable automated pain recognition in cats
+PY  - 2023
+JO  - SCIENTIFIC REPORTS
+DO  - 10.1038/s41598-023-35846-6
+AB  - Manual tools for pain assessment from facial expressions have been suggested and validated for several animal species. However, facial expression analysis performed by humans is prone to subjectivity and bias, and in many cases also requires special expertise and training. This has led to an increasing body of work on automated pain recognition, which has been addressed for several species, including cats. Even for experts, cats are a notoriously challenging species for pain assessment. A previous study compared two approaches to automated 'pain'/'no pain' classification from cat facial images: a deep learning approach, and an approach based on manually annotated geometric landmarks, reaching comparable accuracy results. However, the study included a very homogeneous dataset of cats and thus further research to study generalizability of pain recognition to more realistic settings is required. This study addresses the question of whether AI models can classify 'pain'/'no pain' in cats in a more realistic (multi-breed, multi-sex) setting using a more heterogeneous and thus potentially 'noisy' dataset of 84 client-owned cats. Cats were a convenience sample presented to the Department of Small Animal Medicine and Surgery of the University of Veterinary Medicine Hannover and included individuals of different breeds, ages, sex, and with varying medical conditions/medical histories. Cats were scored by veterinary experts using the Glasgow composite measure pain scale in combination with the well-documented and comprehensive clinical history of those patients; the scoring was then used for training AI models using two different approaches. We show that in this context the landmark-based approach performs better, reaching accuracy above 77% in pain detection as opposed to only above 65% reached by the deep learning approach. Furthermore, we investigated the explainability of such machine recognition in terms of identifying facial features that are important for the machine, revealing that the region of nose and mouth seems more important for machine pain classification, while the region of ears is less important, with these findings being consistent across the models and techniques studied here.
+KW  - FACIAL EXPRESSION
+KW  - DOGS
+KW  - VETERINARIANS
+KW  - ATTITUDES
+KW  - GENDER
+KW  - SCALE
+ER  -
+
+TY  - JOUR
+AU  - Feighelstein, M
+AU  - Shimshoni, I
+AU  - Finka, LR
+AU  - Luna, SPL
+AU  - Mills, DS
+AU  - Zamansky, A
+TI  - Automated recognition of pain in cats
+PY  - 2022
+JO  - SCIENTIFIC REPORTS
+DO  - 10.1038/s41598-022-13348-1
+AB  - Facial expressions in non-human animals are closely linked to their internal affective states, with the majority of empirical work focusing on facial shape changes associated with pain. However, existing tools for facial expression analysis are prone to human subjectivity and bias, and in many cases also require special expertise and training. This paper presents the first comparative study of two different paths towards automatizing pain recognition in facial images of domestic short haired cats (n = 29), captured during ovariohysterectomy at different time points corresponding to varying intensities of pain. One approach is based on convolutional neural networks (ResNet50), while the other-on machine learning models based on geometric landmarks analysis inspired by species specific Facial Action Coding Systems (i.e. catFACS). Both types of approaches reach comparable accuracy of above 72%, indicating their potential usefulness as a basis for automating cat pain detection from images.
+KW  - FACIAL EXPRESSION
+KW  - EQUINE PAIN
+KW  - VALIDATION
+KW  - GENDER
+ER  -
+
+TY  - JOUR
+AU  - Boneh-Shitrit, T
+AU  - Finka, L
+AU  - Mills, DS
+AU  - Luna, SP
+AU  - Dalla Costa, E
+AU  - Zamansky, A
+AU  - Bremhorst, A
+TI  - A segment-based framework for explainability in animal affective computing
+PY  - 2025
+JO  - SCIENTIFIC REPORTS
+DO  - 10.1038/s41598-025-96634-y
+AB  - Recent developments in animal motion tracking and pose recognition have revolutionized the study of animal behavior. More recent efforts extend beyond tracking towards affect recognition using facial and body language analysis, with far-reaching applications in animal welfare and health. Deep learning models are the most commonly used in this context. However, their "black box" nature poses a significant challenge to explainability, which is vital for building trust and encouraging adoption among researchers. Despite its importance, the field of explainability and its quantification remains under-explored. Saliency maps are among the most widely used methods for explainability, where each pixel is assigned a significance level indicating its relevance to the neural network's decision. Although these maps are frequently used in research, they are predominantly applied qualitatively, with limited methods for quantitatively analyzing them or identifying the most suitable method for a specific task. In this paper, we propose a framework aimed at enhancing explainability in the field of animal affective computing. Assuming the availability of a classifier for a specific affective state and the ability to generate saliency maps, our approach focuses on evaluating and comparing visual explanations by emphasizing the importance of meaningful semantic parts captured as segments, which are thought to be closely linked to behavioral indicators of affective states. Furthermore, our approach introduces a quantitative scoring mechanism to assess how well the saliency maps generated by a given classifier align with predefined semantic regions. This scoring system allows for systematic, measurable comparisons of different pipelines in terms of their visual explanations within animal affective computing. Such a metric can serve as a quality indicator when developing classifiers for known biologically relevant segments or help researchers assess whether a classifier is using expected meaningful regions when exploring new potential indicators. We evaluated the framework using three datasets focused on cat and horse pain and dog emotions. Across all datasets, the generated explanations consistently revealed that the eye area is the most significant feature for the classifiers. These results highlight the potential of the explainability frameworks such as the suggested one to uncover new insights into how machines 'see' animal affective states.
+ER  -
+
+TY  - JOUR
+AU  - Austermann, A
+AU  - Yamada, S
+TI  - Teaching a pet-robot to understand user feedback through interactive virtual training tasks
+PY  - 2010
+JO  - AUTONOMOUS AGENTS AND MULTI-AGENT SYSTEMS
+DO  - 10.1007/s10458-009-9095-8
+AB  - In this paper, we present a human-robot teaching framework that uses "virtual" games as a means for adapting a robot to its user through natural interaction in a controlled environment. We present an experimental study in which participants instruct an AIBO pet robot while playing different games together on a computer generated playfield. By playing the games and receiving instruction and feedback from its user, the robot learns to understand the user's typical way of giving multimodal positive and negative feedback. The games are designed in such a way that the robot can reliably predict positive or negative feedback based on the game state and explore its user's reward behavior by making good or bad moves. We implemented a two-staged learning method combining Hidden Markov Models and a mathematical model of classical conditioning to learn how to discriminate between positive and negative feedback. The system combines multimodal speech and touch input for reliable recognition. After finishing the training, the system was able to recognize positive and negative reward with an average accuracy of 90.33%.
+KW  - User feedback
+KW  - Multimodality
+KW  - Conditioning
+KW  - Human-robot-interaction
+KW  - Machine learning
+KW  - Hidden Markov Models
+KW  - Training tasks
+ER  -

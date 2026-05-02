@@ -1,0 +1,244 @@
+{
+  "batch_id": "batch_0006",
+  "paper_count": 9,
+  "paper_ids": [
+    "paper_000051",
+    "paper_000052",
+    "paper_000053",
+    "paper_000054",
+    "paper_000055",
+    "paper_000056",
+    "paper_000057",
+    "paper_000058",
+    "paper_000059"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000051",
+      "entry_type": "article",
+      "title": "KSCNet: Exploring KAN and state space model collaboration network for small object detection from UAV imagery",
+      "authors": [
+        "Li, Y.",
+        "Xu, H.",
+        "Sun, Y.",
+        "Zhu, P.",
+        "Xu, L.",
+        "Zhu, X."
+      ],
+      "year": 2026,
+      "journal": "Expert Systems with Applications",
+      "doi": "10.1016/j.eswa.2025.130240",
+      "abstract": "Detecting small objects in aerial images taken by unmanned aerial vehicles (UAVs) has become a crucial research challenge in the field of computer vision. This challenge is attributable to the following primary factors: the small size of the targets, the complexity of the background and the inadequate feature fusion, which makes small targets more susceptible to limited effective information and inferior detection performance. To address this issues, we propose a collaboration network that integrates Kolmogorov-Arnold Networks (KAN) and State Space Model (SSM) to improve the small target detection performance from UAV imagery. Specifically, we employ the KAN inserted into original YOLO11 architecture as primary backbone for feature extraction, which is sufficient to decompose complex high-dimensional data into simple one-dimensional function combinations so as to efficiently explore features with strong expressive power. We design Semantic Aggregation Network (SAN) to perform highly-effective multiscale feature fusion of global patterns. The SSM module plays a crucial role in SAN, which has been demonstrated to exhibit a superior capacity to adapt to a variety of input data types through its distinctive scanning strategy and dynamic weighting mechanism, especially for the complicated UAV images. An efficient Depthwise Channel Attention (DCA) is developed to reduce the aliasing effect generated from fused feature via lightweight channel dimension refinement. Extensive experiments on the public UAV datasets have been conducted to validate the effectiveness of KSCNet. Concretely, KSCNet performs 0.844 mAP@50 and 0.691 (Formula presented) on the SIMD dataset, achieving 1.69% and 2.22% accuracy improvement compared with baseline. Moreover, KSCNet also accomplishes 4.82% and 5.11% accuracy increase on the VisDrone validation set and 4.43% and 6.16% boost on the VisDrone test set at mAP@50 and (Formula presented) respectively, indicating that the KSCNet demonstrates excellent performance in the UAV small object detection task, providing substantial technical support for applications in related domains. © 2025 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies.",
+      "keywords": [],
+      "normalized_title": "kscnet exploring kan and state space model collaboration network for small object detection from uav imagery",
+      "raw_bibtex": "@ARTICLE{10.1016/j.eswa.2025.130240,\n\tauthor = {Li, Y. and Xu, H. and Sun, Y. and Zhu, P. and Xu, L. and Zhu, X.},\n\ttitle = {KSCNet: Exploring KAN and state space model collaboration network for small object detection from UAV imagery},\n\tjournal = {Expert Systems with Applications},\n\tyear = {2026},\n\tabstract = {Detecting small objects in aerial images taken by unmanned aerial vehicles (UAVs) has become a crucial research challenge in the field of computer vision. This challenge is attributable to the following primary factors: the small size of the targets, the complexity of the background and the inadequate feature fusion, which makes small targets more susceptible to limited effective information and inferior detection performance. To address this issues, we propose a collaboration network that integrates Kolmogorov-Arnold Networks (KAN) and State Space Model (SSM) to improve the small target detection performance from UAV imagery. Specifically, we employ the KAN inserted into original YOLO11 architecture as primary backbone for feature extraction, which is sufficient to decompose complex high-dimensional data into simple one-dimensional function combinations so as to efficiently explore features with strong expressive power. We design Semantic Aggregation Network (SAN) to perform highly-effective multiscale feature fusion of global patterns. The SSM module plays a crucial role in SAN, which has been demonstrated to exhibit a superior capacity to adapt to a variety of input data types through its distinctive scanning strategy and dynamic weighting mechanism, especially for the complicated UAV images. An efficient Depthwise Channel Attention (DCA) is developed to reduce the aliasing effect generated from fused feature via lightweight channel dimension refinement. Extensive experiments on the public UAV datasets have been conducted to validate the effectiveness of KSCNet. Concretely, KSCNet performs 0.844 mAP@50 and 0.691 (Formula presented) on the SIMD dataset, achieving 1.69% and 2.22% accuracy improvement compared with baseline. Moreover, KSCNet also accomplishes 4.82% and 5.11% accuracy increase on the VisDrone validation set and 4.43% and 6.16% boost on the VisDrone test set at mAP@50 and (Formula presented) respectively, indicating that the KSCNet demonstrates excellent performance in the UAV small object detection task, providing substantial technical support for applications in related domains. © 2025 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies.},\n\tdoi = {10.1016/j.eswa.2025.130240},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105023823695&doi=10.1016%2Fj.eswa.2025.130240&partnerID=40&md5=950c44dba1d5181f601dd011f2edb4b6},\n\tvolume = {299},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.eswa.2025.130240"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000052",
+      "entry_type": "article",
+      "title": "HF-D-FINE: High-resolution features enhanced D-FINE for tiny object detection in UAV image",
+      "authors": [
+        "Hu, Q.",
+        "Wang, L."
+      ],
+      "year": 2026,
+      "journal": "Image and Vision Computing",
+      "doi": "10.1016/j.imavis.2025.105834",
+      "abstract": "Real-time detection in UAV-captured imagery remains a formidable challenge, primarily attributed to the inherent tension between high detection performance and strict computational economy. To address this dilemma, we introduce HF-D-FINE, a novel object-detection paradigm that builds upon the D-FINE architecture and comprises three effective innovations. The HF Hybrid Encoder alleviates the loss of fine-grained detail by selectively injecting high-resolution cues from the backbone’s feature pyramid into the encoder, thereby enriching the representation of minute instances. Complementarily, the CAF module performs cross-scale feature fusion by integrating channel-attentive mechanisms and dynamic upsampling, enabling more expressive interactions between multi-level semantics and spatial cues. Finally, Outer-SNWD introduces aspect ratio consistency penalty factor and auxiliary boxes based on the advantages of Shape-IoU and NWD, making it more suitable for tiny object detection tasks. Collectively, these components substantially elevate tiny object detection accuracy while preserving low computational overhead. Extensive experiments on the widely-adopted aerial benchmarks VisDrone, AI-TOD, and UAVDT demonstrate that HF-D-FINE achieves superior accuracy with a tiny increase in FLOPs. In the VisDrone dataset, the AP value is increased by 3.2% compared with D-FINE-S, and the AP50value is increased by 4.3%, confirming its efficacy and superiority for tiny object detection in UAV image. © 2025 Elsevier B.V. All rights are reserved, including those for text and data mining, AI training, and similar technologies.",
+      "keywords": [],
+      "normalized_title": "hf d fine high resolution features enhanced d fine for tiny object detection in uav image",
+      "raw_bibtex": "@ARTICLE{10.1016/j.imavis.2025.105834,\n\tauthor = {Hu, Q. and Wang, L.},\n\ttitle = {HF-D-FINE: High-resolution features enhanced D-FINE for tiny object detection in UAV image},\n\tjournal = {Image and Vision Computing},\n\tyear = {2026},\n\tabstract = {Real-time detection in UAV-captured imagery remains a formidable challenge, primarily attributed to the inherent tension between high detection performance and strict computational economy. To address this dilemma, we introduce HF-D-FINE, a novel object-detection paradigm that builds upon the D-FINE architecture and comprises three effective innovations. The HF Hybrid Encoder alleviates the loss of fine-grained detail by selectively injecting high-resolution cues from the backbone’s feature pyramid into the encoder, thereby enriching the representation of minute instances. Complementarily, the CAF module performs cross-scale feature fusion by integrating channel-attentive mechanisms and dynamic upsampling, enabling more expressive interactions between multi-level semantics and spatial cues. Finally, Outer-SNWD introduces aspect ratio consistency penalty factor and auxiliary boxes based on the advantages of Shape-IoU and NWD, making it more suitable for tiny object detection tasks. Collectively, these components substantially elevate tiny object detection accuracy while preserving low computational overhead. Extensive experiments on the widely-adopted aerial benchmarks VisDrone, AI-TOD, and UAVDT demonstrate that HF-D-FINE achieves superior accuracy with a tiny increase in FLOPs. In the VisDrone dataset, the AP value is increased by 3.2% compared with D-FINE-S, and the AP50value is increased by 4.3%, confirming its efficacy and superiority for tiny object detection in UAV image. © 2025 Elsevier B.V. All rights are reserved, including those for text and data mining, AI training, and similar technologies.},\n\tdoi = {10.1016/j.imavis.2025.105834},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105024364244&doi=10.1016%2Fj.imavis.2025.105834&partnerID=40&md5=92bad08d572f828f24123c2331dac5a9},\n\tvolume = {165},\n\tnote = {Export Date: 25 March 2026; Cited By: 2 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.imavis.2025.105834"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000053",
+      "entry_type": "article",
+      "title": "An Efficient Single and Multiple Object Tracking and Reidentification Framework for Drone Based Surveillance",
+      "authors": [
+        "Micheal, A.A.",
+        "Micheal, A.A.",
+        "Anurekha, G.",
+        "Barathi, B.U.A."
+      ],
+      "year": 2026,
+      "journal": "Journal of the Indian Society of Remote Sensing",
+      "doi": "10.1007/s12524-025-02402-w",
+      "abstract": "Drones are increasingly utilized in surveillance applications, where object tracking and reidentification are crucial. This manuscript proposes a novel framework for single and multiple object tracking and reidentification in drone-based surveillance. The framework utilizes You Only Look Once Neural Architecture Search (YOLO-NAS) for object detection. YOLO-NAS incorporates quantization-aware blocks and selective quantization offering accurate detection. Further on, a confluence-based non-maximum suppression technique is applied to detect object in various occluded scenarios. The proposed framework includes a novel object tracker, the Densely Connected Bidirectional Long Short Term Memory tracker (DC-Bi-LSTM), which extracts spatial and visual features from YOLO-NAS. A novel occlusion handling reidentification mechanism is designed for single and multiple objects. The proposed framework is evaluated against state-of-the-art models using the VisDrone, UAV123, and UAVDT datasets. A comprehensive ablation study is conducted on the UAV123 dataset, demonstrating that the proposed framework outperforms other models, achieving a Precision of 97.19%, Recall of 97.8%, MOTA of 94.53%, Rel.ID of 9.26%, and F-score of 97.49%. © Indian Society of Remote Sensing 2026.",
+      "keywords": [],
+      "normalized_title": "an efficient single and multiple object tracking and reidentification framework for drone based surveillance",
+      "raw_bibtex": "@ARTICLE{10.1007/s12524-025-02402-w,\n\tauthor = {Micheal, A.A. and Micheal, A.A. and Anurekha, G. and Barathi, B.U.A.},\n\ttitle = {An Efficient Single and Multiple Object Tracking and Reidentification Framework for Drone Based Surveillance},\n\tjournal = {Journal of the Indian Society of Remote Sensing},\n\tyear = {2026},\n\tabstract = {Drones are increasingly utilized in surveillance applications, where object tracking and reidentification are crucial. This manuscript proposes a novel framework for single and multiple object tracking and reidentification in drone-based surveillance. The framework utilizes You Only Look Once Neural Architecture Search (YOLO-NAS) for object detection. YOLO-NAS incorporates quantization-aware blocks and selective quantization offering accurate detection. Further on, a confluence-based non-maximum suppression technique is applied to detect object in various occluded scenarios. The proposed framework includes a novel object tracker, the Densely Connected Bidirectional Long Short Term Memory tracker (DC-Bi-LSTM), which extracts spatial and visual features from YOLO-NAS. A novel occlusion handling reidentification mechanism is designed for single and multiple objects. The proposed framework is evaluated against state-of-the-art models using the VisDrone, UAV123, and UAVDT datasets. A comprehensive ablation study is conducted on the UAV123 dataset, demonstrating that the proposed framework outperforms other models, achieving a Precision of 97.19%, Recall of 97.8%, MOTA of 94.53%, Rel.ID of 9.26%, and F-score of 97.49%. © Indian Society of Remote Sensing 2026.},\n\tdoi = {10.1007/s12524-025-02402-w},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105028275599&doi=10.1007%2Fs12524-025-02402-w&partnerID=40&md5=439e8c39d8c89e6694db6eb4f715b7c7},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1007/s12524-025-02402-w"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000054",
+      "entry_type": "article",
+      "title": "RSTR: An Efficient Detection Network with Cross-Attention Multiscale Feature Aggregation for Remote Sensing Applications",
+      "authors": [
+        "Guo, F.",
+        "Chen, Z.",
+        "Xin, H.",
+        "Ye, J.",
+        "Zheng, G."
+      ],
+      "year": 2026,
+      "journal": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+      "doi": "10.1109/jstars.2026.3665809",
+      "abstract": "Remote sensing scenes exhibit severe scale imbalance, dense layouts, and heavy background clutter, often reducing objects of interest to only a few pixels. Existing detectors typically exhibit a high miss rate under these challenging conditions. We present RSTR (Remote Sensing Detection Transformer), a transformer-based framework optimized for tiny-object detection in complex backgrounds. Specifically, we introduce a novel cross-attention multi-scale feature pyramid network (CMFPN) that captures cross-scale interactions and fuses high-level semantics with low-level details to strengthen representations of minute targets. A deformable patch-wise attention (DPA) module links global context and local detail to increase attention to tiny objects across channels and spatial positions, improving detectability. A lightweight FocusBlock accelerates inference while preserving cues for tiny targets and maintaining a small parameter budget, achieving a favorable speed-accuracy trade-off. We further design FMIoU, a loss function that improves learning from low-confidence predictions and reduces false positives and missed detections for tiny objects. Relative to comparable baselines, RSTR reduces the number of parameters by 39.8% and computation by 16.2%, indicating a stronger accuracy-efficiency balance. Extensive experiments demonstrate that RSTR achieves AP50 scores of 51.3%, 58.8%, and 78.0% on the VisDrone, AI-TOD, and DIOR datasets, respectively. RSTR also yields substantial gains over the RT-DETR baseline and other detectors on tiny-object benchmarks, providing an effective solution for tiny object detection in remote sensing imagery. © 2008-2012 IEEE.",
+      "keywords": [],
+      "normalized_title": "rstr an efficient detection network with cross attention multiscale feature aggregation for remote sensing applications",
+      "raw_bibtex": "@ARTICLE{10.1109/JSTARS.2026.3665809,\n\tauthor = {Guo, F. and Chen, Z. and Xin, H. and Ye, J. and Zheng, G.},\n\ttitle = {RSTR: An Efficient Detection Network with Cross-Attention Multiscale Feature Aggregation for Remote Sensing Applications},\n\tjournal = {IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing},\n\tyear = {2026},\n\tabstract = {Remote sensing scenes exhibit severe scale imbalance, dense layouts, and heavy background clutter, often reducing objects of interest to only a few pixels. Existing detectors typically exhibit a high miss rate under these challenging conditions. We present RSTR (Remote Sensing Detection Transformer), a transformer-based framework optimized for tiny-object detection in complex backgrounds. Specifically, we introduce a novel cross-attention multi-scale feature pyramid network (CMFPN) that captures cross-scale interactions and fuses high-level semantics with low-level details to strengthen representations of minute targets. A deformable patch-wise attention (DPA) module links global context and local detail to increase attention to tiny objects across channels and spatial positions, improving detectability. A lightweight FocusBlock accelerates inference while preserving cues for tiny targets and maintaining a small parameter budget, achieving a favorable speed-accuracy trade-off. We further design FMIoU, a loss function that improves learning from low-confidence predictions and reduces false positives and missed detections for tiny objects. Relative to comparable baselines, RSTR reduces the number of parameters by 39.8% and computation by 16.2%, indicating a stronger accuracy-efficiency balance. Extensive experiments demonstrate that RSTR achieves AP50 scores of 51.3%, 58.8%, and 78.0% on the VisDrone, AI-TOD, and DIOR datasets, respectively. RSTR also yields substantial gains over the RT-DETR baseline and other detectors on tiny-object benchmarks, providing an effective solution for tiny object detection in remote sensing imagery. © 2008-2012 IEEE.},\n\tdoi = {10.1109/JSTARS.2026.3665809},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105030705567&doi=10.1109%2FJSTARS.2026.3665809&partnerID=40&md5=cbad2dc9216ee16be81feb898b577a72},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1109/JSTARS.2026.3665809"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000055",
+      "entry_type": "article",
+      "title": "Visual Detection Algorithms for Counter-UAV in Low-Altitude Air Defense",
+      "authors": [
+        "Li, M.",
+        "Li, H.",
+        "Zhu, J.",
+        "Zhang, X."
+      ],
+      "year": 2026,
+      "journal": "Computers, Materials and Continua",
+      "doi": "10.32604/cmc.2025.072406",
+      "abstract": "To address the challenge of real-time detection of unauthorized drone intrusions in complex low-altitude urban environments such as parks and airports, this paper proposes an enhanced MBS-YOLO (Multi-Branch Small Target Detection YOLO) model for anti-drone object detection, based on the YOLOv8 architecture. To overcome the limitations of existing methods in detecting small objects within complex backgrounds, we designed a C2f-Pu module with excellent feature extraction capability and a more compact parameter set, aiming to reduce the model’s computational complexity. To improve multi-scale feature fusion, we construct a Multi-Branch Feature Pyramid Network (MB-FPN) that employs a cross-level feature fusion strategy to enhance the model’s representation of small objects. Additionally, a shared detail-enhanced detection head is introduced to address the large size variations of Unmanned Aerial Vehicle (UAV) targets, thereby improving detection performance across different scales. Experimental results demonstrate that the proposed model achieves consistent improvements across multiple benchmarks. On the Det-Fly dataset, it improves precision by 3%, recall by 5.6%, and mAP50 by 4.5% compared with the baseline, while reducing parameters by 21.2%. Cross-validation on the VisDrone dataset further validates its robustness, yielding additional gains of 3.2% in precision, 6.1% in recall, and 4.8% in mAP50 over the original YOLOv8. These findings confirm the effectiveness of the proposed algorithm in enhancing UAV detection performance under complex scenarios. Copyright © 2025 The Authors.",
+      "keywords": [],
+      "normalized_title": "visual detection algorithms for counter uav in low altitude air defense",
+      "raw_bibtex": "@ARTICLE{10.32604/cmc.2025.072406,\n\tauthor = {Li, M. and Li, H. and Zhu, J. and Zhang, X.},\n\ttitle = {Visual Detection Algorithms for Counter-UAV in Low-Altitude Air Defense},\n\tjournal = {Computers, Materials and Continua},\n\tyear = {2026},\n\tabstract = {To address the challenge of real-time detection of unauthorized drone intrusions in complex low-altitude urban environments such as parks and airports, this paper proposes an enhanced MBS-YOLO (Multi-Branch Small Target Detection YOLO) model for anti-drone object detection, based on the YOLOv8 architecture. To overcome the limitations of existing methods in detecting small objects within complex backgrounds, we designed a C2f-Pu module with excellent feature extraction capability and a more compact parameter set, aiming to reduce the model’s computational complexity. To improve multi-scale feature fusion, we construct a Multi-Branch Feature Pyramid Network (MB-FPN) that employs a cross-level feature fusion strategy to enhance the model’s representation of small objects. Additionally, a shared detail-enhanced detection head is introduced to address the large size variations of Unmanned Aerial Vehicle (UAV) targets, thereby improving detection performance across different scales. Experimental results demonstrate that the proposed model achieves consistent improvements across multiple benchmarks. On the Det-Fly dataset, it improves precision by 3%, recall by 5.6%, and mAP50 by 4.5% compared with the baseline, while reducing parameters by 21.2%. Cross-validation on the VisDrone dataset further validates its robustness, yielding additional gains of 3.2% in precision, 6.1% in recall, and 4.8% in mAP50 over the original YOLOv8. These findings confirm the effectiveness of the proposed algorithm in enhancing UAV detection performance under complex scenarios. Copyright © 2025 The Authors.},\n\tdoi = {10.32604/cmc.2025.072406},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105027301921&doi=10.32604%2Fcmc.2025.072406&partnerID=40&md5=74a94586c88778ddb50761565e78aebf},\n\tvolume = {86},\n\tnumber = {3},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.32604/cmc.2025.072406"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000056",
+      "entry_type": "article",
+      "title": "FES-DETR: efficient UAV object detector with frequency-domain enhancement across spatial-domain",
+      "authors": [
+        "Qian, R.",
+        "You, C."
+      ],
+      "year": 2026,
+      "journal": "Journal of Real-Time Image Processing",
+      "doi": "10.1007/s11554-026-01854-8",
+      "abstract": "With the wide application of Unmanned Aerial Vehicles (UAVs), the issue of missed and false detection of small objects in aerial photography needs to be solved. Most current works on small object detection either utilize more complex backbone networks or incorporate multiple manually designed modules within the feature fusion network. These approaches lead to an increase in the computational cost of the model while accuracy improvement is limited. To address the aforementioned challenges, this paper proposes FES-DETR, an efficient DEtection TRansformer (DETR) framework tailored for UAV imagery. Firstly, a multi-scale feature fusion method with frequency-domain enhancement across the spatial domain is proposed to enhance feature extraction by combining high-frequency feature information of imagery. Then, a lightweight low-loss downsampling module is proposed to avoid loss of feature information during image compression. Moreover, a small object detector head for high-resolution feature maps is added to improve the detection performance of small-scale features. Finally, an Inner-WIoU loss function is used to enhance convergence speed and accuracy. Experimental results indicate that FES-DETR achieves mAP@0.5 of 54.7% and mAP@0.5:0.95 of 34.5% on VisDrone, an 8.1% and 6.1% improvement over the baseline model, respectively. © The Author(s), under exclusive licence to Springer-Verlag GmbH Germany, part of Springer Nature 2026.",
+      "keywords": [],
+      "normalized_title": "fes detr efficient uav object detector with frequency domain enhancement across spatial domain",
+      "raw_bibtex": "@ARTICLE{10.1007/s11554-026-01854-8,\n\tauthor = {Qian, R. and You, C.},\n\ttitle = {FES-DETR: efficient UAV object detector with frequency-domain enhancement across spatial-domain},\n\tjournal = {Journal of Real-Time Image Processing},\n\tyear = {2026},\n\tabstract = {With the wide application of Unmanned Aerial Vehicles (UAVs), the issue of missed and false detection of small objects in aerial photography needs to be solved. Most current works on small object detection either utilize more complex backbone networks or incorporate multiple manually designed modules within the feature fusion network. These approaches lead to an increase in the computational cost of the model while accuracy improvement is limited. To address the aforementioned challenges, this paper proposes FES-DETR, an efficient DEtection TRansformer (DETR) framework tailored for UAV imagery. Firstly, a multi-scale feature fusion method with frequency-domain enhancement across the spatial domain is proposed to enhance feature extraction by combining high-frequency feature information of imagery. Then, a lightweight low-loss downsampling module is proposed to avoid loss of feature information during image compression. Moreover, a small object detector head for high-resolution feature maps is added to improve the detection performance of small-scale features. Finally, an Inner-WIoU loss function is used to enhance convergence speed and accuracy. Experimental results indicate that FES-DETR achieves mAP@0.5 of 54.7% and mAP@0.5:0.95 of 34.5% on VisDrone, an 8.1% and 6.1% improvement over the baseline model, respectively. © The Author(s), under exclusive licence to Springer-Verlag GmbH Germany, part of Springer Nature 2026.},\n\tdoi = {10.1007/s11554-026-01854-8},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105027725577&doi=10.1007%2Fs11554-026-01854-8&partnerID=40&md5=58e39140f9a29d4b5204d7fc3de3f2c8},\n\tvolume = {23},\n\tnumber = {1},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1007/s11554-026-01854-8"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000057",
+      "entry_type": "article",
+      "title": "AMSF-YOLO: An attention-based multi-scale feature extraction model for UAV small object detection",
+      "authors": [
+        "Dewangan, B.",
+        "Srinivas, M."
+      ],
+      "year": 2026,
+      "journal": "Pattern Recognition",
+      "doi": "10.1016/j.patcog.2026.113303",
+      "abstract": "This study presents the Attention-based Multi-Scale Feature Extraction (AMSF) model, an improved object detection framework designed to increase computing efficiency and accuracy. Three new feature extraction methods are included in the AMSF model: the Dilated-Residual Group (DRG), the Enhanced Attention Module (EAM), and the Spatial Pyramid Pooling Fusion Plus (SPPFPLUS) block. For effective multi-scale feature aggregation, the SPPFPLUS block employs a lightweight squeeze-and-excitation attention method for dynamic feature weighting. By integrating spatial and channel attention methods, the EAM enables the model to highlight relevant elements in both dimensions. By using global context aggregation, multi-scale dilated convolutions, and residual learning, the DRG module improves feature extraction while efficiently capturing a variety of contextual information. These elements work together to create a strong and effective object identification model that can handle objects of different sizes and complicated surroundings while still operating in real time. The Proposed AMSF model outperforms state-of-the-art models in experimental assessments on two benchmark datasets, VisDrone-DET2019 and GlobalWheat2020, with improvements of +4.1% mAP on VisDrone and +6.4% mAP on GlobalWheat. © 2026 Elsevier Ltd",
+      "keywords": [],
+      "normalized_title": "amsf yolo an attention based multi scale feature extraction model for uav small object detection",
+      "raw_bibtex": "@ARTICLE{10.1016/j.patcog.2026.113303,\n\tauthor = {Dewangan, B. and Srinivas, M.},\n\ttitle = {AMSF-YOLO: An attention-based multi-scale feature extraction model for UAV small object detection},\n\tjournal = {Pattern Recognition},\n\tyear = {2026},\n\tabstract = {This study presents the Attention-based Multi-Scale Feature Extraction (AMSF) model, an improved object detection framework designed to increase computing efficiency and accuracy. Three new feature extraction methods are included in the AMSF model: the Dilated-Residual Group (DRG), the Enhanced Attention Module (EAM), and the Spatial Pyramid Pooling Fusion Plus (SPPFPLUS) block. For effective multi-scale feature aggregation, the SPPFPLUS block employs a lightweight squeeze-and-excitation attention method for dynamic feature weighting. By integrating spatial and channel attention methods, the EAM enables the model to highlight relevant elements in both dimensions. By using global context aggregation, multi-scale dilated convolutions, and residual learning, the DRG module improves feature extraction while efficiently capturing a variety of contextual information. These elements work together to create a strong and effective object identification model that can handle objects of different sizes and complicated surroundings while still operating in real time. The Proposed AMSF model outperforms state-of-the-art models in experimental assessments on two benchmark datasets, VisDrone-DET2019 and GlobalWheat2020, with improvements of +4.1% mAP on VisDrone and +6.4% mAP on GlobalWheat. © 2026 Elsevier Ltd},\n\tdoi = {10.1016/j.patcog.2026.113303},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105030657994&doi=10.1016%2Fj.patcog.2026.113303&partnerID=40&md5=cb101bc383f68cb9c4b3f384ee83b417},\n\tvolume = {177},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.patcog.2026.113303"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000058",
+      "entry_type": "article",
+      "title": "MFA-YOLO: a multi-feature aggregation approach for small-object detection method in drone imagery",
+      "authors": [
+        "Li, S.",
+        "Chen, C."
+      ],
+      "year": 2026,
+      "journal": "Scientific Reports",
+      "doi": "10.1038/s41598-025-32247-9",
+      "abstract": "The rapid evolution of drone technology has expanded its applications across collaborative control, public safety, and aerial imaging, yet reliable object detection remains a challenge due to small target sizes and complex backgrounds in drone-captured imagery. To address these limitations, this paper introduces MFA-YOLO, a high-precision network specifically optimized for small-object detection in drone imagery. The proposed approach integrates three innovations: the Local Feature Mapping (LFM) unit for enhanced fine-grained feature extraction, the Progressive Shared Atrous Pyramid (PSAP) for efficient multi-scale feature integration, and the Dynamic Decoupling Head (DDH) for improved adaptive task alignment. Through these components, MFA-YOLO enhances representational capacity while preserving real-time inference efficiency. Experimental evaluations on the VisDrone benchmark demonstrate a 3.6% increase in AP50, a 2.4% increase in AP, and a 17% reduction in model parameters compared to YOLOv8n. Additional experiments on UAVDT further indicate the model’s promising generalization across similar drone datasets. These results highlight MFA-YOLO’s potential to advance drone-based perception systems, making them more effective and efficient for safety-critical and real-time applications in resource-constrained UAV environments, such as public safety monitoring, surveillance, and autonomous aerial operations. © The Author(s) 2025.",
+      "keywords": [],
+      "normalized_title": "mfa yolo a multi feature aggregation approach for small object detection method in drone imagery",
+      "raw_bibtex": "@ARTICLE{10.1038/s41598-025-32247-9,\n\tauthor = {Li, S. and Chen, C.},\n\ttitle = {MFA-YOLO: a multi-feature aggregation approach for small-object detection method in drone imagery},\n\tjournal = {Scientific Reports},\n\tyear = {2026},\n\tabstract = {The rapid evolution of drone technology has expanded its applications across collaborative control, public safety, and aerial imaging, yet reliable object detection remains a challenge due to small target sizes and complex backgrounds in drone-captured imagery. To address these limitations, this paper introduces MFA-YOLO, a high-precision network specifically optimized for small-object detection in drone imagery. The proposed approach integrates three innovations: the Local Feature Mapping (LFM) unit for enhanced fine-grained feature extraction, the Progressive Shared Atrous Pyramid (PSAP) for efficient multi-scale feature integration, and the Dynamic Decoupling Head (DDH) for improved adaptive task alignment. Through these components, MFA-YOLO enhances representational capacity while preserving real-time inference efficiency. Experimental evaluations on the VisDrone benchmark demonstrate a 3.6% increase in AP50, a 2.4% increase in AP, and a 17% reduction in model parameters compared to YOLOv8n. Additional experiments on UAVDT further indicate the model’s promising generalization across similar drone datasets. These results highlight MFA-YOLO’s potential to advance drone-based perception systems, making them more effective and efficient for safety-critical and real-time applications in resource-constrained UAV environments, such as public safety monitoring, surveillance, and autonomous aerial operations. © The Author(s) 2025.},\n\tdoi = {10.1038/s41598-025-32247-9},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105027986665&doi=10.1038%2Fs41598-025-32247-9&partnerID=40&md5=713960df796a4667c2ec6ac528db143a},\n\tvolume = {16},\n\tnumber = {1},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1038/s41598-025-32247-9"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000059",
+      "entry_type": "article",
+      "title": "A CNN-Enhanced AeroYOLOv3-c2f Framework for Vehicle Detection and Classification in Aerial Imagery via Hybrid Feature Optimization",
+      "authors": [
+        "Parachoori, S.K.",
+        "Sujatha, K."
+      ],
+      "year": 2026,
+      "journal": "Journal of Circuits, Systems and Computers",
+      "doi": "10.1142/s0218126625504602",
+      "abstract": "This paper introduces an effective and fast deep learning model for detecting and classifying vehicles in aerial images to address typical problems of small size, background clutter and unfavorable weather. The AeroYOLOv3-c2f-LSKA pipeline is suggested, which combines improved pre-processing, a combination of handcrafted and deep features, optimized feature selection, attention-guided object detection, and transformer-based classification. The most important innovations are the application of biologically inspired hybrid optimization Piranha Foraging Optimization Algorithm-Secretary Bird Optimization (PFOA-SBO), for feature selection, and the addition of c2f and Large Separable Kernel Attention (LSKA) to the YOLOv3 backbone to enhance localization performance in complicated scenes. Multi-class vehicle classification is further improved using a Vision Transformer. Experimental analysis on VisDrone dataset demonstrates that the proposed model has a better performance with an accuracy of 99.81%, F1-score of 99.80% and inference speed of 41 FPS compared to YOLOv8 and other state-of-The-Art models. These findings prove the applicability of the framework in real-Time applications of aerial surveillance. © 2026 World Scientific Publishing Company.",
+      "keywords": [],
+      "normalized_title": "a cnn enhanced aeroyolov3 c2f framework for vehicle detection and classification in aerial imagery via hybrid feature optimization",
+      "raw_bibtex": "@ARTICLE{10.1142/S0218126625504602,\n\tauthor = {Parachoori, S.K. and Sujatha, K.},\n\ttitle = {A CNN-Enhanced AeroYOLOv3-c2f Framework for Vehicle Detection and Classification in Aerial Imagery via Hybrid Feature Optimization},\n\tjournal = {Journal of Circuits, Systems and Computers},\n\tyear = {2026},\n\tabstract = {This paper introduces an effective and fast deep learning model for detecting and classifying vehicles in aerial images to address typical problems of small size, background clutter and unfavorable weather. The AeroYOLOv3-c2f-LSKA pipeline is suggested, which combines improved pre-processing, a combination of handcrafted and deep features, optimized feature selection, attention-guided object detection, and transformer-based classification. The most important innovations are the application of biologically inspired hybrid optimization Piranha Foraging Optimization Algorithm-Secretary Bird Optimization (PFOA-SBO), for feature selection, and the addition of c2f and Large Separable Kernel Attention (LSKA) to the YOLOv3 backbone to enhance localization performance in complicated scenes. Multi-class vehicle classification is further improved using a Vision Transformer. Experimental analysis on VisDrone dataset demonstrates that the proposed model has a better performance with an accuracy of 99.81%, F1-score of 99.80% and inference speed of 41 FPS compared to YOLOv8 and other state-of-The-Art models. These findings prove the applicability of the framework in real-Time applications of aerial surveillance. © 2026 World Scientific Publishing Company.},\n\tdoi = {10.1142/S0218126625504602},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105017447566&doi=10.1142%2FS0218126625504602&partnerID=40&md5=a035b6019305c88ea355270144babd38},\n\tvolume = {35},\n\tnumber = {6},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1142/S0218126625504602"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

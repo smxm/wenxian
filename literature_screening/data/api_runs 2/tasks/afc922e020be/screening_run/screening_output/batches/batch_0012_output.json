@@ -1,0 +1,45 @@
+{
+  "batch_id": "batch_0012",
+  "results": [
+    {
+      "paper_id": "paper_000111",
+      "decision": "exclude",
+      "reason": "标题和摘要均未提及辐射暴露，研究主题为塑料餐具热暴露对肠道菌群的影响，与筛选主题无关。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000112",
+      "decision": "exclude",
+      "reason": "标题和摘要均未提及辐射暴露，研究主题为微塑料对猴子肠道菌群的影响，与筛选主题无关。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000113",
+      "decision": "uncertain",
+      "reason": "摘要明确提及低剂量辐射（LDR）调节肠道菌群改善糖尿病，但未明确是否为职业性暴露或模拟职业暴露条件。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000114",
+      "decision": "exclude",
+      "reason": "摘要提及辐射性肠炎，但病例为宫颈癌放疗患者，属于大剂量急性暴露，不符合职业暴露特征。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "id": "143d01a87fb8",
+  "kind": "report",
+  "status": "succeeded",
+  "cancel_requested": false,
+  "title": "基于BIM技术的某项目施工图预算-report",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 8,
+  "progress_total": 8,
+  "progress_message": "Task completed",
+  "created_at": "2026-04-07T19:34:12.108998+08:00",
+  "updated_at": "2026-04-07T19:35:28.206233+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "2555381c3888",
+    "project_topic": "基于BIM技术的某项目施工图预算",
+    "model_provider": "deepseek",
+    "source_screening_task_id": null,
+    "input_dataset_ids": [
+      "fulltext-ready"
+    ],
+    "request_payload": {
+      "title": "基于BIM技术的某项目施工图预算-report",
+      "project_id": "2555381c3888",
+      "screening_task_id": null,
+      "dataset_ids": [
+        "fulltext-ready"
+      ],
+      "project_topic": "基于BIM技术的某项目施工图预算",
+      "model": {
+        "provider": "deepseek",
+        "model_name": "deepseek-chat",
+        "api_base_url": "https://api.deepseek.com/v1",
+        "api_key_env": "DEEPSEEK_API_KEY",
+        "temperature": 0.0,
+        "max_tokens": 1536,
+        "min_request_interval_seconds": 2.0
+      },
+      "report_name": "simple_report",
+      "retry_times": 6,
+      "timeout_seconds": 240,
+      "reference_style": "gbt7714"
+    },
+    "virtual_dataset_paths": [
+      "projects/2555381c3888/derived/fulltext_ready.ris"
+    ],
+    "model_secret_id": "0353c13ef8be420d"
+  },
+  "summary": {
+    "report_name": "simple_report",
+    "reference_style": "gbt7714",
+    "reference_override_applied": true
+  },
+  "error": null,
+  "artifacts": {
+    "literature_report": {
+      "path": "tasks/143d01a87fb8/report_output/literature_report.md",
+      "filename": "literature_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 10707
+    },
+    "paper_notes": {
+      "path": "tasks/143d01a87fb8/report_output/paper_notes.json",
+      "filename": "paper_notes.json",
+      "content_type": "application/json",
+      "size_bytes": 8062
+    },
+    "report_overview": {
+      "path": "tasks/143d01a87fb8/report_output/report_overview.json",
+      "filename": "report_overview.json",
+      "content_type": "application/json",
+      "size_bytes": 1777
+    },
+    "literature_report_reviewed": {
+      "path": "tasks/143d01a87fb8/report_output/reviewed/literature_report.reviewed.md",
+      "filename": "literature_report.reviewed.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 10810
+    },
+    "references_reviewed": {
+      "path": "tasks/143d01a87fb8/report_output/reviewed/references.reviewed.txt",
+      "filename": "references.reviewed.txt",
+      "content_type": "text/plain; charset=utf-8",
+      "size_bytes": 1466
+    }
+  },
+  "run_root": "tasks/143d01a87fb8",
+  "output_dir": "tasks/143d01a87fb8/report_output",
+  "markdown_preview": "# 一、相关文献总体情况\n\n这批文献围绕基于BIM技术的施工图预算主题，系统探讨了BIM在工程量计算、成本估算和施工管理中的应用。研究主要关注自动化工程量提取、精度验证、系统集成与优化等关键技术，涵盖从综述分析到具体框架开发的多个层面。文献分布上，既有对BIM应用现状与挑战的系统综述，也有针对自动化提取、质量控制、进度关联、工作流优化等具体场景的技术实现与案例验证，体现了从理论到实践的完整研究链条。\n\n# 二、类型划分\n\n## 综述与现状分析\n\n这类文献通过系统综述或案例研究，综合分析了BIM技术在工程量计算和成本估算中的应用现状、益处、挑战及未来发展方向，为项目提供理论支撑和实施参考。\n\n- BIM-based quantity takeoff: Current state and future opportunities\n- Applying Building Information Modelling (BIM) Technology in Pre-Tender Cost Estimation of Construction Projects: A Case Study in Iran\n\n## 自动化工程量提取与精度控制\n\n这类文献聚焦于开发自动化框架或系统，利用BIM自动提取施工工程量，并通过集成精度检查、规则验证或质量控制模块来提高提取结果的准确性和可靠性。\n\n- Automated system for high-accuracy quantity takeoff using BIM\n- A Cloud-Driven Framework for Automated BIM Quantity Takeoff and Quality Control: Case Study Insights\n- BIM-Based Automatic Extraction of Daily Concrete and Formwork Requirements for Site Work Planning\n\n## 系统集成与工作流优化\n\n这类文献探讨如何通过集成BIM与其他技术（如进度计划、优化算法、虚拟现实）或开发自定义工作流，实现施工信息的高效集成、成本估算的自动化以及项目管理的优化。\n\n- BIM-based flowchart for improving road construction planning and management\n- A Decision Support System for Optimizing Labor Acquisition in Construction\n- Cost Estimation Model Based on Building Information Modeling and Virtual Reality for Customizing Presold Homes\n\n# 三、逐篇文献总结分析\n\n## BIM-based quantity takeoff: Current state and future opportunities\n\n总结：\n本文采用PRISMA方法对52篇期刊文章进行系统综述，探讨了基于BIM的工程量计算（QTO）方法的现状、益处、挑战及未来机遇。通过文献计量分析，识别了管理、专业技能、软件功能和实施成本等方面的关键问题，并提出了软件开发与专业人员培训等未来发展方向。研究贡献了一个综合可持续的BIM-based QTO实施概念模型。\n\n分析：\n该文献为基于BIM技术的施工图预算项目提供了系统性的证据整合，适合支撑BIM在工程量计算中的应用机制和优化路径。它点明了软件功能改进和专业人员培训等具体应用场景，有助于指导项目在预算编制中克服实施障碍并提升效率。\n\n## Automated system for high-accuracy quantity takeoff using BIM\n\n总结：\n该文献开发了一个集成框架，利用建筑信息模型（BIM）自动提取和可视化施工工程量，并包含一个数量精度检查模块以提高准确性。系统通过外部数据库和Microsoft Power BI仪表板实现数据传递与可视化，支持二维与BIM工程量对比及设计变更跟踪。在加拿大基础设施项目中验证显示，系统识别了墙体材料数量39%的不一致性，并因设计变更减少了10%的钢材用量，为成本估算和决策提供高效工具。\n\n分析：\n该文献对于基于BIM技术的施工图预算主题具有重要参考价值，其自动化工程量提取和精度检查机制可直接支撑预算编制中的数量计算环节。系统可视化功能适用于设计变更影响分析，有助于项目成本控制团队快速响应变更并优化采购决策。\n\n## A Cloud-Driven Framework for Automated BIM Quantity Takeoff and Quality Control: Case Study Insights\n\n总结：\n本研究提出了一种基于云的自动化BIM工程量提取与质量控制框架，通过集成规则驱动的数量精度检查机制，确保从已验证的BIM数据中提取工程量。该框架采用开放数据标准，支持跨团队协作，并通过案例研究验证了其在检测参数不一致性、提高提取结果准确性方面的有效性。研究还引入了五项定量验证指标来评估系统性能，但当前验证仅限于单一项目，需进一步测试以确认其可扩展性。\n\n分析：\n该文献为基于BIM技术的施工图预算项目提供了自动化工程量提取与质量控制的系统设计参考，其云驱动框架和规则验证机制可直接应用于预算编制中的工程量计算环节。文献中提出的定量验证指标（如数量精度改进率）可用于评估预算系统的准确性提升效果，而案例研究中的参数一致性检测方法有助于优化预算数据源的质量管理流程。\n\n## BIM-Based Automatic Extraction of Daily Concrete and Formwork Requirements for Site Work Planning\n\n总结：\n本研究开发了一个基于BIM的框架，用于自动提取区域混凝土体积和模板位置，并将其与项目进度关联，以估算每日混凝土和模板需求。该框架通过创新算法计算混凝土构件重叠区域，并引入进度任务命名规则，无需在3D模型中绘制模板即可评估需求。\n\n分析：\n该文献为基于BIM技术的施工图预算项目提供了具体机制参考，特别是自动提取和进度关联的方法，适用于支撑材料需求估算和减少浪费的系统设计。它有助于优化施工计划中的资源分配，提升预算编制的准确性和效率。\n\n## BIM-based flowchart for improving road construction planning and management\n\n总结：\n该文献研究了如何通过基于BIM的工作流程改善单车道道路项目中施工信息的集成。通过开发基于Autodesk Civil 3D和Dynamo的自定义插件工作流，实现了道路实体的自动虚拟分割、时间和成本属性集的定义以及IFC格式导出。应用结果表明，该方法提高了互操作性，减少了建模时间和错误，并为道路基础设施的5D BIM工作流自动化提供了基础。\n\n分析：\n该文献为基于BIM技术的施工图预算项目提供了具体的技术实现路径，特别是通过自定义插件实现时间和成本数据自动集成的工作机制。其基于IFC标准的数据导出方法可直接支撑项目中的预算数据交换需求，而针对道路实体的虚拟分割技术则适用于处理线性基础设施的精细化预算分解场景。\n\n## A Decision Support System for Optimizing Labor Acquisition in Construction\n\n总结：\n该研究提出了一种决策支持系统，通过集成BIM设计数据和施工进度计划，并采用多目标优化模型来优化劳动力获取。该系统利用Revit与Primavera P6的定制集成实现5D BIM，基于NSGA-II算法平衡劳动力释放、重新雇佣、闲置和成本等因素。验证结果显示，该系统能有效减少劳动力波动和成本，提升施工项目的协调性和效率。\n\n分析：\n该文献对于基于BIM技术的施工图预算项目具有参考价值，因为它展示了如何将BIM与施工进度优化结合，支撑动态劳动力管理机制。它适用于需要减少劳动力波动和成本的施工应用场景，为系统设计提供了集成BIM和优化算法的实践案例，有助于提升预算控制的精确性和项目执行效率。\n\n## Cost Estimation Model Based on Building Information Modeling and Virtual Reality for Customizing Presold Homes\n\n总结：\n本研究设计了一个整合建筑信息模型（BIM）与虚拟现实（VR）的系统，用于预售住宅定制。该系统允许客户在沉浸式VR环境中即时修改并查看房屋样式，同时通过链接材料单价数据库自动计算变更成本。结果表明，该系统能准确快速实现成本估算，并确保BIM与虚拟环境信息的一致性，促进了BIM在建筑设计后生命周期阶段的应用。\n\n分析：\n该文献为基于BIM技术的施工图预算项目提供了直接参考，展示了BIM与VR集成在成本估算中的具体应用机制。它适合支撑预售住宅定制场景下的变更管理与实时预算系统设计，为项目预算的动态调整和客户沟通提供了技术实现思路。\n\n## Applying Building Information Modelling (BIM) Technology in Pre-Tender Cost Estimation of Construction Projects: A Case Study in Iran\n\n总结：\n本研究探讨了建筑信息模型（BIM）技术在伊朗建筑项目投标前成本估算中的应用。通过案例研究，发现BIM模型能提高估算精度并缩短时间，同时提出了评估BIM模型质量的创新框架。结果表明，BIM相比传统方法在准确性和效率方面具有优势，并建议结合AI技术以提升模型评估。\n\n分析：\n该文献为基于BIM技术的施工图预算主题提供了实证支持，展示了BIM在成本估算中的具体应用场景和机制。它适合支撑项目早期预算编制和系统设计，特别是针对提高估算精度和效率的研究脉络，有助于整合BIM与AI技术在实际项目中的实施策略。\n\n# 参考列表\n\n[1] ALATHAMNEH S, COLLINS W, AZHAR S. BIM-based quantity takeoff: Current state and future opportunities[J]. Automation in Construction, 2024, 165: 105549.\n[2] VALINEJADSHOUBI M, MOSELHI O, IORDANOVA I, et al. Automated system for high-accuracy quantity takeoff using BIM[J]. Automation in Construction, 2024, 157: 105155.\n[3] VALINEJADSHOUBI M, MOSELHI O, IORDANOVA I, et al. A Cloud-Driven Framework for Automated BIM Quantity Takeoff and Quality Control: Case Study Insights[J]. Buildings, 2025, 15(21): 3942.\n[4] PHAM V H, CHEN P H, NGUYEN Q, et al. BIM-Based Automatic Extraction of Daily Concrete and Formwork Requirements for Site Work Planning[J]. Buildings, 2024, 14(12): 4021.\n[5] PEÑA C A, CAMACHO-TORREGROSA F J, GARCÍA A. BIM-based flowchart for improving road construction planning and management[J]. Automation in Construction, 2026, 184: 106845.\n[6] JAISWAL S, KAR S. A Decision Support System for Optimizing Labor Acquisition in Construction[J]. Journal of Construction Engineering and Management, 2025, 151(12): 04025211.\n[7] WANG K C, TUNG S H. Cost Estimation Model Based on Building Information Modeling and Virtual Reality for Customizing Presold Homes[J]. KSCE Journal of Civil Engineering, 2023, 27(4): 1397-1411.\n[8] RASHIDI A, CHAN D W M, RAVANSHADNIA M, et al. Applying Building Information Modelling (BIM) Technology in Pre-Tender Cost Estimation of Construction Projects: A Case Study in Iran[J]. Buildings, 2024, 14(5): 1260.\n",
+  "records": [],
+  "project_id": "2555381c3888",
+  "project_topic": "基于BIM技术的某项目施工图预算",
+  "model_provider": "deepseek",
+  "input_dataset_ids": [
+    "fulltext-ready"
+  ]
+}

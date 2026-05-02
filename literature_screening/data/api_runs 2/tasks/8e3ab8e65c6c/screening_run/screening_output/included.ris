@@ -1,0 +1,31 @@
+TY  - CONF
+AU  - Zhan, Y.
+AU  - Feng, F.
+TI  - Detection and Identification of Strip Surface Defects Based on Deep Learning
+PY  - 2022
+JO  - Proceedings - 2022 International Conference on Machine Learning and Intelligent Systems Engineering, MLISE 2022
+DO  - 10.1109/mlise57402.2022.00086
+AB  - As one of the important product forms in the steel industry, strip steel plays an irreplaceable role in daily production and life. However, in real life, due to the use of raw materials and the manufacturing process, there are many defects on the surface of strip steel. These defects will not only affect the appearance of strip steel, but also cause significant economic losses. Therefore, it is particularly important to accurately detect these defects on the surface of strip steel. Aiming at the problem that there are many tiny defects in strip steel, which can easily lead to missed detection, this paper improves it based on Faster R-CNN detection algorithm, uses ResNet50+FPN method to extract features to prevent missing tiny defect details, and uses ROI Align instead of ROI Pooling to perform pool operation of defect location. Because the position deviation caused by the two quantization operations of ROI Pooling can prevent the slight defect of missing detection, the experimental verification finally shows that the improved measures effectively improve the accuracy of strip surface detection compared with the previous detection algorithm. © 2022 IEEE.
+ER  -
+
+TY  - CONF
+AU  - Liang, C.
+AU  - Bai, S.
+TI  - Multiple Prototype Guided Enhanced Network for Few-Shot Steel Surface Defect Segmentation
+PY  - 2024
+JO  - 2024 5th International Conference on Computer Vision, Image and Deep Learning, CVIDL 2024
+DO  - 10.1109/cvidl62147.2024.10604061
+AB  - Few-shot semantic segmentation techniques can effectively alleviate the high data costs associated with industrial applications. The task of metal surface defect segmentation, due to the numerous types of defects and limited data availability, is highly suited for the application of few-shot semantic segmentation techniques. However, current methods for handling multiple defects in support images may result in semantic shifts in the global prototype due to mask average pooling (MAP). In this paper, we propose the Multiple Prototype Guided Enhanced Network (MPENet). We propose a multiple prototype mask average mask pooling (Multi-MAP) operation to extract each defect region as a prototype and guidance enhancement module to leverage these multiple prototypes to enhance the global prototype. The final experimental results demonstrate that MPENet can achieves state-of-the-art performance on the FSSD12 dataset with minimal increase in learnable parameters. © 2024 IEEE.
+ER  -
+
+TY  - CONF
+AU  - Zheng, Y.
+AU  - Du, M.
+AU  - Zhao, L.
+AU  - Peng, C.
+TI  - Metal Surface Defect Detection based on Variable Mask Ratio Multi-scale Reconstruction
+PY  - 2025
+JO  - ICMR 2025 - Proceedings of the 2025 International Conference on Multimedia Retrieval
+DO  - 10.1145/3731715.3733485
+AB  - Metal surface defect detection plays a critical role in ensuring product quality in industrial manufacturing. Traditional detection methods often suffer from incomplete feature extraction and limited defective samples, hindering the performance of supervised learning. This paper explores the potential of Vision Transformer (ViT) for metal surface defect detection by addressing domain shift issues and improving training speed. We propose a semi-supervised anomaly detection method based on a Transformer network, using a variable masking ratio to integrate generative modeling with representation learning. By fusing features from a convolutional-Transformer encoder, we utilize a feature pyramid network and a frozen pre-trained hierarchical encoder to generate multi-scale features. By employing these technologies, the proposed method captures fine-grained anomalies effectively, providing a robust solution for detecting diverse defect types. The experimental results on benchmark datasets demonstrate that the proposed method outperforms state-of-the-art defect detection techniques. © 2025 ACM.
+ER  -

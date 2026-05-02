@@ -1,0 +1,396 @@
+{
+  "batch_id": "batch_0004",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000031",
+    "paper_000032",
+    "paper_000033",
+    "paper_000034",
+    "paper_000035",
+    "paper_000036",
+    "paper_000037",
+    "paper_000038",
+    "paper_000039",
+    "paper_000040"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000031",
+      "entry_type": "article",
+      "title": "A Novel Method for Early Fatigue Damage Diagnosis in 316L Stainless Steel Formed by Selective Laser Melting Technology",
+      "authors": [
+        "Yan, XL",
+        "Tang, XJ"
+      ],
+      "year": 2023,
+      "journal": "MATERIALS",
+      "doi": "10.3390/ma16093363",
+      "abstract": "Early fatigue damage is an important factor affecting the service safety of 316L stainless steel parts formed by selective laser melting (SLM) technology. Nonlinear ultrasonic testing for early fatigue damage in SLM 316L stainless steel specimens was carried out. A new method for evaluation of early fatigue damage based on nonlinear ultrasonic testing was proposed. Empirical mode decomposition (EMD) was applied to the unsteady ultrasonic testing signal, and the signal was decomposed into multiple intrinsic mode functions (IMFs) that meet certain conditions; then, the specific IMF (ESI) containing the effective fatigue damage information was extracted. Lastly, fast Fourier transform (FFT) was applied to the specific IMF signal to obtain the required information to evaluate the damage in the measured part caused by fatigue. The results of nonlinear ultrasonic testing agreed well with transmission electron microscope experimental analysis and theoretical model of acoustic nonlinearity caused by dislocations. The change in nonlinear ultrasonic testing results reflected the generation and evolution of dislocation structure during the low-cycle fatigue regime of the SLM 316L stainless steel specimen and revealed the early fatigue damage mechanism of this metal part. Compared with the classical FFT method, the EMD-ESI-FFT method is more sensitive in identifying the early damage in SLM 316L stainless parts induced by fatigue loading, which is equivalent to improving the early fatigue damage identification and diagnosis ability and can better ensure the service safety of important metal parts.",
+      "keywords": [
+        "nonlinear ultrasonic",
+        "early fatigue damage",
+        "selective laser melting",
+        "signal processing",
+        "reliability",
+        "ULTRASONIC 2ND",
+        "3RD HARMONICS",
+        "GENERATION",
+        "CRACK"
+      ],
+      "normalized_title": "a novel method for early fatigue damage diagnosis in 316l stainless steel formed by selective laser melting technology",
+      "raw_bibtex": "@ARTICLE{10.3390/ma16093363,\n\tauthor = {Yan, XL and Tang, XJ},\n\ttitle = {A Novel Method for Early Fatigue Damage Diagnosis in 316L Stainless Steel Formed by Selective Laser Melting Technology},\n\tjournal = {MATERIALS},\n\tyear = {2023},\n\tkeywords = {nonlinear ultrasonic; early fatigue damage; selective laser melting; signal processing; reliability; ULTRASONIC 2ND; 3RD HARMONICS; GENERATION; CRACK},\n\tabstract = {Early fatigue damage is an important factor affecting the service safety of 316L stainless steel parts formed by selective laser melting (SLM) technology. Nonlinear ultrasonic testing for early fatigue damage in SLM 316L stainless steel specimens was carried out. A new method for evaluation of early fatigue damage based on nonlinear ultrasonic testing was proposed. Empirical mode decomposition (EMD) was applied to the unsteady ultrasonic testing signal, and the signal was decomposed into multiple intrinsic mode functions (IMFs) that meet certain conditions; then, the specific IMF (ESI) containing the effective fatigue damage information was extracted. Lastly, fast Fourier transform (FFT) was applied to the specific IMF signal to obtain the required information to evaluate the damage in the measured part caused by fatigue. The results of nonlinear ultrasonic testing agreed well with transmission electron microscope experimental analysis and theoretical model of acoustic nonlinearity caused by dislocations. The change in nonlinear ultrasonic testing results reflected the generation and evolution of dislocation structure during the low-cycle fatigue regime of the SLM 316L stainless steel specimen and revealed the early fatigue damage mechanism of this metal part. Compared with the classical FFT method, the EMD-ESI-FFT method is more sensitive in identifying the early damage in SLM 316L stainless parts induced by fatigue loading, which is equivalent to improving the early fatigue damage identification and diagnosis ability and can better ensure the service safety of important metal parts.},\n\tdoi = {10.3390/ma16093363},\n\tvolume = {16},\n\tnumber = {9},\n\tissn = {1996-1944},\n\tnote = {Times Cited in Web of Science Core Collection: 4 Total Times Cited: 4 Cited Reference Count: 43 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/ma16093363"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000032",
+      "entry_type": "article",
+      "title": "Attention-enhanced semi-supervised graph neural network for binary imaging of subsurface defects with laser ultrasonics",
+      "authors": [
+        "Zhang, WX",
+        "Kang, XF",
+        "Chen, D",
+        "Guo, SF",
+        "Gong, T",
+        "Zhang, YJ",
+        "Xu, L",
+        "Liang, ZF"
+      ],
+      "year": 2025,
+      "journal": "NONDESTRUCTIVE TESTING AND EVALUATION",
+      "doi": "10.1080/10589759.2025.2526168",
+      "abstract": "This paper proposes a deep learning-based ultrasonic imaging method specifically designed to classify signals located at defect boundaries, enabling accurate reconstruction of C-scan images of subsurface defects. The IMNS-GAAN algorithm, which integrates graph attention network within the generative adversarial network framework, incorporates imbalanced and negative-sampling graph attention adversarial modules, effectively addressing signal misclassification within defect areas due to imbalanced dataset and enhancing the accuracy of signal classification at defect boundaries. Laser ultrasonic experiments performed on artificial subsurface defects fabricated from additively manufactured AlSi10Mg and TC4 specimens demonstrate the efficiency of the proposed IMNS-GAAN algorithm in accurately reconstructing C-scan images. Compared to traditional amplitude imaging in time and frequency domains, the IMNS-GAAN algorithm depicts defect boundaries more distinctly than other three graph neural network-based methods: GraphSAGE-MEAN, GraphSAGE-LSTM, and GAT, achieving a defect size measurement error of 7% and an image similarity score of 98.46%. These results demonstrate the effectiveness and accuracy of the proposed IMNS-GAAN algorithm in precisely imaging subsurface defects under the laser-ultrasonic testing conditions with multi-mode coupling.",
+      "keywords": [
+        "Laser ultrasonic testing",
+        "metal additive manufacturing",
+        "subsurface defects imaging",
+        "image reconstruction",
+        "graph neural network"
+      ],
+      "normalized_title": "attention enhanced semi supervised graph neural network for binary imaging of subsurface defects with laser ultrasonics",
+      "raw_bibtex": "@ARTICLE{10.1080/10589759.2025.2526168,\n\tauthor = {Zhang, WX and Kang, XF and Chen, D and Guo, SF and Gong, T and Zhang, YJ and Xu, L and Liang, ZF},\n\ttitle = {Attention-enhanced semi-supervised graph neural network for binary imaging of subsurface defects with laser ultrasonics},\n\tjournal = {NONDESTRUCTIVE TESTING AND EVALUATION},\n\tyear = {2025},\n\tkeywords = {Laser ultrasonic testing; metal additive manufacturing; subsurface defects imaging; image reconstruction; graph neural network},\n\tabstract = {This paper proposes a deep learning-based ultrasonic imaging method specifically designed to classify signals located at defect boundaries, enabling accurate reconstruction of C-scan images of subsurface defects. The IMNS-GAAN algorithm, which integrates graph attention network within the generative adversarial network framework, incorporates imbalanced and negative-sampling graph attention adversarial modules, effectively addressing signal misclassification within defect areas due to imbalanced dataset and enhancing the accuracy of signal classification at defect boundaries. Laser ultrasonic experiments performed on artificial subsurface defects fabricated from additively manufactured AlSi10Mg and TC4 specimens demonstrate the efficiency of the proposed IMNS-GAAN algorithm in accurately reconstructing C-scan images. Compared to traditional amplitude imaging in time and frequency domains, the IMNS-GAAN algorithm depicts defect boundaries more distinctly than other three graph neural network-based methods: GraphSAGE-MEAN, GraphSAGE-LSTM, and GAT, achieving a defect size measurement error of 7% and an image similarity score of 98.46%. These results demonstrate the effectiveness and accuracy of the proposed IMNS-GAAN algorithm in precisely imaging subsurface defects under the laser-ultrasonic testing conditions with multi-mode coupling.},\n\tdoi = {10.1080/10589759.2025.2526168},\n\tissn = {1058-9759},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 39 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1080/10589759.2025.2526168"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000033",
+      "entry_type": "article",
+      "title": "Research on ultrasonic defect imaging based on a neural network with Gaussian weight function fusion model",
+      "authors": [
+        "Lu, ZX",
+        "Yao, K",
+        "Li, XL",
+        "Yu, CH"
+      ],
+      "year": 2024,
+      "journal": "CONSTRUCTION AND BUILDING MATERIALS",
+      "doi": "10.1016/j.conbuildmat.2023.134229",
+      "abstract": "Ultrasonic testing is widely used in the industrial field because of its high sensitivity, safety and low-cost, which plays an increasingly important role in detecting defects on industrial. However, at present, defect detection only stays in scanning surface defects and classifying the internal defects of the specimen. The accuracy of quantitative imaging of the morphology of the internal defects of the specimen is still an issue to be improved. In this paper, the simple defects in several specimens are detected by ultrasound based on finite element simulation software and the accuracy of the signal can be verified by ultrasonic experiment. Then, the features can be extracted by signal processing method. The neural network imagines the inversion results with the Gaussian weight function fusion model. Finally, this paper uses the signals of simple shape defects as the training set to detect the shapes of complex defects and obtain the corresponding imaging results.",
+      "keywords": [
+        "Ultrasonic testing",
+        "Moving A -scan",
+        "Signal process",
+        "Neural network and Gaussian weight function",
+        "fusion",
+        "3-DIMENSIONAL RECONSTRUCTION",
+        "FLAW CLASSIFICATION",
+        "SYSTEM"
+      ],
+      "normalized_title": "research on ultrasonic defect imaging based on a neural network with gaussian weight function fusion model",
+      "raw_bibtex": "@ARTICLE{10.1016/j.conbuildmat.2023.134229,\n\tauthor = {Lu, ZX and Yao, K and Li, XL and Yu, CH},\n\ttitle = {Research on ultrasonic defect imaging based on a neural network with Gaussian weight function fusion model},\n\tjournal = {CONSTRUCTION AND BUILDING MATERIALS},\n\tyear = {2024},\n\tkeywords = {Ultrasonic testing; Moving A -scan; Signal process; Neural network and Gaussian weight function; fusion; 3-DIMENSIONAL RECONSTRUCTION; FLAW CLASSIFICATION; SYSTEM},\n\tabstract = {Ultrasonic testing is widely used in the industrial field because of its high sensitivity, safety and low-cost, which plays an increasingly important role in detecting defects on industrial. However, at present, defect detection only stays in scanning surface defects and classifying the internal defects of the specimen. The accuracy of quantitative imaging of the morphology of the internal defects of the specimen is still an issue to be improved. In this paper, the simple defects in several specimens are detected by ultrasound based on finite element simulation software and the accuracy of the signal can be verified by ultrasonic experiment. Then, the features can be extracted by signal processing method. The neural network imagines the inversion results with the Gaussian weight function fusion model. Finally, this paper uses the signals of simple shape defects as the training set to detect the shapes of complex defects and obtain the corresponding imaging results.},\n\tdoi = {10.1016/j.conbuildmat.2023.134229},\n\tvolume = {411},\n\tissn = {0950-0618},\n\tnote = {Times Cited in Web of Science Core Collection: 2 Total Times Cited: 3 Cited Reference Count: 28 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.conbuildmat.2023.134229"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000034",
+      "entry_type": "article",
+      "title": "Measurement of reinforcement corrosion in concrete by integrated simulations, ultrasonic tests, and artificial neural networks",
+      "authors": [
+        "Hou, ZZ",
+        "Du, YL",
+        "Xu, HB"
+      ],
+      "year": 2025,
+      "journal": "CASE STUDIES IN CONSTRUCTION MATERIALS",
+      "doi": "10.1016/j.cscm.2025.e05570",
+      "abstract": "Current methods for measuring reinforcement corrosion in concrete have limitations, including low efficiency, poor accuracy, and ambiguous interpretation. High-accuracy nondestructive measurement of reinforcement corrosion was realized in this study through the integration of three technical approaches: (1) Ultrasonic wave propagation in reinforced concrete (RC) with different rebar diameters was simulated using COMSOL to establish the relationship between rebar corrosion (reflected by diameter reduction) and ultrasonic characteristics; (2) Accelerated corrosion experiments were performed on RC specimens using a 5 % sodium chloride solution, monitoring corrosion evolution over 40 h. Three distinct corrosion stages were identified: slow development, rapid expansion, and stable deterioration. Additionally, ultrasonic propagation time was found to delay and amplitude increase with intensifying corrosion, while concrete compressive strength decreased rapidly after 8 h of corrosion; (3) A back propagation-artificial neural network (BP-ANN) optimized by the AdaBoost algorithm was developed, with ultrasonic amplitude, crack width, and compressive strength as input parameters. To enhance model training stability and avoid overfitting, 10-fold cross-validation was adopted for data partitioning, and the Gray Wolf Optimization (GWO) algorithm was integrated to optimize the weights and thresholds of the BP-ANN. The AdaBoost-BP model achieved high prediction accuracy for rebar corrosion indicators: 93.75 % for mass loss rate and 97.67 % for section loss rate. The integrated method, combining coda wave interferometry (CWI), ultrasonic testing, and ANN, aims to overcome the limitations of existing techniques. A reliable framework for nondestructive evaluation of reinforcement corrosion was provided, enabling precise monitoring of RC structure durability. This foundation can be extended to complex real-world structures (e.g., bridges, coastal buildings) and promote the development of intelligent corrosion detection systems.",
+      "keywords": [
+        "Coda wave interferometry (CWI)",
+        "Reinforced concrete (RC)",
+        "Ultrasonic tests",
+        "Artificial neural networks",
+        "DIFFUSE ULTRASOUND",
+        "MOISTURE-CONTENT",
+        "CRACKS"
+      ],
+      "normalized_title": "measurement of reinforcement corrosion in concrete by integrated simulations ultrasonic tests and artificial neural networks",
+      "raw_bibtex": "@ARTICLE{10.1016/j.cscm.2025.e05570,\n\tauthor = {Hou, ZZ and Du, YL and Xu, HB},\n\ttitle = {Measurement of reinforcement corrosion in concrete by integrated simulations, ultrasonic tests, and artificial neural networks},\n\tjournal = {CASE STUDIES IN CONSTRUCTION MATERIALS},\n\tyear = {2025},\n\tkeywords = {Coda wave interferometry (CWI); Reinforced concrete (RC); Ultrasonic tests; Artificial neural networks; DIFFUSE ULTRASOUND; MOISTURE-CONTENT; CRACKS},\n\tabstract = {Current methods for measuring reinforcement corrosion in concrete have limitations, including low efficiency, poor accuracy, and ambiguous interpretation. High-accuracy nondestructive measurement of reinforcement corrosion was realized in this study through the integration of three technical approaches: (1) Ultrasonic wave propagation in reinforced concrete (RC) with different rebar diameters was simulated using COMSOL to establish the relationship between rebar corrosion (reflected by diameter reduction) and ultrasonic characteristics; (2) Accelerated corrosion experiments were performed on RC specimens using a 5 % sodium chloride solution, monitoring corrosion evolution over 40 h. Three distinct corrosion stages were identified: slow development, rapid expansion, and stable deterioration. Additionally, ultrasonic propagation time was found to delay and amplitude increase with intensifying corrosion, while concrete compressive strength decreased rapidly after 8 h of corrosion; (3) A back propagation-artificial neural network (BP-ANN) optimized by the AdaBoost algorithm was developed, with ultrasonic amplitude, crack width, and compressive strength as input parameters. To enhance model training stability and avoid overfitting, 10-fold cross-validation was adopted for data partitioning, and the Gray Wolf Optimization (GWO) algorithm was integrated to optimize the weights and thresholds of the BP-ANN. The AdaBoost-BP model achieved high prediction accuracy for rebar corrosion indicators: 93.75 % for mass loss rate and 97.67 % for section loss rate. The integrated method, combining coda wave interferometry (CWI), ultrasonic testing, and ANN, aims to overcome the limitations of existing techniques. A reliable framework for nondestructive evaluation of reinforcement corrosion was provided, enabling precise monitoring of RC structure durability. This foundation can be extended to complex real-world structures (e.g., bridges, coastal buildings) and promote the development of intelligent corrosion detection systems.},\n\tdoi = {10.1016/j.cscm.2025.e05570},\n\tvolume = {23},\n\tissn = {2214-5095},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 37 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.cscm.2025.e05570"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000035",
+      "entry_type": "article",
+      "title": "Real-time state-of-charge estimation for rechargeable batteries based on in-situ ultrasound-based battery health monitoring and extended Kalman filtering model",
+      "authors": [
+        "Yang, F",
+        "Mao, Q",
+        "Zhang, JM",
+        "Hou, SL",
+        "Bao, GC",
+        "Cheng, KWE",
+        "Dai, JY",
+        "Lam, KH"
+      ],
+      "year": 2025,
+      "journal": "APPLIED ENERGY",
+      "doi": "10.1016/j.apenergy.2024.125161",
+      "abstract": "Ultrasonic testing has emerged as a crucial non-invasive method for monitoring battery health, particularly for accurate State-of-Charge (SoC) estimation in Battery Management Systems (BMS). Unlike invasive methods relying on real-time collection of battery current and voltage, ultrasonic inspection offers timely feedback without interfering with battery properties. However, challenges remain in accurately estimating SoC during rechargeable battery discharging due to ultrasonic echo interference. This study presents an ultrasound-based in- situ rechargeable battery health monitoring system, incorporating advanced signal processing techniques. The proposed Ultrasonic Signal Empirical Mode Decomposition-Extended Kalman Filtering (USED-EKF) algorithm, based on Biot's theory, achieves real-time SoC estimation with exceptional accuracy (maximum error 0.63 %). Compared to conventional EKF, USED-EKF outperforms with significantly lower errors under constant current conditions. Additionally, our model enables the detection of overcharged batteries using ultrasound echo for the first time. This research demonstrates the potential of ultrasonic testing in cost-effective battery maintenance and explosion prevention, contributing to advancements in battery monitoring and safety measures. This research showcases the potential of ultrasonic testing as a cost-effective tool for battery maintenance and the prevention of battery explosions. The achieved results position our study as a pivotal driver in expediting these critical processes, highlighting the significance of our proposed model in advancing battery monitoring and safety measures.",
+      "keywords": [
+        "Extended Kalman filtering",
+        "State-of-charge",
+        "Ultrasonic testing",
+        "Hilbert transform",
+        "Ultrasound in-situ rechargeable battery health",
+        "monitoring system",
+        "LITHIUM-ION BATTERIES"
+      ],
+      "normalized_title": "real time state of charge estimation for rechargeable batteries based on in situ ultrasound based battery health monitoring and extended kalman filtering model",
+      "raw_bibtex": "@ARTICLE{10.1016/j.apenergy.2024.125161,\n\tauthor = {Yang, F and Mao, Q and Zhang, JM and Hou, SL and Bao, GC and Cheng, KWE and Dai, JY and Lam, KH},\n\ttitle = {Real-time state-of-charge estimation for rechargeable batteries based on in-situ ultrasound-based battery health monitoring and extended Kalman filtering model},\n\tjournal = {APPLIED ENERGY},\n\tyear = {2025},\n\tkeywords = {Extended Kalman filtering; State-of-charge; Ultrasonic testing; Hilbert transform; Ultrasound in-situ rechargeable battery health; monitoring system; LITHIUM-ION BATTERIES},\n\tabstract = {Ultrasonic testing has emerged as a crucial non-invasive method for monitoring battery health, particularly for accurate State-of-Charge (SoC) estimation in Battery Management Systems (BMS). Unlike invasive methods relying on real-time collection of battery current and voltage, ultrasonic inspection offers timely feedback without interfering with battery properties. However, challenges remain in accurately estimating SoC during rechargeable battery discharging due to ultrasonic echo interference. This study presents an ultrasound-based in- situ rechargeable battery health monitoring system, incorporating advanced signal processing techniques. The proposed Ultrasonic Signal Empirical Mode Decomposition-Extended Kalman Filtering (USED-EKF) algorithm, based on Biot's theory, achieves real-time SoC estimation with exceptional accuracy (maximum error 0.63 %). Compared to conventional EKF, USED-EKF outperforms with significantly lower errors under constant current conditions. Additionally, our model enables the detection of overcharged batteries using ultrasound echo for the first time. This research demonstrates the potential of ultrasonic testing in cost-effective battery maintenance and explosion prevention, contributing to advancements in battery monitoring and safety measures. This research showcases the potential of ultrasonic testing as a cost-effective tool for battery maintenance and the prevention of battery explosions. The achieved results position our study as a pivotal driver in expediting these critical processes, highlighting the significance of our proposed model in advancing battery monitoring and safety measures.},\n\tdoi = {10.1016/j.apenergy.2024.125161},\n\tvolume = {381},\n\tissn = {0306-2619},\n\tnote = {Times Cited in Web of Science Core Collection: 13 Total Times Cited: 14 Cited Reference Count: 34 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.apenergy.2024.125161"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000036",
+      "entry_type": "article",
+      "title": "Using Deep Learning to Automate the Detection of Flaws in Nuclear Fuel Channel UT Scans",
+      "authors": [
+        "Hammad, I",
+        "Simpson, R",
+        "Tsague, HD",
+        "Hall, S"
+      ],
+      "year": 2022,
+      "journal": "IEEE TRANSACTIONS ON ULTRASONICS FERROELECTRICS AND FREQUENCY CONTROL",
+      "doi": "10.1109/tuffc.2021.3112078",
+      "abstract": "Nuclear reactor inspections are critical to ensure the safety and reliability of a nuclear facility's operation. In Canada, ultrasonic testing (UT) is used to inspect the health of pressure tubes that are part of Canada's Deuterium Uranium (CANDU) reactor's fuel channels. Currently, analysis of UT scans is performed by manual visualization and measurement to locate, characterize, and disposition flaws. Therefore, there is motivation to develop an automated method that is fast and accurate. In this article, a proof of concept (PoC) that automates the detection of flaws in nuclear fuel channel UT scans using a convolutional neural network (CNN) is presented. The CNN model was trained after constructing a dataset using historical UT scans and the corresponding inspection results. The requirement for this prototype was to identify the location of at least a portion of each flaw in UT scans while minimizing false positives (FPs). The proposed CNN model achieves this target by automatically identifying at least a portion of each flaw where further manual analysis is performed to identify the width, the length, and the type of the flaw.",
+      "keywords": [
+        "Inspection",
+        "Fuels",
+        "Acoustics",
+        "Electron tubes",
+        "Convolutional neural networks",
+        "Fault diagnosis",
+        "Training",
+        "Convolutional neural network (CNN)",
+        "deep learning",
+        "fuel channel inspection",
+        "nondestructive examination (NDE)",
+        "nuclear reactor",
+        "pipe inspection",
+        "process automation",
+        "ultrasonic testing (UT)",
+        "CANDU REACTOR",
+        "DEFECTS",
+        "CRACK",
+        "POWER",
+        "NDE"
+      ],
+      "normalized_title": "using deep learning to automate the detection of flaws in nuclear fuel channel ut scans",
+      "raw_bibtex": "@ARTICLE{10.1109/TUFFC.2021.3112078,\n\tauthor = {Hammad, I and Simpson, R and Tsague, HD and Hall, S},\n\ttitle = {Using Deep Learning to Automate the Detection of Flaws in Nuclear Fuel Channel UT Scans},\n\tjournal = {IEEE TRANSACTIONS ON ULTRASONICS FERROELECTRICS AND FREQUENCY CONTROL},\n\tyear = {2022},\n\tkeywords = {Inspection; Fuels; Acoustics; Electron tubes; Convolutional neural networks; Fault diagnosis; Training; Convolutional neural network (CNN); deep learning; fuel channel inspection; nondestructive examination (NDE); nuclear reactor; pipe inspection; process automation; ultrasonic testing (UT); CANDU REACTOR; DEFECTS; CRACK; POWER; NDE},\n\tabstract = {Nuclear reactor inspections are critical to ensure the safety and reliability of a nuclear facility's operation. In Canada, ultrasonic testing (UT) is used to inspect the health of pressure tubes that are part of Canada's Deuterium Uranium (CANDU) reactor's fuel channels. Currently, analysis of UT scans is performed by manual visualization and measurement to locate, characterize, and disposition flaws. Therefore, there is motivation to develop an automated method that is fast and accurate. In this article, a proof of concept (PoC) that automates the detection of flaws in nuclear fuel channel UT scans using a convolutional neural network (CNN) is presented. The CNN model was trained after constructing a dataset using historical UT scans and the corresponding inspection results. The requirement for this prototype was to identify the location of at least a portion of each flaw in UT scans while minimizing false positives (FPs). The proposed CNN model achieves this target by automatically identifying at least a portion of each flaw where further manual analysis is performed to identify the width, the length, and the type of the flaw.},\n\tdoi = {10.1109/TUFFC.2021.3112078},\n\tvolume = {69},\n\tnumber = {1},\n\tpages = {323-329},\n\tissn = {0885-3010},\n\tnote = {Times Cited in Web of Science Core Collection: 7 Total Times Cited: 8 Cited Reference Count: 30 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TUFFC.2021.3112078"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000037",
+      "entry_type": "article",
+      "title": "Ultrasonic Detection and Diagnostic Method for the Internal Defects in Epoxy Composite",
+      "authors": [
+        "Liu, P",
+        "Li, JH",
+        "Ye, ZW",
+        "Wu, ZH",
+        "Qiu, N",
+        "Cui, BY",
+        "Wei, JW",
+        "Peng, ZR"
+      ],
+      "year": 2024,
+      "journal": "IEEE TRANSACTIONS ON DIELECTRICS AND ELECTRICAL INSULATION",
+      "doi": "10.1109/tdei.2024.3425316",
+      "abstract": "Insulation components are prone to form internal defects during the production process, which can have adverse effects on their stable operation. Thus, effective detection and diagnosis hold immense importance. In this article, an ultrasonic testing platform is designed to bubbles/cracks detect and verify the effectiveness and feasibility of this method. To address the issue of resolving weak acoustic signals to determine and distinguish defect types, a diagnosis method is proposed. The time and frequency domain information of defect echoes are obtained by discrete wavelet decomposition, and the defect features are reduced by linear discriminant analysis (LDA). Moreover, a step-by-step diagnosis model of typical defects is established by combining a sparrow optimization algorithm and a backpropagation neural network. This method enables the identification of various defect types and morphological characteristics, enhancing the sensitivity of the ultrasonic testing method, which can provide effective support for defect detection of insulators.",
+      "keywords": [
+        "Acoustics",
+        "Probes",
+        "Feature extraction",
+        "Insulators",
+        "Defect detection",
+        "Sensitivity",
+        "Dielectrics and electrical insulation",
+        "Backpropagation neural network (BPNN)",
+        "diagnosis",
+        "feature extraction",
+        "insulation defects",
+        "ultrasound detection",
+        "PARTIAL DISCHARGE",
+        "CLASSIFICATION"
+      ],
+      "normalized_title": "ultrasonic detection and diagnostic method for the internal defects in epoxy composite",
+      "raw_bibtex": "@ARTICLE{10.1109/TDEI.2024.3425316,\n\tauthor = {Liu, P and Li, JH and Ye, ZW and Wu, ZH and Qiu, N and Cui, BY and Wei, JW and Peng, ZR},\n\ttitle = {Ultrasonic Detection and Diagnostic Method for the Internal Defects in Epoxy Composite},\n\tjournal = {IEEE TRANSACTIONS ON DIELECTRICS AND ELECTRICAL INSULATION},\n\tyear = {2024},\n\tkeywords = {Acoustics; Probes; Feature extraction; Insulators; Defect detection; Sensitivity; Dielectrics and electrical insulation; Backpropagation neural network (BPNN); diagnosis; feature extraction; insulation defects; ultrasound detection; PARTIAL DISCHARGE; CLASSIFICATION},\n\tabstract = {Insulation components are prone to form internal defects during the production process, which can have adverse effects on their stable operation. Thus, effective detection and diagnosis hold immense importance. In this article, an ultrasonic testing platform is designed to bubbles/cracks detect and verify the effectiveness and feasibility of this method. To address the issue of resolving weak acoustic signals to determine and distinguish defect types, a diagnosis method is proposed. The time and frequency domain information of defect echoes are obtained by discrete wavelet decomposition, and the defect features are reduced by linear discriminant analysis (LDA). Moreover, a step-by-step diagnosis model of typical defects is established by combining a sparrow optimization algorithm and a backpropagation neural network. This method enables the identification of various defect types and morphological characteristics, enhancing the sensitivity of the ultrasonic testing method, which can provide effective support for defect detection of insulators.},\n\tdoi = {10.1109/TDEI.2024.3425316},\n\tvolume = {31},\n\tnumber = {6},\n\tpages = {3221-3230},\n\tissn = {1070-9878},\n\tnote = {Times Cited in Web of Science Core Collection: 5 Total Times Cited: 5 Cited Reference Count: 21 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TDEI.2024.3425316"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000038",
+      "entry_type": "article",
+      "title": "An Immersion Ultrasonic Testing-Based Research Platform for Studying Electroplating Kinetics",
+      "authors": [
+        "Yang, ZR",
+        "Chen, YD",
+        "Zou, FX",
+        "Cegla, FB"
+      ],
+      "year": 2024,
+      "journal": "CHEMELECTROCHEM",
+      "doi": "10.1002/celc.202400164",
+      "abstract": "Electroplating is widely exploited in numerous application areas. Understanding the kinetics of electroplating, which is essentially a dynamic phenomenon, is crucial to making use of it appropriately in the real world. Currently, there exist a variety of research tools for studying electroplating kinetics, each with its own pros and cons. In this paper, we introduce a novel, immersion ultrasonic testing-based technique that carries out in situ, direct monitoring of the thickness increase of an electroplated layer. Through careful design and optimization of the measurement setup and the signal processing protocol, the measurement resolution of the technique was able to reach a sub-micron level. Via a number of demonstrative zinc plating experiments that were performed under different conditions, the measurement accuracy of the technique was thoroughly validated by a number of independent methods. All in all, the technique can become a promising alternative tool for studying the kinetics of different electroplating processes, supplementing the existing toolbox with the capability of providing a new class of information. An immersion ultrasonic testing-based technique that carries out in situ, direct monitoring of the thickness increases of electroplated layers is introduced. The technique possesses a sub-micron measurement resolution and an experimentally proven measurement accuracy. The technique can become a new alternative for studying the kinetics of different electroplating processes. image",
+      "keywords": [
+        "Electrodeposition",
+        "zinc plating",
+        "ultrasonic testing",
+        "analytical methods",
+        "surface analysis",
+        "FLEXIBLE POLYIMIDE SUBSTRATE",
+        "LOW-CARBON STEEL",
+        "CORROSION-RESISTANCE",
+        "MICROSCALE METALLIZATION",
+        "ZINC",
+        "CU",
+        "ELECTRODEPOSITION",
+        "LINES"
+      ],
+      "normalized_title": "an immersion ultrasonic testing based research platform for studying electroplating kinetics",
+      "raw_bibtex": "@ARTICLE{10.1002/celc.202400164,\n\tauthor = {Yang, ZR and Chen, YD and Zou, FX and Cegla, FB},\n\ttitle = {An Immersion Ultrasonic Testing-Based Research Platform for Studying Electroplating Kinetics},\n\tjournal = {CHEMELECTROCHEM},\n\tyear = {2024},\n\tkeywords = {Electrodeposition; zinc plating; ultrasonic testing; analytical methods; surface analysis; FLEXIBLE POLYIMIDE SUBSTRATE; LOW-CARBON STEEL; CORROSION-RESISTANCE; MICROSCALE METALLIZATION; ZINC; CU; ELECTRODEPOSITION; LINES},\n\tabstract = {Electroplating is widely exploited in numerous application areas. Understanding the kinetics of electroplating, which is essentially a dynamic phenomenon, is crucial to making use of it appropriately in the real world. Currently, there exist a variety of research tools for studying electroplating kinetics, each with its own pros and cons. In this paper, we introduce a novel, immersion ultrasonic testing-based technique that carries out in situ, direct monitoring of the thickness increase of an electroplated layer. Through careful design and optimization of the measurement setup and the signal processing protocol, the measurement resolution of the technique was able to reach a sub-micron level. Via a number of demonstrative zinc plating experiments that were performed under different conditions, the measurement accuracy of the technique was thoroughly validated by a number of independent methods. All in all, the technique can become a promising alternative tool for studying the kinetics of different electroplating processes, supplementing the existing toolbox with the capability of providing a new class of information. An immersion ultrasonic testing-based technique that carries out in situ, direct monitoring of the thickness increases of electroplated layers is introduced. The technique possesses a sub-micron measurement resolution and an experimentally proven measurement accuracy. The technique can become a new alternative for studying the kinetics of different electroplating processes. image},\n\tdoi = {10.1002/celc.202400164},\n\tvolume = {11},\n\tnumber = {11},\n\tissn = {2196-0216},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 44 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1002/celc.202400164"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000039",
+      "entry_type": "article",
+      "title": "Automatic Discontinuity Classification of Wind-turbine Blades Using A-scan-based Convolutional Neural Network",
+      "authors": [
+        "Choung, J",
+        "Lim, S",
+        "Lim, SH",
+        "Chi, SC",
+        "Nam, MH"
+      ],
+      "year": 2021,
+      "journal": "JOURNAL OF MODERN POWER SYSTEMS AND CLEAN ENERGY",
+      "doi": "10.35833/mpce.2018.000672",
+      "abstract": "Recent development trends in wind power generation have increased the importance of the safe operation of wind-turbine blades (WTBs). To realize this objective, it is essential to inspect WTBs for any defects before they are placed into operation. However, conventional methods of fault inspection in WTBs can be rather difficult to implement, since complex curvatures that characterize the WTB structures must ensure accurate and reliable inspection. Moreover, it is considered useful if inspection results can be objectively and consistently classified and analyzed by an automated system and not by the subjective judgment of an inspector. To address this concern, the construction of a pressure- and shape-adaptive phased-array ultrasonic testing platform, which is controlled by a nanoengine operation system to inspect WTBs for internal defects, has been presented in this paper. An automatic classifier has been designed to detect discontinuities in WTBs by using an A-scan-imaging-based convolutional neural network (CNN). The proposed CNN classifier design demonstrates a classification accuracy of nearly 99%. Results of the study demonstrate that the proposed CNN classifier is capable of automatically classifying the discontinuities of WTB with high accuracy, all of which could be considered as defect candidates.",
+      "keywords": [
+        "Blades",
+        "Inspection",
+        "Feature extraction",
+        "Delamination",
+        "Wind power generation",
+        "Convolutional neural networks",
+        "Reliability",
+        "Wind-turbine blade (WTB)",
+        "blade inspection platform",
+        "convolutional neural network (CNN)",
+        "discontinuity",
+        "phased-array ultrasonic testing (PAUT)",
+        "A-scan"
+      ],
+      "normalized_title": "automatic discontinuity classification of wind turbine blades using a scan based convolutional neural network",
+      "raw_bibtex": "@ARTICLE{10.35833/MPCE.2018.000672,\n\tauthor = {Choung, J and Lim, S and Lim, SH and Chi, SC and Nam, MH},\n\ttitle = {Automatic Discontinuity Classification of Wind-turbine Blades Using A-scan-based Convolutional Neural Network},\n\tjournal = {JOURNAL OF MODERN POWER SYSTEMS AND CLEAN ENERGY},\n\tyear = {2021},\n\tkeywords = {Blades; Inspection; Feature extraction; Delamination; Wind power generation; Convolutional neural networks; Reliability; Wind-turbine blade (WTB); blade inspection platform; convolutional neural network (CNN); discontinuity; phased-array ultrasonic testing (PAUT); A-scan},\n\tabstract = {Recent development trends in wind power generation have increased the importance of the safe operation of wind-turbine blades (WTBs). To realize this objective, it is essential to inspect WTBs for any defects before they are placed into operation. However, conventional methods of fault inspection in WTBs can be rather difficult to implement, since complex curvatures that characterize the WTB structures must ensure accurate and reliable inspection. Moreover, it is considered useful if inspection results can be objectively and consistently classified and analyzed by an automated system and not by the subjective judgment of an inspector. To address this concern, the construction of a pressure- and shape-adaptive phased-array ultrasonic testing platform, which is controlled by a nanoengine operation system to inspect WTBs for internal defects, has been presented in this paper. An automatic classifier has been designed to detect discontinuities in WTBs by using an A-scan-imaging-based convolutional neural network (CNN). The proposed CNN classifier design demonstrates a classification accuracy of nearly 99%. Results of the study demonstrate that the proposed CNN classifier is capable of automatically classifying the discontinuities of WTB with high accuracy, all of which could be considered as defect candidates.},\n\tdoi = {10.35833/MPCE.2018.000672},\n\tvolume = {9},\n\tnumber = {1},\n\tpages = {210-218},\n\tissn = {2196-5625},\n\tnote = {Times Cited in Web of Science Core Collection: 19 Total Times Cited: 20 Cited Reference Count: 34 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.35833/MPCE.2018.000672"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000040",
+      "entry_type": "article",
+      "title": "Investigation of real delamination detection in composite structure using air-coupled ultrasonic testing",
+      "authors": [
+        "Bahonar, M",
+        "Safizadeh, MS"
+      ],
+      "year": 2022,
+      "journal": "COMPOSITE STRUCTURES",
+      "doi": "10.1016/j.compstruct.2021.114939",
+      "abstract": "Air-coupled ultrasonic testing (ACUT) is a non-destructive testing method that has been used to investigate composite defects. In this research, a new technique of creating a delamination defect is presented to produce a thin air gap for measuring realistic ultrasonic responses. Composite samples have been made of fiberglass and epoxy resin with six delamination defects in different sizes. A proper setup test has been established for the through-transmission ultrasonic inspection of the composite samples. For fault detection, statistical parameters are derived from ultrasonic response signals. Following dimensionality reduction, a support vector machine (SVM) classifier has been used to improve delamination detection accuracy. Also, the numerical simulation of ultrasonic testing on the composite specimen with delamination defects has been performed to obtain the test parameters. Although the ultrasonic responses have been significantly weakened by the delamination defects (air gaps) yet applying signal processing techniques following by an SVM classifier has proven to improve delamination detection in the composite.",
+      "keywords": [
+        "Air-coupled ultrasonic",
+        "Simulation of delamination defect",
+        "Composite inspection",
+        "INSPECTION"
+      ],
+      "normalized_title": "investigation of real delamination detection in composite structure using air coupled ultrasonic testing",
+      "raw_bibtex": "@ARTICLE{10.1016/j.compstruct.2021.114939,\n\tauthor = {Bahonar, M and Safizadeh, MS},\n\ttitle = {Investigation of real delamination detection in composite structure using air-coupled ultrasonic testing},\n\tjournal = {COMPOSITE STRUCTURES},\n\tyear = {2022},\n\tkeywords = {Air-coupled ultrasonic; Simulation of delamination defect; Composite inspection; INSPECTION},\n\tabstract = {Air-coupled ultrasonic testing (ACUT) is a non-destructive testing method that has been used to investigate composite defects. In this research, a new technique of creating a delamination defect is presented to produce a thin air gap for measuring realistic ultrasonic responses. Composite samples have been made of fiberglass and epoxy resin with six delamination defects in different sizes. A proper setup test has been established for the through-transmission ultrasonic inspection of the composite samples. For fault detection, statistical parameters are derived from ultrasonic response signals. Following dimensionality reduction, a support vector machine (SVM) classifier has been used to improve delamination detection accuracy. Also, the numerical simulation of ultrasonic testing on the composite specimen with delamination defects has been performed to obtain the test parameters. Although the ultrasonic responses have been significantly weakened by the delamination defects (air gaps) yet applying signal processing techniques following by an SVM classifier has proven to improve delamination detection in the composite.},\n\tdoi = {10.1016/j.compstruct.2021.114939},\n\tvolume = {280},\n\tissn = {0263-8223},\n\tnote = {Times Cited in Web of Science Core Collection: 35 Total Times Cited: 41 Cited Reference Count: 13 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.compstruct.2021.114939"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

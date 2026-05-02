@@ -1,0 +1,306 @@
+{
+  "batch_id": "batch_0006",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000051",
+    "paper_000052",
+    "paper_000053",
+    "paper_000054",
+    "paper_000055",
+    "paper_000056",
+    "paper_000057",
+    "paper_000058",
+    "paper_000059",
+    "paper_000060"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000051",
+      "entry_type": "article",
+      "title": "Influences of Pantograph-catenary Arc on Traction Drive System Under Low Air Pressure",
+      "authors": [
+        "Zou, D.",
+        "Xia, Z.",
+        "Zhang, Z.",
+        "Wei, W."
+      ],
+      "year": 2026,
+      "journal": "Zhongguo Dianji Gongcheng Xuebao/Proceedings of the Chinese Society of Electrical Engineering",
+      "doi": "10.13334/j.0258-8013.pcsee.242317",
+      "abstract": "Pantograph-catenary arc is a common fault that can significantly disrupt the stable operation of traction drive system. In high-altitude environments with low air pressure, the electrical characteristics of pantograph-catenary arc differ from those in plains, potentially affecting the system in a different manner. This paper models the pantograph-catenary arc-traction drive system and examines the influence of arc on voltage and harmonic characteristics under different pressures. The results show that lower air pressure increases the impact; short offline periods lead to more severe voltage drops and waveform distortions, while longer offline periods result in larger overvoltages. DC-side voltage drops more slowly after arc quenching, with increased harmonic distortion as pressure decreases. This study provides a valuable reference for the design of electrified trains operating on high-altitude routes. ©2026 Chin.Soc.for Elec.Eng.",
+      "keywords": [],
+      "normalized_title": "influences of pantograph catenary arc on traction drive system under low air pressure",
+      "raw_bibtex": "@ARTICLE{10.13334/j.0258-8013.pcsee.242317,\n\tauthor = {Zou, D. and Xia, Z. and Zhang, Z. and Wei, W.},\n\ttitle = {Influences of Pantograph-catenary Arc on Traction Drive System Under Low Air Pressure},\n\tjournal = {Zhongguo Dianji Gongcheng Xuebao/Proceedings of the Chinese Society of Electrical Engineering},\n\tyear = {2026},\n\tabstract = {Pantograph-catenary arc is a common fault that can significantly disrupt the stable operation of traction drive system. In high-altitude environments with low air pressure, the electrical characteristics of pantograph-catenary arc differ from those in plains, potentially affecting the system in a different manner. This paper models the pantograph-catenary arc-traction drive system and examines the influence of arc on voltage and harmonic characteristics under different pressures. The results show that lower air pressure increases the impact; short offline periods lead to more severe voltage drops and waveform distortions, while longer offline periods result in larger overvoltages. DC-side voltage drops more slowly after arc quenching, with increased harmonic distortion as pressure decreases. This study provides a valuable reference for the design of electrified trains operating on high-altitude routes. ©2026 Chin.Soc.for Elec.Eng.},\n\tdoi = {10.13334/j.0258-8013.pcsee.242317},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105032362484&doi=10.13334%2Fj.0258-8013.pcsee.242317&partnerID=40&md5=8d1be592d4ae62a11ef1e22ddde11a3e},\n\tvolume = {46},\n\tnumber = {4},\n\tpages = {1708-1716},\n\tnote = {Export Date: 30 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 30-2026_f99adb74-ad34-496e-8443-8b0e156d4bd8.ris"
+      ],
+      "source_keys": [
+        "10.13334/j.0258-8013.pcsee.242317"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000052",
+      "entry_type": "article",
+      "title": "Online intelligent perception of pantograph and catenary system status based on parameter adaptation",
+      "authors": [
+        "Shen, Y.",
+        "Pan, X.",
+        "Chang, L."
+      ],
+      "year": 2021,
+      "journal": "Applied Sciences (Switzerland)",
+      "doi": "10.3390/app11041948",
+      "abstract": "Online autonomous perception of pantograph catenary system status is of great significance for railway autonomous operation and maintenance (RIOM). Image sensors combined with an image processing algorithm can realize the automatic acquisition of the pantograph catenary condition; however, it is difficult to meet the demand of long-term stable condition acquisition, which restricts the implementation of online contact state feedback and the realization of railway automation. This paper proposes an online intelligent perception of the pantograph and catenary system (PCS) status based on parameter adaptation to realize fast and stable state analysis when the train is in long-term operation outdoors. First, according to the feature of the contact point, we used histogram of gradient (HoG) features and one-dimensional signal combined with a KCF tracker as the baseline method. Then, a result discriminator located by L1 and hash similarity constraints was used to construct a closed-loop parameter adaptive localization framework, which retrieves and updates parameters when tracking failure occurs. After that, a pruned RefineDet method was used to detect pantograph horns and sparks, which, together with the contact points localization method, ensure the long-term stability of feature localization in PCS images. Then, based on the stereo cameras model, the three-dimensional trajectory of the whole pantograph body can be reconstructed by the image features, and we obtained pantograph catenary contact parameters including the pantograph slide posture, contact line offset, arc detection, separation detection, etc. Our method has been tested on more than 16,000 collected image pairs and the results show that the proposed method has a better positioning effect than the state-of-art method, and realizes the online acquisition of pantograph catenary contact state, representing a significant contribution to RIOM. © 2021 by the authors. Licensee MDPI, Basel, Switzerland.",
+      "keywords": [],
+      "normalized_title": "online intelligent perception of pantograph and catenary system status based on parameter adaptation",
+      "raw_bibtex": "@ARTICLE{10.3390/app11041948,\n\tauthor = {Shen, Y. and Pan, X. and Chang, L.},\n\ttitle = {Online intelligent perception of pantograph and catenary system status based on parameter adaptation},\n\tjournal = {Applied Sciences (Switzerland)},\n\tyear = {2021},\n\tabstract = {Online autonomous perception of pantograph catenary system status is of great significance for railway autonomous operation and maintenance (RIOM). Image sensors combined with an image processing algorithm can realize the automatic acquisition of the pantograph catenary condition; however, it is difficult to meet the demand of long-term stable condition acquisition, which restricts the implementation of online contact state feedback and the realization of railway automation. This paper proposes an online intelligent perception of the pantograph and catenary system (PCS) status based on parameter adaptation to realize fast and stable state analysis when the train is in long-term operation outdoors. First, according to the feature of the contact point, we used histogram of gradient (HoG) features and one-dimensional signal combined with a KCF tracker as the baseline method. Then, a result discriminator located by L1 and hash similarity constraints was used to construct a closed-loop parameter adaptive localization framework, which retrieves and updates parameters when tracking failure occurs. After that, a pruned RefineDet method was used to detect pantograph horns and sparks, which, together with the contact points localization method, ensure the long-term stability of feature localization in PCS images. Then, based on the stereo cameras model, the three-dimensional trajectory of the whole pantograph body can be reconstructed by the image features, and we obtained pantograph catenary contact parameters including the pantograph slide posture, contact line offset, arc detection, separation detection, etc. Our method has been tested on more than 16,000 collected image pairs and the results show that the proposed method has a better positioning effect than the state-of-art method, and realizes the online acquisition of pantograph catenary contact state, representing a significant contribution to RIOM. © 2021 by the authors. Licensee MDPI, Basel, Switzerland.},\n\tdoi = {10.3390/app11041948},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85102115081&doi=10.3390%2Fapp11041948&partnerID=40&md5=c7608ed2dc013a415aa4f84256277faa},\n\tvolume = {11},\n\tnumber = {4},\n\tpages = {1-19},\n\tnote = {Export Date: 30 March 2026; Cited By: 8 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 30-2026_f99adb74-ad34-496e-8443-8b0e156d4bd8.ris"
+      ],
+      "source_keys": [
+        "10.3390/app11041948"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000053",
+      "entry_type": "article",
+      "title": "Simulation and Verification of Effect of Arc Duration on Arc Temperature Based on COMSOL",
+      "authors": [
+        "Yu, X.",
+        "Song, M.",
+        "Wang, Z."
+      ],
+      "year": 2023,
+      "journal": "Machines",
+      "doi": "10.3390/machines11020289",
+      "abstract": "The pantograph–catenary arc of urban rail has the characteristic of high temperature, which directly acts on the surface of the pantograph–catenary system, will seriously ablate pantograph and contact line, and affect the flow of the pantograph–catenary system. In this paper, based on MHD, a mathematical model of the arcing of urban rail pantograph–catenary system is established. COMSOL finite element software was used to simulate the arc temperature field of the pantograph–catenary arc. Through the temperature distribution cloud diagram and related images, the relationship between the arc central temperature, the duration, and the gap of the pantograph arc were studied. It is found that the arc temperature increases with the increase in arc duration when the arc gap is fixed. When the arc duration is fixed, the arc center temperature changes inversely with the increase in the arc gap. The feasibility of the simulation model is verified by the pantograph–catenary arc experiment platform. The research conclusion of this paper can provide a certain basis for the research of arc erosion on the surface of the pantograph–catenary system. © 2023 by the authors.",
+      "keywords": [],
+      "normalized_title": "simulation and verification of effect of arc duration on arc temperature based on comsol",
+      "raw_bibtex": "@ARTICLE{10.3390/machines11020289,\n\tauthor = {Yu, X. and Song, M. and Wang, Z.},\n\ttitle = {Simulation and Verification of Effect of Arc Duration on Arc Temperature Based on COMSOL},\n\tjournal = {Machines},\n\tyear = {2023},\n\tabstract = {The pantograph–catenary arc of urban rail has the characteristic of high temperature, which directly acts on the surface of the pantograph–catenary system, will seriously ablate pantograph and contact line, and affect the flow of the pantograph–catenary system. In this paper, based on MHD, a mathematical model of the arcing of urban rail pantograph–catenary system is established. COMSOL finite element software was used to simulate the arc temperature field of the pantograph–catenary arc. Through the temperature distribution cloud diagram and related images, the relationship between the arc central temperature, the duration, and the gap of the pantograph arc were studied. It is found that the arc temperature increases with the increase in arc duration when the arc gap is fixed. When the arc duration is fixed, the arc center temperature changes inversely with the increase in the arc gap. The feasibility of the simulation model is verified by the pantograph–catenary arc experiment platform. The research conclusion of this paper can provide a certain basis for the research of arc erosion on the surface of the pantograph–catenary system. © 2023 by the authors.},\n\tdoi = {10.3390/machines11020289},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85149229580&doi=10.3390%2Fmachines11020289&partnerID=40&md5=fe57c54057b40ca7ff7d65ff81c8c009},\n\tvolume = {11},\n\tnumber = {2},\n\tnote = {Export Date: 30 March 2026; Cited By: 12 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 30-2026_f99adb74-ad34-496e-8443-8b0e156d4bd8.ris"
+      ],
+      "source_keys": [
+        "10.3390/machines11020289"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000054",
+      "entry_type": "article",
+      "title": "Enhancing pantograph-catenary dynamic performance using an inertance-integrated damping system",
+      "authors": [
+        "Zhu, M.",
+        "Zhang, S.Y.",
+        "Jiang, J.Z.",
+        "Macdonald, J.",
+        "Neild, S.",
+        "Antunes, P.",
+        "Pombo, J.",
+        "Cullingford, S.",
+        "Askill, M.",
+        "Fielder, S."
+      ],
+      "year": 2022,
+      "journal": "Vehicle System Dynamics",
+      "doi": "10.1080/00423114.2021.1884273",
+      "abstract": "For modern electrical rail systems, the pantograph-catenary dynamic performance is one of the most critical challenges. Too much fluctuation in contact forces leads to either accelerated wear of the contacting components or losses of contact and, consequently, arcing. In this work, inertance-integrated pantograph damping systems are investigated with the objective of reducing the contact force standard deviation. Firstly, a multibody pantograph model is developed with its accuracy compared with experimental data. The model is improved through the calibration of the pantograph head suspension parameters and the introduction of both non-ideal joint and flexibility effects. Using the calibrated model, beneficial inertance-integrated damping systems are identified for the pantograph suspension. The results show that the configuration with one inerter provides the best performance among other candidate layouts and contends a 40% reduction of the maximum standard deviation of the contact force over the whole operating speed range in the numerical modelling scenario analysed. Considering the identified configuration, time-domain analysis and modal analysis are investigated. It has been shown that the achieved improvement is due to the fact that with the beneficial inertance-integrated damping system, the first resonance frequency of the pantograph system coincides with the natural frequency of the catenary system. © 2021 Informa UK Limited, trading as Taylor & Francis Group.",
+      "keywords": [],
+      "normalized_title": "enhancing pantograph catenary dynamic performance using an inertance integrated damping system",
+      "raw_bibtex": "@ARTICLE{10.1080/00423114.2021.1884273,\n\tauthor = {Zhu, M. and Zhang, S.Y. and Jiang, J.Z. and Macdonald, J. and Neild, S. and Antunes, P. and Pombo, J. and Cullingford, S. and Askill, M. and Fielder, S.},\n\ttitle = {Enhancing pantograph-catenary dynamic performance using an inertance-integrated damping system},\n\tjournal = {Vehicle System Dynamics},\n\tyear = {2022},\n\tabstract = {For modern electrical rail systems, the pantograph-catenary dynamic performance is one of the most critical challenges. Too much fluctuation in contact forces leads to either accelerated wear of the contacting components or losses of contact and, consequently, arcing. In this work, inertance-integrated pantograph damping systems are investigated with the objective of reducing the contact force standard deviation. Firstly, a multibody pantograph model is developed with its accuracy compared with experimental data. The model is improved through the calibration of the pantograph head suspension parameters and the introduction of both non-ideal joint and flexibility effects. Using the calibrated model, beneficial inertance-integrated damping systems are identified for the pantograph suspension. The results show that the configuration with one inerter provides the best performance among other candidate layouts and contends a 40% reduction of the maximum standard deviation of the contact force over the whole operating speed range in the numerical modelling scenario analysed. Considering the identified configuration, time-domain analysis and modal analysis are investigated. It has been shown that the achieved improvement is due to the fact that with the beneficial inertance-integrated damping system, the first resonance frequency of the pantograph system coincides with the natural frequency of the catenary system. © 2021 Informa UK Limited, trading as Taylor & Francis Group.},\n\tdoi = {10.1080/00423114.2021.1884273},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85101041381&doi=10.1080%2F00423114.2021.1884273&partnerID=40&md5=414cea4d3e056675c60adc26d395c994},\n\tvolume = {60},\n\tnumber = {6},\n\tpages = {1909-1932},\n\tnote = {Export Date: 30 March 2026; Cited By: 20 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 30-2026_f99adb74-ad34-496e-8443-8b0e156d4bd8.ris"
+      ],
+      "source_keys": [
+        "10.1080/00423114.2021.1884273"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000055",
+      "entry_type": "article",
+      "title": "Research on the Model and Transient Characteristics of the Pantograph-Catenary Arc in Different Sections of Power Supply Lines",
+      "authors": [
+        "Tang, Y.",
+        "Li, F.",
+        "Zhou, C.",
+        "Wang, Y.",
+        "Zhu, F."
+      ],
+      "year": 2023,
+      "journal": "The Applied Computational Electromagnetics Society Journal (ACES)",
+      "doi": "10.13052/2023.aces.j.380205",
+      "abstract": "During the operation of high-speed trains, the pantograph will inevitably have occasional and instantaneous separations from the power supply line, resulting in the pantograph catenary arc (PCA). The diverse states of PCA generated in different sections of the power supply line will lead to various electromagnetic interference (EMI). To study the transient characteristics of PCA, firstly, the voltage and the dissipative power of PCA at the common and neutral sections of the power supply line are analyzed and calculated respectively. Secondly, two PCA models that describe the different PCA states are established based on the improved Habedank arc model. Finally, the high-frequency transient voltage and current of the PCA when high-speed trains pass through the common and neutral sections at different speeds are obtained by simulation. In this paper, we comprehensively study the model and the transient characteristics of PCA, which provides a theoretical basis and relevant data for further study of its EMI. © ACES.",
+      "keywords": [
+        "pantograph-catenary arc"
+      ],
+      "normalized_title": "research on the model and transient characteristics of the pantograph catenary arc in different sections of power supply lines",
+      "raw_bibtex": "@ARTICLE{10.13052/2023.ACES.J.380205,\n\tauthor = {Tang, Y. and Li, F. and Zhou, C. and Wang, Y. and Zhu, F.},\n\ttitle = {Research on the Model and Transient Characteristics of the Pantograph-Catenary Arc in Different Sections of Power Supply Lines},\n\tjournal = {Applied Computational Electromagnetics Society Journal},\n\tyear = {2023},\n\tabstract = {During the operation of high-speed trains, the pantograph will inevitably have occasional and instantaneous separations from the power supply line, resulting in the pantograph catenary arc (PCA). The diverse states of PCA generated in different sections of the power supply line will lead to various electromagnetic interference (EMI). To study the transient characteristics of PCA, firstly, the voltage and the dissipative power of PCA at the common and neutral sections of the power supply line are analyzed and calculated respectively. Secondly, two PCA models that describe the different PCA states are established based on the improved Habedank arc model. Finally, the high-frequency transient voltage and current of the PCA when high-speed trains pass through the common and neutral sections at different speeds are obtained by simulation. In this paper, we comprehensively study the model and the transient characteristics of PCA, which provides a theoretical basis and relevant data for further study of its EMI. © ACES.},\n\tdoi = {10.13052/2023.ACES.J.380205},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85165883021&doi=10.13052%2F2023.ACES.J.380205&partnerID=40&md5=725eaaf428ec95f37f35348e817a4a86},\n\tvolume = {38},\n\tnumber = {2},\n\tpages = {109-116},\n\tnote = {Export Date: 30 March 2026; Cited By: 2 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 30-2026_f99adb74-ad34-496e-8443-8b0e156d4bd8.ris",
+        "导出的条目.ris"
+      ],
+      "source_keys": [
+        "10.13052/2023.ACES.J.380205"
+      ],
+      "merged_from": [
+        "raw_000106"
+      ],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000056",
+      "entry_type": "article",
+      "title": "Characteristics of pantograph-catenary arc under low air pressure and strong airflow",
+      "authors": [
+        "Xu, Z.",
+        "Gao, G.",
+        "Wei, W.",
+        "Yang, Z.",
+        "Xie, W.",
+        "Dong, K.",
+        "Ma, Y.",
+        "Yang, Y.",
+        "Wu, G."
+      ],
+      "year": 2022,
+      "journal": "High Voltage",
+      "doi": "10.1049/hve2.12180",
+      "abstract": "Pantograph-catenary arc fault is the primary factor threatening the stability of the power transmission for high-speed railway. The motion characteristics of the pantograph-catenary arc under low air pressure and strong airflow is significantly different from the case under atmospheric pressure. In this paper, an experimental platform of pantograph-catenary arc was built to investigate arc root position-time and arc column longitudinal drift height-time characteristic curves under different air pressures and airflow velocites. Via analysing the corresponding results, it can be found that there are different arc root–arc column traction mechanisms at different stages of arc development. The arcing time and arc root stagnation time under low air pressure are significantly longer than the case under atmospheric pressure, resulting in more serious electrode ablation. The arc column longitudinal drift velocity and height are greater with the increase of airflow velocity. Two typical irregular arc motion phenomena—arc root jumping and arc reignition are observed. To clarify the internal mechanism of the above phenomenon, a magnetohydrodynamics (MHD) model of the pantograph-catenary arc was lauched, the influence mechanism of the pantograph-catenary arc temperature and voltage are studied, and the physical process of arc temperature oscillation is analysed. The research results provide theoretical support for arc protection in high-altitude areas. © 2021 The Authors. High Voltage published by John Wiley & Sons Ltd on behalf of The Institution of Engineering and Technology and China Electric Power Research Institute.",
+      "keywords": [],
+      "normalized_title": "characteristics of pantograph catenary arc under low air pressure and strong airflow",
+      "raw_bibtex": "@ARTICLE{10.1049/hve2.12180,\n\tauthor = {Xu, Z. and Gao, G. and Wei, W. and Yang, Z. and Xie, W. and Dong, K. and Ma, Y. and Yang, Y. and Wu, G.},\n\ttitle = {Characteristics of pantograph-catenary arc under low air pressure and strong airflow},\n\tjournal = {High Voltage},\n\tyear = {2022},\n\tabstract = {Pantograph-catenary arc fault is the primary factor threatening the stability of the power transmission for high-speed railway. The motion characteristics of the pantograph-catenary arc under low air pressure and strong airflow is significantly different from the case under atmospheric pressure. In this paper, an experimental platform of pantograph-catenary arc was built to investigate arc root position-time and arc column longitudinal drift height-time characteristic curves under different air pressures and airflow velocites. Via analysing the corresponding results, it can be found that there are different arc root–arc column traction mechanisms at different stages of arc development. The arcing time and arc root stagnation time under low air pressure are significantly longer than the case under atmospheric pressure, resulting in more serious electrode ablation. The arc column longitudinal drift velocity and height are greater with the increase of airflow velocity. Two typical irregular arc motion phenomena—arc root jumping and arc reignition are observed. To clarify the internal mechanism of the above phenomenon, a magnetohydrodynamics (MHD) model of the pantograph-catenary arc was lauched, the influence mechanism of the pantograph-catenary arc temperature and voltage are studied, and the physical process of arc temperature oscillation is analysed. The research results provide theoretical support for arc protection in high-altitude areas. © 2021 The Authors. High Voltage published by John Wiley & Sons Ltd on behalf of The Institution of Engineering and Technology and China Electric Power Research Institute.},\n\tdoi = {10.1049/hve2.12180},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85122017783&doi=10.1049%2Fhve2.12180&partnerID=40&md5=18a72429eb34a41dc4c0081f11091f4e},\n\tvolume = {7},\n\tnumber = {2},\n\tpages = {369-381},\n\tnote = {Export Date: 30 March 2026; Cited By: 53 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 30-2026_f99adb74-ad34-496e-8443-8b0e156d4bd8.ris"
+      ],
+      "source_keys": [
+        "10.1049/hve2.12180"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000057",
+      "entry_type": "article",
+      "title": "Vibration reduction on overhead contact rails: A simulation-optimization approach",
+      "authors": [
+        "Calvo Hernandez, A.",
+        "Sanz Bobi, J.D.",
+        "Gomez Fernandez, J.",
+        "Badolato Martin, A."
+      ],
+      "year": 2021,
+      "journal": "International Journal of Simulation Modelling",
+      "doi": "10.2507/ijsimm20-2-561",
+      "abstract": "The use of overhead contact rail systems in rail transport has been favoured by the need of having an electrification system that allows its installation where space is limited. The displacement of a train pantograph running through a railway line causes an oscillating movement on the contact line. The overhead contact rail systems or rigid catenary, due to its characteristics, describes a movement with greater inertial forces than the equivalent flexible overhead contact lines. The main consequence is that at higher speeds larger variations in the contact force between pantograph and catenary wires occur, leading to contact loses and producing electrical arcs. Results obtained in the study developed on the implementation of stiffness compensation systems are described on this paper. Simulations demonstrate that it is feasible to reduce the effects of the movement described by the overhead contact rail’s beam. This opens a new investigation field focused on develop the most efficient configuration for alternative overhead contact rail solutions. © 2021, DAAAM International Vienna. All rights reserved.",
+      "keywords": [],
+      "normalized_title": "vibration reduction on overhead contact rails a simulation optimization approach",
+      "raw_bibtex": "@ARTICLE{10.2507/IJSIMM20-2-561,\n\tauthor = {Calvo Hernandez, A. and Sanz Bobi, J.D. and Gomez Fernandez, J. and Badolato Martin, A.},\n\ttitle = {Vibration reduction on overhead contact rails: A simulation-optimization approach},\n\tjournal = {International Journal of Simulation Modelling},\n\tyear = {2021},\n\tabstract = {The use of overhead contact rail systems in rail transport has been favoured by the need of having an electrification system that allows its installation where space is limited. The displacement of a train pantograph running through a railway line causes an oscillating movement on the contact line. The overhead contact rail systems or rigid catenary, due to its characteristics, describes a movement with greater inertial forces than the equivalent flexible overhead contact lines. The main consequence is that at higher speeds larger variations in the contact force between pantograph and catenary wires occur, leading to contact loses and producing electrical arcs. Results obtained in the study developed on the implementation of stiffness compensation systems are described on this paper. Simulations demonstrate that it is feasible to reduce the effects of the movement described by the overhead contact rail’s beam. This opens a new investigation field focused on develop the most efficient configuration for alternative overhead contact rail solutions. © 2021, DAAAM International Vienna. All rights reserved.},\n\tdoi = {10.2507/IJSIMM20-2-561},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85108328306&doi=10.2507%2FIJSIMM20-2-561&partnerID=40&md5=8271aa4394afa04784208bd7bb5c7df8},\n\tvolume = {20},\n\tnumber = {2},\n\tpages = {315-326},\n\tnote = {Export Date: 30 March 2026; Cited By: 4 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 30-2026_f99adb74-ad34-496e-8443-8b0e156d4bd8.ris"
+      ],
+      "source_keys": [
+        "10.2507/IJSIMM20-2-561"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000058",
+      "entry_type": "article",
+      "title": "Principal component guided DCGAN for mitigating mode collapse in electromagnetic pulse signal synthesis",
+      "authors": [
+        "Gao, Z.",
+        "Zhao, L.",
+        "Zheng, J.",
+        "Yi, T.",
+        "Zhang, C.",
+        "Wang, Q."
+      ],
+      "year": 2025,
+      "journal": "Scientific Reports",
+      "doi": "10.1038/s41598-025-20962-2",
+      "abstract": "To mitigate mode collapse in Deep Convolutional Generative Adversarial Networks (DCGANs), this study proposes an innovative deep learning model integrating Principal Component Analysis (PCA)—the PCA-enhanced Deep Convolutional Generative Adversarial Network (PCA-DCGAN)—to mitigate mode collapse during sample generation. By introducing a PCA module prior to the generator, principal components of input samples are extracted and fed into the generator as structured noise input. The resulting components are then fed back into the generator as part of the noise input. This approach breaks from the traditional random selection of generator input noise and provides a more principled direction for optimizing the generator’s parameters. The approach effectively alleviates mode collapse and reduces computational complexity. Experimental results show that the PCA-DCGAN model achieves Fréchet Inception Distance (FID) scores 35.47 and 12.26 lower than those of DCGAN and Wasserstein Generative Adversarial Network with Gradient Penalty (WGAN-GP), respectively. It also significantly improves classification accuracy and reduces loss when training with augmented datasets, thereby validating the effectiveness of the proposed method. The model is applied to generate pantograph-catenary arc electromagnetic interference (EMI) signals, addressing challenges of transient signals and sample scarcity in high-speed railways. This provides an innovative solution for data-scarce domains. © The Author(s) 2025.",
+      "keywords": [],
+      "normalized_title": "principal component guided dcgan for mitigating mode collapse in electromagnetic pulse signal synthesis",
+      "raw_bibtex": "@ARTICLE{10.1038/s41598-025-20962-2,\n\tauthor = {Gao, Z. and Zhao, L. and Zheng, J. and Yi, T. and Zhang, C. and Wang, Q.},\n\ttitle = {Principal component guided DCGAN for mitigating mode collapse in electromagnetic pulse signal synthesis},\n\tjournal = {Scientific Reports},\n\tyear = {2025},\n\tabstract = {To mitigate mode collapse in Deep Convolutional Generative Adversarial Networks (DCGANs), this study proposes an innovative deep learning model integrating Principal Component Analysis (PCA)—the PCA-enhanced Deep Convolutional Generative Adversarial Network (PCA-DCGAN)—to mitigate mode collapse during sample generation. By introducing a PCA module prior to the generator, principal components of input samples are extracted and fed into the generator as structured noise input. The resulting components are then fed back into the generator as part of the noise input. This approach breaks from the traditional random selection of generator input noise and provides a more principled direction for optimizing the generator’s parameters. The approach effectively alleviates mode collapse and reduces computational complexity. Experimental results show that the PCA-DCGAN model achieves Fréchet Inception Distance (FID) scores 35.47 and 12.26 lower than those of DCGAN and Wasserstein Generative Adversarial Network with Gradient Penalty (WGAN-GP), respectively. It also significantly improves classification accuracy and reduces loss when training with augmented datasets, thereby validating the effectiveness of the proposed method. The model is applied to generate pantograph-catenary arc electromagnetic interference (EMI) signals, addressing challenges of transient signals and sample scarcity in high-speed railways. This provides an innovative solution for data-scarce domains. © The Author(s) 2025.},\n\tdoi = {10.1038/s41598-025-20962-2},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105019575826&doi=10.1038%2Fs41598-025-20962-2&partnerID=40&md5=294a82ebfb69919d5b85520c943cd1fb},\n\tvolume = {15},\n\tnumber = {1},\n\tnote = {Export Date: 30 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 30-2026_f99adb74-ad34-496e-8443-8b0e156d4bd8.ris"
+      ],
+      "source_keys": [
+        "10.1038/s41598-025-20962-2"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000059",
+      "entry_type": "article",
+      "title": "Research on the characteristics and influencing factors of arc in segmented insulators",
+      "authors": [
+        "Gao, G.",
+        "Li, H.",
+        "Qian, P.",
+        "Zhou, C.",
+        "Zeng, J.",
+        "Fu, R.",
+        "Weng, X.",
+        "Wang, H.",
+        "Yang, Z.",
+        "Wu, G."
+      ],
+      "year": 2025,
+      "journal": "Physica Scripta",
+      "doi": "10.1088/1402-4896/add186",
+      "abstract": "The segmented insulator is an indispensable electrical insulation component in the pantograph-catenary system but is highly susceptible to damage from persistent arcs during pantograph transitions, causing critical issues like severe arc horn erosion, insulating rod failure, and short circuits. Due to complex operating conditions, the factors influencing arcs and underlying mechanisms remain unclear. In this article, a novel multiphysics simulation model is developed to conduct a quantitative analysis of arc characteristics. Firstly, a magnetohydrodynamic (MHD) model in COMSOL investigates arc evolution patterns and elucidates the influence principle of the Kármán vortex street on arc behavior. Then, key factors affecting voltage and temperature are systematically analyzed, revealing that under low wind speeds and high currents, short-circuit risks increase and arc horn erosion intensifies, under strong wind speeds and high currents, insulating rod erosion becomes more pronounced. Finally, a segmented insulator experimental platform was constructed, with a maximum voltage deviation of 1.84% between experimental and simulated results, validating the simulation’s accuracy. This work indicates the mechanism of arc evolution in segmented insulators, explains the effects of wind speed and current on the arc, and provides a crucial theoretical foundation for mitigating arc erosion and reducing short-circuit risks. © 2025 IOP Publishing Ltd. All rights, including for text and data mining, AI training, and similar technologies, are reserved.",
+      "keywords": [],
+      "normalized_title": "research on the characteristics and influencing factors of arc in segmented insulators",
+      "raw_bibtex": "@ARTICLE{10.1088/1402-4896/add186,\n\tauthor = {Gao, G. and Li, H. and Qian, P. and Zhou, C. and Zeng, J. and Fu, R. and Weng, X. and Wang, H. and Yang, Z. and Wu, G.},\n\ttitle = {Research on the characteristics and influencing factors of arc in segmented insulators},\n\tjournal = {Physica Scripta},\n\tyear = {2025},\n\tabstract = {The segmented insulator is an indispensable electrical insulation component in the pantograph-catenary system but is highly susceptible to damage from persistent arcs during pantograph transitions, causing critical issues like severe arc horn erosion, insulating rod failure, and short circuits. Due to complex operating conditions, the factors influencing arcs and underlying mechanisms remain unclear. In this article, a novel multiphysics simulation model is developed to conduct a quantitative analysis of arc characteristics. Firstly, a magnetohydrodynamic (MHD) model in COMSOL investigates arc evolution patterns and elucidates the influence principle of the Kármán vortex street on arc behavior. Then, key factors affecting voltage and temperature are systematically analyzed, revealing that under low wind speeds and high currents, short-circuit risks increase and arc horn erosion intensifies, under strong wind speeds and high currents, insulating rod erosion becomes more pronounced. Finally, a segmented insulator experimental platform was constructed, with a maximum voltage deviation of 1.84% between experimental and simulated results, validating the simulation’s accuracy. This work indicates the mechanism of arc evolution in segmented insulators, explains the effects of wind speed and current on the arc, and provides a crucial theoretical foundation for mitigating arc erosion and reducing short-circuit risks. © 2025 IOP Publishing Ltd. All rights, including for text and data mining, AI training, and similar technologies, are reserved.},\n\tdoi = {10.1088/1402-4896/add186},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105005409540&doi=10.1088%2F1402-4896%2Fadd186&partnerID=40&md5=47690f0106a5aaa90a4704da5ae63c6e},\n\tvolume = {100},\n\tnumber = {6},\n\tnote = {Export Date: 30 March 2026; Cited By: 1 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 30-2026_f99adb74-ad34-496e-8443-8b0e156d4bd8.ris"
+      ],
+      "source_keys": [
+        "10.1088/1402-4896/add186"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000060",
+      "entry_type": "article",
+      "title": "Drift characteristics and the multi-field coupling stress mechanism of the pantograph-catenary arc under low air pressure",
+      "authors": [
+        "Xu, Z.",
+        "Gao, G.",
+        "Qian, P.",
+        "Xiao, S.",
+        "Wei, W.",
+        "Yang, Z.",
+        "Dong, K.",
+        "Ma, Y.",
+        "Wu, G."
+      ],
+      "year": 2023,
+      "journal": "Chinese Physics B",
+      "doi": "10.1088/1674-1056/ac9360",
+      "abstract": "The fault caused by a pantograph-catenary arc is the main factor that threatens the stability of high-speed railway energy transmission. Pantograph-catenary arc vertical drift is more severe than the case under normal pressure, as it is easy to develop the rigid busbar, which may lead to the flashover occurring around the support insulators. We establish a pantograph-catenary arc experiment and diagnosis platform to simulate low pressure and strong airflow environment. Meanwhile, the variation law of arc drift height with time under different air pressures and airflow velocities is analyzed. Moreover, arc drift characteristics and influencing factors are explored. The physical process of the arc column drifting to the rigid busbar with the jumping mechanism of the arc root on the rigid busbar is summarized. In order to further explore the mechanism of the above physical process, a multi-field stress coupling model is built, as the multi-stress variation law of arc is quantitatively evaluated. The dynamic action mechanism of multi-field stress on arc drifting characteristics is explored, as the physical mechanism of arc drifting under low pressure is theoretically explained. The research results provide theoretical support for arc suppression in high-altitude areas. © 2023 Chinese Physical Society and IOP Publishing Ltd.",
+      "keywords": [],
+      "normalized_title": "drift characteristics and the multi field coupling stress mechanism of the pantograph catenary arc under low air pressure",
+      "raw_bibtex": "@ARTICLE{10.1088/1674-1056/ac9360,\n\tauthor = {Xu, Z. and Gao, G. and Qian, P. and Xiao, S. and Wei, W. and Yang, Z. and Dong, K. and Ma, Y. and Wu, G.},\n\ttitle = {Drift characteristics and the multi-field coupling stress mechanism of the pantograph-catenary arc under low air pressure},\n\tjournal = {Chinese Physics B},\n\tyear = {2023},\n\tabstract = {The fault caused by a pantograph-catenary arc is the main factor that threatens the stability of high-speed railway energy transmission. Pantograph-catenary arc vertical drift is more severe than the case under normal pressure, as it is easy to develop the rigid busbar, which may lead to the flashover occurring around the support insulators. We establish a pantograph-catenary arc experiment and diagnosis platform to simulate low pressure and strong airflow environment. Meanwhile, the variation law of arc drift height with time under different air pressures and airflow velocities is analyzed. Moreover, arc drift characteristics and influencing factors are explored. The physical process of the arc column drifting to the rigid busbar with the jumping mechanism of the arc root on the rigid busbar is summarized. In order to further explore the mechanism of the above physical process, a multi-field stress coupling model is built, as the multi-stress variation law of arc is quantitatively evaluated. The dynamic action mechanism of multi-field stress on arc drifting characteristics is explored, as the physical mechanism of arc drifting under low pressure is theoretically explained. The research results provide theoretical support for arc suppression in high-altitude areas. © 2023 Chinese Physical Society and IOP Publishing Ltd.},\n\tdoi = {10.1088/1674-1056/ac9360},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85152134175&doi=10.1088%2F1674-1056%2Fac9360&partnerID=40&md5=ed5fb4ef483172f42895fd61704bc0ae},\n\tvolume = {32},\n\tnumber = {4},\n\tnote = {Export Date: 30 March 2026; Cited By: 5 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 30-2026_f99adb74-ad34-496e-8443-8b0e156d4bd8.ris"
+      ],
+      "source_keys": [
+        "10.1088/1674-1056/ac9360"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

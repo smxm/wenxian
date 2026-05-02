@@ -1,0 +1,385 @@
+{
+  "batch_id": "batch_0006",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000051",
+    "paper_000052",
+    "paper_000053",
+    "paper_000054",
+    "paper_000055",
+    "paper_000056",
+    "paper_000057",
+    "paper_000058",
+    "paper_000059",
+    "paper_000060"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000051",
+      "entry_type": "article",
+      "title": "Accurate trajectory tracking control for AUV under state constraints with a rapid stability dimensionality-augmented state observer",
+      "authors": [
+        "Wang, JH",
+        "Wang, HY",
+        "Hu, ZK",
+        "Liu, JR",
+        "Chen, KR"
+      ],
+      "year": 2024,
+      "journal": "INTERNATIONAL JOURNAL OF ROBUST AND NONLINEAR CONTROL",
+      "doi": "10.1002/rnc.7591",
+      "abstract": "A rapid stability dimensionality-augmented state observer (RSDASO) based event-driven control strategy is presented for the autonomous underwater vehicle (AUV) trajectory tracking issue, addressing state constraints, model uncertainty, limited communication resources and unknown external time-varying disturbances. The first step is to develop a fast stability extended state observer to estimate the lumped disturbances and unmeasurable states of the system and ensure the estimation error converges in fixed time. Secondly, a fixed-time AUV trajectory tracking control method is proposed to ensure that the tracking error of the system converges within a fixed time, based on the mentioned observer. Simultaneously, to reduce the communication resource usage by the system, an event-triggered mechanism (ETM) is included in the control law. Lastly, simulation experiments verify the effectiveness of the process.",
+      "keywords": [
+        "autonomous underwater vehicle",
+        "event-triggered mechanism",
+        "fixed-time stability",
+        "nonlinear systems",
+        "state constraints",
+        "state observer",
+        "NONLINEAR-SYSTEMS",
+        "UNDERWATER VEHICLES",
+        "TARGET TRACKING",
+        "FAULTS"
+      ],
+      "normalized_title": "accurate trajectory tracking control for auv under state constraints with a rapid stability dimensionality augmented state observer",
+      "raw_bibtex": "@ARTICLE{10.1002/rnc.7591,\n\tauthor = {Wang, JH and Wang, HY and Hu, ZK and Liu, JR and Chen, KR},\n\ttitle = {Accurate trajectory tracking control for AUV under state constraints with a rapid stability dimensionality-augmented state observer},\n\tjournal = {INTERNATIONAL JOURNAL OF ROBUST AND NONLINEAR CONTROL},\n\tyear = {2024},\n\tkeywords = {autonomous underwater vehicle; event-triggered mechanism; fixed-time stability; nonlinear systems; state constraints; state observer; NONLINEAR-SYSTEMS; UNDERWATER VEHICLES; TARGET TRACKING; FAULTS},\n\tabstract = {A rapid stability dimensionality-augmented state observer (RSDASO) based event-driven control strategy is presented for the autonomous underwater vehicle (AUV) trajectory tracking issue, addressing state constraints, model uncertainty, limited communication resources and unknown external time-varying disturbances. The first step is to develop a fast stability extended state observer to estimate the lumped disturbances and unmeasurable states of the system and ensure the estimation error converges in fixed time. Secondly, a fixed-time AUV trajectory tracking control method is proposed to ensure that the tracking error of the system converges within a fixed time, based on the mentioned observer. Simultaneously, to reduce the communication resource usage by the system, an event-triggered mechanism (ETM) is included in the control law. Lastly, simulation experiments verify the effectiveness of the process.},\n\tdoi = {10.1002/rnc.7591},\n\tvolume = {34},\n\tnumber = {16},\n\tpages = {11312-11332},\n\tissn = {1049-8923},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 43 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1002/rnc.7591"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000052",
+      "entry_type": "article",
+      "title": "Fast Finite-Time Super-Twisting Sliding Mode Control with an Extended State Higher-Order Sliding Mode Observer for UUV Trajectory Tracking",
+      "authors": [
+        "Guo, LW",
+        "Liu, WD",
+        "Li, L",
+        "Xu, JM",
+        "Zhang, K",
+        "Zhang, Y"
+      ],
+      "year": 2024,
+      "journal": "DRONES",
+      "doi": "10.3390/drones8020041",
+      "abstract": "This paper proposes a trajectory tracking control scheme consisting of a fast finite-time super-twisting sliding mode control (FSTSMC) approach and an extended state higher-order sliding mode observer (ESHSMO) for unmanned underwater vehicles (UUVs) with external disturbances and model uncertainties. Firstly, an extended state higher-order sliding mode observer with the finite-time convergence is designed based on the higher-order sliding mode technique and the extended state observer technique. Next, on the basis of disturbances and model uncertainties observation, a fast finite-time super-twisting sliding mode control approach is proposed, and the finite time stabilization property of the tracking errors is proved by Lyapunov theory. Finally, through numerical simulation and experiment in a water pool, it has been verified that the proposed control scheme has achieved the high control precision, the smaller chattering, the disturbance compensation and the fast finite-time convergence in UUV trajectory tracking.",
+      "keywords": [
+        "unmanned underwater vehicle",
+        "super-twisting sliding mode control",
+        "extended state higher-order sliding mode observer",
+        "fast finite-time convergence",
+        "GUIDANCE",
+        "SYSTEMS"
+      ],
+      "normalized_title": "fast finite time super twisting sliding mode control with an extended state higher order sliding mode observer for uuv trajectory tracking",
+      "raw_bibtex": "@ARTICLE{10.3390/drones8020041,\n\tauthor = {Guo, LW and Liu, WD and Li, L and Xu, JM and Zhang, K and Zhang, Y},\n\ttitle = {Fast Finite-Time Super-Twisting Sliding Mode Control with an Extended State Higher-Order Sliding Mode Observer for UUV Trajectory Tracking},\n\tjournal = {DRONES},\n\tyear = {2024},\n\tkeywords = {unmanned underwater vehicle; super-twisting sliding mode control; extended state higher-order sliding mode observer; fast finite-time convergence; GUIDANCE; SYSTEMS},\n\tabstract = {This paper proposes a trajectory tracking control scheme consisting of a fast finite-time super-twisting sliding mode control (FSTSMC) approach and an extended state higher-order sliding mode observer (ESHSMO) for unmanned underwater vehicles (UUVs) with external disturbances and model uncertainties. Firstly, an extended state higher-order sliding mode observer with the finite-time convergence is designed based on the higher-order sliding mode technique and the extended state observer technique. Next, on the basis of disturbances and model uncertainties observation, a fast finite-time super-twisting sliding mode control approach is proposed, and the finite time stabilization property of the tracking errors is proved by Lyapunov theory. Finally, through numerical simulation and experiment in a water pool, it has been verified that the proposed control scheme has achieved the high control precision, the smaller chattering, the disturbance compensation and the fast finite-time convergence in UUV trajectory tracking.},\n\tdoi = {10.3390/drones8020041},\n\tvolume = {8},\n\tnumber = {2},\n\tissn = {2504-446X},\n\tnote = {Times Cited in Web of Science Core Collection: 13 Total Times Cited: 14 Cited Reference Count: 42 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/drones8020041"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000053",
+      "entry_type": "article",
+      "title": "Distributed Dual Closed-Loop Model Predictive Formation Control for Collision-Free Multi-AUV System Subject to Compound Disturbances",
+      "authors": [
+        "Zhang, MY",
+        "Yan, ZP",
+        "Zhou, JJ",
+        "Yue, LD"
+      ],
+      "year": 2023,
+      "journal": "JOURNAL OF MARINE SCIENCE AND ENGINEERING",
+      "doi": "10.3390/jmse11101897",
+      "abstract": "This paper focuses on the collision-free formation tracking of autonomous underwater vehicles (AUVs) with compound disturbances in complex ocean environments. We propose a novel finite-time extended state observer (FTESO)-based distributed dual closed-loop model predictive control scheme. Initially, a fast FTESO is designed to accurately estimate both model uncertainties and external disturbances for each subsystem. Subsequently, the outer-loop and inner-loop formation controllers are developed by integrating disturbance compensation with distributed model predictive control (DMPC) theory. With full consideration of the input and state constraints, we resolve the local information-based DMPC optimization problem to obtain the control inputs for each AUV, thereby preventing actuator saturation and collisions among AUVs. Moreover, to mitigate the increased computation caused by the control structure, the Laguerre orthogonal function is applied to alleviate the computational burden in time intervals. We also demonstrate the stability of the closed-loop system by applying the terminal state constraint. Finally, based on a connected directed topology, comparative simulations are performed under various control schemes to verify the robustness and superior performance of the proposed scheme.",
+      "keywords": [
+        "multi-AUV system",
+        "formation tracking",
+        "finite-time extended state observer",
+        "distributed model predictive control",
+        "Laguerre function",
+        "AUTONOMOUS UNDERWATER VEHICLE",
+        "TRAJECTORY TRACKING"
+      ],
+      "normalized_title": "distributed dual closed loop model predictive formation control for collision free multi auv system subject to compound disturbances",
+      "raw_bibtex": "@ARTICLE{10.3390/jmse11101897,\n\tauthor = {Zhang, MY and Yan, ZP and Zhou, JJ and Yue, LD},\n\ttitle = {Distributed Dual Closed-Loop Model Predictive Formation Control for Collision-Free Multi-AUV System Subject to Compound Disturbances},\n\tjournal = {JOURNAL OF MARINE SCIENCE AND ENGINEERING},\n\tyear = {2023},\n\tkeywords = {multi-AUV system; formation tracking; finite-time extended state observer; distributed model predictive control; Laguerre function; AUTONOMOUS UNDERWATER VEHICLE; TRAJECTORY TRACKING},\n\tabstract = {This paper focuses on the collision-free formation tracking of autonomous underwater vehicles (AUVs) with compound disturbances in complex ocean environments. We propose a novel finite-time extended state observer (FTESO)-based distributed dual closed-loop model predictive control scheme. Initially, a fast FTESO is designed to accurately estimate both model uncertainties and external disturbances for each subsystem. Subsequently, the outer-loop and inner-loop formation controllers are developed by integrating disturbance compensation with distributed model predictive control (DMPC) theory. With full consideration of the input and state constraints, we resolve the local information-based DMPC optimization problem to obtain the control inputs for each AUV, thereby preventing actuator saturation and collisions among AUVs. Moreover, to mitigate the increased computation caused by the control structure, the Laguerre orthogonal function is applied to alleviate the computational burden in time intervals. We also demonstrate the stability of the closed-loop system by applying the terminal state constraint. Finally, based on a connected directed topology, comparative simulations are performed under various control schemes to verify the robustness and superior performance of the proposed scheme.},\n\tdoi = {10.3390/jmse11101897},\n\tvolume = {11},\n\tnumber = {10},\n\tissn = {2077-1312},\n\tnote = {Times Cited in Web of Science Core Collection: 5 Total Times Cited: 5 Cited Reference Count: 43 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/jmse11101897"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000054",
+      "entry_type": "article",
+      "title": "PELOS-based path following control for autonomous underwater vehicle with input saturation and dead-zone",
+      "authors": [
+        "Guo, Y",
+        "Yu, CY",
+        "Xiang, XB",
+        "Lian, L"
+      ],
+      "year": 2024,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2024.116956",
+      "abstract": "This paper focuses on horizontal path following control with prescribed performance for an autonomous underwater vehicle (AUV) with input saturation nonlinearity and dead -zone nonlinearity. The proposed control scheme consists of two functional parts, namely prescribed -performance line -of -sight with extended state observer (PELOS) based guidance and nonlinear model predictive control (MPC) based attitude control. Firstly, PELOS guidance is derived with an error transformed function such that the path following errors are restricted in the prescribed maximum overshoot and converge at a rate not lower than the prescribed convergence rate bound. Subsequently, the dedicated MPC with a smooth inverse dead -zone model is designed to remove the chattering phenomenon caused by dead -zone nonlinearity. It is illustrated that with the help of the designed controller, required transient and steady constraints of path following errors are never violated and the control input is chattering -free and smooth despite of the influence of saturation and dead -zone of actuators. Finally, three comparative numerical simulation results are carried out to demonstrate the effectiveness and advantages of the proposed path following control method.",
+      "keywords": [
+        "Autonomous underwater vehicle",
+        "Prescribed performance guidance",
+        "Line-of-sight",
+        "Model predictive control",
+        "Dead-zone compensation",
+        "ROBUST ADAPTIVE-CONTROL",
+        "PERFORMANCE",
+        "TRACKING"
+      ],
+      "normalized_title": "pelos based path following control for autonomous underwater vehicle with input saturation and dead zone",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2024.116956,\n\tauthor = {Guo, Y and Yu, CY and Xiang, XB and Lian, L},\n\ttitle = {PELOS-based path following control for autonomous underwater vehicle with input saturation and dead-zone},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2024},\n\tkeywords = {Autonomous underwater vehicle; Prescribed performance guidance; Line-of-sight; Model predictive control; Dead-zone compensation; ROBUST ADAPTIVE-CONTROL; PERFORMANCE; TRACKING},\n\tabstract = {This paper focuses on horizontal path following control with prescribed performance for an autonomous underwater vehicle (AUV) with input saturation nonlinearity and dead -zone nonlinearity. The proposed control scheme consists of two functional parts, namely prescribed -performance line -of -sight with extended state observer (PELOS) based guidance and nonlinear model predictive control (MPC) based attitude control. Firstly, PELOS guidance is derived with an error transformed function such that the path following errors are restricted in the prescribed maximum overshoot and converge at a rate not lower than the prescribed convergence rate bound. Subsequently, the dedicated MPC with a smooth inverse dead -zone model is designed to remove the chattering phenomenon caused by dead -zone nonlinearity. It is illustrated that with the help of the designed controller, required transient and steady constraints of path following errors are never violated and the control input is chattering -free and smooth despite of the influence of saturation and dead -zone of actuators. Finally, three comparative numerical simulation results are carried out to demonstrate the effectiveness and advantages of the proposed path following control method.},\n\tdoi = {10.1016/j.oceaneng.2024.116956},\n\tvolume = {296},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 8 Total Times Cited: 10 Cited Reference Count: 28 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2024.116956"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000055",
+      "entry_type": "article",
+      "title": "Dynamic modeling and controller design of a four-cable assisted positioning system for unmanned surface vehicle recovery",
+      "authors": [
+        "Li, J",
+        "Lei, SY",
+        "Wang, SH",
+        "Zhang, CH",
+        "Han, GD",
+        "Yuan, ZY",
+        "Chen, HQ",
+        "Sun, YQ"
+      ],
+      "year": 2025,
+      "journal": "SHIPS AND OFFSHORE STRUCTURES",
+      "doi": "10.1080/17445302.2025.2569436",
+      "abstract": "To enhance the safety and efficiency of unmanned surface vehicle (USV) recovery operations, this study proposes a four-cable assisted positioning system (FAPS). A dynamic model of the FAPS is developed, incorporating the coupled effects of wind and wave loads, as well as inertial effects arising from vessel motion and crane actions. Given the difficulty in accurately measuring the mother vessel's attitude and the recovery cage's center of gravity, a dynamic model for disturbance decoupling is derived. To improve the positioning accuracy and attitude stability of the recovery cage, a computed torque sliding mode control with an extended state observer is developed. The recovery operation is divided into three phases: docking, berthing, and lifting. Simulation results indicate that the proposed controller effectively reduces overshoot, accelerates convergence, enhances accuracy, and lowers energy consumption. The proposed method provides theoretical and technical guidance for designing and developing USV recovery systems.",
+      "keywords": [
+        "Unmanned surface vehicle recovery",
+        "cable-driven parallel mechanism",
+        "telescopic crane",
+        "dynamic modeling",
+        "robust control",
+        "CRANE",
+        "MOTION",
+        "SHIP"
+      ],
+      "normalized_title": "dynamic modeling and controller design of a four cable assisted positioning system for unmanned surface vehicle recovery",
+      "raw_bibtex": "@ARTICLE{10.1080/17445302.2025.2569436,\n\tauthor = {Li, J and Lei, SY and Wang, SH and Zhang, CH and Han, GD and Yuan, ZY and Chen, HQ and Sun, YQ},\n\ttitle = {Dynamic modeling and controller design of a four-cable assisted positioning system for unmanned surface vehicle recovery},\n\tjournal = {SHIPS AND OFFSHORE STRUCTURES},\n\tyear = {2025},\n\tkeywords = {Unmanned surface vehicle recovery; cable-driven parallel mechanism; telescopic crane; dynamic modeling; robust control; CRANE; MOTION; SHIP},\n\tabstract = {To enhance the safety and efficiency of unmanned surface vehicle (USV) recovery operations, this study proposes a four-cable assisted positioning system (FAPS). A dynamic model of the FAPS is developed, incorporating the coupled effects of wind and wave loads, as well as inertial effects arising from vessel motion and crane actions. Given the difficulty in accurately measuring the mother vessel's attitude and the recovery cage's center of gravity, a dynamic model for disturbance decoupling is derived. To improve the positioning accuracy and attitude stability of the recovery cage, a computed torque sliding mode control with an extended state observer is developed. The recovery operation is divided into three phases: docking, berthing, and lifting. Simulation results indicate that the proposed controller effectively reduces overshoot, accelerates convergence, enhances accuracy, and lowers energy consumption. The proposed method provides theoretical and technical guidance for designing and developing USV recovery systems.},\n\tdoi = {10.1080/17445302.2025.2569436},\n\tissn = {1744-5302},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 46 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1080/17445302.2025.2569436"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000056",
+      "entry_type": "article",
+      "title": "Target tracking control of multiple unmanned surface vehicles based on distributed extended state observer",
+      "authors": [
+        "Bai, JG",
+        "Zhu, YK",
+        "Guo, G"
+      ],
+      "year": 2025,
+      "journal": "INTERNATIONAL JOURNAL OF SYSTEMS SCIENCE",
+      "doi": "10.1080/00207721.2024.2428847",
+      "abstract": "In this paper, the target tracking control problem of multiple unmanned surface vehicles (multi-USVs) based on relative states information and data fusion is studied with underactuation and disturbances. Firstly, the concepts of relative position and relative velocity are proposed in view of the fact that the target USV does not actively transmit states information and some sensors can only measure distance. Then, a novel distributed extended state observer is designed to enable each tracking USV to estimate the position and velocity of the target USV. Secondly, a novel data fusion algorithm is proposed to obtain the accurate estimation of the position and velocity of the target USV. Then, the distributed position and velocity tracking errors are proposed, based on which, an integral backstepping sliding mode distributed controller is designed. An exponential reaching law is introduced to improve the dynamic response of the tracking USVs. Finally, the mathematical proof that the proposed controller can realise target tracking is given. Simulation results show the effectiveness of the controller, distributed extended state observer and data fusion algorithm.",
+      "keywords": [
+        "Target tracking control",
+        "multiple unmanned surface vehicles",
+        "relative states information",
+        "data fusion",
+        "distributed extended state observer",
+        "TRAJECTORY TRACKING",
+        "NONLINEAR-SYSTEMS"
+      ],
+      "normalized_title": "target tracking control of multiple unmanned surface vehicles based on distributed extended state observer",
+      "raw_bibtex": "@ARTICLE{10.1080/00207721.2024.2428847,\n\tauthor = {Bai, JG and Zhu, YK and Guo, G},\n\ttitle = {Target tracking control of multiple unmanned surface vehicles based on distributed extended state observer},\n\tjournal = {INTERNATIONAL JOURNAL OF SYSTEMS SCIENCE},\n\tyear = {2025},\n\tkeywords = {Target tracking control; multiple unmanned surface vehicles; relative states information; data fusion; distributed extended state observer; TRAJECTORY TRACKING; NONLINEAR-SYSTEMS},\n\tabstract = {In this paper, the target tracking control problem of multiple unmanned surface vehicles (multi-USVs) based on relative states information and data fusion is studied with underactuation and disturbances. Firstly, the concepts of relative position and relative velocity are proposed in view of the fact that the target USV does not actively transmit states information and some sensors can only measure distance. Then, a novel distributed extended state observer is designed to enable each tracking USV to estimate the position and velocity of the target USV. Secondly, a novel data fusion algorithm is proposed to obtain the accurate estimation of the position and velocity of the target USV. Then, the distributed position and velocity tracking errors are proposed, based on which, an integral backstepping sliding mode distributed controller is designed. An exponential reaching law is introduced to improve the dynamic response of the tracking USVs. Finally, the mathematical proof that the proposed controller can realise target tracking is given. Simulation results show the effectiveness of the controller, distributed extended state observer and data fusion algorithm.},\n\tdoi = {10.1080/00207721.2024.2428847},\n\tvolume = {56},\n\tnumber = {7},\n\tpages = {1590-1605},\n\tissn = {0020-7721},\n\tnote = {Times Cited in Web of Science Core Collection: 8 Total Times Cited: 8 Cited Reference Count: 43 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1080/00207721.2024.2428847"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000057",
+      "entry_type": "article",
+      "title": "Hybrid coordinated trajectory tracking control for AUVs via multi-objective quantum-behaved PSO",
+      "authors": [
+        "Zhou, P",
+        "Chen, HA",
+        "Chen, Y",
+        "Bai, JJ",
+        "Guo, YF"
+      ],
+      "year": 2026,
+      "journal": "INTERNATIONAL JOURNAL OF SYSTEMS SCIENCE",
+      "doi": "10.1080/00207721.2026.2634194",
+      "abstract": "To deal with the trajectory tracking control (TTC) problem of an autonomous underwater vehicle (AUV) under oceanic current disturbances, this article proposes a hybrid coordinated control (HCC) method and the multi-objective optimisation issue is solved correspondingly. First, a double-loop integral sliding mode controller (ISMC) is designed, which exhibits excellent fast-response performance but poor steady-state feature. Meanwhile, a state error port-controlled Hamiltonian (SEPCH) controller is formulated, demonstrating relatively poor response speed while maintaining good steady-state characteristics. Subsequently, the hybrid control strategy by combining double-loop ISMC and SEPCH controller is constructed through a weighted model. Moreover, the weighting coefficients involving three performance indices related to tracking error, energy and time can be intelligently optimised by means of multi-objective quantum-behaved particle swarm optimisation (MOQBPSO) technique. Then, a reduced-order extended state observer (ESO) is introduced to enhance the control accuracy in the presence of time-varying disturbances from external surroundings. Two simulation scenarios demonstrate the validity of the proposed method.",
+      "keywords": [
+        "Trajectory tracking control",
+        "autonomous underwater vehicles",
+        "state error port-controlled Hamiltonian",
+        "double-loop integral sliding mode control",
+        "hybrid coordinated control",
+        "multi-objective quantum-behaved PSO",
+        "AUTONOMOUS UNDERWATER VEHICLES",
+        "PASSIVITY-BASED CONTROL"
+      ],
+      "normalized_title": "hybrid coordinated trajectory tracking control for auvs via multi objective quantum behaved pso",
+      "raw_bibtex": "@ARTICLE{10.1080/00207721.2026.2634194,\n\tauthor = {Zhou, P and Chen, HA and Chen, Y and Bai, JJ and Guo, YF},\n\ttitle = {Hybrid coordinated trajectory tracking control for AUVs via multi-objective quantum-behaved PSO},\n\tjournal = {INTERNATIONAL JOURNAL OF SYSTEMS SCIENCE},\n\tyear = {2026},\n\tkeywords = {Trajectory tracking control; autonomous underwater vehicles; state error port-controlled Hamiltonian; double-loop integral sliding mode control; hybrid coordinated control; multi-objective quantum-behaved PSO; AUTONOMOUS UNDERWATER VEHICLES; PASSIVITY-BASED CONTROL},\n\tabstract = {To deal with the trajectory tracking control (TTC) problem of an autonomous underwater vehicle (AUV) under oceanic current disturbances, this article proposes a hybrid coordinated control (HCC) method and the multi-objective optimisation issue is solved correspondingly. First, a double-loop integral sliding mode controller (ISMC) is designed, which exhibits excellent fast-response performance but poor steady-state feature. Meanwhile, a state error port-controlled Hamiltonian (SEPCH) controller is formulated, demonstrating relatively poor response speed while maintaining good steady-state characteristics. Subsequently, the hybrid control strategy by combining double-loop ISMC and SEPCH controller is constructed through a weighted model. Moreover, the weighting coefficients involving three performance indices related to tracking error, energy and time can be intelligently optimised by means of multi-objective quantum-behaved particle swarm optimisation (MOQBPSO) technique. Then, a reduced-order extended state observer (ESO) is introduced to enhance the control accuracy in the presence of time-varying disturbances from external surroundings. Two simulation scenarios demonstrate the validity of the proposed method.},\n\tdoi = {10.1080/00207721.2026.2634194},\n\tissn = {0020-7721},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 48 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1080/00207721.2026.2634194"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000058",
+      "entry_type": "article",
+      "title": "A Trajectory Tracking and Local Path Planning Control Strategy for Unmanned Underwater Vehicles",
+      "authors": [
+        "Zhang, X",
+        "Wang, ZQ",
+        "Chen, HJ",
+        "Ding, H"
+      ],
+      "year": 2023,
+      "journal": "JOURNAL OF MARINE SCIENCE AND ENGINEERING",
+      "doi": "10.3390/jmse11122230",
+      "abstract": "The control strategy of an underdriven unmanned underwater vehicle (UUV) equipped with front sonar and actuator faults in a continuous task environment is investigated. Considering trajectory tracking and local path planning in complex-obstacle environments, we propose a task transition strategy under the event-triggered mechanism and design the corresponding state space and action space for the trajectory tracking task under the deep reinforcement learning framework. Meanwhile, a feed-forward compensation mechanism is designed to counteract the effects of external disturbances and actuator faults in combination with a reduced-order extended state observer. For the path planning task under the rapidly exploring random tree (RRT) framework, a reward component and angular factors are introduced to optimize the growth and exploration points of the extended tree under the consideration of the shortest distance, optimal energy consumption, and steering angle constraints. The effectiveness of the proposed method was verified through continuous task simulations of trajectory tracking and local path planning.",
+      "keywords": [
+        "deep reinforcement learning",
+        "RRT",
+        "unmanned underwater vehicle",
+        "path tracking",
+        "route planning"
+      ],
+      "normalized_title": "a trajectory tracking and local path planning control strategy for unmanned underwater vehicles",
+      "raw_bibtex": "@ARTICLE{10.3390/jmse11122230,\n\tauthor = {Zhang, X and Wang, ZQ and Chen, HJ and Ding, H},\n\ttitle = {A Trajectory Tracking and Local Path Planning Control Strategy for Unmanned Underwater Vehicles},\n\tjournal = {JOURNAL OF MARINE SCIENCE AND ENGINEERING},\n\tyear = {2023},\n\tkeywords = {deep reinforcement learning; RRT; unmanned underwater vehicle; path tracking; route planning},\n\tabstract = {The control strategy of an underdriven unmanned underwater vehicle (UUV) equipped with front sonar and actuator faults in a continuous task environment is investigated. Considering trajectory tracking and local path planning in complex-obstacle environments, we propose a task transition strategy under the event-triggered mechanism and design the corresponding state space and action space for the trajectory tracking task under the deep reinforcement learning framework. Meanwhile, a feed-forward compensation mechanism is designed to counteract the effects of external disturbances and actuator faults in combination with a reduced-order extended state observer. For the path planning task under the rapidly exploring random tree (RRT) framework, a reward component and angular factors are introduced to optimize the growth and exploration points of the extended tree under the consideration of the shortest distance, optimal energy consumption, and steering angle constraints. The effectiveness of the proposed method was verified through continuous task simulations of trajectory tracking and local path planning.},\n\tdoi = {10.3390/jmse11122230},\n\tvolume = {11},\n\tnumber = {12},\n\tissn = {2077-1312},\n\tnote = {Times Cited in Web of Science Core Collection: 2 Total Times Cited: 2 Cited Reference Count: 30 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/jmse11122230"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000059",
+      "entry_type": "article",
+      "title": "Path-Guided Model-Free Flocking Control of Unmanned Surface Vehicles Based on Concurrent Learning Extended State Observers",
+      "authors": [
+        "Peng, ZH",
+        "Jiang, Y",
+        "Liu, L",
+        "Shi, Y"
+      ],
+      "year": 2023,
+      "journal": "IEEE TRANSACTIONS ON SYSTEMS MAN CYBERNETICS-SYSTEMS",
+      "doi": "10.1109/tsmc.2023.3256371",
+      "abstract": "This article addresses the path-guided flocking control of unmanned surface vehicles (USVs) suffering from fully unknown kinetics. A model-free learning and anti-disturbance control method is developed to achieve path-guided flocking without using prior knowledge of model nonlinearities, ocean disturbances, or control input gains. Specifically, data-driven concurrent learning extended state observers (CLESOs) based on fuzzy systems are presented to estimate the unknown kinetics of USVs. With the proposed CLESO, a model-free path-following control law is proposed for a leader USV to follow a parameterized path. Then, model-free flocking control laws based on potential functions are proposed for follower USVs to avoid collisions and maintain network links within available communication ranges. Through cascade stability analysis, the closed-loop system is proven to be globally asymptotically stable. Simulation results substantiate the proposed CLESO-based anti-disturbance control approach for path-guided flocking of a swarm of USVs.",
+      "keywords": [
+        "Fuzzy systems",
+        "Observers",
+        "Kinetic theory",
+        "Estimation",
+        "Computational modeling",
+        "Stability analysis",
+        "Simulation",
+        "Concurrent learning extended state observer (CLESO)",
+        "path-guided flocking",
+        "potential functions",
+        "unmanned surface vehicles (USVs)",
+        "OUTPUT-FEEDBACK CONTROL",
+        "TRACKING CONTROL",
+        "CONTAINMENT CONTROL",
+        "SYSTEMS",
+        "VESSELS",
+        "SUBJECT",
+        "LEADER",
+        "SHIP"
+      ],
+      "normalized_title": "path guided model free flocking control of unmanned surface vehicles based on concurrent learning extended state observers",
+      "raw_bibtex": "@ARTICLE{10.1109/TSMC.2023.3256371,\n\tauthor = {Peng, ZH and Jiang, Y and Liu, L and Shi, Y},\n\ttitle = {Path-Guided Model-Free Flocking Control of Unmanned Surface Vehicles Based on Concurrent Learning Extended State Observers},\n\tjournal = {IEEE TRANSACTIONS ON SYSTEMS MAN CYBERNETICS-SYSTEMS},\n\tyear = {2023},\n\tkeywords = {Fuzzy systems; Observers; Kinetic theory; Estimation; Computational modeling; Stability analysis; Simulation; Concurrent learning extended state observer (CLESO); path-guided flocking; potential functions; unmanned surface vehicles (USVs); OUTPUT-FEEDBACK CONTROL; TRACKING CONTROL; CONTAINMENT CONTROL; SYSTEMS; VESSELS; SUBJECT; LEADER; SHIP},\n\tabstract = {This article addresses the path-guided flocking control of unmanned surface vehicles (USVs) suffering from fully unknown kinetics. A model-free learning and anti-disturbance control method is developed to achieve path-guided flocking without using prior knowledge of model nonlinearities, ocean disturbances, or control input gains. Specifically, data-driven concurrent learning extended state observers (CLESOs) based on fuzzy systems are presented to estimate the unknown kinetics of USVs. With the proposed CLESO, a model-free path-following control law is proposed for a leader USV to follow a parameterized path. Then, model-free flocking control laws based on potential functions are proposed for follower USVs to avoid collisions and maintain network links within available communication ranges. Through cascade stability analysis, the closed-loop system is proven to be globally asymptotically stable. Simulation results substantiate the proposed CLESO-based anti-disturbance control approach for path-guided flocking of a swarm of USVs.},\n\tdoi = {10.1109/TSMC.2023.3256371},\n\tvolume = {53},\n\tnumber = {8},\n\tpages = {4729-4739},\n\tissn = {2168-2216},\n\tnote = {Times Cited in Web of Science Core Collection: 55 Total Times Cited: 57 Cited Reference Count: 75 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TSMC.2023.3256371"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000060",
+      "entry_type": "article",
+      "title": "Extended state observer-based composite-system control for trajectory tracking of underactuated AUVs",
+      "authors": [
+        "Lei, M",
+        "Li, Y",
+        "Pang, S"
+      ],
+      "year": 2021,
+      "journal": "APPLIED OCEAN RESEARCH",
+      "doi": "10.1016/j.apor.2021.102694",
+      "abstract": "In this paper, an alternative design method is presented for the horizontal trajectory tracking of underactuated autonomous underwater vehicles (AUVs) subject to unknown internal and external disturbances. In the guidance loop, a kinematic control law of the desired surge speed and trajectory angle is derived. To meet the previous convergence requirement, a kinetic control law is developed. It consists of two terms: the disturbance rejection and the stabilizing controller. The former is given by using an extended state observer (ESO) based on the high gain technique. In this process, the singular perturbation theory is applied to analyze the extended state system via order reduction. Then the latter is designed in the reduced model independently, in term of the backstepping technique and a composite-system method. Moreover, this paper also proves that the proposed controller makes the closed-loop system asymptotically stable. Finally, simulation results are presented to illustrate the control performance.",
+      "keywords": [
+        "Autonomous underwater vehicle",
+        "Trajectory tracking",
+        "Extended state observer",
+        "Composite system",
+        "Control design",
+        "Stability analysis",
+        "PATH-FOLLOWING CONTROL",
+        "AUTONOMOUS UNDERWATER VEHICLES",
+        "SLIDING MODE CONTROL",
+        "STABILITY ANALYSIS",
+        "ROBUST",
+        "STABILIZATION",
+        "DESIGN"
+      ],
+      "normalized_title": "extended state observer based composite system control for trajectory tracking of underactuated auvs",
+      "raw_bibtex": "@ARTICLE{10.1016/j.apor.2021.102694,\n\tauthor = {Lei, M and Li, Y and Pang, S},\n\ttitle = {Extended state observer-based composite-system control for trajectory tracking of underactuated AUVs},\n\tjournal = {APPLIED OCEAN RESEARCH},\n\tyear = {2021},\n\tkeywords = {Autonomous underwater vehicle; Trajectory tracking; Extended state observer; Composite system; Control design; Stability analysis; PATH-FOLLOWING CONTROL; AUTONOMOUS UNDERWATER VEHICLES; SLIDING MODE CONTROL; STABILITY ANALYSIS; ROBUST; STABILIZATION; DESIGN},\n\tabstract = {In this paper, an alternative design method is presented for the horizontal trajectory tracking of underactuated autonomous underwater vehicles (AUVs) subject to unknown internal and external disturbances. In the guidance loop, a kinematic control law of the desired surge speed and trajectory angle is derived. To meet the previous convergence requirement, a kinetic control law is developed. It consists of two terms: the disturbance rejection and the stabilizing controller. The former is given by using an extended state observer (ESO) based on the high gain technique. In this process, the singular perturbation theory is applied to analyze the extended state system via order reduction. Then the latter is designed in the reduced model independently, in term of the backstepping technique and a composite-system method. Moreover, this paper also proves that the proposed controller makes the closed-loop system asymptotically stable. Finally, simulation results are presented to illustrate the control performance.},\n\tdoi = {10.1016/j.apor.2021.102694},\n\tvolume = {112},\n\tissn = {0141-1187},\n\tnote = {Times Cited in Web of Science Core Collection: 17 Total Times Cited: 20 Cited Reference Count: 31 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.apor.2021.102694"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究聚焦于场地分类和分区，未明确针对场地放大效应的量化评估或预测。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T21:27:45.809947+08:00"
+  },
+  {
+    "paper_id": "paper_000002",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "摘要表明研究目标是地面沉降易发性评估，而非场地放大效应的量化评估或预测。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T21:27:45.809947+08:00"
+  },
+  {
+    "paper_id": "paper_000003",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要明确研究对象为非结构构件的动态放大系数，属于上部结构响应，而非下方土体/地形的场地放大效应。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T21:27:45.809947+08:00"
+  },
+  {
+    "paper_id": "paper_000004",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确使用机器学习方法预测局部场地放大效应，并基于数值模拟生成的数据集进行模型训练。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T21:27:45.809947+08:00"
+  },
+  {
+    "paper_id": "paper_000005",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要提到Vs30和盆地深度代理参数捕捉场地放大效应，但研究主要目标是预测地震动持续时间和能量强度指标，是否明确针对场地放大量化评估信息不足。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T21:27:45.809947+08:00"
+  },
+  {
+    "paper_id": "paper_000006",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究仅进行场地分类，未将其用于计算或预测场地放大效应。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T21:27:45.809947+08:00"
+  },
+  {
+    "paper_id": "paper_000007",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确使用卷积神经网络预测局部场地放大系数，并基于实际地震动记录数据。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.92,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T21:27:45.809947+08:00"
+  }
+]

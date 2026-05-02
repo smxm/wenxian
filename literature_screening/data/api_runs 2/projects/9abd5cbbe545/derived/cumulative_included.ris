@@ -1,0 +1,425 @@
+TY  - JOUR
+AU  - Hou, ZZ
+AU  - Du, YL
+AU  - Xu, HB
+TI  - Measurement of reinforcement corrosion in concrete by integrated simulations, ultrasonic tests, and artificial neural networks
+PY  - 2025
+JO  - CASE STUDIES IN CONSTRUCTION MATERIALS
+DO  - 10.1016/j.cscm.2025.e05570
+AB  - Current methods for measuring reinforcement corrosion in concrete have limitations, including low efficiency, poor accuracy, and ambiguous interpretation. High-accuracy nondestructive measurement of reinforcement corrosion was realized in this study through the integration of three technical approaches: (1) Ultrasonic wave propagation in reinforced concrete (RC) with different rebar diameters was simulated using COMSOL to establish the relationship between rebar corrosion (reflected by diameter reduction) and ultrasonic characteristics; (2) Accelerated corrosion experiments were performed on RC specimens using a 5 % sodium chloride solution, monitoring corrosion evolution over 40 h. Three distinct corrosion stages were identified: slow development, rapid expansion, and stable deterioration. Additionally, ultrasonic propagation time was found to delay and amplitude increase with intensifying corrosion, while concrete compressive strength decreased rapidly after 8 h of corrosion; (3) A back propagation-artificial neural network (BP-ANN) optimized by the AdaBoost algorithm was developed, with ultrasonic amplitude, crack width, and compressive strength as input parameters. To enhance model training stability and avoid overfitting, 10-fold cross-validation was adopted for data partitioning, and the Gray Wolf Optimization (GWO) algorithm was integrated to optimize the weights and thresholds of the BP-ANN. The AdaBoost-BP model achieved high prediction accuracy for rebar corrosion indicators: 93.75 % for mass loss rate and 97.67 % for section loss rate. The integrated method, combining coda wave interferometry (CWI), ultrasonic testing, and ANN, aims to overcome the limitations of existing techniques. A reliable framework for nondestructive evaluation of reinforcement corrosion was provided, enabling precise monitoring of RC structure durability. This foundation can be extended to complex real-world structures (e.g., bridges, coastal buildings) and promote the development of intelligent corrosion detection systems.
+KW  - Coda wave interferometry (CWI)
+KW  - Reinforced concrete (RC)
+KW  - Ultrasonic tests
+KW  - Artificial neural networks
+KW  - DIFFUSE ULTRASOUND
+KW  - MOISTURE-CONTENT
+KW  - CRACKS ER -
+ER  -
+
+TY  - JOUR
+AU  - Zhang, L
+AU  - Qiao, C
+AU  - Jia, SD
+AU  - Zeng, JJ
+AU  - Li, HY
+AU  - Zhang, TH
+AU  - Wu, SF
+TI  - Imaging of inclusions in concrete with enhanced low-frequency ultrasound tomography
+PY  - 2025
+JO  - SENSORS AND ACTUATORS A-PHYSICAL
+DO  - 10.1016/j.sna.2025.116324
+AB  - Ultrasonic Testing (UT) is widely used to identify surface and sub-surface defects/flaws in various materials. Especially for a concrete structure, the visualization of the interior using ultrasound tomography allows for the quantitative description of defects. However, imaging error errors in concrete are inevitable due to the nature of ray-trace-based tomography and material, whose detectability can be influenced by many factors (e.g., wave propagation, the existence of aggregates, pores, heterogeneity, etc.). In order to enhance the imaging quality, a proper selection of abnormal path imaging methods based on the average ultrasonic velocity is proposed. The defective and imperfect zones in concrete can be identified by plotting intersection zones formed with multiple paths of ultrasound propagation. To illustrate the proposed strategy, both numerical and experimental analyses were conducted; furthermore, the reliability and efficiency have been confirmed accordingly. Compared with the conventional tomography method, the path optimization imaging method can effectively enhance the detect- ability and reduce the deployment of transducers and the number of measurements. In addition, an optimization method for determining the time of flight (TOF) is presented to obtain a more accurate arrival time for each ultrasound path with a noise outlier-based method. Low-frequency ultrasonic testing schemes were proposed to ensure sufficient ultrasonic energy penetration and reduce signal attenuation. This work offers a practical solution for high-quality ultrasonic imaging in concrete and further provides an idea for cost-effective and in-situ evaluations.
+KW  - Ultrasonic testing
+KW  - Ultrasound path
+KW  - Tomography
+KW  - Ray-trace method
+KW  - Heterogeneous material
+KW  - Concrete
+KW  - WAVE-PROPAGATION ER -
+ER  -
+
+TY  - JOUR
+AU  - Hu, TY
+AU  - Zhao, JH
+AU  - Zheng, RF
+AU  - Wang, PF
+AU  - Li, XL
+AU  - Zhang, QC
+TI  - Ultrasonic based concrete defects identification via wavelet packet transform and GA-BP neural network
+PY  - 2021
+JO  - PEERJ COMPUTER SCIENCE
+DO  - 10.7717/peerj-cs.635
+AB  - Concrete is the main material in building. Since its poor structural integrity may cause accidents, it is significant to detect defects in concrete. However, it is a challenging topic as the unevenness of concrete would lead to the complex dynamics with uncertainties in the ultrasonic diagnosis of defects. Note that the detection results mainly depend on the direct parameters, e.g., the time of travel through the concrete. The current diagnosis accuracy and intelligence level are difficult to meet the design requirement for automatic and increasingly high-performance demands. To solve the mentioned problems, our contribution of this paper can be summarized as establishing a diagnosis model based on the GA-BPNN method and ultrasonic information extracted that helps engineers identify concrete defects. Potentially, the application of this model helps to improve the working efficiency, diagnostic accuracy and automation level of ultrasonic testing instruments. In particular, we propose a simple and effective signal recognition method for small-size concrete hole defects. This method can be divided into two parts: (1) signal effective information extraction based on wavelet packet transform (WPT), where mean value, standard deviation, kurtosis coefficient, skewness coefficient and energy ratio are utilized as features to characterize the detection signals based on the analysis of the main frequency node of the signals, and (2) defect signal recognition based on GA optimized back propagation neural network (GA-BPNN), where the crossvalidation method has been used for the stochastic division of the signal dataset and it leads to the BPNN recognition model with small bias. Finally, we implement this method on 150 detection signal data which are obtained by the ultrasonic testing system with 50 kHz working frequency. The experimental test block is a C30 class concrete block with 5, 7, and 9 mm penetrating holes. The information of the experimental environment, algorithmic parameters setting and signal processing procedure are described in detail. The average recognition accuracy is 91.33% for the identification of small size concrete defects according to experimental results, which verifies the feasibility and efficiency.
+KW  - Concrete defects
+KW  - Ultrasonic signal processing
+KW  - Wavelet packet transform
+KW  - BP neural network
+KW  - Pattern recognition
+KW  - SIGNAL
+KW  - PROPAGATION
+KW  - DAMAGE
+KW  - TESTS
+KW  - ECHO ER -
+ER  -
+
+TY  - JOUR
+AU  - Wang, YM
+AU  - Wang, LH
+AU  - Ye, WJ
+AU  - Zhang, FY
+AU  - Pan, YD
+AU  - Li, Y
+TI  - Concrete Defect Localization Based on Multilevel Convolutional Neural Networks
+PY  - 2024
+JO  - MATERIALS
+DO  - 10.3390/ma17153685
+AB  - Concrete structures frequently manifest diverse defects throughout their manufacturing and usage processes due to factors such as design, construction, environmental conditions and distress mechanisms. In this paper, a multilevel convolutional neural network (CNN) combined with array ultrasonic testing (AUT) is proposed for identifying the locations of hole defects in concrete structures. By refining the detection area layer by layer, AUT is used to collect ultrasonic signals containing hole defect information, and the original echo signal is input to CNN for the classification of hole locations. The advantage of the proposed method is that the corresponding defect location information can be obtained directly from the input ultrasonic signal without manual discrimination. It effectively addresses the issue of traditional methods being insufficiently accurate when dealing with complex structures or hidden defects. The analysis process is as follows. First, COMSOL-Multiphysics finite element software is utilized to simulate the AUT detection process and generate a large amount of ultrasonic echo data. Next, the extracted signal data are trained and learned using the proposed multilevel CNN approach to achieve progressive localization of internal structural defects. Afterwards, a comparative analysis is conducted between the proposed multilevel CNN method and traditional CNN approaches. The results show that the defect localization accuracy of the proposed multilevel CNN approach improved from 85.38% to 95.27% compared to traditional CNN methods. Furthermore, the computation time required for this process is reduced, indicating that the method not only achieves higher recognition precision but also operates with greater efficiency. Finally, a simple experimental verification is conducted; the results show that this method has strong robustness in recognizing noisy ultrasonic signals, provides effective solutions, and can be used as a reference for future defect detection.
+KW  - convolutional neural networks
+KW  - concrete structures
+KW  - array ultrasonic testing
+KW  - defect localization
+KW  - NONDESTRUCTIVE TECHNIQUES
+KW  - ALGORITHM
+KW  - MODEL ER -
+ER  -
+
+TY  - JOUR
+AU  - Jin, S
+AU  - Song, H
+AU  - Kang, J
+AU  - Yu, B
+AU  - Park, S
+TI  - Concrete crack reasoning: Explainable defect diagnosis incorporating generative Pretrained transformer 4 and multimodal nondestructive testing data
+PY  - 2026
+JO  - AUTOMATION IN CONSTRUCTION
+DO  - 10.1016/j.autcon.2025.106661
+AB  - Timely detection of aging concrete deterioration requires diagnostic methods combining laboratory-level accuracy with field robustness. Existing models suffer from opaque decision-making and limited integration of multimodal sensor data. This paper presents Concrete Crack Reasoning (CCR), a field-validated diagnostic framework for concrete bridge defects that overcomes these limitations via a two-module pipeline: (i) sensorspecific convolutional neural networks distill features from ground penetrating radar, impact echo, and ultrasonic testing into concise, human-readable sentences; (ii) a memory-guided GPT-4 reasoning stage, operable in Baseline, Feedback, and Adaptive Refiner modes, the last of which uses prompt retrieval for self-correction. On a 1088-sample, four-class bridge-deck dataset, CCR raises top-1 accuracy from 49.4 % to 87.8 % and 97.9 %, reducing the 95 % bootstrap confidence interval to +/- 1.8 %. Explanations in Adaptive Refiner mode employ threshold-aware, cluster-referenced language consistent with expert practice, enhancing auditability. With lightweight in-model retrieval and no external databases, CCR is deployable on resource-constrained units, offering a practical path toward explainable AI-assisted structural health monitoring.
+KW  - Structural health monitoring
+KW  - Concrete crack detection
+KW  - Multimodal non-destructive testing
+KW  - Explainable AI
+KW  - GPT-4
+KW  - Machine learning ER -
+ER  -
+
+TY  - JOUR
+AU  - Xiao, HZ
+AU  - Huang, Y
+TI  - Detection of grout sleeve defects based on the time domain dimensionless indicators of component signals
+PY  - 2023
+JO  - JOURNAL OF BUILDING ENGINEERING
+DO  - 10.1016/j.jobe.2022.105795
+AB  - In recent years, precast concrete structures have been widely used in building and bridge engineering. Grouted sleeve connectors (GSC) are extensively applied to connect vertical rebars between precast concrete members. In practical construction, defects, such as no grouting, insufficient grouting, and missing rebar, often exist in the GSC, which reduces the load-bearing capacity. Therefore, detecting GSC defects is important for the safety of precast concrete structures. In this paper, a numerical model of meso-scale GSC concrete was developed. The model was verified by test data from existing literature. The ultrasonic wave signals in the GSC with and without defects were compared in detail. The signals were decomposed based on wavelet packet transform and empirical mode decomposition. Then the time domain dimensionless indicators were extracted to examine the GSC defects. The proposed method was shown to be superior in detecting the GSC defects with high sensitivity.
+KW  - Grouted sleeve connectors
+KW  - Grouted sleeve connectors defects
+KW  - Ultrasonic testing
+KW  - Wavelet packet transform
+KW  - Empirical mode decomposition
+KW  - CONCRETE
+KW  - PROPAGATION
+KW  - WAVES ER -
+ER  -
+
+TY  - JOUR
+AU  - Lin, L
+AU  - Shen, HY
+AU  - Shi, SQ
+AU  - Zhang, DH
+AU  - Fu, DX
+AU  - Ma, ZY
+TI  - Subwavelength resolution imaging of ultrasonic total focusing method by decoupling overlapped signals through back propagation neural network
+PY  - 2025
+JO  - MECHANICAL SYSTEMS AND SIGNAL PROCESSING
+DO  - 10.1016/j.ymssp.2025.112724
+AB  - The resolution, defined as the ability to distinguish two closely spaced defect, is one key criterion for evaluating ultrasonic imaging systems. The ultimate resolution of ultrasonic images is in the order of wavelength 7 due to the Rayleigh criterion. In this paper, a Back Propagation Neural Network-Total Focusing Method (BPNN-TFM) is proposed for achieving subwavelength resolution imaging. In this method, the BPNN is trained to decouple overlapping signals from adjacent defect by predicting the times of arrival (ToAs) of defect waves, and the TFM performs delay-andsum beamforming. Experimental data is collected through full matrix capture (FMC) from the aluminum alloy specimens that contain adjacent side-drilled holes (SDHs) with central distances ranging from 0.57 to 1.07, and simulation models are established for data augmentation, totaling 54 sets of 55,296 A-scan signals. Twelve multi-domain features, commonly used in ultrasonic testing, are extracted from each A-scan signal as the input of the network. The prediction of ToAs for adjacent SDHs and reconstruction of high-resolution A-scan signals for TFM imaging are sequentially accomplished through BPNN optimized by genetic algorithm. The results demonstrate that the SDHs with a minimum central distance 0.57 can be identified, and the resolution of BPNN-TFM is superior to the existing super-resolution imaging algorithms. Moreover, Shapley additive explanation (SHAP) is introduced to quantitatively analyze the relationship between twelve features and ToAs, and six high-contribution features are further selected. Finally, based on the simulation data, the ultimate resolution of BPNN-TFM in aluminum alloy is explored, and the applicability of the method is discussed by taking two SDHs with depth aberration and three SDHs arranged horizontally with 0.57 central distances as case studies.
+KW  - Ultrasonic detection
+KW  - Back propagation neural network (BPNN)
+KW  - Total focusing method (TFM)
+KW  - Full matrix capture (FMC)
+KW  - Subwavelength resolution
+KW  - FULL MATRIX
+KW  - QUANTITATIVE-EVALUATION
+KW  - OPTIMIZATION
+KW  - ENHANCEMENT
+KW  - ALGORITHMS
+KW  - MODEL ER -
+ER  -
+
+TY  - JOUR
+AU  - Xu, WL
+AU  - Li, XH
+AU  - Zhang, J
+AU  - Xue, ZX
+AU  - Cao, JC
+TI  - Ultrasonic signal enhancement for coarse grain materials by machine learning analysis
+PY  - 2021
+JO  - ULTRASONICS
+DO  - 10.1016/j.ultras.2021.106550
+AB  - This paper aims at dealing with the dilemma of examining the existence of a defect in ultrasonic detection of coarse grain materials. In such cases, defect echoes can be drowned in a strong noise background resulting from intricate coarse grain scattering, that is, grain noise. To this end, we develop an innovative signal reconstruction methodology from polluted measurements which combines basic statistical analysis with a series of machine learning algorithms. The proposed methodology analyzes abundant information from numerous raw signals to distinguish the desired signal from grain noise, avoiding the limitation of information provided only by a single signal. The technique is achieved by collecting similar signals together through a clustering algorithm and subsequently inputting these similar signals to a denoising autoencoder to suppress the grain noise. It is successfully employed to ultrasonic signals obtained from an as-cast stainless steel specimen with coarse equiaxed grains, a stainless steel specimen with relatively homogeneous dendrite fabricated by additive manufacturing and a stainless steel weld with heterogeneous columnar grains having variation of grain sizes in various locations. The influence of material microstructure and probe frequency on denoising performance is investigated in detail. Based on this, the proposed methodology is applied to defect detection. Desired A-scan results and B-scan imaging are achieved by the proposed method, where defects are well revealed. The experimental results demonstrate the developed methodology has stable excellent performance and superior denoising capabilities for defect detection with respect to conventional techniques, especially in the case where the noise is almost the same as the desired signal.
+KW  - Grain noise
+KW  - Ultrasonic testing
+KW  - Signal reconstruction
+KW  - Machine learning
+KW  - Clustering algorithm
+KW  - NEURAL-NETWORK
+KW  - WAVELET ER -
+ER  -
+
+TY  - JOUR
+AU  - Wu, JT
+AU  - El Naggar, MH
+AU  - Wang, KH
+TI  - A Hybrid Convolutional and Recurrent Neural Network for Multi-Sensor Pile Damage Detection with Time Series
+PY  - 2024
+JO  - SENSORS
+DO  - 10.3390/s24041190
+AB  - Machine learning (ML) algorithms are increasingly applied to structure health monitoring (SHM) problems. However, their application to pile damage detection (PDD) is hindered by the complexity of the problem. A novel multi-sensor pile damage detection (MSPDD) method is proposed in this paper to extend the application of ML algorithms in the automatic identification of PDD. The time-series signals collected by multiple sensors during the pile integrity test are first processed by the traveling wave decomposition (TWD) theory and are then input into a hybrid one-dimensional (1D) convolutional and recurrent neural network. The hybrid neural network can achieve the automatic multi-task identification of pile damage detection based on the time series of MSPDD results. Finally, the analytical solution-based sample set is utilized to evaluate the performance of the proposed hybrid model. The outputs of the multi-task learning framework can provide a detailed description of the actual pile quality and provide strong support for the classification of pile quality as well.
+KW  - pile damage detection
+KW  - multiple sensors
+KW  - convolutional neural network
+KW  - recurrent neural network
+KW  - analytical solution
+KW  - DYNAMIC SOIL REACTIONS
+KW  - MODEL ER -
+ER  -
+
+TY  - JOUR
+AU  - Wu, CS
+AU  - Zhang, JQ
+AU  - Qi, LL
+AU  - Zhuo, DB
+TI  - Defect Identification of Concrete Piles Based on Numerical Simulation and Convolutional Neural Network
+PY  - 2022
+JO  - BUILDINGS
+DO  - 10.3390/buildings12050664
+AB  - Defects in pile foundations, such as neck defects, bulge imperfections, weak concretes, cracks, and broken piles, can cause a decrease in the bearing capacity and the structural stability of the foundation. Identification of the type of defect is vital in formulating a reasonable repair plan for the pile foundation. In this study, the authors proposed a scheme to identify the types of defects in concrete piles based on a convolution neural network and a low-strain pile integrity test (LSPIT). A batch modeling method of defective pile foundations using Python script was also proffered. The different degrees of signals of five types of defective pile foundations were simulated by this method. The original data were decomposed and reconstructed by wavelet packet decomposition (WPT). To prevent the data from losing too much information after WPT, the data of 400 x 1 after decomposition and reconstruction were processed by dimension-raising to obtain the data of 20 x 20 x 1. Then, the multidimensional feature index of 20 x 20 x 2 was generated by index fusion with the original data. Finally, the data were input onto convolutional neural network (CNN) as a training parameter. Following an improvement of the dataset, the recognition accuracy of the type of defect in the pile foundation by the proposed identification scheme reached 94.4%.
+KW  - concrete pile
+KW  - numerical simulation
+KW  - convolutional neural network
+KW  - wavelet packet decomposition
+KW  - low strain pile integrity test ER -
+ER  -
+
+TY  - JOUR
+AU  - Wu, CS
+AU  - Ge, M
+AU  - Qi, LL
+AU  - Zhuo, DB
+AU  - Zhang, JQ
+AU  - Hao, TQ
+AU  - Peng, YX
+TI  - Multi-Defect Identification of Concrete Piles Based on Low Strain Integrity Test and Two-Channel Convolutional Neural Network
+PY  - 2023
+JO  - APPLIED SCIENCES-BASEL
+DO  - 10.3390/app13063530
+AB  - Defects in different positions and degrees in pile foundations will affect the building structure's safety and the foundation's bearing capacity. The efficiency and accuracy of using traditional methods to identify multi-defect types of pile foundations are very low, so finding suitable methods to improve their related indicators for pile foundation safety and engineering applications is necessary. In this paper, under the condition of secondary development of finite element software ABAQUS to obtain the time-domain signal database of six kinds of multi-defect pile foundations, a multi-defect type identification method of pile foundations based on two-channel convolutional neural network (TC-CNN) and low-strain pile integrity test (LSPIT) is proposed. Firstly, simulated time-domain signals of the dynamic measurements that match the experimental results performed wavelet packet denoising. Secondly, the 1D time-domain signals before and after denoising and the corresponding 2D wavelet time-frequency maps are inputs to retain more data information and prevent overfitting. Finally, TC-CNN achieved the multi-defect type identification of concrete piles. Compared with the single-channel convolutional neural network, this method can effectively fuse 1D and 2D features, extract more potential features, and make the classification accuracy reach 99.17%.
+KW  - concrete multi-defect pile
+KW  - numerical simulation
+KW  - wavelet packet denoising
+KW  - low-strain integrity detection
+KW  - two-channel convolutional neural network
+KW  - CONTINUOUS WAVELET TRANSFORM ER -
+ER  -
+
+TY  - JOUR
+AU  - Samaan, RM
+AU  - Saafan, MSA
+AU  - Mokhtar, AA
+AU  - Ebid, AM
+TI  - Recurrent neural network long short term memory model to detect the pile toe using raw data of pile integrity test
+PY  - 2026
+JO  - SCIENTIFIC REPORTS
+DO  - 10.1038/s41598-026-36732-7
+AB  - This article proposes a novel approach to automatically generate velocity reflectogram of Pile Integrity Testing using a Recurrent Neural Network with Long Short-Term Memory (RNN-LSTM) model. Conventional Low-Strain Integrity Testing (LSIT) accuracy relies significantly on expert interpretation of reflected wave signals and entails subjectivity as well as efficiency limitations. The purpose of this study is to develop an artificial intelligence system capable of learning wave propagation behavior from acceleration inputs and generating reflectogram that capture pile toe locations correctly, thereby reducing dependence on human experience. The proposed technique eliminates human error and increases both the reliability and efficiency of the model. The strategy involved the collection of LSIT data from several of Egypt's driven piles projects, followed by systematic preprocessing which converted raw acceleration signals into digitized velocity-time series. Several RNN-LSTM networks with various hidden layers and neurons were trained and optimized against performance including measures the coefficient of determination (R2), computational expense, and visual examination of reflectogram. The proposed six-layer, 32-neuron LSTM model achieved an optimum balance between accuracy and computational expense and yielded training and validation R2 of 0.9126 and 0.8778, respectively, and demonstrated satisfactory predictive generalization. Visual examinations also guaranteed the validity of the model, where "Good" predictions for toe location were up to 84% for the validation set and 89.5% for the training set, while "Fair" and "Bad" predictions had an average of only 10% and 5%, respectively. The experiments demonstrate that the RNN-LSTM model effectively mimics human-generated reflectogram with high accuracy and low mis-adoption risk. Lastly, this research describes how deep learning, namely RNN-LSTM, presents an excellent alternative to the conventional generated reflectogram, greater reliability, and reduced reliance on human experience.
+KW  - Pile integrity testing
+KW  - Recurrent neural network
+KW  - Long short-term memory
+KW  - Reflectogram ER -
+ER  -
+
+TY  - JOUR
+AU  - Öztürk, Ö
+AU  - Özacar, T
+AU  - Canbula, B
+TI  - Transfer Learning-Based Detection of Pile Defects in Low-Strain Pile Integrity Testing
+PY  - 2025
+JO  - APPLIED SCIENCES-BASEL
+DO  - 10.3390/app15158278
+AB  - Pile foundations are critical structural elements, and their integrity is essential for ensuring the stability and safety of construction projects. Low-strain pile integrity testing (LSPIT) is widely used for defect detection; however, conventional manual interpretation of reflectograms is both time-consuming and susceptible to human error. This study presents a deep learning-driven approach utilizing transfer learning with convolutional neural networks (CNNs) to automate pile defect detection. A dataset of 328 reflectograms collected from real construction sites, including 246 intact and 82 defective samples, was used to train and evaluate the model. To address class imbalance, oversampling techniques were applied. Several state-of-the-art pretrained CNN architectures were compared, with ConvNeXtLarge achieving the highest accuracy of 98.2%. The accuracy reported was achieved on a dedicated test set using real reflectogram data from actual construction sites, distinguishing this study from prior work relying primarily on synthetic data. The proposed novelty includes adapting pre-trained CNN architectures specifically for real-world pile integrity testing, addressing practical challenges such as data imbalance and limited dataset size through targeted oversampling techniques. The proposed approach demonstrates significant improvements in accuracy and efficiency compared to manual interpretation methods, making it a promising solution for practical applications in the construction industry. The proposed method demonstrates potential for generalization across varying pile lengths and geological conditions, though further validation with broader datasets is recommended.
+KW  - CNN
+KW  - deep learning
+KW  - pile integrity test
+KW  - transfer learning
+KW  - CONVOLUTIONAL NEURAL-NETWORKS ER -
+ER  -
+
+TY  - JOUR
+AU  - Chen, GY
+AU  - Koh, CG
+AU  - Li, SH
+AU  - Jiang, ZY
+AU  - Liang, YZ
+AU  - Xu, Z
+AU  - Wu, DG
+TI  - Intelligent integrity detection and damage localization of pile from low-strain test using deep learning with accelerated training via variable-order gradient descent
+PY  - 2025
+JO  - ADVANCED ENGINEERING INFORMATICS
+DO  - 10.1016/j.aei.2025.103690
+AB  - Low-Strain Testing (LST) is widely used for pile integrity assessment, where wave velocity signals enable engineers to qualitatively evaluate pile's integrity and locate damage. However, this method heavily relies on the expertise of inspectors, involving subjectivity, uncertainty, and inefficiency. To enhance the accuracy, efficiency, and automation of pile quality inspection, this study proposes a novel two-stage deep learning framework for pile integrity recognition and damage localization, using ShuffleNet and U-Net1D. In the first stage, the framework addresses the low energy and narrow frequency characteristics of one-dimensional LST signals by applying Gramian Angular Field, Continuous Wavelet Transform, and Short-Time Fourier Transform to generate three feature images, which are combined into an RGB image and input into ShuffleNet for pile integrity detection. In the second stage, U-Net1D is employed for damage localization. To overcome challenges posed by sparse, discontinuous and discrete binary damage labels, a novel damage label construction strategy is introduced to more precise guidance for localization, based on Gaussian membership functions and the probability sum approach. Additionally, to improve model training speed and deployment, a variable-order gradient descent algorithm called lambda-FAdaMax is proposed, combining Caputo fractional derivatives with the Adam optimizer to balance convergence speed and precision. Experimental results show that, under lambda-FAdaMax, the framework achieves 99.17 % accuracy on the training set and 100 % on the test set for pile integrity detection, with median localization errors of 0.034 m, 0.033 m, and 0.073 m for three damage levels, respectively. The proposed algorithm lambda-FAdaMax outperforms traditional optimizers, demonstrating significant potential for engineering applications.
+KW  - Pile integrity
+KW  - Low-strain test
+KW  - Gradient descent
+KW  - Fractional calculus
+KW  - Deep learning
+KW  - CONVOLUTIONAL NEURAL-NETWORK
+KW  - WAVELET TRANSFORM
+KW  - MODEL ER -
+ER  -
+
+TY  - JOUR
+AU  - Wu, JT
+AU  - El Naggar, MH
+AU  - Wang, KH
+TI  - Pile Damage Detection Using Machine Learning with the Multipoint Traveling Wave Decomposition Method
+PY  - 2023
+JO  - SENSORS
+DO  - 10.3390/s23198308
+AB  - The in-hole multipoint traveling wave decomposition (MPTWD) method is developed for detecting and characterizing the damage of cast in situ reinforced concrete (RC) piles. Compared with the results of MPTWD, the results of the in-hole MPTWD reconstruction technique are found ideal for evaluating the lower-part pile integrity and are further utilized to establish a data-driven machine-learning framework to detect and quantify the degree of damage. Considering the relatively small number of field test samples of the in-hole MPTWD method at this stage, an analytical solution is employed to generate sufficient samples to verify the feasibility and optimize the performance of the machine learning modeling framework. Two types of features extracted by the distributed sampling and statistical and signal processing techniques are applied to three machine-learning classifiers, i.e., logistic regression (LR), extreme gradient boosting (XGBoost) and multilayer perceptron (MLP). The performance of the data-driven machine-learning framework is then evaluated through a specific case study. The results demonstrate that all three classifiers perform better when employing the statistical and signal processing techniques, and the total of 24 extracted features are sufficient for the machine-learning algorithms.
+KW  - pile integrity test
+KW  - traveling wave decomposition
+KW  - data-driven modeling
+KW  - machine learning
+KW  - damage characterization
+KW  - VERTICAL DYNAMIC-RESPONSE
+KW  - LONGITUDINAL VIBRATION
+KW  - MODEL
+KW  - IDENTIFICATION ER -
+ER  -
+
+TY  - JOUR
+AU  - Loseva, E
+AU  - Lozovsky, I
+AU  - Zhostkov, R
+AU  - Syasko, V
+TI  - Wavelet Analysis for Evaluating the Length of Precast Spliced Piles Using Low Strain Integrity Testing
+PY  - 2022
+JO  - APPLIED SCIENCES-BASEL
+DO  - 10.3390/app122110901
+AB  - Featured Application The presented techniques can be applied to access a splice depth and a total length of driven precast piles. The difficulties with the application of low strain integrity testing for evaluating the length of driven precast piles of two sections justify the need for new data acquisition and analysis techniques. The standard time domain analysis of the recorded signals may not allow for distinguishing the desired responses from a pile toe and a splice. In this paper, we propose the use of a set of hammers of different weights and tip materials that will provide various sensitivities of the test to a pile splice. To further analyze the collected data, we study the distributions of phase angles obtained using complex continuous wavelet transform. The characteristic phase shifts that distribute from higher to lower frequencies can be interpreted as responses from a pile toe and a splice. To verify the proposed approaches, a series of numerical simulations were performed using the finite element method for the driven pile models with the different properties of a splice zone. Numerical simulation results show that the pile splices are clearly identified when using the shorter input pulses which can be generated by light hammers with a hard head material. The total length of a simulated pile with a 1 mm air gap between sections was undetectable by standard data analysis approaches and was evaluated when analyzing the wavelet phase angle distributions. Numerically validated data acquisition and analysis techniques were applied to field data analysis and allowed us to confidently identify the length of two-section piles grouped with a pile cap.
+KW  - piles
+KW  - precast concrete piles
+KW  - pile integrity testing
+KW  - low strain integrity testing
+KW  - sonic-echo test
+KW  - numerical simulation
+KW  - wavelet transform
+KW  - complex continuous wavelet transform
+KW  - DAMAGE LOCALIZATION
+KW  - TRANSFORM ER -
+ER  -
+
+TY  - JOUR
+AU  - Oh, HJ
+AU  - Park, JH
+AU  - Park, HC
+TI  - Non-Destructive Evaluation of Material Stiffness beneath Pile Foundations Tip Using Harmonic Wavelet Transform
+PY  - 2024
+JO  - BUILDINGS
+DO  - 10.3390/buildings14020511
+AB  - Pile foundations are used to support superstructures and play an important role in the safety of these structures. The performance of pile foundations generally depends on the conditions of the pile itself and the material under the pile tip(i.e., bottom), especially for end-bearing piles installed in soft soil volumes. Therefore, to assess the performance of existing pile foundations, it is crucial not only to evaluate the structural integrity of the pile itself, but also to assess the ground conditions, such as subsoil stiffness beneath the pile foundation tip. Accessing the subsoil beneath the pile foundation tip is highly challenging in the field. Hence, there is a need for the development of non-destructive pile evaluation methods that allow the assessment of subsoil stiffness beneath the pile tip without direct access to the subsoil. Various non-destructive methods have been developed for pile performance assessment. However, these conventional non-destructive methods are primarily designed for assessing the structural integrity of the pile itself, and there are no existing non-destructive pile integrity testing methods applicable to evaluate the subsoil stiffness beneath the pile tip. In this study, a non-destructive method is developed to evaluate the subsurface soil stiffness beneath pile tip without direct access. The proposed method involves applying impact loading to the easily accessible pile head and measuring the elastic waves propagated within the pile foundation due to the impact loading. These wave signals are then recorded at the pile head. The measured time-history signals are decomposed using harmonic wavelet transform. This allows the obtainment of well-defined magnitude and phase information over time for various individual frequency components composing the wave. In this study, a method is proposed to assess the stiffness of the subsoil beneath the pile tip by simultaneously utilizing the magnitude and phase information of the measured signals obtained through harmonic wavelet transform. To facilitate this, a step-by-step data analysis procedure for evaluating the subsoil stiffness beneath the pile tip is introduced. To validate the proposed method, numerical simulations were conducted using ABAQUS. The experimental data obtained from the numerical simulations were processed using the proposed method to assess the subsoil stiffness beneath the pile. The determined subsoil stiffness was then compared with the exact soil stiffness used in the numerical simulation to evaluate the validity of the proposed method. Through this analysis, the proposed method demonstrated its effectiveness in assessing the subsoil stiffness beneath piles tip installed in weak soil volume.
+KW  - pile foundation
+KW  - harmonic wavelet transform
+KW  - P-wave velocity
+KW  - material condition under bottom of pile
+KW  - SONIC ECHO
+KW  - VIBRATION
+KW  - DEFECTS ER -
+ER  -
+
+TY  - JOUR
+AU  - Yang, YQ
+AU  - Li, YQ
+AU  - Li, GW
+AU  - Gui, N
+TI  - An Experimental Study to Shape Detection of Branch-Plate Pile Through the Cross-Hole Sonic Logging Test
+PY  - 2025
+JO  - ADVANCES IN CIVIL ENGINEERING
+DO  - 10.1155/adce/9945439
+AB  - The extruded cast in-situ branch-plate (DX) pile is important to control the quality of the pile by measuring its profile and strength. This experimental study sought to develop a technique for detecting the external profile and quality of DX pile using the cross-hole sonic logging (CSL) test. A field test was carried out on a DX pile, in which inclinometer casings were installed in drilled holes along the entire length of the pile and a plane-coordinate system was established on the top of the pile. The inclinometer measurement was performed at different depths, and the horizontal spacing between the casings was calculated to eliminate inclinometer deviations. The distances between the casings and the first arrival time (FAT) were used to calculate the ultrasonic velocity in the pile and soil. A new equation is derived to correct the shape of the branch and plate. Comparative analysis demonstrates that the corrected shape of DX pile is consistent with the design shape. This study also confirms the feasibility and practicability of detecting the shape of the branch and plate using CSL.
+KW  - branch-plate pile
+KW  - cross-hole sonic logging
+KW  - experimental study
+KW  - first arrival time
+KW  - inclinometer measurement
+KW  - shape correction
+KW  - RELIABILITY ER -
+ER  -
+
+TY  - JOUR
+AU  - Wang, G
+AU  - Chen, Y
+AU  - Li, QF
+AU  - Lu, C
+AU  - Chen, G
+AU  - Huang, LX
+TI  - Ultrasonic Computerized Tomography Imaging Method With Combinatorial Optimization Algorithm for Concrete Pile Foundation
+PY  - 2019
+JO  - IEEE ACCESS
+DO  - 10.1109/access.2019.2940766
+AB  - Concrete pile foundations are the main load-carrying and aseismic structures for many large-scale building structures. Their structural quality will have a great impact on the safety of building structures. However, the imaging results still cannot easily meet practical demands in current ultrasonic Computerized Tomography (CT) imaging tests of concrete structures. In view of the current difficulties, a combinatorial optimization tomographic imaging method is proposed. First, a quadric broadening objective function with a clear physical meaning is established according to the characteristics of ultrasonic propagation in concrete. Then, a new CT imaging method of concrete pile foundation is formed by combining fast adaptive optimization search ability of Genetic Algorithm (GA) with the global search control ability of Simulated Annealing Algorithm (SAA). The numerical simulation experiments have shown that the usage of the correct priori information and the excellent characteristic of the Simulated Annealing Genetic Algorithm (SAGA) in searching for the global minimum value of the function have produced accurate and effective results with stable numerical values. Finally, the imaging method is verified by experiment, where results show that SAGA requires fewer iterations, has faster computation speed and gives more accurate imaging results compared with the single GA.
+KW  - Concrete pile foundation
+KW  - ultrasonic CT
+KW  - inversion imaging algorithm
+KW  - combinatorial optimization algorithm
+KW  - SAGA
+KW  - IMPROVEMENT ER -
+ER  -
+
+TY  - JOUR
+AU  - Kordjazi, A
+AU  - Coe, JT
+AU  - Afanasiev, M
+TI  - Nondestructive Evaluation of Drilled Shaft Construction Anomalies Using Full Waveform Tomography of Simulated Crosshole Measurements
+PY  - 2021
+JO  - JOURNAL OF NONDESTRUCTIVE EVALUATION
+DO  - 10.1007/s10921-020-00728-8
+AB  - Construction of drilled shafts for transportation infrastructure presents quality assurance challenges related to structural anomalies, including voids and degraded concrete. Efforts to evaluate anomalies often use stress-wave non-destructive testing (NDT) techniques such as the crosshole sonic logging (CSL) method. CSL relies on the propagation of stress waves between access tubes inserted alongside the reinforcement cage. Differences in travel time and amplitudes can be used to estimate concrete quality within the source-receiver ray paths. Crosshole tomography (CT) advances this approach further and models ray paths to solve an inverse problem based on first arrival times. However, both stress-wave methods cannot typically evaluate anomalies smaller than 10% to 15% of the shaft cross sectional area. Recent advances in wave propagation modeling have led to the development of full waveform inversion (FWI) approaches. FWI attempts to generate a more detailed tomographic model that matches the entire waveform recordings. This paper presents findings from a numerical study where full waveform tomography was performed on a portion of a drilled shaft with a structural anomaly. Crosshole stress-wave propagation was simulated using a spectral element method (SEM) forward modeler. The resulting waveforms were then used as inputs into a CT travel-time inversion algorithm using ray-path modeling and into a FWI algorithm using the entire recorded signals. The results highlighted that FWI estimated concrete velocities and the geometry of the anomaly more accurately than CT in the idealized numerical model. This was the case even though information from more sources and receiver pairs was used for the CT inversion.
+KW  - Drilled shafts
+KW  - Structural integrity
+KW  - Non-destructive testing
+KW  - Crosshole sonic logging
+KW  - Tomography
+KW  - Full waveform inversion
+KW  - TRAVEL-TIME TOMOGRAPHY
+KW  - MINOR FLAWS
+KW  - INVERSION ER -
+ER  -
+
+TY  - JOUR
+AU  - Zhang, MX
+AU  - Li, MC
+AU  - Zhang, JR
+AU  - Liu, L
+AU  - Li, H
+TI  - Onset detection of ultrasonic signals for the testing of concrete foundation piles by coupled continuous wavelet transform and machine learning algorithms
+PY  - 2020
+JO  - ADVANCED ENGINEERING INFORMATICS
+DO  - 10.1016/j.aei.2020.101034
+AB  - The construction of ultra-high-rise and long-span structures requires higher requirements for the integrity detection of piles. The acoustic signal detection has been verified an efficient and accurate nondestructive testing method. In fact, the integrity of piles is closely related to the onset time of signals. The accuracy of onset time directly affects the integrity evaluation of a pile. To achieve high-precision onset detection, continuous wavelet transform (CWT) preprocessing and machine learning algorithms were integrated into the software of high-sampling rate testing equipment. The distortion of waveforms, which could interfere with the accuracy of detection, was eliminated by CWT preprocessing. To make full use of the collected waveform data, three types of machine learning algorithms were used for classifying whether the data points are ambient or ultrasonic signals. The models involve a commonly used classifier (ELM), an individual classification tree model (DTC), an ensemble tree model (RFC) and a deep learning model (DBN). The classification accuracy of the ambient and ultrasonic signals of these models was compared by 5-fold validation. Results indicate that RFC performance is better than DBN and DTC after training. It is more suitable for the classification of points in waveforms. Then, a detection method of onset time based on classification results was therefore proposed to minimize the interference of classification errors on detection. In addition to the three data mining methods, the autocorrelation function method was selected as the control method to compare the proposed data mining based methods with the traditional one. The accuracy and error analysis of 300 waveforms proved the feasibility and stability of the proposed method. The RFC-based detection method is recommended because of the highest accuracy, lowest errors, and the most favorable error distribution among four onset detection methods. Successful applications demonstrate that it could provide a new way for ensuring the accurate testing of pile foundation integrity.
+KW  - Concrete pile foundation
+KW  - Ultrasonic signals
+KW  - Onset detection
+KW  - Continuous wavelet transform
+KW  - Machine learning
+KW  - Error analysis
+KW  - ACOUSTIC-EMISSION
+KW  - NUMERICAL-SIMULATION
+KW  - TIME
+KW  - CLASSIFICATION
+KW  - PREDICTION
+KW  - CONSTRUCTION
+KW  - LOCATION
+KW  - SULFATE
+KW  - PICKING
+KW  - PICKER ER -
+ER  -

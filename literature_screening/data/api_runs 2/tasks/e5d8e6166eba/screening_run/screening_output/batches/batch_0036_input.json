@@ -1,0 +1,405 @@
+{
+  "batch_id": "batch_0036",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000351",
+    "paper_000352",
+    "paper_000353",
+    "paper_000354",
+    "paper_000355",
+    "paper_000356",
+    "paper_000357",
+    "paper_000358",
+    "paper_000359",
+    "paper_000360"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000351",
+      "entry_type": "article",
+      "title": "Training and external validation of machine learning supervised prognostic models of upper tract urothelial cancer (UTUC) after nephroureterectomy",
+      "authors": [
+        "Nicoletti, R",
+        "Ho, N",
+        "Lee, HY",
+        "Wu, WJ",
+        "Laukhtina, E",
+        "Spatafora, P",
+        "Wong, CHM",
+        "Ko, ICH",
+        "Leung, CH",
+        "Giannarini, G",
+        "Vasdev, N",
+        "Gontero, P",
+        "Ng, CF",
+        "Li, CC",
+        "Li, WM",
+        "Ke, HL",
+        "Yeh, HC",
+        "Campi, R",
+        "Serni, S",
+        "Gacci, M",
+        "Shariat, S",
+        "Choi, T",
+        "Teoh, JYC"
+      ],
+      "year": 2026,
+      "journal": "SCIENTIFIC REPORTS",
+      "doi": "10.1038/s41598-025-29043-w",
+      "abstract": "The European association of Urology (EAU) suggests a prognostic stratification of Upper Tract Urothelial Cancer (UTUC) based on high and low risk patients, with Radical nephroureterectomy (RNU) and bladder cuff resection being the gold standard for the treatment of non-metastatic High risk UTUC. However, no consensus on post-operative patient management or tools that predict who would benefit the most from a close follow-up rather than adjuvant chemotherapy regimen exist. in Machine Learning (ML) is gaining interest in Urology providing models for prognostic prediction purpose; It's role in UTUC has not yet been investigated. We aim to develop and validate multiple supervised ML models based on patient- and tumor- related features to predict prognosis in patients with preoperative Histological or Imaging proved UTUC treated with RNU within a multiethnic large cohort. Data from an international multicenter large cohort of histologically proven UTUC patients from Asia and Europe treated with RNU were retrospectively collected. Twenty different ML-supervised predictive models were first trained and then external validate with two separate set. Nomograms were constructed based on 8 independent prognostic factors (age, gender, grading, pT, pN, presence of Carcinoma in Situ (CIS), multifocality and Lymphovascular invasion(LVI)) to predict 6 Outcomes (Overall Survival (OS), Cancer Specific Survival (CSS) and Disease Free Survival (DFS) at 3 and 5 year). Performances were compared using Area-under-curve (AUC) of Receiver-Operating Characteristics (ROC). A total of 3129 patients were enrolled: 637 Asian Patients (training cohort) and 2492 European patients (validation cohort). Upon training assessment, LR models achieved the best results, being the best model for prediction of 4/6 outcomes, with the best result in CSS both at 3 and 5 years (AUC: 0.85, 0.84, 0.81 for CSS-3y, CSS-5y and DFS-3y respectively). Upon external validation, LR(CSL) models achieve the best results, being the number 1 model for prediction of 3/6 outcomes (AUC: 0.84, 0.79, 0.77 for CSS-3y, OS-3y and OS-5y respectively). ML is a promising technology in the field of UTUC. Our model achieve favorable results in terms of prediction of prognosis after RNU, especially in terms of CSS at 3 and 5 years, moreover is the first model of prognosis taking into account the differences in epidemiology existing between European and Asian patients. Further clinical validation and verification of its reliability for the case selection of adjuvant therapy are needed to assess its use in clinical practice linked to clinical decision making. ML is an advancing technology in the field of medicine and urology, which can also be applied to the definition of the prognosis of patients with UTUC undergoing RNU. Our study represents the first experience investigating this potential.",
+      "keywords": [
+        "Upper tract urothelial cancer",
+        "Nephroureterectomy",
+        "Machine learning",
+        "RADICAL NEPHROURETERECTOMY",
+        "POSTOPERATIVE NOMOGRAM",
+        "BLADDER-CANCER",
+        "CARCINOMA",
+        "SURVIVAL"
+      ],
+      "normalized_title": "training and external validation of machine learning supervised prognostic models of upper tract urothelial cancer utuc after nephroureterectomy",
+      "raw_bibtex": "@ARTICLE{10.1038/s41598-025-29043-w,\n\tauthor = {Nicoletti, R and Ho, N and Lee, HY and Wu, WJ and Laukhtina, E and Spatafora, P and Wong, CHM and Ko, ICH and Leung, CH and Giannarini, G and Vasdev, N and Gontero, P and Ng, CF and Li, CC and Li, WM and Ke, HL and Yeh, HC and Campi, R and Serni, S and Gacci, M and Shariat, S and Choi, T and Teoh, JYC},\n\ttitle = {Training and external validation of machine learning supervised prognostic models of upper tract urothelial cancer (UTUC) after nephroureterectomy},\n\tjournal = {SCIENTIFIC REPORTS},\n\tyear = {2026},\n\tkeywords = {Upper tract urothelial cancer; Nephroureterectomy; Machine learning; RADICAL NEPHROURETERECTOMY; POSTOPERATIVE NOMOGRAM; BLADDER-CANCER; CARCINOMA; SURVIVAL},\n\tabstract = {The European association of Urology (EAU) suggests a prognostic stratification of Upper Tract Urothelial Cancer (UTUC) based on high and low risk patients, with Radical nephroureterectomy (RNU) and bladder cuff resection being the gold standard for the treatment of non-metastatic High risk UTUC. However, no consensus on post-operative patient management or tools that predict who would benefit the most from a close follow-up rather than adjuvant chemotherapy regimen exist. in Machine Learning (ML) is gaining interest in Urology providing models for prognostic prediction purpose; It's role in UTUC has not yet been investigated. We aim to develop and validate multiple supervised ML models based on patient- and tumor- related features to predict prognosis in patients with preoperative Histological or Imaging proved UTUC treated with RNU within a multiethnic large cohort. Data from an international multicenter large cohort of histologically proven UTUC patients from Asia and Europe treated with RNU were retrospectively collected. Twenty different ML-supervised predictive models were first trained and then external validate with two separate set. Nomograms were constructed based on 8 independent prognostic factors (age, gender, grading, pT, pN, presence of Carcinoma in Situ (CIS), multifocality and Lymphovascular invasion(LVI)) to predict 6 Outcomes (Overall Survival (OS), Cancer Specific Survival (CSS) and Disease Free Survival (DFS) at 3 and 5 year). Performances were compared using Area-under-curve (AUC) of Receiver-Operating Characteristics (ROC). A total of 3129 patients were enrolled: 637 Asian Patients (training cohort) and 2492 European patients (validation cohort). Upon training assessment, LR models achieved the best results, being the best model for prediction of 4/6 outcomes, with the best result in CSS both at 3 and 5 years (AUC: 0.85, 0.84, 0.81 for CSS-3y, CSS-5y and DFS-3y respectively). Upon external validation, LR(CSL) models achieve the best results, being the number 1 model for prediction of 3/6 outcomes (AUC: 0.84, 0.79, 0.77 for CSS-3y, OS-3y and OS-5y respectively). ML is a promising technology in the field of UTUC. Our model achieve favorable results in terms of prediction of prognosis after RNU, especially in terms of CSS at 3 and 5 years, moreover is the first model of prognosis taking into account the differences in epidemiology existing between European and Asian patients. Further clinical validation and verification of its reliability for the case selection of adjuvant therapy are needed to assess its use in clinical practice linked to clinical decision making. ML is an advancing technology in the field of medicine and urology, which can also be applied to the definition of the prognosis of patients with UTUC undergoing RNU. Our study represents the first experience investigating this potential.},\n\tdoi = {10.1038/s41598-025-29043-w},\n\tvolume = {16},\n\tnumber = {1},\n\tissn = {2045-2322},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 28 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1038/s41598-025-29043-w"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000352",
+      "entry_type": "article",
+      "title": "On the generality of a preferred orientation at interfaces of crystals",
+      "authors": [
+        "Zhou, C",
+        "Rohrer, GS",
+        "Salvador, PA"
+      ],
+      "year": 2025,
+      "journal": "MATERIALS TODAY ADVANCES",
+      "doi": "10.1016/j.mtadv.2025.100580",
+      "abstract": "The generality of a preferred orientation at crystalline interfaces is considered by analyzing previously reported computed grain boundary energies of metals from an epitaxial thin film perspective. 388 fcc and 408 boundaries are sorted in a fashion that is conceptually analogous to combinatorial substrate epitaxy (CSE) experiments previously reported for non-isostructural oxide film-substrate pairs. CSE observations are briefly reviewed, indicating that there is a single preferred OR for all film-substrate pairs of close-packed oxides, regardless of the interface plane, which is called the eutactic OR. The eutactic OR is shown to be structurally similar to the 13 coincident site lattice (CSL) OR for grain boundaries of metals. Based on low-energy outliers in the grain boundary populations, it is shown that the 13 CSL OR (the common twin misorientation) is preferred OR for both metal families, also regardless of the interface orientation. The combined observations for metal grain boundaries and epitaxial oxide films are consistent with the existence of a single preferred (a 13 OR) at interfaces of crystals.",
+      "keywords": [
+        "Solid interfaces",
+        "Epitaxy of thin films",
+        "Grain boundaries",
+        "COMBINATORIAL SUBSTRATE EPITAXY",
+        "GRAIN-BOUNDARY PROPERTIES",
+        "OXIDE POLYMORPHS",
+        "ENERGY",
+        "GROWTH",
+        "METALS",
+        "PHASE",
+        "STABILIZATION",
+        "TEMPERATURE",
+        "MODEL"
+      ],
+      "normalized_title": "on the generality of a preferred orientation at interfaces of crystals",
+      "raw_bibtex": "@ARTICLE{10.1016/j.mtadv.2025.100580,\n\tauthor = {Zhou, C and Rohrer, GS and Salvador, PA},\n\ttitle = {On the generality of a preferred orientation at interfaces of crystals},\n\tjournal = {MATERIALS TODAY ADVANCES},\n\tyear = {2025},\n\tkeywords = {Solid interfaces; Epitaxy of thin films; Grain boundaries; COMBINATORIAL SUBSTRATE EPITAXY; GRAIN-BOUNDARY PROPERTIES; OXIDE POLYMORPHS; ENERGY; GROWTH; METALS; PHASE; STABILIZATION; TEMPERATURE; MODEL},\n\tabstract = {The generality of a preferred orientation at crystalline interfaces is considered by analyzing previously reported computed grain boundary energies of metals from an epitaxial thin film perspective. 388 fcc and 408 boundaries are sorted in a fashion that is conceptually analogous to combinatorial substrate epitaxy (CSE) experiments previously reported for non-isostructural oxide film-substrate pairs. CSE observations are briefly reviewed, indicating that there is a single preferred OR for all film-substrate pairs of close-packed oxides, regardless of the interface plane, which is called the eutactic OR. The eutactic OR is shown to be structurally similar to the 13 coincident site lattice (CSL) OR for grain boundaries of metals. Based on low-energy outliers in the grain boundary populations, it is shown that the 13 CSL OR (the common twin misorientation) is preferred OR for both metal families, also regardless of the interface orientation. The combined observations for metal grain boundaries and epitaxial oxide films are consistent with the existence of a single preferred (a 13 OR) at interfaces of crystals.},\n\tdoi = {10.1016/j.mtadv.2025.100580},\n\tvolume = {26},\n\tissn = {2590-0498},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 71 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.mtadv.2025.100580"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000353",
+      "entry_type": "article",
+      "title": "High-Performance 10-Transistor Adder Cell for Low-Power Applications",
+      "authors": [
+        "Misra, A",
+        "Birla, S",
+        "Singh, N",
+        "Dargar, SK"
+      ],
+      "year": 2023,
+      "journal": "IETE JOURNAL OF RESEARCH",
+      "doi": "10.1080/03772063.2022.2043785",
+      "abstract": "Addition is one of the most fundamental arithmetic operations. Any adder in a digital circuit and system can improve the digital system's performance. Adders, for example, are commonly found in the critical path of many ALUs, processors, and digital signal processing chips. As a result, each of these blocks should execute efficiently and precisely on their own, enhancing the overall performance of the system. Optimizing an adder may lead to overall system optimization. A desirable adder meets all the criteria, such as high speed, low-power dissipation, low leakage power, and small footprint. However, because there is a trade-off between the area, power and, speed.Obtaining the finest adder in terms of speed, power dissipation, leakage power, and area consumed would assist the designer in selecting an adder for the given application. Transmission function adder (TFA), 17-transistor adder (17-TA), 14-transistor adder (14-TA), ripple carry adder (RCA), carry lookahead adder (CLA), and carry-select adder are among the new 2-bit adders suggested and compared (CSL). This research presents a comparative analysis and performance evaluation of adders based on latency, power dissipation, PDP, leakage power, area, and EDP. Simulations are being done using HSPICE software at 28-nm technology with a supply voltage range of 0.7-1.1 V. The suggested adder has a minimum delay and is 8.6% faster than CLA, according to simulation results. When compared to the other adders, it uses the minimum area and has the lowest leakage power. The proposed adder has minimum power delay product.",
+      "keywords": [
+        "Carry lookahead adder",
+        "Carry-select adder",
+        "Energy delay product",
+        "Leakage power",
+        "Power delay product",
+        "Ripple carry adder",
+        "Transmission full adder",
+        "FULL ADDER",
+        "DESIGN"
+      ],
+      "normalized_title": "high performance 10 transistor adder cell for low power applications",
+      "raw_bibtex": "@ARTICLE{10.1080/03772063.2022.2043785,\n\tauthor = {Misra, A and Birla, S and Singh, N and Dargar, SK},\n\ttitle = {High-Performance 10-Transistor Adder Cell for Low-Power Applications},\n\tjournal = {IETE JOURNAL OF RESEARCH},\n\tyear = {2023},\n\tkeywords = {Carry lookahead adder; Carry-select adder; Energy delay product; Leakage power; Power delay product; Ripple carry adder; Transmission full adder; FULL ADDER; DESIGN},\n\tabstract = {Addition is one of the most fundamental arithmetic operations. Any adder in a digital circuit and system can improve the digital system's performance. Adders, for example, are commonly found in the critical path of many ALUs, processors, and digital signal processing chips. As a result, each of these blocks should execute efficiently and precisely on their own, enhancing the overall performance of the system. Optimizing an adder may lead to overall system optimization. A desirable adder meets all the criteria, such as high speed, low-power dissipation, low leakage power, and small footprint. However, because there is a trade-off between the area, power and, speed.Obtaining the finest adder in terms of speed, power dissipation, leakage power, and area consumed would assist the designer in selecting an adder for the given application. Transmission function adder (TFA), 17-transistor adder (17-TA), 14-transistor adder (14-TA), ripple carry adder (RCA), carry lookahead adder (CLA), and carry-select adder are among the new 2-bit adders suggested and compared (CSL). This research presents a comparative analysis and performance evaluation of adders based on latency, power dissipation, PDP, leakage power, area, and EDP. Simulations are being done using HSPICE software at 28-nm technology with a supply voltage range of 0.7-1.1 V. The suggested adder has a minimum delay and is 8.6% faster than CLA, according to simulation results. When compared to the other adders, it uses the minimum area and has the lowest leakage power. The proposed adder has minimum power delay product.},\n\tdoi = {10.1080/03772063.2022.2043785},\n\tvolume = {69},\n\tnumber = {11},\n\tpages = {8318-8336},\n\tissn = {0377-2063},\n\tnote = {Times Cited in Web of Science Core Collection: 6 Total Times Cited: 8 Cited Reference Count: 29 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1080/03772063.2022.2043785"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000354",
+      "entry_type": "article",
+      "title": "Unsupervised Domain Adaptation by Causal Learning for Biometric Signal-based HCI",
+      "authors": [
+        "Dai, QF",
+        "Wong, YK",
+        "Sun, GF",
+        "Wang, YW",
+        "Zhou, Z",
+        "Kankanhalli, MS",
+        "Li, XD",
+        "Geng, WD"
+      ],
+      "year": 2024,
+      "journal": "ACM TRANSACTIONS ON MULTIMEDIA COMPUTING COMMUNICATIONS AND APPLICATIONS",
+      "doi": "10.1145/3583885",
+      "abstract": "Biometric signal based human-computer interface (HCI) has attracted increasing attention due to its wide application in healthcare, entertainment, neurocomputing, and so on. In recent years, deep learning-based approaches have made great progress on biometric signal processing. However, the state-of-the-art (SOTA) approaches still suffer from model degradation across subjects or sessions. In this work, we propose a novel unsupervised domain adaptation approach for biometric signal-based HCI via causal representation learning. Specifically, three kinds of interventions on biometric signals (i.e., subjects, sessions, and trials) can be selected to generalize deep models across the selected intervention. In the proposed approach, a generative model is trained for producing intervened features that are subsequently used for learning transferable and causal relations with three modes. Experiments on the EEG-based emotion recognition task and sEMG-based gesture recognition task are conducted to confirm the superiority of our approach. An improvement of +0.21% on the task of inter-subject EEG-based emotion recognition is achieved using our approach. Besides, on the task of inter-session sEMG-based gesture recognition, our approach achieves improvements of +1.47%, +3.36%, +1.71%, and +1.01% on sEMG datasets including CSL-HDEMG, CapgMyo DB-b, 3DC, and Ninapro DB6, respectively. The proposed approach also works on the task of inter-trial sEMG-based gesture recognition and an average improvement of +0.66% on Ninapro databases is achieved. These experimental results show the superiority of the proposed approach compared with the SOTA unsupervised domain adaptation methods on HCIs based on biometric signal.",
+      "keywords": [
+        "Deep learning",
+        "domain adaptation",
+        "causal learning",
+        "human-computer interface",
+        "RECOGNITION",
+        "EXTRACTION",
+        "PCA",
+        "EMG"
+      ],
+      "normalized_title": "unsupervised domain adaptation by causal learning for biometric signal based hci",
+      "raw_bibtex": "@ARTICLE{10.1145/3583885,\n\tauthor = {Dai, QF and Wong, YK and Sun, GF and Wang, YW and Zhou, Z and Kankanhalli, MS and Li, XD and Geng, WD},\n\ttitle = {Unsupervised Domain Adaptation by Causal Learning for Biometric Signal-based HCI},\n\tjournal = {ACM TRANSACTIONS ON MULTIMEDIA COMPUTING COMMUNICATIONS AND APPLICATIONS},\n\tyear = {2024},\n\tkeywords = {Deep learning; domain adaptation; causal learning; human-computer interface; RECOGNITION; EXTRACTION; PCA; EMG},\n\tabstract = {Biometric signal based human-computer interface (HCI) has attracted increasing attention due to its wide application in healthcare, entertainment, neurocomputing, and so on. In recent years, deep learning-based approaches have made great progress on biometric signal processing. However, the state-of-the-art (SOTA) approaches still suffer from model degradation across subjects or sessions. In this work, we propose a novel unsupervised domain adaptation approach for biometric signal-based HCI via causal representation learning. Specifically, three kinds of interventions on biometric signals (i.e., subjects, sessions, and trials) can be selected to generalize deep models across the selected intervention. In the proposed approach, a generative model is trained for producing intervened features that are subsequently used for learning transferable and causal relations with three modes. Experiments on the EEG-based emotion recognition task and sEMG-based gesture recognition task are conducted to confirm the superiority of our approach. An improvement of +0.21% on the task of inter-subject EEG-based emotion recognition is achieved using our approach. Besides, on the task of inter-session sEMG-based gesture recognition, our approach achieves improvements of +1.47%, +3.36%, +1.71%, and +1.01% on sEMG datasets including CSL-HDEMG, CapgMyo DB-b, 3DC, and Ninapro DB6, respectively. The proposed approach also works on the task of inter-trial sEMG-based gesture recognition and an average improvement of +0.66% on Ninapro databases is achieved. These experimental results show the superiority of the proposed approach compared with the SOTA unsupervised domain adaptation methods on HCIs based on biometric signal.},\n\tdoi = {10.1145/3583885},\n\tvolume = {20},\n\tnumber = {2},\n\tissn = {1551-6857},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 80 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1145/3583885"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000355",
+      "entry_type": "article",
+      "title": "Localised ensemble learning (LEL) - a localised approach to class imbalance",
+      "authors": [
+        "Olabisi, O",
+        "Maurya, L",
+        "Bader-El-Den, M"
+      ],
+      "year": 2025,
+      "journal": "PATTERN ANALYSIS AND APPLICATIONS",
+      "doi": "10.1007/s10044-025-01545-3",
+      "abstract": "Class imbalance is a persistent challenge in machine learning, often degrading model performance by skewing predictions toward majority classes. Traditional approaches typically focus on global correction strategies, which may overlook important Localised irregularities within the data. These global methods may fail to adapt to the varying characteristics of individual samples, limiting their effectiveness in complex real-world scenarios.To address these limitations, we propose Localised Ensemble Learning (LEL), a novel framework that incorporates local structural information into the learning process. LEL begins by applying K-Nearest Neighbors (KNN) to assign each sample a Sample Type based on specific rules that capture neighbourhood distribution, distance-based imbalance, and sample quality. This Sample Type feature is then used to partition the dataset into distinct subsets, each of which is treated using tailored imbalance mitigation strategies. Individual models are trained on these subsets, and their predictions are integrated into a final ensemble, allowing LEL to address different forms of localised imbalance in a principled and modular way. The effectiveness of LEL is validated through a comprehensive evaluation against global correction strategies namely SMOTE, NOGAN, Cost-Sensitive Learning (CSL) and Ensemble methods, across multiple metrics including Recall, Precision, F1 Score, Kappa, G Mean and quantitatively. Statistical significance of the results is assessed using paired T-tests and Wilcoxon signed rank test. SHAP (SHapley Additive exPlanations) values are employed to analyze feature contributions, revealing the Sample Type feature as a critical determinant of model performance. Additionally, an ablation study highlights the impact of key parameters, such as the \\documentclass[12pt]minimal \\usepackageamsmath \\usepackagewasysym \\usepackageamsfonts \\usepackageamssymb \\usepackageamsbsy \\usepackagemathrsfs \\usepackageupgreek \\setlength\\oddsidemargin-69pt \\begindocument$$ k $$\\enddocument value in KNN providing further insights into the robustness and adaptability of the LEL framework. Experimental results demonstrate that LEL consistently outperforms global approaches across all tested classifiers, including Random Forest, Decision Tree, XGBoost, and Naive Bayes. LEL achieves statistically significant improvements in recall and precision, underscoring its ability to handle localised forms of imbalance effectively which translates to global imbalances. The findings emphasize the importance of addressing localised data defects and leveraging features like Sample Type, which capture complex relationships and enhance predictive accuracy.",
+      "keywords": [
+        "Class Imbalance",
+        "Classification",
+        "Random forest",
+        "Nearest neighbour",
+        "PERFORMANCE",
+        "ALGORITHMS",
+        "SMOTE"
+      ],
+      "normalized_title": "localised ensemble learning lel a localised approach to class imbalance",
+      "raw_bibtex": "@ARTICLE{10.1007/s10044-025-01545-3,\n\tauthor = {Olabisi, O and Maurya, L and Bader-El-Den, M},\n\ttitle = {Localised ensemble learning (LEL) - a localised approach to class imbalance},\n\tjournal = {PATTERN ANALYSIS AND APPLICATIONS},\n\tyear = {2025},\n\tkeywords = {Class Imbalance; Classification; Random forest; Nearest neighbour; PERFORMANCE; ALGORITHMS; SMOTE},\n\tabstract = {Class imbalance is a persistent challenge in machine learning, often degrading model performance by skewing predictions toward majority classes. Traditional approaches typically focus on global correction strategies, which may overlook important Localised irregularities within the data. These global methods may fail to adapt to the varying characteristics of individual samples, limiting their effectiveness in complex real-world scenarios.To address these limitations, we propose Localised Ensemble Learning (LEL), a novel framework that incorporates local structural information into the learning process. LEL begins by applying K-Nearest Neighbors (KNN) to assign each sample a Sample Type based on specific rules that capture neighbourhood distribution, distance-based imbalance, and sample quality. This Sample Type feature is then used to partition the dataset into distinct subsets, each of which is treated using tailored imbalance mitigation strategies. Individual models are trained on these subsets, and their predictions are integrated into a final ensemble, allowing LEL to address different forms of localised imbalance in a principled and modular way. The effectiveness of LEL is validated through a comprehensive evaluation against global correction strategies namely SMOTE, NOGAN, Cost-Sensitive Learning (CSL) and Ensemble methods, across multiple metrics including Recall, Precision, F1 Score, Kappa, G Mean and quantitatively. Statistical significance of the results is assessed using paired T-tests and Wilcoxon signed rank test. SHAP (SHapley Additive exPlanations) values are employed to analyze feature contributions, revealing the Sample Type feature as a critical determinant of model performance. Additionally, an ablation study highlights the impact of key parameters, such as the \\documentclass[12pt]minimal \\usepackageamsmath \\usepackagewasysym \\usepackageamsfonts \\usepackageamssymb \\usepackageamsbsy \\usepackagemathrsfs \\usepackageupgreek \\setlength\\oddsidemargin-69pt \\begindocument$$ k $$\\enddocument value in KNN providing further insights into the robustness and adaptability of the LEL framework. Experimental results demonstrate that LEL consistently outperforms global approaches across all tested classifiers, including Random Forest, Decision Tree, XGBoost, and Naive Bayes. LEL achieves statistically significant improvements in recall and precision, underscoring its ability to handle localised forms of imbalance effectively which translates to global imbalances. The findings emphasize the importance of addressing localised data defects and leveraging features like Sample Type, which capture complex relationships and enhance predictive accuracy.},\n\tdoi = {10.1007/s10044-025-01545-3},\n\tvolume = {28},\n\tnumber = {4},\n\tissn = {1433-7541},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 68 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s10044-025-01545-3"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000356",
+      "entry_type": "article",
+      "title": "Wavelet Analysis for Evaluating the Length of Precast Spliced Piles Using Low Strain Integrity Testing",
+      "authors": [
+        "Loseva, E",
+        "Lozovsky, I",
+        "Zhostkov, R",
+        "Syasko, V"
+      ],
+      "year": 2022,
+      "journal": "APPLIED SCIENCES-BASEL",
+      "doi": "10.3390/app122110901",
+      "abstract": "Featured Application The presented techniques can be applied to access a splice depth and a total length of driven precast piles. The difficulties with the application of low strain integrity testing for evaluating the length of driven precast piles of two sections justify the need for new data acquisition and analysis techniques. The standard time domain analysis of the recorded signals may not allow for distinguishing the desired responses from a pile toe and a splice. In this paper, we propose the use of a set of hammers of different weights and tip materials that will provide various sensitivities of the test to a pile splice. To further analyze the collected data, we study the distributions of phase angles obtained using complex continuous wavelet transform. The characteristic phase shifts that distribute from higher to lower frequencies can be interpreted as responses from a pile toe and a splice. To verify the proposed approaches, a series of numerical simulations were performed using the finite element method for the driven pile models with the different properties of a splice zone. Numerical simulation results show that the pile splices are clearly identified when using the shorter input pulses which can be generated by light hammers with a hard head material. The total length of a simulated pile with a 1 mm air gap between sections was undetectable by standard data analysis approaches and was evaluated when analyzing the wavelet phase angle distributions. Numerically validated data acquisition and analysis techniques were applied to field data analysis and allowed us to confidently identify the length of two-section piles grouped with a pile cap.",
+      "keywords": [
+        "piles",
+        "precast concrete piles",
+        "pile integrity testing",
+        "low strain integrity testing",
+        "sonic-echo test",
+        "numerical simulation",
+        "wavelet transform",
+        "complex continuous wavelet transform",
+        "DAMAGE LOCALIZATION",
+        "TRANSFORM"
+      ],
+      "normalized_title": "wavelet analysis for evaluating the length of precast spliced piles using low strain integrity testing",
+      "raw_bibtex": "@ARTICLE{10.3390/app122110901,\n\tauthor = {Loseva, E and Lozovsky, I and Zhostkov, R and Syasko, V},\n\ttitle = {Wavelet Analysis for Evaluating the Length of Precast Spliced Piles Using Low Strain Integrity Testing},\n\tjournal = {APPLIED SCIENCES-BASEL},\n\tyear = {2022},\n\tkeywords = {piles; precast concrete piles; pile integrity testing; low strain integrity testing; sonic-echo test; numerical simulation; wavelet transform; complex continuous wavelet transform; DAMAGE LOCALIZATION; TRANSFORM},\n\tabstract = {Featured Application The presented techniques can be applied to access a splice depth and a total length of driven precast piles. The difficulties with the application of low strain integrity testing for evaluating the length of driven precast piles of two sections justify the need for new data acquisition and analysis techniques. The standard time domain analysis of the recorded signals may not allow for distinguishing the desired responses from a pile toe and a splice. In this paper, we propose the use of a set of hammers of different weights and tip materials that will provide various sensitivities of the test to a pile splice. To further analyze the collected data, we study the distributions of phase angles obtained using complex continuous wavelet transform. The characteristic phase shifts that distribute from higher to lower frequencies can be interpreted as responses from a pile toe and a splice. To verify the proposed approaches, a series of numerical simulations were performed using the finite element method for the driven pile models with the different properties of a splice zone. Numerical simulation results show that the pile splices are clearly identified when using the shorter input pulses which can be generated by light hammers with a hard head material. The total length of a simulated pile with a 1 mm air gap between sections was undetectable by standard data analysis approaches and was evaluated when analyzing the wavelet phase angle distributions. Numerically validated data acquisition and analysis techniques were applied to field data analysis and allowed us to confidently identify the length of two-section piles grouped with a pile cap.},\n\tdoi = {10.3390/app122110901},\n\tvolume = {12},\n\tnumber = {21},\n\tissn = {2076-3417},\n\tnote = {Times Cited in Web of Science Core Collection: 14 Total Times Cited: 14 Cited Reference Count: 45 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/app122110901"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000357",
+      "entry_type": "article",
+      "title": "Dual-kernel driven convolutional sparse learning for bearing transient feature enhancement",
+      "authors": [
+        "Yi, HR",
+        "Ding, XX",
+        "Li, QC",
+        "Wang, H",
+        "Tang, J",
+        "Liu, R",
+        "Huang, WB"
+      ],
+      "year": 2023,
+      "journal": "MEASUREMENT",
+      "doi": "10.1016/j.measurement.2023.112643",
+      "abstract": "The transient structure feature of bearing reflects the dynamic response of vibration, which is of vital importance for rotating machinery fault diagnosis. However, the measured signals are complicated and non-stationary, where the transient impacts are always submerged in heavy background noise. In this study, a novel dual-kernel driven convolutional sparse learning (DKCSL) is proposed to enhance the transient feature with the intrinsic structure mined. Considering the benefits of data-driven representation with time-frequency manifold (TFM) learning and model-driven representation with wavelet analysis, two time-frequency kernels with different principles are constructed for 2-dimensional convolutional sparse learning (CSL) in a fusion way of both data-driven and model-driven. From the perspective of image processing, the representation of desired transient structure features can be well sensed from time-frequency distribution (TFD) by those two dual-driven time-frequency kernels. In this manner, the desired defective intrinsic features can be mined, which is consistent with the physical dynamic response. In addition, image entropy is introduced to output the optimal TFM kernel and a series of inverse transform are applied to obtain the enhanced signal waveform. Simulated and experimental data are tested here to verify the creativity and effectiveness of the proposed DKCSL method, and a comparison with the traditional single TFM kernel-based sparse result and wavelet kernel-based sparse result are further provided, which deeply indicates the originality of our method that its potential in intrinsic structure feature extraction with dual-kernel sensing for bearing fault diagnosis.",
+      "keywords": [
+        "Dual-kernel",
+        "Convolutional sparse learning",
+        "Wavelet analysis",
+        "Time-frequency manifold learning",
+        "Transient feature enhancement",
+        "DECOMPOSITION",
+        "WAVELET"
+      ],
+      "normalized_title": "dual kernel driven convolutional sparse learning for bearing transient feature enhancement",
+      "raw_bibtex": "@ARTICLE{10.1016/j.measurement.2023.112643,\n\tauthor = {Yi, HR and Ding, XX and Li, QC and Wang, H and Tang, J and Liu, R and Huang, WB},\n\ttitle = {Dual-kernel driven convolutional sparse learning for bearing transient feature enhancement},\n\tjournal = {MEASUREMENT},\n\tyear = {2023},\n\tkeywords = {Dual-kernel; Convolutional sparse learning; Wavelet analysis; Time-frequency manifold learning; Transient feature enhancement; DECOMPOSITION; WAVELET},\n\tabstract = {The transient structure feature of bearing reflects the dynamic response of vibration, which is of vital importance for rotating machinery fault diagnosis. However, the measured signals are complicated and non-stationary, where the transient impacts are always submerged in heavy background noise. In this study, a novel dual-kernel driven convolutional sparse learning (DKCSL) is proposed to enhance the transient feature with the intrinsic structure mined. Considering the benefits of data-driven representation with time-frequency manifold (TFM) learning and model-driven representation with wavelet analysis, two time-frequency kernels with different principles are constructed for 2-dimensional convolutional sparse learning (CSL) in a fusion way of both data-driven and model-driven. From the perspective of image processing, the representation of desired transient structure features can be well sensed from time-frequency distribution (TFD) by those two dual-driven time-frequency kernels. In this manner, the desired defective intrinsic features can be mined, which is consistent with the physical dynamic response. In addition, image entropy is introduced to output the optimal TFM kernel and a series of inverse transform are applied to obtain the enhanced signal waveform. Simulated and experimental data are tested here to verify the creativity and effectiveness of the proposed DKCSL method, and a comparison with the traditional single TFM kernel-based sparse result and wavelet kernel-based sparse result are further provided, which deeply indicates the originality of our method that its potential in intrinsic structure feature extraction with dual-kernel sensing for bearing fault diagnosis.},\n\tdoi = {10.1016/j.measurement.2023.112643},\n\tvolume = {216},\n\tissn = {0263-2241},\n\tnote = {Times Cited in Web of Science Core Collection: 4 Total Times Cited: 5 Cited Reference Count: 38 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.measurement.2023.112643"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000358",
+      "entry_type": "article",
+      "title": "Cross-Supervised multisource prototypical network: A novel domain adaptation method for multi-source few-shot fault diagnosis",
+      "authors": [
+        "Zhang, X",
+        "Huang, WG",
+        "Ding, CC",
+        "Wang, J",
+        "Shen, CQ",
+        "Shi, JJ"
+      ],
+      "year": 2024,
+      "journal": "ADVANCED ENGINEERING INFORMATICS",
+      "doi": "10.1016/j.aei.2024.102538",
+      "abstract": "Multi-source domain adaptation (MSDA) has demonstrated superior performance in intelligent fault diagnosis (IFD) compared to single-source domain adaptation (SSDA), as it can provide more comprehensive and diverse information from multiple fully-labeled source domains. However, in many real industrial scenarios, acquiring multiple fully-labeled source domains is challenging because labeling all the source domains is as expensive and laborious as labeling the target domain. Given this concern, a cross-supervised multisource prototypical network (CSMPN) is proposed for multi-source few-shot fault diagnosis. Specifically, a domain-shared and a domainindividual branch are constructed to realize shared domain alignment across all the source and target domains and individual domain alignment of source-target domain pairs, respectively. Within two branches, domain alignment is realized by the designed prototypical contrastive learning (PCL) module. In the PCL module, we propose a prototype calibration strategy to address the issue of biased prototype estimation owing to outlier samples. In addition, a two-stage pseudo-labeled sample selection mechanism is proposed to enhance the feature representation ability of two branches. At the end of the two branches, we design a cross-supervised learning (CSL) module to realize mutual and collaborative learning between the two branches, which can further improve the diagnosis performance on the target domain. Experiments on two different bearing datasets are implemented to verify the superiority of the proposed method compared with the comparison methods. Our code is available at https://github.com/YNWA-Zhang/CSMPN.",
+      "keywords": [
+        "Intelligent fault diagnosis",
+        "Multi-source domain adaptation",
+        "Few-shot learning",
+        "Contrastive learning"
+      ],
+      "normalized_title": "cross supervised multisource prototypical network a novel domain adaptation method for multi source few shot fault diagnosis",
+      "raw_bibtex": "@ARTICLE{10.1016/j.aei.2024.102538,\n\tauthor = {Zhang, X and Huang, WG and Ding, CC and Wang, J and Shen, CQ and Shi, JJ},\n\ttitle = {Cross-Supervised multisource prototypical network: A novel domain adaptation method for multi-source few-shot fault diagnosis},\n\tjournal = {ADVANCED ENGINEERING INFORMATICS},\n\tyear = {2024},\n\tkeywords = {Intelligent fault diagnosis; Multi-source domain adaptation; Few-shot learning; Contrastive learning},\n\tabstract = {Multi-source domain adaptation (MSDA) has demonstrated superior performance in intelligent fault diagnosis (IFD) compared to single-source domain adaptation (SSDA), as it can provide more comprehensive and diverse information from multiple fully-labeled source domains. However, in many real industrial scenarios, acquiring multiple fully-labeled source domains is challenging because labeling all the source domains is as expensive and laborious as labeling the target domain. Given this concern, a cross-supervised multisource prototypical network (CSMPN) is proposed for multi-source few-shot fault diagnosis. Specifically, a domain-shared and a domainindividual branch are constructed to realize shared domain alignment across all the source and target domains and individual domain alignment of source-target domain pairs, respectively. Within two branches, domain alignment is realized by the designed prototypical contrastive learning (PCL) module. In the PCL module, we propose a prototype calibration strategy to address the issue of biased prototype estimation owing to outlier samples. In addition, a two-stage pseudo-labeled sample selection mechanism is proposed to enhance the feature representation ability of two branches. At the end of the two branches, we design a cross-supervised learning (CSL) module to realize mutual and collaborative learning between the two branches, which can further improve the diagnosis performance on the target domain. Experiments on two different bearing datasets are implemented to verify the superiority of the proposed method compared with the comparison methods. Our code is available at https://github.com/YNWA-Zhang/CSMPN.},\n\tdoi = {10.1016/j.aei.2024.102538},\n\tvolume = {61},\n\tissn = {1474-0346},\n\tnote = {Times Cited in Web of Science Core Collection: 46 Total Times Cited: 46 Cited Reference Count: 51 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.aei.2024.102538"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000359",
+      "entry_type": "article",
+      "title": "Non-Destructive Evaluation of Material Stiffness beneath Pile Foundations Tip Using Harmonic Wavelet Transform",
+      "authors": [
+        "Oh, HJ",
+        "Park, JH",
+        "Park, HC"
+      ],
+      "year": 2024,
+      "journal": "BUILDINGS",
+      "doi": "10.3390/buildings14020511",
+      "abstract": "Pile foundations are used to support superstructures and play an important role in the safety of these structures. The performance of pile foundations generally depends on the conditions of the pile itself and the material under the pile tip(i.e., bottom), especially for end-bearing piles installed in soft soil volumes. Therefore, to assess the performance of existing pile foundations, it is crucial not only to evaluate the structural integrity of the pile itself, but also to assess the ground conditions, such as subsoil stiffness beneath the pile foundation tip. Accessing the subsoil beneath the pile foundation tip is highly challenging in the field. Hence, there is a need for the development of non-destructive pile evaluation methods that allow the assessment of subsoil stiffness beneath the pile tip without direct access to the subsoil. Various non-destructive methods have been developed for pile performance assessment. However, these conventional non-destructive methods are primarily designed for assessing the structural integrity of the pile itself, and there are no existing non-destructive pile integrity testing methods applicable to evaluate the subsoil stiffness beneath the pile tip. In this study, a non-destructive method is developed to evaluate the subsurface soil stiffness beneath pile tip without direct access. The proposed method involves applying impact loading to the easily accessible pile head and measuring the elastic waves propagated within the pile foundation due to the impact loading. These wave signals are then recorded at the pile head. The measured time-history signals are decomposed using harmonic wavelet transform. This allows the obtainment of well-defined magnitude and phase information over time for various individual frequency components composing the wave. In this study, a method is proposed to assess the stiffness of the subsoil beneath the pile tip by simultaneously utilizing the magnitude and phase information of the measured signals obtained through harmonic wavelet transform. To facilitate this, a step-by-step data analysis procedure for evaluating the subsoil stiffness beneath the pile tip is introduced. To validate the proposed method, numerical simulations were conducted using ABAQUS. The experimental data obtained from the numerical simulations were processed using the proposed method to assess the subsoil stiffness beneath the pile. The determined subsoil stiffness was then compared with the exact soil stiffness used in the numerical simulation to evaluate the validity of the proposed method. Through this analysis, the proposed method demonstrated its effectiveness in assessing the subsoil stiffness beneath piles tip installed in weak soil volume.",
+      "keywords": [
+        "pile foundation",
+        "harmonic wavelet transform",
+        "P-wave velocity",
+        "material condition under bottom of pile",
+        "SONIC ECHO",
+        "VIBRATION",
+        "DEFECTS"
+      ],
+      "normalized_title": "non destructive evaluation of material stiffness beneath pile foundations tip using harmonic wavelet transform",
+      "raw_bibtex": "@ARTICLE{10.3390/buildings14020511,\n\tauthor = {Oh, HJ and Park, JH and Park, HC},\n\ttitle = {Non-Destructive Evaluation of Material Stiffness beneath Pile Foundations Tip Using Harmonic Wavelet Transform},\n\tjournal = {BUILDINGS},\n\tyear = {2024},\n\tkeywords = {pile foundation; harmonic wavelet transform; P-wave velocity; material condition under bottom of pile; SONIC ECHO; VIBRATION; DEFECTS},\n\tabstract = {Pile foundations are used to support superstructures and play an important role in the safety of these structures. The performance of pile foundations generally depends on the conditions of the pile itself and the material under the pile tip(i.e., bottom), especially for end-bearing piles installed in soft soil volumes. Therefore, to assess the performance of existing pile foundations, it is crucial not only to evaluate the structural integrity of the pile itself, but also to assess the ground conditions, such as subsoil stiffness beneath the pile foundation tip. Accessing the subsoil beneath the pile foundation tip is highly challenging in the field. Hence, there is a need for the development of non-destructive pile evaluation methods that allow the assessment of subsoil stiffness beneath the pile tip without direct access to the subsoil. Various non-destructive methods have been developed for pile performance assessment. However, these conventional non-destructive methods are primarily designed for assessing the structural integrity of the pile itself, and there are no existing non-destructive pile integrity testing methods applicable to evaluate the subsoil stiffness beneath the pile tip. In this study, a non-destructive method is developed to evaluate the subsurface soil stiffness beneath pile tip without direct access. The proposed method involves applying impact loading to the easily accessible pile head and measuring the elastic waves propagated within the pile foundation due to the impact loading. These wave signals are then recorded at the pile head. The measured time-history signals are decomposed using harmonic wavelet transform. This allows the obtainment of well-defined magnitude and phase information over time for various individual frequency components composing the wave. In this study, a method is proposed to assess the stiffness of the subsoil beneath the pile tip by simultaneously utilizing the magnitude and phase information of the measured signals obtained through harmonic wavelet transform. To facilitate this, a step-by-step data analysis procedure for evaluating the subsoil stiffness beneath the pile tip is introduced. To validate the proposed method, numerical simulations were conducted using ABAQUS. The experimental data obtained from the numerical simulations were processed using the proposed method to assess the subsoil stiffness beneath the pile. The determined subsoil stiffness was then compared with the exact soil stiffness used in the numerical simulation to evaluate the validity of the proposed method. Through this analysis, the proposed method demonstrated its effectiveness in assessing the subsoil stiffness beneath piles tip installed in weak soil volume.},\n\tdoi = {10.3390/buildings14020511},\n\tvolume = {14},\n\tnumber = {2},\n\tissn = {2075-5309},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 44 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/buildings14020511"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000360",
+      "entry_type": "article",
+      "title": "An air quality and boundary layer dynamics analysis of the Los Angeles basin area during the Southwest Urban NOx and VOCs Experiment (SUNVEx)",
+      "authors": [
+        "Strobach, EJ",
+        "Baidar, S",
+        "Carroll, BJ",
+        "Brown, SS",
+        "Zuraski, K",
+        "Coggon, M",
+        "Stockwell, CE",
+        "Xu, L",
+        "Pichugina, YL",
+        "Brewer, WA",
+        "Warneke, C",
+        "Peischl, J",
+        "Gilman, J",
+        "McCarty, B",
+        "Holloway, M",
+        "Marchbanks, R"
+      ],
+      "year": 2024,
+      "journal": "ATMOSPHERIC CHEMISTRY AND PHYSICS",
+      "doi": "10.5194/acp-24-9277-2024",
+      "abstract": "The NOAA Chemical Sciences Laboratory (CSL) conducted the Southwest Urban NOx and VOCs Experiment (SUNVEx) to study emissions and the role of boundary layer (BL) dynamics and sea-breeze (SB) transitions in the evolution of coastal air quality. The study presented utilizes remote sensing and in situ observations in Pasadena, California. Separate analyses are conducted on the synoptic conditions during ozone (O3) exceedance (>70 ppb) and non-exceedance (<70 ppb) days, as well as the fine-structure variability of in situ chemistry measurements during BL growth and SB transitions. Diurnal analyses spanning August 2021 revealed a markedly different wind direction during evenings preceding O-3 exceedance (northerly) versus non-exceedance (easterly) days. Increased O3 occurred simultaneously with warmer and drier conditions, a reduction in winds, and an increase in volatile organic compounds (VOCs) and fine particulate matter (PM2.5). While the average BL height was lower and surface pressure was higher, the day-to-day variability of these quantities led to an overall weak statistical relationship. Investigations focused on the fine-structure variability of in situ chemistry measurements superimposed on background trends were conducted using a novel multivariate spectral coherence mapping (MSCM) technique that combined the spectral structure of two or more independent measurements through a wavelet analysis as reported by maximum-normalized scaleograms. A case study was chosen to illustrate the MSCM technique, where the dominant peaks in scaleograms were identified and compared to BL height during the growth phase. The temporal widths of peaks (tau(max)) derived from VOC and nitrogen oxide (NOx) scaleograms, as well as scaleograms combining VOCs, NOx, and variations in BL height, indicated a broadening with respect to time as the BL increased in depth. A separate section focused on comparisons between tau(max) and BL height during August 2021 revealed uncorrelated or weakly correlated scatter, except in the case of VOCs when really large tau max and relatively deep BL heights were ignored. Instances of large tau(max) and relatively deep BL heights occurred near sunrise and as onshore flow entered Pasadena, respectively. Wind transitions likely influenced both the dynamical evolution of the BL and tracer advection and thus offer additional challenges when separating factors contributing to the fine structure. Other insights gained from this work include observations of descending wind jets from the San Gabriel Mountains that were not resolved by the High-Resolution Rapid Refresh (HRRR) model and the derivation of intrinsic properties of oscillations observed in NOx and O-3 during the interaction between an SB and enhanced winds above the BL that flowed in opposition to the SB.",
+      "keywords": [
+        "TEMPERATURE-DEPENDENCE",
+        "POLLUTION",
+        "IMPACT",
+        "EMISSIONS",
+        "WIND",
+        "HEAT",
+        "MS"
+      ],
+      "normalized_title": "an air quality and boundary layer dynamics analysis of the los angeles basin area during the southwest urban nox and vocs experiment sunvex",
+      "raw_bibtex": "@ARTICLE{10.5194/acp-24-9277-2024,\n\tauthor = {Strobach, EJ and Baidar, S and Carroll, BJ and Brown, SS and Zuraski, K and Coggon, M and Stockwell, CE and Xu, L and Pichugina, YL and Brewer, WA and Warneke, C and Peischl, J and Gilman, J and McCarty, B and Holloway, M and Marchbanks, R},\n\ttitle = {An air quality and boundary layer dynamics analysis of the Los Angeles basin area during the Southwest Urban NOx and VOCs Experiment (SUNVEx)},\n\tjournal = {ATMOSPHERIC CHEMISTRY AND PHYSICS},\n\tyear = {2024},\n\tkeywords = {TEMPERATURE-DEPENDENCE; POLLUTION; IMPACT; EMISSIONS; WIND; HEAT; MS},\n\tabstract = {The NOAA Chemical Sciences Laboratory (CSL) conducted the Southwest Urban NOx and VOCs Experiment (SUNVEx) to study emissions and the role of boundary layer (BL) dynamics and sea-breeze (SB) transitions in the evolution of coastal air quality. The study presented utilizes remote sensing and in situ observations in Pasadena, California. Separate analyses are conducted on the synoptic conditions during ozone (O3) exceedance (>70 ppb) and non-exceedance (<70 ppb) days, as well as the fine-structure variability of in situ chemistry measurements during BL growth and SB transitions. Diurnal analyses spanning August 2021 revealed a markedly different wind direction during evenings preceding O-3 exceedance (northerly) versus non-exceedance (easterly) days. Increased O3 occurred simultaneously with warmer and drier conditions, a reduction in winds, and an increase in volatile organic compounds (VOCs) and fine particulate matter (PM2.5). While the average BL height was lower and surface pressure was higher, the day-to-day variability of these quantities led to an overall weak statistical relationship. Investigations focused on the fine-structure variability of in situ chemistry measurements superimposed on background trends were conducted using a novel multivariate spectral coherence mapping (MSCM) technique that combined the spectral structure of two or more independent measurements through a wavelet analysis as reported by maximum-normalized scaleograms. A case study was chosen to illustrate the MSCM technique, where the dominant peaks in scaleograms were identified and compared to BL height during the growth phase. The temporal widths of peaks (tau(max)) derived from VOC and nitrogen oxide (NOx) scaleograms, as well as scaleograms combining VOCs, NOx, and variations in BL height, indicated a broadening with respect to time as the BL increased in depth. A separate section focused on comparisons between tau(max) and BL height during August 2021 revealed uncorrelated or weakly correlated scatter, except in the case of VOCs when really large tau max and relatively deep BL heights were ignored. Instances of large tau(max) and relatively deep BL heights occurred near sunrise and as onshore flow entered Pasadena, respectively. Wind transitions likely influenced both the dynamical evolution of the BL and tracer advection and thus offer additional challenges when separating factors contributing to the fine structure. Other insights gained from this work include observations of descending wind jets from the San Gabriel Mountains that were not resolved by the High-Resolution Rapid Refresh (HRRR) model and the derivation of intrinsic properties of oscillations observed in NOx and O-3 during the interaction between an SB and enhanced winds above the BL that flowed in opposition to the SB.},\n\tdoi = {10.5194/acp-24-9277-2024},\n\tvolume = {24},\n\tnumber = {16},\n\tpages = {9277-9307},\n\tissn = {1680-7316},\n\tnote = {Times Cited in Web of Science Core Collection: 4 Total Times Cited: 4 Cited Reference Count: 49 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.5194/acp-24-9277-2024"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

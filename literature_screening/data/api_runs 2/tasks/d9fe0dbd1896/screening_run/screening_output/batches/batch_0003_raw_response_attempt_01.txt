@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0003",
+    "results": [
+        {
+            "paper_id": "paper_000021",
+            "decision": "exclude",
+            "reason": "标题和摘要仅探讨传统金融机构（私人银行和信用合作社）的普惠金融，未涉及数字金融或金融科技变量。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000022",
+            "decision": "exclude",
+            "reason": "标题和摘要明确研究数字金融对家庭碳足迹的影响，与收入差距、贫困或不平等主题无关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000023",
+            "decision": "uncertain",
+            "reason": "摘要探讨数字金融包容性与性别差距，但未明确涉及收入不平等、城乡差距或减贫的经济学影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000024",
+            "decision": "exclude",
+            "reason": "标题和摘要研究金融科技对绿色金融的影响，未涉及收入差距、贫困或不平等主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000025",
+            "decision": "exclude",
+            "reason": "标题和摘要探讨金融发展对全球化与收入不平等关系的影响，未涉及数字金融或金融科技变量。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000026",
+            "decision": "exclude",
+            "reason": "标题和摘要表明是数字金融包容性领域的文献可视化综述，非实证或理论研究，不符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000027",
+            "decision": "uncertain",
+            "reason": "摘要探讨金融包容性对收入不平等与WASH设施关系的影响，但未明确涉及数字金融变量，且主题偏向健康基础设施。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000028",
+            "decision": "uncertain",
+            "reason": "摘要提到金融科技可减少收入不平等，但这是系统性文献综述，非实证或高质量理论研究，且主题宽泛涉及可持续发展。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.45
+        },
+        {
+            "paper_id": "paper_000029",
+            "decision": "uncertain",
+            "reason": "摘要探讨金融包容性对贫困的影响，但未明确涉及数字金融变量，且主题聚焦社会分层与基本服务获取。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.48
+        },
+        {
+            "paper_id": "paper_000030",
+            "decision": "exclude",
+            "reason": "标题和摘要研究数字金融包容性对主观幸福感的影响，与收入差距、贫困或不平等主题无关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.92
+        }
+    ]
+}

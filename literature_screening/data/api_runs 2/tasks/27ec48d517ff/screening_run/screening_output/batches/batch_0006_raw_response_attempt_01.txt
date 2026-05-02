@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0006",
+    "results": [
+        {
+            "paper_id": "paper_000051",
+            "decision": "exclude",
+            "reason": "标题和摘要表明研究为计算机模拟实验，不涉及真实患者的术后MAP管理策略或临床预后。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000052",
+            "decision": "include",
+            "reason": "标题和摘要明确针对HeartMate 3 LVAD患者的血压监测技术，涉及MAP测量并与临床管理相关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000053",
+            "decision": "include",
+            "reason": "标题和摘要明确研究LVAD患者的平均动脉压（MAP）自动化测量方法，旨在将血压控制在目标范围以减少并发症。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000054",
+            "decision": "exclude",
+            "reason": "标题和摘要表明研究针对经皮左心室辅助装置（pLVAD）用于室速消融期间的临时支持，不涉及长期植入的CF-LVAD术后MAP管理。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.82
+        },
+        {
+            "paper_id": "paper_000055",
+            "decision": "uncertain",
+            "reason": "标题表明为专家共识声明，可能涉及MAP管理，但摘要信息缺失，无法确认是否满足纳入标准的具体内容。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000056",
+            "decision": "exclude",
+            "reason": "标题和摘要表明研究针对微轴循环支持装置用于急性心梗合并心源性休克的PCI围术期，不涉及长期植入的CF-LVAD术后MAP管理。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000057",
+            "decision": "exclude",
+            "reason": "标题和摘要明确研究主动脉内球囊反搏（IABP）的时机对血流动力学的影响，不涉及左心室辅助装置（LVAD）。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000058",
+            "decision": "exclude",
+            "reason": "标题和摘要表明研究针对耐用LVAD患者的室速消融病例，不涉及术后平均动脉压（MAP）的管理策略或目标范围。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000059",
+            "decision": "include",
+            "reason": "摘要明确涉及连续血流LVAD植入患者术后平均动脉压（MAP）的测量，并关联了30天死亡率等临床预后。",
+            "evidence": ["abstract"],
+            "confidence": 0.86
+        },
+        {
+            "paper_id": "paper_000060",
+            "decision": "exclude",
+            "reason": "标题和摘要表明研究关注LVAD受者的生活体验和患者报告结局，不涉及术后平均动脉压（MAP）的管理或临床预后。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        }
+    ]
+}

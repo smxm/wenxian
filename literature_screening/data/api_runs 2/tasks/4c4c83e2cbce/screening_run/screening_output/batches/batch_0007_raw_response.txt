@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0007",
+    "results": [
+        {
+            "paper_id": "paper_000061",
+            "decision": "uncertain",
+            "reason": "标题和摘要涉及弓网机电相互作用模型，提到电弧发生条件，但未明确包含电弧数学模型或MATLAB仿真。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000062",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦接触线磨损机制实验研究，虽涉及电弧放电能量，但核心是磨损分析而非电气特性建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000063",
+            "decision": "uncertain",
+            "reason": "摘要提到抑制弓网电弧和控制算法优化，涉及电气化铁路弓网系统，但未明确包含电弧模型或MATLAB仿真细节。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000064",
+            "decision": "exclude",
+            "reason": "标题和摘要专注于弓网状态检测方法，涉及接触损失监测，但核心是图像处理与定位技术，无电气特性分析或电弧建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000065",
+            "decision": "include",
+            "reason": "标题和摘要明确研究弓网电弧检测方法，涉及电流和电磁辐射信号分析，符合弓网系统电气特性主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000066",
+            "decision": "exclude",
+            "reason": "标题和摘要研究双受电弓动态性能，涉及接触损失率，但核心是机械动力学分析，无电气特性或电弧建模内容。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000067",
+            "decision": "exclude",
+            "reason": "标题和摘要分析接触线电流的电磁场暴露，虽提及弓网电弧，但核心是健康风险评估，非弓网离线电气特性建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.87
+        },
+        {
+            "paper_id": "paper_000068",
+            "decision": "include",
+            "reason": "标题和摘要分析弓网电弧电磁干扰，涉及过电压和电磁辐射，明确研究电气化铁路弓网系统的电气特性影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.82
+        },
+        {
+            "paper_id": "paper_000069",
+            "decision": "uncertain",
+            "reason": "摘要提及高速铁路弓网系统电弧放电，建立电磁辐射噪声数学模型，但未明确说明是否针对弓网离线电气特性。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.6
+        },
+        {
+            "paper_id": "paper_000070",
+            "decision": "uncertain",
+            "reason": "标题和摘要研究弓网动态相互作用，提出再附着动量冲击数学模型，涉及电弧来源，但电气特性分析不足。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.58
+        }
+    ]
+}

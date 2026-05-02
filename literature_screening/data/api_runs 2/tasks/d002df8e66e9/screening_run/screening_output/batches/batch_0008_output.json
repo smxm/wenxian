@@ -1,0 +1,35 @@
+{
+  "batch_id": "batch_0008",
+  "results": [
+    {
+      "paper_id": "paper_000022",
+      "decision": "include",
+      "reason": "标题显示涉及弓网系统瞬态电弧特性，摘要提到电弧建模和数值仿真分析电气演化。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000023",
+      "decision": "uncertain",
+      "reason": "摘要提到电弧温度分布和数学模型，但未明确探讨电气特性变化如电压/电流畸变。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000024",
+      "decision": "include",
+      "reason": "标题明确探讨弓网电弧的电气特性，摘要提到建立数学模型并使用仿真分析电压和电流分布。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    }
+  ]
+}

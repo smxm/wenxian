@@ -693,3 +693,135 @@ Append-only log for thread handoff. Add one new entry at the end of the file aft
   - `/Users/mao/Documents/langchain/project_session_log.md`
   - `/Users/mao/Documents/langchain/docs/project_history/index.md`
   - `/Users/mao/Documents/langchain/docs/project_history/state_snapshots/2026-04-24_1841_project_state.md`
+
+## Session 2026-04-24 - Report source selection, provider model discovery, and live screening progress
+
+- Scope: updated the report-generation entry point so model names and report sources are user-selectable without manual model typing, corrected the screening-task edit affordance, and made screening counts update during long-running jobs.
+- Main changes:
+  - added `/api/model-options` in `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/api/app.py`, with schemas in `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/api/schemas.py`, to load provider model lists from OpenAI-compatible `/models` endpoints using the entered API key or server env var.
+  - changed `/Users/mao/Documents/langchain/literature_screening_web/src/views/ProjectDetailView.vue` so the report model name is a refreshable dropdown and the report source is a multi-select over report-source, fulltext-ready, cumulative included, and individual included/reviewed screening datasets.
+  - changed `/Users/mao/Documents/langchain/literature_screening_web/src/views/ScreeningRunView.vue` so new initial-screening tasks use the same provider model dropdown instead of a free-text model-name input.
+  - changed `/Users/mao/Documents/langchain/literature_screening_web/src/views/TaskDetailView.vue` so screening task detail shows “编辑初筛任务” instead of the mistaken thread-edit button; it restores the saved task payload into the screening form for a corrected new submission.
+  - updated `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/pipeline/run_pipeline.py` and the API screening progress callback so task summaries pick up `run_summary.json` after each completed batch, exposing live processed/included/excluded/uncertain counts.
+  - archived the previous current-state file into `/Users/mao/Documents/langchain/docs/project_history/state_snapshots/2026-04-24_1902_project_state.md` and refreshed the project state plus atlas routing/module notes.
+- Verification:
+  - `PYTHONPATH=/Users/mao/Documents/langchain/literature_screening/src /Users/mao/Documents/langchain/literature_screening/.venv311-codex/bin/python -m pytest -q literature_screening/tests/test_api_app.py -k 'meta_endpoint or model_options or screening_progress_callback or report_task or report_source'`
+  - result: `8 passed, 23 deselected`
+  - `PYTHONPATH=/Users/mao/Documents/langchain/literature_screening/src /Users/mao/Documents/langchain/literature_screening/.venv311-codex/bin/python -m pytest -q literature_screening/tests/test_api_app.py literature_screening/tests/test_task_store.py literature_screening/tests/test_screening_pipeline.py literature_screening/separated_modules/formal_report_module/tests/test_simple_report.py`
+  - result: `58 passed`
+  - `PYTHONPATH=/Users/mao/Documents/langchain/literature_screening/src /Users/mao/Documents/langchain/literature_screening/.venv311-codex/bin/python -m py_compile literature_screening/src/literature_screening/api/app.py literature_screening/src/literature_screening/api/schemas.py literature_screening/src/literature_screening/pipeline/run_pipeline.py`
+  - `cd /Users/mao/Documents/langchain/literature_screening_web && /Applications/Codex.app/Contents/Resources/node node_modules/vue-tsc/bin/vue-tsc.js --noEmit`
+  - `git -C /Users/mao/Documents/langchain diff --check`
+  - attempted Vite startup with bundled Codex Node, but local `node_modules` is missing `@rollup/rollup-darwin-arm64`; browser walkthrough was not run.
+- Outstanding follow-ups:
+  - browser-test the new report-source selector, report/screening model dropdown fallback/provider-load states, and screening edit handoff after frontend dependencies are repaired.
+  - run one real multi-batch screening task to visually confirm live counts on both the thread card and task detail page.
+  - consider extending provider model dropdowns to the strategy form if the report/screening version feels right.
+- Files touched:
+  - `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/api/app.py`
+  - `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/api/schemas.py`
+  - `/Users/mao/Documents/langchain/literature_screening/src/literature_screening/pipeline/run_pipeline.py`
+  - `/Users/mao/Documents/langchain/literature_screening/tests/test_api_app.py`
+  - `/Users/mao/Documents/langchain/literature_screening_web/src/api/client.ts`
+  - `/Users/mao/Documents/langchain/literature_screening_web/src/types/api.ts`
+  - `/Users/mao/Documents/langchain/literature_screening_web/src/views/ProjectDetailView.vue`
+  - `/Users/mao/Documents/langchain/literature_screening_web/src/views/ScreeningRunView.vue`
+  - `/Users/mao/Documents/langchain/literature_screening_web/src/views/TaskDetailView.vue`
+  - `/Users/mao/Documents/langchain/project_state.md`
+  - `/Users/mao/Documents/langchain/project_session_log.md`
+  - `/Users/mao/Documents/langchain/docs/project_history/index.md`
+  - `/Users/mao/Documents/langchain/docs/project_history/state_snapshots/2026-04-24_1902_project_state.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/change-routing.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/modules/backend-api-and-storage.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/modules/frontend-shell-and-stores.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/modules/frontend-thread-and-task-views.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/modules/reporting-and-formal-report.md`
+  - `/Users/mao/Documents/langchain/docs/project_atlas/modules/screening-and-data-pipeline.md`
+
+## Session 2026-04-24 - Documentation path hygiene, legacy archive, and doc-router skill
+
+- Scope: cleaned the active project handoff/docs so future threads use workspace-relative paths, archived stale architecture/workbench notes, and created a skill for fast doc-driven edit routing.
+- Main changes:
+  - archived the previous `project_state.md` into `docs/project_history/state_snapshots/2026-04-24_2359_project_state.md`.
+  - normalized current handoff, history-index, README, deploy, atlas, and skill docs toward repo-relative paths; older snapshots and earlier session-log entries remain unchanged as historical records.
+  - moved `literature_screening/docs/architecture.md` and `literature_screening/docs/web-workbench.md` into `docs/archive/legacy-docs/literature_screening/`, with `docs/archive/legacy-docs/README.md` explaining that atlas docs are now the current source of truth.
+  - refreshed `README.md`, `literature_screening/README.md`, `literature_screening_web/README.md`, and `deploy/cloud-server.md` to remove stale local Windows/macOS workspace assumptions from active instructions.
+  - added `$project-doc-router` at `$CODEX_HOME/skills/project-doc-router/SKILL.md` and mirrored it into `skills/project-doc-router/SKILL.md`; it reads `project_state.md`, `docs/project_atlas/`, and relevant module cards before naming likely edit files and verification.
+  - updated `$update-project-state` in Codex home and `skills/update-project-state/SKILL.md` so active docs prefer workspace-relative paths and immutable historical snapshots are not rewritten for cosmetic path cleanup.
+- Verification:
+  - path-hygiene `rg` scans over active docs, README files, deploy docs, and `skills/`; no project absolute-path or old drive-letter matches remained
+  - `find docs/archive/legacy-docs "$CODEX_HOME/skills/project-doc-router" skills/project-doc-router -maxdepth 3 -type f -print` confirmed the archive and skill files
+  - `git diff --check` passed
+- Outstanding follow-ups:
+  - try `$project-doc-router` in the next feature thread and adjust its output expectations if it routes too broadly.
+  - keep historical snapshots immutable; add new rows/entries instead of back-editing older logs when path conventions change.
+- Files touched:
+  - `project_state.md`
+  - `project_session_log.md`
+  - `docs/project_history/index.md`
+  - `docs/project_history/state_snapshots/2026-04-24_2359_project_state.md`
+  - `docs/project_atlas/index.md`
+  - `docs/project_atlas/change-routing.md`
+  - `docs/project_atlas/invariants.md`
+  - `docs/project_atlas/modules/documentation-handoff-and-skills.md`
+  - `docs/project_atlas/modules/backend-api-and-storage.md`
+  - `docs/project_atlas/modules/frontend-shell-and-stores.md`
+  - `docs/project_atlas/modules/frontend-thread-and-task-views.md`
+  - `docs/project_atlas/modules/reporting-and-formal-report.md`
+  - `docs/project_atlas/modules/runtime-and-operations.md`
+  - `docs/project_atlas/modules/screening-and-data-pipeline.md`
+  - `docs/project_atlas/modules/workflow-orchestration.md`
+  - `docs/archive/legacy-docs/README.md`
+  - `docs/archive/legacy-docs/literature_screening/architecture.md`
+  - `docs/archive/legacy-docs/literature_screening/web-workbench.md`
+  - `README.md`
+  - `deploy/cloud-server.md`
+  - `literature_screening/README.md`
+  - `literature_screening_web/README.md`
+  - `skills/update-project-state/SKILL.md`
+  - `skills/project-doc-router/SKILL.md`
+  - `$CODEX_HOME/skills/update-project-state/SKILL.md`
+  - `$CODEX_HOME/skills/project-doc-router/SKILL.md`
+
+## Session 2026-05-02 - Provider model discovery and screening enhancements
+
+- Scope: added provider model discovery endpoint, enhanced screening configuration parameters, refactored fulltext queue view, and updated project documentation.
+- Main changes:
+  - added `/api/model-options` endpoint for fetching model lists from provider APIs (DeepSeek, Kimi) with fallback defaults.
+  - added new screening configuration parameters: `batch_size`, `target_include_count`, `stop_when_target_reached`, `min_include_confidence`, `allow_uncertain`, `retry_times`, `request_timeout_seconds`, `encoding`.
+  - refactored `FulltextQueueView.vue` with improved filtering, pagination, multi-select, and enrichment workflows.
+  - updated `ProjectDetailView.vue`, `ScreeningRunView.vue`, `TaskDetailView.vue` with UI improvements.
+  - added comprehensive tests for API endpoints (`test_api_app.py`) and screening pipeline (`test_screening_pipeline.py`).
+  - updated project atlas and module cards to reflect new features.
+- Verification:
+  - backend tests passed
+  - frontend vue-tsc passed
+  - git diff --check passed
+- Outstanding follow-ups:
+  - browser-test provider model discovery with different API key configurations
+  - test fulltext queue refactoring with real data
+  - verify screening configuration changes end-to-end
+- Files touched:
+  - `project_state.md`
+  - `project_session_log.md`
+  - `literature_screening/src/literature_screening/api/app.py`
+  - `literature_screening/src/literature_screening/api/schemas.py`
+  - `literature_screening/src/literature_screening/pipeline/run_pipeline.py`
+  - `literature_screening/src/literature_screening/screening/llm_client.py`
+  - `literature_screening/src/literature_screening/screening/prompt_builder.py`
+  - `literature_screening/src/literature_screening/studio/service.py`
+  - `literature_screening/tests/test_api_app.py`
+  - `literature_screening/tests/test_screening_pipeline.py`
+  - `literature_screening_web/src/views/FulltextQueueView.vue`
+  - `literature_screening_web/src/views/ProjectDetailView.vue`
+  - `literature_screening_web/src/views/ScreeningRunView.vue`
+  - `literature_screening_web/src/views/TaskDetailView.vue`
+  - `docs/project_atlas/change-routing.md`
+  - `docs/project_atlas/index.md`
+  - `docs/project_atlas/invariants.md`
+  - `docs/project_atlas/modules/backend-api-and-storage.md`
+  - `docs/project_atlas/modules/frontend-shell-and-stores.md`
+  - `docs/project_atlas/modules/frontend-thread-and-task-views.md`
+  - `docs/project_atlas/modules/reporting-and-formal-report.md`
+  - `docs/project_atlas/modules/screening-and-data-pipeline.md`
+  - `docs/project_history/index.md`

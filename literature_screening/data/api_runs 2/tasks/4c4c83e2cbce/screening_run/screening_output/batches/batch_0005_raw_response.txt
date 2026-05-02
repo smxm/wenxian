@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0005",
+    "results": [
+        {
+            "paper_id": "paper_000041",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于电弧检测技术，未提及弓网离线电气特性分析或电弧建模与仿真。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000042",
+            "decision": "include",
+            "reason": "摘要明确涉及弓网电弧引发的低频纹波，并提出了有源电力滤波控制方法进行抑制，包含电气特性分析与控制模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000043",
+            "decision": "exclude",
+            "reason": "标题和摘要主要描述基于图像处理的弓网接触条件研究，属于机械/视觉分析，未涉及电气特性或电弧建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000044",
+            "decision": "include",
+            "reason": "标题和摘要明确研究双弓网离线电弧特性，建立了黑盒电弧模型并进行电路仿真，符合所有纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000045",
+            "decision": "exclude",
+            "reason": "标题和摘要专注于弓网相互作用的高频数值模拟，属于纯机械动力学研究，未提及电气特性或电弧建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000046",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论接触网多参数优化以改善受流质量，属于机械设计范畴，未涉及电气特性分析或电弧建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000047",
+            "decision": "uncertain",
+            "reason": "标题和摘要为弓网系统主动控制技术的文献综述，可能涵盖电气特性与电弧建模，但信息不足确认具体内容。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000048",
+            "decision": "include",
+            "reason": "标题和摘要明确研究分相绝缘器弓网电弧的建模与抑制，提出了黑盒电弧模型并进行仿真验证。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000049",
+            "decision": "uncertain",
+            "reason": "标题和摘要涉及直流铁路弓网电弧检测方法，提到了电气特性变化，但未明确包含电弧数学模型或仿真细节。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000050",
+            "decision": "exclude",
+            "reason": "标题和摘要专注于基于图像处理的弓网电弧信号检测算法，属于计算机视觉应用，未涉及电气特性分析或电弧建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        }
+    ]
+}

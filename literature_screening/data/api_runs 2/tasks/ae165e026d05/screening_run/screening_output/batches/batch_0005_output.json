@@ -1,0 +1,105 @@
+{
+  "batch_id": "batch_0005",
+  "results": [
+    {
+      "paper_id": "paper_000041",
+      "decision": "exclude",
+      "reason": "标题和摘要显示研究对象是建筑结构抗震损伤评估，而非场地土体放大效应。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000042",
+      "decision": "exclude",
+      "reason": "标题和摘要明确针对建筑结构内部加速度放大因子，研究对象是上部结构而非场地放大效应。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000043",
+      "decision": "exclude",
+      "reason": "摘要表明研究目标是估算S波速度剖面和VS30参数，未明确用于场地放大评估或预测。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000044",
+      "decision": "exclude",
+      "reason": "标题和摘要显示研究对象是数据中心建筑结构的抗震性能测试，偏离场地放大主题。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000045",
+      "decision": "include",
+      "reason": "标题和摘要明确使用机器学习算法研究场地条件代理对响应谱放大因子的影响，基于KiK-Net数据集。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000046",
+      "decision": "include",
+      "reason": "标题和摘要显示使用卷积神经网络预测沉积盆地放大特征，明确针对场地放大效应。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000047",
+      "decision": "exclude",
+      "reason": "摘要表明研究目标是液化灾害评估，虽然提到放大因子，但核心是液化分类而非场地放大量化评估。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000048",
+      "decision": "include",
+      "reason": "标题和摘要明确使用机器学习算法预测斜坡地形放大效应，针对场地放大主题。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000049",
+      "decision": "exclude",
+      "reason": "摘要显示研究目标是建立地震动预测模型，虽然包含非线性场地放大特征，但未明确针对场地放大量化评估。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "paper_id": "paper_000050",
+      "decision": "include",
+      "reason": "标题和摘要明确使用神经网络预测非线性土壤行为的放大因子，针对场地放大评估。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    }
+  ]
+}

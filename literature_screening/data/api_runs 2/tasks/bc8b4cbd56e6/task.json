@@ -1,0 +1,563 @@
+{
+  "id": "bc8b4cbd56e6",
+  "kind": "screening",
+  "status": "succeeded",
+  "cancel_requested": false,
+  "title": "精神疾病/心理应激（如抑郁、焦虑）对肿瘤患者预后（生存期、复发率、死亡率等）影响及相关机制",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 4,
+  "progress_total": 4,
+  "progress_message": "Task completed",
+  "created_at": "2026-03-27T12:33:23.153185+08:00",
+  "updated_at": "2026-03-27T12:34:59.465682+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "ab2a7dea53f3",
+    "project_topic": "精神疾病/心理应激（如抑郁、焦虑）对肿瘤患者预后（生存期、复发率、死亡率等）影响及相关机制",
+    "model_provider": "deepseek",
+    "parent_task_id": null,
+    "input_dataset_ids": [],
+    "request_payload": {
+      "title": "精神疾病/心理应激（如抑郁、焦虑）对肿瘤患者预后（生存期、复发率、死亡率等）影响及相关机制",
+      "topic": "精神疾病/心理应激（如抑郁、焦虑）对肿瘤患者预后（生存期、复发率、死亡率等）影响及相关机制",
+      "criteria_markdown": "# Role\r\n\r\n你是一位医学和心理肿瘤学领域的资深学术研究员，正在协助我筛选参考文献。我正在撰写一篇关于“精神疾病/心理应激（如抑郁、焦虑）对肿瘤患者预后（生存期、复发率、死亡率等）影响及相关机制”的综述/论文。我需要你帮我快速判读并筛选出高质量的参考文献。\r\n\r\n# Task\r\n\r\n我将提供一批英文文献的元数据（标题、摘要等）。请你逐一阅读，并严格按照以下流程处理：\r\n\r\n## Step 1: 筛选判读\r\n\r\n请根据以下标准判断该文献是否符合我的研究需求：\r\n\r\n* 纳入标准 (Inclusion Criteria)：\r\n  1. 必须同时涉及心理/精神因素（心理应激、抑郁、焦虑、精神障碍等）与肿瘤/癌症。\r\n  2. 必须探讨上述因素对肿瘤预后的影响（如总生存期、无进展生存期、死亡率、复发率），或解释其背后的生物学/分子机制（如神经内分泌免疫调节、HPA轴等）。\r\n  3. 文献类型需为高质量的综述 (Review)、大规模临床队列研究、荟萃分析 (Meta-analysis) 或高水平的机制探索性基础研究。\r\n\r\n* 排除标准 (Exclusion Criteria)：\r\n  1. 仅研究心理因素或仅研究肿瘤，两者无交叉关联。\r\n  2. 仅探讨确诊肿瘤后患者的心理状态或生活质量，但未涉及这些心理状态如何反过来影响“肿瘤预后/生存结局/肿瘤进展”。\r\n  3. 研究对象仅为患者家属或医护人员的心理压力。\r\n  4. 非英文文献。\r\n\r\n## Step 2: 格式化输出\r\n\r\n根据判读结果，执行不同的输出逻辑。\r\n**绝对指令：** 必须将结果输出在 markdown 代码框内；绝对禁止使用任何来源引用标记（如 或类似的脚注功能），只输出纯文本。\r\n\r\n情况 A：如果不符合要求\r\n* 仅输出一行文字：\r\n  ❌ [剔除]：<文献完整标题>\r\n\r\n情况 B：如果符合要求\r\n* 请按以下结构输出：\r\n\r\n# <文献完整英文标题>\r\n（<这里填写带有括号的中文翻译标题>）\r\n\r\n核心总结\r\n（请用中文精准概括：1. 文章探讨的核心问题；2. 使用的研究类型/方法/机制通路；3. 得出的关键预后数据或结论。）\r\n\r\n深度分析\r\n* 参考价值：针对“心理应激/精神疾病与肿瘤预后”这一主题，这篇文章能为我提供哪些高价值素材？（例如：具体的神经内分泌分子通路、明确的临床生存期差异数据、或是心理干预改善预后的临床证据等。）\r\n---\r\n\r\n# Input Data\r\n\r\n[在此处粘贴你导出的文献信息，如纯文本、BibTeX 格式，或标题+摘要文本]",
+      "inclusion": [
+        "必须同时涉及心理/精神因素（心理应激、抑郁、焦虑、精神障碍等）与肿瘤/癌症。",
+        "必须探讨上述因素对肿瘤预后的影响（如总生存期、无进展生存期、死亡率、复发率），或解释其背后的生物学/分子机制（如神经内分泌免疫调节、HPA轴等）。",
+        "文献类型需为高质量的综述 (Review)、大规模临床队列研究、荟萃分析 (Meta-analysis) 或高水平的机制探索性基础研究。"
+      ],
+      "exclusion": [
+        "仅研究心理因素或仅研究肿瘤，两者无交叉关联。",
+        "仅探讨确诊肿瘤后患者的心理状态或生活质量，但未涉及这些心理状态如何反过来影响“肿瘤预后/生存结局/肿瘤进展”。",
+        "研究对象仅为患者家属或医护人员的心理压力。",
+        "非英文文献。"
+      ],
+      "provider": "deepseek",
+      "model_name": "deepseek-chat",
+      "api_base_url": "https://api.deepseek.com/v1",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.0,
+      "max_tokens": 1536,
+      "min_request_interval_seconds": 2.0,
+      "batch_size": 10,
+      "target_include_count": 30,
+      "stop_when_target_reached": true,
+      "allow_uncertain": true,
+      "retry_times": 6,
+      "request_timeout_seconds": 240,
+      "encoding": "auto",
+      "project_id": "ab2a7dea53f3",
+      "parent_task_id": null,
+      "source_dataset_ids": []
+    },
+    "model_secret_id": "5031dde2e32e465e",
+    "uploaded_input_paths": [
+      "tasks/bc8b4cbd56e6/uploads/scopus_export_Mar 27-2026_57196760-2ce4-4462-90f9-227f805e289c.ris"
+    ]
+  },
+  "summary": {
+    "run_id": "run_20260327_123323",
+    "input_files_count": 1,
+    "raw_entries_count": 39,
+    "deduped_entries_count": 39,
+    "processed_count": 39,
+    "included_count": 7,
+    "excluded_count": 28,
+    "uncertain_count": 4,
+    "unused_count": 0,
+    "batch_count": 4,
+    "api_call_count": 4,
+    "stop_reason": "all_records_processed",
+    "started_at": "2026-03-27T12:33:23.244383+08:00",
+    "finished_at": "2026-03-27T12:34:59.447036+08:00"
+  },
+  "error": null,
+  "artifacts": {
+    "included_report": {
+      "path": "tasks/bc8b4cbd56e6/screening_run/screening_output/included_report.md",
+      "filename": "included_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 2915
+    },
+    "excluded_report": {
+      "path": "tasks/bc8b4cbd56e6/screening_run/screening_output/excluded_report.md",
+      "filename": "excluded_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 12043
+    },
+    "uncertain_report": {
+      "path": "tasks/bc8b4cbd56e6/screening_run/screening_output/uncertain_report.md",
+      "filename": "uncertain_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 1830
+    },
+    "included_ris": {
+      "path": "tasks/bc8b4cbd56e6/screening_run/screening_output/included.ris",
+      "filename": "included.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 12449
+    },
+    "unused_ris": {
+      "path": "tasks/bc8b4cbd56e6/screening_run/screening_output/unused_remaining.ris",
+      "filename": "unused_remaining.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 0
+    },
+    "run_summary": {
+      "path": "tasks/bc8b4cbd56e6/screening_run/screening_output/run_summary.json",
+      "filename": "run_summary.json",
+      "content_type": "application/json",
+      "size_bytes": 443
+    },
+    "screening_decisions": {
+      "path": "tasks/bc8b4cbd56e6/screening_run/screening_output/screening_decisions.json",
+      "filename": "screening_decisions.json",
+      "content_type": "application/json",
+      "size_bytes": 19303
+    }
+  },
+  "run_root": "tasks/bc8b4cbd56e6/screening_run",
+  "output_dir": "tasks/bc8b4cbd56e6/screening_run/screening_output",
+  "markdown_preview": null,
+  "records": [
+    {
+      "paper_id": "paper_000001",
+      "title": "Chronic Psychological Stress in Oncogenesis: Multisystem Crosstalk and Multimodal Interventions",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确探讨慢性心理应激对癌症进展的影响及其神经内分泌免疫机制，符合研究主题和纳入标准。",
+      "year": 2025,
+      "journal": "Research",
+      "doi": "10.34133/research.0948",
+      "abstract": "Malignant tumors constitute a major global public health burden. Chronic psychological stress (CPS) manifests as sustained dysregulation arising from prolonged adaptive responses to chronic endogenous and exogenous stimuli. Clinical evidence indicates that CPS markedly influences cancer progression, with most oncology patients developing detectable stress-related psychological disorders during disease management. This review synthesizes recent advances in understanding CPS-mediated oncogenic mechanisms and evaluates current intervention approaches. Mechanistically, CPS compromises immune surveillance through neuroendocrine-mediated hormonal dysregulation, impairing malignant cell recognition and clearance. Concurrently, CPS hormones promote tumor metabolic adaptation via hypothalamic–pituitary–adrenal axis-driven metabolic reprogramming, enhancing glycolytic flux to support uncontrolled proliferation. CPS further accelerates tumor progression through reactive oxygen species-induced mitochondrial impairment, DNA damage accumulation, and inflammatory cascades. Notably, CPS induces gut microbiota perturbations that reciprocally amplify tumorigenic processes through microbial metabolite disturbances and neuroimmune crosstalk, creating a self-perpetuating pathogenic loop. Therapeutic strategies to address cancer-related CPS that encompass pharmacological agents targeting neuroendocrine pathways, psychosomatic behavioral interventions, social environment adjustments, and evidence-based traditional Chinese medicine formulations demonstrate potential in cancer prevention, treatment, and outcome optimization. However, challenges remain in achieving precise neuromodulation and minimizing intervention side effects, underscoring the need for mechanism-guided therapeutic innovations. Copyright © 2025 Bin Huang et al."
+    },
+    {
+      "paper_id": "paper_000002",
+      "title": "The effects of pre-existing psychiatric disorders on gastric cancer survival.",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要显示研究精神疾病对胃癌患者生存期的影响，明确涉及心理因素与肿瘤预后的关联。",
+      "year": 2024,
+      "journal": "Journal of Clinical Oncology",
+      "doi": "10.1200/jco.2024.42.3_suppl.293",
+      "abstract": "293Background: Despite advances in available treatment, gastric cancer (GC) survival remains low (34.5% overall 5-year survival). In patients diagnosed with cancer, having a prior psychiatric disorder (PD) has been associated with worse survival outcomes compared with no prior PD. Therefore, we examined the relationship between a prior PD diagnosis and GC survival. Methods: We queried the Surveillance, Epidemiology and End Results (SEER)-Medicare database from 2000 to 2017 for patients who were 66 years of age or older with histologically confirmed GC. Patients with prior cancer history, who were diagnosed by autopsy or death certificate, or were not continuously enrolled in Medicare for at least one year prior to their GC diagnosis were excluded. Patients diagnosed with a PD at least one year prior to GC diagnosis and patients without a prior PD were defined as the exposed and unexposed groups, respectively. PDs were categorized as either mild (depression and anxiety) or severe (bipolar or psychotic disorders and schizophrenia). We performed adjusted multivariable Cox proportional hazards regression modeling to evaluate the relationship between prior PD and 5-year overall and cancer-specific survival. Cancer stage, histologic grade, age at diagnosis, sex, race and ethnicity, rural/urban, comorbidity, socioeconomic status, and marital status were examined as potential confounders. Results: Out of 10, 464 identified GC patients, 1, 651 had a prior PD (46.3% male, mean age 77.5 years) and 8, 813 did not have a prior PD (61.5% male, mean age 77.4 years). Our PD patient cohort included 1, 355 mild and 296 severe PD patients. When we examined overall survival, patients with a prior PD had a greater hazard of death compared to patients without a prior PD (adjusted hazard ratio: 1.12; 95% CI: [1.05, 1.19]). However, we found no association between having a prior PD compared with not having a prior PD on GC-specific survival (adjusted hazard ratio: 1.07; 95% CI: [0.99, 1.15]). In GC patients with a prior PD, we examined the effects of severe PD versus mild PD on survival. For overall survival, severe PD patients had a greater hazard of death compared with mild PD patients (adjusted hazard ratio: 1.43; 95% CI: [1.23, 1.65]). Similarly, for GC-specific survival, severe PD patients had a greater hazard of death compared to mild PD patients (adjusted hazard ratio: 1.26; 95% CI: [1.06, 1.50]). Conclusions: Our study found that GC patients with a prior PD had a 12% greater likelihood of overall mortality compared with GC patients without a prior PD. Our analysis also showed that GC patients with a prior severe PD had a 43% higher likelihood of overall mortality and a 26% higher likelihood of GC-specific mortality compared with GC patients with a prior mild PD. Future work to identify the mechanism between PDs and cancer survival is critical to develop effective targeted interventions to improve survival of this highly fatal cancer. © 2024"
+    },
+    {
+      "paper_id": "paper_000003",
+      "title": "A mixed-methods review and meta-synthesis of fears of recurrence and progression in people with mental health conditions",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "摘要显示研究焦点是精神健康疾病的复发恐惧，未涉及肿瘤或癌症，不符合研究主题。",
+      "year": 2023,
+      "journal": "Clinical Psychology Review",
+      "doi": "10.1016/j.cpr.2023.102342",
+      "abstract": "A fear that one's physical illness will recur or worsen has received substantial research attention over the past decade, most notably as fear of cancer recurrence. Indeed, such fear is known to be associated with poorer quality of life, adjustment, and psychopathology. However, fear of a recurrence or progression (FORP) of mental health conditions has received comparatively little study. The present review aimed to, 1) systematically review quantitative research on FORP in mental health regarding its association with age, gender, quality of life, mental health outcomes, and health behaviours, and 2) meta-synthesize qualitative research related to FORP to construct a transdiagnostic model. A qualitative meta-synthesis of 19 studies identified four subthemes underlying FORP (fear of symptoms, loss of progress, fear of death, and traumatic experiences). The three themes related to FORP were: inability to trust oneself, hypervigilance, and a low-risk low-reward lifestyle which was comprised of three subthemes (limiting relationships, limiting life goals, and fear of changing treatment). A quantitative systematic review of 15 studies found that FORP was strongly associated with worse quality of life, and greater depression, anxiety, psychotic symptoms, and medication adherence, but was not associated with age or gender. Hence, FORP can be understood transdiagnostically, and is generally associated with poorer mental health outcomes but may also predict adaptive health behaviours, such as appropriate medication adherence. © 2023 The Authors"
+    },
+    {
+      "paper_id": "paper_000004",
+      "title": "A comprehensive framework for early-onset colorectal cancer research",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "摘要提到早发性结直肠癌的挑战，但仅提及心理社会挑战，未探讨心理因素如何影响肿瘤预后。",
+      "year": 2022,
+      "journal": "The Lancet Oncology",
+      "doi": "10.1016/s1470-2045(21)00588-x",
+      "abstract": "Sporadic colorectal cancer has traditionally been viewed as a malignancy of older individuals. However, as the global prevalence of the disease diagnosed in younger individuals (<50 years) is expected to increase within the next decade, greater recognition is now being given to early-onset colorectal cancer. The cause of the predicted rise in prevalence is largely unknown and probably multifactorial. In this Series paper, we discuss the potential underlying causes of early-onset colorectal cancer, the role of energy balance, biological and genomic mechanisms (including microbiome aspects), and the treatment of early-onset colorectal cancer. We have specifically considered the psychosocial challenges of being diagnosed with colorectal cancer at younger age and the potential financial toxicity that might ensue. This Series paper brings a comprehensive review based on the existing data in the hopes of optimising the overall outcomes for patients with early-onset colorectal cancer. © 2022 Elsevier Ltd"
+    },
+    {
+      "paper_id": "paper_000005",
+      "title": "Ketamine-assisted psychotherapies for mental disorders: A historical overview and systematic review",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要聚焦于氯胺酮辅助心理治疗对精神障碍的疗效，未涉及肿瘤或癌症，不符合研究主题。",
+      "year": 2026,
+      "journal": "Clinical Psychology Review",
+      "doi": "10.1016/j.cpr.2026.102706",
+      "abstract": "Introduction: Ketamine-assisted psychotherapy (KAP) is considered a promising treatment strategy in psychiatric disorders, combining psychotherapeutic interventions with the rapid-acting pharmacological effects of ketamine towards enhancing outcomes. Although KAP has been practiced for many years across different diagnoses, evidence regarding optimal treatment methods and working mechanisms remains limited and has only partly been synthesized. Methods: This systematic review provides a historical overview of studies published up to 2025, that combined ketamine and psychotherapy for the treatment of mental disorders. Psychotherapeutic approaches were categorized into their overarching psychological paradigms: psychoanalytic and psychodynamic, behavioral, humanistic, cognitive-behavioral, integrative/holistic, and other therapeutic frameworks. Results: 64 articles, reporting on 72 studies, were included in this review, of which only 11 were randomized controlled trials (RCTs), highlighting the limited representation of RCTs in the overall body of evidence. Diverse therapeutic approaches were found, most were classified into the ‘other’ category (n = 24). Results suggest transdiagnostic effectiveness for indications including major depressive disorder, posttraumatic stress disorder, obsessive-compulsive disorder, substance use disorders and eating disorders. KAP, compared to only psychotherapy, was observed to enhance treatment engagement, symptom reduction, and duration of treatment response. Only two studies randomized psychotherapy in the context of ketamine treatment, neither of which reported added effects for psychotherapy. One of those studies also randomized ketamine and did not find a significant interaction effect. This limited evidence does not support added benefit from psychotherapy nor evidence of synergy. Methodological heterogeneity and the limited number of trials that used a psychotherapy control group, restrict definitive conclusions. Discussion: Clinical effects are generally reported to be quite positive across psychiatric indications, however, there is a clear need for well-controlled trials to test for potential additive or synergistic effects of the combined use of ketamine and psychotherapy and to identify optimal therapeutic protocols. © 2026 The Authors"
+    },
+    {
+      "paper_id": "paper_000006",
+      "title": "GCIG-Consensus guideline for Long-term survivorship in gynecologic Cancer: A position paper from the gynecologic cancer Intergroup (GCIG) symptom benefit committee",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "摘要讨论妇科癌症长期生存者的健康问题，包括心理健康，但未探讨心理因素如何影响肿瘤预后或生存结局。",
+      "year": 2022,
+      "journal": "Cancer Treatment Reviews",
+      "doi": "10.1016/j.ctrv.2022.102396",
+      "abstract": "Introduction: Long-term survivors of gynecological cancers may be cured but still have ongoing health concerns and long-term side effects following cancer treatment. The aim of this brainstorming meeting was to develop recommendations for long-term follow-up for survivors from gynecologic cancer. Methods: International experts, representing each member group within the Gynecologic Cancer InterGroup (GCIG), met to define long-term survival, propose guidelines for long term follow-up and propose ways to implement long term survivorship follow-up in clinical trials involving gynecological cancers. Results: Long-term survival with/from gynecological cancers was defined as survival of at least five years from diagnosis, irrespective of disease recurrences. Review of the literature showed that more than 50% of cancer survivors with gynecological cancer still experienced health concerns/long-term side effects. Main side effects included neurologic symptoms, sleep disturbance, fatigue, sexual dysfunction, bowel and urinary problems and lymphedema. In this article, long-term side effects are discussed in detail and treatment options are proposed. Screening for second primary cancers and lifestyle counselling (nutrition, physical activity, mental health) may improve quality of life and overall health status, as well as prevent cardiovascular events. Clinical trials should address cancer survivorship and report patient reported outcome measures (PROMs) for cancer survivors. Conclusion: Long-term survivors after gynecological cancer have unique longer term challenges that need to be addressed systematically by care givers. Follow-up after completing treatment for primary gynecological cancer should be offered lifelong. Survivorship care plans may help to summarize cancer history, long-term side effects and to give information on health promotion and prevention. © 2022 Elsevier Ltd"
+    },
+    {
+      "paper_id": "paper_000007",
+      "title": "Palliative care in dermatology: A clinical primer, review of the literature, and needs assessment",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要聚焦于皮肤病学的姑息护理，未涉及精神疾病或心理应激对肿瘤患者预后的影响。",
+      "year": 2021,
+      "journal": "Journal of the American Academy of Dermatology",
+      "doi": "10.1016/j.jaad.2020.08.029",
+      "abstract": "Palliative care has been shown to improve quality of life, symptoms, and caregiver burden for a range of life-limiting diseases. Palliative care use among patients with severe dermatologic disease remains relatively unexplored, but the limited available data suggest significant unmet care needs and low rates of palliative care use. This review summarizes current palliative care patterns in dermatology, identifying areas for improvement and future investigation. © 2020"
+    },
+    {
+      "paper_id": "paper_000008",
+      "title": "MASLD in childhood as a multisystem health challenge beyond the liver",
+      "decision": "exclude",
+      "confidence": 0.75,
+      "reason": "摘要提到MASLD与抑郁焦虑相关，并可能增加癌症风险，但未明确探讨心理因素如何影响肿瘤预后或机制。",
+      "year": 2025,
+      "journal": "Trends in Endocrinology and Metabolism",
+      "doi": "10.1016/j.tem.2025.10.001",
+      "abstract": "The rising prevalence of childhood obesity and type 2 diabetes has made metabolic dysfunction-associated steatotic liver disease (MASLD) an urgent pediatric health concern. Beyond its well-known hepatic and cardiometabolic burden, emerging evidence also links MASLD to impaired bone health, growth deficits, sleep disturbances, and neurobehavioral issues including depression and anxiety. These extrahepatic complications significantly affect long-term health and psychosocial risks. Progression to steatohepatitis and fibrosis may also increase the lifetime risk of hepatic and extrahepatic cancers. Greater clinical awareness and further research into its mechanisms and comorbidities are urgently needed; moreover, early detection and coordinated, multidisciplinary care will be essential to improve patient outcomes. We explore the multifaceted long-term health impact of MASLD as a childhood-onset multisystem disorder. © 2025 Elsevier Ltd"
+    },
+    {
+      "paper_id": "paper_000009",
+      "title": "Psoriasis",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "摘要提到银屑病与精神疾病共病，但未涉及肿瘤或癌症，不符合研究主题。",
+      "year": 2025,
+      "journal": "Nature Reviews Disease Primers",
+      "doi": "10.1038/s41572-025-00630-5",
+      "abstract": "Plaque psoriasis is a chronic, immune-mediated inflammatory skin disease that has considerable effects on patients’ physical, psychological and social well-being. It is strongly influenced by genetic predisposition, with HLA-C*06:02 showing the strongest association, particularly in those with early-onset disease. Additional susceptibility loci, including IL23A, IL12B and IL17RA, are linked to dysregulation of the IL-23–T helper 17 axis, which contributes to chronic inflammation and keratinocyte hyperproliferation. Plaque psoriasis is frequently associated with psoriatic arthritis and other comorbidities, such as cardiovascular disease, metabolic syndrome and psychiatric disorders, all of which contribute to increased morbidity and mortality. Management strategies are tailored to disease severity and the presence of comorbidities. For mild disease, topical therapies remain the first-line treatment, including corticosteroids, vitamin D analogues and topical calcineurin inhibitors. New non-steroidal agents, such as topical PDE4 and aryl hydrocarbon receptor agonists, offer additional options. In moderate-to-severe disease, oral systemic therapies, such as methotrexate, ciclosporin, acitretin, apremilast and deucravacitinib, provide a range of immunomodulatory effects. Biologic therapies targeting TNF, IL-17, IL-23 and IL-12/23 have demonstrated high efficacy in improving both cutaneous and systemic inflammation. Current research on systemic therapies is focused on the development of additional inhibitors of the Tyk2 pathway and inhibitors to IL-23 receptor, IL-17, and TNF. Early screening for psoriatic arthritis, proactive cardiovascular risk reduction and multidisciplinary care are crucial to optimizing long-term outcomes. Ongoing research continues to advance precision medicine approaches, with the goal of enhancing treatment durability and improving quality of life for individuals living with psoriasis. © Springer Nature Limited 2025."
+    },
+    {
+      "paper_id": "paper_000010",
+      "title": "Testicular Cancer Survivorship: Looking Back to Move Forward",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "摘要缺失，仅从标题无法判断是否涉及精神疾病或心理应激对睾丸癌患者预后的影响。",
+      "year": 2021,
+      "journal": "Journal of Clinical Oncology",
+      "doi": "10.1200/jco.21.01984",
+      "abstract": null
+    },
+    {
+      "paper_id": "paper_000011",
+      "title": "Chronic stress in cancer development and progression",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确探讨慢性应激对癌症发展和预后的影响，包括增加肿瘤负荷和死亡率，并涉及神经内分泌等机制。",
+      "year": 2025,
+      "journal": "Science Bulletin",
+      "doi": "10.1016/j.scib.2025.09.034",
+      "abstract": "Short-term stress positively affects homeostasis recovery; however, long-term stress leads to various diseases. Accumulating evidence shows that cancer processes are not only related to genetics and environment but also to chronic stress. For patients with cancer, the disease process induces prolonged psychological and physical stress, including fear and pain, which makes chronic stress common in patients. Chronic stress, in turn, regulates different components of the primary tumor and tumor microenvironment through a wide variety of stress mediators. Furthermore, studies indicate that chronic stress increases tumor burden and mortality in patients with different types of cancer, while the management of chronic stress can alleviate disease burden and extend patient survival. Therefore, a deeper understanding of the role and mechanism of chronic stress in cancer is necessary for developing new strategies for cancer treatment beyond traditional treatment approaches. Herein, we explored the different sources of chronic stress, the molecular mechanisms through which chronic stress affects cancer development and progression, and the stress mediators involved. We discussed the multiple impacts of chronic stress on cancer, as well as the currently available intervention strategies. We also highlighted the prospects and challenges of chronic stress management in the clinical treatment of cancer. © 2025 Science China Press"
+    },
+    {
+      "paper_id": "paper_000012",
+      "title": "Efficacy of psychosocial interventions for young offspring of parents with a serious physical or mental illness: Systematic review and meta-analysis",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "研究对象为患有严重疾病的父母的年轻后代，未涉及肿瘤患者或心理因素对肿瘤预后的影响。",
+      "year": 2025,
+      "journal": "Clinical Psychology Review",
+      "doi": "10.1016/j.cpr.2025.102569",
+      "abstract": "Serious parental physical or mental illness significantly increases the risk of adverse adjustment outcomes in adolescents and young adults. This systematic review and meta-analysis evaluates the efficacy of psychosocial interventions targeting this vulnerable group. Eligible randomized control trials (RCTs) were searched through the Medline, Web of Science, PsycINFO, PsycArticles, Cinahl, and ProQuest Dissertation and Theses databases. Young offspring outcomes included: psychological (including internalizing and externalizing problems), positive, and interpersonal adjustment. Thirty-one manuscripts reporting on twenty-seven independent RCTs, including 3590 adolescent and young adult offspring, met eligibility criteria. Most of the studies targeted adolescents with a mean age within ±1 SD of 12.17–16.33 years, with only one study directly targeting young adults. Three-quarters of studies included parental mental illness, and the remaining parental physical illness. Results highlighted a small post-intervention effect for psychological adjustment (d = 0.17,[0.05,0.29], p = .006), maintained at short-term (3–12 months) follow-up (d = 0.33 [0.12,0.54], p = .002), but not at long-term (15 months or longer) follow-up (d = −0.00 [−0.19,0.19], p = .98). A similar pattern emerged for internalizing problems, while for externalizing problems, no significant post-intervention effect was detected. Results also showed a small post-intervention effect for positive adjustment (d = 0.36,[0.10,0.61], p = .006), which increased to a medium effect at short-term follow-up (d = 0.62,[0.15,1.09], p = .010). Post-intervention effects were not present for interpersonal adjustment. Intervention duration moderated effects on post-intervention outcomes, while intervention setting and gender balance moderated outcomes at follow-ups. Psychosocial interventions for young offspring of parents with serious illnesses appear effective in improving psychological and positive outcomes with small-to-moderate effects at post-intervention and short-term follow-up. © 2025 The Authors"
+    },
+    {
+      "paper_id": "paper_000013",
+      "title": "Neurodegenerative disorders: Mechanisms of degeneration and therapeutic approaches with their clinical relevance",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "主题为神经退行性疾病，未涉及肿瘤或心理因素对肿瘤预后的影响。",
+      "year": 2024,
+      "journal": "Ageing Research Reviews",
+      "doi": "10.1016/j.arr.2024.102357",
+      "abstract": "Neurodegenerative disorders (NDs) are expected to pose a significant challenge for both medicine and public health in the upcoming years due to global demographic changes. NDs are mainly represented by degeneration/loss of neurons, which is primarily accountable for severe mental illness. This neuronal degeneration leads to many neuropsychiatric problems and permanent disability in an individual. Moreover, the tight junction of the brain, blood-brain barrier (BBB)has a protective feature, functioning as a biological barrier that can prevent medicines, toxins, and foreign substances from entering the brain. However, delivering any medicinal agent to the brain in NDs (i.e., Multiple sclerosis, Alzheimer's, Parkinson's, etc.) is enormously challenging. There are many approved therapies to address NDs, but most of them only help treat the associated manifestations. The available therapies have failed to control the progression of NDs due to certain factors, i.e., BBB and drug-associated undesirable effects. NDs have extremely complex pathology, with many pathogenic mechanisms involved in the initiation and progression; thereby, a limited survival rate has been observed in ND patients. Hence, understanding the exact mechanism behind NDs is crucial to developing alternative approaches for improving ND patients' survival rates. Thus, the present review sheds light on different cellular mechanisms involved in NDs and novel therapeutic approaches with their clinical relevance, which will assist researchers in developing alternate strategies to address the limitations of conventional ND therapies. The current work offers the scope into the near future to improve the therapeutic approach of NDs. © 2024 The Authors"
+    },
+    {
+      "paper_id": "paper_000014",
+      "title": "Use of patient-reported outcomes in heart failure: from clinical trials to routine practice",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "主题为心力衰竭患者报告结局，未涉及肿瘤或心理因素对肿瘤预后的影响。",
+      "year": 2023,
+      "journal": "European Journal of Heart Failure",
+      "doi": "10.1002/ejhf.2778",
+      "abstract": "Heart failure (HF) is a complex syndrome that affects mortality/morbidity and acts at different levels in the patient's life, resulting in a drastic impairment in multiple aspects of daily activities (e.g. physical, mental/emotional, and social) and leading to a reduction in quality of life. The definition of disease status and symptom severity has been traditionally based on the physician assessment, while the patient's experience of disease has been long overlooked. The active participation of patients in their own care is necessary to better understand the perception of disease and the multiple aspects of life affected, and to improve adherence to treatments. Patient-reported outcomes (PROs) aim to switch traditional care to a more patient-centred approach. Although PROs demonstrated precision in the evaluation of disease status and have a good association with prognosis in several randomized controlled trials, their implementation into clinical practice is limited. This review discusses the modalities of use of PROs in HF, summarizes the most largely adopted PROs in HF care, and provides an overview on the application of PROs in trials and the potential for their transition to clinical practice. By discussing the advantages and the disadvantages of their use, the reasons limiting their application in daily clinical routine, and the strategies that may promote their implementation, this review aims to foster the systematic integration of the patient's standpoint in HF care. © 2023 The Authors. European Journal of Heart Failure published by John Wiley & Sons Ltd on behalf of European Society of Cardiology."
+    },
+    {
+      "paper_id": "paper_000015",
+      "title": "Recent advances in clinical trials targeting the kynurenine pathway",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "摘要提到犬尿氨酸通路在癌症中的作用，但未明确涉及心理因素对肿瘤预后的影响，信息不足。",
+      "year": 2022,
+      "journal": "Pharmacology and Therapeutics",
+      "doi": "10.1016/j.pharmthera.2021.108055",
+      "abstract": "The kynurenine pathway (KP) is the major catabolic pathway for the essential amino acid tryptophan leading to he production of nicotinamide adenine dinucleotide. In inflammatory conditions, the activation of the KP leads to the production of several bioactive metabolites including kynurenine, 3-hydroxykynurenine, 3-hydroxyanthranilic acid, kynurenic acid and quinolinic acid. These metabolites can have redox and immune suppressive activity, be neurotoxic or neuroprotective. While the activity of the pathway is tightly regulated under normal physiological condition, it can be upregulated by immunological activation and inflammation. The dysregulation of the KP has been implicated in wide range of neurological diseases and psychiatric disorders. In this review, we discuss the mechanisms involved in KP-mediated neurotoxicity and immune suppression, and its role in diseases of our expertise including cancer, chronic pain and multiple sclerosis. We also provide updates on the clinical trials evaluating the efficacy of KP inhibitors and/or analogues in each respective disease. © 2021 Elsevier Inc."
+    },
+    {
+      "paper_id": "paper_000016",
+      "title": "Do metacognitive beliefs satisfy criteria as mechanisms of change in treatment? A systematic review and evidence synthesis",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "主题为元认知信念在心理治疗中的作用，未涉及肿瘤或心理因素对肿瘤预后的影响。",
+      "year": 2025,
+      "journal": "Clinical Psychology Review",
+      "doi": "10.1016/j.cpr.2025.102654",
+      "abstract": "The Self-Regulatory Executive Function (S-REF) model emphasizes biases in metacognition, and particularly negative metacognitive beliefs, as the central mechanism of persistent emotional distress and disorders. Hence, interventions which effectively modify dysfunctional metacognitions are predicted to create improvement regardless of whether metacognitions are directly targeted or not. With an aim to evaluate the empirical support for metacognitions as a mechanism of change in psychopathology, we conducted a systematic review of the literature focusing on metacognitive change and its relationship to change in outcomes across emotional disorders and therapeutic interventions. Systematic searches were conducted and following PRISMA 2020 guidelines, 27 articles were identified. Results were synthesized and evaluated against established criteria for accurately classifying theoretical predictors as mechanisms of change. Our review shows a consistent association between change in metacognitions, particularly negative metacognitive beliefs, and outcome changes across different mental disorders, outcomes, and interventions. This relationship held even when controlling competing mechanisms such as cognitive beliefs and support the criterion of specificity. However, most of the identified studies lacked the methodological rigor needed (e.g., multiple assessment points during the treatment phase) to draw firm conclusions about metacognitions as a causal mechanism of change. Based on the existing literature, we conclude that metacognition is promising as a candidate to be considered a transdiagnostic mechanism of change of emotional disorders. We provide directions for future research necessary to more definitely determine the role of metacognitive change in psychopathology improvement and recovery. © 2025 The Authors"
+    },
+    {
+      "paper_id": "paper_000017",
+      "title": "Prognostic effects of multimorbidity clusters on health outcomes in adults: A systematic review and meta-analysis",
+      "decision": "uncertain",
+      "confidence": 0.45,
+      "reason": "摘要提到多病共存簇预测癌症死亡率，但未明确涉及心理因素，信息不足以判断是否符合纳入标准。",
+      "year": 2025,
+      "journal": "Ageing Research Reviews",
+      "doi": "10.1016/j.arr.2025.102897",
+      "abstract": "Background: Multimorbidity is an important global health concern. We evaluated the prognostic impacts of multimorbidity clusters on health outcomes in adults. Methods: This study was registered in PROSPERO (CRD42024528148), and no funding was received. Eight databases (PubMed, EMBASE, Cochrane Library, Web of Science, PsycINFO, CINAHL, Wan Fang, and CNKI) were searched for longitudinal studies reporting the prognostic impacts of multimorbidity clusters. Methodological quality was assessed using Newcastle–Ottawa Scale. Data analysis incorporated narrative synthesis, random-effects meta-analysis, subgroup analysis, meta-regression, sensitivity analysis, and Egger's test. Results: Forty articles identifying 12 multimorbidity clusters were included. Cardiometabolic multimorbidity (adjusted hazard ratio [HR]: 1.97, 95 % confidence interval [CI]: 1.76–2.21; adjusted odds ratio [OR]: 1.44, 95 % CI: 1.16–1.80) had strong prognostic impact on all-cause mortality, followed by cardiopulmonary (adjusted HR: 1.70, 95 % CI: 1.38–2.09), and digestive multimorbidity (adjusted HR: 1.46, 95 % CI: 1.11–1.93). It also predicted circulatory (adjusted HR: 3.41, 95 % CI: 2.27–5.12) and cancer mortality (adjusted HR: 1.32, 95 % CI: 1.04–1.67), activities of daily living disability (adjusted OR: 1.76, 95 % CI: 1.57–1.99), and depression (adjusted OR: 1.53, 95 % CI: 1.27–1.85). Multi-system multimorbidity predicted all-cause mortality (adjusted OR: 1.41, 95 % CI: 1.12–1.77) and activities of daily living disability (adjusted OR: 2.04, 95 % CI: 1.36–3.05). Cardiometabolic multimorbidity predicted a higher risk of all-cause mortality when identified using a pre-determined method. Conclusion: Multimorbidity clusters strongly impact activities of daily living, depression, and mortality, with cardiometabolic multimorbidity warranting particular attention. However, due to methodological limitations, heterogeneity, Asian-dominant samples, and language bias, these results should be interpreted with caution. © 2025"
+    },
+    {
+      "paper_id": "paper_000018",
+      "title": "Biosensors for psychiatric biomarkers in mental health monitoring",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "主题为精神疾病生物传感器，未涉及肿瘤或心理因素对肿瘤预后的影响。",
+      "year": 2024,
+      "journal": "Biosensors and Bioelectronics",
+      "doi": "10.1016/j.bios.2024.116242",
+      "abstract": "Psychiatric disorders are associated with serve disturbances in cognition, emotional control, and/or behavior regulation, yet few routine clinical tools are available for the real-time evaluation and early-stage diagnosis of mental health. Abnormal levels of relevant biomarkers may imply biological, neurological, and developmental dysfunctions of psychiatric patients. Exploring biosensors that can provide rapid, in-situ, and real-time monitoring of psychiatric biomarkers is therefore vital for prevention, diagnosis, treatment, and prognosis of mental disorders. Recently, psychiatric biosensors with high sensitivity, selectivity, and reproducibility have been widely developed, which are mainly based on electrochemical and optical sensing technologies. This review presented psychiatric disorders with high morbidity, disability, and mortality, followed by describing pathophysiology in a biomarker-implying manner. The latest biosensors developed for the detection of representative psychiatric biomarkers (e.g., cortisol, dopamine, and serotonin) were comprehensively summarized and compared in their sensitivities, sensing technologies, applicable biological platforms, and integrative readouts. These well-developed biosensors are promising for facilitating the clinical utility and commercialization of point-of-care diagnostics. It is anticipated that mental healthcare could be gradually improved in multiple perspectives, ranging from innovations in psychiatric biosensors in terms of biometric elements, transducing principles, and flexible readouts, to the construction of 'Big-Data' networks utilized for sharing intractable psychiatric indicators and cases. © 2024 The Authors"
+    },
+    {
+      "paper_id": "paper_000019",
+      "title": "Depression remodels tumor microenvironment to drive tumor progression: Bio-behavioural signalling pathways and clinical interventions",
+      "decision": "include",
+      "confidence": 0.98,
+      "reason": "标题和摘要明确探讨抑郁通过HPA轴等机制重塑肿瘤微环境并驱动肿瘤进展，符合主题和纳入标准。",
+      "year": 2025,
+      "journal": "Journal of Advanced Research",
+      "doi": "10.1016/j.jare.2025.11.001",
+      "abstract": "Background Depression, chronic stress, fear, and anxiety have been implicated as major risk factors in tumor growth, invasion, and metastasis. These psychological conditions stimulate the secretion of neurotransmitters and stress hormones through prolonged activation of the fight-or-flight response. The arousal of stress-related systems, such as the hypothalamic-pituitary-adrenocortical axis and the sympathetic nervous system, induces physiological alterations. Consequently, stress-associated mediators suppress antitumor immune responses, enhance the release of inflammatory cytokines, and promote tumor cell migration and survival within an altered tumor microenvironment through diverse signaling pathways. Aim of Review This review highlights recent advances in understanding how depression and chronic stress regulate tumor growth, angiogenesis, invasion, and metastasis. We further discuss how stress response systems remodel the tumor microenvironment to promote cancer progression, providing insights into the interface between behavioral and biological mechanisms and identifying potential therapeutic targets. Key Scientific Concepts of Review We emphasize the rationale and importance of developing pharmacological interventions to inhibit tumor progression and enhance the efficacy of conventional therapies and immunotherapies in patients with cancer-associated depression. Moreover, we discuss emerging pharmacological strategies with the potential to prevent stress-related cancer progression. © 2025 The Author(s)."
+    },
+    {
+      "paper_id": "paper_000020",
+      "title": "The emerging role of the gut microbiome in depression: implications for precision medicine",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "主题为肠道微生物组在抑郁症中的作用，未涉及肿瘤或心理因素对肿瘤预后的影响。",
+      "year": 2025,
+      "journal": "Molecular Psychiatry",
+      "doi": "10.1038/s41380-025-03191-x",
+      "abstract": "Major depressive disorder is a debilitating mental illness that seriously endangers human health. Its pathogenesis is highly complex, and traditional treatments face substantial challenges. A growing body of preclinical and clinical findings highlight the important role of the gut microbiome in the pathogenesis of depression and its potential as a diagnostic and therapeutic target. A deeper understanding of how the gut microbiome regulates depression will greatly enhance its clinical application, improve diagnostic and treatment strategies, and pave the way for microbiota-based precision medicine for depression. In this review, we summarize the depression-associated compositional and functional microbial alterations, delineate their mechanistic contributions to disease pathogenesis, and evaluate their potentiality as novel diagnostic biomarkers and treatment targets. Finally, we consider the future potential of utilizing the gut microbiome to advance precision medicine approaches for depression. © The Author(s), under exclusive licence to Springer Nature Limited 2025."
+    },
+    {
+      "paper_id": "paper_000021",
+      "title": "Depression in breast cancer patients: Immunopathogenesis and immunotherapy",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确探讨乳腺癌患者抑郁的免疫发病机制及其对预后的影响，符合纳入标准。",
+      "year": 2022,
+      "journal": "Cancer Letters",
+      "doi": "10.1016/j.canlet.2022.215648",
+      "abstract": "Depression is a common and recurrent mental illness with a complicated etiology, but the specific pathogenesis is not clear. Breast cancer increases susceptibility to depression, which leads to a poor prognosis. Rapid advances in the understanding of tumor immunology and neuroimmunology have provided new evidence for the pathogenesis of depression. Dysfunction of immune cells and cytokines cause depression by affecting tryptophan metabolism, serotonin levels, and blood–brain barrier permeability. Dysregulation of cytokines or intestinal flora may be shared between patients with depression and breast cancer. This review presents an overview of immune dysregulation in breast cancer patients with depression and proposes future alternative research directions and interventions. © 2022 Elsevier B.V."
+    },
+    {
+      "paper_id": "paper_000022",
+      "title": "Lipocalin family proteins and their diverse roles in cardiovascular disease",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要聚焦脂质运载蛋白家族在心血管疾病中的作用，未涉及心理因素与肿瘤预后的关联。",
+      "year": 2023,
+      "journal": "Pharmacology and Therapeutics",
+      "doi": "10.1016/j.pharmthera.2023.108385",
+      "abstract": "The lipocalin (LCN) family members, a group of small extracellular proteins with 160-180 amino acids in length, can be detected in all kingdoms of life from bacteria to human beings. They are characterized by low similarity of amino acid sequence but highly conserved tertiary structures with an eight-stranded antiparallel β-barrel which forms a cup-shaped ligand binding pocket. In addition to bind small hydrophobic ligands (i.e., fatty acids, odorants, retinoids, and steroids) and transport them to specific cells, lipocalins (LCNs) can interact with specific cell membrane receptors to activate their downstream signaling pathways, and with soluble macromolecules to form the complex. Consequently, LCNs exhibit great functional diversity. Accumulating evidence has demonstrated that LCN family proteins exert multiple layers of function in the regulation of many physiological processes and human diseases (i.e., cancers, immune disorders, metabolic disease, neurological/psychiatric disorders, and cardiovascular disease). In this review, we firstly introduce the structural and sequence properties of LCNs. Next, six LCNs including apolipoprotein D (ApoD), ApoM, lipocalin 2 (LCN2), LCN10, retinol-binding protein 4 (RBP4), and Lipocalin-type prostaglandin D synthase (L-PGDS) which have been characterized so far are highlighted for their diagnostic/prognostic values and their potential effects on coronary artery disease and myocardial infarction injury. The roles of these 6 LCNs in cardiac hypertrophy, heart failure, diabetes-induced cardiac disorder, and septic cardiomyopathy are also summarized. Finally, their therapeutic potential for cardiovascular disease is discussed in each section. © 2023 Elsevier Inc."
+    },
+    {
+      "paper_id": "paper_000023",
+      "title": "Depression and Anxiety Trajectories in Chronic Disease: A Systematic Review and Meta-Analysis",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "摘要综述慢性疾病中抑郁焦虑轨迹，未专门探讨肿瘤预后或机制，不符合纳入标准。",
+      "year": 2023,
+      "journal": "Psychotherapy and Psychosomatics",
+      "doi": "10.1159/000533263",
+      "abstract": "Introduction: People living with chronic diseases are at an increased risk of anxiety and depression, which are associated with poorer medical and psychosocial outcomes. Many studies have examined the trajectories of depression and anxiety in people with specific diseases, including the predictors of these trajectories. This is valuable for understanding the process of adjustment to diseases and informing treatment planning. However, no review has yet synthesised this information across chronic diseases. Methods: Electronic databases were searched for studies reporting trajectories of depression or anxiety in chronic disease samples. Data extracted included sample characteristics, results from trajectory analyses, and predictors of trajectories. Meta-analysis of the overall pooled prevalence of depression and anxiety trajectories was conducted, and qualitative synthesis of disease severity predictors was undertaken. Results: Following search and screening, 67 studies were included (N = 61,201 participants). Most participants followed a stable nonclinical trajectory for depression (69.0% [95% CI: 65.6, 72.2]) and anxiety (73.4% [95% CI: 66.3, 79.5]). Smaller but meaningful subsamples followed a trajectory of depression and anxiety symptoms consistently in the clinical range (11.8% [95% CI: 9.2, 14.8] and 13.7% [95% CI: 9.3, 19.7], respectively). Several clinical and methodological moderators emerged, and qualitative synthesis suggested that few aspects of disease severity were associated with participants' trajectories. Conclusion: Most people with chronic disease follow a trajectory of distress that is low and stable, suggesting that most people psychologically adjust to living with chronic disease. Evidence also suggests that the nature and severity of the disease are not meaningful predictors of psychological distress. © 2023 The Author(s). Published by S. Karger AG, Basel."
+    },
+    {
+      "paper_id": "paper_000024",
+      "title": "The role of psychological stress in cancer initiation: clinical relevance and potential molecular mechanisms",
+      "decision": "include",
+      "confidence": 0.92,
+      "reason": "标题和摘要明确讨论心理应激在癌症发生中的作用及潜在分子机制，符合纳入标准。",
+      "year": 2021,
+      "journal": "Cancer Research",
+      "doi": "10.1158/0008-5472.can-21-0684",
+      "abstract": "The hypothesis that the physiological response to psychological stress influences the initiation of cancer is highly controversial. The link between initiating stressors, the psychological stress response, and disease is plausible considering that the stress response is associated with defined physiological outcomes and molecular mechanisms. In light of this, we review the clinical relevance of psychological stress on the risk of cancer, and we propose potential molecular pathways that may link the stress response to early stages of malignant cell transformation. © 2021 American Association for Cancer Research."
+    },
+    {
+      "paper_id": "paper_000025",
+      "title": "Psychosocial and Integrative Oncology: Interventions Across the Disease Trajectory",
+      "decision": "exclude",
+      "confidence": 0.88,
+      "reason": "摘要综述癌症患者的心理反应和干预措施，未涉及心理因素如何影响肿瘤预后或机制。",
+      "year": 2023,
+      "journal": "Annual Review of Psychology",
+      "doi": "10.1146/annurev-psych-032620-031757",
+      "abstract": "This article provides an overview of the fields of psychosocial and integrative oncology, highlighting common psychological reactions to being diagnosed with and treated for cancer, including distress, anxiety, depression, fear of cancer recurrence and caregiver burden, as well as symptoms of fatigue, pain, and sleep disturbance. Patterns of symptomatology across the disease continuum are also discussed. Interventions targeted at treating these symptoms are reviewed, including acceptance-based and mindfulness therapies, mind-body therapies, and meaning-based approaches designed for people with advanced stages of disease, including psychedelic therapy. Common methodological issues and shortcomings of the evidence base are summarized with design recommendations, and a discussion of trends in future research including pragmatic research design, digital health interventions, and implementation science completes the article. Copyright © 2023 by the author(s)."
+    },
+    {
+      "paper_id": "paper_000026",
+      "title": "Internet-based and mobile-based cognitive behavioral therapy for chronic diseases: a systematic review and meta-analysis",
+      "decision": "exclude",
+      "confidence": 0.87,
+      "reason": "摘要聚焦慢性疾病的互联网认知行为疗法，未专门探讨心理因素与肿瘤预后的关联。",
+      "year": 2023,
+      "journal": "npj Digital Medicine",
+      "doi": "10.1038/s41746-023-00809-8",
+      "abstract": "Positive adjustment to chronic diseases reduces psychiatric comorbidity and enhances quality of life. Very little is known about the benefit of internet-based and mobile-based Cognitive Behavioral Therapy (IM-CBT) on physical outcomes and its reciprocal interactions with psychiatric outcomes, the active therapeutic elements, and effect moderators among people with major chronic medical conditions. In this systematic review and meta-analysis (PROSPERO: CRD42022265738), CINAHL of Systematic Reviews, MEDLINE, PsycINFO, PubMed, Web of Science are systematically searched up to 1 June 2022, for randomized controlled trials (RCTs) comparing IM-CBT against non-CBT control condition(s) among people with chronic disease(s). Primary outcomes include improvements in psychiatric symptoms (depressive, anxiety, PTSD symptoms, general psychological distress) from baseline to post-intervention and follow-ups. Secondary outcomes include improvements in physical distress (physical symptoms, functional impairment, self-rated ill health, objective physiological dysfunction). Among 44 RCTs (5077 patients with seven different chronic diseases), IM-CBT improves depressive symptoms, anxiety symptoms, and general psychological distress at post-intervention and across follow-ups, and improves physical distress and functional impairment at post-intervention. Preliminary evidence suggests that behavioral modification and problem-solving could be necessary components to reduce psychiatric symptoms in IM-CBT, whereas cognitive restructuring, psychoeducation, and mindfulness elements relate to reduced physical distress. IM-CBT shows stronger benefits in chronic pain, cancer, arthritis, and cardiovascular disease, relative to other conditions. Changes in psychiatric symptoms and physical distress prospectively predict each other over time. IM-CBT is an effective intervention for comprehensive symptom management among people with chronic diseases. © 2023, The Author(s)."
+    },
+    {
+      "paper_id": "paper_000027",
+      "title": "Optimal targeting of PI3K-AKT and mTOR in advanced oestrogen receptor-positive breast cancer",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要讨论乳腺癌的PI3K-AKT和mTOR靶向治疗，未涉及心理因素或其对预后的影响。",
+      "year": 2024,
+      "journal": "The Lancet Oncology",
+      "doi": "10.1016/s1470-2045(23)00676-9",
+      "abstract": "The growing availability of targeted therapies for patients with advanced oestrogen receptor-positive breast cancer has improved survival, but there remains much to learn about the optimal management of these patients. The PI3K–AKT and mTOR pathways are among the most commonly activated pathways in breast cancer, whose crucial role in the pathogenesis of this tumour type has spurred major efforts to target this pathway at specific kinase hubs. Approvals for oestrogen receptor-positive advanced breast cancer include the PI3K inhibitor alpelisib for PIK3CA-mutated tumours, the AKT inhibitor capivasertib for tumours with alterations in PIK3CA, AKT1, or PTEN, and the mTOR inhibitor everolimus, which is used irrespective of mutation status. The availability of different inhibitors leaves physicians with a potentially challenging decision over which of these therapies should be used for individual patients and when. In this Review, we present a comprehensive summary of our current understanding of the pathways and the three inhibitors and discuss strategies for the optimal sequencing of therapies in the clinic, particularly after progression on a CDK4/6 inhibitor. © 2024 Elsevier Ltd"
+    },
+    {
+      "paper_id": "paper_000028",
+      "title": "Optimizing care in early phase cancer trials: The role of palliative care",
+      "decision": "exclude",
+      "confidence": 0.86,
+      "reason": "摘要讨论早期癌症试验中的姑息护理作用，未涉及心理因素如何影响肿瘤预后或机制。",
+      "year": 2024,
+      "journal": "Cancer Treatment Reviews",
+      "doi": "10.1016/j.ctrv.2024.102767",
+      "abstract": "Advancements in cancer treatment have led to improved survival rates, with early phase clinical trials (EPCTs) serving as important initial steps in evaluating novel therapies. Recent studies have shown that response rates in these trials have doubled in the last twenty years. Patients who enroll on EPCTs have advanced cancer and heightened symptomatology yet maintain a robust performance status that qualifies them for clinical trial participation. It is well established that many of these patients have needs that can be addressed by palliative care, including symptom management, value assessments, advance care planning, and psychosocial and spiritual support. Several small studies have aimed to identify the most beneficial palliative care intervention for this cohort of patients, ranging from formal clinic-based multidisciplinary palliative care interventions to home-based interventions. While outcomes have trended towards benefit for patients, especially pertaining to psychological well-being, most studies were not powered to detect additional benefits for improved physical symptom management, reduction in care utilization or increased length of time on trial. In this review, we discuss the unique palliative care needs of this population and what we can learn from results of past interventional studies. We advocate for a tailored palliative care approach that acknowledges the time toxicity experienced by patients enrolled in EPCTs and address challenges posed by shortages within the palliative care workforce. © 2024 Elsevier Ltd"
+    },
+    {
+      "paper_id": "paper_000029",
+      "title": "The role of polyunsaturated fatty acids in the neurobiology of major depressive disorder and suicide risk",
+      "decision": "exclude",
+      "confidence": 0.91,
+      "reason": "标题和摘要聚焦多不饱和脂肪酸在抑郁症和自杀风险中的神经生物学作用，未涉及肿瘤。",
+      "year": 2024,
+      "journal": "Molecular Psychiatry",
+      "doi": "10.1038/s41380-023-02322-6",
+      "abstract": "Long-chain polyunsaturated fatty acids (LC-PUFAs) are obtained from diet or derived from essential shorter-chain fatty acids, and are crucial for brain development and functioning. Fundamentally, LC-PUFAs’ neurobiological effects derive from their physicochemical characteristics, including length and double bond configuration, which differentiate LC-PUFA species and give rise to functional differences between n(omega)-3 and n-6 LC-PUFAs. LC-PUFA imbalances are implicated in psychiatric disorders, including major depression and suicide risk. Dietary intake and genetic variants in enzymes involved in biosynthesis of LC-PUFAs from shorter chain fatty acids influence LC-PUFA status. Domains impacted by LC-PUFAs include 1) cell signaling, 2) inflammation, and 3) bioenergetics. 1) As major constituents of lipid bilayers, LC-PUFAs are determinants of cell membrane properties of viscosity and order, affecting lipid rafts, which play a role in regulation of membrane-bound proteins involved in cell-cell signaling, including monoaminergic receptors and transporters. 2) The n-3:n-6 LC-PUFA balance profoundly influences inflammation. Generally, metabolic products of n-6 LC-PUFAs (eicosanoids) are pro-inflammatory, while those of n-3 LC-PUFAs (docosanoids) participate in the resolution of inflammation. Additionally, n-3 LC-PUFAs suppress microglial activation and the ensuing proinflammatory cascade. 3) N-3 LC-PUFAs in the inner mitochondrial membrane affect oxidative stress, suppressing production of and scavenging reactive oxygen species (ROS), with neuroprotective benefits. Until now, this wealth of knowledge about LC-PUFA biomechanisms has not been adequately tapped to develop translational studies of LC-PUFA clinical effects in humans. Future studies integrating neurobiological mechanisms with clinical outcomes may suggest ways to identify depressed individuals most likely to respond to n-3 LC-PUFA supplementation, and mechanistic research may generate new treatment strategies. © The Author(s), under exclusive licence to Springer Nature Limited 2023."
+    },
+    {
+      "paper_id": "paper_000030",
+      "title": "Biomarker opportunities in the treatment of cancer-related depression",
+      "decision": "include",
+      "confidence": 0.93,
+      "reason": "标题和摘要明确探讨癌症相关抑郁的生物标志物，涉及炎症机制及其对肿瘤进展的影响。",
+      "year": 2022,
+      "journal": "Trends in Molecular Medicine",
+      "doi": "10.1016/j.molmed.2022.10.003",
+      "abstract": "Depression comorbid with cancer is common and associated with a host of negative health outcomes. The inflammatory basis of depression is a growing area of research in cancer, focused on how stressors transduce into inflammation and contribute to the emergence of depression. In this review, we synthesize inflammatory biomarker associations with both depression and the currently available pharmacotherapies and psychotherapies in cancer, underscoring the need for expanding research on anti-inflammatory agents with antidepressant effects. Modulation of inflammatory neuroimmune pathways can slow tumor progression and reduce metastases. Biomarkers associated with depression in cancer may help with diagnosis and treatment monitoring, as well as inform research on novel drug targets to potentially improve cancer survival. © 2022 Elsevier Ltd"
+    },
+    {
+      "paper_id": "paper_000031",
+      "title": "Are digital psychological interventions for psychological distress and quality of life in cancer patients effective? A systematic review and network meta-analysis",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要显示研究数字心理干预对癌症患者心理困扰和生活质量的效果，未涉及心理因素对肿瘤预后的影响。",
+      "year": 2025,
+      "journal": "Clinical Psychology Review",
+      "doi": "10.1016/j.cpr.2024.102520",
+      "abstract": "Background: Many cancer patients experience psychological distress and/or poor quality of life during or after their cancer treatment, yet they face multiple barriers to accessing psychological support. Digital psychological interventions represent a promising approach for addressing these barriers, however their comparative effectiveness remains uncertain. Methods: Nine databases were searched for randomized controlled trials (RCTs) from inception to July 2024. The primary outcomes were psychological distress and quality of life, and the secondary outcomes were measures of depression, anxiety, insomnia, fatigue, and fear of cancer recurrence in this study. Results: One hundred and thirty-six RCTs with 23,154 participants were identified. Of these interventions, three types—digitally-delivered cognitive behavioral therapy (CBT), health education, and virtual reality therapy (VRT)—demonstrated significant reductions in psychological distress compared to non-active controls. Digital CBT, narrative interventions, and VRT significantly improved quality of life compared to non-active controls. For depression, both digital CBT and VRT were superior to the non-active control group. Regarding anxiety, CBT, psychoeducation, and VRT outperformed the non-active control group. In terms of fatigue, CBT, psychoeducation, VRT, and multi-component interventions all showed enhanced efficacy compared to the non-active control group. However, only CBT exhibited significantly superior effectiveness in alleviating insomnia compared to non-active controls. Similarly, only mindfulness-based interventions significantly reduced fear of cancer recurrence compared to the non-active control condition. Conclusions: Our results suggest that digital CBT and VRT are highly promising options for reducing psychological distress and enhancing the quality of life among cancer patients; further high-quality randomized controlled trials involving diverse populations are essential to validate these findings. © 2024 Elsevier Ltd"
+    },
+    {
+      "paper_id": "paper_000032",
+      "title": "Applying a Life Course Biological Age Framework to Improving the Care of Individuals with Adult Cancers: Review and Research Recommendations",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "标题和摘要讨论生物年龄框架在癌症护理中的应用，未涉及心理/精神因素对肿瘤预后的影响。",
+      "year": 2021,
+      "journal": "JAMA Oncology",
+      "doi": "10.1001/jamaoncol.2021.1160",
+      "abstract": "Importance: The practice of oncology will increasingly involve the care of a growing population of individuals with midlife and late-life cancers. Managing cancer in these individuals is complex, based on differences in biological age at diagnosis. Biological age is a measure of accumulated life course damage to biological systems, loss of reserve, and vulnerability to functional deterioration and death. Biological age is important because it affects the ability to manage the rigors of cancer therapy, survivors' function, and cancer progression. However, biological age is not always clinically apparent. This review presents a conceptual framework of life course biological aging, summarizes candidate measures, and describes a research agenda to facilitate clinical translation to oncology practice. Observations: Midlife and late-life cancers are chronic diseases that may arise from cumulative patterns of biological aging occurring over the life course. Before diagnosis, each new patient was on a distinct course of biological aging related to past exposures, life experiences, genetics, and noncancer chronic disease. Cancer and its treatments may also be associated with biological aging. Several measures of biological age, including p16INK4a, epigenetic age, telomere length, and inflammatory and body composition markers, have been used in oncology research. One or more of these measures may be useful in cancer care, either alone or in combination with clinical history and geriatric assessments. However, further research will be needed before biological age assessment can be recommended in routine practice, including determination of situations in which knowledge about biological age would change treatment, ascertaining whether treatment effects on biological aging are short-lived or persistent, and testing interventions to modify biological age, decrease treatment toxic effects, and maintain functional abilities. Conclusions and Relevance: Understanding differences in biological aging could ultimately allow clinicians to better personalize treatment and supportive care, develop tailored survivorship care plans, and prescribe preventive or ameliorative therapies and behaviors informed by aging mechanisms.. © 2021 American Medical Association. All rights reserved."
+    },
+    {
+      "paper_id": "paper_000033",
+      "title": "Clinical utility of demoralization: A systematic review of the literature",
+      "decision": "exclude",
+      "confidence": 0.75,
+      "reason": "标题和摘要系统综述失志症的临床效用，涉及多种人群包括癌症患者，但未探讨心理因素对肿瘤预后的影响。",
+      "year": 2023,
+      "journal": "Clinical Psychology Review",
+      "doi": "10.1016/j.cpr.2022.102227",
+      "abstract": "Demoralization is a complex clinical phenomenon which has raised a growing interest in clinical and research realms. The present systematic review of the literature aimed at (1) updating on demoralization prevalence in different populations, (2) identifying the instruments more largely used to assess demoralization, and (3) verifying whether new tools of assessment have been proposed. PubMed and Web of Science were searched from inception to April 2022. Search terms were: demoralization/demoralized/demoralizing/demoralised/demoralising. PRISMA guidelines were followed. GRADE rating system was used. A total of 188 papers were included. Demoralization appeared to be a distinctive psychological state common in medical, psychiatric, and non-clinical settings, thus not limited to life-threatening diseases. Diagnostic Criteria for Psychosomatic Research (DCPR) and Demoralization Scale (DS) are the most commonly used tools to assess it. DCPR allow to diagnose demoralization as a manifestation of dealing with chronic stress. DS captures dimensionally a psychological distress related to end of life. Demoralization is associated with clinical features encompassing allostatic overload, quality of life, wellbeing/euthymia. Implications on health outcomes and treatment are discussed. Demoralization warrants careful consideration in clinical contexts through valid assessment procedures. DCPR are recommended to diagnose it, DS can be helpful to capture clinical details. © 2022 Elsevier Ltd"
+    },
+    {
+      "paper_id": "paper_000034",
+      "title": "Examining the prevalence of anxiety and depression in surgical oncology patients: Results of a prospective cohort study.",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "标题和摘要研究外科肿瘤患者焦虑抑郁的患病率及其与术后结局的关联，但结果显示焦虑抑郁与术后结局无显著关联。",
+      "year": 2024,
+      "journal": "Journal of Clinical Oncology",
+      "doi": "10.1200/jco.2024.42.3_suppl.734",
+      "abstract": "734Background: Prospective data assessing prevalence of anxiety and depression in a diverse surgical oncology population are currently lacking. Psychological distress may affect patient outcomes in the postoperative setting. The General Anxiety Disorder (GAD) and Patient Health Questionnaire (PHQ9) surveys are validated instruments to assess severity of anxiety and depression, respectively. We aimed to determine the prevalence of anxiety and depression using validated screening tools, and assess associations between anxiety and depression with clinical outcomes in patients presenting to our surgical oncology clinic. Methods: A prospective, surgeon-blinded study was conducted to assess associations of anxiety and depression with postoperative outcomes in patients with histologically proven malignancy who underwent surgical intervention. Preoperatively, the GAD and PHQ9 surveys were administered to evaluate for anxiety and depression, respectively. Frailty level was also assessed using the validated Risk Analysis Index (RAI-C) survey. Postoperative outcomes included rates of ICU admission, 30- and 90-day readmissions, postoperative complications classified by Clavien-Dindo score, and disposition to home versus rehabilitation facilities. Outcomes were compared between different groups as defined by the severity of anxiety and depression. Results: 191 patients met inclusion criteria. The cohort was stratified into three groups by severity of anxiety and depression. Overall, 59 (31%) patients reported at least moderate anxiety as defined by a GAD score ≥5, with 30 (15.7%) patients reporting severe anxiety (GAD score ≥ 10). Similarly, 62 (32%) patients reported at least mild depression as defined by a PHQ9 score ≥5, with 21 (11%) patients experiencing moderate to severe depression (PHQ9 ≥ 10). No difference was detected in length of stay, ICU admission, 30- and 90-day readmission, and postoperative complications. Preoperative frailty, as defined by RAI-C score >21, was also not associated with anxiety or depression. Marital status of single or widowed was found to be significantly associated with mild depression (p=0.027) and moderate to severe depression (p=0.028), respectively. Conclusions: While anxiety and depression were not found to be significantly associated with postoperative outcomes, they are prevalent in surgical oncology patients, affecting approximately one-third of our patient population. The GAD and PHQ9 surveys are validated instruments that can be administered easily to identify surgical oncology patients with psychological distress. Comprehensive evaluation of psychological well-being, in conjunction with a thorough social evaluation, can identify those patients who may benefit from referral to supportive resources. © 2024"
+    },
+    {
+      "paper_id": "paper_000035",
+      "title": "Protein kinase CK2: a potential therapeutic target for diverse human diseases",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要综述蛋白激酶CK2作为多种人类疾病的潜在治疗靶点，包括癌症，但未涉及心理/精神因素。",
+      "year": 2021,
+      "journal": "Signal Transduction and Targeted Therapy",
+      "doi": "10.1038/s41392-021-00567-7",
+      "abstract": "CK2 is a constitutively active Ser/Thr protein kinase, which phosphorylates hundreds of substrates, controls several signaling pathways, and is implicated in a plethora of human diseases. Its best documented role is in cancer, where it regulates practically all malignant hallmarks. Other well-known functions of CK2 are in human infections; in particular, several viruses exploit host cell CK2 for their life cycle. Very recently, also SARS-CoV-2, the virus responsible for the COVID-19 pandemic, has been found to enhance CK2 activity and to induce the phosphorylation of several CK2 substrates (either viral and host proteins). CK2 is also considered an emerging target for neurological diseases, inflammation and autoimmune disorders, diverse ophthalmic pathologies, diabetes, and obesity. In addition, CK2 activity has been associated with cardiovascular diseases, as cardiac ischemia–reperfusion injury, atherosclerosis, and cardiac hypertrophy. The hypothesis of considering CK2 inhibition for cystic fibrosis therapies has been also entertained for many years. Moreover, psychiatric disorders and syndromes due to CK2 mutations have been recently identified. On these bases, CK2 is emerging as an increasingly attractive target in various fields of human medicine, with the advantage that several very specific and effective inhibitors are already available. Here, we review the literature on CK2 implication in different human pathologies and evaluate its potential as a pharmacological target in the light of the most recent findings. © 2021, The Author(s)."
+    },
+    {
+      "paper_id": "paper_000036",
+      "title": "Effect of an Oncology Nurse-Led Primary Palliative Care Intervention on Patients with Advanced Cancer: The CONNECT Cluster Randomized Clinical Trial",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "标题和摘要评估肿瘤护士主导的初级姑息护理干预对晚期癌症患者的影响，未涉及心理因素对肿瘤预后的影响。",
+      "year": 2021,
+      "journal": "JAMA Internal Medicine",
+      "doi": "10.1001/jamainternmed.2021.5185",
+      "abstract": "Importance: Guidelines recommend early specialty palliative care for all patients with advanced cancer, but most patients lack access to such services. Objective: To assess the effect of CONNECT (Care Management by Oncology Nurses to Address Supportive Care Needs), a primary palliative care intervention delivered by oncology nurses, on patient outcomes. Design, Setting, and Participants: This cluster randomized clinical trial of the CONNECT intervention vs standard care was conducted from July 25, 2016, to October 6, 2020. Participants were adult patients with metastatic solid tumors who were undergoing oncological care and for whom an oncologist would agree with the statement \"would not be surprised if the patient died in the next year.\" The trial was conducted at 17 community oncology practices in western Pennsylvania. Data analyses adhered to the intention-to-treat principle. Interventions: The CONNECT intervention included 3 monthly visits with an existing infusion room nurse who was trained to address symptoms, provide emotional support, engage in advance care planning, and coordinate care. Main Outcomes and Measures: The primary outcome was quality of life. At baseline and 3 months, participants completed assessments of quality of life (Functional Assessment of Chronic Illness Therapy-Palliative care: score range, 0-184, with higher scores indicating better quality of life), symptom burden (Edmonton Symptom Assessment Scale: score range, 0-90, with higher scores indicating greater symptom burden), and mood symptoms (Hospital Anxiety and Depression Scale [HADS]: score range, 0-21, with higher scores indicating substantial anxiety and depression). Linear mixed-effects models were used to estimate adjusted mean differences in 3-month outcomes. Preplanned, intensity-adjusted analyses were conducted. Results: A total of 672 patients were enrolled (mean [SD] age, 69.3 [10.2] years; 360 women [53.6%]). The mean (SD) number of CONNECT visits completed was 2.2 (1.0). At 3 months, no difference in mean (SD) quality-of-life score was found between the CONNECT and standard care groups (130.7 [28.2] vs 134.1 [28.1]; adjusted mean difference, 1.20; 95% CI, -2.75 to 5.15; P =.55). Similarly, there was no difference between groups in 3-month mean (SD) symptom burden (23.2 [16.6] vs 24.0 [16.1]; adjusted mean difference, -2.64; 95% CI, -5.85 to 0.58; P =.11) or mood symptoms (HADS depression subscale score: 5.1 [3.4] vs 4.8 [3.7], adjusted mean difference, -0.08 [95% CI, -0.71 to 0.57], P =.82; HADS anxiety subscale score: 5.7 [3.9] vs 5.4 [4.2], adjusted mean difference, -0.31 [95% CI, -0.96 to 0.33], P =.34). Intensity-adjusted analyses revealed a larger estimated treatment effect for patients who received a full dose (3 visits) of the CONNECT intervention. Conclusions and Relevance: This cluster randomized clinical trial found that a primary palliative care intervention that was delivered by oncology nurses did not improve patient-reported outcomes at 3 months. Primary palliative care interventions with a higher dose intensity may be beneficial for most patients with advanced cancer who lack access to palliative care specialists. Trial Registration: ClinicalTrials.gov Identifier: NCT02712229. © 2021 American Medical Association. All rights reserved."
+    },
+    {
+      "paper_id": "paper_000037",
+      "title": "Crossing epigenetic frontiers: the intersection of novel histone modifications and diseases",
+      "decision": "exclude",
+      "confidence": 0.75,
+      "reason": "标题和摘要综述新型组蛋白修饰与疾病的交叉，包括癌症和精神疾病，但未探讨心理因素对肿瘤预后的影响机制。",
+      "year": 2024,
+      "journal": "Signal Transduction and Targeted Therapy",
+      "doi": "10.1038/s41392-024-01918-w",
+      "abstract": "Histone post-translational modifications (HPTMs), as one of the core mechanisms of epigenetic regulation, are garnering increasing attention due to their close association with the onset and progression of diseases and their potential as targeted therapeutic agents. Advances in high-throughput molecular tools and the abundance of bioinformatics data have led to the discovery of novel HPTMs which similarly affect gene expression, metabolism, and chromatin structure. Furthermore, a growing body of research has demonstrated that novel histone modifications also play crucial roles in the development and progression of various diseases, including various cancers, cardiovascular diseases, infectious diseases, psychiatric disorders, and reproductive system diseases. This review defines nine novel histone modifications: lactylation, citrullination, crotonylation, succinylation, SUMOylation, propionylation, butyrylation, 2-hydroxyisobutyrylation, and 2-hydroxybutyrylation. It comprehensively introduces the modification processes of these nine novel HPTMs, their roles in transcription, replication, DNA repair and recombination, metabolism, and chromatin structure, as well as their involvement in promoting the occurrence and development of various diseases and their clinical applications as therapeutic targets and potential biomarkers. Moreover, this review provides a detailed overview of novel HPTM inhibitors targeting various targets and their emerging strategies in the treatment of multiple diseases while offering insights into their future development prospects and challenges. Additionally, we briefly introduce novel epigenetic research techniques and their applications in the field of novel HPTM research. © The Author(s) 2024."
+    },
+    {
+      "paper_id": "paper_000038",
+      "title": "To be aware or not to be aware of the prognosis in the terminal stage of cancer? A systematic review of the associations between prognostic awareness with anxiety, depression, and quality of life according to cancer stage",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "标题和摘要系统综述预后意识与焦虑、抑郁和生活质量的关联，涉及癌症患者心理因素，但未明确探讨对肿瘤预后的影响。",
+      "year": 2025,
+      "journal": "Clinical Psychology Review",
+      "doi": "10.1016/j.cpr.2025.102544",
+      "abstract": "Prognostic awareness (PA) has an important role in promoting informed care planning in cancer patients. However, studies in the literature showed discordant results regarding the impact of PA on psychological and quality of life outcomes. The present systematic review aimed to investigate the associations between PA with anxiety, depression, and quality of life in oncological patients according to early, advanced, and terminal cancer stages. The review adhered to PRISMA guidelines and was registered on PROSPERO. The research identified 42.357 studies, of which 54 were included. The main result showed that the associations of PA with anxiety, depression, and quality of life varied according to the cancer stage. In studies with early and advanced cancer patients, 0 % and 9 %, respectively, showed favourable associations, while in those with terminal cancer patients, 53 % showed favourable associations. In terminal stage cancer, the associations were favourable when patients were enrolled in hospice, had a mean survival time shorter than 60 days, and a mean age older than 65 years. These findings suggest that it could be important within psychological interventions for patients to consider the impact of PA at different stages of cancer. While in the early and advanced stages of cancer, patients might benefit most from interventions focused on implementing psychological resources to face the illness and maintaining a hopeful outlook, in the terminal stage of cancer, it could be important to promote the process of becoming aware of their prognosis. © 2025 The Authors"
+    },
+    {
+      "paper_id": "paper_000039",
+      "title": "We Cannot Change What We Cannot See: A Rationale for Patient-Reported Outcomes in Pediatric Oncology Clinical Research",
+      "decision": "exclude",
+      "confidence": 0.7,
+      "reason": "标题讨论儿科肿瘤临床研究中患者报告结局的理由，摘要缺失，无法判断是否涉及心理因素对肿瘤预后的影响。",
+      "year": 2022,
+      "journal": "Journal of Clinical Oncology",
+      "doi": "10.1200/jco.22.00196",
+      "abstract": null
+    }
+  ],
+  "project_id": "ab2a7dea53f3",
+  "project_topic": "精神疾病/心理应激（如抑郁、焦虑）对肿瘤患者预后（生存期、复发率、死亡率等）影响及相关机制",
+  "model_provider": "deepseek",
+  "parent_task_id": null,
+  "input_dataset_ids": [],
+  "output_dataset_ids": [
+    "30f0ff2d610e",
+    "e3c5112b0379"
+  ]
+}

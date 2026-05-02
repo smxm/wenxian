@@ -1,0 +1,60 @@
+{
+  "project": {
+    "name": "new-screening-run",
+    "output_dir": "tasks/9d0d630ecb0f/screening_run/screening_output",
+    "save_raw_response": true,
+    "save_intermediate_files": true
+  },
+  "input": {
+    "input_files": [
+      "tasks/9d0d630ecb0f/screening_run/inputs/abstract-LupusEryth-set.txt"
+    ],
+    "encoding": "auto"
+  },
+  "dedup": {
+    "enabled": true,
+    "strict_doi_match": true,
+    "normalized_title_exact_match": true,
+    "fuzzy_title_match": false
+  },
+  "screening": {
+    "batch_size": 10,
+    "target_include_count": 15,
+    "stop_when_target_reached": true,
+    "allow_uncertain": true,
+    "retry_times": 6,
+    "request_timeout_seconds": 240
+  },
+  "criteria": {
+    "topic": "自身炎症及自身免疫性疾病（重点包含VKH、SLE等）的眼底及其他眼部表现",
+    "inclusion": [
+      "全身性疾病背景：必须涉及自身炎症性疾病（Autoinflammatory）或自身免疫性疾病（Autoimmune），特别是明确提及 VKH（小柳原田综合征）、SLE（系统性红斑狼疮）或其他相关免疫介导疾病。",
+      "临床表型：必须探讨上述疾病引起的眼部受累表现。重点关注眼底、葡萄膜、视网膜、脉络膜或视神经的病变（如全葡萄膜炎、视网膜血管炎、渗出性视网膜脱离、棉絮斑等）。"
+    ],
+    "exclusion": [
+      "纯全身性免疫疾病研究，完全没有提及眼部/眼底表现的文献。",
+      "纯眼科局部疾病，缺乏全身性自身免疫/自身炎症背景的文献（例如：年龄相关性黄斑变性、糖尿病视网膜病变、单纯的机械性眼外伤等）。",
+      "仅作为流行病学数据一笔带过，缺乏对眼部特征、机制或影像学进行实质性探讨的低信息量文献。"
+    ]
+  },
+  "model": {
+    "provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "api_base_url": "https://api.deepseek.com/v1",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 1536,
+    "min_request_interval_seconds": 2.0
+  },
+  "report": {
+    "export_included_ris": true,
+    "export_excluded_ris": false,
+    "export_unused_ris": true,
+    "export_included_bib": false,
+    "export_excluded_bib": false,
+    "export_unused_bib": false,
+    "included_report_format": "md",
+    "excluded_report_format": "md",
+    "summary_format": "json"
+  }
+}

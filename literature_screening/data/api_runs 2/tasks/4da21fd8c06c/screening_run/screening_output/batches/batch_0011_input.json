@@ -1,0 +1,380 @@
+{
+  "batch_id": "batch_0011",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000101",
+    "paper_000102",
+    "paper_000103",
+    "paper_000104",
+    "paper_000105",
+    "paper_000106",
+    "paper_000107",
+    "paper_000108",
+    "paper_000109",
+    "paper_000110"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000101",
+      "entry_type": "article",
+      "title": "Large Area Detection of Microstructural Defects with Multi-Mode Ultrasonic Signals",
+      "authors": [
+        "Ju, T",
+        "Findikoglu, AT"
+      ],
+      "year": 2022,
+      "journal": "APPLIED SCIENCES-BASEL",
+      "doi": "10.3390/app12042082",
+      "abstract": "Cyclic loading or other stresses can lead to development of cracks and crack growth in mechanical structures, leading to eventual failure. While ultrasound imaging can be used for non-destructive testing of such structures, conventional ultrasound techniques are often limited by crack size, density, and areal coverage. An effective characterization of real-world, large-area structures is required at an early damage stage to prevent catastrophic failure and predict remaining life. In this study, a new nonlinear ultrasonic testing (NUT) method is proposed for large-area monitoring of practical structures with arbitrary complexity by using multiple-mode guided-wave ultrasonic signals. The proposed guided-wave NUT technique requires single-element transducers, simple electronics, and a mixed time-frequency domain signal processing. As a proof-of-concept demonstration, numerical simulations and experiments are performed on an A36 carbon steel beam assembly with previously formed microstructural defects that cause nonlinearities in ultrasonic response. The quadratic dependence of the nonlinear wave excitation on the input ultrasonic signal amplitude is shown by numerical simulations, and such a nonlinear ultrasonic response is experimentally observed in the zone with a high density of microstructural defects.",
+      "keywords": [
+        "multiple-mode guided waves",
+        "nonlinear ultrasonic testing (NUT)",
+        "non-destructive evaluation (NDE)",
+        "structural health monitoring (SHM)",
+        "finite-element method (FEM) simulation",
+        "real-world structures",
+        "fatigue damages",
+        "WAVES"
+      ],
+      "normalized_title": "large area detection of microstructural defects with multi mode ultrasonic signals",
+      "raw_bibtex": "@ARTICLE{10.3390/app12042082,\n\tauthor = {Ju, T and Findikoglu, AT},\n\ttitle = {Large Area Detection of Microstructural Defects with Multi-Mode Ultrasonic Signals},\n\tjournal = {APPLIED SCIENCES-BASEL},\n\tyear = {2022},\n\tkeywords = {multiple-mode guided waves; nonlinear ultrasonic testing (NUT); non-destructive evaluation (NDE); structural health monitoring (SHM); finite-element method (FEM) simulation; real-world structures; fatigue damages; WAVES},\n\tabstract = {Cyclic loading or other stresses can lead to development of cracks and crack growth in mechanical structures, leading to eventual failure. While ultrasound imaging can be used for non-destructive testing of such structures, conventional ultrasound techniques are often limited by crack size, density, and areal coverage. An effective characterization of real-world, large-area structures is required at an early damage stage to prevent catastrophic failure and predict remaining life. In this study, a new nonlinear ultrasonic testing (NUT) method is proposed for large-area monitoring of practical structures with arbitrary complexity by using multiple-mode guided-wave ultrasonic signals. The proposed guided-wave NUT technique requires single-element transducers, simple electronics, and a mixed time-frequency domain signal processing. As a proof-of-concept demonstration, numerical simulations and experiments are performed on an A36 carbon steel beam assembly with previously formed microstructural defects that cause nonlinearities in ultrasonic response. The quadratic dependence of the nonlinear wave excitation on the input ultrasonic signal amplitude is shown by numerical simulations, and such a nonlinear ultrasonic response is experimentally observed in the zone with a high density of microstructural defects.},\n\tdoi = {10.3390/app12042082},\n\tvolume = {12},\n\tnumber = {4},\n\tissn = {2076-3417},\n\tnote = {Times Cited in Web of Science Core Collection: 9 Total Times Cited: 9 Cited Reference Count: 23 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/app12042082"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000102",
+      "entry_type": "article",
+      "title": "System Invariant Method for Ultrasonic Flaw Classification in Weldments Using Residual Neural Network",
+      "authors": [
+        "Park, J",
+        "Lee, SE",
+        "Kim, HJ",
+        "Song, SJ",
+        "Kang, SS"
+      ],
+      "year": 2022,
+      "journal": "APPLIED SCIENCES-BASEL",
+      "doi": "10.3390/app12031477",
+      "abstract": "The industrial use of ultrasonic flaw classification using neural networks in weldments must overcome many challenges. A major constraint is the use of numerous systems, including a combination of transducers and equipment. This causes high complexity in the datasets used in the training of neural networks, which decreases performance. In this study, the performance of a neural network was enhanced using signal processing on an ultrasonic weldment flaw dataset to achieve system invariance. The dataset contained 5839 ultrasonic flaw signals collected by various types of transducers connected to KrautKramer USN60. Every signal in the dataset was from 45 FlawTech/Sonaspection weldment specimens with five types of flaw: crack, lack of fusion, slag inclusion, porosity, and incomplete penetration. The neural network used in this study is a residual neural network with 19 layers. The performance evaluation of the same network structure showed that the original database can achieve 62.17% +/- 4.13% accuracy, and that the invariant database using the system invariant method can achieve 91.45% +/- 1.77% accuracy. The results demonstrate that using a system invariant method for ultrasonic flaw classification in weldments can improve the performance of a neural network with a highly complex dataset.",
+      "keywords": [
+        "weldments",
+        "ultrasonic testing",
+        "flaw classification",
+        "system invariant",
+        "residual neural network"
+      ],
+      "normalized_title": "system invariant method for ultrasonic flaw classification in weldments using residual neural network",
+      "raw_bibtex": "@ARTICLE{10.3390/app12031477,\n\tauthor = {Park, J and Lee, SE and Kim, HJ and Song, SJ and Kang, SS},\n\ttitle = {System Invariant Method for Ultrasonic Flaw Classification in Weldments Using Residual Neural Network},\n\tjournal = {APPLIED SCIENCES-BASEL},\n\tyear = {2022},\n\tkeywords = {weldments; ultrasonic testing; flaw classification; system invariant; residual neural network},\n\tabstract = {The industrial use of ultrasonic flaw classification using neural networks in weldments must overcome many challenges. A major constraint is the use of numerous systems, including a combination of transducers and equipment. This causes high complexity in the datasets used in the training of neural networks, which decreases performance. In this study, the performance of a neural network was enhanced using signal processing on an ultrasonic weldment flaw dataset to achieve system invariance. The dataset contained 5839 ultrasonic flaw signals collected by various types of transducers connected to KrautKramer USN60. Every signal in the dataset was from 45 FlawTech/Sonaspection weldment specimens with five types of flaw: crack, lack of fusion, slag inclusion, porosity, and incomplete penetration. The neural network used in this study is a residual neural network with 19 layers. The performance evaluation of the same network structure showed that the original database can achieve 62.17% +/- 4.13% accuracy, and that the invariant database using the system invariant method can achieve 91.45% +/- 1.77% accuracy. The results demonstrate that using a system invariant method for ultrasonic flaw classification in weldments can improve the performance of a neural network with a highly complex dataset.},\n\tdoi = {10.3390/app12031477},\n\tvolume = {12},\n\tnumber = {3},\n\tissn = {2076-3417},\n\tnote = {Times Cited in Web of Science Core Collection: 9 Total Times Cited: 10 Cited Reference Count: 35 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/app12031477"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000103",
+      "entry_type": "article",
+      "title": "Skip-Feedback Neural Network With Unsupervised Feature Learning for Railway Crack Distance Estimation",
+      "authors": [
+        "Pavitpok, S",
+        "Phasukkit, P"
+      ],
+      "year": 2026,
+      "journal": "IEEE ACCESS",
+      "doi": "10.1109/access.2026.3651372",
+      "abstract": "Accurate estimation of crack distance is critical for railway safety and structural health monitoring. This paper proposes a Skip-Feedback Neural Network (SFNN) for single-sensor acoustic emission (AE)-based crack distance estimation in railway rails. Unlike conventional multi-sensor or high-cost inspection systems, the proposed framework employs a single AE sensor together with entropy-based signal representations to capture distance-dependent crack characteristics under noisy operating conditions. The SFNN integrates learnable skip and feedback pathways to enhance feature reuse, stabilize gradient propagation, and improve robustness against signal attenuation. Experimental evaluation was performed using controlled pencil-lead break simulations at multiple crack-to-sensor distances, as well as field measurements at real crack locations validated by phased-array ultrasonic testing. Results demonstrate that the proposed SFNN consistently outperforms baseline neural-network models across different distance ranges. The proposed framework offers a cost-efficient, noise-resilient, and scalable solution for AE-based railway crack monitoring and future structural health-monitoring applications.",
+      "keywords": [
+        "Entropy",
+        "Feature extraction",
+        "Rail transportation",
+        "Rails",
+        "Monitoring",
+        "Acoustic emission",
+        "Noise reduction",
+        "Estimation",
+        "Complexity theory",
+        "Transient analysis",
+        "Skip-feedback neural network",
+        "cross-layer connections",
+        "acoustic emission",
+        "railway crack detection",
+        "predictive maintenance",
+        "ACOUSTIC-EMISSION",
+        "DAMAGES"
+      ],
+      "normalized_title": "skip feedback neural network with unsupervised feature learning for railway crack distance estimation",
+      "raw_bibtex": "@ARTICLE{10.1109/ACCESS.2026.3651372,\n\tauthor = {Pavitpok, S and Phasukkit, P},\n\ttitle = {Skip-Feedback Neural Network With Unsupervised Feature Learning for Railway Crack Distance Estimation},\n\tjournal = {IEEE ACCESS},\n\tyear = {2026},\n\tkeywords = {Entropy; Feature extraction; Rail transportation; Rails; Monitoring; Acoustic emission; Noise reduction; Estimation; Complexity theory; Transient analysis; Skip-feedback neural network; cross-layer connections; acoustic emission; railway crack detection; predictive maintenance; ACOUSTIC-EMISSION; DAMAGES},\n\tabstract = {Accurate estimation of crack distance is critical for railway safety and structural health monitoring. This paper proposes a Skip-Feedback Neural Network (SFNN) for single-sensor acoustic emission (AE)-based crack distance estimation in railway rails. Unlike conventional multi-sensor or high-cost inspection systems, the proposed framework employs a single AE sensor together with entropy-based signal representations to capture distance-dependent crack characteristics under noisy operating conditions. The SFNN integrates learnable skip and feedback pathways to enhance feature reuse, stabilize gradient propagation, and improve robustness against signal attenuation. Experimental evaluation was performed using controlled pencil-lead break simulations at multiple crack-to-sensor distances, as well as field measurements at real crack locations validated by phased-array ultrasonic testing. Results demonstrate that the proposed SFNN consistently outperforms baseline neural-network models across different distance ranges. The proposed framework offers a cost-efficient, noise-resilient, and scalable solution for AE-based railway crack monitoring and future structural health-monitoring applications.},\n\tdoi = {10.1109/ACCESS.2026.3651372},\n\tvolume = {14},\n\tpages = {8288-8304},\n\tissn = {2169-3536},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 39 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/ACCESS.2026.3651372"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000104",
+      "entry_type": "article",
+      "title": "Intelligent damage recognition of composite materials based on deep learning and ultrasonic testing",
+      "authors": [
+        "Li, CZ",
+        "He, WF",
+        "Nie, XF",
+        "Wei, XL",
+        "Guo, HY",
+        "Wu, X",
+        "Xu, HJ",
+        "Zhang, TJ",
+        "Liu, XY"
+      ],
+      "year": 2021,
+      "journal": "AIP ADVANCES",
+      "doi": "10.1063/5.0063615",
+      "abstract": "Ultrasonic non-destructive testing can effectively detect damage in aircraft composite materials, but traditional manual testing is time-consuming and labor-intensive. To realize the intelligent recognition of aircraft composite material damage, this paper proposes a 1D-YOLO network, in which intelligent fusion recognizes both the ultrasonic C-scan image and ultrasonic A-scan signal of composite material damage. Through training and testing the composite material damage data on aircraft skin, the accuracy of the model is 94.5%, the mean average precision is 80.0%, and the kappa value is 97.5%. The use of dilated convolution and a recursive feature pyramid effectively improves the feature extraction ability of the model. The effectively used Cascade R-CNN (Cascade Region-Convolutional Neural Network) improves the recognition effect of the model, and the effectively used one-dimensional convolutional neural network excludes non-damaged objects. Comparing our network with YOLOv3, YOLOv4, cascade R-CNN, and other networks, the results show that our network can identify the damage of composite materials more accurately.(c) 2021 Author(s).",
+      "keywords": [
+        "IDENTIFICATION"
+      ],
+      "normalized_title": "intelligent damage recognition of composite materials based on deep learning and ultrasonic testing",
+      "raw_bibtex": "@ARTICLE{10.1063/5.0063615,\n\tauthor = {Li, CZ and He, WF and Nie, XF and Wei, XL and Guo, HY and Wu, X and Xu, HJ and Zhang, TJ and Liu, XY},\n\ttitle = {Intelligent damage recognition of composite materials based on deep learning and ultrasonic testing},\n\tjournal = {AIP ADVANCES},\n\tyear = {2021},\n\tkeywords = {IDENTIFICATION},\n\tabstract = {Ultrasonic non-destructive testing can effectively detect damage in aircraft composite materials, but traditional manual testing is time-consuming and labor-intensive. To realize the intelligent recognition of aircraft composite material damage, this paper proposes a 1D-YOLO network, in which intelligent fusion recognizes both the ultrasonic C-scan image and ultrasonic A-scan signal of composite material damage. Through training and testing the composite material damage data on aircraft skin, the accuracy of the model is 94.5%, the mean average precision is 80.0%, and the kappa value is 97.5%. The use of dilated convolution and a recursive feature pyramid effectively improves the feature extraction ability of the model. The effectively used Cascade R-CNN (Cascade Region-Convolutional Neural Network) improves the recognition effect of the model, and the effectively used one-dimensional convolutional neural network excludes non-damaged objects. Comparing our network with YOLOv3, YOLOv4, cascade R-CNN, and other networks, the results show that our network can identify the damage of composite materials more accurately.(c) 2021 Author(s).},\n\tdoi = {10.1063/5.0063615},\n\tvolume = {11},\n\tnumber = {12},\n\tissn = {2158-3226},\n\tnote = {Times Cited in Web of Science Core Collection: 20 Total Times Cited: 20 Cited Reference Count: 26 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1063/5.0063615"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000105",
+      "entry_type": "article",
+      "title": "Application of Adaptive Anisotropic Diffusion Filter To Improve the Reflector Image Quality when Performing Ultrasonic Nondestructive Testing",
+      "authors": [
+        "Bazulin, EG"
+      ],
+      "year": 2021,
+      "journal": "RUSSIAN JOURNAL OF NONDESTRUCTIVE TESTING",
+      "doi": "10.1134/s1061830921050041",
+      "abstract": "At present, systems for the recognition (classification) of reflectors based on artificial neural networks are being actively developed to increase the speed of preparation of the ultrasonic testing protocol and reduce the influence of the human factor. For these systems to operate most efficiently, the reflector images must be processed in order to increase the signal-to-noise ratio of the image and its segmentation (clustering). One way of segmentation is to process the image with an adaptive anisotropic diffusion filter, which is used to process optical images. The effectiveness of using this texture filter for segmentation of reflector images reconstructed from echo signals measured with antenna arrays has been demonstrated in model experiments.",
+      "keywords": [
+        "antenna array",
+        "digital antenna focusing (DFA)",
+        "full matrix capture (FMC)",
+        "total focusing method (TFM)",
+        "adaptive anisotropic diffusion filter (2D or 3D AADF)"
+      ],
+      "normalized_title": "application of adaptive anisotropic diffusion filter to improve the reflector image quality when performing ultrasonic nondestructive testing",
+      "raw_bibtex": "@ARTICLE{10.1134/S1061830921050041,\n\tauthor = {Bazulin, EG},\n\ttitle = {Application of Adaptive Anisotropic Diffusion Filter To Improve the Reflector Image Quality when Performing Ultrasonic Nondestructive Testing},\n\tjournal = {RUSSIAN JOURNAL OF NONDESTRUCTIVE TESTING},\n\tyear = {2021},\n\tkeywords = {antenna array; digital antenna focusing (DFA); full matrix capture (FMC); total focusing method (TFM); adaptive anisotropic diffusion filter (2D or 3D AADF)},\n\tabstract = {At present, systems for the recognition (classification) of reflectors based on artificial neural networks are being actively developed to increase the speed of preparation of the ultrasonic testing protocol and reduce the influence of the human factor. For these systems to operate most efficiently, the reflector images must be processed in order to increase the signal-to-noise ratio of the image and its segmentation (clustering). One way of segmentation is to process the image with an adaptive anisotropic diffusion filter, which is used to process optical images. The effectiveness of using this texture filter for segmentation of reflector images reconstructed from echo signals measured with antenna arrays has been demonstrated in model experiments.},\n\tdoi = {10.1134/S1061830921050041},\n\tvolume = {57},\n\tnumber = {5},\n\tpages = {343-351},\n\tissn = {1061-8309},\n\tnote = {Times Cited in Web of Science Core Collection: 5 Total Times Cited: 5 Cited Reference Count: 17 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1134/S1061830921050041"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000106",
+      "entry_type": "article",
+      "title": "Phased array ultrasonic evaluation of domestic and imported thermite welds: defect detection and performance analysis in railroad applications",
+      "authors": [
+        "Phrommahakul, N",
+        "Kongpuang, M",
+        "Sangwiman, W",
+        "Muangjunburee, P",
+        "Burapa, R",
+        "Sani, S"
+      ],
+      "year": 2025,
+      "journal": "NONDESTRUCTIVE TESTING AND EVALUATION",
+      "doi": "10.1080/10589759.2025.2575294",
+      "abstract": "This study demonstrates the superior capability of Phased Array Ultrasonic Testing (PAUT) over conventional ultrasonic methods for inspecting thermite welds in railroad applications. The research evaluated both domestically produced and imported thermite powders (two Asian and two European brands), with PAUT proving significantly more effective in detecting and characterising critical defects. The system successfully identified distributed microporosity (2-53 mu m) and centre-line imperfections at weld interfaces, while conventional methods showed limited detection sensitivity for sub-surface flaws. PAUT enabled precise quantitative analysis, establishing a strong correlation between material hardness and signal quality (SNR = 0.15<middle dot>HV - 30.5, R2 = 0.89) and detecting porosity clusters exceeding 50 mu m known to reduce fatigue life by 40-60%. The domestic thermite powder demonstrated equivalent performance to imported alternatives in chemical composition, mechanical properties, and microstructural characteristics. PAUT's multi-angle scanning capabilities and superior signal processing provided enhanced detection reliability in coarse-grained thermite microstructures, particularly for internal flaws that conventional methods frequently missed. This research validates both the cost-effectiveness of domestic thermite materials and PAUT's critical role in modern rail maintenance, especially in challenging environments like Southeast Asia's tropical climate, where rail integrity is paramount for transportation safety.",
+      "keywords": [
+        "Rail thermite welding",
+        "phased array ultrasonic testing",
+        "microstructure",
+        "porosity",
+        "advanced non-destructive testing",
+        "FATIGUE-CRACK INITIATION",
+        "CARBON CONTENT"
+      ],
+      "normalized_title": "phased array ultrasonic evaluation of domestic and imported thermite welds defect detection and performance analysis in railroad applications",
+      "raw_bibtex": "@ARTICLE{10.1080/10589759.2025.2575294,\n\tauthor = {Phrommahakul, N and Kongpuang, M and Sangwiman, W and Muangjunburee, P and Burapa, R and Sani, S},\n\ttitle = {Phased array ultrasonic evaluation of domestic and imported thermite welds: defect detection and performance analysis in railroad applications},\n\tjournal = {NONDESTRUCTIVE TESTING AND EVALUATION},\n\tyear = {2025},\n\tkeywords = {Rail thermite welding; phased array ultrasonic testing; microstructure; porosity; advanced non-destructive testing; FATIGUE-CRACK INITIATION; CARBON CONTENT},\n\tabstract = {This study demonstrates the superior capability of Phased Array Ultrasonic Testing (PAUT) over conventional ultrasonic methods for inspecting thermite welds in railroad applications. The research evaluated both domestically produced and imported thermite powders (two Asian and two European brands), with PAUT proving significantly more effective in detecting and characterising critical defects. The system successfully identified distributed microporosity (2-53 mu m) and centre-line imperfections at weld interfaces, while conventional methods showed limited detection sensitivity for sub-surface flaws. PAUT enabled precise quantitative analysis, establishing a strong correlation between material hardness and signal quality (SNR = 0.15<middle dot>HV - 30.5, R2 = 0.89) and detecting porosity clusters exceeding 50 mu m known to reduce fatigue life by 40-60%. The domestic thermite powder demonstrated equivalent performance to imported alternatives in chemical composition, mechanical properties, and microstructural characteristics. PAUT's multi-angle scanning capabilities and superior signal processing provided enhanced detection reliability in coarse-grained thermite microstructures, particularly for internal flaws that conventional methods frequently missed. This research validates both the cost-effectiveness of domestic thermite materials and PAUT's critical role in modern rail maintenance, especially in challenging environments like Southeast Asia's tropical climate, where rail integrity is paramount for transportation safety.},\n\tdoi = {10.1080/10589759.2025.2575294},\n\tissn = {1058-9759},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 57 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1080/10589759.2025.2575294"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000107",
+      "entry_type": "article",
+      "title": "Leveraging physics-informed neural networks for wavefield analysis in laser ultrasonic testing",
+      "authors": [
+        "Li, Y",
+        "Xu, B",
+        "Zou, Y",
+        "Sha, GF",
+        "Cai, GX"
+      ],
+      "year": 2025,
+      "journal": "NONDESTRUCTIVE TESTING AND EVALUATION",
+      "doi": "10.1080/10589759.2024.2443768",
+      "abstract": "Laser Ultrasonic (LU) technology has emerged as a pivotal non-destructive testing method, offering a unique capability to visualise ultrasonic wavefields and identify defects without causing structural damage. However, challenges arise in certain testing scenarios where direct laser irradiation of the sample surface is hindered, resulting in incomplete LU wavefield datasets. This limitation poses a significant obstacle in accurately assessing material integrity and defect detection. This paper explores the application of Physics-Informed Neural Networks (PINNs) for LU wavefield reconstruction and prediction. PINNs are employed to reconstruct wavefields from incomplete data and predict wavefield behaviour at different time instances. Results demonstrate PINNs' effectiveness in accurately reconstructing wavefields, with correlation coefficients exceeding 0.94 between reconstructed and actual wavefields. Additionally, PINNs show promise in predicting LU wavefield data, albeit with slightly reduced accuracy beyond the training range. Moreover, PINNs effectively reduce noise in wavefield data, enhancing clarity and reliability. This study lays groundwork for further exploration of PINNs in LU defect detection.",
+      "keywords": [
+        "Physics-informed neural networks",
+        "wavefield reconstruction",
+        "wavefield prediction",
+        "laser ultrasonic",
+        "non-destructive testing"
+      ],
+      "normalized_title": "leveraging physics informed neural networks for wavefield analysis in laser ultrasonic testing",
+      "raw_bibtex": "@ARTICLE{10.1080/10589759.2024.2443768,\n\tauthor = {Li, Y and Xu, B and Zou, Y and Sha, GF and Cai, GX},\n\ttitle = {Leveraging physics-informed neural networks for wavefield analysis in laser ultrasonic testing},\n\tjournal = {NONDESTRUCTIVE TESTING AND EVALUATION},\n\tyear = {2025},\n\tkeywords = {Physics-informed neural networks; wavefield reconstruction; wavefield prediction; laser ultrasonic; non-destructive testing},\n\tabstract = {Laser Ultrasonic (LU) technology has emerged as a pivotal non-destructive testing method, offering a unique capability to visualise ultrasonic wavefields and identify defects without causing structural damage. However, challenges arise in certain testing scenarios where direct laser irradiation of the sample surface is hindered, resulting in incomplete LU wavefield datasets. This limitation poses a significant obstacle in accurately assessing material integrity and defect detection. This paper explores the application of Physics-Informed Neural Networks (PINNs) for LU wavefield reconstruction and prediction. PINNs are employed to reconstruct wavefields from incomplete data and predict wavefield behaviour at different time instances. Results demonstrate PINNs' effectiveness in accurately reconstructing wavefields, with correlation coefficients exceeding 0.94 between reconstructed and actual wavefields. Additionally, PINNs show promise in predicting LU wavefield data, albeit with slightly reduced accuracy beyond the training range. Moreover, PINNs effectively reduce noise in wavefield data, enhancing clarity and reliability. This study lays groundwork for further exploration of PINNs in LU defect detection.},\n\tdoi = {10.1080/10589759.2024.2443768},\n\tvolume = {40},\n\tnumber = {11},\n\tpages = {5479-5501},\n\tissn = {1058-9759},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 38 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1080/10589759.2024.2443768"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000108",
+      "entry_type": "article",
+      "title": "Developing an advanced ANN-based approach to estimate compaction characteristics of highway subgrade",
+      "authors": [
+        "Wang, XF",
+        "Dong, XP",
+        "Li, JL",
+        "Zhang, ZS",
+        "Zhang, JM",
+        "Ma, GW"
+      ],
+      "year": 2023,
+      "journal": "ADVANCED ENGINEERING INFORMATICS",
+      "doi": "10.1016/j.aei.2023.102023",
+      "abstract": "The current methodology of assessing the compaction characteristic of subgrade fillers is time-consuming. The spot-sampling method and the following laboratory tests bring bias to engineering practice. This study proposes an advanced approach to determine the maximum dry density, optimum moisture content, and compactness of subgrade based on ANN algorithms. A large number of compaction tests are performed to assess the compaction quality of various types of subgrade fillers. The particle gradation is specifically considered. Wave propagations of the compacted specimen are assessed based on the ultrasonic test, and the anisotropic feature is demonstrated. The dynamic elastic parameters are derived to further reveal the interaction mechanism. A dataset is proposed by combining these laboratory data and the literature data. The PSO-BP-NN model is developed to automatically predict the compaction parameters of different filling materials. A positive correlation is demonstrated between the elastic modulus and the total density, and Poisson's ratio illustrates an inverse trend. The compaction energy is influential to the maximum dry density while the moisture content has the greatest impact on the compactness. This study aims to develop an accurate model to replace the extensive Proctor test and efficiently evaluate the compaction quality of subgrade for highway constructions.",
+      "keywords": [
+        "Intelligent compaction",
+        "Particle composition",
+        "Compaction mechanism",
+        "Proctor test",
+        "Ultrasonic test",
+        "PSO-BP-NN",
+        "FINE-GRAINED SOILS",
+        "INTELLIGENT COMPACTION",
+        "POROSITY ESTIMATION",
+        "WAVE VELOCITY",
+        "QUALITY",
+        "PREDICTION",
+        "BEHAVIOR",
+        "DENSITY",
+        "MODELS",
+        "SATURATION"
+      ],
+      "normalized_title": "developing an advanced ann based approach to estimate compaction characteristics of highway subgrade",
+      "raw_bibtex": "@ARTICLE{10.1016/j.aei.2023.102023,\n\tauthor = {Wang, XF and Dong, XP and Li, JL and Zhang, ZS and Zhang, JM and Ma, GW},\n\ttitle = {Developing an advanced ANN-based approach to estimate compaction characteristics of highway subgrade},\n\tjournal = {ADVANCED ENGINEERING INFORMATICS},\n\tyear = {2023},\n\tkeywords = {Intelligent compaction; Particle composition; Compaction mechanism; Proctor test; Ultrasonic test; PSO-BP-NN; FINE-GRAINED SOILS; INTELLIGENT COMPACTION; POROSITY ESTIMATION; WAVE VELOCITY; QUALITY; PREDICTION; BEHAVIOR; DENSITY; MODELS; SATURATION},\n\tabstract = {The current methodology of assessing the compaction characteristic of subgrade fillers is time-consuming. The spot-sampling method and the following laboratory tests bring bias to engineering practice. This study proposes an advanced approach to determine the maximum dry density, optimum moisture content, and compactness of subgrade based on ANN algorithms. A large number of compaction tests are performed to assess the compaction quality of various types of subgrade fillers. The particle gradation is specifically considered. Wave propagations of the compacted specimen are assessed based on the ultrasonic test, and the anisotropic feature is demonstrated. The dynamic elastic parameters are derived to further reveal the interaction mechanism. A dataset is proposed by combining these laboratory data and the literature data. The PSO-BP-NN model is developed to automatically predict the compaction parameters of different filling materials. A positive correlation is demonstrated between the elastic modulus and the total density, and Poisson's ratio illustrates an inverse trend. The compaction energy is influential to the maximum dry density while the moisture content has the greatest impact on the compactness. This study aims to develop an accurate model to replace the extensive Proctor test and efficiently evaluate the compaction quality of subgrade for highway constructions.},\n\tdoi = {10.1016/j.aei.2023.102023},\n\tvolume = {56},\n\tissn = {1474-0346},\n\tnote = {Times Cited in Web of Science Core Collection: 27 Total Times Cited: 28 Cited Reference Count: 92 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.aei.2023.102023"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000109",
+      "entry_type": "article",
+      "title": "On the use of a Transformer Neural Network to deconvolve ultrasonic signals",
+      "authors": [
+        "Sendra, T",
+        "Belanger, P"
+      ],
+      "year": 2025,
+      "journal": "ULTRASONICS",
+      "doi": "10.1016/j.ultras.2025.107639",
+      "abstract": "Pulse-echo ultrasonic techniques play a crucial role in assessing wall thickness deterioration in safety-critical industries. Current approaches face limitations with low signal-to-noise ratios, weak echoes, or vague echo patterns typical of heavily corroded profiles. This study proposes a novel combination of Convolution Neural Networks (CNN) and Transformer Neural Networks (TNN) to improve thickness gauging accuracy for complex geometries and echo patterns. Recognizing the strength of TNN in language processing and speech recognition, the proposed network comprises three modules: 1. pre-processing CNN, 2. a Transformer model and 3. a post-processing CNN. Two datasets, one being simulation-generated, and the other, experimentally gathered from a corroded carbon steel staircase specimen, support the training and testing processes. Results indicate that the proposed model outperforms other AI architectures and traditional methods, providing a 5.45% improvement over CNN architectures from NDE literature, a 1.81% improvement over ResNet-50, and a 17.5% improvement compared to conventional thresholding techniques in accurately detecting depths with a precision under 0.5 lambda.",
+      "keywords": [
+        "Convolutional neural network",
+        "Corrosion",
+        "Deconvolution",
+        "Non-Destructive Evaluation",
+        "Time-of-flight",
+        "Thickness measurement",
+        "Transformer Neural Network",
+        "Ultrasonic testing",
+        "PROCESSING TECHNIQUES",
+        "DROPOUT"
+      ],
+      "normalized_title": "on the use of a transformer neural network to deconvolve ultrasonic signals",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ultras.2025.107639,\n\tauthor = {Sendra, T and Belanger, P},\n\ttitle = {On the use of a Transformer Neural Network to deconvolve ultrasonic signals},\n\tjournal = {ULTRASONICS},\n\tyear = {2025},\n\tkeywords = {Convolutional neural network; Corrosion; Deconvolution; Non-Destructive Evaluation; Time-of-flight; Thickness measurement; Transformer Neural Network; Ultrasonic testing; PROCESSING TECHNIQUES; DROPOUT},\n\tabstract = {Pulse-echo ultrasonic techniques play a crucial role in assessing wall thickness deterioration in safety-critical industries. Current approaches face limitations with low signal-to-noise ratios, weak echoes, or vague echo patterns typical of heavily corroded profiles. This study proposes a novel combination of Convolution Neural Networks (CNN) and Transformer Neural Networks (TNN) to improve thickness gauging accuracy for complex geometries and echo patterns. Recognizing the strength of TNN in language processing and speech recognition, the proposed network comprises three modules: 1. pre-processing CNN, 2. a Transformer model and 3. a post-processing CNN. Two datasets, one being simulation-generated, and the other, experimentally gathered from a corroded carbon steel staircase specimen, support the training and testing processes. Results indicate that the proposed model outperforms other AI architectures and traditional methods, providing a 5.45% improvement over CNN architectures from NDE literature, a 1.81% improvement over ResNet-50, and a 17.5% improvement compared to conventional thresholding techniques in accurately detecting depths with a precision under 0.5 lambda.},\n\tdoi = {10.1016/j.ultras.2025.107639},\n\tvolume = {152},\n\tissn = {0041-624X},\n\tnote = {Times Cited in Web of Science Core Collection: 4 Total Times Cited: 4 Cited Reference Count: 56 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ultras.2025.107639"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000110",
+      "entry_type": "article",
+      "title": "Ultrasonic adaptive plane wave high-resolution imaging based on convolutional neural network",
+      "authors": [
+        "Zhang, FB",
+        "Luo, L",
+        "Li, JL",
+        "Peng, JP",
+        "Zhang, Y",
+        "Gao, XR"
+      ],
+      "year": 2023,
+      "journal": "NDT & E INTERNATIONAL",
+      "doi": "10.1016/j.ndteint.2023.102891",
+      "abstract": "Components with complex surfaces can pose a challenge for achieving phased array ultrasonic testing. Although coupling issues can be addressed by immersing or adding plexiglass wedges, obtaining high-quality images in a short time remains difficult under such conditions. This paper proposes an adaptive plane wave imaging scheme to address these challenges. First, the interface is reconstructed using a plane wave priority echo estimation method. Then, a beamforming algorithm adapted to the irregular interface is used to generate low-resolution (LR) images, which are then reconstructed into high-resolution (HR) images in a short time with convolu-tional neural network (CNN). The CNN is trained with simulation data, and the defects of test blocks and wheel rim are tested. Experimental results show that the reconstruction method combined with CNN significantly improves imaging quality and speed compared to the conventional adaptive plane wave beamforming algorithm based on the time-domain physical model.",
+      "keywords": [
+        "Adaptive plane wave imaging",
+        "Double-layer medium",
+        "Beamforming algorithm",
+        "Convolutional neural network",
+        "High-resolution",
+        "FULL-MATRIX",
+        "NONDESTRUCTIVE EVALUATION",
+        "COMPONENTS",
+        "ARRAYS",
+        "RECONSTRUCTION",
+        "ALGORITHMS",
+        "INSPECTION",
+        "MIGRATION",
+        "DEFECTS"
+      ],
+      "normalized_title": "ultrasonic adaptive plane wave high resolution imaging based on convolutional neural network",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ndteint.2023.102891,\n\tauthor = {Zhang, FB and Luo, L and Li, JL and Peng, JP and Zhang, Y and Gao, XR},\n\ttitle = {Ultrasonic adaptive plane wave high-resolution imaging based on convolutional neural network},\n\tjournal = {NDT & E INTERNATIONAL},\n\tyear = {2023},\n\tkeywords = {Adaptive plane wave imaging; Double-layer medium; Beamforming algorithm; Convolutional neural network; High-resolution; FULL-MATRIX; NONDESTRUCTIVE EVALUATION; COMPONENTS; ARRAYS; RECONSTRUCTION; ALGORITHMS; INSPECTION; MIGRATION; DEFECTS},\n\tabstract = {Components with complex surfaces can pose a challenge for achieving phased array ultrasonic testing. Although coupling issues can be addressed by immersing or adding plexiglass wedges, obtaining high-quality images in a short time remains difficult under such conditions. This paper proposes an adaptive plane wave imaging scheme to address these challenges. First, the interface is reconstructed using a plane wave priority echo estimation method. Then, a beamforming algorithm adapted to the irregular interface is used to generate low-resolution (LR) images, which are then reconstructed into high-resolution (HR) images in a short time with convolu-tional neural network (CNN). The CNN is trained with simulation data, and the defects of test blocks and wheel rim are tested. Experimental results show that the reconstruction method combined with CNN significantly improves imaging quality and speed compared to the conventional adaptive plane wave beamforming algorithm based on the time-domain physical model.},\n\tdoi = {10.1016/j.ndteint.2023.102891},\n\tvolume = {138},\n\tissn = {0963-8695},\n\tnote = {Times Cited in Web of Science Core Collection: 9 Total Times Cited: 10 Cited Reference Count: 47 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ndteint.2023.102891"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

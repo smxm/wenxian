@@ -1,0 +1,1247 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要仅涉及Akkermansia对母乳寡糖的利用机制，未提及乳制品基质或发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:16:51.737495+08:00"
+  },
+  {
+    "paper_id": "paper_000002",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "摘要显示为纯临床研究，探讨巴氏灭活AKK对肌肉功能的影响，未涉及乳制品或发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:16:51.737495+08:00"
+  },
+  {
+    "paper_id": "paper_000003",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要提到酪蛋白饮食和AKK灌胃，但研究重点为结肠炎恢复机制，是否涉及乳制品应用不够明确。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:16:51.737495+08:00"
+  },
+  {
+    "paper_id": "paper_000004",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确研究牛奶对db/db小鼠的影响，并发现Akkermansia属增加，涉及乳制品基质。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:16:51.737495+08:00"
+  },
+  {
+    "paper_id": "paper_000005",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "摘要比较植物基与乳基婴儿配方，但仅提及AKK作为菌群组成之一，未专门研究AKK在乳制品中的应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.75,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:16:51.737495+08:00"
+  },
+  {
+    "paper_id": "paper_000006",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要研究氨基酸配方补充母乳寡糖，未涉及AKK或下一代益生菌。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:16:51.737495+08:00"
+  },
+  {
+    "paper_id": "paper_000007",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "摘要探讨地中海饮食脂肪对结肠炎的影响，仅提及AKK作为菌群指标，未涉及乳制品或发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:16:51.737495+08:00"
+  },
+  {
+    "paper_id": "paper_000008",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要研究人、山羊、牛乳脂肪球对菌群的影响，明确提到Akkermansia，涉及乳制品基质。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:16:51.737495+08:00"
+  },
+  {
+    "paper_id": "paper_000009",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要研究豆奶酸奶对认知功能的影响，仅提及AKK作为菌群组成，未专门针对AKK在乳制品中的应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.75,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:16:51.737495+08:00"
+  },
+  {
+    "paper_id": "paper_000010",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "摘要探讨菌群与健康指标的关联，仅提及发酵乳制品与乳酸菌相关，未涉及AKK或下一代益生菌。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:16:51.737495+08:00"
+  },
+  {
+    "paper_id": "paper_000011",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要仅涉及2'-FL对肠道菌群的影响，未提及乳制品基质或发酵工艺，属于纯医学机制研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:17:18.069831+08:00"
+  },
+  {
+    "paper_id": "paper_000012",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "摘要提到绵羊奶影响Akkermansia，但未明确涉及乳制品发酵工艺或AKK在乳制品中的应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:17:18.069831+08:00"
+  },
+  {
+    "paper_id": "paper_000013",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究比较肉类与乳制品辅食对婴儿肠道菌群的影响，未涉及AKK在乳制品中的发酵工艺或应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:17:18.069831+08:00"
+  },
+  {
+    "paper_id": "paper_000014",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确涉及功能奶酪发酵对Akkermansia muciniphila的影响，符合乳制品基质和发酵工艺主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:17:18.069831+08:00"
+  },
+  {
+    "paper_id": "paper_000015",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究关注乳脂肪球膜对肥胖大鼠子代神经发育的影响，未涉及AKK在乳制品中的发酵工艺或应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:17:18.069831+08:00"
+  },
+  {
+    "paper_id": "paper_000016",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究关注辅食对婴儿肠道菌群的影响，未涉及AKK在乳制品中的发酵工艺或应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:17:18.069831+08:00"
+  },
+  {
+    "paper_id": "paper_000017",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "摘要提到牛奶影响Akkermansia，但未明确涉及发酵工艺或AKK在乳制品中的具体应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:17:18.069831+08:00"
+  },
+  {
+    "paper_id": "paper_000018",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "标题和摘要涉及绵羊奶与牛奶对Akkermansia的影响，但未明确涉及发酵工艺或AKK在乳制品中的应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.6,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:17:18.069831+08:00"
+  },
+  {
+    "paper_id": "paper_000019",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要仅涉及2'-FL对肥胖和肠道菌群的影响，未提及乳制品基质或发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:17:18.069831+08:00"
+  },
+  {
+    "paper_id": "paper_000020",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确涉及薏米奶发酵工艺，并提到Akkermansia，符合乳制品基质和发酵工艺主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:17:18.069831+08:00"
+  },
+  {
+    "paper_id": "paper_000021",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "摘要提到AKK在酸奶中作为有益微生物出现，研究涉及乳制品基质和发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:17:44.409779+08:00"
+  },
+  {
+    "paper_id": "paper_000022",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究仅涉及骆驼乳蛋白对结肠炎的影响，未提及乳制品应用或发酵工艺，且AKK被减少。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:17:44.409779+08:00"
+  },
+  {
+    "paper_id": "paper_000023",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要仅涉及微生物群落组装和碳水化合物影响，未提及AKK或乳制品应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.75,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:17:44.409779+08:00"
+  },
+  {
+    "paper_id": "paper_000024",
+    "batch_id": "batch_0003",
+    "decision": "uncertain",
+    "reason": "摘要提到hGOS促进AKK生长，但未明确涉及乳制品基质或发酵工艺，主题相关性不足。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:17:44.409779+08:00"
+  },
+  {
+    "paper_id": "paper_000025",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要仅涉及母乳甜菜碱与AKK的关联及代谢健康，未提及乳制品应用或发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:17:44.409779+08:00"
+  },
+  {
+    "paper_id": "paper_000026",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及奶牛饲料添加剂对肠道菌群的影响，AKK被提及但未涉及乳制品应用或发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.75,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:17:44.409779+08:00"
+  },
+  {
+    "paper_id": "paper_000027",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要明确研究酸奶对肠道菌群的影响，AKK在酸奶干预后增加，涉及乳制品应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:17:44.409779+08:00"
+  },
+  {
+    "paper_id": "paper_000028",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要仅涉及母乳寡糖与过敏及肠道菌群的长期关联，未提及乳制品应用或发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:17:44.409779+08:00"
+  },
+  {
+    "paper_id": "paper_000029",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要仅涉及AKK的酶学机制，未提及乳制品应用或发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:17:44.409779+08:00"
+  },
+  {
+    "paper_id": "paper_000030",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及母乳脂肪替代品对肠道菌群的影响，未提及AKK或乳制品应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:17:44.409779+08:00"
+  },
+  {
+    "paper_id": "paper_000031",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "摘要明确提到合生元酸奶增加了Akkermansia的相对丰度，研究涉及乳制品基质（酸奶）和下一代益生菌AKK。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:18:11.755059+08:00"
+  },
+  {
+    "paper_id": "paper_000032",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要仅研究牛奶过敏对肠道菌群和行为的影响，未提及下一代益生菌AKK或乳制品发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:18:11.755059+08:00"
+  },
+  {
+    "paper_id": "paper_000033",
+    "batch_id": "batch_0004",
+    "decision": "uncertain",
+    "reason": "摘要提到山羊乳水解物增加了Akkermansia的相对丰度，但未明确涉及乳制品基质或发酵工艺，仅提及乳源成分。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:18:11.755059+08:00"
+  },
+  {
+    "paper_id": "paper_000034",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要仅研究从母乳中分离的产尿石素A的链球菌，未提及Akkermansia muciniphila或乳制品应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:18:11.755059+08:00"
+  },
+  {
+    "paper_id": "paper_000035",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要研究AKK对乳化剂的保护作用，但未涉及乳制品基质或发酵工艺，属于纯机制研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:18:11.755059+08:00"
+  },
+  {
+    "paper_id": "paper_000036",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要研究肠道菌群与饮食的关联，虽提及AKK和乳制品摄入，但未涉及乳制品基质或发酵工艺的应用研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:18:11.755059+08:00"
+  },
+  {
+    "paper_id": "paper_000037",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "摘要提到瑞士乳杆菌来源的乳清增加了Akkermansia，并涉及发酵乳制品（乳清）和肠道菌群调节。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:18:11.755059+08:00"
+  },
+  {
+    "paper_id": "paper_000038",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要研究宿主遗传与饮食对肠道菌群的联合影响，未提及Akkermansia muciniphila或乳制品应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:18:11.755059+08:00"
+  },
+  {
+    "paper_id": "paper_000039",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "标题和摘要明确研究AKK的α-半乳糖苷酶，并指出其在乳品工业中水解乳糖寡糖的潜在应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.92,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:18:11.755059+08:00"
+  },
+  {
+    "paper_id": "paper_000040",
+    "batch_id": "batch_0004",
+    "decision": "uncertain",
+    "reason": "摘要提到AKK是促进短链脂肪酸产生的关键属，但研究焦点是抗性淀粉与植物乳杆菌，未明确涉及乳制品。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:18:11.755059+08:00"
+  },
+  {
+    "paper_id": "paper_000041",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "研究涉及后生元与益生元混合物，但未提及Akkermansia muciniphila或下一代益生菌，且未涉及乳制品基质或发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:18:38.220844+08:00"
+  },
+  {
+    "paper_id": "paper_000042",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "研究涉及粘蛋白O-聚糖对Akkermansia muciniphila的影响，但未涉及乳制品基质或发酵工艺，属于纯微生物学研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:18:38.220844+08:00"
+  },
+  {
+    "paper_id": "paper_000043",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "研究涉及传统乳制品来源的乳酸菌对Akkermansia的影响，但重点在医学机制（失眠治疗），未涉及乳制品基质或发酵工艺应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.75,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:18:38.220844+08:00"
+  },
+  {
+    "paper_id": "paper_000044",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "研究涉及人乳寡糖对Akkermansia的影响，但重点在阿尔茨海默病治疗机制，未涉及乳制品基质或发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:18:38.220844+08:00"
+  },
+  {
+    "paper_id": "paper_000045",
+    "batch_id": "batch_0005",
+    "decision": "uncertain",
+    "reason": "研究涉及水解酪蛋白饮食对Akkermansia muciniphila的影响，并提及巴氏灭菌A. muciniphila，与乳制品相关，但未明确涉及发酵工艺或乳制品应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:18:38.220844+08:00"
+  },
+  {
+    "paper_id": "paper_000046",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "研究涉及人乳二糖对Akkermansia的影响，但未涉及乳制品基质或发酵工艺，属于纯微生物学研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:18:38.220844+08:00"
+  },
+  {
+    "paper_id": "paper_000047",
+    "batch_id": "batch_0005",
+    "decision": "uncertain",
+    "reason": "研究涉及山羊奶婴儿配方奶粉对Akkermansia的影响，与乳制品相关，但未明确涉及下一代益生菌或发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:18:38.220844+08:00"
+  },
+  {
+    "paper_id": "paper_000048",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "研究涉及酪蛋白饮食对Akkermansia的影响，但重点在衰老机制，未涉及乳制品基质或发酵工艺应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.75,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:18:38.220844+08:00"
+  },
+  {
+    "paper_id": "paper_000049",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "研究涉及2'-岩藻糖基乳糖对Akkermansia muciniphila的影响，但未涉及乳制品基质或发酵工艺，属于纯微生物学研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:18:38.220844+08:00"
+  },
+  {
+    "paper_id": "paper_000050",
+    "batch_id": "batch_0005",
+    "decision": "include",
+    "reason": "研究直接探讨乳制品消费与Akkermansia丰度的关系，明确涉及乳制品基质，符合筛选主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:18:38.220844+08:00"
+  },
+  {
+    "paper_id": "paper_000051",
+    "batch_id": "batch_0006",
+    "decision": "uncertain",
+    "reason": "摘要提到酸奶干预和Akkermansia丰度，但未明确涉及AKK作为益生菌在乳制品中的应用或发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:19:05.552981+08:00"
+  },
+  {
+    "paper_id": "paper_000052",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于断奶期微生物演替机制，虽提及Akkermansia muciniphila，但未涉及乳制品基质或发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:19:05.552981+08:00"
+  },
+  {
+    "paper_id": "paper_000053",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要明确为AKK治疗结肠炎的医学机制研究，未提及乳制品或食品工程应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:19:05.552981+08:00"
+  },
+  {
+    "paper_id": "paper_000054",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要研究化脓性汗腺炎与饮食关系，虽提及牛奶消费，但未涉及AKK或下一代益生菌。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:19:05.552981+08:00"
+  },
+  {
+    "paper_id": "paper_000055",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要研究2′-岩藻糖基乳糖对结肠炎的影响，虽提及Akkermansia_muciniphila，但未涉及乳制品基质或发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:19:05.552981+08:00"
+  },
+  {
+    "paper_id": "paper_000056",
+    "batch_id": "batch_0006",
+    "decision": "uncertain",
+    "reason": "摘要提到酸奶消费增加Akkermansia丰度，但未明确AKK作为益生菌在乳制品中的应用或具体发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:19:05.552981+08:00"
+  },
+  {
+    "paper_id": "paper_000057",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要研究霉菌毒素暴露对婴儿肠道菌群的影响，未提及AKK、乳制品或发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:19:05.552981+08:00"
+  },
+  {
+    "paper_id": "paper_000058",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要研究饮食对肠道菌群和炎症性肠病的影响，未提及AKK、乳制品或发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:19:05.552981+08:00"
+  },
+  {
+    "paper_id": "paper_000059",
+    "batch_id": "batch_0006",
+    "decision": "include",
+    "reason": "标题明确涉及西藏开菲尔奶，摘要提到Akkermansia在菌群中的变化，符合乳制品基质和益生菌相关主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.75,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:19:05.552981+08:00"
+  },
+  {
+    "paper_id": "paper_000060",
+    "batch_id": "batch_0006",
+    "decision": "include",
+    "reason": "标题涉及发酵乳，摘要提到Akkermansia_Muciniphila在肠道菌群中的变化，明确符合乳制品基质和发酵工艺主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:19:05.552981+08:00"
+  },
+  {
+    "paper_id": "paper_000061",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究聚焦于2'-FL和GOS对结肠炎的预防机制，仅提及Akkermansia作为肠道菌群变化指标，未涉及乳制品基质或发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:19:35.999877+08:00"
+  },
+  {
+    "paper_id": "paper_000062",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究探讨2'-FL对LPS诱导结肠炎的保护作用，仅提及Akkermansia丰度变化，未涉及乳制品或发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:19:35.999877+08:00"
+  },
+  {
+    "paper_id": "paper_000063",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究聚焦于Lactobacillus rhamnosus SHA113对溃疡性结肠炎的治疗，仅提及Akkermansia作为肠道菌群变化指标，未涉及下一代益生菌或乳制品应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:19:35.999877+08:00"
+  },
+  {
+    "paper_id": "paper_000064",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究探讨食物过敏致敏机制，仅提及Akkermansia耗竭与过敏相关，未涉及乳制品基质、发酵工艺或下一代益生菌应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:19:35.999877+08:00"
+  },
+  {
+    "paper_id": "paper_000065",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究聚焦于人乳链球菌对肠道菌群和免疫的调节作用，仅提及Akkermansia作为菌群变化指标，未涉及下一代益生菌或乳制品应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:19:35.999877+08:00"
+  },
+  {
+    "paper_id": "paper_000066",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究探讨Akkermansia muciniphila对NASH相关肿瘤的抑制作用，聚焦于医学机制和免疫细胞，未涉及乳制品基质或发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:19:35.999877+08:00"
+  },
+  {
+    "paper_id": "paper_000067",
+    "batch_id": "batch_0007",
+    "decision": "uncertain",
+    "reason": "摘要提到牛奶细胞外囊泡增加Akkermansia丰度，涉及乳制品成分，但未明确提及下一代益生菌、发酵工艺或具体应用研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:19:35.999877+08:00"
+  },
+  {
+    "paper_id": "paper_000068",
+    "batch_id": "batch_0007",
+    "decision": "uncertain",
+    "reason": "标题和摘要显示研究探讨氧化牛奶对后代学习记忆的影响，提及Akkermansia减少，但未明确涉及下一代益生菌或发酵工艺应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:19:35.999877+08:00"
+  },
+  {
+    "paper_id": "paper_000069",
+    "batch_id": "batch_0007",
+    "decision": "uncertain",
+    "reason": "摘要提到膳食核苷酸促进Akkermansia增加，涉及乳制品成分，但未明确提及下一代益生菌、发酵工艺或具体应用研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:19:35.999877+08:00"
+  },
+  {
+    "paper_id": "paper_000070",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究聚焦于母乳喂养婴儿肠道菌群组装，未提及Akkermansia muciniphila、下一代益生菌或乳制品发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:19:35.999877+08:00"
+  },
+  {
+    "paper_id": "paper_000071",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究聚焦于母体纤维补充对哺乳和后代生长的影响，未涉及乳制品基质或发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:20:04.759598+08:00"
+  },
+  {
+    "paper_id": "paper_000072",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要表明研究为临床随机对照试验，探讨多菌株益生菌对孕妇和婴儿肠道菌群的影响，未涉及乳制品或发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.82,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:20:04.759598+08:00"
+  },
+  {
+    "paper_id": "paper_000073",
+    "batch_id": "batch_0008",
+    "decision": "uncertain",
+    "reason": "标题和摘要提到自制酸奶中可能存在下一代益生菌，但未明确提及Akkermansia muciniphila，且研究重点为微生物组分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:20:04.759598+08:00"
+  },
+  {
+    "paper_id": "paper_000074",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究探讨乳脂肪球膜对肠道屏障和菌群的调节作用，属于纯医学机制研究，未涉及乳制品应用或发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:20:04.759598+08:00"
+  },
+  {
+    "paper_id": "paper_000075",
+    "batch_id": "batch_0008",
+    "decision": "uncertain",
+    "reason": "标题和摘要涉及乳中微生物组和短链脂肪酸分析，提到Akkermansia与短链脂肪酸相关，但未明确涉及乳制品应用或发酵工艺开发。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:20:04.759598+08:00"
+  },
+  {
+    "paper_id": "paper_000076",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要表明研究聚焦于母体饮食和微生物组对后代免疫发育的影响，属于纯医学机制研究，未涉及乳制品或发酵工艺。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.83,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:20:04.759598+08:00"
+  },
+  {
+    "paper_id": "paper_000077",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究评估传统发酵乳制品中酵母的益生特性，但未提及Akkermansia muciniphila或下一代益生菌。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:20:04.759598+08:00"
+  },
+  {
+    "paper_id": "paper_000078",
+    "batch_id": "batch_0008",
+    "decision": "include",
+    "reason": "标题和摘要明确描述基于乳外泌体的递送系统用于封装益生菌，包括Akkermansia muciniphila，并评估其在胃肠道中的存活率。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:20:04.759598+08:00"
+  },
+  {
+    "paper_id": "paper_000079",
+    "batch_id": "batch_0008",
+    "decision": "include",
+    "reason": "标题和摘要明确研究将Akkermansia muciniphila融入奶酪涂抹酱，评估其理化特性、生物活性及在储存和消化过程中的存活率。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:20:04.759598+08:00"
+  },
+  {
+    "paper_id": "paper_000080",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要表明研究探讨限制乳制品和发酵食品摄入对肠道菌群和代谢物的影响，属于观察性研究，未涉及乳制品应用或发酵工艺开发。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.81,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:20:04.759598+08:00"
+  },
+  {
+    "paper_id": "paper_000081",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "研究聚焦脂肪酸分布对小鼠代谢和认知的影响，虽提及Akkermansia但未涉及乳制品基质或发酵工艺，属于纯动物模型肠道菌群分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:20:15.282394+08:00"
+  },
+  {
+    "paper_id": "paper_000082",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "研究比较母乳与婴儿配方奶粉对小鼠肠道菌群和免疫的影响，虽提及Akkermansia但未涉及乳制品发酵工艺或AKK在乳制品中的应用，属于纯动物模型分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:20:15.282394+08:00"
+  },
+  {
+    "paper_id": "paper_000083",
+    "batch_id": "batch_0009",
+    "decision": "include",
+    "reason": "摘要明确提及合生元微胶囊促进A. muciniphila富集，研究涉及微胶囊化技术和合生元开发，符合下一代益生菌在食品工业中的应用主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:20:15.282394+08:00"
+  }
+]

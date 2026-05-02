@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0004",
+    "results": [
+        {
+            "paper_id": "paper_000031",
+            "decision": "include",
+            "reason": "标题和摘要明确聚焦课堂手机使用，探讨其教育应用与政策限制，符合辩证视角。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000032",
+            "decision": "exclude",
+            "reason": "研究场景为老年成人学习，非标准教育环境，且手机使用仅为技术障碍之一，未实质性探讨筛选主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000033",
+            "decision": "uncertain",
+            "reason": "标题和摘要涉及教育移动应用评估，但未明确讨论手机在课堂中的双重角色，信息不足以判断是否满足纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000034",
+            "decision": "include",
+            "reason": "摘要提到学生使用手机在元宇宙课堂讨论作业，涉及手机作为教育工具，符合正面影响维度。",
+            "evidence": ["abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000035",
+            "decision": "include",
+            "reason": "标题和摘要研究教师使用移动互联网的意图，涉及手机在教育中的应用，符合辩证视角。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000036",
+            "decision": "uncertain",
+            "reason": "摘要提到混合学习中使用手机，但未明确探讨手机在课堂中的具体影响，信息不足。",
+            "evidence": ["abstract"],
+            "confidence": 0.45
+        },
+        {
+            "paper_id": "paper_000037",
+            "decision": "include",
+            "reason": "摘要提到学生在课堂上看手机作为负面行为，涉及手机造成的注意力分散，符合负面影响维度。",
+            "evidence": ["abstract"],
+            "confidence": 0.82
+        },
+        {
+            "paper_id": "paper_000038",
+            "decision": "uncertain",
+            "reason": "摘要提到学生在传统讲座期间用手机看动画，但未深入探讨手机使用的影响，相关性有限。",
+            "evidence": ["abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000039",
+            "decision": "include",
+            "reason": "标题和摘要明确研究智能手机在EFL写作课堂中的应用，涉及手机作为教育工具，符合正面影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000040",
+            "decision": "exclude",
+            "reason": "研究聚焦大学校园自然干预与学生心理健康，手机应用仅为工具之一，未实质性探讨课堂手机使用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.75
+        }
+    ]
+}

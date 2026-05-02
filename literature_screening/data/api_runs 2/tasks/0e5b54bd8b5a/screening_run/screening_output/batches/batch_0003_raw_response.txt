@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0003",
+    "results": [
+        {
+            "paper_id": "paper_000021",
+            "decision": "include",
+            "reason": "摘要提到AKK在酸奶中作为有益微生物出现，研究涉及乳制品基质和发酵工艺。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000022",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究仅涉及骆驼乳蛋白对结肠炎的影响，未提及乳制品应用或发酵工艺，且AKK被减少。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000023",
+            "decision": "exclude",
+            "reason": "标题和摘要仅涉及微生物群落组装和碳水化合物影响，未提及AKK或乳制品应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.75
+        },
+        {
+            "paper_id": "paper_000024",
+            "decision": "uncertain",
+            "reason": "摘要提到hGOS促进AKK生长，但未明确涉及乳制品基质或发酵工艺，主题相关性不足。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000025",
+            "decision": "exclude",
+            "reason": "标题和摘要仅涉及母乳甜菜碱与AKK的关联及代谢健康，未提及乳制品应用或发酵工艺。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000026",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及奶牛饲料添加剂对肠道菌群的影响，AKK被提及但未涉及乳制品应用或发酵工艺。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.75
+        },
+        {
+            "paper_id": "paper_000027",
+            "decision": "include",
+            "reason": "标题和摘要明确研究酸奶对肠道菌群的影响，AKK在酸奶干预后增加，涉及乳制品应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000028",
+            "decision": "exclude",
+            "reason": "标题和摘要仅涉及母乳寡糖与过敏及肠道菌群的长期关联，未提及乳制品应用或发酵工艺。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000029",
+            "decision": "exclude",
+            "reason": "标题和摘要仅涉及AKK的酶学机制，未提及乳制品应用或发酵工艺。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000030",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及母乳脂肪替代品对肠道菌群的影响，未提及AKK或乳制品应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        }
+    ]
+}

@@ -1,0 +1,61 @@
+{
+  "project": {
+    "name": "new-screening-run",
+    "output_dir": "tasks/8606a4d5f057/screening_run/screening_output",
+    "save_raw_response": true,
+    "save_intermediate_files": true
+  },
+  "input": {
+    "input_files": [
+      "tasks/8606a4d5f057/screening_run/inputs/CNKI-20260403174755870.enw"
+    ],
+    "encoding": "auto"
+  },
+  "dedup": {
+    "enabled": true,
+    "strict_doi_match": true,
+    "normalized_title_exact_match": true,
+    "fuzzy_title_match": false
+  },
+  "screening": {
+    "batch_size": 10,
+    "target_include_count": 30,
+    "stop_when_target_reached": true,
+    "allow_uncertain": true,
+    "retry_times": 6,
+    "request_timeout_seconds": 240
+  },
+  "criteria": {
+    "topic": "游戏化教学法在音乐鉴赏课中的运用",
+    "inclusion": [
+      "核心交叉：必须同时涉及“游戏化教学/教育游戏/游戏化机制”与“音乐教育/音乐鉴赏/音乐欣赏”两个领域。",
+      "机制与应用：优先纳入探讨了具体游戏化机制（如积分、闯关、角色扮演、即时反馈等）如何在音乐课堂中落地的文献。",
+      "效果验证：优先纳入包含实证研究、教学实验数据或心流理论/学习动机理论探讨的文献。"
+    ],
+    "exclusion": [
+      "纯音乐本体研究：仅分析音乐史料、曲式结构、作曲技法，完全不涉及教学法或受众心理的文献。",
+      "纯技术开发：仅讨论音乐游戏软件的代码编写或算法逻辑，缺乏教育教学场景应用的文献。",
+      "非音乐领域：探讨游戏化教学，但应用学科为语数外等非音乐学科的文献。"
+    ]
+  },
+  "model": {
+    "provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "api_base_url": "https://api.deepseek.com/v1",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 1536,
+    "min_request_interval_seconds": 2.0
+  },
+  "report": {
+    "export_included_ris": true,
+    "export_excluded_ris": false,
+    "export_unused_ris": true,
+    "export_included_bib": false,
+    "export_excluded_bib": false,
+    "export_unused_bib": false,
+    "included_report_format": "md",
+    "excluded_report_format": "md",
+    "summary_format": "json"
+  }
+}

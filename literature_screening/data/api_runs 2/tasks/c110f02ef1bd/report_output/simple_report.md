@@ -1,0 +1,180 @@
+# 一、相关文献总体情况
+
+这批文献聚焦于下一代益生菌Akkermansia muciniphila（AKK）在乳制品基质中的应用及其发酵工艺优化。研究主要关注AKK如何通过调节肠道菌群改善宿主健康，涉及的乳制品类型多样，包括牛奶、酸奶、奶酪、开菲尔奶、薏米奶、豆酸奶及功能性奶酪涂抹酱等。研究主题广泛分布于代谢健康调控（如肥胖、糖尿病、高脂血症）、肠道微生态平衡、炎症缓解、神经保护及生殖健康改善等多个领域。多数研究通过动物模型或人体初步调查，结合肠道菌群分析和代谢组学等方法，揭示了乳制品作为益生菌载体，通过特定发酵工艺或添加功能成分（如益生元、抗菌肽、外泌体）来增强AKK定植、存活及功能表达的机制，为开发基于AKK的功能性乳制品提供了实证依据。
+
+# 二、类型划分
+
+## 乳制品基质与肠道菌群调控
+
+这类文献共同关注不同乳制品（如牛奶、酸奶、奶酪）作为基质，如何通过其固有成分或发酵过程影响肠道菌群结构，特别是促进Akkermansia muciniphila等有益菌的丰度，从而改善宿主代谢健康、炎症状态或微生态平衡。
+
+- Milk protects against sarcopenic obesity due to increase in the genus Akkermansia in faeces of db/db mice
+- Effects of Human, Caprine, and Bovine Milk Fat Globules on Microbiota Adhesion and Gut Microecology
+- Functional Swiss-type cheeses promote beneficial effects in mice gut microbiome during homeostasis and inflammation
+- Changes in the intestinal microbiota of healthy adults induced by brown yogurt and relationships of bacterial taxa with specific components
+- Dairy Consumption and the Colonic Mucosa-Associated Gut Microbiota in Humans—A Preliminary Investigation
+- Tibet Kefir Milk Regulated Metabolic Changes Induced by High-Fat Diet via Amino Acids, Bile Acids, and Equol Metabolism in Human-Microbiota-Associated Rats
+- Effect of Fermented Milk Supplemented with Nisin or Plantaricin Q7 on Inflammatory Factors and Gut Microbiota in Mice
+
+## 发酵工艺与功能强化
+
+这类文献探讨通过特定发酵工艺（如使用益生菌株、添加功能成分）优化乳制品，以增强其对Akkermansia muciniphila的调控作用及产品功能性，涉及改善脂质代谢、血糖稳态、神经保护或生殖健康等具体应用场景。
+
+- Coix Seed-Based Milk Fermented With Limosilactobacillus reuteri Improves Lipid Metabolism and Gut Microbiota in Mice Fed With a High-Fat Diet
+- Soy yoghurts produced with efficient GABA (γ-aminobutyric acid)-producing Lactiplantibacillus plantarum ameliorate hyperglycaemia and re-establish gut microbiota in streptozotocin (STZ)-induced diabetic mice
+- Yogurt Enriched with Inulin Ameliorated Reproductive Functions and Regulated Gut Microbiota in Dehydroepiandrosterone-Induced Polycystic Ovary Syndrome Mice
+- Lactobacillus helveticus-derived whey alleviates scopolamine-induced cognitive impairment in mice via the gut-brain axis
+- Can a functional cheese spread incorporating Akkermansia muciniphila deliver beneficial physicochemical and biological properties while enhancing probiotic stability and viability during aerobic storage and in vitro digestion?
+
+## 递送系统与稳定性技术
+
+这类文献研究如何通过微胶囊化、外泌体封装等递送系统技术，提高Akkermansia muciniphila在乳制品加工、储存及胃肠道环境中的存活率、稳定性和定植潜力，以保障其益生功能的发挥。
+
+- Milk Exosome-Based Delivery System for Probiotic Encapsulation That Enhances the Gastrointestinal Resistance and Adhesion of Probiotics
+- Preparation and synbiotic interaction mechanism of microcapsules of Bifidobacterium animalis F1–7 and human milk oligosaccharides (HMO)
+
+## 分子机制与酶学功能
+
+这类文献聚焦于Akkermansia muciniphila的分子层面机制，如特定酶的纯化与功能探索，为其在乳制品工业中作为生物催化剂或理解其代谢功能提供理论基础。
+
+- Expression, Purification, and Functional Exploration of an α-Galactosidase from Akkermansia muciniphila
+
+# 三、逐篇文献总结分析
+
+## Milk protects against sarcopenic obesity due to increase in the genus Akkermansia in faeces of db/db mice
+
+总结：
+该研究探讨了牛奶对db/db小鼠肌肉减少性肥胖的预防作用，通过随机盲法实验发现牛奶摄入能提高握力、肌肉质量并减少内脏脂肪，同时增加肠道Akkermansia属丰度。机制上涉及氨基酸吸收转运基因上调，表明牛奶可能通过改变肠道环境改善代谢。
+
+分析：
+该文献为报告主题提供了Akkermansia作为益生菌在乳制品应用中的实证支持，适合支撑乳制品基质如何通过调节肠道菌群改善代谢健康的机制研究。它可应用于开发基于牛奶的益生菌产品设计，或作为研究发酵工艺中菌群调控效果的参考案例。
+
+## Effects of Human, Caprine, and Bovine Milk Fat Globules on Microbiota Adhesion and Gut Microecology
+
+总结：
+该研究比较了人、山羊和牛乳脂肪球对肠道菌群的影响，发现人乳脂肪球通过黏蛋白和补体抑制蛋白抑制病原体并促进Akkermansia和Bifidobacterium等益生菌，山羊乳脂肪球通过黏蛋白1直接诱导益生菌定植，而牛乳脂肪球则增加Oscillospira丰度以降低肥胖风险。研究揭示了不同来源乳脂肪球调控肠道微生态的机制差异，为开发功能性婴儿配方食品提供了方向。
+
+分析：
+该文献对下一代益生菌（如Akkermansia muciniphila）在乳制品应用中的研究具有参考价值，它具体展示了人乳脂肪球如何通过特定蛋白机制促进Akkermansia等益生菌，这有助于支撑益生菌在乳制品基质中的功能强化和发酵工艺优化。研究结果可用于指导基于乳脂肪球成分的益生菌产品设计，特别是在婴儿配方食品和功能性乳制品开发中，以改善肠道微生态和代谢健康。
+
+## Functional Swiss-type cheeses promote beneficial effects in mice gut microbiome during homeostasis and inflammation
+
+总结：
+该研究探讨了两种由益生菌发酵的功能性瑞士干酪对小鼠肠道菌群的影响，包括在健康状态和DSS诱导的结肠炎条件下。通过宏基因组测序分析，发现干酪摄入未扰乱微生物群落生态，其中一种干酪增加了如Romboutsia和Akkermansia muciniphila等共生菌，并可能促进代谢物产生。在结肠炎小鼠中，特定干酪处理恢复了部分受损的代谢功能，并增加了具有免疫调节潜力的Ligilactobacillus murinus。
+
+分析：
+这篇文献对于研究下一代益生菌如Akkermansia muciniphila在乳制品基质中的应用具有参考价值，支持发酵工艺优化以增强肠道有益菌的机制。它适用于乳制品功能食品开发场景，为通过特定菌株组合调控肠道菌群和炎症反应提供了实验依据，有助于系统设计针对肠道健康的发酵产品。
+
+## Coix Seed-Based Milk Fermented With Limosilactobacillus reuteri Improves Lipid Metabolism and Gut Microbiota in Mice Fed With a High-Fat Diet
+
+总结：
+该研究探讨了用罗伊氏乳杆菌发酵的薏米奶对高脂饮食小鼠脂质代谢和肠道菌群的影响。通过实验发现，薏米奶能降低小鼠体重增长、改善血清脂质水平、减轻肝脏氧化应激，并调节肠道菌群结构，增加有益菌如Akkermansia的丰度。结果表明，薏米奶可能作为改善高脂血症和肠道菌群失调的潜在膳食补充剂。
+
+分析：
+这篇文献对报告主题的参考价值在于，它展示了发酵乳制品（薏米奶）通过特定益生菌（罗伊氏乳杆菌）调控肠道菌群（如Akkermansia）以改善代谢健康的机制。这适合支撑下一代益生菌在乳制品基质中的应用设计，为开发基于发酵工艺的功能性食品提供实证依据，并有助于理解肠道菌群与脂质代谢的相互作用。
+
+## Soy yoghurts produced with efficient GABA (γ-aminobutyric acid)-producing Lactiplantibacillus plantarum ameliorate hyperglycaemia and re-establish gut microbiota in streptozotocin (STZ)-induced diabetic mice
+
+总结：
+该研究探讨了利用高效产γ-氨基丁酸（GABA）的植物乳杆菌GA30发酵豆奶制成酸奶，在链脲佐菌素诱导的糖尿病小鼠模型中评估其改善高血糖和肠道菌群的效果。实验表明，这种酸奶能显著提升血浆GABA水平、改善葡萄糖稳态和肾功能，并恢复肠道菌群平衡，特别是增加了有益菌如阿克曼氏菌的丰度。结果揭示了GABA产生与益生菌作用的协同效应，为糖尿病干预提供了新思路。
+
+分析：
+这篇文献对报告主题具有重要参考价值，因为它展示了发酵工艺（如使用特定益生菌株）如何增强乳制品（豆酸奶）的功能性，特别是通过产GABA机制改善代谢健康。它适合支撑下一代益生菌（如AKK）在发酵食品中的应用场景，为设计基于肠道菌群调控的代谢疾病干预系统提供实证依据。此外，研究强调了菌株特异性（如GA30与PV30的差异）对效果的影响，有助于优化益生菌筛选和工艺设计。
+
+## Changes in the intestinal microbiota of healthy adults induced by brown yogurt and relationships of bacterial taxa with specific components
+
+总结：
+该研究通过随机对照试验，探究了棕色酸奶（SSN）对健康成人肠道菌群的影响。研究发现SSN能显著增加丁酸产生菌如Akkermansia muciniphila等，并减少潜在病原体，这些变化可能与SSN中较高的单糖、棕榈油酸等成分相关。结果表明SSN富含益生元成分，可能对健康有益，并提示通过优化乳制品配方可促进有益菌群。
+
+分析：
+该文献为下一代益生菌（如Akkermansia muciniphila）在乳制品中的应用提供了实证支持，适合支撑发酵工艺优化和益生元机制研究。它展示了特定酸奶成分如何调控肠道菌群，有助于设计针对健康成人的功能性乳制品系统。
+
+## Yogurt Enriched with Inulin Ameliorated Reproductive Functions and Regulated Gut Microbiota in Dehydroepiandrosterone-Induced Polycystic Ovary Syndrome Mice
+
+总结：
+该研究使用DHEA诱导的多囊卵巢综合征小鼠模型，探究了富含菊粉的合生元酸奶对病理表现及肠道菌群-胆汁酸轴的影响。结果表明，补充该酸奶能改善小鼠体重增加、发情周期和卵巢形态，调节血清激素水平，并增加乳杆菌、双歧杆菌和Akkermansia等菌属的相对丰度。此外，它还改变了胆汁酸生物合成途径和胆汁酸谱，从而缓解生殖功能障碍。
+
+分析：
+这篇文献对于研究下一代益生菌AKK在乳制品中的应用具有参考价值，它展示了酸奶作为基质如何通过调节肠道菌群和胆汁酸代谢来改善代谢性疾病症状。该研究适合支撑乳制品发酵工艺中益生菌功能强化的机制，以及AKK在代谢调控和生殖健康领域的应用场景。
+
+## Lactobacillus helveticus-derived whey alleviates scopolamine-induced cognitive impairment in mice via the gut-brain axis
+
+总结：
+该文献研究了瑞士乳杆菌来源的乳清对东莨菪碱诱导的小鼠认知障碍的预防作用，通过行为测试、肠道菌群分析和代谢组学方法，发现乳清能改善记忆和学习能力，减少神经元凋亡、神经炎症和氧化应激损伤，并调节肠道菌群如Lachnospiraceae_NK4A136_group和Akkermansia，增加神经活性代谢物水平，提示其通过肠脑轴发挥神经保护作用。
+
+分析：
+这篇文献对于当前报告主题具有参考价值，因为它直接涉及Akkermansia菌群的调节，支持了下一代益生菌如Akkermansia muciniphila在认知健康中的应用机制；同时，它展示了发酵乳制品（乳清）作为功能性食品的潜力，适合支撑发酵工艺优化和乳制品应用场景的设计，为开发基于肠道菌群调控的神经保护产品提供了实证依据。
+
+## Expression, Purification, and Functional Exploration of an α-Galactosidase from Akkermansia muciniphila
+
+总结：
+本研究克隆并表达了Akkermansia muciniphila中的α-半乳糖苷酶Amuc_0517，通过生物信息学分析和酶活实验证实其特异性水解α-1,6-糖苷键，分子动力学模拟进一步支持其底物特异性。该酶在乳品工业中具有水解含半乳糖寡糖的潜力，可作为新型生物催化剂用于功能性乳制品开发。
+
+分析：
+该文献为下一代益生菌AKK的分子机制研究提供了具体酶学证据，适合支撑AKK作为益生菌的碳水化合物代谢功能分析。其酶学特性可直接应用于乳制品发酵工艺优化，例如减少乳糖寡糖以改善产品功能性，为开发益生菌强化乳制品提供理论依据。
+
+## Dairy Consumption and the Colonic Mucosa-Associated Gut Microbiota in Humans—A Preliminary Investigation
+
+总结：
+该研究通过横断面调查，分析了乳制品摄入与结肠黏膜相关肠道菌群的关系，发现较高乳制品和牛奶摄入与更高的微生物多样性和特定有益菌丰度相关，表明乳制品可能通过调节菌群结构影响宿主健康。
+
+分析：
+该文献为下一代益生菌Akkermansia muciniphila在乳制品中的应用提供了初步证据，支持乳制品作为益生菌载体的机制研究，适用于乳制品基质优化和健康效应评估的场景。
+
+## Tibet Kefir Milk Regulated Metabolic Changes Induced by High-Fat Diet via Amino Acids, Bile Acids, and Equol Metabolism in Human-Microbiota-Associated Rats
+
+总结：
+本研究通过建立高脂饮食诱导的肥胖模型，探究西藏开菲尔奶对肠道菌群和代谢的影响。研究采用高通量测序和非靶向代谢组学技术，发现西藏开菲尔奶干预能调节氨基酸代谢、恢复胆汁酸代谢平衡，并提升抗肥胖因子水平。结果表明，西藏开菲尔奶通过改变宿主肠道代谢物，成为减少脂肪沉积的主要机制。
+
+分析：
+该文献为下一代益生菌Akkermansia muciniphila在乳制品中的应用提供了实证支持，展示了发酵乳制品通过调节肠道菌群和代谢途径改善代谢健康的机制。研究结果适用于支撑乳制品基质中益生菌功能验证、代谢调控机制解析，以及针对肥胖等代谢性疾病的食品干预方案设计。
+
+## Effect of Fermented Milk Supplemented with Nisin or Plantaricin Q7 on Inflammatory Factors and Gut Microbiota in Mice
+
+总结：
+该研究探讨了添加nisin或plantaricin Q7的发酵乳对小鼠炎症因子和肠道菌群的影响。通过分析血清炎症因子水平和16S rRNA基因测序，发现两种发酵乳均能调节炎症反应并改变肠道菌群组成，如降低厚壁菌门/拟杆菌门比例和增加短链脂肪酸总量。结果表明这些发酵乳可能通过影响肠道微生物和代谢成分来调节宿主健康。
+
+分析：
+该文献为下一代益生菌（如Akkermansia muciniphila）在乳制品中的应用提供了实验依据，适合支撑发酵工艺优化和益生菌功能验证的机制研究。它展示了乳制品基质如何通过特定抗菌肽影响肠道菌群结构和代谢产物，对设计针对肠道健康的发酵乳产品具有参考价值。
+
+## Milk Exosome-Based Delivery System for Probiotic Encapsulation That Enhances the Gastrointestinal Resistance and Adhesion of Probiotics
+
+总结：
+该文献研究了一种基于乳外泌体（mExos）和DSPE-PEG-PBA的益生菌封装系统，旨在保护益生菌免受胃肠道恶劣环境影响。通过封装Akkermansia muciniphila等益生菌，该系统显著提高了益生菌在模拟胃肠道环境中的存活率，并增强了其粘附性和定植潜力。
+
+分析：
+该文献为下一代益生菌（如Akkermansia muciniphila）的递送系统设计提供了参考，展示了乳外泌体作为封装平台的潜力。它适用于支撑益生菌在乳制品应用中的发酵工艺优化，以及提高益生菌在胃肠道中的存活和定植机制研究。
+
+## Can a functional cheese spread incorporating Akkermansia muciniphila deliver beneficial physicochemical and biological properties while enhancing probiotic stability and viability during aerobic storage and in vitro digestion?
+
+总结：
+该研究将下一代益生菌Akkermansia muciniphila融入乳制品基质，开发了一种功能性奶酪涂抹酱。通过评估其理化特性、生物活性及在冷藏有氧储存和模拟消化过程中的存活率，发现该产品能有效维持益生菌高存活率，并具有抗糖尿病和抗高血压等生物活性。
+
+分析：
+该文献为当前报告主题提供了益生菌在乳制品应用中的具体案例，适合支撑发酵工艺优化和益生菌稳定性机制的研究。它展示了Akkermansia muciniphila在食品载体中的可行性，有助于探讨其在功能性食品设计中的应用场景和系统设计。
+
+## Preparation and synbiotic interaction mechanism of microcapsules of Bifidobacterium animalis F1–7 and human milk oligosaccharides (HMO)
+
+总结：
+该研究通过乳化/内部凝胶化方法成功制备了含有B. animalis F1-7和人类母乳寡糖（HMO）的微胶囊，发现HMO微胶囊在冻干形式、热稳定性和模拟胃肠道环境中显著提高了益生菌存活率。研究还表明，HMO组分6'-SL能促进B. animalis F1-7的生长和短链脂肪酸产生，并在体外粪便发酵中富集A. muciniphila等有益菌。
+
+分析：
+该文献为下一代益生菌A. muciniphila的富集机制提供了实验支持，适合用于合生元微胶囊在乳制品等食品工业中的应用设计。其微胶囊化技术可参考用于提升益生菌在加工和储存中的稳定性，支撑发酵工艺优化研究。
+
+# 参考列表
+
+[1] Okamura, T, Hamaguchi, M, Nakajima, H, et al. Milk protects against sarcopenic obesity due to increase in the genus Akkermansia in faeces of db/db mice[J]. Journal of Cachexia, Sarcopenia and Muscle, 2023, 14(3): 1395-1409.
+[2] Yao, Y, Zhou, X, Hadiatullah, H, et al. Effects of Human, Caprine, and Bovine Milk Fat Globules on Microbiota Adhesion and Gut Microecology[J]. Journal of Agricultural and Food Chemistry, 2021, 69(34): 9778-9787.
+[3] Carvalho, R.D.D.O, Rabah, H, Ariute, J.C, et al. Functional Swiss-type cheeses promote beneficial effects in mice gut microbiome during homeostasis and inflammation[J]. Food Bioscience, 2023, 56.
+[4] Yang, Z, Zhu, X, Wen, A, et al. Coix Seed-Based Milk Fermented With Limosilactobacillus reuteri Improves Lipid Metabolism and Gut Microbiota in Mice Fed With a High-Fat Diet[J]. Frontiers in Nutrition, 2022, 9.
+[5] Weng, B.B, Yuan, H.-D, Chen, L.-G, et al. Soy yoghurts produced with efficient GABA (γ-aminobutyric acid)-producing Lactiplantibacillus plantarum ameliorate hyperglycaemia and re-establish gut microbiota in streptozotocin (STZ)-induced diabetic mice[J]. Food and Function, 2023, 14(3): 1699-1709.
+[6] Jiang, T.M, Liang, Y, Liu, B, et al. Changes in the intestinal microbiota of healthy adults induced by brown yogurt and relationships of bacterial taxa with specific components[J]. Food and Function, 2022, 13(10): 5701-5714.
+[7] Li, T, Zhang, Y, Song, J, et al. Yogurt Enriched with Inulin Ameliorated Reproductive Functions and Regulated Gut Microbiota in Dehydroepiandrosterone-Induced Polycystic Ovary Syndrome Mice[J]. Nutrients, 2022, 14(2).
+[8] Sun, Y, Gao, S, Jiang, Y, et al. Lactobacillus helveticus-derived whey alleviates scopolamine-induced cognitive impairment in mice via the gut-brain axis[J]. Food Bioscience, 2026, 75.
+[9] Zuo, T, Yin, Z, Li, Z, et al. Expression, Purification, and Functional Exploration of an α-Galactosidase from Akkermansia muciniphila[J]. Foods, 2025, 14(21).
+[10] Chen, E, Ajami, N.J, White, D.L, et al. Dairy Consumption and the Colonic Mucosa-Associated Gut Microbiota in Humans—A Preliminary Investigation[J]. Nutrients, 2025, 17(3).
+[11] Gao, J, Mao, K, Wang, X, et al. Tibet Kefir Milk Regulated Metabolic Changes Induced by High-Fat Diet via Amino Acids, Bile Acids, and Equol Metabolism in Human-Microbiota-Associated Rats[J]. Journal of Agricultural and Food Chemistry, 2021, 69(23): 6720-6732.
+[12] Liu, Y, Bu, Y, Cao, J, et al. Effect of Fermented Milk Supplemented with Nisin or Plantaricin Q7 on Inflammatory Factors and Gut Microbiota in Mice[J]. Nutrients, 2024, 16(5).
+[13] Hao, L, Liu, Y, Szeto, I.M.-Y, et al. Milk Exosome-Based Delivery System for Probiotic Encapsulation That Enhances the Gastrointestinal Resistance and Adhesion of Probiotics[J]. Nutrients, 2025, 17(5).
+[14] Fonseca, M, Vedor, R, Barbosa, J.C, et al. Can a functional cheese spread incorporating Akkermansia muciniphila deliver beneficial physicochemical and biological properties while enhancing probiotic stability and viability during aerobic storage and in vitro digestion?[J]. LWT, 2024, 200.
+[15] Huang, X, Liu, R, Wang, J, et al. Preparation and synbiotic interaction mechanism of microcapsules of Bifidobacterium animalis F1–7 and human milk oligosaccharides (HMO)[J]. International Journal of Biological Macromolecules, 2024, 259.

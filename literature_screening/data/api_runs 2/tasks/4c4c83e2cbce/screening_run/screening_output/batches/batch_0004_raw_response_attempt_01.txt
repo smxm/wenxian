@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0004",
+    "results": [
+        {
+            "paper_id": "paper_000031",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦机械磨损预测，未明确涉及电气特性变化或电弧建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000032",
+            "decision": "include",
+            "reason": "标题和摘要明确研究弓网电弧模型，基于Mayr和Schwarz模型，探讨低气压下的电气特性。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000033",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦机械控制改善受流质量，未涉及电气特性分析或电弧建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000034",
+            "decision": "uncertain",
+            "reason": "标题和摘要研究弓网电弧动态和侵蚀，但未明确提及电气特性变化或具体电弧模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000035",
+            "decision": "exclude",
+            "reason": "标题和摘要研究电流密度分布，未涉及弓网离线、电气特性变化或电弧建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000036",
+            "decision": "uncertain",
+            "reason": "标题和摘要涉及弓网电弧建模，但未明确提及电气特性变化或Cassie/Mayr等黑盒模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000037",
+            "decision": "include",
+            "reason": "摘要明确使用Mayr电弧模型进行弓网电弧检测，涉及电流信号处理。",
+            "evidence": ["abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000038",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦机械磨损和电弧放电能量，未涉及电气特性变化或电弧建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000039",
+            "decision": "uncertain",
+            "reason": "摘要涉及接触中断对车辆电流的影响，但未明确提及电弧建模或电气特性变化。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.45
+        },
+        {
+            "paper_id": "paper_000040",
+            "decision": "include",
+            "reason": "标题和摘要明确研究弓网电弧模型及其对牵引系统电能质量的影响，涉及谐波分析。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        }
+    ]
+}

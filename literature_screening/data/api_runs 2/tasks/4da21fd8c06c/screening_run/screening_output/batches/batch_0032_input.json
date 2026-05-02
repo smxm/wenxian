@@ -1,0 +1,364 @@
+{
+  "batch_id": "batch_0032",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000311",
+    "paper_000312",
+    "paper_000313",
+    "paper_000314",
+    "paper_000315",
+    "paper_000316",
+    "paper_000317",
+    "paper_000318",
+    "paper_000319",
+    "paper_000320"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000311",
+      "entry_type": "article",
+      "title": "Dynamical semantic enhancement network for continuous sign language recognition",
+      "authors": [
+        "Wang, SY",
+        "Guo, LM",
+        "Xue, WL"
+      ],
+      "year": 2024,
+      "journal": "MULTIMEDIA SYSTEMS",
+      "doi": "10.1007/s00530-024-01505-7",
+      "abstract": "In the field of sign language recognition, effective interpretation of semantic information, which is primarily conveyed through facial and hand gestures, poses significant challenges. Previous methods often struggle to simultaneously capture semantic areas and accurately assess the varying importance of different motion frames, which hampers recognition accuracy. We propose the Dynamical Semantic Enhancement (DSE) Network which integrates the Long-Short Dependence Attention (LSDA) and Global Interaction Conv2d (GIConv2d) to address these challenges. LSDA is designed to form long-short-range spatial dependencies by advanced large-kernel convolutions coupled with small-kernel convolutions, which effectively capture synchronous facial and hand semantic contents. Meanwhile, GIConv2d adaptively learns the motion semantic contents by dynamically generating calibrated weights, focusing on the reasoning of frame-level contributions of rapid movement frames and static frames. Our DSE achieves competitive performances on three widely used datasets: PHOENIX14, PHOENIX14-T, and CSL-Daily. Additionally, visualization experiments confirm the DSE's superior capability in reinforcing semantic extraction both spatially and temporally.",
+      "keywords": [
+        "Continuous sign language recognition",
+        "Attention mechanism",
+        "Dynamic temporal convolution",
+        "Convolutional neural networks"
+      ],
+      "normalized_title": "dynamical semantic enhancement network for continuous sign language recognition",
+      "raw_bibtex": "@ARTICLE{10.1007/s00530-024-01505-7,\n\tauthor = {Wang, SY and Guo, LM and Xue, WL},\n\ttitle = {Dynamical semantic enhancement network for continuous sign language recognition},\n\tjournal = {MULTIMEDIA SYSTEMS},\n\tyear = {2024},\n\tkeywords = {Continuous sign language recognition; Attention mechanism; Dynamic temporal convolution; Convolutional neural networks},\n\tabstract = {In the field of sign language recognition, effective interpretation of semantic information, which is primarily conveyed through facial and hand gestures, poses significant challenges. Previous methods often struggle to simultaneously capture semantic areas and accurately assess the varying importance of different motion frames, which hampers recognition accuracy. We propose the Dynamical Semantic Enhancement (DSE) Network which integrates the Long-Short Dependence Attention (LSDA) and Global Interaction Conv2d (GIConv2d) to address these challenges. LSDA is designed to form long-short-range spatial dependencies by advanced large-kernel convolutions coupled with small-kernel convolutions, which effectively capture synchronous facial and hand semantic contents. Meanwhile, GIConv2d adaptively learns the motion semantic contents by dynamically generating calibrated weights, focusing on the reasoning of frame-level contributions of rapid movement frames and static frames. Our DSE achieves competitive performances on three widely used datasets: PHOENIX14, PHOENIX14-T, and CSL-Daily. Additionally, visualization experiments confirm the DSE's superior capability in reinforcing semantic extraction both spatially and temporally.},\n\tdoi = {10.1007/s00530-024-01505-7},\n\tvolume = {30},\n\tnumber = {6},\n\tissn = {0942-4962},\n\tnote = {Times Cited in Web of Science Core Collection: 4 Total Times Cited: 4 Cited Reference Count: 80 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s00530-024-01505-7"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000312",
+      "entry_type": "article",
+      "title": "Lightweight Detection Network for Arbitrary-Oriented Vehicles in UAV Imagery via Global Attentive Relation and Multi-Path Fusion",
+      "authors": [
+        "Feng, JF",
+        "Yi, CJ"
+      ],
+      "year": 2022,
+      "journal": "DRONES",
+      "doi": "10.3390/drones6050108",
+      "abstract": "Recent advances in unmanned aerial vehicles (UAVs) have increased altitude capability in road-traffic monitoring. However, state-of-the-art vehicle detection methods still lack accurate abilities and lightweight structures in the UAV platform due to the background uncertainties, scales, densities, shapes, and directions of objects resulting from the UAV imagery's shooting angle. We propose a lightweight solution to detect arbitrary-oriented vehicles under uncertain backgrounds, varied resolutions, and illumination conditions. We first present a cross-stage partial bottleneck transformer (CSP BoT) module to exploit the global spatial relationship captured by multi-head self-attention, validating its implication in recessive dependencies. We then propose an angle classification prediction branch in the YOLO head network to detect arbitrarily oriented vehicles in UAV images and employ a circular smooth label (CSL) to reduce the classification loss. We further improve the multi-scale feature maps by combining the prediction head network with the adaptive spatial feature fusion block (ASFF-Head), which adapts the spatial variation of prediction uncertainties. Our method features a compact, lightweight design that automatically recognizes key geometric factors in the UAV images. It demonstrates superior performance under environmental changes while it is also easy to train and highly generalizable. This remarkable learning ability makes the proposed method applicable to geometric structure and uncertainty estimates. Extensive experiments on the UAV vehicle dataset UAV-ROD and remote sensing dataset UACS-AOD demonstrate the superiority and cost-effectiveness of the proposed method, making it practical for urban traffic and public security.",
+      "keywords": [
+        "UAVs",
+        "vehicle detection",
+        "lightweight model",
+        "deep neural networks",
+        "remote sensing",
+        "OBJECT DETECTION"
+      ],
+      "normalized_title": "lightweight detection network for arbitrary oriented vehicles in uav imagery via global attentive relation and multi path fusion",
+      "raw_bibtex": "@ARTICLE{10.3390/drones6050108,\n\tauthor = {Feng, JF and Yi, CJ},\n\ttitle = {Lightweight Detection Network for Arbitrary-Oriented Vehicles in UAV Imagery via Global Attentive Relation and Multi-Path Fusion},\n\tjournal = {DRONES},\n\tyear = {2022},\n\tkeywords = {UAVs; vehicle detection; lightweight model; deep neural networks; remote sensing; OBJECT DETECTION},\n\tabstract = {Recent advances in unmanned aerial vehicles (UAVs) have increased altitude capability in road-traffic monitoring. However, state-of-the-art vehicle detection methods still lack accurate abilities and lightweight structures in the UAV platform due to the background uncertainties, scales, densities, shapes, and directions of objects resulting from the UAV imagery's shooting angle. We propose a lightweight solution to detect arbitrary-oriented vehicles under uncertain backgrounds, varied resolutions, and illumination conditions. We first present a cross-stage partial bottleneck transformer (CSP BoT) module to exploit the global spatial relationship captured by multi-head self-attention, validating its implication in recessive dependencies. We then propose an angle classification prediction branch in the YOLO head network to detect arbitrarily oriented vehicles in UAV images and employ a circular smooth label (CSL) to reduce the classification loss. We further improve the multi-scale feature maps by combining the prediction head network with the adaptive spatial feature fusion block (ASFF-Head), which adapts the spatial variation of prediction uncertainties. Our method features a compact, lightweight design that automatically recognizes key geometric factors in the UAV images. It demonstrates superior performance under environmental changes while it is also easy to train and highly generalizable. This remarkable learning ability makes the proposed method applicable to geometric structure and uncertainty estimates. Extensive experiments on the UAV vehicle dataset UAV-ROD and remote sensing dataset UACS-AOD demonstrate the superiority and cost-effectiveness of the proposed method, making it practical for urban traffic and public security.},\n\tdoi = {10.3390/drones6050108},\n\tvolume = {6},\n\tnumber = {5},\n\tissn = {2504-446X},\n\tnote = {Times Cited in Web of Science Core Collection: 29 Total Times Cited: 30 Cited Reference Count: 50 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/drones6050108"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000313",
+      "entry_type": "article",
+      "title": "Sign Language Recognition Based on R(2+1)D With Spatial-Temporal-Channel Attention",
+      "authors": [
+        "Han, XZ",
+        "Lu, F",
+        "Yin, JQ",
+        "Tian, GH",
+        "Liu, J"
+      ],
+      "year": 2022,
+      "journal": "IEEE TRANSACTIONS ON HUMAN-MACHINE SYSTEMS",
+      "doi": "10.1109/thms.2022.3144000",
+      "abstract": "Previous work utilized three-dimensional (3-D) convolutional neural networks (CNNs) tomodel the spatial appearance and temporal evolution concurrently for sign language recognition (SLR) and exhibited impressive performance. However, there are still challenges for 3-D CNN-based methods. First, motion information plays a more significant role than spatial content in sign language. Therefore, it is still questionable whether to treat space and time equally and model them jointly by heavy 3-D convolutions in a unified approach. Second, because of the interference from the highly redundant information in sign videos, it is still nontrivial to effectively extract discriminative spatiotemporal features related to sign language. In this study, deep R(2+1)D was adopted for separate spatial and temporal modeling and demonstrated that decomposing 3-D convolution filters into independent spatial and temporal convolutions facilitates the optimization process in SLR. A lightweight spatial-temporal-channel attention module, including two submodules called channel-temporal attention and spatial-temporal attention, was proposed to make the network concentrate on the significant information along spatial, temporal, and channel dimensions by combining squeeze and excitation attention with self-attention. By embedding this module into R(2+1)D, superior or comparable results to the state-of-the-art methods on the CSL-500, Jester, and EgoGesture datasets were obtained, which demonstrated the effectiveness of the proposed method.",
+      "keywords": [
+        "Convolution",
+        "Feature extraction",
+        "Videos",
+        "Hidden Markov models",
+        "Gesture recognition",
+        "Task analysis",
+        "Spatiotemporal phenomena",
+        "Attention mechanism",
+        "R(2+1)D",
+        "sign language recognition (SLR)",
+        "SCALE GESTURE RECOGNITION",
+        "FRAMEWORK",
+        "FUSION"
+      ],
+      "normalized_title": "sign language recognition based on r 2 1 d with spatial temporal channel attention",
+      "raw_bibtex": "@ARTICLE{10.1109/THMS.2022.3144000,\n\tauthor = {Han, XZ and Lu, F and Yin, JQ and Tian, GH and Liu, J},\n\ttitle = {Sign Language Recognition Based on R(2+1)D With Spatial-Temporal-Channel Attention},\n\tjournal = {IEEE TRANSACTIONS ON HUMAN-MACHINE SYSTEMS},\n\tyear = {2022},\n\tkeywords = {Convolution; Feature extraction; Videos; Hidden Markov models; Gesture recognition; Task analysis; Spatiotemporal phenomena; Attention mechanism; R(2+1)D; sign language recognition (SLR); SCALE GESTURE RECOGNITION; FRAMEWORK; FUSION},\n\tabstract = {Previous work utilized three-dimensional (3-D) convolutional neural networks (CNNs) tomodel the spatial appearance and temporal evolution concurrently for sign language recognition (SLR) and exhibited impressive performance. However, there are still challenges for 3-D CNN-based methods. First, motion information plays a more significant role than spatial content in sign language. Therefore, it is still questionable whether to treat space and time equally and model them jointly by heavy 3-D convolutions in a unified approach. Second, because of the interference from the highly redundant information in sign videos, it is still nontrivial to effectively extract discriminative spatiotemporal features related to sign language. In this study, deep R(2+1)D was adopted for separate spatial and temporal modeling and demonstrated that decomposing 3-D convolution filters into independent spatial and temporal convolutions facilitates the optimization process in SLR. A lightweight spatial-temporal-channel attention module, including two submodules called channel-temporal attention and spatial-temporal attention, was proposed to make the network concentrate on the significant information along spatial, temporal, and channel dimensions by combining squeeze and excitation attention with self-attention. By embedding this module into R(2+1)D, superior or comparable results to the state-of-the-art methods on the CSL-500, Jester, and EgoGesture datasets were obtained, which demonstrated the effectiveness of the proposed method.},\n\tdoi = {10.1109/THMS.2022.3144000},\n\tvolume = {52},\n\tnumber = {4},\n\tpages = {687-698},\n\tissn = {2168-2291},\n\tnote = {Times Cited in Web of Science Core Collection: 36 Total Times Cited: 40 Cited Reference Count: 69 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/THMS.2022.3144000"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000314",
+      "entry_type": "article",
+      "title": "A multimodal human-robot sign language interaction framework applied in social robots",
+      "authors": [
+        "Li, J",
+        "Zhong, JP",
+        "Wang, N"
+      ],
+      "year": 2023,
+      "journal": "FRONTIERS IN NEUROSCIENCE",
+      "doi": "10.3389/fnins.2023.1168888",
+      "abstract": "Deaf-mutes face many difficulties in daily interactions with hearing people through spoken language. Sign language is an important way of expression and communication for deaf-mutes. Therefore, breaking the communication barrier between the deaf-mute and hearing communities is significant for facilitating their integration into society. To help them integrate into social life better, we propose a multimodal Chinese sign language (CSL) gesture interaction framework based on social robots. The CSL gesture information including both static and dynamic gestures is captured from two different modal sensors. A wearable Myo armband and a Leap Motion sensor are used to collect human arm surface electromyography (sEMG) signals and hand 3D vectors, respectively. Two modalities of gesture datasets are preprocessed and fused to improve the recognition accuracy and to reduce the processing time cost of the network before sending it to the classifier. Since the input datasets of the proposed framework are temporal sequence gestures, the long-short term memory recurrent neural network is used to classify these input sequences. Comparative experiments are performed on an NAO robot to test our method. Moreover, our method can effectively improve CSL gesture recognition accuracy, which has potential applications in a variety of gesture interaction scenarios not only in social robots.",
+      "keywords": [
+        "social robots",
+        "sign language",
+        "gesture recognition",
+        "multimodal sensors",
+        "human-robot interaction",
+        "HAND GESTURE RECOGNITION",
+        "EMG FEATURE EVALUATION",
+        "VISION"
+      ],
+      "normalized_title": "a multimodal human robot sign language interaction framework applied in social robots",
+      "raw_bibtex": "@ARTICLE{10.3389/fnins.2023.1168888,\n\tauthor = {Li, J and Zhong, JP and Wang, N},\n\ttitle = {A multimodal human-robot sign language interaction framework applied in social robots},\n\tjournal = {FRONTIERS IN NEUROSCIENCE},\n\tyear = {2023},\n\tkeywords = {social robots; sign language; gesture recognition; multimodal sensors; human-robot interaction; HAND GESTURE RECOGNITION; EMG FEATURE EVALUATION; VISION},\n\tabstract = {Deaf-mutes face many difficulties in daily interactions with hearing people through spoken language. Sign language is an important way of expression and communication for deaf-mutes. Therefore, breaking the communication barrier between the deaf-mute and hearing communities is significant for facilitating their integration into society. To help them integrate into social life better, we propose a multimodal Chinese sign language (CSL) gesture interaction framework based on social robots. The CSL gesture information including both static and dynamic gestures is captured from two different modal sensors. A wearable Myo armband and a Leap Motion sensor are used to collect human arm surface electromyography (sEMG) signals and hand 3D vectors, respectively. Two modalities of gesture datasets are preprocessed and fused to improve the recognition accuracy and to reduce the processing time cost of the network before sending it to the classifier. Since the input datasets of the proposed framework are temporal sequence gestures, the long-short term memory recurrent neural network is used to classify these input sequences. Comparative experiments are performed on an NAO robot to test our method. Moreover, our method can effectively improve CSL gesture recognition accuracy, which has potential applications in a variety of gesture interaction scenarios not only in social robots.},\n\tdoi = {10.3389/fnins.2023.1168888},\n\tvolume = {17},\n\tissn = {1662-453X},\n\tnote = {Times Cited in Web of Science Core Collection: 5 Total Times Cited: 5 Cited Reference Count: 58 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3389/fnins.2023.1168888"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000315",
+      "entry_type": "article",
+      "title": "A Constrained Learning-Based Competitive Swarm Optimizer for Large-Scale Multiobjective Optimization",
+      "authors": [
+        "Li, YF",
+        "Li, LJ",
+        "Lin, QZ",
+        "Ming, Z",
+        "Leung, VCM",
+        "Coello, CAC"
+      ],
+      "year": 2026,
+      "journal": "IEEE TRANSACTIONS ON CYBERNETICS",
+      "doi": "10.1109/tcyb.2025.3612091",
+      "abstract": "CSO is considered as a prominent paradigm for solving large-scale multiobjective optimization problems (LMOPs). However, the pairwise random competition (PRC) mechanism used in most existing competitive swarm optimizers (CSOs) may limit their performance in solving LMOPs due to the following reasons. First, when the winner particle obtained by PRC is of poor quality, it may limit the learning effect of its corresponding loser particle. Second, due to the stochastic nature of PRC, the evolutionary direction of the loser particles may be drastically perturbed over the iterations, thus slowing down their convergence speed. To alleviate the above issues, this article proposes a constrained learning (CL)-based CSO for tackling LMOPs, called CL-CSO. First, CL-CSO adopts a set of reference vectors to divide the original objective space into several subregions. Second, CL-CSO designs a CL-based strategy, including the ISL and CSL strategy, which let the loser particles only learn from the winner particles in their intra-subregions or neighboring subregions, respectively. Moreover, CL-CSO designs a GM assisted evolutionary strategy to help the evolution of winner particles, aiming to further improve the diversity and quality of winner particles. This way, the learning effect of particles and the overall convergence speed can be significantly enhanced. Compared to several competitive algorithms for tackling LMOPs, experimental results show that CL-CSO performs well in solving two well-known benchmark LMOPs (containing 2-3 objectives and 500-5000 decision variables), as well as real-world IS problems.",
+      "keywords": [
+        "Search problems",
+        "Optimization",
+        "Convergence",
+        "Vectors",
+        "Neural networks",
+        "Computer science",
+        "Artificial intelligence",
+        "Systematic literature review",
+        "Stochastic processes",
+        "Software engineering",
+        "CSO",
+        "CL",
+        "large-scale optimization",
+        "multiobjective optimization",
+        "EVOLUTIONARY ALGORITHM",
+        "INDICATOR",
+        "FRAMEWORK",
+        "SELECTION"
+      ],
+      "normalized_title": "a constrained learning based competitive swarm optimizer for large scale multiobjective optimization",
+      "raw_bibtex": "@ARTICLE{10.1109/TCYB.2025.3612091,\n\tauthor = {Li, YF and Li, LJ and Lin, QZ and Ming, Z and Leung, VCM and Coello, CAC},\n\ttitle = {A Constrained Learning-Based Competitive Swarm Optimizer for Large-Scale Multiobjective Optimization},\n\tjournal = {IEEE TRANSACTIONS ON CYBERNETICS},\n\tyear = {2026},\n\tkeywords = {Search problems; Optimization; Convergence; Vectors; Neural networks; Computer science; Artificial intelligence; Systematic literature review; Stochastic processes; Software engineering; CSO; CL; large-scale optimization; multiobjective optimization; EVOLUTIONARY ALGORITHM; INDICATOR; FRAMEWORK; SELECTION},\n\tabstract = {CSO is considered as a prominent paradigm for solving large-scale multiobjective optimization problems (LMOPs). However, the pairwise random competition (PRC) mechanism used in most existing competitive swarm optimizers (CSOs) may limit their performance in solving LMOPs due to the following reasons. First, when the winner particle obtained by PRC is of poor quality, it may limit the learning effect of its corresponding loser particle. Second, due to the stochastic nature of PRC, the evolutionary direction of the loser particles may be drastically perturbed over the iterations, thus slowing down their convergence speed. To alleviate the above issues, this article proposes a constrained learning (CL)-based CSO for tackling LMOPs, called CL-CSO. First, CL-CSO adopts a set of reference vectors to divide the original objective space into several subregions. Second, CL-CSO designs a CL-based strategy, including the ISL and CSL strategy, which let the loser particles only learn from the winner particles in their intra-subregions or neighboring subregions, respectively. Moreover, CL-CSO designs a GM assisted evolutionary strategy to help the evolution of winner particles, aiming to further improve the diversity and quality of winner particles. This way, the learning effect of particles and the overall convergence speed can be significantly enhanced. Compared to several competitive algorithms for tackling LMOPs, experimental results show that CL-CSO performs well in solving two well-known benchmark LMOPs (containing 2-3 objectives and 500-5000 decision variables), as well as real-world IS problems.},\n\tdoi = {10.1109/TCYB.2025.3612091},\n\tvolume = {56},\n\tnumber = {1},\n\tpages = {148-161},\n\tissn = {2168-2267},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 65 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TCYB.2025.3612091"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000316",
+      "entry_type": "article",
+      "title": "Self-supervised feature-gate coupling for dynamic network pruning",
+      "authors": [
+        "Shi, MN",
+        "Liu, C",
+        "Jiao, JB",
+        "Ye, QX"
+      ],
+      "year": 2024,
+      "journal": "PATTERN RECOGNITION",
+      "doi": "10.1016/j.patcog.2024.110594",
+      "abstract": "Gating modules have been widely explored in dynamic network pruning (DNP) to reduce the run-time computational cost of deep neural networks while keeping the features representative. Despite the substantial progress, existing methods remain ignoring the consistency between feature and gate distributions, which may lead to distortion of gated features. In this paper, we propose a feature -gate coupling (FGC) approach aiming to align distributions of features and gates. FGC is a plug -and -play module that consists of two steps carried out in an iterative self -supervised manner. In the first step, FGC utilizes the k -Nearest Neighbor algorithm in the feature space to explore instance neighborhood relationships, which are treated as self -supervisory signals. In the second step, FGC exploits contrastive self -supervised learning (CSL) to regularize gating modules, leading to the alignment of instance neighborhood relationships within the feature and gate spaces. Experimental results validate that the proposed FGC method improves the baseline approach with significant margins, outperforming state-of-the-art methods with a better accuracy -computation trade-off. Code is publicly available at github.com/smn2010/FGC-PR.",
+      "keywords": [
+        "Contrastive self-supervised learning (CSL)",
+        "Dynamic network pruning (DNP)",
+        "Feature-gate coupling",
+        "Instance neighborhood relationship"
+      ],
+      "normalized_title": "self supervised feature gate coupling for dynamic network pruning",
+      "raw_bibtex": "@ARTICLE{10.1016/j.patcog.2024.110594,\n\tauthor = {Shi, MN and Liu, C and Jiao, JB and Ye, QX},\n\ttitle = {Self-supervised feature-gate coupling for dynamic network pruning},\n\tjournal = {PATTERN RECOGNITION},\n\tyear = {2024},\n\tkeywords = {Contrastive self-supervised learning (CSL); Dynamic network pruning (DNP); Feature-gate coupling; Instance neighborhood relationship},\n\tabstract = {Gating modules have been widely explored in dynamic network pruning (DNP) to reduce the run-time computational cost of deep neural networks while keeping the features representative. Despite the substantial progress, existing methods remain ignoring the consistency between feature and gate distributions, which may lead to distortion of gated features. In this paper, we propose a feature -gate coupling (FGC) approach aiming to align distributions of features and gates. FGC is a plug -and -play module that consists of two steps carried out in an iterative self -supervised manner. In the first step, FGC utilizes the k -Nearest Neighbor algorithm in the feature space to explore instance neighborhood relationships, which are treated as self -supervisory signals. In the second step, FGC exploits contrastive self -supervised learning (CSL) to regularize gating modules, leading to the alignment of instance neighborhood relationships within the feature and gate spaces. Experimental results validate that the proposed FGC method improves the baseline approach with significant margins, outperforming state-of-the-art methods with a better accuracy -computation trade-off. Code is publicly available at github.com/smn2010/FGC-PR.},\n\tdoi = {10.1016/j.patcog.2024.110594},\n\tvolume = {154},\n\tissn = {0031-3203},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 50 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.patcog.2024.110594"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000317",
+      "entry_type": "article",
+      "title": "Cost-sensitive learning for imbalanced medical data: a review",
+      "authors": [
+        "Araf, I",
+        "Idri, A",
+        "Chairi, I"
+      ],
+      "year": 2024,
+      "journal": "ARTIFICIAL INTELLIGENCE REVIEW",
+      "doi": "10.1007/s10462-023-10652-8",
+      "abstract": "Integrating Machine Learning (ML) in medicine has unlocked many opportunities to harness complex medical data, enhancing patient outcomes and advancing the field. However, the inherent imbalanced distribution of medical data poses a significant challenge, resulting in biased ML models that perform poorly on minority classes. Mitigating the impact of class imbalance has prompted researchers to explore various strategies, wherein Cost-Sensitive Learning (CSL) arises as a promising approach to improve the accuracy and reliability of ML models. This paper presents the first review of CSL for imbalanced medical data. A comprehensive exploration of the existing literature encompassed papers published from January 2010 to December 2022 and sourced from five major digital libraries. A total of 173 papers were selected, analysed, and classified based on key criteria, including publication years, channels and sources, research types, empirical types, medical sub-fields, medical tasks, CSL approaches, strengths and weaknesses of CSL, frequently used datasets and data types, evaluation metrics, and development tools. The results indicate a noteworthy publication rise, particularly since 2020, and a strong preference for CSL direct approaches. Data type analysis unveiled diverse modalities, with medical images prevailing. The underutilisation of cost-related metrics and the prevalence of Python as the primary programming tool are highlighted. The strengths and weaknesses analysis covered three aspects: CSL strategy, CSL approaches, and relevant works. This study serves as a valuable resource for researchers seeking to explore the current state of research, identify strengths and gaps in the existing literature and advance CSL's application for imbalanced medical data.",
+      "keywords": [
+        "Machine learning",
+        "Data imbalance",
+        "Cost-sensitive learning",
+        "Medical data",
+        "NEURAL-NETWORK",
+        "CLASSIFICATION",
+        "DECISION",
+        "PREDICTION",
+        "SVM"
+      ],
+      "normalized_title": "cost sensitive learning for imbalanced medical data a review",
+      "raw_bibtex": "@ARTICLE{10.1007/s10462-023-10652-8,\n\tauthor = {Araf, I and Idri, A and Chairi, I},\n\ttitle = {Cost-sensitive learning for imbalanced medical data: a review},\n\tjournal = {ARTIFICIAL INTELLIGENCE REVIEW},\n\tyear = {2024},\n\tkeywords = {Machine learning; Data imbalance; Cost-sensitive learning; Medical data; NEURAL-NETWORK; CLASSIFICATION; DECISION; PREDICTION; SVM},\n\tabstract = {Integrating Machine Learning (ML) in medicine has unlocked many opportunities to harness complex medical data, enhancing patient outcomes and advancing the field. However, the inherent imbalanced distribution of medical data poses a significant challenge, resulting in biased ML models that perform poorly on minority classes. Mitigating the impact of class imbalance has prompted researchers to explore various strategies, wherein Cost-Sensitive Learning (CSL) arises as a promising approach to improve the accuracy and reliability of ML models. This paper presents the first review of CSL for imbalanced medical data. A comprehensive exploration of the existing literature encompassed papers published from January 2010 to December 2022 and sourced from five major digital libraries. A total of 173 papers were selected, analysed, and classified based on key criteria, including publication years, channels and sources, research types, empirical types, medical sub-fields, medical tasks, CSL approaches, strengths and weaknesses of CSL, frequently used datasets and data types, evaluation metrics, and development tools. The results indicate a noteworthy publication rise, particularly since 2020, and a strong preference for CSL direct approaches. Data type analysis unveiled diverse modalities, with medical images prevailing. The underutilisation of cost-related metrics and the prevalence of Python as the primary programming tool are highlighted. The strengths and weaknesses analysis covered three aspects: CSL strategy, CSL approaches, and relevant works. This study serves as a valuable resource for researchers seeking to explore the current state of research, identify strengths and gaps in the existing literature and advance CSL's application for imbalanced medical data.},\n\tdoi = {10.1007/s10462-023-10652-8},\n\tvolume = {57},\n\tnumber = {4},\n\tissn = {0269-2821},\n\tnote = {Times Cited in Web of Science Core Collection: 85 Total Times Cited: 100 Cited Reference Count: 208 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s10462-023-10652-8"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000318",
+      "entry_type": "article",
+      "title": "Causal structure learning for high-dimensional non-stationary time series",
+      "authors": [
+        "Chen, SY",
+        "Wu, HT",
+        "Jin, G"
+      ],
+      "year": 2024,
+      "journal": "KNOWLEDGE-BASED SYSTEMS",
+      "doi": "10.1016/j.knosys.2024.111868",
+      "abstract": "Learning the causal structure of high-dimensional non-stationary time series can help in understanding the data generation mechanism, which is a crucial task in machine learning. However, current causal discovery methods for high-dimensional non-stationary time series face several challenges, including the inability to effectively capture non-stationarity, failure to ensure acyclicity of causal graphs, and reliance on subjective threshold definitions, leading to suboptimal algorithm performance. To address these challenges, we introduce a novel Causal Structure Learning model for High-dimensional Non-stationary Time Series (CSL-HNTS). Firstly, this model presents a graph neural network to model the non-stationarity of time series. Secondly, it introduces a novel Directed Acyclic Graph (DAG) sampling method that transforms the space of DAGs into a continuous space, enabling the search for causal graphs within this continuous space to ensure acyclicity. Finally, the model proposes an automatic threshold definition method, without prior knowledge, to convert the weighted adjacency matrix into the Boolean adjacency matrix of the causal graph, thereby avoiding time-consuming postprocessing steps. The proposed approach is validated using simulation datasets and two real datasets, and is benchmarked against current state-of-the-art methods and ablation experiments. The results demonstrate a significant improvement over existing methods, highlighting the efficacy of the proposed model.",
+      "keywords": [
+        "Causal discovery",
+        "Time series",
+        "Gradient optimization",
+        "Causal structure learning"
+      ],
+      "normalized_title": "causal structure learning for high dimensional non stationary time series",
+      "raw_bibtex": "@ARTICLE{10.1016/j.knosys.2024.111868,\n\tauthor = {Chen, SY and Wu, HT and Jin, G},\n\ttitle = {Causal structure learning for high-dimensional non-stationary time series},\n\tjournal = {KNOWLEDGE-BASED SYSTEMS},\n\tyear = {2024},\n\tkeywords = {Causal discovery; Time series; Gradient optimization; Causal structure learning},\n\tabstract = {Learning the causal structure of high-dimensional non-stationary time series can help in understanding the data generation mechanism, which is a crucial task in machine learning. However, current causal discovery methods for high-dimensional non-stationary time series face several challenges, including the inability to effectively capture non-stationarity, failure to ensure acyclicity of causal graphs, and reliance on subjective threshold definitions, leading to suboptimal algorithm performance. To address these challenges, we introduce a novel Causal Structure Learning model for High-dimensional Non-stationary Time Series (CSL-HNTS). Firstly, this model presents a graph neural network to model the non-stationarity of time series. Secondly, it introduces a novel Directed Acyclic Graph (DAG) sampling method that transforms the space of DAGs into a continuous space, enabling the search for causal graphs within this continuous space to ensure acyclicity. Finally, the model proposes an automatic threshold definition method, without prior knowledge, to convert the weighted adjacency matrix into the Boolean adjacency matrix of the causal graph, thereby avoiding time-consuming postprocessing steps. The proposed approach is validated using simulation datasets and two real datasets, and is benchmarked against current state-of-the-art methods and ablation experiments. The results demonstrate a significant improvement over existing methods, highlighting the efficacy of the proposed model.},\n\tdoi = {10.1016/j.knosys.2024.111868},\n\tvolume = {295},\n\tissn = {0950-7051},\n\tnote = {Times Cited in Web of Science Core Collection: 11 Total Times Cited: 12 Cited Reference Count: 55 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.knosys.2024.111868"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000319",
+      "entry_type": "article",
+      "title": "Global-Aware Ranking Deep Metric Learning for Remote Sensing Image Retrieval",
+      "authors": [
+        "Zhao, HW",
+        "Yuan, L",
+        "Zhao, HY",
+        "Wang, Z"
+      ],
+      "year": 2022,
+      "journal": "IEEE GEOSCIENCE AND REMOTE SENSING LETTERS",
+      "doi": "10.1109/lgrs.2021.3059908",
+      "abstract": "Remote sensing image retrieval (RSIR) is the process of searching and acquiring similar images to a query image in a large-scale remote sensing image database. Several recent studies encourage the discriminative feature space by developing loss functions under the deep metric learning paradigm. However, there are still some problems that have not been well resolved. The first is that for each category in the RSIR data set, the similarity among the samples within the category is different, so the samples and the number of samples that need to be learned should also be different. We propose intraclass space sample mining, which selects ``misplaced'' samples based on the distribution of samples, instead of artificially setting the boundary threshold of sample mining as usual. The second problem is the inconsistency between the loss reduction direction and the optimization direction. We propose the cost-sensitive loss (CSL) by penalizing the error samples in the candidate list. As a plug-in, CSL combined with other local losses can effectively improve retrieval accuracy. Finally, in view of the problem that the current loss is optimized based on local space and cannot distinguish different categories with high similarity, we propose a global-aware ranking loss (GRL) model. This is a global optimization model based on the feature space and retrieval candidate list. We have conducted comprehensive experiments on two public remote sensing data sets. Compared with the baseline, our proposed algorithm can achieve state-of-the-art performance.",
+      "keywords": [
+        "Remote sensing",
+        "Image retrieval",
+        "Training",
+        "Optimization",
+        "Extraterrestrial measurements",
+        "Semantics",
+        "Image resolution",
+        "Content-based image retrieval (CBIR)",
+        "convolutional neural networks",
+        "deep metric learning (DML)",
+        "remote sensing image retrieval (RSIR)"
+      ],
+      "normalized_title": "global aware ranking deep metric learning for remote sensing image retrieval",
+      "raw_bibtex": "@ARTICLE{10.1109/LGRS.2021.3059908,\n\tauthor = {Zhao, HW and Yuan, L and Zhao, HY and Wang, Z},\n\ttitle = {Global-Aware Ranking Deep Metric Learning for Remote Sensing Image Retrieval},\n\tjournal = {IEEE GEOSCIENCE AND REMOTE SENSING LETTERS},\n\tyear = {2022},\n\tkeywords = {Remote sensing; Image retrieval; Training; Optimization; Extraterrestrial measurements; Semantics; Image resolution; Content-based image retrieval (CBIR); convolutional neural networks; deep metric learning (DML); remote sensing image retrieval (RSIR)},\n\tabstract = {Remote sensing image retrieval (RSIR) is the process of searching and acquiring similar images to a query image in a large-scale remote sensing image database. Several recent studies encourage the discriminative feature space by developing loss functions under the deep metric learning paradigm. However, there are still some problems that have not been well resolved. The first is that for each category in the RSIR data set, the similarity among the samples within the category is different, so the samples and the number of samples that need to be learned should also be different. We propose intraclass space sample mining, which selects ``misplaced'' samples based on the distribution of samples, instead of artificially setting the boundary threshold of sample mining as usual. The second problem is the inconsistency between the loss reduction direction and the optimization direction. We propose the cost-sensitive loss (CSL) by penalizing the error samples in the candidate list. As a plug-in, CSL combined with other local losses can effectively improve retrieval accuracy. Finally, in view of the problem that the current loss is optimized based on local space and cannot distinguish different categories with high similarity, we propose a global-aware ranking loss (GRL) model. This is a global optimization model based on the feature space and retrieval candidate list. We have conducted comprehensive experiments on two public remote sensing data sets. Compared with the baseline, our proposed algorithm can achieve state-of-the-art performance.},\n\tdoi = {10.1109/LGRS.2021.3059908},\n\tvolume = {19},\n\tissn = {1545-598X},\n\tnote = {Times Cited in Web of Science Core Collection: 8 Total Times Cited: 8 Cited Reference Count: 22 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/LGRS.2021.3059908"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000320",
+      "entry_type": "article",
+      "title": "Improved 3D-ResNet sign language recognition algorithm with enhanced hand features",
+      "authors": [
+        "Wang, SQ",
+        "Wang, KK",
+        "Yang, TP",
+        "Li, YM",
+        "Fan, D"
+      ],
+      "year": 2022,
+      "journal": "SCIENTIFIC REPORTS",
+      "doi": "10.1038/s41598-022-21636-z",
+      "abstract": "In sign language video, the hand region is small, the resolution is low, the motion speed is fast, and there are cross occlusion and blur phenomena, which have a great impact on sign language recognition rate and speed, and are important factors restricting sign language recognition performance. To solve these problems, this paper proposes an improved 3D-ResNet sign language recognition algorithm with enhanced hand features, aiming to highlight the features of both hands, solve the problem of missing more effective information when relying only on global features, and improve the accuracy of sign language recognition. The proposed method has two improvements. Firstly, the algorithm detects the left and right hand regions based on the improved EfficientDet network, uses the improved Bi-FPN module and dual channel and spatial attention module are used to enhance the detection ability of the network for small targets like hand. Secondly, the improved residual module is used to improve the 3D-ResNet18 network to extract sign language features. The global, the left-hand and the right-hand image sequences are divided into three branches for feature extraction and fusion, so as to strengthen the attention to hand features, strengthen the representation ability of sign language features, and achieve the purpose of improving the accuracy of sign language recognition. In order to verify the performance of this algorithm, a series of experiments are carried out on CSL dataset. For example, in the experiments of hand detection algorithm and sign language recognition algorithm, the performance indicators such as Top-N, mAP, FLOPs and Parm are applied to find the optimal algorithm framework. The experimental results show that the Top1 recognition accuracy of this algorithm reaches 91.12%, which is more than 10% higher than that of C3D, P3D and 3D-ResNet basic networks. From the performance indicators of Top-N, mAP, FLOPs, Parm and so on, the performance of the algorithm in this paper is better than several algorithms in recent three years, such as I3D+BLSTM, B3D ResNet, AM-ResC3D+RCNN and so on. The results show that the hand detection network with enhanced hand features and three-dimensional convolutional neural network proposed in this paper can achieve higher accuracy of sign language recognition.",
+      "keywords": [
+        "GESTURE RECOGNITION"
+      ],
+      "normalized_title": "improved 3d resnet sign language recognition algorithm with enhanced hand features",
+      "raw_bibtex": "@ARTICLE{10.1038/s41598-022-21636-z,\n\tauthor = {Wang, SQ and Wang, KK and Yang, TP and Li, YM and Fan, D},\n\ttitle = {Improved 3D-ResNet sign language recognition algorithm with enhanced hand features},\n\tjournal = {SCIENTIFIC REPORTS},\n\tyear = {2022},\n\tkeywords = {GESTURE RECOGNITION},\n\tabstract = {In sign language video, the hand region is small, the resolution is low, the motion speed is fast, and there are cross occlusion and blur phenomena, which have a great impact on sign language recognition rate and speed, and are important factors restricting sign language recognition performance. To solve these problems, this paper proposes an improved 3D-ResNet sign language recognition algorithm with enhanced hand features, aiming to highlight the features of both hands, solve the problem of missing more effective information when relying only on global features, and improve the accuracy of sign language recognition. The proposed method has two improvements. Firstly, the algorithm detects the left and right hand regions based on the improved EfficientDet network, uses the improved Bi-FPN module and dual channel and spatial attention module are used to enhance the detection ability of the network for small targets like hand. Secondly, the improved residual module is used to improve the 3D-ResNet18 network to extract sign language features. The global, the left-hand and the right-hand image sequences are divided into three branches for feature extraction and fusion, so as to strengthen the attention to hand features, strengthen the representation ability of sign language features, and achieve the purpose of improving the accuracy of sign language recognition. In order to verify the performance of this algorithm, a series of experiments are carried out on CSL dataset. For example, in the experiments of hand detection algorithm and sign language recognition algorithm, the performance indicators such as Top-N, mAP, FLOPs and Parm are applied to find the optimal algorithm framework. The experimental results show that the Top1 recognition accuracy of this algorithm reaches 91.12%, which is more than 10% higher than that of C3D, P3D and 3D-ResNet basic networks. From the performance indicators of Top-N, mAP, FLOPs, Parm and so on, the performance of the algorithm in this paper is better than several algorithms in recent three years, such as I3D+BLSTM, B3D ResNet, AM-ResC3D+RCNN and so on. The results show that the hand detection network with enhanced hand features and three-dimensional convolutional neural network proposed in this paper can achieve higher accuracy of sign language recognition.},\n\tdoi = {10.1038/s41598-022-21636-z},\n\tvolume = {12},\n\tnumber = {1},\n\tissn = {2045-2322},\n\tnote = {Times Cited in Web of Science Core Collection: 10 Total Times Cited: 12 Cited Reference Count: 51 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1038/s41598-022-21636-z"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

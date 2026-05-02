@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0001",
+    "results": [
+        {
+            "paper_id": "paper_000001",
+            "decision": "exclude",
+            "reason": "发表年份为2010年，早于纳入标准要求的2016年。",
+            "evidence": ["year"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000002",
+            "decision": "exclude",
+            "reason": "研究对象为儿童癌症幸存者，不符合成人白血病患者的要求。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000003",
+            "decision": "exclude",
+            "reason": "摘要未提及赋能教育干预，主要关注临床路径和护理角色。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000004",
+            "decision": "uncertain",
+            "reason": "研究涉及白血病患者和叙事医学，患者报告感到赋能，但未明确说明干预措施是否为赋能教育。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000005",
+            "decision": "uncertain",
+            "reason": "标题和摘要提到CLL患者赋能计划，但研究对象是医生沟通经验，而非直接对患者进行赋能教育干预。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000006",
+            "decision": "exclude",
+            "reason": "研究对象为白血病儿童的家属，不符合成人白血病患者的要求。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000007",
+            "decision": "exclude",
+            "reason": "发表年份为2004年，早于纳入标准要求的2016年。",
+            "evidence": ["year"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000008",
+            "decision": "exclude",
+            "reason": "研究对象为青少年和年轻成人癌症患者，未明确限定为白血病。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000009",
+            "decision": "exclude",
+            "reason": "发表年份为2015年，早于纳入标准要求的2016年。",
+            "evidence": ["year"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000010",
+            "decision": "exclude",
+            "reason": "标题表明研究对象为儿科患者，且发表年份为2011年早于2016年。",
+            "evidence": ["title", "year"],
+            "confidence": 0.95
+        }
+    ]
+}

@@ -1,0 +1,192 @@
+TY  - JOUR
+AU  - Elbelkasi, M.S.
+AU  - Elkalashy, N.I.
+AU  - Badran, E.A.
+AU  - Abdel-Rahman, M.H.
+TI  - A Novel Chirp Detector Algorithm for Universal Pantograph Arc Detection
+PY  - 2025
+JO  - Engineering, Technology and Applied Science Research
+DO  - 10.48084/etasr.14604
+AB  - Catenary-pantograph arc faults pose a serious threat to the reliability and safety of electric railways. Faults cause violent transient disturbances, accelerate equipment aging, and disrupt power continuity. Real-time applicability is limited for traditional approaches based on their reliance on image processing or vision-based deep learning and their computation latency is greater than the arc time constant. The paper introduces a novel image-free arc detection algorithm that directly processes measured pantograph current signals without relying on vision data. The novelty of the chirp-inspired algorithm lies in integrating band-pass filtering, differentiation, Hilbert transform envelope extraction, and multi-stage statistical processing to construct an efficient arc detection index. In contrast to existing approaches, the algorithm exploits the inherent physical fingerprints of arc transients in the electrical current waveform, representing the first systematic investigation into current-based arc detection in pantograph–catenary systems. The approach is evaluated across 20 test cases under varying arc time constants and fixed voltages to demonstrate its universality. The algorithm consistently distinguishes arc events from mechanical or noise-induced oscillations, providing a stable baseline after arc extinction and enabling real-time and reliable monitoring. The proposed image-free system surpasses vision-based schemes for arc detection, providing a scalable and feasible solution to leading-edge railway electrification systems. Licensed under a CC-BY 4.0 license | Copyright (c) by the authors | DOI: https://doi.org/10.48084/etasr.14604
+ER  -
+
+TY  - JOUR
+AU  - Tian, R.
+AU  - Wang, S.-J.
+AU  - Lu, M.
+AU  - Li, J.
+TI  - Study on the Ablation of Slide Plate by Pantograph–Catenary Arc Based on Pantograph Slide Material
+PY  - 2025
+JO  - Infrastructures
+DO  - 10.3390/infrastructures10100276
+AB  - The ablation of pantograph sliders caused by pantograph–catenary arcing is a critical issue in the operation of pantograph–catenary systems. The arc discharge induces localized high temperatures that lead to the melting and even evaporation of the slider material, resulting in material loss. This phenomenon directly impacts the power supply safety and economic efficiency of trains. This study establishes a mathematical model of pantograph–catenary arcing based on Magneto Hydro Dynamics (MHD) theory, incorporating the physical parameters of the arc as well as electromagnetic, thermal, and radiative phenomena. Through secondary development using COMSOL 6.2 finite element software, the temperature distribution within the arc column region and on the surfaces of the electrode plates in pantograph–catenary arcing was simulated. The effects of the pantograph–catenary gap and slider material on arc ablation were investigated. The results show that with the increase in the distance between the pantograph and catenary, the arc shape lengthens gradually, and the high-temperature area inside the slider material shrinks gradually. When the arc duration is constant, the copper-impregnated carbon slider exhibits the best ablation resistance. Increasing the sublimation latent heat of the slider material enhances its anti-ablation performance. The findings of this study provide a valuable reference for understanding and mitigating surface arc erosion in pantograph–catenary systems. © 2025 by the authors.
+ER  -
+
+TY  - JOUR
+AU  - Chu, S.
+AU  - Yang, S.
+AU  - Liu, C.
+TI  - Study on the influence of transient processes in pantograph-catenary contact-loss on the characteristics of glue rail insulation
+PY  - 2025
+JO  - Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit
+DO  - 10.1177/09544097251338629
+AB  - Electrified railways are complex electromagnetic systems that feature strong-weak electrical interactions and the coexistence of dynamic and static components. In this system, rails serve dual roles as signaling circuits and traction return channels. With the increase in operating speeds and the optimization of operational strategies, greater traction currents and more frequent traction switching when passing neutral zones pose higher demands on the signaling system’s EMI immunity, and the insulation joints’ voltage tolerance. This paper investigates the impact of pantograph-catenary contact-loss during train passing neutral zones on the return current cut-off insulation joints (referred to as ‘cut-off joints’). First, a circuit model is established based on the traction return system principles and the cut-off joints’ configuration scheme. Key model parameters are determined to clarify the mechanisms, influencing factors, and coupling paths of transient pulses during the contact-loss process. The propagation characteristics of these pulses in rails are analyzed. The results indicate that in typical scenarios, cut-off joints experience an impulse voltage peak of 4 kV and a frequency of 109 kHz as the train exits the neutral zone. Using the ANSYS Maxwell platform, a finite element modeling simulation is conducted to analyze the electric field distribution of the insulation joint structure under both ideal and defect conditions when subjected to impulse voltages. Finally, all results are validated through field tests, and optimization suggestions are proposed. This study contributes to fault tracing in glue rail insulation, provides a basis for setting electrical standards, and offers guidance for designing stationary current channels. © IMechE 2025
+ER  -
+
+TY  - JOUR
+AU  - Du, Y.
+AU  - Jiao, Y.
+AU  - Li, H.
+AU  - Chen, Q.
+TI  - Pantograph-Catenary Arc Detection Based on Electrical Parameter Transient Variations Correlated With Current-Zero Arc Phenomena
+PY  - 2025
+JO  - IEEE Transactions on Instrumentation and Measurement
+DO  - 10.1109/tim.2025.3602598
+AB  - Reliable pantograph-catenary (P-C) contact is fundamental to locomotive operational stability. P-C arcing (P-C arc) discharges are induced by deteriorated contact conditions; thus, real-time arc detection becomes imperative for proactive maintenance interventions. Conventional methodologies are designed based on optical/acoustic signals induced by the P-C structure or normal frequency bands of electrical parameters accompanying arcs. However, some limitations exist: environmental interference would largely affect the out-carriage sensing modalities. For approaches based on conventional electrical parameters, the accuracy is compromised, attributable to two principal factors: the selection of electrical parameters is constrained, which might be inadequate to delineate arc features. The frequency band utilized is relatively low, failing to effectively pinpoint arc features. This article presents a novel transient analysis framework, targeting electrical parameters during arc current-zero periods. Multiple electrical parameters are analyzed to identify the optimal detection frequency bands, exhibiting maximal discriminative power between arcing/normal contact states. The features are calculated by windowed fast Fourier transformation (FFT) according to the analysis and then processed and temporally synchronized to form datasets. Finally, a random forest (RF) classifier constructed based on the datasets enables real-time detection. Experimental validation confirms superior detection efficacy. © 1963-2012 IEEE.
+ER  -
+
+TY  - JOUR
+AU  - Pan, L.
+AU  - Wang, X.
+AU  - Yuan, Y.
+AU  - Xing, T.
+AU  - Chen, L.
+TI  - Transient Arcing Characteristics of the Pantograph–Catenary System in Electrical Sectioning Overlaps
+PY  - 2026
+JO  - Infrastructures
+DO  - 10.3390/infrastructures11010017
+AB  - Transient arcing often occurs as an electric locomotive traverses an electrical sectioning overlap (ESO), deteriorating current collection stability and reducing the durability of the pantograph–catenary (PC) system. In this study, the formation mechanism and electrical evolution characteristics of transient arcing in the ESO region are investigated through theoretical analysis and numerical simulations. First, based on the dynamic motion of the locomotive passing through the ESO, the transient arcing mechanism of the ESO is clarified, and the plasma characteristics of the arc are described. Then, the electromagnetic, airflow, and thermal field interactions within the PC contact gap during arc ignition are analyzed. A Multiphysics coupled PC arc model is developed, incorporating aerodynamic, electromagnetic, and heat transfer effects. Subsequently, finite element meshing and boundary conditions are applied to simulate the transient evolution of the ESO arc. Finally, the transient arcing characteristics of the ESO are analyzed. The results indicate that the current density is highly concentrated at the initial arcing stage and gradually forms an axially symmetric conductive channel (approximately 107 A/m2), which shifts upward as the contact gap increases. Moreover, due to the geometric discontinuity of the ESO, a strong localized electric field develops near the wire edge, leading to arc root migration and reignition. © 2026 by the authors.
+ER  -
+
+TY  - JOUR
+AU  - Wang, X.
+AU  - Song, Y.
+AU  - Fan, S.
+AU  - Duan, F.
+AU  - Xie, B.
+AU  - Liu, Z.
+TI  - Thermal behavior of arcing in electrical section overlaps under specialized mechanical configurations
+PY  - 2026
+JO  - International Journal of Thermal Sciences
+DO  - 10.1016/j.ijthermalsci.2025.110424
+AB  - The frequent occurrence of transient arcing in pantograph–catenary (PC) electrical section overlaps (ESO) poses a serious threat to the operational safety of electric locomotives. Extending previous works that oversimplified the mechanical configuration or considered only limited operating conditions, this study incorporates the specialized ESO structure and systematically analyzes the PC arc temperature distribution under varying conditions. First, by incorporating the specialized parabolic structure of the ESO, a mathematical model was established to describe the dynamic separation trajectory between the slide and the non-working branch of the contact wire. Subsequently, a multiphysics-coupled arc model for the ESO was developed and validated through comparative analysis based on magnetohydrodynamic theory. Based on this, the morphological evolution of the ESO arc during the first arcing cycle under alternating voltage difference was elucidated. Finally, the temperature field distribution of transient arcing under various conditions was numerically analyzed using dynamic mesh techniques. The results indicate that the average temperature of the ESO arc increases from 7840 K to 101,386 K with increasing voltage difference, while showing a significant negative correlation with both train speed and crosswind velocity. This suggests that higher train speeds or lower voltage differences promote arc extinction. Moreover, the average arc temperature exhibits an oscillatory decay over time and stabilizes at approximately 8000 K within the first arcing cycle. Notably, under low voltage conditions, the minimum arc temperature is delayed by 1.8 ms, indicating a pronounced lag effect. © 2025 Elsevier Masson SAS.
+ER  -
+
+TY  - JOUR
+AU  - Yu, X.
+AU  - Song, L.
+AU  - Su, Y.
+AU  - Yang, J.
+AU  - Lu, X.
+AU  - Wei, C.
+AU  - Cheng, Y.
+AU  - Liu, Y.
+TI  - Electrical Characteristics of the Pantograph-Catenary Arc in Urban Rail Transit Under Different Air Pressure Conditions
+PY  - 2025
+JO  - Sustainability (Switzerland)
+DO  - 10.3390/su17146285
+AB  - Nowadays, urban rail transit is expanding towards high-elevation zones, and the effect of the low air pressure environment on the pantograph-catenary system is becoming increasingly prominent. As a key indicator for evaluating the electrical contact performance of a pantograph-catenary system, research on the electrical characteristics of the pantograph-catenary arc is of great significance. For this reason, this paper established a plasma mathematical model applicable to the arc of the urban rail transit bow network based on the theory of magnetohydrodynamics. The mathematical model of the pantograph-catenary arc was used to set the relevant initial conditions. Based on COMSOL Multiphysics finite element simulation software, this study developed a multi-physics simulation model of the pantograph-catenary arc and systematically analysed its voltage characteristics and current density distribution under varying air pressure conditions. The results showed that as the air pressure decreases, the potential at the axial points declines, the pressure drop across the arc poles becomes more pronounced, and the current density decreases accordingly. This study provides theoretical and technical support for optimizing the design of and promoting the sustainable development of urban rail transit pantograph-catenary systems in high-altitude areas. © 2025 by the authors.
+ER  -
+
+TY  - JOUR
+AU  - Qian, P.
+AU  - Gao, G.
+AU  - Dong, K.
+AU  - Wang, Q.
+AU  - Peng, W.
+AU  - Ma, Y.
+AU  - Zhou, C.
+AU  - Chen, S.
+AU  - Yang, Z.
+AU  - Xiao, S.
+AU  - Wu, G.
+TI  - Research on driving force and dynamic characteristics of pantograph-catenary arc
+PY  - 2023
+JO  - Journal of Physics D: Applied Physics
+DO  - 10.1088/1361-6463/ace064
+AB  - Pantograph-catenary (PC) system is the key current collection equipment for electrified rail vehicles. The PC arc ages the contact line and pantograph abnormally, which is a limiting factor for rail transit to increase the speed of operation. To reduce the harm caused by the PC arc, in this article, a new PC arc chain model was established, which considered the arc current element mass and the acceleration process, updating the control equations. Meanwhile, a PC arc experimental platform was built in order to verify this model. It is demonstrated that the simulation results obtained by this work fit the arc and are suitable to describe the arc in the field. Experiments have found that the evolution of PC arc can be divided into three distinct processes: arc initial process, rapid stretching process and violent oscillation process. Combined with the model, the driving force and dynamic characteristics of the PC arc root and column in each process have been studied. The electromagnetic force dominates the arc evolution in the first two processes, and then the wind load dominates the last process. Besides, thermal buoyancy dominates the arc root jumping behavior. The driving mechanism for the movement of arc has been revealed. The arc root first suppresses the arc column, and then the arc column pulls the arc root. It is helpful for controlling PC arcs in the field. © 2023 IOP Publishing Ltd.
+ER  -
+
+TY  - JOUR
+AU  - Yu, X.
+AU  - Wang, Z.
+AU  - Song, M.
+AU  - Song, L.
+AU  - Yang, J.
+AU  - Su, Y.
+TI  - Simulation Study on Arc Temperature of Urban Rail DC Pantograph-Catenary and Arc Ablation of Contact Line
+PY  - 2024
+JO  - Machines
+DO  - 10.3390/machines12080514
+AB  - The high temperature generated by the DC pantograph-catenary arc of urban rail systems will aggravate the wear of the pantograph-catenary system. When the ablation intensifies, it will lead to disconnection accidents on the contact line. In this paper, through the establishment of a pantograph-catenary arc model and contact line arc ablation model, considering the flow of the molten pool, it is reported that the temperature distribution of the pantograph-catenary arc is axisymmetric. With the increase in the arcing time, the maximum temperature of the arc increases. The heat flux density of the arc injection contact line presents a Gaussian distribution and is positively correlated with the arcing time. The high-temperature area of the contact line and the distribution of the molten pool show an approximate arc shape. The velocity of the molten pool shows a symmetrical distribution about the center of the electrode. The area, depth, and radius of the molten pool of the contact line increase with an increase in the arcing time, and the radius of the molten pool is always greater than the depth of the molten pool. The work presented in this paper is helpful to further our understanding of the basic physical process of pantograph-catenary arc ablation of contact lines. © 2024 by the authors.
+ER  -
+
+TY  - JOUR
+AU  - Li, B.
+AU  - Shu, J.
+AU  - Du, D.
+TI  - Theoretical modeling and fault diagnosis of pantograph–catenary arc under high-speed airflow
+PY  - 2025
+JO  - Scientific Reports
+DO  - 10.1038/s41598-025-93585-2
+AB  - In traditional pantograph-catenary arc mathematical models, the relationship function between high-speed airflow and the voltage gradient contains certain inaccuracies. Furthermore, fault identification based on voltage or current often involves complex feature extraction and algorithmic processes. To address these issues, this paper introduces a new mathematical model and presents the concept of port impedance. First, based on the Habedank model, this paper combines the offline distance and airflow velocity fitting function with the existing relationship function between voltage gradient and arc current, deriving a mathematical arc model with airflow velocity and arc current as the primary influencing factors. Next, the correctness of this arc model is validated through simulations and experiments. The arc model simulation is performed using PSCAD software, and a corresponding experimental platform is built in the laboratory. Based on this, the Spearman correlation coefficient between the simulation and experimental data is calculated, showing a high correlation between the simulation data and the experimental data. Finally, the concept of port impedance is introduced, and the feasibility of arc fault identification based on port impedance is analyzed using the validated arc model. The research results indicate that port impedance can transform fault diagnosis problems into linearly separable problems, thereby avoiding the high-dimensional feature extraction and complex algorithms involved in arc fault diagnosis using current or voltage. Even without optimization, the original support vector machine classification model achieves an identification accuracy of up to 99%. © The Author(s) 2025.
+ER  -
+
+TY  - JOUR
+AU  - Yu, X.
+AU  - Su, Y.
+AU  - Song, M.
+AU  - Yang, J.
+AU  - Song, L.
+AU  - Wang, Z.
+AU  - Liu, Y.
+AU  - Wei, C.
+AU  - Cheng, Y.
+TI  - Simulation of Pantograph–Catenary Arc Temperature Field in Urban Railway and Study of Influencing Factors on Arc Temperature
+PY  - 2025
+JO  - Infrastructures
+DO  - 10.3390/infrastructures10090237
+AB  - During the running of urban railway trains, arcs of the pantograph–catenary (PC) system cause instantaneous high-temperature ablation of PC system materials, which severely impact the standard running of trains. Utilizing magnetohydrodynamics (MHD), a mathematical model of urban railway PC arcs is introduced in this article. The multiphysics finite element analysis platform COMSOL Multiphysics was used to solve and simulate the mathematical model of the PC arc. The simulation results were analyzed to explore the temperature dispersion law of the PC arc. Experimental measurements of arc duration and arc temperature were conducted, with the mathematical model’s accuracy validated through empirical comparisons. Based on the established mathematical model of the PC arc, the effects of PC gap and current intensity on the arc temperature were investigated. The results reveal that the PC arc’s temperature field follows a radially decaying dispersion, attaining maximum temperature in the center of the arc column. The surface temperature of the pantograph strip is higher than that of the contact wire. As the duration of the PC arc increases, the arc temperature gradually increases; the temperature of the PC arc diminishes with the increase in the PC gap. The PC current increases, and the arc zone temperature increases. The research conclusions of this article can provide a basis for mitigating the number of PC arcs and enhancing the quality of the PC current. © 2025 by the authors.
+ER  -
+
+TY  - JOUR
+AU  - Gao, G.
+AU  - Qian, P.
+AU  - Xu, Z.
+AU  - Dong, K.
+AU  - Wang, Q.
+AU  - Peng, W.
+AU  - Liu, Y.
+AU  - Ma, Y.
+AU  - Xiao, S.
+AU  - Huang, G.
+AU  - Wu, G.
+TI  - The evolution law of the pantograph-catenary arc with the multi-stress coupled force analysis under the sub-atmospheric pressure strong-airflow condition
+PY  - 2022
+JO  - Physics of Plasmas
+DO  - 10.1063/5.0100683
+AB  - As the unique power entrance, the pantograph-catenary plays a vital role in providing traction power for high-speed railways. Along with the operational velocity of trains constantly increasing, the poor contact between the contact wire and the pantograph strip happens frequently due to the "rigid point"existing on the contact wire, forming the "off-line"phenomenon. The off-line phenomenon is normally accompanied by the pantograph-catenary arc occurring, which seriously threatens the safety of the power supply for the high-speed train. Nowadays, as some railways have been built in remote places at high altitude, the motion characteristics of the pantograph-catenary arc under the sub-atmospheric pressure with strong airflow are extremely different from the case under normal pressure. Herein, a pantograph-catenary arc experimental platform is built for observing the evolutionary process of the arc under the sub-atmospheric pressure strong-airflow condition. The impact brought from different air pressures and airflows on the arc is analyzed, as the experimental results show that the pantograph-catenary arc has different motion characteristics when the arcing process is at different stages. To further explore the reason resulting in the varying motion characteristics of the arc, a multi-stress coupled force analysis model is established, with the consideration of the influence of air pressure, wind load, thermal buoyancy, air resistance, arc self-magnetism, etc. From the perspective of force acting on the arc, the arc formation mechanism at the development evolutionary stages is investigated under sub-atmospheric pressure strong-airflow conditions, which lays a theoretical foundation for effectively restraining the pantograph-catenary arc. © 2022 Author(s).
+ER  -
+
+TY  - JOUR
+AU  - Huang, K.
+AU  - Su, D.
+TI  - Extended Pantograph–Catenary Arc Modeling and an Analysis of the Vehicular-Grounding Electromagnetic Transients of Electric Multiple Units
+PY  - 2024
+JO  - Energies
+DO  - 10.3390/en17071512
+AB  - As the operating speed of electric multiple units (EMUs) in high-speed railways increases, pantograph–catenary (PC) detachment arcing occurs frequently. The resulting vehicular-grounding electromagnetic transients are related to the dynamic characteristics of the arc length. During large detachment, the processes of arc extinction and arc reignition may occur, resulting in more severe train body (TB) over-voltages and adverse effects on some vehicular electronic devices. As an extension of the previous works, this paper aims to establish a suitable PC arc model to examine the TB transient voltages. To begin with, the arc length dynamic characteristics are reasonably analyzed to deduce the relationship between the detachment distance and the arc length via the chain arc model. Then, the dynamic characteristics of the arc length are introduced, and an arc modeling scheme is proposed to elaborate the vehicle-grid electric power model for EMUs encountering various arcing scenarios. Based on this, the transient over-voltages are analyzed, accounting for both the arc extinction and arc reignition, as well as the mutual influences of multiple detachments in a short time. The influential factors, including arc length characteristics, phase angle, excitation inductance, and grounding parameters, are also involved in the performed analyses. © 2024 by the authors.
+ER  -
+
+TY  - JOUR
+AU  - Dong, Y.
+AU  - Wang, H.
+AU  - Zhang, H.
+AU  - Gong, H.
+AU  - Gao, T.
+TI  - Process Simulation of Humidity and Airflow Effects on Arc Discharge Characteristics in Pantograph–Catenary Systems
+PY  - 2025
+JO  - Processes
+DO  - 10.3390/pr13103242
+AB  - The electrical arcs generated by high-speed dynamic separation between pantograph and catenary systems pose a significant threat to the operational safety of high-speed railways. Environmental factors, particularly relative humidity and airflow, critically influence arc characteristics. This study establishes a two-dimensional pantograph–catenary arc model based on magnetohydrodynamic theory, validated through a self-developed experimental platform. Research findings demonstrate that as relative humidity increases from 25% to 100%, the core arc temperature decreases from 10,500 K to 9000 K due to enhanced heat dissipation in humid air and electron capture by water molecules; the peak arc voltage rises from 37.25 V to 48.17 V resulting from accelerated deionization processes under high humidity conditions; the average arc energy in polar regions increases from 2.5 × 10−4 J/m3 to 3.5 × 10−4 J/m3, exhibiting a saddle-shaped distribution; and the maximum arc pressure declines from 5.3 Pa to 3.7 Pa. Under airflow conditions of 10–30 m/s, synergistic effects between airflow and humidity further modify arc behavior. The most pronounced temperature fluctuations and most frequent arc root migration occur at 100% humidity with 30 m/s airflow, while the shortest travel distance and longest persistence are observed at 25% humidity with 10 m/s airflow, as airflow accelerates heat dissipation and promotes arc root alternation. Experimental measurements of arc radiation intensity and temperature distribution show excellent agreement with simulation results, verifying the model’s reliability. This study quantitatively elucidates the influence patterns of humidity and airflow on arc characteristics, providing a theoretical foundation for enhancing pantograph–catenary system reliability. © 2025 by the authors.
+ER  -

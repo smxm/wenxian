@@ -1,0 +1,86 @@
+{
+  "batch_id": "batch_0001",
+  "paper_count": 3,
+  "paper_ids": [
+    "paper_000001",
+    "paper_000002",
+    "paper_000003"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000001",
+      "entry_type": "inproceedings",
+      "title": "An Algorithm for Detecting Surface Defects in Industrial Strip Steel based on Receptive Field and Feature Information Supplementation",
+      "authors": [
+        "Xu, Q.",
+        "Yu, J.",
+        "Dong, A.",
+        "Shang, Z."
+      ],
+      "year": 2024,
+      "journal": "Proceedings of the 2024 27th International Conference on Computer Supported Cooperative Work in Design, CSCWD 2024",
+      "doi": "10.1109/cscwd61410.2024.10580868",
+      "abstract": "In the context of Industry 4.0 and the rise of intelligent manufacturing, the quality of industrial products is becoming more and more important. Strip steel surface defect detection, as a key link in industrial production, is crucial to ensure the quality of industrial products. However, due to the irregularity of the defect scale and the inconspicuous defect features in the surface defect image of strip steel, it is difficult for the existing detection algorithms to realize the effective detection of defects. In order to better extract the features of defects and improve the network's ability to detect defects, this paper proposes an algorithm for detecting surface defects on industrial strip steel based on receptive field and feature information supplementation. First, we design a receptive field (RF) module to replace the residual structure in the C3 module, which we name C3RF. This module can effectively increase the network's receptive field, allowing the network to fully capture irregular defect features without increasing the cost. Second, for the characteristics that defective features are not obvious and tend to lose detail information as the network deepens, an extra information supplemental branching feature fusion pyramid (EFPN) is proposed on the basis of the original PAFPN architecture to compensate for the detail information that is lost by the fragile features in deeper layers. Finally, convolutional block attention module (CBAM) is introduced to replace the spatial pooling pyramid (SPPF) in the baseline network, which enhances the contrast between defects and backgrounds, and improves the classification and localization ability of the network. Our network achieves an accuracy of 82.2% on the publicly available strip steel defect detection dataset, which is a 4.0% improvement over the baseline. The results show that the network constructed in this paper can realize effective defect detection. © 2024 IEEE.",
+      "keywords": [],
+      "normalized_title": "an algorithm for detecting surface defects in industrial strip steel based on receptive field and feature information supplementation",
+      "raw_bibtex": "@INPROCEEDINGS{10.1109/CSCWD61410.2024.10580868,\n\tauthor = {Xu, Q. and Yu, J. and Dong, A. and Shang, Z.},\n\ttitle = {An Algorithm for Detecting Surface Defects in Industrial Strip Steel based on Receptive Field and Feature Information Supplementation},\n\tjournal = {Proceedings of the 2024 27th International Conference on Computer Supported Cooperative Work in Design, CSCWD 2024},\n\tyear = {2024},\n\tabstract = {In the context of Industry 4.0 and the rise of intelligent manufacturing, the quality of industrial products is becoming more and more important. Strip steel surface defect detection, as a key link in industrial production, is crucial to ensure the quality of industrial products. However, due to the irregularity of the defect scale and the inconspicuous defect features in the surface defect image of strip steel, it is difficult for the existing detection algorithms to realize the effective detection of defects. In order to better extract the features of defects and improve the network's ability to detect defects, this paper proposes an algorithm for detecting surface defects on industrial strip steel based on receptive field and feature information supplementation. First, we design a receptive field (RF) module to replace the residual structure in the C3 module, which we name C3RF. This module can effectively increase the network's receptive field, allowing the network to fully capture irregular defect features without increasing the cost. Second, for the characteristics that defective features are not obvious and tend to lose detail information as the network deepens, an extra information supplemental branching feature fusion pyramid (EFPN) is proposed on the basis of the original PAFPN architecture to compensate for the detail information that is lost by the fragile features in deeper layers. Finally, convolutional block attention module (CBAM) is introduced to replace the spatial pooling pyramid (SPPF) in the baseline network, which enhances the contrast between defects and backgrounds, and improves the classification and localization ability of the network. Our network achieves an accuracy of 82.2% on the publicly available strip steel defect detection dataset, which is a 4.0% improvement over the baseline. The results show that the network constructed in this paper can realize effective defect detection. © 2024 IEEE.},\n\tdoi = {10.1109/CSCWD61410.2024.10580868},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85199100035&doi=10.1109%2FCSCWD61410.2024.10580868&partnerID=40&md5=714529a4eea568d7fc4e820cdfc296ef},\n\tpages = {3078-3085},\n\tnote = {Export Date: 01 April 2026; Cited By: 2 ER -; Conference paper},\n\ttype = {Conference paper},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Apr 1-2026_eb5bb4a5-7c33-4882-93ce-fa5189cfc718.ris"
+      ],
+      "source_keys": [
+        "10.1109/CSCWD61410.2024.10580868"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000002",
+      "entry_type": "inproceedings",
+      "title": "Metal surface Feature Fusion for Defect Recognition",
+      "authors": [
+        "Lyu, W.",
+        "Yang, C."
+      ],
+      "year": 2023,
+      "journal": "Proceedings - 2023 3rd International Conference on Robotics, Automation and Intelligent Control, ICRAIC 2023",
+      "doi": "10.1109/icraic61978.2023.00011",
+      "abstract": "Metal sheets have been widely used in various industrial production and production life aspects. However, the surface of metal plates is prone to multiple defects, which affect the electromagnetic characteristics and coating effect of metal plates. Currently, mainstream inspection uses YOLO, PaddleClas, and other methods to detect flat metal surfaces. These algorithms are all very potent in their classification capabilities, but as generalized defect handling algorithms, they cannot be specific to each type of defect in a real problem. In this paper, we propose a multi-information fusion method for defect recognition. We consider both low-level texture features and high-level convolutional features of metal surfaces for defect recognition. We use a convolutional neural network as the main body and add extracted and processed prompts during training. Finally, we test the proposed method extensively on Camshaft and Kaggle metal surface defects datasets, and the experimental results demonstrate that our method achieves a state-of-the-art recognition performance that surpasses previous defect recognition methods. © 2023 IEEE.",
+      "keywords": [],
+      "normalized_title": "metal surface feature fusion for defect recognition",
+      "raw_bibtex": "@INPROCEEDINGS{10.1109/ICRAIC61978.2023.00011,\n\tauthor = {Lyu, W. and Yang, C.},\n\ttitle = {Metal surface Feature Fusion for Defect Recognition},\n\tjournal = {Proceedings - 2023 3rd International Conference on Robotics, Automation and Intelligent Control, ICRAIC 2023},\n\tyear = {2023},\n\tabstract = {Metal sheets have been widely used in various industrial production and production life aspects. However, the surface of metal plates is prone to multiple defects, which affect the electromagnetic characteristics and coating effect of metal plates. Currently, mainstream inspection uses YOLO, PaddleClas, and other methods to detect flat metal surfaces. These algorithms are all very potent in their classification capabilities, but as generalized defect handling algorithms, they cannot be specific to each type of defect in a real problem. In this paper, we propose a multi-information fusion method for defect recognition. We consider both low-level texture features and high-level convolutional features of metal surfaces for defect recognition. We use a convolutional neural network as the main body and add extracted and processed prompts during training. Finally, we test the proposed method extensively on Camshaft and Kaggle metal surface defects datasets, and the experimental results demonstrate that our method achieves a state-of-the-art recognition performance that surpasses previous defect recognition methods. © 2023 IEEE.},\n\tdoi = {10.1109/ICRAIC61978.2023.00011},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85191975127&doi=10.1109%2FICRAIC61978.2023.00011&partnerID=40&md5=9a3bd82005b0959c37b210d5e0c53d55},\n\tpages = {19-23},\n\tnote = {Export Date: 01 April 2026; Cited By: 0 ER -; Conference paper},\n\ttype = {Conference paper},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Apr 1-2026_eb5bb4a5-7c33-4882-93ce-fa5189cfc718.ris"
+      ],
+      "source_keys": [
+        "10.1109/ICRAIC61978.2023.00011"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000003",
+      "entry_type": "inproceedings",
+      "title": "A Highly Efficient Surface Defect Detection Approach for Hot Rolled Strip Steel Based on Deep Learning",
+      "authors": [
+        "Hao, X.",
+        "Dong, T.",
+        "Zhang, D."
+      ],
+      "year": 2021,
+      "journal": "2021 6th International Conference on Robotics and Automation Engineering, ICRAE 2021",
+      "doi": "10.1109/icrae53653.2021.9657815",
+      "abstract": "With the continuous improvement of the requirements for surface quality assurance in steel strip industrial production, the automatic defect detection based on computer vision has been widely concerned. Currently, the algorithm based on convolutional neural network can achieve satisfactory accuracy in the task of surface defect detection. However, these high-precision deep convolution networks need a lot of computing power, which makes it difficult for these network models to be directly applied to factories. In this paper, a lightweight object detection framework based on MobileNetv3 backbone model is proposed, and three improvements have been made to increase the detection accuracy on strip steel surface defect, i.e., additional output layer for multi-scale detection, spatial pyramid pooling module for richer deep features, and feature pyramid and bottom-up path augmentation module for feature fusion. Experimental results demonstrate that the performance of the network model proposed in this paper is better than that of network models such as YOLOv3, YOLOv4, SSD and faster R-CNN. © 2021 IEEE.",
+      "keywords": [],
+      "normalized_title": "a highly efficient surface defect detection approach for hot rolled strip steel based on deep learning",
+      "raw_bibtex": "@INPROCEEDINGS{10.1109/ICRAE53653.2021.9657815,\n\tauthor = {Hao, X. and Dong, T. and Zhang, D.},\n\ttitle = {A Highly Efficient Surface Defect Detection Approach for Hot Rolled Strip Steel Based on Deep Learning},\n\tjournal = {2021 6th International Conference on Robotics and Automation Engineering, ICRAE 2021},\n\tyear = {2021},\n\tabstract = {With the continuous improvement of the requirements for surface quality assurance in steel strip industrial production, the automatic defect detection based on computer vision has been widely concerned. Currently, the algorithm based on convolutional neural network can achieve satisfactory accuracy in the task of surface defect detection. However, these high-precision deep convolution networks need a lot of computing power, which makes it difficult for these network models to be directly applied to factories. In this paper, a lightweight object detection framework based on MobileNetv3 backbone model is proposed, and three improvements have been made to increase the detection accuracy on strip steel surface defect, i.e., additional output layer for multi-scale detection, spatial pyramid pooling module for richer deep features, and feature pyramid and bottom-up path augmentation module for feature fusion. Experimental results demonstrate that the performance of the network model proposed in this paper is better than that of network models such as YOLOv3, YOLOv4, SSD and faster R-CNN. © 2021 IEEE.},\n\tdoi = {10.1109/ICRAE53653.2021.9657815},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85124794397&doi=10.1109%2FICRAE53653.2021.9657815&partnerID=40&md5=8fed7ad8a29d8e859a2bff277e84a4c9},\n\tpages = {318-322},\n\tnote = {Export Date: 01 April 2026; Cited By: 12 ER -; Conference paper},\n\ttype = {Conference paper},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Apr 1-2026_eb5bb4a5-7c33-4882-93ce-fa5189cfc718.ris"
+      ],
+      "source_keys": [
+        "10.1109/ICRAE53653.2021.9657815"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

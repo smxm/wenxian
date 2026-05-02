@@ -1,0 +1,566 @@
+{
+  "batch_id": "batch_0004",
+  "paper_count": 20,
+  "paper_ids": [
+    "paper_000061",
+    "paper_000062",
+    "paper_000063",
+    "paper_000064",
+    "paper_000065",
+    "paper_000066",
+    "paper_000067",
+    "paper_000068",
+    "paper_000069",
+    "paper_000070",
+    "paper_000071",
+    "paper_000072",
+    "paper_000073",
+    "paper_000074",
+    "paper_000075",
+    "paper_000076",
+    "paper_000077",
+    "paper_000078",
+    "paper_000079",
+    "paper_000080"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000061",
+      "entry_type": "article",
+      "title": "Hyper-Dense_Lung_Seg: Multimodal-Fusion-Based Modified U-Net for Lung Tumour Segmentation Using Multimodality of CT-PET Scans",
+      "authors": [
+        "Alshmrani, G.M.",
+        "Ni, Q.",
+        "Jiang, R.",
+        "Muhammed, N."
+      ],
+      "year": 2023,
+      "journal": "Diagnostics",
+      "doi": "10.3390/diagnostics13223481",
+      "abstract": "The majority of cancer-related deaths globally are due to lung cancer, which also has the second-highest mortality rate. The segmentation of lung tumours, treatment evaluation, and tumour stage classification have become significantly more accessible with the advent of PET/CT scans. With the advent of PET/CT scans, it is possible to obtain both functioning and anatomic data during a single examination. However, integrating images from different modalities can indeed be time-consuming for medical professionals and remains a challenging task. This challenge arises from several factors, including differences in image acquisition techniques, image resolutions, and the inherent variations in the spectral and temporal data captured by different imaging modalities. Artificial Intelligence (AI) methodologies have shown potential in the automation of image integration and segmentation. To address these challenges, multimodal fusion approach-based U-Net architecture (early fusion, late fusion, dense fusion, hyper-dense fusion, and hyper-dense VGG16 U-Net) are proposed for lung tumour segmentation. Dice scores of 73% show that hyper-dense VGG16 U-Net is superior to the other four proposed models. The proposed method can potentially aid medical professionals in detecting lung cancer at an early stage. © 2023 by the authors.",
+      "keywords": [],
+      "normalized_title": "hyper dense_lung_seg multimodal fusion based modified u net for lung tumour segmentation using multimodality of ct pet scans",
+      "raw_bibtex": "@ARTICLE{10.3390/diagnostics13223481,\n\tauthor = {Alshmrani, G.M. and Ni, Q. and Jiang, R. and Muhammed, N.},\n\ttitle = {Hyper-Dense_Lung_Seg: Multimodal-Fusion-Based Modified U-Net for Lung Tumour Segmentation Using Multimodality of CT-PET Scans},\n\tjournal = {Diagnostics},\n\tyear = {2023},\n\tabstract = {The majority of cancer-related deaths globally are due to lung cancer, which also has the second-highest mortality rate. The segmentation of lung tumours, treatment evaluation, and tumour stage classification have become significantly more accessible with the advent of PET/CT scans. With the advent of PET/CT scans, it is possible to obtain both functioning and anatomic data during a single examination. However, integrating images from different modalities can indeed be time-consuming for medical professionals and remains a challenging task. This challenge arises from several factors, including differences in image acquisition techniques, image resolutions, and the inherent variations in the spectral and temporal data captured by different imaging modalities. Artificial Intelligence (AI) methodologies have shown potential in the automation of image integration and segmentation. To address these challenges, multimodal fusion approach-based U-Net architecture (early fusion, late fusion, dense fusion, hyper-dense fusion, and hyper-dense VGG16 U-Net) are proposed for lung tumour segmentation. Dice scores of 73% show that hyper-dense VGG16 U-Net is superior to the other four proposed models. The proposed method can potentially aid medical professionals in detecting lung cancer at an early stage. © 2023 by the authors.},\n\tdoi = {10.3390/diagnostics13223481},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85178349875&doi=10.3390%2Fdiagnostics13223481&partnerID=40&md5=0eb581374adbf2f3b6d2aae415b1db44},\n\tvolume = {13},\n\tnumber = {22},\n\tnote = {Export Date: 23 March 2026; Cited By: 11 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.3390/diagnostics13223481"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000062",
+      "entry_type": "article",
+      "title": "A spatial squeeze and multimodal feature fusion attention network for multiple tumor segmentation from PET–CT Volumes",
+      "authors": [
+        "Diao, Z.",
+        "Jiang, H.",
+        "Shi, T."
+      ],
+      "year": 2023,
+      "journal": "Engineering Applications of Artificial Intelligence",
+      "doi": "10.1016/j.engappai.2023.105955",
+      "abstract": "Tumor segmentation is a key step in computer-aided diagnosis. The PET–CT co-segmentation method combines the high sensitivity of PET images and the anatomical information of CT images. For whole-body multiple tumors, such as soft tissue sarcoma, lymphoma, etc., due to the different lesion location and size, it is necessary to segment the tumor area according to the whole body anatomical information. How to effectively leverage whole-body contextual information and the fusion of multimodal information is the key to the problem. To address this issue, we propose a spatial squeeze and multimodal feature fusion attention network for whole-body multiple tumors segmentation based on PET–CT volumes. Our proposed method consists of two parts, a Coronal-Spatial Squeeze Attention Extraction Network (CSAE-Net) and a Precise PET–CT Fusion Attention Segmentation Network (PFAS-Net), respectively. In CSAE-Net, we squeeze a 3D PET–CT volume along the coronal plane into m 2D images, and obtain 3D Coronal Spatial Squeeze Attention Volume based on these 2D images. In PFAS-Net, the input is a 2D axial PET–CT slice, and the previously obtained coronal spatial squeeze attention map is used to guide the segmentation. Moreover, a Multimodal Fusion Attention (MFA) module is proposed to fuse the metabolic information of PET and the anatomical information of CT. We perform experiments on PET–CT datasets of two whole-body multiple tumors, Soft Tissue Sarcoma (STS) and Lymphoma. The results show that our proposed method improved Dice values by 8.03% in STS and 1.74% in Lymphoma. Also the visualization results show that our proposed method is able to suppress high-uptake regions of normal tissues. © 2023 Elsevier Ltd",
+      "keywords": [],
+      "normalized_title": "a spatial squeeze and multimodal feature fusion attention network for multiple tumor segmentation from pet ct volumes",
+      "raw_bibtex": "@ARTICLE{10.1016/j.engappai.2023.105955,\n\tauthor = {Diao, Z. and Jiang, H. and Shi, T.},\n\ttitle = {A spatial squeeze and multimodal feature fusion attention network for multiple tumor segmentation from PET–CT Volumes},\n\tjournal = {Engineering Applications of Artificial Intelligence},\n\tyear = {2023},\n\tabstract = {Tumor segmentation is a key step in computer-aided diagnosis. The PET–CT co-segmentation method combines the high sensitivity of PET images and the anatomical information of CT images. For whole-body multiple tumors, such as soft tissue sarcoma, lymphoma, etc., due to the different lesion location and size, it is necessary to segment the tumor area according to the whole body anatomical information. How to effectively leverage whole-body contextual information and the fusion of multimodal information is the key to the problem. To address this issue, we propose a spatial squeeze and multimodal feature fusion attention network for whole-body multiple tumors segmentation based on PET–CT volumes. Our proposed method consists of two parts, a Coronal-Spatial Squeeze Attention Extraction Network (CSAE-Net) and a Precise PET–CT Fusion Attention Segmentation Network (PFAS-Net), respectively. In CSAE-Net, we squeeze a 3D PET–CT volume along the coronal plane into m 2D images, and obtain 3D Coronal Spatial Squeeze Attention Volume based on these 2D images. In PFAS-Net, the input is a 2D axial PET–CT slice, and the previously obtained coronal spatial squeeze attention map is used to guide the segmentation. Moreover, a Multimodal Fusion Attention (MFA) module is proposed to fuse the metabolic information of PET and the anatomical information of CT. We perform experiments on PET–CT datasets of two whole-body multiple tumors, Soft Tissue Sarcoma (STS) and Lymphoma. The results show that our proposed method improved Dice values by 8.03% in STS and 1.74% in Lymphoma. Also the visualization results show that our proposed method is able to suppress high-uptake regions of normal tissues. © 2023 Elsevier Ltd},\n\tdoi = {10.1016/j.engappai.2023.105955},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85147847565&doi=10.1016%2Fj.engappai.2023.105955&partnerID=40&md5=6205803ed68b4ada24ae26ae66efb552},\n\tvolume = {121},\n\tnote = {Export Date: 23 March 2026; Cited By: 11 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.engappai.2023.105955"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000063",
+      "entry_type": "article",
+      "title": "Hybridized Deep Learning Approach for Detecting Alzheimer’s Disease",
+      "authors": [
+        "Balaji, P.",
+        "Chaurasia, M.A.",
+        "Bilfaqih, S.M.",
+        "Muniasamy, A.",
+        "Alsid, L.E.G."
+      ],
+      "year": 2023,
+      "journal": "Biomedicines",
+      "doi": "10.3390/biomedicines11010149",
+      "abstract": "Alzheimer’s disease (AD) is mainly a neurodegenerative sickness. The primary characteristics are neuronal atrophy, amyloid deposition, and cognitive, behavioral, and psychiatric disorders. Numerous machine learning (ML) algorithms have been investigated and applied to AD identification over the past decades, emphasizing the subtle prodromal stage of mild cognitive impairment (MCI) to assess critical features that distinguish the disease’s early manifestation and instruction for early detection and treatment. Identifying early MCI (EMCI) remains challenging due to the difficulty in distinguishing patients with cognitive normality from those with MCI. As a result, most classification algorithms for these two groups perform poorly. This paper proposes a hybrid Deep Learning Approach for the early detection of Alzheimer’s disease. A method for early AD detection using multimodal imaging and Convolutional Neural Network with the Long Short-term memory algorithm combines magnetic resonance imaging (MRI), positron emission tomography (PET), and standard neuropsychological test scores. The proposed methodology updates the learning weights, and Adam’s optimization is used to increase accuracy. The system has an unparalleled accuracy of 98.5% in classifying cognitively normal controls from EMCI. These results imply that deep neural networks may be trained to automatically discover imaging biomarkers indicative of AD and use them to identify the illness accurately. © 2023 by the authors.",
+      "keywords": [],
+      "normalized_title": "hybridized deep learning approach for detecting alzheimer s disease",
+      "raw_bibtex": "@ARTICLE{10.3390/biomedicines11010149,\n\tauthor = {Balaji, P. and Chaurasia, M.A. and Bilfaqih, S.M. and Muniasamy, A. and Alsid, L.E.G.},\n\ttitle = {Hybridized Deep Learning Approach for Detecting Alzheimer’s Disease},\n\tjournal = {Biomedicines},\n\tyear = {2023},\n\tabstract = {Alzheimer’s disease (AD) is mainly a neurodegenerative sickness. The primary characteristics are neuronal atrophy, amyloid deposition, and cognitive, behavioral, and psychiatric disorders. Numerous machine learning (ML) algorithms have been investigated and applied to AD identification over the past decades, emphasizing the subtle prodromal stage of mild cognitive impairment (MCI) to assess critical features that distinguish the disease’s early manifestation and instruction for early detection and treatment. Identifying early MCI (EMCI) remains challenging due to the difficulty in distinguishing patients with cognitive normality from those with MCI. As a result, most classification algorithms for these two groups perform poorly. This paper proposes a hybrid Deep Learning Approach for the early detection of Alzheimer’s disease. A method for early AD detection using multimodal imaging and Convolutional Neural Network with the Long Short-term memory algorithm combines magnetic resonance imaging (MRI), positron emission tomography (PET), and standard neuropsychological test scores. The proposed methodology updates the learning weights, and Adam’s optimization is used to increase accuracy. The system has an unparalleled accuracy of 98.5% in classifying cognitively normal controls from EMCI. These results imply that deep neural networks may be trained to automatically discover imaging biomarkers indicative of AD and use them to identify the illness accurately. © 2023 by the authors.},\n\tdoi = {10.3390/biomedicines11010149},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85146825486&doi=10.3390%2Fbiomedicines11010149&partnerID=40&md5=27225794386ca8c8e3dfdc5c0b064f5d},\n\tvolume = {11},\n\tnumber = {1},\n\tnote = {Export Date: 23 March 2026; Cited By: 126 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.3390/biomedicines11010149"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000064",
+      "entry_type": "article",
+      "title": "Automated landmark-based cat facial analysis and its applications",
+      "authors": [
+        "Martvel, G.",
+        "Lazebnik, T.",
+        "Feighelstein, M.",
+        "Meller, S.",
+        "Shimshoni, I.",
+        "Finka, L.",
+        "Luna, S.P.L.",
+        "Mills, D.S.",
+        "Volk, H.A.",
+        "Zamansky, A."
+      ],
+      "year": 2024,
+      "journal": "Frontiers in Veterinary Science",
+      "doi": "10.3389/fvets.2024.1442634",
+      "abstract": "Facial landmarks, widely studied in human affective computing, are beginning to gain interest in the animal domain. Specifically, landmark-based geometric morphometric methods have been used to objectively assess facial expressions in cats, focusing on pain recognition and the impact of breed-specific morphology on facial signaling. These methods employed a 48-landmark scheme grounded in cat facial anatomy. Manually annotating these landmarks, however, is a labor-intensive process, deeming it impractical for generating sufficiently large amounts of data for machine learning purposes and for use in applied real-time contexts with cats. Our previous work introduced an AI pipeline for automated landmark detection, which showed good performance in standard machine learning metrics. Nonetheless, the effectiveness of fully automated, end-to-end landmark-based systems for practical cat facial analysis tasks remained underexplored. In this paper we develop AI pipelines for three benchmark tasks using two previously collected datasets of cat faces. The tasks include automated cat breed recognition, cephalic type recognition and pain recognition. Our fully automated end-to-end pipelines reached accuracy of 75% and 66% in cephalic type and pain recognition respectively, suggesting that landmark-based approaches hold promise for automated pain assessment and morphological explorations. Copyright © 2024 Martvel, Lazebnik, Feighelstein, Meller, Shimshoni, Finka, Luna, Mills, Volk and Zamansky.",
+      "keywords": [],
+      "normalized_title": "automated landmark based cat facial analysis and its applications",
+      "raw_bibtex": "@ARTICLE{10.3389/fvets.2024.1442634,\n\tauthor = {Martvel, G. and Lazebnik, T. and Feighelstein, M. and Meller, S. and Shimshoni, I. and Finka, L. and Luna, S.P.L. and Mills, D.S. and Volk, H.A. and Zamansky, A.},\n\ttitle = {Automated landmark-based cat facial analysis and its applications},\n\tjournal = {Frontiers in Veterinary Science},\n\tyear = {2024},\n\tabstract = {Facial landmarks, widely studied in human affective computing, are beginning to gain interest in the animal domain. Specifically, landmark-based geometric morphometric methods have been used to objectively assess facial expressions in cats, focusing on pain recognition and the impact of breed-specific morphology on facial signaling. These methods employed a 48-landmark scheme grounded in cat facial anatomy. Manually annotating these landmarks, however, is a labor-intensive process, deeming it impractical for generating sufficiently large amounts of data for machine learning purposes and for use in applied real-time contexts with cats. Our previous work introduced an AI pipeline for automated landmark detection, which showed good performance in standard machine learning metrics. Nonetheless, the effectiveness of fully automated, end-to-end landmark-based systems for practical cat facial analysis tasks remained underexplored. In this paper we develop AI pipelines for three benchmark tasks using two previously collected datasets of cat faces. The tasks include automated cat breed recognition, cephalic type recognition and pain recognition. Our fully automated end-to-end pipelines reached accuracy of 75% and 66% in cephalic type and pain recognition respectively, suggesting that landmark-based approaches hold promise for automated pain assessment and morphological explorations. Copyright © 2024 Martvel, Lazebnik, Feighelstein, Meller, Shimshoni, Finka, Luna, Mills, Volk and Zamansky.},\n\tdoi = {10.3389/fvets.2024.1442634},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85212681732&doi=10.3389%2Ffvets.2024.1442634&partnerID=40&md5=092c6d890dea8df3d5fe069145f3cd2a},\n\tvolume = {11},\n\tnote = {Export Date: 23 March 2026; Cited By: 6 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.3389/fvets.2024.1442634"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000065",
+      "entry_type": "article",
+      "title": "Deep learning based facial expression recognition using improved Cat Swarm Optimization",
+      "authors": [
+        "Sikkandar, H.",
+        "Thiyagarajan, R."
+      ],
+      "year": 2021,
+      "journal": "Journal of Ambient Intelligence and Humanized Computing",
+      "doi": "10.1007/s12652-020-02463-4",
+      "abstract": "Human emotional facial expressions play a vital role in interpersonal relations. Automated facial expression recognition has always remained a challenging problem in real-life applications as people vary significantly in the way of showing their expressions. Recently various approaches have been proposed for automatically analyzing the facial expression of a person. In this paper, a novel approach to human facial expression recognition by applying a modified version of the Cat Swarm Optimization (CSO) algorithm, called Improved Cat Swarm Optimization (ICSO) algorithm is proposed. The input image given to the proposed system retrieves similar images from the dataset as well as identifies the person’s emotional state through facial expressions. Deep features present in the face image are extracted using Deep Convolution Neural Network (DCNN) approach. ICSO is proposed to select optimal features from the face image that can uniquely distinguish the facial expression of a person. Employing DCNN with ICSO improves the retrieval performance of the proposed system. Ensemble classifiers that employ Neural Network (NN) and Support Vector Machine (SVM) are implemented to classify facial expressions such as normal, happy, sad, surprise, fear and angry. The performance of the proposed system is evaluated using JAFFE, CK+, Pie datasets and some real-world images. The proposed system outperforms the existing system, thus achieving superior accuracy and reduced computation time. © 2020, Springer-Verlag GmbH Germany, part of Springer Nature.",
+      "keywords": [],
+      "normalized_title": "deep learning based facial expression recognition using improved cat swarm optimization",
+      "raw_bibtex": "@ARTICLE{10.1007/s12652-020-02463-4,\n\tauthor = {Sikkandar, H. and Thiyagarajan, R.},\n\ttitle = {Deep learning based facial expression recognition using improved Cat Swarm Optimization},\n\tjournal = {Journal of Ambient Intelligence and Humanized Computing},\n\tyear = {2021},\n\tabstract = {Human emotional facial expressions play a vital role in interpersonal relations. Automated facial expression recognition has always remained a challenging problem in real-life applications as people vary significantly in the way of showing their expressions. Recently various approaches have been proposed for automatically analyzing the facial expression of a person. In this paper, a novel approach to human facial expression recognition by applying a modified version of the Cat Swarm Optimization (CSO) algorithm, called Improved Cat Swarm Optimization (ICSO) algorithm is proposed. The input image given to the proposed system retrieves similar images from the dataset as well as identifies the person’s emotional state through facial expressions. Deep features present in the face image are extracted using Deep Convolution Neural Network (DCNN) approach. ICSO is proposed to select optimal features from the face image that can uniquely distinguish the facial expression of a person. Employing DCNN with ICSO improves the retrieval performance of the proposed system. Ensemble classifiers that employ Neural Network (NN) and Support Vector Machine (SVM) are implemented to classify facial expressions such as normal, happy, sad, surprise, fear and angry. The performance of the proposed system is evaluated using JAFFE, CK+, Pie datasets and some real-world images. The proposed system outperforms the existing system, thus achieving superior accuracy and reduced computation time. © 2020, Springer-Verlag GmbH Germany, part of Springer Nature.},\n\tdoi = {10.1007/s12652-020-02463-4},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85089748097&doi=10.1007%2Fs12652-020-02463-4&partnerID=40&md5=3390116f7cc491dd1f348565a15670bb},\n\tvolume = {12},\n\tnumber = {2},\n\tpages = {3037-3053},\n\tnote = {Export Date: 23 March 2026; Cited By: 74 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1007/s12652-020-02463-4"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000066",
+      "entry_type": "article",
+      "title": "Consumer-Centric Explainable Multimodal Digital Twin Modeling for Personalized Alzheimer’s Detection in Healthcare 5.0",
+      "authors": [
+        "Asmat, H.",
+        "Din, I.U.",
+        "Almogren, A.",
+        "Syed, T.A.",
+        "Rodrigues, J.J.P.C."
+      ],
+      "year": 2026,
+      "journal": "IEEE Transactions on Consumer Electronics",
+      "doi": "10.1109/tce.2026.3659536",
+      "abstract": "Alzheimer disease (AD), as one of the progressive neurodegenerative diseases, is recognized as one of the major causes of dementia throughout the world, and the existing methods of diagnosis and treatment prove to be highly limited. To overcome these obstacles, the proposed AD-TwinML framework integrates MRI and PET imaging with machine learning methods, which provides an effective solution to the diagnosis and management of Alzheimer. The proposed framework employes Vision transformer (ViTs), Digital twin (DT), and Time-series Transformers (TST) which will help in modeling disease progression to predict and diagnose Alzheimer’s. The experimental findings show that the framework has better accuracy (94.5%), sensitivity (91.5%), and AUC (0.946) than MM-CNN and MRIVGG16. Moreover, AD-TwinML has lower execution time (14 seconds) and error values (6.1%), which is appropriate to use in real time clinical scenarios. The framework is consistent with the objectives of Healthcare 5.0 because it facilitates consumer-focused, individualized monitoring and proactive intervention plans. © 2026 IEEE. All rights reserved.",
+      "keywords": [],
+      "normalized_title": "consumer centric explainable multimodal digital twin modeling for personalized alzheimer s detection in healthcare 5 0",
+      "raw_bibtex": "@ARTICLE{10.1109/TCE.2026.3659536,\n\tauthor = {Asmat, H. and Din, I.U. and Almogren, A. and Syed, T.A. and Rodrigues, J.J.P.C.},\n\ttitle = {Consumer-Centric Explainable Multimodal Digital Twin Modeling for Personalized Alzheimer’s Detection in Healthcare 5.0},\n\tjournal = {IEEE Transactions on Consumer Electronics},\n\tyear = {2026},\n\tabstract = {Alzheimer disease (AD), as one of the progressive neurodegenerative diseases, is recognized as one of the major causes of dementia throughout the world, and the existing methods of diagnosis and treatment prove to be highly limited. To overcome these obstacles, the proposed AD-TwinML framework integrates MRI and PET imaging with machine learning methods, which provides an effective solution to the diagnosis and management of Alzheimer. The proposed framework employes Vision transformer (ViTs), Digital twin (DT), and Time-series Transformers (TST) which will help in modeling disease progression to predict and diagnose Alzheimer’s. The experimental findings show that the framework has better accuracy (94.5%), sensitivity (91.5%), and AUC (0.946) than MM-CNN and MRIVGG16. Moreover, AD-TwinML has lower execution time (14 seconds) and error values (6.1%), which is appropriate to use in real time clinical scenarios. The framework is consistent with the objectives of Healthcare 5.0 because it facilitates consumer-focused, individualized monitoring and proactive intervention plans. © 2026 IEEE. All rights reserved.},\n\tdoi = {10.1109/TCE.2026.3659536},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105029131438&doi=10.1109%2FTCE.2026.3659536&partnerID=40&md5=549374c2b01d49132542f7e52edaa83d},\n\tnote = {Export Date: 23 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1109/TCE.2026.3659536"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000067",
+      "entry_type": "article",
+      "title": "Positron emission tomography for response evaluation in microenvironment-targeted anti-cancer therapy",
+      "authors": [
+        "Oriuchi, N.",
+        "Sugawara, S.",
+        "Shiga, T."
+      ],
+      "year": 2020,
+      "journal": "Biomedicines",
+      "doi": "10.3390/biomedicines8090371",
+      "abstract": "Therapeutic response is evaluated using the diameter of tumors and quantitative parameters of 2-[18F] fluoro-2-deoxy-d-glucose positron emission tomography (FDG-PET). Tumor response to molecular-targeted drugs and immune checkpoint inhibitors is different from conventional chemotherapy in terms of temporal metabolic alteration and morphological change after the therapy. Cancer stem cells, immunologically competent cells, and metabolism of cancer are considered targets of novel therapy. Accumulation of FDG reflects the glucose metabolism of cancer cells as well as immune cells in the tumor microenvironment, which differs among patients according to the individual immune function; however, FDG-PET could evaluate the viability of the tumor as a whole. On the other hand, specific imaging and cell tracking of cancer cell or immunological cell subsets does not elucidate tumor response in a complexed interaction in the tumor microenvironment. Considering tumor heterogeneity and individual variation in therapeutic response, a radiomics approach with quantitative features of multimodal images and deep learning algorithm with reference to pathologic and genetic data has the potential to improve response assessment for emerging cancer therapy. © 2020 by the authors.",
+      "keywords": [],
+      "normalized_title": "positron emission tomography for response evaluation in microenvironment targeted anti cancer therapy",
+      "raw_bibtex": "@ARTICLE{10.3390/BIOMEDICINES8090371,\n\tauthor = {Oriuchi, N. and Sugawara, S. and Shiga, T.},\n\ttitle = {Positron emission tomography for response evaluation in microenvironment-targeted anti-cancer therapy},\n\tjournal = {Biomedicines},\n\tyear = {2020},\n\tabstract = {Therapeutic response is evaluated using the diameter of tumors and quantitative parameters of 2-[18F] fluoro-2-deoxy-d-glucose positron emission tomography (FDG-PET). Tumor response to molecular-targeted drugs and immune checkpoint inhibitors is different from conventional chemotherapy in terms of temporal metabolic alteration and morphological change after the therapy. Cancer stem cells, immunologically competent cells, and metabolism of cancer are considered targets of novel therapy. Accumulation of FDG reflects the glucose metabolism of cancer cells as well as immune cells in the tumor microenvironment, which differs among patients according to the individual immune function; however, FDG-PET could evaluate the viability of the tumor as a whole. On the other hand, specific imaging and cell tracking of cancer cell or immunological cell subsets does not elucidate tumor response in a complexed interaction in the tumor microenvironment. Considering tumor heterogeneity and individual variation in therapeutic response, a radiomics approach with quantitative features of multimodal images and deep learning algorithm with reference to pathologic and genetic data has the potential to improve response assessment for emerging cancer therapy. © 2020 by the authors.},\n\tdoi = {10.3390/BIOMEDICINES8090371},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85092566105&doi=10.3390%2FBIOMEDICINES8090371&partnerID=40&md5=0ff47d54f797450f7a1252dd463e2419},\n\tvolume = {8},\n\tnumber = {9},\n\tnote = {Export Date: 23 March 2026; Cited By: 15 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.3390/BIOMEDICINES8090371"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000068",
+      "entry_type": "article",
+      "title": "FDG-PET/CT and Multimodal Machine Learning Model Prediction of Pathological Complete Response to Neoadjuvant Chemotherapy in Triple-Negative Breast Cancer",
+      "authors": [
+        "Groheux, D.",
+        "Ferrer, L.",
+        "Vargas, J.",
+        "Martineau, A.",
+        "Borgel, A.",
+        "Teixeira, L.",
+        "Menu, P.",
+        "Bertheau, P.",
+        "Gallinato, O.",
+        "Colin, T.",
+        "Lehmann-Che, J."
+      ],
+      "year": 2025,
+      "journal": "Cancers",
+      "doi": "10.3390/cancers17071249",
+      "abstract": "Purpose: Triple-negative breast cancer (TNBC) is a biologically and clinically heterogeneous disease, associated with poorer outcomes when compared with other subtypes of breast cancer. Neoadjuvant chemotherapy (NAC) is often given before surgery, and achieving a pathological complete response (pCR) has been associated with patient outcomes. There is thus strong clinical interest in the ability to accurately predict pCR status using baseline data. Materials and Methods: A cohort of 57 TNBC patients who underwent FDG-PET/CT before NAC was analyzed to develop a machine learning (ML) algorithm predictive of pCR. A total of 241 predictors were collected for each patient: 11 clinical features, 11 histopathological features, 13 genomic features, and 206 PET features, including 195 radiomic features. The optimization criterion was the area under the ROC curve (AUC). Event-free survival (EFS) was estimated using the Kaplan–Meier method. Results: The best ML algorithm reached an AUC of 0.82. The features with the highest weight in the algorithm were a mix of PET (including radiomics), histopathological, genomic, and clinical features, highlighting the importance of truly multimodal analysis. Patients with predicted pCR tended to have a longer EFS than patients with predicted non-pCR, even though this difference was not significant, probably due to the small sample size and few events observed (p = 0.09). Conclusions: This study suggests that ML applied to baseline multimodal data can help predict pCR status after NAC for TNBC patients and may identify correlations with long-term outcomes. Patients predicted as non-pCR may benefit from concomitant treatment with immunotherapy or dose intensification. © 2025 by the authors.",
+      "keywords": [],
+      "normalized_title": "fdg pet ct and multimodal machine learning model prediction of pathological complete response to neoadjuvant chemotherapy in triple negative breast cancer",
+      "raw_bibtex": "@ARTICLE{10.3390/cancers17071249,\n\tauthor = {Groheux, D. and Ferrer, L. and Vargas, J. and Martineau, A. and Borgel, A. and Teixeira, L. and Menu, P. and Bertheau, P. and Gallinato, O. and Colin, T. and Lehmann-Che, J.},\n\ttitle = {FDG-PET/CT and Multimodal Machine Learning Model Prediction of Pathological Complete Response to Neoadjuvant Chemotherapy in Triple-Negative Breast Cancer},\n\tjournal = {Cancers},\n\tyear = {2025},\n\tabstract = {Purpose: Triple-negative breast cancer (TNBC) is a biologically and clinically heterogeneous disease, associated with poorer outcomes when compared with other subtypes of breast cancer. Neoadjuvant chemotherapy (NAC) is often given before surgery, and achieving a pathological complete response (pCR) has been associated with patient outcomes. There is thus strong clinical interest in the ability to accurately predict pCR status using baseline data. Materials and Methods: A cohort of 57 TNBC patients who underwent FDG-PET/CT before NAC was analyzed to develop a machine learning (ML) algorithm predictive of pCR. A total of 241 predictors were collected for each patient: 11 clinical features, 11 histopathological features, 13 genomic features, and 206 PET features, including 195 radiomic features. The optimization criterion was the area under the ROC curve (AUC). Event-free survival (EFS) was estimated using the Kaplan–Meier method. Results: The best ML algorithm reached an AUC of 0.82. The features with the highest weight in the algorithm were a mix of PET (including radiomics), histopathological, genomic, and clinical features, highlighting the importance of truly multimodal analysis. Patients with predicted pCR tended to have a longer EFS than patients with predicted non-pCR, even though this difference was not significant, probably due to the small sample size and few events observed (p = 0.09). Conclusions: This study suggests that ML applied to baseline multimodal data can help predict pCR status after NAC for TNBC patients and may identify correlations with long-term outcomes. Patients predicted as non-pCR may benefit from concomitant treatment with immunotherapy or dose intensification. © 2025 by the authors.},\n\tdoi = {10.3390/cancers17071249},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105002368489&doi=10.3390%2Fcancers17071249&partnerID=40&md5=3c3f29d10841eeb38c56809899c19722},\n\tvolume = {17},\n\tnumber = {7},\n\tnote = {Export Date: 23 March 2026; Cited By: 5 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.3390/cancers17071249"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000069",
+      "entry_type": "article",
+      "title": "EEG Based Emotion Analysis Using Reinforced Spatio-Temporal Attentive Graph Neural and Contextnet Techniques",
+      "authors": [
+        "Akalya Devi, C.",
+        "Karthika Renuka, D."
+      ],
+      "year": 2024,
+      "journal": "Journal of Automation, Mobile Robotics and Intelligent Systems",
+      "doi": "10.14313/jamris/3-2024/23",
+      "abstract": "EEG-based emotion classification is considered to separate and observe the mental state or emotions. Emotion classification using EEG is used for medical, security and other purposes. Several deep learning and machine learning strategies are employed to classify the EEG emotion signals. They do not provide sufficient accuracy and have higher complexity and high error rate. In this manuscript, a novel Reinforced Spatio-Temporal Attentive Graph Neural Networks (RSTAGNN) and ContextNet for emotion classification with EEG signals is proposed (RSTAGNN-ContextNet-GWOA-EEG-EA). Here, the input EEG signals are taken from two benchmark datasets,namely DEAP and K-EmoCon datasets. Then, the input EEG signals are pre-processed,and the features are extracted utilizing ContextNet with Global Principal Component Analysis (GPCA). After that, the EEG signal emotions are classified using Reinforced Spatio-Temporal Attentive Graph Neural Networks method. RSTAGNN weight parameters are optimized under the Glowworm Swarm Optimization Algorithm (GWOA). The proposed model classifies the EEG signal emotions with high accuracy. The efficacy of the proposed method using the DEAP dataset attains higher accuracy by 24.05%, 12.64% related to existing systems, like Multi-domain feature fusion for emotion classification (DWT-SVM-EEGEA- DEAP), EEG emotion finding utilizing fusion mode of graph CNN with LSTM (GCNN-LSTM-EEG-EA-DEAP) respectively. The efficiency of the proposed method using the K-EmoCon dataset attains higher accuracy 32.64%, 15.65% related to existing systems, like Toward Robust Wearable Emotion Realization along Contrastive Representation Learning (CAT-EEG-EA-K-EmoCon) and Human Emotion Recognition using Physiological Signals (CATEEG- EA-K-EmoCon) respectively. © 2024 C. Akalya Devi et al., published by Sciendo.",
+      "keywords": [],
+      "normalized_title": "eeg based emotion analysis using reinforced spatio temporal attentive graph neural and contextnet techniques",
+      "raw_bibtex": "@ARTICLE{10.14313/jamris/3-2024/23,\n\tauthor = {Akalya Devi, C. and Karthika Renuka, D.},\n\ttitle = {EEG Based Emotion Analysis Using Reinforced Spatio-Temporal Attentive Graph Neural and Contextnet Techniques},\n\tjournal = {Journal of Automation, Mobile Robotics and Intelligent Systems},\n\tyear = {2024},\n\tabstract = {EEG-based emotion classification is considered to separate and observe the mental state or emotions. Emotion classification using EEG is used for medical, security and other purposes. Several deep learning and machine learning strategies are employed to classify the EEG emotion signals. They do not provide sufficient accuracy and have higher complexity and high error rate. In this manuscript, a novel Reinforced Spatio-Temporal Attentive Graph Neural Networks (RSTAGNN) and ContextNet for emotion classification with EEG signals is proposed (RSTAGNN-ContextNet-GWOA-EEG-EA). Here, the input EEG signals are taken from two benchmark datasets,namely DEAP and K-EmoCon datasets. Then, the input EEG signals are pre-processed,and the features are extracted utilizing ContextNet with Global Principal Component Analysis (GPCA). After that, the EEG signal emotions are classified using Reinforced Spatio-Temporal Attentive Graph Neural Networks method. RSTAGNN weight parameters are optimized under the Glowworm Swarm Optimization Algorithm (GWOA). The proposed model classifies the EEG signal emotions with high accuracy. The efficacy of the proposed method using the DEAP dataset attains higher accuracy by 24.05%, 12.64% related to existing systems, like Multi-domain feature fusion for emotion classification (DWT-SVM-EEGEA- DEAP), EEG emotion finding utilizing fusion mode of graph CNN with LSTM (GCNN-LSTM-EEG-EA-DEAP) respectively. The efficiency of the proposed method using the K-EmoCon dataset attains higher accuracy 32.64%, 15.65% related to existing systems, like Toward Robust Wearable Emotion Realization along Contrastive Representation Learning (CAT-EEG-EA-K-EmoCon) and Human Emotion Recognition using Physiological Signals (CATEEG- EA-K-EmoCon) respectively. © 2024 C. Akalya Devi et al., published by Sciendo.},\n\tdoi = {10.14313/jamris/3-2024/23},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85204030578&doi=10.14313%2Fjamris%2F3-2024%2F23&partnerID=40&md5=52fea3914779b0986d366f31df31ef89},\n\tvolume = {18},\n\tnumber = {3},\n\tpages = {61-68},\n\tnote = {Export Date: 23 March 2026; Cited By: 1 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.14313/jamris/3-2024/23"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000070",
+      "entry_type": "article",
+      "title": "Advancing cat facial emotion interpretation: evaluating supervised and semi-supervised models using facial landmark and image data",
+      "authors": [
+        "Hovongratana, T.",
+        "Sareerasart, B.",
+        "Srisaswatakul, T.",
+        "Chamchum, W.",
+        "Siriborvornratanakul, T."
+      ],
+      "year": 2026,
+      "journal": "Multimedia Tools and Applications",
+      "doi": "10.1007/s11042-026-21301-x",
+      "abstract": "Interpreting cat emotions poses a significant challenge due to the subtlety and absence of facial expressions, making it difficult to indicate their feelings. Our study addresses this challenge by experimenting with supervised and semi-supervised models for the classification of cat facial emotions on the Cat Facial Landmark in the Wild (CatFLW) dataset. Due to the lack of ground truth labels, we labeled a portion of the dataset based on shapes of facial features inferred from a previous study on cat behaviors. Subsequently, we examined supervised learning approaches with four model specifications derived from a combination of cat facial images and cat facial landmark vector inputs. The result for the best performing supervised model is the vanilla multi-layer perceptron (MLP) using cat facial landmark vector input with validation accuracy 95.73 ± 1.28%. For semi-supervised learning, we compared two techniques widely used in semi-supervised learning, FixMatch and Mean Teacher. Following the result of the supervised learning, we used the vanilla MLP as our model structure for both semi-supervised methods. Mean Teacher was found to be the better semi-supervised method for our dataset with the unlabeled accuracy of 95.65 ± 0.68% and the validation accuracy only slightly below the supervised model at 90.29 ± 2.00%, demonstrating sufficient generalization performance. Our study demonstrates the effectiveness of the proposed models and introduces a framework for interpreting cat emotions using both image and facial landmark data. We also contributed labeled cat facial expressions to the CatFLW dataset (https://raw.githubusercontent.com/geexe/cat-facial-expression-recognition/main/CatFLW%20Dataset/psuedo-labels.csv). However, since the labels were not provided by feline behavior experts, the dataset may contain subjectivity and limited generalizability, which we aim to address in future work. © The Author(s), under exclusive licence to Springer Science+Business Media, LLC, part of Springer Nature 2026.",
+      "keywords": [],
+      "normalized_title": "advancing cat facial emotion interpretation evaluating supervised and semi supervised models using facial landmark and image data",
+      "raw_bibtex": "@ARTICLE{10.1007/s11042-026-21301-x,\n\tauthor = {Hovongratana, T. and Sareerasart, B. and Srisaswatakul, T. and Chamchum, W. and Siriborvornratanakul, T.},\n\ttitle = {Advancing cat facial emotion interpretation: evaluating supervised and semi-supervised models using facial landmark and image data},\n\tjournal = {Multimedia Tools and Applications},\n\tyear = {2026},\n\tabstract = {Interpreting cat emotions poses a significant challenge due to the subtlety and absence of facial expressions, making it difficult to indicate their feelings. Our study addresses this challenge by experimenting with supervised and semi-supervised models for the classification of cat facial emotions on the Cat Facial Landmark in the Wild (CatFLW) dataset. Due to the lack of ground truth labels, we labeled a portion of the dataset based on shapes of facial features inferred from a previous study on cat behaviors. Subsequently, we examined supervised learning approaches with four model specifications derived from a combination of cat facial images and cat facial landmark vector inputs. The result for the best performing supervised model is the vanilla multi-layer perceptron (MLP) using cat facial landmark vector input with validation accuracy 95.73 ± 1.28%. For semi-supervised learning, we compared two techniques widely used in semi-supervised learning, FixMatch and Mean Teacher. Following the result of the supervised learning, we used the vanilla MLP as our model structure for both semi-supervised methods. Mean Teacher was found to be the better semi-supervised method for our dataset with the unlabeled accuracy of 95.65 ± 0.68% and the validation accuracy only slightly below the supervised model at 90.29 ± 2.00%, demonstrating sufficient generalization performance. Our study demonstrates the effectiveness of the proposed models and introduces a framework for interpreting cat emotions using both image and facial landmark data. We also contributed labeled cat facial expressions to the CatFLW dataset (https://raw.githubusercontent.com/geexe/cat-facial-expression-recognition/main/CatFLW%20Dataset/psuedo-labels.csv). However, since the labels were not provided by feline behavior experts, the dataset may contain subjectivity and limited generalizability, which we aim to address in future work. © The Author(s), under exclusive licence to Springer Science+Business Media, LLC, part of Springer Nature 2026.},\n\tdoi = {10.1007/s11042-026-21301-x},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105028992399&doi=10.1007%2Fs11042-026-21301-x&partnerID=40&md5=5437ecd1f5c5b3a28b84cae1286b5c70},\n\tvolume = {85},\n\tnumber = {2},\n\tnote = {Export Date: 23 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1007/s11042-026-21301-x"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000071",
+      "entry_type": "article",
+      "title": "Hierarchical Contrastive Learning for Precise Whole-Body Anatomical Localization in PET/CT Imaging",
+      "authors": [
+        "Gao, Y.",
+        "Shu, Y.",
+        "Yu, M.",
+        "Chen, Y.",
+        "Liu, J.",
+        "Zhong, S.",
+        "Zhang, W.",
+        "Zhan, Y.",
+        "Zhou, X.S.",
+        "Wang, X.",
+        "Zhao, M.",
+        "Shen, D."
+      ],
+      "year": 2026,
+      "journal": "IEEE Transactions on Medical Imaging",
+      "doi": "10.1109/tmi.2025.3599197",
+      "abstract": "Automatic anatomical localization is critical for radiology report generation. While many studies focus on lesion detection and segmentation, anatomical localization—accurately describing lesion positions in radiology reports—has received less attention. Conventional segmentation-based methods are limited to organ-level localization and often fail in severe disease cases due to low segmentation accuracy. To address these limitations, we reformulate anatomical localization as an image-to-text retrieval task. Specifically, we propose a CLIP-based framework that aligns lesion image patches with anatomically descriptive text embeddings in a shared multimodal space. By projecting lesion features into the semantic space and retrieving the most relevant anatomical descriptions in a coarse-to-fine manner, our method achieves fine-grained lesion localization with high accuracy across the entire body. Our main contributions are as follows: (1) hierarchical anatomical retrieval, which organizes 387 locations into a two-level hierarchy, by retrieving from the first level of 124 coarse categories to narrow down the search space and reduce localization complexity; (2) augmented location descriptions, which integrate domain-specific anatomical knowledge for enhancing semantic representation and improving visual—text alignment; and (3) semi-hard negative sample mining, which improves training stability and discriminative learning by avoiding selecting the overly similar negative samples that may introduce label noise or semantic ambiguity. We validate our method on two whole-body PET/CT datasets, achieving an 84.13% localization accuracy on the internal test set and 80.42% on the external test set, with a per-lesion inference time of 34 ms. The proposed framework also demonstrated superior robustness in complex clinical cases compared to segmentation-based approaches. © 1982-2012 IEEE.",
+      "keywords": [],
+      "normalized_title": "hierarchical contrastive learning for precise whole body anatomical localization in pet ct imaging",
+      "raw_bibtex": "@ARTICLE{10.1109/TMI.2025.3599197,\n\tauthor = {Gao, Y. and Shu, Y. and Yu, M. and Chen, Y. and Liu, J. and Zhong, S. and Zhang, W. and Zhan, Y. and Zhou, X.S. and Wang, X. and Zhao, M. and Shen, D.},\n\ttitle = {Hierarchical Contrastive Learning for Precise Whole-Body Anatomical Localization in PET/CT Imaging},\n\tjournal = {IEEE Transactions on Medical Imaging},\n\tyear = {2026},\n\tabstract = {Automatic anatomical localization is critical for radiology report generation. While many studies focus on lesion detection and segmentation, anatomical localization—accurately describing lesion positions in radiology reports—has received less attention. Conventional segmentation-based methods are limited to organ-level localization and often fail in severe disease cases due to low segmentation accuracy. To address these limitations, we reformulate anatomical localization as an image-to-text retrieval task. Specifically, we propose a CLIP-based framework that aligns lesion image patches with anatomically descriptive text embeddings in a shared multimodal space. By projecting lesion features into the semantic space and retrieving the most relevant anatomical descriptions in a coarse-to-fine manner, our method achieves fine-grained lesion localization with high accuracy across the entire body. Our main contributions are as follows: (1) hierarchical anatomical retrieval, which organizes 387 locations into a two-level hierarchy, by retrieving from the first level of 124 coarse categories to narrow down the search space and reduce localization complexity; (2) augmented location descriptions, which integrate domain-specific anatomical knowledge for enhancing semantic representation and improving visual—text alignment; and (3) semi-hard negative sample mining, which improves training stability and discriminative learning by avoiding selecting the overly similar negative samples that may introduce label noise or semantic ambiguity. We validate our method on two whole-body PET/CT datasets, achieving an 84.13% localization accuracy on the internal test set and 80.42% on the external test set, with a per-lesion inference time of 34 ms. The proposed framework also demonstrated superior robustness in complex clinical cases compared to segmentation-based approaches. © 1982-2012 IEEE.},\n\tdoi = {10.1109/TMI.2025.3599197},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105013895395&doi=10.1109%2FTMI.2025.3599197&partnerID=40&md5=34b600d5c607405242a0cfab85d8bc41},\n\tvolume = {45},\n\tnumber = {1},\n\tpages = {391-405},\n\tnote = {Export Date: 23 March 2026; Cited By: 1 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1109/TMI.2025.3599197"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000072",
+      "entry_type": "article",
+      "title": "A Machine Learning Pipeline for Prognostic Modeling of Alzheimer’s Disease Using Multimodal Data",
+      "authors": [
+        "De Palma, L.",
+        "D’Alessandro, V.I.",
+        "Attivissimo, F.",
+        "Lanzolla, A.M.L.",
+        "Pich, E.M.",
+        "Di Nisio, A."
+      ],
+      "year": 2026,
+      "journal": "Sensors",
+      "doi": "10.3390/s26051523",
+      "abstract": "Accurate prediction of progression to Alzheimer’s disease (AD) is crucial for early intervention and personalized patient management. In this study, we developed a robust, data-driven survival analysis pipeline to model time-to-progression from cognitively normal (CN) and mild cognitive impairment (MCI) at baseline to AD, integrating cognitive, clinical, MRI and PET neuroimaging biomarkers, and biospecimen features from the Alzheimer’s Disease Neuroimaging Initiative (ADNI) dataset. The ADNI cohort can be regarded as a multi-center platform for multimodal data integration that jointly captures cognitive performance, MRI/PET imaging-sensor biomarkers, and biofluid biosensing assays within a unified prognostic framework. Accordingly, our pipeline is designed to be robust to cross-site and cross-instrument variability through harmonized preprocessing and quality-check aware integration of heterogeneous multimodal data. Indeed, we employed eXtreme Gradient Boosting (XGBoost) for predicting survival data, which allows for the native handling of missing values that are frequently observed in real-world clinical datasets. Our results confirm that strong predictive performance can be achieved using a minimal set of features, obtaining a concordance index (C-index) of 0.92 using 13 features and 0.90 using only 4 features. These findings underscore the importance of multi-domain feature integration, transparent feature selection, and the inclusion of underexplored biomarkers such as lipid metabolites for prognostic modeling. © 2026 by the authors.",
+      "keywords": [],
+      "normalized_title": "a machine learning pipeline for prognostic modeling of alzheimer s disease using multimodal data",
+      "raw_bibtex": "@ARTICLE{10.3390/s26051523,\n\tauthor = {De Palma, L. and D’Alessandro, V.I. and Attivissimo, F. and Lanzolla, A.M.L. and Pich, E.M. and Di Nisio, A.},\n\ttitle = {A Machine Learning Pipeline for Prognostic Modeling of Alzheimer’s Disease Using Multimodal Data},\n\tjournal = {Sensors},\n\tyear = {2026},\n\tabstract = {Accurate prediction of progression to Alzheimer’s disease (AD) is crucial for early intervention and personalized patient management. In this study, we developed a robust, data-driven survival analysis pipeline to model time-to-progression from cognitively normal (CN) and mild cognitive impairment (MCI) at baseline to AD, integrating cognitive, clinical, MRI and PET neuroimaging biomarkers, and biospecimen features from the Alzheimer’s Disease Neuroimaging Initiative (ADNI) dataset. The ADNI cohort can be regarded as a multi-center platform for multimodal data integration that jointly captures cognitive performance, MRI/PET imaging-sensor biomarkers, and biofluid biosensing assays within a unified prognostic framework. Accordingly, our pipeline is designed to be robust to cross-site and cross-instrument variability through harmonized preprocessing and quality-check aware integration of heterogeneous multimodal data. Indeed, we employed eXtreme Gradient Boosting (XGBoost) for predicting survival data, which allows for the native handling of missing values that are frequently observed in real-world clinical datasets. Our results confirm that strong predictive performance can be achieved using a minimal set of features, obtaining a concordance index (C-index) of 0.92 using 13 features and 0.90 using only 4 features. These findings underscore the importance of multi-domain feature integration, transparent feature selection, and the inclusion of underexplored biomarkers such as lipid metabolites for prognostic modeling. © 2026 by the authors.},\n\tdoi = {10.3390/s26051523},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105032652848&doi=10.3390%2Fs26051523&partnerID=40&md5=cf1e7130b793a4f9fc2193537dde0d4a},\n\tvolume = {26},\n\tnumber = {5},\n\tnote = {Export Date: 23 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.3390/s26051523"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000073",
+      "entry_type": "article",
+      "title": "Alzheimer’s Disease Detection from Fused PET and MRI Modalities Using an Ensemble Classifier",
+      "authors": [
+        "Shukla, A.",
+        "Tiwari, R.",
+        "Tiwari, S."
+      ],
+      "year": 2023,
+      "journal": "Machine Learning and Knowledge Extraction",
+      "doi": "10.3390/make5020031",
+      "abstract": "Alzheimer’s disease (AD) is an old-age disease that comes in different stages and directly affects the different regions of the brain. The research into the detection of AD and its stages has new advancements in terms of single-modality and multimodality approaches. However, sustainable techniques for the detection of AD and its stages still require a greater extent of research. In this study, a multimodal image-fusion method is initially proposed for the fusion of two different modalities, i.e., PET (Positron Emission Tomography) and MRI (Magnetic Resonance Imaging). Further, the features obtained from fused and non-fused biomarkers are passed to the ensemble classifier with a Random Forest-based feature selection strategy. Three classes of Alzheimer’s disease are used in this work, namely AD, MCI (Mild Cognitive Impairment) and CN (Cognitive Normal). In the resulting analysis, the Binary classifications, i.e., AD vs. CN and MCI vs. CN, attained an accuracy (Acc) of 99% in both cases. The class AD vs. MCI detection achieved an adequate accuracy (Acc) of 91%. Furthermore, the Multi Class classification, i.e., AD vs. MCI vs. CN, achieved 96% (Acc). © 2023 by the authors.",
+      "keywords": [],
+      "normalized_title": "alzheimer s disease detection from fused pet and mri modalities using an ensemble classifier",
+      "raw_bibtex": "@ARTICLE{10.3390/make5020031,\n\tauthor = {Shukla, A. and Tiwari, R. and Tiwari, S.},\n\ttitle = {Alzheimer’s Disease Detection from Fused PET and MRI Modalities Using an Ensemble Classifier},\n\tjournal = {Machine Learning and Knowledge Extraction},\n\tyear = {2023},\n\tabstract = {Alzheimer’s disease (AD) is an old-age disease that comes in different stages and directly affects the different regions of the brain. The research into the detection of AD and its stages has new advancements in terms of single-modality and multimodality approaches. However, sustainable techniques for the detection of AD and its stages still require a greater extent of research. In this study, a multimodal image-fusion method is initially proposed for the fusion of two different modalities, i.e., PET (Positron Emission Tomography) and MRI (Magnetic Resonance Imaging). Further, the features obtained from fused and non-fused biomarkers are passed to the ensemble classifier with a Random Forest-based feature selection strategy. Three classes of Alzheimer’s disease are used in this work, namely AD, MCI (Mild Cognitive Impairment) and CN (Cognitive Normal). In the resulting analysis, the Binary classifications, i.e., AD vs. CN and MCI vs. CN, attained an accuracy (Acc) of 99% in both cases. The class AD vs. MCI detection achieved an adequate accuracy (Acc) of 91%. Furthermore, the Multi Class classification, i.e., AD vs. MCI vs. CN, achieved 96% (Acc). © 2023 by the authors.},\n\tdoi = {10.3390/make5020031},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85163682153&doi=10.3390%2Fmake5020031&partnerID=40&md5=cc62ed5a7ebc0ce1b52531c3e37858f4},\n\tvolume = {5},\n\tnumber = {2},\n\tpages = {512-538},\n\tnote = {Export Date: 23 March 2026; Cited By: 41 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.3390/make5020031"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000074",
+      "entry_type": "article",
+      "title": "Intelligent Detection of Road Rage Using PNN Parameter Optimization and Multimodal Driver Speech and Text Data",
+      "authors": [
+        "Xie, E.",
+        "Huang, Y."
+      ],
+      "year": 2026,
+      "journal": "Tehnicki Vjesnik",
+      "doi": "10.17559/tv-20250620002763",
+      "abstract": "Road rage is a critical factor in traffic accidents, often expressed through vocal and semantic cues. This study proposes a multimodal road rage detection system that integrates speech and text features. Speech signals are processed by a probabilistic neural network (PNN) optimized with an Improved Sand Cat Swarm Optimization (ISCSO) algorithm, while text features are modelled with a long short-term memory (LSTM) network. A decision-level fusion strategy combines outputs from both modalities. Experiments on a self-constructed dataset of 10,000 speech samples and corresponding text corpora demonstrate that the proposed model achieves superior performance compared to CNN, DBN, TextCNN, and hybrid deep learning baselines. The system achieved maximum accuracy and recall of 95.61% and 99.31%, while maintaining low computational overhead (minimum detection time 58 ms, memory usage 10.06%). These findings suggest that the ISCSO-PNN and LSTM multimodal fusion framework provides an efficient and effective approach to detecting road rage, with strong potential for integration into real-time intelligent transportation systems. © 2026 Strojarski Facultet. All rights reserved.",
+      "keywords": [],
+      "normalized_title": "intelligent detection of road rage using pnn parameter optimization and multimodal driver speech and text data",
+      "raw_bibtex": "@ARTICLE{10.17559/TV-20250620002763,\n\tauthor = {Xie, E. and Huang, Y.},\n\ttitle = {Intelligent Detection of Road Rage Using PNN Parameter Optimization and Multimodal Driver Speech and Text Data},\n\tjournal = {Tehnicki Vjesnik},\n\tyear = {2026},\n\tabstract = {Road rage is a critical factor in traffic accidents, often expressed through vocal and semantic cues. This study proposes a multimodal road rage detection system that integrates speech and text features. Speech signals are processed by a probabilistic neural network (PNN) optimized with an Improved Sand Cat Swarm Optimization (ISCSO) algorithm, while text features are modelled with a long short-term memory (LSTM) network. A decision-level fusion strategy combines outputs from both modalities. Experiments on a self-constructed dataset of 10,000 speech samples and corresponding text corpora demonstrate that the proposed model achieves superior performance compared to CNN, DBN, TextCNN, and hybrid deep learning baselines. The system achieved maximum accuracy and recall of 95.61% and 99.31%, while maintaining low computational overhead (minimum detection time 58 ms, memory usage 10.06%). These findings suggest that the ISCSO-PNN and LSTM multimodal fusion framework provides an efficient and effective approach to detecting road rage, with strong potential for integration into real-time intelligent transportation systems. © 2026 Strojarski Facultet. All rights reserved.},\n\tdoi = {10.17559/TV-20250620002763},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105032743215&doi=10.17559%2FTV-20250620002763&partnerID=40&md5=8242f05fab684b28dee5fd6a8fb95bf0},\n\tvolume = {33},\n\tnumber = {2},\n\tpages = {684-696},\n\tnote = {Export Date: 23 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.17559/TV-20250620002763"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000075",
+      "entry_type": "article",
+      "title": "A Systematic Review of Deep Learning Models and Multimodal Fusion Techniques for Alzheimer’s Disease Prediction",
+      "authors": [
+        "Ogundokun, R.O.",
+        "Olawoye, P.O.",
+        "Clifford-Ordor, N.R.",
+        "Adeniji, O.A.",
+        "Ehimika, O.E."
+      ],
+      "year": 2025,
+      "journal": "NIPES - Journal of Science and Technology Research",
+      "doi": "10.37933/nipes/7.4.2025.si252",
+      "abstract": "Alzheimer’s disease (AD) remains the predominant cause of dementia worldwide and ranks among the leading causes of mortality due to its progressive neurodegenerative nature. Early diagnosis of AD, particularly during the preclinical and mild cognitive impairment (MCI) stages, is critical for enabling timely interventions and improving patient outcomes. This systematic review comprehensively examines deep learning-based approaches for AD prediction, emphasizing the integration of multimodal datasets—including neuroimaging (MRI and PET scans), genetic biomarkers (e.g., SNPs, APOE genotypes), and clinical cognitive assessments. Recent advances reveal that multimodal fusion techniques significantly enhance model performance by capturing complementary structural, functional, and molecular features of disease progression. Architectures employing convolutional neural networks (CNNs), recurrent neural networks (RNNs), transformers, and graph-based models are critically analyzed, alongside various fusion strategies such as intermediate, late, attention-based, and graph-based fusion. The review also highlights current limitations, including over-reliance on the ADNI dataset, challenges in handling missing modalities, limited model interpretability, and gaps in external validation. Emerging trends point toward the adoption of federated learning, contrastive learning, explainable AI (XAI), and scalable multimodal frameworks to bridge these gaps. In conclusion, deep learning frameworks leveraging heterogeneous biomarkers represent a transformative frontier in proactive AD diagnosis and personalized disease management, yet real-world clinical translation demands concerted efforts in model robustness, generalizability, and ethical AI deployment. © 2025 NIPES Pub.",
+      "keywords": [],
+      "normalized_title": "a systematic review of deep learning models and multimodal fusion techniques for alzheimer s disease prediction",
+      "raw_bibtex": "@ARTICLE{10.37933/nipes/7.4.2025.SI252,\n\tauthor = {Ogundokun, R.O. and Olawoye, P.O. and Clifford-Ordor, N.R. and Adeniji, O.A. and Ehimika, O.E.},\n\ttitle = {A Systematic Review of Deep Learning Models and Multimodal Fusion Techniques for Alzheimer’s Disease Prediction},\n\tjournal = {NIPES - Journal of Science and Technology Research},\n\tyear = {2025},\n\tabstract = {Alzheimer’s disease (AD) remains the predominant cause of dementia worldwide and ranks among the leading causes of mortality due to its progressive neurodegenerative nature. Early diagnosis of AD, particularly during the preclinical and mild cognitive impairment (MCI) stages, is critical for enabling timely interventions and improving patient outcomes. This systematic review comprehensively examines deep learning-based approaches for AD prediction, emphasizing the integration of multimodal datasets—including neuroimaging (MRI and PET scans), genetic biomarkers (e.g., SNPs, APOE genotypes), and clinical cognitive assessments. Recent advances reveal that multimodal fusion techniques significantly enhance model performance by capturing complementary structural, functional, and molecular features of disease progression. Architectures employing convolutional neural networks (CNNs), recurrent neural networks (RNNs), transformers, and graph-based models are critically analyzed, alongside various fusion strategies such as intermediate, late, attention-based, and graph-based fusion. The review also highlights current limitations, including over-reliance on the ADNI dataset, challenges in handling missing modalities, limited model interpretability, and gaps in external validation. Emerging trends point toward the adoption of federated learning, contrastive learning, explainable AI (XAI), and scalable multimodal frameworks to bridge these gaps. In conclusion, deep learning frameworks leveraging heterogeneous biomarkers represent a transformative frontier in proactive AD diagnosis and personalized disease management, yet real-world clinical translation demands concerted efforts in model robustness, generalizability, and ethical AI deployment. © 2025 NIPES Pub.},\n\tdoi = {10.37933/nipes/7.4.2025.SI252},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105025921916&doi=10.37933%2Fnipes%2F7.4.2025.SI252&partnerID=40&md5=4ff4d185d3a58f5dfc1f8e4b945a4bc4},\n\tvolume = {7},\n\tnumber = {1 Special Issue},\n\tpages = {2142-2152},\n\tnote = {Export Date: 23 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.37933/nipes/7.4.2025.SI252"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000076",
+      "entry_type": "article",
+      "title": "CEPrompt: Cross-Modal Emotion-Aware Prompting for Facial Expression Recognition",
+      "authors": [
+        "Zhou, H.",
+        "Huang, S.",
+        "Zhang, F.",
+        "Xu, C."
+      ],
+      "year": 2024,
+      "journal": "IEEE Transactions on Circuits and Systems for Video Technology",
+      "doi": "10.1109/tcsvt.2024.3424777",
+      "abstract": "Facial expression recognition (FER) remains a challenging task due to the ambiguity and subtlety of expressions. To address this challenge, current FER methods predominantly prioritize visual cues while inadvertently neglecting the potential insights that can be gleaned from other modalities. Recently, vision-language pre-training (VLP) models integrated textual cues as guidance, culminating in a powerful multi-modal solution that has proven effective for a range of computer vision tasks. In this paper, we propose a Cross-Modal Emotion-Aware Prompting (CEPrompt) framework for FER based on VLP models. To make VLP models sensitive to expression-relevant visual discrepancies, we devise an Emotion Conception-guided Visual Adapter (EVA) to capture the category-specific appearance representations with emotion conception guidance. Moreover, knowledge distillation is employed to prevent the model from forgetting the pre-trained category-invariant knowledge. In addition, we design a Conception-Appearance Tuner (CAT) to facilitate the interaction of multi-modal information via cooperatively tuning between emotion conception and appearance prompts. In this way, semantic information about emotion text conception is infused directly into facial appearance images, thereby enhancing a comprehensive and precise understanding of expression-related facial details. Quantitative and qualitative experiments show that our CEPrompt outperforms state-of-the-art approaches on three real-world FER datasets. The code is available at https://github.com/HaoliangZhou/CEPrompt. © 2024 IEEE.",
+      "keywords": [],
+      "normalized_title": "ceprompt cross modal emotion aware prompting for facial expression recognition",
+      "raw_bibtex": "@ARTICLE{10.1109/TCSVT.2024.3424777,\n\tauthor = {Zhou, H. and Huang, S. and Zhang, F. and Xu, C.},\n\ttitle = {CEPrompt: Cross-Modal Emotion-Aware Prompting for Facial Expression Recognition},\n\tjournal = {IEEE Transactions on Circuits and Systems for Video Technology},\n\tyear = {2024},\n\tabstract = {Facial expression recognition (FER) remains a challenging task due to the ambiguity and subtlety of expressions. To address this challenge, current FER methods predominantly prioritize visual cues while inadvertently neglecting the potential insights that can be gleaned from other modalities. Recently, vision-language pre-training (VLP) models integrated textual cues as guidance, culminating in a powerful multi-modal solution that has proven effective for a range of computer vision tasks. In this paper, we propose a Cross-Modal Emotion-Aware Prompting (CEPrompt) framework for FER based on VLP models. To make VLP models sensitive to expression-relevant visual discrepancies, we devise an Emotion Conception-guided Visual Adapter (EVA) to capture the category-specific appearance representations with emotion conception guidance. Moreover, knowledge distillation is employed to prevent the model from forgetting the pre-trained category-invariant knowledge. In addition, we design a Conception-Appearance Tuner (CAT) to facilitate the interaction of multi-modal information via cooperatively tuning between emotion conception and appearance prompts. In this way, semantic information about emotion text conception is infused directly into facial appearance images, thereby enhancing a comprehensive and precise understanding of expression-related facial details. Quantitative and qualitative experiments show that our CEPrompt outperforms state-of-the-art approaches on three real-world FER datasets. The code is available at https://github.com/HaoliangZhou/CEPrompt. © 2024 IEEE.},\n\tdoi = {10.1109/TCSVT.2024.3424777},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85198301415&doi=10.1109%2FTCSVT.2024.3424777&partnerID=40&md5=68e0337109f1447fb94ea815a147a4dc},\n\tvolume = {34},\n\tnumber = {11},\n\tpages = {11886-11899},\n\tnote = {Export Date: 23 March 2026; Cited By: 27 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1109/TCSVT.2024.3424777"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000077",
+      "entry_type": "article",
+      "title": "A dual-branch encoder network based on squeeze-and-excitation UNet and transformer for 3D PET-CT image tumor segmentation",
+      "authors": [
+        "Li, M.",
+        "Zhu, R.",
+        "Li, M.",
+        "Wang, H.",
+        "Teng, Y."
+      ],
+      "year": 2026,
+      "journal": "Medical and Biological Engineering and Computing",
+      "doi": "10.1007/s11517-025-03427-6",
+      "abstract": "Abstract: Recognition of tumors is very important in clinical practice and radiomics; however, the segmentation task currently still needs to be done manually by experts. With the development of deep learning, automatic segmentation of tumors is gradually becoming possible. This paper combines the molecular information from PET and the pathology information from CT for tumor segmentation. A dual-branch encoder is designed based on SE-UNet (Squeeze-and-Excitation Normalization UNet) and Transformer, 3D Convolutional Block Attention Module (CBAM) is added to skip-connection, and BCE loss is used in training for improving segmentation accuracy. The new model is named TASE-UNet. The proposed method was tested on the HECKTOR2022 dataset, which obtains the best segmentation accuracy compared with state-of-the-art methods. Specifically, we obtained results of 76.10% and 3.27 for the two key evaluation metrics, DSC and HD95. Experiments demonstrate that the designed network is reasonable and effective. The full implementation is available at https://github.com/LiMingrui1/TASE-UNet. © International Federation for Medical and Biological Engineering 2025.",
+      "keywords": [],
+      "normalized_title": "a dual branch encoder network based on squeeze and excitation unet and transformer for 3d pet ct image tumor segmentation",
+      "raw_bibtex": "@ARTICLE{10.1007/s11517-025-03427-6,\n\tauthor = {Li, M. and Zhu, R. and Li, M. and Wang, H. and Teng, Y.},\n\ttitle = {A dual-branch encoder network based on squeeze-and-excitation UNet and transformer for 3D PET-CT image tumor segmentation},\n\tjournal = {Medical and Biological Engineering and Computing},\n\tyear = {2026},\n\tabstract = {Abstract: Recognition of tumors is very important in clinical practice and radiomics; however, the segmentation task currently still needs to be done manually by experts. With the development of deep learning, automatic segmentation of tumors is gradually becoming possible. This paper combines the molecular information from PET and the pathology information from CT for tumor segmentation. A dual-branch encoder is designed based on SE-UNet (Squeeze-and-Excitation Normalization UNet) and Transformer, 3D Convolutional Block Attention Module (CBAM) is added to skip-connection, and BCE loss is used in training for improving segmentation accuracy. The new model is named TASE-UNet. The proposed method was tested on the HECKTOR2022 dataset, which obtains the best segmentation accuracy compared with state-of-the-art methods. Specifically, we obtained results of 76.10% and 3.27 for the two key evaluation metrics, DSC and HD95. Experiments demonstrate that the designed network is reasonable and effective. The full implementation is available at https://github.com/LiMingrui1/TASE-UNet. © International Federation for Medical and Biological Engineering 2025.},\n\tdoi = {10.1007/s11517-025-03427-6},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105015399975&doi=10.1007%2Fs11517-025-03427-6&partnerID=40&md5=094e1500398031adb6d73fd8acdc5b01},\n\tvolume = {64},\n\tnumber = {1},\n\tpages = {61-74},\n\tnote = {Export Date: 23 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1007/s11517-025-03427-6"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000078",
+      "entry_type": "article",
+      "title": "Multimodal Analogy-Based Image Retrieval by Improving Semantic Embeddings",
+      "authors": [
+        "Ota, K.",
+        "Shirai, K.",
+        "Miyao, H.",
+        "Maruyama, M."
+      ],
+      "year": 2022,
+      "journal": "Journal of Advanced Computational Intelligence and Intelligent Informatics",
+      "doi": "10.20965/jaciii.2022.p0995",
+      "abstract": "In this work, we study the application of multimodal analogical reasoning to image retrieval. Multimodal analogy questions are given in a form of tuples of words and images, e.g., “cat”:“dog”::[an image of a cat sitting on a bench]:?, to search for an image of a dog sitting on a bench. Retrieving desired images given these tuples can be seen as a task of finding images whose relation between the query image is close to that of query words. One way to achieve the task is building a common vector space that exhibits analogical regularities. To learn such an embedding, we propose a quadruple neural network called multimodal siamese network. The network consists of recurrent neural networks and convolutional neural networks based on the siamese architecture. We also introduce an effective procedure to generate analogy examples from an image-caption dataset for training of our network. In our experiments, we test our model on analogy-based image retrieval tasks. The results show that our method outperforms the previous work in qualitative evaluation. © Fuji Technology Press Ltd.",
+      "keywords": [],
+      "normalized_title": "multimodal analogy based image retrieval by improving semantic embeddings",
+      "raw_bibtex": "@ARTICLE{10.20965/jaciii.2022.p0995,\n\tauthor = {Ota, K. and Shirai, K. and Miyao, H. and Maruyama, M.},\n\ttitle = {Multimodal Analogy-Based Image Retrieval by Improving Semantic Embeddings},\n\tjournal = {Journal of Advanced Computational Intelligence and Intelligent Informatics},\n\tyear = {2022},\n\tabstract = {In this work, we study the application of multimodal analogical reasoning to image retrieval. Multimodal analogy questions are given in a form of tuples of words and images, e.g., “cat”:“dog”::[an image of a cat sitting on a bench]:?, to search for an image of a dog sitting on a bench. Retrieving desired images given these tuples can be seen as a task of finding images whose relation between the query image is close to that of query words. One way to achieve the task is building a common vector space that exhibits analogical regularities. To learn such an embedding, we propose a quadruple neural network called multimodal siamese network. The network consists of recurrent neural networks and convolutional neural networks based on the siamese architecture. We also introduce an effective procedure to generate analogy examples from an image-caption dataset for training of our network. In our experiments, we test our model on analogy-based image retrieval tasks. The results show that our method outperforms the previous work in qualitative evaluation. © Fuji Technology Press Ltd.},\n\tdoi = {10.20965/jaciii.2022.p0995},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85146487801&doi=10.20965%2Fjaciii.2022.p0995&partnerID=40&md5=74d59a7ce97b4ffc6fe90ff0108dcafe},\n\tvolume = {26},\n\tnumber = {6},\n\tpages = {995-1003},\n\tnote = {Export Date: 23 March 2026; Cited By: 2 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.20965/jaciii.2022.p0995"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000079",
+      "entry_type": "article",
+      "title": "An analytic method for improving the reliability of models based on a histogram for prediction of companion dogs’ behaviors",
+      "authors": [
+        "Lee, H.-J.",
+        "Ihm, S.-Y.",
+        "Park, S.-H.",
+        "Park, Y.-H."
+      ],
+      "year": 2021,
+      "journal": "Applied Sciences (Switzerland)",
+      "doi": "10.3390/app112211050",
+      "abstract": "Dogs and cats tend to show their conditions and desires through their behaviors. In companion animal behavior recognition, behavior data obtained by attaching a wearable device or sensor to a dog’s body are mostly used. However, differences occur in the output values of the sensor when the dog moves violently. A tightly coupled RGB time tensor network (TRT-Net) is proposed that minimizes the loss of spatiotemporal information by reflecting the three components (x-, y-, and z-axes) of the skeleton sequences in the corresponding three channels (red, green, and blue) for the behavioral classification of dogs. This paper introduces the YouTube-C7B dataset consisting of dog behaviors in various environments. Based on a method that visualizes the Conv-layer filters in analyzable feature maps, we add reliability to the results derived by the model. We can identify the joint parts, i.e., those represented as rows of input images showing behaviors, learned by the proposed model mainly for making decisions. Finally, the performance of the proposed method is compared to those of the LSTM, GRU, and RNN models. The experimental results demonstrate that the proposed TRT-Net method classifies dog behaviors more effectively, with improved accuracy and F1 scores of 7.9% and 7.3% over conventional models. © 2021 by the authors. Licensee MDPI, Basel, Switzerland.",
+      "keywords": [],
+      "normalized_title": "an analytic method for improving the reliability of models based on a histogram for prediction of companion dogs behaviors",
+      "raw_bibtex": "@ARTICLE{10.3390/app112211050,\n\tauthor = {Lee, H.-J. and Ihm, S.-Y. and Park, S.-H. and Park, Y.-H.},\n\ttitle = {An analytic method for improving the reliability of models based on a histogram for prediction of companion dogs’ behaviors},\n\tjournal = {Applied Sciences (Switzerland)},\n\tyear = {2021},\n\tabstract = {Dogs and cats tend to show their conditions and desires through their behaviors. In companion animal behavior recognition, behavior data obtained by attaching a wearable device or sensor to a dog’s body are mostly used. However, differences occur in the output values of the sensor when the dog moves violently. A tightly coupled RGB time tensor network (TRT-Net) is proposed that minimizes the loss of spatiotemporal information by reflecting the three components (x-, y-, and z-axes) of the skeleton sequences in the corresponding three channels (red, green, and blue) for the behavioral classification of dogs. This paper introduces the YouTube-C7B dataset consisting of dog behaviors in various environments. Based on a method that visualizes the Conv-layer filters in analyzable feature maps, we add reliability to the results derived by the model. We can identify the joint parts, i.e., those represented as rows of input images showing behaviors, learned by the proposed model mainly for making decisions. Finally, the performance of the proposed method is compared to those of the LSTM, GRU, and RNN models. The experimental results demonstrate that the proposed TRT-Net method classifies dog behaviors more effectively, with improved accuracy and F1 scores of 7.9% and 7.3% over conventional models. © 2021 by the authors. Licensee MDPI, Basel, Switzerland.},\n\tdoi = {10.3390/app112211050},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85119910850&doi=10.3390%2Fapp112211050&partnerID=40&md5=1397eaba59cfade593ec79f04d5f75fa},\n\tvolume = {11},\n\tnumber = {22},\n\tnote = {Export Date: 23 March 2026; Cited By: 1 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.3390/app112211050"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000080",
+      "entry_type": "article",
+      "title": "Deep Learning-Based Dog Expression Recognition",
+      "authors": [
+        "Li, D.-L.",
+        "Lee, S.-K.",
+        "Tsai, Y.-C."
+      ],
+      "year": 2026,
+      "journal": "IEEE Access",
+      "doi": "10.1109/access.2025.3650550",
+      "abstract": "Modern life is generally stressful, leading many individuals to seek emotional support through pet companionship. Dogs remain one of the most popular choices due to their social nature. However, while dogs express their internal states through various behavioral and morphological cues, humans often struggle to accurately and objectively interpret these species-specific signals. Therefore, developing effective tools to decode canine affective states can significantly enhance the bond between humans and their pets. This paper proposes an automated system based on deep learning for the recognition of dog muzzle expressions. The system aims to provide an objective assessment of canine emotional states, thereby fostering a deeper understanding and strengthening the connection between owners and their dogs. The study utilizes a dataset of Shetland Sheepdog categorized into five affective states. The recognition pipeline first employs the YOLOv8 architecture to detect key anatomical regions, specifically the ears, eyes, and muzzle. These localized features are then processed to classify associated emotional cues. A confidence-weighted strategy is implemented to integrate the scores from multiple detected regions, resulting in a final decision for each target image. To enhance the model’s robustness, the experiment incorporates data augmentation and transfer learning techniques. The proposed method achieves a high classification accuracy of 90% on the test set. By focusing on localized feature fusion rather than global image analysis, the system demonstrates significant potential in providing more granular and reliable emotion recognition in domestic dogs. © 2013 IEEE.",
+      "keywords": [],
+      "normalized_title": "deep learning based dog expression recognition",
+      "raw_bibtex": "@ARTICLE{10.1109/ACCESS.2025.3650550,\n\tauthor = {Li, D.-L. and Lee, S.-K. and Tsai, Y.-C.},\n\ttitle = {Deep Learning-Based Dog Expression Recognition},\n\tjournal = {IEEE Access},\n\tyear = {2026},\n\tabstract = {Modern life is generally stressful, leading many individuals to seek emotional support through pet companionship. Dogs remain one of the most popular choices due to their social nature. However, while dogs express their internal states through various behavioral and morphological cues, humans often struggle to accurately and objectively interpret these species-specific signals. Therefore, developing effective tools to decode canine affective states can significantly enhance the bond between humans and their pets. This paper proposes an automated system based on deep learning for the recognition of dog muzzle expressions. The system aims to provide an objective assessment of canine emotional states, thereby fostering a deeper understanding and strengthening the connection between owners and their dogs. The study utilizes a dataset of Shetland Sheepdog categorized into five affective states. The recognition pipeline first employs the YOLOv8 architecture to detect key anatomical regions, specifically the ears, eyes, and muzzle. These localized features are then processed to classify associated emotional cues. A confidence-weighted strategy is implemented to integrate the scores from multiple detected regions, resulting in a final decision for each target image. To enhance the model’s robustness, the experiment incorporates data augmentation and transfer learning techniques. The proposed method achieves a high classification accuracy of 90% on the test set. By focusing on localized feature fusion rather than global image analysis, the system demonstrates significant potential in providing more granular and reliable emotion recognition in domestic dogs. © 2013 IEEE.},\n\tdoi = {10.1109/ACCESS.2025.3650550},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105027145524&doi=10.1109%2FACCESS.2025.3650550&partnerID=40&md5=5ef8cae843663598efc9e2613f25e661},\n\tvolume = {14},\n\tpages = {5675-5683},\n\tnote = {Export Date: 23 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1109/ACCESS.2025.3650550"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

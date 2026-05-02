@@ -1,0 +1,52 @@
+project:
+  name: 基于智能优化与改进型自抗扰控制（ADRC）的无人海洋载具（USV/UUV/水下滑翔机等）导引与轨迹跟踪系统
+  output_dir: tasks/e8e70cbb90ae/screening_run/screening_output
+  save_raw_response: true
+  save_intermediate_files: true
+input:
+  input_files:
+  - tasks/e8e70cbb90ae/screening_run/inputs/savedrecs (2).ris
+  encoding: auto
+dedup:
+  enabled: true
+  strict_doi_match: true
+  normalized_title_exact_match: true
+  fuzzy_title_match: false
+screening:
+  batch_size: 10
+  target_include_count: 30
+  stop_when_target_reached: true
+  allow_uncertain: true
+  retry_times: 6
+  request_timeout_seconds: 240
+criteria:
+  topic: 基于智能优化与改进型自抗扰控制（ADRC）的无人海洋载具（USV/UUV/水下滑翔机等）导引与轨迹跟踪系统
+  inclusion:
+  - 研究对象必须是无人水面艇（USV）、无人潜航器（UUV）、自主水下航行器（AUV）、水下滑翔机（Underwater Glider）等海洋无人载具。
+  - 核心控制算法必须包含自抗扰控制（ADRC）或扩张状态观测器（ESO）。
+  - 必须切中以下至少一个子方向：
+  - 结合了导引律（如LOS视线法、三维路径导引）进行路径跟随/轨迹跟踪。
+  - 提出了ADRC理论结构的改进（如滑模ESO、有限时间/固定时间收敛ESO、降阶ESO等）。
+  - 应用了智能算法（如群智能算法、强化学习、神经网络、模糊逻辑等）对ADRC进行参数自整定或优化。
+  exclusion:
+  - 纯水动力学外形优化或机械结构设计（缺乏控制算法研究）。
+  - 控制对象为无人机（UAV）或陆地车辆（除非其提出的ADRC优化结构极具普适性）。
+  - 未将ADRC/ESO作为核心论述对象，或仅使用传统PID。
+model:
+  provider: deepseek
+  model_name: deepseek-chat
+  api_base_url: https://api.deepseek.com/v1
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.0
+  max_tokens: 1536
+  min_request_interval_seconds: 2.0
+report:
+  export_included_ris: true
+  export_excluded_ris: false
+  export_unused_ris: true
+  export_included_bib: false
+  export_excluded_bib: false
+  export_unused_bib: false
+  included_report_format: md
+  excluded_report_format: md
+  summary_format: json

@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0002",
+    "results": [
+        {
+            "paper_id": "paper_000011",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于放射性核素在食物链中的迁移模型，未提及职业性辐射暴露或肠道健康。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000012",
+            "decision": "exclude",
+            "reason": "摘要讨论太空辐射致癌风险，涉及结直肠和肠道肿瘤，但非职业性暴露，且未明确涉及肠道健康指标。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000013",
+            "decision": "exclude",
+            "reason": "标题为章节标题，摘要缺失，无法判断是否涉及职业性辐射暴露或肠道健康。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000014",
+            "decision": "exclude",
+            "reason": "摘要研究患者接受钡剂X射线检查的辐射剂量，非职业性暴露，且未提及对肠道健康的影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000015",
+            "decision": "exclude",
+            "reason": "摘要研究钚在职业工人中的排泄，涉及肝脏和骨骼，但未提及肠道健康相关指标。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000016",
+            "decision": "exclude",
+            "reason": "摘要讨论前列腺癌的低剂量率近距离放疗，涉及胃肠道毒性，但非职业性暴露，且患者为癌症治疗。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000017",
+            "decision": "uncertain",
+            "reason": "摘要综述干细胞对电离辐射的反应，提及消化道的辐射生物学，但未明确涉及职业性低剂量暴露或肠道健康具体指标。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000018",
+            "decision": "exclude",
+            "reason": "摘要讨论儿科鼻胃管放置的辐射暴露担忧，非职业性暴露，且未涉及肠道健康影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000019",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及胃癌药物治疗的临床试验，未提及辐射暴露或肠道健康。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000020",
+            "decision": "exclude",
+            "reason": "摘要讨论α粒子靶向治疗的辐射防护，涉及肠道排泄，但非职业性低剂量暴露，且未提及肠道健康影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        }
+    ]
+}

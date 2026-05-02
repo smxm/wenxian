@@ -1,0 +1,239 @@
+{
+  "batch_id": "batch_0016",
+  "paper_count": 6,
+  "paper_ids": [
+    "paper_000151",
+    "paper_000152",
+    "paper_000153",
+    "paper_000154",
+    "paper_000155",
+    "paper_000156"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000151",
+      "entry_type": "article",
+      "title": "ALOS-Based USV Path-Following Control with Obstacle Avoidance Strategy",
+      "authors": [
+        "Liu, ZL",
+        "Song, SM",
+        "Yuan, SZ",
+        "Ma, YK",
+        "Yao, ZX"
+      ],
+      "year": 2022,
+      "journal": "JOURNAL OF MARINE SCIENCE AND ENGINEERING",
+      "doi": "10.3390/jmse10091203",
+      "abstract": "Path following and obstacle avoidances are used in heading control and path replanning for unmanned surface vessels (USVs), which have attracted the interest of many researchers over the years. This paper investigates the path-following and obstacle avoidance problems for USVs. First, on the basis of the current position and desired path, an adaptive line-of-sight (ALOS) algorithm is used to obtain the desired heading angle, and the sideslip angle compensation is considered. Then, to ensure that the USV follows the desired path. Model predictive control (MPC) is used to reduce the lateral error. The event-triggered mechanism (ETM) strategy is utilized to reduce the computational cost of MPC. Moreover, to obtain accurate state quantities in real time, a linear extended state observer (LESO) is used to counteract the effects of external disturbances and the nonlinear term of the model. Furthermore, an improved obstacle avoidance algorithm based on the geometric relationship is proposed. This method can better ensure USV navigation safety and reduce consumption and computation. Lastly, multiple simulation experiments illustrate that the algorithm improves the path-following capability and security and ensures smooth input changes by setting input constraints. Therefore, the designed controller has better feasibility and robustness.",
+      "keywords": [
+        "USV",
+        "path following",
+        "MPC",
+        "obstacle avoidance",
+        "MODEL-PREDICTIVE CONTROL",
+        "RECEDING HORIZON CONTROL",
+        "LINE-OF-SIGHT",
+        "COLLISION-AVOIDANCE",
+        "ALGORITHM"
+      ],
+      "normalized_title": "alos based usv path following control with obstacle avoidance strategy",
+      "raw_bibtex": "@ARTICLE{10.3390/jmse10091203,\n\tauthor = {Liu, ZL and Song, SM and Yuan, SZ and Ma, YK and Yao, ZX},\n\ttitle = {ALOS-Based USV Path-Following Control with Obstacle Avoidance Strategy},\n\tjournal = {JOURNAL OF MARINE SCIENCE AND ENGINEERING},\n\tyear = {2022},\n\tkeywords = {USV; path following; MPC; obstacle avoidance; MODEL-PREDICTIVE CONTROL; RECEDING HORIZON CONTROL; LINE-OF-SIGHT; COLLISION-AVOIDANCE; ALGORITHM},\n\tabstract = {Path following and obstacle avoidances are used in heading control and path replanning for unmanned surface vessels (USVs), which have attracted the interest of many researchers over the years. This paper investigates the path-following and obstacle avoidance problems for USVs. First, on the basis of the current position and desired path, an adaptive line-of-sight (ALOS) algorithm is used to obtain the desired heading angle, and the sideslip angle compensation is considered. Then, to ensure that the USV follows the desired path. Model predictive control (MPC) is used to reduce the lateral error. The event-triggered mechanism (ETM) strategy is utilized to reduce the computational cost of MPC. Moreover, to obtain accurate state quantities in real time, a linear extended state observer (LESO) is used to counteract the effects of external disturbances and the nonlinear term of the model. Furthermore, an improved obstacle avoidance algorithm based on the geometric relationship is proposed. This method can better ensure USV navigation safety and reduce consumption and computation. Lastly, multiple simulation experiments illustrate that the algorithm improves the path-following capability and security and ensures smooth input changes by setting input constraints. Therefore, the designed controller has better feasibility and robustness.},\n\tdoi = {10.3390/jmse10091203},\n\tvolume = {10},\n\tnumber = {9},\n\tissn = {2077-1312},\n\tnote = {Times Cited in Web of Science Core Collection: 31 Total Times Cited: 33 Cited Reference Count: 39 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/jmse10091203"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000152",
+      "entry_type": "article",
+      "title": "Rule-based safety optimization and dynamical anti-disturbance control: Application to point-to-point transitions for multiple autonomous surface vehicles with semi-physical experiments",
+      "authors": [
+        "Xu, YP",
+        "Gu, N",
+        "Li, TS",
+        "Zhang, WD",
+        "Peng, ZH"
+      ],
+      "year": 2026,
+      "journal": "ISA TRANSACTIONS",
+      "doi": "10.1016/j.isatra.2025.11.042",
+      "abstract": "This paper addresses the safety-certified point-to-point transition problem of multiple underactuated autonomous surface vehicles (ASVs) operating in a congested maritime environment. The main idea of this paper is to develop a novel rule-based safety optimization approach, combined with a dynamic anti-disturbance control strategy, to enable collision-free point-to-point transitions. The key features are twofold: ensuring the safe navigation of ASVs while minimizing the impact on the point-to-point transition task; and realizing precise kinetic control without relying on any prior knowledge of ASV model parameters. Specifically, at the kinematic level, nominal guidance laws are designed for position stabilization. Three rule-based control barrier functions are formulated to impose safety constraints on resultant velocity and yaw rate. The optimal guidance signals are obtained by solving a quadratic programming problem. At the kinetic level, extended state observers are designed to estimate the extended state, which unifies nonlinear dynamics, external disturbances, and control inputs. The estimates are then used to design dynamic controllers for velocity and yaw rate tracking. It is proven that the closed-loop control system is input-to-state stable, and that the safety of the multi-ASV system is also ensured. Both comparative results and semi-physical experimental results are elaborated to substantiate the efficacy of the proposed rule-based safety optimization and dynamical anti-disturbance control method.",
+      "keywords": [
+        "Safety optimization",
+        "Dynamical anti-disturbance control",
+        "Control barrier function",
+        "Autonomous surface vehicles",
+        "TRACKING CONTROL",
+        "TARGET TRACKING",
+        "OBSERVERS",
+        "SYSTEMS",
+        "USV"
+      ],
+      "normalized_title": "rule based safety optimization and dynamical anti disturbance control application to point to point transitions for multiple autonomous surface vehicles with semi physical experiments",
+      "raw_bibtex": "@ARTICLE{10.1016/j.isatra.2025.11.042,\n\tauthor = {Xu, YP and Gu, N and Li, TS and Zhang, WD and Peng, ZH},\n\ttitle = {Rule-based safety optimization and dynamical anti-disturbance control: Application to point-to-point transitions for multiple autonomous surface vehicles with semi-physical experiments},\n\tjournal = {ISA TRANSACTIONS},\n\tyear = {2026},\n\tkeywords = {Safety optimization; Dynamical anti-disturbance control; Control barrier function; Autonomous surface vehicles; TRACKING CONTROL; TARGET TRACKING; OBSERVERS; SYSTEMS; USV},\n\tabstract = {This paper addresses the safety-certified point-to-point transition problem of multiple underactuated autonomous surface vehicles (ASVs) operating in a congested maritime environment. The main idea of this paper is to develop a novel rule-based safety optimization approach, combined with a dynamic anti-disturbance control strategy, to enable collision-free point-to-point transitions. The key features are twofold: ensuring the safe navigation of ASVs while minimizing the impact on the point-to-point transition task; and realizing precise kinetic control without relying on any prior knowledge of ASV model parameters. Specifically, at the kinematic level, nominal guidance laws are designed for position stabilization. Three rule-based control barrier functions are formulated to impose safety constraints on resultant velocity and yaw rate. The optimal guidance signals are obtained by solving a quadratic programming problem. At the kinetic level, extended state observers are designed to estimate the extended state, which unifies nonlinear dynamics, external disturbances, and control inputs. The estimates are then used to design dynamic controllers for velocity and yaw rate tracking. It is proven that the closed-loop control system is input-to-state stable, and that the safety of the multi-ASV system is also ensured. Both comparative results and semi-physical experimental results are elaborated to substantiate the efficacy of the proposed rule-based safety optimization and dynamical anti-disturbance control method.},\n\tdoi = {10.1016/j.isatra.2025.11.042},\n\tvolume = {168},\n\tpages = {379-389},\n\tissn = {0019-0578},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 41 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.isatra.2025.11.042"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000153",
+      "entry_type": "article",
+      "title": "Novel barrier Lyapunov function-based backstepping fault tolerant control system for an ROV with thruster constraints",
+      "authors": [
+        "Hosseinnajad, A",
+        "Mohajer, N",
+        "Nahavandi, S"
+      ],
+      "year": 2023,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2023.115312",
+      "abstract": "This paper proposes a novel Barrier Lyapunov Function (BLF)-based fault tolerant control system for a work-class Remotely-Operated Vehicle (ROV) with thruster saturation and rate limits. The proposed control system is composed of a fixed-time state and fault observer, and a novel BLF-based backstepping controller. The novel BLFbased controller is introduced to eliminate the sensitivity of conventional BLF-based algorithms to rate limitations of the thrusters. In addition, it helps to improve the performance during initial transients and provides faster response to fault and failures. The observer combines the dynamics of the ROV with the dynamics of the thruster system. This combination facilitates estimation of thruster faults and failures independently of the system uncertainties, so highly improved performance is expected compared to conventional extended-state observers. To account for thruster constraints and provide fault tolerance, control allocation is utilized. Stability analysis is performed for the observer and controller, and it is shown that the state estimation error is fixed time convergent, the fault estimation unit is bounded-input bounded-output stable, and the controller is exponentially stable. Simulations are carried out and comparisons are made with several asymptotic and finite-time BLF-based control systems. The simulations confirm the superior performance of the proposed control system.",
+      "keywords": [
+        "Barrier Lyapunov Function",
+        "Backstepping control",
+        "Control allocation",
+        "Fault-tolerant control",
+        "Fixed-time state and fault observer",
+        "Remotely operated vehicle",
+        "TRAJECTORY TRACKING CONTROL",
+        "FIXED-TIME STABILIZATION",
+        "OUTPUT-FEEDBACK CONTROL",
+        "SLIDING-MODE OBSERVER",
+        "NONLINEAR-SYSTEMS",
+        "RECONSTRUCTION SCHEME",
+        "ALLOCATION ALGORITHM",
+        "UNDERWATER VEHICLES",
+        "DESIGN",
+        "SUBJECT"
+      ],
+      "normalized_title": "novel barrier lyapunov function based backstepping fault tolerant control system for an rov with thruster constraints",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2023.115312,\n\tauthor = {Hosseinnajad, A and Mohajer, N and Nahavandi, S},\n\ttitle = {Novel barrier Lyapunov function-based backstepping fault tolerant control system for an ROV with thruster constraints},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2023},\n\tkeywords = {Barrier Lyapunov Function; Backstepping control; Control allocation; Fault-tolerant control; Fixed-time state and fault observer; Remotely operated vehicle; TRAJECTORY TRACKING CONTROL; FIXED-TIME STABILIZATION; OUTPUT-FEEDBACK CONTROL; SLIDING-MODE OBSERVER; NONLINEAR-SYSTEMS; RECONSTRUCTION SCHEME; ALLOCATION ALGORITHM; UNDERWATER VEHICLES; DESIGN; SUBJECT},\n\tabstract = {This paper proposes a novel Barrier Lyapunov Function (BLF)-based fault tolerant control system for a work-class Remotely-Operated Vehicle (ROV) with thruster saturation and rate limits. The proposed control system is composed of a fixed-time state and fault observer, and a novel BLF-based backstepping controller. The novel BLFbased controller is introduced to eliminate the sensitivity of conventional BLF-based algorithms to rate limitations of the thrusters. In addition, it helps to improve the performance during initial transients and provides faster response to fault and failures. The observer combines the dynamics of the ROV with the dynamics of the thruster system. This combination facilitates estimation of thruster faults and failures independently of the system uncertainties, so highly improved performance is expected compared to conventional extended-state observers. To account for thruster constraints and provide fault tolerance, control allocation is utilized. Stability analysis is performed for the observer and controller, and it is shown that the state estimation error is fixed time convergent, the fault estimation unit is bounded-input bounded-output stable, and the controller is exponentially stable. Simulations are carried out and comparisons are made with several asymptotic and finite-time BLF-based control systems. The simulations confirm the superior performance of the proposed control system.},\n\tdoi = {10.1016/j.oceaneng.2023.115312},\n\tvolume = {285},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 18 Total Times Cited: 20 Cited Reference Count: 84 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2023.115312"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000154",
+      "entry_type": "article",
+      "title": "Fault tolerant control system for an ROV based on a novel integral sliding mode control and a state and fault observer in the presence of thruster limitations",
+      "authors": [
+        "Hosseinnajad, A",
+        "Loueipour, M"
+      ],
+      "year": 2023,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2023.114687",
+      "abstract": "This paper presents a novel fault tolerant control system for remotely operated vehicles in the presence of un-known system dynamics and unknown thruster faults and failures while accounting for magnitude and rate limits of the thrusters. The proposed control system consists of a novel integral sliding mode control (ISMC) and a new state and fault observer. The proposed ISMC utilizes a novel asymptotic sliding surface to enhance the perfor-mance of the control system during both initial transients and steady-state conditions. The observer takes thrusters system dynamics into account and provides estimation of faults and failures. Control allocation is utilized for fault accommodation and to separate the high-level control system and the low-level thruster con-trollers. Stability analyses are carried out and it is shown that the state observer is guaranteed to be fixed-time convergent while the fault observation error is input-to-state stable. It is also shown that the ISMC-based closed -loop control system is uniformly-ultimately bounded with practically fixed-time reaching phase. Simulations are carried out and comparisons are made with several fixed-time and finite-time control systems. The results outline the superior performance of the proposed control system in terms of positioning accuracy and fault tolerance during initial transients and steady-state conditions.",
+      "keywords": [
+        "Fault-tolerant control",
+        "Fixed-time extended-state observer",
+        "Fixed-time integral sliding mode",
+        "State and fault observer",
+        "Remotely-operated vehicle",
+        "TRAJECTORY TRACKING CONTROL",
+        "TIME CONSENSUS TRACKING",
+        "DESIGN",
+        "STABILIZATION",
+        "STABILITY",
+        "VEHICLES"
+      ],
+      "normalized_title": "fault tolerant control system for an rov based on a novel integral sliding mode control and a state and fault observer in the presence of thruster limitations",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2023.114687,\n\tauthor = {Hosseinnajad, A and Loueipour, M},\n\ttitle = {Fault tolerant control system for an ROV based on a novel integral sliding mode control and a state and fault observer in the presence of thruster limitations},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2023},\n\tkeywords = {Fault-tolerant control; Fixed-time extended-state observer; Fixed-time integral sliding mode; State and fault observer; Remotely-operated vehicle; TRAJECTORY TRACKING CONTROL; TIME CONSENSUS TRACKING; DESIGN; STABILIZATION; STABILITY; VEHICLES},\n\tabstract = {This paper presents a novel fault tolerant control system for remotely operated vehicles in the presence of un-known system dynamics and unknown thruster faults and failures while accounting for magnitude and rate limits of the thrusters. The proposed control system consists of a novel integral sliding mode control (ISMC) and a new state and fault observer. The proposed ISMC utilizes a novel asymptotic sliding surface to enhance the perfor-mance of the control system during both initial transients and steady-state conditions. The observer takes thrusters system dynamics into account and provides estimation of faults and failures. Control allocation is utilized for fault accommodation and to separate the high-level control system and the low-level thruster con-trollers. Stability analyses are carried out and it is shown that the state observer is guaranteed to be fixed-time convergent while the fault observation error is input-to-state stable. It is also shown that the ISMC-based closed -loop control system is uniformly-ultimately bounded with practically fixed-time reaching phase. Simulations are carried out and comparisons are made with several fixed-time and finite-time control systems. The results outline the superior performance of the proposed control system in terms of positioning accuracy and fault tolerance during initial transients and steady-state conditions.},\n\tdoi = {10.1016/j.oceaneng.2023.114687},\n\tvolume = {280},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 9 Total Times Cited: 9 Cited Reference Count: 66 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2023.114687"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000155",
+      "entry_type": "article",
+      "title": "Distributed TMPC formation trajectory tracking of multi-UUV with time-varying communication delay",
+      "authors": [
+        "Yan, ZP",
+        "Yan, JY",
+        "Nan, FB",
+        "Cai, SJ",
+        "Hou, SP"
+      ],
+      "year": 2024,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2024.117091",
+      "abstract": "For the problem of multiple underwater unmanned vehicle (UUV) formation control with time-varying communication delays, current interferences, and model uncertainties in marine environments, a distributed tube model prediction controller (DTMPC) based on a double-closed-loop under the communication synchronization strategy is proposed. A state information buffer is first designed to synchronize the asynchronous information with communication delay. Then, the computational complexity is reduced by the double-closed-loop structure with serial control of position and velocity controllers, while the stable convergence of position and velocity is guaranteed, and the problems of current interference and model uncertainty are solved by combining the tube MPC and the extended state observer in the velocity controller. In addition, the feasibility, stability and effectiveness of the formation controller are verified through the stability theorem and simulation experiment. The tracking error of each UUV quickly converges to around zero, and the UUV formation can quickly form a formation and accurately track the target trajectory.",
+      "keywords": [
+        "Underwater unmanned vehicle",
+        "Communication delays",
+        "Distributed model predictive control (DMPC)",
+        "Formation control",
+        "Current interference",
+        "SYSTEMS",
+        "MPC",
+        "CONSTRAINTS",
+        "UNCERTAINTY"
+      ],
+      "normalized_title": "distributed tmpc formation trajectory tracking of multi uuv with time varying communication delay",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2024.117091,\n\tauthor = {Yan, ZP and Yan, JY and Nan, FB and Cai, SJ and Hou, SP},\n\ttitle = {Distributed TMPC formation trajectory tracking of multi-UUV with time-varying communication delay},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2024},\n\tkeywords = {Underwater unmanned vehicle; Communication delays; Distributed model predictive control (DMPC); Formation control; Current interference; SYSTEMS; MPC; CONSTRAINTS; UNCERTAINTY},\n\tabstract = {For the problem of multiple underwater unmanned vehicle (UUV) formation control with time-varying communication delays, current interferences, and model uncertainties in marine environments, a distributed tube model prediction controller (DTMPC) based on a double-closed-loop under the communication synchronization strategy is proposed. A state information buffer is first designed to synchronize the asynchronous information with communication delay. Then, the computational complexity is reduced by the double-closed-loop structure with serial control of position and velocity controllers, while the stable convergence of position and velocity is guaranteed, and the problems of current interference and model uncertainty are solved by combining the tube MPC and the extended state observer in the velocity controller. In addition, the feasibility, stability and effectiveness of the formation controller are verified through the stability theorem and simulation experiment. The tracking error of each UUV quickly converges to around zero, and the UUV formation can quickly form a formation and accurately track the target trajectory.},\n\tdoi = {10.1016/j.oceaneng.2024.117091},\n\tvolume = {297},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 11 Total Times Cited: 11 Cited Reference Count: 45 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2024.117091"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000156",
+      "entry_type": "article",
+      "title": "Dual closed loop AUV trajectory tracking control based on finite time and state observer",
+      "authors": [
+        "Dai, XQ",
+        "Xu, HW",
+        "Ma, HC",
+        "Ding, JJ",
+        "Lai, Q"
+      ],
+      "year": 2022,
+      "journal": "MATHEMATICAL BIOSCIENCES AND ENGINEERING",
+      "doi": "10.3934/mbe.2022517",
+      "abstract": "The three-dimensional trajectory tracking of AUV is an important basis for it to complete its task. Due to many uncertain disturbances such as wind, wave and current on the sea, it is easy to cause problems such as slow convergence speed of the controller and saturation of the controller output in the three-dimensional trajectory tracking control of AUV. And the dynamic uncertainty of AUV's own model will have a great negative impact on AUV's trajectory tracking control. In order to solve the problem of slow convergence speed of the above controller, the finite time control method is introduced into the designed position controller. In order to solve the problem of AUV controller output saturation, an auxiliary dynamic system is designed to compensate the system control output saturation. In order to solve the uncertainty of AUV model, a reduced order extended observer is designed in the dynamic controller. It can observe the motion parameters of AUV at any time, and compensate the uncertainty of model uncertainty and external environment disturbance in real time. The control method in this paper is simulated in a three-dimensional model. The experimental results show that the convergence speed, control accuracy, robustness and tracking effect of AUV are higher than those of common trajectory tracker. The algorithm is loaded into the \"sea exploration II\" AUV and verified by experiments in Suzhou lake. The effect of AUV navigation basically meets the task requirements, in which the mean value of pitch angle and heading angle error is less than 8 degrees and the mean value of depth error is less than 0.1M. The trajectory tracker can better meet the trajectory tracking control needs of the AUV.",
+      "keywords": [
+        "AUV",
+        "trajectory tracking control",
+        "adaptive finite time control",
+        "reduced-order extended state observer",
+        "filter integral sliding mode",
+        "SLIDING MODE CONTROL",
+        "UNDERWATER VEHICLE",
+        "ROBUST"
+      ],
+      "normalized_title": "dual closed loop auv trajectory tracking control based on finite time and state observer",
+      "raw_bibtex": "@ARTICLE{10.3934/mbe.2022517,\n\tauthor = {Dai, XQ and Xu, HW and Ma, HC and Ding, JJ and Lai, Q},\n\ttitle = {Dual closed loop AUV trajectory tracking control based on finite time and state observer},\n\tjournal = {MATHEMATICAL BIOSCIENCES AND ENGINEERING},\n\tyear = {2022},\n\tkeywords = {AUV; trajectory tracking control; adaptive finite time control; reduced-order extended state observer; filter integral sliding mode; SLIDING MODE CONTROL; UNDERWATER VEHICLE; ROBUST},\n\tabstract = {The three-dimensional trajectory tracking of AUV is an important basis for it to complete its task. Due to many uncertain disturbances such as wind, wave and current on the sea, it is easy to cause problems such as slow convergence speed of the controller and saturation of the controller output in the three-dimensional trajectory tracking control of AUV. And the dynamic uncertainty of AUV's own model will have a great negative impact on AUV's trajectory tracking control. In order to solve the problem of slow convergence speed of the above controller, the finite time control method is introduced into the designed position controller. In order to solve the problem of AUV controller output saturation, an auxiliary dynamic system is designed to compensate the system control output saturation. In order to solve the uncertainty of AUV model, a reduced order extended observer is designed in the dynamic controller. It can observe the motion parameters of AUV at any time, and compensate the uncertainty of model uncertainty and external environment disturbance in real time. The control method in this paper is simulated in a three-dimensional model. The experimental results show that the convergence speed, control accuracy, robustness and tracking effect of AUV are higher than those of common trajectory tracker. The algorithm is loaded into the \"sea exploration II\" AUV and verified by experiments in Suzhou lake. The effect of AUV navigation basically meets the task requirements, in which the mean value of pitch angle and heading angle error is less than 8 degrees and the mean value of depth error is less than 0.1M. The trajectory tracker can better meet the trajectory tracking control needs of the AUV.},\n\tdoi = {10.3934/mbe.2022517},\n\tvolume = {19},\n\tnumber = {11},\n\tpages = {11086-11113},\n\tissn = {1547-1063},\n\tnote = {Times Cited in Web of Science Core Collection: 12 Total Times Cited: 12 Cited Reference Count: 21 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3934/mbe.2022517"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

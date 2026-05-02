@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0005",
+    "results": [
+        {
+            "paper_id": "paper_000041",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于电弧检测的深度学习算法，未提及电气特性分析或电弧建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000042",
+            "decision": "exclude",
+            "reason": "摘要主要研究接触线磨损机制，虽提及电弧放电能量，但核心是磨损实验，未涉及电气特性建模或仿真。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.75
+        },
+        {
+            "paper_id": "paper_000043",
+            "decision": "uncertain",
+            "reason": "摘要提到抑制弓网电弧并涉及控制算法，但未明确说明是否包含电弧模型或电气特性仿真。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000044",
+            "decision": "exclude",
+            "reason": "标题和摘要专注于弓网状态检测的关键点定位方法，未涉及电气特性或电弧建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000045",
+            "decision": "exclude",
+            "reason": "摘要描述基于信号融合的电弧检测方法，核心是检测算法，未提及电气特性建模或仿真。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000046",
+            "decision": "exclude",
+            "reason": "标题和摘要研究接触线不规则性对动力学性能的影响，聚焦机械相互作用，未涉及电气特性或电弧。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000047",
+            "decision": "exclude",
+            "reason": "摘要研究接触线电流的电磁场暴露，虽提及弓网电弧作为场源之一，但核心是健康风险评估，非电气特性建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.75
+        },
+        {
+            "paper_id": "paper_000048",
+            "decision": "uncertain",
+            "reason": "摘要分析弓网电弧的电磁干扰，涉及过电压和电磁辐射，但未明确说明是否包含电弧模型或仿真细节。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000049",
+            "decision": "exclude",
+            "reason": "标题和摘要描述基于神经网络的PID控制方法以减少接触离线，聚焦控制系统，未涉及电气特性或电弧建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000050",
+            "decision": "exclude",
+            "reason": "标题和摘要提出用于电弧检测的语义分割模型，专注于视觉检测算法，未涉及电气特性分析或建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        }
+    ]
+}

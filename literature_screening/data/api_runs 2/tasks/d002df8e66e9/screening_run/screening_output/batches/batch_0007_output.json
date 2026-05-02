@@ -1,0 +1,35 @@
+{
+  "batch_id": "batch_0007",
+  "results": [
+    {
+      "paper_id": "paper_000019",
+      "decision": "uncertain",
+      "reason": "标题和摘要显示研究弓网电弧引起的滑块烧蚀，使用MHD模型和COMSOL仿真，但未明确讨论电气特性变化或使用指定电弧模型。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000020",
+      "decision": "uncertain",
+      "reason": "标题和摘要研究弓网离线对轨道绝缘的电气影响，建立了电路模型并使用ANSYS仿真，但未明确包含电弧模型或指定仿真工具。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000021",
+      "decision": "uncertain",
+      "reason": "标题和摘要研究弓网电弧检测，基于电气参数瞬态分析，但未涉及电弧建模或指定仿真工具。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.5
+    }
+  ]
+}

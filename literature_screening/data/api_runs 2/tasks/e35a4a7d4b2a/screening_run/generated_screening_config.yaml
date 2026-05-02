@@ -1,0 +1,50 @@
+project:
+  name: 数字设备使用与学生福祉（Digital device use and well-being among students）
+  output_dir: tasks/e35a4a7d4b2a/screening_run/screening_output
+  save_raw_response: true
+  save_intermediate_files: true
+input:
+  input_files:
+  - tasks/e35a4a7d4b2a/screening_run/inputs/savedrecs.ris
+  encoding: auto
+dedup:
+  enabled: true
+  strict_doi_match: true
+  normalized_title_exact_match: true
+  fuzzy_title_match: false
+screening:
+  batch_size: 10
+  target_include_count: 20
+  stop_when_target_reached: true
+  allow_uncertain: true
+  retry_times: 6
+  request_timeout_seconds: 240
+criteria:
+  topic: 数字设备使用与学生福祉（Digital device use and well-being among students）
+  inclusion:
+  - 研究对象必须是学生群体（如青少年、中学生、大学生等）。
+  - 自变量必须包含明确的数字设备或媒介使用行为（如智能手机成瘾、社交媒体使用频率、整体屏幕时间）。
+  - 因变量必须涉及福祉的具体测量（如抑郁、焦虑、睡眠质量、孤独感、主观幸福感或学业倦怠）。
+  - 必须是高质量的实证研究（定量、定性或混合方法）或系统性综述/元分析。
+  exclusion:
+  - 纯探讨数字设备硬件技术、通信协议或底层算法（无人类心理/行为测量）。
+  - 研究对象主要为非学生群体（如学龄前婴幼儿、老年人、全职职场人士）。
+  - 仅探讨数字设备在特定疾病临床治疗中的应用（如利用VR技术治疗特定恐惧症），而非日常使用习惯对普遍福祉的影响。
+model:
+  provider: deepseek
+  model_name: deepseek-chat
+  api_base_url: https://api.deepseek.com/v1
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.0
+  max_tokens: 1536
+  min_request_interval_seconds: 2.0
+report:
+  export_included_ris: true
+  export_excluded_ris: false
+  export_unused_ris: true
+  export_included_bib: false
+  export_excluded_bib: false
+  export_unused_bib: false
+  included_report_format: md
+  excluded_report_format: md
+  summary_format: json

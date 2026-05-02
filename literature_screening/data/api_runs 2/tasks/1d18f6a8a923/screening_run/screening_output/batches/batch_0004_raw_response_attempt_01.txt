@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0004",
+    "results": [
+        {
+            "paper_id": "paper_000031",
+            "decision": "uncertain",
+            "reason": "标题和摘要聚焦于档案教育课程改革，未明确涉及企业数字档案系统建设的具体实施方案或模型框架。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000032",
+            "decision": "include",
+            "reason": "标题和摘要明确研究政府电子记录管理，涉及数字转型背景下的系统建设、数据安全和政策框架。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000033",
+            "decision": "include",
+            "reason": "标题和摘要直接研究区块链技术在数字档案管理中的应用，涉及技术采纳和长期保存。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.82
+        },
+        {
+            "paper_id": "paper_000034",
+            "decision": "include",
+            "reason": "标题和摘要明确针对企业电子档案管理，提出基于HBase的大数据存储模型和优化方案。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000035",
+            "decision": "include",
+            "reason": "标题和摘要研究人工智能与云计算技术在数字档案管理中的应用，提出具体框架。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.86
+        },
+        {
+            "paper_id": "paper_000036",
+            "decision": "include",
+            "reason": "标题和摘要研究政府机构数字记录管理实施，涉及政策、基础设施等关键要素。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.84
+        },
+        {
+            "paper_id": "paper_000037",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于乡村文化遗产的数字保护，属于公共文化馆藏管理，非企业或政府业务档案。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000038",
+            "decision": "uncertain",
+            "reason": "摘要讨论数字时代档案管理挑战，但未提供具体实施方案或模型框架，信息不够具体。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000039",
+            "decision": "include",
+            "reason": "标题和摘要研究高等教育机构电子记录管理系统采纳，涉及技术采纳框架和决策支持。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.83
+        },
+        {
+            "paper_id": "paper_000040",
+            "decision": "exclude",
+            "reason": "标题和摘要完全关于船舶压载水处理系统，与数字档案系统建设主题无关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0025",
+    "results": [
+        {
+            "paper_id": "paper_000241",
+            "decision": "exclude",
+            "reason": "研究对象为集成电路封装，未涉及基桩、深基础或混凝土结构检测。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000242",
+            "decision": "exclude",
+            "reason": "研究对象为海底管道，未涉及基桩、深基础或混凝土结构检测。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000243",
+            "decision": "uncertain",
+            "reason": "涉及超声波信号处理和参数估计，但未明确提及基桩、深基础或混凝土结构检测。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000244",
+            "decision": "exclude",
+            "reason": "研究内容为土壤力学性能预测，未涉及超声波无损检测或误差修正算法。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000245",
+            "decision": "exclude",
+            "reason": "研究对象为卫星异常检测，未涉及超声波检测或基桩、混凝土结构。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000246",
+            "decision": "uncertain",
+            "reason": "涉及超声波图像处理和深度学习，但未明确提及基桩、深基础或混凝土结构检测。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000247",
+            "decision": "exclude",
+            "reason": "使用涡流检测而非超声波检测，且研究对象为输送带而非基桩或混凝土结构。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000248",
+            "decision": "uncertain",
+            "reason": "涉及超声波信号处理和时差自动诊断，但未明确提及基桩、深基础或混凝土结构检测。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000249",
+            "decision": "uncertain",
+            "reason": "涉及超声波缺陷检测和信号处理，但未明确提及基桩、深基础或混凝土结构检测。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000250",
+            "decision": "exclude",
+            "reason": "研究对象为飞机紧固件孔，未涉及基桩、深基础或混凝土结构检测。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        }
+    ]
+}

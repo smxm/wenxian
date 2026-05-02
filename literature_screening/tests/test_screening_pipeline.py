@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import pytest
@@ -9,7 +10,8 @@ from literature_screening.bibtex.exporter import export_ris
 from literature_screening.bibtex.normalizer import normalize_title
 from literature_screening.bibtex.parser import parse_bibtex_files
 from literature_screening.core.exceptions import SchemaValidationError
-from literature_screening.core.models import CriteriaConfig, PaperRecord
+from literature_screening.core.models import CriteriaConfig, InputConfig, ModelConfig, PaperRecord, ProjectConfig, ReportConfig, RunConfig, ScreeningConfig
+from literature_screening.pipeline.run_pipeline import _payload_to_decisions, _request_batch_payload_with_split_fallback
 from literature_screening.screening.prompt_builder import build_screening_prompt
 from literature_screening.screening.validator import validate_batch_response
 
@@ -194,7 +196,118 @@ def test_build_screening_prompt_contains_ids_and_missing_markers() -> None:
     assert "paper_000001, paper_000002" in prompt
     assert "[ABSTRACT_MISSING]" in prompt
     assert "[KEYWORDS_MISSING]" in prompt
+    assert "80%" in prompt
     assert '"batch_id"' in prompt
+
+
+def test_payload_to_decisions_downgrades_low_confidence_includes() -> None:
+    config = RunConfig(
+        project=ProjectConfig(name="demo", output_dir="."),
+        input=InputConfig(input_files=["input.ris"]),
+        screening=ScreeningConfig(
+            batch_size=10,
+            target_include_count=10,
+            min_include_confidence=0.8,
+            allow_uncertain=True,
+        ),
+        criteria=CriteriaConfig(topic="test topic", inclusion=["keep relevant"], exclusion=["drop irrelevant"]),
+        model=ModelConfig(
+            provider="deepseek",
+            model_name="deepseek-chat",
+            api_base_url="https://api.deepseek.com/v1",
+            api_key_env="DEEPSEEK_API_KEY",
+        ),
+        report=ReportConfig(),
+    )
+    payload = {
+        "batch_id": "batch_0001",
+        "results": [
+            {
+                "paper_id": "paper_000001",
+                "decision": "include",
+                "reason": "主题相关但证据较弱",
+                "evidence": ["title"],
+                "confidence": 0.7,
+            }
+        ],
+    }
+
+    decisions = _payload_to_decisions(payload, "batch_0001", config)
+
+    assert decisions[0].decision == "uncertain"
+    assert decisions[0].confidence == 0.7
+    assert "最低纳入阈值 80%" in decisions[0].reason
+
+
+def test_truncated_batch_response_splits_without_exhausting_retries(tmp_path: Path) -> None:
+    template_path = Path(__file__).resolve().parents[1] / "prompts" / "screening_prompt.md"
+    criteria = CriteriaConfig(topic="test topic", inclusion=["keep relevant"], exclusion=["drop irrelevant"])
+    papers = [
+        PaperRecord(paper_id=f"paper_{index:06d}", title=f"Paper {index}", abstract="Summary text")
+        for index in range(1, 5)
+    ]
+    progress_messages: list[str | None] = []
+
+    class FakeClient:
+        request_count = 0
+        last_finish_reason = None
+
+        def chat(self, prompt: str) -> str:
+            self.request_count += 1
+            if "batch_0001_part1" in prompt:
+                return _valid_screening_response("batch_0001_part1", ["paper_000001", "paper_000002"])
+            if "batch_0001_part2" in prompt:
+                return _valid_screening_response("batch_0001_part2", ["paper_000003", "paper_000004"])
+            return '{"batch_id": "batch_0001", "results": ['
+
+        @staticmethod
+        def extract_retry_after_seconds(_error: Exception) -> int | None:
+            return None
+
+    (tmp_path / "batches").mkdir()
+    client = FakeClient()
+    payload = _request_batch_payload_with_split_fallback(
+        client=client,  # type: ignore[arg-type]
+        template_path=template_path,
+        criteria=criteria,
+        min_include_confidence=0.8,
+        allow_uncertain=True,
+        batch_id="batch_0001",
+        batch_papers=papers,
+        retry_times=6,
+        output_dir=tmp_path,
+        save_raw_response=True,
+        progress_callback=lambda _phase, _label, _current, _total, message: progress_messages.append(message),
+    )
+
+    assert payload["batch_id"] == "batch_0001"
+    assert client.request_count == 3
+    assert [item["paper_id"] for item in payload["results"]] == [
+        "paper_000001",
+        "paper_000002",
+        "paper_000003",
+        "paper_000004",
+    ]
+    assert any(message and "拆分" in message for message in progress_messages)
+    assert (tmp_path / "batches" / "batch_0001_raw_response_failed_last.txt").exists()
+
+
+def _valid_screening_response(batch_id: str, paper_ids: list[str]) -> str:
+    return json.dumps(
+        {
+            "batch_id": batch_id,
+            "results": [
+                {
+                    "paper_id": paper_id,
+                    "decision": "include",
+                    "reason": "matches",
+                    "evidence": ["title"],
+                    "confidence": 0.9,
+                }
+                for paper_id in paper_ids
+            ],
+        }
+    )
 
 
 def test_validate_batch_response_accepts_exact_id_match() -> None:

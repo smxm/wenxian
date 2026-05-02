@@ -1,0 +1,105 @@
+{
+  "batch_id": "batch_0002",
+  "results": [
+    {
+      "paper_id": "paper_000011",
+      "decision": "exclude",
+      "reason": "标题和摘要明确讨论模糊逻辑、模糊集合等数学和计算机领域的模糊控制概念，命中排除标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000012",
+      "decision": "include",
+      "reason": "标题和摘要明确分析工程论文中态度表达和元话语设备，涉及学术写作和学科对比，符合纳入标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000013",
+      "decision": "exclude",
+      "reason": "标题和摘要讨论工程中过程描述的模糊性度量，属于工程系统优化而非学术写作中的模糊语分析。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000014",
+      "decision": "exclude",
+      "reason": "标题和摘要讨论故障树分析中的模糊性和不精确性，属于工程系统可靠性分析，命中模糊逻辑排除标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000015",
+      "decision": "exclude",
+      "reason": "标题和摘要讨论大象对植物的利用，其中“hedging”指植物修剪，属于生态学而非学术写作分析。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000016",
+      "decision": "include",
+      "reason": "标题和摘要明确比较软硬科学论文讨论部分中模糊语和增强语的使用，符合学术写作和学科对比纳入标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000017",
+      "decision": "include",
+      "reason": "标题和摘要分析医学文章中模糊语的使用变化，涉及学术写作和语料库对比，符合纳入标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.88
+    },
+    {
+      "paper_id": "paper_000018",
+      "decision": "uncertain",
+      "reason": "摘要提到自然语言的模糊性，但主要讨论WordNet和NLP，是否涉及学术写作中的模糊语分析信息不足。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000019",
+      "decision": "exclude",
+      "reason": "标题和摘要讨论决策模型中的模糊性建模和测量，属于决策理论而非学术写作中的模糊语分析。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000020",
+      "decision": "exclude",
+      "reason": "标题和摘要讨论核战略中的“核模糊”策略，属于国际政治领域，命中金融经济领域对冲的排除标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    }
+  ]
+}

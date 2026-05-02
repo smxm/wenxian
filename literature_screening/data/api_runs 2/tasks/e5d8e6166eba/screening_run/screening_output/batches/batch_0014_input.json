@@ -1,0 +1,385 @@
+{
+  "batch_id": "batch_0014",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000131",
+    "paper_000132",
+    "paper_000133",
+    "paper_000134",
+    "paper_000135",
+    "paper_000136",
+    "paper_000137",
+    "paper_000138",
+    "paper_000139",
+    "paper_000140"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000131",
+      "entry_type": "article",
+      "title": "Numerical investigations of deep learning-assisted delamination characterization using ultrasonic guided waves",
+      "authors": [
+        "Wang, JZ",
+        "Qu, JM"
+      ],
+      "year": 2025,
+      "journal": "WAVE MOTION",
+      "doi": "10.1016/j.wavemoti.2025.103514",
+      "abstract": "Ultrasonic guided waves have been applied extensively for nondestructively detecting delamination in multilayered structures. However, traditional guided-wave-based nondestructive evaluation (NDE) techniques require highly skilled users to interpret the complex wave field scattered by the delamination. To overcome this challenge, this study proposes an approach that combines a deep-learning (DL) neural network with traditional ultrasonic NDE techniques. The NDE technique used here is based on guided waves generated and received in a transmitter-receiver configuration. A 2D finite element analysis (FEA) model is constructed to simulate the guided wave interactions with a delamination between two metallic layers, which yields both the training and testing data. The tailored DL neural network is a convolutional neural network (CNN) combined with bi-directional long short-term memory (BiLSTM). This hybrid neural network is trained by a set of pulse-echo or pitch-catch time-domain data. Once trained, the DL neural network predicts the location of delamination using the recorded pulse-echo time-domain signals as input, and the length of delamination using the recoded pitch-catch time-domain as input. This process of nondestructively characterizing the location and size of delamination can be carried out automatically without the need to analyze the complex wave fields in the ultrasonic tests. The predicted results on both within-range and out-of-range unseen data demonstrate that the proposed technique has tremendous potential for characterizing delamination in practical NDE and structural health monitoring (SHM) applications.",
+      "keywords": [
+        "Guided wave",
+        "Delamination",
+        "Deep learning",
+        "Finite element analysis",
+        "Nondestructive evaluation",
+        "Structural health monitoring",
+        "LAMB WAVES",
+        "COMPOSITE STRUCTURES",
+        "MODE",
+        "IDENTIFICATION",
+        "DAMAGE"
+      ],
+      "normalized_title": "numerical investigations of deep learning assisted delamination characterization using ultrasonic guided waves",
+      "raw_bibtex": "@ARTICLE{10.1016/j.wavemoti.2025.103514,\n\tauthor = {Wang, JZ and Qu, JM},\n\ttitle = {Numerical investigations of deep learning-assisted delamination characterization using ultrasonic guided waves},\n\tjournal = {WAVE MOTION},\n\tyear = {2025},\n\tkeywords = {Guided wave; Delamination; Deep learning; Finite element analysis; Nondestructive evaluation; Structural health monitoring; LAMB WAVES; COMPOSITE STRUCTURES; MODE; IDENTIFICATION; DAMAGE},\n\tabstract = {Ultrasonic guided waves have been applied extensively for nondestructively detecting delamination in multilayered structures. However, traditional guided-wave-based nondestructive evaluation (NDE) techniques require highly skilled users to interpret the complex wave field scattered by the delamination. To overcome this challenge, this study proposes an approach that combines a deep-learning (DL) neural network with traditional ultrasonic NDE techniques. The NDE technique used here is based on guided waves generated and received in a transmitter-receiver configuration. A 2D finite element analysis (FEA) model is constructed to simulate the guided wave interactions with a delamination between two metallic layers, which yields both the training and testing data. The tailored DL neural network is a convolutional neural network (CNN) combined with bi-directional long short-term memory (BiLSTM). This hybrid neural network is trained by a set of pulse-echo or pitch-catch time-domain data. Once trained, the DL neural network predicts the location of delamination using the recorded pulse-echo time-domain signals as input, and the length of delamination using the recoded pitch-catch time-domain as input. This process of nondestructively characterizing the location and size of delamination can be carried out automatically without the need to analyze the complex wave fields in the ultrasonic tests. The predicted results on both within-range and out-of-range unseen data demonstrate that the proposed technique has tremendous potential for characterizing delamination in practical NDE and structural health monitoring (SHM) applications.},\n\tdoi = {10.1016/j.wavemoti.2025.103514},\n\tvolume = {134},\n\tissn = {0165-2125},\n\tnote = {Times Cited in Web of Science Core Collection: 5 Total Times Cited: 5 Cited Reference Count: 56 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.wavemoti.2025.103514"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000132",
+      "entry_type": "article",
+      "title": "A comparative study of regression, neural network and neuro-fuzzy inference system for determining the compressive strength of brick-mortar masonry by fusing nondestructive testing data",
+      "authors": [
+        "Mishra, M",
+        "Bhatia, AS",
+        "Maity, D"
+      ],
+      "year": 2021,
+      "journal": "ENGINEERING WITH COMPUTERS",
+      "doi": "10.1007/s00366-019-00810-4",
+      "abstract": "Determining the compressive strength of masonry structures is critical for assessing their service life and thus providing safety assurances to their occupants and valued stakeholders. This paper presents a methodology based on various data fusion systems for predicting the compressive strength using data collected from nondestructive testing. According to the experimental readings obtained from the laboratory tests for masonry wallettes, 44 samples are used to construct the training datasets and results validated against a masonry structure located in Kharagpur. The compressive strength of masonry units is predicted using statistical regression models and other state-of-the-art approaches. Two indices, namely the coefficient of determination (R2 and root mean square error, are used to test the performance of different models. The results indicate that both neural network and neuro-fuzzy inference system have a superior predictive capacity than other models and can be reliably employed in the field to evaluate the compressive strength of brick-mortar masonry structures.",
+      "keywords": [
+        "Neuro-fuzzy inference system",
+        "Brick masonry",
+        "Ultrasonic testing",
+        "Compressive strength",
+        "Non-destructive methods",
+        "SITU CONCRETE STRENGTH",
+        "NDT DATA FUSION",
+        "ELASTIC-MODULUS",
+        "PREDICTION",
+        "ANFIS",
+        "VELOCITY",
+        "VARIABILITY"
+      ],
+      "normalized_title": "a comparative study of regression neural network and neuro fuzzy inference system for determining the compressive strength of brick mortar masonry by fusing nondestructive testing data",
+      "raw_bibtex": "@ARTICLE{10.1007/s00366-019-00810-4,\n\tauthor = {Mishra, M and Bhatia, AS and Maity, D},\n\ttitle = {A comparative study of regression, neural network and neuro-fuzzy inference system for determining the compressive strength of brick-mortar masonry by fusing nondestructive testing data},\n\tjournal = {ENGINEERING WITH COMPUTERS},\n\tyear = {2021},\n\tkeywords = {Neuro-fuzzy inference system; Brick masonry; Ultrasonic testing; Compressive strength; Non-destructive methods; SITU CONCRETE STRENGTH; NDT DATA FUSION; ELASTIC-MODULUS; PREDICTION; ANFIS; VELOCITY; VARIABILITY},\n\tabstract = {Determining the compressive strength of masonry structures is critical for assessing their service life and thus providing safety assurances to their occupants and valued stakeholders. This paper presents a methodology based on various data fusion systems for predicting the compressive strength using data collected from nondestructive testing. According to the experimental readings obtained from the laboratory tests for masonry wallettes, 44 samples are used to construct the training datasets and results validated against a masonry structure located in Kharagpur. The compressive strength of masonry units is predicted using statistical regression models and other state-of-the-art approaches. Two indices, namely the coefficient of determination (R2 and root mean square error, are used to test the performance of different models. The results indicate that both neural network and neuro-fuzzy inference system have a superior predictive capacity than other models and can be reliably employed in the field to evaluate the compressive strength of brick-mortar masonry structures.},\n\tdoi = {10.1007/s00366-019-00810-4},\n\tvolume = {37},\n\tnumber = {1},\n\tpages = {77-91},\n\tissn = {0177-0667},\n\tnote = {Times Cited in Web of Science Core Collection: 39 Total Times Cited: 42 Cited Reference Count: 83 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s00366-019-00810-4"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000133",
+      "entry_type": "article",
+      "title": "Improved Ultrasonic Dead Zone Detectability of Work Rolls Using a Convolutional Neural Network",
+      "authors": [
+        "Yeom, YT",
+        "Kim, HH",
+        "Park, J",
+        "Kim, HJ",
+        "Song, SJ"
+      ],
+      "year": 2022,
+      "journal": "APPLIED SCIENCES-BASEL",
+      "doi": "10.3390/app12105009",
+      "abstract": "Rolled carbon steel sheets used in industrial and construction sites are formed by passing metal stock between two rotating rolls using a rolling mill, and the work roll is an essential part of the rolling mill. As the work rolls are in direct contact with the workpiece, the process quality is highly sensitive to their surface integrity, which is maintained through rough and finish cuttings; ultrasonic inspection is often performed after rough cutting the surfaces of work rolls. Ultrasonic inspection signals comprise signals reflected from and below the surface. Depending on the size of the subsurface defects, the thickness of the finish cutting is determined. The signals reflected by defects close to the surface overlap with those from the work roll surface, which is referred to as the ultrasonic dead zone and makes defect detection difficult. Since visual detection of flaws is not possible from signals collected from the dead zone, finish cutting is commonly performed up to the dead zone depth; this requires unnecessary cost and process time, which must be improved. Therefore, in this study a convolutional neural network is used to improve defect detection performance in the ultrasonic dead zone during the inspection of work rolls.",
+      "keywords": [
+        "ultrasonic dead zone",
+        "convolutional neural network",
+        "work roll",
+        "ultrasonic testing",
+        "detectability",
+        "CLASSIFICATION",
+        "SYSTEM"
+      ],
+      "normalized_title": "improved ultrasonic dead zone detectability of work rolls using a convolutional neural network",
+      "raw_bibtex": "@ARTICLE{10.3390/app12105009,\n\tauthor = {Yeom, YT and Kim, HH and Park, J and Kim, HJ and Song, SJ},\n\ttitle = {Improved Ultrasonic Dead Zone Detectability of Work Rolls Using a Convolutional Neural Network},\n\tjournal = {APPLIED SCIENCES-BASEL},\n\tyear = {2022},\n\tkeywords = {ultrasonic dead zone; convolutional neural network; work roll; ultrasonic testing; detectability; CLASSIFICATION; SYSTEM},\n\tabstract = {Rolled carbon steel sheets used in industrial and construction sites are formed by passing metal stock between two rotating rolls using a rolling mill, and the work roll is an essential part of the rolling mill. As the work rolls are in direct contact with the workpiece, the process quality is highly sensitive to their surface integrity, which is maintained through rough and finish cuttings; ultrasonic inspection is often performed after rough cutting the surfaces of work rolls. Ultrasonic inspection signals comprise signals reflected from and below the surface. Depending on the size of the subsurface defects, the thickness of the finish cutting is determined. The signals reflected by defects close to the surface overlap with those from the work roll surface, which is referred to as the ultrasonic dead zone and makes defect detection difficult. Since visual detection of flaws is not possible from signals collected from the dead zone, finish cutting is commonly performed up to the dead zone depth; this requires unnecessary cost and process time, which must be improved. Therefore, in this study a convolutional neural network is used to improve defect detection performance in the ultrasonic dead zone during the inspection of work rolls.},\n\tdoi = {10.3390/app12105009},\n\tvolume = {12},\n\tnumber = {10},\n\tissn = {2076-3417},\n\tnote = {Times Cited in Web of Science Core Collection: 6 Total Times Cited: 6 Cited Reference Count: 30 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/app12105009"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000134",
+      "entry_type": "article",
+      "title": "Automated detection and segmentation of internal defects in reinforced concrete using deep learning on ultrasonic images",
+      "authors": [
+        "Kuchipudi, ST",
+        "Ghosh, D"
+      ],
+      "year": 2024,
+      "journal": "CONSTRUCTION AND BUILDING MATERIALS",
+      "doi": "10.1016/j.conbuildmat.2023.134491",
+      "abstract": "Periodic inspection of concrete structures for detecting internal defects through nondestructive imaging is recommended for ensuring structural safety and integrity. Ultrasonic imaging is one of the emerging and widely accepted techniques in nondestructive diagnostics of concrete structures. However, manually screening the ultrasonic images to detect and localize anomalies over large areas especially those from public infrastructure is tedious and prone to misjudgments. This work proposes a Region-based CNN to automatically detect, localize, and segment those signatures corresponding to defects from the noisy ultrasonic images with multiple features. This network replaces the conventional RoI pooling adopted in RCNNs with RoIAlign. To optimize the model for real-life complexity and noise levels, the network is trained on real experimental data. The ultrasonic image dataset has been generated by applying the imaging technique based on the Synthetic Aperture Focusing Technique on reflected waveform data obtained on various specimens with installed defects. The proposed network has been trained on the labelled image dataset containing signatures corresponding to multiple flaws like debonded rebars, delaminations, and planar crack-like defects in concrete members. The predictions of the trained model over the test datasets detect and masks the pixels corresponding to defects in ultrasonic images with a best mAP of 0.98. Segmentation results of the developed model upon testing are found superior to other state-of-the-art defect detection networks.",
+      "keywords": [
+        "Defect detection",
+        "Cracks",
+        "Ultrasonic testing",
+        "Convolutional Neural Networks",
+        "Image Segmentation",
+        "SURFACE-BREAKING CRACKS",
+        "NEURAL-NETWORKS",
+        "CLASSIFICATION",
+        "RECONSTRUCTION",
+        "REFLECTION"
+      ],
+      "normalized_title": "automated detection and segmentation of internal defects in reinforced concrete using deep learning on ultrasonic images",
+      "raw_bibtex": "@ARTICLE{10.1016/j.conbuildmat.2023.134491,\n\tauthor = {Kuchipudi, ST and Ghosh, D},\n\ttitle = {Automated detection and segmentation of internal defects in reinforced concrete using deep learning on ultrasonic images},\n\tjournal = {CONSTRUCTION AND BUILDING MATERIALS},\n\tyear = {2024},\n\tkeywords = {Defect detection; Cracks; Ultrasonic testing; Convolutional Neural Networks; Image Segmentation; SURFACE-BREAKING CRACKS; NEURAL-NETWORKS; CLASSIFICATION; RECONSTRUCTION; REFLECTION},\n\tabstract = {Periodic inspection of concrete structures for detecting internal defects through nondestructive imaging is recommended for ensuring structural safety and integrity. Ultrasonic imaging is one of the emerging and widely accepted techniques in nondestructive diagnostics of concrete structures. However, manually screening the ultrasonic images to detect and localize anomalies over large areas especially those from public infrastructure is tedious and prone to misjudgments. This work proposes a Region-based CNN to automatically detect, localize, and segment those signatures corresponding to defects from the noisy ultrasonic images with multiple features. This network replaces the conventional RoI pooling adopted in RCNNs with RoIAlign. To optimize the model for real-life complexity and noise levels, the network is trained on real experimental data. The ultrasonic image dataset has been generated by applying the imaging technique based on the Synthetic Aperture Focusing Technique on reflected waveform data obtained on various specimens with installed defects. The proposed network has been trained on the labelled image dataset containing signatures corresponding to multiple flaws like debonded rebars, delaminations, and planar crack-like defects in concrete members. The predictions of the trained model over the test datasets detect and masks the pixels corresponding to defects in ultrasonic images with a best mAP of 0.98. Segmentation results of the developed model upon testing are found superior to other state-of-the-art defect detection networks.},\n\tdoi = {10.1016/j.conbuildmat.2023.134491},\n\tvolume = {411},\n\tissn = {0950-0618},\n\tnote = {Times Cited in Web of Science Core Collection: 45 Total Times Cited: 46 Cited Reference Count: 54 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.conbuildmat.2023.134491"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000135",
+      "entry_type": "article",
+      "title": "Unsupervised Enhancement of Ultrasonic Sequential Images Based on High-Frequency Feature Extraction and Bi-ConvLSTM",
+      "authors": [
+        "Li, X",
+        "Li, M",
+        "Pan, FS",
+        "Li, HK",
+        "Liu, YB"
+      ],
+      "year": 2024,
+      "journal": "JOURNAL OF NONDESTRUCTIVE EVALUATION",
+      "doi": "10.1007/s10921-023-01013-0",
+      "abstract": "Ultrasonic X-scan testing enables multiple equidistant layer scanning images along the direction of material thickness to obtain an overall characterization of material internal quality. However, ultrasonic sequential images produced by ultrasonic X-scan testing suffer from issues with low brightness, low contrast and poor clarity making it difficult to accurately characterize the internal quality of materials. In order to improve the characterization capabilities, an unsupervised enhancement network called UT_enhancenet is proposed in this paper. The UT_enhancenet combines correlated features of Bi-ConvLSTM with high-frequency features of Octconv to create encoding features. And then these features are input into decoder to generate high-quality sequential images. Simultaneously, an unsupervised loss function integrating content, brightness, and noise is constructed to guide the training of the neural network. To demonstrate the efficacy of the new method, sequential ultrasonic images of particle-reinforced metal matrix composites were enhanced by the new method. Consequently, an average particle detection rate of 91.3% and an average relative size error of 6.9% were observed across the three enhanced sequential image regions. The results indicate that the new method is significantly superior to the old methods.",
+      "keywords": [
+        "Ultrasonic testing",
+        "Sequential ultrasonic images",
+        "Image enhancement",
+        "Deep neural network",
+        "ADAPTIVE HISTOGRAM EQUALIZATION",
+        "PERFORMANCE",
+        "TRANSFORM",
+        "RETINEX"
+      ],
+      "normalized_title": "unsupervised enhancement of ultrasonic sequential images based on high frequency feature extraction and bi convlstm",
+      "raw_bibtex": "@ARTICLE{10.1007/s10921-023-01013-0,\n\tauthor = {Li, X and Li, M and Pan, FS and Li, HK and Liu, YB},\n\ttitle = {Unsupervised Enhancement of Ultrasonic Sequential Images Based on High-Frequency Feature Extraction and Bi-ConvLSTM},\n\tjournal = {JOURNAL OF NONDESTRUCTIVE EVALUATION},\n\tyear = {2024},\n\tkeywords = {Ultrasonic testing; Sequential ultrasonic images; Image enhancement; Deep neural network; ADAPTIVE HISTOGRAM EQUALIZATION; PERFORMANCE; TRANSFORM; RETINEX},\n\tabstract = {Ultrasonic X-scan testing enables multiple equidistant layer scanning images along the direction of material thickness to obtain an overall characterization of material internal quality. However, ultrasonic sequential images produced by ultrasonic X-scan testing suffer from issues with low brightness, low contrast and poor clarity making it difficult to accurately characterize the internal quality of materials. In order to improve the characterization capabilities, an unsupervised enhancement network called UT_enhancenet is proposed in this paper. The UT_enhancenet combines correlated features of Bi-ConvLSTM with high-frequency features of Octconv to create encoding features. And then these features are input into decoder to generate high-quality sequential images. Simultaneously, an unsupervised loss function integrating content, brightness, and noise is constructed to guide the training of the neural network. To demonstrate the efficacy of the new method, sequential ultrasonic images of particle-reinforced metal matrix composites were enhanced by the new method. Consequently, an average particle detection rate of 91.3% and an average relative size error of 6.9% were observed across the three enhanced sequential image regions. The results indicate that the new method is significantly superior to the old methods.},\n\tdoi = {10.1007/s10921-023-01013-0},\n\tvolume = {43},\n\tnumber = {1},\n\tissn = {0195-9298},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 40 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s10921-023-01013-0"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000136",
+      "entry_type": "article",
+      "title": "WaveCLR: Contrastive Learning of Guided Wave Representations for Composite Damage Identification",
+      "authors": [
+        "Yun, HG",
+        "Wang, R",
+        "Rayhana, R",
+        "Pant, S",
+        "Genest, M",
+        "Liu, Z"
+      ],
+      "year": 2024,
+      "journal": "IEEE TRANSACTIONS ON INSTRUMENTATION AND MEASUREMENT",
+      "doi": "10.1109/tim.2024.3386207",
+      "abstract": "Damage identification in composite materials is an area of interest within the field of structural health monitoring (SHM). Damage identification in the field not only cares about recognition accuracy but also requires robustness to the variation of the input data. Deep learning methods to analyze guided wave signals collected by ultrasonic testing (UT) for damage identification have been gaining increasing attention in the last decade. However, existing methods for damage identification lack this robustness by failing to consider the input data distribution discrepancy between the training phase (source domain) and the inference phase (target domain). To address this issue, this article proposes a novel domain generalization method named WaveCLR for damage identification in composite materials using ultrasonic guided waves (UGW). WaveCLR is a deep neural network (DNN) model that leverages contrastive learning to account for data discrepancies that typically arise from variations in ultrasonic wave data due to damage characteristics. By maximizing the feature mutual interclass distance and intraclass distance in the source domain, the models' performance in the target domain is improved. The effectiveness of the proposed WaveCLR was validated on two distinct datasets capturing different damage scenarios. The results indicate that our proposed model successfully addresses the domain generalization problem in composite damage identification.",
+      "keywords": [
+        "Feature extraction",
+        "Data models",
+        "Self-supervised learning",
+        "Task analysis",
+        "Standards",
+        "Location awareness",
+        "Convolutional neural networks",
+        "Composite materials",
+        "contrastive learning",
+        "damage identification",
+        "domain generalization",
+        "guided wave",
+        "LAMB WAVES",
+        "NETWORK"
+      ],
+      "normalized_title": "waveclr contrastive learning of guided wave representations for composite damage identification",
+      "raw_bibtex": "@ARTICLE{10.1109/TIM.2024.3386207,\n\tauthor = {Yun, HG and Wang, R and Rayhana, R and Pant, S and Genest, M and Liu, Z},\n\ttitle = {WaveCLR: Contrastive Learning of Guided Wave Representations for Composite Damage Identification},\n\tjournal = {IEEE TRANSACTIONS ON INSTRUMENTATION AND MEASUREMENT},\n\tyear = {2024},\n\tkeywords = {Feature extraction; Data models; Self-supervised learning; Task analysis; Standards; Location awareness; Convolutional neural networks; Composite materials; contrastive learning; damage identification; domain generalization; guided wave; LAMB WAVES; NETWORK},\n\tabstract = {Damage identification in composite materials is an area of interest within the field of structural health monitoring (SHM). Damage identification in the field not only cares about recognition accuracy but also requires robustness to the variation of the input data. Deep learning methods to analyze guided wave signals collected by ultrasonic testing (UT) for damage identification have been gaining increasing attention in the last decade. However, existing methods for damage identification lack this robustness by failing to consider the input data distribution discrepancy between the training phase (source domain) and the inference phase (target domain). To address this issue, this article proposes a novel domain generalization method named WaveCLR for damage identification in composite materials using ultrasonic guided waves (UGW). WaveCLR is a deep neural network (DNN) model that leverages contrastive learning to account for data discrepancies that typically arise from variations in ultrasonic wave data due to damage characteristics. By maximizing the feature mutual interclass distance and intraclass distance in the source domain, the models' performance in the target domain is improved. The effectiveness of the proposed WaveCLR was validated on two distinct datasets capturing different damage scenarios. The results indicate that our proposed model successfully addresses the domain generalization problem in composite damage identification.},\n\tdoi = {10.1109/TIM.2024.3386207},\n\tvolume = {73},\n\tissn = {0018-9456},\n\tnote = {Times Cited in Web of Science Core Collection: 7 Total Times Cited: 8 Cited Reference Count: 44 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TIM.2024.3386207"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000137",
+      "entry_type": "article",
+      "title": "Application of the German Standardization Approach for the Reliability Assessment of NDT - Honeycomb Detection in Concrete using Ultrasonic Testing",
+      "authors": [
+        "Kessler, S",
+        "Rentala, VK",
+        "Dethof, F",
+        "Kanzler, D"
+      ],
+      "year": 2024,
+      "journal": "JOURNAL OF ADVANCED CONCRETE TECHNOLOGY",
+      "doi": "10.3151/jact.22.664",
+      "abstract": "In recent decades, non-destructive testing (NDT) has become an indispensable component of condition assessment in various industries such as civil infrastructure, automotive, nuclear, and other safety-related sectors. Each NDT method possesses unique strengths and weaknesses, prompting increased interest in combining these methods for comprehensive assessments. However, the full potential of NDT data remains underutilized due to a lack of standardization in estimating NDT reliability. Often, the capabilities of NDT systems for specific inspection tasks are unknown, hindering advancements in NDE 4.0, where knowledge about the reliability of non-destructive tests is crucial. For example, such information is very valuable when labeling data for machine learning purposes to define whether a measurement can be considered sound or defect. This paper underscores the pressing need for international standardization in the reliability assessment of NDT and presents the German approach. This standard outlines procedures for NDT evaluation, including (i) defining the application, (ii) developing and producing test specimens, (iii) statistically evaluating test results (iv) considering human factors, and more. By doing so, the standard ensures the comparability of reliability assessments and enhances their overall acceptance. This study specifically delves into the discussion of reliability evaluation using a model-based approach for ultrasonic inspection of concrete structures, both with and without reinforcement, and under different defect conditions. In this case, honeycombs are chosen as the investigated defect type. Furthermore, an initial case study applies a Probability of Detection (POD) analysis for ultrasonic testing (UT) data obtained from a concrete specimen with artificial defects. This study represents a pioneering effort for UT in the context of concrete structures.",
+      "keywords": [
+        "POD"
+      ],
+      "normalized_title": "application of the german standardization approach for the reliability assessment of ndt honeycomb detection in concrete using ultrasonic testing",
+      "raw_bibtex": "@ARTICLE{10.3151/jact.22.664,\n\tauthor = {Kessler, S and Rentala, VK and Dethof, F and Kanzler, D},\n\ttitle = {Application of the German Standardization Approach for the Reliability Assessment of NDT - Honeycomb Detection in Concrete using Ultrasonic Testing},\n\tjournal = {JOURNAL OF ADVANCED CONCRETE TECHNOLOGY},\n\tyear = {2024},\n\tkeywords = {POD},\n\tabstract = {In recent decades, non-destructive testing (NDT) has become an indispensable component of condition assessment in various industries such as civil infrastructure, automotive, nuclear, and other safety-related sectors. Each NDT method possesses unique strengths and weaknesses, prompting increased interest in combining these methods for comprehensive assessments. However, the full potential of NDT data remains underutilized due to a lack of standardization in estimating NDT reliability. Often, the capabilities of NDT systems for specific inspection tasks are unknown, hindering advancements in NDE 4.0, where knowledge about the reliability of non-destructive tests is crucial. For example, such information is very valuable when labeling data for machine learning purposes to define whether a measurement can be considered sound or defect. This paper underscores the pressing need for international standardization in the reliability assessment of NDT and presents the German approach. This standard outlines procedures for NDT evaluation, including (i) defining the application, (ii) developing and producing test specimens, (iii) statistically evaluating test results (iv) considering human factors, and more. By doing so, the standard ensures the comparability of reliability assessments and enhances their overall acceptance. This study specifically delves into the discussion of reliability evaluation using a model-based approach for ultrasonic inspection of concrete structures, both with and without reinforcement, and under different defect conditions. In this case, honeycombs are chosen as the investigated defect type. Furthermore, an initial case study applies a Probability of Detection (POD) analysis for ultrasonic testing (UT) data obtained from a concrete specimen with artificial defects. This study represents a pioneering effort for UT in the context of concrete structures.},\n\tdoi = {10.3151/jact.22.664},\n\tvolume = {22},\n\tnumber = {10},\n\tpages = {664-673},\n\tissn = {1346-8014},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 23 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3151/jact.22.664"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000138",
+      "entry_type": "article",
+      "title": "Deep learning framework for crack type detection in laminated glass based on ultrasonic and modal analysis using finite element simulations",
+      "authors": [
+        "Ahani, E",
+        "Yang, J"
+      ],
+      "year": 2026,
+      "journal": "JOURNAL OF NON-CRYSTALLINE SOLIDS",
+      "doi": "10.1016/j.jnoncrysol.2026.123950",
+      "abstract": "Widely used in modern architecture for their mechanical and aesthetic qualities, laminated glass is prone to brittle fracture and complex failure modes, thus advanced structural health monitoring (SHM) systems are necessary. Using finite element simulations of ultrasonic wave propagation and modal analysis, this work presents a fresh deep learning framework for detecting and classifying types of cracks (radial, concentric, delamination, and impact-induced) in laminated glass, with delamination considered as a known damage configuration introduced at the glass-interlayer interface. Augmented with dual attention mechanisms, a U-Net-inspired encoder-decoder neural network processes multi-channel piezoelectric sensor signals to attain exact crack type identification and signal reconstruction. Generated by COMSOL Multiphysics, a complete dataset of 1200 simulations captures modal frequencies and ultrasonic characteristics under diverse mechanical and environmental conditions, so supporting strong artificial neural network (ANN) training. With 95.23% accuracy, 95.60% precision, 94.80% recall, and a 95.19% F1-score above baseline models including AESC-PCA-Net, AE-CladNet, and AE-EnsClusterNet the proposed model achieves exceptional performance. Reliable real-time SHM is guaranteed by the framework with low false alarm rate (0.04) and high discriminative ability (AUC: 0.98). This work addresses environmental adaptability and computational efficiency by combining multi-modal non-destructive testing methods including ultrasonic testing and acoustic emission, so advancing automated crack detection for safer laminated glass applications in architectural design.",
+      "keywords": [
+        "Laminated glass",
+        "Structural health monitoring",
+        "Deep learning",
+        "Ultrasonic wave propagation",
+        "Modal analysis",
+        "Crack type detection",
+        "Artificial neural network",
+        "Finite element simulation"
+      ],
+      "normalized_title": "deep learning framework for crack type detection in laminated glass based on ultrasonic and modal analysis using finite element simulations",
+      "raw_bibtex": "@ARTICLE{10.1016/j.jnoncrysol.2026.123950,\n\tauthor = {Ahani, E and Yang, J},\n\ttitle = {Deep learning framework for crack type detection in laminated glass based on ultrasonic and modal analysis using finite element simulations},\n\tjournal = {JOURNAL OF NON-CRYSTALLINE SOLIDS},\n\tyear = {2026},\n\tkeywords = {Laminated glass; Structural health monitoring; Deep learning; Ultrasonic wave propagation; Modal analysis; Crack type detection; Artificial neural network; Finite element simulation},\n\tabstract = {Widely used in modern architecture for their mechanical and aesthetic qualities, laminated glass is prone to brittle fracture and complex failure modes, thus advanced structural health monitoring (SHM) systems are necessary. Using finite element simulations of ultrasonic wave propagation and modal analysis, this work presents a fresh deep learning framework for detecting and classifying types of cracks (radial, concentric, delamination, and impact-induced) in laminated glass, with delamination considered as a known damage configuration introduced at the glass-interlayer interface. Augmented with dual attention mechanisms, a U-Net-inspired encoder-decoder neural network processes multi-channel piezoelectric sensor signals to attain exact crack type identification and signal reconstruction. Generated by COMSOL Multiphysics, a complete dataset of 1200 simulations captures modal frequencies and ultrasonic characteristics under diverse mechanical and environmental conditions, so supporting strong artificial neural network (ANN) training. With 95.23% accuracy, 95.60% precision, 94.80% recall, and a 95.19% F1-score above baseline models including AESC-PCA-Net, AE-CladNet, and AE-EnsClusterNet the proposed model achieves exceptional performance. Reliable real-time SHM is guaranteed by the framework with low false alarm rate (0.04) and high discriminative ability (AUC: 0.98). This work addresses environmental adaptability and computational efficiency by combining multi-modal non-destructive testing methods including ultrasonic testing and acoustic emission, so advancing automated crack detection for safer laminated glass applications in architectural design.},\n\tdoi = {10.1016/j.jnoncrysol.2026.123950},\n\tvolume = {676},\n\tissn = {0022-3093},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 43 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.jnoncrysol.2026.123950"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000139",
+      "entry_type": "article",
+      "title": "A Methodology to Automatically Segment 3D Ultrasonic Data Using X-ray Computed Tomography and a Convolutional Neural Network",
+      "authors": [
+        "Caballero, JI",
+        "Cosarinsky, G",
+        "Camacho, J",
+        "Menasalvas, E",
+        "Gonzalo-Martin, C",
+        "Sket, F"
+      ],
+      "year": 2023,
+      "journal": "APPLIED SCIENCES-BASEL",
+      "doi": "10.3390/app13105933",
+      "abstract": "Ultrasonic non-destructive testing (UT) is a proficient method for detecting damage in composite materials; however, conventional manual testing procedures are time-consuming and labor-intensive. We propose a semi-automated defect segmentation methodology employing a convolutional neural network (CNN) on 3D ultrasonic data, facilitated by the fusion of X-ray computed tomography (XCT) and Phased-Array Ultrasonic Testing (PAUT) data. This approach offers the ability to develop supervised datasets for cases where UT techniques inadequately assess defects and enables the creation of models with genuine defects rather than artificially introduced ones. During the training process, we recommend processing the 3D volumes as a sequence of 2D slices derived from each technique. Our methodology was applied to segment porosity, a common defect in composite materials, for which characteristics such as void size and shape remain immeasurable via UT. Precision, recall, F1 score, and Intersection over Union (IoU) metrics were used in the evaluation. The results of the evaluation show that the following challenges have to be faced for improvement: (i) achieving accurate 3D registration, (ii) discovering suitable similar keypoints for XCT and UT data registration, (iii) differentiating ultrasonic echoes originating from porosity versus those related to noise or microstructural features (interfaces, resin pockets, fibers, etc.), and, (iv) single out defect echoes located near the edges of the component. In fact, an average F1 score of 0.66 and IoU of 0.5 were obtained.",
+      "keywords": [
+        "machine learning",
+        "deep learning",
+        "ultrasounds",
+        "phased array",
+        "XCT",
+        "data fusion",
+        "segmentation",
+        "detection",
+        "composites",
+        "NDT",
+        "CLASSIFICATION"
+      ],
+      "normalized_title": "a methodology to automatically segment 3d ultrasonic data using x ray computed tomography and a convolutional neural network",
+      "raw_bibtex": "@ARTICLE{10.3390/app13105933,\n\tauthor = {Caballero, JI and Cosarinsky, G and Camacho, J and Menasalvas, E and Gonzalo-Martin, C and Sket, F},\n\ttitle = {A Methodology to Automatically Segment 3D Ultrasonic Data Using X-ray Computed Tomography and a Convolutional Neural Network},\n\tjournal = {APPLIED SCIENCES-BASEL},\n\tyear = {2023},\n\tkeywords = {machine learning; deep learning; ultrasounds; phased array; XCT; data fusion; segmentation; detection; composites; NDT; CLASSIFICATION},\n\tabstract = {Ultrasonic non-destructive testing (UT) is a proficient method for detecting damage in composite materials; however, conventional manual testing procedures are time-consuming and labor-intensive. We propose a semi-automated defect segmentation methodology employing a convolutional neural network (CNN) on 3D ultrasonic data, facilitated by the fusion of X-ray computed tomography (XCT) and Phased-Array Ultrasonic Testing (PAUT) data. This approach offers the ability to develop supervised datasets for cases where UT techniques inadequately assess defects and enables the creation of models with genuine defects rather than artificially introduced ones. During the training process, we recommend processing the 3D volumes as a sequence of 2D slices derived from each technique. Our methodology was applied to segment porosity, a common defect in composite materials, for which characteristics such as void size and shape remain immeasurable via UT. Precision, recall, F1 score, and Intersection over Union (IoU) metrics were used in the evaluation. The results of the evaluation show that the following challenges have to be faced for improvement: (i) achieving accurate 3D registration, (ii) discovering suitable similar keypoints for XCT and UT data registration, (iii) differentiating ultrasonic echoes originating from porosity versus those related to noise or microstructural features (interfaces, resin pockets, fibers, etc.), and, (iv) single out defect echoes located near the edges of the component. In fact, an average F1 score of 0.66 and IoU of 0.5 were obtained.},\n\tdoi = {10.3390/app13105933},\n\tvolume = {13},\n\tnumber = {10},\n\tissn = {2076-3417},\n\tnote = {Times Cited in Web of Science Core Collection: 6 Total Times Cited: 6 Cited Reference Count: 45 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/app13105933"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000140",
+      "entry_type": "article",
+      "title": "Non-destructive evaluation of additively manufactured lattice structures: A comprehensive review of techniques, machine learning integration, and future directions",
+      "authors": [
+        "Akula, SB",
+        "Seshagirirao, DV",
+        "Pradeep, N",
+        "Sastry, CC",
+        "Rahman, AH"
+      ],
+      "year": 2026,
+      "journal": "JOURNAL OF ALLOYS AND COMPOUNDS",
+      "doi": "10.1016/j.jallcom.2026.186865",
+      "abstract": "Additively manufactured (AM) lattice structures enable unprecedented strength-to-weight optimization and multifunctional performance across aerospace, biomedical, defence, and energy applications. However, their architected geometries characterized by thin struts, nodal overlap, periodic topology, and open porosity introduce defect-detectability challenges that fundamentally differ from those in monolithic AM components. Process induced imperfections such as porosity, lack of fusion, geometric distortion, and micro cracking can significantly compromise mechanical reliability, fatigue resistance, and structural integrity, necessitating geometry-aware non-destructive evaluation (NDE) strategies. This review presents a comprehensive, lattice-centric analysis of NDE techniques applied to metal and polymer lattice architectures, including X-ray computed tomography, ultrasonic testing, acoustic emission, infrared thermography, eddy-current testing, magnetic methods, and resonant acoustic approaches. For each modality, defect sensitivity, lattice-specific limitations, and applicability across AM processes are critically examined. Comparative and defect-oriented decision frameworks are introduced to guide method selection based on defect scale, penetration depth, topology sensitivity, throughput, and cost constraints. The review further synthesizes the convergence of machine learning (ML) and deep learning (DL) within lattice-centric NDE workflows. Distinct learning paradigms supervised, unsupervised, selfsupervised, physics-informed, transfer-learning, and uncertainty-aware frameworks are systematically differentiated with respect to ground-truth strategies, interpretability, generalization, and certification readiness. ML is positioned as a modality-agnostic interpretive layer enabling segmentation refinement, multimodal fusion, probability-of-detection analysis, and performance-correlated digital qualification. Finally, emerging directions in physics-informed ML, multimodal sensor fusion, uncertainty quantification, digital twin integration, and ISO/ ASTM-aligned standardization are discussed. The review establishes that the future of AM lattice inspection lies in integrated, AI-augmented, and performance-driven NDE ecosystems that are inherently lattice-aware and industrially scalable.",
+      "keywords": [
+        "Additive manufacturing",
+        "Lattice structures",
+        "Non-destructive evaluation X-ray computed",
+        "tomography",
+        "Ultrasonic testing",
+        "Machine learning inspection",
+        "ACOUSTIC-EMISSION",
+        "DAMAGE ASSESSMENT",
+        "DEFECT DETECTION",
+        "POROSITY",
+        "ALLOY",
+        "WIRE",
+        "TOMOGRAPHY",
+        "BEHAVIOR",
+        "NDT"
+      ],
+      "normalized_title": "non destructive evaluation of additively manufactured lattice structures a comprehensive review of techniques machine learning integration and future directions",
+      "raw_bibtex": "@ARTICLE{10.1016/j.jallcom.2026.186865,\n\tauthor = {Akula, SB and Seshagirirao, DV and Pradeep, N and Sastry, CC and Rahman, AH},\n\ttitle = {Non-destructive evaluation of additively manufactured lattice structures: A comprehensive review of techniques, machine learning integration, and future directions},\n\tjournal = {JOURNAL OF ALLOYS AND COMPOUNDS},\n\tyear = {2026},\n\tkeywords = {Additive manufacturing; Lattice structures; Non-destructive evaluation X-ray computed; tomography; Ultrasonic testing; Machine learning inspection; ACOUSTIC-EMISSION; DAMAGE ASSESSMENT; DEFECT DETECTION; POROSITY; ALLOY; WIRE; TOMOGRAPHY; BEHAVIOR; NDT},\n\tabstract = {Additively manufactured (AM) lattice structures enable unprecedented strength-to-weight optimization and multifunctional performance across aerospace, biomedical, defence, and energy applications. However, their architected geometries characterized by thin struts, nodal overlap, periodic topology, and open porosity introduce defect-detectability challenges that fundamentally differ from those in monolithic AM components. Process induced imperfections such as porosity, lack of fusion, geometric distortion, and micro cracking can significantly compromise mechanical reliability, fatigue resistance, and structural integrity, necessitating geometry-aware non-destructive evaluation (NDE) strategies. This review presents a comprehensive, lattice-centric analysis of NDE techniques applied to metal and polymer lattice architectures, including X-ray computed tomography, ultrasonic testing, acoustic emission, infrared thermography, eddy-current testing, magnetic methods, and resonant acoustic approaches. For each modality, defect sensitivity, lattice-specific limitations, and applicability across AM processes are critically examined. Comparative and defect-oriented decision frameworks are introduced to guide method selection based on defect scale, penetration depth, topology sensitivity, throughput, and cost constraints. The review further synthesizes the convergence of machine learning (ML) and deep learning (DL) within lattice-centric NDE workflows. Distinct learning paradigms supervised, unsupervised, selfsupervised, physics-informed, transfer-learning, and uncertainty-aware frameworks are systematically differentiated with respect to ground-truth strategies, interpretability, generalization, and certification readiness. ML is positioned as a modality-agnostic interpretive layer enabling segmentation refinement, multimodal fusion, probability-of-detection analysis, and performance-correlated digital qualification. Finally, emerging directions in physics-informed ML, multimodal sensor fusion, uncertainty quantification, digital twin integration, and ISO/ ASTM-aligned standardization are discussed. The review establishes that the future of AM lattice inspection lies in integrated, AI-augmented, and performance-driven NDE ecosystems that are inherently lattice-aware and industrially scalable.},\n\tdoi = {10.1016/j.jallcom.2026.186865},\n\tvolume = {1057},\n\tissn = {0925-8388},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 179 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.jallcom.2026.186865"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

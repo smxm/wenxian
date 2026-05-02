@@ -1,0 +1,50 @@
+project:
+  name: new-screening-run
+  output_dir: tasks/b945834b65c8/screening_run/screening_output
+  save_raw_response: true
+  save_intermediate_files: true
+input:
+  input_files:
+  - tasks/b945834b65c8/screening_run/inputs/abstract-LeukemiaMe-set.txt
+  encoding: auto
+dedup:
+  enabled: true
+  strict_doi_match: true
+  normalized_title_exact_match: true
+  fuzzy_title_match: false
+screening:
+  batch_size: 10
+  target_include_count: 30
+  stop_when_target_reached: false
+  allow_uncertain: true
+  retry_times: 6
+  request_timeout_seconds: 240
+criteria:
+  topic: 成人白血病患者赋能教育（Empowerment Education）干预与应用
+  inclusion:
+  - 研究对象必须是成人白血病患者（纯患者群体）。
+  - 核心干预措施或研究主题必须涉及“赋能教育”（包括授权教育、自我效能提升、自我管理健康教育等）。
+  - 文献发表时间必须在2016年及以后。
+  exclusion:
+  - 研究对象包含儿童、婴幼儿或未成年人。
+  - 研究/干预对象包含患者家属、照顾者、父母（必须是针对患者本人的研究）。
+  - 纯临床病理机制、药物疗效试验或非教育/非心理干预类的医学研究。
+  - 发表时间在2016年以前。
+model:
+  provider: deepseek
+  model_name: deepseek-chat
+  api_base_url: https://api.deepseek.com/v1
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.0
+  max_tokens: 1536
+  min_request_interval_seconds: 2.0
+report:
+  export_included_ris: true
+  export_excluded_ris: false
+  export_unused_ris: true
+  export_included_bib: false
+  export_excluded_bib: false
+  export_unused_bib: false
+  included_report_format: md
+  excluded_report_format: md
+  summary_format: json

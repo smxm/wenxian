@@ -1,0 +1,260 @@
+{
+  "batch_id": "batch_0011",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000101",
+    "paper_000102",
+    "paper_000103",
+    "paper_000104",
+    "paper_000105",
+    "paper_000106",
+    "paper_000107",
+    "paper_000108",
+    "paper_000109",
+    "paper_000110"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000101",
+      "entry_type": "article",
+      "title": "Dynamic option hedging with transaction costs: A stochastic model predictive control approach",
+      "authors": [
+        "Graf Plessen, M.",
+        "Puglia, L.",
+        "Gabbriellini, T.",
+        "Bemporad, A."
+      ],
+      "year": 2019,
+      "journal": "International Journal of Robust and Nonlinear Control",
+      "doi": "10.1002/rnc.3915",
+      "abstract": "This paper proposes stochastic model predictive control as a tool for hedging derivative contracts (such as plain vanilla and exotic options) in the presence of transaction costs. The methodology combines stochastic scenario generation for the prediction of asset prices at the next rebalancing interval with the minimization of a stochastic measure of the predicted hedging error. We consider 3 different measures to minimize in order to optimally rebalance the replicating portfolio: a trade-off between variance and expected value of hedging error, conditional value at risk, and the largest predicted hedging error. The resulting optimization problems require solving at each trading instant a quadratic program, a linear program, and a (smaller-scale) linear program, respectively. These can be combined with 3 different scenario generation schemes: the lognormal stock model with parameters recursively identified from data, an identification method based on support vector regression, and a simpler scheme based on perturbation noise. The hedging performance obtained by the proposed stochastic model predictive control strategies is illustrated on real-world data drawn from the NASDAQ-100 composite, evaluated for a European call and a barrier option, and compared with delta hedging. © 2017 John Wiley & Sons, Ltd.",
+      "keywords": [],
+      "normalized_title": "dynamic option hedging with transaction costs a stochastic model predictive control approach",
+      "raw_bibtex": "@ARTICLE{10.1002/rnc.3915,\n\tauthor = {Graf Plessen, M. and Puglia, L. and Gabbriellini, T. and Bemporad, A.},\n\ttitle = {Dynamic option hedging with transaction costs: A stochastic model predictive control approach},\n\tjournal = {International Journal of Robust and Nonlinear Control},\n\tyear = {2019},\n\tabstract = {This paper proposes stochastic model predictive control as a tool for hedging derivative contracts (such as plain vanilla and exotic options) in the presence of transaction costs. The methodology combines stochastic scenario generation for the prediction of asset prices at the next rebalancing interval with the minimization of a stochastic measure of the predicted hedging error. We consider 3 different measures to minimize in order to optimally rebalance the replicating portfolio: a trade-off between variance and expected value of hedging error, conditional value at risk, and the largest predicted hedging error. The resulting optimization problems require solving at each trading instant a quadratic program, a linear program, and a (smaller-scale) linear program, respectively. These can be combined with 3 different scenario generation schemes: the lognormal stock model with parameters recursively identified from data, an identification method based on support vector regression, and a simpler scheme based on perturbation noise. The hedging performance obtained by the proposed stochastic model predictive control strategies is illustrated on real-world data drawn from the NASDAQ-100 composite, evaluated for a European call and a barrier option, and compared with delta hedging. © 2017 John Wiley & Sons, Ltd.},\n\tdoi = {10.1002/rnc.3915},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85028913763&doi=10.1002%2Frnc.3915&partnerID=40&md5=d060030e1fc978859578a7d9f92974fa},\n\tvolume = {29},\n\tnumber = {15},\n\tpages = {5058-5077},\n\tnote = {Export Date: 07 April 2026; Cited By: 11 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Apr 7-2026_24180722-c108-4c0f-a012-84c68ba08d7b.ris"
+      ],
+      "source_keys": [
+        "10.1002/rnc.3915"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000102",
+      "entry_type": "article",
+      "title": "Estimation of the conditional value at risk of a minimum variance hedging portfolio via distribution kurtosis",
+      "authors": [
+        "Chuang, C.-C.",
+        "Wang, Y.-H.",
+        "Yeh, T.-J.",
+        "Chuang, S.-L."
+      ],
+      "year": 2012,
+      "journal": "ICIC Express Letters",
+      "doi": null,
+      "abstract": "When returns on assets display heavy tail or leptokurtosis, estimating value at risk (VaR) without considering distribution kurtosis can cause estimation bias. This study considered the kurtosis of distribution, utilizing various models to examine the conditional VaR of minimum variance portfolios (incorporating both the stock index and futures) and performing back-testing to compare individual model performance. Results demonstrate the improved accuracy of models using distribution kurtosis to estimate VaR. Furthermore, t distributed models outperformed both those with a normal distribution and symmetric volatility models in terms of the conditional VaR of minimum variance portfolios. These results suggest that in portfolio construction, investors should consider distribution kurtosis and volatility asymmetry. © 2012 ISSN.",
+      "keywords": [],
+      "normalized_title": "estimation of the conditional value at risk of a minimum variance hedging portfolio via distribution kurtosis",
+      "raw_bibtex": "@ARTICLE{ris_000102,\n\tauthor = {Chuang, C.-C. and Wang, Y.-H. and Yeh, T.-J. and Chuang, S.-L.},\n\ttitle = {Estimation of the conditional value at risk of a minimum variance hedging portfolio via distribution kurtosis},\n\tjournal = {ICIC Express Letters},\n\tyear = {2012},\n\tabstract = {When returns on assets display heavy tail or leptokurtosis, estimating value at risk (VaR) without considering distribution kurtosis can cause estimation bias. This study considered the kurtosis of distribution, utilizing various models to examine the conditional VaR of minimum variance portfolios (incorporating both the stock index and futures) and performing back-testing to compare individual model performance. Results demonstrate the improved accuracy of models using distribution kurtosis to estimate VaR. Furthermore, t distributed models outperformed both those with a normal distribution and symmetric volatility models in terms of the conditional VaR of minimum variance portfolios. These results suggest that in portfolio construction, investors should consider distribution kurtosis and volatility asymmetry. © 2012 ISSN.},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-84869022516&partnerID=40&md5=3741bd6269cadda105d365d4872d21fc},\n\tvolume = {6},\n\tnumber = {10},\n\tpages = {2529-2534},\n\tnote = {Export Date: 07 April 2026; Cited By: 4 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Apr 7-2026_24180722-c108-4c0f-a012-84c68ba08d7b.ris"
+      ],
+      "source_keys": [
+        "ris_000102"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000103",
+      "entry_type": "article",
+      "title": "Exemplification and reformulation in expert linguists’ writings: Elaborative metadiscourse between disciplinarity and individuality",
+      "authors": [
+        "Triki, N."
+      ],
+      "year": 2024,
+      "journal": "Journal of English for Academic Purposes",
+      "doi": "10.1016/j.jeap.2024.101407",
+      "abstract": "Exemplification and reformulation are key elaborative strategies that empower clarity and argumentation in academic writing. Most research investigating their use in academic writing argues that writers’ choices in terms of frequency and marker type are conditioned by disciplinary variations and the level of expertise of the writers. This has led to an understanding of discourse communities as being homogeneous groups of novice versus expert writers and of separate soft versus hard disciplines. Through the analysis of 90 research articles and book chapters single-authored by six leading linguists, this study shows that these successful authors deviate from the common practices in linguistics and their choices deviate from each other significantly. However, the data does not reveal any steady increasing or decreasing frequencies in the use of exemplification and reformulation throughout their career stages, which makes it hard to claim that the frequency of using the two discourse functions evolves with experience. The study argues that individuality and style preferences within the same discourse community should be acknowledged as an additional variable affecting discursive choices and calls for a more nuanced understanding of disciplinarity and writing expertise. © 2024",
+      "keywords": [],
+      "normalized_title": "exemplification and reformulation in expert linguists writings elaborative metadiscourse between disciplinarity and individuality",
+      "raw_bibtex": "@ARTICLE{10.1016/j.jeap.2024.101407,\n\tauthor = {Triki, N.},\n\ttitle = {Exemplification and reformulation in expert linguists’ writings: Elaborative metadiscourse between disciplinarity and individuality},\n\tjournal = {Journal of English for Academic Purposes},\n\tyear = {2024},\n\tabstract = {Exemplification and reformulation are key elaborative strategies that empower clarity and argumentation in academic writing. Most research investigating their use in academic writing argues that writers’ choices in terms of frequency and marker type are conditioned by disciplinary variations and the level of expertise of the writers. This has led to an understanding of discourse communities as being homogeneous groups of novice versus expert writers and of separate soft versus hard disciplines. Through the analysis of 90 research articles and book chapters single-authored by six leading linguists, this study shows that these successful authors deviate from the common practices in linguistics and their choices deviate from each other significantly. However, the data does not reveal any steady increasing or decreasing frequencies in the use of exemplification and reformulation throughout their career stages, which makes it hard to claim that the frequency of using the two discourse functions evolves with experience. The study argues that individuality and style preferences within the same discourse community should be acknowledged as an additional variable affecting discursive choices and calls for a more nuanced understanding of disciplinarity and writing expertise. © 2024},\n\tdoi = {10.1016/j.jeap.2024.101407},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85197518055&doi=10.1016%2Fj.jeap.2024.101407&partnerID=40&md5=ccbc5299037b85f73fb601a84b36bfa9},\n\tvolume = {71},\n\tnote = {Export Date: 07 April 2026; Cited By: 5 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Apr 7-2026_24180722-c108-4c0f-a012-84c68ba08d7b.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.jeap.2024.101407"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000104",
+      "entry_type": "article",
+      "title": "Disciplinary variation in argumentative essays: Mapping metadiscourse patterns in undergraduate writing",
+      "authors": [
+        "Khamkhien, A."
+      ],
+      "year": 2025,
+      "journal": "Ampersand",
+      "doi": "10.1016/j.amper.2025.100238",
+      "abstract": "Academic writing is not only content-oriented but also involves various rhetorical strategies that enable authors to project themselves into the text. This study investigated the use of metadiscourse markers in 230 undergraduate argumentative essays across four disciplines: health and human sciences, liberal arts, science, and engineering, drawing on Hyland's (2005) model to examine interactive and interactional resources. The analysed essays were taken from undergraduate students with diverse L1 backgrounds in the CROW corpus. A mixed-methods approach was employed, combining frequency analysis using corpus tools (SketchEngine) with manual annotation and statistical testing to identify patterns of metadiscourse across discipline and educational contexts. Specifically, interactive markers, particularly transitions and frame markers, dominated all disciplines, reflecting students' textual cohesion and organisation prioritisation. Interactional markers such as hedges and engagement devices were used more selectively as science and engineering students favoured precise, low-reflexivity strategies. Likewise, liberal arts and health students used more evaluative language and authorial presence. Pedagogically, this study highlights the importance of explicit instruction on metadiscourse, emphasising genre and discipline-sensitive approaches to guiding readers, taking a personal stance, and engaging directly with readers. © 2025 The Author",
+      "keywords": [],
+      "normalized_title": "disciplinary variation in argumentative essays mapping metadiscourse patterns in undergraduate writing",
+      "raw_bibtex": "@ARTICLE{10.1016/j.amper.2025.100238,\n\tauthor = {Khamkhien, A.},\n\ttitle = {Disciplinary variation in argumentative essays: Mapping metadiscourse patterns in undergraduate writing},\n\tjournal = {Ampersand},\n\tyear = {2025},\n\tabstract = {Academic writing is not only content-oriented but also involves various rhetorical strategies that enable authors to project themselves into the text. This study investigated the use of metadiscourse markers in 230 undergraduate argumentative essays across four disciplines: health and human sciences, liberal arts, science, and engineering, drawing on Hyland's (2005) model to examine interactive and interactional resources. The analysed essays were taken from undergraduate students with diverse L1 backgrounds in the CROW corpus. A mixed-methods approach was employed, combining frequency analysis using corpus tools (SketchEngine) with manual annotation and statistical testing to identify patterns of metadiscourse across discipline and educational contexts. Specifically, interactive markers, particularly transitions and frame markers, dominated all disciplines, reflecting students' textual cohesion and organisation prioritisation. Interactional markers such as hedges and engagement devices were used more selectively as science and engineering students favoured precise, low-reflexivity strategies. Likewise, liberal arts and health students used more evaluative language and authorial presence. Pedagogically, this study highlights the importance of explicit instruction on metadiscourse, emphasising genre and discipline-sensitive approaches to guiding readers, taking a personal stance, and engaging directly with readers. © 2025 The Author},\n\tdoi = {10.1016/j.amper.2025.100238},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105014956119&doi=10.1016%2Fj.amper.2025.100238&partnerID=40&md5=7d8f158e93af942112c0e8f9d77780f5},\n\tvolume = {15},\n\tnote = {Export Date: 07 April 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Apr 7-2026_24180722-c108-4c0f-a012-84c68ba08d7b.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.amper.2025.100238"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000105",
+      "entry_type": "article",
+      "title": "A novel collaborative requirement prioritization approach to handle priority vagueness and inter-relationships",
+      "authors": [
+        "Gupta, A.",
+        "Gupta, C."
+      ],
+      "year": 2022,
+      "journal": "Journal of King Saud University - Computer and Information Sciences",
+      "doi": "10.1016/j.jksuci.2019.12.002",
+      "abstract": "One of the challenging tasks of requirement engineering is to choose which among the set of requirements are more advantageous than others and ought to be viewed as first for execution. Years of research has established it is vital to capture, analyze and prioritize requirements, which to a great extent relies on acknowledgment acceptance of stakeholder's requirements, concerns and criteria's. Proposed method provides interactive support for eliciting stakeholders and developer's initial ranking decision in collaborative manner. Intuitionistic Fuzzy Approach (IFS) is used to support stakeholders view; whereas analysis of inter relationships, requirement slicing and backtracking are used to support developers view using weighted page rank algorithm. Finally a ranking is generated in a collaborative manner to support requirement prioritization. The feasibility of the approach is illustrated through an experimental proof of concept by comparing results of proposed approach with state of art, Analytic Hierarchy Process (AHP) and Interactive Genetic Algorithm (IGA) prioritization techniques. Results of experimentation conclude that presented approach is capable of producing accurate and comparable results by handling technical constraints of dependency, tradeoffs of collaboration and scope of inclusion of initial multi-criteria preferences expressed as priority values to support reliability and robustness to errors. © 2019 King Saud University",
+      "keywords": [],
+      "normalized_title": "a novel collaborative requirement prioritization approach to handle priority vagueness and inter relationships",
+      "raw_bibtex": "@ARTICLE{10.1016/j.jksuci.2019.12.002,\n\tauthor = {Gupta, A. and Gupta, C.},\n\ttitle = {A novel collaborative requirement prioritization approach to handle priority vagueness and inter-relationships},\n\tjournal = {Journal of King Saud University - Computer and Information Sciences},\n\tyear = {2022},\n\tabstract = {One of the challenging tasks of requirement engineering is to choose which among the set of requirements are more advantageous than others and ought to be viewed as first for execution. Years of research has established it is vital to capture, analyze and prioritize requirements, which to a great extent relies on acknowledgment acceptance of stakeholder's requirements, concerns and criteria's. Proposed method provides interactive support for eliciting stakeholders and developer's initial ranking decision in collaborative manner. Intuitionistic Fuzzy Approach (IFS) is used to support stakeholders view; whereas analysis of inter relationships, requirement slicing and backtracking are used to support developers view using weighted page rank algorithm. Finally a ranking is generated in a collaborative manner to support requirement prioritization. The feasibility of the approach is illustrated through an experimental proof of concept by comparing results of proposed approach with state of art, Analytic Hierarchy Process (AHP) and Interactive Genetic Algorithm (IGA) prioritization techniques. Results of experimentation conclude that presented approach is capable of producing accurate and comparable results by handling technical constraints of dependency, tradeoffs of collaboration and scope of inclusion of initial multi-criteria preferences expressed as priority values to support reliability and robustness to errors. © 2019 King Saud University},\n\tdoi = {10.1016/j.jksuci.2019.12.002},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85077164877&doi=10.1016%2Fj.jksuci.2019.12.002&partnerID=40&md5=f66b8d0dc6a73540b2c7f82607771199},\n\tvolume = {34},\n\tnumber = {5},\n\tpages = {2288-2297},\n\tnote = {Export Date: 07 April 2026; Cited By: 12 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Apr 7-2026_24180722-c108-4c0f-a012-84c68ba08d7b.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.jksuci.2019.12.002"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000106",
+      "entry_type": "article",
+      "title": "Metadiscourse in results and discussion chapters: Across-linguistic analysis of English and Spanish thesis writers in engineering",
+      "authors": [
+        "Lee, J.J.",
+        "Casal, J.E."
+      ],
+      "year": 2014,
+      "journal": "System",
+      "doi": "10.1016/j.system.2014.07.009",
+      "abstract": "This study investigates cross-linguistic variation of metadiscourse in the results and discussion chapters of engineering master's theses written in English and Spanish. The analysis is based on a corpus of 200 master's thesis results and discussion chapters: 100 written by L1 English students and 100 written by L1 Spanish students. Using Hyland's (2005a) interpersonal model of metadiscourse, the results and discussion chapters were compared to examine the influence of lingua-cultural contexts of writing on student writer's employment of metadiscoursal resources. Findings of the comparative analysis reveal significant cross-linguistic differences for overall frequency of metadiscourse as well as for most (sub-)categories. The analysis suggests that interpersonal features of writing are inexorably linked to the specific lingua-cultural contexts in which texts are produced and consumed, even within the same discipline and (part-)genre. The paper concludes with some pedagogical implications for L2 writing instruction. © 2014 Elsevier Ltd.",
+      "keywords": [],
+      "normalized_title": "metadiscourse in results and discussion chapters across linguistic analysis of english and spanish thesis writers in engineering",
+      "raw_bibtex": "@ARTICLE{10.1016/j.system.2014.07.009,\n\tauthor = {Lee, J.J. and Casal, J.E.},\n\ttitle = {Metadiscourse in results and discussion chapters: Across-linguistic analysis of English and Spanish thesis writers in engineering},\n\tjournal = {System},\n\tyear = {2014},\n\tabstract = {This study investigates cross-linguistic variation of metadiscourse in the results and discussion chapters of engineering master's theses written in English and Spanish. The analysis is based on a corpus of 200 master's thesis results and discussion chapters: 100 written by L1 English students and 100 written by L1 Spanish students. Using Hyland's (2005a) interpersonal model of metadiscourse, the results and discussion chapters were compared to examine the influence of lingua-cultural contexts of writing on student writer's employment of metadiscoursal resources. Findings of the comparative analysis reveal significant cross-linguistic differences for overall frequency of metadiscourse as well as for most (sub-)categories. The analysis suggests that interpersonal features of writing are inexorably linked to the specific lingua-cultural contexts in which texts are produced and consumed, even within the same discipline and (part-)genre. The paper concludes with some pedagogical implications for L2 writing instruction. © 2014 Elsevier Ltd.},\n\tdoi = {10.1016/j.system.2014.07.009},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-84905404749&doi=10.1016%2Fj.system.2014.07.009&partnerID=40&md5=c4dae5669831aed58daaeb8d3e2940db},\n\tvolume = {46},\n\tnumber = {1},\n\tpages = {39-54},\n\tnote = {Export Date: 07 April 2026; Cited By: 107 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Apr 7-2026_24180722-c108-4c0f-a012-84c68ba08d7b.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.system.2014.07.009"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000107",
+      "entry_type": "article",
+      "title": "Applicability of Financial Derivatives for Hedging Material Price Risk in Highway construction",
+      "authors": [
+        "Firouzi, A.",
+        "Vahdatmanesh, M."
+      ],
+      "year": 2019,
+      "journal": "Journal of Construction Engineering and Management",
+      "doi": "10.1061/(asce)co.1943-7862.0001639",
+      "abstract": "Highway infrastructure is critical to the sustainable development of a country. Nonetheless, these capital-intensive projects, especially in build-operate-transfer (BOT) contracts, are prone to the risk of material price fluctuations during the construction phase, which may lead to project cost overruns. To surmount the effects of downside exposures, construction companies seek innovative risk management tools. The main intention of the present study is to show how the construction industry can take advantage of well-developed financial derivatives. In particular, a new methodology is presented for hedging the material price risk using the Bermudan collar option, the applicability of which is shown via a worked example. It was found that these over-the-counter (OTc) options are appropriate risk management instruments, which conforms to the characteristics of highway construction. It is also concluded that in choosing their hedging strategy, companies should have due regard to the specific size, time frame, and counterparty credit risk. © 2019 American Society of civil Engineers.",
+      "keywords": [],
+      "normalized_title": "applicability of financial derivatives for hedging material price risk in highway construction",
+      "raw_bibtex": "@ARTICLE{10.1061/(AScE)cO.1943-7862.0001639,\n\tauthor = {Firouzi, A. and Vahdatmanesh, M.},\n\ttitle = {Applicability of Financial Derivatives for Hedging Material Price Risk in Highway construction},\n\tjournal = {Journal of Construction Engineering and Management},\n\tyear = {2019},\n\tabstract = {Highway infrastructure is critical to the sustainable development of a country. Nonetheless, these capital-intensive projects, especially in build-operate-transfer (BOT) contracts, are prone to the risk of material price fluctuations during the construction phase, which may lead to project cost overruns. To surmount the effects of downside exposures, construction companies seek innovative risk management tools. The main intention of the present study is to show how the construction industry can take advantage of well-developed financial derivatives. In particular, a new methodology is presented for hedging the material price risk using the Bermudan collar option, the applicability of which is shown via a worked example. It was found that these over-the-counter (OTc) options are appropriate risk management instruments, which conforms to the characteristics of highway construction. It is also concluded that in choosing their hedging strategy, companies should have due regard to the specific size, time frame, and counterparty credit risk. © 2019 American Society of civil Engineers.},\n\tdoi = {10.1061/(AScE)cO.1943-7862.0001639},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85062029172&doi=10.1061%2F%28AScE%29cO.1943-7862.0001639&partnerID=40&md5=b10de7612456c8f3aafb03c9de2805f7},\n\tvolume = {145},\n\tnumber = {5},\n\tnote = {Export Date: 07 April 2026; Cited By: 13 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Apr 7-2026_24180722-c108-4c0f-a012-84c68ba08d7b.ris"
+      ],
+      "source_keys": [
+        "10.1061/(AScE)cO.1943-7862.0001639"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000108",
+      "entry_type": "article",
+      "title": "Hedging, Weasel Words, and Truthiness in Scientific Writing",
+      "authors": [
+        "Ott, D.E."
+      ],
+      "year": 2018,
+      "journal": "Journal of the Society of Laparoendoscopic Surgeons",
+      "doi": "10.4293/jsls.2018.00063",
+      "abstract": "Background and Objectives: Words in scientific discourse must be truthful. Introducing ambiguity or creating a false narrative by insinuating close counts or almost statements as facts that appeal to a truth the writer wants to exist doesn’t make it true. A reader’s personal interpretation because of hedging or weasel words creates an opportunity for truthiness as a belief to become a fact when it isn’t. Conclusion: Awareness by scientists of this situation will make article reading more critical and related to reality rather than what you want an author wants it to be. © 2018 by JSLS,.",
+      "keywords": [],
+      "normalized_title": "hedging weasel words and truthiness in scientific writing",
+      "raw_bibtex": "@ARTICLE{10.4293/JSLS.2018.00063,\n\tauthor = {Ott, D.E.},\n\ttitle = {Hedging, Weasel Words, and Truthiness in Scientific Writing},\n\tjournal = {Journal of the Society of Laparoendoscopic Surgeons},\n\tyear = {2018},\n\tabstract = {Background and Objectives: Words in scientific discourse must be truthful. Introducing ambiguity or creating a false narrative by insinuating close counts or almost statements as facts that appeal to a truth the writer wants to exist doesn’t make it true. A reader’s personal interpretation because of hedging or weasel words creates an opportunity for truthiness as a belief to become a fact when it isn’t. Conclusion: Awareness by scientists of this situation will make article reading more critical and related to reality rather than what you want an author wants it to be. © 2018 by JSLS,.},\n\tdoi = {10.4293/JSLS.2018.00063},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85059501384&doi=10.4293%2FJSLS.2018.00063&partnerID=40&md5=2ed0327a36e86593a534f752c9ce671d},\n\tvolume = {22},\n\tnumber = {4},\n\tnote = {Export Date: 07 April 2026; Cited By: 7 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Apr 7-2026_24180722-c108-4c0f-a012-84c68ba08d7b.ris"
+      ],
+      "source_keys": [
+        "10.4293/JSLS.2018.00063"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000109",
+      "entry_type": "article",
+      "title": "Integrated Operational and Financial Hedging for Risk Management in Crude Oil Procurement",
+      "authors": [
+        "Ji, X.",
+        "Huang, S.",
+        "Grossmann, I.E."
+      ],
+      "year": 2015,
+      "journal": "Industrial and Engineering Chemistry Research",
+      "doi": "10.1021/acs.iecr.5b00903",
+      "abstract": "This Article presents a general framework for the integration of operational hedging and financial hedging strategy in the crude oil procurement process. The main purpose of the proposed approach is to manage the risk in the oil procurement process due to oil price fluctuation. The problem is formulated as a one-stage stochastic programming model that incorporates Conditional Value-at-Risk (CVaR) as the risk measure. By introducing production flexibility such as inventory and the nonlinear CDU Fractionation Index (FI) model, as well as financial derivatives like futures, put option, and call option, the integrated hedging strategy enables industrial managers to obtain the desired balance between profitability and risk tolerance. In addition, a Sample Average Approximation (SAA) method is applied to solve the stochastic problem. Numerical studies illustrate the benefits of the proposed approach and also provide useful managerial insights. © 2015 American Chemical Society.",
+      "keywords": [],
+      "normalized_title": "integrated operational and financial hedging for risk management in crude oil procurement",
+      "raw_bibtex": "@ARTICLE{10.1021/acs.iecr.5b00903,\n\tauthor = {Ji, X. and Huang, S. and Grossmann, I.E.},\n\ttitle = {Integrated Operational and Financial Hedging for Risk Management in Crude Oil Procurement},\n\tjournal = {Industrial and Engineering Chemistry Research},\n\tyear = {2015},\n\tabstract = {This Article presents a general framework for the integration of operational hedging and financial hedging strategy in the crude oil procurement process. The main purpose of the proposed approach is to manage the risk in the oil procurement process due to oil price fluctuation. The problem is formulated as a one-stage stochastic programming model that incorporates Conditional Value-at-Risk (CVaR) as the risk measure. By introducing production flexibility such as inventory and the nonlinear CDU Fractionation Index (FI) model, as well as financial derivatives like futures, put option, and call option, the integrated hedging strategy enables industrial managers to obtain the desired balance between profitability and risk tolerance. In addition, a Sample Average Approximation (SAA) method is applied to solve the stochastic problem. Numerical studies illustrate the benefits of the proposed approach and also provide useful managerial insights. © 2015 American Chemical Society.},\n\tdoi = {10.1021/acs.iecr.5b00903},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-84942115414&doi=10.1021%2Facs.iecr.5b00903&partnerID=40&md5=3d286f3fc128a4f68f5cf9d9f74d8b8d},\n\tvolume = {54},\n\tnumber = {37},\n\tpages = {9191-9201},\n\tnote = {Export Date: 07 April 2026; Cited By: 13 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Apr 7-2026_24180722-c108-4c0f-a012-84c68ba08d7b.ris"
+      ],
+      "source_keys": [
+        "10.1021/acs.iecr.5b00903"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000110",
+      "entry_type": "article",
+      "title": "Pricing and hedging spread options",
+      "authors": [
+        "Carmona, R.",
+        "Durrleman, V."
+      ],
+      "year": 2003,
+      "journal": "SIAM Review",
+      "doi": "10.1137/s0036144503424798",
+      "abstract": "We survey theoretical and computational problems associated with the pricing and hedging of spread options. These options are ubiquitous in the financial markets, whether they be equity, fixed income, foreign exchange, commodities, or energy markets. As a matter of introduction, we present a general overview of the common features of all spread options by discussing in detail their roles as speculation devices and risk management tools. We describe the mathematical framework used to model them, and we review the numerical algorithms actually used to price and hedge them. There is already extensive literature on the pricing of spread options in the equity and fixed income markets, and our contribution is mostly to put together material scattered across a wide spectrum of recent textbooks and journal articles. On the other hand, information about the various numerical procedures that can be used to price and hedge spread options on physical commodities is more difficult to find. For this reason, we make a systematic effort to choose examples from the energy markets in order to illustrate the numerical challenges associated with these instruments. This gives us a chance to discuss an interesting application of spread options to an asset valuation problem after it is recast in the framework of real options. This approach is currently the object of intense mathematical research. In this spirit, we review the two major avenues to modeling energy price dynamics. We explain how the pricing and hedging algorithms can be implemented in the framework of models for both the spot price dynamics and the forward curve dynamics.",
+      "keywords": [],
+      "normalized_title": "pricing and hedging spread options",
+      "raw_bibtex": "@ARTICLE{10.1137/S0036144503424798,\n\tauthor = {Carmona, R. and Durrleman, V.},\n\ttitle = {Pricing and hedging spread options},\n\tjournal = {SIAM Review},\n\tyear = {2003},\n\tabstract = {We survey theoretical and computational problems associated with the pricing and hedging of spread options. These options are ubiquitous in the financial markets, whether they be equity, fixed income, foreign exchange, commodities, or energy markets. As a matter of introduction, we present a general overview of the common features of all spread options by discussing in detail their roles as speculation devices and risk management tools. We describe the mathematical framework used to model them, and we review the numerical algorithms actually used to price and hedge them. There is already extensive literature on the pricing of spread options in the equity and fixed income markets, and our contribution is mostly to put together material scattered across a wide spectrum of recent textbooks and journal articles. On the other hand, information about the various numerical procedures that can be used to price and hedge spread options on physical commodities is more difficult to find. For this reason, we make a systematic effort to choose examples from the energy markets in order to illustrate the numerical challenges associated with these instruments. This gives us a chance to discuss an interesting application of spread options to an asset valuation problem after it is recast in the framework of real options. This approach is currently the object of intense mathematical research. In this spirit, we review the two major avenues to modeling energy price dynamics. We explain how the pricing and hedging algorithms can be implemented in the framework of models for both the spot price dynamics and the forward curve dynamics.},\n\tdoi = {10.1137/S0036144503424798},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-1642461515&doi=10.1137%2FS0036144503424798&partnerID=40&md5=7bd9571db4294914542c30300b7467c5},\n\tvolume = {45},\n\tnumber = {4},\n\tpages = {627-685},\n\tnote = {Export Date: 07 April 2026; Cited By: 199 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Apr 7-2026_24180722-c108-4c0f-a012-84c68ba08d7b.ris"
+      ],
+      "source_keys": [
+        "10.1137/S0036144503424798"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

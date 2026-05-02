@@ -1,0 +1,127 @@
+{
+  "batch_id": "batch_0001",
+  "paper_count": 3,
+  "paper_ids": [
+    "paper_000001",
+    "paper_000002",
+    "paper_000003"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000001",
+      "entry_type": "article",
+      "title": "An Extended Habedank’s Equation-Based EMTP Model of Pantograph Arcing Considering Pantograph-Catenary Interactions and Train Speeds",
+      "authors": [
+        "Wang, Ying",
+        "Liu, Zhi Gang",
+        "Mu, Xiu Qing",
+        "Huang, Ke",
+        "Wang, Hong Rui",
+        "Gao, Shi Bin"
+      ],
+      "year": 2016,
+      "journal": "IEEE Transactions on Power Delivery",
+      "doi": "10.1109/tpwrd.2015.2500260",
+      "abstract": "Pantograph arcing is a more and more common and prominent phenomenon in ac-electrified railway systems, especially with the increase of pantograph-catenary (PAC) interaction and train speed. In order to address this issue, an extended Habedank’s equation-based model, by means of the Electromagnetic Transients Program (EMTP), is presented to obtain equivalent modeling for pantograph arcing studies considering train speeds in this paper. First, the pantograph arcing phenomenon is investigated, such as transient mechanisms and influencing factors. Second, based on the features of existing and emerging pantograph arcing, Habedank’s arc equations are further derived and studied by improving voltage gradient and power dissipation. Next, due to the relationship among voltage gradient, power dissipation, and arc length, the maximum detachment interval law between pantograph and contact wire is obtained by establishing the finite-element model for PAC interaction, and the ultimate extended Habedank’s equation-based EMTP model of pantograph arcing considering different train speeds is acquired. Then, the related model parameters are discussed and determined. Finally, based on the China Beijing-Yizhuang HSR line model in EMTP, the arc characteristic differences considering loads under different parameter values are compared and analyzed. The comparison results illustrate that the proposed model can be feasible to determine and reveal the pantograph arcing characteristics and influences in the HSR system as well as the PAC contact loss problems.",
+      "keywords": [
+        "Arc parameters",
+        "Electromagnetic Transients Program (EMTP)",
+        "EMTP",
+        "Finite element analysis",
+        "finite-element method (FEM)",
+        "high-speed railway (HSR)",
+        "Load modeling",
+        "Mathematical model",
+        "pantograph arcing",
+        "Rail transportation",
+        "Suspensions",
+        "Wires"
+      ],
+      "normalized_title": "an extended habedank s equation based emtp model of pantograph arcing considering pantograph catenary interactions and train speeds",
+      "raw_bibtex": "@ARTICLE{10.1109/TPWRD.2015.2500260,\n\tauthor = {Wang, Ying and Liu, Zhi Gang and Mu, Xiu Qing and Huang, Ke and Wang, Hong Rui and Gao, Shi Bin},\n\ttitle = {An Extended Habedank’s Equation-Based EMTP Model of Pantograph Arcing Considering Pantograph-Catenary Interactions and Train Speeds},\n\tjournal = {IEEE Transactions on Power Delivery},\n\tyear = {2016},\n\tkeywords = {Arc parameters; Electromagnetic Transients Program (EMTP); EMTP; Finite element analysis; finite-element method (FEM); high-speed railway (HSR); Load modeling; Mathematical model; pantograph arcing; Rail transportation; Suspensions; Wires},\n\tabstract = {Pantograph arcing is a more and more common and prominent phenomenon in ac-electrified railway systems, especially with the increase of pantograph-catenary (PAC) interaction and train speed. In order to address this issue, an extended Habedank’s equation-based model, by means of the Electromagnetic Transients Program (EMTP), is presented to obtain equivalent modeling for pantograph arcing studies considering train speeds in this paper. First, the pantograph arcing phenomenon is investigated, such as transient mechanisms and influencing factors. Second, based on the features of existing and emerging pantograph arcing, Habedank’s arc equations are further derived and studied by improving voltage gradient and power dissipation. Next, due to the relationship among voltage gradient, power dissipation, and arc length, the maximum detachment interval law between pantograph and contact wire is obtained by establishing the finite-element model for PAC interaction, and the ultimate extended Habedank’s equation-based EMTP model of pantograph arcing considering different train speeds is acquired. Then, the related model parameters are discussed and determined. Finally, based on the China Beijing-Yizhuang HSR line model in EMTP, the arc characteristic differences considering loads under different parameter values are compared and analyzed. The comparison results illustrate that the proposed model can be feasible to determine and reveal the pantograph arcing characteristics and influences in the HSR system as well as the PAC contact loss problems.},\n\tdoi = {10.1109/TPWRD.2015.2500260},\n\turl = {http://ieeexplore.ieee.org/document/7330029/},\n\tvolume = {31},\n\tnumber = {3},\n\tpages = {1186-1194},\n\tissn = {0885-8977, 1937-4208},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "最终整理.ris"
+      ],
+      "source_keys": [
+        "10.1109/TPWRD.2015.2500260"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000002",
+      "entry_type": "article",
+      "title": "Simulation on Operating Overvoltage of Dropping Pantograph Based on Pantograph–Catenary Arc and Variable Capacitance Model",
+      "authors": [
+        "Jiang, Da Zuo",
+        "Zou, Huan Qing",
+        "Guo, Yi Ke",
+        "Tian, Fu Qiang",
+        "Liu, Hong Qi",
+        "Yin, Yu Feng"
+      ],
+      "year": 2024,
+      "journal": "Applied Sciences",
+      "doi": "10.3390/app14166861",
+      "abstract": "When the electric locomotive pantograph is dropping, the interruption of pantograph catenary contact causes electromagnetic oscillation and arcing. The frequent arc burning that occurs due to charge accumulation results in the amplitude of overvoltage increasing gradually, posing a threat to locomotive high-voltage equipment. However, the physical mechanisms and characteristics of overvoltage are still unclear. This paper proposes a simulation model of operating overvoltage due to a dropping pantograph based on the pantograph–catenary arc and variable capacitance. Distributed RLC electromagnetic oscillation is considered, which allows the real-time calculation of arc resistance and capacitance. Under the same working conditions, the error between the simulation and test results is less than 4.0%, which proves the credibility of the model. The variation law of overvoltage under different dropping speeds or catenary phases was investigated, which shows the max amplitude is 298.20 kV and steepness is 2096.80 kV/μs at 0.30 m/s speed. The waveform shows the characteristics of high amplitude and high steepness, similar to very fast transient overvoltage (VFTO). There is a sinusoidal relationship between the catenary phase and overvoltage amplitude. The closer the catenary phase to 90°, the higher the overvoltage amplitude. The research has important guiding significance for the overvoltage formation mechanism of a traction power supply system and the insulation coordination design of high-voltage equipment.",
+      "keywords": [
+        "arc model",
+        "electromagnetic oscillation",
+        "operating overvoltage of dropping pantograph",
+        "variable capacitance"
+      ],
+      "normalized_title": "simulation on operating overvoltage of dropping pantograph based on pantograph catenary arc and variable capacitance model",
+      "raw_bibtex": "@ARTICLE{10.3390/app14166861,\n\tauthor = {Jiang, Da Zuo and Zou, Huan Qing and Guo, Yi Ke and Tian, Fu Qiang and Liu, Hong Qi and Yin, Yu Feng},\n\ttitle = {Simulation on Operating Overvoltage of Dropping Pantograph Based on Pantograph–Catenary Arc and Variable Capacitance Model},\n\tjournal = {Applied Sciences},\n\tyear = {2024},\n\tkeywords = {arc model; electromagnetic oscillation; operating overvoltage of dropping pantograph; variable capacitance},\n\tabstract = {When the electric locomotive pantograph is dropping, the interruption of pantograph catenary contact causes electromagnetic oscillation and arcing. The frequent arc burning that occurs due to charge accumulation results in the amplitude of overvoltage increasing gradually, posing a threat to locomotive high-voltage equipment. However, the physical mechanisms and characteristics of overvoltage are still unclear. This paper proposes a simulation model of operating overvoltage due to a dropping pantograph based on the pantograph–catenary arc and variable capacitance. Distributed RLC electromagnetic oscillation is considered, which allows the real-time calculation of arc resistance and capacitance. Under the same working conditions, the error between the simulation and test results is less than 4.0%, which proves the credibility of the model. The variation law of overvoltage under different dropping speeds or catenary phases was investigated, which shows the max amplitude is 298.20 kV and steepness is 2096.80 kV/μs at 0.30 m/s speed. The waveform shows the characteristics of high amplitude and high steepness, similar to very fast transient overvoltage (VFTO). There is a sinusoidal relationship between the catenary phase and overvoltage amplitude. The closer the catenary phase to 90°, the higher the overvoltage amplitude. The research has important guiding significance for the overvoltage formation mechanism of a traction power supply system and the insulation coordination design of high-voltage equipment.},\n\tdoi = {10.3390/app14166861},\n\turl = {https://www.mdpi.com/2076-3417/14/16/6861},\n\tvolume = {14},\n\tnumber = {16},\n\tpages = {6861},\n\tissn = {2076-3417},\n\tpublisher = {Multidisciplinary Digital Publishing Institute},\n\tschool = {Multidisciplinary Digital Publishing Institute},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "最终整理.ris"
+      ],
+      "source_keys": [
+        "10.3390/app14166861"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000003",
+      "entry_type": "article",
+      "title": "Influence of Low Air Pressure on Pantograph–Catenary Arc Model",
+      "authors": [
+        "Zou, Dan Dan",
+        "Xin Xia, Zi",
+        "Tian Xu, Guang",
+        "Sarkar, Sanjib",
+        "Atul, Jyoti K.",
+        "Fen Shi, Gui",
+        "Yao Wang, Meng"
+      ],
+      "year": 2025,
+      "journal": "IEEE Transactions on Plasma Science",
+      "doi": "10.1109/tps.2025.3558860",
+      "abstract": "The pantograph-catenary arc is a crucial factor that significantly impacts the effective current collection of high-speed railway pantograph-catenary systems. Investigating the electrical properties of this arc has engineering applications for enhancing the reliability and operational lifespan of such systems. The electrical characteristics of the pantograph-catenary arc in high-altitude areas with low gas pressure differ from those in low-altitude areas with atmospheric pressure across various aspects. In this article, we model the pantograph-catenary arc based on both Mayr arc and Schwarz arc mathematical models. By adjusting the dissipation power value, we investigate the arc voltage-time, arc conductance-time, and arc power-time characteristic curves under different altitudes, and establish the mechanism of low gas pressure on pantograph-catenary arc. A comparison between simulation results obtained using these two models reveals that Schwarz’s model is more suitable for modeling high-altitude pantograph-catenary arcs. The results indicate that, throughout the arcing process, the arc conductance of the pantograph-catenary system significantly decreases with increasing altitude, while the arc quenching capability of the pantograph-catenary system synchronously increases with altitude. This finding provides valuable insights for designing parameters related to pantograph-catenary systems in high-altitude regions worldwide.",
+      "keywords": [
+        "Atmospheric modeling",
+        "Closed box",
+        "Convection",
+        "Heating systems",
+        "High-altitude",
+        "Integrated circuit modeling",
+        "Mathematical models",
+        "Mayr arc model",
+        "pantograph-catenary arc",
+        "Schwarz arc model",
+        "Temperature",
+        "Voltage measurement"
+      ],
+      "normalized_title": "influence of low air pressure on pantograph catenary arc model",
+      "raw_bibtex": "@ARTICLE{10.1109/TPS.2025.3558860,\n\tauthor = {Zou, Dan Dan and Xin Xia, Zi and Tian Xu, Guang and Sarkar, Sanjib and Atul, Jyoti K. and Fen Shi, Gui and Yao Wang, Meng},\n\ttitle = {Influence of Low Air Pressure on Pantograph–Catenary Arc Model},\n\tjournal = {IEEE Transactions on Plasma Science},\n\tyear = {2025},\n\tkeywords = {Atmospheric modeling; Closed box; Convection; Heating systems; High-altitude; Integrated circuit modeling; Mathematical models; Mayr arc model; pantograph-catenary arc; Schwarz arc model; Temperature; Voltage measurement},\n\tabstract = {The pantograph-catenary arc is a crucial factor that significantly impacts the effective current collection of high-speed railway pantograph-catenary systems. Investigating the electrical properties of this arc has engineering applications for enhancing the reliability and operational lifespan of such systems. The electrical characteristics of the pantograph-catenary arc in high-altitude areas with low gas pressure differ from those in low-altitude areas with atmospheric pressure across various aspects. In this article, we model the pantograph-catenary arc based on both Mayr arc and Schwarz arc mathematical models. By adjusting the dissipation power value, we investigate the arc voltage-time, arc conductance-time, and arc power-time characteristic curves under different altitudes, and establish the mechanism of low gas pressure on pantograph-catenary arc. A comparison between simulation results obtained using these two models reveals that Schwarz’s model is more suitable for modeling high-altitude pantograph-catenary arcs. The results indicate that, throughout the arcing process, the arc conductance of the pantograph-catenary system significantly decreases with increasing altitude, while the arc quenching capability of the pantograph-catenary system synchronously increases with altitude. This finding provides valuable insights for designing parameters related to pantograph-catenary systems in high-altitude regions worldwide.},\n\tdoi = {10.1109/TPS.2025.3558860},\n\turl = {https://ieeexplore.ieee.org/document/11006900/},\n\tvolume = {53},\n\tnumber = {6},\n\tpages = {1292-1298},\n\tissn = {0093-3813, 1939-9375},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "最终整理.ris"
+      ],
+      "source_keys": [
+        "10.1109/TPS.2025.3558860"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

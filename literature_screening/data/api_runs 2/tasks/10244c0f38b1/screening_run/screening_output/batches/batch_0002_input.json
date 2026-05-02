@@ -1,0 +1,302 @@
+{
+  "batch_id": "batch_0002",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000011",
+    "paper_000012",
+    "paper_000013",
+    "paper_000014",
+    "paper_000015",
+    "paper_000016",
+    "paper_000017",
+    "paper_000018",
+    "paper_000019",
+    "paper_000020"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000011",
+      "entry_type": "article",
+      "title": "Hardware-in-the-Loop Test Bench for Simulation of Catenary–Pantograph Interaction (CPI) with Linear Camera Measurement",
+      "authors": [
+        "Correcher, A.",
+        "Ricolfe-Viala, C.",
+        "Tur, M.",
+        "Gregori, S.",
+        "Salvador-Muñoz, M.",
+        "Fuenmayor, F.J.",
+        "Gil, J.",
+        "Pedrosa, A.M."
+      ],
+      "year": 2023,
+      "journal": "Sensors",
+      "doi": "10.3390/s23041773",
+      "abstract": "Catenary–pantograph contact force is generally used for assessment of the current collection quality. A good current collection quality not only increases catenary lifetime but also keeps a stable electric supply and helps to avoid accidents. Low contact forces lead to electric arcs that degrade the catenary, and high contact forces generate excessive wear on the sliding surfaces. Railway track operators require track tests to ensure that catenary–pantograph force remains between safe values. However, a direct measure of the contact force requires an instrumented pantograph which is generally costly and complicated. This paper presents a test bench that allows testing virtual catenaries over real pantographs. Therefore, the contact point force behavior can be tested before the track test to guarantee that the test is passed. Moreover, due to its flexibility, the system can be used for model identification and validation, catenary testing, or contact loss simulation. The test bench also explores using computer vision as an additional sensor for each application. Results show that the system has high precision and flexibility in the available tests. © 2023 by the authors.",
+      "keywords": [],
+      "normalized_title": "hardware in the loop test bench for simulation of catenary pantograph interaction cpi with linear camera measurement",
+      "raw_bibtex": "@ARTICLE{10.3390/s23041773,\n\tauthor = {Correcher, A. and Ricolfe-Viala, C. and Tur, M. and Gregori, S. and Salvador-Muñoz, M. and Fuenmayor, F.J. and Gil, J. and Pedrosa, A.M.},\n\ttitle = {Hardware-in-the-Loop Test Bench for Simulation of Catenary–Pantograph Interaction (CPI) with Linear Camera Measurement},\n\tjournal = {Sensors},\n\tyear = {2023},\n\tabstract = {Catenary–pantograph contact force is generally used for assessment of the current collection quality. A good current collection quality not only increases catenary lifetime but also keeps a stable electric supply and helps to avoid accidents. Low contact forces lead to electric arcs that degrade the catenary, and high contact forces generate excessive wear on the sliding surfaces. Railway track operators require track tests to ensure that catenary–pantograph force remains between safe values. However, a direct measure of the contact force requires an instrumented pantograph which is generally costly and complicated. This paper presents a test bench that allows testing virtual catenaries over real pantographs. Therefore, the contact point force behavior can be tested before the track test to guarantee that the test is passed. Moreover, due to its flexibility, the system can be used for model identification and validation, catenary testing, or contact loss simulation. The test bench also explores using computer vision as an additional sensor for each application. Results show that the system has high precision and flexibility in the available tests. © 2023 by the authors.},\n\tdoi = {10.3390/s23041773},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85148970659&doi=10.3390%2Fs23041773&partnerID=40&md5=7fe2e10ee5958979260b4c9773ad112c},\n\tvolume = {23},\n\tnumber = {4},\n\tnote = {Export Date: 30 March 2026; Cited By: 9 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 30-2026_f99adb74-ad34-496e-8443-8b0e156d4bd8.ris"
+      ],
+      "source_keys": [
+        "10.3390/s23041773"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000012",
+      "entry_type": "article",
+      "title": "Pantograph-Catenary Arc Detection Based on Electrical Parameter Transient Variations Correlated With Current-Zero Arc Phenomena",
+      "authors": [
+        "Du, Y.",
+        "Jiao, Y.",
+        "Li, H.",
+        "Chen, Q."
+      ],
+      "year": 2025,
+      "journal": "IEEE Transactions on Instrumentation and Measurement",
+      "doi": "10.1109/tim.2025.3602598",
+      "abstract": "Reliable pantograph-catenary (P-C) contact is fundamental to locomotive operational stability. P-C arcing (P-C arc) discharges are induced by deteriorated contact conditions; thus, real-time arc detection becomes imperative for proactive maintenance interventions. Conventional methodologies are designed based on optical/acoustic signals induced by the P-C structure or normal frequency bands of electrical parameters accompanying arcs. However, some limitations exist: environmental interference would largely affect the out-carriage sensing modalities. For approaches based on conventional electrical parameters, the accuracy is compromised, attributable to two principal factors: the selection of electrical parameters is constrained, which might be inadequate to delineate arc features. The frequency band utilized is relatively low, failing to effectively pinpoint arc features. This article presents a novel transient analysis framework, targeting electrical parameters during arc current-zero periods. Multiple electrical parameters are analyzed to identify the optimal detection frequency bands, exhibiting maximal discriminative power between arcing/normal contact states. The features are calculated by windowed fast Fourier transformation (FFT) according to the analysis and then processed and temporally synchronized to form datasets. Finally, a random forest (RF) classifier constructed based on the datasets enables real-time detection. Experimental validation confirms superior detection efficacy. © 1963-2012 IEEE.",
+      "keywords": [],
+      "normalized_title": "pantograph catenary arc detection based on electrical parameter transient variations correlated with current zero arc phenomena",
+      "raw_bibtex": "@ARTICLE{10.1109/TIM.2025.3602598,\n\tauthor = {Du, Y. and Jiao, Y. and Li, H. and Chen, Q.},\n\ttitle = {Pantograph-Catenary Arc Detection Based on Electrical Parameter Transient Variations Correlated With Current-Zero Arc Phenomena},\n\tjournal = {IEEE Transactions on Instrumentation and Measurement},\n\tyear = {2025},\n\tabstract = {Reliable pantograph-catenary (P-C) contact is fundamental to locomotive operational stability. P-C arcing (P-C arc) discharges are induced by deteriorated contact conditions; thus, real-time arc detection becomes imperative for proactive maintenance interventions. Conventional methodologies are designed based on optical/acoustic signals induced by the P-C structure or normal frequency bands of electrical parameters accompanying arcs. However, some limitations exist: environmental interference would largely affect the out-carriage sensing modalities. For approaches based on conventional electrical parameters, the accuracy is compromised, attributable to two principal factors: the selection of electrical parameters is constrained, which might be inadequate to delineate arc features. The frequency band utilized is relatively low, failing to effectively pinpoint arc features. This article presents a novel transient analysis framework, targeting electrical parameters during arc current-zero periods. Multiple electrical parameters are analyzed to identify the optimal detection frequency bands, exhibiting maximal discriminative power between arcing/normal contact states. The features are calculated by windowed fast Fourier transformation (FFT) according to the analysis and then processed and temporally synchronized to form datasets. Finally, a random forest (RF) classifier constructed based on the datasets enables real-time detection. Experimental validation confirms superior detection efficacy. © 1963-2012 IEEE.},\n\tdoi = {10.1109/TIM.2025.3602598},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105014344378&doi=10.1109%2FTIM.2025.3602598&partnerID=40&md5=d396823ddaec0f3c9a678d5c5c10e2bd},\n\tvolume = {74},\n\tnote = {Export Date: 30 March 2026; Cited By: 1 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 30-2026_f99adb74-ad34-496e-8443-8b0e156d4bd8.ris"
+      ],
+      "source_keys": [
+        "10.1109/TIM.2025.3602598"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000013",
+      "entry_type": "article",
+      "title": "Simulation on Operating Overvoltage of Dropping Pantograph Based on Pantograph–Catenary Arc and Variable Capacitance Model",
+      "authors": [
+        "Jiang, D.",
+        "Zou, H.",
+        "Guo, Y.",
+        "Tian, F.",
+        "Liu, H.",
+        "Yin, Y."
+      ],
+      "year": 2024,
+      "journal": "Applied Sciences (Switzerland)",
+      "doi": "10.3390/app14166861",
+      "abstract": "When the electric locomotive pantograph is dropping, the interruption of pantograph catenary contact causes electromagnetic oscillation and arcing. The frequent arc burning that occurs due to charge accumulation results in the amplitude of overvoltage increasing gradually, posing a threat to locomotive high-voltage equipment. However, the physical mechanisms and characteristics of overvoltage are still unclear. This paper proposes a simulation model of operating overvoltage due to a dropping pantograph based on the pantograph–catenary arc and variable capacitance. Distributed RLC electromagnetic oscillation is considered, which allows the real-time calculation of arc resistance and capacitance. Under the same working conditions, the error between the simulation and test results is less than 4.0%, which proves the credibility of the model. The variation law of overvoltage under different dropping speeds or catenary phases was investigated, which shows the max amplitude is 298.20 kV and steepness is 2096.80 kV/μs at 0.30 m/s speed. The waveform shows the characteristics of high amplitude and high steepness, similar to very fast transient overvoltage (VFTO). There is a sinusoidal relationship between the catenary phase and overvoltage amplitude. The closer the catenary phase to 90°, the higher the overvoltage amplitude. The research has important guiding significance for the overvoltage formation mechanism of a traction power supply system and the insulation coordination design of high-voltage equipment. © 2024 by the authors.",
+      "keywords": [
+        "arc model",
+        "electromagnetic oscillation",
+        "operating overvoltage of dropping pantograph",
+        "variable capacitance"
+      ],
+      "normalized_title": "simulation on operating overvoltage of dropping pantograph based on pantograph catenary arc and variable capacitance model",
+      "raw_bibtex": "@ARTICLE{10.3390/app14166861,\n\tauthor = {Jiang, Dazuo and Zou, Huanqing and Guo, Yike and Tian, Fuqiang and Liu, Hongqi and Yin, Yufeng},\n\ttitle = {Simulation on Operating Overvoltage of Dropping Pantograph Based on Pantograph–Catenary Arc and Variable Capacitance Model},\n\tjournal = {Applied Sciences},\n\tyear = {2024},\n\tkeywords = {arc model; electromagnetic oscillation; operating overvoltage of dropping pantograph; variable capacitance},\n\tabstract = {When the electric locomotive pantograph is dropping, the interruption of pantograph catenary contact causes electromagnetic oscillation and arcing. The frequent arc burning that occurs due to charge accumulation results in the amplitude of overvoltage increasing gradually, posing a threat to locomotive high-voltage equipment. However, the physical mechanisms and characteristics of overvoltage are still unclear. This paper proposes a simulation model of operating overvoltage due to a dropping pantograph based on the pantograph–catenary arc and variable capacitance. Distributed RLC electromagnetic oscillation is considered, which allows the real-time calculation of arc resistance and capacitance. Under the same working conditions, the error between the simulation and test results is less than 4.0%, which proves the credibility of the model. The variation law of overvoltage under different dropping speeds or catenary phases was investigated, which shows the max amplitude is 298.20 kV and steepness is 2096.80 kV/μs at 0.30 m/s speed. The waveform shows the characteristics of high amplitude and high steepness, similar to very fast transient overvoltage (VFTO). There is a sinusoidal relationship between the catenary phase and overvoltage amplitude. The closer the catenary phase to 90°, the higher the overvoltage amplitude. The research has important guiding significance for the overvoltage formation mechanism of a traction power supply system and the insulation coordination design of high-voltage equipment.},\n\tdoi = {10.3390/app14166861},\n\turl = {https://www.mdpi.com/2076-3417/14/16/6861},\n\tvolume = {14},\n\tnumber = {16},\n\tpages = {6861},\n\tissn = {2076-3417},\n\tpublisher = {Multidisciplinary Digital Publishing Institute},\n\tschool = {Multidisciplinary Digital Publishing Institute},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "scopus_export_Mar 30-2026_f99adb74-ad34-496e-8443-8b0e156d4bd8.ris",
+        "导出的条目.ris"
+      ],
+      "source_keys": [
+        "10.3390/app14166861"
+      ],
+      "merged_from": [
+        "raw_000100"
+      ],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000014",
+      "entry_type": "article",
+      "title": "Multi-domain approach to modeling pantograph-catenary interaction",
+      "authors": [
+        "Zdziebko, P.",
+        "Martowicz, A.",
+        "Uhl, T."
+      ],
+      "year": 2022,
+      "journal": "Eksploatacja i Niezawodnosc",
+      "doi": "10.17531/ein.2022.1.15",
+      "abstract": "When a railway pantograph interacts with a catenary during the movement of a rail vehicle, several physical phenomena, both mechanical and electrical, occur in the system. These phenomena affect the quality of power supply of a train from traction devices. The unfavourable arcing occurring when there are disturbances of contact between the pantograph’s slider and the catenary contact wire. In turn, it results in energy loss and increased wear of the components of the system. When designing new solutions, computational models are helpful to predict the quality of interaction between the components of the pantograph-contact line system already at the virtual prototyping stage. In this paper, the authors comprehensively present a multi-domain (multiphysics) model, which takes into account necessary conditions for interaction between pantograph elements and a catenary. Finally, the impact of the individual physical domains are analysed and the ones which have a significant impact on the simulation of the operation results are identified. © 2022, Polish Academy of Sciences Branch Lublin. All rights reserved.",
+      "keywords": [],
+      "normalized_title": "multi domain approach to modeling pantograph catenary interaction",
+      "raw_bibtex": "@ARTICLE{10.17531/ein.2022.1.15,\n\tauthor = {Zdziebko, P. and Martowicz, A. and Uhl, T.},\n\ttitle = {Multi-domain approach to modeling pantograph-catenary interaction},\n\tjournal = {Eksploatacja i Niezawodnosc},\n\tyear = {2022},\n\tabstract = {When a railway pantograph interacts with a catenary during the movement of a rail vehicle, several physical phenomena, both mechanical and electrical, occur in the system. These phenomena affect the quality of power supply of a train from traction devices. The unfavourable arcing occurring when there are disturbances of contact between the pantograph’s slider and the catenary contact wire. In turn, it results in energy loss and increased wear of the components of the system. When designing new solutions, computational models are helpful to predict the quality of interaction between the components of the pantograph-contact line system already at the virtual prototyping stage. In this paper, the authors comprehensively present a multi-domain (multiphysics) model, which takes into account necessary conditions for interaction between pantograph elements and a catenary. Finally, the impact of the individual physical domains are analysed and the ones which have a significant impact on the simulation of the operation results are identified. © 2022, Polish Academy of Sciences Branch Lublin. All rights reserved.},\n\tdoi = {10.17531/ein.2022.1.15},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85126097168&doi=10.17531%2Fein.2022.1.15&partnerID=40&md5=516a3d44d0f6fe8e6527217aca9bc966},\n\tvolume = {24},\n\tnumber = {1},\n\tpages = {130-139},\n\tnote = {Export Date: 30 March 2026; Cited By: 7 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 30-2026_f99adb74-ad34-496e-8443-8b0e156d4bd8.ris"
+      ],
+      "source_keys": [
+        "10.17531/ein.2022.1.15"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000015",
+      "entry_type": "article",
+      "title": "Development of Shinkansen Simple Catenary Equipment for Operating Speeds of 320 km/h",
+      "authors": [
+        "Tsunemoto, M.",
+        "Shimizu, M.",
+        "Irikura, K.",
+        "Morimoto, H.",
+        "Ikeda, K."
+      ],
+      "year": 2026,
+      "journal": "Electrical Engineering in Japan (English translation of Denki Gakkai Ronbunshi)",
+      "doi": "10.1002/eej.70006",
+      "abstract": "The compound catenary equipment on the Shinkansen lines currently requires large-scale renewal. To streamline this process and reduce maintenance costs, an efficient strategy is to replace the compound catenary equipment with simple catenary equipment rather than renewing the compound catenary equipment. However, simple catenary equipment, unlike compound catenary equipment, induces large vertical oscillations of the pantograph between support points. When thick wires are used to ensure the current capacity, the fluctuations in the contact force between the contact wire and the pantograph tend to be large because of the hanger intervals. In this study, a new type of Shinkansen simple catenary equipment was developed for operating speeds of 320 kmh, which is the current maximum speed on commercial Shinkansen lines. Theoretical analyses and dynamic characteristic evaluations were conducted to validate the performance of the developed catenary equipment. A field test on a commercial line further verified the current collection performance of the developed catenary equipment. © 2025 Wiley Periodicals LLC.",
+      "keywords": [],
+      "normalized_title": "development of shinkansen simple catenary equipment for operating speeds of 320 km h",
+      "raw_bibtex": "@ARTICLE{10.1002/eej.70006,\n\tauthor = {Tsunemoto, M. and Shimizu, M. and Irikura, K. and Morimoto, H. and Ikeda, K.},\n\ttitle = {Development of Shinkansen Simple Catenary Equipment for Operating Speeds of 320 km/h},\n\tjournal = {Electrical Engineering in Japan (English translation of Denki Gakkai Ronbunshi)},\n\tyear = {2026},\n\tabstract = {The compound catenary equipment on the Shinkansen lines currently requires large-scale renewal. To streamline this process and reduce maintenance costs, an efficient strategy is to replace the compound catenary equipment with simple catenary equipment rather than renewing the compound catenary equipment. However, simple catenary equipment, unlike compound catenary equipment, induces large vertical oscillations of the pantograph between support points. When thick wires are used to ensure the current capacity, the fluctuations in the contact force between the contact wire and the pantograph tend to be large because of the hanger intervals. In this study, a new type of Shinkansen simple catenary equipment was developed for operating speeds of 320 kmh, which is the current maximum speed on commercial Shinkansen lines. Theoretical analyses and dynamic characteristic evaluations were conducted to validate the performance of the developed catenary equipment. A field test on a commercial line further verified the current collection performance of the developed catenary equipment. © 2025 Wiley Periodicals LLC.},\n\tdoi = {10.1002/eej.70006},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105024777342&doi=10.1002%2Feej.70006&partnerID=40&md5=8f84d83515ba4682fd6248e8907fa9d2},\n\tvolume = {219},\n\tnumber = {1},\n\tpages = {34-42},\n\tnote = {Export Date: 30 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 30-2026_f99adb74-ad34-496e-8443-8b0e156d4bd8.ris"
+      ],
+      "source_keys": [
+        "10.1002/eej.70006"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000016",
+      "entry_type": "article",
+      "title": "Modeling of catenary electromagnetic emission with electrified train passing through neutral section",
+      "authors": [
+        "Yang, C.",
+        "Zhu, F.",
+        "Yang, Y.",
+        "Lu, N.",
+        "Dong, X."
+      ],
+      "year": 2023,
+      "journal": "International Journal of Electrical Power and Energy Systems",
+      "doi": "10.1016/j.ijepes.2022.108899",
+      "abstract": "Rail transit entering the airport facilitates people's travel, but it also brings potential electromagnetic interference. In this paper, based on the transmission line model of the arc harmonic conduction current generated by the pantograph and the catenary with the highly insulated ballastless railway, the electromagnetic emission model of the traction network is proposed in the working frequency band of the nondirectional beacon when the train passes through the neutral section of the electric phase separation. And the simplification of the transmission line model is realized by deforming the transmission line equation. Then, the finite difference time domain algorithm is used to solve the distributed current on the transmission line. However, the terminal of the conventional finite difference time domain algorithm can only be a pure resistive load. Therefore, the backward difference and the Implicit Wendroff difference format are used to extend the finite difference time domain algorithm to a more general case. Combined with a real ballastless railway in China, the effectiveness and accuracy of the proposed method are verified. From the perspective of magnetic field attenuation, ballastless railway is easier to pass the electromagnetic environment assessment of the airport than ballasted railway. © 2022 Elsevier Ltd",
+      "keywords": [],
+      "normalized_title": "modeling of catenary electromagnetic emission with electrified train passing through neutral section",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ijepes.2022.108899,\n\tauthor = {Yang, C. and Zhu, F. and Yang, Y. and Lu, N. and Dong, X.},\n\ttitle = {Modeling of catenary electromagnetic emission with electrified train passing through neutral section},\n\tjournal = {International Journal of Electrical Power and Energy Systems},\n\tyear = {2023},\n\tabstract = {Rail transit entering the airport facilitates people's travel, but it also brings potential electromagnetic interference. In this paper, based on the transmission line model of the arc harmonic conduction current generated by the pantograph and the catenary with the highly insulated ballastless railway, the electromagnetic emission model of the traction network is proposed in the working frequency band of the nondirectional beacon when the train passes through the neutral section of the electric phase separation. And the simplification of the transmission line model is realized by deforming the transmission line equation. Then, the finite difference time domain algorithm is used to solve the distributed current on the transmission line. However, the terminal of the conventional finite difference time domain algorithm can only be a pure resistive load. Therefore, the backward difference and the Implicit Wendroff difference format are used to extend the finite difference time domain algorithm to a more general case. Combined with a real ballastless railway in China, the effectiveness and accuracy of the proposed method are verified. From the perspective of magnetic field attenuation, ballastless railway is easier to pass the electromagnetic environment assessment of the airport than ballasted railway. © 2022 Elsevier Ltd},\n\tdoi = {10.1016/j.ijepes.2022.108899},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85144627906&doi=10.1016%2Fj.ijepes.2022.108899&partnerID=40&md5=3c5b5b98740e946943b8c362144d2691},\n\tvolume = {147},\n\tnote = {Export Date: 30 March 2026; Cited By: 6 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 30-2026_f99adb74-ad34-496e-8443-8b0e156d4bd8.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ijepes.2022.108899"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000017",
+      "entry_type": "article",
+      "title": "Dynamic physical characteristics of DC arc on arcing horn for HVDC grounding electrode line",
+      "authors": [
+        "Liu, Y.",
+        "Yang, C.",
+        "Guo, Y.",
+        "Zhang, X.",
+        "Xiao, S.",
+        "Gao, G.",
+        "Wu, G."
+      ],
+      "year": 2022,
+      "journal": "Plasma Science and Technology",
+      "doi": "10.1088/2058-6272/ac793b",
+      "abstract": "The dynamic physical characteristics of a DC arc on an arcing horn for a high voltage direct current (HVDC) grounding electrode line are significantly different from those of the switching device arc, secondary arc, AC fault arc and pantograph-catenary arc. In this work, an experimental platform for the DC arc on the arcing horn was built, and mechanisms of the arc column short circuit and arc root movement were studied. This work further analyzes the characteristics and mechanisms of the arc motion when wind speed and direction, magnetic field and the expansion angle of the electrode are varied. Arc root movement is more likely to occur at the upper electrode. There is a competitive relationship between arc expansion and the transferring effect. The effect of wind on the arc column is greater than the effect on the arc root. The magnetic field has a significant driving effect on both the arc column and the arc root. The research results provide a comprehensive experimental basis for further probing the method of DC arc suppression, and the improvement of the arcing horn. © 2022 Hefei Institutes of Physical Science, Chinese Academy of Sciences and IOP Publishing.",
+      "keywords": [],
+      "normalized_title": "dynamic physical characteristics of dc arc on arcing horn for hvdc grounding electrode line",
+      "raw_bibtex": "@ARTICLE{10.1088/2058-6272/ac793b,\n\tauthor = {Liu, Y. and Yang, C. and Guo, Y. and Zhang, X. and Xiao, S. and Gao, G. and Wu, G.},\n\ttitle = {Dynamic physical characteristics of DC arc on arcing horn for HVDC grounding electrode line},\n\tjournal = {Plasma Science and Technology},\n\tyear = {2022},\n\tabstract = {The dynamic physical characteristics of a DC arc on an arcing horn for a high voltage direct current (HVDC) grounding electrode line are significantly different from those of the switching device arc, secondary arc, AC fault arc and pantograph-catenary arc. In this work, an experimental platform for the DC arc on the arcing horn was built, and mechanisms of the arc column short circuit and arc root movement were studied. This work further analyzes the characteristics and mechanisms of the arc motion when wind speed and direction, magnetic field and the expansion angle of the electrode are varied. Arc root movement is more likely to occur at the upper electrode. There is a competitive relationship between arc expansion and the transferring effect. The effect of wind on the arc column is greater than the effect on the arc root. The magnetic field has a significant driving effect on both the arc column and the arc root. The research results provide a comprehensive experimental basis for further probing the method of DC arc suppression, and the improvement of the arcing horn. © 2022 Hefei Institutes of Physical Science, Chinese Academy of Sciences and IOP Publishing.},\n\tdoi = {10.1088/2058-6272/ac793b},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85141934117&doi=10.1088%2F2058-6272%2Fac793b&partnerID=40&md5=0b5afec345bea7ed56ad2fe381f7db4a},\n\tvolume = {25},\n\tnumber = {1},\n\tnote = {Export Date: 30 March 2026; Cited By: 1 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 30-2026_f99adb74-ad34-496e-8443-8b0e156d4bd8.ris"
+      ],
+      "source_keys": [
+        "10.1088/2058-6272/ac793b"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000018",
+      "entry_type": "article",
+      "title": "Research on a composite detection method of pantograph-catenary arc fault based on the fusion of acoustic imaging",
+      "authors": [
+        "Cai, Z.",
+        "Wang, J.",
+        "Lu, Z.",
+        "Wei, B.",
+        "Cheng, H.",
+        "Sun, H."
+      ],
+      "year": 2026,
+      "journal": "Nondestructive Testing and Evaluation",
+      "doi": "10.1080/10589759.2025.2612257",
+      "abstract": "Conventional camera-based methods for pantograph–catenary arc fault detection are susceptible to environmental disturbances, which have a detrimental effect on recognition accuracy. To overcome these limitations, the present study proposes a multimodal recognition network that integrates acoustic and visual imaging to enhance robustness. The approach adopts a feature-level fusion strategy to facilitate precise fault identification under varied conditions. The system’s inputs include acoustic, infrared, and visible-light images. Each modality is processed by convolutional neural networks (CNNs) to extract salient features, followed by fault localisation and classification. To address discrepancies across modalities, the architecture incorporates a Top-k initial query selection module and a multimodal deformable cross-attention module, and employs a cascaded Detection Transformer (DETR) framework to optimise multimodal information fusion and complementarity. In light of the paucity of publicly available datasets, a novel multimodal dataset was devised by simulating pantograph–catenary arc faults, containing acoustic, infrared, and visible-light data. Experiments on this dataset demonstrate that the proposed model attains an accuracy of 84%, surpassing single-modality visible-light methods and combined visible–infrared methods by 15.9% and 8.1%, respectively. The findings corroborate the efficacy of multimodal fusion in enhancing arc fault recognition. © 2026 Informa UK Limited, trading as Taylor & Francis Group.",
+      "keywords": [],
+      "normalized_title": "research on a composite detection method of pantograph catenary arc fault based on the fusion of acoustic imaging",
+      "raw_bibtex": "@ARTICLE{10.1080/10589759.2025.2612257,\n\tauthor = {Cai, Z. and Wang, J. and Lu, Z. and Wei, B. and Cheng, H. and Sun, H.},\n\ttitle = {Research on a composite detection method of pantograph-catenary arc fault based on the fusion of acoustic imaging},\n\tjournal = {Nondestructive Testing and Evaluation},\n\tyear = {2026},\n\tabstract = {Conventional camera-based methods for pantograph–catenary arc fault detection are susceptible to environmental disturbances, which have a detrimental effect on recognition accuracy. To overcome these limitations, the present study proposes a multimodal recognition network that integrates acoustic and visual imaging to enhance robustness. The approach adopts a feature-level fusion strategy to facilitate precise fault identification under varied conditions. The system’s inputs include acoustic, infrared, and visible-light images. Each modality is processed by convolutional neural networks (CNNs) to extract salient features, followed by fault localisation and classification. To address discrepancies across modalities, the architecture incorporates a Top-k initial query selection module and a multimodal deformable cross-attention module, and employs a cascaded Detection Transformer (DETR) framework to optimise multimodal information fusion and complementarity. In light of the paucity of publicly available datasets, a novel multimodal dataset was devised by simulating pantograph–catenary arc faults, containing acoustic, infrared, and visible-light data. Experiments on this dataset demonstrate that the proposed model attains an accuracy of 84%, surpassing single-modality visible-light methods and combined visible–infrared methods by 15.9% and 8.1%, respectively. The findings corroborate the efficacy of multimodal fusion in enhancing arc fault recognition. © 2026 Informa UK Limited, trading as Taylor & Francis Group.},\n\tdoi = {10.1080/10589759.2025.2612257},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105029409818&doi=10.1080%2F10589759.2025.2612257&partnerID=40&md5=f5efa440f7c940e0f84af7af7ddc73fd},\n\tnote = {Export Date: 30 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 30-2026_f99adb74-ad34-496e-8443-8b0e156d4bd8.ris"
+      ],
+      "source_keys": [
+        "10.1080/10589759.2025.2612257"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000019",
+      "entry_type": "article",
+      "title": "Transient Arcing Characteristics of the Pantograph–Catenary System in Electrical Sectioning Overlaps",
+      "authors": [
+        "Pan, L.",
+        "Wang, X.",
+        "Yuan, Y.",
+        "Xing, T.",
+        "Chen, L."
+      ],
+      "year": 2026,
+      "journal": "Infrastructures",
+      "doi": "10.3390/infrastructures11010017",
+      "abstract": "Transient arcing often occurs as an electric locomotive traverses an electrical sectioning overlap (ESO), deteriorating current collection stability and reducing the durability of the pantograph–catenary (PC) system. In this study, the formation mechanism and electrical evolution characteristics of transient arcing in the ESO region are investigated through theoretical analysis and numerical simulations. First, based on the dynamic motion of the locomotive passing through the ESO, the transient arcing mechanism of the ESO is clarified, and the plasma characteristics of the arc are described. Then, the electromagnetic, airflow, and thermal field interactions within the PC contact gap during arc ignition are analyzed. A Multiphysics coupled PC arc model is developed, incorporating aerodynamic, electromagnetic, and heat transfer effects. Subsequently, finite element meshing and boundary conditions are applied to simulate the transient evolution of the ESO arc. Finally, the transient arcing characteristics of the ESO are analyzed. The results indicate that the current density is highly concentrated at the initial arcing stage and gradually forms an axially symmetric conductive channel (approximately 107 A/m2), which shifts upward as the contact gap increases. Moreover, due to the geometric discontinuity of the ESO, a strong localized electric field develops near the wire edge, leading to arc root migration and reignition. © 2026 by the authors.",
+      "keywords": [],
+      "normalized_title": "transient arcing characteristics of the pantograph catenary system in electrical sectioning overlaps",
+      "raw_bibtex": "@ARTICLE{10.3390/infrastructures11010017,\n\tauthor = {Pan, L. and Wang, X. and Yuan, Y. and Xing, T. and Chen, L.},\n\ttitle = {Transient Arcing Characteristics of the Pantograph–Catenary System in Electrical Sectioning Overlaps},\n\tjournal = {Infrastructures},\n\tyear = {2026},\n\tabstract = {Transient arcing often occurs as an electric locomotive traverses an electrical sectioning overlap (ESO), deteriorating current collection stability and reducing the durability of the pantograph–catenary (PC) system. In this study, the formation mechanism and electrical evolution characteristics of transient arcing in the ESO region are investigated through theoretical analysis and numerical simulations. First, based on the dynamic motion of the locomotive passing through the ESO, the transient arcing mechanism of the ESO is clarified, and the plasma characteristics of the arc are described. Then, the electromagnetic, airflow, and thermal field interactions within the PC contact gap during arc ignition are analyzed. A Multiphysics coupled PC arc model is developed, incorporating aerodynamic, electromagnetic, and heat transfer effects. Subsequently, finite element meshing and boundary conditions are applied to simulate the transient evolution of the ESO arc. Finally, the transient arcing characteristics of the ESO are analyzed. The results indicate that the current density is highly concentrated at the initial arcing stage and gradually forms an axially symmetric conductive channel (approximately 107 A/m2), which shifts upward as the contact gap increases. Moreover, due to the geometric discontinuity of the ESO, a strong localized electric field develops near the wire edge, leading to arc root migration and reignition. © 2026 by the authors.},\n\tdoi = {10.3390/infrastructures11010017},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105028528381&doi=10.3390%2Finfrastructures11010017&partnerID=40&md5=28cf08a8afe7209f2b974e8d4cd3bb79},\n\tvolume = {11},\n\tnumber = {1},\n\tnote = {Export Date: 30 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 30-2026_f99adb74-ad34-496e-8443-8b0e156d4bd8.ris"
+      ],
+      "source_keys": [
+        "10.3390/infrastructures11010017"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000020",
+      "entry_type": "article",
+      "title": "Experimental research on the non-uniform wear of the carbon strip of the metro pantograph",
+      "authors": [
+        "Luo, X.",
+        "Cai, C.",
+        "Yang, H.",
+        "Mei, G.",
+        "Gao, C.",
+        "Liu, W.",
+        "Yang, D."
+      ],
+      "year": 2023,
+      "journal": "Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology",
+      "doi": "10.1177/13506501231193068",
+      "abstract": "The present study simulated the actual contact conditions between the catenary and pantograph of a metro line using high-speed ring block current that carried friction and wear testers, from which the uneven wear of the pantograph carbon strip under different working conditions was studied. The results show that the arc power, friction coefficient, and wear amount will change correspondingly with increasing current and normal load. Additionally, all carbon strips showed non-uniform wear after the test, and the edge erosion and wear depth of the carbon strip perpendicular to the moving direction were higher than those in the middle part. The ablation of the back end of the carbon strip running with the catenary was higher than that of the front end. © IMechE 2023.",
+      "keywords": [],
+      "normalized_title": "experimental research on the non uniform wear of the carbon strip of the metro pantograph",
+      "raw_bibtex": "@ARTICLE{10.1177/13506501231193068,\n\tauthor = {Luo, X. and Cai, C. and Yang, H. and Mei, G. and Gao, C. and Liu, W. and Yang, D.},\n\ttitle = {Experimental research on the non-uniform wear of the carbon strip of the metro pantograph},\n\tjournal = {Proceedings of the Institution of Mechanical Engineers, Part J: Journal of Engineering Tribology},\n\tyear = {2023},\n\tabstract = {The present study simulated the actual contact conditions between the catenary and pantograph of a metro line using high-speed ring block current that carried friction and wear testers, from which the uneven wear of the pantograph carbon strip under different working conditions was studied. The results show that the arc power, friction coefficient, and wear amount will change correspondingly with increasing current and normal load. Additionally, all carbon strips showed non-uniform wear after the test, and the edge erosion and wear depth of the carbon strip perpendicular to the moving direction were higher than those in the middle part. The ablation of the back end of the carbon strip running with the catenary was higher than that of the front end. © IMechE 2023.},\n\tdoi = {10.1177/13506501231193068},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85167348392&doi=10.1177%2F13506501231193068&partnerID=40&md5=783b9f8c84e95ca972dc429c645bf228},\n\tvolume = {237},\n\tnumber = {10},\n\tpages = {1943-1952},\n\tnote = {Export Date: 30 March 2026; Cited By: 6 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 30-2026_f99adb74-ad34-496e-8443-8b0e156d4bd8.ris"
+      ],
+      "source_keys": [
+        "10.1177/13506501231193068"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

@@ -1,0 +1,295 @@
+{
+  "id": "cb22d359186d",
+  "kind": "screening",
+  "status": "succeeded",
+  "cancel_requested": false,
+  "title": "new-screening-run",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 2,
+  "progress_total": 2,
+  "progress_message": "Task completed",
+  "created_at": "2026-03-25T12:22:45.778866+08:00",
+  "updated_at": "2026-03-25T12:23:28.218720+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "66bfd2598de0",
+    "project_topic": "生态翻译学",
+    "model_provider": "deepseek",
+    "parent_task_id": null,
+    "input_dataset_ids": [],
+    "request_payload": {
+      "title": "new-screening-run",
+      "topic": "生态翻译学",
+      "inclusion": [
+        "核心理论必须是以胡庚申为代表的“生态翻译学”（Eco-translatology）。"
+      ],
+      "exclusion": [
+        "纯生物学、自然生态学或环境科学文献（排除检索词带来的跨学科噪音）。",
+        "仅使用传统翻译理论（如功能目的论、奈达的对等理论），未涉及或未对比生态翻译学视角的文献。",
+        "缺乏实质性案例分析的空泛议论（视你的论文类型而定，如果你的论文偏理论则删去此条）。"
+      ],
+      "provider": "deepseek",
+      "model_name": "deepseek-chat",
+      "api_base_url": "https://api.deepseek.com/v1",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.0,
+      "max_tokens": 1536,
+      "min_request_interval_seconds": 2.0,
+      "batch_size": 10,
+      "target_include_count": 30,
+      "stop_when_target_reached": false,
+      "allow_uncertain": true,
+      "retry_times": 6,
+      "request_timeout_seconds": 240,
+      "encoding": "auto",
+      "project_id": "66bfd2598de0",
+      "parent_task_id": null,
+      "source_dataset_ids": []
+    },
+    "model_secret_id": "413fbdf9a82a457c",
+    "uploaded_input_paths": [
+      "tasks/cb22d359186d/uploads/savedrecs (4).ris"
+    ]
+  },
+  "summary": {
+    "run_id": "run_20260325_122246",
+    "input_files_count": 1,
+    "raw_entries_count": 15,
+    "deduped_entries_count": 15,
+    "processed_count": 15,
+    "included_count": 8,
+    "excluded_count": 3,
+    "uncertain_count": 4,
+    "unused_count": 0,
+    "batch_count": 2,
+    "api_call_count": 2,
+    "stop_reason": "all_records_processed",
+    "started_at": "2026-03-25T12:22:46.228819+08:00",
+    "finished_at": "2026-03-25T12:23:28.207171+08:00"
+  },
+  "error": null,
+  "artifacts": {
+    "included_report": {
+      "path": "tasks/cb22d359186d/screening_run/screening_output/included_report.md",
+      "filename": "included_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 3331
+    },
+    "excluded_report": {
+      "path": "tasks/cb22d359186d/screening_run/screening_output/excluded_report.md",
+      "filename": "excluded_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 1366
+    },
+    "uncertain_report": {
+      "path": "tasks/cb22d359186d/screening_run/screening_output/uncertain_report.md",
+      "filename": "uncertain_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 1705
+    },
+    "included_ris": {
+      "path": "tasks/cb22d359186d/screening_run/screening_output/included.ris",
+      "filename": "included.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 14309
+    },
+    "unused_ris": {
+      "path": "tasks/cb22d359186d/screening_run/screening_output/unused_remaining.ris",
+      "filename": "unused_remaining.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 0
+    },
+    "run_summary": {
+      "path": "tasks/cb22d359186d/screening_run/screening_output/run_summary.json",
+      "filename": "run_summary.json",
+      "content_type": "application/json",
+      "size_bytes": 442
+    },
+    "screening_decisions": {
+      "path": "tasks/cb22d359186d/screening_run/screening_output/screening_decisions.json",
+      "filename": "screening_decisions.json",
+      "content_type": "application/json",
+      "size_bytes": 7406
+    }
+  },
+  "run_root": "tasks/cb22d359186d/screening_run",
+  "output_dir": "tasks/cb22d359186d/screening_run/screening_output",
+  "markdown_preview": null,
+  "records": [
+    {
+      "paper_id": "paper_000001",
+      "title": "Translation as a form of language activism: an ecolinguistic perspective",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "摘要和关键词明确提及生态翻译学（Eco-translatology）作为核心理论框架之一，与筛选主题直接相关。",
+      "year": 2026,
+      "journal": "LANGUAGE SCIENCES",
+      "doi": "10.1016/j.langsci.2025.101770",
+      "abstract": "This conceptual review emerges from a recognition that ecolinguistics and translation studies are both concerned with language's role in shaping human and environmental future yet remain insufficiently theorized in their interconnection. The study proposes an integrative framework that positions translation as a form of ecolinguistic activism, mapped onto two distinct paradigms: eco-translation, which emphasizes discourse-level ecological awareness, and eco-translatology, which focuses on systemic adaptation within ecological contexts. The first section outlines the ecological turn in linguistic theory and its implications for understanding language as a site of activism. The analysis then turns to translation, examining its potential to support ecological values. Afterwards, case studies in endangered language revitalization and digital translation activism illustrate how translators engage with ecological concerns through terminology development, orthographic adaptation, and collaborative practice. The final section considers the ethical tensions posed by AI-mediated translation technologies and reflects on how ecological principles might inform future approaches to translation. Rather than offering prescriptive solutions, further inquiry is invited into the role of translation in advancing linguistic diversity and ecological awareness. (c) 2025 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies."
+    },
+    {
+      "paper_id": "paper_000002",
+      "title": "EMPIRICAL STUDY OF ECO-TRANSLATOLOGY FOR SCENIC SPOT IN CHINA BASED ON COGNITIVE SCHEMA THEORY - A CASE STUDY OF MOUNT SONG WORLD GEO-PARK",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确基于生态翻译学理论进行案例分析，符合纳入标准。",
+      "year": 2019,
+      "journal": "JOURNAL OF ENVIRONMENTAL PROTECTION AND ECOLOGY",
+      "doi": null,
+      "abstract": "Based on Image Schema Theory and Eco-translatology theory, this paper cites English introductions of Mount Song World Geo-park as a case study to illustrate the translation process in which the translator activates the schema of source language, constructs the contrastive schema between source language and target language and makes adaptive selection of the target language in terms of linguistic, cultural and communicative dimensions. Basic principles and translation strategies for scenic spot translation are proposed so as to broaden the comprehensive study of eco-translatology and cognitive linguistics, providing constructive reference for other relevant studies."
+    },
+    {
+      "paper_id": "paper_000003",
+      "title": "Eco-Translatology: Towards an Eco-paradigm of Translation Studies",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "标题直接涉及生态翻译学，但摘要和关键词缺失，无法确认具体内容是否以胡庚申理论为核心。",
+      "year": 2021,
+      "journal": "PERSPECTIVES-STUDIES IN TRANSLATION THEORY AND PRACTICE",
+      "doi": "10.1080/0907676x.2021.1985667",
+      "abstract": null
+    },
+    {
+      "paper_id": "paper_000004",
+      "title": "Shujaa Okonkwo analysis from the perspective of Eco-Translatology",
+      "decision": "include",
+      "confidence": 0.92,
+      "reason": "摘要明确使用生态翻译学框架分析文学作品翻译，作者包括胡庚申，符合核心理论要求。",
+      "year": 2025,
+      "journal": "SOUTHERN AFRICAN LINGUISTICS AND APPLIED LANGUAGE STUDIES",
+      "doi": "10.2989/16073614.2024.2430203",
+      "abstract": "The relationship between translation, literature, and culture is intricate and solid, as they mutually influence and shape one another. However, translating cultural perspectives often presents challenges due to linguistic and cultural differences. This study investigates the translation of cultural elements from the English novel Things Fall Apart into the Swahili version, Shujaa Okonkwo, using the framework of Eco-Translatology. It examines how a holistic, multi-dimensional translation strategy can address these challenges, focusing on linguistic, cultural, and communicative aspects. The study emphasizes the importance of ecological balance in translation, considering the translator's selection and adaptations and the translational environment. The findings offer practical insights for English-Swahili translators and propose strategies for preserving cultural perspectives, thereby contributing to the advancement of Eco-Translatology and cross-cultural literary translation."
+    },
+    {
+      "paper_id": "paper_000005",
+      "title": "Construction of the Teaching System of Translation Course for Foreign Language Majors in Colleges and Universities Based on Eco-translatology",
+      "decision": "uncertain",
+      "confidence": 0.45,
+      "reason": "标题提及生态翻译学，但摘要缺失，无法确认是否以胡庚申理论为核心或是否有实质性内容。",
+      "year": 2020,
+      "journal": "BASIC & CLINICAL PHARMACOLOGY & TOXICOLOGY",
+      "doi": null,
+      "abstract": null
+    },
+    {
+      "paper_id": "paper_000006",
+      "title": "Analysis of Achebe's Things Fall Apart From Eco-Translatology Perspective",
+      "decision": "include",
+      "confidence": 0.93,
+      "reason": "摘要和关键词明确使用生态翻译学框架分析文学翻译，符合研究主题和纳入标准。",
+      "year": 2023,
+      "journal": "SAGE OPEN",
+      "doi": "10.1177/21582440231211981",
+      "abstract": "With literature serving as a means to convey cultural norms and values across generations, the relationship between culture and literature is intricate and expansive; therefore, translation plays a crucial role in broadening cultural understanding, especially in a globalized world. However, the translation process faces challenges in preserving cultural perspectives due to inherent cultural and linguistic disparities. This paper focuses on the challenges faced in translating Achebe's Things Fall Apart into Chinese and emphasizes the need for a holistic framework-Eco-Translatology, which considers the ecological perspective, the translator's selection and adaptation, and the textual environment, to address the challenges encountered in translation. By adopting a multi-dimensional perspective incorporating linguistic, communicative, cultural, esthetic, and rhetorical dimensions, the study explores practical ways to bridge cultural, linguistic, communicative, and esthetic gaps, offering fresh insights and perspectives for translators working on English-Chinese translations, providing a more comprehensive understanding of the translational challenges and proposing practical solutions in the translation of cultural elements."
+    },
+    {
+      "paper_id": "paper_000007",
+      "title": "A New Approach to the Interpretation of Geotourism Texts",
+      "decision": "include",
+      "confidence": 0.94,
+      "reason": "摘要和关键词明确基于胡庚申的生态翻译学理论构建模型，符合核心理论要求。",
+      "year": 2024,
+      "journal": "GEOHERITAGE",
+      "doi": "10.1007/s12371-024-01040-x",
+      "abstract": "The importance given to geotourism reflects public awareness of the urgency of environmental conservation that includes geomorphological, ecological, and cultural knowledge. The recent growth of geotourism has increased the demand for high-quality geotourism interpretation to ensure accurate data communication. Nonetheless, the lack of systematic theoretical guidance has meant interpreters frequently resort to haphazard and ineffective interpretation strategies. Therefore, to enhance interpretation, (Geoheritage 14:1-24, 2022b, Geoheritage 14:1-20, 2022c and J Sustain Tourism 2024) established the Semantic, Style and Cultural (SSC) equivalence Model and the taxonomy of geotourism interpretation strategies (hereafter, Taxonomy) based on a corpus-based method and the theoretical framework of Hu's (Perspectives 11:283-291, 2003) Eco-Translatology. Since this research is so recent it remains untested in the field. This paper aims to evaluate the effectiveness of these models using new geotourism data concerning Abiotic, Biotic and Cultural elements from three Chinese UNESCO Global Geoparks (UGGps)-Fangshan, Xiangxi, and Mount Kunlun, the corpus-based method and Eco-Translatology. Quantitative and qualitative analysis findings support the validity of both the SSC Model and the Taxonomy. Firstly, we found that most of the geotourism interpretation strategies employed to interpret geodata were derived from the Taxonomy in alignment with principles of Eco-Translatology to attain the SSC equivalence. Secondly, with the new data, we were able to find usage patterns that were previously missing in Li et al.'s (Geoheritage 14:1-24, 2022b; J Sustain Tourism 2024) Taxonomy. Thirdly, we identified a completely new strategy used in interpreting geological processes. Finally, this paper further illustrated how potentially ineffective geotourism interpretations can be optimised by effective interpretation strategies from Li et al.'s Taxonomy (Geoheritage 14:1-24, 2022b; J Sustain Tourism 2024 to achieve SSC equivalence."
+    },
+    {
+      "paper_id": "paper_000008",
+      "title": "Benchmarking the Quality of Chinese to English Geotourism Interpretation: the SSC Model Based on Eco-translatology",
+      "decision": "include",
+      "confidence": 0.94,
+      "reason": "摘要和关键词明确将生态翻译学理论应用于SSC模型构建，符合纳入标准。",
+      "year": 2022,
+      "journal": "GEOHERITAGE",
+      "doi": "10.1007/s12371-022-00725-5",
+      "abstract": "The global growth of geotourism has increased the demand and quality for geotourism interpretation. However, in its pioneer stage, geotourism interpretation has much ineffective interpretation, which hinders the informative purpose of geotourism. Moreover, geotourism interpretation lacks a systematic quality evaluation model. Such a model is essential to the future of reliable interpretation and the minimising of ineffective interpretation. This paper exams whether the currently proposed SSC model (Semantic, Style and Cultural Equivalence) for translation benchmarking purposes can effectively ensure the quality of geotourism interpretation. The SSC model is built on the three geotourism categories (ABC-Abiotic, Biotic and Culture), the unique principles of geotourism interpretation (which are determined by its objectives) and the theory of Eco-translatology. To enhance corpus research, the digital auxiliary tools, Tmxmall (2014) and Sketch Engine (2003), were used. The detailed SSC model was shaped through corpus-based contrastive analysis. The model contains a total of eight criteria that the interpreter should follow, including four for semantic equivalence: linguistic accuracy, scientific accuracy of terminology, reader acceptability of terminology, and semantic completeness of geo-information; and three for style equivalence: logical syntax, concise syntax and appropriate voice syntax. The final criterion is an accurate connotation in cultural elements. The main research findings were that the SSC model can minimise ineffective interpretation of Chinese to English geodata and guarantee accurate transmission of data for geotourism in Chinese UNESCO Global Geoparks."
+    },
+    {
+      "paper_id": "paper_000009",
+      "title": "Effective Chinese-to-English biotic interpretation in ecotourism destinations: a corpus-based interdisciplinary study",
+      "decision": "include",
+      "confidence": 0.93,
+      "reason": "摘要和关键词明确基于胡庚申的生态翻译学理论发展策略分类，符合核心理论要求。",
+      "year": 2025,
+      "journal": "JOURNAL OF SUSTAINABLE TOURISM",
+      "doi": "10.1080/09669582.2024.2322129",
+      "abstract": "Ecotourism interpretation pertains to vital public education regarding environmental conservation. At present, there is no professional standard or system for interpretation in this domain, which potentially hinders the goals of geoheritage, and species preservation. To address this shortcoming, two categories of ecotourism (flora and fauna), are selected and broken down into the three main interpretation issues: common biotic names, local Chinese biotic terms, and ecological processes. Effective Chinese-to-English interpretation is identified through analysis of interpreted texts and their originals, on the basis of which a taxonomy of reliable interpretation strategies is proposed. The main difficulties confronted were scientific terminology, sentence structure, and culture. This analysis presented adopts a corpus-based approach that systematically investigates the interpretation language used in geoparks, providing representative and comprehensive views into ecotourism interpretation. We found that, generally, literal interpretation can be used. However, other strategies are essential for achieving effective interpretations, particularly regarding textual representations of flora and fauna processes. Informed by Hu's Eco-Translatology, a taxonomy of effective strategies is developed and recommended for use by ecotourism translators and interpreters."
+    },
+    {
+      "paper_id": "paper_000010",
+      "title": "Translation strategy of legal terms with Chinese characteristics in Civil Code of the People's Republic of China based on Skopos theory",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "摘要提及生态翻译学但作为次要理论，主要基于目的论，是否以胡庚申理论为核心不明确。",
+      "year": 2022,
+      "journal": "PLOS ONE",
+      "doi": "10.1371/journal.pone.0273944",
+      "abstract": "The Civil Code of the People's Republic of China, known as the \"Encyclopedia of social life\", has come into effect since January 1, 2021. It is the first law named after the \"Code\" and occupies a fundamental position in the China's legal system. Therefore, translation of legal terms is vital in making target readers familiar with the China's civil system and contributes to cultural communication and academic exchange. Previous research on translations of legal terms provides various translation principles and strategies. However, culture connotation in Chinese is usually implicit or lacks counterparts, leading to the difficulties in the equivalent translation of legal terms with Chinese characteristics. Therefore, this paper concentrates on the selection of legal term translation principles from the perspective of the Skopos theory and a Chinese translation theory named Eco-translatology, to explore the application and effect of selected principles in the translation of legal terms with Chinese characteristics. Guided by the Skopos theory and Eco-translatology, this paper collects 42 legal terms with Chinese characteristics from the The Civil Code of the People's Republic of China and analyzes the application of 5 translation principles of accuracy, readability, traceability, conventionality, and unification. Through analysis, the legal terms are classified into newly-coined and inherited terms and rules of strategy application are therefore summarized. It is expected that this paper would provide systematic principles for the translation of legal terms with Chinese characteristics."
+    },
+    {
+      "paper_id": "paper_000011",
+      "title": "Developing Culturally Effective Strategies for Chinese to English Geotourism Translation by Corpus-Based Interdisciplinary Translation Analysis",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "摘要明确提到使用胡庚申的生态翻译学理论，关键词包含Eco-translatology，符合纳入标准。",
+      "year": 2022,
+      "journal": "GEOHERITAGE",
+      "doi": "10.1007/s12371-021-00616-1",
+      "abstract": "As a new field of translation with its own special genre, geotourism has not yet been firmly established because geotourism translations are currently not of a sufficient professional standard. This situation does not provide geotourists with the genre's full target of enjoyment, learning and engagement through science popularisation tourism activities. In order to better meet these three definitive purposes in geotourism, this study analyses the three basic categories of geotourism-geological features (GFs), geological processes (GPs) and cultural elements (CEs)-to determine effective strategies of geotourism translation from Chinese into English. Challenges in translation include scientific jargon, language style and cultural gaps. In this article, the advantages of Hu's Eco-translatology theory are explained and used for minimising translation problems; and the corpus linguistics method, superior for quantitative and qualitative analysis, is utilised. As well, digital auxiliary tools Tmxmall (2014) and Sketch Engine (2003) were employed to facilitate corpus research. Through analysis, effective strategies in each of the key geotourism categories, GFs, GPs and CEs, were identified, shaped and recommended for future translators' attention. In the results, literal translation, transliteration and free translation, addition and use of official UNESCO names were recommended to render GFs. Division and shift translation, literal translation and shift and division were recommended for GPs. Literal translation, transliteration and free translation and addition were recommended for CEs. Since this is an initial investigation in the genre of geotourism, this study has attempted to build a model platform for future study and wider research in geotourism translation and translation pedagogy for the improvement of geotourism translation quality."
+    },
+    {
+      "paper_id": "paper_000012",
+      "title": "Eco-translation: translation and ecology in the age of the Anthropocene",
+      "decision": "uncertain",
+      "confidence": 0.45,
+      "reason": "标题涉及生态翻译，但摘要和关键词缺失，无法确认是否以胡庚申的生态翻译学为核心理论。",
+      "year": 2019,
+      "journal": "TRANSLATOR",
+      "doi": "10.1080/13556509.2018.1448173",
+      "abstract": null
+    },
+    {
+      "paper_id": "paper_000013",
+      "title": "Insights into a new paradigm in translation Eco-translation and its reflections",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "摘要显示研究采用生态批评方法，关键词为eco-translation而非Eco-translatology，未涉及胡庚申的生态翻译学理论。",
+      "year": 2020,
+      "journal": "BABEL-REVUE INTERNATIONALE DE LA TRADUCTION-INTERNATIONAL JOURNAL OF TRANSLATION",
+      "doi": "10.1075/babel.00136.aks",
+      "abstract": "The purpose of this paper is to draw attention to the reflection and recreation of the physical landscape in literary texts and in their translations; to explore in what ways nature is represented and, secondly, to discuss aspects of this process in the light of the translational norms proposed by Toury. The focus is the idea that language and culture, the core of literature, are to be transferred to other linguistic and cultural mediums during translation, and constitute the ecological environment of the text. This undertaking assigns to the translator the task of selecting, adapting and recreating this material in the foreign environment. An ecocritical approach will be adopted to explore how and how far this task is materialized by studying a Turkish author Yasar Kemal's novel Ortadirek translated as The Wind from the Plain. Yasar Kemal is regarded as the most ecologically-minded author of Turkish literature and his novels portray nature as the mental landscapes of man, a force under which the constituents of the text are recreated at every linguistic and culture-bound effort of the author. Hence, the main endeavour of this study will be to bring to the surface, with an eco-critical approach, the translational preferences of the translator of Ortadirek and their significance in the recreation of Kemal's ecological vision in the translation."
+    },
+    {
+      "paper_id": "paper_000014",
+      "title": "How do you say kelen-kelen in Italian? Migration, landscape and untranslatable food",
+      "decision": "exclude",
+      "confidence": 0.75,
+      "reason": "关键词包含eco-translation，但摘要显示研究聚焦移民、食物和翻译，未提及生态翻译学理论。",
+      "year": 2020,
+      "journal": "TRANSLATION STUDIES",
+      "doi": "10.1080/14781700.2019.1662837",
+      "abstract": "This article discusses translation and migrant (in)visibility in Italy in the context of the so-called migrant and refugee crisis, using food as a key element in the redefinition of the asylum seekers' cultural identities. The article builds on the debate on linguistic performance and landscape in translation studies and sociolinguistics, relating the first results of a research project being carried out in Perugia (Italy) in collaboration with the NGO Tamat. If migrants are to gain agency and visibility, this can only happen in relation to the host landscape, the material and linguistic resources available in that landscape, and the possibilities for acting successfully as translators. Food is a key element of the discussion on migration and integration: by studying interactions in an agriculture class for asylum seekers, this article investigates how a discussion on food opens spaces for a productive exploration of difference that involves social, environmental and cultural elements."
+    },
+    {
+      "paper_id": "paper_000015",
+      "title": "Translating the wood-fired oven from an antispeciesist perspective",
+      "decision": "exclude",
+      "confidence": 0.78,
+      "reason": "关键词包含eco-translation，但摘要显示研究主要关注素食主义和文化翻译，未涉及生态翻译学核心理论。",
+      "year": 2026,
+      "journal": "BABEL-REVUE INTERNATIONALE DE LA TRADUCTION-INTERNATIONAL JOURNAL OF TRANSLATION",
+      "doi": "10.1075/babel.25050.sut",
+      "abstract": "This study examines the intersection of food, translation studies, and antispeciesism by analyzing how traditional Turkish dishes are transformed into vegan options at Vegan Masa, Turkey's first fully vegan wood-fired oven restaurant. Based on the idea that food serves as a cultural and communicative system, this research views the reproduction of wood-fired dishes like pide and lahmacun with vegan ingredients as acts of cultural and superasemiospheric translation within the framework of eco-translation. By analyzing menu changes and ingredients, with traditional versions seen as source texts and vegan versions as target texts, this study highlights how Turkish culinary traditions are reinterpreted through an antispeciesist lens that questions interspecies hierarchies. Content analysis of menu modifications and thematic analysis of an interview with Vegan Masa's co-founder reveal the subtle cultural reinterpretations involved in veganizing traditional Turkish cuisine. The results emphasize the dual role of menus as expressions of collective culinary identity and as tools for broader ecological and interspecies discussions. This research adds to the growing interest in post-anthropocentric translation practices by providing insights into how antispeciesist dietary choices are reshaping cultural narratives in Turkey, as shown through Vegan Masa's example of transforming ways of thinking. Cette & eacute;tude explore l'intersection entre la nourriture, la traductologie et l'antisp & eacute;cisme en analysant la mani & egrave;re dont Vegan Masa, premier restaurant turc enti & egrave;rement v & eacute;gane avec un four & agrave; bois, transforme les plat traditionnels turc en alternatives v & eacute;ganes. En partant du postulat que la nourriture fonctionne comme un syst & egrave;me culturel et de communication, cet article part du postulat que la reproduction de plats cuits au four & agrave; bois, tels que le pide et le lahmacun, avec des ingr & eacute;dients v & eacute;ganes peut & ecirc;tre vu comme des actes de traduction culturelle et m & ecirc;me superasemiospherique selon la terminologie de l'& eacute;co-traduction. En examinant la transformation des menus et des ingr & eacute;dients (les versions traditionnelles fonctionnant comme des textes sources et les r & eacute;& eacute;critures v & eacute;ganes comme des textes cibles), cette & eacute;tude met en lumi & egrave;re la mani & egrave;re dont les pratiques culinaires traditionnelles sont r & eacute;interpr & eacute;t & eacute;es & agrave; travers une perspective antisp & eacute;ciste qui remet en question les hi & eacute;rarchies inter-esp & egrave;ces. L'analyse de contenu des transformations des menus et l'analyse th & eacute;matique d'un entretien avec la cofondatrice de Vegan Masa r & eacute;v & egrave;lent les r & eacute;& eacute;critures culturelles subtiles inh & eacute;rentes & agrave; la v & eacute;ganisation de la cuisine turque traditionnelle. Les r & eacute;sultats soulignent le double r & ocirc;le des menus, & agrave; la fois comme reflets d'une identit & eacute; culinaire collective et comme vecteurs de discours & eacute;cologiques et inter-esp & egrave;ces d'une port & eacute;e plus large. Cette recherche contribue & agrave; l'int & eacute;r & ecirc;t croissant pour les pratiques traductives post-anthropocentriques, offrant des perspectives sur la mani & egrave;re dont les pratiques alimentaires antisp & eacute;cistes transforment les narrations culturelles en modifiant les modes de pens & eacute;e."
+    }
+  ],
+  "project_id": "66bfd2598de0",
+  "project_topic": "生态翻译学",
+  "model_provider": "deepseek",
+  "parent_task_id": null,
+  "input_dataset_ids": [],
+  "output_dataset_ids": [
+    "fdc6349725e0",
+    "e415bbad9caa"
+  ]
+}

@@ -74,6 +74,7 @@ function buildThreadProfile(base: ThreadProfile | null, threadUpdatedAt: string)
         batch_size: 10,
         target_include_count: null,
         stop_when_target_reached: false,
+        min_include_confidence: 0.8,
         allow_uncertain: true,
         retry_times: 6,
         request_timeout_seconds: 240,

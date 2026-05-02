@@ -21,7 +21,7 @@ from literature_screening.core.constants import (
     STOP_REASON_MANUAL,
     STOP_REASON_TARGET_REACHED,
 )
-from literature_screening.core.exceptions import ResponseParseError, SchemaValidationError, TaskCancelledError
+from literature_screening.core.exceptions import ModelRequestError, ResponseParseError, SchemaValidationError, TaskCancelledError
 from literature_screening.core.models import RunConfig, ScreeningDecision
 from literature_screening.reporting.report_generator import write_screening_markdown_report
 from literature_screening.reporting.writers import write_json
@@ -128,12 +128,17 @@ def run_pipeline(
                 client=client,
                 template_path=prompt_template_path,
                 criteria=config.criteria,
+                min_include_confidence=config.screening.min_include_confidence,
+                allow_uncertain=config.screening.allow_uncertain,
                 batch_id=batch.batch_id,
                 batch_papers=batch_papers,
                 retry_times=config.screening.retry_times,
                 output_dir=output_dir,
                 save_raw_response=config.project.save_raw_response,
                 cancel_callback=cancel_callback,
+                progress_callback=progress_callback,
+                progress_current=processed_batches,
+                progress_total=len(batch_records),
             )
             write_json(payload, batch_output_path)
         processed_batches += 1
@@ -149,7 +154,7 @@ def run_pipeline(
         batch_decisions = _payload_to_decisions(payload, batch.batch_id, config)
         decisions.extend(batch_decisions)
         _apply_decisions(record_map, batch_decisions)
-        _write_progress_summary(
+        progress_summary = _write_progress_summary(
             output_dir=output_dir,
             run_id=run_id,
             input_paths=input_paths,
@@ -158,8 +163,22 @@ def run_pipeline(
             record_map=record_map,
             decisions=decisions,
             processed_batches=processed_batches,
+            api_call_count=client.request_count,
             stop_reason="running",
             started_at=now,
+        )
+        _emit_progress(
+            progress_callback,
+            "screening",
+            "Screening batches",
+            processed_batches,
+            len(batch_records),
+            (
+                f"已筛选 {progress_summary['processed_count']}/{progress_summary['deduped_entries_count']} 篇，"
+                f"纳入 {progress_summary['included_count']} 篇，"
+                f"剔除 {progress_summary['excluded_count']} 篇，"
+                f"不确定 {progress_summary['uncertain_count']} 篇"
+            ),
         )
 
         if (
@@ -235,7 +254,7 @@ def run_pipeline(
         "uncertain_count": _count_status(record_map.values(), STATUS_UNCERTAIN),
         "unused_count": _count_status(record_map.values(), STATUS_UNUSED),
         "batch_count": processed_batches,
-        "api_call_count": processed_batches,
+        "api_call_count": client.request_count,
         "stop_reason": stop_reason,
         "started_at": now.isoformat(),
         "finished_at": finished_at.isoformat(),
@@ -291,10 +310,15 @@ def _request_validated_batch_payload(
     output_dir: Path,
     save_raw_response: bool,
     cancel_callback: CancelCallback | None = None,
+    allow_fast_split: bool = False,
+    progress_callback: ProgressCallback | None = None,
+    progress_current: int | None = None,
+    progress_total: int | None = None,
 ) -> dict:
     last_error: Exception | None = None
+    total_attempts = retry_times + 1
 
-    for attempt in range(retry_times + 1):
+    for attempt in range(total_attempts):
         _ensure_not_cancelled(cancel_callback)
         raw_text = ""
         try:
@@ -319,8 +343,26 @@ def _request_validated_batch_payload(
             if save_raw_response and raw_text:
                 failed_raw_path = output_dir / "batches" / f"{batch_id}_raw_response_failed_last.txt"
                 failed_raw_path.write_text(raw_text, encoding="utf-8")
+            if allow_fast_split and _should_split_without_retry(exc, raw_text, client):
+                _emit_progress(
+                    progress_callback,
+                    "screening",
+                    "Screening batches",
+                    progress_current,
+                    progress_total,
+                    f"{batch_id} 返回内容不完整，正在拆分为更小批次",
+                )
+                raise
             if attempt < retry_times:
-                delay_seconds = client.extract_retry_after_seconds(exc) or (2 ** attempt)
+                delay_seconds = _retry_delay_seconds(client, exc, attempt)
+                _emit_progress(
+                    progress_callback,
+                    "screening",
+                    "Screening batches",
+                    progress_current,
+                    progress_total,
+                    f"{batch_id} 第 {attempt + 1}/{total_attempts} 次请求未通过校验，{delay_seconds} 秒后重试",
+                )
                 _ensure_not_cancelled(cancel_callback)
                 time.sleep(delay_seconds)
 
@@ -333,12 +375,17 @@ def _request_batch_payload_with_split_fallback(
     client: ChatCompletionClient,
     template_path: Path,
     criteria,
+    min_include_confidence: float,
+    allow_uncertain: bool,
     batch_id: str,
     batch_papers: list,
     retry_times: int,
     output_dir: Path,
     save_raw_response: bool,
     cancel_callback: CancelCallback | None = None,
+    progress_callback: ProgressCallback | None = None,
+    progress_current: int | None = None,
+    progress_total: int | None = None,
 ) -> dict:
     _ensure_not_cancelled(cancel_callback)
     prompt = build_screening_prompt(
@@ -346,6 +393,8 @@ def _request_batch_payload_with_split_fallback(
         batch_id=batch_id,
         criteria=criteria,
         papers=batch_papers,
+        min_include_confidence=min_include_confidence,
+        allow_uncertain=allow_uncertain,
     )
     expected_paper_ids = [paper.paper_id for paper in batch_papers]
 
@@ -359,36 +408,60 @@ def _request_batch_payload_with_split_fallback(
             output_dir=output_dir,
             save_raw_response=save_raw_response,
             cancel_callback=cancel_callback,
+            allow_fast_split=len(batch_papers) > 1,
+            progress_callback=progress_callback,
+            progress_current=progress_current,
+            progress_total=progress_total,
         )
-    except (ResponseParseError, SchemaValidationError):
+    except (ResponseParseError, SchemaValidationError, ModelRequestError) as exc:
+        if isinstance(exc, ModelRequestError) and not _should_split_without_retry(exc, "", client):
+            raise
         if len(batch_papers) <= 1:
             raise
 
     midpoint = len(batch_papers) // 2
     left_papers = batch_papers[:midpoint]
     right_papers = batch_papers[midpoint:]
+    _emit_progress(
+        progress_callback,
+        "screening",
+        "Screening batches",
+        progress_current,
+        progress_total,
+        f"{batch_id} 拆分为 {len(left_papers)} + {len(right_papers)} 篇继续筛选",
+    )
 
     left_payload = _request_batch_payload_with_split_fallback(
         client=client,
         template_path=template_path,
         criteria=criteria,
+        min_include_confidence=min_include_confidence,
+        allow_uncertain=allow_uncertain,
         batch_id=f"{batch_id}_part1",
         batch_papers=left_papers,
         retry_times=retry_times,
         output_dir=output_dir,
         save_raw_response=save_raw_response,
         cancel_callback=cancel_callback,
+        progress_callback=progress_callback,
+        progress_current=progress_current,
+        progress_total=progress_total,
     )
     right_payload = _request_batch_payload_with_split_fallback(
         client=client,
         template_path=template_path,
         criteria=criteria,
+        min_include_confidence=min_include_confidence,
+        allow_uncertain=allow_uncertain,
         batch_id=f"{batch_id}_part2",
         batch_papers=right_papers,
         retry_times=retry_times,
         output_dir=output_dir,
         save_raw_response=save_raw_response,
         cancel_callback=cancel_callback,
+        progress_callback=progress_callback,
+        progress_current=progress_current,
+        progress_total=progress_total,
     )
 
     payload = {
@@ -406,6 +479,48 @@ def _request_batch_payload_with_split_fallback(
 def _ensure_not_cancelled(cancel_callback: CancelCallback | None) -> None:
     if cancel_callback and cancel_callback():
         raise TaskCancelledError("Task cancelled by user")
+
+
+def _retry_delay_seconds(client: ChatCompletionClient, error: Exception, attempt: int) -> int:
+    return client.extract_retry_after_seconds(error) or (2 ** attempt)
+
+
+def _should_split_without_retry(error: Exception, raw_text: str, client: ChatCompletionClient) -> bool:
+    finish_reason = getattr(client, "last_finish_reason", None)
+    if isinstance(error, (ResponseParseError, SchemaValidationError)) and finish_reason == "length":
+        return True
+    if isinstance(error, ResponseParseError) and _looks_like_truncated_json(raw_text):
+        return True
+    if isinstance(error, ModelRequestError):
+        text = str(error).lower()
+        return "max_tokens" in text or "token limit" in text
+    return False
+
+
+def _looks_like_truncated_json(raw_text: str) -> bool:
+    text = raw_text.strip()
+    if not text:
+        return False
+
+    depth = 0
+    in_string = False
+    escaped = False
+    for char in text:
+        if in_string:
+            if char == '"' and not escaped:
+                in_string = False
+            escaped = char == "\\" and not escaped
+            continue
+        if char == '"':
+            in_string = True
+            escaped = False
+            continue
+        if char in "{[":
+            depth += 1
+        elif char in "}]":
+            depth -= 1
+
+    return in_string or depth > 0 or text.endswith((",", ":", '"'))
 
 
 def _load_existing_batch_payload(
@@ -435,9 +550,10 @@ def _write_progress_summary(
     record_map: dict[str, object],
     decisions: list[ScreeningDecision],
     processed_batches: int,
+    api_call_count: int,
     stop_reason: str,
     started_at: datetime,
-) -> None:
+) -> dict:
     summary = {
         "run_id": run_id,
         "input_files_count": len(input_paths),
@@ -449,32 +565,47 @@ def _write_progress_summary(
         "uncertain_count": _count_status(record_map.values(), STATUS_UNCERTAIN),
         "unused_count": _count_status(record_map.values(), STATUS_UNUSED) + _count_status(record_map.values(), STATUS_UNPROCESSED),
         "batch_count": processed_batches,
-        "api_call_count": processed_batches,
+        "api_call_count": api_call_count,
         "stop_reason": stop_reason,
         "started_at": started_at.isoformat(),
         "finished_at": datetime.now().astimezone().isoformat(),
     }
     write_json(summary, output_dir / "run_summary.json")
+    return summary
 
 
 def _payload_to_decisions(payload: dict, batch_id: str, config: RunConfig) -> list[ScreeningDecision]:
     timestamp = datetime.now().astimezone()
     decisions = []
+    min_include_confidence = config.screening.min_include_confidence
     for result in payload["results"]:
+        decision_value = result["decision"]
+        reason = result["reason"]
+        confidence = float(result["confidence"])
+        if decision_value == "include" and confidence < min_include_confidence:
+            decision_value = "uncertain" if config.screening.allow_uncertain else "exclude"
+            reason = _append_include_threshold_reason(reason, min_include_confidence, decision_value)
         decisions.append(
             ScreeningDecision(
                 paper_id=result["paper_id"],
                 batch_id=batch_id,
-                decision=result["decision"],
-                reason=result["reason"],
+                decision=decision_value,
+                reason=reason,
                 evidence=result.get("evidence", []),
-                confidence=result["confidence"],
+                confidence=confidence,
                 model_provider=config.model.provider,
                 model_name=config.model.model_name,
                 timestamp=timestamp,
             )
         )
     return decisions
+
+
+def _append_include_threshold_reason(reason: str, min_include_confidence: float, next_decision: str) -> str:
+    threshold_percent = round(min_include_confidence * 100)
+    next_label = "不确定" if next_decision == "uncertain" else "剔除"
+    suffix = f"相关度低于本轮最低纳入阈值 {threshold_percent}%，已转为{next_label}。"
+    return f"{reason.rstrip('。.')}。{suffix}" if reason else suffix
 
 
 def _apply_decisions(record_map: dict[str, object], decisions: list[ScreeningDecision]) -> None:

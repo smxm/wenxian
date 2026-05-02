@@ -2,7 +2,7 @@
 import { computed, h, onMounted, onUnmounted, reactive, ref } from 'vue'
 import { RouterLink, RouterView, useRoute, useRouter } from 'vue-router'
 import { ChevronDown, ChevronUp, Files, LayoutDashboard, Sparkles } from 'lucide-vue-next'
-import { NBadge, NButton, NDropdown, NForm, NFormItem, NInput, NLayout, NLayoutContent, NLayoutSider, NMenu, NModal, NSpace, NText, useMessage } from 'naive-ui'
+import { NButton, NDropdown, NForm, NFormItem, NInput, NLayout, NLayoutContent, NLayoutSider, NMenu, NModal, NSpace, useMessage } from 'naive-ui'
 import { useDraftsStore } from '@/stores/drafts'
 import { useProjectsStore } from '@/stores/projects'
 import { useTasksStore } from '@/stores/tasks'
@@ -56,10 +56,6 @@ const activeKey = computed(() => {
   return '/'
 })
 const activeThreadId = computed(() => String(route.params.projectId ?? ''))
-const screeningDraftRoute = computed(() =>
-  draftsStore.screeningDraft.projectId ? `/threads/${draftsStore.screeningDraft.projectId}/screening/new` : '/screening/new'
-)
-
 const allRecentThreads = computed(() =>
   [...projectsStore.list].sort((left, right) => new Date(right.updated_at).getTime() - new Date(left.updated_at).getTime())
 )
@@ -94,7 +90,7 @@ async function saveThreadEdit() {
 }
 
 async function removeThread(project: { id: string; name: string }) {
-  if (!window.confirm(`确认删除主题“${project.name}”？相关初筛和报告任务也会一起删除。`)) {
+  if (!window.confirm(`确认删除主题“${project.name}”？相关初筛和报告生成任务也会一起删除。`)) {
     return
   }
   await projectsStore.deleteProject(project.id)
@@ -161,11 +157,10 @@ onUnmounted(() => {
               <Sparkles :size="20" />
             </div>
             <div>
-              <div class="brand-kicker">Thread-first Studio</div>
-              <div class="brand-title">主题线程工作台</div>
+              <div class="brand-kicker">Literature Review Studio</div>
+              <div class="brand-title">文献综研工作台</div>
             </div>
           </div>
-          <p class="brand-copy">每个研究主题是一条线程。在线程里持续推进初筛、全文复核和报告生成。</p>
         </div>
 
         <NMenu :value="activeKey" :options="menuOptions" class="nav-menu" />
@@ -209,55 +204,14 @@ onUnmounted(() => {
           </div>
           <div v-else class="empty-copy">还没有主题线程。先输入研究需求生成线程方案，再在线程里发起第一轮初筛。</div>
         </div>
-
-        <div class="status-block panel-surface">
-          <div class="status-title">运行状态</div>
-          <NSpace vertical :size="10">
-            <div class="status-row">
-              <NText depth="3">运行中任务</NText>
-              <NBadge :value="tasksStore.runningTasks.length" color="#2d6a4f" />
-            </div>
-            <div class="status-row">
-              <NText depth="3">已完成报告</NText>
-              <NBadge :value="tasksStore.completedReports.length" color="#8f5b1f" />
-            </div>
-            <div class="status-row">
-              <NText depth="3">未提交草稿</NText>
-              <NBadge :value="draftsStore.hasScreeningDraft ? 1 : 0" color="#6a776c" />
-            </div>
-            <NButton tertiary block @click="tasksStore.refreshList()">刷新任务</NButton>
-            <RouterLink v-if="draftsStore.hasScreeningDraft" :to="screeningDraftRoute" class="status-link">
-              继续编辑未提交的初筛草稿
-            </RouterLink>
-          </NSpace>
-
-          <div v-if="tasksStore.runningTasks.length" class="running-list">
-            <div class="running-title">正在执行</div>
-            <RouterLink
-              v-for="task in tasksStore.runningTasks.slice(0, 4)"
-              :key="task.id"
-              :to="`/tasks/${task.id}`"
-              class="running-item"
-            >
-              <div class="running-item-title">{{ task.title }}</div>
-              <div class="running-item-meta">
-                {{ task.phase_label || task.phase }}
-                <span v-if="task.progress_total"> · {{ task.progress_current || 0 }}/{{ task.progress_total }}</span>
-              </div>
-            </RouterLink>
-          </div>
-        </div>
       </div>
     </NLayoutSider>
 
     <NLayoutContent embedded content-style="padding: 28px;">
       <div class="topbar panel-surface">
         <div>
-          <div class="topbar-eyebrow">Thread-first Studio</div>
-          <div class="topbar-title">围绕主题连续推进初筛、全文复核与报告</div>
-        </div>
-        <div class="topbar-note">
-          先用自然语言创建线程方案，再按“初筛 -> 全文 -> 报告”的顺序推进；线程顶部会一直固定当前主题和筛选标准。
+          <div class="topbar-eyebrow">Literature Review Studio</div>
+          <div class="topbar-title">围绕主题管理初筛、复核、全文获取与报告生成</div>
         </div>
       </div>
 
@@ -314,6 +268,8 @@ onUnmounted(() => {
 
 .sider-scroll {
   height: 100vh;
+  height: 100dvh;
+  min-height: 0;
   overflow-y: auto;
   padding: 22px 16px;
   display: flex;
@@ -324,9 +280,13 @@ onUnmounted(() => {
 
 .brand-block,
 .thread-block,
-.status-block,
 .topbar {
   padding: 20px;
+}
+
+.brand-block,
+.nav-menu {
+  flex: 0 0 auto;
 }
 
 .brand-row {
@@ -360,16 +320,20 @@ onUnmounted(() => {
   color: #1f2520;
 }
 
-.brand-copy,
-.topbar-note {
-  margin: 12px 0 0;
-  color: #5b665d;
-  line-height: 1.6;
-}
-
 .nav-menu {
   border-radius: 24px;
   overflow: hidden;
+}
+
+.nav-menu :deep(.n-menu-item-content) {
+  min-height: 56px;
+}
+
+.thread-block {
+  display: flex;
+  min-height: 0;
+  flex: 0 0 auto;
+  flex-direction: column;
 }
 
 .section-header {
@@ -386,8 +350,7 @@ onUnmounted(() => {
   color: #7b857d;
 }
 
-.status-title,
-.running-title {
+.status-title {
   font-weight: 700;
 }
 
@@ -395,22 +358,12 @@ onUnmounted(() => {
   flex-shrink: 0;
 }
 
-.status-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.status-link {
-  color: #2d6a4f;
-  font-size: 13px;
-}
-
 .thread-list {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  max-height: 420px;
+  max-height: 52vh;
+  min-height: 0;
   overflow-y: auto;
   padding-right: 6px;
   scrollbar-width: thin;
@@ -418,12 +371,11 @@ onUnmounted(() => {
 
 .thread-list.expanded {
   max-height: none;
-  overflow: visible;
+  overflow-y: visible;
   padding-right: 0;
 }
 
-.thread-item,
-.running-item {
+.thread-item {
   display: block;
 }
 
@@ -444,20 +396,17 @@ onUnmounted(() => {
   box-shadow: inset 0 0 0 1px rgba(45, 106, 79, 0.16);
 }
 
-.thread-item + .thread-item,
-.running-item + .running-item {
+.thread-item + .thread-item {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.thread-item-title,
-.running-item-title {
+.thread-item-title {
   font-weight: 600;
   color: #1f2520;
   line-height: 1.45;
 }
 
-.thread-item-copy,
-.running-item-meta {
+.thread-item-copy {
   margin-top: 6px;
   color: #5b665d;
   font-size: 13px;
@@ -477,29 +426,19 @@ onUnmounted(() => {
   margin-bottom: 24px;
 }
 
-.running-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 12px;
-}
-
-.running-item {
-  padding-top: 10px;
-}
-
 @media (max-width: 1024px) {
   .topbar {
     flex-direction: column;
   }
 
   .sider-scroll {
-    height: auto;
-    max-height: 60vh;
+    height: 100vh;
+    height: 100dvh;
+    max-height: none;
   }
 
   .thread-list {
-    max-height: 260px;
+    max-height: 52vh;
   }
 }
 </style>

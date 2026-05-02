@@ -1,0 +1,59 @@
+{
+  "project": {
+    "name": "基于 VisDrone 数据集的极端轻量化目标检测算法",
+    "output_dir": "tasks/276bcf5c1041/screening_run/screening_output",
+    "save_raw_response": true,
+    "save_intermediate_files": true
+  },
+  "input": {
+    "input_files": [
+      "tasks/276bcf5c1041/screening_run/inputs/scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+    ],
+    "encoding": "auto"
+  },
+  "dedup": {
+    "enabled": true,
+    "strict_doi_match": true,
+    "normalized_title_exact_match": true,
+    "fuzzy_title_match": false
+  },
+  "screening": {
+    "batch_size": 10,
+    "target_include_count": 30,
+    "stop_when_target_reached": false,
+    "allow_uncertain": true,
+    "retry_times": 6,
+    "request_timeout_seconds": 240
+  },
+  "criteria": {
+    "topic": "基于 VisDrone 数据集的极端轻量化目标检测算法",
+    "inclusion": [
+      "场景与任务匹配：明确提及无人机视角 (UAV, Drone, Aerial) 和目标检测 (Object Detection)，且最好提及 VisDrone 数据集。",
+      "轻量化意图：摘要中强调了模型轻量化、实时性、边缘设备部署、低算力消耗，或者提到了使用了轻量级网络架构（如 YOLO, MobileNet, GhostNet, 轻量级注意力机制等）。"
+    ],
+    "exclusion": [
+      "任务不符：纯目标跟踪 (Object Tracking)、图像分割、无人机路径规划或纯硬件设计。",
+      "明显不属于轻量化：摘要中明确强调追求极致精度（State-of-the-Art）而忽略计算成本，或者使用了明显的大型重载网络（如未经轻量化处理的大型 Vision Transformer）。"
+    ]
+  },
+  "model": {
+    "provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "api_base_url": "https://api.deepseek.com/v1",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 1536,
+    "min_request_interval_seconds": 2.0
+  },
+  "report": {
+    "export_included_ris": true,
+    "export_excluded_ris": false,
+    "export_unused_ris": true,
+    "export_included_bib": false,
+    "export_excluded_bib": false,
+    "export_unused_bib": false,
+    "included_report_format": "md",
+    "excluded_report_format": "md",
+    "summary_format": "json"
+  }
+}

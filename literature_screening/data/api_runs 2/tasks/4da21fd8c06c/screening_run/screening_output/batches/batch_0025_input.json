@@ -1,0 +1,394 @@
+{
+  "batch_id": "batch_0025",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000241",
+    "paper_000242",
+    "paper_000243",
+    "paper_000244",
+    "paper_000245",
+    "paper_000246",
+    "paper_000247",
+    "paper_000248",
+    "paper_000249",
+    "paper_000250"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000241",
+      "entry_type": "article",
+      "title": "Damage detection technique using ultrasonic guided waves and outlier detection: Application to interface delamination diagnosis of integrated circuit package",
+      "authors": [
+        "Lee, H",
+        "Koo, B",
+        "Chattopadhyay, A",
+        "Neerukatti, RK",
+        "Liu, KC"
+      ],
+      "year": 2021,
+      "journal": "MECHANICAL SYSTEMS AND SIGNAL PROCESSING",
+      "doi": "10.1016/j.ymssp.2021.107884",
+      "abstract": "This paper presents the development of a robust data-driven damage diagnosis technique to accurately detect sealant delamination in an integrated circuit (IC) package. A sealant is used to bond the integrated heat spreader (IHS) to the substrate of IC packages for effective thermal dissipation. Delamination of the sealant causes significant reduction in heat management capability of the package, which leads to degradation of processor performance and component reliability. In this work, non-destructive evaluation (NDE) using ultrasonic guided wave (UGW) is performed to interrogate the integrity of the IC package. The advantage of using UGW is its large area inspection capability and small defect detection sensitivity. Ultrasonic tests using a pitch-catch active sensing method with removable piezoelectric (PZT) tranducers are performed with a wide range of excitation frequencies to classify various delamination scenarios in the IC package. Data preprocessing and Hilbert transform-based feature extraction method are also performed on the collected UGWs to extract dominant UGW features. Pattern analysis using a density-based spatial clustering of applications with noise (DBSCAN) algorithm is conducted on the UGW feature space to classify the damage indicators. These damage indicators (outliers) are then used to identify the IC packages with sealant delamination. The proposed technique is validated by comparing it to dye-and-pry tests, delamination metrics, and detection method using a multivariate Gaussian model. The results demonstrate that the proposed diagnosis technique has the potential to be a part of the industrial quality assurance process for IC packages for its capability to detect manufacturing defects with high accuracy. (c) 2021 Elsevier Ltd. All rights reserved.",
+      "keywords": [
+        "Data-driven damage detection",
+        "Ultrasonic guided wave",
+        "Feature extraction",
+        "Pattern analysis",
+        "Outlier detection",
+        "DEFECTS INSPECTION",
+        "FLIP",
+        "LOCALIZATION",
+        "MODE"
+      ],
+      "normalized_title": "damage detection technique using ultrasonic guided waves and outlier detection application to interface delamination diagnosis of integrated circuit package",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ymssp.2021.107884,\n\tauthor = {Lee, H and Koo, B and Chattopadhyay, A and Neerukatti, RK and Liu, KC},\n\ttitle = {Damage detection technique using ultrasonic guided waves and outlier detection: Application to interface delamination diagnosis of integrated circuit package},\n\tjournal = {MECHANICAL SYSTEMS AND SIGNAL PROCESSING},\n\tyear = {2021},\n\tkeywords = {Data-driven damage detection; Ultrasonic guided wave; Feature extraction; Pattern analysis; Outlier detection; DEFECTS INSPECTION; FLIP; LOCALIZATION; MODE},\n\tabstract = {This paper presents the development of a robust data-driven damage diagnosis technique to accurately detect sealant delamination in an integrated circuit (IC) package. A sealant is used to bond the integrated heat spreader (IHS) to the substrate of IC packages for effective thermal dissipation. Delamination of the sealant causes significant reduction in heat management capability of the package, which leads to degradation of processor performance and component reliability. In this work, non-destructive evaluation (NDE) using ultrasonic guided wave (UGW) is performed to interrogate the integrity of the IC package. The advantage of using UGW is its large area inspection capability and small defect detection sensitivity. Ultrasonic tests using a pitch-catch active sensing method with removable piezoelectric (PZT) tranducers are performed with a wide range of excitation frequencies to classify various delamination scenarios in the IC package. Data preprocessing and Hilbert transform-based feature extraction method are also performed on the collected UGWs to extract dominant UGW features. Pattern analysis using a density-based spatial clustering of applications with noise (DBSCAN) algorithm is conducted on the UGW feature space to classify the damage indicators. These damage indicators (outliers) are then used to identify the IC packages with sealant delamination. The proposed technique is validated by comparing it to dye-and-pry tests, delamination metrics, and detection method using a multivariate Gaussian model. The results demonstrate that the proposed diagnosis technique has the potential to be a part of the industrial quality assurance process for IC packages for its capability to detect manufacturing defects with high accuracy. (c) 2021 Elsevier Ltd. All rights reserved.},\n\tdoi = {10.1016/j.ymssp.2021.107884},\n\tvolume = {160},\n\tissn = {0888-3270},\n\tnote = {Times Cited in Web of Science Core Collection: 24 Total Times Cited: 27 Cited Reference Count: 39 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ymssp.2021.107884"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000242",
+      "entry_type": "article",
+      "title": "Three-Dimensional Ultrasonic Reverse-Time Migration Imaging of Submarine Pipeline Nondestructive Testing in Cylindrical Coordinates",
+      "authors": [
+        "Peng, DC",
+        "Cheng, F",
+        "She, XY",
+        "Zheng, YP",
+        "Tang, YJ",
+        "Fan, Z"
+      ],
+      "year": 2023,
+      "journal": "JOURNAL OF MARINE SCIENCE AND ENGINEERING",
+      "doi": "10.3390/jmse11071459",
+      "abstract": "Submarine pipelines are a safe and energy-efficient mode of gas transport. However, due to the complex manufacturing process and harsh operating environment, submarine pipelines are subject to fatigue cracks under long-term cyclic loading. A comprehensive and high-precision characterization strategy for submarine pipelines can effectively prevent potential safety hazards and have significant economic and social repercussions. As a matter of fact, pipeline defects cannot be reliably detected with current traditional 2D methods. On the other hand, in ultrasonic testing, cylindrical geometry increases the complexity of the 3D wave field in the submarine pipeline space and significantly influences the accuracy of the detection results. In this paper, we put forward a novel method for 3D ultrasonic image testing that is suitable for cylindrical coordinates. In order to accurately simulate the ultrasonic signal received from pipelines, we generalize the 3D staggered-grid finite-difference method from Cartesian coordinates to cylindrical ones and simulate the full wave field in the 3D pipeline space. Then, signal processing is performed on the ultrasound simulation records, and 3D reverse-time migration imaging of submarine pipeline defects can be effectively achieved using the reverse-time migration method and cross-correlation imaging conditions. The results obtained from simulations and real field data show that the proposed method provides high-quality 3D imaging of defects in pipelines, taking into account multiple scattering and mode conversion information at the bottom of the defects.",
+      "keywords": [
+        "submarine pipelines",
+        "nondestructive testing",
+        "3D ultrasonic imaging",
+        "reverse-time migration",
+        "cylindrical coordinates",
+        "WAVELET ESTIMATION",
+        "ELASTIC-WAVES",
+        "LOCALIZATION",
+        "PRESTACK"
+      ],
+      "normalized_title": "three dimensional ultrasonic reverse time migration imaging of submarine pipeline nondestructive testing in cylindrical coordinates",
+      "raw_bibtex": "@ARTICLE{10.3390/jmse11071459,\n\tauthor = {Peng, DC and Cheng, F and She, XY and Zheng, YP and Tang, YJ and Fan, Z},\n\ttitle = {Three-Dimensional Ultrasonic Reverse-Time Migration Imaging of Submarine Pipeline Nondestructive Testing in Cylindrical Coordinates},\n\tjournal = {JOURNAL OF MARINE SCIENCE AND ENGINEERING},\n\tyear = {2023},\n\tkeywords = {submarine pipelines; nondestructive testing; 3D ultrasonic imaging; reverse-time migration; cylindrical coordinates; WAVELET ESTIMATION; ELASTIC-WAVES; LOCALIZATION; PRESTACK},\n\tabstract = {Submarine pipelines are a safe and energy-efficient mode of gas transport. However, due to the complex manufacturing process and harsh operating environment, submarine pipelines are subject to fatigue cracks under long-term cyclic loading. A comprehensive and high-precision characterization strategy for submarine pipelines can effectively prevent potential safety hazards and have significant economic and social repercussions. As a matter of fact, pipeline defects cannot be reliably detected with current traditional 2D methods. On the other hand, in ultrasonic testing, cylindrical geometry increases the complexity of the 3D wave field in the submarine pipeline space and significantly influences the accuracy of the detection results. In this paper, we put forward a novel method for 3D ultrasonic image testing that is suitable for cylindrical coordinates. In order to accurately simulate the ultrasonic signal received from pipelines, we generalize the 3D staggered-grid finite-difference method from Cartesian coordinates to cylindrical ones and simulate the full wave field in the 3D pipeline space. Then, signal processing is performed on the ultrasound simulation records, and 3D reverse-time migration imaging of submarine pipeline defects can be effectively achieved using the reverse-time migration method and cross-correlation imaging conditions. The results obtained from simulations and real field data show that the proposed method provides high-quality 3D imaging of defects in pipelines, taking into account multiple scattering and mode conversion information at the bottom of the defects.},\n\tdoi = {10.3390/jmse11071459},\n\tvolume = {11},\n\tnumber = {7},\n\tissn = {2077-1312},\n\tnote = {Times Cited in Web of Science Core Collection: 12 Total Times Cited: 14 Cited Reference Count: 56 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/jmse11071459"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000243",
+      "entry_type": "article",
+      "title": "ABIDE: A Novel Scheme for Ultrasonic Echo Estimation by Combining CEEMD-SSWT Method with EM Algorithm",
+      "authors": [
+        "Jiao, YK",
+        "Li, ZW",
+        "Zhu, JC",
+        "Xue, B",
+        "Zhang, BF"
+      ],
+      "year": 2022,
+      "journal": "SUSTAINABILITY",
+      "doi": "10.3390/su14041960",
+      "abstract": "Ultrasonic echo estimation has played an important role in industrial non-destructive testing and analysis. The ability to estimate parameters in the ultrasonic echo model is crucial to ensure the effectiveness of practical ultrasonic testing applications. In this paper, a scheme called ABIDE for identifying both multiple noises in the echo signal and the distribution of the denoised signal is proposed for ultrasonic echo signal parameter estimation. ABIDE integrates complementary ensemble empirical mode decomposition and the synchrosqueezed wavelet transform (CEEMD-SSWT) as well as the expectation maximization (EM) algorithm. The echo signal is split into a series of IMF components and a residual with the help of CEEMD, and then these IMFs are classified into the noise-dominant part and signal-dominant part by analyzing the correlation of each IMF and the echo signal using grey relational analysis. Considering the effect of noise in the signal-dominant part, SSWT is adopted to remove the noise in the signal-dominant part. Lastly, the signal output by the SSWT algorithm is used for reconstructing a denoised signal combined with the residual from CEEMD. Considering the distribution characteristic of the denoised signal, the EM algorithm is used to estimate parameters in the ultrasonic echo model. The relative performance of the proposed scheme was evaluated on synthetic data and real-world data and then compared with the state-of-the-art methods. Simulation results on synthetic data show that ABIDE outperforms the state-of-the-art methods in parameter estimation. Physical results on real-world data show that the proposed scheme has a greater PCC value in estimating echo model parameters. This paper also shows that ABIDE requires less convergence time than competitive methods.",
+      "keywords": [
+        "ultrasonic echo estimation",
+        "complementary ensemble empirical mode decomposition",
+        "synchrosqueezed wavelet transform",
+        "expectation maximization",
+        "SIGNAL",
+        "MODEL",
+        "TIME",
+        "PARAMETERS",
+        "DAMAGE",
+        "OPTIMIZATION",
+        "DIAGNOSIS",
+        "ENVELOPE",
+        "FATIGUE"
+      ],
+      "normalized_title": "abide a novel scheme for ultrasonic echo estimation by combining ceemd sswt method with em algorithm",
+      "raw_bibtex": "@ARTICLE{10.3390/su14041960,\n\tauthor = {Jiao, YK and Li, ZW and Zhu, JC and Xue, B and Zhang, BF},\n\ttitle = {ABIDE: A Novel Scheme for Ultrasonic Echo Estimation by Combining CEEMD-SSWT Method with EM Algorithm},\n\tjournal = {SUSTAINABILITY},\n\tyear = {2022},\n\tkeywords = {ultrasonic echo estimation; complementary ensemble empirical mode decomposition; synchrosqueezed wavelet transform; expectation maximization; SIGNAL; MODEL; TIME; PARAMETERS; DAMAGE; OPTIMIZATION; DIAGNOSIS; ENVELOPE; FATIGUE},\n\tabstract = {Ultrasonic echo estimation has played an important role in industrial non-destructive testing and analysis. The ability to estimate parameters in the ultrasonic echo model is crucial to ensure the effectiveness of practical ultrasonic testing applications. In this paper, a scheme called ABIDE for identifying both multiple noises in the echo signal and the distribution of the denoised signal is proposed for ultrasonic echo signal parameter estimation. ABIDE integrates complementary ensemble empirical mode decomposition and the synchrosqueezed wavelet transform (CEEMD-SSWT) as well as the expectation maximization (EM) algorithm. The echo signal is split into a series of IMF components and a residual with the help of CEEMD, and then these IMFs are classified into the noise-dominant part and signal-dominant part by analyzing the correlation of each IMF and the echo signal using grey relational analysis. Considering the effect of noise in the signal-dominant part, SSWT is adopted to remove the noise in the signal-dominant part. Lastly, the signal output by the SSWT algorithm is used for reconstructing a denoised signal combined with the residual from CEEMD. Considering the distribution characteristic of the denoised signal, the EM algorithm is used to estimate parameters in the ultrasonic echo model. The relative performance of the proposed scheme was evaluated on synthetic data and real-world data and then compared with the state-of-the-art methods. Simulation results on synthetic data show that ABIDE outperforms the state-of-the-art methods in parameter estimation. Physical results on real-world data show that the proposed scheme has a greater PCC value in estimating echo model parameters. This paper also shows that ABIDE requires less convergence time than competitive methods.},\n\tdoi = {10.3390/su14041960},\n\tvolume = {14},\n\tnumber = {4},\n\tissn = {2071-1050},\n\tnote = {Times Cited in Web of Science Core Collection: 4 Total Times Cited: 7 Cited Reference Count: 44 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/su14041960"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000244",
+      "entry_type": "article",
+      "title": "Prediction of the Unconfined Compressive Strength of Salinized Frozen Soil Based on Machine Learning",
+      "authors": [
+        "Zhao, HW",
+        "Bing, H"
+      ],
+      "year": 2024,
+      "journal": "BUILDINGS",
+      "doi": "10.3390/buildings14030641",
+      "abstract": "Unconfined compressive strength (UCS) is an important parameter of rock and soil mechanical behavior in foundation engineering design and construction. In this study, salinized frozen soil is selected as the research object, and soil GDS tests, ultrasonic tests, and scanning electron microscopy (SEM) tests are conducted. Based on the classification method of the model parameters, 2 macroscopic parameters, 38 mesoscopic parameters, and 19 microscopic parameters are selected. A machine learning model is used to predict the strength of soil considering the three-level characteristic parameters. Four accuracy evaluation indicators are used to evaluate six machine learning models. The results show that the radial basis function (RBF) has the best UCS predictive performance for both the training and testing stages. In terms of acceptable accuracy and stability loss, through the analysis of the gray correlation and rough set of the three-level parameters, the total amount and proportion of parameters are optimized so that there are 2, 16, and 16 macro, meso, and micro parameters in a sequence, respectively. In the simulation of the aforementioned six machine learning models with the optimized parameters, the RBF still performs optimally. In addition, after parameter optimization, the sensitivity proportion of the third-level parameters is more reasonable. The RBF model with optimized parameters proved to be a more effective method for predicting soil UCS. This study improves the prediction ability of the UCS by classifying and optimizing the model parameters and provides a useful reference for future research on salty soil strength parameters in seasonally frozen regions.",
+      "keywords": [
+        "machine learning model",
+        "sulfuric salinized frozen soil",
+        "unconfined compressive strength",
+        "macro-meso-micro three-level characteristic parameter",
+        "MECHANICAL-PROPERTIES",
+        "MICROSTRUCTURE",
+        "SHEAR",
+        "QUANTIFICATION",
+        "CONCRETE",
+        "POROSITY",
+        "MODELS",
+        "IMPACT",
+        "CLAY"
+      ],
+      "normalized_title": "prediction of the unconfined compressive strength of salinized frozen soil based on machine learning",
+      "raw_bibtex": "@ARTICLE{10.3390/buildings14030641,\n\tauthor = {Zhao, HW and Bing, H},\n\ttitle = {Prediction of the Unconfined Compressive Strength of Salinized Frozen Soil Based on Machine Learning},\n\tjournal = {BUILDINGS},\n\tyear = {2024},\n\tkeywords = {machine learning model; sulfuric salinized frozen soil; unconfined compressive strength; macro-meso-micro three-level characteristic parameter; MECHANICAL-PROPERTIES; MICROSTRUCTURE; SHEAR; QUANTIFICATION; CONCRETE; POROSITY; MODELS; IMPACT; CLAY},\n\tabstract = {Unconfined compressive strength (UCS) is an important parameter of rock and soil mechanical behavior in foundation engineering design and construction. In this study, salinized frozen soil is selected as the research object, and soil GDS tests, ultrasonic tests, and scanning electron microscopy (SEM) tests are conducted. Based on the classification method of the model parameters, 2 macroscopic parameters, 38 mesoscopic parameters, and 19 microscopic parameters are selected. A machine learning model is used to predict the strength of soil considering the three-level characteristic parameters. Four accuracy evaluation indicators are used to evaluate six machine learning models. The results show that the radial basis function (RBF) has the best UCS predictive performance for both the training and testing stages. In terms of acceptable accuracy and stability loss, through the analysis of the gray correlation and rough set of the three-level parameters, the total amount and proportion of parameters are optimized so that there are 2, 16, and 16 macro, meso, and micro parameters in a sequence, respectively. In the simulation of the aforementioned six machine learning models with the optimized parameters, the RBF still performs optimally. In addition, after parameter optimization, the sensitivity proportion of the third-level parameters is more reasonable. The RBF model with optimized parameters proved to be a more effective method for predicting soil UCS. This study improves the prediction ability of the UCS by classifying and optimizing the model parameters and provides a useful reference for future research on salty soil strength parameters in seasonally frozen regions.},\n\tdoi = {10.3390/buildings14030641},\n\tvolume = {14},\n\tnumber = {3},\n\tissn = {2075-5309},\n\tnote = {Times Cited in Web of Science Core Collection: 9 Total Times Cited: 9 Cited Reference Count: 87 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/buildings14030641"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000245",
+      "entry_type": "article",
+      "title": "On-orbit satellite hierarchical anomaly detection using causal structure learning",
+      "authors": [
+        "Chen, SY",
+        "Jin, G",
+        "Long, X"
+      ],
+      "year": 2025,
+      "journal": "ADVANCES IN SPACE RESEARCH",
+      "doi": "10.1016/j.asr.2024.09.050",
+      "abstract": "Real-time anomaly detection for on-orbit satellites is crucial in the early identification of faults to prevent further anomaly expansion. However, current anomaly detection methods for on-orbit satellites face challenges such as low sensitivity to anomalies, high rates of false negatives, and a lack of criteria for assessing anomaly severity. The Spatio-Temporal Causal Graph (STCG) describes the intrinsic temporal and spatial relationships among telemetry parameters. By extracting temporal and spatial features, it facilitates enhanced modeling of normal data and improves the model's sensitivity to anomalies. Moreover, according to the principle of anomaly propagation, the STCG can be utilized to identify false negatives. Therefore, we propose a framework of on-orbit satellite hierarchical anomaly detection using causal structure learning (OSHAD-CSL). This framework introduces a graph autoencoder for STCG learning and develops a method for dynamically setting detection thresholds. Additionally, the framework puts forward a false negative identification method based on the learned STCG. Lastly, the framework presents an anomaly severity judgment criterion, enabling the determination of the affected system level by the detected anomaly. To evaluate the effectiveness of the proposed framework, we validate the OSHADCSL on three public datasets and a dataset from a satellite's attitude control system. The results demonstrate that the proposed method outperforms the baselines, with an F1-score (a metric used for evaluating the performance of anomaly detection) of 80% for anomaly detection and an accuracy of 83% for anomaly severity judgment. These findings highlight the efficacy of the proposed method in improving the performance of anomaly detection and severity assessment. (c) 2024 COSPAR. Published by Elsevier B.V. All rights are reserved, including those for text and data mining, AI training, and similar technologies.",
+      "keywords": [
+        "Anomaly detection",
+        "Causal structure learning",
+        "Graph neural network",
+        "Satellite",
+        "Telemetry data",
+        "SERIES"
+      ],
+      "normalized_title": "on orbit satellite hierarchical anomaly detection using causal structure learning",
+      "raw_bibtex": "@ARTICLE{10.1016/j.asr.2024.09.050,\n\tauthor = {Chen, SY and Jin, G and Long, X},\n\ttitle = {On-orbit satellite hierarchical anomaly detection using causal structure learning},\n\tjournal = {ADVANCES IN SPACE RESEARCH},\n\tyear = {2025},\n\tkeywords = {Anomaly detection; Causal structure learning; Graph neural network; Satellite; Telemetry data; SERIES},\n\tabstract = {Real-time anomaly detection for on-orbit satellites is crucial in the early identification of faults to prevent further anomaly expansion. However, current anomaly detection methods for on-orbit satellites face challenges such as low sensitivity to anomalies, high rates of false negatives, and a lack of criteria for assessing anomaly severity. The Spatio-Temporal Causal Graph (STCG) describes the intrinsic temporal and spatial relationships among telemetry parameters. By extracting temporal and spatial features, it facilitates enhanced modeling of normal data and improves the model's sensitivity to anomalies. Moreover, according to the principle of anomaly propagation, the STCG can be utilized to identify false negatives. Therefore, we propose a framework of on-orbit satellite hierarchical anomaly detection using causal structure learning (OSHAD-CSL). This framework introduces a graph autoencoder for STCG learning and develops a method for dynamically setting detection thresholds. Additionally, the framework puts forward a false negative identification method based on the learned STCG. Lastly, the framework presents an anomaly severity judgment criterion, enabling the determination of the affected system level by the detected anomaly. To evaluate the effectiveness of the proposed framework, we validate the OSHADCSL on three public datasets and a dataset from a satellite's attitude control system. The results demonstrate that the proposed method outperforms the baselines, with an F1-score (a metric used for evaluating the performance of anomaly detection) of 80% for anomaly detection and an accuracy of 83% for anomaly severity judgment. These findings highlight the efficacy of the proposed method in improving the performance of anomaly detection and severity assessment. (c) 2024 COSPAR. Published by Elsevier B.V. All rights are reserved, including those for text and data mining, AI training, and similar technologies.},\n\tdoi = {10.1016/j.asr.2024.09.050},\n\tvolume = {75},\n\tnumber = {1},\n\tpages = {718-736},\n\tissn = {0273-1177},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 64 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.asr.2024.09.050"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000246",
+      "entry_type": "article",
+      "title": "Automated Defect Detection From Ultrasonic Images Using Deep Learning",
+      "authors": [
+        "Medak, D",
+        "Posilovic, L",
+        "Subasic, M",
+        "Budimir, M",
+        "Loncaric, S"
+      ],
+      "year": 2021,
+      "journal": "IEEE TRANSACTIONS ON ULTRASONICS FERROELECTRICS AND FREQUENCY CONTROL",
+      "doi": "10.1109/tuffc.2021.3081750",
+      "abstract": "Nondestructive evaluation (NDE) is a set of techniques used for material inspection and defect detection without causing damage to the inspected component. One of the commonly used nondestructive techniques is called ultrasonic inspection. The acquisition of ultrasonic data was mostly automated in recent years, but the analysis of the collected data is still performed manually. This process is thus very expensive, inconsistent, and prone to human errors. An automated system would significantly increase the efficiency of analysis, but the methods presented so far fail to generalize well on new cases and are not used in real-life inspection. Many of the similar data analysis problems were recently tackled by deep learning methods. This approach outperforms classical methods but requires lots of training data, which is difficult to obtain in the NDE domain. In this work, we train a deep learning architecture EfficientDet to automatically detect defects from ultrasonic images. We showed how some of the hyperparameters can be tweaked in order to improve the detection of defects with extreme aspect ratios that are common in ultrasonic images. The proposed object detector was trained on the largest dataset of ultrasonic images that was so far seen in the literature. In order to collect the dataset, six steel blocks containing 68 defects were scanned with a phased-array probe. More than 4000 VC-B-scans were acquired and used for training and evaluation of EfficientDet. The proposed model achieved 89.6% of mean average precision (mAP) during fivefold cross validation, which is a significant improvement compared to some similar methods that were previously used for this task. A detailed performance overview for each of the folds revealed that EfficientDet-D0 successfully detects all of the defects present in the inspected material.",
+      "keywords": [
+        "Acoustics",
+        "Deep learning",
+        "Detectors",
+        "Probes",
+        "Training",
+        "Inspection",
+        "Wavelet transforms",
+        "Automated defect detection",
+        "deep learning",
+        "flaw detection",
+        "ultrasonic image analysis",
+        "ultrasonic testing (UT)",
+        "CLASSIFICATION",
+        "WAVELET",
+        "SYSTEM"
+      ],
+      "normalized_title": "automated defect detection from ultrasonic images using deep learning",
+      "raw_bibtex": "@ARTICLE{10.1109/TUFFC.2021.3081750,\n\tauthor = {Medak, D and Posilovic, L and Subasic, M and Budimir, M and Loncaric, S},\n\ttitle = {Automated Defect Detection From Ultrasonic Images Using Deep Learning},\n\tjournal = {IEEE TRANSACTIONS ON ULTRASONICS FERROELECTRICS AND FREQUENCY CONTROL},\n\tyear = {2021},\n\tkeywords = {Acoustics; Deep learning; Detectors; Probes; Training; Inspection; Wavelet transforms; Automated defect detection; deep learning; flaw detection; ultrasonic image analysis; ultrasonic testing (UT); CLASSIFICATION; WAVELET; SYSTEM},\n\tabstract = {Nondestructive evaluation (NDE) is a set of techniques used for material inspection and defect detection without causing damage to the inspected component. One of the commonly used nondestructive techniques is called ultrasonic inspection. The acquisition of ultrasonic data was mostly automated in recent years, but the analysis of the collected data is still performed manually. This process is thus very expensive, inconsistent, and prone to human errors. An automated system would significantly increase the efficiency of analysis, but the methods presented so far fail to generalize well on new cases and are not used in real-life inspection. Many of the similar data analysis problems were recently tackled by deep learning methods. This approach outperforms classical methods but requires lots of training data, which is difficult to obtain in the NDE domain. In this work, we train a deep learning architecture EfficientDet to automatically detect defects from ultrasonic images. We showed how some of the hyperparameters can be tweaked in order to improve the detection of defects with extreme aspect ratios that are common in ultrasonic images. The proposed object detector was trained on the largest dataset of ultrasonic images that was so far seen in the literature. In order to collect the dataset, six steel blocks containing 68 defects were scanned with a phased-array probe. More than 4000 VC-B-scans were acquired and used for training and evaluation of EfficientDet. The proposed model achieved 89.6% of mean average precision (mAP) during fivefold cross validation, which is a significant improvement compared to some similar methods that were previously used for this task. A detailed performance overview for each of the folds revealed that EfficientDet-D0 successfully detects all of the defects present in the inspected material.},\n\tdoi = {10.1109/TUFFC.2021.3081750},\n\tvolume = {68},\n\tnumber = {10},\n\tpages = {3126-3134},\n\tissn = {0885-3010},\n\tnote = {Times Cited in Web of Science Core Collection: 85 Total Times Cited: 105 Cited Reference Count: 35 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TUFFC.2021.3081750"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000247",
+      "entry_type": "article",
+      "title": "Eddy Current Detection of Broken Steel Wires in the Core of the Conveyor Belt Based on CutMix-ReliefF-RF",
+      "authors": [
+        "Li, JX",
+        "Gao, JK",
+        "Jiao, SN",
+        "Kou, ZM",
+        "Zhang, W",
+        "Kou, YF"
+      ],
+      "year": 2025,
+      "journal": "IEEE TRANSACTIONS ON INSTRUMENTATION AND MEASUREMENT",
+      "doi": "10.1109/tim.2025.3580872",
+      "abstract": "Broken steel wires in the core of the conveyor belt significantly reduce its carrying capacity and overall strength, potentially leading to safety hazards. The eddy current testing (ECT) has significant advantages in terms of cost and portability over other nondestructive testing technologies such as ultrasonic testing (UT) and X-ray. ECT detects changes in the magnetic field, enabling the detection of the broken steel wires. However, the detection of broken wire ropes in conveyor belts has difficulty in obtaining data under actual working conditions, insufficient data diversity, low recognition accuracy, and poor model generalization ability. This article designs a differential probe and introduces a novel approach, the CutMix-ReliefF-RF method, which addresses these challenges based on the differential signal. By applying CutMix, we enhance the diversity of small sample data and construct varied datasets representing different numbers of broken wires, which significantly improves the model's recognition ability and generalization performance. The fault features of the broken steel wires in the core of the conveyor belt are extracted, and then the ReliefF method is used for dimensionality reduction to obtain an optimal feature subset. The random forest (RF) algorithm is adopted to identify the broken core characteristics from the eddy current (EC) detection signal. The accuracy of the finite element model (FEM) is validated through experimental and simulation signals used to generate training samples. The proposed method can accurately identify broken steel wires in the core of the conveyor belt, achieving a fault diagnosis accuracy of 98.23% under simulation signals and 96.67% under experimental signals, respectively. This provides strong support for the health monitoring of broken steel wires in the core of the conveyor belt.",
+      "keywords": [
+        "Wires",
+        "Steel",
+        "Belts",
+        "Eddy currents",
+        "Coils",
+        "Probes",
+        "Feature extraction",
+        "Magnetic fields",
+        "Testing",
+        "Magnetic cores",
+        "Conveyor belt",
+        "core broken wire failure",
+        "eddy current testing (ECT)",
+        "fault diagnosis",
+        "signal processing"
+      ],
+      "normalized_title": "eddy current detection of broken steel wires in the core of the conveyor belt based on cutmix relieff rf",
+      "raw_bibtex": "@ARTICLE{10.1109/TIM.2025.3580872,\n\tauthor = {Li, JX and Gao, JK and Jiao, SN and Kou, ZM and Zhang, W and Kou, YF},\n\ttitle = {Eddy Current Detection of Broken Steel Wires in the Core of the Conveyor Belt Based on CutMix-ReliefF-RF},\n\tjournal = {IEEE TRANSACTIONS ON INSTRUMENTATION AND MEASUREMENT},\n\tyear = {2025},\n\tkeywords = {Wires; Steel; Belts; Eddy currents; Coils; Probes; Feature extraction; Magnetic fields; Testing; Magnetic cores; Conveyor belt; core broken wire failure; eddy current testing (ECT); fault diagnosis; signal processing},\n\tabstract = {Broken steel wires in the core of the conveyor belt significantly reduce its carrying capacity and overall strength, potentially leading to safety hazards. The eddy current testing (ECT) has significant advantages in terms of cost and portability over other nondestructive testing technologies such as ultrasonic testing (UT) and X-ray. ECT detects changes in the magnetic field, enabling the detection of the broken steel wires. However, the detection of broken wire ropes in conveyor belts has difficulty in obtaining data under actual working conditions, insufficient data diversity, low recognition accuracy, and poor model generalization ability. This article designs a differential probe and introduces a novel approach, the CutMix-ReliefF-RF method, which addresses these challenges based on the differential signal. By applying CutMix, we enhance the diversity of small sample data and construct varied datasets representing different numbers of broken wires, which significantly improves the model's recognition ability and generalization performance. The fault features of the broken steel wires in the core of the conveyor belt are extracted, and then the ReliefF method is used for dimensionality reduction to obtain an optimal feature subset. The random forest (RF) algorithm is adopted to identify the broken core characteristics from the eddy current (EC) detection signal. The accuracy of the finite element model (FEM) is validated through experimental and simulation signals used to generate training samples. The proposed method can accurately identify broken steel wires in the core of the conveyor belt, achieving a fault diagnosis accuracy of 98.23% under simulation signals and 96.67% under experimental signals, respectively. This provides strong support for the health monitoring of broken steel wires in the core of the conveyor belt.},\n\tdoi = {10.1109/TIM.2025.3580872},\n\tvolume = {74},\n\tissn = {0018-9456},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 34 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TIM.2025.3580872"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000248",
+      "entry_type": "article",
+      "title": "Auto-Diagnosis of Time-of-Flight for Ultrasonic Signal Based on Defect Peaks Tracking Model",
+      "authors": [
+        "Yang, F",
+        "Shi, DL",
+        "Lo, LY",
+        "Mao, Q",
+        "Zhang, JM",
+        "Lam, KH"
+      ],
+      "year": 2023,
+      "journal": "REMOTE SENSING",
+      "doi": "10.3390/rs15030599",
+      "abstract": "With the popularization of humans working in tandem with robots and artificial intelligence (AI) by Industry 5.0, ultrasonic non-destructive testing (NDT)) technology has been increasingly used in quality inspections in the industry. As a crucial part of handling ultrasonic testing results-signal processing, the current approach focuses on professional training to perform signal discrimination but automatic and intelligent signal optimization and estimation lack systematic research. Though the automated and intelligent framework for ultrasonic echo signal processing has already exhibited essential research significance for diagnosing defect locations, the real-time applicability of the algorithm for the time-of-flight (ToF) estimation is rarely considered, which is a very important indicator for intelligent detection. This paper conducts a systematic comparison among different ToF algorithms for the first time and presents the auto-diagnosis of the ToF approach based on the Defect Peaks Tracking Model (DPTM). The proposed DPTM is used for ultrasonic echo signal processing and recognition for the first time. The DPTM using the Hilbert transform was verified to locate the defect with the size of 2-10 mm, in which the wavelet denoising method was adopted. With the designed mechanical fixture through 3D printing technology on the pipeline to inspect defects, the difficulty of collecting sufficient data could be conquered. The maximum auto-diagnosis error could be reduced to 0.25% and 1.25% for steel plate and pipeline under constant pressure, respectively, which were much smaller than those with the DPTM adopting the cross-correlation. The real-time auto-diagnosis identification feature of DPTM has the potential to be combined with AI in future work, such as machine learning and deep learning, to achieve more intelligent approaches for industrial health inspection.",
+      "keywords": [
+        "intelligent algorithm",
+        "smart manufacturing",
+        "time-of-flight",
+        "NDT",
+        "ultrasound transducer",
+        "pipeline inspection"
+      ],
+      "normalized_title": "auto diagnosis of time of flight for ultrasonic signal based on defect peaks tracking model",
+      "raw_bibtex": "@ARTICLE{10.3390/rs15030599,\n\tauthor = {Yang, F and Shi, DL and Lo, LY and Mao, Q and Zhang, JM and Lam, KH},\n\ttitle = {Auto-Diagnosis of Time-of-Flight for Ultrasonic Signal Based on Defect Peaks Tracking Model},\n\tjournal = {REMOTE SENSING},\n\tyear = {2023},\n\tkeywords = {intelligent algorithm; smart manufacturing; time-of-flight; NDT; ultrasound transducer; pipeline inspection; NDT},\n\tabstract = {With the popularization of humans working in tandem with robots and artificial intelligence (AI) by Industry 5.0, ultrasonic non-destructive testing (NDT)) technology has been increasingly used in quality inspections in the industry. As a crucial part of handling ultrasonic testing results-signal processing, the current approach focuses on professional training to perform signal discrimination but automatic and intelligent signal optimization and estimation lack systematic research. Though the automated and intelligent framework for ultrasonic echo signal processing has already exhibited essential research significance for diagnosing defect locations, the real-time applicability of the algorithm for the time-of-flight (ToF) estimation is rarely considered, which is a very important indicator for intelligent detection. This paper conducts a systematic comparison among different ToF algorithms for the first time and presents the auto-diagnosis of the ToF approach based on the Defect Peaks Tracking Model (DPTM). The proposed DPTM is used for ultrasonic echo signal processing and recognition for the first time. The DPTM using the Hilbert transform was verified to locate the defect with the size of 2-10 mm, in which the wavelet denoising method was adopted. With the designed mechanical fixture through 3D printing technology on the pipeline to inspect defects, the difficulty of collecting sufficient data could be conquered. The maximum auto-diagnosis error could be reduced to 0.25% and 1.25% for steel plate and pipeline under constant pressure, respectively, which were much smaller than those with the DPTM adopting the cross-correlation. The real-time auto-diagnosis identification feature of DPTM has the potential to be combined with AI in future work, such as machine learning and deep learning, to achieve more intelligent approaches for industrial health inspection.},\n\tdoi = {10.3390/rs15030599},\n\tvolume = {15},\n\tnumber = {3},\n\tissn = {2072-4292},\n\tnote = {Times Cited in Web of Science Core Collection: 16 Total Times Cited: 17 Cited Reference Count: 50 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/rs15030599"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000249",
+      "entry_type": "article",
+      "title": "Measurement of Defect Sizes and Physical Limitations of Digital Data Processing in Ultrasonic Flaw Detection by Echo and Diffraction Methods",
+      "authors": [
+        "Mogilner, LY",
+        "Stekolshchikov, YA"
+      ],
+      "year": 2025,
+      "journal": "RUSSIAN JOURNAL OF NONDESTRUCTIVE TESTING",
+      "doi": "10.1134/s1061830925700275",
+      "abstract": "It is noted that manufacturers and suppliers of ultrasonic flaw detectors usually focus on the ultimate sensitivity of the equipment but pay little attention to the error that the linear dimensions of defects can be measured with. It is also noted that the physical principles underlying ultrasonic flaw detection and the accumulated practical experience of its application show that currently, defect sizes can be measured no more accurately than with an error of 1 mm. Therefore, it would be more accurate to talk not about measuring the height of defects in the cross section of welded seams but about estimating this height using ultrasonic flaw detection methods. Examples of representing sections with defects in the form of acoustic B-scans are provided, and it is shown that these images have changed little over the past 60 years, despite the fact that signal processing techniques and technology have developed significantly during this time. At the same time, the article shows that it is possible to qualitatively assess the change in defect height by fractions of a millimeter. In this regard, the results of calculation and experiment on assessing the influence of weak material anisotropy on the shape of the phase spectra of bottom pulses are presented, and it is shown that, in addition to the traditionally used time sweeps of signals (A-scans) and amplitude spectra, it is advisable to pay more attention to the analysis of phase spectra of signals received from products. Phase spectra change significantly more than other characteristics of the recorded pulses also when the height of defects in the cross section of a welded seam increases. This conclusion also applies to cases where the defect height does not exceed the length of the used ultrasonic waves.",
+      "keywords": [
+        "ultrasonic testing",
+        "defects in materials and welds",
+        "defect size",
+        "sensitivity and measurement error",
+        "signal amplitude and phase spectra"
+      ],
+      "normalized_title": "measurement of defect sizes and physical limitations of digital data processing in ultrasonic flaw detection by echo and diffraction methods",
+      "raw_bibtex": "@ARTICLE{10.1134/S1061830925700275,\n\tauthor = {Mogilner, LY and Stekolshchikov, YA},\n\ttitle = {Measurement of Defect Sizes and Physical Limitations of Digital Data Processing in Ultrasonic Flaw Detection by Echo and Diffraction Methods},\n\tjournal = {RUSSIAN JOURNAL OF NONDESTRUCTIVE TESTING},\n\tyear = {2025},\n\tkeywords = {ultrasonic testing; defects in materials and welds; defect size; sensitivity and measurement error; signal amplitude and phase spectra},\n\tabstract = {It is noted that manufacturers and suppliers of ultrasonic flaw detectors usually focus on the ultimate sensitivity of the equipment but pay little attention to the error that the linear dimensions of defects can be measured with. It is also noted that the physical principles underlying ultrasonic flaw detection and the accumulated practical experience of its application show that currently, defect sizes can be measured no more accurately than with an error of 1 mm. Therefore, it would be more accurate to talk not about measuring the height of defects in the cross section of welded seams but about estimating this height using ultrasonic flaw detection methods. Examples of representing sections with defects in the form of acoustic B-scans are provided, and it is shown that these images have changed little over the past 60 years, despite the fact that signal processing techniques and technology have developed significantly during this time. At the same time, the article shows that it is possible to qualitatively assess the change in defect height by fractions of a millimeter. In this regard, the results of calculation and experiment on assessing the influence of weak material anisotropy on the shape of the phase spectra of bottom pulses are presented, and it is shown that, in addition to the traditionally used time sweeps of signals (A-scans) and amplitude spectra, it is advisable to pay more attention to the analysis of phase spectra of signals received from products. Phase spectra change significantly more than other characteristics of the recorded pulses also when the height of defects in the cross section of a welded seam increases. This conclusion also applies to cases where the defect height does not exceed the length of the used ultrasonic waves.},\n\tdoi = {10.1134/S1061830925700275},\n\tvolume = {61},\n\tnumber = {9},\n\tpages = {1076-1087},\n\tissn = {1061-8309},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 19 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1134/S1061830925700275"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000250",
+      "entry_type": "article",
+      "title": "Structural health monitoring of fastener hole using ring-design direct-write piezoelectric ultrasonic transducer",
+      "authors": [
+        "Wong, VK",
+        "Liu, ML",
+        "Goh, WP",
+        "Chen, ST",
+        "Wong, ZZ",
+        "Cui, FS",
+        "Yao, K"
+      ],
+      "year": 2022,
+      "journal": "STRUCTURAL HEALTH MONITORING-AN INTERNATIONAL JOURNAL",
+      "doi": "10.1177/14759217211073950",
+      "abstract": "Fatigue cracks initiated from fastener holes are common in aircraft structures. Implementation of effective structural health monitoring (SHM) system to detect or monitor fatigue cracks near fastener holes is desired for realizing condition-based maintenance with improved aircraft safety at reduced cost. In this work, direct-write piezoelectric ultrasonic transducers were used for monitoring crack near fastener hole. Made of poly (vinylidenefluoride-co-trifluoroethylene) [P(VDF-TrFE)] film and annular array electrodes, the direct-write piezoelectric ultrasonic transducers were both directly coated and patterned around the fastener holes. A novel ring-design using annular array electrodes with small footprint was proposed to detect fatigue crack initiated in the vicinity of a fastener hole using pulse-echo and pitch-catch methods. The ring-design direct-write piezoelectric ultrasonic transducers were designed to operate with Lamb wave modes at 1.5 MHz. A numerical simulation study was conducted to investigate the interaction of Lamb wave modes with the fatigue crack. Experimental ultrasonic testing was performed with signal gates determined using wavelet analysis. Fatigue crack detection was demonstrated using an energy ratio method by comparing energy parameter of gated ultrasonic signal with baseline signal. Using the pulse-echo method, the direction of the fatigue crack was able to be determined. The pitch-catch method was found to have higher sensitivity in fatigue crack detection but could not determine the direction of the fatigue crack. These transducers made of thin films promise high conformability even on curved surface and around irregular objects with limited space, compared to conventional discrete ultrasonic transducers. The analysis and results showed that the ring-design direct-write piezoelectric ultrasonic transducers have great potential for fastener hole SHM.",
+      "keywords": [
+        "direct-write",
+        "piezoelectric ultrasonic transducer",
+        "structural health monitoring",
+        "pulse-echo",
+        "pitch-catch",
+        "lamb wave",
+        "FATIGUE-CRACK GROWTH",
+        "SENSOR/ACTUATOR NETWORK"
+      ],
+      "normalized_title": "structural health monitoring of fastener hole using ring design direct write piezoelectric ultrasonic transducer",
+      "raw_bibtex": "@ARTICLE{10.1177/14759217211073950,\n\tauthor = {Wong, VK and Liu, ML and Goh, WP and Chen, ST and Wong, ZZ and Cui, FS and Yao, K},\n\ttitle = {Structural health monitoring of fastener hole using ring-design direct-write piezoelectric ultrasonic transducer},\n\tjournal = {STRUCTURAL HEALTH MONITORING-AN INTERNATIONAL JOURNAL},\n\tyear = {2022},\n\tkeywords = {direct-write; piezoelectric ultrasonic transducer; structural health monitoring; pulse-echo; pitch-catch; lamb wave; FATIGUE-CRACK GROWTH; SENSOR/ACTUATOR NETWORK},\n\tabstract = {Fatigue cracks initiated from fastener holes are common in aircraft structures. Implementation of effective structural health monitoring (SHM) system to detect or monitor fatigue cracks near fastener holes is desired for realizing condition-based maintenance with improved aircraft safety at reduced cost. In this work, direct-write piezoelectric ultrasonic transducers were used for monitoring crack near fastener hole. Made of poly (vinylidenefluoride-co-trifluoroethylene) [P(VDF-TrFE)] film and annular array electrodes, the direct-write piezoelectric ultrasonic transducers were both directly coated and patterned around the fastener holes. A novel ring-design using annular array electrodes with small footprint was proposed to detect fatigue crack initiated in the vicinity of a fastener hole using pulse-echo and pitch-catch methods. The ring-design direct-write piezoelectric ultrasonic transducers were designed to operate with Lamb wave modes at 1.5 MHz. A numerical simulation study was conducted to investigate the interaction of Lamb wave modes with the fatigue crack. Experimental ultrasonic testing was performed with signal gates determined using wavelet analysis. Fatigue crack detection was demonstrated using an energy ratio method by comparing energy parameter of gated ultrasonic signal with baseline signal. Using the pulse-echo method, the direction of the fatigue crack was able to be determined. The pitch-catch method was found to have higher sensitivity in fatigue crack detection but could not determine the direction of the fatigue crack. These transducers made of thin films promise high conformability even on curved surface and around irregular objects with limited space, compared to conventional discrete ultrasonic transducers. The analysis and results showed that the ring-design direct-write piezoelectric ultrasonic transducers have great potential for fastener hole SHM.},\n\tdoi = {10.1177/14759217211073950},\n\tvolume = {21},\n\tnumber = {6},\n\tpages = {2657-2669},\n\tissn = {1475-9217},\n\tnote = {Times Cited in Web of Science Core Collection: 14 Total Times Cited: 14 Cited Reference Count: 22 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1177/14759217211073950"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

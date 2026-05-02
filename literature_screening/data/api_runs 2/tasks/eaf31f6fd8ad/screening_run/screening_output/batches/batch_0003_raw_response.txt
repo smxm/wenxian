@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0003",
+    "results": [
+        {
+            "paper_id": "paper_000021",
+            "decision": "include",
+            "reason": "标题和摘要明确显示研究“互联网+”健康管理系统对老年类风湿关节炎患者的护理干预效果，符合所有纳入标准。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000022",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究对象为老年脑卒中患者，但未提及任何“互联网+”或信息化技术载体，不符合纳入标准。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000023",
+            "decision": "exclude",
+            "reason": "摘要描述慢性病监测信息平台构建，属于系统开发研究，缺乏明确的护理干预或临床应用数据。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000024",
+            "decision": "uncertain",
+            "reason": "摘要提到慢性病患者使用智能可穿戴设备，但未明确研究对象为老年人，且核心内容为影响因素研究而非护理干预。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000025",
+            "decision": "uncertain",
+            "reason": "摘要提及数字技术应用，但信息过于简略，无法确认是否包含具体的“互联网+”载体、护理干预或明确的老年慢性病人群。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.45
+        },
+        {
+            "paper_id": "paper_000026",
+            "decision": "include",
+            "reason": "标题和摘要明确研究生态瞬时干预在老年慢性病患者体力活动中的应用，干预载体包括应用程序和可穿戴设备，属于护理干预范畴。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000027",
+            "decision": "exclude",
+            "reason": "摘要提及可穿戴设备与远程康复，但属于展望部分，核心内容为运动康复方案综述，未明确结合“互联网+”进行护理干预研究。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000028",
+            "decision": "exclude",
+            "reason": "标题和摘要研究老年肿瘤患者用药安全行为，肿瘤通常不被视为典型慢性病，且未提及任何“互联网+”或信息化技术载体。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000029",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究自我健康管理能力评价指标体系构建，属于方法学研究，未涉及“互联网+”技术或具体的护理干预应用。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000030",
+            "decision": "include",
+            "reason": "标题和摘要明确基于单导联可穿戴心电设备研究老年高血压患者，属于远程监测技术在慢性病管理中的应用，且有明确的健康宣教干预。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.92
+        }
+    ]
+}

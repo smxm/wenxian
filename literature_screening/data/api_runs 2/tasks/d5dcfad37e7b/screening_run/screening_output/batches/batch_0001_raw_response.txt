@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0001",
+    "results": [
+        {
+            "paper_id": "paper_000001",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及天然产物（elemene）、纳米材料（nanoemulsion）、肠道微生态（gut homeostasis restoration）和肿瘤（colorectal cancer），符合核心要素要求。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000002",
+            "decision": "uncertain",
+            "reason": "摘要仅提供勘误信息，无研究内容描述，无法判断是否满足纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.45
+        },
+        {
+            "paper_id": "paper_000003",
+            "decision": "exclude",
+            "reason": "摘要提到EGCG调节肠道菌群和纳米颗粒，但未明确涉及纳米递送系统或脑肠轴机制，且为综述文章，未强关联三个核心维度。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.75
+        },
+        {
+            "paper_id": "paper_000004",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及纳米材料和肿瘤，但未提及天然产物或肠道微生态/脑肠轴，不符合核心要素要求。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000005",
+            "decision": "uncertain",
+            "reason": "摘要仅提供关注声明，无研究内容描述，无法判断是否满足纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.45
+        },
+        {
+            "paper_id": "paper_000006",
+            "decision": "exclude",
+            "reason": "摘要讨论外泌体在肝癌中的应用，未涉及天然产物或脑肠轴，与筛选主题相关性弱。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000007",
+            "decision": "uncertain",
+            "reason": "摘要涉及天然产物和肠道微生态，并提到纳米技术，但未明确关联肿瘤治疗，信息不足以确认纳入。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000008",
+            "decision": "exclude",
+            "reason": "摘要提到白藜芦醇调节肠道菌群和纳米制剂，但未明确涉及肿瘤或脑肠轴机制，且为综述文章。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.7
+        },
+        {
+            "paper_id": "paper_000009",
+            "decision": "exclude",
+            "reason": "摘要讨论姜黄素和二甲双胍的协同作用，涉及肿瘤但未明确涉及纳米材料或脑肠轴，不符合核心要素要求。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.75
+        },
+        {
+            "paper_id": "paper_000010",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及天然产物（food-medicine homologous substances）、纳米材料（nanodelivery systems）、脑肠轴（gut-lung axis）和肿瘤（lung cancer），符合核心要素要求。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        }
+    ]
+}

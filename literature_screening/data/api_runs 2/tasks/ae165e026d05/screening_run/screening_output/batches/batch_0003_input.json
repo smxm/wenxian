@@ -1,0 +1,292 @@
+{
+  "batch_id": "batch_0003",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000021",
+    "paper_000022",
+    "paper_000023",
+    "paper_000024",
+    "paper_000025",
+    "paper_000026",
+    "paper_000027",
+    "paper_000028",
+    "paper_000029",
+    "paper_000030"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000021",
+      "entry_type": "article",
+      "title": "Neural Network-Based Ground Motion Model for Central and Western Himalayas in India Using a Seismological Model",
+      "authors": [
+        "Kanth Sriwastav, R.",
+        "Prasanth Kumar, S.",
+        "Yedulla, J.",
+        "Raghukanth, S.T.G.",
+        "Basu, J."
+      ],
+      "year": 2025,
+      "journal": "Natural Hazards Review",
+      "doi": "10.1061/nhrefo.nheng-2300",
+      "abstract": "The Himalayan region, formed by the collision of the stable Eurasian plate with the northward-moving Indian plate, is one of the most tectonically active areas in the world. This complex tectonic environment leads to significant seismic hazards, yet the scarcity of recorded ground motion data in the region poses challenges for developing reliable ground motion models (GMMs) and accurately assessing seismic risks. To address these limitations, a stochastic finite-fault ground motion simulation approach is employed, leveraging locally calibrated input parameters for India's central and western Himalayan shallow crustal regions. A large ensemble of synthetic ground motions is generated using these parameters. Based on the simulated data, a nonparametric GMM for horizontal spectral acceleration is developed for the region using artificial neural networks. The model is specifically developed for a reference site with an average shear wave velocity of 760 m/s, ensuring adaptability to site-specific conditions beyond the study region. Mixed-effect regression is carried out to quantify the total standard deviation of spectral ordinates. The model's applicability for the study region is demonstrated by incorporating local soil amplification effects for various site classes and evaluating against recorded ground motions and local and global GMMs. The proposed model aligns well with observed ground motions, offering an improved model for seismic hazard assessment in the region. This model effectively mitigates the limitations caused by the scarcity of recorded ground motion data while providing a robust tool for understanding seismic hazards in the central and western Himalayas. © 2025 American Society of Civil Engineers.",
+      "keywords": [],
+      "normalized_title": "neural network based ground motion model for central and western himalayas in india using a seismological model",
+      "raw_bibtex": "@ARTICLE{10.1061/NHREFO.NHENG-2300,\n\tauthor = {Kanth Sriwastav, R. and Prasanth Kumar, S. and Yedulla, J. and Raghukanth, S.T.G. and Basu, J.},\n\ttitle = {Neural Network-Based Ground Motion Model for Central and Western Himalayas in India Using a Seismological Model},\n\tjournal = {Natural Hazards Review},\n\tyear = {2025},\n\tabstract = {The Himalayan region, formed by the collision of the stable Eurasian plate with the northward-moving Indian plate, is one of the most tectonically active areas in the world. This complex tectonic environment leads to significant seismic hazards, yet the scarcity of recorded ground motion data in the region poses challenges for developing reliable ground motion models (GMMs) and accurately assessing seismic risks. To address these limitations, a stochastic finite-fault ground motion simulation approach is employed, leveraging locally calibrated input parameters for India's central and western Himalayan shallow crustal regions. A large ensemble of synthetic ground motions is generated using these parameters. Based on the simulated data, a nonparametric GMM for horizontal spectral acceleration is developed for the region using artificial neural networks. The model is specifically developed for a reference site with an average shear wave velocity of 760 m/s, ensuring adaptability to site-specific conditions beyond the study region. Mixed-effect regression is carried out to quantify the total standard deviation of spectral ordinates. The model's applicability for the study region is demonstrated by incorporating local soil amplification effects for various site classes and evaluating against recorded ground motions and local and global GMMs. The proposed model aligns well with observed ground motions, offering an improved model for seismic hazard assessment in the region. This model effectively mitigates the limitations caused by the scarcity of recorded ground motion data while providing a robust tool for understanding seismic hazards in the central and western Himalayas. © 2025 American Society of Civil Engineers.},\n\tdoi = {10.1061/NHREFO.NHENG-2300},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105007927966&doi=10.1061%2FNHREFO.NHENG-2300&partnerID=40&md5=d91d67ad91a27d23fbb9614f4a29c030},\n\tvolume = {26},\n\tnumber = {3},\n\tnote = {Export Date: 25 March 2026; Cited By: 3 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_4fa68a63-f320-4dc0-96bd-9dc3afd609a5.ris"
+      ],
+      "source_keys": [
+        "10.1061/NHREFO.NHENG-2300"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000022",
+      "entry_type": "article",
+      "title": "The i-FSC proxy for predicting inter-event and spatial variation of topographic site effects",
+      "authors": [
+        "Bou Nassif, A.",
+        "Maufroy, E.",
+        "Lacroix, P.",
+        "Chaljub, E.",
+        "Causse, M.",
+        "Bard, P.-Y."
+      ],
+      "year": 2025,
+      "journal": "Bulletin of Earthquake Engineering",
+      "doi": "10.1007/s10518-024-02042-4",
+      "abstract": "Our study focuses on predicting topographic amplification of ground motion in the near-source region, where seismic rays reach the free-surface at varying incidence angles. We rely on data from previous 3D numerical simulations conducted on a topographic relief with a homogeneous medium. First, using neural networks, we identify which key parameters, describing the geometric characteristics of the relief relative to the seismic source position, control ground motion amplification. Then, we determine the functional form that relates these parameters to the simulated amplifications. Subsequently, we conduct a regression study to develop a model of topographic amplification, referred to as the i-FSC proxy (Illuminated Frequency-Scaled Curvature). Our estimator depends on the frequency-scaled (1) curvature, a parameter that accounts for the occurrence of amplifications over convex topographies and de-amplification over concave ones; (2) normalized illumination angle, a newly defined parameter that quantifies the slope exposure to the incoming wavefield, accounting for high amplification on slopes oriented opposite to the seismic source. The illumination parameter reduces the uncertainties of the proxy by a factor of 2 compared to estimators that rely solely on curvature. The proxy does not require high computational resources. It uses a digital elevation map and a seismic source position to predict amplification factors (without lithological effects) for an S-wave at any site on the surface topography. It allows exploration of variations in topographic amplification near seismic sources, representing a significant breakthrough as areas closest to the fault typically sustain the highest damages. A MATLAB script performing the i-FSC calculations is provided. © The Author(s) 2024.",
+      "keywords": [],
+      "normalized_title": "the i fsc proxy for predicting inter event and spatial variation of topographic site effects",
+      "raw_bibtex": "@ARTICLE{10.1007/s10518-024-02042-4,\n\tauthor = {Bou Nassif, A. and Maufroy, E. and Lacroix, P. and Chaljub, E. and Causse, M. and Bard, P.-Y.},\n\ttitle = {The i-FSC proxy for predicting inter-event and spatial variation of topographic site effects},\n\tjournal = {Bulletin of Earthquake Engineering},\n\tyear = {2025},\n\tabstract = {Our study focuses on predicting topographic amplification of ground motion in the near-source region, where seismic rays reach the free-surface at varying incidence angles. We rely on data from previous 3D numerical simulations conducted on a topographic relief with a homogeneous medium. First, using neural networks, we identify which key parameters, describing the geometric characteristics of the relief relative to the seismic source position, control ground motion amplification. Then, we determine the functional form that relates these parameters to the simulated amplifications. Subsequently, we conduct a regression study to develop a model of topographic amplification, referred to as the i-FSC proxy (Illuminated Frequency-Scaled Curvature). Our estimator depends on the frequency-scaled (1) curvature, a parameter that accounts for the occurrence of amplifications over convex topographies and de-amplification over concave ones; (2) normalized illumination angle, a newly defined parameter that quantifies the slope exposure to the incoming wavefield, accounting for high amplification on slopes oriented opposite to the seismic source. The illumination parameter reduces the uncertainties of the proxy by a factor of 2 compared to estimators that rely solely on curvature. The proxy does not require high computational resources. It uses a digital elevation map and a seismic source position to predict amplification factors (without lithological effects) for an S-wave at any site on the surface topography. It allows exploration of variations in topographic amplification near seismic sources, representing a significant breakthrough as areas closest to the fault typically sustain the highest damages. A MATLAB script performing the i-FSC calculations is provided. © The Author(s) 2024.},\n\tdoi = {10.1007/s10518-024-02042-4},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85214218742&doi=10.1007%2Fs10518-024-02042-4&partnerID=40&md5=22ea441386b5fb0a779130e3c9c4128b},\n\tvolume = {23},\n\tnumber = {2},\n\tpages = {671-692},\n\tnote = {Export Date: 25 March 2026; Cited By: 1 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_4fa68a63-f320-4dc0-96bd-9dc3afd609a5.ris"
+      ],
+      "source_keys": [
+        "10.1007/s10518-024-02042-4"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000023",
+      "entry_type": "article",
+      "title": "Spatial earthquake vulnerability assessment by using multi-criteria decision making and probabilistic neural network techniques in Odisha, India",
+      "authors": [
+        "Jena, R.",
+        "Pradhan, B.",
+        "Beydoun, G.",
+        "Alamri, A.",
+        "Shanableh, A."
+      ],
+      "year": 2022,
+      "journal": "Geocarto International",
+      "doi": "10.1080/10106049.2021.1992023",
+      "abstract": "In this study, the multi-criteria decision-making method was used to estimate the weights of several input factors such as slope, curvature, elevation, proximity to road, road density, proximity to land use, land use density, proximity to water bodies, river density, rail density, distance from rail, groundwater variation, lithology with amplification factors, peak ground acceleration (PGA) variation, and population density. An integrated analytic hierarchy process (AHP) and a probabilistic neural network (PNN) were applied for the Earthquake vulnerability assessment (EVA). The PNN model successfully explored the relationship between variables and weights obtained from the AHP approach. Validation results indicate that 92.5% accuracy was attained by the PNN model. According to the results, 24.26%, 15.26%, and 20.58% of the area fall under very-high, high, and moderate vulnerability category, respectively. The EVA map illustrates that high to very-high impact could be observed in coastal Odisha and few districts in the Mahanadi Graven. © 2021 Informa UK Limited, trading as Taylor & Francis Group.",
+      "keywords": [],
+      "normalized_title": "spatial earthquake vulnerability assessment by using multi criteria decision making and probabilistic neural network techniques in odisha india",
+      "raw_bibtex": "@ARTICLE{10.1080/10106049.2021.1992023,\n\tauthor = {Jena, R. and Pradhan, B. and Beydoun, G. and Alamri, A. and Shanableh, A.},\n\ttitle = {Spatial earthquake vulnerability assessment by using multi-criteria decision making and probabilistic neural network techniques in Odisha, India},\n\tjournal = {Geocarto International},\n\tyear = {2022},\n\tabstract = {In this study, the multi-criteria decision-making method was used to estimate the weights of several input factors such as slope, curvature, elevation, proximity to road, road density, proximity to land use, land use density, proximity to water bodies, river density, rail density, distance from rail, groundwater variation, lithology with amplification factors, peak ground acceleration (PGA) variation, and population density. An integrated analytic hierarchy process (AHP) and a probabilistic neural network (PNN) were applied for the Earthquake vulnerability assessment (EVA). The PNN model successfully explored the relationship between variables and weights obtained from the AHP approach. Validation results indicate that 92.5% accuracy was attained by the PNN model. According to the results, 24.26%, 15.26%, and 20.58% of the area fall under very-high, high, and moderate vulnerability category, respectively. The EVA map illustrates that high to very-high impact could be observed in coastal Odisha and few districts in the Mahanadi Graven. © 2021 Informa UK Limited, trading as Taylor & Francis Group.},\n\tdoi = {10.1080/10106049.2021.1992023},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85118546201&doi=10.1080%2F10106049.2021.1992023&partnerID=40&md5=8c382d86f4bfcc66054321b1c5af9121},\n\tvolume = {37},\n\tnumber = {25},\n\tpages = {8080-8099},\n\tnote = {Export Date: 25 March 2026; Cited By: 12 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_4fa68a63-f320-4dc0-96bd-9dc3afd609a5.ris"
+      ],
+      "source_keys": [
+        "10.1080/10106049.2021.1992023"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000024",
+      "entry_type": "article",
+      "title": "Transfer learning model for estimating site amplification factors from limited microtremor H/V spectral ratios",
+      "authors": [
+        "Pan, D.",
+        "Miura, H.",
+        "Kwan, C."
+      ],
+      "year": 2024,
+      "journal": "Geophysical Journal International",
+      "doi": "10.1093/gji/ggae065",
+      "abstract": "Site amplification factors (SAFs) of seismic ground motions are essential in evaluating and estimating seismic hazards. In our previous study, the authors proposed a simple and cost-effective method to estimate a SAF based on a deep neural network (DNN) model and microtremor horizontal-to-vertical spectral ratio (MHVR). Since the previous DNN model was based on the observed SAFs and MHVRs within a limited district in Japan, the applicability of the previous model to non-source regions with different site conditions was limited. This study explored the application of a transfer learning (TL) technique to adapt an existing (pre-trained) DNN model to new regions and a different database. The SAFs obtained through generalized spectral inversion technique (GIT) at the seismic observation stations (K-NET and KiK-net) in Japan were collated as the ground truth for site effects. MHVRs recorded at the stations in several districts of Japan were collected to construct a data set for the development of the TL model. Subsequently, a TL model was constructed, leveraging the neural network layers and their weights from the pre-trained model while incorporating additional neural network layers to enhance the performance. During the training process, a total data set of 112 sites was divided into training set, validation set, and external test set by 1:1:5. Utilizing a cross-validation strategy, the residuals between pSAFs (pseudo-SAFs) estimated by the TL model and the observed SAFs were analysed for the external test set containing 80 sites. The results showed that the TL model outperformed the pre-trained DNN model. The cross-validation results demonstrated that almost consistent prediction results were obtained regardless of any combination of 16 sites selected as the training set. Furthermore, by contrasting the influence of varying training set sizes on the performance of the TL model and comparing the TL model to a DNN model with an extended training set, the effectiveness of constructing the model with the limited number of data (16 sites) was ascertained. Finally, the effectiveness and limitations of the TL model were evaluated using MHVRs with peak frequencies falling outside the training set’s range. C The Author(s) 2024.",
+      "keywords": [],
+      "normalized_title": "transfer learning model for estimating site amplification factors from limited microtremor h v spectral ratios",
+      "raw_bibtex": "@ARTICLE{10.1093/gji/ggae065,\n\tauthor = {Pan, D. and Miura, H. and Kwan, C.},\n\ttitle = {Transfer learning model for estimating site amplification factors from limited microtremor H/V spectral ratios},\n\tjournal = {Geophysical Journal International},\n\tyear = {2024},\n\tabstract = {Site amplification factors (SAFs) of seismic ground motions are essential in evaluating and estimating seismic hazards. In our previous study, the authors proposed a simple and cost-effective method to estimate a SAF based on a deep neural network (DNN) model and microtremor horizontal-to-vertical spectral ratio (MHVR). Since the previous DNN model was based on the observed SAFs and MHVRs within a limited district in Japan, the applicability of the previous model to non-source regions with different site conditions was limited. This study explored the application of a transfer learning (TL) technique to adapt an existing (pre-trained) DNN model to new regions and a different database. The SAFs obtained through generalized spectral inversion technique (GIT) at the seismic observation stations (K-NET and KiK-net) in Japan were collated as the ground truth for site effects. MHVRs recorded at the stations in several districts of Japan were collected to construct a data set for the development of the TL model. Subsequently, a TL model was constructed, leveraging the neural network layers and their weights from the pre-trained model while incorporating additional neural network layers to enhance the performance. During the training process, a total data set of 112 sites was divided into training set, validation set, and external test set by 1:1:5. Utilizing a cross-validation strategy, the residuals between pSAFs (pseudo-SAFs) estimated by the TL model and the observed SAFs were analysed for the external test set containing 80 sites. The results showed that the TL model outperformed the pre-trained DNN model. The cross-validation results demonstrated that almost consistent prediction results were obtained regardless of any combination of 16 sites selected as the training set. Furthermore, by contrasting the influence of varying training set sizes on the performance of the TL model and comparing the TL model to a DNN model with an extended training set, the effectiveness of constructing the model with the limited number of data (16 sites) was ascertained. Finally, the effectiveness and limitations of the TL model were evaluated using MHVRs with peak frequencies falling outside the training set’s range. C The Author(s) 2024.},\n\tdoi = {10.1093/gji/ggae065},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85186713388&doi=10.1093%2Fgji%2Fggae065&partnerID=40&md5=b648fc153d364551f240673150bc2e88},\n\tvolume = {237},\n\tnumber = {1},\n\tpages = {622-635},\n\tnote = {Export Date: 25 March 2026; Cited By: 3 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_4fa68a63-f320-4dc0-96bd-9dc3afd609a5.ris"
+      ],
+      "source_keys": [
+        "10.1093/gji/ggae065"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000025",
+      "entry_type": "article",
+      "title": "Development of rule-based approaches for soil amplification predictio",
+      "authors": [
+        "Ozmen, H.B.",
+        "Ozer, E."
+      ],
+      "year": 2025,
+      "journal": "Ingegneria Sismica",
+      "doi": "10.65102/is202522",
+      "abstract": "Earthquakes are a natural disaster which causes loss of life and property. For this reason, earthquake professionals show great effort for reliable earthquake predictions. Earthquake attempts to guess with techniques rely on different modeling, approach, and certain precursors for seismic activity. These predictions in current technology can also improve by using various machine learning techniques. Because machine learning techniques such as association rule mining facilitate the interpretation of many complex problems, particularly for large databases. Furthermore, the techniques can develop more reliable approaches by combining previously acquired information. The aim of this study is to predict the key conditions influencing soil amplification from the data of the 8400 ground motion records for 100 different soil profiles. This is achieved by applying association rule mining on 31 different parameters related to soil profiles and the ground motion records with respect to amplification levels. The rules generated for predicting soil amplification are mathematically validated. Results from the proposed rule-based predictions for soil amplification show the most effective parameters (conditions) related to ground motion and soil such as frequency content, period and intensity. Additionally, probabilities of soil amplification and damping respect to soil type and peak ground acceleration were determined. These findings may provide valuable insights for future research on soil amplification. © 2025, Medinlin Soft. All rights reserved.",
+      "keywords": [],
+      "normalized_title": "development of rule based approaches for soil amplification predictio",
+      "raw_bibtex": "@ARTICLE{10.65102/is202522,\n\tauthor = {Ozmen, H.B. and Ozer, E.},\n\ttitle = {Development of rule-based approaches for soil amplification predictio},\n\tjournal = {Ingegneria Sismica},\n\tyear = {2025},\n\tabstract = {Earthquakes are a natural disaster which causes loss of life and property. For this reason, earthquake professionals show great effort for reliable earthquake predictions. Earthquake attempts to guess with techniques rely on different modeling, approach, and certain precursors for seismic activity. These predictions in current technology can also improve by using various machine learning techniques. Because machine learning techniques such as association rule mining facilitate the interpretation of many complex problems, particularly for large databases. Furthermore, the techniques can develop more reliable approaches by combining previously acquired information. The aim of this study is to predict the key conditions influencing soil amplification from the data of the 8400 ground motion records for 100 different soil profiles. This is achieved by applying association rule mining on 31 different parameters related to soil profiles and the ground motion records with respect to amplification levels. The rules generated for predicting soil amplification are mathematically validated. Results from the proposed rule-based predictions for soil amplification show the most effective parameters (conditions) related to ground motion and soil such as frequency content, period and intensity. Additionally, probabilities of soil amplification and damping respect to soil type and peak ground acceleration were determined. These findings may provide valuable insights for future research on soil amplification. © 2025, Medinlin Soft. All rights reserved.},\n\tdoi = {10.65102/is202522},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105024187661&doi=10.65102%2Fis202522&partnerID=40&md5=6398dade842df30e1af22fed00f0d8a7},\n\tvolume = {42},\n\tnumber = {2},\n\tpages = {29-42},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_4fa68a63-f320-4dc0-96bd-9dc3afd609a5.ris"
+      ],
+      "source_keys": [
+        "10.65102/is202522"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000026",
+      "entry_type": "article",
+      "title": "Assessment of Site Amplification Factors in Southern Lima, Peru Based on Microtremor H/V Spectral Ratios and Deep Neural Network",
+      "authors": [
+        "Miura, H.",
+        "Gonzales, C.",
+        "Diaz, M.",
+        "Estrada, M.",
+        "Lazares, F.",
+        "Aguilar, Z.",
+        "Pan, D.",
+        "Matsuoka, M."
+      ],
+      "year": 2023,
+      "journal": "Journal of Disaster Research",
+      "doi": "10.20965/jdr.2023.p0298",
+      "abstract": "Evaluation of site amplification factors (SAFs) of seismic waves has been one of the important issues for evaluating seismic hazards. The authors have pro-posed a deep neural network (DNN) model in or-der to cost-effectively and accurately estimate SAF from microtremor horizontal-to-vertical spectral ratio (MHVR). In this study, we assessed the SAFs in southern Lima, Peru by estimating from MHVRs and DNN. First, we validated the applicability of the DNN model to Lima by estimating the SAFs from the MHVRs observed at seismic stations in Lima. From the comparison with the observed SAFs derived from spectral inversion technique, we confirmed that the SAFs in Lima were accurately estimated by the DNN model. The SAFs in the southern Lima including Chorrillos and Villa El Salvador districts were evaluated by ap-plying the DNN model to the observed MHVRs at ap-proximately 250 sites. We found that large amplifications at low frequency around 1 Hz were expected in the southeastern coastal areas formed by eolian sands whereas smaller amplification were estimated in the northwestern areas mainly located on alluvial de-posits. © Fuji Technology Press Ltd.",
+      "keywords": [],
+      "normalized_title": "assessment of site amplification factors in southern lima peru based on microtremor h v spectral ratios and deep neural network",
+      "raw_bibtex": "@ARTICLE{10.20965/jdr.2023.p0298,\n\tauthor = {Miura, H. and Gonzales, C. and Diaz, M. and Estrada, M. and Lazares, F. and Aguilar, Z. and Pan, D. and Matsuoka, M.},\n\ttitle = {Assessment of Site Amplification Factors in Southern Lima, Peru Based on Microtremor H/V Spectral Ratios and Deep Neural Network},\n\tjournal = {Journal of Disaster Research},\n\tyear = {2023},\n\tabstract = {Evaluation of site amplification factors (SAFs) of seismic waves has been one of the important issues for evaluating seismic hazards. The authors have pro-posed a deep neural network (DNN) model in or-der to cost-effectively and accurately estimate SAF from microtremor horizontal-to-vertical spectral ratio (MHVR). In this study, we assessed the SAFs in southern Lima, Peru by estimating from MHVRs and DNN. First, we validated the applicability of the DNN model to Lima by estimating the SAFs from the MHVRs observed at seismic stations in Lima. From the comparison with the observed SAFs derived from spectral inversion technique, we confirmed that the SAFs in Lima were accurately estimated by the DNN model. The SAFs in the southern Lima including Chorrillos and Villa El Salvador districts were evaluated by ap-plying the DNN model to the observed MHVRs at ap-proximately 250 sites. We found that large amplifications at low frequency around 1 Hz were expected in the southeastern coastal areas formed by eolian sands whereas smaller amplification were estimated in the northwestern areas mainly located on alluvial de-posits. © Fuji Technology Press Ltd.},\n\tdoi = {10.20965/jdr.2023.p0298},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85163179602&doi=10.20965%2Fjdr.2023.p0298&partnerID=40&md5=12a2f2080a98a7b86444b0036d95e0cc},\n\tvolume = {18},\n\tnumber = {4},\n\tpages = {298-307},\n\tnote = {Export Date: 25 March 2026; Cited By: 4 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_4fa68a63-f320-4dc0-96bd-9dc3afd609a5.ris"
+      ],
+      "source_keys": [
+        "10.20965/jdr.2023.p0298"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000027",
+      "entry_type": "article",
+      "title": "Effects of Vertical Ground Motion on Pedestrian-Induced Vibrations of Footbridges: Numerical Analysis and Machine Learning-Based Prediction",
+      "authors": [
+        "Wei, X.",
+        "Fu, B.",
+        "Wu, W.",
+        "Liu, X."
+      ],
+      "year": 2022,
+      "journal": "Buildings",
+      "doi": "10.3390/buildings12122138",
+      "abstract": "Current codes and guidelines for the dynamic design of footbridges often only specify the pedestrian-induced excitations. However, earthquakes may occur during the passing stage of pedestrians in earthquake-prone regions. In addition, modern footbridges tend to be slender and are sensitive to vertical ground motions. Therefore, we investigate the effects of vertical ground motion on pedestrian-induced vibrations of footbridges. A total of 138 footbridges with different materials, dimensions, and structural types are considered as the target structures. The classical social force model combined with the pedestrian-induced load is used to simulate crowd loads for the scenarios with six typical pedestrian densities. Furthermore, 59 vertical ground motions with four seismic intensities are taken as the seismic inputs. An amplification factor is introduced to quantify the amplification effects of vertical ground motion on human-induced vibrations of footbridges. Four machine learning (ML) algorithms are used to predict the amplification factor. The feature importance indicates that the scaled peak ground acceleration, the pedestrian density, and the bridge span are the three most important parameters influencing the amplification factor. Finally, the vibration serviceability of the footbridge subjected to both crowd load and vertical ground motion is assessed. © 2022 by the authors.",
+      "keywords": [],
+      "normalized_title": "effects of vertical ground motion on pedestrian induced vibrations of footbridges numerical analysis and machine learning based prediction",
+      "raw_bibtex": "@ARTICLE{10.3390/buildings12122138,\n\tauthor = {Wei, X. and Fu, B. and Wu, W. and Liu, X.},\n\ttitle = {Effects of Vertical Ground Motion on Pedestrian-Induced Vibrations of Footbridges: Numerical Analysis and Machine Learning-Based Prediction},\n\tjournal = {Buildings},\n\tyear = {2022},\n\tabstract = {Current codes and guidelines for the dynamic design of footbridges often only specify the pedestrian-induced excitations. However, earthquakes may occur during the passing stage of pedestrians in earthquake-prone regions. In addition, modern footbridges tend to be slender and are sensitive to vertical ground motions. Therefore, we investigate the effects of vertical ground motion on pedestrian-induced vibrations of footbridges. A total of 138 footbridges with different materials, dimensions, and structural types are considered as the target structures. The classical social force model combined with the pedestrian-induced load is used to simulate crowd loads for the scenarios with six typical pedestrian densities. Furthermore, 59 vertical ground motions with four seismic intensities are taken as the seismic inputs. An amplification factor is introduced to quantify the amplification effects of vertical ground motion on human-induced vibrations of footbridges. Four machine learning (ML) algorithms are used to predict the amplification factor. The feature importance indicates that the scaled peak ground acceleration, the pedestrian density, and the bridge span are the three most important parameters influencing the amplification factor. Finally, the vibration serviceability of the footbridge subjected to both crowd load and vertical ground motion is assessed. © 2022 by the authors.},\n\tdoi = {10.3390/buildings12122138},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85144839278&doi=10.3390%2Fbuildings12122138&partnerID=40&md5=d39f11665c98245882213888f5ec81da},\n\tvolume = {12},\n\tnumber = {12},\n\tnote = {Export Date: 25 March 2026; Cited By: 8 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_4fa68a63-f320-4dc0-96bd-9dc3afd609a5.ris"
+      ],
+      "source_keys": [
+        "10.3390/buildings12122138"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000028",
+      "entry_type": "article",
+      "title": "Machine learning techniques for estimating seismic site amplification in the Santiago basin, Chile",
+      "authors": [
+        "Díaz, J.P.",
+        "Sáez, E.",
+        "Monsalve, M.",
+        "Candia, G.",
+        "Aron, F.",
+        "González, G."
+      ],
+      "year": 2022,
+      "journal": "Engineering Geology",
+      "doi": "10.1016/j.enggeo.2022.106764",
+      "abstract": "Seismic site amplification and seismic hazard maps are crucial inputs for decision making and risk evaluation in places where seismicity imposes a significant risk to human life and infrastructure. In this work, we propose a novel machine learning (ML) based methodology to integrate qualitative and quantitative data to map the degree of seismic amplification in an area of Chile, one of the most seismically active countries on Earth. Our method uses measurements of surface shear wave velocities (Vs30) and predominant frequencies (f0) combined with gravity anomaly maps to update the geographic extension of seismic amplification classes. Additionally, we trained the predictive models to interpolate and extrapolate Vs30 and f0 to the unsampled sites. Applying this method to the Santiago basin resulted in (i) a refined seismic amplification map, and (ii) maps of Vs30 and f0 estimated with improved accuracy. The best predictions, obtained by ML techniques and validated through cross-validation, are possibly due to the inclusion of spatial covariates for algorithm training, enhancing the ability of the model to capture the spatial correlations of geological, geophysical and geotechnical data. The estimation of predominant frequencies (f0) is improved considerably by including gravity as a covariant. The accuracy of the f0 predictions apparently depends more on the choice of covariates than on the algorithm used, while the Vs30 predictions are more sensitive to the chosen algorithm. These results illustrate the great potential of machine learning predictive algorithms in digital soil mapping, which surpass traditional geostatistical techniques. The major contribution of this work is to introduce a novel methodology, based on artificial intelligence models, to extend local measurements of site-specific dynamic properties. This information can be used to quantitatively estimate seismic hazard over a regional scale. © 2022 Elsevier B.V.",
+      "keywords": [],
+      "normalized_title": "machine learning techniques for estimating seismic site amplification in the santiago basin chile",
+      "raw_bibtex": "@ARTICLE{10.1016/j.enggeo.2022.106764,\n\tauthor = {Díaz, J.P. and Sáez, E. and Monsalve, M. and Candia, G. and Aron, F. and González, G.},\n\ttitle = {Machine learning techniques for estimating seismic site amplification in the Santiago basin, Chile},\n\tjournal = {Engineering Geology},\n\tyear = {2022},\n\tabstract = {Seismic site amplification and seismic hazard maps are crucial inputs for decision making and risk evaluation in places where seismicity imposes a significant risk to human life and infrastructure. In this work, we propose a novel machine learning (ML) based methodology to integrate qualitative and quantitative data to map the degree of seismic amplification in an area of Chile, one of the most seismically active countries on Earth. Our method uses measurements of surface shear wave velocities (Vs30) and predominant frequencies (f0) combined with gravity anomaly maps to update the geographic extension of seismic amplification classes. Additionally, we trained the predictive models to interpolate and extrapolate Vs30 and f0 to the unsampled sites. Applying this method to the Santiago basin resulted in (i) a refined seismic amplification map, and (ii) maps of Vs30 and f0 estimated with improved accuracy. The best predictions, obtained by ML techniques and validated through cross-validation, are possibly due to the inclusion of spatial covariates for algorithm training, enhancing the ability of the model to capture the spatial correlations of geological, geophysical and geotechnical data. The estimation of predominant frequencies (f0) is improved considerably by including gravity as a covariant. The accuracy of the f0 predictions apparently depends more on the choice of covariates than on the algorithm used, while the Vs30 predictions are more sensitive to the chosen algorithm. These results illustrate the great potential of machine learning predictive algorithms in digital soil mapping, which surpass traditional geostatistical techniques. The major contribution of this work is to introduce a novel methodology, based on artificial intelligence models, to extend local measurements of site-specific dynamic properties. This information can be used to quantitatively estimate seismic hazard over a regional scale. © 2022 Elsevier B.V.},\n\tdoi = {10.1016/j.enggeo.2022.106764},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85132526460&doi=10.1016%2Fj.enggeo.2022.106764&partnerID=40&md5=e307da371705e9624acb0740da9266ae},\n\tvolume = {306},\n\tnote = {Export Date: 25 March 2026; Cited By: 14 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_4fa68a63-f320-4dc0-96bd-9dc3afd609a5.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.enggeo.2022.106764"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000029",
+      "entry_type": "article",
+      "title": "Site database for national strong motion stations in mainland China",
+      "authors": [
+        "Ji, K.",
+        "Ren, Y.",
+        "Zhu, C.",
+        "Zhang, Y.",
+        "Yao, X.",
+        "Wang, D.",
+        "Zhang, P.",
+        "Si, H.",
+        "Kishida, T.",
+        "Liu, Y.",
+        "Yaghmaei-Sabegh, S.",
+        "Wen, R."
+      ],
+      "year": 2024,
+      "journal": "Engineering Geology",
+      "doi": "10.1016/j.enggeo.2024.107651",
+      "abstract": "Ground motion amplification and spectral content are significantly influenced by local soil and geological conditions. This article summarizes the development of the China Site Database (CNSDB) in the China Ground Motion Flatfile project. CNSDB contains site information for 1450 strong-motion recording stations within the National Strong Motion Observation Network System (NSMONS) in China. The primary site information in CNSDB includes the time-averaged shear-wave velocity in the upper 30 m (VS30), and site class according to the seismic design code in China. These site data are derived using different methods from various data sources. Priority is given to approaches that minimize bias and dispersion relative to measurement-based results. Recommended VS30 values and site class are derived from reliable velocity profiles or field survey results whenever available. A China-specific VS30 extrapolation model is developed using 6179 engineering boreholes and is then utilized to estimate VS30 for profiles <30 m. VS30 values and site class are estimated from horizontal-to-vertical spectral ratio (HVSR) curves of earthquake recordings using machine-learning techniques. For the remaining sites without velocity profiles or sufficient ground-motion recordings for HVSR computation, VS30 values are determined as the weighted average of proxy-based estimates using geological attributes, topographic slope, and terrain categories. We also discuss the potential application of CNSDB in the development of China seismic hazard map considering site amplification factors. © 2024",
+      "keywords": [],
+      "normalized_title": "site database for national strong motion stations in mainland china",
+      "raw_bibtex": "@ARTICLE{10.1016/j.enggeo.2024.107651,\n\tauthor = {Ji, K. and Ren, Y. and Zhu, C. and Zhang, Y. and Yao, X. and Wang, D. and Zhang, P. and Si, H. and Kishida, T. and Liu, Y. and Yaghmaei-Sabegh, S. and Wen, R.},\n\ttitle = {Site database for national strong motion stations in mainland China},\n\tjournal = {Engineering Geology},\n\tyear = {2024},\n\tabstract = {Ground motion amplification and spectral content are significantly influenced by local soil and geological conditions. This article summarizes the development of the China Site Database (CNSDB) in the China Ground Motion Flatfile project. CNSDB contains site information for 1450 strong-motion recording stations within the National Strong Motion Observation Network System (NSMONS) in China. The primary site information in CNSDB includes the time-averaged shear-wave velocity in the upper 30 m (VS30), and site class according to the seismic design code in China. These site data are derived using different methods from various data sources. Priority is given to approaches that minimize bias and dispersion relative to measurement-based results. Recommended VS30 values and site class are derived from reliable velocity profiles or field survey results whenever available. A China-specific VS30 extrapolation model is developed using 6179 engineering boreholes and is then utilized to estimate VS30 for profiles <30 m. VS30 values and site class are estimated from horizontal-to-vertical spectral ratio (HVSR) curves of earthquake recordings using machine-learning techniques. For the remaining sites without velocity profiles or sufficient ground-motion recordings for HVSR computation, VS30 values are determined as the weighted average of proxy-based estimates using geological attributes, topographic slope, and terrain categories. We also discuss the potential application of CNSDB in the development of China seismic hazard map considering site amplification factors. © 2024},\n\tdoi = {10.1016/j.enggeo.2024.107651},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85199513795&doi=10.1016%2Fj.enggeo.2024.107651&partnerID=40&md5=b0bd63c2ba424e2f9a1cde843d52d1c2},\n\tvolume = {339},\n\tnote = {Export Date: 25 March 2026; Cited By: 7 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_4fa68a63-f320-4dc0-96bd-9dc3afd609a5.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.enggeo.2024.107651"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000030",
+      "entry_type": "article",
+      "title": "A physics-based machine learning-informed model for predicting regional earthquake-induced landslides",
+      "authors": [
+        "Gong, W.",
+        "Zekkos, D.",
+        "Clark, M."
+      ],
+      "year": 2026,
+      "journal": "Engineering Geology",
+      "doi": "10.1016/j.enggeo.2025.108488",
+      "abstract": "Reduced complexity physical models are commonly applied to regional earthquake-triggered landslide events because they are computationally efficient and can reproduce observed landsliding patterns with relatively few input parameters. However, a major shortcoming of existing physical models is the overprediction of slope failure arising from the implementation of seismic displacement models that depend on a single critical slope angle. Such models predict that all slopes steeper than the critical slope angle will fail, in contrast to observational data that indicate that only a certain portion do. High-resolution input of spatially variable ground conditions and strength parameters and consideration of topographic amplification would likely reduce overprediction, but these approaches are considered prohibitively expensive at present. In this study, we explore the opportunity to improve the prediction of regional earthquake-induced landslides obtained from physics-based models by applying a computationally efficient machine learning (ML) algorithm to classify the model results. A pseudo-three-dimensional (pseudo-3D) physics-based methodology is used to predict the landslides caused by the 2015 Mw 6.5 Lefkada earthquake and the prediction has broad geospatial overlap with observed landslides and high landslide density areas, however the model also overpredicts landslide occurrence. Classifying the results of the physics-based model using the XGBoost ML algorithm is found to enhance regional earthquake-induced landslide prediction by establishing objective criteria for eliminating false predictions from the physics-based model. The ML model considers five training features, i.e., landslide volume, calculated ratio of three-dimensional (3D) factor of safety (FS) to one-dimensional (1D) FS, slope aspect, elevation, and topographic roughness. Incorporation of these features results in a 45% reduction in the total number of predicted landslides originally predicted by the physics-based method. However, application of the ML algorithm also reduces true positive rate, underscoring the need to fairly assess the tradeoffs between true- and false-predictions in landslide hazard forecasting. © 2025 Elsevier B.V.",
+      "keywords": [],
+      "normalized_title": "a physics based machine learning informed model for predicting regional earthquake induced landslides",
+      "raw_bibtex": "@ARTICLE{10.1016/j.enggeo.2025.108488,\n\tauthor = {Gong, W. and Zekkos, D. and Clark, M.},\n\ttitle = {A physics-based machine learning-informed model for predicting regional earthquake-induced landslides},\n\tjournal = {Engineering Geology},\n\tyear = {2026},\n\tabstract = {Reduced complexity physical models are commonly applied to regional earthquake-triggered landslide events because they are computationally efficient and can reproduce observed landsliding patterns with relatively few input parameters. However, a major shortcoming of existing physical models is the overprediction of slope failure arising from the implementation of seismic displacement models that depend on a single critical slope angle. Such models predict that all slopes steeper than the critical slope angle will fail, in contrast to observational data that indicate that only a certain portion do. High-resolution input of spatially variable ground conditions and strength parameters and consideration of topographic amplification would likely reduce overprediction, but these approaches are considered prohibitively expensive at present. In this study, we explore the opportunity to improve the prediction of regional earthquake-induced landslides obtained from physics-based models by applying a computationally efficient machine learning (ML) algorithm to classify the model results. A pseudo-three-dimensional (pseudo-3D) physics-based methodology is used to predict the landslides caused by the 2015 Mw 6.5 Lefkada earthquake and the prediction has broad geospatial overlap with observed landslides and high landslide density areas, however the model also overpredicts landslide occurrence. Classifying the results of the physics-based model using the XGBoost ML algorithm is found to enhance regional earthquake-induced landslide prediction by establishing objective criteria for eliminating false predictions from the physics-based model. The ML model considers five training features, i.e., landslide volume, calculated ratio of three-dimensional (3D) factor of safety (FS) to one-dimensional (1D) FS, slope aspect, elevation, and topographic roughness. Incorporation of these features results in a 45% reduction in the total number of predicted landslides originally predicted by the physics-based method. However, application of the ML algorithm also reduces true positive rate, underscoring the need to fairly assess the tradeoffs between true- and false-predictions in landslide hazard forecasting. © 2025 Elsevier B.V.},\n\tdoi = {10.1016/j.enggeo.2025.108488},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105023825840&doi=10.1016%2Fj.enggeo.2025.108488&partnerID=40&md5=5eb24df8571f8fc2e95d82ec775bff3a},\n\tvolume = {361},\n\tnote = {Export Date: 25 March 2026; Cited By: 1 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_4fa68a63-f320-4dc0-96bd-9dc3afd609a5.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.enggeo.2025.108488"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

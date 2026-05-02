@@ -7,7 +7,10 @@ import {
   NAlert,
   NButton,
   NCard,
+  NForm,
+  NFormItem,
   NInput,
+  NModal,
   NProgress,
   NSpace,
   NSpin,
@@ -46,6 +49,8 @@ const bulkReviewDecision = ref<'include' | 'exclude' | 'uncertain'>('exclude')
 const bulkReviewReason = ref('人工复核：批量修正')
 const bulkReviewText = ref('')
 const referenceOverrideText = ref('')
+const showRenameTaskModal = ref(false)
+const renameTaskTitle = ref('')
 
 const selectedRecords = computed(() => {
   const map = new Map((task.value?.records ?? []).map((row) => [row.paper_id, row]))
@@ -72,7 +77,7 @@ const progressPercentage = computed(() => {
 })
 const threadHomePath = computed(() => (task.value?.project_id ? `/threads/${task.value.project_id}` : null))
 const threadEditPath = computed(() => (
-  task.value?.project_id
+  task.value?.project_id && task.value.kind !== 'screening'
     ? { path: `/threads/${task.value.project_id}`, query: { editThread: '1' } }
     : null
 ))
@@ -97,7 +102,8 @@ function latestMatchingDataset(taskRecord: { output_dataset_ids: string[] }, kin
 const includedDataset = computed(() => (task.value?.kind === 'screening' ? latestMatchingDataset(task.value, ['included_reviewed', 'included']) : null))
 const unusedDataset = computed(() => (task.value?.kind === 'screening' ? latestMatchingDataset(task.value, ['unused']) : null))
 const excludedDataset = computed(() => (task.value?.kind === 'screening' ? latestMatchingDataset(task.value, ['excluded_reviewed', 'excluded']) : null))
-const canReturnToEdit = computed(() => isRetriableTask.value && (task.value?.kind === 'screening' || task.value?.kind === 'report'))
+const canRenameScreeningTask = computed(() => task.value?.kind === 'screening')
+const canReturnToEdit = computed(() => isRetriableTask.value && task.value?.kind === 'report')
 
 function asRecord(value: unknown): Record<string, unknown> | null {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return null
@@ -114,6 +120,10 @@ function asStringArray(value: unknown): string[] {
 
 const taskPayload = computed(() => asRecord(task.value?.request_payload))
 const uploadedFileNames = computed(() => asStringArray(taskPayload.value?.uploaded_file_names))
+const minIncludeConfidenceLabel = computed(() => {
+  const value = asNumber(taskPayload.value?.min_include_confidence, 0.8) ?? 0.8
+  return value > 0 ? `${Math.round(value * 100)}%` : '模型判定'
+})
 const taskScreeningCriteria = computed(() => {
   const payload = taskPayload.value
   if (!payload) return null
@@ -185,12 +195,13 @@ function restoreScreeningDraftFromTask(taskDetail: TaskDetailPayload): boolean {
       api_key_env: asString(payload.api_key_env, provider === 'kimi' ? 'KIMI_API_KEY' : 'DEEPSEEK_API_KEY'),
       api_key: draftsStore.getProviderApiKey(provider),
       temperature: asNumber(payload.temperature, 0) ?? 0,
-      max_tokens: asNumber(payload.max_tokens, 1536) ?? 1536,
+      max_tokens: Math.max(asNumber(payload.max_tokens, 4096) ?? 4096, 4096),
       min_request_interval_seconds: asNumber(payload.min_request_interval_seconds, 2) ?? 2,
     },
     batchSize: asNumber(payload.batch_size, 10) ?? 10,
     targetIncludeCount: asNumber(payload.target_include_count, null),
     stopWhenReached: asBoolean(payload.stop_when_target_reached, false),
+    minIncludeConfidence: asNumber(payload.min_include_confidence, 0.8) ?? 0.8,
     allowUncertain: asBoolean(payload.allow_uncertain, true),
     retryTimes: asNumber(payload.retry_times, 6) ?? 6,
     requestTimeout: asNumber(payload.request_timeout_seconds, 240) ?? 240,
@@ -291,23 +302,44 @@ async function retryCurrentTask() {
   message.success('任务已重新启动')
 }
 
+function openRenameTaskModal() {
+  if (!task.value || task.value.kind !== 'screening') return
+  renameTaskTitle.value = task.value.title
+  showRenameTaskModal.value = true
+}
+
+async function saveTaskRename() {
+  if (!task.value || task.value.kind !== 'screening') return
+  const nextTitle = renameTaskTitle.value.trim()
+  if (!nextTitle) {
+    message.warning('任务名称不能为空')
+    return
+  }
+  await tasksStore.rename(task.value.id, nextTitle)
+  if (task.value.project_id) {
+    await projectsStore.loadProject(task.value.project_id)
+  }
+  showRenameTaskModal.value = false
+  message.success('初筛任务名称已更新')
+}
+
+async function cloneScreeningTaskAsNewRound() {
+  if (!task.value || task.value.kind !== 'screening') return
+  if (!restoreScreeningDraftFromTask(task.value)) {
+    message.error('当前任务缺少可恢复的编辑参数')
+    return
+  }
+  const targetPath = task.value.project_id ? `/threads/${task.value.project_id}/screening/new` : '/screening/new'
+  await router.push(targetPath)
+  message.success('已复制本轮初筛参数，可以作为新一轮重新提交')
+}
+
 async function returnTaskToEdit() {
   if (!task.value) return
 
-  if (task.value.kind === 'screening') {
-    if (!restoreScreeningDraftFromTask(task.value)) {
-      message.error('当前任务缺少可恢复的编辑参数')
-      return
-    }
-    const targetPath = task.value.project_id ? `/threads/${task.value.project_id}/screening/new` : '/screening/new'
-    await router.push(targetPath)
-    message.success('已返回初筛编辑页，请重新选择文件后再提交')
-    return
-  }
-
   if (task.value.kind === 'report') {
     if (!task.value.project_id || !restoreReportDraftFromTask(task.value)) {
-      message.error('当前报告任务缺少可恢复的编辑参数')
+      message.error('当前报告生成任务缺少可恢复的编辑参数')
       return
     }
     await router.push({
@@ -335,7 +367,7 @@ function requestErrorMessage(error: unknown, fallback: string) {
 
 async function deleteCurrentTask() {
   if (!task.value || !canDeleteTask.value) return
-  const confirmed = window.confirm('删除这轮初筛后，它产生的纳入/剔除/未使用结果会一并移除，并从全文工作台回收。这个操作不能撤销。确定继续吗？')
+  const confirmed = window.confirm('删除这轮初筛后，它产生的纳入/剔除/未使用结果会一并移除，并从复核与全文工作台回收。这个操作不能撤销。确定继续吗？')
   if (!confirmed) return
 
   const projectId = task.value.project_id
@@ -441,6 +473,14 @@ async function goToFulltextWorkspace() {
             编辑线程信息
           </NButton>
         </RouterLink>
+        <NButton v-if="canRenameScreeningTask" tertiary type="warning" @click="openRenameTaskModal">
+          <template #icon><Pencil :size="16" /></template>
+          重命名初筛
+        </NButton>
+        <NButton v-if="canRenameScreeningTask && !isRunning" tertiary @click="cloneScreeningTaskAsNewRound">
+          <template #icon><FileText :size="16" /></template>
+          复制为新一轮
+        </NButton>
         <NButton tertiary @click="refreshCurrentTask">
           <template #icon><RefreshCw :size="16" /></template>
           刷新
@@ -464,6 +504,30 @@ async function goToFulltextWorkspace() {
       </NSpace>
     </section>
 
+    <NModal
+      v-model:show="showRenameTaskModal"
+      preset="card"
+      title="重命名初筛任务"
+      style="width: 520px"
+      :bordered="false"
+    >
+      <NForm label-placement="top">
+        <NFormItem label="任务名称">
+          <NInput
+            v-model:value="renameTaskTitle"
+            placeholder="例如：English batch 1"
+            @keyup.enter="saveTaskRename"
+          />
+        </NFormItem>
+      </NForm>
+      <template #footer>
+        <NSpace justify="end">
+          <NButton @click="showRenameTaskModal = false">取消</NButton>
+          <NButton type="primary" :loading="tasksStore.submitting" @click="saveTaskRename">保存</NButton>
+        </NSpace>
+      </template>
+    </NModal>
+
     <NAlert v-if="task.error" type="error" :show-icon="false">
       <pre class="error-block">{{ task.error }}</pre>
     </NAlert>
@@ -486,7 +550,7 @@ async function goToFulltextWorkspace() {
     </NCard>
 
     <NSpin v-if="isRunning && task.kind === 'report'" size="large">
-      <template #description>报告任务正在整理单篇摘要、参考列表和最终 Markdown。</template>
+      <template #description>报告生成任务正在整理单篇摘要、参考列表和最终 Markdown。</template>
     </NSpin>
 
     <template v-if="task.kind === 'strategy'">
@@ -544,12 +608,12 @@ async function goToFulltextWorkspace() {
         <OverviewMetric label="已处理" :value="screeningSummary.processed_count ?? 0" />
       </section>
 
-      <NCard title="下一步：进入全文工作台" class="panel-surface">
+      <NCard title="下一步：进入复核与全文工作台" class="panel-surface">
         <div class="report-action-row">
-          <div class="report-copy">后续处理直接在全文工作台完成；拿到全文后会自动进入报告源。</div>
+          <div class="report-copy">后续处理直接在复核与全文工作台完成；生成报告时再选择需要的已获取全文批次。</div>
           <NButton type="primary" @click="goToFulltextWorkspace" :disabled="!task.project_id">
             <template #icon><BookOpenText :size="16" /></template>
-            去全文工作台
+            去复核与全文工作台
           </NButton>
         </div>
       </NCard>
@@ -570,6 +634,10 @@ async function goToFulltextWorkspace() {
             <div class="summary-item">
               <span>模型</span>
               <strong>{{ task.model_provider || '未记录' }}</strong>
+            </div>
+            <div class="summary-item">
+              <span>最低纳入相关度</span>
+              <strong>{{ minIncludeConfidenceLabel }}</strong>
             </div>
             <div v-if="asNumber(taskPayload?.target_include_count, null)" class="summary-item">
               <span>目标纳入</span>
@@ -664,7 +732,7 @@ async function goToFulltextWorkspace() {
 
     <template v-else-if="task.kind === 'report'">
       <MarkdownArticle v-if="task.markdown_preview" :source="task.markdown_preview" />
-      <NAlert v-else type="info" :show-icon="false">报告任务已创建。完成后这里会直接显示 Markdown 预览。</NAlert>
+      <NAlert v-else type="info" :show-icon="false">报告生成任务已创建。完成后这里会直接显示 Markdown 预览。</NAlert>
 
       <NCard v-if="task.status === 'succeeded'" title="参考列表人工修正" class="panel-surface">
         <div class="report-copy">

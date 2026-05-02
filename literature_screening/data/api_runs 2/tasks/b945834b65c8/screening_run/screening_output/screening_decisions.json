@@ -1,0 +1,1643 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于导管并发症和临床管理，未提及赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:25:25.206259+08:00"
+  },
+  {
+    "paper_id": "paper_000002",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要描述罕见病例报告，未涉及赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:25:25.206259+08:00"
+  },
+  {
+    "paper_id": "paper_000003",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要提到患者教育，但研究对象不限于白血病患者，且未明确赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:25:25.206259+08:00"
+  },
+  {
+    "paper_id": "paper_000004",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于遗传性血小板疾病，未涉及白血病患者的赋能教育。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:25:25.206259+08:00"
+  },
+  {
+    "paper_id": "paper_000005",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要涉及癌症患者信息需求和自我管理，但研究对象包括实体瘤和血癌，未明确赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:25:25.206259+08:00"
+  },
+  {
+    "paper_id": "paper_000006",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要描述获得性血友病病例，未涉及白血病患者的赋能教育。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:25:25.206259+08:00"
+  },
+  {
+    "paper_id": "paper_000007",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确研究白血病患者的教育方法对自我效能的影响，符合赋能教育主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:25:25.206259+08:00"
+  },
+  {
+    "paper_id": "paper_000008",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题表明文章聚焦CAR-T细胞药理机制，未涉及赋能教育干预。",
+    "evidence": [
+      "title"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:25:25.206259+08:00"
+  },
+  {
+    "paper_id": "paper_000009",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "标题涉及血癌自我管理，但摘要缺失，无法确认研究对象和干预细节。",
+    "evidence": [
+      "title"
+    ],
+    "confidence": 0.45,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:25:25.206259+08:00"
+  },
+  {
+    "paper_id": "paper_000010",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要研究足部反射疗法对睡眠质量的影响，未涉及赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:25:25.206259+08:00"
+  },
+  {
+    "paper_id": "paper_000011",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究对象为多发性骨髓瘤患者，而非白血病患者，不符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:25:46.506226+08:00"
+  },
+  {
+    "paper_id": "paper_000012",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究对象为多种癌症合并糖尿病患者，白血病患者仅为其中一部分，且干预措施聚焦糖尿病足教育，非赋能教育。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:25:46.506226+08:00"
+  },
+  {
+    "paper_id": "paper_000013",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究主题为心血管不良事件管理共识，虽涉及患者教育，但核心是临床管理指南，非赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:25:46.506226+08:00"
+  },
+  {
+    "paper_id": "paper_000014",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "研究对象为急性髓系白血病患者，主题涉及患者教育材料评估，但未明确提及赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:25:46.506226+08:00"
+  },
+  {
+    "paper_id": "paper_000015",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究对象为非霍奇金淋巴瘤患者，而非白血病患者，不符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:25:46.506226+08:00"
+  },
+  {
+    "paper_id": "paper_000016",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "研究对象为慢性髓系白血病患者，干预措施涉及自我管理支持，但未明确提及赋能教育。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.6,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:25:46.506226+08:00"
+  },
+  {
+    "paper_id": "paper_000017",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "研究对象包括白血病和淋巴瘤年轻成人，主题涉及自我管理学习需求，但未明确针对赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:25:46.506226+08:00"
+  },
+  {
+    "paper_id": "paper_000018",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "研究对象为慢性髓系白血病患者，主题涉及治疗依从性因素，但未明确提及赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:25:46.506226+08:00"
+  },
+  {
+    "paper_id": "paper_000019",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究对象为多种血液恶性肿瘤患者，白血病患者仅为其中一部分，且主题为疫苗接种知识，非赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:25:46.506226+08:00"
+  },
+  {
+    "paper_id": "paper_000020",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究对象为急性髓系白血病患者，但干预措施为体力活动计划，非赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:25:46.506226+08:00"
+  },
+  {
+    "paper_id": "paper_000021",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究主题为皮肤癌风险，与赋能教育无关，且研究对象为血液系统恶性肿瘤患者，未明确限定为成人白血病患者。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:10.899226+08:00"
+  },
+  {
+    "paper_id": "paper_000022",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究主题为护士主导的慢性病药物依从性干预，研究对象包括多种慢性病，仅提及一例慢性粒细胞白血病，未明确限定为成人白血病患者，且未涉及赋能教育。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:10.899226+08:00"
+  },
+  {
+    "paper_id": "paper_000023",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究主题为CAR T细胞治疗的护理视角，涉及患者教育但未明确为赋能教育，且研究对象为癌症患者，未明确限定为成人白血病患者。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:10.899226+08:00"
+  },
+  {
+    "paper_id": "paper_000024",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究主题为多学科预康复，涉及自我效能但未明确为赋能教育，且研究对象为AML和MDS患者，未明确限定为成人白血病患者。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:10.899226+08:00"
+  },
+  {
+    "paper_id": "paper_000025",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要显示研究对象为成人急性髓系白血病患者，干预措施为化疗教育视频，属于患者教育，符合赋能教育主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:10.899226+08:00"
+  },
+  {
+    "paper_id": "paper_000026",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要显示研究对象为成人急性髓系和慢性淋巴细胞白血病患者，干预措施为数字健康教练，旨在提高自我效能，明确符合赋能教育主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:10.899226+08:00"
+  },
+  {
+    "paper_id": "paper_000027",
+    "batch_id": "batch_0003",
+    "decision": "uncertain",
+    "reason": "文献信息严重缺失，仅有标题且无具体内容，无法判断是否与成人白血病患者赋能教育相关。",
+    "evidence": [
+      "title"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:10.899226+08:00"
+  },
+  {
+    "paper_id": "paper_000028",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究主题为血癌教育材料的可读性评估，未涉及针对患者的赋能教育干预，且研究对象不明确。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:10.899226+08:00"
+  },
+  {
+    "paper_id": "paper_000029",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究主题为预康复，涉及自我效能但未明确为赋能教育，且研究对象为AML和高危MDS患者，未明确限定为成人白血病患者。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:10.899226+08:00"
+  },
+  {
+    "paper_id": "paper_000030",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究主题为肛周损伤预防，干预措施为护士教育，但未明确为赋能教育，且研究对象为白血病患者但未明确限定为成人。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:10.899226+08:00"
+  },
+  {
+    "paper_id": "paper_000031",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "研究对象为癌症幸存者，研究主题为康复治疗，未涉及赋能教育。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:33.432607+08:00"
+  },
+  {
+    "paper_id": "paper_000032",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "研究对象为血液科医生，研究主题为医患沟通，未涉及针对白血病患者的赋能教育。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:33.432607+08:00"
+  },
+  {
+    "paper_id": "paper_000033",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "研究对象为白血病患者，研究主题为人工智能辅助自我管理，涉及赋能教育相关概念。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:33.432607+08:00"
+  },
+  {
+    "paper_id": "paper_000034",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "研究主题为侵袭性真菌病的诊断与预防，属于临床医学综述，未涉及赋能教育。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:33.432607+08:00"
+  },
+  {
+    "paper_id": "paper_000035",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "研究对象为多发性骨髓瘤等浆细胞疾病患者，非白血病患者，且研究主题为患者报告结局的应用。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:33.432607+08:00"
+  },
+  {
+    "paper_id": "paper_000036",
+    "batch_id": "batch_0004",
+    "decision": "uncertain",
+    "reason": "研究对象为慢性淋巴细胞白血病患者，摘要提到患者教育，但未明确涉及赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:33.432607+08:00"
+  },
+  {
+    "paper_id": "paper_000037",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "研究主题为急性髓系白血病患者的口腔评估，属于临床牙科内容，未涉及赋能教育。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:33.432607+08:00"
+  },
+  {
+    "paper_id": "paper_000038",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "研究对象为慢性髓系白血病患者，摘要明确提到平台旨在赋能患者，提升自我管理能力。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:33.432607+08:00"
+  },
+  {
+    "paper_id": "paper_000039",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "研究对象为多种癌症的女性幸存者，非纯白血病患者，且研究主题为营养干预。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:33.432607+08:00"
+  },
+  {
+    "paper_id": "paper_000040",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "研究为个案报告，主题为药物相关白血病，摘要仅提及患者教育但未涉及赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:33.432607+08:00"
+  },
+  {
+    "paper_id": "paper_000041",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究主题是精准医疗决策感知，未涉及赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:52.594519+08:00"
+  },
+  {
+    "paper_id": "paper_000042",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "研究对象包含多发性骨髓瘤和慢性淋巴细胞白血病患者，未明确限定为成人白血病患者。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:52.594519+08:00"
+  },
+  {
+    "paper_id": "paper_000043",
+    "batch_id": "batch_0005",
+    "decision": "include",
+    "reason": "标题和摘要明确针对白血病患者，研究健康促进策略对自我效能的影响，符合赋能教育主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:52.594519+08:00"
+  },
+  {
+    "paper_id": "paper_000044",
+    "batch_id": "batch_0005",
+    "decision": "uncertain",
+    "reason": "标题和摘要提到康复项目包含自我管理平台，但未明确说明是否针对成人白血病患者或具体赋能教育内容。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:52.594519+08:00"
+  },
+  {
+    "paper_id": "paper_000045",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "研究主题是阿片类药物感知和疼痛管理，未涉及赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:52.594519+08:00"
+  },
+  {
+    "paper_id": "paper_000046",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要显示是药物不良反应管理指南，非教育干预研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:52.594519+08:00"
+  },
+  {
+    "paper_id": "paper_000047",
+    "batch_id": "batch_0005",
+    "decision": "include",
+    "reason": "标题和摘要明确针对慢性粒细胞白血病患者，研究数字平台对患者赋能的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:52.594519+08:00"
+  },
+  {
+    "paper_id": "paper_000048",
+    "batch_id": "batch_0005",
+    "decision": "include",
+    "reason": "标题和摘要明确针对急性髓系白血病患者，研究心理移动应用对自我效能的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:52.594519+08:00"
+  },
+  {
+    "paper_id": "paper_000049",
+    "batch_id": "batch_0005",
+    "decision": "uncertain",
+    "reason": "标题提到治疗教育和身体活动，但摘要未明确说明是否针对成人白血病患者或具体赋能教育内容。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:52.594519+08:00"
+  },
+  {
+    "paper_id": "paper_000050",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "研究对象包含多种癌症患者，未限定为成人白血病患者，且研究主题是医疗不平等而非赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:26:52.594519+08:00"
+  },
+  {
+    "paper_id": "paper_000051",
+    "batch_id": "batch_0006",
+    "decision": "uncertain",
+    "reason": "标题和摘要提到使用应用程序支持慢性粒细胞白血病患者管理，但未明确提及赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:13.988490+08:00"
+  },
+  {
+    "paper_id": "paper_000052",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "研究对象包含多种癌症患者，不限于白血病，且干预为症状管理程序而非赋能教育。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:13.988490+08:00"
+  },
+  {
+    "paper_id": "paper_000053",
+    "batch_id": "batch_0006",
+    "decision": "include",
+    "reason": "标题和摘要明确研究白血病患者，干预措施为共情护理与正念认知疗法，涉及自我管理能力提升。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:13.988490+08:00"
+  },
+  {
+    "paper_id": "paper_000054",
+    "batch_id": "batch_0006",
+    "decision": "uncertain",
+    "reason": "标题和摘要涉及教育干预支持口服抗癌治疗依从性，但研究对象不限于白血病患者，且未明确提及赋能教育。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:13.988490+08:00"
+  },
+  {
+    "paper_id": "paper_000055",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "研究对象为年轻成人（18-39岁）造血干细胞移植患者，不限于白血病，且为叙事综述非干预研究。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:13.988490+08:00"
+  },
+  {
+    "paper_id": "paper_000056",
+    "batch_id": "batch_0006",
+    "decision": "uncertain",
+    "reason": "标题和摘要研究慢性粒细胞白血病患者口服化疗依从性，涉及自我报告评估，但未明确提及赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.45,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:13.988490+08:00"
+  },
+  {
+    "paper_id": "paper_000057",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要研究髓系和淋巴肿瘤共存的临床特征，属于纯临床研究，非教育或心理干预。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:13.988490+08:00"
+  },
+  {
+    "paper_id": "paper_000058",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及精准医学测试术语共识，研究对象不限于白血病患者，且未提及赋能教育。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:13.988490+08:00"
+  },
+  {
+    "paper_id": "paper_000059",
+    "batch_id": "batch_0006",
+    "decision": "uncertain",
+    "reason": "标题和摘要研究慢性淋巴细胞白血病患者与医疗团队沟通新治疗方案，涉及共享决策，但未明确提及赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:13.988490+08:00"
+  },
+  {
+    "paper_id": "paper_000060",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要研究老年血液恶性肿瘤患者运动干预可行性，干预措施为运动非赋能教育。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:13.988490+08:00"
+  },
+  {
+    "paper_id": "paper_000061",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究主题为伊布替尼药物疗效，未涉及赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:33.371258+08:00"
+  },
+  {
+    "paper_id": "paper_000062",
+    "batch_id": "batch_0007",
+    "decision": "include",
+    "reason": "摘要明确提到平台旨在增强患者赋能，研究对象为慢性髓系白血病成人患者，发表时间符合要求。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:33.371258+08:00"
+  },
+  {
+    "paper_id": "paper_000063",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "研究主题为认知行为疗法干预疲劳，未涉及赋能教育或自我管理健康教育。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:33.371258+08:00"
+  },
+  {
+    "paper_id": "paper_000064",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "研究对象为年轻成人（18-39岁），摘要未明确限定为成人白血病患者，且主题为自我管理学习经验而非赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:33.371258+08:00"
+  },
+  {
+    "paper_id": "paper_000065",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "研究对象为骨髓增殖性肿瘤患者，非白血病患者，不符合研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:33.371258+08:00"
+  },
+  {
+    "paper_id": "paper_000066",
+    "batch_id": "batch_0007",
+    "decision": "uncertain",
+    "reason": "摘要提到患者教育，但研究主题为肿瘤溶解综合征和中性粒细胞减少症的临床管理，是否属于赋能教育干预不明确。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:33.371258+08:00"
+  },
+  {
+    "paper_id": "paper_000067",
+    "batch_id": "batch_0007",
+    "decision": "include",
+    "reason": "标题和摘要表明应用程序旨在促进癌症幸存者自我管理，研究对象包括慢性髓系白血病患者，涉及自我效能提升。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:33.371258+08:00"
+  },
+  {
+    "paper_id": "paper_000068",
+    "batch_id": "batch_0007",
+    "decision": "uncertain",
+    "reason": "研究涉及患者大使支持，可能具有赋能成分，但摘要未明确提及赋能教育或自我管理干预。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:33.371258+08:00"
+  },
+  {
+    "paper_id": "paper_000069",
+    "batch_id": "batch_0007",
+    "decision": "include",
+    "reason": "摘要显示药师主导的干预包括患者教育，涉及提供疾病和治疗信息，研究对象为慢性髓系白血病成人患者。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:33.371258+08:00"
+  },
+  {
+    "paper_id": "paper_000070",
+    "batch_id": "batch_0007",
+    "decision": "uncertain",
+    "reason": "摘要提到患者教育，但研究主题为药学监护项目对伊布替尼疗效的影响，是否属于赋能教育干预不明确。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:33.371258+08:00"
+  },
+  {
+    "paper_id": "paper_000071",
+    "batch_id": "batch_0008",
+    "decision": "include",
+    "reason": "标题和摘要明确针对慢性粒细胞白血病患者，开发以患者为中心的赋能平台，涉及患者参与和工具提供以自我管理疾病。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:56.974189+08:00"
+  },
+  {
+    "paper_id": "paper_000072",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "研究对象为淋巴瘤患者，不符合成人白血病患者的纳入标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:56.974189+08:00"
+  },
+  {
+    "paper_id": "paper_000073",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于血液恶性肿瘤的疼痛管理和阿片类药物使用，未涉及赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:56.974189+08:00"
+  },
+  {
+    "paper_id": "paper_000074",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论博舒替尼在慢性粒细胞白血病中的药物作用，属于纯药物治疗综述，未涉及赋能教育。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:56.974189+08:00"
+  },
+  {
+    "paper_id": "paper_000075",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "研究对象为青少年和年轻成人白血病幸存者，包含未成年人，不符合成人患者群体的纳入标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:56.974189+08:00"
+  },
+  {
+    "paper_id": "paper_000076",
+    "batch_id": "batch_0008",
+    "decision": "uncertain",
+    "reason": "摘要研究造血干细胞移植患者的症状管理自我效能，但未明确说明患者是否为白血病患者，且干预性质不够明确。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:56.974189+08:00"
+  },
+  {
+    "paper_id": "paper_000077",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论靶向癌症治疗引起的口腔黏膜损伤，属于临床病理机制研究，未涉及赋能教育。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:56.974189+08:00"
+  },
+  {
+    "paper_id": "paper_000078",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于慢性粒细胞白血病的酪氨酸激酶抑制剂使用和药学实践，未涉及赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:56.974189+08:00"
+  },
+  {
+    "paper_id": "paper_000079",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "研究对象为年轻成人癌症幸存者，包含多种癌症类型，且白血病/淋巴瘤仅占12.5%，不符合纯成人白血病患者群体的纳入标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:56.974189+08:00"
+  },
+  {
+    "paper_id": "paper_000080",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论急性髓系白血病的去甲基化药物使用指南，属于纯药物治疗综述，未涉及赋能教育。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:27:56.974189+08:00"
+  },
+  {
+    "paper_id": "paper_000081",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "标题和摘要未提及赋能教育，研究主题为患者停药决策，不符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:19.364217+08:00"
+  },
+  {
+    "paper_id": "paper_000082",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "摘要缺失，标题仅提及远程医疗监测，未显示赋能教育内容，无法确认符合纳入标准。",
+    "evidence": [
+      "title"
+    ],
+    "confidence": 0.7,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:19.364217+08:00"
+  },
+  {
+    "paper_id": "paper_000083",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "研究对象为血液恶性肿瘤患者，未特指白血病；研究主题为跌倒风险感知，非赋能教育。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:19.364217+08:00"
+  },
+  {
+    "paper_id": "paper_000084",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "研究主题为药物依从性测量，未涉及赋能教育干预，不符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:19.364217+08:00"
+  },
+  {
+    "paper_id": "paper_000085",
+    "batch_id": "batch_0009",
+    "decision": "uncertain",
+    "reason": "摘要提到患者教育对药物浓度的影响，研究对象为急性髓系白血病患者，但未明确是否为赋能教育。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:19.364217+08:00"
+  },
+  {
+    "paper_id": "paper_000086",
+    "batch_id": "batch_0009",
+    "decision": "uncertain",
+    "reason": "摘要描述药剂师主导的教育项目提升患者知识和依从性，涉及慢性髓系白血病患者，但未明确是否为赋能教育。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.6,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:19.364217+08:00"
+  },
+  {
+    "paper_id": "paper_000087",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "研究对象包含多种癌症患者，仅部分为急性髓系白血病；研究主题为吸烟戒烟，非赋能教育。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:19.364217+08:00"
+  },
+  {
+    "paper_id": "paper_000088",
+    "batch_id": "batch_0009",
+    "decision": "uncertain",
+    "reason": "摘要提及以患者为中心的教育方法，涉及慢性髓系白血病患者，但未明确教育内容是否为赋能教育。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:19.364217+08:00"
+  },
+  {
+    "paper_id": "paper_000089",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "标题和摘要为停药临床实践建议，未涉及赋能教育干预，不符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:19.364217+08:00"
+  },
+  {
+    "paper_id": "paper_000090",
+    "batch_id": "batch_0009",
+    "decision": "include",
+    "reason": "标题明确提及通过多学科教育改善共同决策，摘要显示针对慢性淋巴细胞白血病患者的教育项目提升患者参与和知识，符合赋能教育主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:19.364217+08:00"
+  },
+  {
+    "paper_id": "paper_000091",
+    "batch_id": "batch_0010",
+    "decision": "uncertain",
+    "reason": "标题和摘要提到移动健康干预用于慢性粒细胞白血病患者的药物依从性和症状自我管理，但未明确提及赋能教育或相关概念。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:41.642036+08:00"
+  },
+  {
+    "paper_id": "paper_000092",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于慢性淋巴细胞白血病患者的继发性皮肤癌风险，未涉及赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:41.642036+08:00"
+  },
+  {
+    "paper_id": "paper_000093",
+    "batch_id": "batch_0010",
+    "decision": "uncertain",
+    "reason": "标题涉及慢性淋巴细胞白血病患者的皮肤癌监测建议，但摘要缺失，无法判断是否包含赋能教育内容。",
+    "evidence": [
+      "title"
+    ],
+    "confidence": 0.45,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:41.642036+08:00"
+  },
+  {
+    "paper_id": "paper_000094",
+    "batch_id": "batch_0010",
+    "decision": "uncertain",
+    "reason": "摘要提到马来西亚慢性粒细胞白血病患者缺乏教育和意识，但未明确描述赋能教育干预措施。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:41.642036+08:00"
+  },
+  {
+    "paper_id": "paper_000095",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "研究对象包括多种慢性疾病患者，不限于成人白血病患者，且未涉及赋能教育干预。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:41.642036+08:00"
+  },
+  {
+    "paper_id": "paper_000096",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "研究对象包括多种慢性癌症患者，不限于成人白血病患者，且未涉及赋能教育干预。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:41.642036+08:00"
+  },
+  {
+    "paper_id": "paper_000097",
+    "batch_id": "batch_0010",
+    "decision": "uncertain",
+    "reason": "标题和摘要描述伊布替尼患者支持计划，包括护士提供信息和副作用管理，但未明确提及赋能教育概念。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:41.642036+08:00"
+  },
+  {
+    "paper_id": "paper_000098",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于博舒替尼副作用管理，属于临床实践指南，未涉及赋能教育干预。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:41.642036+08:00"
+  },
+  {
+    "paper_id": "paper_000099",
+    "batch_id": "batch_0010",
+    "decision": "uncertain",
+    "reason": "摘要提到通过教育和互联网使患者获得赋权和教育，但未明确描述赋能教育干预措施。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.6,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:41.642036+08:00"
+  },
+  {
+    "paper_id": "paper_000100",
+    "batch_id": "batch_0010",
+    "decision": "uncertain",
+    "reason": "摘要提到患者教育和沟通是最大化酪氨酸激酶抑制剂益处的关键组成部分，但未明确描述赋能教育干预措施。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:41.642036+08:00"
+  },
+  {
+    "paper_id": "paper_000101",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "研究对象为孕妇，不是成人白血病患者，且研究主题为脐带血库认知调查，不涉及赋能教育。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:58.314661+08:00"
+  },
+  {
+    "paper_id": "paper_000102",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "研究主题为专科药房服务综述，虽然提到患者教育，但未明确针对成人白血病患者，且不聚焦赋能教育。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:58.314661+08:00"
+  },
+  {
+    "paper_id": "paper_000103",
+    "batch_id": "batch_0011",
+    "decision": "include",
+    "reason": "研究对象为成人慢性髓系白血病患者，干预措施为定制化患者教育，旨在提高服药依从性，符合赋能教育主题。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:58.314661+08:00"
+  },
+  {
+    "paper_id": "paper_000104",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "研究对象为年轻成人癌症患者（18-39岁），包含多种癌症类型，未明确限定为白血病，且研究主题为生育力保留讨论，不涉及赋能教育。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:58.314661+08:00"
+  },
+  {
+    "paper_id": "paper_000105",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "研究对象为青少年，不是成人患者，且研究主题为Barrows Cards方法改善自我管理，虽涉及教育干预但对象不符。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.92,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:58.314661+08:00"
+  },
+  {
+    "paper_id": "paper_000106",
+    "batch_id": "batch_0011",
+    "decision": "include",
+    "reason": "研究对象为成人急性髓系白血病患者，干预措施包括患者教育，旨在通过自我监测预防肺炎，符合赋能教育主题。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.87,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:58.314661+08:00"
+  },
+  {
+    "paper_id": "paper_000107",
+    "batch_id": "batch_0011",
+    "decision": "include",
+    "reason": "研究对象为成人急性髓系白血病患者，干预措施为口腔护理自我管理支持协议，涉及教育和行为干预，符合赋能教育主题。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year"
+    ],
+    "confidence": 0.89,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-29T12:28:58.314661+08:00"
+  }
+]

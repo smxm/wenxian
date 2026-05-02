@@ -1,0 +1,66 @@
+{
+  "id": "4da21fd8c06c",
+  "kind": "screening",
+  "status": "cancelled",
+  "cancel_requested": true,
+  "title": "new-search-strategy-screening",
+  "phase": "cancelled",
+  "phase_label": "Cancelled",
+  "progress_current": 1,
+  "progress_total": 38,
+  "progress_message": "Task cancelled by user",
+  "created_at": "2026-03-24T23:56:15.877562+08:00",
+  "updated_at": "2026-03-24T23:56:48.179251+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "9abd5cbbe545",
+    "project_topic": "声测管倾斜管距修正算法与模型",
+    "model_provider": "deepseek",
+    "parent_task_id": null,
+    "input_dataset_ids": [],
+    "request_payload": {
+      "title": "new-search-strategy-screening",
+      "topic": "声测管倾斜管距修正算法与模型",
+      "inclusion": [
+        "必须涉及超声波透射法（Crosshole Sonic Logging, CSL）、超声波检测或声波CT层析成像。",
+        "必须涉及基桩、深基础或混凝土结构的完整性检测。",
+        "研究内容必须包含误差修正或信号处理。具体包括但不限于：空间轨迹计算、管距/距离补偿、几何模型拟合（直接法）；或小波变换、神经网络、异常特征剔除等数据处理算法（间接法）。"
+      ],
+      "exclusion": [
+        "纯粹的基桩承载力测试（如静载试验、高应变法）或施工机械研究。",
+        "纯混凝土材料化学配比、水化热或力学性能研究（未涉及超声无损检测）。",
+        "完全没有提及数据修正、误差补偿或相关数学/机器学习算法的纯基础操作报告。"
+      ],
+      "provider": "deepseek",
+      "model_name": "deepseek-chat",
+      "api_base_url": "https://api.deepseek.com/v1",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.0,
+      "max_tokens": 1536,
+      "min_request_interval_seconds": 2.0,
+      "batch_size": 10,
+      "target_include_count": 30,
+      "stop_when_target_reached": true,
+      "allow_uncertain": true,
+      "retry_times": 6,
+      "request_timeout_seconds": 240,
+      "encoding": "auto",
+      "project_id": "9abd5cbbe545",
+      "parent_task_id": null,
+      "source_dataset_ids": []
+    },
+    "model_secret_id": "fbf0125680244623",
+    "uploaded_input_paths": [
+      "tasks/4da21fd8c06c/uploads/savedrecs (2).ris",
+      "tasks/4da21fd8c06c/uploads/savedrecs.ris",
+      "tasks/4da21fd8c06c/uploads/savedrecs (1).ris"
+    ]
+  },
+  "summary": null,
+  "error": null,
+  "artifacts": {},
+  "run_root": null,
+  "output_dir": null,
+  "markdown_preview": null,
+  "records": []
+}

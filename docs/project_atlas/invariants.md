@@ -71,3 +71,12 @@ Touched by:
 - `project_session_log.md` and `docs/project_history/` are chronological.
 - `docs/project_atlas/` is the navigation layer for module ownership and file routing.
 - If one document starts doing another document's job, future threads slow down again.
+
+## 9. Active docs use workspace-relative paths
+
+- Current handoff, atlas, README, and skill docs should prefer repo-relative paths such as `literature_screening_web/src/views/ProjectDetailView.vue`.
+- Historical snapshots and older session-log entries may keep absolute paths because they record what happened on a specific machine.
+- Old explanatory docs that are no longer the primary source of truth belong under `docs/archive/legacy-docs/` with a short pointer to the current replacement.
+
+Touched by:
+`project_state.md`, `project_session_log.md`, `docs/project_history/index.md`, `docs/project_atlas/`, `docs/archive/`, `skills/`

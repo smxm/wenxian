@@ -1,0 +1,679 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于儿童音乐教育和红色文化，未涉及高中阶段或古典交响乐教学。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:17.521365+08:00"
+  },
+  {
+    "paper_id": "paper_000002",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要提到游戏化教学和音乐教育，但未明确涉及高中阶段或具体教学主题，信息不足。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:17.521365+08:00"
+  },
+  {
+    "paper_id": "paper_000003",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要明确针对高校音乐鉴赏课程和粤剧，未涉及高中阶段或古典交响乐教学。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:17.521365+08:00"
+  },
+  {
+    "paper_id": "paper_000004",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要明确针对高校音乐鉴赏课程和粤剧，未涉及高中阶段或古典交响乐教学。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:17.521365+08:00"
+  },
+  {
+    "paper_id": "paper_000005",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要明确针对小学低年段教学，未涉及高中阶段或音乐鉴赏。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:17.521365+08:00"
+  },
+  {
+    "paper_id": "paper_000006",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要明确针对专科院校学前音乐教育专业，未涉及高中阶段或音乐鉴赏。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:17.521365+08:00"
+  },
+  {
+    "paper_id": "paper_000007",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要明确针对小学生音乐素养，未涉及高中阶段或音乐鉴赏。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:17.521365+08:00"
+  },
+  {
+    "paper_id": "paper_000008",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要明确针对幼儿教育，未涉及高中阶段或音乐鉴赏。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:17.521365+08:00"
+  },
+  {
+    "paper_id": "paper_000009",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要提到游戏化学习和音乐教育，但未明确涉及高中阶段或具体教学主题，信息不足。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:17.521365+08:00"
+  },
+  {
+    "paper_id": "paper_000010",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "标题和摘要涉及游戏化教学和音乐教育，但未明确涉及高中阶段或音乐鉴赏，信息不足。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:17.521365+08:00"
+  },
+  {
+    "paper_id": "paper_000011",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究对象为学前教育阶段的幼儿，与筛选主题要求的高中阶段不符。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:37.470780+08:00"
+  },
+  {
+    "paper_id": "paper_000012",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究对象为小学中高年级合唱课堂，与筛选主题要求的高中阶段不符。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:37.470780+08:00"
+  },
+  {
+    "paper_id": "paper_000013",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究对象为少儿，未明确涉及高中阶段，且未提及音乐鉴赏或古典交响乐教学。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:37.470780+08:00"
+  },
+  {
+    "paper_id": "paper_000014",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究对象为幼小衔接阶段的小学音乐唱游教学，与筛选主题要求的高中阶段不符。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:37.470780+08:00"
+  },
+  {
+    "paper_id": "paper_000015",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究对象为幼儿音乐教育，与筛选主题要求的高中阶段不符。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:37.470780+08:00"
+  },
+  {
+    "paper_id": "paper_000016",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确探讨高中音乐课堂的趣味教学与游戏化学习，直接涉及游戏化教学和高中音乐教育两项核心概念。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:37.470780+08:00"
+  },
+  {
+    "paper_id": "paper_000017",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "摘要提及音乐教育和游戏化学习，但未明确涉及高中阶段或音乐鉴赏课，且重点在于AI赋能与范式转型。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:37.470780+08:00"
+  },
+  {
+    "paper_id": "paper_000018",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究对象为幼儿园音乐欣赏活动，与筛选主题要求的高中阶段不符。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:37.470780+08:00"
+  },
+  {
+    "paper_id": "paper_000019",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究对象为幼儿园音乐活动，与筛选主题要求的高中阶段不符。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:37.470780+08:00"
+  },
+  {
+    "paper_id": "paper_000020",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究对象为职业学校钢琴演奏课程，与筛选主题要求的高中阶段不符，且未提及音乐鉴赏或古典交响乐教学。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:37.470780+08:00"
+  },
+  {
+    "paper_id": "paper_000021",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "研究对象为高职学前教育专业，与高中阶段教育不符，且未涉及音乐鉴赏或古典交响乐教学。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:57.804605+08:00"
+  },
+  {
+    "paper_id": "paper_000022",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "研究对象为幼儿教育，与高中阶段教育不符，且未涉及音乐鉴赏或古典交响乐教学。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:57.804605+08:00"
+  },
+  {
+    "paper_id": "paper_000023",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "研究对象为幼儿音乐教学，与高中阶段教育不符，且未涉及音乐鉴赏或古典交响乐教学。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:57.804605+08:00"
+  },
+  {
+    "paper_id": "paper_000024",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "研究对象为幼儿园音乐教学，与高中阶段教育不符，且未涉及音乐鉴赏或古典交响乐教学。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:57.804605+08:00"
+  },
+  {
+    "paper_id": "paper_000025",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "研究对象为小学音乐教学，与高中阶段教育不符，且未涉及音乐鉴赏或古典交响乐教学。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:57.804605+08:00"
+  },
+  {
+    "paper_id": "paper_000026",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "研究对象为幼儿园打击乐教学，与高中阶段教育不符，且未涉及音乐鉴赏或古典交响乐教学。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:57.804605+08:00"
+  },
+  {
+    "paper_id": "paper_000027",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "研究对象为幼儿音乐活动，与高中阶段教育不符，且未涉及音乐鉴赏或古典交响乐教学。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:57.804605+08:00"
+  },
+  {
+    "paper_id": "paper_000028",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "研究对象为小学低年级节奏训练，与高中阶段教育不符，且未涉及音乐鉴赏或古典交响乐教学。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:57.804605+08:00"
+  },
+  {
+    "paper_id": "paper_000029",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "研究对象为小学音乐课，与高中阶段教育不符，且未涉及音乐鉴赏或古典交响乐教学。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:57.804605+08:00"
+  },
+  {
+    "paper_id": "paper_000030",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "研究对象为幼儿音乐领域，与高中阶段教育不符，且未涉及音乐鉴赏或古典交响乐教学。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:50:57.804605+08:00"
+  },
+  {
+    "paper_id": "paper_000031",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要明确针对幼儿音乐教育，与高中阶段教育无关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:51:15.427665+08:00"
+  },
+  {
+    "paper_id": "paper_000032",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦幼儿教师音乐素养培养，未涉及高中阶段或音乐鉴赏课。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:51:15.427665+08:00"
+  },
+  {
+    "paper_id": "paper_000033",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论学前音乐教育中的音乐才能培养，与高中阶段无关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:51:15.427665+08:00"
+  },
+  {
+    "paper_id": "paper_000034",
+    "batch_id": "batch_0004",
+    "decision": "uncertain",
+    "reason": "标题和摘要涉及中小学音乐教育中的音乐游戏，但未明确区分高中阶段或音乐鉴赏课。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:51:15.427665+08:00"
+  },
+  {
+    "paper_id": "paper_000035",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要专注于幼儿教师音乐素养，未涉及高中阶段或音乐鉴赏课。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:51:15.427665+08:00"
+  },
+  {
+    "paper_id": "paper_000036",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要明确针对小学音乐课堂，与高中阶段教育无关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:51:15.427665+08:00"
+  },
+  {
+    "paper_id": "paper_000037",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论小学音乐欣赏课中的奥尔夫教学法，未涉及高中阶段。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:51:15.427665+08:00"
+  },
+  {
+    "paper_id": "paper_000038",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要明确针对幼儿园音乐教育活动，与高中阶段教育无关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:51:15.427665+08:00"
+  },
+  {
+    "paper_id": "paper_000039",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要明确针对小学音乐教育，与高中阶段教育无关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:51:15.427665+08:00"
+  },
+  {
+    "paper_id": "paper_000040",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论幼儿音乐教育游戏化，未涉及高中阶段或音乐鉴赏课。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:51:15.427665+08:00"
+  },
+  {
+    "paper_id": "paper_000041",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "研究对象为幼儿园阶段，与筛选主题要求的高中阶段不符。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:51:22.098702+08:00"
+  },
+  {
+    "paper_id": "paper_000042",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "研究对象为学前教育专业学生，与筛选主题要求的高中阶段不符。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:51:22.098702+08:00"
+  },
+  {
+    "paper_id": "paper_000043",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "研究对象为幼儿音乐教育，与筛选主题要求的高中阶段不符。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T17:51:22.098702+08:00"
+  }
+]

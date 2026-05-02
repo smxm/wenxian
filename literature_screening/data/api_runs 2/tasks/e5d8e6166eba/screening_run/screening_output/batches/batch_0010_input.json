@@ -1,0 +1,381 @@
+{
+  "batch_id": "batch_0010",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000091",
+    "paper_000092",
+    "paper_000093",
+    "paper_000094",
+    "paper_000095",
+    "paper_000096",
+    "paper_000097",
+    "paper_000098",
+    "paper_000099",
+    "paper_000100"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000091",
+      "entry_type": "article",
+      "title": "Evaluation of Heat Treatment Effect on the Tensile Strength of Mild Steel Welded Joints Using Ultrasonic Testing",
+      "authors": [
+        "Shah, A",
+        "Ali, G",
+        "Khan, TMR",
+        "Shah, A",
+        "Imran, M",
+        "Nisar, S"
+      ],
+      "year": 2021,
+      "journal": "RUSSIAN JOURNAL OF NONDESTRUCTIVE TESTING",
+      "doi": "10.1134/s1061830921060024",
+      "abstract": "The tensile strength of welded joints subjected to thermal stresses degrades with age. Tensile strength is generally assessed using tensile test, which is a destructive technique. This degradation measurement using the nondestructive testing (NDT) method has merit as specimens are intact even after the test. In situ NDT offers another significant advantage that testing of material can be performed without removing the sample from its service. Ultrasonic testing (UT) is a widely used NDT technique for material characterization and flaws detection. Motivated by this, we aim to investigate the tensile strength of mild steel post-weld heat-treated samples through advanced signal processing of the acquired ultrasonic signals through UT of mild steel heat-treated welded specimens. To this end, mild steel welded specimens were prepared for this study using electric arc welding with E6013 electrodes. After welding, specimens were heat-treated at different temperatures and then normalized. Ultrasonic signals were acquired using the pulse-echo technique on different samples, heat-treated at different temperatures, and later ultrasonic signal's attenuation was measured. The acquired UT signals were then processed using advance signal processing techniques i.e., fast Fourier transform (FFT) and power spectral density (PSD). Measured attenuation of UT signals and discriminatory features computed through the application of signal processing techniques on acquired UT signals then correlated with the specimens' tensile strength. Analysis of results showed that the tensile strength, FFT power of UT signals, and UT signals' PSD energy decreases as UT signal attenuation, increases with an increase in heat treatment temperature. Results also revealed that there exists a relationship between FFT signals strength, PSD energy, and UT signals attenuation with respect to heat treatment temperatures. This study will help weld quality inspectors to use in situ UT for predicting the tensile strength of mild steel welded specimens using the relationship established through the proposed scheme.",
+      "keywords": [
+        "tensile strength",
+        "ultrasonic testing",
+        "ultrasonic signals' attenuation",
+        "fast Fourier transform",
+        "power spectral density",
+        "IDENTIFICATION"
+      ],
+      "normalized_title": "evaluation of heat treatment effect on the tensile strength of mild steel welded joints using ultrasonic testing",
+      "raw_bibtex": "@ARTICLE{10.1134/S1061830921060024,\n\tauthor = {Shah, A and Ali, G and Khan, TMR and Shah, A and Imran, M and Nisar, S},\n\ttitle = {Evaluation of Heat Treatment Effect on the Tensile Strength of Mild Steel Welded Joints Using Ultrasonic Testing},\n\tjournal = {RUSSIAN JOURNAL OF NONDESTRUCTIVE TESTING},\n\tyear = {2021},\n\tkeywords = {tensile strength; ultrasonic testing; ultrasonic signals' attenuation; fast Fourier transform; power spectral density; IDENTIFICATION},\n\tabstract = {The tensile strength of welded joints subjected to thermal stresses degrades with age. Tensile strength is generally assessed using tensile test, which is a destructive technique. This degradation measurement using the nondestructive testing (NDT) method has merit as specimens are intact even after the test. In situ NDT offers another significant advantage that testing of material can be performed without removing the sample from its service. Ultrasonic testing (UT) is a widely used NDT technique for material characterization and flaws detection. Motivated by this, we aim to investigate the tensile strength of mild steel post-weld heat-treated samples through advanced signal processing of the acquired ultrasonic signals through UT of mild steel heat-treated welded specimens. To this end, mild steel welded specimens were prepared for this study using electric arc welding with E6013 electrodes. After welding, specimens were heat-treated at different temperatures and then normalized. Ultrasonic signals were acquired using the pulse-echo technique on different samples, heat-treated at different temperatures, and later ultrasonic signal's attenuation was measured. The acquired UT signals were then processed using advance signal processing techniques i.e., fast Fourier transform (FFT) and power spectral density (PSD). Measured attenuation of UT signals and discriminatory features computed through the application of signal processing techniques on acquired UT signals then correlated with the specimens' tensile strength. Analysis of results showed that the tensile strength, FFT power of UT signals, and UT signals' PSD energy decreases as UT signal attenuation, increases with an increase in heat treatment temperature. Results also revealed that there exists a relationship between FFT signals strength, PSD energy, and UT signals attenuation with respect to heat treatment temperatures. This study will help weld quality inspectors to use in situ UT for predicting the tensile strength of mild steel welded specimens using the relationship established through the proposed scheme.},\n\tdoi = {10.1134/S1061830921060024},\n\tvolume = {57},\n\tnumber = {6},\n\tpages = {455-464},\n\tissn = {1061-8309},\n\tnote = {Times Cited in Web of Science Core Collection: 3 Total Times Cited: 3 Cited Reference Count: 27 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1134/S1061830921060024"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000092",
+      "entry_type": "article",
+      "title": "Machine learning analysis of features extracted from time-frequency domain of ultrasonic testing results for wood material assessment",
+      "authors": [
+        "Mousavi, M",
+        "Gandomi, AH",
+        "Holloway, D",
+        "Berry, A",
+        "Chen, F"
+      ],
+      "year": 2022,
+      "journal": "CONSTRUCTION AND BUILDING MATERIALS",
+      "doi": "10.1016/j.conbuildmat.2022.127761",
+      "abstract": "In this paper, a systematic machine learning strategy is proposed to classify wood properties based on a contact ultrasonic testing results. As such, several aspects of the wood material including the type of wood (hardwood or softwood), the direction of an ultrasonic test with respect to the growth rings of the wood, and, whether the wood is damaged or intact are investigated. As a pre-processor, the Variational Mode Decomposition technique is applied to the nonlinearly modulated ultrasonic signals, and the centre frequencies of the decomposition results are taken as features for Machine learning Algorithms (MLAs). Then with each of the MLAs, hyperparameter settings were optimised and technical aspects of the feature engineering are discussed. Best results were achieved using Ensemble classifiers, SVM, and KNN using three features/decomposition. To explore the physics behind the nonlinear problem, the relative false discovery rate obtained from the confusion matrix associated with applying the MLAs is proposed as a metric. We show that different features are capable of exploring different aspects of the problem better. The techniques of this paper can be applied to quality assessment of wood materials. The paper also demonstrates the capability of MLAs in exploring some physics of such problems. Moreover, billets with natural imperfections harvested from the site Collie in WA, Australia are classified to demonstrate the applicability of the proposed approach in real world problems. The result of 94% 5-fold cross-validation accuracy indicates the effectiveness of the proposed approach.",
+      "keywords": [
+        "Ultrasonics",
+        "Variational Mode Decomposition",
+        "Machine learning",
+        "Nondestructive damage testing",
+        "Wood",
+        "NONDESTRUCTIVE EVALUATION",
+        "TIMBER",
+        "STRENGTH",
+        "DEFECTS",
+        "IMPACT",
+        "NDE"
+      ],
+      "normalized_title": "machine learning analysis of features extracted from time frequency domain of ultrasonic testing results for wood material assessment",
+      "raw_bibtex": "@ARTICLE{10.1016/j.conbuildmat.2022.127761,\n\tauthor = {Mousavi, M and Gandomi, AH and Holloway, D and Berry, A and Chen, F},\n\ttitle = {Machine learning analysis of features extracted from time-frequency domain of ultrasonic testing results for wood material assessment},\n\tjournal = {CONSTRUCTION AND BUILDING MATERIALS},\n\tyear = {2022},\n\tkeywords = {Ultrasonics; Variational Mode Decomposition; Machine learning; Nondestructive damage testing; Wood; NONDESTRUCTIVE EVALUATION; TIMBER; STRENGTH; DEFECTS; IMPACT; NDE},\n\tabstract = {In this paper, a systematic machine learning strategy is proposed to classify wood properties based on a contact ultrasonic testing results. As such, several aspects of the wood material including the type of wood (hardwood or softwood), the direction of an ultrasonic test with respect to the growth rings of the wood, and, whether the wood is damaged or intact are investigated. As a pre-processor, the Variational Mode Decomposition technique is applied to the nonlinearly modulated ultrasonic signals, and the centre frequencies of the decomposition results are taken as features for Machine learning Algorithms (MLAs). Then with each of the MLAs, hyperparameter settings were optimised and technical aspects of the feature engineering are discussed. Best results were achieved using Ensemble classifiers, SVM, and KNN using three features/decomposition. To explore the physics behind the nonlinear problem, the relative false discovery rate obtained from the confusion matrix associated with applying the MLAs is proposed as a metric. We show that different features are capable of exploring different aspects of the problem better. The techniques of this paper can be applied to quality assessment of wood materials. The paper also demonstrates the capability of MLAs in exploring some physics of such problems. Moreover, billets with natural imperfections harvested from the site Collie in WA, Australia are classified to demonstrate the applicability of the proposed approach in real world problems. The result of 94% 5-fold cross-validation accuracy indicates the effectiveness of the proposed approach.},\n\tdoi = {10.1016/j.conbuildmat.2022.127761},\n\tvolume = {342},\n\tissn = {0950-0618},\n\tnote = {Times Cited in Web of Science Core Collection: 22 Total Times Cited: 22 Cited Reference Count: 57 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.conbuildmat.2022.127761"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000093",
+      "entry_type": "article",
+      "title": "Advancing one-sided nondestructive testing for denoising: integrating deep learning for enhanced defect detection and quality assurance",
+      "authors": [
+        "Alanazi, AM"
+      ],
+      "year": 2025,
+      "journal": "INTERNATIONAL JOURNAL OF ADVANCED MANUFACTURING TECHNOLOGY",
+      "doi": "10.1007/s00170-025-15663-z",
+      "abstract": "This paper presents a comprehensive study on the enhancement of one-sided nondestructive testing (NDT) methods-ultrasonic testing (UT), eddy current testing (ECT), and radiographic testing (RT)-through the application of AI models. The primary focus is on improving defect detection accuracy, signal-to-noise ratio (SNR), and reducing the minimum detectable defect size. For UT, a convolutional neural network (CNN) was employed to process deconvolved ultrasonic signals, achieving a defect size detection of 0.8 mm and improving SNR to 35 dB with an accuracy rate of 98%. ECT was enhanced using a recurrent neural network (RNN) with long short-term memory (LSTM) layers, reducing the defect size detection to 0.3 mm, increasing SNR to 45 dB, and achieving a detection accuracy of 99%. In RT, a deep convolutional generative adversarial network (DCGAN) was used to enhance X-ray image quality, enabling the detection of defects as small as 0.7 mm with an SNR of 40 dB and a detection probability of 97%. Although CNN, RNN, and DCGAN are applied independently to different NDT modalities (UT, ECT, RT, respectively), their selection is strategically aligned for hybrid system integration. Each model complements the others by targeting distinct signal characteristics-spatial, temporal, and generative-within a unified deep learning-driven NDT framework. Compared to traditional NDT methods, the proposed deep learning-enhanced framework demonstrates significant improvements, including up to 20% higher accuracy and 15-25% SNR gain, based on identical input signals. These results highlight the potential of neural architectures to significantly improve the efficiency, accuracy, and reliability of NDT processes. Despite these advancements, challenges such as the need for extensive datasets and high computational power remain, signaling areas for future research.",
+      "keywords": [
+        "Nondestructive testing",
+        "One-sided inspection",
+        "Deep learning",
+        "Defect detection",
+        "Quality assurance",
+        "Ultrasonic testing",
+        "NDT"
+      ],
+      "normalized_title": "advancing one sided nondestructive testing for denoising integrating deep learning for enhanced defect detection and quality assurance",
+      "raw_bibtex": "@ARTICLE{10.1007/s00170-025-15663-z,\n\tauthor = {Alanazi, AM},\n\ttitle = {Advancing one-sided nondestructive testing for denoising: integrating deep learning for enhanced defect detection and quality assurance},\n\tjournal = {INTERNATIONAL JOURNAL OF ADVANCED MANUFACTURING TECHNOLOGY},\n\tyear = {2025},\n\tkeywords = {Nondestructive testing; One-sided inspection; Deep learning; Defect detection; Quality assurance; Ultrasonic testing; NDT},\n\tabstract = {This paper presents a comprehensive study on the enhancement of one-sided nondestructive testing (NDT) methods-ultrasonic testing (UT), eddy current testing (ECT), and radiographic testing (RT)-through the application of AI models. The primary focus is on improving defect detection accuracy, signal-to-noise ratio (SNR), and reducing the minimum detectable defect size. For UT, a convolutional neural network (CNN) was employed to process deconvolved ultrasonic signals, achieving a defect size detection of 0.8 mm and improving SNR to 35 dB with an accuracy rate of 98%. ECT was enhanced using a recurrent neural network (RNN) with long short-term memory (LSTM) layers, reducing the defect size detection to 0.3 mm, increasing SNR to 45 dB, and achieving a detection accuracy of 99%. In RT, a deep convolutional generative adversarial network (DCGAN) was used to enhance X-ray image quality, enabling the detection of defects as small as 0.7 mm with an SNR of 40 dB and a detection probability of 97%. Although CNN, RNN, and DCGAN are applied independently to different NDT modalities (UT, ECT, RT, respectively), their selection is strategically aligned for hybrid system integration. Each model complements the others by targeting distinct signal characteristics-spatial, temporal, and generative-within a unified deep learning-driven NDT framework. Compared to traditional NDT methods, the proposed deep learning-enhanced framework demonstrates significant improvements, including up to 20% higher accuracy and 15-25% SNR gain, based on identical input signals. These results highlight the potential of neural architectures to significantly improve the efficiency, accuracy, and reliability of NDT processes. Despite these advancements, challenges such as the need for extensive datasets and high computational power remain, signaling areas for future research.},\n\tdoi = {10.1007/s00170-025-15663-z},\n\tissn = {0268-3768},\n\tnote = {Times Cited in Web of Science Core Collection: 4 Total Times Cited: 4 Cited Reference Count: 32 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s00170-025-15663-z"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000094",
+      "entry_type": "article",
+      "title": "Deep Learning-Based Defect Detection From Sequences of Ultrasonic B-Scans",
+      "authors": [
+        "Medak, D",
+        "Posilovic, L",
+        "Subasic, M",
+        "Budimir, M",
+        "Loncaric, S"
+      ],
+      "year": 2022,
+      "journal": "IEEE SENSORS JOURNAL",
+      "doi": "10.1109/jsen.2021.3134452",
+      "abstract": "Ultrasonic testing (UT) is one of the commonly used non-destructive testing (NDT) techniques for material evaluation and defect detection. The acquisition of UT data is largely performed automatically by using various robotic manipulators which can ensure the consistency of the recorded data. On the other hand, complete analysis of the acquired data is still performed manually by trained personnel. Thismakes the reliabilityof defect detectionhighly dependent on humans' knowledge and experience. Most of the previous attempts for automated defect detection fromUT data analyze individualA-scans. In such cases, valuable information present in the surrounding A-scans remains unused and limits the performance of such methods. The situation is better if a B-scan is used as an input, especially if the dataset is large enough to train a deep learning object detector. However, if each of the B-scans is analyzed individually, as it was done so far in the literature, there is still valuable information left in the surrounding B-scans that could be used to improve the precision. We showed that expanding the input layer of an existing method will not lead to an improvement and that a more complex approach is needed in order to effectively use information from neighboring B-scans. We propose two approaches based on high-dimensional feature maps merging. We showed that proposedmodels improve mean average precision ( mAP) compared to the previous state-of-the- artmodel by 2% for input resolutions of 512x512 pixels, and 3.4% for input resolutions of 384 x 384 pixels.",
+      "keywords": [
+        "Image analysis",
+        "deep learning",
+        "convolutional neural networks",
+        "defect detection",
+        "ultrasonic testing",
+        "CLASSIFICATION",
+        "NETWORK",
+        "WAVELET",
+        "SYSTEM"
+      ],
+      "normalized_title": "deep learning based defect detection from sequences of ultrasonic b scans",
+      "raw_bibtex": "@ARTICLE{10.1109/JSEN.2021.3134452,\n\tauthor = {Medak, D and Posilovic, L and Subasic, M and Budimir, M and Loncaric, S},\n\ttitle = {Deep Learning-Based Defect Detection From Sequences of Ultrasonic B-Scans},\n\tjournal = {IEEE SENSORS JOURNAL},\n\tyear = {2022},\n\tkeywords = {Image analysis; deep learning; convolutional neural networks; defect detection; ultrasonic testing; CLASSIFICATION; NETWORK; WAVELET; SYSTEM},\n\tabstract = {Ultrasonic testing (UT) is one of the commonly used non-destructive testing (NDT) techniques for material evaluation and defect detection. The acquisition of UT data is largely performed automatically by using various robotic manipulators which can ensure the consistency of the recorded data. On the other hand, complete analysis of the acquired data is still performed manually by trained personnel. Thismakes the reliabilityof defect detectionhighly dependent on humans' knowledge and experience. Most of the previous attempts for automated defect detection fromUT data analyze individualA-scans. In such cases, valuable information present in the surrounding A-scans remains unused and limits the performance of such methods. The situation is better if a B-scan is used as an input, especially if the dataset is large enough to train a deep learning object detector. However, if each of the B-scans is analyzed individually, as it was done so far in the literature, there is still valuable information left in the surrounding B-scans that could be used to improve the precision. We showed that expanding the input layer of an existing method will not lead to an improvement and that a more complex approach is needed in order to effectively use information from neighboring B-scans. We propose two approaches based on high-dimensional feature maps merging. We showed that proposedmodels improve mean average precision ( mAP) compared to the previous state-of-the- artmodel by 2% for input resolutions of 512x512 pixels, and 3.4% for input resolutions of 384 x 384 pixels.},\n\tdoi = {10.1109/JSEN.2021.3134452},\n\tvolume = {22},\n\tnumber = {3},\n\tpages = {2456-2463},\n\tissn = {1530-437X},\n\tnote = {Times Cited in Web of Science Core Collection: 25 Total Times Cited: 28 Cited Reference Count: 35 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/JSEN.2021.3134452"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000095",
+      "entry_type": "article",
+      "title": "Research on an ultrasonic detection method for weld defects based on neural network architecture search",
+      "authors": [
+        "Zhang, R",
+        "Gao, MR",
+        "Zhang, PY",
+        "Zhang, YM",
+        "Fu, LH",
+        "Chai, YF"
+      ],
+      "year": 2023,
+      "journal": "MEASUREMENT",
+      "doi": "10.1016/j.measurement.2023.113483",
+      "abstract": "In order to further reduce the subjectivity of network design and improve the ability of model feature extraction, an ultrasonic detection method for weld defects based on neural network architecture search is proposed. Through the designed multi-level and multi-branch search space and an untrained architecture search and evaluation method, an efficient defect classification network was automatically constructed to complete the task of weld defect classification. Experiments were carried out on a self-constructed data set, and compared with the manually designed model, the classification accuracy of defect types reached 95.26% when the number of parameters was only 7.3 M. Compared with the model constructed using neural network architecture search, the proposed method can reduce the searching time to 8.29% of the baseline model while weighing multiple conflicting objectives, which proved the efficiency and effectiveness of the proposed method.",
+      "keywords": [
+        "Weld defects",
+        "Ultrasonic testing",
+        "Neural network architecture search",
+        "Multi-objective optimization algorithm",
+        "ALGORITHM",
+        "CLASSIFICATION"
+      ],
+      "normalized_title": "research on an ultrasonic detection method for weld defects based on neural network architecture search",
+      "raw_bibtex": "@ARTICLE{10.1016/j.measurement.2023.113483,\n\tauthor = {Zhang, R and Gao, MR and Zhang, PY and Zhang, YM and Fu, LH and Chai, YF},\n\ttitle = {Research on an ultrasonic detection method for weld defects based on neural network architecture search},\n\tjournal = {MEASUREMENT},\n\tyear = {2023},\n\tkeywords = {Weld defects; Ultrasonic testing; Neural network architecture search; Multi-objective optimization algorithm; ALGORITHM; CLASSIFICATION},\n\tabstract = {In order to further reduce the subjectivity of network design and improve the ability of model feature extraction, an ultrasonic detection method for weld defects based on neural network architecture search is proposed. Through the designed multi-level and multi-branch search space and an untrained architecture search and evaluation method, an efficient defect classification network was automatically constructed to complete the task of weld defect classification. Experiments were carried out on a self-constructed data set, and compared with the manually designed model, the classification accuracy of defect types reached 95.26% when the number of parameters was only 7.3 M. Compared with the model constructed using neural network architecture search, the proposed method can reduce the searching time to 8.29% of the baseline model while weighing multiple conflicting objectives, which proved the efficiency and effectiveness of the proposed method.},\n\tdoi = {10.1016/j.measurement.2023.113483},\n\tvolume = {221},\n\tissn = {0263-2241},\n\tnote = {Times Cited in Web of Science Core Collection: 9 Total Times Cited: 10 Cited Reference Count: 49 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.measurement.2023.113483"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000096",
+      "entry_type": "article",
+      "title": "Ultrasound based Crack Depth Estimation in Steel-fiber Reinforced Concrete",
+      "authors": [
+        "Kirlangiç, AS"
+      ],
+      "year": 2022,
+      "journal": "TEKNIK DERGI",
+      "doi": "10.18400/tekderg.797412",
+      "abstract": "Estimation of the depth of surface-breaking cracks caused by bending in concrete has crucial importance in order to predict the remaining load capacity of a structural member. In practice, ultrasonic tests are the most commonly used non-destructive methods to assess the condition of concrete. However, the commercial ultrasound-based methods focus on the estimation of thickness of the structural element rather than the crack depth. The cracks cause dispersion and attenuation in the propagating waves, and thus by monitoring the changes in these wave characteristics, diagnostic indexes correlated with the crack depth can be defined. This paper explains this approach through the tests performed on seven laboratory-scale steel-fiber reinforced concrete beams (50x10x10 cm(3)). The beams are loaded under the crack-controlled three-point bending test until a specific crack depth is reached. These beams are then subjected to ultrasonic testing to acquire the propagating surface waves. The recorded signals are analysed by utilizing signal processing techniques, including discrete wavelet transform and frequency-wavenumber analysis in order to extract two diagnostic features, namely, material attenuation coefficient and dispersion index. It is shown that both diagnostic features are able to detect the crack and estimate its depth.",
+      "keywords": [
+        "Non-destructive testing",
+        "crack depth estimation",
+        "steel-fiber reinforced concrete",
+        "ultrasonic surface waves",
+        "dispersion",
+        "attenuation",
+        "SURFACE-BREAKING CRACKS"
+      ],
+      "normalized_title": "ultrasound based crack depth estimation in steel fiber reinforced concrete",
+      "raw_bibtex": "@ARTICLE{10.18400/tekderg.797412,\n\tauthor = {Kirlangiç, AS},\n\ttitle = {Ultrasound based Crack Depth Estimation in Steel-fiber Reinforced Concrete},\n\tjournal = {TEKNIK DERGI},\n\tyear = {2022},\n\tkeywords = {Non-destructive testing; crack depth estimation; steel-fiber reinforced concrete; ultrasonic surface waves; dispersion; attenuation; SURFACE-BREAKING CRACKS},\n\tabstract = {Estimation of the depth of surface-breaking cracks caused by bending in concrete has crucial importance in order to predict the remaining load capacity of a structural member. In practice, ultrasonic tests are the most commonly used non-destructive methods to assess the condition of concrete. However, the commercial ultrasound-based methods focus on the estimation of thickness of the structural element rather than the crack depth. The cracks cause dispersion and attenuation in the propagating waves, and thus by monitoring the changes in these wave characteristics, diagnostic indexes correlated with the crack depth can be defined. This paper explains this approach through the tests performed on seven laboratory-scale steel-fiber reinforced concrete beams (50x10x10 cm(3)). The beams are loaded under the crack-controlled three-point bending test until a specific crack depth is reached. These beams are then subjected to ultrasonic testing to acquire the propagating surface waves. The recorded signals are analysed by utilizing signal processing techniques, including discrete wavelet transform and frequency-wavenumber analysis in order to extract two diagnostic features, namely, material attenuation coefficient and dispersion index. It is shown that both diagnostic features are able to detect the crack and estimate its depth.},\n\tdoi = {10.18400/tekderg.797412},\n\tvolume = {33},\n\tnumber = {3},\n\tpages = {11903-11920},\n\tissn = {1300-3453},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 26 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.18400/tekderg.797412"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000097",
+      "entry_type": "article",
+      "title": "A softmax classifier for high-precision classification of ultrasonic similar signals",
+      "authors": [
+        "Gao, F",
+        "Li, B",
+        "Chen, L",
+        "Shang, ZY",
+        "Wei, X",
+        "He, C"
+      ],
+      "year": 2021,
+      "journal": "ULTRASONICS",
+      "doi": "10.1016/j.ultras.2020.106344",
+      "abstract": "High precision classification of ultrasonic signals is helpful to improve the identification and evaluation accuracy for detecting defects. In the previous research, the deep neural network (DNN) has been used to classify the signal with obvious differences. But for different defects of the same depth, or when the defect position is close, the ultrasonic A-scan signal curve is very similar, causing the classification accuracy not high enough. In this paper, an optimized softmax classifier is proposed based on the traditional softmax classifier, and the convolution neural network (CNN) framework is built, which can achieve the accurate classification of signals with similar curves. Through a comparative experiment, the performance of the proposed classifier is evaluated from the loss curve decline rate, classification accuracy and feature visualization. The results show that the classifier has high classification accuracy and strong robustness.",
+      "keywords": [
+        "Softmax classifier",
+        "Ultrasonic testing",
+        "High-precision classification",
+        "CNN",
+        "CONVOLUTIONAL NEURAL-NETWORK",
+        "BEARING FAULT-DIAGNOSIS",
+        "CROSS-ENTROPY",
+        "DEEP",
+        "RECOGNITION",
+        "SCHEME"
+      ],
+      "normalized_title": "a softmax classifier for high precision classification of ultrasonic similar signals",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ultras.2020.106344,\n\tauthor = {Gao, F and Li, B and Chen, L and Shang, ZY and Wei, X and He, C},\n\ttitle = {A softmax classifier for high-precision classification of ultrasonic similar signals},\n\tjournal = {ULTRASONICS},\n\tyear = {2021},\n\tkeywords = {Softmax classifier; Ultrasonic testing; High-precision classification; CNN; CONVOLUTIONAL NEURAL-NETWORK; BEARING FAULT-DIAGNOSIS; CROSS-ENTROPY; DEEP; RECOGNITION; SCHEME},\n\tabstract = {High precision classification of ultrasonic signals is helpful to improve the identification and evaluation accuracy for detecting defects. In the previous research, the deep neural network (DNN) has been used to classify the signal with obvious differences. But for different defects of the same depth, or when the defect position is close, the ultrasonic A-scan signal curve is very similar, causing the classification accuracy not high enough. In this paper, an optimized softmax classifier is proposed based on the traditional softmax classifier, and the convolution neural network (CNN) framework is built, which can achieve the accurate classification of signals with similar curves. Through a comparative experiment, the performance of the proposed classifier is evaluated from the loss curve decline rate, classification accuracy and feature visualization. The results show that the classifier has high classification accuracy and strong robustness.},\n\tdoi = {10.1016/j.ultras.2020.106344},\n\tvolume = {112},\n\tissn = {0041-624X},\n\tnote = {Times Cited in Web of Science Core Collection: 42 Total Times Cited: 47 Cited Reference Count: 29 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ultras.2020.106344"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000098",
+      "entry_type": "article",
+      "title": "Prediction of Fatigue Damage Evolution in 3D-Printed CFRP Based on Ultrasonic Testing and LSTM",
+      "authors": [
+        "Li, ER",
+        "Xu, S",
+        "Wan, HQ",
+        "Chen, H",
+        "Yang, YL",
+        "Li, YF"
+      ],
+      "year": 2026,
+      "journal": "APPLIED SCIENCES-BASEL",
+      "doi": "10.3390/app16021139",
+      "abstract": "To address the prediction of fatigue damage for 3D-printed Carbon Fiber Reinforced Polymer (CFRP), this study used 3D-printing technology to fabricate CFRP specimens. Through multi-stage fatigue testing, samples with varying porosity levels were obtained. Based on porosity test results and ultrasonic attenuation coefficient measurements of specimens under different fatigue cycle counts, a quantitative relationship model was established between the porosity and ultrasonic attenuation coefficient of 3D-printed CFRP. According to the porosity and fatigue-loading cycles obtained from tests, the Time-series Generative Adversarial Network (TimeGAN) algorithm was employed for data augmentation to meet the requirements for neural-network training. Subsequently, the Long Short-Term Memory (LSTM) neural network was utilized to predict the fatigue damage evolution of 3D-printed CFRP specimens. Research findings indicate that by integrating the established relationship between porosity and ultrasonic attenuation coefficient, non-destructive testing of material fatigue damage evolution based on ultrasonic attenuation coefficient can be achieved.",
+      "keywords": [
+        "ultrasonic attenuation coefficient",
+        "porosity",
+        "CFRP",
+        "LSTM",
+        "fatigue damage evolution",
+        "VOID CONTENT",
+        "ATTENUATION",
+        "CARBON/EPOXY",
+        "PERFORMANCE",
+        "STRENGTH",
+        "COMPOSITES",
+        "POROSITY"
+      ],
+      "normalized_title": "prediction of fatigue damage evolution in 3d printed cfrp based on ultrasonic testing and lstm",
+      "raw_bibtex": "@ARTICLE{10.3390/app16021139,\n\tauthor = {Li, ER and Xu, S and Wan, HQ and Chen, H and Yang, YL and Li, YF},\n\ttitle = {Prediction of Fatigue Damage Evolution in 3D-Printed CFRP Based on Ultrasonic Testing and LSTM},\n\tjournal = {APPLIED SCIENCES-BASEL},\n\tyear = {2026},\n\tkeywords = {ultrasonic attenuation coefficient; porosity; CFRP; LSTM; fatigue damage evolution; VOID CONTENT; ATTENUATION; CARBON/EPOXY; PERFORMANCE; STRENGTH; COMPOSITES; POROSITY},\n\tabstract = {To address the prediction of fatigue damage for 3D-printed Carbon Fiber Reinforced Polymer (CFRP), this study used 3D-printing technology to fabricate CFRP specimens. Through multi-stage fatigue testing, samples with varying porosity levels were obtained. Based on porosity test results and ultrasonic attenuation coefficient measurements of specimens under different fatigue cycle counts, a quantitative relationship model was established between the porosity and ultrasonic attenuation coefficient of 3D-printed CFRP. According to the porosity and fatigue-loading cycles obtained from tests, the Time-series Generative Adversarial Network (TimeGAN) algorithm was employed for data augmentation to meet the requirements for neural-network training. Subsequently, the Long Short-Term Memory (LSTM) neural network was utilized to predict the fatigue damage evolution of 3D-printed CFRP specimens. Research findings indicate that by integrating the established relationship between porosity and ultrasonic attenuation coefficient, non-destructive testing of material fatigue damage evolution based on ultrasonic attenuation coefficient can be achieved.},\n\tdoi = {10.3390/app16021139},\n\tvolume = {16},\n\tnumber = {2},\n\tissn = {2076-3417},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 32 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/app16021139"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000099",
+      "entry_type": "article",
+      "title": "Improving Ultrasonic Testing by Using Machine Learning Framework Based on Model Interpretation Strategy",
+      "authors": [
+        "Shi, SQ",
+        "Jin, SJ",
+        "Zhang, DH",
+        "Liao, JY",
+        "Fu, DX",
+        "Lin, L"
+      ],
+      "year": 2023,
+      "journal": "CHINESE JOURNAL OF MECHANICAL ENGINEERING",
+      "doi": "10.1186/s10033-023-00960-z",
+      "abstract": "Ultrasonic testing (UT) is increasingly combined with machine learning (ML) techniques for intelligently identifying damage. Extracting significant features from UT data is essential for efficient defect characterization. Moreover, the hidden physics behind ML is unexplained, reducing the generalization capability and versatility of ML methods in UT. In this paper, a generally applicable ML framework based on the model interpretation strategy is proposed to improve the detection accuracy and computational efficiency of UT. Firstly, multi-domain features are extracted from the UT signals with signal processing techniques to construct an initial feature space. Subsequently, a feature selection method based on model interpretable strategy (FS-MIS) is innovatively developed by integrating Shapley additive explanation (SHAP), filter method, embedded method and wrapper method. The most effective ML model and the optimal feature subset with better correlation to the target defects are determined self-adaptively. The proposed framework is validated by identifying and locating side-drilled holes (SDHs) with 0.5 lambda central distance and different depths. An ultrasonic array probe is adopted to acquire FMC datasets from several aluminum alloy specimens containing two SDHs by experiments. The optimal feature subset selected by FS-MIS is set as the input of the chosen ML model to train and predict the times of arrival (ToAs) of the scattered waves emitted by adjacent SDHs. The experimental results demonstrate that the relative errors of the predicted ToAs are all below 3.67% with an average error of 0.25%, significantly improving the time resolution of UT signals. On this basis, the predicted ToAs are assigned to the corresponding original signals for decoupling overlapped pulse-echoes and reconstructing high-resolution FMC datasets. The imaging resolution is enhanced to 0.5 lambda by implementing the total focusing method (TFM). The relative errors of hole depths and central distance are no more than 0.51% and 3.57%, respectively. Finally, the superior performance of the proposed FS-MIS is validated by comparing it with initial feature space and conventional dimensionality reduction techniques.",
+      "keywords": [
+        "Ultrasonic testing",
+        "Machine learning",
+        "Feature extraction",
+        "Feature selection",
+        "Shapley additive explanation",
+        "FEATURE-SELECTION",
+        "TIME-RESOLUTION",
+        "CLASSIFICATION",
+        "ENHANCEMENT",
+        "INVERSION",
+        "SYSTEM",
+        "MATRIX"
+      ],
+      "normalized_title": "improving ultrasonic testing by using machine learning framework based on model interpretation strategy",
+      "raw_bibtex": "@ARTICLE{10.1186/s10033-023-00960-z,\n\tauthor = {Shi, SQ and Jin, SJ and Zhang, DH and Liao, JY and Fu, DX and Lin, L},\n\ttitle = {Improving Ultrasonic Testing by Using Machine Learning Framework Based on Model Interpretation Strategy},\n\tjournal = {CHINESE JOURNAL OF MECHANICAL ENGINEERING},\n\tyear = {2023},\n\tkeywords = {Ultrasonic testing; Machine learning; Feature extraction; Feature selection; Shapley additive explanation; FEATURE-SELECTION; TIME-RESOLUTION; CLASSIFICATION; ENHANCEMENT; INVERSION; SYSTEM; MATRIX},\n\tabstract = {Ultrasonic testing (UT) is increasingly combined with machine learning (ML) techniques for intelligently identifying damage. Extracting significant features from UT data is essential for efficient defect characterization. Moreover, the hidden physics behind ML is unexplained, reducing the generalization capability and versatility of ML methods in UT. In this paper, a generally applicable ML framework based on the model interpretation strategy is proposed to improve the detection accuracy and computational efficiency of UT. Firstly, multi-domain features are extracted from the UT signals with signal processing techniques to construct an initial feature space. Subsequently, a feature selection method based on model interpretable strategy (FS-MIS) is innovatively developed by integrating Shapley additive explanation (SHAP), filter method, embedded method and wrapper method. The most effective ML model and the optimal feature subset with better correlation to the target defects are determined self-adaptively. The proposed framework is validated by identifying and locating side-drilled holes (SDHs) with 0.5 lambda central distance and different depths. An ultrasonic array probe is adopted to acquire FMC datasets from several aluminum alloy specimens containing two SDHs by experiments. The optimal feature subset selected by FS-MIS is set as the input of the chosen ML model to train and predict the times of arrival (ToAs) of the scattered waves emitted by adjacent SDHs. The experimental results demonstrate that the relative errors of the predicted ToAs are all below 3.67% with an average error of 0.25%, significantly improving the time resolution of UT signals. On this basis, the predicted ToAs are assigned to the corresponding original signals for decoupling overlapped pulse-echoes and reconstructing high-resolution FMC datasets. The imaging resolution is enhanced to 0.5 lambda by implementing the total focusing method (TFM). The relative errors of hole depths and central distance are no more than 0.51% and 3.57%, respectively. Finally, the superior performance of the proposed FS-MIS is validated by comparing it with initial feature space and conventional dimensionality reduction techniques.},\n\tdoi = {10.1186/s10033-023-00960-z},\n\tvolume = {36},\n\tnumber = {1},\n\tissn = {1000-9345},\n\tnote = {Times Cited in Web of Science Core Collection: 17 Total Times Cited: 18 Cited Reference Count: 62 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1186/s10033-023-00960-z"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000100",
+      "entry_type": "article",
+      "title": "Predictive probability of detection curves for ultrasonic testing",
+      "authors": [
+        "Orellana, AEM",
+        "Mendler, A",
+        "Schmid, S",
+        "Grosse, CU"
+      ],
+      "year": 2025,
+      "journal": "NDT & E INTERNATIONAL",
+      "doi": "10.1016/j.ndteint.2025.103346",
+      "abstract": "The probability of detection (POD) is one of the most meaningful ways to quantify the detectability of damage, because it considers the statistical variability in the measurements. Predictive probability of detection (P-POD) curves are particularly efficient, as they generate POD curves based on a series of measurements from undamaged specimens, without having to run a series of destructive tests. P-POD methods are model- assisted, but instead of generating synthetic data, a sensitivity matrix is extracted from the model, and the measurement uncertainties are quantified based on experimental tests. However, so far, they have only been applied to global structural health monitoring applications. This paper sets out to apply the P-POD method to ultrasonic testing for the first time, and to experimentally validate the predictions for contact-based and air- coupled measurements. For that purpose, a contact ultrasound study is carried out, where changes of circular reflectors from their nominal values are evaluated in a polyamide cuboid based on the maximum reflected wave amplitude. Moreover, an air-coupled ultrasonic testis performed to determine thickness changes of a carbon fiber-reinforced polymer plate based on time-of-flight considerations. In both cases, the predicted POD is compared with empirical tests. The results show that the P-POD accurately predicts the POD with very small absolute deviations between predicted and actual POD. Since P-POD methods require analytical models that relate measured damage indicators to material changes, a separate study is added to demonstrate how the model-based uncertainty can be quantified using confidence intervals, and how it can be distinguished from data-driven uncertainties. As mentioned above, the POD can be predicted based on undamaged specimens, and that is why the P-POD method is an appropriate tool to optimize user-defined signal processing parameters before scanning the objects. To demonstrate this, different onset pickers are analyzed in a comparative study, where the one based on the Akaike information criterion led to a POD up to 38% higher than other pickers.",
+      "keywords": [
+        "Probability of detection",
+        "Non-destructive testing",
+        "Contact ultrasound",
+        "Air-coupled ultrasound",
+        "Confidence interval",
+        "PICKING",
+        "MODEL"
+      ],
+      "normalized_title": "predictive probability of detection curves for ultrasonic testing",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ndteint.2025.103346,\n\tauthor = {Orellana, AEM and Mendler, A and Schmid, S and Grosse, CU},\n\ttitle = {Predictive probability of detection curves for ultrasonic testing},\n\tjournal = {NDT & E INTERNATIONAL},\n\tyear = {2025},\n\tkeywords = {Probability of detection; Non-destructive testing; Contact ultrasound; Air-coupled ultrasound; Confidence interval; PICKING; MODEL},\n\tabstract = {The probability of detection (POD) is one of the most meaningful ways to quantify the detectability of damage, because it considers the statistical variability in the measurements. Predictive probability of detection (P-POD) curves are particularly efficient, as they generate POD curves based on a series of measurements from undamaged specimens, without having to run a series of destructive tests. P-POD methods are model- assisted, but instead of generating synthetic data, a sensitivity matrix is extracted from the model, and the measurement uncertainties are quantified based on experimental tests. However, so far, they have only been applied to global structural health monitoring applications. This paper sets out to apply the P-POD method to ultrasonic testing for the first time, and to experimentally validate the predictions for contact-based and air- coupled measurements. For that purpose, a contact ultrasound study is carried out, where changes of circular reflectors from their nominal values are evaluated in a polyamide cuboid based on the maximum reflected wave amplitude. Moreover, an air-coupled ultrasonic testis performed to determine thickness changes of a carbon fiber-reinforced polymer plate based on time-of-flight considerations. In both cases, the predicted POD is compared with empirical tests. The results show that the P-POD accurately predicts the POD with very small absolute deviations between predicted and actual POD. Since P-POD methods require analytical models that relate measured damage indicators to material changes, a separate study is added to demonstrate how the model-based uncertainty can be quantified using confidence intervals, and how it can be distinguished from data-driven uncertainties. As mentioned above, the POD can be predicted based on undamaged specimens, and that is why the P-POD method is an appropriate tool to optimize user-defined signal processing parameters before scanning the objects. To demonstrate this, different onset pickers are analyzed in a comparative study, where the one based on the Akaike information criterion led to a POD up to 38% higher than other pickers.},\n\tdoi = {10.1016/j.ndteint.2025.103346},\n\tvolume = {153},\n\tissn = {0963-8695},\n\tnote = {Times Cited in Web of Science Core Collection: 3 Total Times Cited: 4 Cited Reference Count: 51 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ndteint.2025.103346"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

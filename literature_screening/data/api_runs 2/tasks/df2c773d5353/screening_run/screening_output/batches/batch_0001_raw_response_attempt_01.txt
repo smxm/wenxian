@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0001",
+    "results": [
+        {
+            "paper_id": "paper_000001",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦中国歌剧电影与电影技术，未涉及西方歌剧咏叹调演唱技巧研究。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000002",
+            "decision": "exclude",
+            "reason": "研究针对COVID-19后遗症患者的呼吸训练项目，虽提及歌唱技巧，但主题为医疗康复而非西方歌剧咏叹调演唱技巧。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000003",
+            "decision": "include",
+            "reason": "标题和摘要明确研究歌剧与爵士演唱中颤音的复杂性，直接涉及西方歌剧演唱技巧分析。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000004",
+            "decision": "include",
+            "reason": "标题和摘要比较古典（歌剧）与流行歌手的声辐射，直接研究歌剧演唱者的声学技术与差异。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000005",
+            "decision": "uncertain",
+            "reason": "研究呼吸肌训练对歌手（含歌剧歌手）音高范围的影响，主题相关但未明确聚焦咏叹调或西方歌剧传统，信息不足。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000006",
+            "decision": "exclude",
+            "reason": "标题和摘要研究歌剧录音中的歌声检测算法，属于音乐信息检索技术，未涉及演唱技巧或声乐教学。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000007",
+            "decision": "include",
+            "reason": "摘要明确研究西方古典歌唱等不同声乐品质的声效率，直接涉及歌剧演唱技术与声带振动分析。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000008",
+            "decision": "exclude",
+            "reason": "标题和摘要研究中国学生音乐素养教育，虽提及西方古典音乐和中国歌剧，但主题为通用音乐教育而非西方歌剧咏叹调演唱技巧。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.87
+        },
+        {
+            "paper_id": "paper_000009",
+            "decision": "include",
+            "reason": "标题和摘要探索歌剧声质练习在嗓音治疗中的应用，直接研究歌剧演唱技巧对声学参数的影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.93
+        },
+        {
+            "paper_id": "paper_000010",
+            "decision": "exclude",
+            "reason": "标题和摘要研究昆曲的声学传统与文化身份，属于中国歌剧形式，未涉及西方歌剧或咏叹调。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.91
+        }
+    ]
+}

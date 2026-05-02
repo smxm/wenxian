@@ -1,0 +1,49 @@
+project:
+  name: new-screening-run
+  output_dir: tasks/60790b0ec1e1/screening_run/screening_output
+  save_raw_response: true
+  save_intermediate_files: true
+input:
+  input_files:
+  - tasks/60790b0ec1e1/screening_run/inputs/CNKI-20260407230752254.enw
+  encoding: auto
+dedup:
+  enabled: true
+  strict_doi_match: true
+  normalized_title_exact_match: true
+  fuzzy_title_match: false
+screening:
+  batch_size: 10
+  target_include_count: 30
+  stop_when_target_reached: false
+  allow_uncertain: true
+  retry_times: 6
+  request_timeout_seconds: 240
+criteria:
+  topic: 理工科（STEM）学术写作中模糊语（Hedging / Vague Language）的使用及语用分析
+  inclusion:
+  - 必须探讨学术写作、科技语篇或理工科 含医学、工程等硬学科 背景下的模糊语 hedging, vague language, epistemic modality
+    等 现象
+  - 包含语用功能分析、基于语料库的对比 如中外学者对比、学科对比 或科技文本翻译中的模糊语处理。
+  exclusion:
+  - 严格排除金融和经济领域的“对冲 hedging ”
+  - 严格排除数学、计算机算法和控制系统中的“模糊逻辑/模糊控制 fuzzy logic/fuzzy control ”
+  - 排除非学术语境 如日常会话、小说、新闻 的分析。
+model:
+  provider: deepseek
+  model_name: deepseek-chat
+  api_base_url: https://api.deepseek.com/v1
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.0
+  max_tokens: 1536
+  min_request_interval_seconds: 2.0
+report:
+  export_included_ris: true
+  export_excluded_ris: false
+  export_unused_ris: true
+  export_included_bib: false
+  export_excluded_bib: false
+  export_unused_bib: false
+  included_report_format: md
+  excluded_report_format: md
+  summary_format: json

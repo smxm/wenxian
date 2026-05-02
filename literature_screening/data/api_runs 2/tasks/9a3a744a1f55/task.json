@@ -1,0 +1,573 @@
+{
+  "id": "9a3a744a1f55",
+  "kind": "screening",
+  "status": "succeeded",
+  "cancel_requested": false,
+  "title": "new-screening-run",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 4,
+  "progress_total": 12,
+  "progress_message": "Task completed",
+  "created_at": "2026-03-29T23:34:28.402289+08:00",
+  "updated_at": "2026-03-29T23:36:03.628489+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "263d3fe4e2ec",
+    "project_topic": "AI虚拟主播与虚拟商品类型对消费者购买意愿的影响",
+    "model_provider": "deepseek",
+    "parent_task_id": null,
+    "input_dataset_ids": [],
+    "request_payload": {
+      "title": "new-screening-run",
+      "topic": "AI虚拟主播与虚拟商品类型对消费者购买意愿的影响",
+      "criteria_markdown": "# Role\r\n你是一位市场营销与消费者行为学领域的资深学术研究员，正在协助我筛选参考文献。我正在撰写一篇关于“AI虚拟主播与虚拟商品类型对消费者购买意愿的影响”的论文，我需要你帮我找出我能用到的核心文献。\r\n\r\n# Task\r\n我将提供一批文献的元数据（标题、摘要、关键词等）。请你逐一仔细阅读，并严格按照以下流程处理：\r\n\r\n## Step 1: 筛选判读\r\n请根据以下标准判断该文献是否符合我的研究需求：\r\n\r\n* 纳入标准 (Inclusion Criteria)：\r\n  1. 必须涉及 AI 虚拟主播（Virtual Streamer/Influencer/Avatar）、数字人或虚拟代言人。\r\n  2. 必须探讨消费者行为或心理学指标，特别是购买意愿（Purchase Intention）或感知价值。\r\n  3. 研究背景最好包含虚拟电商、直播带货，或明确探讨了虚拟商品/数字产品（Virtual Goods/Digital Products）的分类与属性。\r\n* 排除标准 (Exclusion Criteria)：\r\n  1. 纯计算机视觉、图形渲染、大模型底层算法等纯技术类文献（无消费者实证数据）。\r\n  2. 与电子商务、市场营销完全无关的场景（如：纯医学辅助数字人、工业孪生数字人）。\r\n  3. 非学术期刊/会议的无深度新闻报道。\r\n\r\n## Step 2: 格式化输出\r\n根据判读结果，执行不同的输出逻辑（**严格要求：必须将所有输出内容放置在一个统一的 markdown 代码框内，且绝对禁止使用任何来源标记、网页引用或类似 的标注符号**）：\r\n\r\n情况 A：如果不符合要求\r\n* 仅输出一行文字：\r\n  `❌ [剔除]：<文献完整标题>`\r\n\r\n情况 B：如果符合要求\r\n* 请按以下结构输出文本（再次强调：不使用任何自动引用功能）：\r\n\r\n# <文献完整标题>\r\n（如果是英文文献，一级标题保留英文原名，并在下方新增一行带括号的中文翻译标题）\r\n\r\n核心总结\r\n（请用中文精简概括：文章旨在解决什么问题？使用了什么核心理论/方法？得出了什么关键结论？）\r\n\r\n深度分析\r\n* 变量提取：该文献主要测量了哪些自变量、因变量和调节/中介变量？\r\n* 理论参考：该文献是否使用了 SOR、TAM、匹配度假说或准社会互动等理论？\r\n* 核心价值：针对我的论文主题（探讨虚拟主播特质、虚拟商品类型如何共同作用于购买意愿），这篇文章在“理论框架搭建”、“实验/问卷设计借鉴”或“结论论证”方面，能为我提供什么具体的可用素材？\r\n---\r\n\r\n# Input Data\r\n[在此处粘贴你导出的文献信息，可以是 BibTeX 格式，或者包含标题+摘要的文本]",
+      "inclusion": [
+        "必须涉及 AI 虚拟主播（Virtual Streamer/Influencer/Avatar）、数字人或虚拟代言人。",
+        "必须探讨消费者行为或心理学指标，特别是购买意愿（Purchase Intention）或感知价值。",
+        "研究背景最好包含虚拟电商、直播带货，或明确探讨了虚拟商品/数字产品（Virtual Goods/Digital Products）的分类与属性。"
+      ],
+      "exclusion": [
+        "纯计算机视觉、图形渲染、大模型底层算法等纯技术类文献（无消费者实证数据）。",
+        "与电子商务、市场营销完全无关的场景（如：纯医学辅助数字人、工业孪生数字人）。",
+        "非学术期刊/会议的无深度新闻报道。"
+      ],
+      "provider": "deepseek",
+      "model_name": "deepseek-chat",
+      "api_base_url": "https://api.deepseek.com/v1",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.0,
+      "max_tokens": 1536,
+      "min_request_interval_seconds": 2.0,
+      "batch_size": 10,
+      "target_include_count": 30,
+      "stop_when_target_reached": true,
+      "allow_uncertain": true,
+      "retry_times": 6,
+      "request_timeout_seconds": 240,
+      "encoding": "auto",
+      "project_id": "263d3fe4e2ec",
+      "parent_task_id": null,
+      "source_dataset_ids": []
+    },
+    "model_secret_id": "e6a62e402534468a",
+    "uploaded_input_paths": [
+      "tasks/9a3a744a1f55/uploads/scopus_export_Mar 29-2026_35e9992d-d8c9-4b75-8081-4e64598f033b.ris"
+    ]
+  },
+  "summary": {
+    "run_id": "run_20260329_233428",
+    "input_files_count": 1,
+    "raw_entries_count": 116,
+    "deduped_entries_count": 116,
+    "processed_count": 40,
+    "included_count": 32,
+    "excluded_count": 2,
+    "uncertain_count": 6,
+    "unused_count": 76,
+    "batch_count": 4,
+    "api_call_count": 4,
+    "stop_reason": "target_include_count_reached",
+    "started_at": "2026-03-29T23:34:28.678254+08:00",
+    "finished_at": "2026-03-29T23:36:03.566309+08:00"
+  },
+  "error": null,
+  "artifacts": {
+    "included_report": {
+      "path": "tasks/9a3a744a1f55/screening_run/screening_output/included_report.md",
+      "filename": "included_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 14515
+    },
+    "excluded_report": {
+      "path": "tasks/9a3a744a1f55/screening_run/screening_output/excluded_report.md",
+      "filename": "excluded_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 953
+    },
+    "uncertain_report": {
+      "path": "tasks/9a3a744a1f55/screening_run/screening_output/uncertain_report.md",
+      "filename": "uncertain_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 2902
+    },
+    "included_ris": {
+      "path": "tasks/9a3a744a1f55/screening_run/screening_output/included.ris",
+      "filename": "included.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 52582
+    },
+    "unused_ris": {
+      "path": "tasks/9a3a744a1f55/screening_run/screening_output/unused_remaining.ris",
+      "filename": "unused_remaining.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 136982
+    },
+    "run_summary": {
+      "path": "tasks/9a3a744a1f55/screening_run/screening_output/run_summary.json",
+      "filename": "run_summary.json",
+      "content_type": "application/json",
+      "size_bytes": 453
+    },
+    "screening_decisions": {
+      "path": "tasks/9a3a744a1f55/screening_run/screening_output/screening_decisions.json",
+      "filename": "screening_decisions.json",
+      "content_type": "application/json",
+      "size_bytes": 19491
+    }
+  },
+  "run_root": "tasks/9a3a744a1f55/screening_run",
+  "output_dir": "tasks/9a3a744a1f55/screening_run/screening_output",
+  "markdown_preview": null,
+  "records": [
+    {
+      "paper_id": "paper_000001",
+      "title": "Do Virtual Influencers’ Endorsements Impact Purchase Intention at Restaurants: An Examination Using Symmetric and Asymmetric Approaches",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究虚拟影响者对餐厅购买意愿的影响，符合纳入标准。",
+      "year": 2025,
+      "journal": "International Journal of Hospitality and Tourism Administration",
+      "doi": "10.1080/15256480.2025.2556689",
+      "abstract": "The study examines how virtual influencers’ (VI) endorsement influences customers’ purchase intention (PI) at restaurants. It bridges the gaps in VI literature about a few antecedents of restaurant PI. The antecedents identified include attractiveness, credibility, trustworthiness, and attention. The respondents for the study included customers who visited restaurants through the influence of VIs. Data was collected from 411 respondents using online structured questionnaires. The data was analyzed using symmetric and asymmetric approaches. Results show that the identified variables influence PI of restaurant customers. The study has expanded the theoretical understanding of how VI can influence PI. It also provides practitioners with input on executing VI campaigns to increase consumer involvement and PI. The study has addressed the complex interplay between credibility, trustworthiness, attention, and PI. © 2025 Taylor & Francis Group, LLC."
+    },
+    {
+      "paper_id": "paper_000002",
+      "title": "How do virtual streamers affect purchase intention in the live streaming context? A presence perspective",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究虚拟主播在直播带货中对购买意愿的影响，符合纳入标准。",
+      "year": 2023,
+      "journal": "Journal of Retailing and Consumer Services",
+      "doi": "10.1016/j.jretconser.2023.103356",
+      "abstract": "The rise of live streaming commerce has attracted attention from scholars and practitioners as a new opportunity to reach consumers. However, few studies have focused on the role of virtual streamers in this context. Based on the stimulus organism response framework, we explore the impact of three characteristics of virtual streamers—likeability, animacy, and responsiveness—on social presence, telepresence, and purchase intention. We use partial least squares structural equation modeling analysis with online survey data from 378 consumers concerning their experiences of viewing virtual streamers. The findings indicate that likeability, animacy, and responsiveness enhance social presence and telepresence, which then promote purchase intention. Likeability and responsiveness directly increase purchase intention, but animacy does not. Multi-group analysis reveals differences between the effects of humanoid and zoonotic virtual streamers on social presence and telepresence. These results shed light on the role of virtual streamer characteristics and contribute to the literature on live streaming commerce, presence, and virtual humans. © 2023 Elsevier Ltd"
+    },
+    {
+      "paper_id": "paper_000003",
+      "title": "AI-powered virtual streamers and viewer behavior: An image-inspiration-behavior framework",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究AI虚拟主播对购买意愿的影响，符合纳入标准。",
+      "year": 2025,
+      "journal": "Entertainment Computing",
+      "doi": "10.1016/j.entcom.2025.101000",
+      "abstract": "Today, a new form of live-streaming has emerged: virtual streamers powered by Artificial Intelligence technology, which autonomously perform live-streaming tasks as human streamers do. This form of live-streaming has quickly gained popularity. However, studies in this area are scarce. This study aims to fill this research gap by investigating how virtual AI streamers impact viewers by adopting the image-inspiration-behavior framework, in which the image of virtual AI streamers is described by warmth, competence, and coolness, and behavior is studied as interaction and purchase intentions. The data were collected from 559 participants via a scenario-based survey. The partial least squares – structural equation modeling and artificial neural network are used to analyze the data. It was found that the three image dimensions (warmth, competence, and coolness) influence consumer interaction and purchase intentions through the mediating effect of inspiration. The findings of this study advance previous studies mainly by investigating how virtual AI streamers impact viewer behaviors and offer insights to live-streaming companies in their adoption of virtual AI streamers. © 2025 Elsevier B.V."
+    },
+    {
+      "paper_id": "paper_000004",
+      "title": "Virtual influencers’ attractiveness effect on purchase intention: A moderated mediation model of the Product–Endorser fit with the brand",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究虚拟影响者吸引力对购买意愿的影响，符合纳入标准。",
+      "year": 2023,
+      "journal": "Computers in Human Behavior",
+      "doi": "10.1016/j.chb.2023.107703",
+      "abstract": "The fourth industrial revolution has fundamentally altered the way we live, and social media has become a crucial channel for the promotion of brands through influencers. This study explored the relationship between a virtual influencer's attractiveness and a consumer's purchase intention, the mediating effect of mimetic desire and brand attachment, as well as the moderating effect of the product–endorser fit with the brand. An online survey of 364 female Instagram users was developed using confirmatory factor analysis and PROCESS macro models 4 and 59. The findings revealed that virtual influencers' attractiveness was not directly associated with purchase intention; however, mimetic desire and brand attachment mediated this relationship. Additionally, the conditional direct effect of virtual influencers' attractiveness on purchase intention was partially supported while indirect effects via mimetic desire and brand attachment were moderated by the product–endorser fit. This study makes important contributions to source attractiveness model literature through emphasis on the role of virtual influencers in enhancing customers' favorable perceptions toward advertisements, which in turn leads to greater purchase intention. It also suggests managerial implications for marketers, including the finding that a good product–endorser match is a crucial factor in determining the effectiveness of advertisements. © 2023 Elsevier Ltd"
+    },
+    {
+      "paper_id": "paper_000005",
+      "title": "Anthropomorphism effect of virtual influencers on purchase intention in social commerce: A presence perspective",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究虚拟影响者拟人化对购买意愿的影响，符合纳入标准。",
+      "year": 2025,
+      "journal": "Social Behavior and Personality",
+      "doi": "10.2224/sbp.13953",
+      "abstract": "The rise of social commerce has drawn attention from scholars and practitioners, but the role of virtual influencers (VIs) remains underexplored. Utilizing the computers as social actors paradigm, our study examined how the anthropomorphism of VIs influences consumer behavior, with brand credibility as a moderator. We analyzed survey data from 408 consumers using partial least squares structural equation modeling. Findings showed that the anthropomorphism of VIs enhanced social presence and telepresence, boosting consumers’ purchase intention. Additionally, brand credibility moderated the effect of telepresence on purchase intention. The study concludes with a summary of implications for research and practice. © 2025 Scientific Journal Publishers Limited. All Rights Reserved."
+    },
+    {
+      "paper_id": "paper_000006",
+      "title": "Unveiling the relationship between virtual streamer characteristics and consumer purchase intention in live streaming commerce: Insights from source credibility perspective",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究虚拟主播特征对直播带货中购买意愿的影响，符合纳入标准。",
+      "year": 2025,
+      "journal": "Electronic Markets",
+      "doi": "10.1007/s12525-025-00813-8",
+      "abstract": "As a novel business phenomenon, virtual streamers are increasingly employed to promote consumer purchases in live streaming commerce. However, few scholars have focused on how virtual streamers influence consumer purchase intentions. By drawing upon source credibility theory and the stimulus‒organism‒response framework, this study investigates the mechanism through which perceived characteristics of virtual streamers shape purchase intentions, based on survey data from 318 live streaming consumers. The empirical results demonstrate that consumers’ perceived attractiveness, intelligence, interactivity, and congruence of virtual streamers significantly show associations with consumer purchase intentions through their mediation effects on trust and affection. Notably, perceived attractiveness exhibits a stronger association with affection than with trust, whereas perceived intelligence shows the reverse pattern. Furthermore, fuzzy-set qualitative comparative analysis is used to investigate two different configuration options that can lead to high purchase intentions. The results of this study can help guide effective marketing strategies in live streaming commerce. © The Author(s), under exclusive licence to Institute of Applied Informatics at University of Leipzig 2025."
+    },
+    {
+      "paper_id": "paper_000007",
+      "title": "A new era of rivalry for human influencers: Leveraging opportunities of virtual influencers for digital marketing strategies",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "摘要明确研究虚拟影响者对购买意愿的影响，符合纳入标准。",
+      "year": 2026,
+      "journal": "Acta Psychologica",
+      "doi": "10.1016/j.actpsy.2025.106196",
+      "abstract": "Purpose: Based on the uses and gratifications theory, this study aims to demonstrate the systematic influence of social media browsing, openness to change, and parasocial relationships with virtual influencers on consumers' purchase intentions, while considering potential moderating factors. Design/methodology/approach: Structural equation modeling (SEM) was utilized to evaluate data obtained from 276 followers of Chinese virtual influencers. Findings: The findings show that followers' openness to change is influenced by their hedonic and utilitarian social media browsing, which also positively impacts their parasocial relationships. Furthermore, the role of being open to change in establishing a strong parasocial relationship is significantly enhanced by the perceived humanity of virtual influencers. Unexpectedly, the study revealed that the interaction between product-endorser fit and parasocial relationship did not substantially shape followers' purchase interactions. Originality/value: This study provides novel insights for brands to exploit the digital uprising of virtual influencers effectively. It signifies the need to change digital marketing strategies to reinforce consumer engagement strategies arising from the virtual influencers' framework, which can help achieve marketing goals more effectively. © 2026 The Authors"
+    },
+    {
+      "paper_id": "paper_000008",
+      "title": "How Does Humanoid Virtual Influencers' Appearance Convey Social Presence? The Underlying Process and Path to Purchase Intention",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究人形虚拟影响者对购买意愿的影响，符合纳入标准。",
+      "year": 2025,
+      "journal": "International Journal of Consumer Studies",
+      "doi": "10.1111/ijcs.70013",
+      "abstract": "Drawing on the stimulus-organism-response (S-O-R) framework, the current work contends that the interplay between Humanoid Virtual Influencer (HVI) traits acts as a stimulus that shapes consumers' sense of social presence and perception of HVI's attractiveness, which in turn influences their willingness to follow HVI's recommendations and purchase intention. Four online survey studies were conducted among Instagram users in Japan. The results from Study 1 show that animism partially mediates the impact of HVI anthropomorphism on social presence. Moreover, Study 2 reveals that warmth and competence dimensions, as stereotypical evaluations, partially mediate the influence of anthropomorphism and animism on social presence. Unexpectedly, Study 3 found that HVI attractiveness does not mediate the linkage between social presence and consumers' disposition to follow HVI recommendations. However, Study 4 reveals that the disposition to follow HVI recommendations acts as a mediating factor in the pathway between attractiveness and the intention to make a purchase. This research expands the existing literature by considering animism as an additional characteristic of HVIs and examining its influence on stereotypical evaluations. These insights provide practical implications for retail marketers who collaborate with HVIs in their advertising efforts. © 2024 The Author(s). International Journal of Consumer Studies published by John Wiley & Sons Ltd."
+    },
+    {
+      "paper_id": "paper_000009",
+      "title": "Real or Virtual? The Impact of Influencer Type on Wine Consumption Behaviour in the Lebanese Market",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "标题和摘要研究虚拟影响者对购买意愿的影响，但未明确涉及虚拟商品类型，信息不足。",
+      "year": 2025,
+      "journal": "International Journal of Customer Relationship Marketing and Management",
+      "doi": "10.4018/ijcrmm.398843",
+      "abstract": "This study investigates how influencer type (virtual vs. human) and message appeal (hedonic vs. authenticity-focused) jointly shape consumer engagement, trust, and purchase intention in Lebanon’s wine market. Across two experiments grounded in Source Credibility Theory and the Match-Up Hypothesis, the authors show that virtual influencers generate stronger engagement and purchase intention under hedonic appeals, while human influencers are more persuasive when authenticity is emphasised. A second study using a simulated Instagram feed replicates these effects and reveals that trust mediates the impact of influencer type on purchase intention, moderated by consumer innovativeness: highly innovative consumers respond more favourably to virtual influencers, whereas less innovative consumers prefer human influencers under authenticity cues. The findings demonstrate dual persuasive pathways—aspirational (VI–hedonic) and relational (HI–authentic)—and provide actionable insights for designing effective influencer campaigns in credence-rich, culturally embedded markets. © 2025 IGI Global. All rights reserved."
+    },
+    {
+      "paper_id": "paper_000010",
+      "title": "Virtual influencer marketing: Evaluating the influence of virtual influencers’ form realism and behavioral realism on consumer ambivalence and marketing performance",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究虚拟影响者设计对购买意愿的影响，符合纳入标准。",
+      "year": 2024,
+      "journal": "Journal of Business Research",
+      "doi": "10.1016/j.jbusres.2024.114611",
+      "abstract": "The existing literature examines VIs’ utilitarian, personal, and relational traits, but a gap exists in interface design understanding. This study employs avatar marketing and ambivalence theories to explore how VIs’ design elements (VI's varying form realism and behavioral realism design) induce ambivalent emotions (eeriness and coolness) and impact VI marketing performance (follow and purchase intentions). Two experimental studies were conducted, using ANCOVA, multiple regression, and PROCESS macro analyses. In Study 1, utilizing contemporary VIs from the market, it was revealed that a VI exhibiting mid (vs. low) form realism triggered heightened perceptions of both eeriness and coolness, with these effects being magnified under the condition of high (vs. low) behavioral realism. In Study 2, using VIs generated through the StyleGAN AI technique, it was validated that those with high (vs. low) form realism were associated with decreased perceptions of eeriness and increased coolness, particularly when combined with high (vs. low) behavioral realism. Additionally, our findings emphasized the negative impact of eeriness and the positive influence of coolness on VI performance outcomes. In summary, our study reveals the significant role of VI interface designs in VI marketing performance, highlighting consumers' mixed emotions as crucial mediators in this context. Additionally, our findings highlight the negative impact of eeriness and the positive influence of coolness on VI performance. Its primary contribution is uncovering VIs’ interface designs as significant factors in VI marketing performance, while recognizing consumers’ ambivalent emotions as vital mediators in this relationship. © 2024 Elsevier Inc."
+    },
+    {
+      "paper_id": "paper_000011",
+      "title": "Virtual streamer anthropomorphism affects consumers’ purchase intention: The mediating role of social presence",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究虚拟主播拟人化对消费者购买意愿的影响，涉及直播电商场景，符合筛选主题。",
+      "year": 2025,
+      "journal": "Social Behavior and Personality",
+      "doi": "10.2224/sbp.14517",
+      "abstract": "This study examined the effect of virtual streamer anthropomorphism on consumers’ purchase intention from the perspective of social presence in live streaming commerce (LSC). We collected survey data from 362 Chinese consumers who had watched virtual streamers in the context of LSC. Our results revealed that virtual streamer anthropomorphism had a positive impact on consumers’ purchase intention in LSC and that this relationship was mediated by social presence. This study expands on current theoretical research regarding LSC and offers practical insights for operators in the field. © 2025 Scientific Journal Publishers Limited. All Rights Reserved."
+    },
+    {
+      "paper_id": "paper_000012",
+      "title": "Persuasive differences between human and virtual influencers in health supplement advertising: evidence from eye-tracking",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "研究背景为健康补充剂广告，与虚拟电商、直播带货等筛选主题背景不符，且未提及虚拟商品类型。",
+      "year": 2026,
+      "journal": "Frontiers in Psychology",
+      "doi": "10.3389/fpsyg.2025.1692737",
+      "abstract": "Introduction: Attention is scarce in fast-paced, visually saturated feeds—especially for trust-sensitive categories such as health supplements, where credibility relies on source cues. Eye-tracking shows how viewers engage with advertising elements, yet authenticity and perceived human-likeness vary between human and virtual endorsers. We posit that source type moderates whether attention translates into evaluation. To examine these effects, we investigate whether source type influences effectiveness, whether attention drives outcomes, and whether these relationships depend on source type. Methods: In a laboratory experiment with an East Asian university student sample (N = 120), an Instagram-style vitamin C advertisement was displayed using a 2 × 2 design (human vs. virtual influencer; gender). Gaze was tracked with Tobii Pro Nano for three areas: the endorser’s face, the product, and the text. After viewing, participants rated their attitude toward the advertisement and purchase intention. Hierarchical regressions with interactions were used to test main and moderating effects. Results: There are persuasive differences between human and virtual influencers. Virtual influencers tended to attract more visual attention, but this did not consistently correspond to more favorable outcomes. By contrast, human influencers were generally associated with more positive advertising attitudes and stronger purchase intentions. Attention to text and face appeared to be predictors of advertising effectiveness. Importantly, source type appeared to moderate the link between attention and outcomes: for human endorsers, greater face attention was associated with more favorable evaluations, whereas for virtual endorsers, similar levels of attention were not accompanied by comparable gains. Discussion: The findings shift focus from “who performs better” toward understanding “when and why” attention persuades. Attention influences persuasion through a processing fluency-based mechanism, operating via the ease with which the source is perceived as human—both visually and mentally. Eye-tracking complements self-reports by revealing processing before conscious awareness. The patterns yield preliminary hypotheses that human endorsers may better support credibility-intensive claims and suggest a testable framework for how attention could translate into persuasion, offering a starting point for future targeted evaluations. Copyright © 2026 Du and You Ryu."
+    },
+    {
+      "paper_id": "paper_000013",
+      "title": "Self-created or collaborative? The effects of virtual influencers' identity type and post type on purchase intentions",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确研究虚拟影响者身份类型对购买意愿的影响，涉及消费者行为研究，符合筛选主题。",
+      "year": 2025,
+      "journal": "Asia Pacific Journal of Marketing and Logistics",
+      "doi": "10.1108/apjml-07-2024-0980",
+      "abstract": "Purpose: Considering that when endorsing the same product, virtual influencers with different identity types (self-created, collaborative) can have different impacts on consumers' purchasing behaviors, this paper aims to explore how to maximize the impact effects of the VIs' respective identities. It provides companies with new perspectives on endorsement strategies. Design/methodology/approach: The interaction between VI identity type and post type (informational, storytelling) on purchase intention was analyzed in four experiments (N = 1,007), considering informational and normative social influence as intermediate mechanisms and consumer self-construal as moderators. Findings: The findings show that self-created VI is suited to informational posts and collaborative VI to storytelling posts. This identity-content match effectively triggers the social influence mechanism: informational posts of self-created VI significantly enhance informational social influence. In contrast, storytelling posts of collaborative VI primarily stimulate normative social influence. Consumer self-construal also moderates the process of influencing mechanisms. Originality/value: Based on social influence theory and matching theory, this paper confirms the existence of an interaction between VI identity types, which influences consumers' purchase intention through informational and normative social influence. This finding fills the research gap in the field of VI endorsement strategy. It also emphasizes the importance of consumer self-construal and contributes new insights into the related field. © 2024, Emerald Publishing Limited."
+    },
+    {
+      "paper_id": "paper_000014",
+      "title": "Can virtual, CGI-generated, influencers help sell products on Instagram? Effects of perceived realism and disclosure on brand-related attitudes and behavioural intentions",
+      "decision": "include",
+      "confidence": 0.88,
+      "reason": "标题和摘要研究虚拟影响者对品牌态度和购买意愿的影响，涉及社交媒体广告场景，符合筛选主题。",
+      "year": 2025,
+      "journal": "International Journal of Internet Marketing and Advertising",
+      "doi": "10.1504/ijima.2025.148678",
+      "abstract": "Virtual influencers, CGI-generated avatars with fabricated personalities, are increasingly being used by brands to advertise products on social media platforms. Applying theoretical frameworks including the match-up hypothesis (Kamins, 1990), parasocial identification (Horton and Wohl, 1956; Rubin and Perse, 1987), source credibility (Ohanian, 1990) and the persuasion knowledge model (Friestad and Wright, 1994), the current study assessed effects of perceived realism (high versus low) and disclosure (yes versus no) of a virtual influencer in an Instagram brand ad on perceived brand credibility, brand attitude, purchase intention and eWOM intention. Using a two (realism: high versus low) x two (disclosure: yes versus no) between-subjects experiment, results revealed that perceived realism exerted a significant main effect on the dependent measures, and also interacted with disclosure to influence brand-related outcomes. Further, perceived prosocial characteristics of the virtual influencer also mediated between realism and the dependent measures. Theoretical and practical implications are discussed. Copyright © 2025 Inderscience Enterprises Ltd."
+    },
+    {
+      "paper_id": "paper_000015",
+      "title": "Trust in Human and Virtual Live Streamers: The Role of Integrity and Social Presence",
+      "decision": "include",
+      "confidence": 0.92,
+      "reason": "标题和摘要明确比较虚拟与人类主播对信任和购买意愿的影响，涉及直播电商场景，符合筛选主题。",
+      "year": 2024,
+      "journal": "International Journal of Human-Computer Interaction",
+      "doi": "10.1080/10447318.2023.2279410",
+      "abstract": "With the development of live streaming e-commerce, an increasing number of virtual streamers have emerged on e-commerce platforms. Considering trust is an antecedent factor in entering business partnerships, this research examines the composition of trust in streamers and the factors influencing purchase intentions in live-streaming commerce, focusing on the differences between virtual and human streamers. Study 1 collected 411 survey data (147 males and 264 females) from consumers and used PLS techniques to evaluate the hypotheses. Study 2 designed a 2 × 2 × 2 mixed-design experiment to explore the causal relationship between the type of streamers, the streamer’s integrity, the live room’s social presence, and customers’ trust and purchase intention. One hundred sixty data were processed using repeated measures ANOVA. The results showed that trust in live streamers comprises perceived integrity, ability, and benevolence. Social presence influences trust for both types of live streamers, but it only directly affects purchase intention towards virtual streamers. Perceived enjoyment and similarity also affect purchase intention. More importantly, the effect of social presence on trust and purchase intention was constrained by the integrity and type of streamer. The present studies provide robust evidence for the trust and purchase intention in live streaming commerce, revealing perceptual differences between human and virtual streamers. It emphasizes the significance of integrity for human streamers and social presence for virtual streamers. This research not only offers insights and recommendations for the thriving human streamer industry but also sheds light on the potential development of virtual streamers in the future. © 2023 Taylor & Francis Group, LLC."
+    },
+    {
+      "paper_id": "paper_000016",
+      "title": "Virtual Idols’ influence on Consumer's brand attitude and purchase intention: A perspective of para-social interaction",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要研究虚拟偶像对品牌态度和购买意愿的影响，涉及品牌代言场景，符合筛选主题。",
+      "year": 2025,
+      "journal": "Electronic Commerce Research and Applications",
+      "doi": "10.1016/j.elerap.2025.101546",
+      "abstract": "Generation Z is becoming a dominant force in the consumer market, prompting numerous brands to turn to virtual idols as brand endorsers to connect with this new generation. This has led to the emergence of virtual idol marketing. To understand the influence of these virtual digital celebrities on consumers, this study first identifies the key definitional elements of virtual idols. It then seeks to explain how virtual idols impact consumers’ brand attitudes and purchase intentions through the lens of para-social interaction. This study uses PLS-SEM analysis (N = 418) and finds that virtual idols’ characteristics (i.e., physical attractiveness, social attractiveness, activity, homophily in attitude and morality dimensions) are antecedents of audiences’ para-social interaction toward virtual idols. This para-social interaction, in turn, can positively impact target audiences’ brand attitudes and purchase intentions. Brand attitude is suggested to be the primary marketing goal rather than purchase intention in virtual idol endorsement. This study contributes to the research on the emerging field of virtual idol marketing and offers practical implications for marketing practitioners in the digital era. © 2025 The Authors"
+    },
+    {
+      "paper_id": "paper_000017",
+      "title": "Attractiveness vs similarity: how attributes of AI-based virtual influencers impact credibility, parasocial interaction and purchase intentions of social-media users",
+      "decision": "include",
+      "confidence": 0.93,
+      "reason": "标题和摘要明确研究AI虚拟影响者属性对购买意愿的影响，涉及时尚产品推广，符合筛选主题。",
+      "year": 2026,
+      "journal": "Asia Pacific Journal of Marketing and Logistics",
+      "doi": "10.1108/apjml-01-2025-0144",
+      "abstract": "Purpose – Virtual influencers (VIs) are a rising force in shaping online user engagement and consumer behavior because, unlike traditional influencers, a VI offers freedom for creativity and provides unique opportunities for brands to control their messaging and advertisements meticulously. Therefore, this study investigates the influence of VI’s attributes, including interest similarity, language similarity, physical attractiveness, social attractiveness, and attitude homophily, on their credibility perception and parasocial interaction (PSI) and, subsequently, their effect on willingness to follow recommendations and intention to purchase fashion products promoted by these digital personas on Instagram. Design/methodology/approach – This study collected primary data from 332 Indian Instagram followers of virtual influencers using a structured questionnaire. Subsequently, the analysis was performed using structural equation modeling (PLS-SEM). Findings – The perceived credibility of VIs was significantly influenced by their social attractiveness, physical attractiveness, and attitude homophily, while users’ PSI with VIs was significantly influenced by interest similarity, language similarity, physical attractiveness, and attitude homophily. Furthermore, the study found that willingness to follow VI’s recommendations is influenced by credibility and parasocial interaction, while intention to purchase fashion products is influenced by credibility alone. Originality/value – There is a dearth of studies that explore the influence of VI’s attributes and characteristics on social media users’ behavioral intentions in the context of fashion products. Therefore, this study addresses this gap by exploring the persuasive power of VIs on Instagram through the lens of the CASA framework. © Emerald Publishing Limited"
+    },
+    {
+      "paper_id": "paper_000018",
+      "title": "Anthropomorphism of virtual influencers: A congruence perspective",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要研究虚拟影响者拟人化一致性对购买意愿的影响，涉及消费者响应研究，符合筛选主题。",
+      "year": 2026,
+      "journal": "Journal of Retailing and Consumer Services",
+      "doi": "10.1016/j.jretconser.2025.104580",
+      "abstract": "Anthropomorphism is a defining element in virtual influencer design and a key driver of how audiences perceive and respond to them. Building on prior work that examined individual anthropomorphic features, this research aims to investigate how congruence between two core dimensions of anthropomorphism—appearance and behavior—shapes audience responses, with a particular focus on purchase intention and the mediating role of psychological distance. Data were collected through an online survey of Instagram users who followed virtual influencers (N = 362) and analyzed using polynomial regression with response surface analysis (PRRSA). Results indicate that anthropomorphic congruence enhances purchase intention following a commensurate compatibility pattern along the misfit line and a linear effect along the fit line. When incongruence occurs, behavior-dominant anthropomorphism elicits more favorable responses than appearance-dominant anthropomorphism. Psychological distance partially mediates the relationship between anthropomorphic congruence and purchase intention. Overall, this research demonstrates the importance of anthropomorphic congruence for enhancing virtual influencer effectiveness and reveals asymmetric effects between appearance and behavior. It advances theoretical understanding of anthropomorphic design in human–AI interactions and offers actionable implications for marketers to develop effective virtual influencer strategies. © 2025 The Authors"
+    },
+    {
+      "paper_id": "paper_000019",
+      "title": "What, Was She Not Human? The Mediated Effects of Virtual Influencers’ Identity Disclosure Timing on Behavioral Intentions: Focusing on the Moderating Role of Influencer-Brand Fit",
+      "decision": "include",
+      "confidence": 0.88,
+      "reason": "标题和摘要研究虚拟影响者身份披露时机对购买意愿的影响，涉及社交媒体营销，符合筛选主题。",
+      "year": 2025,
+      "journal": "International Journal of Human-Computer Interaction",
+      "doi": "10.1080/10447318.2024.2403891",
+      "abstract": "In the current era, numerous human-like virtual influencers (VI) on social media promote brands without immediately revealing their non-human nature, intending for viewers to realize it later. This marketing strategy raises a question regarding their endorsement effectiveness. Grounded in Computers are Social Actors (CASA) paradigm, this online experiment employs a quota sample of Korean adults (N = 128) to explore how the timing of VI identity disclosure (before vs. after exposure to sponsored content) affects viewers’ attitudes toward the VI and, subsequently, their intentions to purchase the endorsed brand or spread word-of-mouth. Additionally, based on the match-up hypothesis, this study examines how perceived influencer-brand fit impacts these relationships. Moderated mediation analyses reveal that viewer attitudes mediate the relationship between disclosure timing and behavioral intentions, with VI-brand fit significantly moderating this mediation. The findings underscore the negative effects of delayed VI identity disclosure and emphasize the critical importance of a strong influencer-brand match. © 2024 Taylor & Francis Group, LLC."
+    },
+    {
+      "paper_id": "paper_000020",
+      "title": "Making Sense? The Sensory-Specific Nature of Virtual Influencer Effectiveness",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "标题和摘要研究虚拟影响者感官代言效果，但未明确提及虚拟商品类型或电商场景，信息不足以确认完全符合纳入标准。",
+      "year": 2024,
+      "journal": "Journal of Marketing",
+      "doi": "10.1177/00222429231203699",
+      "abstract": "The current research examines consumers’ responses to sensory endorsements from virtual influencers. The authors reveal that consumers perceive virtual and human influencers to have similar distal sensory (i.e., visual and auditory) capacities. Consumers, however, perceive virtual influencers as having lower proximal sensory (i.e., haptic, olfactory, and gustatory) capacities. Consequently, when endorsements focus on proximal sensory experiences, consumers have lower purchase intention toward products and services endorsed by a virtual (vs. human) influencer. The findings further reveal that imagery difficulty and perceived sensory capacity serially mediate this effect. Importantly, this effect is mitigated when endorsements focus on distal sensory experiences, when sensory information is not explicitly mentioned, and when consumers are informed of new technology that enables virtual influencers to have proximal sensory experiences. These findings offer actionable insights for marketers to effectively utilize virtual influencers in sensory-driven campaigns, providing practical strategies to improve consumer responses to sensory endorsements and enhance marketing effectiveness. © American Marketing Association 2023."
+    },
+    {
+      "paper_id": "paper_000021",
+      "title": "Factors of virtual influencer marketing influencing Generation Y consumers’ purchase intention in Malaysia",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究虚拟影响者营销对消费者购买意愿的影响，符合研究主题和纳入标准。",
+      "year": 2022,
+      "journal": "International Journal of Internet Marketing and Advertising",
+      "doi": "10.1504/ijima.2022.126735",
+      "abstract": "The advent of computer-generated virtual influencers disrupts the convention of traditional influencer marketing that relies on real human influencers as brand ambassadors. This study sheds light on the key factors of virtual influencer marketing that affect the purchase intention of Generation Y consumers in Malaysia by using relevant ideas from TEARS model and theory of planned behaviour. Using data analysis based on 450 respondents, it is confirmed that factors such as parasocial interaction and attractiveness have highly significant effects, except for perceived realism and trustworthiness. Interestingly, attitude towards virtual influencer strongly mediates the relationship between the significant factors (parasocial interaction and attractiveness) and purchase intention. Lastly, gender and persuasion knowledge only have significant moderating effects in the relationship between parasocial interaction and purchase intention, but they are insignificant towards other factors. Copyright © 2022 Inderscience Enterprises Ltd."
+    },
+    {
+      "paper_id": "paper_000022",
+      "title": "Artificial Intelligence Influencers’ Credibility Effect on Consumer Engagement and Purchase Intention",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究AI虚拟影响者对消费者参与度和购买意愿的影响，符合研究主题和纳入标准。",
+      "year": 2025,
+      "journal": "Journal of Theoretical and Applied Electronic Commerce Research",
+      "doi": "10.3390/jtaer20010017",
+      "abstract": "In the evolving world of influencer marketing, Artificial Intelligence (AI) influencers are creating significant impact and transforming the approach to brand promotions on social media platforms. In recent times, many popular brands have partnered with AI influencers to engage with their social media audiences. AI influencers have become popular as a novel method for brands to increase customer engagement and create purchase intention, but there is a scarcity of research on this emerging trend of marketing. The AI-based virtual influencers effect on consumer engagement and purchase intention remain largely unexplored. This study used a questionnaire-based survey method and 414 responses were collected. The result from the research shows that credibility, informative value and human-likeness are the major factors influencing consumer engagement purchase intention towards brands promoted through AI-based virtual influencers. The attractiveness and entertainment value of AI influencer’s social media posts affect consumer engagement but exhibit no effect on purchase intention. Theoretical and managerial recommendations related to AI influencers’ marketing are presented. © 2025 by the authors."
+    },
+    {
+      "paper_id": "paper_000023",
+      "title": "Avatar effect of AI-enabled virtual streamers on consumer purchase intention in e-commerce livestreaming",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究AI虚拟主播在电商直播中对消费者购买意愿的影响，符合研究主题和纳入标准。",
+      "year": 2024,
+      "journal": "Journal of Consumer Behaviour",
+      "doi": "10.1002/cb.2389",
+      "abstract": "In recent years, digital avatars employed as virtual streamers are experiencing a surge in popularity in e-commerce livestreaming. However, the influence of the avatars' anthropomorphic features on their effectiveness as virtual streamers remains unclear. This study investigates the avatar effect of artificial intelligence-enabled virtual streamers, wherein their form and behavioral realism interactively affect consumer purchase intention. Three lab experiments with 604 participants were conducted to test this effect and its underlying mechanism and boundary conditions. Based on the findings, behavioral realism positively affects consumer purchase intention only when the virtual streamers' form realism is low. Parasocial interactions underpin this avatar effect, which only holds when consumers exhibit a communal relationship norm orientation. When consumers possess an exchange relationship norm orientation, the effect of behavioral realism becomes positive regardless of the level of form realism. Overall, our study proposes an avatar effect in livestreaming, and extends the literature by offering insights on the interactive effect of the anthropomorphic features of human-like avatars (as virtual streamers) on the effectiveness of e-commerce livestreaming. By revealing the mechanisms and boundary conditions of this effect, our conclusions offer guidance for companies in developing appropriate combinations of form and behavioral realism for the avatars of virtual streams while considering consumer characteristics. © 2024 John Wiley & Sons Ltd."
+    },
+    {
+      "paper_id": "paper_000024",
+      "title": "A Study on the Regulatory Fit Effects of Influencer Types and Message Types",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "摘要提到比较人类和虚拟影响者对购买意愿的影响，符合研究主题和纳入标准。",
+      "year": 2024,
+      "journal": "International Journal of Human-Computer Interaction",
+      "doi": "10.1080/10447318.2023.2232213",
+      "abstract": "This study compared the persuasive effects of human and virtual influencers. Virtual influencers persuade consumers; however, there is insufficient research on strategies that can elicit consumer responses to them. Additionally, we aimed to verify the impact of information source types and message types (rational/emotional) and the interaction effects of regulatory focus tendencies through consumer attitudes (sharing intention/purchase intention). A survey was conducted with 323 South Korean consumers concerning posts on influencers’ Instagram accounts. The responses were processed through multivariate analysis of covariance. The main effects were significant for both information sources; however, consumers showed greater sharing and purchase intentions after interacting with virtual influencers. In addition, a three-way interaction between the independent variables was confirmed, suggesting that consumer persuasion must account for the information source type, the nature of the message, and consumer tendencies. The study results offer insights for establishing effective message strategies to reach consumers. © 2023 Taylor & Francis Group, LLC."
+    },
+    {
+      "paper_id": "paper_000025",
+      "title": "Should your brand hire virtual influencers? How realism and gender presentation shape trust and purchase intentions",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究虚拟影响者的真实感对消费者信任和购买意愿的影响，符合研究主题和纳入标准。",
+      "year": 2026,
+      "journal": "Journal of Retailing and Consumer Services",
+      "doi": "10.1016/j.jretconser.2025.104491",
+      "abstract": "Virtual influencers (VIs), a natural progression in the AI gold rush in marketing, are becoming increasingly humanlike thanks to the advancements in generative-AI and natural language processing (NLP). This study (N = 710), guided by an integrated framework combining the Technology Acceptance Model (TAM), Parasocial Relationships (PSR), and Extended Privacy Calculus Model (EPCM), explores how perceived realism (form and behavioral) of VIs influences consumers' trust, brand attitudes, and purchase intentions, with gender presentation moderating these effects. Findings reveal that form (visual) realism boosts perceived usefulness, while behavioral (communication) realism enhances perceived ease-of-use. These functional affordances, along with social factors (presence, cognition, enjoyment), influence trust in VIs. Privacy concerns negatively shape trust, which, in turn, impacts purchase intentions through brand attitudes. These effects are stronger for male VIs. Findings support the PSR-based perspective, highlighting that consumers treat VIs as social actors and apply human social norms in brand-specific interactions. © 2025"
+    },
+    {
+      "paper_id": "paper_000026",
+      "title": "The Power of Virtual Influencers: Impact on Consumer Behaviour and Attitudes in the Age of AI",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确研究虚拟影响者对消费者行为和购买意愿的影响，符合研究主题和纳入标准。",
+      "year": 2023,
+      "journal": "Administrative Sciences",
+      "doi": "10.3390/admsci13080178",
+      "abstract": "In recent years, a new type of influencer has emerged in the field of social media marketing: virtual influencers. Though it is spreading fast, the trend is still new and, therefore, limited research has been conducted on the topic. This study aims to investigate the impact of virtual influencers on customers and whether there is a direct impact on human influencers due to the rise of virtual influencers in the industry. The study employed a questionnaire-based survey method to collect and analyse responses from a sample of 357 participants. The questions focus on trust, credibility, expertise, and contribution to purchase intention by the virtual influencers. The results indicate that customers are increasingly attracted to virtual influencers and that virtual influences are perceived as more trustworthy, credible, and relevant to customers’ preferences, leading to an increase in purchase intention. The study also discusses the implications of these findings for managers designing marketing campaigns. © 2023 by the author."
+    },
+    {
+      "paper_id": "paper_000027",
+      "title": "On the Social Media Platform, Virtual Internet Celebrities and Real Idol Brand Spokesmen Perceive Human Nature, Physical Charm, and Study Consumer Reaction Based on Self-Consistency: The Media Effect of Trust",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "摘要提到虚拟网红和真实偶像对广告效果的影响，但未明确提及AI虚拟主播或购买意愿，信息不足。",
+      "year": 2024,
+      "journal": "WSEAS Transactions on Business and Economics",
+      "doi": "10.37394/23207.2024.21.64",
+      "abstract": "With technological advances in computer-generated images, a new type of social media influencer has arisen, the virtual webcam. It has an advantage over human webmasters because, without physical constraints, their images are easier to control. However, it remains to be seen and researched whether virtual influencers can be as effective as human influencers in generating positive brand attitudes. Virtual web celebrities or real idols, marketing to consumers is the trust of the marketing effect, so it tries to discuss from the empirical. This paper discusses the role of perceiving human nature, charm, and the mediation effect of trust based on self-consistency. To this end, determine the perception of human-level (high/low) and charm (high/low) self-consistency (high/low) model spokesperson type (virtual web celebrity/real idol) on the influence of advertising effect, the results show that consumers to brand perception human nature and charm level is higher, when a positive attitude towards advertising and high trust, and consumer self-consistency is higher brand spokesperson also have higher preference. In addition, trust also plays a media role in the relationship between the characteristics of brand spokesmen and the advertising effect. Specifically, when the level of human nature and charm is high, the spokesperson will be more trustworthy, which also has a positive impact on the effect of all advertising. Finally, the influence of human nature perception and charm on the advertising effect does not change according to the different types of spokesmen, but in contrast, the trust degree of real idol models is higher than that of virtual web celebrities, and their positive attitude and purchase intention to the brand are also higher. Perception of humanity, charm, and self-consistency all have a positive impact on trust. Furthermore, trustworthiness had a meaningful effect on consumer response and was confirmed to have a vector effect on all independent variables. This study is expected to provide both theoretical and practical value by clarifying the effects of the main variables that may influence the marketing of brand spokesmen. © 2024, World Scientific and Engineering Academy and Society. All rights reserved."
+    },
+    {
+      "paper_id": "paper_000028",
+      "title": "Human vs virtual influencers and message framing: enhancing environmental awareness, activism and sustainable purchase intentions through effective messaging",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "摘要明确研究虚拟影响者在可持续营销中的效果，与虚拟商品类型无关，不符合研究主题。",
+      "year": 2025,
+      "journal": "Management Research Review",
+      "doi": "10.1108/mrr-08-2024-0630",
+      "abstract": "Purpose: With the advent of metaverse, virtual influencers (VIs) are on the rise and so is their usage in advertisement of various products and services. This study aims to explore the domain of sustainable marketing and presents whether a VI can be more effective than their human counterparts (HIs) when it comes to environmental messaging. The study uses the concept of message frames to check which message frame and influencer type leads to more effective communication and ultimately sustainable purchase decisions. Design/methodology/approach: A 2 × 2 experimental design was employed to check the effect of the type of influencer (HI vs VIs) on message effectiveness using positive and negative message frames which ultimately affect the purchase intentions of the followers. A combination of two-way ANOVA along with PLS-SEM was used to validate the hypothesized relationships. Findings: The findings from the structural equation modelling revealed that HIs still continue to be better at communicating environmental messages than VIs. Further, in lines with the previous research this study highlighted the importance of negative message frames in enhancing the effectiveness of posts related to environmental causes. Additionally, the study revealed a positive association between message effectiveness, consequential awareness, environmental activism and sustainable purchase intentions. Originality/value: Though there is an emergent interest in VIs, scant literature exists on how they encourage sustainable consumer behaviour. This study attempts to fill this gap by assessing the comparison between VIs and HIs in terms of promoting sustainable consumption. It is a novel effort in the crossover of sustainable marketing and influencer marketing. © 2025, Emerald Publishing Limited."
+    },
+    {
+      "paper_id": "paper_000029",
+      "title": "Can virtual streamers replace human streamers? The interactive effect of streamer type and product type on purchase intention",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究虚拟主播与产品类型对购买意愿的交互影响，符合研究主题和纳入标准。",
+      "year": 2025,
+      "journal": "Marketing Intelligence and Planning",
+      "doi": "10.1108/mip-11-2023-0623",
+      "abstract": "Purpose: Digitally driven virtual streamers are increasingly utilized in live-streaming commerce, possessing distinct advantages compared to human streamers. However, the applicable scenarios of virtual streamers are still unclear. Focusing on product attribute variances, this paper compares the livestreaming effects of virtual and human streamers to clarify the applicable scenarios for each and assist companies in strategically choosing suitable streamers. Design/methodology/approach: We conducted four experiments utilizing both images and video as stimulus materials, and each experiment employed different products. To test the proposed model, a total of 1,068 valid participants were recruited, encompassing a diverse group of individuals, including undergraduates and employed workers. Findings: The results indicate no significant difference between virtual and human streamers in increasing consumers’ purchase intention for utilitarian products. In contrast, human streamers are more effective in enhancing consumer purchase intention for hedonic products, with a mediating role of mental imagery quality. Consumers’ implicit personality variances also influence their willingness to accept virtual streamers. Originality/value: This paper is the first to compare the effects of virtual and human streamers in promoting different products to enhance our comprehension of virtual streamers. Given the potential risks associated with human streamers, a comprehensive understanding of the role of virtual streamers is imperative for brands when deploying live-streaming commerce activities. © 2024, Emerald Publishing Limited."
+    },
+    {
+      "paper_id": "paper_000030",
+      "title": "Pixels versus Personalities: A Comparative Analysis of Virtual and Human Influencers",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "摘要明确比较虚拟和人类影响者对购买意愿的影响，并涉及产品类型，符合研究主题和纳入标准。",
+      "year": 2026,
+      "journal": "Services Marketing Quarterly",
+      "doi": "10.1080/15332969.2026.2637395",
+      "abstract": "This study examines comparative effectiveness of human and virtual influencers in shaping purchase intention, word-of-mouth intention, and willingness to follow. Using Social exchange theory and source-based persuasion models, 2 × 2 experiment tests responses to hedonic and utilitarian offerings in product–service and service–service contexts. Findings indicate that human influencers generate higher purchase intention and greater perceived expertise, attractiveness, and relatability, whereas virtual influencers evoke stronger follow intention. Mediation effects of expertise, attractiveness, and homophily are confirmed. Interaction effects reveal virtual influencers as more persuasive for utilitarian, while human influencers for hedonic offerings, with stronger effects in product–service than service–service contexts. © 2026 Taylor & Francis Group, LLC."
+    },
+    {
+      "paper_id": "paper_000031",
+      "title": "Can Virtual Influencers be An Alternate to Human Influencers? Factors Affecting Product/Service Attitudes, and Brand Attitudes, and Purchase Intention",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确研究虚拟影响者（VI）对购买意愿的影响，涉及消费者行为指标。",
+      "year": 2025,
+      "journal": "Industrial Engineering and Management Systems",
+      "doi": "10.7232/iems.2025.24.2.234",
+      "abstract": "The use of Virtual Influencer (VI) has increased in popularity due to the advantages they offer over human influencers. However, as the VI market is still in its nascent phase, the factors influencing purchase intention when using VIs remain poorly understood. Given this context, this study aimed to investigate factors influencing purchase intention based on the attributes of VIs. To this end, we developed a structural equation model incorporating purchase intention, product/service attributes, brand attitudes, and the five characteristics of VI. A total of 528 participants completed an online survey, and the responses were subjected to analysis using the partial least square (PLS) method. The results showed that product/service attributes (R2 = 0.699) and brand attitudes (R2 = 0.849) significantly influenced purchase intention (R2 = 0.704). Among the VI attributes, physical attractiveness (β = 0.258, p < 0.001) and trustworthiness (β = 0.250, p < 0.001) had the strongest effects on product/service attributes, while physical attractiveness (β = 0.143, p < 0.001) and social attractiveness (β = 0.102, p < 0.01) influenced brand attitudes. The findings of this study are expected to provide significant evidence for researchers and engineers involved in the development and design of VIs. © 2025 KIIE"
+    },
+    {
+      "paper_id": "paper_000032",
+      "title": "Standing out or fitting in? How perceived autonomy affects virtual influencer marketing outcomes",
+      "decision": "include",
+      "confidence": 0.88,
+      "reason": "标题和摘要探讨虚拟影响者的感知自主性对购买意愿的影响，符合消费者行为研究主题。",
+      "year": 2024,
+      "journal": "Journal of Business Research",
+      "doi": "10.1016/j.jbusres.2024.114917",
+      "abstract": "Virtual influencers have exerted a profound influence on future marketing strategies. However, a comprehensive understanding of how and why virtual influencers, with varying characteristics, affect the effectiveness of their brand endorsements remains elusive. This research explores the relationships between consumers’ perceived autonomy of virtual influencers, their purchase intentions, and brand attitudes. Through one pretest and five studies, we reveal that virtual influencers characterized by low autonomy, in contrast to their highly autonomous counterparts, tend to elicit more favorable consumer responses. This effect is driven by the identity threat from autonomous VI and does not apply to human influencers. Furthermore, we demonstrate that this effect is particularly pronounced when virtual influencers endorse experience products as opposed to search products. Moreover, within the category of lowly autonomous influencers, consumers exhibit a preference for search products when endorsed by virtual influencers than human influencers. © 2024 Elsevier Inc."
+    },
+    {
+      "paper_id": "paper_000033",
+      "title": "Investigating the effectiveness of virtual and human influencers on purchase intentions in hotel promotions: the role of authenticity and postmodern authenticity",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "标题和摘要研究虚拟影响者在酒店推广中的有效性，但未明确提及虚拟商品或数字产品分类。",
+      "year": 2025,
+      "journal": "Tourism Recreation Research",
+      "doi": "10.1080/02508281.2025.2585803",
+      "abstract": "Recently, several hotel chains have begun collaborating with influencers as brand ambassadors. Given the importance and complexity of authenticity in influencer marketing, how people evaluate their authenticity remains unclear. The study sheds light on investigating the effectiveness of virtual and human influencers in facilitating hotel promotions, guided by the core concept of authenticity in tourism, encompassing objective, constructive, existential, and postmodern authenticity. Using data from 311 participants exposed to virtual influencers and 303 participants exposed to human influencers, analysed via SmartPLS, this study confirms that both influencer types effectively promote hotel brands. The four types of authenticity are well-adapted to the influencer marketing context and contribute to hospitality marketing promotions, yet postmodern authenticity does not significantly moderate the relationships among objective, constructive, and existential authenticity. By extending the application of tourism authenticity frameworks to influencer marketing and integrating source credibility theory, this study contributes to a deeper understanding of authenticity in influencer marketing in hospitality and tourism contexts. © 2025 Informa UK Limited, trading as Taylor & Francis Group."
+    },
+    {
+      "paper_id": "paper_000034",
+      "title": "Cognitive and affective factors in AI virtual influencer marketing: A stimulus–organism–response and pleasure–arousal–dominance model approach",
+      "decision": "include",
+      "confidence": 0.92,
+      "reason": "标题和摘要明确研究AI虚拟影响者营销中的认知和情感因素对购买意愿的影响。",
+      "year": 2025,
+      "journal": "Digital Business",
+      "doi": "10.1016/j.digbus.2025.100150",
+      "abstract": "Despite the exponential rise of AI-powered virtual influencer (VI), the role of user-centric elements, particularly experiential content and emotional factors in shaping consumer decision-making remains underexplored. This study adopts the Stimulus–Organism–Response (S-O-R) framework and incorporates the Pleasure-Arousal-Dominance (PAD) model to conceptualize emotional responses in the VI context. The present research integrates affective (perceived enjoyment, hedonic motivation) and cognitive (satisfaction) emotional states to better understand consumer responses to VI. We surveyed 248 VI followers and employed structural equation modeling to test the conceptual framework. The findings reveal that: (1) Perceived interactivity significantly influences both affective (emotional states, perceived enjoyment, hedonic motivation) and cognitive states (satisfaction); (2) perceived risk and visual appeal significantly influence emotional states; (3) visual appeal significantly influences perceived enjoyment; and (4) hedonic motivation and satisfaction significantly influence willingness to buy. The findings provide practical guidance for designing emotionally engaging VI campaigns by leveraging key stimuli to influence consumer behavior. © 2025 The Authors"
+    },
+    {
+      "paper_id": "paper_000035",
+      "title": "Digital human calls you dear: How do customers respond to virtual streamers’ social-oriented language in e-commerce livestreaming? A stereotyping perspective",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要研究虚拟主播在电商直播中使用社交导向语言对购买意愿的影响，涉及虚拟商品类型。",
+      "year": 2024,
+      "journal": "Journal of Retailing and Consumer Services",
+      "doi": "10.1016/j.jretconser.2024.103872",
+      "abstract": "Social-oriented language as a linguistic style can improve customer experiences in various service contexts, involving both human employees and AI-enabled service agents. The emergence of digital human characters in e-commerce livestreaming, also known as virtual streamers, raises the question: Can social-oriented language used by virtual streamers increase the customers' purchase intention? However, the theoretical understanding of whether, how, and when the interaction effect between virtual streamers' social-oriented language and product type influences purchase intention remains far from conclusive. Based on the stereotype content model (SCM), we developed a theoretical model to explain the mechanism between virtual streamers' linguistic style and customers’ purchase intention. A multi-method study combining two online experiments, one lab experiment, and one focus group was conducted to explore the effectiveness of social-oriented language (Study 1: N = 321; Study 2: N = 292; Study 3: N = 120; Study 4: N = 9). Participants in both Study 1 and Study 2 were recruited online and were randomly assigned to a condition in 2 (linguistic style: social-oriented vs. task-oriented) × 2 (product type: experience vs. search) between-subjects experimental design. Participants were recruited in the university by three blind-to-hypothesis experimenters in Study 3 and were randomly assigned to a condition in 2 (linguistic style: social-oriented vs. task-oriented) × 2 (product type: experience vs. search) × 2 (virtual streamer type: human-like vs. animated) between-subjects experimental design in the behavioral lab. Participants in Study 4 were recruited from a large WeChat group specifically interested in online shopping discounts. The results of Study 1 indicate the effect of social-oriented language on purchase intention solely in the experience product condition. Study 2 demonstrates the mediating role of perceived warmth and perceived competence, and confirms a compensatory effect and a positive relationship between perceived warmth and competence. Study 3 verifies the moderating role of the virtual streamer type while a focus group Study 4 supports the findings from Studies 1–3. Our findings extend the livestreaming commerce literature by exploring the implications of social-oriented language and task-oriented language when the live streamer is a digital human rather than a human. Also, we provide fresh insights into the literature on human-AI interactions by unraveling both the cognitive mechanism and the boundary condition, deepening our understanding of a novel but under-investigated phenomenon. Furthermore, our findings provide practical implications for livestreaming commerce practitioners. © 2024 Elsevier Ltd"
+    },
+    {
+      "paper_id": "paper_000036",
+      "title": "How cool virtual streamer influences customer in live-streaming commerce? An explanation of stereotype content model",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要探讨虚拟主播的酷感因素在直播电商中对购买意愿的影响。",
+      "year": 2025,
+      "journal": "Journal of Retailing and Consumer Services",
+      "doi": "10.1016/j.jretconser.2024.104139",
+      "abstract": "Virtual streamers, powered by sophisticated artificial intelligence technologies, have been increasingly adopted in live-streaming commerce. Despite the rise in relevant studies, little is known about how the coolness of virtual streamers affects customers in the context of live-streaming commerce. Using online survey data, this study empirically examined the effects of coolness factors including attractiveness, subculture, utility, and originality on purchase intention based on the stereotype content model. The results suggested that most of the coolness factors played critical roles in improving competence and warmth, which in turn induce purchase intention. However, subculture was found to exert a nonsignificant effect on warmth. In addition, the findings from a multi-group analysis indicated that the coolness factors varied in their effect on customers depending on whether a virtual streamer performed live streaming cooperating with or without a human streamer. The results of the study contribute to deepening the understanding of virtual streamers, the literature on coolness, and the stereotype content model, as well as offer insightful implications for live-streaming commerce practices. © 2024 Elsevier Ltd"
+    },
+    {
+      "paper_id": "paper_000037",
+      "title": "Virtual Influencers vs. Human Influencers in the Context of Influencer Marketing: The Moderating Role of Machine Heuristic on Perceived Authenticity of Influencers",
+      "decision": "include",
+      "confidence": 0.87,
+      "reason": "标题和摘要比较虚拟与人类影响者对购买意愿的影响，涉及消费者行为指标。",
+      "year": 2025,
+      "journal": "International Journal of Human-Computer Interaction",
+      "doi": "10.1080/10447318.2024.2374100",
+      "abstract": "While the popularity of virtual influencers in influencer marketing is on the rise, little is known about the reasons behind their increasing popularity. Furthermore, there is also a dearth of research examining why and how virtual influencers could be more effective than human influencers in influencing consumer purchase decisions. Drawing on the concept of perceived authenticity of influencers and machine heuristic, this study investigates the effects of influencer type (virtual influencer vs. human influencer) on the perceived authenticity of consumers. In addition, we also explore if machine heuristic will moderate the perceived authenticity of consumers and whether trust in influencers and purchase intentions will be subsequently associated with the perceived authenticity of the influencer. Results from an online between-subjects designed experiment (N = 130) indicated that virtual influencers were unexpectedly perceived as more authentic than human influencers. Additionally, the perceived authenticity of virtual influencers significantly increased among those with a strong belief in the machine heuristic. Subsequently, we found a positive association between the perceived authenticity of influencers and the extent of consumers’ trust in them. Additionally, trust in influencers was positively associated with consumers’ intention to purchase the products they promoted by the influencers. These findings provide valuable insights into the use of virtual influencers for marketing purposes. Further theoretical and practical implications are discussed. © 2024 The Author(s). Published with license by Taylor & Francis Group, LLC."
+    },
+    {
+      "paper_id": "paper_000038",
+      "title": "The power of influence: exploring celebrity and human-like virtual influencers’ impact on consumer responses",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "标题和摘要研究人类虚拟影响者对消费者反应的影响，但未明确提及虚拟商品或数字产品。",
+      "year": 2025,
+      "journal": "International Journal of Advertising",
+      "doi": "10.1080/02650487.2025.2550106",
+      "abstract": "Celebrity endorsements have long been a powerful tool in advertising, but the rise of human-like virtual influencers (HVIs) is reshaping the brand communication landscape. This study validates a measurement model of endorser credibility–encompassing expertise, trustworthiness, and attractiveness–for both celebrities and HVIs, and examines their impact on key advertising outcomes: ad attitude, brand attitude, brand trust, and purchase intention. Using data from 501 survey respondents, the findings confirm the robustness of the credibility model across both endorser types while revealing distinct serial mediation patterns underlying consumer responses. This is the first study to investigate celebrity endorser and HVI within a real-life unified advertising campaign, offering novel theoretical and practical insights into optimizing endorser strategy in an era of hybrid digital branding. © 2025 Advertising Association."
+    },
+    {
+      "paper_id": "paper_000039",
+      "title": "AI or human: How endorser shapes online purchase intention?",
+      "decision": "include",
+      "confidence": 0.93,
+      "reason": "标题和摘要比较AI与人类代言人对在线购买意愿的影响，涉及产品类型分类。",
+      "year": 2024,
+      "journal": "Computers in Human Behavior",
+      "doi": "10.1016/j.chb.2024.108300",
+      "abstract": "Digital presence is increasing on social platforms, and increasing numbers of companies have begun to invite virtual influencers to endorse their products. However, the question of whether AI endorsers can completely replace real humans is a challenging one. Therefore, in this study, we attempt to identify the differences in consumer purchase intention between consumers of products promoted by AI endorsers versus real human endorsers. In two studies, we found that AI endorsers effectively stimulated consumers' purchase intentions when recommending search products. For experience products, the marketing effect of a real human celebrity endorser is better, however, and consumers' purchase intention is stronger. Perceptions of congruency mediate the interaction of endorser and product type on consumers' purchase intention; self-image congruency mediates the influence of AI endorsers on consumers' purchase intention for search products. Moreover, functional congruency mediates the influence of celebrity endorsers on consumers' purchase intention for experience products. This paper is helpful for companies to encourage them to consider the role of different product attributes and adopt more appropriate strategies to maximize the effect of endorsement marketing strategies. © 2024"
+    },
+    {
+      "paper_id": "paper_000040",
+      "title": "Digital charisma or human appeal: A comparative study on how streamers' multidimensional signals affect viewers' impulsive purchases in live commerce",
+      "decision": "uncertain",
+      "confidence": 0.48,
+      "reason": "标题和摘要比较虚拟与人类主播对冲动购买的影响，但未明确提及AI虚拟主播或虚拟商品类型。",
+      "year": 2026,
+      "journal": "Decision Support Systems",
+      "doi": "10.1016/j.dss.2025.114581",
+      "abstract": "Despite the immense popularity of live commerce, many streamers struggle in conveying appealing signals to viewers and realizing expected commercial returns. It is also confusing that the same signal often delivers differential impacts on viewers across virtual and human streaming settings. Toward this end, we integrate signaling theory with consumption value theory and propose a comprehensive framework to explain how streamers' multidimensional signals collectively shape viewers' impulsive purchases and how such signaling processes differ across virtual and human streaming contexts. Analyzing survey data from 557 experienced livestreaming shoppers, we observe that aesthetic, social, and task signals all significantly enhance viewers' product value perceptions, which in turn motivate their impulsive purchases. Moreover, aesthetic signal displays no differential impacts on viewers' product value perceptions across virtual and human live-show settings. Social signal and task signal respectively exert a stronger and a weaker influence on product value perceptions in virtual live shows than in human ones. Our findings provide nuanced insights to help optimize streaming strategies and signal investments, and ultimately enhance commercial effectiveness of live-streaming ventures. © 2025"
+    }
+  ],
+  "project_id": "263d3fe4e2ec",
+  "project_topic": "AI虚拟主播与虚拟商品类型对消费者购买意愿的影响",
+  "model_provider": "deepseek",
+  "parent_task_id": null,
+  "input_dataset_ids": [],
+  "output_dataset_ids": [
+    "f9f8507065b9",
+    "0ff8944a514d"
+  ]
+}

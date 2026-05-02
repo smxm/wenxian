@@ -1,0 +1,99 @@
+{
+  "batch_id": "batch_0003",
+  "results": [
+    {
+      "paper_id": "paper_000021",
+      "decision": "exclude",
+      "reason": "标题和摘要显示研究内容为白血病诊断技术，未涉及赋能教育干预。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000022",
+      "decision": "exclude",
+      "reason": "标题和摘要显示研究内容为血癌药物分子描述符，未涉及赋能教育干预。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000023",
+      "decision": "exclude",
+      "reason": "发表年份为2014年，不符合2016年及以后的纳入标准。",
+      "evidence": [
+        "year"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "paper_id": "paper_000024",
+      "decision": "include",
+      "reason": "标题和摘要明确研究赋能对血液肿瘤患者的影响，研究对象为成人患者，发表年份符合要求。",
+      "evidence": [
+        "title",
+        "abstract",
+        "year"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000025",
+      "decision": "uncertain",
+      "reason": "摘要提到白血病患者和社会阶层对赋能的影响，但未明确说明核心干预措施是否为赋能教育。",
+      "evidence": [
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000026",
+      "decision": "exclude",
+      "reason": "发表年份为2015年，不符合2016年及以后的纳入标准。",
+      "evidence": [
+        "year"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "paper_id": "paper_000027",
+      "decision": "exclude",
+      "reason": "发表年份为2013年，不符合2016年及以后的纳入标准。",
+      "evidence": [
+        "year"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "paper_id": "paper_000028",
+      "decision": "exclude",
+      "reason": "发表年份为1998年，不符合2016年及以后的纳入标准。",
+      "evidence": [
+        "year"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "paper_id": "paper_000029",
+      "decision": "exclude",
+      "reason": "发表年份为2009年，不符合2016年及以后的纳入标准。",
+      "evidence": [
+        "year"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "paper_id": "paper_000030",
+      "decision": "exclude",
+      "reason": "发表年份为2013年，不符合2016年及以后的纳入标准。",
+      "evidence": [
+        "year"
+      ],
+      "confidence": 1.0
+    }
+  ]
+}

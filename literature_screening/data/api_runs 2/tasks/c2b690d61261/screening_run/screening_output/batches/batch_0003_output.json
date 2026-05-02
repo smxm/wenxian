@@ -1,0 +1,111 @@
+{
+  "batch_id": "batch_0003",
+  "results": [
+    {
+      "paper_id": "paper_000041",
+      "decision": "exclude",
+      "reason": "标题和摘要明确涉及帕金森病的PET/MR医学影像诊断，命中绝对排除标准。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "paper_id": "paper_000042",
+      "decision": "exclude",
+      "reason": "标题和摘要聚焦多模态医学图像融合技术综述，关键词包含PET，属于医学影像领域，命中绝对排除标准。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "paper_id": "paper_000043",
+      "decision": "exclude",
+      "reason": "研究对象为狗，未涉及猫咪、伴侣动物或虚拟宠物，不符合纳入标准的研究对象要求。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000044",
+      "decision": "exclude",
+      "reason": "标题和摘要描述通用机器学习特征融合框架，未提及动物交互场景，不符合研究焦点要求。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000045",
+      "decision": "exclude",
+      "reason": "标题和摘要明确涉及帕金森病的深度学习分类研究，使用PET/MR医学影像，命中绝对排除标准。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "paper_id": "paper_000046",
+      "decision": "include",
+      "reason": "摘要明确提到在猫、马、狗数据集上评估可解释性框架，涉及动物情感计算和AI技术，符合研究主题和纳入标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000047",
+      "decision": "exclude",
+      "reason": "标题和摘要研究意识障碍的多模态诊断，涉及PET等医学影像，属于临床医学文献，命中绝对排除标准。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "paper_id": "paper_000048",
+      "decision": "include",
+      "reason": "标题和摘要描述通过虚拟游戏训练宠物机器人理解用户反馈，涉及AI、人机交互和虚拟训练，符合研究主题。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "paper_id": "paper_000049",
+      "decision": "exclude",
+      "reason": "标题和摘要研究路怒症检测，涉及驾驶员多模态数据，未涉及动物交互，不符合研究主题。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000050",
+      "decision": "exclude",
+      "reason": "标题和摘要聚焦多模态医学图像融合方法，涉及PET等医学影像，属于医学影像领域，命中绝对排除标准。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 1.0
+    }
+  ]
+}

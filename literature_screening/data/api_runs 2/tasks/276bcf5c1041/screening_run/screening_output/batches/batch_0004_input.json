@@ -1,0 +1,285 @@
+{
+  "batch_id": "batch_0004",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000031",
+    "paper_000032",
+    "paper_000033",
+    "paper_000034",
+    "paper_000035",
+    "paper_000036",
+    "paper_000037",
+    "paper_000038",
+    "paper_000039",
+    "paper_000040"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000031",
+      "entry_type": "article",
+      "title": "YOLO-LIGHT: A Real-Time Lightweight Model Based on Limited Edge Computing for Traffic Scene Detection and Tracking",
+      "authors": [
+        "Wang, Q.",
+        "Ye, G.",
+        "Li, F.",
+        "Chen, Q.",
+        "Jiang, J.",
+        "Zhang, S.",
+        "Ullah, F."
+      ],
+      "year": 2026,
+      "journal": "IEEE Transactions on Intelligent Transportation Systems",
+      "doi": "10.1109/tits.2026.3665257",
+      "abstract": "Intelligent transportation systems (ITSs) play a vital role in addressing urban traffic safety challenges. The deployment of lightweight and efficient algorithms for conducting vehicle detection and tracking on edge devices is a key requirement, due to the limited computational resources of these devices. To address this challenge, we propose YOLO-LIGHT, a real-time vehicle detection model, and Ve-Track, a lightweight tracking algorithm. YOLO-LIGHT improves the feature extraction process and reduces the incurred computational cost. It integrates a novel FastPConv convolution in its detection head, while the DySample and SCAM modules in the neck provide enhanced feature representations. Soft-NMS and AMA_SPPF further strengthen the ability of the model to capture fine details. Additionally, global channel sparsity and pruning are employed to compress the parameters of the model while preserving its detection accuracy. For tracking purposes, Ve-Track builds on ByteTrack by filtering background detection boxes using a “life value” indicator and recalculating scores. An enhanced Kalman filter (EV-KF) is also introduced to better model nonlinear vehicle motions. Experimental results obtained on the modified VisDrone dataset show that YOLO-LIGHT improves the mAP95 metric by 17.6% and exhibits a computational complexity reduction of 82.6%, achieving 51 FPS on an embedded platform. Ve-Track outperforms ByteTrack, with a 6.2% MOTA increase and a 17.2% FPS increase, demonstrating its suitability for real-time ITS applications. © 2000-2011 IEEE.",
+      "keywords": [],
+      "normalized_title": "yolo light a real time lightweight model based on limited edge computing for traffic scene detection and tracking",
+      "raw_bibtex": "@ARTICLE{10.1109/TITS.2026.3665257,\n\tauthor = {Wang, Q. and Ye, G. and Li, F. and Chen, Q. and Jiang, J. and Zhang, S. and Ullah, F.},\n\ttitle = {YOLO-LIGHT: A Real-Time Lightweight Model Based on Limited Edge Computing for Traffic Scene Detection and Tracking},\n\tjournal = {IEEE Transactions on Intelligent Transportation Systems},\n\tyear = {2026},\n\tabstract = {Intelligent transportation systems (ITSs) play a vital role in addressing urban traffic safety challenges. The deployment of lightweight and efficient algorithms for conducting vehicle detection and tracking on edge devices is a key requirement, due to the limited computational resources of these devices. To address this challenge, we propose YOLO-LIGHT, a real-time vehicle detection model, and Ve-Track, a lightweight tracking algorithm. YOLO-LIGHT improves the feature extraction process and reduces the incurred computational cost. It integrates a novel FastPConv convolution in its detection head, while the DySample and SCAM modules in the neck provide enhanced feature representations. Soft-NMS and AMA_SPPF further strengthen the ability of the model to capture fine details. Additionally, global channel sparsity and pruning are employed to compress the parameters of the model while preserving its detection accuracy. For tracking purposes, Ve-Track builds on ByteTrack by filtering background detection boxes using a “life value” indicator and recalculating scores. An enhanced Kalman filter (EV-KF) is also introduced to better model nonlinear vehicle motions. Experimental results obtained on the modified VisDrone dataset show that YOLO-LIGHT improves the mAP95 metric by 17.6% and exhibits a computational complexity reduction of 82.6%, achieving 51 FPS on an embedded platform. Ve-Track outperforms ByteTrack, with a 6.2% MOTA increase and a 17.2% FPS increase, demonstrating its suitability for real-time ITS applications. © 2000-2011 IEEE.},\n\tdoi = {10.1109/TITS.2026.3665257},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105031923896&doi=10.1109%2FTITS.2026.3665257&partnerID=40&md5=c7c82f23e11e06cb1d2324842fdef689},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1109/TITS.2026.3665257"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000032",
+      "entry_type": "article",
+      "title": "EHDC-YOLO: Enhancing Object Detection for UAV Imagery via Multi-Scale Edge and Detail Capture",
+      "authors": [
+        "Deng, Z.",
+        "Ye, Y.",
+        "Guo, J."
+      ],
+      "year": 2026,
+      "journal": "Computers, Materials and Continua",
+      "doi": "10.32604/cmc.2025.069090",
+      "abstract": "With the rapid expansion of drone applications, accurate detection of objects in aerial imagery has become crucial for intelligent transportation, urban management, and emergency rescue missions. However, existing methods face numerous challenges in practical deployment, including scale variation handling, feature degradation, and complex backgrounds. To address these issues, we propose Edge-enhanced and Detail-Capturing You Only Look Once (EHDC-YOLO), a novel framework for object detection in Unmanned Aerial Vehicle (UAV) imagery. Based on the You Only Look Once version 11 nano (YOLOv11n) baseline, EHDC-YOLO systematically introduces several architectural enhancements: (1) a Multi-Scale Edge Enhancement (MSEE) module that leverages multi-scale pooling and edge information to enhance boundary feature extraction; (2) an Enhanced Feature Pyramid Network (EFPN) that integrates P2-level features with Cross Stage Partial (CSP) structures and OmniKernel convolutions for better fine-grained representation; and (3) Dynamic Head (DyHead) with multi-dimensional attention mechanisms for enhanced cross-scale modeling and perspective adaptability. Comprehensive experiments on the Vision meets Drones for Detection (VisDrone-DET) 2019 dataset demonstrate that EHDC-YOLO achieves significant improvements, increasing mean Average Precision (mAP)@0.5 from 33.2% to 46.1% (an absolute improvement of 12.9 percentage points) and mAP@0.5:0.95 from 19.5% to 28.0% (an absolute improvement of 8.5 percentage points) compared with the YOLOv11n baseline, while maintaining a reasonable parameter count (2.81 M vs the baseline’s 2.58 M). Further ablation studies confirm the effectiveness of each proposed component, while visualization results highlight EHDC-YOLO’s superior performance in detecting objects and handling occlusions in complex drone scenarios. Copyright © 2025 The Authors.",
+      "keywords": [],
+      "normalized_title": "ehdc yolo enhancing object detection for uav imagery via multi scale edge and detail capture",
+      "raw_bibtex": "@ARTICLE{10.32604/cmc.2025.069090,\n\tauthor = {Deng, Z. and Ye, Y. and Guo, J.},\n\ttitle = {EHDC-YOLO: Enhancing Object Detection for UAV Imagery via Multi-Scale Edge and Detail Capture},\n\tjournal = {Computers, Materials and Continua},\n\tyear = {2026},\n\tabstract = {With the rapid expansion of drone applications, accurate detection of objects in aerial imagery has become crucial for intelligent transportation, urban management, and emergency rescue missions. However, existing methods face numerous challenges in practical deployment, including scale variation handling, feature degradation, and complex backgrounds. To address these issues, we propose Edge-enhanced and Detail-Capturing You Only Look Once (EHDC-YOLO), a novel framework for object detection in Unmanned Aerial Vehicle (UAV) imagery. Based on the You Only Look Once version 11 nano (YOLOv11n) baseline, EHDC-YOLO systematically introduces several architectural enhancements: (1) a Multi-Scale Edge Enhancement (MSEE) module that leverages multi-scale pooling and edge information to enhance boundary feature extraction; (2) an Enhanced Feature Pyramid Network (EFPN) that integrates P2-level features with Cross Stage Partial (CSP) structures and OmniKernel convolutions for better fine-grained representation; and (3) Dynamic Head (DyHead) with multi-dimensional attention mechanisms for enhanced cross-scale modeling and perspective adaptability. Comprehensive experiments on the Vision meets Drones for Detection (VisDrone-DET) 2019 dataset demonstrate that EHDC-YOLO achieves significant improvements, increasing mean Average Precision (mAP)@0.5 from 33.2% to 46.1% (an absolute improvement of 12.9 percentage points) and mAP@0.5:0.95 from 19.5% to 28.0% (an absolute improvement of 8.5 percentage points) compared with the YOLOv11n baseline, while maintaining a reasonable parameter count (2.81 M vs the baseline’s 2.58 M). Further ablation studies confirm the effectiveness of each proposed component, while visualization results highlight EHDC-YOLO’s superior performance in detecting objects and handling occlusions in complex drone scenarios. Copyright © 2025 The Authors.},\n\tdoi = {10.32604/cmc.2025.069090},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105028359313&doi=10.32604%2Fcmc.2025.069090&partnerID=40&md5=297628e81859e10fdd0be776ee49c5be},\n\tvolume = {86},\n\tnumber = {1},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.32604/cmc.2025.069090"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000033",
+      "entry_type": "article",
+      "title": "Bio-YOLO: A bio-inspired lightweight small object detection network for aerial images",
+      "authors": [
+        "Peng, J.",
+        "Huang, S.",
+        "Lin, C.",
+        "Pang, X."
+      ],
+      "year": 2026,
+      "journal": "Applied Soft Computing",
+      "doi": "10.1016/j.asoc.2026.114575",
+      "abstract": "In aerial image object detection, detecting a large number of small objects becomes a major challenge due to the significant differences in object sizes and the complexity of background information. Biological organisms, through their efficient visual nervous systems, are able to accurately identify tiny objects in their field of view. Inspired by the biological visual information processing mechanism, this study designs a three-part architecture consisting of a Pre-Network, Feature Extraction Network, and Feature Fusion Network. Furthermore, we propose an efficient and lightweight one-stage small object detection network—Bio-YOLO. By simulating the parallel pathways from the Retina/LGN-V1 and their receptive field characteristics, we construct a Pre-network with a dual-branch structure, significantly improving the detection capability for objects of different sizes. A new Feature Extraction Network is built by simulating the “ventral” visual pathway and its receptive field characteristics, which effectively enhances the detection of small objects while remaining lightweight. Inspired by the descending modulation mechanism of visual information, we design a Feedback Attention Fusion Module (FAFM) and build a new Feature Fusion Network that further strengthens the network's ability to distinguish between objects and background. Experimental results show that Bio-YOLO achieves an mAP50 of 53.9 and an mAP50−95 of 23.7 on the AI-TOD dataset with only 1.8M parameters, demonstrating outstanding performance on the Visdrone dataset as well. This research not only advances the development of aerial image object detection technology but also provides new insights for the integration of biological vision and computer vision. © 2026 Elsevier B.V.",
+      "keywords": [],
+      "normalized_title": "bio yolo a bio inspired lightweight small object detection network for aerial images",
+      "raw_bibtex": "@ARTICLE{10.1016/j.asoc.2026.114575,\n\tauthor = {Peng, J. and Huang, S. and Lin, C. and Pang, X.},\n\ttitle = {Bio-YOLO: A bio-inspired lightweight small object detection network for aerial images},\n\tjournal = {Applied Soft Computing},\n\tyear = {2026},\n\tabstract = {In aerial image object detection, detecting a large number of small objects becomes a major challenge due to the significant differences in object sizes and the complexity of background information. Biological organisms, through their efficient visual nervous systems, are able to accurately identify tiny objects in their field of view. Inspired by the biological visual information processing mechanism, this study designs a three-part architecture consisting of a Pre-Network, Feature Extraction Network, and Feature Fusion Network. Furthermore, we propose an efficient and lightweight one-stage small object detection network—Bio-YOLO. By simulating the parallel pathways from the Retina/LGN-V1 and their receptive field characteristics, we construct a Pre-network with a dual-branch structure, significantly improving the detection capability for objects of different sizes. A new Feature Extraction Network is built by simulating the “ventral” visual pathway and its receptive field characteristics, which effectively enhances the detection of small objects while remaining lightweight. Inspired by the descending modulation mechanism of visual information, we design a Feedback Attention Fusion Module (FAFM) and build a new Feature Fusion Network that further strengthens the network's ability to distinguish between objects and background. Experimental results show that Bio-YOLO achieves an mAP50 of 53.9 and an mAP50−95 of 23.7 on the AI-TOD dataset with only 1.8M parameters, demonstrating outstanding performance on the Visdrone dataset as well. This research not only advances the development of aerial image object detection technology but also provides new insights for the integration of biological vision and computer vision. © 2026 Elsevier B.V.},\n\tdoi = {10.1016/j.asoc.2026.114575},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105026838925&doi=10.1016%2Fj.asoc.2026.114575&partnerID=40&md5=b93498d79301a8161f12f4dac3ca0e38},\n\tvolume = {190},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.asoc.2026.114575"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000034",
+      "entry_type": "article",
+      "title": "DeC-YOLO: Dynamic illumination compensation and context-transformer fusion for low-light object detection",
+      "authors": [
+        "Li, B.",
+        "Wang, B.",
+        "Hu, X."
+      ],
+      "year": 2026,
+      "journal": "Optics and Laser Technology",
+      "doi": "10.1016/j.optlastec.2025.114610",
+      "abstract": "To address the challenges of low-illumination feature degradation and spatial semantic loss in object detection under low-light conditions, a low-light object detection model named DeC-YOLO, based on YOLOv8n, is proposed in this study, incorporating two key improvements. First, for image enhancement, a dynamic enhancement network DeNet is designed based on Retinex theory. Through the proposed multi-scale illumination compensation module (MICM), adaptive adjustments of the illumination component are performed according to the contrast feature information of the image's reflective component learned by the dynamic adaptive contrast reconstruction network (DACR Net). This enhances image detail quality and effectively suppresses feature degradation in low-light regions. Second, for object detection, a context-dynamic Transformer FPN (CoDT-FPN) is devised. By synergistic optimization of the context network and channel attention, cross-scale feature fusion of object detail information under low-light conditions is achieved, mitigating spatial semantic information loss while reducing parameter count. Experimental results demonstrate that on the Exdark, VisDrone, and Darkface datasets, DeC-YOLO achieves mAP values of 83.1 %, 38.2 %, and 44.8 %, respectively, representing improvements of 1.3 %, 2.6 %, and 2.18 % over the baseline model. Optimal results are also obtained for PSNR, SSIM, and LPIPS. Furthermore, DeC-YOLO reduces parameter count and GFLOPs while significantly enhancing FPS, showcasing robustness and generalization capabilities. © 2025 Elsevier Ltd",
+      "keywords": [],
+      "normalized_title": "dec yolo dynamic illumination compensation and context transformer fusion for low light object detection",
+      "raw_bibtex": "@ARTICLE{10.1016/j.optlastec.2025.114610,\n\tauthor = {Li, B. and Wang, B. and Hu, X.},\n\ttitle = {DeC-YOLO: Dynamic illumination compensation and context-transformer fusion for low-light object detection},\n\tjournal = {Optics and Laser Technology},\n\tyear = {2026},\n\tabstract = {To address the challenges of low-illumination feature degradation and spatial semantic loss in object detection under low-light conditions, a low-light object detection model named DeC-YOLO, based on YOLOv8n, is proposed in this study, incorporating two key improvements. First, for image enhancement, a dynamic enhancement network DeNet is designed based on Retinex theory. Through the proposed multi-scale illumination compensation module (MICM), adaptive adjustments of the illumination component are performed according to the contrast feature information of the image's reflective component learned by the dynamic adaptive contrast reconstruction network (DACR Net). This enhances image detail quality and effectively suppresses feature degradation in low-light regions. Second, for object detection, a context-dynamic Transformer FPN (CoDT-FPN) is devised. By synergistic optimization of the context network and channel attention, cross-scale feature fusion of object detail information under low-light conditions is achieved, mitigating spatial semantic information loss while reducing parameter count. Experimental results demonstrate that on the Exdark, VisDrone, and Darkface datasets, DeC-YOLO achieves mAP values of 83.1 %, 38.2 %, and 44.8 %, respectively, representing improvements of 1.3 %, 2.6 %, and 2.18 % over the baseline model. Optimal results are also obtained for PSNR, SSIM, and LPIPS. Furthermore, DeC-YOLO reduces parameter count and GFLOPs while significantly enhancing FPS, showcasing robustness and generalization capabilities. © 2025 Elsevier Ltd},\n\tdoi = {10.1016/j.optlastec.2025.114610},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105027143673&doi=10.1016%2Fj.optlastec.2025.114610&partnerID=40&md5=add17940b77677f35ee384d7248b3249},\n\tvolume = {196},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.optlastec.2025.114610"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000035",
+      "entry_type": "article",
+      "title": "SlimTom-DETR: A Lightweight and Real-Time Tomato Detection Model for Plant Factories with Complex Lighting Conditions",
+      "authors": [
+        "Guo, J.",
+        "Liu, Z.",
+        "Zhang, X.",
+        "Wang, R.",
+        "Ma, X.",
+        "Li, W."
+      ],
+      "year": 2026,
+      "journal": "IEEE Access",
+      "doi": "10.1109/access.2026.3672401",
+      "abstract": "Automated tomato detection is fundamental for intelligent management in plant factories, where high-value crops are cultivated under fully controlled environments dominated by artificial LED lighting. Compared with conventional greenhouses or open fields, plant factories exhibit severe spectral shifts, non-uniform illumination with strong highlights and deep shadows, and dense occlusions caused by high-density planting and structural components. These factors make it difficult for existing detectors to simultaneously maintain robustness, accuracy, and efficiency on resource-constrained edge devices. To address the coupled challenges of illumination-aware feature extraction, multi-scale dense-target detection, and lightweight deployment, we propose SlimTom-DETR, a real-time tomato detection model built upon the RT-DETR- R18 baseline. SlimTom-DETR integrates three tightly coupled components: a C2f_DMB dynamic mixing backbone that adaptively adjusts receptive fields via multi-branch depthwise separable convolutions and gradient-diversion connections, an ELA-HSFPN feature fusion network that embeds efficient local attention into a hierarchical feature pyramid to enhance spatial selectivity and cross-scale alignment for dense small fruits, and a Polarized Self-Attention Decoupling Module (PSDM) that replaces conventional multihead attention with polarization-aware linear attention and a spatially enhanced feedforward network to explicitly decouple highlight and shadowresponses. Experiments on the Tomato-Plant-Factory-Dataset show that SlimTom-DETR achieves 90.8% mAP@50 and 69.5% mAP@50:95, surpassing RT-DETR-R18 by 2.0 and 2.2 percentage points, respectively, while reducing GFLOPs by 27.4% (56.9 to 41.3) and parameters by 20.2% (19.8M to 15.8M). Comprehensive comparisons, ablation studies, and cross-domain evaluations on Laboro Tomato,WeedCrop, and VisDrone further verify that SlimTom-DETR attains a favorable accuracy–efficiency trade-off and strong generalization ability in complex agricultural environments. © 2013 IEEE.",
+      "keywords": [],
+      "normalized_title": "slimtom detr a lightweight and real time tomato detection model for plant factories with complex lighting conditions",
+      "raw_bibtex": "@ARTICLE{10.1109/ACCESS.2026.3672401,\n\tauthor = {Guo, J. and Liu, Z. and Zhang, X. and Wang, R. and Ma, X. and Li, W.},\n\ttitle = {SlimTom-DETR: A Lightweight and Real-Time Tomato Detection Model for Plant Factories with Complex Lighting Conditions},\n\tjournal = {IEEE Access},\n\tyear = {2026},\n\tabstract = {Automated tomato detection is fundamental for intelligent management in plant factories, where high-value crops are cultivated under fully controlled environments dominated by artificial LED lighting. Compared with conventional greenhouses or open fields, plant factories exhibit severe spectral shifts, non-uniform illumination with strong highlights and deep shadows, and dense occlusions caused by high-density planting and structural components. These factors make it difficult for existing detectors to simultaneously maintain robustness, accuracy, and efficiency on resource-constrained edge devices. To address the coupled challenges of illumination-aware feature extraction, multi-scale dense-target detection, and lightweight deployment, we propose SlimTom-DETR, a real-time tomato detection model built upon the RT-DETR- R18 baseline. SlimTom-DETR integrates three tightly coupled components: a C2f_DMB dynamic mixing backbone that adaptively adjusts receptive fields via multi-branch depthwise separable convolutions and gradient-diversion connections, an ELA-HSFPN feature fusion network that embeds efficient local attention into a hierarchical feature pyramid to enhance spatial selectivity and cross-scale alignment for dense small fruits, and a Polarized Self-Attention Decoupling Module (PSDM) that replaces conventional multihead attention with polarization-aware linear attention and a spatially enhanced feedforward network to explicitly decouple highlight and shadowresponses. Experiments on the Tomato-Plant-Factory-Dataset show that SlimTom-DETR achieves 90.8% mAP@50 and 69.5% mAP@50:95, surpassing RT-DETR-R18 by 2.0 and 2.2 percentage points, respectively, while reducing GFLOPs by 27.4% (56.9 to 41.3) and parameters by 20.2% (19.8M to 15.8M). Comprehensive comparisons, ablation studies, and cross-domain evaluations on Laboro Tomato,WeedCrop, and VisDrone further verify that SlimTom-DETR attains a favorable accuracy–efficiency trade-off and strong generalization ability in complex agricultural environments. © 2013 IEEE.},\n\tdoi = {10.1109/ACCESS.2026.3672401},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105032763702&doi=10.1109%2FACCESS.2026.3672401&partnerID=40&md5=8be8589856af130d8a09b6e4d1f8e95b},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1109/ACCESS.2026.3672401"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000036",
+      "entry_type": "article",
+      "title": "FReID: advancing small-target object detection with feature reintegration and distribution",
+      "authors": [
+        "Miao, Z.",
+        "Zhang, Q.",
+        "He, M.",
+        "Li, Y.",
+        "Bi, X.",
+        "Wang, J.",
+        "Hou, Q."
+      ],
+      "year": 2026,
+      "journal": "Journal of Supercomputing",
+      "doi": "10.1007/s11227-025-08143-4",
+      "abstract": "In object detection tasks, detecting small objects presents numerous challenges, including unclear positions in the image, blurry or indistinct features, and vulnerability to complex backgrounds. Commonly, existing object detectors extract features through multiple downsampling, which may result in the loss or significant attenuation of feature information for small objects, thus affecting detection accuracy and stability. This paper proposes an innovative feature enhancement method called FReID (Feature ReIntegration and Distribution) to address the challenge of small-sized object recognition in object detection. FReID incorporates a feature reintegration module designed to fully utilize multi-level features by aligning channels based on the features at different levels, thereby enhancing the retention of small-object features. Additionally, we introduce a lightweight feature distribution module based on cross-attention, which fuses the re-integrated features with those from lower downsampling layers to improve the retention of complementary information. Our experimental results on the AI-TOD and VisDrone-2019 datasets show that our method surpasses current two-stage and one-stage object detection methods with similar parameter quantities and scales. Specifically, in the improved method based on YOLOv8, the mAP@0.5:0.95 increased by up to 5.6% across the two datasets. These findings indicate the significant potential and wide applicability of our approach in enhancing detection performance. © The Author(s), under exclusive licence to Springer Science+Business Media, LLC, part of Springer Nature 2025.",
+      "keywords": [],
+      "normalized_title": "freid advancing small target object detection with feature reintegration and distribution",
+      "raw_bibtex": "@ARTICLE{10.1007/s11227-025-08143-4,\n\tauthor = {Miao, Z. and Zhang, Q. and He, M. and Li, Y. and Bi, X. and Wang, J. and Hou, Q.},\n\ttitle = {FReID: advancing small-target object detection with feature reintegration and distribution},\n\tjournal = {Journal of Supercomputing},\n\tyear = {2026},\n\tabstract = {In object detection tasks, detecting small objects presents numerous challenges, including unclear positions in the image, blurry or indistinct features, and vulnerability to complex backgrounds. Commonly, existing object detectors extract features through multiple downsampling, which may result in the loss or significant attenuation of feature information for small objects, thus affecting detection accuracy and stability. This paper proposes an innovative feature enhancement method called FReID (Feature ReIntegration and Distribution) to address the challenge of small-sized object recognition in object detection. FReID incorporates a feature reintegration module designed to fully utilize multi-level features by aligning channels based on the features at different levels, thereby enhancing the retention of small-object features. Additionally, we introduce a lightweight feature distribution module based on cross-attention, which fuses the re-integrated features with those from lower downsampling layers to improve the retention of complementary information. Our experimental results on the AI-TOD and VisDrone-2019 datasets show that our method surpasses current two-stage and one-stage object detection methods with similar parameter quantities and scales. Specifically, in the improved method based on YOLOv8, the mAP@0.5:0.95 increased by up to 5.6% across the two datasets. These findings indicate the significant potential and wide applicability of our approach in enhancing detection performance. © The Author(s), under exclusive licence to Springer Science+Business Media, LLC, part of Springer Nature 2025.},\n\tdoi = {10.1007/s11227-025-08143-4},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105028378283&doi=10.1007%2Fs11227-025-08143-4&partnerID=40&md5=12d1afe26e4dd4ae0adf5a21ddfb3088},\n\tvolume = {82},\n\tnumber = {2},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1007/s11227-025-08143-4"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000037",
+      "entry_type": "article",
+      "title": "LE-YOLO: a lightweight and effective YOLO model for remote sensing image object detection",
+      "authors": [
+        "Wang, J.",
+        "Huang, Z.",
+        "Dong, Y.",
+        "Hu, Y.",
+        "Zhao, H."
+      ],
+      "year": 2026,
+      "journal": "Journal of Real-Time Image Processing",
+      "doi": "10.1007/s11554-025-01822-8",
+      "abstract": "Existing deep learning models have demonstrated remarkable performance in remote sensing image object detection; however, their substantial computational complexity and high resource consumption hinder deployment on edge devices with limited hardware capabilities. To address this challenge, we propose a lightweight and effective YOLO-based model (LE-YOLO) for fast and accurate object detection in remote sensing images. Specifically, a new backbone network is introduced by replacing the C2f module in the Yolov8n backbone with the DualHet module, which strengthens feature representation while reducing complexity. Then, the lightweight hybrid convolutional–transformer detector (HCT-Det) is developed to effectively model global contextual dependencies and improve the discrimination of salient objects within complex remote sensing scenarios. Furthermore, the Fast-IoU equipped with a dynamic non-monotonic focusing mechanism is adopted to efficiently refine medium-quality anchor boxes, further enabling more accurate localization and detection performance. Experimental results on the AI-TOD and Visdrone datasets show that our LE-YOLO achieves mAP50 of 45.8% and 39.3% respectively, with only 2.14 MB parameters and 5.7 GFLOPs, striking a balance between detection accuracy and computational efficiency. Finally, the proposed LE-YOLO is successfully deployed on an embedded system composed of a Rockchip RK3588 and a low-cost embedded image sensor, enabling the real-time object detection in remote sensing applications. © The Author(s), under exclusive licence to Springer-Verlag GmbH Germany, part of Springer Nature 2025.",
+      "keywords": [],
+      "normalized_title": "le yolo a lightweight and effective yolo model for remote sensing image object detection",
+      "raw_bibtex": "@ARTICLE{10.1007/s11554-025-01822-8,\n\tauthor = {Wang, J. and Huang, Z. and Dong, Y. and Hu, Y. and Zhao, H.},\n\ttitle = {LE-YOLO: a lightweight and effective YOLO model for remote sensing image object detection},\n\tjournal = {Journal of Real-Time Image Processing},\n\tyear = {2026},\n\tabstract = {Existing deep learning models have demonstrated remarkable performance in remote sensing image object detection; however, their substantial computational complexity and high resource consumption hinder deployment on edge devices with limited hardware capabilities. To address this challenge, we propose a lightweight and effective YOLO-based model (LE-YOLO) for fast and accurate object detection in remote sensing images. Specifically, a new backbone network is introduced by replacing the C2f module in the Yolov8n backbone with the DualHet module, which strengthens feature representation while reducing complexity. Then, the lightweight hybrid convolutional–transformer detector (HCT-Det) is developed to effectively model global contextual dependencies and improve the discrimination of salient objects within complex remote sensing scenarios. Furthermore, the Fast-IoU equipped with a dynamic non-monotonic focusing mechanism is adopted to efficiently refine medium-quality anchor boxes, further enabling more accurate localization and detection performance. Experimental results on the AI-TOD and Visdrone datasets show that our LE-YOLO achieves mAP50 of 45.8% and 39.3% respectively, with only 2.14 MB parameters and 5.7 GFLOPs, striking a balance between detection accuracy and computational efficiency. Finally, the proposed LE-YOLO is successfully deployed on an embedded system composed of a Rockchip RK3588 and a low-cost embedded image sensor, enabling the real-time object detection in remote sensing applications. © The Author(s), under exclusive licence to Springer-Verlag GmbH Germany, part of Springer Nature 2025.},\n\tdoi = {10.1007/s11554-025-01822-8},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105024756516&doi=10.1007%2Fs11554-025-01822-8&partnerID=40&md5=cc50951e59aac690b7bd1a3ae3a2fa48},\n\tvolume = {23},\n\tnumber = {1},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1007/s11554-025-01822-8"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000038",
+      "entry_type": "article",
+      "title": "RTUAV-YOLO: A lightweight network for multiscale object detection in UAV imagery",
+      "authors": [
+        "Dong, Y.",
+        "Zhang, Z.",
+        "Zeng, H.",
+        "Li, J.",
+        "Wang, Z.",
+        "Sun, Y."
+      ],
+      "year": 2026,
+      "journal": "Digital Signal Processing: A Review Journal",
+      "doi": "10.1016/j.dsp.2025.105701",
+      "abstract": "Detecting objects at various scales is a challenging issue in Unmanned Aerial Vehicle (UAV) imagery. Designers must balance the tradeoff between accuracy and speed. They must also consider the computing load from capturing fine-grained details versus semantics. To address these challenges, we propose RTUAV-YOLO by improving the baseline YOLOv8 model. In the head, we replace the large object detection head with a small object detection head. The improved head enhances the model’s detection performance for small objects. It also reduces computational redundancy. In the neck, we highlight the Enhanced Reparametrized Generalized Feature Pyramid Network (E-RepGFPN). E-RepGFPN has a bi-directional feature fusion network to exchange deep-level semantics and shallow spatial information more efficiently. We suggest the Multi-Branch Aggregation Module (MBAM) and Ghost Convolution (GhostConv) to enrich the feature space. We also employ improved Queen-Fusion to reduce parameters. The improved neck achieves notable gains in detection accuracy over the baseline YOLOv8s model. In the backbone, we present Partial Convolution and Triplet Attention-based Feature Extraction Module (PTA-FEM). It facilitates the extraction of spatial information from coarser-resolution feature maps. We also suggest Adaptive Downsampling (ADown) to preserve rich semantics during downsampling. The upgraded backbone enhances the model’s ability to represent features at multiple scales. It also cuts down on computational costs. Moreover, we propose Context-guided Programmable Gradient Information (CGPGI) as an auxiliary reversible branch. This module prevents the semantic loss by gradient information propagation at different semantic levels. It also uses Context Guided Down (CGDown) to enhance the multiscale feature representation. We conduct extensive experiments on the VisDrone-DET2019 and BDD100K benchmarks. Our findings show that our model balances accuracy and efficiency more effectively. Compared with the baseline YOLOv8s model, the proposed RTUAV-YOLO-s improves mAP@0.5 and mAP@0.5:0.9.5 by 5.3 % and 3.3 %, respectively, and reduces parameters by 64 %. Comparative tests on the NVIDIA Jetson Xavier NX show that after FP16 quantization, our model achieves the highest mAP. It runs at 35 FPS, beating other models. This shows our design’s good accuracy and speed. It is suitable for embedded applications. © 2025 Elsevier Inc.",
+      "keywords": [],
+      "normalized_title": "rtuav yolo a lightweight network for multiscale object detection in uav imagery",
+      "raw_bibtex": "@ARTICLE{10.1016/j.dsp.2025.105701,\n\tauthor = {Dong, Y. and Zhang, Z. and Zeng, H. and Li, J. and Wang, Z. and Sun, Y.},\n\ttitle = {RTUAV-YOLO: A lightweight network for multiscale object detection in UAV imagery},\n\tjournal = {Digital Signal Processing: A Review Journal},\n\tyear = {2026},\n\tabstract = {Detecting objects at various scales is a challenging issue in Unmanned Aerial Vehicle (UAV) imagery. Designers must balance the tradeoff between accuracy and speed. They must also consider the computing load from capturing fine-grained details versus semantics. To address these challenges, we propose RTUAV-YOLO by improving the baseline YOLOv8 model. In the head, we replace the large object detection head with a small object detection head. The improved head enhances the model’s detection performance for small objects. It also reduces computational redundancy. In the neck, we highlight the Enhanced Reparametrized Generalized Feature Pyramid Network (E-RepGFPN). E-RepGFPN has a bi-directional feature fusion network to exchange deep-level semantics and shallow spatial information more efficiently. We suggest the Multi-Branch Aggregation Module (MBAM) and Ghost Convolution (GhostConv) to enrich the feature space. We also employ improved Queen-Fusion to reduce parameters. The improved neck achieves notable gains in detection accuracy over the baseline YOLOv8s model. In the backbone, we present Partial Convolution and Triplet Attention-based Feature Extraction Module (PTA-FEM). It facilitates the extraction of spatial information from coarser-resolution feature maps. We also suggest Adaptive Downsampling (ADown) to preserve rich semantics during downsampling. The upgraded backbone enhances the model’s ability to represent features at multiple scales. It also cuts down on computational costs. Moreover, we propose Context-guided Programmable Gradient Information (CGPGI) as an auxiliary reversible branch. This module prevents the semantic loss by gradient information propagation at different semantic levels. It also uses Context Guided Down (CGDown) to enhance the multiscale feature representation. We conduct extensive experiments on the VisDrone-DET2019 and BDD100K benchmarks. Our findings show that our model balances accuracy and efficiency more effectively. Compared with the baseline YOLOv8s model, the proposed RTUAV-YOLO-s improves mAP@0.5 and mAP@0.5:0.9.5 by 5.3 % and 3.3 %, respectively, and reduces parameters by 64 %. Comparative tests on the NVIDIA Jetson Xavier NX show that after FP16 quantization, our model achieves the highest mAP. It runs at 35 FPS, beating other models. This shows our design’s good accuracy and speed. It is suitable for embedded applications. © 2025 Elsevier Inc.},\n\tdoi = {10.1016/j.dsp.2025.105701},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105021938785&doi=10.1016%2Fj.dsp.2025.105701&partnerID=40&md5=741625111d287f362d38ffe420d2e1dd},\n\tvolume = {169},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.dsp.2025.105701"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000039",
+      "entry_type": "article",
+      "title": "GDEIM-SF: A Lightweight UAV Detection Framework Coupling Dehazing and Low-Light Enhancement",
+      "authors": [
+        "Zheng, J.",
+        "Li, L."
+      ],
+      "year": 2026,
+      "journal": "Sensors",
+      "doi": "10.3390/s26051557",
+      "abstract": "In complex traffic environments, image degradation caused by haze, low illumination, and occlusion significantly undermines the reliability of vehicle and pedestrian detection. To address these challenges, this paper proposes an aerial vision framework that tightly couples multi-level image enhancement with a lightweight detection architecture. At the image preprocessing stage, a cascaded “dehazing + enhancement” module is constructed, where a learning-based dehazing method is employed to restore long-range details affected by scattering artifacts. Additionally, structural fidelity is enhanced in low-light regions, while global brightness consistency is achieved. On the detection side, a lightweight yet robust detection architecture, termed GDEIM-SF, is designed. It adopts GoldYOLO as the lightweight backbone and integrates D-FINE as an anchor-free decoder. Moreover, two key modules, CAPR and ASF, are incorporated to enhance high-frequency edge modeling and multi-scale semantic alignment. Through evaluation on the VisDrone dataset, the proposed method achieves improvements of approximately 2.5 to 2.7 percentage points in core metrics such as mAP@50-90 compared to similar lightweight models, while maintaining a low parameter count and computational overhead. This ensures a balanced trade-off among detection accuracy, inference efficiency, and deployment adaptability, providing a practical and efficient solution for UAV-based visual perception tasks under challenging imaging conditions. © 2026 by the authors.",
+      "keywords": [],
+      "normalized_title": "gdeim sf a lightweight uav detection framework coupling dehazing and low light enhancement",
+      "raw_bibtex": "@ARTICLE{10.3390/s26051557,\n\tauthor = {Zheng, J. and Li, L.},\n\ttitle = {GDEIM-SF: A Lightweight UAV Detection Framework Coupling Dehazing and Low-Light Enhancement},\n\tjournal = {Sensors},\n\tyear = {2026},\n\tabstract = {In complex traffic environments, image degradation caused by haze, low illumination, and occlusion significantly undermines the reliability of vehicle and pedestrian detection. To address these challenges, this paper proposes an aerial vision framework that tightly couples multi-level image enhancement with a lightweight detection architecture. At the image preprocessing stage, a cascaded “dehazing + enhancement” module is constructed, where a learning-based dehazing method is employed to restore long-range details affected by scattering artifacts. Additionally, structural fidelity is enhanced in low-light regions, while global brightness consistency is achieved. On the detection side, a lightweight yet robust detection architecture, termed GDEIM-SF, is designed. It adopts GoldYOLO as the lightweight backbone and integrates D-FINE as an anchor-free decoder. Moreover, two key modules, CAPR and ASF, are incorporated to enhance high-frequency edge modeling and multi-scale semantic alignment. Through evaluation on the VisDrone dataset, the proposed method achieves improvements of approximately 2.5 to 2.7 percentage points in core metrics such as mAP@50-90 compared to similar lightweight models, while maintaining a low parameter count and computational overhead. This ensures a balanced trade-off among detection accuracy, inference efficiency, and deployment adaptability, providing a practical and efficient solution for UAV-based visual perception tasks under challenging imaging conditions. © 2026 by the authors.},\n\tdoi = {10.3390/s26051557},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105032636033&doi=10.3390%2Fs26051557&partnerID=40&md5=4bcf56fc0f7362507d3550a438200335},\n\tvolume = {26},\n\tnumber = {5},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.3390/s26051557"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000040",
+      "entry_type": "article",
+      "title": "OY8s: A collaborative scale-aware attention network for small target detection in unmanned aerial vehicles",
+      "authors": [
+        "Wang, Z.",
+        "Tian, L.",
+        "Chen, X.",
+        "Shao, S."
+      ],
+      "year": 2026,
+      "journal": "Engineering Research Express",
+      "doi": "10.1088/2631-8695/ae3a38",
+      "abstract": "To address the challenge of low detection accuracy caused by small target sizes and complex backgrounds in UAV aerial imagery, we propose a novel Collaborative Scale-Aware Attention Network, named OY8s. This network achieves systematic collaborative optimization across three stages: (1) Within the backbone, we design an asymmetric parallel Enhancement Module (EM) that utilizes a hybrid combination of parallel asymmetric and dilated convolutions to capture multi-scale features with minimal computational cost; (2) In the neck, an efficient weighted Path Aggregation module (PB) facilitates the intelligent fusion of cross-scale information; (3) In the detection head, an innovative Dynamic Attention Head (DyH) refines features from three orthogonal dimensions—scale, spatial, and task. On the challenging VisDrone dataset, OY8s outperforms the baseline YOLOv8s with significant improvements of 8.51% and 6.02% in mAP@0.5 and mAP@0.5:0.95, respectively. Furthermore, compared to state-of-the-art non-YOLO models like the RT-DETR-based EMSD-DETR, OY8s demonstrates a superior balance of accuracy and efficiency. Specifically, OY8s exhibits remarkable scalability across heterogeneous edge devices, achieving 24.15 FPS on the resource-constrained legacy Jetson Nano and increasing to 78.42 FPS on the modern Jetson Orin Nano. With only 10M parameters, this study provides a robust solution for real-time, high-accuracy small target detection in complex highway disaster scenarios. © 2026 IOP Publishing Ltd. All rights, including for text and data mining, AI training, and similar technologies, are reserved.",
+      "keywords": [],
+      "normalized_title": "oy8s a collaborative scale aware attention network for small target detection in unmanned aerial vehicles",
+      "raw_bibtex": "@ARTICLE{10.1088/2631-8695/ae3a38,\n\tauthor = {Wang, Z. and Tian, L. and Chen, X. and Shao, S.},\n\ttitle = {OY8s: A collaborative scale-aware attention network for small target detection in unmanned aerial vehicles},\n\tjournal = {Engineering Research Express},\n\tyear = {2026},\n\tabstract = {To address the challenge of low detection accuracy caused by small target sizes and complex backgrounds in UAV aerial imagery, we propose a novel Collaborative Scale-Aware Attention Network, named OY8s. This network achieves systematic collaborative optimization across three stages: (1) Within the backbone, we design an asymmetric parallel Enhancement Module (EM) that utilizes a hybrid combination of parallel asymmetric and dilated convolutions to capture multi-scale features with minimal computational cost; (2) In the neck, an efficient weighted Path Aggregation module (PB) facilitates the intelligent fusion of cross-scale information; (3) In the detection head, an innovative Dynamic Attention Head (DyH) refines features from three orthogonal dimensions—scale, spatial, and task. On the challenging VisDrone dataset, OY8s outperforms the baseline YOLOv8s with significant improvements of 8.51% and 6.02% in mAP@0.5 and mAP@0.5:0.95, respectively. Furthermore, compared to state-of-the-art non-YOLO models like the RT-DETR-based EMSD-DETR, OY8s demonstrates a superior balance of accuracy and efficiency. Specifically, OY8s exhibits remarkable scalability across heterogeneous edge devices, achieving 24.15 FPS on the resource-constrained legacy Jetson Nano and increasing to 78.42 FPS on the modern Jetson Orin Nano. With only 10M parameters, this study provides a robust solution for real-time, high-accuracy small target detection in complex highway disaster scenarios. © 2026 IOP Publishing Ltd. All rights, including for text and data mining, AI training, and similar technologies, are reserved.},\n\tdoi = {10.1088/2631-8695/ae3a38},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105029467843&doi=10.1088%2F2631-8695%2Fae3a38&partnerID=40&md5=5e33b248aa5b41a69560b880de70cdec},\n\tvolume = {8},\n\tnumber = {3},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1088/2631-8695/ae3a38"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

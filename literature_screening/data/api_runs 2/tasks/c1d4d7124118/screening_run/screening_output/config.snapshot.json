@@ -1,0 +1,60 @@
+{
+  "project": {
+    "name": "new-screening-run",
+    "output_dir": "tasks/c1d4d7124118/screening_run/screening_output",
+    "save_raw_response": true,
+    "save_intermediate_files": true
+  },
+  "input": {
+    "input_files": [
+      "tasks/c1d4d7124118/screening_run/inputs/scopus_export_Mar 24-2026_68dfa362-bcb3-4458-8bb4-c2b512e42e74.ris"
+    ],
+    "encoding": "auto"
+  },
+  "dedup": {
+    "enabled": true,
+    "strict_doi_match": true,
+    "normalized_title_exact_match": true,
+    "fuzzy_title_match": false
+  },
+  "screening": {
+    "batch_size": 10,
+    "target_include_count": 30,
+    "stop_when_target_reached": true,
+    "allow_uncertain": true,
+    "retry_times": 6,
+    "request_timeout_seconds": 240
+  },
+  "criteria": {
+    "topic": "下一代益生菌（特别是Akkermansia muciniphila/AKK）在食品基质中的工程化应用及其对食品理化与储藏特性的影响",
+    "inclusion": [
+      "明确将下一代益生菌（AKK等活菌）或其后生元（灭活菌）添加/应用到具体的食品基质中（重点是发酵乳、奶酪等乳制品）。",
+      "必须包含食品科学维度的评估指标，如：理化特性（pH值、酸度）、流变学/质构（硬度、粘稠度）、感官评价（消费者接受度、风味）、或加工与储藏过程中的存活率/稳定性（货架期测试）。"
+    ],
+    "exclusion": [
+      "纯医学、药理学或动物/人体生理干预实验（如：仅研究喂食AKK对小鼠肥胖、肠炎的治疗机制），未涉及食品基质的加工与理化特性。",
+      "纯基础微生物学研究（如：仅在实验室基础肉汤培养基中研究其生长曲线或基因组），无食品应用场景。",
+      "完全未涉及下一代益生菌（仅研究传统乳酸菌或双歧杆菌）。"
+    ]
+  },
+  "model": {
+    "provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "api_base_url": "https://api.deepseek.com/v1",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 1536,
+    "min_request_interval_seconds": 2.0
+  },
+  "report": {
+    "export_included_ris": true,
+    "export_excluded_ris": false,
+    "export_unused_ris": true,
+    "export_included_bib": false,
+    "export_excluded_bib": false,
+    "export_unused_bib": false,
+    "included_report_format": "md",
+    "excluded_report_format": "md",
+    "summary_format": "json"
+  }
+}

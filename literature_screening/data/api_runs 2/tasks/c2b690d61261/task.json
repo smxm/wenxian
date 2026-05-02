@@ -1,0 +1,632 @@
+{
+  "id": "c2b690d61261",
+  "kind": "screening",
+  "status": "succeeded",
+  "title": "new-screening-run",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 3,
+  "progress_total": 3,
+  "progress_message": "Task completed",
+  "created_at": "2026-03-24T13:37:13.796461+08:00",
+  "updated_at": "2026-03-24T13:39:51.470866+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "7fa0d0c03b46",
+    "project_topic": "人工智能（AI）与扩展现实（XR）技术在猫咪及动物交互中的应用（涵盖多模态感知、智能干预、XR界面与数字孪生设备）",
+    "model_provider": "deepseek",
+    "parent_task_id": null,
+    "input_dataset_ids": [],
+    "request_payload": {
+      "title": "new-screening-run",
+      "topic": "人工智能（AI）与扩展现实（XR）技术在猫咪及动物交互中的应用（涵盖多模态感知、智能干预、XR界面与数字孪生设备）",
+      "inclusion": [
+        "研究对象必须涉及猫咪（Cat/Feline）、伴侣动物（Companion Animals）或虚拟宠物（Virtual Pets）。",
+        "核心技术必须明确包含人工智能（AI、机器学习、计算机视觉、多模态情感计算等）或扩展现实/物联网（XR、VR、AR、数字孪生、智能穿戴设备等）。",
+        "研究焦点落在“交互”或“干预”上（如行为识别、无聊干预、跨物种界面设计、人宠互动）。"
+      ],
+      "exclusion": [
+        "绝对排除医学影像与临床医学文献（如涉及正电子发射断层扫描 PET scans、PET-CT、PET-MRI、阿茨海默症、肿瘤学）。",
+        "绝对排除化工材料文献（如涉及聚对苯二甲酸乙二醇酯 PET 塑料）。",
+        "排除纯兽医基础科学、纯生物学、传统畜牧业研究，且无现代计算机技术（AI/XR/IoT）深度参与的文章。",
+        "排除纯算法理论或纯硬件底层开发，未结合具体动物交互场景的文章。"
+      ],
+      "provider": "deepseek",
+      "model_name": "deepseek-chat",
+      "api_base_url": "https://api.deepseek.com/v1",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.0,
+      "max_tokens": 1536,
+      "min_request_interval_seconds": 2.0,
+      "batch_size": 20,
+      "target_include_count": 30,
+      "stop_when_target_reached": true,
+      "allow_uncertain": true,
+      "retry_times": 6,
+      "request_timeout_seconds": 240,
+      "encoding": "auto",
+      "project_id": "7fa0d0c03b46",
+      "parent_task_id": null,
+      "source_dataset_ids": []
+    },
+    "model_secret_id": "b1d1e97736c64003",
+    "uploaded_input_paths": [
+      "tasks/c2b690d61261/uploads/savedrecs.ris"
+    ]
+  },
+  "summary": {
+    "run_id": "run_20260324_133714",
+    "input_files_count": 1,
+    "raw_entries_count": 50,
+    "deduped_entries_count": 50,
+    "processed_count": 50,
+    "included_count": 9,
+    "excluded_count": 37,
+    "uncertain_count": 4,
+    "unused_count": 0,
+    "batch_count": 3,
+    "api_call_count": 3,
+    "stop_reason": "all_records_processed",
+    "started_at": "2026-03-24T13:37:14.156872+08:00",
+    "finished_at": "2026-03-24T13:39:51.458309+08:00"
+  },
+  "error": null,
+  "artifacts": {
+    "included_report": {
+      "path": "tasks/c2b690d61261/screening_run/screening_output/included_report.md",
+      "filename": "included_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 3814
+    },
+    "excluded_report": {
+      "path": "tasks/c2b690d61261/screening_run/screening_output/excluded_report.md",
+      "filename": "excluded_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 15560
+    },
+    "uncertain_report": {
+      "path": "tasks/c2b690d61261/screening_run/screening_output/uncertain_report.md",
+      "filename": "uncertain_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 1752
+    },
+    "included_ris": {
+      "path": "tasks/c2b690d61261/screening_run/screening_output/included.ris",
+      "filename": "included.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 18219
+    },
+    "unused_ris": {
+      "path": "tasks/c2b690d61261/screening_run/screening_output/unused_remaining.ris",
+      "filename": "unused_remaining.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 0
+    },
+    "run_summary": {
+      "path": "tasks/c2b690d61261/screening_run/screening_output/run_summary.json",
+      "filename": "run_summary.json",
+      "content_type": "application/json",
+      "size_bytes": 443
+    },
+    "screening_decisions": {
+      "path": "tasks/c2b690d61261/screening_run/screening_output/screening_decisions.json",
+      "filename": "screening_decisions.json",
+      "content_type": "application/json",
+      "size_bytes": 24970
+    }
+  },
+  "run_root": "tasks/c2b690d61261/screening_run",
+  "output_dir": "tasks/c2b690d61261/screening_run/screening_output",
+  "markdown_preview": null,
+  "records": [
+    {
+      "paper_id": "paper_000001",
+      "title": "Subclinical bacteriuria and pyuria in companion animals without signs of lower urinary tract disease: prevalence and associations in a prospective cross-sectional study using multimodal analytics",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要显示为兽医临床医学研究，涉及尿路感染等医学诊断，明显命中医学排除标准。",
+      "year": 2026,
+      "journal": "JOURNAL OF VETERINARY INTERNAL MEDICINE",
+      "doi": "10.1093/jvimsj/aalaf092"
+    },
+    {
+      "paper_id": "paper_000002",
+      "title": "Explainable text-tabular models for predicting mortality risk in companion animals",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "标题和摘要涉及伴侣动物死亡率预测的机器学习模型，但未明确说明是否包含猫咪或具体交互应用。",
+      "year": 2024,
+      "journal": "SCIENTIFIC REPORTS",
+      "doi": "10.1038/s41598-024-64551-1"
+    },
+    {
+      "paper_id": "paper_000003",
+      "title": "An Analytic Method for Improving the Reliability of Models Based on a Histogram for Prediction of Companion Dogs' Behaviors",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确研究对象为狗，未涉及猫咪，不符合研究对象纳入标准。",
+      "year": 2021,
+      "journal": "APPLIED SCIENCES-BASEL",
+      "doi": "10.3390/app112211050"
+    },
+    {
+      "paper_id": "paper_000004",
+      "title": "Artificial Intelligence's Potential in Zoo Animal Welfare",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要聚焦动物园动物福利的AI应用综述，研究对象为动物园动物而非猫咪或伴侣动物。",
+      "year": 2025,
+      "journal": "ZOO BIOLOGY",
+      "doi": "10.1002/zoo.70008"
+    },
+    {
+      "paper_id": "paper_000005",
+      "title": "Fear Detection Using Electroencephalogram and Artificial Intelligence: A Systematic Review",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要涉及人类恐惧检测的EEG与AI系统综述，研究对象为人类而非动物。",
+      "year": 2025,
+      "journal": "BRAIN SCIENCES",
+      "doi": "10.3390/brainsci15080815"
+    },
+    {
+      "paper_id": "paper_000006",
+      "title": "Sentiment analysis of pets using deep learning technologies in artificial intelligence of things system",
+      "decision": "include",
+      "confidence": 0.8,
+      "reason": "标题和摘要明确研究宠物情感分析，使用深度学习与物联网技术，符合AI/XR技术与动物交互主题。",
+      "year": 2021,
+      "journal": "SOFT COMPUTING",
+      "doi": "10.1007/s00500-021-06038-z"
+    },
+    {
+      "paper_id": "paper_000007",
+      "title": "Automated landmark-based cat facial analysis and its applications",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "标题和摘要涉及猫咪面部地标分析与AI应用，明确包含猫咪和人工智能技术，聚焦行为识别。",
+      "year": 2024,
+      "journal": "FRONTIERS IN VETERINARY SCIENCE",
+      "doi": "10.3389/fvets.2024.1442634"
+    },
+    {
+      "paper_id": "paper_000008",
+      "title": "Cat and Dog Behavior Recognition Method Using Deep Learning Approach Based on Inertial Measurement Unit Sensor Data",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "标题和摘要明确研究猫狗行为识别，使用深度学习与传感器技术，符合AI技术与动物交互标准。",
+      "year": 2025,
+      "journal": "SENSORS AND MATERIALS",
+      "doi": "10.18494/sam5359"
+    },
+    {
+      "paper_id": "paper_000009",
+      "title": "Artificial Intelligence for the Diagnosis of Respiratory Diseases in Dogs and Cats: A Systematic Review",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要涉及犬猫呼吸疾病AI诊断的系统综述，明显属于兽医临床医学领域，命中医学排除标准。",
+      "year": 2026,
+      "journal": "VETERINARY SCIENCES",
+      "doi": "10.3390/vetsci13020163"
+    },
+    {
+      "paper_id": "paper_000010",
+      "title": "Artificial intelligence for medical image analysis in epilepsy",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要涉及癫痫医学影像AI分析，明显属于人类医学影像领域，且关键词包含PET等排除术语。",
+      "year": 2022,
+      "journal": "EPILEPSY RESEARCH",
+      "doi": "10.1016/j.eplepsyres.2022.106861"
+    },
+    {
+      "paper_id": "paper_000011",
+      "title": "Artificial intelligence and multimodal imaging in orthopaedics: from technological advances to clinical translation",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要涉及骨科多模态成像与AI的临床转化，属于人类医学领域，且摘要提到PET等排除术语。",
+      "year": 2026,
+      "journal": "FRONTIERS IN MEDICINE",
+      "doi": "10.3389/fmed.2025.1728248"
+    },
+    {
+      "paper_id": "paper_000012",
+      "title": "Multimodal quantitative analysis guides precise preoperative localization of epilepsy",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要涉及癫痫术前定位的多模态定量分析，属于人类神经医学领域，明显不符合动物交互主题。",
+      "year": 2025,
+      "journal": "JOURNAL OF NEUROLOGY",
+      "doi": "10.1007/s00415-025-13324-5"
+    },
+    {
+      "paper_id": "paper_000013",
+      "title": "JL-TFMSFNet: A domestic cat sound emotion recognition method based on jointly learning the time-frequency domain and multi-scale features",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "标题和摘要明确研究家猫声音情感识别，使用深度学习技术，符合AI技术与猫咪交互标准。",
+      "year": 2024,
+      "journal": "EXPERT SYSTEMS WITH APPLICATIONS",
+      "doi": "10.1016/j.eswa.2024.124620"
+    },
+    {
+      "paper_id": "paper_000014",
+      "title": "Automated video-based pain recognition in cats using facial landmarks",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "标题和摘要涉及猫咪视频疼痛识别，使用AI与面部地标技术，明确符合AI技术与猫咪交互主题。",
+      "year": 2024,
+      "journal": "SCIENTIFIC REPORTS",
+      "doi": "10.1038/s41598-024-78406-2"
+    },
+    {
+      "paper_id": "paper_000015",
+      "title": "Explainable automated pain recognition in cats",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "标题和摘要涉及猫咪疼痛自动识别与可解释AI，明确包含猫咪和人工智能技术，聚焦行为评估。",
+      "year": 2023,
+      "journal": "SCIENTIFIC REPORTS",
+      "doi": "10.1038/s41598-023-35846-6"
+    },
+    {
+      "paper_id": "paper_000016",
+      "title": "How to feel about emotionalized artificial intelligence? When robot pets, holograms, and chatbots become affective partners",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "标题和摘要涉及情感化AI与机器人宠物的伦理讨论，但未明确说明具体动物交互应用或技术细节。",
+      "year": 2021,
+      "journal": "ETHICS AND INFORMATION TECHNOLOGY",
+      "doi": "10.1007/s10676-021-09598-8"
+    },
+    {
+      "paper_id": "paper_000017",
+      "title": "Using weighted directed graphs for identification of flow of emotions in poems",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要涉及诗歌情感识别的图论方法，研究对象为人类文本情感分析，未涉及动物或AI/XR技术。",
+      "year": 2020,
+      "journal": "JOURNAL OF INTELLIGENT & FUZZY SYSTEMS",
+      "doi": "10.3233/jifs-179885"
+    },
+    {
+      "paper_id": "paper_000018",
+      "title": "Automated recognition of pain in cats",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "标题和摘要明确研究猫咪疼痛自动识别，使用卷积神经网络与地标分析，符合AI技术与猫咪交互标准。",
+      "year": 2022,
+      "journal": "SCIENTIFIC REPORTS",
+      "doi": "10.1038/s41598-022-13348-1"
+    },
+    {
+      "paper_id": "paper_000019",
+      "title": "Deep Learning-Based Dog Expression Recognition",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确研究对象为狗的表情识别，未涉及猫咪，不符合研究对象纳入标准。",
+      "year": 2026,
+      "journal": "IEEE ACCESS",
+      "doi": "10.1109/access.2025.3650550"
+    },
+    {
+      "paper_id": "paper_000020",
+      "title": "Comparison between AI and human expert performance in acute pain assessment in sheep",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要涉及绵羊疼痛评估的AI与人类专家比较，研究对象为绵羊而非猫咪或伴侣动物。",
+      "year": 2025,
+      "journal": "SCIENTIFIC REPORTS",
+      "doi": "10.1038/s41598-024-83950-y"
+    },
+    {
+      "paper_id": "paper_000021",
+      "title": "Smart flexible microfluidic technology: Intelligent sensors, chips manufacturing, and emerging applications",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "摘要提到AI和宠物健康应用，但未明确涉及猫咪或具体交互场景，主题相关性不足。",
+      "year": 2026,
+      "journal": "JOURNAL OF MANUFACTURING PROCESSES",
+      "doi": "10.1016/j.jmapro.2025.12.063"
+    },
+    {
+      "paper_id": "paper_000022",
+      "title": "The Effect of Multimodal Anatomical Images in Deep Learning-enhanced Low-dose Amyloid PET Imaging",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题明确涉及PET成像，命中医学影像排除标准。",
+      "year": 2023,
+      "journal": "EUROPEAN JOURNAL OF NUCLEAR MEDICINE AND MOLECULAR IMAGING",
+      "doi": null
+    },
+    {
+      "paper_id": "paper_000023",
+      "title": "Voice Based Emotion Recognition with Convolutional Neural Networks for Companion Robots",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "关键词提到伴侣机器人和宠物机器人，但未明确涉及猫咪或具体动物交互应用。",
+      "year": 2017,
+      "journal": "ROMANIAN JOURNAL OF INFORMATION SCIENCE AND TECHNOLOGY",
+      "doi": null
+    },
+    {
+      "paper_id": "paper_000024",
+      "title": "Objective Measurement of Musculoskeletal Pain: A Comprehensive Review",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "摘要提到PET等医学影像技术，命中医学影像排除标准，且未涉及动物交互。",
+      "year": 2025,
+      "journal": "DIAGNOSTICS",
+      "doi": "10.3390/diagnostics15131581"
+    },
+    {
+      "paper_id": "paper_000025",
+      "title": "Deep learning advancements for cardiovascular diseases (CVDs) diagnosis: Imaging modalities, challenges, and future perspectives",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要聚焦心血管疾病医学影像，命中医学影像排除标准，未涉及动物交互。",
+      "year": 2026,
+      "journal": "BIOMEDICAL SIGNAL PROCESSING AND CONTROL",
+      "doi": "10.1016/j.bspc.2026.109899"
+    },
+    {
+      "paper_id": "paper_000026",
+      "title": "Deep learning based facial expression recognition using improved Cat Swarm Optimization",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题提到Cat Swarm Optimization但仅指算法名称，内容为人类面部识别，未涉及动物交互。",
+      "year": 2021,
+      "journal": "JOURNAL OF AMBIENT INTELLIGENCE AND HUMANIZED COMPUTING",
+      "doi": "10.1007/s12652-020-02463-4"
+    },
+    {
+      "paper_id": "paper_000027",
+      "title": "Affective Recommender System for Pet Social Network",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "摘要明确研究对象为狗，未涉及猫咪，不符合纳入标准。",
+      "year": 2022,
+      "journal": "SENSORS",
+      "doi": "10.3390/s22186759"
+    },
+    {
+      "paper_id": "paper_000028",
+      "title": "Textual emotion recognition to improve real-time communication of disabled people in sustainable environments using an ensemble deep learning approach",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要聚焦人类文本情感识别，未涉及动物或AI/XR交互技术。",
+      "year": 2025,
+      "journal": "SCIENTIFIC REPORTS",
+      "doi": "10.1038/s41598-025-25363-z"
+    },
+    {
+      "paper_id": "paper_000029",
+      "title": "Clinica: An Open-Source Software Platform for Reproducible Clinical Neuroscience Studies",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "摘要提到PET数据等医学影像处理，命中医学影像排除标准，且未涉及动物交互。",
+      "year": 2021,
+      "journal": "FRONTIERS IN NEUROINFORMATICS",
+      "doi": "10.3389/fninf.2021.689675"
+    },
+    {
+      "paper_id": "paper_000030",
+      "title": "Collaborative Attention Transformer on facial expression recognition under partial occlusion",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要为人类面部识别，未涉及动物或AI/XR交互技术。",
+      "year": 2022,
+      "journal": "JOURNAL OF ELECTRONIC IMAGING",
+      "doi": "10.1117/1.jei.31.2.023037"
+    },
+    {
+      "paper_id": "paper_000031",
+      "title": "Effective Technique for Noise Removal and Emotion Recognition in Speech Signals Using Cat Swarm Optimized Spiking Neural Networks",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题提到Cat Swarm Optimization但仅指算法名称，内容为人类语音情感识别，未涉及动物交互。",
+      "year": 2022,
+      "journal": "FLUCTUATION AND NOISE LETTERS",
+      "doi": "10.1142/s0219477522500195"
+    },
+    {
+      "paper_id": "paper_000032",
+      "title": "TOWARD ROBUST SPEECH EMOTION RECOGNITION AND CLASSIFICATION USING NATURAL LANGUAGE PROCESSING WITH DEEP LEARNING MODEL",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要为人类语音情感识别，未涉及动物或AI/XR交互技术。",
+      "year": 2025,
+      "journal": "FRACTALS-COMPLEX GEOMETRY PATTERNS AND SCALING IN NATURE AND SOCIETY",
+      "doi": "10.1142/s0218348x25400225"
+    },
+    {
+      "paper_id": "paper_000033",
+      "title": "Advancements and challenges in cardiac amyloidosis imaging: A comprehensive review of novel techniques and clinical applications",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "摘要提到PET示踪剂等医学影像技术，命中医学影像排除标准，且未涉及动物交互。",
+      "year": 2024,
+      "journal": "CURRENT PROBLEMS IN CARDIOLOGY",
+      "doi": "10.1016/j.cpcardiol.2024.102733"
+    },
+    {
+      "paper_id": "paper_000034",
+      "title": "Pet dog facial expression recognition based on convolutional neural network and improved whale optimization algorithm",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究对象为宠物狗，未涉及猫咪，不符合纳入标准。",
+      "year": 2023,
+      "journal": "SCIENTIFIC REPORTS",
+      "doi": "10.1038/s41598-023-30442-0"
+    },
+    {
+      "paper_id": "paper_000035",
+      "title": "CatLC: Catalonia Multiresolution Land Cover Dataset",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要为遥感土地覆盖数据集，未涉及动物、AI或XR技术。",
+      "year": 2022,
+      "journal": "SCIENTIFIC DATA",
+      "doi": "10.1038/s41597-022-01674-y"
+    },
+    {
+      "paper_id": "paper_000036",
+      "title": "Aspect-Based Sentiment Analysis of Customer Speech Data Using Deep Convolutional Neural Network and BiLSTM",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要为人类语音情感分析，未涉及动物或AI/XR交互技术。",
+      "year": 2023,
+      "journal": "COGNITIVE COMPUTATION",
+      "doi": "10.1007/s12559-023-10127-6"
+    },
+    {
+      "paper_id": "paper_000037",
+      "title": "CEPrompt: Cross-Modal Emotion-Aware Prompting for Facial Expression Recognition",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要为人类面部识别，未涉及动物或AI/XR交互技术。",
+      "year": 2024,
+      "journal": "IEEE TRANSACTIONS ON CIRCUITS AND SYSTEMS FOR VIDEO TECHNOLOGY",
+      "doi": "10.1109/tcsvt.2024.3424777"
+    },
+    {
+      "paper_id": "paper_000038",
+      "title": "Multi-modality medical image fusion by edge supervising and multi-scale attention features extraction",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "摘要明确涉及SPECT和PET医学影像融合，命中医学影像排除标准，且未涉及动物交互。",
+      "year": 2025,
+      "journal": "JOURNAL OF SUPERCOMPUTING",
+      "doi": "10.1007/s11227-025-07601-3"
+    },
+    {
+      "paper_id": "paper_000039",
+      "title": "Can Multimodal Large Language Models Enhance Performance Benefits Among Higher Education Students? An Investigation Based on the Task-Technology Fit Theory and the Artificial Intelligence Device Use Acceptance Model",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要聚焦高等教育中多模态大语言模型应用，未涉及动物或交互技术。",
+      "year": 2024,
+      "journal": "SUSTAINABILITY",
+      "doi": "10.3390/su162310780"
+    },
+    {
+      "paper_id": "paper_000040",
+      "title": "EvoZymePro-Cat: A Protein-Ligand-Aware Deep Learning Framework for Predicting Mutation Effects in Enzyme Function",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要为酶蛋白计算生物学研究，未涉及动物、AI或XR交互技术。",
+      "year": 2026,
+      "journal": "ACS SYNTHETIC BIOLOGY",
+      "doi": "10.1021/acssynbio.5c00755"
+    },
+    {
+      "paper_id": "paper_000041",
+      "title": "Multimodal metabolic and functional network signatures for diagnosis of parkinson's disease: a PET/MR study",
+      "decision": "exclude",
+      "confidence": 1.0,
+      "reason": "标题和摘要明确涉及帕金森病的PET/MR医学影像诊断，命中绝对排除标准。",
+      "year": 2025,
+      "journal": "SCIENTIFIC REPORTS",
+      "doi": "10.1038/s41598-025-19652-w"
+    },
+    {
+      "paper_id": "paper_000042",
+      "title": "A Review of Multimodal Medical Image Fusion Techniques",
+      "decision": "exclude",
+      "confidence": 1.0,
+      "reason": "标题和摘要聚焦多模态医学图像融合技术综述，关键词包含PET，属于医学影像领域，命中绝对排除标准。",
+      "year": 2020,
+      "journal": "COMPUTATIONAL AND MATHEMATICAL METHODS IN MEDICINE",
+      "doi": "10.1155/2020/8279342"
+    },
+    {
+      "paper_id": "paper_000043",
+      "title": "Automated analysis of emotional expressions in dogs based on geometric morphometrics",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "研究对象为狗，未涉及猫咪、伴侣动物或虚拟宠物，不符合纳入标准的研究对象要求。",
+      "year": 2025,
+      "journal": "SCIENTIFIC REPORTS",
+      "doi": "10.1038/s41598-025-15741-y"
+    },
+    {
+      "paper_id": "paper_000044",
+      "title": "A unified and scalable machine learning framework for feature fusion in object classification using weighted PCA with adaptive concatenation and dynamic scaling",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要描述通用机器学习特征融合框架，未提及动物交互场景，不符合研究焦点要求。",
+      "year": 2025,
+      "journal": "DISCOVER COMPUTING",
+      "doi": "10.1007/s10791-025-09622-1"
+    },
+    {
+      "paper_id": "paper_000045",
+      "title": "Deep learning for Parkinson's disease classification using multimodal and multi-sequences PET/MR images",
+      "decision": "exclude",
+      "confidence": 1.0,
+      "reason": "标题和摘要明确涉及帕金森病的深度学习分类研究，使用PET/MR医学影像，命中绝对排除标准。",
+      "year": 2025,
+      "journal": "EJNMMI RESEARCH",
+      "doi": "10.1186/s13550-025-01245-3"
+    },
+    {
+      "paper_id": "paper_000046",
+      "title": "A segment-based framework for explainability in animal affective computing",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "摘要明确提到在猫、马、狗数据集上评估可解释性框架，涉及动物情感计算和AI技术，符合研究主题和纳入标准。",
+      "year": 2025,
+      "journal": "SCIENTIFIC REPORTS",
+      "doi": "10.1038/s41598-025-96634-y"
+    },
+    {
+      "paper_id": "paper_000047",
+      "title": "Multimodal multicentre investigation of diagnostic and prognostic markers in disorders of consciousness",
+      "decision": "exclude",
+      "confidence": 1.0,
+      "reason": "标题和摘要研究意识障碍的多模态诊断，涉及PET等医学影像，属于临床医学文献，命中绝对排除标准。",
+      "year": 2026,
+      "journal": "BRAIN",
+      "doi": "10.1093/brain/awaf412"
+    },
+    {
+      "paper_id": "paper_000048",
+      "title": "Teaching a pet-robot to understand user feedback through interactive virtual training tasks",
+      "decision": "include",
+      "confidence": 0.8,
+      "reason": "标题和摘要描述通过虚拟游戏训练宠物机器人理解用户反馈，涉及AI、人机交互和虚拟训练，符合研究主题。",
+      "year": 2010,
+      "journal": "AUTONOMOUS AGENTS AND MULTI-AGENT SYSTEMS",
+      "doi": "10.1007/s10458-009-9095-8"
+    },
+    {
+      "paper_id": "paper_000049",
+      "title": "Intelligent Detection of Road Rage Using PNN Parameter Optimization and Multimodal Driver Speech and Text Data",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要研究路怒症检测，涉及驾驶员多模态数据，未涉及动物交互，不符合研究主题。",
+      "year": 2026,
+      "journal": "TEHNICKI VJESNIK-TECHNICAL GAZETTE",
+      "doi": "10.17559/tv-20250620002763"
+    },
+    {
+      "paper_id": "paper_000050",
+      "title": "LMACV: A lightweight multiscale ACmix-VMamba framework for efficient multimodal medical image fusion",
+      "decision": "exclude",
+      "confidence": 1.0,
+      "reason": "标题和摘要聚焦多模态医学图像融合方法，涉及PET等医学影像，属于医学影像领域，命中绝对排除标准。",
+      "year": 2026,
+      "journal": "NEUROCOMPUTING",
+      "doi": "10.1016/j.neucom.2025.132018"
+    }
+  ],
+  "project_id": "7fa0d0c03b46",
+  "project_topic": "人工智能（AI）与扩展现实（XR）技术在猫咪及动物交互中的应用（涵盖多模态感知、智能干预、XR界面与数字孪生设备）",
+  "model_provider": "deepseek",
+  "parent_task_id": null,
+  "input_dataset_ids": [],
+  "output_dataset_ids": [
+    "df7a7a275799",
+    "ce67d3af7e6d"
+  ]
+}

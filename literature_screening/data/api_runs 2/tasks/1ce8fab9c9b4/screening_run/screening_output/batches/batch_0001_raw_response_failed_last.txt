@@ -1,0 +1,133 @@
+{
+    "batch_id": "batch_0001",
+    "results": [
+        {
+            "paper_id": "paper_000001",
+            "decision": "include",
+            "reason": "标题和摘要明确显示研究对象为克雷伯氏菌，核心围绕甘油代谢途径生产1,3-丙二醇，并包含多种代谢工程改造手段。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000002",
+            "decision": "exclude",
+            "reason": "研究对象为沙门氏菌，与克雷伯氏菌无关，且研究内容涉及木糖酸盐利用，未提及甘油代谢。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000003",
+            "decision": "include",
+            "reason": "标题和摘要明确显示研究对象为克雷伯氏菌，研究内容为通过基因敲除和过表达优化甘油代谢途径以提高1,3-丙二醇产量。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000004",
+            "decision": "include",
+            "reason": "标题和摘要明确显示研究对象为克雷伯氏菌，研究内容为通过基因敲除和酶过表达优化甘油代谢途径生产1,2-丙二醇。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000005",
+            "decision": "exclude",
+            "reason": "研究对象为恶臭假单胞菌，与克雷伯氏菌无关，且研究内容为利用甘油生产聚羟基脂肪酸酯，未涉及甘油途径的高效表达与代谢工程改造。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000006",
+            "decision": "exclude",
+            "reason": "标题和摘要表明这是一篇关于C3-C5二醇生物合成的综述，未明确针对克雷伯氏菌或甘油途径的具体改造。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000007",
+            "decision": "uncertain",
+            "reason": "研究对象为克雷伯氏菌并利用甘油生产生物氢，但摘要提到代谢产物包括1,3-丙二醇，是否涉及提高表达或产量的具体手段信息不足。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000008",
+            "decision": "include",
+            "reason": "标题和摘要明确显示研究对象为克雷伯氏菌，研究内容为通过基因敲除和过表达优化甘油代谢途径以提高1,3-丙二醇产量并减少副产物。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.91
+        },
+        {
+            "paper_id": "paper_000009",
+            "decision": "exclude",
+            "reason": "标题和摘要表明这是一篇关于非天然宿主生产1-丁醇的综述，未明确针对克雷伯氏菌或甘油途径。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.87
+        },
+        {
+            "paper_id": "paper_000010",
+            "decision": "exclude",
+            "reason": "研究对象为大肠杆菌，与克雷伯氏菌无关，且研究内容为利用甘油生产3-羟基丙酸，未涉及克雷伯氏菌的代谢工程改造。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.89
+        },
+        {
+            "paper_id": "paper_000011",
+            "decision": "exclude",
+            "reason": "研究对象为枯草芽孢杆菌，与克雷伯氏菌无关，且研究内容为利用甘油生产3-羟基丙酸，未涉及克雷伯氏菌的代谢工程改造。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000012",
+            "decision": "exclude",
+            "reason": "标题和摘要表明这是一篇关于C4醇微生物生产的综述，未明确针对克雷伯氏菌或甘油途径。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.86
+        },
+        {
+            "paper_id": "paper_000013",
+            "decision": "include",
+            "reason": "标题和摘要明确显示研究对象为克雷伯氏菌，研究内容为通过基因敲除和工艺优化利用甘油生产2,3-丁二醇，涉及代谢工程和发酵控制。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000014",
+            "decision": "exclude",
+            "reason": "研究对象为大肠杆菌，与克雷伯氏菌无关，且研究内容为利用葡萄糖生产3-羟基丙酸，未涉及甘油途径。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.89
+        },
+        {
+            "paper_id": "paper_000015",
+            "decision": "include",
+            "reason": "标题和摘要明确显示研究对象为克雷伯氏菌，研究内容为通过基因敲除优化甘油代谢途径以提高1,3-丙二醇产量。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.91
+        },
+        {
+            "paper_id": "paper_000016",
+            "decision": "include",
+            "reason": "标题和摘要明确显示研究对象为克雷伯氏菌，研究内容为通过基因过表达和CRISPR-dCas9调控优化甘油代谢途径以提高1,3-丙二醇产量。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.93
+        },
+        {
+            "paper_id": "paper_000017",
+            "decision": "include",
+            "reason": "标题和摘要明确显示研究对象为克雷伯氏菌，研究内容为通过代谢工程改造优化甘油代谢途径以提高1,3-丙二醇产量并减少副产物。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000018",
+            "decision": "include",
+            "reason": "标题和摘要明确显示研究对象为克雷伯氏菌，研究内容为通过CRISPRi系统调控甘油代谢途径以生产1,3-丙二醇和3-羟基丙酸。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000019",
+            "decision": "include",
+           

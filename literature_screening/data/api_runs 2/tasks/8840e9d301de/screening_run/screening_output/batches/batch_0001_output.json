@@ -1,0 +1,96 @@
+{
+  "batch_id": "batch_0001",
+  "results": [
+    {
+      "paper_id": "paper_000001",
+      "decision": "uncertain",
+      "reason": "摘要提到科创板上市改变了管理层的风险承担意愿，但未明确提及研发支出比率作为风险承担的测度指标。",
+      "evidence": [
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000002",
+      "decision": "uncertain",
+      "reason": "标题和摘要明确涉及企业风险承担，但未提及研发支出比率作为测度指标。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000003",
+      "decision": "include",
+      "reason": "摘要明确将风险承担作为核心概念，并提到进一步分析显示相对业绩评价促进风险承担有助于企业增加研发投入。",
+      "evidence": [
+        "abstract"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "paper_id": "paper_000004",
+      "decision": "exclude",
+      "reason": "摘要提到财务柔性通过降低企业风险承担来促进创新绩效，但未将研发支出比率作为风险承担的测度指标，且主题侧重于财务柔性而非风险承担测量。",
+      "evidence": [
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000005",
+      "decision": "uncertain",
+      "reason": "摘要涉及风险承担水平与科技创业绩效，但未明确提及研发支出比率作为风险承担的测度指标。",
+      "evidence": [
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000006",
+      "decision": "uncertain",
+      "reason": "摘要提到股权激励计划通过提高高管风险承担水平来提高国有企业研发投入，但未明确将研发支出比率作为风险承担的代理变量。",
+      "evidence": [
+        "abstract"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "paper_id": "paper_000007",
+      "decision": "include",
+      "reason": "摘要明确以企业风险承担为核心，并提到行业锦标赛激励提高了研发支出，构成风险承担的作用机制。",
+      "evidence": [
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000008",
+      "decision": "uncertain",
+      "reason": "摘要提到股权激励通过提升研发风险承担水平影响数字化转型，但未明确将研发支出比率作为风险承担的测度指标。",
+      "evidence": [
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000009",
+      "decision": "uncertain",
+      "reason": "摘要涉及企业家精神对企业风险承担倾向的影响，但未提及研发支出比率作为风险承担的测度指标。",
+      "evidence": [
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000010",
+      "decision": "uncertain",
+      "reason": "摘要提到企业风险承担在政府补助、税收优惠作用于企业研发投入中起到中介效应，但未明确将研发支出比率作为风险承担的测度指标。",
+      "evidence": [
+        "abstract"
+      ],
+      "confidence": 0.5
+    }
+  ]
+}

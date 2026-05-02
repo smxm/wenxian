@@ -1,0 +1,106 @@
+{
+  "batch_id": "batch_0004",
+  "results": [
+    {
+      "paper_id": "paper_000031",
+      "decision": "include",
+      "reason": "标题和摘要明确针对成人慢性髓系白血病患者，并提及平台旨在增强患者赋能，年份符合要求。",
+      "evidence": [
+        "title",
+        "abstract",
+        "year"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000032",
+      "decision": "exclude",
+      "reason": "研究对象为多发性骨髓瘤等M蛋白疾病患者，非白血病，且未提及赋能教育干预。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000033",
+      "decision": "exclude",
+      "reason": "研究对象为儿童癌症幸存者，明确命中排除标准，且发表年份过早。",
+      "evidence": [
+        "title",
+        "abstract",
+        "year"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "paper_id": "paper_000034",
+      "decision": "include",
+      "reason": "标题和摘要明确针对成人慢性髓系白血病患者，开发以患者为中心的赋能平台，年份符合要求。",
+      "evidence": [
+        "title",
+        "abstract",
+        "year"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000035",
+      "decision": "exclude",
+      "reason": "发表年份在2016年以前，且摘要未明确针对白血病患者或赋能教育干预。",
+      "evidence": [
+        "year",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000036",
+      "decision": "uncertain",
+      "reason": "摘要提及慢性髓系白血病患者，但研究主题为故意不依从行为，未明确涉及赋能教育干预。",
+      "evidence": [
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000037",
+      "decision": "exclude",
+      "reason": "干预对象为白血病患儿的母亲，明确命中排除标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000038",
+      "decision": "uncertain",
+      "reason": "摘要提及血液癌症患者和赋能，但未明确是否为白血病，且干预为远程监测系统，是否直接涉及赋能教育不够明确。",
+      "evidence": [
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000039",
+      "decision": "uncertain",
+      "reason": "标题和摘要针对成人毛细胞白血病患者，提及赋能，但研究焦点为护理场合，是否核心干预为赋能教育信息不足。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "paper_id": "paper_000040",
+      "decision": "exclude",
+      "reason": "研究对象为血液癌症患者，非特指白血病，且干预为同伴支持，未明确涉及赋能教育。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.8
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+{
+  "batch_id": "batch_0006",
+  "results": [
+    {
+      "paper_id": "paper_000051",
+      "decision": "exclude",
+      "reason": "标题和摘要讨论水利工程中的洪水对冲操作，属于工程控制领域，与语言模糊语分析无关。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000052",
+      "decision": "exclude",
+      "reason": "标题和摘要讨论股票期权交易中的对冲策略，属于金融领域，严格排除。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000053",
+      "decision": "uncertain",
+      "reason": "标题和摘要讨论工程实践中软件介导的特定模糊性，涉及工程语境但未明确分析学术写作中的模糊语。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000054",
+      "decision": "exclude",
+      "reason": "标题和摘要讨论电力市场中的能源合同对冲策略，属于金融风险管理，严格排除。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000055",
+      "decision": "exclude",
+      "reason": "标题和摘要讨论城市规划中的不确定性对冲，属于社会科学分析，非学术写作语境。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000056",
+      "decision": "include",
+      "reason": "标题和摘要明确分析科学语篇中情态助动词的模糊语使用，涉及语用分析和性别差异。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000057",
+      "decision": "include",
+      "reason": "标题和摘要分析俄罗斯作者研究摘要中的元话语变异，涉及语言学与工程学的跨学科对比。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000058",
+      "decision": "exclude",
+      "reason": "标题和摘要讨论金融工程中的期权动态对冲，属于金融领域，严格排除。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000059",
+      "decision": "uncertain",
+      "reason": "标题和摘要讨论认知科学中的模糊性概念，但未明确涉及学术写作或理工科语境。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000060",
+      "decision": "exclude",
+      "reason": "标题和摘要讨论金融工程中的完美对冲策略，属于金融领域，严格排除。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "project": {
+    "name": "new-screening-run",
+    "output_dir": "tasks/4f9f49a69c87/screening_run/screening_output",
+    "save_raw_response": true,
+    "save_intermediate_files": true
+  },
+  "input": {
+    "input_files": [
+      "tasks/4f9f49a69c87/screening_run/inputs/scopus_export_Apr 1-2026_eb5bb4a5-7c33-4882-93ce-fa5189cfc718.ris"
+    ],
+    "encoding": "auto"
+  },
+  "dedup": {
+    "enabled": true,
+    "strict_doi_match": true,
+    "normalized_title_exact_match": true,
+    "fuzzy_title_match": false
+  },
+  "screening": {
+    "batch_size": 10,
+    "target_include_count": 30,
+    "stop_when_target_reached": true,
+    "allow_uncertain": true,
+    "retry_times": 6,
+    "request_timeout_seconds": 240
+  },
+  "criteria": {
+    "topic": "基于深度学习的冷轧带钢表面缺陷检测与分析",
+    "inclusion": [
+      "研究对象必须是冷轧带钢、带钢或高度相关的金属表面缺陷。",
+      "核心技术必须涉及前沿深度学习/计算机视觉方法（如：无监督异常检测、小样本/长尾学习、域自适应/泛化、轻量化边缘网络、或多模态根因分析）。",
+      "具有明确的工业落地痛点解决思路或算法创新。"
+    ],
+    "exclusion": [
+      "纯传统的冶金机理、机械结构或材料化学成分研究，无视觉/数据驱动算法介入。",
+      "过于陈旧的传统图像处理方法（如单纯的阈值分割、传统边缘算子），缺乏深度学习或现代机器学习背景。",
+      "与工业缺陷检测无关的纯理论算法推导。",
+      "非中英文文献。"
+    ]
+  },
+  "model": {
+    "provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "api_base_url": "https://api.deepseek.com/v1",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 1536,
+    "min_request_interval_seconds": 2.0
+  },
+  "report": {
+    "export_included_ris": true,
+    "export_excluded_ris": false,
+    "export_unused_ris": true,
+    "export_included_bib": false,
+    "export_excluded_bib": false,
+    "export_unused_bib": false,
+    "included_report_format": "md",
+    "excluded_report_format": "md",
+    "summary_format": "json"
+  }
+}

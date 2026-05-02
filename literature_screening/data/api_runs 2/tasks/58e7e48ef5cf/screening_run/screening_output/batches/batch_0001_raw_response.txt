@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0001",
+    "results": [
+        {
+            "paper_id": "paper_000001",
+            "decision": "uncertain",
+            "reason": "摘要提到hedges作为元话语标记，涉及工程学科，但未明确分析模糊语的语用功能或基于语料库对比。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000002",
+            "decision": "exclude",
+            "reason": "标题和摘要分析Nature Podcast的元话语，属于科学传播而非学术写作语境，不符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000003",
+            "decision": "uncertain",
+            "reason": "标题和摘要探讨元话语在MOOC视频讲座中的使用，涉及工程学科，但未明确提及模糊语或语用分析。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000004",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论金融领域的hedging（风险对冲），明确命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000005",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及制造系统中的hedging control policies，属于控制系统领域，明确命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000006",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论生态学中的碳“bet hedging”，属于生物学概念，不符合学术写作中模糊语的研究主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000007",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及金融数学中的CVaR minimization for hedging，明确命中金融领域排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000008",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论金融中的dynamic hedging model，明确命中金融领域排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000009",
+            "decision": "include",
+            "reason": "标题和摘要明确研究波斯语研究文章中元话语模糊语的使用，并进行硬软科学对比，符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000010",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论能源市场中的hedging strategies，属于金融经济领域，明确命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        }
+    ]
+}

@@ -1,0 +1,115 @@
+{
+  "batch_id": "batch_0001",
+  "results": [
+    {
+      "paper_id": "paper_000001",
+      "decision": "include",
+      "reason": "标题和摘要表明研究对象为ROV（无人水下机器人），核心算法为ADRC与深度强化学习优化，涉及轨迹跟踪控制。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000002",
+      "decision": "include",
+      "reason": "标题和摘要明确研究对象为USV，核心算法为改进ADRC，应用于路径跟随控制。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.98
+    },
+    {
+      "paper_id": "paper_000003",
+      "decision": "include",
+      "reason": "标题和摘要表明研究对象为USV-UAV协同系统，核心算法为LADRC与遗传算法优化，涉及路径跟随与LOS导引。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.96
+    },
+    {
+      "paper_id": "paper_000004",
+      "decision": "include",
+      "reason": "标题和摘要明确研究对象为USV，核心算法为ADRC与LESO，应用于路径跟随控制。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.97
+    },
+    {
+      "paper_id": "paper_000005",
+      "decision": "include",
+      "reason": "标题和摘要表明研究对象为水下滑翔机，核心算法为ADRC与优化LOS导引，应用于深度跟踪控制。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.96
+    },
+    {
+      "paper_id": "paper_000006",
+      "decision": "include",
+      "reason": "标题和摘要明确研究对象为AUV，核心算法为ADRC与自适应LOS导引，应用于深度跟踪控制。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.97
+    },
+    {
+      "paper_id": "paper_000007",
+      "decision": "include",
+      "reason": "标题和摘要表明研究对象为UUV，核心算法为改进ADRC与ESO，应用于三维轨迹跟踪控制。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000008",
+      "decision": "include",
+      "reason": "标题和摘要明确研究对象为AUV，核心算法为ADRC-SMC与自适应LOS导引，应用于深度跟踪控制。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.96
+    },
+    {
+      "paper_id": "paper_000009",
+      "decision": "uncertain",
+      "reason": "标题和摘要主要讨论AUV的浮力系统设计与扩展性，虽提及ADRC但未明确说明是否为核心算法或应用于导引/轨迹跟踪。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000010",
+      "decision": "include",
+      "reason": "标题和摘要表明研究对象为AUV，核心算法为基于有限时间ESO的ADRC，应用于跟踪控制。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.94
+    }
+  ]
+}

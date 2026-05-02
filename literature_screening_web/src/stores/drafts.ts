@@ -20,6 +20,7 @@ export interface ScreeningDraftState {
   batchSize: number
   targetIncludeCount: number | null
   stopWhenReached: boolean
+  minIncludeConfidence: number
   allowUncertain: boolean
   retryTimes: number
   requestTimeout: number
@@ -83,12 +84,13 @@ function createDefaultScreeningDraft(): ScreeningDraftState {
       api_base_url: 'https://api.deepseek.com/v1',
       api_key_env: 'DEEPSEEK_API_KEY',
       temperature: 0,
-      max_tokens: 1536,
+      max_tokens: 4096,
       min_request_interval_seconds: 2
     },
     batchSize: 10,
     targetIncludeCount: null,
     stopWhenReached: false,
+    minIncludeConfidence: 0.8,
     allowUncertain: true,
     retryTimes: 6,
     requestTimeout: 240,

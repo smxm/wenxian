@@ -1,0 +1,110 @@
+{
+  "id": "0cdf7775e62a",
+  "name": "您的论文标题（可不填）：“小芳草”南京芳草国际旅-thread-plan",
+  "topic": "IP design travel agency research travel architecture illustration",
+  "description": "您的论文标题（可不填）：“小芳草”南京芳草国际旅行社IP设计\n\n\n\n英文文献or中文文献：中文\n\n查找文献的主题：设计类IP形象类 旅行社ip形象研学特色建筑与IP形象结合插画 海报 \n\n关键词：芳草国际旅行社 IP形象 研学\n\n作者（机构）国籍（属地）要求：外国\n\n文章篇幅要求（字数or页数）：无\n\n发表期刊要求 无\n\n\n\n文献年份：2020到现在\n\n需要的文献数量：4\n\n其他要求：无",
+  "thread_profile": {
+    "strategy": {
+      "research_need": "您的论文标题（可不填）：“小芳草”南京芳草国际旅行社IP设计\n\n\n\n英文文献or中文文献：中文\n\n查找文献的主题：设计类IP形象类 旅行社ip形象研学特色建筑与IP形象结合插画 海报 \n\n关键词：芳草国际旅行社 IP形象 研学\n\n作者（机构）国籍（属地）要求：外国\n\n文章篇幅要求（字数or页数）：无\n\n发表期刊要求 无\n\n\n\n文献年份：2020到现在\n\n需要的文献数量：4\n\n其他要求：无",
+      "selected_databases": [
+        "scopus",
+        "wos"
+      ],
+      "model": {
+        "provider": "deepseek",
+        "model_name": "deepseek-reasoner",
+        "api_base_url": "https://api.deepseek.com/v1",
+        "api_key_env": "DEEPSEEK_API_KEY",
+        "api_key": null,
+        "temperature": 0.0,
+        "max_tokens": 4096,
+        "min_request_interval_seconds": 2.0
+      },
+      "latest_task_id": "56131ceb28f8",
+      "plan": {
+        "topic": "IP image design for travel agencies incorporating research travel and architectural visual elements",
+        "intent_summary": "The user seeks Chinese literature from 2020 onwards on designing IP images for travel agencies, specifically Nanjing Fangcao International Travel Agency, with a focus on research travel features, integration of architecture, and aspects of illustration and poster design.",
+        "screening_topic": "IP design travel agency research travel architecture illustration",
+        "inclusion": [
+          "Studies published in or after 2020.",
+          "Primary topic is IP image or brand identity design in the travel or tourism sector.",
+          "Includes elements of research travel, educational tourism, or study tours.",
+          "Discusses integration with architecture, spatial design, or visual arts like illustration and poster design.",
+          "Written in Chinese language."
+        ],
+        "exclusion": [
+          "Studies not related to travel, tourism, or hospitality.",
+          "No focus on design, branding, or IP development.",
+          "Published before 2020.",
+          "In languages other than Chinese.",
+          "Focused solely on marketing or management without design aspects."
+        ],
+        "search_blocks": [
+          {
+            "database": "scopus",
+            "title": "Scopus advanced search for IP design in Chinese travel agencies",
+            "query": "TITLE-ABS-KEY( \"IP形象\" OR \"品牌设计\" OR \"IP design\" ) AND TITLE-ABS-KEY( \"旅行社\" OR \"旅游机构\" OR \"travel agency\" ) AND TITLE-ABS-KEY( \"研学\" OR \"教育旅游\" OR \"research travel\" ) AND TITLE-ABS-KEY( \"建筑\" OR \"architecture\" OR \"插画\" OR \"illustration\" OR \"海报\" OR \"poster\" ) AND PUBYEAR > 2019 AND LANGUAGE( chinese )",
+            "lines": [],
+            "notes": [
+              "Adjust search terms based on initial results; use TITLE-ABS-KEY for comprehensive coverage.",
+              "Consider refining with specific terms like \"芳草国际旅行社\" if noise is high."
+            ]
+          },
+          {
+            "database": "wos",
+            "title": "Web of Science advanced search for IP design in Chinese travel agencies",
+            "query": "TS=( \"IP形象\" OR \"品牌设计\" ) AND TS=( \"旅行社\" OR \"旅游机构\" ) AND TS=( \"研学\" OR \"教育旅游\" ) AND TS=( \"建筑\" OR \"插画\" OR \"海报\" ) AND PY=2020-2024 AND LA=chinese",
+            "lines": [],
+            "notes": [
+              "Use TS field for topic search covering title, abstract, and keywords.",
+              "Update PY range as needed for current year; consider adding more visual design terms."
+            ]
+          }
+        ],
+        "caution_notes": [
+          "The search may retrieve studies not specific to travel agencies; manually screen for relevance.",
+          "Some relevant studies might be in English; if results are limited, consider removing language filter.",
+          "Architecture and illustration terms could introduce noise; refine with additional context terms during screening."
+        ]
+      }
+    },
+    "screening": {
+      "topic": "IP design travel agency research travel architecture illustration",
+      "criteria_markdown": "# 研究主题\n\nIP design travel agency research travel architecture illustration\n\n# 纳入标准\n\n- Studies published in or after 2020.\n- Primary topic is IP image or brand identity design in the travel or tourism sector.\n- Includes elements of research travel, educational tourism, or study tours.\n- Discusses integration with architecture, spatial design, or visual arts like illustration and poster design.\n- Written in Chinese language.\n\n# 排除标准\n\n- Studies not related to travel, tourism, or hospitality.\n- No focus on design, branding, or IP development.\n- Published before 2020.\n- In languages other than Chinese.\n- Focused solely on marketing or management without design aspects.",
+      "inclusion": [
+        "Studies published in or after 2020.",
+        "Primary topic is IP image or brand identity design in the travel or tourism sector.",
+        "Includes elements of research travel, educational tourism, or study tours.",
+        "Discusses integration with architecture, spatial design, or visual arts like illustration and poster design.",
+        "Written in Chinese language."
+      ],
+      "exclusion": [
+        "Studies not related to travel, tourism, or hospitality.",
+        "No focus on design, branding, or IP development.",
+        "Published before 2020.",
+        "In languages other than Chinese.",
+        "Focused solely on marketing or management without design aspects."
+      ],
+      "model": {
+        "provider": "deepseek",
+        "model_name": "deepseek-chat",
+        "api_base_url": "https://api.deepseek.com/v1",
+        "api_key_env": "DEEPSEEK_API_KEY",
+        "api_key": null,
+        "temperature": 0,
+        "max_tokens": 1536,
+        "min_request_interval_seconds": 2
+      },
+      "batch_size": 10,
+      "target_include_count": null,
+      "stop_when_target_reached": false,
+      "allow_uncertain": true,
+      "retry_times": 6,
+      "request_timeout_seconds": 240,
+      "encoding": "auto"
+    },
+    "last_updated_at": "2026-04-10T06:23:18.250668+00:00"
+  },
+  "created_at": "2026-04-10T06:22:05.834542+00:00",
+  "updated_at": "2026-04-10T06:23:18.250819+00:00"
+}

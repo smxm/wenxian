@@ -1,0 +1,112 @@
+{
+  "batch_id": "batch_0002",
+  "results": [
+    {
+      "paper_id": "paper_000011",
+      "decision": "include",
+      "reason": "标题和摘要明确提及针对癌症患者的“competence empowerment”干预，研究对象为成人癌症患者，年份符合要求。",
+      "evidence": [
+        "title",
+        "abstract",
+        "year"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000012",
+      "decision": "exclude",
+      "reason": "标题和摘要描述的是针对异基因骨髓移植患者的康复计划，未提及“赋能教育”作为核心干预措施。",
+      "evidence": [
+        "title",
+        "abstract",
+        "year"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "paper_id": "paper_000013",
+      "decision": "exclude",
+      "reason": "标题和摘要明确研究对象为儿童白血病患者，命中排除标准。",
+      "evidence": [
+        "title",
+        "abstract",
+        "year"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "paper_id": "paper_000014",
+      "decision": "exclude",
+      "reason": "发表年份为2013年，早于2016年，不符合纳入标准。",
+      "evidence": [
+        "year"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "paper_id": "paper_000015",
+      "decision": "exclude",
+      "reason": "标题和摘要明确研究对象为儿科肿瘤患者，命中排除标准。",
+      "evidence": [
+        "title",
+        "abstract",
+        "year"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "paper_id": "paper_000016",
+      "decision": "exclude",
+      "reason": "标题和摘要明确研究对象为儿童白血病患者的父母，干预对象包含照顾者，命中排除标准。",
+      "evidence": [
+        "title",
+        "abstract",
+        "year"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "paper_id": "paper_000017",
+      "decision": "uncertain",
+      "reason": "摘要提及癌症患者和低患者赋能，但未明确研究对象是否为成人白血病患者，也未说明核心干预措施是否为赋能教育。",
+      "evidence": [
+        "abstract",
+        "year"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000018",
+      "decision": "exclude",
+      "reason": "标题和摘要研究对象为儿科血液肿瘤专科医生，与成人白血病患者赋能教育主题无关。",
+      "evidence": [
+        "title",
+        "abstract",
+        "year"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000019",
+      "decision": "exclude",
+      "reason": "标题和摘要明确研究对象为儿童白血病患者，命中排除标准。",
+      "evidence": [
+        "title",
+        "abstract",
+        "year"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "paper_id": "paper_000020",
+      "decision": "include",
+      "reason": "标题和摘要描述针对慢性髓系白血病患者的数字护理平台，明确提及“patient empowerment”作为干预目标，研究对象为成人患者，年份符合要求。",
+      "evidence": [
+        "title",
+        "abstract",
+        "year"
+      ],
+      "confidence": 0.85
+    }
+  ]
+}

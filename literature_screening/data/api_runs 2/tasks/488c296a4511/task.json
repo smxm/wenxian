@@ -1,0 +1,84 @@
+{
+  "id": "488c296a4511",
+  "kind": "report",
+  "status": "succeeded",
+  "cancel_requested": false,
+  "title": "电子学生-report",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 0,
+  "progress_total": 0,
+  "progress_message": "Task completed",
+  "created_at": "2026-03-25T19:24:01.583989+08:00",
+  "updated_at": "2026-03-25T19:24:05.233737+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "6cf84af27296",
+    "project_topic": "电子学生",
+    "model_provider": "deepseek",
+    "source_screening_task_id": null,
+    "input_dataset_ids": [
+      "fulltext-ready"
+    ],
+    "request_payload": {
+      "title": "电子学生-report",
+      "screening_task_id": null,
+      "dataset_ids": [
+        "fulltext-ready"
+      ],
+      "project_topic": "电子学生",
+      "model": {
+        "provider": "deepseek",
+        "model_name": "deepseek-chat",
+        "api_base_url": "https://api.deepseek.com/v1",
+        "api_key_env": "DEEPSEEK_API_KEY",
+        "temperature": 0.0,
+        "max_tokens": 1536,
+        "min_request_interval_seconds": 2.0
+      },
+      "report_name": "simple_report",
+      "retry_times": 6,
+      "timeout_seconds": 240,
+      "reference_style": "gbt7714"
+    },
+    "virtual_dataset_paths": [
+      "projects/6cf84af27296/derived/fulltext_ready.ris"
+    ],
+    "model_secret_id": "733d63828aa24eb5"
+  },
+  "summary": {
+    "report_name": "simple_report",
+    "reference_style": "gbt7714"
+  },
+  "error": null,
+  "artifacts": {
+    "literature_report": {
+      "path": "tasks/488c296a4511/report_output/literature_report.md",
+      "filename": "literature_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 245
+    },
+    "paper_notes": {
+      "path": "tasks/488c296a4511/report_output/paper_notes.json",
+      "filename": "paper_notes.json",
+      "content_type": "application/json",
+      "size_bytes": null
+    },
+    "report_overview": {
+      "path": "tasks/488c296a4511/report_output/report_overview.json",
+      "filename": "report_overview.json",
+      "content_type": "application/json",
+      "size_bytes": 179
+    }
+  },
+  "run_root": "tasks/488c296a4511",
+  "output_dir": "tasks/488c296a4511/report_output",
+  "markdown_preview": "# 一、相关文献总体情况\n\n输入中未提供任何文献笔记，因此无法基于现有内容总结文献总体情况、主要关注点或研究分布。\n\n# 二、类型划分\n\n# 三、逐篇文献总结分析\n\n# 参考列表\n",
+  "records": [],
+  "project_id": "6cf84af27296",
+  "project_topic": "电子学生",
+  "model_provider": "deepseek",
+  "input_dataset_ids": [
+    "fulltext-ready"
+  ]
+}

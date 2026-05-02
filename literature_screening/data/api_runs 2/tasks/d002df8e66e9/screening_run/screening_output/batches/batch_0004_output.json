@@ -1,0 +1,36 @@
+{
+  "batch_id": "batch_0004",
+  "results": [
+    {
+      "paper_id": "paper_000010",
+      "decision": "include",
+      "reason": "标题和摘要表明研究弓网电弧的电气特性，并使用Habedank模型进行仿真。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000011",
+      "decision": "include",
+      "reason": "摘要提到研究弓网电弧对牵引系统电压的影响，并采用Habedank模型仿真。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000012",
+      "decision": "uncertain",
+      "reason": "摘要提到结合Cassie和Mayr模型研究弓网电弧对电气特性的影响，但建模和仿真细节不足。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0005",
+    "results": [
+        {
+            "paper_id": "paper_000041",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究肿瘤放疗患者的大剂量急性辐射治疗，不符合职业性低剂量暴露特征。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000042",
+            "decision": "exclude",
+            "reason": "标题和摘要研究铀矿工氡暴露与多种疾病死亡率，但未提及肠道健康相关结局指标。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000043",
+            "decision": "exclude",
+            "reason": "标题和摘要研究食管胃切除术后营养性神经病变，未涉及辐射暴露或肠道健康。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000044",
+            "decision": "exclude",
+            "reason": "标题和摘要为2级胶质瘤临床指南，未涉及辐射暴露或肠道健康。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000045",
+            "decision": "exclude",
+            "reason": "摘要提到dmPGE2可减轻肠道黏膜细胞损伤，但研究针对急性辐射综合征的造血系统保护，暴露为大剂量全身照射。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000046",
+            "decision": "exclude",
+            "reason": "标题和摘要研究职业性铅中毒导致肠梗阻，未涉及电离辐射暴露。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000047",
+            "decision": "include",
+            "reason": "标题明确研究低剂量职业电离辐射暴露与胃肠道癌症死亡率，摘要详细描述放射技师队列和胃肠道癌症结局。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000048",
+            "decision": "uncertain",
+            "reason": "摘要涉及内镜医师对透视辐射暴露的担忧，但未明确研究肠道健康指标，仅间接相关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000049",
+            "decision": "exclude",
+            "reason": "标题和摘要模拟内镜过程中气溶胶传播，未涉及辐射暴露或肠道健康影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000050",
+            "decision": "exclude",
+            "reason": "标题和摘要描述核临界事故中大剂量急性暴露受害者的医疗管理，不符合职业性低剂量暴露特征。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        }
+    ]
+}

@@ -1,0 +1,54 @@
+{
+    "batch_id": "batch_0011",
+    "results": [
+        {
+            "paper_id": "paper_000101",
+            "decision": "exclude",
+            "reason": "研究对象为孕妇，不是成人白血病患者，且研究主题为脐带血库认知调查，不涉及赋能教育。",
+            "evidence": ["title", "abstract", "year"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000102",
+            "decision": "exclude",
+            "reason": "研究主题为专科药房服务综述，虽然提到患者教育，但未明确针对成人白血病患者，且不聚焦赋能教育。",
+            "evidence": ["title", "abstract", "year"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000103",
+            "decision": "include",
+            "reason": "研究对象为成人慢性髓系白血病患者，干预措施为定制化患者教育，旨在提高服药依从性，符合赋能教育主题。",
+            "evidence": ["title", "abstract", "year"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000104",
+            "decision": "exclude",
+            "reason": "研究对象为年轻成人癌症患者（18-39岁），包含多种癌症类型，未明确限定为白血病，且研究主题为生育力保留讨论，不涉及赋能教育。",
+            "evidence": ["title", "abstract", "year"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000105",
+            "decision": "exclude",
+            "reason": "研究对象为青少年，不是成人患者，且研究主题为Barrows Cards方法改善自我管理，虽涉及教育干预但对象不符。",
+            "evidence": ["title", "abstract", "year"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000106",
+            "decision": "include",
+            "reason": "研究对象为成人急性髓系白血病患者，干预措施包括患者教育，旨在通过自我监测预防肺炎，符合赋能教育主题。",
+            "evidence": ["title", "abstract", "year"],
+            "confidence": 0.87
+        },
+        {
+            "paper_id": "paper_000107",
+            "decision": "include",
+            "reason": "研究对象为成人急性髓系白血病患者，干预措施为口腔护理自我管理支持协议，涉及教育和行为干预，符合赋能教育主题。",
+            "evidence": ["title", "abstract", "year"],
+            "confidence": 0.89
+        }
+    ]
+}

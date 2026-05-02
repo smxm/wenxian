@@ -1,0 +1,47 @@
+project:
+  name: new-screening-run
+  output_dir: tasks/74d60e047582/screening_run/screening_output
+  save_raw_response: true
+  save_intermediate_files: true
+input:
+  input_files:
+  - tasks/74d60e047582/screening_run/inputs/scopus_export_Apr 1-2026_edb05c14-3f59-42fb-8f12-e2911ea13c7e.ris
+  encoding: auto
+dedup:
+  enabled: true
+  strict_doi_match: true
+  normalized_title_exact_match: true
+  fuzzy_title_match: false
+screening:
+  batch_size: 10
+  target_include_count: 30
+  stop_when_target_reached: true
+  allow_uncertain: true
+  retry_times: 6
+  request_timeout_seconds: 240
+criteria:
+  topic: 基于超声的子宫内膜蠕动波定量分析（如EmPA技术）与超微血流成像（如UMA技术）在容受性评估及妇科疾病中的临床应用与技术基础
+  inclusion:
+  - 涉及子宫、子宫内膜或结合带的动力学（蠕动波/运动轨迹）或血流动力学（微血管灌注）的客观定量评估。
+  - 涵盖相关底层技术（高帧率超声、斑点追踪算法）或具体临床场景（IVF/胚胎着床预测、子宫腺肌症/内异症诊断）。
+  exclusion:
+  - 纯传统医学影像的形态学主观观察，缺乏自动化或定量的数据分析。
+  - 研究对象与女性生殖系统完全无关（除非是极其相关的通用超声图像处理算法）。
+model:
+  provider: deepseek
+  model_name: deepseek-chat
+  api_base_url: https://api.deepseek.com/v1
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.0
+  max_tokens: 1536
+  min_request_interval_seconds: 2.0
+report:
+  export_included_ris: true
+  export_excluded_ris: false
+  export_unused_ris: true
+  export_included_bib: false
+  export_excluded_bib: false
+  export_unused_bib: false
+  included_report_format: md
+  excluded_report_format: md
+  summary_format: json

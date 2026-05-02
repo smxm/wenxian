@@ -1,0 +1,36 @@
+{
+  "batch_id": "batch_0006",
+  "results": [
+    {
+      "paper_id": "paper_000016",
+      "decision": "uncertain",
+      "reason": "摘要提到弓网电弧模拟和过电压研究，但未明确说明电弧模型或MATLAB仿真细节，信息不全。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000017",
+      "decision": "include",
+      "reason": "标题和摘要明确研究弓网电火花放电，提出火花放电模型和电路模型，涉及电气特性分析和仿真。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000018",
+      "decision": "exclude",
+      "reason": "标题和摘要聚焦于电弧检测算法，未涉及电弧的数学建模或MATLAB仿真，不符合纳入标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    }
+  ]
+}

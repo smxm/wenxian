@@ -1,0 +1,767 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "标题和摘要讨论低水分食品基质作为益生菌载体，并提及下一代益生菌，但未明确涉及AKK在具体食品基质中的应用或食品科学评估指标。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:48:27.621624+08:00"
+  },
+  {
+    "paper_id": "paper_000002",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "摘要提到发酵番茄泥中Akkermansia丰度增加，但研究焦点是传统发酵剂Kluyveromyces marxianus对番茄的影响，未涉及将下一代益生菌添加到食品基质中。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:48:27.621624+08:00"
+  },
+  {
+    "paper_id": "paper_000003",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "研究婴儿谷物对肠道菌群的影响，未涉及将下一代益生菌添加到食品基质中，且未包含食品科学评估指标。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:48:27.621624+08:00"
+  },
+  {
+    "paper_id": "paper_000004",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "研究小球藻多糖对肠道菌群的调节作用，包括增加Akkermansia丰度，但未涉及将下一代益生菌添加到具体食品基质中。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:48:27.621624+08:00"
+  },
+  {
+    "paper_id": "paper_000005",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "研究酪醇糖苷对小鼠肠道菌群的影响，包括对Akkermansia的调节，但未涉及食品基质应用或食品科学评估指标。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:48:27.621624+08:00"
+  },
+  {
+    "paper_id": "paper_000006",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确将Akkermansia muciniphila添加到巧克力基质中，并评估了储存期间的存活率、pH值和生物活性等食品科学指标。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:48:27.621624+08:00"
+  },
+  {
+    "paper_id": "paper_000007",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "研究BSA-壳聚糖纳米载体对二氢杨梅素的保护作用及其对肠道菌群的影响，包括增加Akkermansia，但未涉及食品基质应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:48:27.621624+08:00"
+  },
+  {
+    "paper_id": "paper_000008",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "研究黑果腺肋花楸多糖的理化性质及免疫调节机制，未涉及下一代益生菌或食品基质应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:48:27.621624+08:00"
+  },
+  {
+    "paper_id": "paper_000009",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "研究海带可溶性膳食纤维的理化性质及其对2型糖尿病小鼠的调节作用，包括增加Akkermansia丰度，但未涉及食品基质应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:48:27.621624+08:00"
+  },
+  {
+    "paper_id": "paper_000010",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "标题和摘要提到秋葵多糖微胶囊促进下一代益生菌，并涉及模拟胃液处理，但未明确说明将益生菌添加到具体食品基质中或评估食品理化特性。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:48:27.621624+08:00"
+  },
+  {
+    "paper_id": "paper_000011",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究聚焦于纳米颗粒递送系统治疗炎症性肠病的药理学评估，未涉及食品基质应用或食品科学指标。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:48:56.279313+08:00"
+  },
+  {
+    "paper_id": "paper_000012",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要表明这是一篇关于植物副产物作为益生元的综述，未涉及下一代益生菌在食品基质中的具体应用或食品特性评估。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:48:56.279313+08:00"
+  },
+  {
+    "paper_id": "paper_000013",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究聚焦于白酒糟多糖对酒精性肝病的缓解作用及机制，属于动物生理干预实验，未涉及食品基质应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:48:56.279313+08:00"
+  },
+  {
+    "paper_id": "paper_000014",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究评估发酵竹笋对溃疡性结肠炎小鼠的缓解作用，属于动物生理干预，未涉及下一代益生菌在食品基质中的应用或食品特性评估。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.87,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:48:56.279313+08:00"
+  },
+  {
+    "paper_id": "paper_000015",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究聚焦于枸杞多糖组分对免疫抑制小鼠的调节作用及肠道菌群影响，属于动物生理干预，未涉及食品基质应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.86,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:48:56.279313+08:00"
+  },
+  {
+    "paper_id": "paper_000016",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究评估开菲尔谷物胞外多糖的抗肥胖作用及对肠道菌群的影响，属于动物生理干预实验，未涉及下一代益生菌在食品基质中的应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:48:56.279313+08:00"
+  },
+  {
+    "paper_id": "paper_000017",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究聚焦于桦褐孔菌多糖对高脂血症的改善作用及肠道菌群调节，属于动物生理干预，未涉及食品基质应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.87,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:48:56.279313+08:00"
+  },
+  {
+    "paper_id": "paper_000018",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究评估梨皮多酚对溃疡性结肠炎的保护作用及肠道菌群调节，属于动物生理干预，未涉及下一代益生菌在食品基质中的应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.86,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:48:56.279313+08:00"
+  },
+  {
+    "paper_id": "paper_000019",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究聚焦于南瓜多糖的降血糖活性及对糖尿病小鼠肠道菌群的影响，属于动物生理干预，未涉及食品基质应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:48:56.279313+08:00"
+  },
+  {
+    "paper_id": "paper_000020",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究比较不同地区干腌火腿的微生物组成，未涉及下一代益生菌的添加应用或食品理化与储藏特性评估。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:48:56.279313+08:00"
+  },
+  {
+    "paper_id": "paper_000021",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要仅综述益生菌冰淇淋，未明确涉及下一代益生菌AKK在食品基质中的应用及理化特性评估。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:49:23.669519+08:00"
+  },
+  {
+    "paper_id": "paper_000022",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "摘要明确将微囊化Akkermansia muciniphila添加到饮料中，并评估了感官分析和稳定性。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:49:23.669519+08:00"
+  },
+  {
+    "paper_id": "paper_000023",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要研究海藻酸钠包埋材料，未涉及将下一代益生菌添加到具体食品基质中。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:49:23.669519+08:00"
+  },
+  {
+    "paper_id": "paper_000024",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要研究棉籽粕在水产饲料中的应用，未涉及下一代益生菌在食品基质中的工程化应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:49:23.669519+08:00"
+  },
+  {
+    "paper_id": "paper_000025",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要综述人工甜味剂对肠道菌群的影响，未涉及下一代益生菌在食品基质中的应用及理化特性评估。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:49:23.669519+08:00"
+  },
+  {
+    "paper_id": "paper_000026",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要研究纳米颗粒对结肠炎小鼠的影响，未涉及下一代益生菌在食品基质中的工程化应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:49:23.669519+08:00"
+  },
+  {
+    "paper_id": "paper_000027",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要明确将微囊化Akkermansia muciniphila嵌入黑巧克力，并评估了储存稳定性和感官测试。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:49:23.669519+08:00"
+  },
+  {
+    "paper_id": "paper_000028",
+    "batch_id": "batch_0003",
+    "decision": "uncertain",
+    "reason": "摘要提到营养餐替代粉促进Akkermansia muciniphila生长，但未明确添加活菌或后生元到食品基质中，且缺乏理化特性评估。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:49:23.669519+08:00"
+  },
+  {
+    "paper_id": "paper_000029",
+    "batch_id": "batch_0003",
+    "decision": "uncertain",
+    "reason": "摘要提到发酵饼干促进Akkermansia增殖，但未明确添加活菌或后生元，且食品科学评估指标有限。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.45,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:49:23.669519+08:00"
+  },
+  {
+    "paper_id": "paper_000030",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要研究高纤维辅食对儿童粪便菌群的影响，未涉及下一代益生菌在食品基质中的工程化应用及理化特性评估。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:49:23.669519+08:00"
+  },
+  {
+    "paper_id": "paper_000031",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要仅提及传统乳酸菌和天然发酵乳，未涉及下一代益生菌（如AKK）在食品基质中的应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:49:52.082797+08:00"
+  },
+  {
+    "paper_id": "paper_000032",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要显示为纯动物医学干预实验，研究药物对小鼠结肠炎的治疗机制，未涉及食品基质应用或食品科学评估指标。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:49:52.082797+08:00"
+  },
+  {
+    "paper_id": "paper_000033",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要显示为纯动物医学干预实验，研究多糖对小鼠结肠炎的影响，未涉及食品基质应用或食品科学评估指标。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:49:52.082797+08:00"
+  },
+  {
+    "paper_id": "paper_000034",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要显示为纯动物医学干预实验，研究提取物对小鼠肠道菌群的影响，未涉及食品基质应用或食品科学评估指标。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:49:52.082797+08:00"
+  },
+  {
+    "paper_id": "paper_000035",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要显示为纯动物医学干预实验，研究多糖对小鼠免疫调节的影响，未涉及食品基质应用或食品科学评估指标。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:49:52.082797+08:00"
+  },
+  {
+    "paper_id": "paper_000036",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要显示为纯动物医学干预实验，研究发酵食品对小鼠高血脂的影响，未涉及下一代益生菌（如AKK）在食品基质中的应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:49:52.082797+08:00"
+  },
+  {
+    "paper_id": "paper_000037",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要显示为水产养殖策略研究，关注鱼类肉质和肠道菌群，未涉及下一代益生菌（如AKK）在食品基质中的应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:49:52.082797+08:00"
+  },
+  {
+    "paper_id": "paper_000038",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要显示为系统综述，总结茶叶对健康的影响机制，未涉及下一代益生菌（如AKK）在食品基质中的应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:49:52.082797+08:00"
+  },
+  {
+    "paper_id": "paper_000039",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要显示为综述文章，讨论果胶的甲基化与性质关系，未涉及下一代益生菌（如AKK）或食品基质应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:49:52.082797+08:00"
+  },
+  {
+    "paper_id": "paper_000040",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要显示为畜牧养殖研究，分析奶牛垫料对初乳菌群的影响，未涉及下一代益生菌（如AKK）在食品基质中的应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:49:52.082797+08:00"
+  },
+  {
+    "paper_id": "paper_000041",
+    "batch_id": "batch_0005",
+    "decision": "include",
+    "reason": "标题和摘要明确将Akkermansia muciniphila作为载体应用于膳食补充剂，并评估了其理化稳定性（热稳定性）和生物可及性。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:23.564928+08:00"
+  },
+  {
+    "paper_id": "paper_000042",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要研究牛肉干湿熟化过程中的细菌多样性，仅提及Akkermansia作为检测到的菌属之一，未涉及下一代益生菌在食品基质中的工程化应用或食品科学评估。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:23.564928+08:00"
+  },
+  {
+    "paper_id": "paper_000043",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要研究蝉花多糖的提取工艺及其对小鼠肠道菌群的影响，仅提及Akkermansia丰度变化，未涉及下一代益生菌在食品基质中的应用或食品科学评估。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:23.564928+08:00"
+  },
+  {
+    "paper_id": "paper_000044",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要为综述，概述米糠和麦麸膳食纤维对肠道菌群的影响，未涉及下一代益生菌在食品基质中的工程化应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:23.564928+08:00"
+  },
+  {
+    "paper_id": "paper_000045",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要为综述，概述柑橘源益生元对肠道菌群的影响，仅提及Akkermansia作为有益菌之一，未涉及下一代益生菌在食品基质中的工程化应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:23.564928+08:00"
+  },
+  {
+    "paper_id": "paper_000046",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要研究黄粉虫壳聚糖寡糖的制备及其益生元活性，仅提及Akkermansia丰度变化，未涉及下一代益生菌在食品基质中的应用或食品科学评估。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:23.564928+08:00"
+  },
+  {
+    "paper_id": "paper_000047",
+    "batch_id": "batch_0005",
+    "decision": "include",
+    "reason": "标题和摘要明确将Akkermansia muciniphila添加到奶酪涂抹酱中，并评估了理化特性（质地、颜色、水分活度、pH）、益生菌存活率（冷藏储存21天）和体外消化稳定性。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:23.564928+08:00"
+  },
+  {
+    "paper_id": "paper_000048",
+    "batch_id": "batch_0005",
+    "decision": "include",
+    "reason": "标题和摘要明确使用Akkermansia muciniphila发酵脱脂乳，并评估了理化特性（pH、可溶性蛋白、蛋白酶活性、游离氨基酸、短链脂肪酸）和抗氧化能力。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:23.564928+08:00"
+  },
+  {
+    "paper_id": "paper_000049",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要研究自然发酵凝乳的细菌多样性和代谢物，仅提及Akkermansia作为检测到的菌属之一，未涉及下一代益生菌在食品基质中的工程化应用或食品科学评估。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:23.564928+08:00"
+  },
+  {
+    "paper_id": "paper_000050",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要为关于甜菜碱的综述，涉及食品科学但未提及下一代益生菌或Akkermansia muciniphila。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:23.564928+08:00"
+  },
+  {
+    "paper_id": "paper_000051",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要未明确提及下一代益生菌（如Akkermansia muciniphila）在食品基质中的应用，且未涉及食品理化与储藏特性的具体评估。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:31.079264+08:00"
+  }
+]

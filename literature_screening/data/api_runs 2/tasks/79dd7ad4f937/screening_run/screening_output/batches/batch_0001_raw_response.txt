@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0001",
+    "results": [
+        {
+            "paper_id": "paper_000001",
+            "decision": "uncertain",
+            "reason": "摘要提到弓网系统结冰导致电弧更频繁，但未明确说明电气特性变化或电弧模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000002",
+            "decision": "exclude",
+            "reason": "标题和摘要表明研究基于机器视觉检测弓网动态性能和电弧，但未涉及电气特性分析或电弧建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000003",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦弓网系统临界速度的机械动力学分析，未提及电气特性或电弧模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000004",
+            "decision": "uncertain",
+            "reason": "摘要研究碳-铜接触的电气接触电阻和放电特性，涉及弓网系统，但未明确讨论离线电气特性或Cassie等电弧模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000005",
+            "decision": "include",
+            "reason": "标题和摘要明确研究弓网电弧检测算法，基于电流信号分析电弧瞬态特性，涉及电气特性变化。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.75
+        },
+        {
+            "paper_id": "paper_000006",
+            "decision": "include",
+            "reason": "标题和摘要明确研究弓网电弧烧蚀，基于磁流体动力学建立电弧数学模型，涉及电弧物理建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000007",
+            "decision": "include",
+            "reason": "标题和摘要研究弓网离线对轨道绝缘特性的影响，建立电路模型分析瞬态脉冲，涉及电气特性变化。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.78
+        },
+        {
+            "paper_id": "paper_000008",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦地铁隧道中受电弓的气动性能，提及电弧但未涉及电气特性分析或电弧建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.82
+        },
+        {
+            "paper_id": "paper_000009",
+            "decision": "include",
+            "reason": "标题和摘要研究弓网电弧放电的电磁干扰激励电流时间特性，建立随机模型，涉及电气特性分析和建模。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000010",
+            "decision": "exclude",
+            "reason": "标题和摘要基于深度学习的电弧图像分割方法，未涉及电气特性变化或电弧数学模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        }
+    ]
+}

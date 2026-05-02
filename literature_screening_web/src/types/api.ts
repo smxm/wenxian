@@ -69,6 +69,7 @@ export interface ThreadScreeningSettings {
   batch_size: number
   target_include_count?: number | null
   stop_when_target_reached: boolean
+  min_include_confidence: number
   allow_uncertain: boolean
   retry_times: number
   request_timeout_seconds: number
@@ -238,6 +239,11 @@ export interface ScreeningRecordRow {
   decision: string
   confidence?: number | string | null
   reason: string
+  original_decision?: string | null
+  original_reason?: string | null
+  review_decision?: string | null
+  review_reason?: string | null
+  reviewed?: boolean
   year?: number | null
   journal?: string | null
   doi?: string | null
@@ -299,6 +305,25 @@ export interface ModelSettings {
   min_request_interval_seconds: number
 }
 
+export interface ProviderModelOption {
+  id: string
+  label: string
+}
+
+export interface ProviderModelListPayload {
+  provider: ProviderName
+  api_base_url: string
+  api_key_env: string
+  api_key?: string | null
+}
+
+export interface ProviderModelListResponse {
+  provider: ProviderName
+  models: ProviderModelOption[]
+  source: 'provider' | 'fallback'
+  error?: string | null
+}
+
 export interface ScreeningFormPayload {
   project_id?: string | null
   new_project_name?: string
@@ -314,6 +339,7 @@ export interface ScreeningFormPayload {
   batch_size: number
   target_include_count?: number | null
   stop_when_target_reached: boolean
+  min_include_confidence: number
   allow_uncertain: boolean
   retry_times: number
   request_timeout_seconds: number

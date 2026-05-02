@@ -1,0 +1,40 @@
+{
+    "batch_id": "batch_0002",
+    "results": [
+        {
+            "paper_id": "paper_000011",
+            "decision": "include",
+            "reason": "摘要明确提到使用胡庚申的生态翻译学理论，关键词包含Eco-translatology，符合纳入标准。",
+            "evidence": ["abstract", "keywords"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000012",
+            "decision": "uncertain",
+            "reason": "标题涉及生态翻译，但摘要和关键词缺失，无法确认是否以胡庚申的生态翻译学为核心理论。",
+            "evidence": ["title"],
+            "confidence": 0.45
+        },
+        {
+            "paper_id": "paper_000013",
+            "decision": "exclude",
+            "reason": "摘要显示研究采用生态批评方法，关键词为eco-translation而非Eco-translatology，未涉及胡庚申的生态翻译学理论。",
+            "evidence": ["abstract", "keywords"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000014",
+            "decision": "exclude",
+            "reason": "关键词包含eco-translation，但摘要显示研究聚焦移民、食物和翻译，未提及生态翻译学理论。",
+            "evidence": ["abstract", "keywords"],
+            "confidence": 0.75
+        },
+        {
+            "paper_id": "paper_000015",
+            "decision": "exclude",
+            "reason": "关键词包含eco-translation，但摘要显示研究主要关注素食主义和文化翻译，未涉及生态翻译学核心理论。",
+            "evidence": ["abstract", "keywords"],
+            "confidence": 0.78
+        }
+    ]
+}

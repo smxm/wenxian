@@ -1,0 +1,142 @@
+{
+    "batch_id": "batch_0001",
+    "results": [
+        {
+            "paper_id": "paper_000001",
+            "decision": "exclude",
+            "reason": "标题和摘要显示为兽医临床医学研究，涉及下尿路疾病诊断，明显命中医学影像与临床医学排除标准。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000002",
+            "decision": "uncertain",
+            "reason": "标题和摘要涉及伴侣动物死亡率预测的机器学习模型，但未明确提及猫咪或具体交互场景，信息不足以确认是否满足纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000003",
+            "decision": "include",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及伴侣犬行为识别，使用人工智能技术（TRT-Net）和可穿戴设备，符合研究主题和纳入标准。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.90
+        },
+        {
+            "paper_id": "paper_000004",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦动物园动物福利的AI应用，研究对象为动物园动物而非猫咪或伴侣动物，不符合纳入标准。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000005",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及人类恐惧检测的EEG与AI研究，未提及动物或交互场景，不符合研究主题。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.90
+        },
+        {
+            "paper_id": "paper_000006",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及宠物情感分析，使用深度学习技术和人工智能物联网系统，符合猫咪/宠物交互与AI/XR技术主题。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000007",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及猫咪面部分析的AI应用，包括疼痛识别和品种识别，符合猫咪交互与AI技术主题。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000008",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及猫狗行为识别，使用深度学习方法和可穿戴传感器，符合伴侣动物交互与AI/IoT技术主题。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.91
+        },
+        {
+            "paper_id": "paper_000009",
+            "decision": "exclude",
+            "reason": "标题和摘要显示为犬猫呼吸系统疾病的AI诊断综述，属于兽医临床医学领域，明显命中医学排除标准。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.93
+        },
+        {
+            "paper_id": "paper_000010",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及癫痫医学影像的AI分析，明确提及PET等医学影像，命中医学影像排除标准。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.94
+        },
+        {
+            "paper_id": "paper_000011",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及骨科多模态成像与AI的临床翻译，属于人类医学领域，未提及动物或交互场景。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.89
+        },
+        {
+            "paper_id": "paper_000012",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及癫痫术前定位的多模态定量分析，属于人类神经医学领域，未提及动物或交互场景。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.90
+        },
+        {
+            "paper_id": "paper_000013",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及家猫声音情感识别，使用深度学习网络，符合猫咪交互与AI技术主题。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.93
+        },
+        {
+            "paper_id": "paper_000014",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及猫咪视频疼痛识别，使用AI管道和面部标志，符合猫咪交互与AI技术主题。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000015",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及猫咪疼痛识别的可解释AI，符合猫咪交互与AI技术主题。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.91
+        },
+        {
+            "paper_id": "paper_000016",
+            "decision": "uncertain",
+            "reason": "标题和摘要涉及情感化AI的伦理讨论，提到机器人宠物，但未明确涉及实际动物交互或具体技术应用，信息不足。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.50
+        },
+        {
+            "paper_id": "paper_000017",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及诗歌情感识别的AI应用，研究对象为人类诗歌，未提及动物或交互场景。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000018",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及猫咪疼痛自动识别，比较CNN和几何标志方法，符合猫咪交互与AI技术主题。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.90
+        },
+        {
+            "paper_id": "paper_000019",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及犬类表情识别，使用深度学习方法，符合伴侣动物交互与AI技术主题。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.89
+        },
+        {
+            "paper_id": "paper_000020",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及绵羊疼痛评估的AI与人类专家比较，研究对象为绵羊而非猫咪或伴侣动物，不符合纳入标准。",
+            "evidence": ["

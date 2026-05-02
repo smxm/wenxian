@@ -1,0 +1,322 @@
+TY  - JOUR
+AU  - Esteghamati, M.Z.
+AU  - Kottke, A.R.
+AU  - Rodriguez-Marek, A.
+TI  - A Data-Driven Approach to Evaluate Site Amplification of Ground-Motion Models Using Vector Proxies Derived from Horizontal-to-Vertical Spectral Ratios
+PY  - 2022
+JO  - Bulletin of the Seismological Society of America
+DO  - 10.1785/0120220106
+AB  - This study develops a data-driven framework to improve the prediction of site amplification in ground-motion models (GMM) using horizontal-to-vertical spectral ratios (HVSR) proxies derived from strong-motion data. Three machine learning algorithms (multiple regression, random forest, and support vector machine [SVM]) were implemented in an automated data-driven workflow that included feature selection (filter-based, wrapper-based, and embedded methods), hyperparameter tuning, and cross-validation modules. The site-to-site variability of resultant data-driven models was then compared to a baseline GMM. In addition, sensitivity analysis on framework choices was carried out. The results show that data-driven models with HVSR proxies provide lower site-to-site variability than conventional GMM. The best performing data-driven model (i.e., SVMs) showed an average of 24.1% (and up to 50.8%) lower site-to-site variability than the baseline GMM, where the difference was more significant at lower frequencies. Finally, all feature selection methods favor using a vector of the HVSR spectrum over single-valued HVSR proxies such as peak frequency and amplitude. © Seismological Society of America.
+ER  -
+
+TY  - JOUR
+AU  - Challagulla, S.P.
+AU  - Kontoni, D.-P.N.
+AU  - Suluguru, A.K.
+AU  - Hossain, I.
+AU  - Ramakrishna, U.
+AU  - Jameel, M.
+TI  - Assessing the Seismic Demands on Non-Structural Components Attached to Reinforced Concrete Frames
+PY  - 2023
+JO  - Applied Sciences (Switzerland)
+DO  - 10.3390/app13031817
+AB  - Nonstructural components (NSCs) are the systems that are attached to the floors of a building structure. NSCs have become critical in sustaining post-earthquake functionality while constructing seismic-resilient structures. The seismic behavior of the NSCs primarily depends upon the behavior of the structure to which the NSC is attached. Building structures are subjected to earthquake loads and behave differently when the supporting soil type varies. In light of this, this study investigates the seismic demands on NSC attached to the floors of an elastic-reinforced concrete building frame supported by different soil types. The present study considered a regular building frame and a building frame with mass irregularity on the lower story. A total of 3 sets of 11 horizontal spectral-matched ground motions consistent with each soil type are considered. Floor response spectra (FRS) can be used to measure the seismic load on non-structural components. Primarily, it was found that the ordinates of FRS depend on the floor height, the vibration periods of the building, and the soil type. The presence of mass irregularity at the lower story amplified the floor response at all floor levels. Additionally, the values of floor spectral acceleration increase as soil flexibility increases. The amplification factors are critical for generating the floor response spectra, and their variation along the building height is discussed. The floor acceleration was found to vary non-linearly with the height of the building. Finally, artificial neural networks (ANNs) are employed to develop the prediction models for dynamic amplification factors. The results calculated by the dynamic time history analyses are utilized to validate the proposed prediction models. © 2023 by the authors.
+ER  -
+
+TY  - JOUR
+AU  - Rouzrokh, S.
+AU  - Rajabi, E.
+AU  - Ghodrati Amiri, G.
+TI  - Numerical Investigation of Seismic Performance of Steel Concentrically Braced Frames Subjected to Critical Consecutive Earthquakes
+PY  - 2025
+JO  - Journal of Rehabilitation in Civil Engineering
+DO  - 10.22075/jrce.2025.35507.2179
+AB  - This paper evaluates the effect of critical successive-shocks on the seismic performance of steel concentrically braced frames (CBFs) for significant structural design parameters such as behavior factor(R), displacement amplification factor (Cd), maximum drift and damage index (DI). For this purpose, three CBFs with 3,7and 11-stories are investigated using IDA, nonlinear dynamic analysis (NDA) under recorded critical seismic scenarios with/without successive-shocks and pushover. Results show that the average of R-factors has a 14% reduction rate under successive earthquakes compared with that of individual earthquakes. While Cd is not significantly affected by successive shocks, the occurrence of secondary-shocks increased DI by 1.8 times. In severer cases, the maximum drift is increased by up to 2 times. Finally, the sensitivity of seismic demand parameters to periods, PGA of first and second-shock is also evaluated by training an ideal ANN and proposing the empirical equations. Moreover, the effect of artificial successive shocks is examined on the seismic performance of CBFs. Despite what is necessitated in the seismic design codes, considering a constant value as R-factor for the whole steel structure cannot lead to the proper design of these structures especially under successive scenarios. Also, the use of artificial consecutive earthquakes can cause the inadequate assessment of seismic performance. © 2025 The Authors.
+ER  -
+
+TY  - JOUR
+AU  - Bergamo, P.
+AU  - Hammer, C.
+AU  - Fäh, D.
+TI  - On the relation between empirical amplification and proxies measured at swiss and japanese stations: Systematic regression analysis and neural network prediction of amplification
+PY  - 2021
+JO  - Bulletin of the Seismological Society of America
+DO  - 10.1785/0120200228
+AB  - We address the relation between local amplification and site-condition indicators derived from in situ geophysical surveys for the estimation of the VS profile, and sin-gle-station recordings processed with horizontal-to-vertical spectral ratio technique. Site-condition indicators, or proxies (e.g., VS30), aim at “summarizing” the description of the local geophysical structure, with a focus on its relation to site amplification. The premise for our work was the compilation of two companion databases: one of soil condition proxies and the other of empirically derived Fourier amplification functions, for Swiss and Japanese stations. We investigated the connection between these two datasets, at first, with a systematic set of regressions correlating each proxy to amplification factors within the frequency band 0.5– 20 Hz, second, with a neural network (NN) structure predicting site amplification from proxies. The regression analyses showed that, generally, site-condition parameters (SCPs) bear a better correlation with amplification within 1.7–6.7 Hz; the “best” indicators are the fre-quency-dependent quarter-wavelength (QWL) velocity and, among scalar parameters, VS30, the bedrock depth, and f0 . Collating Swiss and Japanese datasets, the trend of variation of amplification with respect to most proxies is similar. Finally, we evaluated the prediction performance of various combinations of SCPs, for local amplification, using a NN. To attain a database large enough to constrain the estimation of the network parameters, we merged Swiss and Japanese stations into a single training and validation dataset, motivated by the similarities observed in the regression analyses. The outcome we obtained from the NN is encouraging and consistent with the results of the regressions; SCPs with higher correlation to amplification provide a better forecast of the latter (particularly within 1.7–6.7 Hz). More complete input information, such as QWL parameters (velocity, impedance contrast), or extended ensembles of scalar proxies (particularly, including f0 ), offer a better estimation of local amplification. © Seismological Society of America.
+ER  -
+
+TY  - JOUR
+AU  - Geyin, M.
+AU  - Maurer, B.W.
+TI  - U.S. National VS30 Models and Maps Informed by Remote Sensing and Machine Learning
+PY  - 2023
+JO  - Seismological Research Letters
+DO  - 10.1785/0220220181
+AB  - The shear-wave velocity time averaged over the upper 30 m (VS30) is widely used as a proxy for site effects, forms the basis of seismic site class, and underpins site-amplification factors in empirical ground-motion models. Many earthquake simulations, therefore, require VS30. This presents a challenge at regional scale, given the infeasibility of subsurface testing over vast areas. Although various models for predicting VS30 have thus been proposed, the most popular U.S. national, or “background,” model is a regression equation based on just one variable. Given the growth of community data sets, satellite remote sensing, and algorithmic learning, more advanced and accurate solutions may be possible. Toward that end, we develop national VS30 models and maps using field data from over 7000 sites and machine learning (ML), wherein up to 17 geospatial parameters are used to predict subsurface conditions (i.e., VS30). Of the two models developed, that using geologic data performs marginally better, yet such data are not always available. Both models significantly outperform existing solutions in unbiased testing and are used to create new VS30 maps at ∼ 220 m resolution. These maps are updated in the vicinity of field measurements using regression kriging and cover the 50 U.S. states and Puerto Rico. Ultimately, and like any model, performance cannot be known where data is sparse. In this regard, alternative maps that use other models are proposed for steep slopes. More broadly, this study demonstrates the utility of ML for inferring below-ground conditions from geospatial data, a technique that could be applied to other data and objectives. © Seismological Society of America.
+ER  -
+
+TY  - JOUR
+AU  - Pan, D.
+AU  - Miura, H.
+AU  - Kanno, T.
+AU  - Shigefuji, M.
+AU  - Abiru, T.
+TI  - Deep-Neural-Network-Based Estimation of Site Amplification Factor from Microtremor H/V Spectral Ratio
+PY  - 2022
+JO  - Bulletin of the Seismological Society of America
+DO  - 10.1785/0120210300
+AB  - Site amplification factors (SAFs) of S wave at ground surface are crucial for evaluating and predicting seismic ground motions. This study proposed a novel methodology for directly estimating S-wave SAF from microtremor horizontal-to-vertical spectral ratio (MHVR) based on deep neural network (DNN) model. We analyzed site amplifications obtained from generalized spectral inversion technique and microtremor data observed at Kyoshin net and Kiban–Kyoshin network sites in Chugoku district, western Japan. The DNN model was developed using peak frequency and the frequency-dependent relationship between MHVRs and SAFs. The sites were divided into training set, validation set, and test set. The training set and validation set were used in k-fold cross-validation technique to evaluate and select optimal model. Once the optimal model had been determined, the model was employed on the test set that was completely independent of the training and validation set for evaluating the generalization performance. Residuals and root mean square errors between the estimated and observed SAFs were evaluated to discuss the applicability of the proposed model. We also confirmed that the DNN model shows better performance in estimating SAFs com-pared with the existing double empirical correction method. © Seismological Society of America.
+ER  -
+
+TY  - JOUR
+AU  - Lee, Y.-G.
+AU  - Park, D.
+AU  - Kwon, O.-S.
+TI  - Development of a site and motion proxy-based site amplification model for shallow bedrock profiles using machine learning
+PY  - 2025
+JO  - Frontiers in Built Environment
+DO  - 10.3389/fbuil.2025.1597715
+AB  - Accurate prediction of site amplification is crucial for seismic hazard assessment, particularly at shallow bedrock sites where limited data can constrain modeling efforts. Traditional regression-based models often fail to capture complex nonlinear interactions inherent in seismic ground response. This study aims to develop proxy-based linear and nonlinear site amplification models that provide reliable predictions using machine learning (ML) techniques, enabling practical applications in regional ground motion modeling. The outputs of a series of one-dimensional site response analyses were used for training. Three ML algorithms were used: random forest (RF), extreme gradient boosting (XGB), and deep neural network (DNN). The models incorporated four site proxies and two motion proxies to predict site amplification, and their performance was evaluated against both a conventional regression-based model and a rigorous ML model utilizing full shear-wave velocity profiles and input motion spectra. When identical proxies were used, the differences between the regression and ML-based models were not pronounced. However, when the ML model was trained simultaneously with the site and motion proxies for both linear and nonlinear components, the prediction performance was significantly enhanced. This revealed that the traditional two-track approach of the site-proxy-dependent linear component and motion-proxy-conditioned nonlinear component is ineffective. A pairing scheme for site and motion proxies is recommended to achieve the most accurate predictions. Among the three ML methods, the RF algorithm exhibited the weakest performance. The XGB and DNN algorithms’ prediction accuracies were superior to the RF algorithm. The XGB and DNN outperformed each other when predicting the linear and nonlinear components, respectively. The proposed ML models achieved coefficient of determination (R2) values up to 0.97 with root mean square error (RMSE) as low as 0.04 for linear components, and R2 up to 0.92 with RMSE as low as 0.06 for nonlinear components, demonstrating significant improvements over conventional regression-based models. Compared with a rigorous ML model, the proxy-based models exhibited agreeable predictions with far less information, illustrating the benefit of adopting the ML algorithms for improved adaptability and predictive capability. The constraint imposed on the site type, considering only profiles with a bedrock depth of less than 30 m, may have resulted in the strong performance of the proxy-based model. Copyright © 2025 Lee, Park and Kwon.
+ER  -
+
+TY  - JOUR
+AU  - Alfaro-Diaz, R.
+AU  - Kintner, J.
+AU  - Phillips, W.S.
+AU  - Delbridge, B.
+AU  - Carmichael, J.
+TI  - Probabilistic Programming for Transportable Source Characterization and Uncertainty Quantification of the North Korean Nuclear Tests 2006–2017
+PY  - 2025
+JO  - Seismological Research Letters
+DO  - 10.1785/0220240212
+AB  - We introduce a transportable technique to determine the yield and depth of burial (DOB) from seismic source spectra of underground nuclear explosions. We demonstrate this technique on the six declared North Korean nuclear tests. This approach derives source spectra in absolute units from regional phase (Pg) amplitudes by correcting the observations for geometric spreading, attenuation, and site amplification. We couple the source spectra and explosion source models with a probabilistic programming framework that integrates deep learning techniques and Bayesian modeling. This approach permits the exchange of information across various data categories to quantify both the data and model uncertainty. This technique stands out as an innovative use of broad-area propagation models, making it transportable across various geologic settings. This method proves to be effective in scenarios with diverse and/or limited observational data, even when the source depth is unknown. We present new independent estimates of absolute yield and DOB that are consistent with the prior assessments, underscoring the potential of this method in enhancing transportable nuclear explosion monitoring capabilities. © Seismological Society of America.
+ER  -
+
+TY  - JOUR
+AU  - Roten, D.
+AU  - Olsen, K.B.
+TI  - Estimation of site amplification from geotechnical array data using neural networks
+PY  - 2021
+JO  - Bulletin of the Seismological Society of America
+DO  - 10.1785/0120200346
+AB  - We use deep learning to predict surface-to-borehole Fourier amplification functions (AFs) from discretized shear-wave velocity profiles. Specifically, we train a fully connected neural network and a convolutional neural network using mean AFs observed at ∼600 KiK-net vertical array sites. Compared with predictions based on theoretical SH 1D amplifications, the neural network (NN) results in up to 50% reduction of the mean squared log error between predictions and observations at sites not used for training. In the future, NNs may lead to a purely data-driven prediction of site response that is independent of proxies or simplifying assumptions. © Seismological Society of America.
+ER  -
+
+TY  - JOUR
+AU  - Kalakonas, P.
+AU  - Silva, V.
+TI  - Earthquake scenarios for building portfolios using artificial neural networks: part I—ground motion modelling
+PY  - 2024
+JO  - Bulletin of Earthquake Engineering
+DO  - 10.1007/s10518-022-01598-3
+AB  - The calculation of the spatial distribution of ground motion is one of the most important steps in earthquake scenarios. The advancements in machine learning algorithms and the release of new ground motion data can enable improvements in the reliability and accuracy of this component. We developed an artificial neural network (ANN) ground motion model using a compiled database from two subsets with measured Vs30 from the Pan-European strong motion database and the NGA-West2 database. The ANN model employs five input parameters: moment magnitude (Mw), hypocentral depth, Joyner–Boore distance (Rjb), shear wave velocity in the top 30 m (Vs30), and faulting type. The outputs of the ANN are the RotD50 horizontal components of common intensity measures used in seismic risk assessment: PGA, PGD, PGV, Arias Intensity, and 5% damped spectral acceleration at 27 periods from 0.01 to 4.0 s. A mixed-effects modelling approach was followed to train the ANN and partition the ground motion variability into between-event and between-site terms. The input parameter scaling relationships were studied and demonstrated physically sound trends of the ground motion with respect to Mw scaling, distance attenuation, and site amplification. The predicted median response spectra for several combinations of Mw and Rjb were compared to common ground motion models for Europe, and the results are discussed. The developed ANN is used in a companion study to calculate the hazard footprints for several historical earthquakes in the Balkan region. © The Author(s), under exclusive licence to Springer Nature B.V. 2022.
+ER  -
+
+TY  - JOUR
+AU  - Zor, E.
+AU  - Peng, Z.
+AU  - Ergin, M.
+AU  - Sandvol, E.
+AU  - Sevim, F.
+AU  - Tapırdamaz, M.C.
+AU  - Mach, P.
+AU  - Yalvaç, O.
+AU  - Tarancıoğlu, A.
+AU  - Koşma, M.K.
+AU  - Adeboboye, O.
+AU  - Ding, C.
+AU  - Açıkgöz, C.
+AU  - Büyük, E.
+TI  - Dense Seismic Recordings of the 2023 Kahramanmaraş Earthquake Sequence in Southeastern Türkiye
+PY  - 2025
+JO  - Seismological Research Letters
+DO  - 10.1785/0220240152
+AB  - The devastating 6 February 2023 Kahramanmaraş earthquake sequence in southeastern Türkiye started with a moment magnitude (Mw) 7.8 earthquake, for which the initial rupture broke the Sakçagöz segment near Nurdağı and then jumped into a bilateral rupture along multiple segments of the Eastern Anatolian fault zone (EAFZ). This complicated rupture was followed nine hours later by an Mw 7.6 event near Ekinözü. To better understand the spatiotemporal evolution of aftershocks, site amplification, and the structural and tectonic framework of the EAFZ in this diffuse triple junction, we deployed a dense seismometer array covering both aftershock zones for nearly four months. The main Eastern Anatolian Seismic Temporary (EAST) array includes 125 nodal, 10 broadband, and 6 strong-motion seismic stations distributed around the rupture zone. An additional linear array of 73 nodal stations was also installed across the Pazarcık segment of the EAFZ and the Sakçagöz segment near the Mw 7.8 epicenter to record fault-zone waves for ∼30 days. This article shows example recordings and the EAST array geometry, preliminary research results, and the metadata related to all of the stations in this array. A deep-learning-based phase picking for one month of continuous recording yielded millions of seismic phase readings and tens of thousands of aftershock locations after phase associations. We also give examples of both local and teleseismic waveforms recorded by the nodal arrays, which can be used for subsequent high-resolution earthquake relocation, imaging of crustal structures, and fault-zone imaging. © Seismological Society of America.
+ER  -
+
+TY  - JOUR
+AU  - Jena, R.
+AU  - Pradhan, B.
+AU  - Beydoun, G.
+AU  - Alamri, A.
+AU  - Shanableh, A.
+TI  - Spatial earthquake vulnerability assessment by using multi-criteria decision making and probabilistic neural network techniques in Odisha, India
+PY  - 2022
+JO  - Geocarto International
+DO  - 10.1080/10106049.2021.1992023
+AB  - In this study, the multi-criteria decision-making method was used to estimate the weights of several input factors such as slope, curvature, elevation, proximity to road, road density, proximity to land use, land use density, proximity to water bodies, river density, rail density, distance from rail, groundwater variation, lithology with amplification factors, peak ground acceleration (PGA) variation, and population density. An integrated analytic hierarchy process (AHP) and a probabilistic neural network (PNN) were applied for the Earthquake vulnerability assessment (EVA). The PNN model successfully explored the relationship between variables and weights obtained from the AHP approach. Validation results indicate that 92.5% accuracy was attained by the PNN model. According to the results, 24.26%, 15.26%, and 20.58% of the area fall under very-high, high, and moderate vulnerability category, respectively. The EVA map illustrates that high to very-high impact could be observed in coastal Odisha and few districts in the Mahanadi Graven. © 2021 Informa UK Limited, trading as Taylor & Francis Group.
+ER  -
+
+TY  - JOUR
+AU  - Wei, X.
+AU  - Fu, B.
+AU  - Wu, W.
+AU  - Liu, X.
+TI  - Effects of Vertical Ground Motion on Pedestrian-Induced Vibrations of Footbridges: Numerical Analysis and Machine Learning-Based Prediction
+PY  - 2022
+JO  - Buildings
+DO  - 10.3390/buildings12122138
+AB  - Current codes and guidelines for the dynamic design of footbridges often only specify the pedestrian-induced excitations. However, earthquakes may occur during the passing stage of pedestrians in earthquake-prone regions. In addition, modern footbridges tend to be slender and are sensitive to vertical ground motions. Therefore, we investigate the effects of vertical ground motion on pedestrian-induced vibrations of footbridges. A total of 138 footbridges with different materials, dimensions, and structural types are considered as the target structures. The classical social force model combined with the pedestrian-induced load is used to simulate crowd loads for the scenarios with six typical pedestrian densities. Furthermore, 59 vertical ground motions with four seismic intensities are taken as the seismic inputs. An amplification factor is introduced to quantify the amplification effects of vertical ground motion on human-induced vibrations of footbridges. Four machine learning (ML) algorithms are used to predict the amplification factor. The feature importance indicates that the scaled peak ground acceleration, the pedestrian density, and the bridge span are the three most important parameters influencing the amplification factor. Finally, the vibration serviceability of the footbridge subjected to both crowd load and vertical ground motion is assessed. © 2022 by the authors.
+ER  -
+
+TY  - JOUR
+AU  - Ji, K.
+AU  - Ren, Y.
+AU  - Zhu, C.
+AU  - Zhang, Y.
+AU  - Yao, X.
+AU  - Wang, D.
+AU  - Zhang, P.
+AU  - Si, H.
+AU  - Kishida, T.
+AU  - Liu, Y.
+AU  - Yaghmaei-Sabegh, S.
+AU  - Wen, R.
+TI  - Site database for national strong motion stations in mainland China
+PY  - 2024
+JO  - Engineering Geology
+DO  - 10.1016/j.enggeo.2024.107651
+AB  - Ground motion amplification and spectral content are significantly influenced by local soil and geological conditions. This article summarizes the development of the China Site Database (CNSDB) in the China Ground Motion Flatfile project. CNSDB contains site information for 1450 strong-motion recording stations within the National Strong Motion Observation Network System (NSMONS) in China. The primary site information in CNSDB includes the time-averaged shear-wave velocity in the upper 30 m (VS30), and site class according to the seismic design code in China. These site data are derived using different methods from various data sources. Priority is given to approaches that minimize bias and dispersion relative to measurement-based results. Recommended VS30 values and site class are derived from reliable velocity profiles or field survey results whenever available. A China-specific VS30 extrapolation model is developed using 6179 engineering boreholes and is then utilized to estimate VS30 for profiles <30 m. VS30 values and site class are estimated from horizontal-to-vertical spectral ratio (HVSR) curves of earthquake recordings using machine-learning techniques. For the remaining sites without velocity profiles or sufficient ground-motion recordings for HVSR computation, VS30 values are determined as the weighted average of proxy-based estimates using geological attributes, topographic slope, and terrain categories. We also discuss the potential application of CNSDB in the development of China seismic hazard map considering site amplification factors. © 2024
+ER  -
+
+TY  - JOUR
+AU  - Gong, W.
+AU  - Zekkos, D.
+AU  - Clark, M.
+TI  - A physics-based machine learning-informed model for predicting regional earthquake-induced landslides
+PY  - 2026
+JO  - Engineering Geology
+DO  - 10.1016/j.enggeo.2025.108488
+AB  - Reduced complexity physical models are commonly applied to regional earthquake-triggered landslide events because they are computationally efficient and can reproduce observed landsliding patterns with relatively few input parameters. However, a major shortcoming of existing physical models is the overprediction of slope failure arising from the implementation of seismic displacement models that depend on a single critical slope angle. Such models predict that all slopes steeper than the critical slope angle will fail, in contrast to observational data that indicate that only a certain portion do. High-resolution input of spatially variable ground conditions and strength parameters and consideration of topographic amplification would likely reduce overprediction, but these approaches are considered prohibitively expensive at present. In this study, we explore the opportunity to improve the prediction of regional earthquake-induced landslides obtained from physics-based models by applying a computationally efficient machine learning (ML) algorithm to classify the model results. A pseudo-three-dimensional (pseudo-3D) physics-based methodology is used to predict the landslides caused by the 2015 Mw 6.5 Lefkada earthquake and the prediction has broad geospatial overlap with observed landslides and high landslide density areas, however the model also overpredicts landslide occurrence. Classifying the results of the physics-based model using the XGBoost ML algorithm is found to enhance regional earthquake-induced landslide prediction by establishing objective criteria for eliminating false predictions from the physics-based model. The ML model considers five training features, i.e., landslide volume, calculated ratio of three-dimensional (3D) factor of safety (FS) to one-dimensional (1D) FS, slope aspect, elevation, and topographic roughness. Incorporation of these features results in a 45% reduction in the total number of predicted landslides originally predicted by the physics-based method. However, application of the ML algorithm also reduces true positive rate, underscoring the need to fairly assess the tradeoffs between true- and false-predictions in landslide hazard forecasting. © 2025 Elsevier B.V.
+ER  -
+
+TY  - JOUR
+AU  - Wandji Zoumb, P.A.
+AU  - Li, X.
+TI  - Influence of earthquake-induced hydrodynamic pressure on train-bridge interactions based on back-propagation neural network
+PY  - 2022
+JO  - Advances in Structural Engineering
+DO  - 10.1177/13694332211067831
+AB  - Forecasting the behavior of the train-bridge system under strong waves is crucial in designing the cross-sea bridge. However, the influence of earthquake-induced hydrodynamic pressure on the dynamic system may be significant and need to be adequately understood. This study investigates the influence of earthquake-induced hydrodynamic force on the stochastic responses of the train-bridge interaction using the Newmark-β method. A surrogate model named back-propagation neural network is implemented by correlating wave samples with the stochastic responses of the train-bridge system. Such a model improves computation efficiency and avoids further time-step integration. The Pintan’s bridge, located in China’s Eastern Region, is selected as a case study. The results show that the earthquake-induced hydrodynamic force involves significant responses of the train-bridge system. Moreover, the maximum dynamic amplification factor of the deck and the pier are 6% and 12.5%, respectively. Finally, a significant value of the peak period minimizes the effect of the earthquake-induced hydrodynamic responses on the train-bridge system. © The Author(s) 2022.
+ER  -
+
+TY  - JOUR
+AU  - Bergamo, P.
+AU  - Hammer, C.
+AU  - Fäh, D.
+TI  - Correspondence between Site Amplification and Topographical, Geological Parameters: Collation of Data from Swiss and Japanese Stations, and Neural Networks-Based Prediction of Local Response
+PY  - 2022
+JO  - Bulletin of the Seismological Society of America
+DO  - 10.1785/0120210225
+AB  - We address the relation between seismic local amplification and topographical and geological indicators describing the site morphology. We focus on parameters that can be derived from layers of diffuse information (e.g., digital elevation models, geological maps) and do not require in situ surveys; we term these parameters as “indirect” proxies, as opposed to “direct” indicators (e.g., f0, VS30 ) derived from field measurements. We first compiled an extensive database of indirect parameters covering 142 and 637 instrumented sites in Switzerland and Japan, respectively; we collected topographical indicators at various spatial extents and focused on shared features in the geological descriptions of the two countries. We paired this proxy database with a companion dataset of site amplification factors at 10 frequencies within 0.5–20 Hz, empirically measured at the same Swiss and Japanese stations. We then assessed the robustness of the correlation between individual site-condition indicators and local response by means of statistical analyses; we also compared the proxy-site amplification relations at Swiss versus Japanese sites. Finally, we tested the prediction of site amplification by feeding ensembles of indirect parameters to a neural network (NN) structure. The main results are: (1) indirect indicators show higher correlation with site amplification in the low-frequency range (0.5–3.33 Hz); (2) topographical parameters primarily relate to local response not because of topographical amplification effects but because topographical features correspond to the properties of the subsurface, hence to stratigraphic amplification; (3) large-scale topographical indicators relate to low-frequency response, smaller-scale to higher-frequency response; (4) site amplification versus indirect proxy relations show a more marked regional variability when compared with direct indicators; and (5) the NN-based prediction of site response is the best achieved in the 1.67–5 Hz band, with both geological and topographical proxies provided as input; topographical indicators alone perform better than geological parameters. © Seismological Society of America.
+ER  -
+
+TY  - JOUR
+AU  - Stambouli, A.B.
+AU  - Zendagui, D.
+AU  - Bard, P.-Y.
+AU  - Dif, H.
+TI  - Influence of site parameters on fourier amplification application for 1d linear viscoelastic method
+PY  - 2021
+JO  - Periodica Polytechnica Civil Engineering
+DO  - 10.3311/ppci.12601
+AB  - We focus on the effect of site parameters, also called site proxies, on the variation of the amplification factor. This latter, named Fourier Amplification Factor (FAF) is defined as the ratio of the Fourier transform of the seismic motion at surface and at bedrock. For this study, the wave propagation theory is used limited to 1D linear viscoelastic domain. At this effect, a set of FAF, is established for a set of 858 real profiles. From there, the site parameters are also derived, it is necessary to mention that the FAF can be computed in independent manner of seismic signals which it is applicable only on linear domain. In Nuclear Power Industry application, the FAF is mostly used and can be approximated by limited number of site proxies. As the usual code practice implies a lower number of site proxies (generally 1, sometimes 2) as UBC97 or EC8, a sensitivity analysis is conducted to identify the "best performing" site parameters. The results show that by far, using the six site proxies lead to a better prediction of FAF. However if we have to use one single site parameter, results show that the best one is the overall resonance frequency (f0). In the case when we intend to use two site parameters built from the average shear wave velocity over the upper 30 m (Vs30) and the resonance frequency (f0) which are preferred and give an important variance reduction superior than 61%. In the result, a new formula has been established. © 2021, Budapest University of Technology and Economics. All rights reserved.
+ER  -
+
+TY  - JOUR
+AU  - Singhai, K.
+AU  - Tiwari, N.
+TI  - A state-of-the-art review on earthquake soil-structure interaction including dynamic cross interaction (DCI) and site city interactions (SCI)
+PY  - 2024
+JO  - Earthquake and Structures
+DO  - 10.12989/eas.2024.27.5.361
+AB  - Earthquake soil-structure interaction (ESSI) is the dynamic interaction between seismic waves, soil layers underlying structures, and the structures themselves during earthquakes, which affects the structures' response. This relationship impacts foundation behaviour, soil amplification, energy dissipation, nonlinear effects, resonance phenomena, and earthquake design considerations. Comprehending ESSI is crucial for evaluating structural performance, creating resilient structures and executing efficient seismic retrofitting procedures in earthquake-prone areas. Present seismic standards do not account for interbuilding dynamic interactions through the soil, and hence the associated seismic risk is ignored. However, due to recent population growth in cities and rising land costs, there has been a rise in city building surface density, resulting in buildings being more closely spaced. The seismic analysis of a city with high building surface density is very complex due to detailed requirement material and geometrical properties of historical as well as present structures. The construction of new building adjacent to preexisting building can either reduce or increase its structural response. This phenomenon of dynamic interaction between existing and newly built buildings is known as dynamic cross interaction (DCI) whereas site-city interactions (SCI) describe the effects of a group of structures on the overall seismic response of the site or city. This study covers the entire literature review of the pioneer findings in the field of ESSI considering different types of structures, mitigation techniques, ESSI modelling techniques, comparison between experimental and numerical techniques for earthquake analysis and latest concepts related to ESSI, DCI and SCI further the research gaps and future scope is also discussed. © 2024 Techno-Press, Ltd.
+ER  -
+
+TY  - JOUR
+AU  - Bhavani, B.D.
+AU  - Challagulla, S.P.
+AU  - Noroozinejad Farsangi, E.
+AU  - Hossain, I.
+AU  - Manne, M.
+TI  - Enhancing seismic design of non-structural components implementing artificial intelligence approach: Predicting component dynamic amplification factors
+PY  - 2023
+JO  - International Journal of Engineering, Transactions B: Applications
+DO  - 10.5829/ije.2023.36.07a.02
+AB  - The seismic performance of non-structural components (NSCs) has been the focus of intensive study during the last few decades. Modern building codes define design forces on components using too simple relationships. The component accelerates faster than the floor acceleration to which it is connected. Therefore, component dynamic amplification factors (CDAFs) are calculated in this work to quantify the amplification in the acceleration of NSCs for the various damping ratios and tuning ratios of the NSC, and the primary structural periods. From the analysis results, it was observed that CDAF peaks are either underestimated or overestimated by the code-based formulae. A prediction model to ascertain the CDAFs was also developed using artificial neural networks (ANNs). Following that, the suggested model is contrasted with the established relationships from the past research. The ANN model's coefficient of correlation (R) was 0.97. Hence, using an ANN algorithm reduces the necessity of laborious and complex analysis. ©2023 The author(s).
+ER  -
+
+TY  - JOUR
+AU  - Kontoni, D.-P.N.
+AU  - Savvides, A.-A.
+AU  - Tsotoulidi, V.
+AU  - Michalopoulou, E.
+TI  - Prediction of structural failure in single-story frame buildings under dynamic horizontal loading using Feed-Forward Neural Networks
+PY  - 2026
+JO  - Research on Engineering Structures and Materials
+DO  - 10.17515/resm2025-950st0606rs
+AB  - In the presence of the evolution of computational mechanics and machine learning sciences, the formulation of estimation tools is of significant importance. In this article, the construction of Feed-Forward Neural Networks is presented for the estimation of failure load, failure time, and corresponding peak structure displacements, velocities and accelerations. The dataset was obtained from the computational nonlinear dynamic failure of a single-story building. It has been demonstrated that the supervised learning procedure has converged rapidly, at 4 epochs, and with a small mean squared error, namely about 1%. Moreover, the correlation between the outputs and targets of all subsets of the initial dataset vector is very strong. Following the model’s reliability, it has been proven that the presence of resonance is making significant amplifications to the response of the structure, in the order of magnitude of the theoretical value of the dynamic amplification factor of 10 for sinusoidal waves. Ultimately, the formulated Networks comply with the physical constraints and are reliable for estimations that will assist in to design of earthquake-resistant infrastructures. © 2026 MIM Research Group. All rights reserved.
+ER  -
+
+TY  - JOUR
+AU  - Latif, I.
+AU  - Surana, M.
+AU  - Banerjee, A.
+TI  - Investigating in-structure acceleration amplification factor of RC frames using explainable artificial intelligence
+PY  - 2025
+JO  - Structures
+DO  - 10.1016/j.istruc.2025.109592
+AB  - The in-structure acceleration amplification factor (IAAF) plays an important role in designing the connections of secondary systems with the buildings. The methodology to obtain this factor is computationally complex and inadequately understood due to its dependence on material, ground motion, and structural characteristics. Here, we address this challenge by proposing a novel machine learning (ML) based methodology to predict the IAAF and explainable artificial intelligence to understand its dependence on the input parameters. We generated 50 unique sets of material properties through Latin hypercube sampling, corresponding to each of 4-, 8-, and 12-storey reinforced-concrete buildings to create a diverse dataset. The developed set of buildings was analyzed using a suite of 30 pulse-type ground motions to obtain the IAAF at different levels of inelasticity (ductility demands) in the buildings. The ML models trained on this diverse dataset to predict the IAAF achieved R2, RMSE, and MAE of 0.96, 0.19, and 0.11, respectively, on the unseen test set. The model predictions were interpreted through a game theory-based approach of SHAP analysis, which revealed that structural and ground motion characteristics exhibited greater influence on the IAAF than material characteristics. It was also identified that the three most influential structural characteristics were relative floor level, strength ratio, and fundamental period of the building. Further, the influential ground motion characteristics comprise peak ground acceleration, peak ground velocity, and pulse period. The unconfined compressive strain and strength of concrete and the yield strength of steel are the three most important material parameters governing the IAAF predictions. Finally, an interactive dashboard was developed that allows users to obtain the predictions using the trained model and compare it with the values obtained using major building codes (ASCE 7–22, EC8, and IS 16700). © 2025 Institution of Structural Engineers
+ER  -
+
+TY  - JOUR
+AU  - Hayashi, K.
+AU  - Suzuki, T.
+AU  - Inazaki, T.
+AU  - Konishi, C.
+AU  - Suzuki, H.
+AU  - Matsuyama, H.
+TI  - Estimating S-wave velocity profiles from horizontal-to-vertical spectral ratios based on deep learning
+PY  - 2024
+JO  - Soils and Foundations
+DO  - 10.1016/j.sandf.2024.101525
+AB  - S-wave velocity (Vs) profile or time averaged Vs to 30 m depth (VS30) is indispensable information to estimate the local site amplification of ground motion from earthquakes. We use a horizontal-to-vertical spectral ratio (H/V) of seismic ambient noise to estimate the Vs profiles or VS30. The measurement of H/V is easier, compared to active surface wave methods (MASW) or microtremor array measurements (MAM). The inversion of H/V is non-unique and it is impossible to obtain unique Vs profiles. We apply deep learning to estimate the Vs profile from H/V together with other information including site coordinates, deep bedrock depths, and geomorphological classification. The pairs of H/V spectra (input layer) and Vs profiles (output layer) are used as training data. An input layer consists of an observed H/V spectrum, site coordinates, deep bedrock depths, and geomorphological classification, and an output layer is a velocity profile. We applied the method to the South Kanto Plain, Japan. We measured MASW, MAM and H/V at approximately 2300 sites. The pairs of H/V spectrum together with their coordinates, geomorphological classification etc. and Vs profile obtained from the inversion of dispersion curve and H/V, compose the training data. A trained neural network predicts Vs profiles from the observed H/V spectra with other information. Predicted Vs profiles and their VS30 are reasonably consistent with true Vs profiles and their VS30. The results implied that the deep learning could estimate Vs profile from H/V together with other information. © 2024
+ER  -
+
+TY  - JOUR
+AU  - Li, Z.
+AU  - Zhang, X.
+AU  - Zuo, H.
+AU  - Shang, Q.
+AU  - Sun, G.
+AU  - Huai, W.
+AU  - Wang, T.
+TI  - Shaking table tests of double-layer micro-module data center: Structural responses and numerical simulation
+PY  - 2025
+JO  - Engineering Structures
+DO  - 10.1016/j.engstruct.2025.120272
+AB  - Data centers are critical infrastructures that run large-scale Internet-based services such as the Internet of Things, cloud computing, and artificial intelligence. To accommodate the requirements on computing power, more and more data centers are being built all over the world including at high seismic intensity areas. However, the seismic performance of data centers, especially the newly developed micro-module data centers are still unknown. In this paper, triaxial shaking table tests on a double-layer micro-module data center model were conducted. The major components of the tested model, including the supporting steel frame structure and inside cabinet equipment, instrumentation, and loading protocols are described in detail. The effects of inside cabinet equipment on seismic performance of the data center were directed considered by installing these equipment in the data center model. The seismic damage and dynamic characteristics of the supporting steel frame were evaluated and explained in terms of the natural frequency, acceleration, dynamic amplification factor, and deformation responses. A finite element model was developed and validated for prediction the seismic responses of the tested data center model. © 2025 Elsevier Ltd
+ER  -
+
+TY  - JOUR
+AU  - Arab, O.
+AU  - Mekouar, S.
+AU  - Mastere, M.
+AU  - Cabieces, R.
+AU  - Collantes, D.R.
+TI  - Improved Liquefaction Hazard Assessment via Deep Feature Extraction and Stacked Ensemble Learning on Microtremor Data
+PY  - 2025
+JO  - Applied Sciences (Switzerland)
+DO  - 10.3390/app15126614
+AB  - The reduction in disaster risk in urban regions due to natural hazards (e.g., earthquakes, landslides, floods, and tropical cyclones) is primarily a development matter that must be treated within the scope of a broader urban development framework. Natural hazard assessment is one of the turning points in mitigating disaster risk, which typically contributes to stronger urban resilience and more sustainable urban development. Regarding this challenge, our research proposes a new approach in the signal processing chain and feature extraction from microtremor data that focuses mainly on the Horizontal-to-Vertical Spectral Ratio (HVSR) so as to assess liquefaction potential as a natural hazard using AI. The key raw seismic features of site amplification and resonance are extracted from the data via bandpass filtering, Fourier Transformation (FT), the calculation of the HVSR, and smoothing through the use of moving averages. The main novelty is the integration of machine learning, particularly stacked ensemble learning, for liquefaction potential classification from imbalanced seismic datasets. For this approach, several models are used to consider class imbalance, enhancing classification performance and offering better insight into liquefaction risk based on microtremor data. Then, the paper proposes a liquefaction detection method based on deep learning with an autoencoder and stacked classifiers. The autoencoder compresses data into the latent space, underlining the liquefaction features classified by the multi-layer perceptron (MLP) classifier and eXtreme Gradient Boosting (XGB) classifier, and the meta-model combines these outputs to put special emphasis on rare liquefaction events. This proposed methodology improved the detection of an imbalanced dataset, although challenges remain in both interpretability and computational complexity. We created a synthetic dataset of 1000 samples using realistic feature ranges that mimic the Rif data region to test model performance and conduct sensitivity analysis. Key seismic and geotechnical variables were included, confirming the amplification factor (Af) and seismic vulnerability index ((Formula presented.)) as dominant predictors and supporting model generalizability in data-scarce regions. Our proposed method for liquefaction potential classification achieves 100% classification accuracy, 100% precision, and 100% recall, providing a new baseline. Compared to existing models such as XGB and MLP, the proposed model performs better in all metrics. This new approach could become a critical component in assessing liquefaction hazard, contributing to disaster mitigation and urban planning. © 2025 by the authors.
+ER  -
+
+TY  - JOUR
+AU  - Sedaghati, F.
+AU  - Pezeshk, S.
+TI  - Machine learning–based ground motion models for shallow crustal earthquakes in active tectonic regions
+PY  - 2023
+JO  - Earthquake Spectra
+DO  - 10.1177/87552930231191759
+AB  - Data-driven ground motion models (GMMs) for the average horizontal component from shallow crustal continental earthquakes in active tectonic regions are derived using a subset of the Next Generation Attenuation (NGA)-West2 data set, including 14,518 recordings out of 285 earthquakes recorded at 2347 different stations. We use four different nonparametric supervised machine learning (ML) algorithms including Artificial Neural Network (ANN), Kernel-Ridge Regressor (KRR), Random Forest Regressor (RFR), and Support Vector Regressor (SVR) to construct four individual models. Then, we use a weighted average ensemble approach to combine these four models into a robust model to predict various ground motion intensity measures such as peak ground displacement (PGD), peak ground velocity (PGV), peak ground acceleration (PGA), and 5%-damped pseudo-spectral acceleration (PSA). The model input parameters are moment magnitude, rupture distance, VS30, and ZTOR. The ensemble modeling attempts to remove the drawbacks or deficiencies of different ML algorithms while capturing their advantages and accounts for epistemic uncertainty. Although no functional form is provided, the model can capture salient features observed in ground motions such as saturation as well as geometrical spreading, anelastic attenuation, and nonlinear site amplification. The response spectra and the magnitude, distance, VS30, and ZTOR scaling trends are consistent and comparable with the NGA-West2 GMMs including several additional input parameters. We used a mixed-effects regression analysis to split the total aleatory uncertainty into between-event, within-station, and event-site–corrected components. The model is applicable to magnitudes from 3.0 to 8.0, rupture distances up to 300 km, and spectral periods of 0 to 10 s. © The Author(s) 2023.
+ER  -

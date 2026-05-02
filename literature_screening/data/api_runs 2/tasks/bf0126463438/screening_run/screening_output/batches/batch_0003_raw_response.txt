@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0003",
+    "results": [
+        {
+            "paper_id": "paper_000021",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论炭疽病，未涉及职业性辐射暴露或肠道健康。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000022",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论放射肿瘤学临床实践分析，未涉及职业性辐射暴露对肠道健康的影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000023",
+            "decision": "exclude",
+            "reason": "摘要提到内镜操作中的辐射暴露，但未明确涉及职业性暴露或肠道健康结局。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000024",
+            "decision": "include",
+            "reason": "标题和摘要明确研究电离辐射对大鼠肠道潘氏细胞的影响，涉及氧化应激和凋亡，符合职业性暴露模拟和肠道健康结局。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000025",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论矽肺和系统性硬化症，未涉及辐射暴露或肠道健康。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000026",
+            "decision": "exclude",
+            "reason": "摘要提到前列腺癌放疗后的肠道问题，但涉及大剂量急性暴露，不符合职业性低剂量暴露特征。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000027",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论慢性肠假性梗阻和肠动力障碍的诊断管理，未涉及辐射暴露。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000028",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论儿童肠道重复畸形的超声诊断，未涉及辐射暴露或肠道健康影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000029",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论心脏移植后胆囊穿孔，未涉及辐射暴露或肠道健康。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000030",
+            "decision": "uncertain",
+            "reason": "摘要提到核医学中放射性药物的使用和职业辐射剂量，但未明确涉及肠道健康结局，信息不足。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        }
+    ]
+}

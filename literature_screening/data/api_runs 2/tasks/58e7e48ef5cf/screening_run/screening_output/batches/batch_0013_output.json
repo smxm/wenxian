@@ -1,0 +1,105 @@
+{
+  "batch_id": "batch_0013",
+  "results": [
+    {
+      "paper_id": "paper_000121",
+      "decision": "exclude",
+      "reason": "标题和摘要涉及金融领域的风险对冲（risk-hedging），严格排除金融经济领域的hedging。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000122",
+      "decision": "exclude",
+      "reason": "标题和摘要涉及金融投资组合的动态对冲（dynamic hedging），严格排除金融经济领域的hedging。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000123",
+      "decision": "exclude",
+      "reason": "标题和摘要涉及金融期权定价和对冲（hedging），严格排除金融经济领域的hedging。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000124",
+      "decision": "include",
+      "reason": "标题和摘要明确分析数学建模竞赛论文中的元话语（metadiscourse），包括hedges等标记，属于STEM学术写作的语用分析。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000125",
+      "decision": "include",
+      "reason": "标题和摘要分析工程学士学位论文中的元话语标记，属于理工科学术写作的语用分析。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000126",
+      "decision": "include",
+      "reason": "标题和摘要比较机械与电气工程研究论文中的互动元话语标记，属于STEM学术写作的语用对比分析。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000127",
+      "decision": "exclude",
+      "reason": "标题和摘要涉及金融资产的对冲（hedging）和定价，严格排除金融经济领域的hedging。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000128",
+      "decision": "exclude",
+      "reason": "标题和摘要涉及乙醇生产的对冲策略（hedging strategy），严格排除金融经济领域的hedging。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000129",
+      "decision": "exclude",
+      "reason": "标题和摘要涉及供应链管理中的规范模糊性（specification vagueness），属于商业运营分析，非学术写作语用研究。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000130",
+      "decision": "exclude",
+      "reason": "标题和摘要涉及自然语言处理中的语义模糊性（semantic vagueness），属于计算机算法应用，严格排除模糊逻辑相关研究。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    }
+  ]
+}

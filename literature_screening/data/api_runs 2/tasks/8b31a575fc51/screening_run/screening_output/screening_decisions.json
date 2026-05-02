@@ -1,0 +1,638 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确研究硬科学和软科学学术写作中模糊语（hedges）的使用及功能对比，符合主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:31:25.941221+08:00"
+  },
+  {
+    "paper_id": "paper_000002",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要提到元话语分析，但未明确提及模糊语（hedging），且研究对象为学术演讲而非写作，信息不足以判断是否满足纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:31:25.941221+08:00"
+  },
+  {
+    "paper_id": "paper_000003",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要提到元话语分析，但未明确提及模糊语（hedging），且研究对象为ESL学习者作文，是否属于严格学术写作语境信息不足。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:31:25.941221+08:00"
+  },
+  {
+    "paper_id": "paper_000004",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确研究学术写作摘要中模糊语（hedge words）的使用及跨学科对比，符合主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:31:25.941221+08:00"
+  },
+  {
+    "paper_id": "paper_000005",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确研究硬科学（工程学）和软科学（语言学）学术写作中模糊语（hedging）的词汇实现及跨学科对比，符合主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.92,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:31:25.941221+08:00"
+  },
+  {
+    "paper_id": "paper_000006",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要提到元话语分析，但研究对象为EMI讲座（口语），是否属于学术写作语境信息不足，且未明确提及模糊语（hedging）。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.45,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:31:25.941221+08:00"
+  },
+  {
+    "paper_id": "paper_000007",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要仅探讨例证和重述策略，未提及模糊语（hedging）或相关概念，不符合研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:31:25.941221+08:00"
+  },
+  {
+    "paper_id": "paper_000008",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确研究科学话语中模糊语（hedging）的使用及语用分析，符合主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:31:25.941221+08:00"
+  },
+  {
+    "paper_id": "paper_000009",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确研究科学文章中模糊语（hedges）的功能分析，符合主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.87,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:31:25.941221+08:00"
+  },
+  {
+    "paper_id": "paper_000010",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确研究语言学与地理学学术写作中模糊语（hedging）的使用及跨语言对比，符合主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:31:25.941221+08:00"
+  },
+  {
+    "paper_id": "paper_000011",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "标题和摘要探讨技术写作中的元话语，但未明确提及模糊语或语用分析，相关性不明确。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:31:49.183381+08:00"
+  },
+  {
+    "paper_id": "paper_000012",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "分析科学播客的修辞和互动元话语，属于非学术语境（播客媒体），不符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:31:49.183381+08:00"
+  },
+  {
+    "paper_id": "paper_000013",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "探讨精神病学分类中的语义模糊性，属于哲学和精神病学领域，非理工科学术写作分析。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:31:49.183381+08:00"
+  },
+  {
+    "paper_id": "paper_000014",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确分析数学建模竞赛报告中的元话语历时变化，包括模糊语使用，属于STEM学术写作语用分析。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:31:49.183381+08:00"
+  },
+  {
+    "paper_id": "paper_000015",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "分析工程、医学和语言学数字期刊中的多模态元话语，涉及STEM领域但未明确提及模糊语或语用功能。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal"
+    ],
+    "confidence": 0.6,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:31:49.183381+08:00"
+  },
+  {
+    "paper_id": "paper_000016",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要分析系统工程理论中的模糊性，属于计算机/控制系统中的“模糊逻辑/控制”范畴，明确命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:31:49.183381+08:00"
+  },
+  {
+    "paper_id": "paper_000017",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "分析工程学生反思中的元话语变化，涉及STEM写作但未明确提及模糊语或语用分析，信息不足。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:31:49.183381+08:00"
+  },
+  {
+    "paper_id": "paper_000018",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "摘要明确对比工程和人文学科本科论文中的模糊语和增强语使用，属于STEM学术写作的语用对比分析。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:31:49.183381+08:00"
+  },
+  {
+    "paper_id": "paper_000019",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题为“碳对冲”，属于金融经济领域的“对冲”，明确命中排除标准；摘要缺失无法提供反证。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:31:49.183381+08:00"
+  },
+  {
+    "paper_id": "paper_000020",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要探讨金融交易中的状态依赖对冲策略，属于金融经济领域的“对冲”，明确命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:31:49.183381+08:00"
+  },
+  {
+    "paper_id": "paper_000021",
+    "batch_id": "batch_0003",
+    "decision": "uncertain",
+    "reason": "标题涉及系统工程的模糊性，但摘要缺失，无法判断是否属于学术写作中的模糊语分析。",
+    "evidence": [
+      "title"
+    ],
+    "confidence": 0.45,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:32:12.056192+08:00"
+  },
+  {
+    "paper_id": "paper_000022",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "摘要明确研究工程学术写作中的多模态元话语教学，符合理工科学术写作主题。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal",
+      "doi"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:32:12.056192+08:00"
+  },
+  {
+    "paper_id": "paper_000023",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "摘要介绍基于语料库的元话语分析工具，应用于工程学位论文，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal",
+      "doi"
+    ],
+    "confidence": 0.82,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:32:12.056192+08:00"
+  },
+  {
+    "paper_id": "paper_000024",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "摘要研究理工科博士论文中元话语的历时演变，包含学科对比分析。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal",
+      "doi"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:32:12.056192+08:00"
+  },
+  {
+    "paper_id": "paper_000025",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "摘要分析工程学科MOOC视频讲座中的元话语使用，包含学科对比。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal",
+      "doi"
+    ],
+    "confidence": 0.86,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:32:12.056192+08:00"
+  },
+  {
+    "paper_id": "paper_000026",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题明确涉及金融领域的对冲策略，命中排除标准。",
+    "evidence": [
+      "title"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:32:12.056192+08:00"
+  },
+  {
+    "paper_id": "paper_000027",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要中的“hedging”指软件工程中的对比学习框架，属于计算机算法应用。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal",
+      "doi"
+    ],
+    "confidence": 0.92,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:32:12.056192+08:00"
+  },
+  {
+    "paper_id": "paper_000028",
+    "batch_id": "batch_0003",
+    "decision": "uncertain",
+    "reason": "摘要涉及元话语方法论，但主要关注生成式AI的定性研究，与学术写作模糊语的相关性不明确。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal",
+      "doi"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:32:12.056192+08:00"
+  },
+  {
+    "paper_id": "paper_000029",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要中的“hedging point policy”指生产库存管理策略，属于经济/管理领域。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal",
+      "doi"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:32:12.056192+08:00"
+  },
+  {
+    "paper_id": "paper_000030",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要明确研究工程博士论文引言中的模糊语策略，包含基于语料库的跨学科对比。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal",
+      "doi"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:32:12.056192+08:00"
+  },
+  {
+    "paper_id": "paper_000031",
+    "batch_id": "batch_0004",
+    "decision": "uncertain",
+    "reason": "摘要和关键词缺失，仅凭标题和期刊信息无法判断是否涉及理工科学术写作中的模糊语分析。",
+    "evidence": [
+      "title",
+      "journal"
+    ],
+    "confidence": 0.45,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:32:34.603154+08:00"
+  },
+  {
+    "paper_id": "paper_000032",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于计算机科学中的自然语言处理技术，涉及语义模糊性，但未提及学术写作或语用分析，属于排除的计算机算法领域。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:32:34.603154+08:00"
+  },
+  {
+    "paper_id": "paper_000033",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要明确讨论核战略中的“核对冲”，属于政治学或国际关系领域，严格排除金融经济以外的其他“对冲”含义。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:32:34.603154+08:00"
+  },
+  {
+    "paper_id": "paper_000034",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论癌症细胞中的“赌注对冲”生物学现象，属于生物医学领域，与语言学的模糊语无关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:32:34.603154+08:00"
+  },
+  {
+    "paper_id": "paper_000035",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "标题和摘要明确分析学术写作中元话语的使用，包括模糊语，并跨工程、医学等学科进行对比，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:32:34.603154+08:00"
+  },
+  {
+    "paper_id": "paper_000036",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及交通基础设施投资中的“对冲风险”，属于金融经济领域的“对冲”，严格排除。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:32:34.603154+08:00"
+  },
+  {
+    "paper_id": "paper_000037",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论电力系统优化中的“渐进对冲”算法，属于数学或计算机算法领域，严格排除。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:32:34.603154+08:00"
+  },
+  {
+    "paper_id": "paper_000038",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及物流优化中的“渐进对冲算法”，属于运筹学或数学领域，严格排除。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:32:34.603154+08:00"
+  },
+  {
+    "paper_id": "paper_000039",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论微燃烧器设计中的“对冲”进气方式，属于工程热物理领域，与语言学的模糊语无关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:32:34.603154+08:00"
+  },
+  {
+    "paper_id": "paper_000040",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题提到“对冲规则”，但摘要缺失，结合标题判断可能涉及水资源优化中的数学方法，属于排除领域。",
+    "evidence": [
+      "title"
+    ],
+    "confidence": 0.7,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:32:34.603154+08:00"
+  },
+  {
+    "paper_id": "paper_000041",
+    "batch_id": "batch_0005",
+    "decision": "include",
+    "reason": "标题和摘要明确探讨学术写作中的模糊语作为礼貌策略，并基于四个学科（含工程和医学）的语料库进行跨学科对比分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:32:42.327801+08:00"
+  }
+]

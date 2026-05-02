@@ -1,0 +1,282 @@
+{
+  "batch_id": "batch_0005",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000041",
+    "paper_000042",
+    "paper_000043",
+    "paper_000044",
+    "paper_000045",
+    "paper_000046",
+    "paper_000047",
+    "paper_000048",
+    "paper_000049",
+    "paper_000050"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000041",
+      "entry_type": "article",
+      "title": "DMS-YOLO: Small target detection algorithm based on YOLOv11",
+      "authors": [
+        "Huang, M.",
+        "Jiang, W."
+      ],
+      "year": 2026,
+      "journal": "PLOS ONE",
+      "doi": "10.1371/journal.pone.0341991",
+      "abstract": "To address the challenges in vehicle detection from unmanned aerial vehicle (UAV) overhead images, such as small object size, low resolution, complex background, and scale variation, this paper proposes several targeted improvements to the YOLOv11n model. Firstly, inspired by the Cross Stage Partial Networks (CSPNet), a Dynamic Multi-Scale Edge Enhancement Network (DMS-EdgeNet) is designed to improve robustness to local target features. This module applies multi-scale pooling to extract edge features at various scales and dynamically fuses them through adaptive weighting. Secondly, the DynaScale Aggregation Network (DySAN) module is introduced into the neck network, and a multi-level jump connections structure is adopted to fuse low-level and high-level boundary semantics, thereby improving the detection capability of fuzzy boundary targets and improving target positioning accuracy under complex imaging conditions. Finally, a P2 small target layer is added to further improve the accuracy of small target detection. Based on these innovations, we propose a new architecture named Dynamic Multi-scale and Channel-scaled YOLO (DMS-YOLO), significantly improve the model's ability to perceive small targets. Experimental results show that DMS-YOLO improves mAP50 and mAP50-95 by 7.0% and 2.9%, respectively, on the Aerial Traffic Images dataset, and by 5.1% and 3.1% on the VisDrone-DET2019 dataset, demonstrating superior performance over the YOLOv11n baseline. © 2026 Huang, Jiang. This is an open access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.",
+      "keywords": [],
+      "normalized_title": "dms yolo small target detection algorithm based on yolov11",
+      "raw_bibtex": "@ARTICLE{10.1371/journal.pone.0341991,\n\tauthor = {Huang, M. and Jiang, W.},\n\ttitle = {DMS-YOLO: Small target detection algorithm based on YOLOv11},\n\tjournal = {PLOS ONE},\n\tyear = {2026},\n\tabstract = {To address the challenges in vehicle detection from unmanned aerial vehicle (UAV) overhead images, such as small object size, low resolution, complex background, and scale variation, this paper proposes several targeted improvements to the YOLOv11n model. Firstly, inspired by the Cross Stage Partial Networks (CSPNet), a Dynamic Multi-Scale Edge Enhancement Network (DMS-EdgeNet) is designed to improve robustness to local target features. This module applies multi-scale pooling to extract edge features at various scales and dynamically fuses them through adaptive weighting. Secondly, the DynaScale Aggregation Network (DySAN) module is introduced into the neck network, and a multi-level jump connections structure is adopted to fuse low-level and high-level boundary semantics, thereby improving the detection capability of fuzzy boundary targets and improving target positioning accuracy under complex imaging conditions. Finally, a P2 small target layer is added to further improve the accuracy of small target detection. Based on these innovations, we propose a new architecture named Dynamic Multi-scale and Channel-scaled YOLO (DMS-YOLO), significantly improve the model's ability to perceive small targets. Experimental results show that DMS-YOLO improves mAP50 and mAP50-95 by 7.0% and 2.9%, respectively, on the Aerial Traffic Images dataset, and by 5.1% and 3.1% on the VisDrone-DET2019 dataset, demonstrating superior performance over the YOLOv11n baseline. © 2026 Huang, Jiang. This is an open access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.},\n\tdoi = {10.1371/journal.pone.0341991},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105028681753&doi=10.1371%2Fjournal.pone.0341991&partnerID=40&md5=923a74250aa4d38988d99b5089192350},\n\tvolume = {21},\n\tnumber = {1 January},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1371/journal.pone.0341991"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000042",
+      "entry_type": "article",
+      "title": "SWL-YOLO: A Synergistic Feature Fusion Strategy for Small Object Detection in Remote Sensing Images Based on YOLOv11",
+      "authors": [
+        "Zhang, J.",
+        "Mustaffa, M.R.B.",
+        "Khalid, F.",
+        "Kahar, Z.A."
+      ],
+      "year": 2026,
+      "journal": "IEEE Access",
+      "doi": "10.1109/access.2025.3646852",
+      "abstract": "To address the challenges of detail loss, feature extraction difficulties, densely distributed small objects, and insufficient feature information in degraded remote sensing images, we introduce SWL-YOLO, a lightweight model built upon YOLOv11. SWL-YOLO incorporates Spatial Adaptive Feature Module (SAFM), Wavelet Downsampling (WDown), and a Large Selective Kernel (LSK) mechanism to adaptively enhance both spatial and contextual representations. Specifically, the SAFM improves sensitivity to fine-grained spatial features, thereby improving its ability to perceive small targets and edges. The wavelet downsampling module performs wavelet decomposition and subsampling, preserving high-frequency detail information while reducing computational complexity. The LSK mechanism dynamically adjusts receptive fields, enabling the model to better handle small objects, complex backgrounds, and multi-category targets through spatially adaptive feature enhancement and context-aware scale selection. While SAFM ensures enhanced local feature modulation, LSK complements it by providing global context awareness, together forming a synergistic spatial feature fusion mechanism. Furthermore, building upon the CIoU of YOLOv11, we develop an improved GeoCIoU loss, which employs a dual-penalty mechanism for loss calculation to achieve more accurate training feedback. Experiments on the VisDrone and NWPU VHR-10 datasets indicate that SWL-YOLO outperforms the baseline models, with mAP50 improvements of 5.1 % and 4.2 %, respectively, showcasing its superior performance in remote sensing target detection. © 2013 IEEE.",
+      "keywords": [],
+      "normalized_title": "swl yolo a synergistic feature fusion strategy for small object detection in remote sensing images based on yolov11",
+      "raw_bibtex": "@ARTICLE{10.1109/ACCESS.2025.3646852,\n\tauthor = {Zhang, J. and Mustaffa, M.R.B. and Khalid, F. and Kahar, Z.A.},\n\ttitle = {SWL-YOLO: A Synergistic Feature Fusion Strategy for Small Object Detection in Remote Sensing Images Based on YOLOv11},\n\tjournal = {IEEE Access},\n\tyear = {2026},\n\tabstract = {To address the challenges of detail loss, feature extraction difficulties, densely distributed small objects, and insufficient feature information in degraded remote sensing images, we introduce SWL-YOLO, a lightweight model built upon YOLOv11. SWL-YOLO incorporates Spatial Adaptive Feature Module (SAFM), Wavelet Downsampling (WDown), and a Large Selective Kernel (LSK) mechanism to adaptively enhance both spatial and contextual representations. Specifically, the SAFM improves sensitivity to fine-grained spatial features, thereby improving its ability to perceive small targets and edges. The wavelet downsampling module performs wavelet decomposition and subsampling, preserving high-frequency detail information while reducing computational complexity. The LSK mechanism dynamically adjusts receptive fields, enabling the model to better handle small objects, complex backgrounds, and multi-category targets through spatially adaptive feature enhancement and context-aware scale selection. While SAFM ensures enhanced local feature modulation, LSK complements it by providing global context awareness, together forming a synergistic spatial feature fusion mechanism. Furthermore, building upon the CIoU of YOLOv11, we develop an improved GeoCIoU loss, which employs a dual-penalty mechanism for loss calculation to achieve more accurate training feedback. Experiments on the VisDrone and NWPU VHR-10 datasets indicate that SWL-YOLO outperforms the baseline models, with mAP50 improvements of 5.1 % and 4.2 %, respectively, showcasing its superior performance in remote sensing target detection. © 2013 IEEE.},\n\tdoi = {10.1109/ACCESS.2025.3646852},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105025936888&doi=10.1109%2FACCESS.2025.3646852&partnerID=40&md5=6828c19ac714546feadc571e1332b08d},\n\tvolume = {14},\n\tpages = {1508-1521},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1109/ACCESS.2025.3646852"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000043",
+      "entry_type": "article",
+      "title": "LDA-YOLO: a lightweight deblurring-aware network for real-time object detection in blurred aerial images",
+      "authors": [
+        "Wu, Q.",
+        "Yang, Y.",
+        "Han, R.",
+        "Sun, W."
+      ],
+      "year": 2026,
+      "journal": "Journal of Real-Time Image Processing",
+      "doi": "10.1007/s11554-025-01815-7",
+      "abstract": "Accurate and real-time object detection in aerial images remains a challenging task due to diverse capture conditions, including motion blur, defocus, scale variation, and complex backgrounds. These issues are further exacerbated when dealing with small or occluded objects commonly found in low-altitude UAV footage, satellite imagery, and vehicle-mounted aerial systems. In this article, we propose a lightweight deblurring-aware object detection network, termed LDA-YOLO, designed to achieve robust and efficient detection across a wide range of aerial imaging platforms. The proposed architecture integrates a fast deblurring module to restore structure from degraded inputs, a dual-domain feature aggregation module (DDFA) to enhance feature focus on informative regions, and a multi-scale feature fusion network based on lightweight backbones to support small object detection under scale and blur variations. A YOLOv8-style detection head enables low-latency prediction suitable for edge deployment. Comprehensive experiments on four representative aerial datasets—VisDrone, DOTA, Drone Vehicle, and VEDAI—demonstrate that LDA-YOLO achieves competitive accuracy while maintaining real-time performance on embedded platforms, offering a deployable and effective solution for general-purpose aerial image object detection under degraded visual conditions. © The Author(s), under exclusive licence to Springer-Verlag GmbH Germany, part of Springer Nature 2025.",
+      "keywords": [],
+      "normalized_title": "lda yolo a lightweight deblurring aware network for real time object detection in blurred aerial images",
+      "raw_bibtex": "@ARTICLE{10.1007/s11554-025-01815-7,\n\tauthor = {Wu, Q. and Yang, Y. and Han, R. and Sun, W.},\n\ttitle = {LDA-YOLO: a lightweight deblurring-aware network for real-time object detection in blurred aerial images},\n\tjournal = {Journal of Real-Time Image Processing},\n\tyear = {2026},\n\tabstract = {Accurate and real-time object detection in aerial images remains a challenging task due to diverse capture conditions, including motion blur, defocus, scale variation, and complex backgrounds. These issues are further exacerbated when dealing with small or occluded objects commonly found in low-altitude UAV footage, satellite imagery, and vehicle-mounted aerial systems. In this article, we propose a lightweight deblurring-aware object detection network, termed LDA-YOLO, designed to achieve robust and efficient detection across a wide range of aerial imaging platforms. The proposed architecture integrates a fast deblurring module to restore structure from degraded inputs, a dual-domain feature aggregation module (DDFA) to enhance feature focus on informative regions, and a multi-scale feature fusion network based on lightweight backbones to support small object detection under scale and blur variations. A YOLOv8-style detection head enables low-latency prediction suitable for edge deployment. Comprehensive experiments on four representative aerial datasets—VisDrone, DOTA, Drone Vehicle, and VEDAI—demonstrate that LDA-YOLO achieves competitive accuracy while maintaining real-time performance on embedded platforms, offering a deployable and effective solution for general-purpose aerial image object detection under degraded visual conditions. © The Author(s), under exclusive licence to Springer-Verlag GmbH Germany, part of Springer Nature 2025.},\n\tdoi = {10.1007/s11554-025-01815-7},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105024313591&doi=10.1007%2Fs11554-025-01815-7&partnerID=40&md5=3c64ef5343b853c96098adcad5be83f0},\n\tvolume = {23},\n\tnumber = {1},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1007/s11554-025-01815-7"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000044",
+      "entry_type": "article",
+      "title": "YOLO-DMA: A Small-Object Detector Based on Multi-Scale Deformable Convolution and Linear Attention",
+      "authors": [
+        "Liao, X.",
+        "Hu, L."
+      ],
+      "year": 2026,
+      "journal": "Electronics (Switzerland)",
+      "doi": "10.3390/electronics15040812",
+      "abstract": "Object detection in UAV aerial imagery presents significant challenges, including large-scale variations, complex background interference, object occlusion, and a high density of small targets. These factors restrict the generalization and localization capabilities of existing detectors. To address these issues, we propose YOLO-DMA, an efficient detection framework for aerial images. The framework incorporates three key improvements. First, we designed a Hierarchical Deformable Block (HDB), which uses adaptive sampling grids and a progressive multi-branch structure to capture features of irregular objects while preserving network depth, enabling richer hierarchical feature representation. Second, we proposed a Dual-Path Linear-complexity Perception (DPLP) module. One path employs a linear-complexity attention mechanism to model the global context efficiently, while the other utilizes lightweight convolutions to extract local details. This design effectively fuses shallow details with mid-level semantics, improving detection and localization accuracy. Third, we adopted the Wise-IoU v3 loss function, which dynamically adjusts optimization objectives, suppressing harmful gradients from low-quality samples and emphasizing small objects during training. Comprehensive experiments on the VisDrone dataset show that YOLO-DMA achieves 42.8% mAP50 and 25.7% mAP50:95. These correspond to improvements of 4.8% and 3.1% over YOLOv10. Experimental results demonstrate the effectiveness and practicality of the proposed framework. © 2026 by the authors.",
+      "keywords": [],
+      "normalized_title": "yolo dma a small object detector based on multi scale deformable convolution and linear attention",
+      "raw_bibtex": "@ARTICLE{10.3390/electronics15040812,\n\tauthor = {Liao, X. and Hu, L.},\n\ttitle = {YOLO-DMA: A Small-Object Detector Based on Multi-Scale Deformable Convolution and Linear Attention},\n\tjournal = {Electronics (Switzerland)},\n\tyear = {2026},\n\tabstract = {Object detection in UAV aerial imagery presents significant challenges, including large-scale variations, complex background interference, object occlusion, and a high density of small targets. These factors restrict the generalization and localization capabilities of existing detectors. To address these issues, we propose YOLO-DMA, an efficient detection framework for aerial images. The framework incorporates three key improvements. First, we designed a Hierarchical Deformable Block (HDB), which uses adaptive sampling grids and a progressive multi-branch structure to capture features of irregular objects while preserving network depth, enabling richer hierarchical feature representation. Second, we proposed a Dual-Path Linear-complexity Perception (DPLP) module. One path employs a linear-complexity attention mechanism to model the global context efficiently, while the other utilizes lightweight convolutions to extract local details. This design effectively fuses shallow details with mid-level semantics, improving detection and localization accuracy. Third, we adopted the Wise-IoU v3 loss function, which dynamically adjusts optimization objectives, suppressing harmful gradients from low-quality samples and emphasizing small objects during training. Comprehensive experiments on the VisDrone dataset show that YOLO-DMA achieves 42.8% mAP50 and 25.7% mAP50:95. These correspond to improvements of 4.8% and 3.1% over YOLOv10. Experimental results demonstrate the effectiveness and practicality of the proposed framework. © 2026 by the authors.},\n\tdoi = {10.3390/electronics15040812},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105031387511&doi=10.3390%2Felectronics15040812&partnerID=40&md5=74f7a1234d2b9cd7e87321439d20d320},\n\tvolume = {15},\n\tnumber = {4},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.3390/electronics15040812"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000045",
+      "entry_type": "article",
+      "title": "BDNet: A Lightweight YOLOv12-Based Vehicle Detection Framework for Smart Urban Traffic Monitoring",
+      "authors": [
+        "Hasan, M.M.",
+        "Wang, Z.",
+        "Fan, H.",
+        "Fatima, K.",
+        "Hussain, M.A.I.",
+        "Shaha, R.",
+        "Habib, T.M.D.A."
+      ],
+      "year": 2026,
+      "journal": "Smart Cities",
+      "doi": "10.3390/smartcities9020033",
+      "abstract": "Highlights: What are the main findings? A lightweight vehicle detection framework (BDNet) achieves a superior accuracy–efficiency trade-off for dense urban traffic, improving detection accuracy, recall, and real-time throughput over recent YOLO baselines while maintaining a compact computational footprint. Detail-preserving downsampling, multi-order contextual aggregation, and feature refinement jointly enhance robustness under occlusion, scale variation, and domain shift, enabling effective generalization from ground-level to aerial traffic scenes. What are the implications of the main findings? The proposed architecture provides a practical vehicle perception solution for smart city infrastructures, supporting real-time deployment on edge or roadside devices under strict latency and resource constraints. The demonstrated cross-dataset generalization indicates that modular, context-aware lightweight designs can improve reliability of urban traffic monitoring systems across heterogeneous sensing conditions and viewpoints. Accurate and real-time vehicle detection is a fundamental requirement for smart urban traffic monitoring, particularly in densely populated cities where heterogeneous traffic, frequent occlusion, and severe scale variation challenge lightweight vision systems deployed at the edge. To address these issues, this paper proposes BDNet, a lightweight YOLOv12-based vehicle detection framework designed to enhance feature preservation, contextual modeling, and multi-scale representation for intelligent transportation systems. BDNet integrates three complementary architectural components: (i) HyDASE, a hybrid detail-preserving downsampling module that mitigates information loss during resolution reduction; (ii) C3k2_MogaBlock, which strengthens long-range contextual interactions through multi-order gated aggregation; and (iii) an A2C2f_FRFN neck, which refines multi-scale features by suppressing redundancy and emphasizing discriminative responses. To support evaluation under realistic developing-region traffic conditions, we introduce the Bangladeshi Road Vehicle Dataset (BRVD), comprising 10,200 annotated images across 13 native vehicle categories captured under diverse urban scenarios, including daytime, nighttime, fog, and rain. On BRVD, BDNet achieves 85.9% (Formula presented.) and 67.3% (Formula presented.), outperforming YOLOv12n by +1.4 and +0.7 percentage points, respectively, while maintaining a compact footprint of 2.5 M parameters, 6.0 GFLOPs, and a real-time inference speed of 285.7 FPS. Cross-dataset evaluation on VisDrone-DET2019, using models trained exclusively on BRVD, further demonstrates improved generalization, achieving 31.9% (Formula presented.) and 17.9% (Formula presented.). These results indicate that BDNet provides an effective and resource-efficient vehicle detection solution for smart city–scale urban traffic monitoring. © 2026 by the authors.",
+      "keywords": [],
+      "normalized_title": "bdnet a lightweight yolov12 based vehicle detection framework for smart urban traffic monitoring",
+      "raw_bibtex": "@ARTICLE{10.3390/smartcities9020033,\n\tauthor = {Hasan, M.M. and Wang, Z. and Fan, H. and Fatima, K. and Hussain, M.A.I. and Shaha, R. and Habib, T.M.D.A.},\n\ttitle = {BDNet: A Lightweight YOLOv12-Based Vehicle Detection Framework for Smart Urban Traffic Monitoring},\n\tjournal = {Smart Cities},\n\tyear = {2026},\n\tabstract = {Highlights: What are the main findings? A lightweight vehicle detection framework (BDNet) achieves a superior accuracy–efficiency trade-off for dense urban traffic, improving detection accuracy, recall, and real-time throughput over recent YOLO baselines while maintaining a compact computational footprint. Detail-preserving downsampling, multi-order contextual aggregation, and feature refinement jointly enhance robustness under occlusion, scale variation, and domain shift, enabling effective generalization from ground-level to aerial traffic scenes. What are the implications of the main findings? The proposed architecture provides a practical vehicle perception solution for smart city infrastructures, supporting real-time deployment on edge or roadside devices under strict latency and resource constraints. The demonstrated cross-dataset generalization indicates that modular, context-aware lightweight designs can improve reliability of urban traffic monitoring systems across heterogeneous sensing conditions and viewpoints. Accurate and real-time vehicle detection is a fundamental requirement for smart urban traffic monitoring, particularly in densely populated cities where heterogeneous traffic, frequent occlusion, and severe scale variation challenge lightweight vision systems deployed at the edge. To address these issues, this paper proposes BDNet, a lightweight YOLOv12-based vehicle detection framework designed to enhance feature preservation, contextual modeling, and multi-scale representation for intelligent transportation systems. BDNet integrates three complementary architectural components: (i) HyDASE, a hybrid detail-preserving downsampling module that mitigates information loss during resolution reduction; (ii) C3k2_MogaBlock, which strengthens long-range contextual interactions through multi-order gated aggregation; and (iii) an A2C2f_FRFN neck, which refines multi-scale features by suppressing redundancy and emphasizing discriminative responses. To support evaluation under realistic developing-region traffic conditions, we introduce the Bangladeshi Road Vehicle Dataset (BRVD), comprising 10,200 annotated images across 13 native vehicle categories captured under diverse urban scenarios, including daytime, nighttime, fog, and rain. On BRVD, BDNet achieves 85.9% (Formula presented.) and 67.3% (Formula presented.), outperforming YOLOv12n by +1.4 and +0.7 percentage points, respectively, while maintaining a compact footprint of 2.5 M parameters, 6.0 GFLOPs, and a real-time inference speed of 285.7 FPS. Cross-dataset evaluation on VisDrone-DET2019, using models trained exclusively on BRVD, further demonstrates improved generalization, achieving 31.9% (Formula presented.) and 17.9% (Formula presented.). These results indicate that BDNet provides an effective and resource-efficient vehicle detection solution for smart city–scale urban traffic monitoring. © 2026 by the authors.},\n\tdoi = {10.3390/smartcities9020033},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105031236510&doi=10.3390%2Fsmartcities9020033&partnerID=40&md5=48ab42cbc0f2885a2a86fd93a50a87e8},\n\tvolume = {9},\n\tnumber = {2},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.3390/smartcities9020033"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000046",
+      "entry_type": "article",
+      "title": "YOLO11s-UAV: An Advanced Algorithm for Small Object Detection in UAV Aerial Imagery",
+      "authors": [
+        "Mi, Q.",
+        "Chao, J.",
+        "Chen, A.",
+        "Zhang, K.",
+        "Lai, J."
+      ],
+      "year": 2026,
+      "journal": "Journal of Imaging",
+      "doi": "10.3390/jimaging12020069",
+      "abstract": "Unmanned aerial vehicles (UAVs) are now widely used in various applications, including agriculture, urban traffic management, and search and rescue operations. However, several challenges arise, including the small size of objects occupying only a sparse number of pixels in images, complex backgrounds in aerial footage, and limited computational resources onboard. To address these issues, this paper proposes an improved UAV-based small object detection algorithm, YOLO11s-UAV, specifically designed for aerial imagery. Firstly, we introduce a novel FPN, called Content-Aware Reassembly and Interaction Feature Pyramid Network (CARIFPN), which significantly enhances small object feature detection while reducing redundant network structures. Secondly, we apply a new downsampling convolution for small object feature extraction, called Space-to-Depth for Dilation-wise Residual Convolution (S2DResConv), in the model’s backbone. This module effectively eliminates information loss caused by strided convolution or pooling operations and facilitates the capture of multi-scale context. Finally, we integrate a simple, parameter-free attention module (SimAM) with C3k2 to form Flexible SimAM (FlexSimAM), which is applied throughout the entire model. This improved module not only reduces the model’s complexity but also enables efficient enhancement of small object features in complex scenarios. Experimental results demonstrate that on the VisDrone-DET2019 dataset, our model improves mAP@0.5 by 7.8% on the validation set (reaching 46.0%) and by 5.9% on the test set (increasing to 37.3%) compared to the baseline YOLO11s, while reducing model parameters by 55.3%. Similarly, it achieves a 7.2% improvement on the TinyPerson dataset and a 3.0% increase on UAVDT-DET. Deployment on the NVIDIA Jetson Orin NX SUPER platform shows that our model achieves 33 FPS, which is 21.4% lower than YOLO11s, confirming its feasibility for real-time onboard UAV applications. © 2026 by the authors.",
+      "keywords": [],
+      "normalized_title": "yolo11s uav an advanced algorithm for small object detection in uav aerial imagery",
+      "raw_bibtex": "@ARTICLE{10.3390/jimaging12020069,\n\tauthor = {Mi, Q. and Chao, J. and Chen, A. and Zhang, K. and Lai, J.},\n\ttitle = {YOLO11s-UAV: An Advanced Algorithm for Small Object Detection in UAV Aerial Imagery},\n\tjournal = {Journal of Imaging},\n\tyear = {2026},\n\tabstract = {Unmanned aerial vehicles (UAVs) are now widely used in various applications, including agriculture, urban traffic management, and search and rescue operations. However, several challenges arise, including the small size of objects occupying only a sparse number of pixels in images, complex backgrounds in aerial footage, and limited computational resources onboard. To address these issues, this paper proposes an improved UAV-based small object detection algorithm, YOLO11s-UAV, specifically designed for aerial imagery. Firstly, we introduce a novel FPN, called Content-Aware Reassembly and Interaction Feature Pyramid Network (CARIFPN), which significantly enhances small object feature detection while reducing redundant network structures. Secondly, we apply a new downsampling convolution for small object feature extraction, called Space-to-Depth for Dilation-wise Residual Convolution (S2DResConv), in the model’s backbone. This module effectively eliminates information loss caused by strided convolution or pooling operations and facilitates the capture of multi-scale context. Finally, we integrate a simple, parameter-free attention module (SimAM) with C3k2 to form Flexible SimAM (FlexSimAM), which is applied throughout the entire model. This improved module not only reduces the model’s complexity but also enables efficient enhancement of small object features in complex scenarios. Experimental results demonstrate that on the VisDrone-DET2019 dataset, our model improves mAP@0.5 by 7.8% on the validation set (reaching 46.0%) and by 5.9% on the test set (increasing to 37.3%) compared to the baseline YOLO11s, while reducing model parameters by 55.3%. Similarly, it achieves a 7.2% improvement on the TinyPerson dataset and a 3.0% increase on UAVDT-DET. Deployment on the NVIDIA Jetson Orin NX SUPER platform shows that our model achieves 33 FPS, which is 21.4% lower than YOLO11s, confirming its feasibility for real-time onboard UAV applications. © 2026 by the authors.},\n\tdoi = {10.3390/jimaging12020069},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105031274444&doi=10.3390%2Fjimaging12020069&partnerID=40&md5=4d2a28ec5fcee4226d872cfd05d204e9},\n\tvolume = {12},\n\tnumber = {2},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.3390/jimaging12020069"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000047",
+      "entry_type": "article",
+      "title": "UAVDet: A CNN–Mamba hybrid network for efficient small object detection in UAV imagery",
+      "authors": [
+        "Yang, Y.",
+        "Guo, F.",
+        "Niu, P."
+      ],
+      "year": 2026,
+      "journal": "Computer Vision and Image Understanding",
+      "doi": "10.1016/j.cviu.2026.104637",
+      "abstract": "Real-time object detection is pivotal in traffic-related Unmanned Aerial Vehicles (UAV) applications. However, UAV imagery presents significant challenges due to the predominance of small objects and complex backgrounds. Traditional backbones generally perform aggressive early-stage downsampling, causing the loss of fine-grained features. To address these issues, we propose UAVDet, a real-time detection model that combines Convolutional Neural Network (CNN) and Mamba architectures. First, we revisit the conventional backbone design by reconfiguring its depth and width, with a focus on preserving fine-grained details crucial for small object detection. Second, we propose the Cross Stage Partial Mamba (CSPMB) module, which integrates the Mamba structure into the CNN framework to enhance global feature representation and improve robustness against complex background interference. Third, we design Tiny-focused Feature Pyramid Network (TFPN) by rebalancing the feature fusion flow and replacing the large-object detection head with a tiny-object detection head, which significantly improves the perception of small objects. Comprehensive experiments on the VisDrone dataset show that our method improves AP and APS by 4.5% and 5.0%, respectively, while reducing parameters by 84.9% compared to the baseline. It also reaches 53 FPS on an RTX 4090, exceeding the 30 FPS real-time threshold. Additional evaluations on UAVDT and DroneVehicle further verify the method’s robust generalization. These results indicate the effectiveness of the developed method in UAV image detection. © 2026 Elsevier Inc.",
+      "keywords": [],
+      "normalized_title": "uavdet a cnn mamba hybrid network for efficient small object detection in uav imagery",
+      "raw_bibtex": "@ARTICLE{10.1016/j.cviu.2026.104637,\n\tauthor = {Yang, Y. and Guo, F. and Niu, P.},\n\ttitle = {UAVDet: A CNN–Mamba hybrid network for efficient small object detection in UAV imagery},\n\tjournal = {Computer Vision and Image Understanding},\n\tyear = {2026},\n\tabstract = {Real-time object detection is pivotal in traffic-related Unmanned Aerial Vehicles (UAV) applications. However, UAV imagery presents significant challenges due to the predominance of small objects and complex backgrounds. Traditional backbones generally perform aggressive early-stage downsampling, causing the loss of fine-grained features. To address these issues, we propose UAVDet, a real-time detection model that combines Convolutional Neural Network (CNN) and Mamba architectures. First, we revisit the conventional backbone design by reconfiguring its depth and width, with a focus on preserving fine-grained details crucial for small object detection. Second, we propose the Cross Stage Partial Mamba (CSPMB) module, which integrates the Mamba structure into the CNN framework to enhance global feature representation and improve robustness against complex background interference. Third, we design Tiny-focused Feature Pyramid Network (TFPN) by rebalancing the feature fusion flow and replacing the large-object detection head with a tiny-object detection head, which significantly improves the perception of small objects. Comprehensive experiments on the VisDrone dataset show that our method improves AP and APS by 4.5% and 5.0%, respectively, while reducing parameters by 84.9% compared to the baseline. It also reaches 53 FPS on an RTX 4090, exceeding the 30 FPS real-time threshold. Additional evaluations on UAVDT and DroneVehicle further verify the method’s robust generalization. These results indicate the effectiveness of the developed method in UAV image detection. © 2026 Elsevier Inc.},\n\tdoi = {10.1016/j.cviu.2026.104637},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105027938468&doi=10.1016%2Fj.cviu.2026.104637&partnerID=40&md5=3d5ceac803a6f9d52a5e2facbf4ab2d5},\n\tvolume = {264},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.cviu.2026.104637"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000048",
+      "entry_type": "article",
+      "title": "PGEM-DETR: Physics-guided enhancement mechanism for drone-based object detection in adverse visual environments",
+      "authors": [
+        "Zhang, S.",
+        "Cao, X.",
+        "Wang, P.",
+        "Li, J."
+      ],
+      "year": 2026,
+      "journal": "Journal of Computational Design and Engineering",
+      "doi": "10.1093/jcde/qwaf121",
+      "abstract": "Drone-based object detection in adverse visual environments (AVEs) poses significant challenges that remain largely unaddressed by existing methods. Degraded image quality from fog and low-light conditions substantially impairs the detection performance of conventional algorithms optimized for ideal conditions. In this paper, we propose Physics-Guided Enhancement Mechanisms with Detection Transformer (PGEM-DETR), a novel framework tailored for drone-based object detection in AVEs. Our approach integrates physics-guided enhancement mechanisms with the DETR architecture, combining environmental prior knowledge with deep learning techniques to overcome visual degradation challenges. Extensive experiments on our comprehensive AVE-CARPK, AVE-DroneVehicle, and AVE-VisDrone datasets demonstrate that PGEM-DETR significantly outperforms state-of-the-art object detectors under adverse conditions while maintaining comparable computational efficiency. PGEM-DETR-M achieves 83.1% AP 5 0 and 58.1% AP 5 0 : 9 5 on the AVE-CARPK dataset, surpassing YOLOV12-X by 2.7% and 2.3%, respectively, while requiring only 73% of its parameters and 69% of its computational complexity. Our lightweight PGEM-DETR-N achieves 142.7 FPS with INT8 quantization on Nvidia Jetson Orin NX, showing strong potential for UAV deployment, though real-world validation beyond simulated adverse environments is still required. © The Author(s) 2025. Published by Oxford University Press on behalf of the Society for Computational Design and Engineering.",
+      "keywords": [],
+      "normalized_title": "pgem detr physics guided enhancement mechanism for drone based object detection in adverse visual environments",
+      "raw_bibtex": "@ARTICLE{10.1093/jcde/qwaf121,\n\tauthor = {Zhang, S. and Cao, X. and Wang, P. and Li, J.},\n\ttitle = {PGEM-DETR: Physics-guided enhancement mechanism for drone-based object detection in adverse visual environments},\n\tjournal = {Journal of Computational Design and Engineering},\n\tyear = {2026},\n\tabstract = {Drone-based object detection in adverse visual environments (AVEs) poses significant challenges that remain largely unaddressed by existing methods. Degraded image quality from fog and low-light conditions substantially impairs the detection performance of conventional algorithms optimized for ideal conditions. In this paper, we propose Physics-Guided Enhancement Mechanisms with Detection Transformer (PGEM-DETR), a novel framework tailored for drone-based object detection in AVEs. Our approach integrates physics-guided enhancement mechanisms with the DETR architecture, combining environmental prior knowledge with deep learning techniques to overcome visual degradation challenges. Extensive experiments on our comprehensive AVE-CARPK, AVE-DroneVehicle, and AVE-VisDrone datasets demonstrate that PGEM-DETR significantly outperforms state-of-the-art object detectors under adverse conditions while maintaining comparable computational efficiency. PGEM-DETR-M achieves 83.1% AP 5 0 and 58.1% AP 5 0 : 9 5 on the AVE-CARPK dataset, surpassing YOLOV12-X by 2.7% and 2.3%, respectively, while requiring only 73% of its parameters and 69% of its computational complexity. Our lightweight PGEM-DETR-N achieves 142.7 FPS with INT8 quantization on Nvidia Jetson Orin NX, showing strong potential for UAV deployment, though real-world validation beyond simulated adverse environments is still required. © The Author(s) 2025. Published by Oxford University Press on behalf of the Society for Computational Design and Engineering.},\n\tdoi = {10.1093/jcde/qwaf121},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105026343147&doi=10.1093%2Fjcde%2Fqwaf121&partnerID=40&md5=65f64a9274d9a05d6f0d429e5dad7970},\n\tvolume = {13},\n\tnumber = {1},\n\tpages = {60-74},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1093/jcde/qwaf121"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000049",
+      "entry_type": "article",
+      "title": "TASONet: A Spatial Enhancement and Temporal Modeling Framework for UAV Small Object Tracking",
+      "authors": [
+        "Ma, R.",
+        "Lai, C.",
+        "Sheng, Q.",
+        "Tao, Z.",
+        "Li, X."
+      ],
+      "year": 2026,
+      "journal": "Remote Sensing",
+      "doi": "10.3390/rs18040561",
+      "abstract": "Highlights: What are the main findings? TASONet introduces a lightweight spatial–temporal enhancement framework that significantly improves the representation of ground small objects in UAV-view imagery while effectively suppressing background interference. The integrated SOE and TEM modules collaboratively enhance spatial discriminability and temporal consistency, delivering substantial performance gains on UAVDT and VisDrone-MOT with minimal computational overhead. What are the implications of the main findings? The findings demonstrate that lightweight spatial enhancement coupled with temporal modeling can overcome the common trade-off between small object amplification and false positive suppression in small object MOT. The efficiency and accuracy of TASONet make it well suited for real-time UAV-based applications such as aerial surveillance, traffic monitoring, and large-scale scene analysis. Multi object tracking (MOT) in UAV imagery is challenged by weak feature representation of small objects due to limited resolution, which leads to frequent missed detections. However, enhancing small object features often amplifies background noise and increases false positives. To address this contradiction, we propose the Temporal Aware Small Object Enhancement Network (TASONet), which integrates spatial enhancement and temporal modeling for robust tracking. The Small Object Enhancement (SOE) module combines depthwise separable convolutions with contrast-aware attention mechanisms (SimAM and LCDAttn) to improve local discriminability. It further incorporates the Small Target Enhancement Path (STEP), which uses motion-difference cues and a confidence adaptive suppression strategy to strengthen spatial features while mitigating noise. The Temporal Enhancement Module (TEM), consisting of Temporal Feature Alignment (TFA) and a Target Memory Unit (TMU), aggregates multi-frame information through adaptive inter-frame fusion and memory of high confidence historical features, improving temporal consistency and reducing false positives potentially introduced by SOE. Experiments show that TASONet achieves significant gains over state-of-the-art methods: on UAVDT, MOTA increases from 68.33 to 75.97 and IDF1 from 83.50 to 88.51; on VisDrone-MOT, MOTA rises from 61.15 to 73.52 with an IDF1 of 88.83. These results validate the effectiveness of jointly enhancing spatial features and temporal coherence for UAV small-object MOT. © 2026 by the authors.",
+      "keywords": [],
+      "normalized_title": "tasonet a spatial enhancement and temporal modeling framework for uav small object tracking",
+      "raw_bibtex": "@ARTICLE{10.3390/rs18040561,\n\tauthor = {Ma, R. and Lai, C. and Sheng, Q. and Tao, Z. and Li, X.},\n\ttitle = {TASONet: A Spatial Enhancement and Temporal Modeling Framework for UAV Small Object Tracking},\n\tjournal = {Remote Sensing},\n\tyear = {2026},\n\tabstract = {Highlights: What are the main findings? TASONet introduces a lightweight spatial–temporal enhancement framework that significantly improves the representation of ground small objects in UAV-view imagery while effectively suppressing background interference. The integrated SOE and TEM modules collaboratively enhance spatial discriminability and temporal consistency, delivering substantial performance gains on UAVDT and VisDrone-MOT with minimal computational overhead. What are the implications of the main findings? The findings demonstrate that lightweight spatial enhancement coupled with temporal modeling can overcome the common trade-off between small object amplification and false positive suppression in small object MOT. The efficiency and accuracy of TASONet make it well suited for real-time UAV-based applications such as aerial surveillance, traffic monitoring, and large-scale scene analysis. Multi object tracking (MOT) in UAV imagery is challenged by weak feature representation of small objects due to limited resolution, which leads to frequent missed detections. However, enhancing small object features often amplifies background noise and increases false positives. To address this contradiction, we propose the Temporal Aware Small Object Enhancement Network (TASONet), which integrates spatial enhancement and temporal modeling for robust tracking. The Small Object Enhancement (SOE) module combines depthwise separable convolutions with contrast-aware attention mechanisms (SimAM and LCDAttn) to improve local discriminability. It further incorporates the Small Target Enhancement Path (STEP), which uses motion-difference cues and a confidence adaptive suppression strategy to strengthen spatial features while mitigating noise. The Temporal Enhancement Module (TEM), consisting of Temporal Feature Alignment (TFA) and a Target Memory Unit (TMU), aggregates multi-frame information through adaptive inter-frame fusion and memory of high confidence historical features, improving temporal consistency and reducing false positives potentially introduced by SOE. Experiments show that TASONet achieves significant gains over state-of-the-art methods: on UAVDT, MOTA increases from 68.33 to 75.97 and IDF1 from 83.50 to 88.51; on VisDrone-MOT, MOTA rises from 61.15 to 73.52 with an IDF1 of 88.83. These results validate the effectiveness of jointly enhancing spatial features and temporal coherence for UAV small-object MOT. © 2026 by the authors.},\n\tdoi = {10.3390/rs18040561},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105031439412&doi=10.3390%2Frs18040561&partnerID=40&md5=590c655d67efc3734a837157ede633e5},\n\tvolume = {18},\n\tnumber = {4},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.3390/rs18040561"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000050",
+      "entry_type": "article",
+      "title": "Adaptive image zoom-in with bounding box transformation for UAV object detection",
+      "authors": [
+        "Wang, T.",
+        "Lin, C.",
+        "Tang, C.",
+        "Zhou, J.",
+        "Xiong, D.",
+        "Li, J.",
+        "Zhao, J.",
+        "Lv, J."
+      ],
+      "year": 2026,
+      "journal": "ISPRS Journal of Photogrammetry and Remote Sensing",
+      "doi": "10.1016/j.isprsjprs.2026.01.036",
+      "abstract": "Detecting objects from UAV-captured images is challenging due to the small object size. In this work, a simple and efficient adaptive zoom-in framework is explored for object detection on UAV images. The main motivation is that the foreground objects are generally smaller and sparser than those in common scene images, which hinders the optimization of effective object detectors. We thus aim to zoom in adaptively on the objects to better capture object features for the detection task. To achieve the goal, two core designs are required: (i) How to conduct non-uniform zooming on each image efficiently? (ii) How to enable object detection training and inference with the zoomed image space? Correspondingly, a lightweight offset prediction scheme coupled with a novel box-based zooming objective is introduced to learn non-uniform zooming on the input image. Based on the learned zooming transformation, a corner-aligned bounding box transformation method is proposed. The method warps the ground-truth bounding boxes to the zoomed space to learn object detection, and warps the predicted bounding boxes back to the original space during inference. We conduct extensive experiments on three representative UAV object detection datasets, including VisDrone, UAVDT, and SeaDronesSee. The proposed ZoomDet is architecture-independent and can be applied to an arbitrary object detection architecture. Remarkably, on the SeaDronesSee dataset, ZoomDet offers more than 8.4 absolute gain of mAP with a Faster R-CNN model, with only about 3 ms additional latency. The code is available at https://github.com/twangnh/zoomdet_code. © 2026",
+      "keywords": [],
+      "normalized_title": "adaptive image zoom in with bounding box transformation for uav object detection",
+      "raw_bibtex": "@ARTICLE{10.1016/j.isprsjprs.2026.01.036,\n\tauthor = {Wang, T. and Lin, C. and Tang, C. and Zhou, J. and Xiong, D. and Li, J. and Zhao, J. and Lv, J.},\n\ttitle = {Adaptive image zoom-in with bounding box transformation for UAV object detection},\n\tjournal = {ISPRS Journal of Photogrammetry and Remote Sensing},\n\tyear = {2026},\n\tabstract = {Detecting objects from UAV-captured images is challenging due to the small object size. In this work, a simple and efficient adaptive zoom-in framework is explored for object detection on UAV images. The main motivation is that the foreground objects are generally smaller and sparser than those in common scene images, which hinders the optimization of effective object detectors. We thus aim to zoom in adaptively on the objects to better capture object features for the detection task. To achieve the goal, two core designs are required: (i) How to conduct non-uniform zooming on each image efficiently? (ii) How to enable object detection training and inference with the zoomed image space? Correspondingly, a lightweight offset prediction scheme coupled with a novel box-based zooming objective is introduced to learn non-uniform zooming on the input image. Based on the learned zooming transformation, a corner-aligned bounding box transformation method is proposed. The method warps the ground-truth bounding boxes to the zoomed space to learn object detection, and warps the predicted bounding boxes back to the original space during inference. We conduct extensive experiments on three representative UAV object detection datasets, including VisDrone, UAVDT, and SeaDronesSee. The proposed ZoomDet is architecture-independent and can be applied to an arbitrary object detection architecture. Remarkably, on the SeaDronesSee dataset, ZoomDet offers more than 8.4 absolute gain of mAP with a Faster R-CNN model, with only about 3 ms additional latency. The code is available at https://github.com/twangnh/zoomdet_code. © 2026},\n\tdoi = {10.1016/j.isprsjprs.2026.01.036},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105029275145&doi=10.1016%2Fj.isprsjprs.2026.01.036&partnerID=40&md5=6f74629b2e91a320ff50cb0f65439b7e},\n\tvolume = {233},\n\tpages = {452-466},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.isprsjprs.2026.01.036"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

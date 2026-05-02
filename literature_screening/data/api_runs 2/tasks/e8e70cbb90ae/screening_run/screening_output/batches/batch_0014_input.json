@@ -1,0 +1,397 @@
+{
+  "batch_id": "batch_0014",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000131",
+    "paper_000132",
+    "paper_000133",
+    "paper_000134",
+    "paper_000135",
+    "paper_000136",
+    "paper_000137",
+    "paper_000138",
+    "paper_000139",
+    "paper_000140"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000131",
+      "entry_type": "article",
+      "title": "Nonlinear Feedback-Based Path Following Control for Underactuated Ships via an Improved Compound Line-of-Sight Guidance",
+      "authors": [
+        "Su, ZJ",
+        "Zhang, XK"
+      ],
+      "year": 2021,
+      "journal": "IEEE ACCESS",
+      "doi": "10.1109/access.2021.3085336",
+      "abstract": "To promise the high fidelity of path following control for the underactuated ship from the aspect of the nautical practice, this paper develops a nonlinear feedback-based control scheme with an improved compound line-of-sight (ICLOS) guidance law, which has the energy-saving and efficient performance. Based on the methodology of the nonlinear disturbance observer and method of reduced-order extended state observer (ESO), a reduced-order state nonlinear sideslip angle observer is developed for online estimation of the time-varying sideslip angel caused by external disturbances, and a sideslip angle controller is incorporated to avert the sharp acting of actuators. Meanwhile, unlike the traditional line-of-sight (LOS) guidance law, a time-varying lookahead distance is designed as a function that relates to the ship' cruising speed and the cross track error, while the advance steering distance is also variable responding to the ship's length and turning angle, both of them make the turning process smoother. In the control scheme, the second-order closed-loop gain shaping algorithm (CGSA) is employed to design a concise robust controller, where the fuzzy logic system (FLS) is introduced to adjust the integral coefficient online to improve the transient performance. In addition, to further reduce the steering frequency and energy consumption of the system, nonlinear feedback technology (NFT) is adopted. Numerical simulation and comprehensive comparisons are conducted to demonstrate the remarkable performance and superiority of the proposed path following control system.",
+      "keywords": [
+        "Marine vehicles",
+        "Navigation",
+        "Mathematical model",
+        "Force",
+        "Adaptive systems",
+        "Dynamics",
+        "Compounds",
+        "Path following control",
+        "closed-loop gain shaping algorithm (CGSA)",
+        "fuzzy logic system (FLS)",
+        "nonlinear feedback technique (NFT)",
+        "improve compound line-of-sight (ICLOS)",
+        "DESIGN",
+        "LAW"
+      ],
+      "normalized_title": "nonlinear feedback based path following control for underactuated ships via an improved compound line of sight guidance",
+      "raw_bibtex": "@ARTICLE{10.1109/ACCESS.2021.3085336,\n\tauthor = {Su, ZJ and Zhang, XK},\n\ttitle = {Nonlinear Feedback-Based Path Following Control for Underactuated Ships via an Improved Compound Line-of-Sight Guidance},\n\tjournal = {IEEE ACCESS},\n\tyear = {2021},\n\tkeywords = {Marine vehicles; Navigation; Mathematical model; Force; Adaptive systems; Dynamics; Compounds; Path following control; closed-loop gain shaping algorithm (CGSA); fuzzy logic system (FLS); nonlinear feedback technique (NFT); improve compound line-of-sight (ICLOS); DESIGN; LAW},\n\tabstract = {To promise the high fidelity of path following control for the underactuated ship from the aspect of the nautical practice, this paper develops a nonlinear feedback-based control scheme with an improved compound line-of-sight (ICLOS) guidance law, which has the energy-saving and efficient performance. Based on the methodology of the nonlinear disturbance observer and method of reduced-order extended state observer (ESO), a reduced-order state nonlinear sideslip angle observer is developed for online estimation of the time-varying sideslip angel caused by external disturbances, and a sideslip angle controller is incorporated to avert the sharp acting of actuators. Meanwhile, unlike the traditional line-of-sight (LOS) guidance law, a time-varying lookahead distance is designed as a function that relates to the ship' cruising speed and the cross track error, while the advance steering distance is also variable responding to the ship's length and turning angle, both of them make the turning process smoother. In the control scheme, the second-order closed-loop gain shaping algorithm (CGSA) is employed to design a concise robust controller, where the fuzzy logic system (FLS) is introduced to adjust the integral coefficient online to improve the transient performance. In addition, to further reduce the steering frequency and energy consumption of the system, nonlinear feedback technology (NFT) is adopted. Numerical simulation and comprehensive comparisons are conducted to demonstrate the remarkable performance and superiority of the proposed path following control system.},\n\tdoi = {10.1109/ACCESS.2021.3085336},\n\tvolume = {9},\n\tpages = {81535-81545},\n\tissn = {2169-3536},\n\tnote = {Times Cited in Web of Science Core Collection: 9 Total Times Cited: 10 Cited Reference Count: 44 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/ACCESS.2021.3085336"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000132",
+      "entry_type": "article",
+      "title": "Finite Time Trajectory Tracking with Full-State Feedback of Underactuated Unmanned Surface Vessel Based on Nonsingular Fast Terminal Sliding Mode",
+      "authors": [
+        "Xu, DH",
+        "Liu, ZP",
+        "Song, JZ",
+        "Zhou, XQ"
+      ],
+      "year": 2022,
+      "journal": "JOURNAL OF MARINE SCIENCE AND ENGINEERING",
+      "doi": "10.3390/jmse10121845",
+      "abstract": "Marine transportation and operations have attracted the attention of more and more countries and scholars in recent years. A full-state finite time feedback control scheme is designed for the model parameters uncertainty, unknown ocean environment disturbances, and unmeasured system states in the underactuated Unmanned Surface Vessel (USV) trajectory tracking control. The external wind, wave and current environmental disturbances and model parameters perturbation are extended by Nonlinear Extended State Observer (NESO) to the state of the system, namely complex disturbances. The complex disturbances, positions and velocities of USV can be observed by NESO and feedback to USV control system. Next, the underactuated USV error model is obtained by operating the obtained feedback information and the virtual ship model. According to the error model, a Nonsingular Fast Terminal Sliding Model surface (NFTSM) is constructed to realize finite-time control. The control law is deduced through the Lyapunov stability theory to ensure the stability of the system. The results of MATLAB numerical simulations under different disturbances show that the trajectory tracking algorithm has fast responses, and a good convergence of the errors is observed, which verifies the effectiveness of the designed scheme.",
+      "keywords": [
+        "nonsingular fast terminal sliding model",
+        "nonlinear extended state observer",
+        "finite time control",
+        "full-state feedback",
+        "trajectory tracking",
+        "VEHICLES",
+        "ROBUST"
+      ],
+      "normalized_title": "finite time trajectory tracking with full state feedback of underactuated unmanned surface vessel based on nonsingular fast terminal sliding mode",
+      "raw_bibtex": "@ARTICLE{10.3390/jmse10121845,\n\tauthor = {Xu, DH and Liu, ZP and Song, JZ and Zhou, XQ},\n\ttitle = {Finite Time Trajectory Tracking with Full-State Feedback of Underactuated Unmanned Surface Vessel Based on Nonsingular Fast Terminal Sliding Mode},\n\tjournal = {JOURNAL OF MARINE SCIENCE AND ENGINEERING},\n\tyear = {2022},\n\tkeywords = {nonsingular fast terminal sliding model; nonlinear extended state observer; finite time control; full-state feedback; trajectory tracking; VEHICLES; ROBUST},\n\tabstract = {Marine transportation and operations have attracted the attention of more and more countries and scholars in recent years. A full-state finite time feedback control scheme is designed for the model parameters uncertainty, unknown ocean environment disturbances, and unmeasured system states in the underactuated Unmanned Surface Vessel (USV) trajectory tracking control. The external wind, wave and current environmental disturbances and model parameters perturbation are extended by Nonlinear Extended State Observer (NESO) to the state of the system, namely complex disturbances. The complex disturbances, positions and velocities of USV can be observed by NESO and feedback to USV control system. Next, the underactuated USV error model is obtained by operating the obtained feedback information and the virtual ship model. According to the error model, a Nonsingular Fast Terminal Sliding Model surface (NFTSM) is constructed to realize finite-time control. The control law is deduced through the Lyapunov stability theory to ensure the stability of the system. The results of MATLAB numerical simulations under different disturbances show that the trajectory tracking algorithm has fast responses, and a good convergence of the errors is observed, which verifies the effectiveness of the designed scheme.},\n\tdoi = {10.3390/jmse10121845},\n\tvolume = {10},\n\tnumber = {12},\n\tissn = {2077-1312},\n\tnote = {Times Cited in Web of Science Core Collection: 13 Total Times Cited: 13 Cited Reference Count: 36 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/jmse10121845"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000133",
+      "entry_type": "article",
+      "title": "Line-of-sight guidance law design for path following of USVs with sideslip angle compensation",
+      "authors": [
+        "Dong, WH",
+        "Zhu, YZ",
+        "Xing, JP",
+        "Wang, SL",
+        "Xin, ZC"
+      ],
+      "year": 2025,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2025.123015",
+      "abstract": "This paper proposes an estimator design approach for the sideslip angle of unmanned surface vessels (USVs) based on an extended state observer with fractional power function. Here it is called as the ESO-fal. Based on the estimation of the sideslip angle, a new line-of-sight guidance law (EFLOS) is designed for a class of underactuated USV. The aim is to address the problem of rapidly time-varying sideslip angle tracking for underactuated USVs in complex marine environments. The ESO-fal is developed for rapid and accurate identification of the time-varying sideslip angle caused by marine dynamic disturbances. Under the influence of wind, waves, and currents in complex marine environments, disturbances substantially compromise path-following performance, underscoring the need to fundamentally enhance its accuracy and stability. Benefiting from the performance characteristics of the ESO-fal, the EFLOS guidance law has a faster convergence speed and better robustness. It is shown from simulation experiments that the EFLOS guidance law has more stable tracking effects, faster convergence speed and more accurate sideslip angle estimation under different speed cases.",
+      "keywords": [
+        "Extended state observer",
+        "Line-of-sight guidance law",
+        "Path following",
+        "Sideslip angle identification",
+        "Unmanned surface vessels",
+        "UNMANNED SURFACE VESSELS",
+        "VEHICLES"
+      ],
+      "normalized_title": "line of sight guidance law design for path following of usvs with sideslip angle compensation",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2025.123015,\n\tauthor = {Dong, WH and Zhu, YZ and Xing, JP and Wang, SL and Xin, ZC},\n\ttitle = {Line-of-sight guidance law design for path following of USVs with sideslip angle compensation},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2025},\n\tkeywords = {Extended state observer; Line-of-sight guidance law; Path following; Sideslip angle identification; Unmanned surface vessels; UNMANNED SURFACE VESSELS; VEHICLES},\n\tabstract = {This paper proposes an estimator design approach for the sideslip angle of unmanned surface vessels (USVs) based on an extended state observer with fractional power function. Here it is called as the ESO-fal. Based on the estimation of the sideslip angle, a new line-of-sight guidance law (EFLOS) is designed for a class of underactuated USV. The aim is to address the problem of rapidly time-varying sideslip angle tracking for underactuated USVs in complex marine environments. The ESO-fal is developed for rapid and accurate identification of the time-varying sideslip angle caused by marine dynamic disturbances. Under the influence of wind, waves, and currents in complex marine environments, disturbances substantially compromise path-following performance, underscoring the need to fundamentally enhance its accuracy and stability. Benefiting from the performance characteristics of the ESO-fal, the EFLOS guidance law has a faster convergence speed and better robustness. It is shown from simulation experiments that the EFLOS guidance law has more stable tracking effects, faster convergence speed and more accurate sideslip angle estimation under different speed cases.},\n\tdoi = {10.1016/j.oceaneng.2025.123015},\n\tvolume = {342},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 32 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2025.123015"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000134",
+      "entry_type": "article",
+      "title": "FXESO based FNMPC path following control for underactuated surface vessels with roll stabilisation",
+      "authors": [
+        "Qin, YF",
+        "Liu, ZQ"
+      ],
+      "year": 2023,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2023.114855",
+      "abstract": "External ocean disturbances result in the roll motion of underactuated surface vessels (USVs), which probably have severe effects. To improve the USV capability of path following and speed maintenance in rudder roll stabilisation (RRS) control, a fixed-time extended state observer (FXESO) based fuzzy nonlinear model predictive control (FNMPC) scheme was proposed. A 4-degrees of freedom (DOF) nonlinear USV model is established for investigation. Subsequently, the FXESO is designed to estimate the velocity states and lumped disturbance terms of the USV model, which are used to simplify the predictive model. Subsequently, the disturbance compensation nonlinear model predictive control (NMPC) with fuzzy rules is designed to handle multi-objective cooperative control problems between path following and RRS. Fuzzy rules are designed to improve the performance of path following and speed maintenance by altering the objective function weights in MPC. The stability of proposed scheme was theoretically proven. The effectiveness of proposed algorithm was verified through simulations and comparisons.",
+      "keywords": [
+        "Rudder roll stabilisation",
+        "Model predictive control",
+        "Fuzzy control",
+        "Path following",
+        "Extended state observer",
+        "MODEL-PREDICTIVE CONTROL",
+        "TRACKING CONTROL",
+        "SYSTEM",
+        "VEHICLE",
+        "SHIP"
+      ],
+      "normalized_title": "fxeso based fnmpc path following control for underactuated surface vessels with roll stabilisation",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2023.114855,\n\tauthor = {Qin, YF and Liu, ZQ},\n\ttitle = {FXESO based FNMPC path following control for underactuated surface vessels with roll stabilisation},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2023},\n\tkeywords = {Rudder roll stabilisation; Model predictive control; Fuzzy control; Path following; Extended state observer; MODEL-PREDICTIVE CONTROL; TRACKING CONTROL; SYSTEM; VEHICLE; SHIP},\n\tabstract = {External ocean disturbances result in the roll motion of underactuated surface vessels (USVs), which probably have severe effects. To improve the USV capability of path following and speed maintenance in rudder roll stabilisation (RRS) control, a fixed-time extended state observer (FXESO) based fuzzy nonlinear model predictive control (FNMPC) scheme was proposed. A 4-degrees of freedom (DOF) nonlinear USV model is established for investigation. Subsequently, the FXESO is designed to estimate the velocity states and lumped disturbance terms of the USV model, which are used to simplify the predictive model. Subsequently, the disturbance compensation nonlinear model predictive control (NMPC) with fuzzy rules is designed to handle multi-objective cooperative control problems between path following and RRS. Fuzzy rules are designed to improve the performance of path following and speed maintenance by altering the objective function weights in MPC. The stability of proposed scheme was theoretically proven. The effectiveness of proposed algorithm was verified through simulations and comparisons.},\n\tdoi = {10.1016/j.oceaneng.2023.114855},\n\tvolume = {280},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 13 Total Times Cited: 14 Cited Reference Count: 42 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2023.114855"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000135",
+      "entry_type": "article",
+      "title": "Nonsingular fast terminal sliding mode tracking control for underwater glider with actuator physical constraints",
+      "authors": [
+        "Zou, HM",
+        "Zhang, GS",
+        "Hao, J"
+      ],
+      "year": 2024,
+      "journal": "ISA TRANSACTIONS",
+      "doi": "10.1016/j.isatra.2024.01.005",
+      "abstract": "ABS T R A C T An adaptive finite -time composite control (AFTCC) scheme is designed for the pitch angle trajectory tracking control of Underwater Glider (UG) with actuator physical constraints, uncertain dynamics and external disturbances. Firstly, a novel nonsingular fast terminal sliding mode control (NFTSMC) law is designed that can avoid singular problems, significantly reduce chattering, and achieve finite -time convergence of the system states. Secondly, a novel fixed-time extended state observer (FxTESO) is established to estimate the pitch angular velocity and lumped disturbances within a fixed time. Furthermore, a novel adaptive fixed-time saturation compensation system (AFxTSCS) is proposed to mitigate the effect caused by actuator saturation, and it can adjust the parameter adaptively when the actuator is in saturation or out of saturation. Finally, the AFTCC scheme, which is based on the NFTSMC framework and combines FxTESO and AFxTSCS, is designed to achieve the pitch angle trajectory tracking of UG, and the finite -time convergence of the whole closed-loop system is proved by the Lyapunov stability theory, and the simulations verify the availability and superiority of the proposed AFTCC scheme.",
+      "keywords": [
+        "Underwater glider",
+        "Fixed-time extended state observer",
+        "Adaptive fixed-time saturation compensation",
+        "system",
+        "Finite-time sliding mode control",
+        "FINITE-TIME STABILITY",
+        "ROBOTIC MANIPULATORS",
+        "SYSTEMS",
+        "DESIGN",
+        "DEPTH",
+        "STABILIZATION",
+        "SPACE"
+      ],
+      "normalized_title": "nonsingular fast terminal sliding mode tracking control for underwater glider with actuator physical constraints",
+      "raw_bibtex": "@ARTICLE{10.1016/j.isatra.2024.01.005,\n\tauthor = {Zou, HM and Zhang, GS and Hao, J},\n\ttitle = {Nonsingular fast terminal sliding mode tracking control for underwater glider with actuator physical constraints},\n\tjournal = {ISA TRANSACTIONS},\n\tyear = {2024},\n\tkeywords = {Underwater glider; Fixed-time extended state observer; Adaptive fixed-time saturation compensation; system; Finite-time sliding mode control; FINITE-TIME STABILITY; ROBOTIC MANIPULATORS; SYSTEMS; DESIGN; DEPTH; STABILIZATION; SPACE},\n\tabstract = {ABS T R A C T An adaptive finite -time composite control (AFTCC) scheme is designed for the pitch angle trajectory tracking control of Underwater Glider (UG) with actuator physical constraints, uncertain dynamics and external disturbances. Firstly, a novel nonsingular fast terminal sliding mode control (NFTSMC) law is designed that can avoid singular problems, significantly reduce chattering, and achieve finite -time convergence of the system states. Secondly, a novel fixed-time extended state observer (FxTESO) is established to estimate the pitch angular velocity and lumped disturbances within a fixed time. Furthermore, a novel adaptive fixed-time saturation compensation system (AFxTSCS) is proposed to mitigate the effect caused by actuator saturation, and it can adjust the parameter adaptively when the actuator is in saturation or out of saturation. Finally, the AFTCC scheme, which is based on the NFTSMC framework and combines FxTESO and AFxTSCS, is designed to achieve the pitch angle trajectory tracking of UG, and the finite -time convergence of the whole closed-loop system is proved by the Lyapunov stability theory, and the simulations verify the availability and superiority of the proposed AFTCC scheme.},\n\tdoi = {10.1016/j.isatra.2024.01.005},\n\tvolume = {146},\n\tpages = {249-262},\n\tissn = {0019-0578},\n\tnote = {Times Cited in Web of Science Core Collection: 25 Total Times Cited: 26 Cited Reference Count: 50 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.isatra.2024.01.005"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000136",
+      "entry_type": "article",
+      "title": "Cascaded Extended State Observers-Based Fixed-Time Line-of-Sight Path Following Control for Unmanned Surface Vessels With Disturbances and Saturation",
+      "authors": [
+        "Song, SM",
+        "Liu, ZL",
+        "Yuan, SZ",
+        "Wang, ZX"
+      ],
+      "year": 2024,
+      "journal": "IEEE TRANSACTIONS ON VEHICULAR TECHNOLOGY",
+      "doi": "10.1109/tvt.2024.3357731",
+      "abstract": "This article solves the path following problem of unmanned surface vessels, where model uncertainties, external environmental disturbances, and input saturation are considered. Specifically, the fixed-time line of sight (FXTLOS) based on fixed-time theory is used to design a guidance subsystem where the convergence time is independent of multiple initial states. Given the unavailability of velocity information, novel cascaded extended state observers have been proposed to estimate velocities and unknown disturbances to provide feedback to the controller for better performance, where only position and heading information is required. Furthermore, fast finite-time sliding mode control is used to solve the motion control problem for the USV, where a suitable auxiliary system is designed to deal with the adverse effects of input saturation and to ensure the stability of the system. The stability of the whole system is demonstrated, and the stability of the kinematic and dynamic cascade system is analyzed. Finally, a large number of comparative simulation cases are given to demonstrate the effectiveness and superior performance of the proposed scheme.",
+      "keywords": [
+        "Convergence",
+        "Vehicle dynamics",
+        "Uncertainty",
+        "Trajectory tracking",
+        "Task analysis",
+        "Surges",
+        "Stability criteria",
+        "Cascaded extended state observers",
+        "fixed-time line of sight",
+        "unmanned surface vessels",
+        "path following",
+        "sliding mode control",
+        "REJECTION",
+        "GUIDANCE",
+        "VEHICLES",
+        "SHIPS"
+      ],
+      "normalized_title": "cascaded extended state observers based fixed time line of sight path following control for unmanned surface vessels with disturbances and saturation",
+      "raw_bibtex": "@ARTICLE{10.1109/TVT.2024.3357731,\n\tauthor = {Song, SM and Liu, ZL and Yuan, SZ and Wang, ZX},\n\ttitle = {Cascaded Extended State Observers-Based Fixed-Time Line-of-Sight Path Following Control for Unmanned Surface Vessels With Disturbances and Saturation},\n\tjournal = {IEEE TRANSACTIONS ON VEHICULAR TECHNOLOGY},\n\tyear = {2024},\n\tkeywords = {Convergence; Vehicle dynamics; Uncertainty; Trajectory tracking; Task analysis; Surges; Stability criteria; Cascaded extended state observers; fixed-time line of sight; unmanned surface vessels; path following; sliding mode control; REJECTION; GUIDANCE; VEHICLES; SHIPS},\n\tabstract = {This article solves the path following problem of unmanned surface vessels, where model uncertainties, external environmental disturbances, and input saturation are considered. Specifically, the fixed-time line of sight (FXTLOS) based on fixed-time theory is used to design a guidance subsystem where the convergence time is independent of multiple initial states. Given the unavailability of velocity information, novel cascaded extended state observers have been proposed to estimate velocities and unknown disturbances to provide feedback to the controller for better performance, where only position and heading information is required. Furthermore, fast finite-time sliding mode control is used to solve the motion control problem for the USV, where a suitable auxiliary system is designed to deal with the adverse effects of input saturation and to ensure the stability of the system. The stability of the whole system is demonstrated, and the stability of the kinematic and dynamic cascade system is analyzed. Finally, a large number of comparative simulation cases are given to demonstrate the effectiveness and superior performance of the proposed scheme.},\n\tdoi = {10.1109/TVT.2024.3357731},\n\tvolume = {73},\n\tnumber = {6},\n\tpages = {7733-7747},\n\tissn = {0018-9545},\n\tnote = {Times Cited in Web of Science Core Collection: 29 Total Times Cited: 30 Cited Reference Count: 45 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TVT.2024.3357731"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000137",
+      "entry_type": "article",
+      "title": "Trajectory tracking control for unmanned amphibious surface vehicles with actuator faults",
+      "authors": [
+        "Meng, YH",
+        "Zhang, Y",
+        "Ye, H",
+        "Yang, XF",
+        "Xiang, ZR"
+      ],
+      "year": 2024,
+      "journal": "APPLIED OCEAN RESEARCH",
+      "doi": "10.1016/j.apor.2024.104182",
+      "abstract": "In this paper, a fixed-time fault-tolerant control strategy is proposed for the trajectory tracking of aquatic- aerial unmanned amphibious vehicles (AquaUAVs) under multiple actuator faults. A switched error system is introduced to describe the AquaUAV trajectory tracking motion under actuator faults in different modes. A switched fixed-time extended state observer (FESO) is developed to observe the tracking errors of the vehicle and the actuator faults, and a fault-tolerant control strategy. The proposed composite controller not only ensures the stability of the system, but also compensates the faults of the actuator. Simulation and experiment results verify that the proposed control strategy can realize the trajectory tracking control of amphibious vehicle under the condition of multiple actuator faults.",
+      "keywords": [
+        "Fault-tolerant control",
+        "Switched system",
+        "Trajectory tracking control",
+        "Unmanned amphibious vehicle (AquaUAV)",
+        "Fixed-time extended state observer (FESO)",
+        "TOLERANT CONTROL",
+        "DESIGN",
+        "USV"
+      ],
+      "normalized_title": "trajectory tracking control for unmanned amphibious surface vehicles with actuator faults",
+      "raw_bibtex": "@ARTICLE{10.1016/j.apor.2024.104182,\n\tauthor = {Meng, YH and Zhang, Y and Ye, H and Yang, XF and Xiang, ZR},\n\ttitle = {Trajectory tracking control for unmanned amphibious surface vehicles with actuator faults},\n\tjournal = {APPLIED OCEAN RESEARCH},\n\tyear = {2024},\n\tkeywords = {Fault-tolerant control; Switched system; Trajectory tracking control; Unmanned amphibious vehicle (AquaUAV); Fixed-time extended state observer (FESO); TOLERANT CONTROL; DESIGN; USV},\n\tabstract = {In this paper, a fixed-time fault-tolerant control strategy is proposed for the trajectory tracking of aquatic- aerial unmanned amphibious vehicles (AquaUAVs) under multiple actuator faults. A switched error system is introduced to describe the AquaUAV trajectory tracking motion under actuator faults in different modes. A switched fixed-time extended state observer (FESO) is developed to observe the tracking errors of the vehicle and the actuator faults, and a fault-tolerant control strategy. The proposed composite controller not only ensures the stability of the system, but also compensates the faults of the actuator. Simulation and experiment results verify that the proposed control strategy can realize the trajectory tracking control of amphibious vehicle under the condition of multiple actuator faults.},\n\tdoi = {10.1016/j.apor.2024.104182},\n\tvolume = {152},\n\tissn = {0141-1187},\n\tnote = {Times Cited in Web of Science Core Collection: 9 Total Times Cited: 9 Cited Reference Count: 37 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.apor.2024.104182"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000138",
+      "entry_type": "article",
+      "title": "Cooperative path following control of USV-UAVs with genetic algorithm extended state observer",
+      "authors": [
+        "Zhang, HG",
+        "Zhang, XK",
+        "Xu, HT",
+        "Soares, CG"
+      ],
+      "year": 2025,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2025.120332",
+      "abstract": "This work investigates an innovative decentralized formation control method for underactuated surface vessel (USV) and underactuated aerial vehicles (UAVs) to achieve path following in the presence of external disturbances. The design of the USV-UAVs cooperative path following controller is divided mainly into two parts. The first part is the guidance system,which employs aline of sight (LOS) based on a switching mechanism for selecting the next way point to steer the USV in path following, thereby mitigating overshooting at turning points. For UAVs, the virtual attitude angles are designed to guide UAVs in tracking the USV's trajectory. The second part is the control system, which uses sliding mode to design a controller to enable the USV-UAVs to track the reference path. An extended state observer,the genetic algorithm-based extended state observer (GAESO), is proposed to estimate unmodeled dynamics and external disturbances. The stability proof of both the USVs and UAVs is presented using the Lyapunov theorem. Finally, the simulation tests are carried out to validate the proposed system and control methods in the presence of environmental disturbance.",
+      "keywords": [
+        "USV-UAVs",
+        "Heterogeneous system",
+        "Cooperative control",
+        "Formation control",
+        "Cooperative path following",
+        "GAESO",
+        "LINE-OF-SIGHT",
+        "TRAJECTORY TRACKING",
+        "SURFACE VEHICLES",
+        "GUIDANCE",
+        "DESIGN",
+        "SYSTEM",
+        "MPC"
+      ],
+      "normalized_title": "cooperative path following control of usv uavs with genetic algorithm extended state observer",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2025.120332,\n\tauthor = {Zhang, HG and Zhang, XK and Xu, HT and Soares, CG},\n\ttitle = {Cooperative path following control of USV-UAVs with genetic algorithm extended state observer},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2025},\n\tkeywords = {USV-UAVs; Heterogeneous system; Cooperative control; Formation control; Cooperative path following; GAESO; LINE-OF-SIGHT; TRAJECTORY TRACKING; SURFACE VEHICLES; GUIDANCE; DESIGN; SYSTEM; MPC},\n\tabstract = {This work investigates an innovative decentralized formation control method for underactuated surface vessel (USV) and underactuated aerial vehicles (UAVs) to achieve path following in the presence of external disturbances. The design of the USV-UAVs cooperative path following controller is divided mainly into two parts. The first part is the guidance system,which employs aline of sight (LOS) based on a switching mechanism for selecting the next way point to steer the USV in path following, thereby mitigating overshooting at turning points. For UAVs, the virtual attitude angles are designed to guide UAVs in tracking the USV's trajectory. The second part is the control system, which uses sliding mode to design a controller to enable the USV-UAVs to track the reference path. An extended state observer,the genetic algorithm-based extended state observer (GAESO), is proposed to estimate unmodeled dynamics and external disturbances. The stability proof of both the USVs and UAVs is presented using the Lyapunov theorem. Finally, the simulation tests are carried out to validate the proposed system and control methods in the presence of environmental disturbance.},\n\tdoi = {10.1016/j.oceaneng.2025.120332},\n\tvolume = {320},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 25 Total Times Cited: 25 Cited Reference Count: 52 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2025.120332"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000139",
+      "entry_type": "article",
+      "title": "Fixed-time observer-based saturated nonsingular terminal sliding mode controller design for an over-actuated ROV with time-varying saturation limits",
+      "authors": [
+        "Hosseinnajad, A",
+        "Mohajer, N"
+      ],
+      "year": 2025,
+      "journal": "ISA TRANSACTIONS",
+      "doi": "10.1016/j.isatra.2025.06.025",
+      "abstract": "Input saturation is critical in over-actuated systems when multiple degrees of freedom (DOF) with different levels of disturbance rejection are controlled simultaneously by a set of actuators. The current study introduces a novel saturated non-singular terminal sliding mode controller to address input saturation for an over-actuated remotely-operated vehicle (ROV). The proposed controller consists of a tuning algorithm to ensure that the control commands do not violate the time-varying saturation limits of each DOF. In addition, a fixed-time extended-state observer is designed to estimate the vehicle's velocity along with the lumped unknown dynamics of the system. The observer is also employed as a tool to maintain the orientation of the ROV in extreme environmental conditions. The stability analysis shows that all system's states, except for yaw angle, are globally finite-time stable and the yaw angle is globally asymptotically stable. Several sets of simulations are carried out and the results demonstrate the superiority of the proposed controller in terms of positioning accuracy, saturation compensation and transient behaviour under different environmental conditions.",
+      "keywords": [
+        "Fixed-time Extended-state Observer",
+        "Remotely-operated Vehicle",
+        "Saturation Compensation in Over-actuated Systems",
+        "Saturated Nonsingular Terminal Sliding Mode Controller",
+        "Time-varying Input Saturation",
+        "2ND-ORDER MULTIAGENT SYSTEMS",
+        "TRAJECTORY TRACKING CONTROL",
+        "DOUBLE-INTEGRATOR DYNAMICS",
+        "CONSENSUS TRACKING",
+        "MULTIPLE INTEGRATORS",
+        "GLOBAL STABILIZATION",
+        "INPUT",
+        "DISTURBANCES",
+        "VESSEL",
+        "STATE"
+      ],
+      "normalized_title": "fixed time observer based saturated nonsingular terminal sliding mode controller design for an over actuated rov with time varying saturation limits",
+      "raw_bibtex": "@ARTICLE{10.1016/j.isatra.2025.06.025,\n\tauthor = {Hosseinnajad, A and Mohajer, N},\n\ttitle = {Fixed-time observer-based saturated nonsingular terminal sliding mode controller design for an over-actuated ROV with time-varying saturation limits},\n\tjournal = {ISA TRANSACTIONS},\n\tyear = {2025},\n\tkeywords = {Fixed-time Extended-state Observer; Remotely-operated Vehicle; Saturation Compensation in Over-actuated Systems; Saturated Nonsingular Terminal Sliding Mode Controller; Time-varying Input Saturation; 2ND-ORDER MULTIAGENT SYSTEMS; TRAJECTORY TRACKING CONTROL; DOUBLE-INTEGRATOR DYNAMICS; CONSENSUS TRACKING; MULTIPLE INTEGRATORS; GLOBAL STABILIZATION; INPUT; DISTURBANCES; VESSEL; STATE},\n\tabstract = {Input saturation is critical in over-actuated systems when multiple degrees of freedom (DOF) with different levels of disturbance rejection are controlled simultaneously by a set of actuators. The current study introduces a novel saturated non-singular terminal sliding mode controller to address input saturation for an over-actuated remotely-operated vehicle (ROV). The proposed controller consists of a tuning algorithm to ensure that the control commands do not violate the time-varying saturation limits of each DOF. In addition, a fixed-time extended-state observer is designed to estimate the vehicle's velocity along with the lumped unknown dynamics of the system. The observer is also employed as a tool to maintain the orientation of the ROV in extreme environmental conditions. The stability analysis shows that all system's states, except for yaw angle, are globally finite-time stable and the yaw angle is globally asymptotically stable. Several sets of simulations are carried out and the results demonstrate the superiority of the proposed controller in terms of positioning accuracy, saturation compensation and transient behaviour under different environmental conditions.},\n\tdoi = {10.1016/j.isatra.2025.06.025},\n\tvolume = {165},\n\tpages = {98-110},\n\tissn = {0019-0578},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 56 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.isatra.2025.06.025"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000140",
+      "entry_type": "article",
+      "title": "Robust trajectory tracking for fully-input-bounded actuated unmanned surface vessel with stochastic disturbances: An approach by the homogeneous nonlinear extended state observer and dynamic surface control",
+      "authors": [
+        "Cao, HT",
+        "Xu, RJ",
+        "Zhao, S",
+        "Li, MJ",
+        "Song, XL",
+        "Dai, HL"
+      ],
+      "year": 2022,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2021.110113",
+      "abstract": "Nowadays, academia, industry, and the government have increased their interests and found the necessities of developing unmanned surface vessels (USV) for maritime shipping, resource exploration, and scientific research. To completely address the USV trajectory tracking problem, a robust trajectory tracking controller based on the homogeneous nonlinear extended state observer (HNESO) and the dynamic surface control (DSC) is introduced in this study, which is capable to deal with saturations both for the control inputs and their change rates, as well as stochastic lumped disturbances that include the model uncertainties, unmeasured disturbances, and noises. With strict mathematical derivation of the HNESO, the estimated stochastic lumped disturbances can be further regarded as compensations during the DSC controller design, such that, the robustness of the proposed controller would be enhanced. The Lyapunov stability analysis proves that all signals in the closed-loop tracking system are bounded. Compared with the Conventional Dynamics Surface Control (CDSC), Nonlinear Model Predictive Control (NMPC), and Adaptive Sliding Mode Control (ASMC), simulation results show that the proposed controller offers better tracking performances, which ensures that the USV precisely tracks the desired trajectory in different working scenarios under conventional or intense stochastic lumped disturbances. Finally, we also show that the HNESO has better estimation results for the stochastic lumped disturbances than the linear extended state observer (LESO).",
+      "keywords": [
+        "Unmanned surface vessel",
+        "Robust control of nonlinear systems",
+        "Trajectory tracking",
+        "Homogeneous nonlinear extended state",
+        "observer",
+        "Dynamic surface control",
+        "Stochastic disturbance estimation",
+        "SATURATION",
+        "MAGNITUDE",
+        "VEHICLES"
+      ],
+      "normalized_title": "robust trajectory tracking for fully input bounded actuated unmanned surface vessel with stochastic disturbances an approach by the homogeneous nonlinear extended state observer and dynamic surface control",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2021.110113,\n\tauthor = {Cao, HT and Xu, RJ and Zhao, S and Li, MJ and Song, XL and Dai, HL},\n\ttitle = {Robust trajectory tracking for fully-input-bounded actuated unmanned surface vessel with stochastic disturbances: An approach by the homogeneous nonlinear extended state observer and dynamic surface control},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2022},\n\tkeywords = {Unmanned surface vessel; Robust control of nonlinear systems; Trajectory tracking; Homogeneous nonlinear extended state; observer; Dynamic surface control; Stochastic disturbance estimation; SATURATION; MAGNITUDE; VEHICLES},\n\tabstract = {Nowadays, academia, industry, and the government have increased their interests and found the necessities of developing unmanned surface vessels (USV) for maritime shipping, resource exploration, and scientific research. To completely address the USV trajectory tracking problem, a robust trajectory tracking controller based on the homogeneous nonlinear extended state observer (HNESO) and the dynamic surface control (DSC) is introduced in this study, which is capable to deal with saturations both for the control inputs and their change rates, as well as stochastic lumped disturbances that include the model uncertainties, unmeasured disturbances, and noises. With strict mathematical derivation of the HNESO, the estimated stochastic lumped disturbances can be further regarded as compensations during the DSC controller design, such that, the robustness of the proposed controller would be enhanced. The Lyapunov stability analysis proves that all signals in the closed-loop tracking system are bounded. Compared with the Conventional Dynamics Surface Control (CDSC), Nonlinear Model Predictive Control (NMPC), and Adaptive Sliding Mode Control (ASMC), simulation results show that the proposed controller offers better tracking performances, which ensures that the USV precisely tracks the desired trajectory in different working scenarios under conventional or intense stochastic lumped disturbances. Finally, we also show that the HNESO has better estimation results for the stochastic lumped disturbances than the linear extended state observer (LESO).},\n\tdoi = {10.1016/j.oceaneng.2021.110113},\n\tvolume = {243},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 33 Total Times Cited: 34 Cited Reference Count: 51 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2021.110113"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

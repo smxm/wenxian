@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0008",
+    "results": [
+        {
+            "paper_id": "paper_000071",
+            "decision": "exclude",
+            "reason": "标题和摘要仅涉及弓网系统的机械控制与接触力优化，未提及离线电气特性或电弧模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000072",
+            "decision": "exclude",
+            "reason": "摘要表明研究聚焦于弓网电弧的视觉检测与图像分割算法，未涉及电气特性分析或电弧建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000073",
+            "decision": "include",
+            "reason": "标题和摘要明确研究弓网电弧模型及其在不同速度下的电气特性（如电压浪涌），并提及模型建立与验证。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000074",
+            "decision": "exclude",
+            "reason": "摘要仅讨论受电弓滑板磨损的深度学习检测方法，未涉及离线电气特性或电弧建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000075",
+            "decision": "include",
+            "reason": "标题和摘要明确研究弓网电弧对牵引驱动系统的影响，包括电压和谐波特性建模，符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000076",
+            "decision": "exclude",
+            "reason": "摘要聚焦于弓网系统状态的在线视觉感知与参数自适应定位，未涉及电气特性分析或电弧建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000077",
+            "decision": "exclude",
+            "reason": "摘要研究碳滑板的分层磨损机制与电弧放电的关系，但未涉及电气特性建模或仿真，属于纯磨损分析。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000078",
+            "decision": "uncertain",
+            "reason": "摘要涉及弓网电弧的温度建模与COMSOL仿真，但未明确提及电气特性（如电压/电流畸变）或Cassie等模型，信息不足。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000079",
+            "decision": "exclude",
+            "reason": "标题和摘要仅讨论弓网动态性能的机械阻尼优化，虽提及离线与电弧，但未涉及电气特性分析或建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000080",
+            "decision": "include",
+            "reason": "标题和摘要明确研究弓网电弧模型与瞬态特性，基于改进的Habedank模型进行仿真，涉及电压/电流分析。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        }
+    ]
+}

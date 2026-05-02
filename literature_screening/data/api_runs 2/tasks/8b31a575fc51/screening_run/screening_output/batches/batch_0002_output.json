@@ -1,0 +1,113 @@
+{
+  "batch_id": "batch_0002",
+  "results": [
+    {
+      "paper_id": "paper_000011",
+      "decision": "uncertain",
+      "reason": "标题和摘要探讨技术写作中的元话语，但未明确提及模糊语或语用分析，相关性不明确。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000012",
+      "decision": "exclude",
+      "reason": "分析科学播客的修辞和互动元话语，属于非学术语境（播客媒体），不符合纳入标准。",
+      "evidence": [
+        "title",
+        "abstract",
+        "journal"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000013",
+      "decision": "exclude",
+      "reason": "探讨精神病学分类中的语义模糊性，属于哲学和精神病学领域，非理工科学术写作分析。",
+      "evidence": [
+        "title",
+        "abstract",
+        "journal"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000014",
+      "decision": "include",
+      "reason": "标题和摘要明确分析数学建模竞赛报告中的元话语历时变化，包括模糊语使用，属于STEM学术写作语用分析。",
+      "evidence": [
+        "title",
+        "abstract",
+        "journal"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000015",
+      "decision": "uncertain",
+      "reason": "分析工程、医学和语言学数字期刊中的多模态元话语，涉及STEM领域但未明确提及模糊语或语用功能。",
+      "evidence": [
+        "title",
+        "abstract",
+        "journal"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "paper_id": "paper_000016",
+      "decision": "exclude",
+      "reason": "标题和摘要分析系统工程理论中的模糊性，属于计算机/控制系统中的“模糊逻辑/控制”范畴，明确命中排除标准。",
+      "evidence": [
+        "title",
+        "abstract",
+        "journal"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000017",
+      "decision": "uncertain",
+      "reason": "分析工程学生反思中的元话语变化，涉及STEM写作但未明确提及模糊语或语用分析，信息不足。",
+      "evidence": [
+        "title",
+        "abstract",
+        "journal"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000018",
+      "decision": "include",
+      "reason": "摘要明确对比工程和人文学科本科论文中的模糊语和增强语使用，属于STEM学术写作的语用对比分析。",
+      "evidence": [
+        "title",
+        "abstract",
+        "journal"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000019",
+      "decision": "exclude",
+      "reason": "标题为“碳对冲”，属于金融经济领域的“对冲”，明确命中排除标准；摘要缺失无法提供反证。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000020",
+      "decision": "exclude",
+      "reason": "标题和摘要探讨金融交易中的状态依赖对冲策略，属于金融经济领域的“对冲”，明确命中排除标准。",
+      "evidence": [
+        "title",
+        "abstract",
+        "journal"
+      ],
+      "confidence": 0.95
+    }
+  ]
+}

@@ -1,0 +1,3324 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要提到hedges作为元话语标记，涉及工程学科，但未明确分析模糊语的语用功能或基于语料库对比。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:05:42.262170+08:00"
+  },
+  {
+    "paper_id": "paper_000002",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要分析Nature Podcast的元话语，属于科学传播而非学术写作语境，不符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:05:42.262170+08:00"
+  },
+  {
+    "paper_id": "paper_000003",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "标题和摘要探讨元话语在MOOC视频讲座中的使用，涉及工程学科，但未明确提及模糊语或语用分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:05:42.262170+08:00"
+  },
+  {
+    "paper_id": "paper_000004",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论金融领域的hedging（风险对冲），明确命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:05:42.262170+08:00"
+  },
+  {
+    "paper_id": "paper_000005",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及制造系统中的hedging control policies，属于控制系统领域，明确命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:05:42.262170+08:00"
+  },
+  {
+    "paper_id": "paper_000006",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论生态学中的碳“bet hedging”，属于生物学概念，不符合学术写作中模糊语的研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:05:42.262170+08:00"
+  },
+  {
+    "paper_id": "paper_000007",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及金融数学中的CVaR minimization for hedging，明确命中金融领域排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:05:42.262170+08:00"
+  },
+  {
+    "paper_id": "paper_000008",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论金融中的dynamic hedging model，明确命中金融领域排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:05:42.262170+08:00"
+  },
+  {
+    "paper_id": "paper_000009",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确研究波斯语研究文章中元话语模糊语的使用，并进行硬软科学对比，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:05:42.262170+08:00"
+  },
+  {
+    "paper_id": "paper_000010",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论能源市场中的hedging strategies，属于金融经济领域，明确命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:05:42.262170+08:00"
+  },
+  {
+    "paper_id": "paper_000011",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要明确讨论模糊逻辑、模糊集合等数学和计算机领域的模糊控制概念，命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:04.401166+08:00"
+  },
+  {
+    "paper_id": "paper_000012",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确分析工程论文中态度表达和元话语设备，涉及学术写作和学科对比，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:04.401166+08:00"
+  },
+  {
+    "paper_id": "paper_000013",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论工程中过程描述的模糊性度量，属于工程系统优化而非学术写作中的模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:04.401166+08:00"
+  },
+  {
+    "paper_id": "paper_000014",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论故障树分析中的模糊性和不精确性，属于工程系统可靠性分析，命中模糊逻辑排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:04.401166+08:00"
+  },
+  {
+    "paper_id": "paper_000015",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论大象对植物的利用，其中“hedging”指植物修剪，属于生态学而非学术写作分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:04.401166+08:00"
+  },
+  {
+    "paper_id": "paper_000016",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确比较软硬科学论文讨论部分中模糊语和增强语的使用，符合学术写作和学科对比纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:04.401166+08:00"
+  },
+  {
+    "paper_id": "paper_000017",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要分析医学文章中模糊语的使用变化，涉及学术写作和语料库对比，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:04.401166+08:00"
+  },
+  {
+    "paper_id": "paper_000018",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "摘要提到自然语言的模糊性，但主要讨论WordNet和NLP，是否涉及学术写作中的模糊语分析信息不足。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:04.401166+08:00"
+  },
+  {
+    "paper_id": "paper_000019",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论决策模型中的模糊性建模和测量，属于决策理论而非学术写作中的模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:04.401166+08:00"
+  },
+  {
+    "paper_id": "paper_000020",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论核战略中的“核模糊”策略，属于国际政治领域，命中金融经济领域对冲的排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:04.401166+08:00"
+  },
+  {
+    "paper_id": "paper_000021",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要明确讨论金融市场的对冲策略，严格排除金融领域的hedging。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:25.170312+08:00"
+  },
+  {
+    "paper_id": "paper_000022",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "摘要明确分析工程学科背景下的学术写作元话语，包含语用功能分析和基于语料库的对比。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:25.170312+08:00"
+  },
+  {
+    "paper_id": "paper_000023",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要明确研究非英语母语作者在学术写作中的元话语模式，包含跨学科对比和语用分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:25.170312+08:00"
+  },
+  {
+    "paper_id": "paper_000024",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要明确讨论矿业公司的金融对冲策略，严格排除金融领域的hedging。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:25.170312+08:00"
+  },
+  {
+    "paper_id": "paper_000025",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要明确讨论金融风险对冲，严格排除金融领域的hedging。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:25.170312+08:00"
+  },
+  {
+    "paper_id": "paper_000026",
+    "batch_id": "batch_0003",
+    "decision": "uncertain",
+    "reason": "摘要提到元话语和STEAM背景，但主要关注生成式AI模型的方法论研究，是否明确分析学术写作中的模糊语不够明确。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:25.170312+08:00"
+  },
+  {
+    "paper_id": "paper_000027",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要明确研究工程和语言学领域学术摘要中的模糊语词汇实现，包含跨学科对比和语用分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:25.170312+08:00"
+  },
+  {
+    "paper_id": "paper_000028",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要明确讨论水资源管理的对冲规则，属于工程控制领域，严格排除模糊控制相关概念。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:25.170312+08:00"
+  },
+  {
+    "paper_id": "paper_000029",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要明确讨论金融对冲的报童模型，严格排除金融领域的hedging。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:25.170312+08:00"
+  },
+  {
+    "paper_id": "paper_000030",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "摘要明确分析社交媒体广告中的元话语，属于非学术语境，排除非学术语境的分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:25.170312+08:00"
+  },
+  {
+    "paper_id": "paper_000031",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要明确讨论金融领域的对冲策略，严格命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:46.663256+08:00"
+  },
+  {
+    "paper_id": "paper_000032",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论能源项目设计中的不确定性对冲，属于工程经济决策，不符合学术写作中的模糊语分析主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:46.663256+08:00"
+  },
+  {
+    "paper_id": "paper_000033",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要明确分析护理和教育学术文章中的模糊语使用，包含学科对比和语用功能分析，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:46.663256+08:00"
+  },
+  {
+    "paper_id": "paper_000034",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论金融衍生品定价中的对冲策略，严格命中金融领域排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:46.663256+08:00"
+  },
+  {
+    "paper_id": "paper_000035",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论模糊逻辑和程度理论，属于数学和计算机领域的模糊逻辑，严格命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:46.663256+08:00"
+  },
+  {
+    "paper_id": "paper_000036",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论钢铁制造技术投资中的不确定性对冲，属于工程管理决策，不符合学术写作中的模糊语分析主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:46.663256+08:00"
+  },
+  {
+    "paper_id": "paper_000037",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要分析学术研究文章中互动元话语标记，涉及多个理工科和经济学学科对比，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:46.663256+08:00"
+  },
+  {
+    "paper_id": "paper_000038",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要明确分析科学话语中的认识论含义，通过语料库方法对比模糊语和含义理论，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:46.663256+08:00"
+  },
+  {
+    "paper_id": "paper_000039",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论气候政策和技术不确定性下的对冲策略，属于环境经济学决策，不符合学术写作中的模糊语分析主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:46.663256+08:00"
+  },
+  {
+    "paper_id": "paper_000040",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论石油价格波动和投资组合对冲，属于金融经济学领域，严格命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:06:46.663256+08:00"
+  },
+  {
+    "paper_id": "paper_000041",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及模糊逻辑和模糊控制，属于排除标准中的数学和计算机算法领域。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:05.508023+08:00"
+  },
+  {
+    "paper_id": "paper_000042",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论软件工程中的模糊性问题，属于计算机算法领域，不符合学术写作中的模糊语分析主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:05.508023+08:00"
+  },
+  {
+    "paper_id": "paper_000043",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要明确讨论模糊逻辑作为模糊性理论，属于排除标准中的数学和计算机算法领域。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:05.508023+08:00"
+  },
+  {
+    "paper_id": "paper_000044",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论语言学中的模糊性和语法，但未涉及学术写作或理工科背景，不符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:05.508023+08:00"
+  },
+  {
+    "paper_id": "paper_000045",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及数学编程中的渐进对冲，属于金融经济领域的对冲概念，不符合学术写作中的模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:05.508023+08:00"
+  },
+  {
+    "paper_id": "paper_000046",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要明确分析科学话语中的对冲现象，涉及学术写作背景和语用功能分析，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:05.508023+08:00"
+  },
+  {
+    "paper_id": "paper_000047",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论石油价格波动和对冲有效性，属于金融经济领域的对冲概念，不符合学术写作中的模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:05.508023+08:00"
+  },
+  {
+    "paper_id": "paper_000048",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及金融对冲模型，属于金融经济领域的对冲概念，不符合学术写作中的模糊语分析主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:05.508023+08:00"
+  },
+  {
+    "paper_id": "paper_000049",
+    "batch_id": "batch_0005",
+    "decision": "uncertain",
+    "reason": "标题和摘要讨论元话语标记在正式写作中的使用，但未明确涉及理工科背景或模糊语分析，信息不足以判断是否满足纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:05.508023+08:00"
+  },
+  {
+    "paper_id": "paper_000050",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要分析学术研究文章中元话语标记的使用，涉及跨学科对比和学术写作背景，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:05.508023+08:00"
+  },
+  {
+    "paper_id": "paper_000051",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论水利工程中的洪水对冲操作，属于工程控制领域，与语言模糊语分析无关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:26.160418+08:00"
+  },
+  {
+    "paper_id": "paper_000052",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论股票期权交易中的对冲策略，属于金融领域，严格排除。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:26.160418+08:00"
+  },
+  {
+    "paper_id": "paper_000053",
+    "batch_id": "batch_0006",
+    "decision": "uncertain",
+    "reason": "标题和摘要讨论工程实践中软件介导的特定模糊性，涉及工程语境但未明确分析学术写作中的模糊语。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:26.160418+08:00"
+  },
+  {
+    "paper_id": "paper_000054",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论电力市场中的能源合同对冲策略，属于金融风险管理，严格排除。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:26.160418+08:00"
+  },
+  {
+    "paper_id": "paper_000055",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论城市规划中的不确定性对冲，属于社会科学分析，非学术写作语境。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:26.160418+08:00"
+  },
+  {
+    "paper_id": "paper_000056",
+    "batch_id": "batch_0006",
+    "decision": "include",
+    "reason": "标题和摘要明确分析科学语篇中情态助动词的模糊语使用，涉及语用分析和性别差异。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:26.160418+08:00"
+  },
+  {
+    "paper_id": "paper_000057",
+    "batch_id": "batch_0006",
+    "decision": "include",
+    "reason": "标题和摘要分析俄罗斯作者研究摘要中的元话语变异，涉及语言学与工程学的跨学科对比。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:26.160418+08:00"
+  },
+  {
+    "paper_id": "paper_000058",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论金融工程中的期权动态对冲，属于金融领域，严格排除。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:26.160418+08:00"
+  },
+  {
+    "paper_id": "paper_000059",
+    "batch_id": "batch_0006",
+    "decision": "uncertain",
+    "reason": "标题和摘要讨论认知科学中的模糊性概念，但未明确涉及学术写作或理工科语境。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:26.160418+08:00"
+  },
+  {
+    "paper_id": "paper_000060",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论金融工程中的完美对冲策略，属于金融领域，严格排除。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:26.160418+08:00"
+  },
+  {
+    "paper_id": "paper_000061",
+    "batch_id": "batch_0007",
+    "decision": "include",
+    "reason": "标题和摘要明确探讨学术写作中模糊语策略，并包含跨语言语料库对比分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:46.118742+08:00"
+  },
+  {
+    "paper_id": "paper_000062",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论植物繁殖策略中的“bet-hedging”，属于生物学概念，非语言学术语用分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:46.118742+08:00"
+  },
+  {
+    "paper_id": "paper_000063",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要明确分析学术写作中模糊语现象，并探讨其语用功能和教学应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:46.118742+08:00"
+  },
+  {
+    "paper_id": "paper_000064",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "摘要分析说明书中的元话语，属于非学术语境的技术写作，不符合研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:46.118742+08:00"
+  },
+  {
+    "paper_id": "paper_000065",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论金融领域的期权对冲策略，明确命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:46.118742+08:00"
+  },
+  {
+    "paper_id": "paper_000066",
+    "batch_id": "batch_0007",
+    "decision": "uncertain",
+    "reason": "摘要分析书评中的互动元话语标记，涉及学术文本但未明确提及模糊语或语用分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:46.118742+08:00"
+  },
+  {
+    "paper_id": "paper_000067",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论生物材料免疫策略中的“hedging”，属于医学生物学概念，非语言学术语用分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:46.118742+08:00"
+  },
+  {
+    "paper_id": "paper_000068",
+    "batch_id": "batch_0007",
+    "decision": "uncertain",
+    "reason": "摘要分析学术演讲中的元话语，涉及跨学科对比但未明确提及模糊语现象。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:46.118742+08:00"
+  },
+  {
+    "paper_id": "paper_000069",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要分析商务投诉信中的模糊语，属于非学术语境，不符合研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:46.118742+08:00"
+  },
+  {
+    "paper_id": "paper_000070",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论金融资产的风险对冲策略，明确命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:07:46.118742+08:00"
+  },
+  {
+    "paper_id": "paper_000071",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要明确讨论金融市场的对冲策略，属于排除标准中的金融领域对冲。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:06.833556+08:00"
+  },
+  {
+    "paper_id": "paper_000072",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论生物质加工网络设计中的不确定性对冲，属于工程优化而非语言分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:06.833556+08:00"
+  },
+  {
+    "paper_id": "paper_000073",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论柑橘树的修剪时间对生长的影响，属于农业研究，与学术写作无关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:06.833556+08:00"
+  },
+  {
+    "paper_id": "paper_000074",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论研发项目中的对冲行为，属于金融风险管理，与语言分析无关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:06.833556+08:00"
+  },
+  {
+    "paper_id": "paper_000075",
+    "batch_id": "batch_0008",
+    "decision": "include",
+    "reason": "标题和摘要明确分析学术写作中的元话语，包括模糊语的使用，并涉及跨学科对比。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:06.833556+08:00"
+  },
+  {
+    "paper_id": "paper_000076",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论使用看跌期权进行风险对冲，属于金融领域，符合排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:06.833556+08:00"
+  },
+  {
+    "paper_id": "paper_000077",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论制造系统中的对冲点控制，属于工程控制领域，与模糊逻辑相关但非语言分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:06.833556+08:00"
+  },
+  {
+    "paper_id": "paper_000078",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论固定收益衍生品的定价和对冲方法，属于金融工程领域。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:06.833556+08:00"
+  },
+  {
+    "paper_id": "paper_000079",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论篮子障碍期权的最优对冲，属于金融衍生品领域，符合排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:06.833556+08:00"
+  },
+  {
+    "paper_id": "paper_000080",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论库存和对冲决策，属于金融风险管理，与学术写作无关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:06.833556+08:00"
+  },
+  {
+    "paper_id": "paper_000081",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论电力市场中的金融对冲，严格排除金融领域的hedging。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:28.326518+08:00"
+  },
+  {
+    "paper_id": "paper_000082",
+    "batch_id": "batch_0009",
+    "decision": "include",
+    "reason": "标题和摘要分析工程、医学和语言学数字学术期刊中的元话语，包含学科对比和语用分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:28.326518+08:00"
+  },
+  {
+    "paper_id": "paper_000083",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论随机规划中的渐进对冲算法，属于数学/运筹学优化方法，排除模糊逻辑/控制相关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:28.326518+08:00"
+  },
+  {
+    "paper_id": "paper_000084",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "标题和摘要明确讨论科学语篇中的hedging，涉及对比语言学视角。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:28.326518+08:00"
+  },
+  {
+    "paper_id": "paper_000085",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论贸易和货币期权对冲模型，严格排除金融领域的hedging。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:28.326518+08:00"
+  },
+  {
+    "paper_id": "paper_000086",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "标题和摘要明确分析科学研究文章中的hedging形式、功能和分布，属于学术写作语用分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:28.326518+08:00"
+  },
+  {
+    "paper_id": "paper_000087",
+    "batch_id": "batch_0009",
+    "decision": "include",
+    "reason": "摘要提到工程和人文学科本科论文中hedging与boosting的对比，涉及学科对比和学术写作分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:28.326518+08:00"
+  },
+  {
+    "paper_id": "paper_000088",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论供应链管理中的对冲策略，属于运营管理领域，不符合学术写作主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:28.326518+08:00"
+  },
+  {
+    "paper_id": "paper_000089",
+    "batch_id": "batch_0009",
+    "decision": "uncertain",
+    "reason": "标题讨论精神病学分类中的语义模糊性，但摘要未明确涉及学术写作或语用分析，信息不足。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:28.326518+08:00"
+  },
+  {
+    "paper_id": "paper_000090",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论水库防洪操作中的对冲规则，属于水利工程优化问题，排除模糊逻辑/控制相关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:28.326518+08:00"
+  },
+  {
+    "paper_id": "paper_000091",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "标题和摘要明确讨论金融领域的对冲（hedging），严格命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:49.685473+08:00"
+  },
+  {
+    "paper_id": "paper_000092",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "标题和摘要明确讨论金融领域的对冲（hedging），严格命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:49.685473+08:00"
+  },
+  {
+    "paper_id": "paper_000093",
+    "batch_id": "batch_0010",
+    "decision": "include",
+    "reason": "标题和摘要明确探讨学术写作中的模糊语（hedging）作为礼貌策略，并基于语料库进行跨学科对比分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:49.685473+08:00"
+  },
+  {
+    "paper_id": "paper_000094",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "标题和摘要明确讨论金融工程和风险管理中的对冲（hedging），严格命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:49.685473+08:00"
+  },
+  {
+    "paper_id": "paper_000095",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "标题和摘要明确讨论商品价格风险的对冲（hedging）策略，属于金融/经济领域，严格命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:49.685473+08:00"
+  },
+  {
+    "paper_id": "paper_000096",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "标题和摘要明确讨论金融衍生品作为风险管理工具的对冲（hedging），严格命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:49.685473+08:00"
+  },
+  {
+    "paper_id": "paper_000097",
+    "batch_id": "batch_0010",
+    "decision": "uncertain",
+    "reason": "标题和摘要探讨元话语标记的跨学科跨语言分析，但未明确提及模糊语（hedging）或语用功能分析，信息不足。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:49.685473+08:00"
+  },
+  {
+    "paper_id": "paper_000098",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论多目标评估推理中的模糊知识表示，属于计算机/控制系统中的模糊逻辑，严格命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:49.685473+08:00"
+  },
+  {
+    "paper_id": "paper_000099",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "标题和摘要明确讨论金融保险产品的对冲（hedging）和定价，严格命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:49.685473+08:00"
+  },
+  {
+    "paper_id": "paper_000100",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论小学数学课堂中的元话语发展，属于非学术语境（基础教育课堂）的分析，命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:08:49.685473+08:00"
+  },
+  {
+    "paper_id": "paper_000101",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "标题和摘要明确讨论金融领域的期权对冲，严格排除金融经济领域的hedging。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:11.348578+08:00"
+  },
+  {
+    "paper_id": "paper_000102",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论投资组合的风险价值估计，属于金融领域，严格排除金融经济领域的hedging。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:11.348578+08:00"
+  },
+  {
+    "paper_id": "paper_000103",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论语言学家的元话语使用，研究对象是语言学而非理工科背景的学术写作。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:11.348578+08:00"
+  },
+  {
+    "paper_id": "paper_000104",
+    "batch_id": "batch_0011",
+    "decision": "include",
+    "reason": "摘要明确分析理工科（科学和工程）学生学术写作中的元话语标记，包含hedges等模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:11.348578+08:00"
+  },
+  {
+    "paper_id": "paper_000105",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论需求优先级中的模糊性处理，属于计算机科学中的模糊逻辑应用，严格排除模糊逻辑/模糊控制。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:11.348578+08:00"
+  },
+  {
+    "paper_id": "paper_000106",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "标题和摘要明确分析工程领域学术写作中的元话语跨语言对比，符合理工科背景和语用分析要求。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:11.348578+08:00"
+  },
+  {
+    "paper_id": "paper_000107",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论高速公路建设中的金融衍生品对冲，属于金融风险管理，严格排除金融经济领域的hedging。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:11.348578+08:00"
+  },
+  {
+    "paper_id": "paper_000108",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "标题和摘要明确讨论科学写作中的hedging和weasel words，符合理工科背景和语用分析要求。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:11.348578+08:00"
+  },
+  {
+    "paper_id": "paper_000109",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论原油采购中的金融对冲策略，属于金融风险管理，严格排除金融经济领域的hedging。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:11.348578+08:00"
+  },
+  {
+    "paper_id": "paper_000110",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论金融市场的价差期权定价和对冲，严格排除金融经济领域的hedging。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:11.348578+08:00"
+  },
+  {
+    "paper_id": "paper_000111",
+    "batch_id": "batch_0012",
+    "decision": "exclude",
+    "reason": "标题和摘要明确讨论金融领域的对冲策略，严格命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:32.933298+08:00"
+  },
+  {
+    "paper_id": "paper_000112",
+    "batch_id": "batch_0012",
+    "decision": "include",
+    "reason": "标题和摘要明确分析航空航天工程学术写作中的元话语特征，符合研究主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:32.933298+08:00"
+  },
+  {
+    "paper_id": "paper_000113",
+    "batch_id": "batch_0012",
+    "decision": "include",
+    "reason": "摘要明确探讨理工科博士论文写作中的元话语演变，符合研究主题和纳入标准。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:32.933298+08:00"
+  },
+  {
+    "paper_id": "paper_000114",
+    "batch_id": "batch_0012",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论国际政治中的战略对冲，属于非学术语境分析，命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:32.933298+08:00"
+  },
+  {
+    "paper_id": "paper_000115",
+    "batch_id": "batch_0012",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论能源风险管理中的对冲策略，属于金融经济领域，严格命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:32.933298+08:00"
+  },
+  {
+    "paper_id": "paper_000116",
+    "batch_id": "batch_0012",
+    "decision": "exclude",
+    "reason": "摘要明确讨论工程中的模糊集理论，属于模糊逻辑/控制领域，严格命中排除标准。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:32.933298+08:00"
+  },
+  {
+    "paper_id": "paper_000117",
+    "batch_id": "batch_0012",
+    "decision": "exclude",
+    "reason": "标题和摘要分析方言中的认识情态，属于日常会话分析，命中非学术语境排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:32.933298+08:00"
+  },
+  {
+    "paper_id": "paper_000118",
+    "batch_id": "batch_0012",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论林业中的植物修剪技术，与模糊语研究主题完全无关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:32.933298+08:00"
+  },
+  {
+    "paper_id": "paper_000119",
+    "batch_id": "batch_0012",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论随机规划中的渐进对冲算法，属于数学算法领域，严格命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:32.933298+08:00"
+  },
+  {
+    "paper_id": "paper_000120",
+    "batch_id": "batch_0012",
+    "decision": "include",
+    "reason": "标题和摘要明确分析学术论文摘要中模糊语的使用，符合研究主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:32.933298+08:00"
+  },
+  {
+    "paper_id": "paper_000121",
+    "batch_id": "batch_0013",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及金融领域的风险对冲（risk-hedging），严格排除金融经济领域的hedging。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:54.739763+08:00"
+  },
+  {
+    "paper_id": "paper_000122",
+    "batch_id": "batch_0013",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及金融投资组合的动态对冲（dynamic hedging），严格排除金融经济领域的hedging。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:54.739763+08:00"
+  },
+  {
+    "paper_id": "paper_000123",
+    "batch_id": "batch_0013",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及金融期权定价和对冲（hedging），严格排除金融经济领域的hedging。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:54.739763+08:00"
+  },
+  {
+    "paper_id": "paper_000124",
+    "batch_id": "batch_0013",
+    "decision": "include",
+    "reason": "标题和摘要明确分析数学建模竞赛论文中的元话语（metadiscourse），包括hedges等标记，属于STEM学术写作的语用分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:54.739763+08:00"
+  },
+  {
+    "paper_id": "paper_000125",
+    "batch_id": "batch_0013",
+    "decision": "include",
+    "reason": "标题和摘要分析工程学士学位论文中的元话语标记，属于理工科学术写作的语用分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:54.739763+08:00"
+  },
+  {
+    "paper_id": "paper_000126",
+    "batch_id": "batch_0013",
+    "decision": "exclude",
+    "reason": "标题和摘要比较机械与电气工程研究论文中的互动元话语标记，属于STEM学术写作的语用对比分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:54.739763+08:00"
+  },
+  {
+    "paper_id": "paper_000127",
+    "batch_id": "batch_0013",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及金融资产的对冲（hedging）和定价，严格排除金融经济领域的hedging。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:54.739763+08:00"
+  },
+  {
+    "paper_id": "paper_000128",
+    "batch_id": "batch_0013",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及乙醇生产的对冲策略（hedging strategy），严格排除金融经济领域的hedging。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:54.739763+08:00"
+  },
+  {
+    "paper_id": "paper_000129",
+    "batch_id": "batch_0013",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及供应链管理中的规范模糊性（specification vagueness），属于商业运营分析，非学术写作语用研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:54.739763+08:00"
+  },
+  {
+    "paper_id": "paper_000130",
+    "batch_id": "batch_0013",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及自然语言处理中的语义模糊性（semantic vagueness），属于计算机算法应用，严格排除模糊逻辑相关研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:09:54.739763+08:00"
+  },
+  {
+    "paper_id": "paper_000131",
+    "batch_id": "batch_0014",
+    "decision": "exclude",
+    "reason": "标题和摘要明确讨论金融领域的对冲策略，严格命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "journal"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:15.417677+08:00"
+  },
+  {
+    "paper_id": "paper_000132",
+    "batch_id": "batch_0014",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论植物生物学中的bet-hedging策略，属于生物学概念，与语言学研究无关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:15.417677+08:00"
+  },
+  {
+    "paper_id": "paper_000133",
+    "batch_id": "batch_0014",
+    "decision": "exclude",
+    "reason": "摘要明确提到使用模糊逻辑进行决策分析，属于计算机算法中的模糊控制，严格命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:15.417677+08:00"
+  },
+  {
+    "paper_id": "paper_000134",
+    "batch_id": "batch_0014",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论农产品进口的汇率风险对冲，属于金融经济领域，严格命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:15.417677+08:00"
+  },
+  {
+    "paper_id": "paper_000135",
+    "batch_id": "batch_0014",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论航空公司的燃油对冲策略，属于金融经济领域，严格命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:15.417677+08:00"
+  },
+  {
+    "paper_id": "paper_000136",
+    "batch_id": "batch_0014",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论电力市场的价格风险对冲策略，属于金融经济领域，严格命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:15.417677+08:00"
+  },
+  {
+    "paper_id": "paper_000137",
+    "batch_id": "batch_0014",
+    "decision": "exclude",
+    "reason": "标题和摘要明确研究自然语言中的数值模糊语，涉及语言使用分析，符合研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:15.417677+08:00"
+  },
+  {
+    "paper_id": "paper_000138",
+    "batch_id": "batch_0014",
+    "decision": "uncertain",
+    "reason": "标题和摘要分析学术摘要中的元话语，与模糊语相关但未明确提及模糊语或语用分析，信息不足。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:15.417677+08:00"
+  },
+  {
+    "paper_id": "paper_000139",
+    "batch_id": "batch_0014",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论股票指数的对冲策略，属于金融经济领域，严格命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:15.417677+08:00"
+  },
+  {
+    "paper_id": "paper_000140",
+    "batch_id": "batch_0014",
+    "decision": "exclude",
+    "reason": "摘要明确讨论医学诊断中的模糊逻辑和模糊推理，属于计算机算法中的模糊控制，严格命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:15.417677+08:00"
+  },
+  {
+    "paper_id": "paper_000141",
+    "batch_id": "batch_0015",
+    "decision": "include",
+    "reason": "标题和摘要明确探讨专业科学文章中的模糊语（hedging）现象，并分析其功能，符合理工科学术写作主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:38.621527+08:00"
+  },
+  {
+    "paper_id": "paper_000142",
+    "batch_id": "batch_0015",
+    "decision": "exclude",
+    "reason": "标题和摘要中的“hedging”指植物修剪技术，属于园艺领域，与语言学的模糊语无关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:38.621527+08:00"
+  },
+  {
+    "paper_id": "paper_000143",
+    "batch_id": "batch_0015",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论金融市场的“delta hedging”，属于金融领域的对冲策略，严格排除。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:38.621527+08:00"
+  },
+  {
+    "paper_id": "paper_000144",
+    "batch_id": "batch_0015",
+    "decision": "uncertain",
+    "reason": "标题和摘要讨论会计概念框架中的模糊性（vagueness），但未明确涉及学术写作或语用分析，主题相关性不足。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:38.621527+08:00"
+  },
+  {
+    "paper_id": "paper_000145",
+    "batch_id": "batch_0015",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦结直肠癌的纳米药物治疗，属于医学实验研究，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:38.621527+08:00"
+  },
+  {
+    "paper_id": "paper_000146",
+    "batch_id": "batch_0015",
+    "decision": "exclude",
+    "reason": "标题和摘要仅为勘误声明，内容与学术写作或模糊语无关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:38.621527+08:00"
+  },
+  {
+    "paper_id": "paper_000147",
+    "batch_id": "batch_0015",
+    "decision": "exclude",
+    "reason": "标题和摘要综述结直肠癌的药物治疗机制，属于医学研究，未涉及学术写作或模糊语。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:38.621527+08:00"
+  },
+  {
+    "paper_id": "paper_000148",
+    "batch_id": "batch_0015",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论结直肠癌的纳米药物递送系统，属于生物医学工程，未涉及学术写作或模糊语。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:38.621527+08:00"
+  },
+  {
+    "paper_id": "paper_000149",
+    "batch_id": "batch_0015",
+    "decision": "exclude",
+    "reason": "标题和摘要仅为关注声明，内容与学术写作或模糊语无关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:38.621527+08:00"
+  },
+  {
+    "paper_id": "paper_000150",
+    "batch_id": "batch_0015",
+    "decision": "exclude",
+    "reason": "标题和摘要综述肝癌的免疫治疗和胞外囊泡机制，属于医学研究，未涉及学术写作或模糊语。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:38.621527+08:00"
+  },
+  {
+    "paper_id": "paper_000151",
+    "batch_id": "batch_0016",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于免疫学与天然产物治疗，未提及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:59.920824+08:00"
+  },
+  {
+    "paper_id": "paper_000152",
+    "batch_id": "batch_0016",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论白藜芦醇的生物学活性与治疗潜力，与学术写作或模糊语无关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:59.920824+08:00"
+  },
+  {
+    "paper_id": "paper_000153",
+    "batch_id": "batch_0016",
+    "decision": "exclude",
+    "reason": "标题和摘要探讨姜黄素与二甲双胍的协同治疗作用，未涉及学术写作或模糊语。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:59.920824+08:00"
+  },
+  {
+    "paper_id": "paper_000154",
+    "batch_id": "batch_0016",
+    "decision": "exclude",
+    "reason": "标题和摘要关注肺癌治疗中的食药同源物质，与学术写作或模糊语分析无关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:59.920824+08:00"
+  },
+  {
+    "paper_id": "paper_000155",
+    "batch_id": "batch_0016",
+    "decision": "exclude",
+    "reason": "标题和摘要研究黄芪多糖纳米颗粒对肝癌的预防作用，未提及学术写作或模糊语。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:59.920824+08:00"
+  },
+  {
+    "paper_id": "paper_000156",
+    "batch_id": "batch_0016",
+    "decision": "exclude",
+    "reason": "标题和摘要描述结肠癌靶向纳米颗粒的制备与疗效，与学术写作或模糊语无关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:59.920824+08:00"
+  },
+  {
+    "paper_id": "paper_000157",
+    "batch_id": "batch_0016",
+    "decision": "exclude",
+    "reason": "标题和摘要综述膳食多酚在结直肠癌中的作用，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:59.920824+08:00"
+  },
+  {
+    "paper_id": "paper_000158",
+    "batch_id": "batch_0016",
+    "decision": "exclude",
+    "reason": "标题和摘要全面回顾膳食多酚与人类健康，与学术写作或模糊语主题无关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:59.920824+08:00"
+  },
+  {
+    "paper_id": "paper_000159",
+    "batch_id": "batch_0016",
+    "decision": "exclude",
+    "reason": "标题和摘要探讨花生四烯酸代谢在结直肠癌中的作用，未提及学术写作或模糊语。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:59.920824+08:00"
+  },
+  {
+    "paper_id": "paper_000160",
+    "batch_id": "batch_0016",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论微生物调节对乳腺癌免疫治疗的影响，与学术写作或模糊语分析无关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:10:59.920824+08:00"
+  },
+  {
+    "paper_id": "paper_000161",
+    "batch_id": "batch_0017",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于蛋白质基药物递送系统与肠道健康，未提及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:11:21.598147+08:00"
+  },
+  {
+    "paper_id": "paper_000162",
+    "batch_id": "batch_0017",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论肠道微生物在癌症治疗中的作用，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:11:21.598147+08:00"
+  },
+  {
+    "paper_id": "paper_000163",
+    "batch_id": "batch_0017",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于多糖治疗肺癌的潜力，未提及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:11:21.598147+08:00"
+  },
+  {
+    "paper_id": "paper_000164",
+    "batch_id": "batch_0017",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论结肠癌免疫治疗与天然产物干预，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:11:21.598147+08:00"
+  },
+  {
+    "paper_id": "paper_000165",
+    "batch_id": "batch_0017",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于天然酚酸介孔结构在化疗中的应用，未提及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:11:21.598147+08:00"
+  },
+  {
+    "paper_id": "paper_000166",
+    "batch_id": "batch_0017",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论小檗碱的药理作用与分子机制，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:11:21.598147+08:00"
+  },
+  {
+    "paper_id": "paper_000167",
+    "batch_id": "batch_0017",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于口服纳米装甲活菌生物制剂增强化疗，未提及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:11:21.598147+08:00"
+  },
+  {
+    "paper_id": "paper_000168",
+    "batch_id": "batch_0017",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论橄榄苦苷作为抗癌剂的作用机制与递送策略，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:11:21.598147+08:00"
+  },
+  {
+    "paper_id": "paper_000169",
+    "batch_id": "batch_0017",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于植物基膳食化合物调节肠道菌群治疗炎症性肠病，未提及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:11:21.598147+08:00"
+  },
+  {
+    "paper_id": "paper_000170",
+    "batch_id": "batch_0017",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论姜黄素纳米粒子的制备与抗肝癌作用，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:11:21.598147+08:00"
+  },
+  {
+    "paper_id": "paper_000171",
+    "batch_id": "batch_0018",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦天然抗癌产品研究，未提及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:11:42.357010+08:00"
+  },
+  {
+    "paper_id": "paper_000172",
+    "batch_id": "batch_0018",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论癌症免疫疗法进展，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:11:42.357010+08:00"
+  },
+  {
+    "paper_id": "paper_000173",
+    "batch_id": "batch_0018",
+    "decision": "exclude",
+    "reason": "标题和摘要关注黄连和黄连素抗癌作用，未提及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:11:42.357010+08:00"
+  },
+  {
+    "paper_id": "paper_000174",
+    "batch_id": "batch_0018",
+    "decision": "exclude",
+    "reason": "标题和摘要探讨多酚在癌症治疗中的应用，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:11:42.357010+08:00"
+  },
+  {
+    "paper_id": "paper_000175",
+    "batch_id": "batch_0018",
+    "decision": "exclude",
+    "reason": "标题和摘要综述人参及其活性成分的抗结直肠癌活性，未提及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:11:42.357010+08:00"
+  },
+  {
+    "paper_id": "paper_000176",
+    "batch_id": "batch_0018",
+    "decision": "exclude",
+    "reason": "标题和摘要研究麦冬果聚糖-硒纳米颗粒治疗溃疡性结肠炎和结肠癌，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:11:42.357010+08:00"
+  },
+  {
+    "paper_id": "paper_000177",
+    "batch_id": "batch_0018",
+    "decision": "exclude",
+    "reason": "标题和摘要综述红藻多糖的药用应用，未提及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:11:42.357010+08:00"
+  },
+  {
+    "paper_id": "paper_000178",
+    "batch_id": "batch_0018",
+    "decision": "exclude",
+    "reason": "标题和摘要探讨木犀草素在炎症性肠病和结直肠癌中的作用，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:11:42.357010+08:00"
+  },
+  {
+    "paper_id": "paper_000179",
+    "batch_id": "batch_0018",
+    "decision": "exclude",
+    "reason": "标题和摘要研究艾叶来源的外泌体样纳米囊泡改善溃疡性结肠炎，未提及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:11:42.357010+08:00"
+  },
+  {
+    "paper_id": "paper_000180",
+    "batch_id": "batch_0018",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论调节肠道菌群在结直肠癌治疗中的作用，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:11:42.357010+08:00"
+  },
+  {
+    "paper_id": "paper_000181",
+    "batch_id": "batch_0019",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于纳米颗粒的免疫调节和抗肿瘤效果，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:04.629034+08:00"
+  },
+  {
+    "paper_id": "paper_000182",
+    "batch_id": "batch_0019",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论姜辣素的生物活性与肠道菌群调节，未提及学术写作或模糊语。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:04.629034+08:00"
+  },
+  {
+    "paper_id": "paper_000183",
+    "batch_id": "batch_0019",
+    "decision": "exclude",
+    "reason": "标题涉及纳米颗粒的肿瘤治疗，摘要仅提供勘误信息，未涉及学术写作或模糊语。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:04.629034+08:00"
+  },
+  {
+    "paper_id": "paper_000184",
+    "batch_id": "batch_0019",
+    "decision": "exclude",
+    "reason": "标题和摘要描述纳米颗粒用于幽门螺杆菌治疗，属于医学研究，未涉及学术写作或模糊语。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:04.629034+08:00"
+  },
+  {
+    "paper_id": "paper_000185",
+    "batch_id": "batch_0019",
+    "decision": "exclude",
+    "reason": "标题和摘要综述抗乳腺癌多糖的结构与活性，未探讨学术写作或模糊语现象。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:04.629034+08:00"
+  },
+  {
+    "paper_id": "paper_000186",
+    "batch_id": "batch_0019",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论中药方剂预防结直肠癌的机制，属于医学研究，未涉及学术写作或模糊语。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:04.629034+08:00"
+  },
+  {
+    "paper_id": "paper_000187",
+    "batch_id": "batch_0019",
+    "decision": "exclude",
+    "reason": "标题和摘要综述天然多酚的抗结直肠癌作用，未提及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:04.629034+08:00"
+  },
+  {
+    "paper_id": "paper_000188",
+    "batch_id": "batch_0019",
+    "decision": "exclude",
+    "reason": "标题和摘要描述纳米疫苗用于增强化疗，属于生物医学研究，未涉及学术写作或模糊语。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:04.629034+08:00"
+  },
+  {
+    "paper_id": "paper_000189",
+    "batch_id": "batch_0019",
+    "decision": "exclude",
+    "reason": "标题和摘要综述姜黄素控制幽门螺杆菌感染，属于医学叙述性综述，未探讨学术写作或模糊语。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:04.629034+08:00"
+  },
+  {
+    "paper_id": "paper_000190",
+    "batch_id": "batch_0019",
+    "decision": "exclude",
+    "reason": "标题和摘要描述姜黄素胶束用于辐射性肠炎，属于医学研究，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:04.629034+08:00"
+  },
+  {
+    "paper_id": "paper_000191",
+    "batch_id": "batch_0020",
+    "decision": "exclude",
+    "reason": "标题和摘要显示为药物递送系统研究，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:26.623886+08:00"
+  },
+  {
+    "paper_id": "paper_000192",
+    "batch_id": "batch_0020",
+    "decision": "exclude",
+    "reason": "标题和摘要显示为纳米药物递送系统研究，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:26.623886+08:00"
+  },
+  {
+    "paper_id": "paper_000193",
+    "batch_id": "batch_0020",
+    "decision": "exclude",
+    "reason": "标题和摘要显示为药物生物利用度改进方法综述，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:26.623886+08:00"
+  },
+  {
+    "paper_id": "paper_000194",
+    "batch_id": "batch_0020",
+    "decision": "exclude",
+    "reason": "标题和摘要显示为中药成分药理与递送综述，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:26.623886+08:00"
+  },
+  {
+    "paper_id": "paper_000195",
+    "batch_id": "batch_0020",
+    "decision": "exclude",
+    "reason": "标题和摘要显示为细胞外囊泡在微生物通讯中的作用综述，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:26.623886+08:00"
+  },
+  {
+    "paper_id": "paper_000196",
+    "batch_id": "batch_0020",
+    "decision": "exclude",
+    "reason": "标题和摘要显示为花青素生物活性与纳米封装应用综述，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:26.623886+08:00"
+  },
+  {
+    "paper_id": "paper_000197",
+    "batch_id": "batch_0020",
+    "decision": "exclude",
+    "reason": "标题和摘要显示为口服纳米药物治疗结肠炎研究，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:26.623886+08:00"
+  },
+  {
+    "paper_id": "paper_000198",
+    "batch_id": "batch_0020",
+    "decision": "exclude",
+    "reason": "标题和摘要显示为纳米发生器治疗幽门螺杆菌感染研究，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:26.623886+08:00"
+  },
+  {
+    "paper_id": "paper_000199",
+    "batch_id": "batch_0020",
+    "decision": "exclude",
+    "reason": "标题和摘要显示为多酚生物活性与慢性疾病综述，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:26.623886+08:00"
+  },
+  {
+    "paper_id": "paper_000200",
+    "batch_id": "batch_0020",
+    "decision": "exclude",
+    "reason": "标题和摘要显示为姜黄素抗癌作用机制综述，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:26.623886+08:00"
+  },
+  {
+    "paper_id": "paper_000201",
+    "batch_id": "batch_0021",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于乳腺癌纳米治疗，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:47.585905+08:00"
+  },
+  {
+    "paper_id": "paper_000202",
+    "batch_id": "batch_0021",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论胡椒碱的药理作用，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:47.585905+08:00"
+  },
+  {
+    "paper_id": "paper_000203",
+    "batch_id": "batch_0021",
+    "decision": "exclude",
+    "reason": "标题和摘要综述黄芪多糖的药理机制，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:47.585905+08:00"
+  },
+  {
+    "paper_id": "paper_000204",
+    "batch_id": "batch_0021",
+    "decision": "exclude",
+    "reason": "标题和摘要探讨人参成分调控肿瘤微环境，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:47.585905+08:00"
+  },
+  {
+    "paper_id": "paper_000205",
+    "batch_id": "batch_0021",
+    "decision": "exclude",
+    "reason": "标题和摘要综述口服纳米药物调节免疫，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:47.585905+08:00"
+  },
+  {
+    "paper_id": "paper_000206",
+    "batch_id": "batch_0021",
+    "decision": "exclude",
+    "reason": "标题和摘要研究茶叶纳米药物治疗结肠疾病，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:47.585905+08:00"
+  },
+  {
+    "paper_id": "paper_000207",
+    "batch_id": "batch_0021",
+    "decision": "exclude",
+    "reason": "标题和摘要进行天然产物癌症研究的文献计量分析，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:47.585905+08:00"
+  },
+  {
+    "paper_id": "paper_000208",
+    "batch_id": "batch_0021",
+    "decision": "exclude",
+    "reason": "标题和摘要综述藻类多糖的抗癌作用，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:47.585905+08:00"
+  },
+  {
+    "paper_id": "paper_000209",
+    "batch_id": "batch_0021",
+    "decision": "exclude",
+    "reason": "标题和摘要描述生姜纳米颗粒的提取方法，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:47.585905+08:00"
+  },
+  {
+    "paper_id": "paper_000210",
+    "batch_id": "batch_0021",
+    "decision": "exclude",
+    "reason": "标题和摘要综述儿茶素纳米递送系统，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:12:47.585905+08:00"
+  },
+  {
+    "paper_id": "paper_000211",
+    "batch_id": "batch_0022",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于植物类黄酮在癌症治疗中的生物利用度和递送方法，未提及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:13:09.716584+08:00"
+  },
+  {
+    "paper_id": "paper_000212",
+    "batch_id": "batch_0022",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论癌症疫苗的佐剂和免疫反应，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:13:09.716584+08:00"
+  },
+  {
+    "paper_id": "paper_000213",
+    "batch_id": "batch_0022",
+    "decision": "exclude",
+    "reason": "标题和摘要描述基于淀粉/果胶的结肠特异性微粒递送系统，未提及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:13:09.716584+08:00"
+  },
+  {
+    "paper_id": "paper_000214",
+    "batch_id": "batch_0022",
+    "decision": "exclude",
+    "reason": "标题和摘要综述芦丁作为膳食多酚的抗癌潜力，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:13:09.716584+08:00"
+  },
+  {
+    "paper_id": "paper_000215",
+    "batch_id": "batch_0022",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论天然蛋白质和多糖在炎症性肠病递送系统中的应用，未提及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:13:09.716584+08:00"
+  },
+  {
+    "paper_id": "paper_000216",
+    "batch_id": "batch_0022",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于菊粉作为结肠癌靶向递送载体，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:13:09.716584+08:00"
+  },
+  {
+    "paper_id": "paper_000217",
+    "batch_id": "batch_0022",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论多酚在阿尔茨海默病和肠脑轴中的作用，未提及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:13:09.716584+08:00"
+  },
+  {
+    "paper_id": "paper_000218",
+    "batch_id": "batch_0022",
+    "decision": "exclude",
+    "reason": "标题和摘要综述肠道微生物产生的丁酸对致癌信号通路的影响，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:13:09.716584+08:00"
+  },
+  {
+    "paper_id": "paper_000219",
+    "batch_id": "batch_0022",
+    "decision": "exclude",
+    "reason": "标题和摘要描述植物来源的细胞外囊泡的生物学特性，未提及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:13:09.716584+08:00"
+  },
+  {
+    "paper_id": "paper_000220",
+    "batch_id": "batch_0022",
+    "decision": "exclude",
+    "reason": "标题和摘要综述表没食子儿茶素没食子酸酯的吸收、代谢和抗癌作用，未涉及学术写作或模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:13:09.716584+08:00"
+  },
+  {
+    "paper_id": "paper_000221",
+    "batch_id": "batch_0023",
+    "decision": "exclude",
+    "reason": "标题和摘要显示这是基因组医学会议的摘要集，主题是生物医学研究，未涉及学术写作中的模糊语分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-07T23:13:19.030255+08:00"
+  }
+]

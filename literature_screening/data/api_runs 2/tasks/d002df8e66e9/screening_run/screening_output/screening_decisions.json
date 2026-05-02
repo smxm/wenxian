@@ -1,0 +1,488 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确涉及弓网电弧的数学建模及EMTP仿真。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:50:37.454280+08:00"
+  },
+  {
+    "paper_id": "paper_000002",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题显示研究弓网离线过电压及电弧模型仿真。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:50:37.454280+08:00"
+  },
+  {
+    "paper_id": "paper_000003",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "摘要提到弓网电弧的Mayr和Schwarz模型建模及仿真。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:50:37.454280+08:00"
+  },
+  {
+    "paper_id": "paper_000004",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确研究弓网电弧及其对电能质量的影响，包含电弧模型和仿真。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:51:55.484104+08:00"
+  },
+  {
+    "paper_id": "paper_000005",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "摘要提到黑盒电弧模型和仿真，但未明确说明弓网离线引发的电气特性变化。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:51:55.484104+08:00"
+  },
+  {
+    "paper_id": "paper_000006",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "摘要提到黑盒电弧模型和仿真，但未明确说明弓网离线引发的电气特性变化。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:51:55.484104+08:00"
+  },
+  {
+    "paper_id": "paper_000007",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要显示研究弓网电弧模型及其对电气特性的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:53:09.328508+08:00"
+  },
+  {
+    "paper_id": "paper_000008",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要表明研究弓网电弧模型和瞬态电气特性，使用仿真方法。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:53:09.328508+08:00"
+  },
+  {
+    "paper_id": "paper_000009",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要显示基于改进Habedank模型研究弓网离线的电气特性。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:53:09.328508+08:00"
+  },
+  {
+    "paper_id": "paper_000010",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "标题和摘要表明研究弓网电弧的电气特性，并使用Habedank模型进行仿真。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:54:16.709269+08:00"
+  },
+  {
+    "paper_id": "paper_000011",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "摘要提到研究弓网电弧对牵引系统电压的影响，并采用Habedank模型仿真。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:54:16.709269+08:00"
+  },
+  {
+    "paper_id": "paper_000012",
+    "batch_id": "batch_0004",
+    "decision": "uncertain",
+    "reason": "摘要提到结合Cassie和Mayr模型研究弓网电弧对电气特性的影响，但建模和仿真细节不足。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:54:16.709269+08:00"
+  },
+  {
+    "paper_id": "paper_000013",
+    "batch_id": "batch_0005",
+    "decision": "uncertain",
+    "reason": "标题和摘要显示研究弓网离线放电的电气特性，但未提及具体电弧模型或仿真方法，信息不足以确认是否满足纳入标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:55:44.226091+08:00"
+  },
+  {
+    "paper_id": "paper_000014",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究铁路牵引系统的功率滤波，弓网电弧被提及但未涉及具体模型或仿真，不符合核心纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.7,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:55:44.226091+08:00"
+  },
+  {
+    "paper_id": "paper_000015",
+    "batch_id": "batch_0005",
+    "decision": "include",
+    "reason": "标题和摘要表明研究弓网离线电弧的电流特性和随机建模，使用修改的双指数函数，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:55:44.226091+08:00"
+  },
+  {
+    "paper_id": "paper_000016",
+    "batch_id": "batch_0006",
+    "decision": "uncertain",
+    "reason": "摘要提到弓网电弧模拟和过电压研究，但未明确说明电弧模型或MATLAB仿真细节，信息不全。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:57:01.461361+08:00"
+  },
+  {
+    "paper_id": "paper_000017",
+    "batch_id": "batch_0006",
+    "decision": "include",
+    "reason": "标题和摘要明确研究弓网电火花放电，提出火花放电模型和电路模型，涉及电气特性分析和仿真。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:57:01.461361+08:00"
+  },
+  {
+    "paper_id": "paper_000018",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于电弧检测算法，未涉及电弧的数学建模或MATLAB仿真，不符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:57:01.461361+08:00"
+  },
+  {
+    "paper_id": "paper_000019",
+    "batch_id": "batch_0007",
+    "decision": "uncertain",
+    "reason": "标题和摘要显示研究弓网电弧引起的滑块烧蚀，使用MHD模型和COMSOL仿真，但未明确讨论电气特性变化或使用指定电弧模型。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:58:26.520394+08:00"
+  },
+  {
+    "paper_id": "paper_000020",
+    "batch_id": "batch_0007",
+    "decision": "uncertain",
+    "reason": "标题和摘要研究弓网离线对轨道绝缘的电气影响，建立了电路模型并使用ANSYS仿真，但未明确包含电弧模型或指定仿真工具。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:58:26.520394+08:00"
+  },
+  {
+    "paper_id": "paper_000021",
+    "batch_id": "batch_0007",
+    "decision": "uncertain",
+    "reason": "标题和摘要研究弓网电弧检测，基于电气参数瞬态分析，但未涉及电弧建模或指定仿真工具。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:58:26.520394+08:00"
+  },
+  {
+    "paper_id": "paper_000022",
+    "batch_id": "batch_0008",
+    "decision": "include",
+    "reason": "标题显示涉及弓网系统瞬态电弧特性，摘要提到电弧建模和数值仿真分析电气演化。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:59:29.492375+08:00"
+  },
+  {
+    "paper_id": "paper_000023",
+    "batch_id": "batch_0008",
+    "decision": "uncertain",
+    "reason": "摘要提到电弧温度分布和数学模型，但未明确探讨电气特性变化如电压/电流畸变。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:59:29.492375+08:00"
+  },
+  {
+    "paper_id": "paper_000024",
+    "batch_id": "batch_0008",
+    "decision": "include",
+    "reason": "标题明确探讨弓网电弧的电气特性，摘要提到建立数学模型并使用仿真分析电压和电流分布。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T16:59:29.492375+08:00"
+  },
+  {
+    "paper_id": "paper_000025",
+    "batch_id": "batch_0009",
+    "decision": "uncertain",
+    "reason": "标题和摘要显示建立弓网电弧模型并仿真，但未明确涉及电气特性变化如电压/电流畸变。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year",
+      "journal",
+      "doi"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T17:00:54.640299+08:00"
+  },
+  {
+    "paper_id": "paper_000026",
+    "batch_id": "batch_0009",
+    "decision": "uncertain",
+    "reason": "摘要讨论电弧温度模型和烧蚀，侧重于热效应，未提及电压/电流等电气特性变化。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year",
+      "journal",
+      "doi"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T17:00:54.640299+08:00"
+  },
+  {
+    "paper_id": "paper_000027",
+    "batch_id": "batch_0009",
+    "decision": "uncertain",
+    "reason": "摘要提出电弧数学模型和PSCAD仿真，涉及电气特性，但仿真软件未指定为MATLAB，且模型未明确为Cassie衍生。",
+    "evidence": [
+      "title",
+      "abstract",
+      "year",
+      "journal",
+      "doi"
+    ],
+    "confidence": 0.6,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T17:00:54.640299+08:00"
+  },
+  {
+    "paper_id": "paper_000028",
+    "batch_id": "batch_0010",
+    "decision": "uncertain",
+    "reason": "标题和摘要涉及弓网电弧温度场模拟，但未明确探讨电气特性变化如电压/电流畸变。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T17:01:58.156845+08:00"
+  },
+  {
+    "paper_id": "paper_000029",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "标题和摘要研究电弧运动特性和力分析，未涉及电气特性变化或电弧建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T17:01:58.156845+08:00"
+  },
+  {
+    "paper_id": "paper_000030",
+    "batch_id": "batch_0010",
+    "decision": "include",
+    "reason": "标题显示电弧建模，摘要探讨电磁暂态和过电压，符合电气特性分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T17:01:58.156845+08:00"
+  },
+  {
+    "paper_id": "paper_000031",
+    "batch_id": "batch_0011",
+    "decision": "uncertain",
+    "reason": "摘要提到基于磁流体动力学的弓网电弧模型，未涉及Cassie模型或MATLAB仿真，是否满足纳入标准不确定。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-reasoner",
+    "timestamp": "2026-03-30T17:02:58.152023+08:00"
+  }
+]

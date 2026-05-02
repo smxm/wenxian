@@ -1,0 +1,570 @@
+{
+  "batch_id": "batch_0002",
+  "paper_count": 20,
+  "paper_ids": [
+    "paper_000021",
+    "paper_000022",
+    "paper_000023",
+    "paper_000024",
+    "paper_000025",
+    "paper_000026",
+    "paper_000027",
+    "paper_000028",
+    "paper_000029",
+    "paper_000030",
+    "paper_000031",
+    "paper_000032",
+    "paper_000033",
+    "paper_000034",
+    "paper_000035",
+    "paper_000036",
+    "paper_000037",
+    "paper_000038",
+    "paper_000039",
+    "paper_000040"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000021",
+      "entry_type": "article",
+      "title": "HME-NET: A HYBRID MULTIMODAL ENSEMBLE FRAMEWORK FOR EXPLAINABLE AND EFFICIENT BONE CANCER DIAGNOSIS",
+      "authors": [
+        "Ramamoorthy, R.",
+        "Shanmugasundaram, R.S."
+      ],
+      "year": 2025,
+      "journal": "International Journal of Applied Mathematics",
+      "doi": "10.12732/ijam.v38i4s.289",
+      "abstract": "Early and precise diagnosis of bone cancer plays a critical role in improving patient outcomes and guiding treatment strategies. Although traditional radiology gives good results, the way experts interpret the images can cause delays or errors in diagnosis. For this reason, we introduce a new integrative framework called Hybrid-Multimodal Ensemble (HME) which mixes MRI, CT and PET images with both radiomicsand deep learning to detect bone cancer automatically. Handcrafted radiomic descriptors are extracted using PyRadiomics and these descriptors are fused with hierarchical semantic features extracted by EfficientNet-B3 and Swin Transformer models. All of these features are brought together by an Explainable Feature Fusion Module (EFFM), with SHAP and LIME providing interpretability, diminishing the number of features and using an attention-based process. Classification of the final feature vector is done by an ensemble of LightGBM, Logistic Regression and a twolayer MLP. Real-time use is possible through quantization and the system allows training to happen on various devices through federated simulation. Evaluations conducted on this curated, mixed dataset found that the hybrid model (HME) scored better, with 98.1% accuracy, 97.4% precision, 98.3% recall, 97.85% F1-score and 0.987 AUC. In addition, looking at deployment metrics shows how prepared the model is to be used in clinical settings. Based on these results, the proposed HME framework ensures excellent diagnoses while also offering good understanding, privacy and ability to grow with more data, making it suitable for clinical use in bone cancer care. © 2025, Diogenes Co. Ltd.. All rights reserved.",
+      "keywords": [],
+      "normalized_title": "hme net a hybrid multimodal ensemble framework for explainable and efficient bone cancer diagnosis",
+      "raw_bibtex": "@ARTICLE{10.12732/ijam.v38i4s.289,\n\tauthor = {Ramamoorthy, R. and Shanmugasundaram, R.S.},\n\ttitle = {HME-NET: A HYBRID MULTIMODAL ENSEMBLE FRAMEWORK FOR EXPLAINABLE AND EFFICIENT BONE CANCER DIAGNOSIS},\n\tjournal = {International Journal of Applied Mathematics},\n\tyear = {2025},\n\tabstract = {Early and precise diagnosis of bone cancer plays a critical role in improving patient outcomes and guiding treatment strategies. Although traditional radiology gives good results, the way experts interpret the images can cause delays or errors in diagnosis. For this reason, we introduce a new integrative framework called Hybrid-Multimodal Ensemble (HME) which mixes MRI, CT and PET images with both radiomicsand deep learning to detect bone cancer automatically. Handcrafted radiomic descriptors are extracted using PyRadiomics and these descriptors are fused with hierarchical semantic features extracted by EfficientNet-B3 and Swin Transformer models. All of these features are brought together by an Explainable Feature Fusion Module (EFFM), with SHAP and LIME providing interpretability, diminishing the number of features and using an attention-based process. Classification of the final feature vector is done by an ensemble of LightGBM, Logistic Regression and a twolayer MLP. Real-time use is possible through quantization and the system allows training to happen on various devices through federated simulation. Evaluations conducted on this curated, mixed dataset found that the hybrid model (HME) scored better, with 98.1% accuracy, 97.4% precision, 98.3% recall, 97.85% F1-score and 0.987 AUC. In addition, looking at deployment metrics shows how prepared the model is to be used in clinical settings. Based on these results, the proposed HME framework ensures excellent diagnoses while also offering good understanding, privacy and ability to grow with more data, making it suitable for clinical use in bone cancer care. © 2025, Diogenes Co. Ltd.. All rights reserved.},\n\tdoi = {10.12732/ijam.v38i4s.289},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105017893643&doi=10.12732%2Fijam.v38i4s.289&partnerID=40&md5=c32743c816eca3e8e299c12179286e59},\n\tvolume = {38},\n\tnumber = {4S},\n\tpages = {1095-1109},\n\tnote = {Export Date: 23 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.12732/ijam.v38i4s.289"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000022",
+      "entry_type": "article",
+      "title": "Unleash the Power of Vision-Language Models by Visual Attention Prompt and Multimodal Interaction",
+      "authors": [
+        "Zhang, W.",
+        "Wu, L.",
+        "Zhang, Z.",
+        "Yu, T.",
+        "Ma, C.",
+        "Jin, X.",
+        "Yang, X.",
+        "Zeng, W."
+      ],
+      "year": 2025,
+      "journal": "IEEE Transactions on Multimedia",
+      "doi": "10.1109/tmm.2024.3521785",
+      "abstract": "Pre-trained vision-language models (VLMs), equipped with parameter-efficient tuning (PET) methods like prompting, have shown impressive knowledge transferability on new downstream tasks, but they are still prone to be limited by catastrophic forgetting and overfitting dilemma due to large gaps among tasks. Furthermore, the underlying physical mechanisms of prompt-based tuning methods (especially for visual prompting) remain largely unexplored. It is unclear why these methods work solely based on learnable parameters as prompts for adaptation. To address the above challenges, we present a new prompt-based framework for vision-language models, termed Uni-prompt. Our framework transfers VLMs to downstream tasks by designing visual prompts from an attention perspective that reduces the transfer/solution space, which enables the vision model to focus on task-relevant regions of the input image while also learning task-specific knowledge. Additionally, Uni-prompt further aligns visual-text prompts learning through a pretext task with masked representation modeling interactions, which implicitly learns a global cross-modal matching between visual and language concepts for consistency. We conduct extensive experiments on the few-shot classification task and achieve significant improvement using our Uni-prompt method while requiring minimal extra parameters cost. © 1999-2012 IEEE.",
+      "keywords": [],
+      "normalized_title": "unleash the power of vision language models by visual attention prompt and multimodal interaction",
+      "raw_bibtex": "@ARTICLE{10.1109/TMM.2024.3521785,\n\tauthor = {Zhang, W. and Wu, L. and Zhang, Z. and Yu, T. and Ma, C. and Jin, X. and Yang, X. and Zeng, W.},\n\ttitle = {Unleash the Power of Vision-Language Models by Visual Attention Prompt and Multimodal Interaction},\n\tjournal = {IEEE Transactions on Multimedia},\n\tyear = {2025},\n\tabstract = {Pre-trained vision-language models (VLMs), equipped with parameter-efficient tuning (PET) methods like prompting, have shown impressive knowledge transferability on new downstream tasks, but they are still prone to be limited by catastrophic forgetting and overfitting dilemma due to large gaps among tasks. Furthermore, the underlying physical mechanisms of prompt-based tuning methods (especially for visual prompting) remain largely unexplored. It is unclear why these methods work solely based on learnable parameters as prompts for adaptation. To address the above challenges, we present a new prompt-based framework for vision-language models, termed Uni-prompt. Our framework transfers VLMs to downstream tasks by designing visual prompts from an attention perspective that reduces the transfer/solution space, which enables the vision model to focus on task-relevant regions of the input image while also learning task-specific knowledge. Additionally, Uni-prompt further aligns visual-text prompts learning through a pretext task with masked representation modeling interactions, which implicitly learns a global cross-modal matching between visual and language concepts for consistency. We conduct extensive experiments on the few-shot classification task and achieve significant improvement using our Uni-prompt method while requiring minimal extra parameters cost. © 1999-2012 IEEE.},\n\tdoi = {10.1109/TMM.2024.3521785},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85213450978&doi=10.1109%2FTMM.2024.3521785&partnerID=40&md5=af7cc1180140dfefa23b39a19899dbe6},\n\tvolume = {27},\n\tpages = {2399-2411},\n\tnote = {Export Date: 23 March 2026; Cited By: 2 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1109/TMM.2024.3521785"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000023",
+      "entry_type": "article",
+      "title": "Ai-assissted multimodal classification of canine and feline (Sub-)Cutaneous tumors using ultrasound, white light and fluorescence imaging",
+      "authors": [
+        "Maciulevičius, M.",
+        "Rupšytė, G.",
+        "Raišutis, R.",
+        "Tamošiūnas, M."
+      ],
+      "year": 2025,
+      "journal": "Measurement: Journal of the International Measurement Confederation",
+      "doi": "10.1016/j.measurement.2025.117295",
+      "abstract": "Research aims to provide an automated method for the diagnostics of (sub-)cutaneous tumors in canine/feline patients via machine learning (ML) on multimodal imaging data. To address the limitations of single mode imaging, we have integrated optical imaging, white light (WL) and fluorescence (FL), in tandem with high frequency (∼350 MHz) ultrasound (US) imaging. Combined hybrid approaches allowed to efficiently differentiate between malignant mastocytomas (MCTs), sarcomas (STSs) and benign lipomas (LPs). The obtained combinations of spectral and temporal US estimates were evaluated for multimodal effect when grouped with FL, WL and optics (FL + WL), resulting in hybrid bimodal and trimodal datasets. Support vector machine (SVM) and random forest (RF) classifiers were optimized via sequential feature selection, resulting in multimodal effect (p < 0.05). Pronounced multimodal increment was detected for US and FL (up to 15 %) for 21–23/31 US combinations for total of 360 MCT and STS cases. US + WL and US + OPT resulted in less efficient multimodal effect (up to ∼5 %). Both SVM and RF classifiers strongly preferred US features in combination with FL. In the presence of superior WL, the relevance of US features decreased, however, still, they comprised more than a quarter of the total number of features. In overall, we have achieved classification efficiency in the range of: 75–80 % (US + FL), 85–90 % (US + WL) as well as 90–95 % (US + OPT), respectively. Our approach provides a reliable diagnostic support for veterinary histopathologist in real-time; therefore, if a disagreement between human and ML-derived analysis occurrs, unclear cases can be double-inspected by human. © 2025 Elsevier Ltd",
+      "keywords": [],
+      "normalized_title": "ai assissted multimodal classification of canine and feline sub cutaneous tumors using ultrasound white light and fluorescence imaging",
+      "raw_bibtex": "@ARTICLE{10.1016/j.measurement.2025.117295,\n\tauthor = {Maciulevičius, M. and Rupšytė, G. and Raišutis, R. and Tamošiūnas, M.},\n\ttitle = {Ai-assissted multimodal classification of canine and feline (Sub-)Cutaneous tumors using ultrasound, white light and fluorescence imaging},\n\tjournal = {Measurement: Journal of the International Measurement Confederation},\n\tyear = {2025},\n\tabstract = {Research aims to provide an automated method for the diagnostics of (sub-)cutaneous tumors in canine/feline patients via machine learning (ML) on multimodal imaging data. To address the limitations of single mode imaging, we have integrated optical imaging, white light (WL) and fluorescence (FL), in tandem with high frequency (∼350 MHz) ultrasound (US) imaging. Combined hybrid approaches allowed to efficiently differentiate between malignant mastocytomas (MCTs), sarcomas (STSs) and benign lipomas (LPs). The obtained combinations of spectral and temporal US estimates were evaluated for multimodal effect when grouped with FL, WL and optics (FL + WL), resulting in hybrid bimodal and trimodal datasets. Support vector machine (SVM) and random forest (RF) classifiers were optimized via sequential feature selection, resulting in multimodal effect (p < 0.05). Pronounced multimodal increment was detected for US and FL (up to 15 %) for 21–23/31 US combinations for total of 360 MCT and STS cases. US + WL and US + OPT resulted in less efficient multimodal effect (up to ∼5 %). Both SVM and RF classifiers strongly preferred US features in combination with FL. In the presence of superior WL, the relevance of US features decreased, however, still, they comprised more than a quarter of the total number of features. In overall, we have achieved classification efficiency in the range of: 75–80 % (US + FL), 85–90 % (US + WL) as well as 90–95 % (US + OPT), respectively. Our approach provides a reliable diagnostic support for veterinary histopathologist in real-time; therefore, if a disagreement between human and ML-derived analysis occurrs, unclear cases can be double-inspected by human. © 2025 Elsevier Ltd},\n\tdoi = {10.1016/j.measurement.2025.117295},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105000711457&doi=10.1016%2Fj.measurement.2025.117295&partnerID=40&md5=0521699099e6a2bfaada84f733561e5b},\n\tvolume = {252},\n\tnote = {Export Date: 23 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.measurement.2025.117295"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000024",
+      "entry_type": "article",
+      "title": "Deep evidential fusion with uncertainty quantification and reliability learning for multimodal medical image segmentation",
+      "authors": [
+        "Huang, L.",
+        "Ruan, S.",
+        "Decazes, P.",
+        "Denœux, T."
+      ],
+      "year": 2025,
+      "journal": "Information Fusion",
+      "doi": "10.1016/j.inffus.2024.102648",
+      "abstract": "Single-modality medical images generally do not contain enough information to reach an accurate and reliable diagnosis. For this reason, physicians commonly rely on multimodal medical images for comprehensive diagnostic assessments. This study introduces a deep evidential fusion framework designed for segmenting multimodal medical images, leveraging the Dempster–Shafer theory of evidence in conjunction with deep neural networks. In this framework, features are first extracted from each imaging modality using a deep neural network, and features are mapped to Dempster–Shafer mass functions that describe the evidence of each modality at each voxel. The mass functions are then corrected by the contextual discounting operation, using learned coefficients quantifying the reliability of each source of information relative to each class. The discounted evidence from each modality is then combined using Dempster's rule of combination. Experiments were carried out on a PET-CT dataset for lymphoma segmentation and a multi-MRI dataset for brain tumor segmentation. The results demonstrate the ability of the proposed fusion scheme to quantify segmentation uncertainty and improve segmentation accuracy. Moreover, the learned reliability coefficients provide some insight into the contribution of each modality to the segmentation process. © 2024 Elsevier B.V.",
+      "keywords": [],
+      "normalized_title": "deep evidential fusion with uncertainty quantification and reliability learning for multimodal medical image segmentation",
+      "raw_bibtex": "@ARTICLE{10.1016/j.inffus.2024.102648,\n\tauthor = {Huang, L. and Ruan, S. and Decazes, P. and Denœux, T.},\n\ttitle = {Deep evidential fusion with uncertainty quantification and reliability learning for multimodal medical image segmentation},\n\tjournal = {Information Fusion},\n\tyear = {2025},\n\tabstract = {Single-modality medical images generally do not contain enough information to reach an accurate and reliable diagnosis. For this reason, physicians commonly rely on multimodal medical images for comprehensive diagnostic assessments. This study introduces a deep evidential fusion framework designed for segmenting multimodal medical images, leveraging the Dempster–Shafer theory of evidence in conjunction with deep neural networks. In this framework, features are first extracted from each imaging modality using a deep neural network, and features are mapped to Dempster–Shafer mass functions that describe the evidence of each modality at each voxel. The mass functions are then corrected by the contextual discounting operation, using learned coefficients quantifying the reliability of each source of information relative to each class. The discounted evidence from each modality is then combined using Dempster's rule of combination. Experiments were carried out on a PET-CT dataset for lymphoma segmentation and a multi-MRI dataset for brain tumor segmentation. The results demonstrate the ability of the proposed fusion scheme to quantify segmentation uncertainty and improve segmentation accuracy. Moreover, the learned reliability coefficients provide some insight into the contribution of each modality to the segmentation process. © 2024 Elsevier B.V.},\n\tdoi = {10.1016/j.inffus.2024.102648},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85201778894&doi=10.1016%2Fj.inffus.2024.102648&partnerID=40&md5=c180fea6212e6b6d218648b124bbafaa},\n\tvolume = {113},\n\tnote = {Export Date: 23 March 2026; Cited By: 45 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.inffus.2024.102648"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000025",
+      "entry_type": "article",
+      "title": "Hybrid Multimodal Medical Image Fusion Method Based on LatLRR and ED-D2GAN",
+      "authors": [
+        "Zhou, T.",
+        "Li, Q.",
+        "Lu, H.",
+        "Zhang, X.",
+        "Cheng, Q."
+      ],
+      "year": 2022,
+      "journal": "Applied Sciences (Switzerland)",
+      "doi": "10.3390/app122412758",
+      "abstract": "In order to better preserve the anatomical structure information of Computed Tomography (CT) source images and highlight the metabolic information of lesion regions in Positron Emission Tomography (PET) source images, a hybrid multimodal medical image fusion method (LatLRR-GAN) based on Latent low-rank representation (LatLRR) and the dual discriminators Generative Adversarial Network (ED-D2GAN) is proposed. Firstly, considering the denoising capability of LatLRR, source images were decomposed by LatLRR. Secondly, the ED-D2GAN model was put forward as the low-rank region fusion method, which can fully extract the information contained by the low-rank region images. Among them, encoder and decoder networks were used in the generator; convolutional neural networks were also used in dual discriminators. Thirdly, a threshold adaptive weighting algorithm based on the region energy ratio is proposed as the salient region fusion rule, which can improve the overall sharpness of the fused image. The experimental results show that compared with the best methods of the other six methods, this paper is effective in multiple objective evaluation metrics, including the average gradient, edge intensity, information entropy, spatial frequency and standard deviation. The results of the two experiments are improved by 35.03%, 42.42%, 4.66%, 8.59% and 11.49% on average. © 2022 by the authors.",
+      "keywords": [],
+      "normalized_title": "hybrid multimodal medical image fusion method based on latlrr and ed d2gan",
+      "raw_bibtex": "@ARTICLE{10.3390/app122412758,\n\tauthor = {Zhou, T. and Li, Q. and Lu, H. and Zhang, X. and Cheng, Q.},\n\ttitle = {Hybrid Multimodal Medical Image Fusion Method Based on LatLRR and ED-D2GAN},\n\tjournal = {Applied Sciences (Switzerland)},\n\tyear = {2022},\n\tabstract = {In order to better preserve the anatomical structure information of Computed Tomography (CT) source images and highlight the metabolic information of lesion regions in Positron Emission Tomography (PET) source images, a hybrid multimodal medical image fusion method (LatLRR-GAN) based on Latent low-rank representation (LatLRR) and the dual discriminators Generative Adversarial Network (ED-D2GAN) is proposed. Firstly, considering the denoising capability of LatLRR, source images were decomposed by LatLRR. Secondly, the ED-D2GAN model was put forward as the low-rank region fusion method, which can fully extract the information contained by the low-rank region images. Among them, encoder and decoder networks were used in the generator; convolutional neural networks were also used in dual discriminators. Thirdly, a threshold adaptive weighting algorithm based on the region energy ratio is proposed as the salient region fusion rule, which can improve the overall sharpness of the fused image. The experimental results show that compared with the best methods of the other six methods, this paper is effective in multiple objective evaluation metrics, including the average gradient, edge intensity, information entropy, spatial frequency and standard deviation. The results of the two experiments are improved by 35.03%, 42.42%, 4.66%, 8.59% and 11.49% on average. © 2022 by the authors.},\n\tdoi = {10.3390/app122412758},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85144896246&doi=10.3390%2Fapp122412758&partnerID=40&md5=8a3ceec550d24892e342b950adf66ac9},\n\tvolume = {12},\n\tnumber = {24},\n\tnote = {Export Date: 23 March 2026; Cited By: 8 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.3390/app122412758"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000026",
+      "entry_type": "article",
+      "title": "MFF: A Deep Learning Model for Multi-Modal Image Fusion Based on Multiple Filters",
+      "authors": [
+        "Wang, Y.",
+        "Li, Z.",
+        "Wang, J.",
+        "Yang, L.",
+        "Dong, B.",
+        "Zhang, H.",
+        "Liu, J."
+      ],
+      "year": 2025,
+      "journal": "IEEE Access",
+      "doi": "10.1109/access.2025.3540007",
+      "abstract": "Multi-modal image fusion mainly refers to the feature fusion of two or more different images taken from the same perspective range to increase the amount of information contained in an image. This study proposes a multi-modal image fusion deep network called the MFF network. Compared with traditional image fusion models, the MFF network decomposes high-frequency features more finely. In contrast to popular transformer networks, the MFF network utilizes multiple filter networks for the corresponding high and low-frequency feature extraction, thereby improving the model training and inference time. First, GaborNet filtering modules were used by the MFF network to extract high-frequency texture features and invertible neural networks (INN) modules are employed for extracting high-frequency edge features. These two sets of features constitute the high-frequency characteristics of an image. The LEF module is utilized as a low-pass filter to acquire the low-frequency characteristics of an image. The method involving low-frequency feature correlation and high-frequency feature non-correlation was used for image training and fusion purposes. By systematically comparing the TNO, MSRS, and RoadScene datasets with other state-of-the-art image fusion models, the experimental results indicate that the MFF model achieves superior performance in visible-infrared image fusion. Furthermore, evaluations on the LLVIP dataset confirm the model's effectiveness in downstream machine vision tasks. Additionally, comparisons using the MRI-CT, MRI-PET, and MRI-SPECT datasets demonstrate that the MFF model exhibits exceptional performance in medical image fusion. © 2013 IEEE.",
+      "keywords": [],
+      "normalized_title": "mff a deep learning model for multi modal image fusion based on multiple filters",
+      "raw_bibtex": "@ARTICLE{10.1109/ACCESS.2025.3540007,\n\tauthor = {Wang, Y. and Li, Z. and Wang, J. and Yang, L. and Dong, B. and Zhang, H. and Liu, J.},\n\ttitle = {MFF: A Deep Learning Model for Multi-Modal Image Fusion Based on Multiple Filters},\n\tjournal = {IEEE Access},\n\tyear = {2025},\n\tabstract = {Multi-modal image fusion mainly refers to the feature fusion of two or more different images taken from the same perspective range to increase the amount of information contained in an image. This study proposes a multi-modal image fusion deep network called the MFF network. Compared with traditional image fusion models, the MFF network decomposes high-frequency features more finely. In contrast to popular transformer networks, the MFF network utilizes multiple filter networks for the corresponding high and low-frequency feature extraction, thereby improving the model training and inference time. First, GaborNet filtering modules were used by the MFF network to extract high-frequency texture features and invertible neural networks (INN) modules are employed for extracting high-frequency edge features. These two sets of features constitute the high-frequency characteristics of an image. The LEF module is utilized as a low-pass filter to acquire the low-frequency characteristics of an image. The method involving low-frequency feature correlation and high-frequency feature non-correlation was used for image training and fusion purposes. By systematically comparing the TNO, MSRS, and RoadScene datasets with other state-of-the-art image fusion models, the experimental results indicate that the MFF model achieves superior performance in visible-infrared image fusion. Furthermore, evaluations on the LLVIP dataset confirm the model's effectiveness in downstream machine vision tasks. Additionally, comparisons using the MRI-CT, MRI-PET, and MRI-SPECT datasets demonstrate that the MFF model exhibits exceptional performance in medical image fusion. © 2013 IEEE.},\n\tdoi = {10.1109/ACCESS.2025.3540007},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105001060023&doi=10.1109%2FACCESS.2025.3540007&partnerID=40&md5=4b14070aa0d4e36ecbacd28979fb9626},\n\tvolume = {13},\n\tpages = {38076-38090},\n\tnote = {Export Date: 23 March 2026; Cited By: 1 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1109/ACCESS.2025.3540007"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000027",
+      "entry_type": "article",
+      "title": "Multimodal deep learning based on the combination of EfficientNetV2 and ViT for Alzheimer’s disease early diagnosis enhanced by SAGAN data augmentation",
+      "authors": [
+        "Kadri, R.",
+        "Bouaziz, B.",
+        "Tmar, M.",
+        "Gargouri, F."
+      ],
+      "year": 2022,
+      "journal": "International Journal of Computer Information Systems and Industrial Management Applications",
+      "doi": null,
+      "abstract": "The digitalization of health data and the innovative eHealth technologies has created a new paradigm shift from traditional medicine methods to a new predictable, individualized medicine based on patient-centric approaches. The emerging fields of predictive and precision medicine are evolutionary methods to treat the disease based on the patient’s characteristics such as his lifestyle, genetic profile,and environment to understand the disease. Alzheimer’s (AD) early detection is still a challenging task. Researchers adopt advanced imaging techniques such as Magnetic Resonance Imaging (MRI) and fluorodeoxyglucose (FDG)-positron emission tomography (PET) to ensure a relevant understanding of AD disease. Extracting insights from these data is the key step towards disease early prediction and preventing its progression. Recently, deep learning methods have shown unparalleled success and have made a significant headway on brain diseases detection. Convolution neural network is a type of deep learning that has shown a state-of-the-art performance on the AD detection and early diagnosis. However its application has many limitations. The recent architectures such as transformers ensure an efficient image recognition and feature extraction with less complexity. In this study we investigate and evaluate the application of the different CNN and transformers models on Alzheimer’s disease early diagnosis. Further, we introduce a multi-modal method based on the MRI and PET modality for Alzheimer’s disease detection using the combination of the Efficientnet V2 and the vision transformer enhanced by a new data augmentation based on the self attention generative adversarial networks(SAGAN).We validated the proposed method using the Alzheimer’s Disease Neuroimaging Initiative (ADNI) and the Open Access Series of Imaging Studies (OASIS). Our proposed method combines the main advantages of the vision transformer and Efficientnet V2 achieving a 96% accuracy rate. This new method outperforms different CNN models and transformer methods and ensures a robust feature extraction and representation © MIR Labs, www.mirlabs.net/ijcisim/index.html",
+      "keywords": [],
+      "normalized_title": "multimodal deep learning based on the combination of efficientnetv2 and vit for alzheimer s disease early diagnosis enhanced by sagan data augmentation",
+      "raw_bibtex": "@ARTICLE{ris_000027,\n\tauthor = {Kadri, R. and Bouaziz, B. and Tmar, M. and Gargouri, F.},\n\ttitle = {Multimodal deep learning based on the combination of EfficientNetV2 and ViT for Alzheimer’s disease early diagnosis enhanced by SAGAN data augmentation},\n\tjournal = {International Journal of Computer Information Systems and Industrial Management Applications},\n\tyear = {2022},\n\tabstract = {The digitalization of health data and the innovative eHealth technologies has created a new paradigm shift from traditional medicine methods to a new predictable, individualized medicine based on patient-centric approaches. The emerging fields of predictive and precision medicine are evolutionary methods to treat the disease based on the patient’s characteristics such as his lifestyle, genetic profile,and environment to understand the disease. Alzheimer’s (AD) early detection is still a challenging task. Researchers adopt advanced imaging techniques such as Magnetic Resonance Imaging (MRI) and fluorodeoxyglucose (FDG)-positron emission tomography (PET) to ensure a relevant understanding of AD disease. Extracting insights from these data is the key step towards disease early prediction and preventing its progression. Recently, deep learning methods have shown unparalleled success and have made a significant headway on brain diseases detection. Convolution neural network is a type of deep learning that has shown a state-of-the-art performance on the AD detection and early diagnosis. However its application has many limitations. The recent architectures such as transformers ensure an efficient image recognition and feature extraction with less complexity. In this study we investigate and evaluate the application of the different CNN and transformers models on Alzheimer’s disease early diagnosis. Further, we introduce a multi-modal method based on the MRI and PET modality for Alzheimer’s disease detection using the combination of the Efficientnet V2 and the vision transformer enhanced by a new data augmentation based on the self attention generative adversarial networks(SAGAN).We validated the proposed method using the Alzheimer’s Disease Neuroimaging Initiative (ADNI) and the Open Access Series of Imaging Studies (OASIS). Our proposed method combines the main advantages of the vision transformer and Efficientnet V2 achieving a 96% accuracy rate. This new method outperforms different CNN models and transformer methods and ensures a robust feature extraction and representation © MIR Labs, www.mirlabs.net/ijcisim/index.html},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85130486347&partnerID=40&md5=e5898f235944d9b456b38a49faf6cf28},\n\tvolume = {14},\n\tpages = {313-325},\n\tnote = {Export Date: 23 March 2026; Cited By: 15 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "ris_000027"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000028",
+      "entry_type": "article",
+      "title": "Collaborative Attention Transformer on facial expression recognition under partial occlusion",
+      "authors": [
+        "Luo, Y.",
+        "Shao, J.",
+        "Yang, R."
+      ],
+      "year": 2022,
+      "journal": "Journal of Electronic Imaging",
+      "doi": "10.1117/1.jei.31.2.023037",
+      "abstract": "Recent research on facial expression recognition (FER) in the wild shows challenges still remain. Different from laboratory-controlled expression in the past, images in the wild contain more uncertainties, such as different forms of face information occlusion, ambiguous facial images, noisy labels, and so on. Among them, real-world facial occlusion is the most general and crucial challenge for FER. In addition, because of the COVID-19 disease epidemic, people have to wear masks in public, which brings new challenges to FER tasks. Due to the recent success of the Transformer on numerous computer vision tasks, we propose a Collaborative Attention Transformer (CAT) network that first uses Cross-Shaped Window Transformer as the backbone for the FER task. Meanwhile, two attention modules are collaborated. Channel-Spatial Attention Module is designed to increase the attention of the network to global features. Moreover, Window Attention Gate is used to enhance the ability of the model to focus on local details. The proposed method is evaluated on two public in-The-wild facial expression datasets, RAF-DB and FERPlus, and the results demonstrate that our CAT performs superior to the state-of-The-Art methods. © 2022 SPIE and IST.",
+      "keywords": [],
+      "normalized_title": "collaborative attention transformer on facial expression recognition under partial occlusion",
+      "raw_bibtex": "@ARTICLE{10.1117/1.JEI.31.2.023037,\n\tauthor = {Luo, Y. and Shao, J. and Yang, R.},\n\ttitle = {Collaborative Attention Transformer on facial expression recognition under partial occlusion},\n\tjournal = {Journal of Electronic Imaging},\n\tyear = {2022},\n\tabstract = {Recent research on facial expression recognition (FER) in the wild shows challenges still remain. Different from laboratory-controlled expression in the past, images in the wild contain more uncertainties, such as different forms of face information occlusion, ambiguous facial images, noisy labels, and so on. Among them, real-world facial occlusion is the most general and crucial challenge for FER. In addition, because of the COVID-19 disease epidemic, people have to wear masks in public, which brings new challenges to FER tasks. Due to the recent success of the Transformer on numerous computer vision tasks, we propose a Collaborative Attention Transformer (CAT) network that first uses Cross-Shaped Window Transformer as the backbone for the FER task. Meanwhile, two attention modules are collaborated. Channel-Spatial Attention Module is designed to increase the attention of the network to global features. Moreover, Window Attention Gate is used to enhance the ability of the model to focus on local details. The proposed method is evaluated on two public in-The-wild facial expression datasets, RAF-DB and FERPlus, and the results demonstrate that our CAT performs superior to the state-of-The-Art methods. © 2022 SPIE and IST.},\n\tdoi = {10.1117/1.JEI.31.2.023037},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85129717590&doi=10.1117%2F1.JEI.31.2.023037&partnerID=40&md5=9e01d1840bbdd02cd457aeb469b84806},\n\tvolume = {31},\n\tnumber = {2},\n\tnote = {Export Date: 23 March 2026; Cited By: 3 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1117/1.JEI.31.2.023037"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000029",
+      "entry_type": "article",
+      "title": "Nanophotonic-Enhanced Photoacoustic Fusion with Transformers for Brain Tumor Classification",
+      "authors": [
+        "Balamanikandan, A.",
+        "Manikandan, N.",
+        "Sriananda Ganesh, T.",
+        "Kalidasan, M.",
+        "Sukanya, M.",
+        "Anbarasu, L."
+      ],
+      "year": 2025,
+      "journal": "International Journal of Electrical and Electronics Research",
+      "doi": "10.37391/ijeer.130427",
+      "abstract": "This research presents a novel diagnostic framework that integrates nanophotonic-enhanced photoacoustic imaging (PAI) with multimodal magnetic resonance imaging (MRI), computed tomography (CT), and positron emission tomography (PET). A lightweight convolutional encoder extracts low-level features, which are fused via a transformer-based architecture employing 3D patch embeddings and multi-head self-attention. Intermediate fusion balances modality-specific and joint representations, achieving an overall accuracy of 97.8%, sensitivity of 96.5%, and specificity of 98.1% on a cohort of 550 complete MRI–CT–PET cases augmented with 100 simulated PAI volumes. Explainable AI techniques—Grad-CAM for spatial heatmaps and Deep SHAP for voxel-level attribution provide clinicians with transparent visualizations and a Pointing Game score of 92% alignment with expert annotations. Inference time of 1.2s per case and robustness to Gaussian (σ = 0.05) and Rician (SNR = 20dB) noise demonstrate clinical viability. Future work will extend domain adaptation to pilot real PAI acquisitions and optimize deployment on standard hospital GPUs. © 2025 by Balamanikandan A, Manikandan N, Sriananda Ganesh T, Kalidasan M, Sukanya M, Anbarasu L.",
+      "keywords": [],
+      "normalized_title": "nanophotonic enhanced photoacoustic fusion with transformers for brain tumor classification",
+      "raw_bibtex": "@ARTICLE{10.37391/ijeer.130427,\n\tauthor = {Balamanikandan, A. and Manikandan, N. and Sriananda Ganesh, T. and Kalidasan, M. and Sukanya, M. and Anbarasu, L.},\n\ttitle = {Nanophotonic-Enhanced Photoacoustic Fusion with Transformers for Brain Tumor Classification},\n\tjournal = {International Journal of Electrical and Electronics Research},\n\tyear = {2025},\n\tabstract = {This research presents a novel diagnostic framework that integrates nanophotonic-enhanced photoacoustic imaging (PAI) with multimodal magnetic resonance imaging (MRI), computed tomography (CT), and positron emission tomography (PET). A lightweight convolutional encoder extracts low-level features, which are fused via a transformer-based architecture employing 3D patch embeddings and multi-head self-attention. Intermediate fusion balances modality-specific and joint representations, achieving an overall accuracy of 97.8%, sensitivity of 96.5%, and specificity of 98.1% on a cohort of 550 complete MRI–CT–PET cases augmented with 100 simulated PAI volumes. Explainable AI techniques—Grad-CAM for spatial heatmaps and Deep SHAP for voxel-level attribution provide clinicians with transparent visualizations and a Pointing Game score of 92% alignment with expert annotations. Inference time of 1.2s per case and robustness to Gaussian (σ = 0.05) and Rician (SNR = 20dB) noise demonstrate clinical viability. Future work will extend domain adaptation to pilot real PAI acquisitions and optimize deployment on standard hospital GPUs. © 2025 by Balamanikandan A, Manikandan N, Sriananda Ganesh T, Kalidasan M, Sukanya M, Anbarasu L.},\n\tdoi = {10.37391/ijeer.130427},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105028192124&doi=10.37391%2Fijeer.130427&partnerID=40&md5=b30cd9626c313104713c418723414aba},\n\tvolume = {13},\n\tnumber = {4},\n\tpages = {870-877},\n\tnote = {Export Date: 23 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.37391/ijeer.130427"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000030",
+      "entry_type": "article",
+      "title": "A Cross-Modal Mutual Knowledge Distillation Framework for Alzheimer’s Disease Diagnosis: Addressing Incomplete Modalities",
+      "authors": [
+        "Kwak, M.G.",
+        "Mao, L.",
+        "Zheng, Z.",
+        "Su, Y.",
+        "Lure, F.",
+        "Li, J."
+      ],
+      "year": 2025,
+      "journal": "IEEE Transactions on Automation Science and Engineering",
+      "doi": "10.1109/tase.2025.3556290",
+      "abstract": "Early detection of Alzheimer’s Disease (AD) is crucial for timely interventions and optimizing treatment outcomes. Integrating multimodal neuroimaging datasets can enhance the early detection of AD. However, models must address the challenge of incomplete modalities, a common issue in real-world scenarios, as not all patients have access to all modalities due to practical constraints such as cost and availability. We propose a deep learning framework employing Incomplete Cross-modal Mutual Knowledge Distillation (IC-MKD) to model different sub-cohorts of patients based on their available modalities. In IC-MKD, the multimodal model (e.g., MRI and PET) serves as a teacher, while the single-modality model (e.g., MRI only) is the student. Our IC-MKD framework features three components: a Modality-Disentangling Teacher (MDT) model designed through information disentanglement, a student model that learns from classification errors and MDT’s knowledge, and the teacher model enhanced via distilling the student’s single-modal feature extraction capabilities. Moreover, we show the effectiveness of the proposed method through theoretical analysis and validate its performance with simulation studies. In addition, our method is demonstrated through a case study with Alzheimer’s Disease Neuroimaging Initiative (ADNI) datasets, underscoring the potential of artificial intelligence in addressing incomplete multimodal neuroimaging datasets and advancing early AD detection. approach improves the accuracy and effectiveness of early AD diagnosis, especially when imaging resources are limited, via bidirectional knowledge transfer. We introduced a teacher model that prioritizes extracting common information between different modalities, significantly enhancing the student model’s learning process. This paper includes theoretical analysis, simulation study, and real-world case study to illustrate the method’s promising potential in early AD detection. However, practitioners should be mindful of the complexities involved in model tuning. Future work will focus on improving model interpretability and expanding its application. This includes developing methods to discover the key brain regions for predictions, enhancing clinical trust, and extending the framework to incorporate a broader range of imaging modalities, demographic information, and clinical data. These advancements aim to provide a more comprehensive view of patient health and improve diagnostic accuracy across various neurodegenerative diseases. © 2025 IEEE All rights reserved.",
+      "keywords": [],
+      "normalized_title": "a cross modal mutual knowledge distillation framework for alzheimer s disease diagnosis addressing incomplete modalities",
+      "raw_bibtex": "@ARTICLE{10.1109/TASE.2025.3556290,\n\tauthor = {Kwak, M.G. and Mao, L. and Zheng, Z. and Su, Y. and Lure, F. and Li, J.},\n\ttitle = {A Cross-Modal Mutual Knowledge Distillation Framework for Alzheimer’s Disease Diagnosis: Addressing Incomplete Modalities},\n\tjournal = {IEEE Transactions on Automation Science and Engineering},\n\tyear = {2025},\n\tabstract = {Early detection of Alzheimer’s Disease (AD) is crucial for timely interventions and optimizing treatment outcomes. Integrating multimodal neuroimaging datasets can enhance the early detection of AD. However, models must address the challenge of incomplete modalities, a common issue in real-world scenarios, as not all patients have access to all modalities due to practical constraints such as cost and availability. We propose a deep learning framework employing Incomplete Cross-modal Mutual Knowledge Distillation (IC-MKD) to model different sub-cohorts of patients based on their available modalities. In IC-MKD, the multimodal model (e.g., MRI and PET) serves as a teacher, while the single-modality model (e.g., MRI only) is the student. Our IC-MKD framework features three components: a Modality-Disentangling Teacher (MDT) model designed through information disentanglement, a student model that learns from classification errors and MDT’s knowledge, and the teacher model enhanced via distilling the student’s single-modal feature extraction capabilities. Moreover, we show the effectiveness of the proposed method through theoretical analysis and validate its performance with simulation studies. In addition, our method is demonstrated through a case study with Alzheimer’s Disease Neuroimaging Initiative (ADNI) datasets, underscoring the potential of artificial intelligence in addressing incomplete multimodal neuroimaging datasets and advancing early AD detection. approach improves the accuracy and effectiveness of early AD diagnosis, especially when imaging resources are limited, via bidirectional knowledge transfer. We introduced a teacher model that prioritizes extracting common information between different modalities, significantly enhancing the student model’s learning process. This paper includes theoretical analysis, simulation study, and real-world case study to illustrate the method’s promising potential in early AD detection. However, practitioners should be mindful of the complexities involved in model tuning. Future work will focus on improving model interpretability and expanding its application. This includes developing methods to discover the key brain regions for predictions, enhancing clinical trust, and extending the framework to incorporate a broader range of imaging modalities, demographic information, and clinical data. These advancements aim to provide a more comprehensive view of patient health and improve diagnostic accuracy across various neurodegenerative diseases. © 2025 IEEE All rights reserved.},\n\tdoi = {10.1109/TASE.2025.3556290},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105002057168&doi=10.1109%2FTASE.2025.3556290&partnerID=40&md5=ad61af99cf9fe90b240212815a08829b},\n\tvolume = {22},\n\tpages = {14218-14233},\n\tnote = {Export Date: 23 March 2026; Cited By: 6 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1109/TASE.2025.3556290"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000031",
+      "entry_type": "article",
+      "title": "A Multi-Scale Interpretability-Based PET-CT Tumor Segmentation Method",
+      "authors": [
+        "Yang, D.",
+        "Wang, Y.",
+        "Ma, Y.",
+        "Yang, H."
+      ],
+      "year": 2025,
+      "journal": "Mathematics",
+      "doi": "10.3390/math13071139",
+      "abstract": "Accurate tumor segmentation is crucial for clinical diagnosis, treatment planning, and efficacy evaluation in medical imaging. Although traditional image processing techniques have been widely applied in tumor segmentation, they often perform poorly when dealing with tumors that have low contrast, irregular shapes, or varying sizes. With the rise of deep learning, particularly the application of convolutional neural networks (CNNs) in medical image segmentation, significant progress has been made, especially in handling multimodal data such as positron emission tomography (PET) and computed tomography (CT). However, the “black-box” nature of CNNs presents challenges for interpretability, which is particularly important in clinical applications. To address this, we propose a tumor segmentation framework based on a multi-scale interpretability module (MSIM). Through ablation experiments and comparisons on three public datasets, we evaluate the performance of the proposed method. The ablation results show that the proposed method achieves an improvement of 1.6, 1.62, and 2.36 in the Dice Similarity Coefficient (DSC) on the Melanoma, Lymphoma, and Lung Cancer datasets, respectively, highlighting the benefits of the interpretability module. Furthermore, the method outperforms the best comparative methods on all three datasets, achieving DSC improvements of 1.46, 1.27, and 1.93, respectively. Finally, visualization and perturbation experiments further validate the effectiveness of our method in emphasizing critical features. © 2025 by the authors.",
+      "keywords": [],
+      "normalized_title": "a multi scale interpretability based pet ct tumor segmentation method",
+      "raw_bibtex": "@ARTICLE{10.3390/math13071139,\n\tauthor = {Yang, D. and Wang, Y. and Ma, Y. and Yang, H.},\n\ttitle = {A Multi-Scale Interpretability-Based PET-CT Tumor Segmentation Method},\n\tjournal = {Mathematics},\n\tyear = {2025},\n\tabstract = {Accurate tumor segmentation is crucial for clinical diagnosis, treatment planning, and efficacy evaluation in medical imaging. Although traditional image processing techniques have been widely applied in tumor segmentation, they often perform poorly when dealing with tumors that have low contrast, irregular shapes, or varying sizes. With the rise of deep learning, particularly the application of convolutional neural networks (CNNs) in medical image segmentation, significant progress has been made, especially in handling multimodal data such as positron emission tomography (PET) and computed tomography (CT). However, the “black-box” nature of CNNs presents challenges for interpretability, which is particularly important in clinical applications. To address this, we propose a tumor segmentation framework based on a multi-scale interpretability module (MSIM). Through ablation experiments and comparisons on three public datasets, we evaluate the performance of the proposed method. The ablation results show that the proposed method achieves an improvement of 1.6, 1.62, and 2.36 in the Dice Similarity Coefficient (DSC) on the Melanoma, Lymphoma, and Lung Cancer datasets, respectively, highlighting the benefits of the interpretability module. Furthermore, the method outperforms the best comparative methods on all three datasets, achieving DSC improvements of 1.46, 1.27, and 1.93, respectively. Finally, visualization and perturbation experiments further validate the effectiveness of our method in emphasizing critical features. © 2025 by the authors.},\n\tdoi = {10.3390/math13071139},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105002365864&doi=10.3390%2Fmath13071139&partnerID=40&md5=2f04611376bf57a4176595feb6548410},\n\tvolume = {13},\n\tnumber = {7},\n\tnote = {Export Date: 23 March 2026; Cited By: 2 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.3390/math13071139"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000032",
+      "entry_type": "article",
+      "title": "A Multimodal Approach for Alzheimer's Disease Detection and Classification Using Deep Learning",
+      "authors": [
+        "Hassan, A.",
+        "Imran, A.",
+        "Yasin, A.U.",
+        "Waqas, M.A.",
+        "Fazal, R."
+      ],
+      "year": 2024,
+      "journal": "Journal of Computing and Biomedical Informatics",
+      "doi": null,
+      "abstract": "Alzheimer's disease (AD) presents a substantial challenge to healthcare systems globally due to its progressive nature and the absence of effective treatments. The timely identification of AD is crucial for enabling interventions aimed at potentially slowing cognitive decline and enhancing patient outcomes. Recent advancements in medical imaging, notably PET and MRI, provide valuable insights into the subtle changes associated with AD pathology. This study investigates the utilization of the VGG16 deep learning model, recognized for its proficiency in image recognition tasks, to extract detailed features from MRI and PET scans. By leveraging the capabilities of deep learning, our objective is to reveal subtle patterns indicative of AD pathology. These extracted features are consolidated into a unified representation, which facilitates the training of machine learning classifiers. Employing various classifiers, such as Random Forest, Support Vector Machine, and K-Nearest Neighbors, we aim to exploit their strengths in managing complex data. The experimental outcomes demonstrate the effectiveness of this hybrid approach, with the Support Vector Machine emerging as the most successful classifier, achieving an accuracy of 84%. These findings underscore the potential of deep learning-assisted feature extraction and emphasize the significance of integrating advanced imaging techniques with sophisticated machine learning algorithms for improved AD detection and classification. Such initiatives hold promise for advancing our comprehension of AD pathology, enhancing diagnostic precision, and ultimately contributing to more effective management strategies for this debilitating neurological disorder. © 2024, Research Center of Computing and Biomedical Informatics. All rights reserved.",
+      "keywords": [],
+      "normalized_title": "a multimodal approach for alzheimer s disease detection and classification using deep learning",
+      "raw_bibtex": "@ARTICLE{ris_000032,\n\tauthor = {Hassan, A. and Imran, A. and Yasin, A.U. and Waqas, M.A. and Fazal, R.},\n\ttitle = {A Multimodal Approach for Alzheimer's Disease Detection and Classification Using Deep Learning},\n\tjournal = {Journal of Computing and Biomedical Informatics},\n\tyear = {2024},\n\tabstract = {Alzheimer's disease (AD) presents a substantial challenge to healthcare systems globally due to its progressive nature and the absence of effective treatments. The timely identification of AD is crucial for enabling interventions aimed at potentially slowing cognitive decline and enhancing patient outcomes. Recent advancements in medical imaging, notably PET and MRI, provide valuable insights into the subtle changes associated with AD pathology. This study investigates the utilization of the VGG16 deep learning model, recognized for its proficiency in image recognition tasks, to extract detailed features from MRI and PET scans. By leveraging the capabilities of deep learning, our objective is to reveal subtle patterns indicative of AD pathology. These extracted features are consolidated into a unified representation, which facilitates the training of machine learning classifiers. Employing various classifiers, such as Random Forest, Support Vector Machine, and K-Nearest Neighbors, we aim to exploit their strengths in managing complex data. The experimental outcomes demonstrate the effectiveness of this hybrid approach, with the Support Vector Machine emerging as the most successful classifier, achieving an accuracy of 84%. These findings underscore the potential of deep learning-assisted feature extraction and emphasize the significance of integrating advanced imaging techniques with sophisticated machine learning algorithms for improved AD detection and classification. Such initiatives hold promise for advancing our comprehension of AD pathology, enhancing diagnostic precision, and ultimately contributing to more effective management strategies for this debilitating neurological disorder. © 2024, Research Center of Computing and Biomedical Informatics. All rights reserved.},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105026789493&partnerID=40&md5=2c32b6a50023837de52ec5d72be5d851},\n\tvolume = {6},\n\tnumber = {2},\n\tpages = {441-450},\n\tnote = {Export Date: 23 March 2026; Cited By: 9 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "ris_000032"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000033",
+      "entry_type": "article",
+      "title": "Multitask Learning Radiomics on Longitudinal Imaging to Predict Survival Outcomes following Risk-Adaptive Chemoradiation for Non-Small Cell Lung Cancer",
+      "authors": [
+        "Forouzannezhad, P.",
+        "Maes, D.",
+        "Hippe, D.S.",
+        "Thammasorn, P.",
+        "Iranzad, R.",
+        "Han, J.",
+        "Duan, C.",
+        "Liu, X.",
+        "Wang, S.",
+        "Chaovalitwongse, W.A.",
+        "Zeng, J.",
+        "Bowen, S.R."
+      ],
+      "year": 2022,
+      "journal": "Cancers",
+      "doi": "10.3390/cancers14051228",
+      "abstract": "(1) Background: Medical imaging provides quantitative and spatial information to evaluate treatment response in the management of patients with non-small cell lung cancer (NSCLC). High throughput extraction of radiomic features on these images can potentially phenotype tumors non-invasively and support risk stratification based on survival outcome prediction. The prognostic value of radiomics from different imaging modalities and time points prior to and during chemoradiation therapy of NSCLC, relative to conventional imaging biomarker or delta radiomics models, remains uncharacterized. We investigated the utility of multitask learning of multi-time point radiomic features, as opposed to single-task learning, for improving survival outcome prediction relative to conventional clinical imaging feature model benchmarks. (2) Methods: Survival outcomes were prospectively collected for 45 patients with unresectable NSCLC enrolled on the FLARE-RT phase II trial of risk-adaptive chemoradiation and optional consolidation PD-L1 checkpoint blockade (NCT02773238). FDG-PET, CT, and perfusion SPECT imaging pretreatment and week 3 mid-treatment was performed and 110 IBSI-compliant pyradiomics shape-/intensity-/texture-based features from the metabolic tumor volume were extracted. Outcome modeling consisted of a fused Laplacian sparse group LASSO with component-wise gradient boosting survival regression in a multitask learning framework. Testing performance under stratified 10-fold cross-validation was evaluated for multitask learning radiomics of different imaging modalities and time points. Multitask learning models were benchmarked against conventional clinical imaging and delta radiomics models and evaluated with the concordance index (c-index) and index of prediction accuracy (IPA). (3) Results: FDG-PET radiomics had higher prognostic value for overall survival in test folds (c-index 0.71 [0.67, 0.75]) than CT radiomics (c-index 0.64 [0.60, 0.71]) or perfusion SPECT radiomics (c-index 0.60 [0.57, 0.63]). Multitask learning of pre-/mid-treatment FDG-PET radiomics (c-index 0.71 [0.67, 0.75]) outperformed benchmark clinical imaging (c-index 0.65 [0.59, 0.71]) and FDG-PET delta radiomics (c-index 0.52 [0.48, 0.58]) models. Similarly, the IPA for multitask learning FDG-PET radiomics (30%) was higher than clinical imaging (26%) and delta radiomics (15%) models. Radiomics models performed consistently under different voxel resampling conditions. (4) Conclusion: Multitask learning radiomics for outcome modeling provides a clinical decision support platform that leverages longitudinal imaging information. This framework can reveal the relative importance of different imaging modalities and time points when designing risk-adaptive cancer treatment strategies. © 2022 by the authors. Licensee MDPI, Basel, Switzerland.",
+      "keywords": [],
+      "normalized_title": "multitask learning radiomics on longitudinal imaging to predict survival outcomes following risk adaptive chemoradiation for non small cell lung cancer",
+      "raw_bibtex": "@ARTICLE{10.3390/cancers14051228,\n\tauthor = {Forouzannezhad, P. and Maes, D. and Hippe, D.S. and Thammasorn, P. and Iranzad, R. and Han, J. and Duan, C. and Liu, X. and Wang, S. and Chaovalitwongse, W.A. and Zeng, J. and Bowen, S.R.},\n\ttitle = {Multitask Learning Radiomics on Longitudinal Imaging to Predict Survival Outcomes following Risk-Adaptive Chemoradiation for Non-Small Cell Lung Cancer},\n\tjournal = {Cancers},\n\tyear = {2022},\n\tabstract = {(1) Background: Medical imaging provides quantitative and spatial information to evaluate treatment response in the management of patients with non-small cell lung cancer (NSCLC). High throughput extraction of radiomic features on these images can potentially phenotype tumors non-invasively and support risk stratification based on survival outcome prediction. The prognostic value of radiomics from different imaging modalities and time points prior to and during chemoradiation therapy of NSCLC, relative to conventional imaging biomarker or delta radiomics models, remains uncharacterized. We investigated the utility of multitask learning of multi-time point radiomic features, as opposed to single-task learning, for improving survival outcome prediction relative to conventional clinical imaging feature model benchmarks. (2) Methods: Survival outcomes were prospectively collected for 45 patients with unresectable NSCLC enrolled on the FLARE-RT phase II trial of risk-adaptive chemoradiation and optional consolidation PD-L1 checkpoint blockade (NCT02773238). FDG-PET, CT, and perfusion SPECT imaging pretreatment and week 3 mid-treatment was performed and 110 IBSI-compliant pyradiomics shape-/intensity-/texture-based features from the metabolic tumor volume were extracted. Outcome modeling consisted of a fused Laplacian sparse group LASSO with component-wise gradient boosting survival regression in a multitask learning framework. Testing performance under stratified 10-fold cross-validation was evaluated for multitask learning radiomics of different imaging modalities and time points. Multitask learning models were benchmarked against conventional clinical imaging and delta radiomics models and evaluated with the concordance index (c-index) and index of prediction accuracy (IPA). (3) Results: FDG-PET radiomics had higher prognostic value for overall survival in test folds (c-index 0.71 [0.67, 0.75]) than CT radiomics (c-index 0.64 [0.60, 0.71]) or perfusion SPECT radiomics (c-index 0.60 [0.57, 0.63]). Multitask learning of pre-/mid-treatment FDG-PET radiomics (c-index 0.71 [0.67, 0.75]) outperformed benchmark clinical imaging (c-index 0.65 [0.59, 0.71]) and FDG-PET delta radiomics (c-index 0.52 [0.48, 0.58]) models. Similarly, the IPA for multitask learning FDG-PET radiomics (30%) was higher than clinical imaging (26%) and delta radiomics (15%) models. Radiomics models performed consistently under different voxel resampling conditions. (4) Conclusion: Multitask learning radiomics for outcome modeling provides a clinical decision support platform that leverages longitudinal imaging information. This framework can reveal the relative importance of different imaging modalities and time points when designing risk-adaptive cancer treatment strategies. © 2022 by the authors. Licensee MDPI, Basel, Switzerland.},\n\tdoi = {10.3390/cancers14051228},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85125194206&doi=10.3390%2Fcancers14051228&partnerID=40&md5=0cb1942786acd730d1171a94c3f829de},\n\tvolume = {14},\n\tnumber = {5},\n\tnote = {Export Date: 23 March 2026; Cited By: 31 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.3390/cancers14051228"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000034",
+      "entry_type": "article",
+      "title": "How to feel about emotionalized artificial intelligence? When robot pets, holograms, and chatbots become affective partners",
+      "authors": [
+        "Weber-Guskar, E."
+      ],
+      "year": 2021,
+      "journal": "Ethics and Information Technology",
+      "doi": "10.1007/s10676-021-09598-8",
+      "abstract": "Interactions between humans and machines that include artificial intelligence are increasingly common in nearly all areas of life. Meanwhile, AI-products are increasingly endowed with emotional characteristics. That is, they are designed and trained to elicit emotions in humans, to recognize human emotions and, sometimes, to simulate emotions (EAI). The introduction of such systems in our lives is met with some criticism. There is a rather strong intuition that there is something wrong about getting attached to a machine, about having certain emotions towards it, and about getting involved in a kind of affective relationship with it. In this paper, I want to tackle these worries by focusing on the last aspect: in what sense could it be problematic or even wrong to establish an emotional relationship with EAI-systems? I want to show that the justifications for the widespread intuition concerning the problems are not as strong as they seem at first sight. To do so, I discuss three arguments: the argument from self-deception, the argument from lack of mutuality, and the argument from moral negligence. © 2021, The Author(s).",
+      "keywords": [],
+      "normalized_title": "how to feel about emotionalized artificial intelligence when robot pets holograms and chatbots become affective partners",
+      "raw_bibtex": "@ARTICLE{10.1007/s10676-021-09598-8,\n\tauthor = {Weber-Guskar, E.},\n\ttitle = {How to feel about emotionalized artificial intelligence? When robot pets, holograms, and chatbots become affective partners},\n\tjournal = {Ethics and Information Technology},\n\tyear = {2021},\n\tabstract = {Interactions between humans and machines that include artificial intelligence are increasingly common in nearly all areas of life. Meanwhile, AI-products are increasingly endowed with emotional characteristics. That is, they are designed and trained to elicit emotions in humans, to recognize human emotions and, sometimes, to simulate emotions (EAI). The introduction of such systems in our lives is met with some criticism. There is a rather strong intuition that there is something wrong about getting attached to a machine, about having certain emotions towards it, and about getting involved in a kind of affective relationship with it. In this paper, I want to tackle these worries by focusing on the last aspect: in what sense could it be problematic or even wrong to establish an emotional relationship with EAI-systems? I want to show that the justifications for the widespread intuition concerning the problems are not as strong as they seem at first sight. To do so, I discuss three arguments: the argument from self-deception, the argument from lack of mutuality, and the argument from moral negligence. © 2021, The Author(s).},\n\tdoi = {10.1007/s10676-021-09598-8},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85106718985&doi=10.1007%2Fs10676-021-09598-8&partnerID=40&md5=c133b6e4698cfd350cda498c32f619f6},\n\tvolume = {23},\n\tnumber = {4},\n\tpages = {601-610},\n\tnote = {Export Date: 23 March 2026; Cited By: 53 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1007/s10676-021-09598-8"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000035",
+      "entry_type": "article",
+      "title": "1D-CNN-LSTM Hybrid-Model-Based Pet Behavior Recognition through Wearable Sensor Data Augmentation",
+      "authors": [
+        "Kim, H.",
+        "Moon, N."
+      ],
+      "year": 2024,
+      "journal": "Journal of Information Processing Systems",
+      "doi": "10.3745/jips.02.0211",
+      "abstract": "The number of healthcare products available for pets has increased in recent times, which has prompted active research into wearable devices for pets. However, the data collected through such devices are limited by outliers and missing values owing to the anomalous and irregular characteristics of pets. Hence, we propose pet behavior recognition based on a hybrid one-dimensional convolutional neural network (CNN) and long shortterm memory (LSTM) model using pet wearable devices. An Arduino-based pet wearable device was first fabricated to collect data for behavior recognition, where gyroscope and accelerometer values were collected using the device. Then, data augmentation was performed after replacing any missing values and outliers via preprocessing. At this time, the behaviors were classified into five types. To prevent bias from specific actions in the data augmentation, the number of datasets was compared and balanced, and CNN-LSTM-based deep learning was performed. The five subdivided behaviors and overall performance were then evaluated, and the overall accuracy of behavior recognition was found to be about 88.76%. © (2024) KIPS.",
+      "keywords": [],
+      "normalized_title": "1d cnn lstm hybrid model based pet behavior recognition through wearable sensor data augmentation",
+      "raw_bibtex": "@ARTICLE{10.3745/JIPS.02.0211,\n\tauthor = {Kim, H. and Moon, N.},\n\ttitle = {1D-CNN-LSTM Hybrid-Model-Based Pet Behavior Recognition through Wearable Sensor Data Augmentation},\n\tjournal = {Journal of Information Processing Systems},\n\tyear = {2024},\n\tabstract = {The number of healthcare products available for pets has increased in recent times, which has prompted active research into wearable devices for pets. However, the data collected through such devices are limited by outliers and missing values owing to the anomalous and irregular characteristics of pets. Hence, we propose pet behavior recognition based on a hybrid one-dimensional convolutional neural network (CNN) and long shortterm memory (LSTM) model using pet wearable devices. An Arduino-based pet wearable device was first fabricated to collect data for behavior recognition, where gyroscope and accelerometer values were collected using the device. Then, data augmentation was performed after replacing any missing values and outliers via preprocessing. At this time, the behaviors were classified into five types. To prevent bias from specific actions in the data augmentation, the number of datasets was compared and balanced, and CNN-LSTM-based deep learning was performed. The five subdivided behaviors and overall performance were then evaluated, and the overall accuracy of behavior recognition was found to be about 88.76%. © (2024) KIPS.},\n\tdoi = {10.3745/JIPS.02.0211},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85193755689&doi=10.3745%2FJIPS.02.0211&partnerID=40&md5=23aacc04f2cc05937b8b7e80a8ee033a},\n\tvolume = {20},\n\tnumber = {2},\n\tpages = {159-172},\n\tnote = {Export Date: 23 March 2026; Cited By: 1 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.3745/JIPS.02.0211"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000036",
+      "entry_type": "article",
+      "title": "Efficient 3D Biomedical Image Segmentation by Parallelly Multiscale Transformer–CNN Aggregation Network",
+      "authors": [
+        "Liu, W.",
+        "He, Y.",
+        "Man, T.",
+        "Zhu, F.",
+        "Chen, Q.",
+        "Huang, Y.",
+        "Feng, X.",
+        "Li, B.",
+        "Wan, Y.",
+        "He, J.",
+        "Deng, S."
+      ],
+      "year": 2025,
+      "journal": "Chemical and Biomedical Imaging",
+      "doi": "10.1021/cbmi.4c00102",
+      "abstract": "Accurate and automated segmentation of 3D biomedical images is a sophisticated imperative in clinical diagnosis, imaging-guided surgery, and prognosis judgment. Although the burgeoning of deep learning technologies has fostered smart segmentators, the successive and simultaneous garnering global and local features still remains challenging, which is essential for an exact and efficient imageological assay. To this end, a segmentation solution dubbed the mixed parallel shunted transformer (MPSTrans) is developed here, highlighting 3D-MPST blocks in a U-form framework. It enabled not only comprehensive characteristic capture and multiscale slice synchronization but also deep supervision in the decoder to facilitate the fetching of hierarchical representations. Performing on an unpublished colon cancer data set, this model achieved an impressive increase in dice similarity coefficient (DSC) and a 1.718 mm decease in Hausdorff distance at 95% (HD95), alongside a substantial shrink of computational load of 56.7% in giga floating-point operations per second (GFLOPs). Meanwhile, MPSTrans outperforms other mainstream methods (Swin UNETR, UNETR, nnU-Net, PHTrans, and 3D U-Net) on three public multiorgan (aorta, gallbladder, kidney, liver, pancreas, spleen, stomach, etc.) and multimodal (CT, PET-CT, and MRI) data sets of medical segmentation decathlon (MSD) brain tumor, multiatlas labeling beyond cranial vault (BCV), and automated cardiac diagnosis challenge (ACDC), accentuating its adaptability. These results reflect the potential of MPSTrans to advance the state-of-the-art in biomedical imaging analysis, which would offer a robust tool for enhanced diagnostic capacity. © 2025 The Authors. Co-published by Nanjing University and American Chemical Society",
+      "keywords": [],
+      "normalized_title": "efficient 3d biomedical image segmentation by parallelly multiscale transformer cnn aggregation network",
+      "raw_bibtex": "@ARTICLE{10.1021/cbmi.4c00102,\n\tauthor = {Liu, W. and He, Y. and Man, T. and Zhu, F. and Chen, Q. and Huang, Y. and Feng, X. and Li, B. and Wan, Y. and He, J. and Deng, S.},\n\ttitle = {Efficient 3D Biomedical Image Segmentation by Parallelly Multiscale Transformer–CNN Aggregation Network},\n\tjournal = {Chemical and Biomedical Imaging},\n\tyear = {2025},\n\tabstract = {Accurate and automated segmentation of 3D biomedical images is a sophisticated imperative in clinical diagnosis, imaging-guided surgery, and prognosis judgment. Although the burgeoning of deep learning technologies has fostered smart segmentators, the successive and simultaneous garnering global and local features still remains challenging, which is essential for an exact and efficient imageological assay. To this end, a segmentation solution dubbed the mixed parallel shunted transformer (MPSTrans) is developed here, highlighting 3D-MPST blocks in a U-form framework. It enabled not only comprehensive characteristic capture and multiscale slice synchronization but also deep supervision in the decoder to facilitate the fetching of hierarchical representations. Performing on an unpublished colon cancer data set, this model achieved an impressive increase in dice similarity coefficient (DSC) and a 1.718 mm decease in Hausdorff distance at 95% (HD95), alongside a substantial shrink of computational load of 56.7% in giga floating-point operations per second (GFLOPs). Meanwhile, MPSTrans outperforms other mainstream methods (Swin UNETR, UNETR, nnU-Net, PHTrans, and 3D U-Net) on three public multiorgan (aorta, gallbladder, kidney, liver, pancreas, spleen, stomach, etc.) and multimodal (CT, PET-CT, and MRI) data sets of medical segmentation decathlon (MSD) brain tumor, multiatlas labeling beyond cranial vault (BCV), and automated cardiac diagnosis challenge (ACDC), accentuating its adaptability. These results reflect the potential of MPSTrans to advance the state-of-the-art in biomedical imaging analysis, which would offer a robust tool for enhanced diagnostic capacity. © 2025 The Authors. Co-published by Nanjing University and American Chemical Society},\n\tdoi = {10.1021/cbmi.4c00102},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105002431045&doi=10.1021%2Fcbmi.4c00102&partnerID=40&md5=eb7238b9c97b8bd94744c5f28437403d},\n\tvolume = {3},\n\tnumber = {8},\n\tpages = {522-533},\n\tnote = {Export Date: 23 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1021/cbmi.4c00102"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000037",
+      "entry_type": "article",
+      "title": "Deep learning in neuroradiology: A systematic review of current algorithms and approaches for the new wave of imaging technology",
+      "authors": [
+        "Yao, A.D.",
+        "Cheng, D.L.",
+        "Pan, I.",
+        "Kitamura, F."
+      ],
+      "year": 2020,
+      "journal": "Radiology: Artificial Intelligence",
+      "doi": "10.1148/ryai.2020190026",
+      "abstract": "Purpose: To systematically review and synthesize the current literature and to develop a compendium of technical characteristics of existing deep learning applications in neuroradiology. Materials and Methods: A Preferred Reporting Items for Systematic Reviews and Meta-Analyses systematic review was conducted through September 1, 2019, using PubMed, Cochrane, and Web of Science databases. A total of 155 articles discussing deep learning applications in neuroimaging were identified, divided by imaging modality, and characterized by imaging task, data source, algorithm type, and outcome metrics. Results: A total of 155 studies were identified and divided into: MRI (n = 115), functional MRI (n = 19), CT (n = 9), PET (n = 18), and US (n = 1). Seven were multimodal. MRI applications were described in 74%, and 76 (49%) were tasked with image segmenta-tion. Of the 155 articles identified in this study, 65 (42%) were tested on institutional data; only 16 were validated against publicly available data. In addition, 53 studies (34%) used a combined dataset of less than 100, and 124 (80%) used a combined dataset of less than 1000. Conclusion: Although deep learning has demonstrated potential for each of these modalities, this review highlights several needs in the field of deep learning research including use of internal datasets without external validation, unavailability of implementation methodinconsistent assessment metrics, and lack of clinical validation. However, the rapid growth of deep learning in neuroradiology holds promise and, as strides are made to improve standardization, generalizability, and reproducibility, it may soon play a role in clinical diagnosis and treatment of neurologic disorders. © RSNA, 2020.",
+      "keywords": [],
+      "normalized_title": "deep learning in neuroradiology a systematic review of current algorithms and approaches for the new wave of imaging technology",
+      "raw_bibtex": "@ARTICLE{10.1148/RYAI.2020190026,\n\tauthor = {Yao, A.D. and Cheng, D.L. and Pan, I. and Kitamura, F.},\n\ttitle = {Deep learning in neuroradiology: A systematic review of current algorithms and approaches for the new wave of imaging technology},\n\tjournal = {Radiology: Artificial Intelligence},\n\tyear = {2020},\n\tabstract = {Purpose: To systematically review and synthesize the current literature and to develop a compendium of technical characteristics of existing deep learning applications in neuroradiology. Materials and Methods: A Preferred Reporting Items for Systematic Reviews and Meta-Analyses systematic review was conducted through September 1, 2019, using PubMed, Cochrane, and Web of Science databases. A total of 155 articles discussing deep learning applications in neuroimaging were identified, divided by imaging modality, and characterized by imaging task, data source, algorithm type, and outcome metrics. Results: A total of 155 studies were identified and divided into: MRI (n = 115), functional MRI (n = 19), CT (n = 9), PET (n = 18), and US (n = 1). Seven were multimodal. MRI applications were described in 74%, and 76 (49%) were tasked with image segmenta-tion. Of the 155 articles identified in this study, 65 (42%) were tested on institutional data; only 16 were validated against publicly available data. In addition, 53 studies (34%) used a combined dataset of less than 100, and 124 (80%) used a combined dataset of less than 1000. Conclusion: Although deep learning has demonstrated potential for each of these modalities, this review highlights several needs in the field of deep learning research including use of internal datasets without external validation, unavailability of implementation methodinconsistent assessment metrics, and lack of clinical validation. However, the rapid growth of deep learning in neuroradiology holds promise and, as strides are made to improve standardization, generalizability, and reproducibility, it may soon play a role in clinical diagnosis and treatment of neurologic disorders. © RSNA, 2020.},\n\tdoi = {10.1148/RYAI.2020190026},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85089312617&doi=10.1148%2FRYAI.2020190026&partnerID=40&md5=47afe1a8f4c9bec5fbe2934b90891bec},\n\tvolume = {2},\n\tnumber = {2},\n\tnote = {Export Date: 23 March 2026; Cited By: 88 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1148/RYAI.2020190026"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000038",
+      "entry_type": "article",
+      "title": "Machine learning based diagnostics of veterinary cancer on ultrasound and optical imaging data",
+      "authors": [
+        "Maciulevičius, M.",
+        "Rupšytė, G.",
+        "Raišutis, R.",
+        "Tamošiūnas, M."
+      ],
+      "year": 2025,
+      "journal": "Veterinary Quarterly",
+      "doi": "10.1080/01652176.2025.2510486",
+      "abstract": "Study advances current diagnostic efficiency of canine/feline (sub-)cutaneous tumors using machine learning and multimodal imaging data. White light (WL), fluorescence (FL) and ultrasound (US) imaging were combined into hybrid approaches to differentiate between malignant mastocytomas, soft tissue sarcomas and benign lipomas. Support Vector Machine and Ensemble classifiers were optimized via sequential feature selection. US radio-frequency signals were quantitatively analyzed to derive the colormaps of six US estimates, corresponding to spectral and temporal domains of the acoustic field. This resulted in the quantification of 72 morphological features for US; as well as 24 and 12–for WL and FL data, respectively. Resulting classification efficiency for mastocytoma and sarcoma using US data was >75%; US+FL − 75–80%; US+WL − 85–90% and US+OPTICS − 90–95%. ∼100% classification efficiency was achieved for the differentiation between benign and malignant tumors even using single WL feature for Ensemble classifier. US features, resulting in inferior classification efficiency, were competitive to superior optical, as they were selected during optimization to be added to or replace optical counterparts. Additional tissue differentiation was performed on z-stacks of US colormaps, obtained using 3D arrays of US radio-frequency signals. This resulted in ∼70% differentiation efficiency for mastocytoma and sarcoma as well as >95% for benign and malignant tissues. The obtained additional metric of classification efficiency provides complementary diagnostic support, which for Support Vector Machine can be expressed as: 90.3 ± 1.9% (US+WL)×71.2 ± 0.6% (USDepth Profile). This hybrid criterion adds robustness to diagnostic model and may be very beneficial to characterize heterogeneous tissues. © 2025 The Author(s). Published by Informa UK Limited, trading as Taylor & Francis Group.",
+      "keywords": [],
+      "normalized_title": "machine learning based diagnostics of veterinary cancer on ultrasound and optical imaging data",
+      "raw_bibtex": "@ARTICLE{10.1080/01652176.2025.2510486,\n\tauthor = {Maciulevičius, M. and Rupšytė, G. and Raišutis, R. and Tamošiūnas, M.},\n\ttitle = {Machine learning based diagnostics of veterinary cancer on ultrasound and optical imaging data},\n\tjournal = {Veterinary Quarterly},\n\tyear = {2025},\n\tabstract = {Study advances current diagnostic efficiency of canine/feline (sub-)cutaneous tumors using machine learning and multimodal imaging data. White light (WL), fluorescence (FL) and ultrasound (US) imaging were combined into hybrid approaches to differentiate between malignant mastocytomas, soft tissue sarcomas and benign lipomas. Support Vector Machine and Ensemble classifiers were optimized via sequential feature selection. US radio-frequency signals were quantitatively analyzed to derive the colormaps of six US estimates, corresponding to spectral and temporal domains of the acoustic field. This resulted in the quantification of 72 morphological features for US; as well as 24 and 12–for WL and FL data, respectively. Resulting classification efficiency for mastocytoma and sarcoma using US data was >75%; US+FL − 75–80%; US+WL − 85–90% and US+OPTICS − 90–95%. ∼100% classification efficiency was achieved for the differentiation between benign and malignant tumors even using single WL feature for Ensemble classifier. US features, resulting in inferior classification efficiency, were competitive to superior optical, as they were selected during optimization to be added to or replace optical counterparts. Additional tissue differentiation was performed on z-stacks of US colormaps, obtained using 3D arrays of US radio-frequency signals. This resulted in ∼70% differentiation efficiency for mastocytoma and sarcoma as well as >95% for benign and malignant tissues. The obtained additional metric of classification efficiency provides complementary diagnostic support, which for Support Vector Machine can be expressed as: 90.3 ± 1.9% (US+WL)×71.2 ± 0.6% (USDepth Profile). This hybrid criterion adds robustness to diagnostic model and may be very beneficial to characterize heterogeneous tissues. © 2025 The Author(s). Published by Informa UK Limited, trading as Taylor & Francis Group.},\n\tdoi = {10.1080/01652176.2025.2510486},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105007009420&doi=10.1080%2F01652176.2025.2510486&partnerID=40&md5=1026e3f11eec23f8f419b646673810fe},\n\tvolume = {45},\n\tnumber = {1},\n\tpages = {1-19},\n\tnote = {Export Date: 23 March 2026; Cited By: 1 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1080/01652176.2025.2510486"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000039",
+      "entry_type": "article",
+      "title": "Potentials and caveats of AI in hybrid imaging",
+      "authors": [
+        "Shiyam Sundar, L.K.",
+        "Muzik, O.",
+        "Buvat, I.",
+        "Bidaut, L.",
+        "Beyer, T."
+      ],
+      "year": 2021,
+      "journal": "Methods",
+      "doi": "10.1016/j.ymeth.2020.10.004",
+      "abstract": "State-of-the-art patient management frequently mandates the investigation of both anatomy and physiology of the patients. Hybrid imaging modalities such as the PET/MRI, PET/CT and SPECT/CT have the ability to provide both structural and functional information of the investigated tissues in a single examination. With the introduction of such advanced hardware fusion, new problems arise such as the exceedingly large amount of multi-modality data that requires novel approaches of how to extract a maximum of clinical information from large sets of multi-dimensional imaging data. Artificial intelligence (AI) has emerged as one of the leading technologies that has shown promise in facilitating highly integrative analysis of multi-parametric data. Specifically, the usefulness of AI algorithms in the medical imaging field has been heavily investigated in the realms of (1) image acquisition and reconstruction, (2) post-processing and (3) data mining and modelling. Here, we aim to provide an overview of the challenges encountered in hybrid imaging and discuss how AI algorithms can facilitate potential solutions. In addition, we highlight the pitfalls and challenges in using advanced AI algorithms in the context of hybrid imaging and provide suggestions for building robust AI solutions that enable reproducible and transparent research. © 2020 The Author(s)",
+      "keywords": [],
+      "normalized_title": "potentials and caveats of ai in hybrid imaging",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ymeth.2020.10.004,\n\tauthor = {Shiyam Sundar, L.K. and Muzik, O. and Buvat, I. and Bidaut, L. and Beyer, T.},\n\ttitle = {Potentials and caveats of AI in hybrid imaging},\n\tjournal = {Methods},\n\tyear = {2021},\n\tabstract = {State-of-the-art patient management frequently mandates the investigation of both anatomy and physiology of the patients. Hybrid imaging modalities such as the PET/MRI, PET/CT and SPECT/CT have the ability to provide both structural and functional information of the investigated tissues in a single examination. With the introduction of such advanced hardware fusion, new problems arise such as the exceedingly large amount of multi-modality data that requires novel approaches of how to extract a maximum of clinical information from large sets of multi-dimensional imaging data. Artificial intelligence (AI) has emerged as one of the leading technologies that has shown promise in facilitating highly integrative analysis of multi-parametric data. Specifically, the usefulness of AI algorithms in the medical imaging field has been heavily investigated in the realms of (1) image acquisition and reconstruction, (2) post-processing and (3) data mining and modelling. Here, we aim to provide an overview of the challenges encountered in hybrid imaging and discuss how AI algorithms can facilitate potential solutions. In addition, we highlight the pitfalls and challenges in using advanced AI algorithms in the context of hybrid imaging and provide suggestions for building robust AI solutions that enable reproducible and transparent research. © 2020 The Author(s)},\n\tdoi = {10.1016/j.ymeth.2020.10.004},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85096616445&doi=10.1016%2Fj.ymeth.2020.10.004&partnerID=40&md5=b1c3ee5c296265f3cd9629d946dfac6e},\n\tvolume = {188},\n\tpages = {4-19},\n\tnote = {Export Date: 23 March 2026; Cited By: 26 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ymeth.2020.10.004"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000040",
+      "entry_type": "article",
+      "title": "Sub-region aware retrieval-based network with multimodal prior knowledge guidance for microvascular invasion prediction in PET/CT imaging",
+      "authors": [
+        "Wu, N.",
+        "Wang, Y.",
+        "Zhang, J.",
+        "Yu, Z.",
+        "Jin, W."
+      ],
+      "year": 2024,
+      "journal": "Neural Computing and Applications",
+      "doi": "10.1007/s00521-024-09777-w",
+      "abstract": "Accurate preoperative microvascular invasion (MVI) prediction using PET/CT imaging is important for guiding surgical plans and treatment strategies for hepatocellular carcinoma (HCC) patients. Deep learning (DL)-based approaches have shown effectiveness in medical imaging-based diagnostics. However, most DL-based methods for automatic MVI diagnosis depend on detailed annotations of HCC regions by clinicians, then perform feature extraction and directly output MVI risk scores, which can increase application complexity and lack transparency in decision-making. Therefore, we propose the sub-region aware retrieval-based network (SRANet), utilizing the prior knowledge of modality complementarity and localization of HCC in PET/CT images for tumor area location and feature extraction. Specifically, in the feature extraction stage, to better highlight lesion areas, we designed the prior knowledge guided fusion (PKGF) block. PKGF integrates knowledge from PET and CT through attention mechanism-based intermodal interaction and implicitly weights features to calibrate different modalities. Furthermore, we developed a sub-region aware module (SRAM) that employs class activation schemes and peak selection to identify and highlight sparse, salient sub-regions in tumor areas, relying solely on coarse-grained supervision. Additionally, we design a new loopback Siamese training strategy, guiding the model to focus on lesion areas through the semantic invariance of lesion features. Finally, we employ a retrieval strategy to present similar slices, providing clinicians with transparent references and enhancing the understandability of MVI predictions beyond simple risk scores. Experimental results show SRANet outperforms leading methods, achieving a slice-level AUC of 0.855 and an individual-level AUC of 0.796, highlighting its potential for clinical application. © The Author(s), under exclusive licence to Springer-Verlag London Ltd., part of Springer Nature 2024.",
+      "keywords": [],
+      "normalized_title": "sub region aware retrieval based network with multimodal prior knowledge guidance for microvascular invasion prediction in pet ct imaging",
+      "raw_bibtex": "@ARTICLE{10.1007/s00521-024-09777-w,\n\tauthor = {Wu, N. and Wang, Y. and Zhang, J. and Yu, Z. and Jin, W.},\n\ttitle = {Sub-region aware retrieval-based network with multimodal prior knowledge guidance for microvascular invasion prediction in PET/CT imaging},\n\tjournal = {Neural Computing and Applications},\n\tyear = {2024},\n\tabstract = {Accurate preoperative microvascular invasion (MVI) prediction using PET/CT imaging is important for guiding surgical plans and treatment strategies for hepatocellular carcinoma (HCC) patients. Deep learning (DL)-based approaches have shown effectiveness in medical imaging-based diagnostics. However, most DL-based methods for automatic MVI diagnosis depend on detailed annotations of HCC regions by clinicians, then perform feature extraction and directly output MVI risk scores, which can increase application complexity and lack transparency in decision-making. Therefore, we propose the sub-region aware retrieval-based network (SRANet), utilizing the prior knowledge of modality complementarity and localization of HCC in PET/CT images for tumor area location and feature extraction. Specifically, in the feature extraction stage, to better highlight lesion areas, we designed the prior knowledge guided fusion (PKGF) block. PKGF integrates knowledge from PET and CT through attention mechanism-based intermodal interaction and implicitly weights features to calibrate different modalities. Furthermore, we developed a sub-region aware module (SRAM) that employs class activation schemes and peak selection to identify and highlight sparse, salient sub-regions in tumor areas, relying solely on coarse-grained supervision. Additionally, we design a new loopback Siamese training strategy, guiding the model to focus on lesion areas through the semantic invariance of lesion features. Finally, we employ a retrieval strategy to present similar slices, providing clinicians with transparent references and enhancing the understandability of MVI predictions beyond simple risk scores. Experimental results show SRANet outperforms leading methods, achieving a slice-level AUC of 0.855 and an individual-level AUC of 0.796, highlighting its potential for clinical application. © The Author(s), under exclusive licence to Springer-Verlag London Ltd., part of Springer Nature 2024.},\n\tdoi = {10.1007/s00521-024-09777-w},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85190669064&doi=10.1007%2Fs00521-024-09777-w&partnerID=40&md5=8b9a030964f90e8116630640b3a1f1d2},\n\tvolume = {36},\n\tnumber = {19},\n\tpages = {11623-11641},\n\tnote = {Export Date: 23 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1007/s00521-024-09777-w"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

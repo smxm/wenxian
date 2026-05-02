@@ -1,0 +1,102 @@
+{
+  "batch_id": "batch_0002",
+  "results": [
+    {
+      "paper_id": "paper_000011",
+      "decision": "include",
+      "reason": "摘要明确提到风险承担水平更高，并涉及研发投入水平，符合研究主题和纳入标准。",
+      "evidence": [
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000012",
+      "decision": "include",
+      "reason": "标题和摘要明确研究企业风险承担，并提到研发投入水平作为具体表现形式，符合纳入标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000013",
+      "decision": "include",
+      "reason": "摘要明确研究高管风险承担意愿与企业技术创新，涉及风险承担概念，符合研究主题。",
+      "evidence": [
+        "abstract"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "paper_id": "paper_000014",
+      "decision": "exclude",
+      "reason": "摘要提到风险承担水平和研发支出，但主题是数字金融与数字化转型，未明确将研发支出比率作为风险承担测度指标。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.75
+    },
+    {
+      "paper_id": "paper_000015",
+      "decision": "include",
+      "reason": "标题和摘要明确从企业风险承担视角检验，并提到研发支出作为风险性投资活动，符合纳入标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000016",
+      "decision": "exclude",
+      "reason": "标题和摘要聚焦新型研发机构绩效评估方法，纯算法和管理类，未涉及企业风险承担概念。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000017",
+      "decision": "include",
+      "reason": "标题和摘要明确研究企业风险承担与企业创新，并提到研发投入增加，符合研究主题和纳入标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000018",
+      "decision": "uncertain",
+      "reason": "摘要提到风险承担水平作为机制，但主题是风险投资与技术并购，未明确研发支出比率作为测度指标。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000019",
+      "decision": "include",
+      "reason": "摘要明确提到垂直薪酬差异提升非CEO高管的风险承担，并涉及研发强度，符合研究主题。",
+      "evidence": [
+        "abstract"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "paper_id": "paper_000020",
+      "decision": "include",
+      "reason": "标题和摘要明确研究企业风险承担，并提到研发强度作为调节变量，符合纳入标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    }
+  ]
+}

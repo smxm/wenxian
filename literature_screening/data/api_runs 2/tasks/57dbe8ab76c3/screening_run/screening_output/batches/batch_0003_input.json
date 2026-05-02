@@ -1,0 +1,574 @@
+{
+  "batch_id": "batch_0003",
+  "paper_count": 20,
+  "paper_ids": [
+    "paper_000041",
+    "paper_000042",
+    "paper_000043",
+    "paper_000044",
+    "paper_000045",
+    "paper_000046",
+    "paper_000047",
+    "paper_000048",
+    "paper_000049",
+    "paper_000050",
+    "paper_000051",
+    "paper_000052",
+    "paper_000053",
+    "paper_000054",
+    "paper_000055",
+    "paper_000056",
+    "paper_000057",
+    "paper_000058",
+    "paper_000059",
+    "paper_000060"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000041",
+      "entry_type": "article",
+      "title": "CsAGP: Detecting Alzheimer's disease from multimodal images via dual-transformer with cross-attention and graph pooling",
+      "authors": [
+        "Tang, C.",
+        "Wei, M.",
+        "Sun, J.",
+        "Wang, S.",
+        "Zhang, Y."
+      ],
+      "year": 2023,
+      "journal": "Journal of King Saud University - Computer and Information Sciences",
+      "doi": "10.1016/j.jksuci.2023.101618",
+      "abstract": "Alzheimer's disease (AD) is a terrible and degenerative disease commonly occurring in the elderly. Early detection can prevent patients from further damage, which is crucial in treating AD. Over the past few decades, it has been demonstrated that neuroimaging can be a critical diagnostic tool for AD, and the feature fusion of different neuroimaging modalities can enhance diagnostic performance. Most previous studies in multimodal feature fusion have only concatenated the high-level features extracted by neural networks from various neuroimaging images simply. However, a major problem of these studies is overlooking the low-level feature interactions between modalities in the feature extraction stage, resulting in suboptimal performance in AD diagnosis. In this paper, we develop a dual-branch vision transformer with cross-attention and graph pooling, namely CsAGP, which enables multi-level feature interactions between the inputs to learn a shared feature representation. Specifically, we first construct a brand-new cross-attention fusion module (CAFM), which processes MRI and PET images by two independent branches of differing computational complexity. These features are fused merely by the cross-attention mechanism to enhance each other. After that, a concise graph pooling algorithm-based Reshape-Pooling-Reshape (RPR) framework is developed for token selection to reduce token redundancy in the proposed model. Extensive experiments on the Alzheimer's Disease Neuroimaging Initiative (ADNI) database demonstrated that the suggested method obtains 99.04%, 97.43%, 98.57%, and 98.72% accuracy for the classification of AD vs. CN, AD vs. MCI, CN vs. MCI, and AD vs. CN vs. MCI, respectively. © 2023 The Author(s)",
+      "keywords": [],
+      "normalized_title": "csagp detecting alzheimer s disease from multimodal images via dual transformer with cross attention and graph pooling",
+      "raw_bibtex": "@ARTICLE{10.1016/j.jksuci.2023.101618,\n\tauthor = {Tang, C. and Wei, M. and Sun, J. and Wang, S. and Zhang, Y.},\n\ttitle = {CsAGP: Detecting Alzheimer's disease from multimodal images via dual-transformer with cross-attention and graph pooling},\n\tjournal = {Journal of King Saud University - Computer and Information Sciences},\n\tyear = {2023},\n\tabstract = {Alzheimer's disease (AD) is a terrible and degenerative disease commonly occurring in the elderly. Early detection can prevent patients from further damage, which is crucial in treating AD. Over the past few decades, it has been demonstrated that neuroimaging can be a critical diagnostic tool for AD, and the feature fusion of different neuroimaging modalities can enhance diagnostic performance. Most previous studies in multimodal feature fusion have only concatenated the high-level features extracted by neural networks from various neuroimaging images simply. However, a major problem of these studies is overlooking the low-level feature interactions between modalities in the feature extraction stage, resulting in suboptimal performance in AD diagnosis. In this paper, we develop a dual-branch vision transformer with cross-attention and graph pooling, namely CsAGP, which enables multi-level feature interactions between the inputs to learn a shared feature representation. Specifically, we first construct a brand-new cross-attention fusion module (CAFM), which processes MRI and PET images by two independent branches of differing computational complexity. These features are fused merely by the cross-attention mechanism to enhance each other. After that, a concise graph pooling algorithm-based Reshape-Pooling-Reshape (RPR) framework is developed for token selection to reduce token redundancy in the proposed model. Extensive experiments on the Alzheimer's Disease Neuroimaging Initiative (ADNI) database demonstrated that the suggested method obtains 99.04%, 97.43%, 98.57%, and 98.72% accuracy for the classification of AD vs. CN, AD vs. MCI, CN vs. MCI, and AD vs. CN vs. MCI, respectively. © 2023 The Author(s)},\n\tdoi = {10.1016/j.jksuci.2023.101618},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85162952425&doi=10.1016%2Fj.jksuci.2023.101618&partnerID=40&md5=7ff6e3f7eea8f529b7743e5ec889f045},\n\tvolume = {35},\n\tnumber = {7},\n\tnote = {Export Date: 23 March 2026; Cited By: 35 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.jksuci.2023.101618"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000042",
+      "entry_type": "article",
+      "title": "Overcoming Limitations in One-Shot Semantic Segmentation via Adaptive Visual-Text Guided Prototype Relationship Optimization",
+      "authors": [
+        "Hou, M.",
+        "Huang, Z.",
+        "Yu, Z.",
+        "Li, X.",
+        "Wang, J.",
+        "Yan, Y.",
+        "Liu, Y.",
+        "Gregersen, H."
+      ],
+      "year": 2025,
+      "journal": "IEEE Transactions on Circuits and Systems for Video Technology",
+      "doi": "10.1109/tcsvt.2025.3632277",
+      "abstract": "The scarcity of high-quality annotated data in medical imaging significantly constrains the performance of deep learning-based segmentation models. While few-shot medical image segmentation (FSMIS) has emerged as a promising solution, existing methods exhibit critical limitations when handling scenarios with inter-class similarity between foreground-background regions and intra-class heterogeneity within foreground objects. Current prototype-based approaches focus primarily on the holistic extraction of the prototype from support images, failing to distinguish subtle anatomical variations and complex feature representations effectively. The AVT-ProNet features three innovative components: 1) An Adaptive Visual-Text Prototype Generation (AVPG) module leveraging CLIP’s cross-modal guide capabilities through adaptive prompting strategies; 2) a graph-based multiregion prototyping relationship optimization (GMPRO) module establishing structural relationships between decomposed subregion prototypes via graph neural networks; 3) a foreground-background prototyping contrast learning (FBPCL) strategy implementing dual-space optimization through inter-class separation and intra-class compactness. The synergistic integration of multi-modal guidance, structural relationship modeling, and contrastive prototype refinement enables our framework to overcome existing limitations in FSMIS. Comprehensive evaluations across multiple clinical scenarios (CHAOS, SABS, and CMR datasets under diverse training configurations) demonstrate superior performance over state-of-the-art approaches, including PANet, CAT-Net, DMAP, and recent PAMI baselines, © 1991-2012 IEEE.",
+      "keywords": [],
+      "normalized_title": "overcoming limitations in one shot semantic segmentation via adaptive visual text guided prototype relationship optimization",
+      "raw_bibtex": "@ARTICLE{10.1109/TCSVT.2025.3632277,\n\tauthor = {Hou, M. and Huang, Z. and Yu, Z. and Li, X. and Wang, J. and Yan, Y. and Liu, Y. and Gregersen, H.},\n\ttitle = {Overcoming Limitations in One-Shot Semantic Segmentation via Adaptive Visual-Text Guided Prototype Relationship Optimization},\n\tjournal = {IEEE Transactions on Circuits and Systems for Video Technology},\n\tyear = {2025},\n\tabstract = {The scarcity of high-quality annotated data in medical imaging significantly constrains the performance of deep learning-based segmentation models. While few-shot medical image segmentation (FSMIS) has emerged as a promising solution, existing methods exhibit critical limitations when handling scenarios with inter-class similarity between foreground-background regions and intra-class heterogeneity within foreground objects. Current prototype-based approaches focus primarily on the holistic extraction of the prototype from support images, failing to distinguish subtle anatomical variations and complex feature representations effectively. The AVT-ProNet features three innovative components: 1) An Adaptive Visual-Text Prototype Generation (AVPG) module leveraging CLIP’s cross-modal guide capabilities through adaptive prompting strategies; 2) a graph-based multiregion prototyping relationship optimization (GMPRO) module establishing structural relationships between decomposed subregion prototypes via graph neural networks; 3) a foreground-background prototyping contrast learning (FBPCL) strategy implementing dual-space optimization through inter-class separation and intra-class compactness. The synergistic integration of multi-modal guidance, structural relationship modeling, and contrastive prototype refinement enables our framework to overcome existing limitations in FSMIS. Comprehensive evaluations across multiple clinical scenarios (CHAOS, SABS, and CMR datasets under diverse training configurations) demonstrate superior performance over state-of-the-art approaches, including PANet, CAT-Net, DMAP, and recent PAMI baselines, © 1991-2012 IEEE.},\n\tdoi = {10.1109/TCSVT.2025.3632277},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105021877085&doi=10.1109%2FTCSVT.2025.3632277&partnerID=40&md5=cffe4c38521d7a99296d51f57ef2d65a},\n\tnote = {Export Date: 23 March 2026; Cited By: 1 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1109/TCSVT.2025.3632277"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000043",
+      "entry_type": "article",
+      "title": "Lung Pathology Detection: A Qualitative and Comprehensive Survey of Deep Neural Networks Utilising CT, MRI, and PET Imaging Modalities",
+      "authors": [
+        "Assish, Y.S.S.K.",
+        "Kuppusamy, P."
+      ],
+      "year": 2025,
+      "journal": "Journal of Innovative Image Processing",
+      "doi": "10.36548/jiip.2025.4.002",
+      "abstract": "In March 2020, the World Health Organisation (WHO) identified COVID-19 as a global pandemic brought about by the SARS-CoV-2 virus. RT-PCR continued to be the first line of diagnosis, but its slow turnaround emphasized the need for faster, complementary diagnostic modalities. Imaging techniques like chest X-rays (CXR), computed tomography (CT) scans, and ultrasound were soon in high demand; yet manual assessment was time-consuming and susceptible to faults. To overcome these challenges, artificial intelligence (AI), and more so deep learning (DL), has proven to be a revolutionary instrument through feature extraction automation and enhanced diagnostic accuracy. This survey differentiates itself from reviews that have already been conducted by providing an exhaustive review of state-of-the-art DL architectures engineered for COVID-19 analysis on various imaging modalities, also highlighting under-investigated aspects like prognostics, rehabilitation assistance, and the role played by uncertainty quantification (UQ) in achieving clinical trustworthiness. The survey identifies areas of research gaps, such as the scarcity of multimodal datasets, difficulties in generalising models across populations, and the absence of standardised evaluation benchmarks. Systematically resolving these gaps, this work highlights the practical significance of AI-based computer-aided diagnosis (CAD) systems toward accelerating faster, more robust, and scalable pandemic response tools. In addition, it gives researchers and clinicians a blueprint for developing AI-based healthcare, allowing for both short-term use in managing COVID-19 and long-term relevance in future public health emergencies. © 2025 Inventive Research Organization.",
+      "keywords": [],
+      "normalized_title": "lung pathology detection a qualitative and comprehensive survey of deep neural networks utilising ct mri and pet imaging modalities",
+      "raw_bibtex": "@ARTICLE{10.36548/jiip.2025.4.002,\n\tauthor = {Assish, Y.S.S.K. and Kuppusamy, P.},\n\ttitle = {Lung Pathology Detection: A Qualitative and Comprehensive Survey of Deep Neural Networks Utilising CT, MRI, and PET Imaging Modalities},\n\tjournal = {Journal of Innovative Image Processing},\n\tyear = {2025},\n\tabstract = {In March 2020, the World Health Organisation (WHO) identified COVID-19 as a global pandemic brought about by the SARS-CoV-2 virus. RT-PCR continued to be the first line of diagnosis, but its slow turnaround emphasized the need for faster, complementary diagnostic modalities. Imaging techniques like chest X-rays (CXR), computed tomography (CT) scans, and ultrasound were soon in high demand; yet manual assessment was time-consuming and susceptible to faults. To overcome these challenges, artificial intelligence (AI), and more so deep learning (DL), has proven to be a revolutionary instrument through feature extraction automation and enhanced diagnostic accuracy. This survey differentiates itself from reviews that have already been conducted by providing an exhaustive review of state-of-the-art DL architectures engineered for COVID-19 analysis on various imaging modalities, also highlighting under-investigated aspects like prognostics, rehabilitation assistance, and the role played by uncertainty quantification (UQ) in achieving clinical trustworthiness. The survey identifies areas of research gaps, such as the scarcity of multimodal datasets, difficulties in generalising models across populations, and the absence of standardised evaluation benchmarks. Systematically resolving these gaps, this work highlights the practical significance of AI-based computer-aided diagnosis (CAD) systems toward accelerating faster, more robust, and scalable pandemic response tools. In addition, it gives researchers and clinicians a blueprint for developing AI-based healthcare, allowing for both short-term use in managing COVID-19 and long-term relevance in future public health emergencies. © 2025 Inventive Research Organization.},\n\tdoi = {10.36548/jiip.2025.4.002},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105019101517&doi=10.36548%2Fjiip.2025.4.002&partnerID=40&md5=166fd8793f4146e56edca9623a9c5fa8},\n\tvolume = {7},\n\tnumber = {4},\n\tpages = {1108-1133},\n\tnote = {Export Date: 23 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.36548/jiip.2025.4.002"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000044",
+      "entry_type": "article",
+      "title": "DeepImageTranslator V2: Analysis of Multimodal Medical Images using Semantic Segmentation Maps Generated through Deep Learning",
+      "authors": [
+        "Ye, E.Z.",
+        "Ye, E.H.",
+        "Bouthillier, M.",
+        "Ye, R.Z."
+      ],
+      "year": 2022,
+      "journal": "HighTech and Innovation Journal",
+      "doi": "10.28991/hij-2022-03-03-07",
+      "abstract": "Introduction: Analysis of multimodal medical images often requires the selection of one or many anatomical regions of interest (ROIs) for extraction of useful statistics. This task can prove laborious when a manual approach is used. We have previously developed a user-friendly software tool for image-to-image translation using deep learning. Therefore, we present herein an update to the DeepImageTranslator V2 software with the addition of a tool for multimodal medical image segmentation analysis (hereby referred to as the MMMISA). Methods: The MMMISA was implemented using the Tkinter library; backend computations were implemented using the Pydicom, Numpy, and OpenCV libraries. We tested our software using 4188 slices from whole-body axial 2-deoxy-2-[18F]-fluoroglucose-position emission tomography/ computed tomography scans ([18F]-FDG-PET/CT) of 10 patients from the American College of Radiology Imaging Network-Head and Neck Squamous Cell Carcinoma (ACRIN-HNSCC) database. Using the deep learning software DeepImageTranslator, a model was trained with 36 randomly selected CT slices and manually labelled semantic segmentation maps. Utilizing the trained model, all the CT scans of the 10 HNSCC patients were segmented with high accuracy. Segmentation maps generated using the deep convolutional network were then used to measure organ specific [18F]-FDG uptake. We also compared measurements performed using the MMMISA and those made with manually selected ROIs. Results: The MMMISA is a tool that allows user to select ROIs based on deep learning-generated segmentation maps and to compute accurate statistics for these ROIs based on coregistered multimodal images. We found that organ-specific [18F]-FDG uptake measured using multiple manually selected ROIs is concordant with whole-tissue measurements made with segmentation maps using the MMMISA tool. © Authors.",
+      "keywords": [],
+      "normalized_title": "deepimagetranslator v2 analysis of multimodal medical images using semantic segmentation maps generated through deep learning",
+      "raw_bibtex": "@ARTICLE{10.28991/HIJ-2022-03-03-07,\n\tauthor = {Ye, E.Z. and Ye, E.H. and Bouthillier, M. and Ye, R.Z.},\n\ttitle = {DeepImageTranslator V2: Analysis of Multimodal Medical Images using Semantic Segmentation Maps Generated through Deep Learning},\n\tjournal = {HighTech and Innovation Journal},\n\tyear = {2022},\n\tabstract = {Introduction: Analysis of multimodal medical images often requires the selection of one or many anatomical regions of interest (ROIs) for extraction of useful statistics. This task can prove laborious when a manual approach is used. We have previously developed a user-friendly software tool for image-to-image translation using deep learning. Therefore, we present herein an update to the DeepImageTranslator V2 software with the addition of a tool for multimodal medical image segmentation analysis (hereby referred to as the MMMISA). Methods: The MMMISA was implemented using the Tkinter library; backend computations were implemented using the Pydicom, Numpy, and OpenCV libraries. We tested our software using 4188 slices from whole-body axial 2-deoxy-2-[18F]-fluoroglucose-position emission tomography/ computed tomography scans ([18F]-FDG-PET/CT) of 10 patients from the American College of Radiology Imaging Network-Head and Neck Squamous Cell Carcinoma (ACRIN-HNSCC) database. Using the deep learning software DeepImageTranslator, a model was trained with 36 randomly selected CT slices and manually labelled semantic segmentation maps. Utilizing the trained model, all the CT scans of the 10 HNSCC patients were segmented with high accuracy. Segmentation maps generated using the deep convolutional network were then used to measure organ specific [18F]-FDG uptake. We also compared measurements performed using the MMMISA and those made with manually selected ROIs. Results: The MMMISA is a tool that allows user to select ROIs based on deep learning-generated segmentation maps and to compute accurate statistics for these ROIs based on coregistered multimodal images. We found that organ-specific [18F]-FDG uptake measured using multiple manually selected ROIs is concordant with whole-tissue measurements made with segmentation maps using the MMMISA tool. © Authors.},\n\tdoi = {10.28991/HIJ-2022-03-03-07},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85139785032&doi=10.28991%2FHIJ-2022-03-03-07&partnerID=40&md5=2217b9ad8bbc15a6bf56efc1c3123eb7},\n\tvolume = {3},\n\tnumber = {3},\n\tpages = {319-325},\n\tnote = {Export Date: 23 March 2026; Cited By: 10 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.28991/HIJ-2022-03-03-07"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000045",
+      "entry_type": "article",
+      "title": "Predictive Multimodal Deep Learning-Based Sustainable Renewable and Non-Renewable Energy Utilization",
+      "authors": [
+        "Motwakel, A.",
+        "Obayya, M.",
+        "Nemri, N.",
+        "Tarmissi, K.",
+        "Mohsen, H.",
+        "Rizwanulla, M.",
+        "Yaseen, I.",
+        "Zamani, A.S."
+      ],
+      "year": 2023,
+      "journal": "Computer Systems Science and Engineering",
+      "doi": "10.32604/csse.2023.037735",
+      "abstract": "Recently, renewable energy (RE) has become popular due to its benefits, such as being inexpensive, low-carbon, ecologically friendly, steady, and reliable. The RE sources are gradually combined with non-renewable energy (NRE) sources into electric grids to satisfy energy demands. Since energy utilization is highly related to national energy policy, energy prediction using artificial intelligence (AI) and deep learning (DL) based models can be employed for energy prediction on RE and NRE power resources. Predicting energy consumption of RE and NRE sources using effective models becomes necessary.With this motivation, this study presents a new multimodal fusionbased predictive tool for energy consumption prediction (MDLFM-ECP) of RE and NRE power sources. Actual data may influence the prediction performance of the results in prediction approaches. The proposed MDLFMECP technique involves pre-processing, fusion-based prediction, and hyperparameter optimization. In addition, the MDLFM-ECP technique involves the fusion of four deep learning (DL) models, namely long short-termmemory (LSTM), bidirectional LSTM (Bi-LSTM), deep belief network (DBN), and gated recurrent unit (GRU). Moreover, the chaotic cat swarm optimization (CCSO) algorithm is applied to tune the hyperparameters of the DL models. The design of the CCSO algorithm for optimal hyperparameter tuning of the DL models, showing the novelty of the work. A series of simulations took place to validate the superior performance of the proposed method, and the simulation outcome emphasized the improved results of the MDLFM-ECP technique over the recent approaches with minimum overall mean absolute percentage error of 3.58%. © 2023 CRL Publishing. All rights reserved.",
+      "keywords": [],
+      "normalized_title": "predictive multimodal deep learning based sustainable renewable and non renewable energy utilization",
+      "raw_bibtex": "@ARTICLE{10.32604/csse.2023.037735,\n\tauthor = {Motwakel, A. and Obayya, M. and Nemri, N. and Tarmissi, K. and Mohsen, H. and Rizwanulla, M. and Yaseen, I. and Zamani, A.S.},\n\ttitle = {Predictive Multimodal Deep Learning-Based Sustainable Renewable and Non-Renewable Energy Utilization},\n\tjournal = {Computer Systems Science and Engineering},\n\tyear = {2023},\n\tabstract = {Recently, renewable energy (RE) has become popular due to its benefits, such as being inexpensive, low-carbon, ecologically friendly, steady, and reliable. The RE sources are gradually combined with non-renewable energy (NRE) sources into electric grids to satisfy energy demands. Since energy utilization is highly related to national energy policy, energy prediction using artificial intelligence (AI) and deep learning (DL) based models can be employed for energy prediction on RE and NRE power resources. Predicting energy consumption of RE and NRE sources using effective models becomes necessary.With this motivation, this study presents a new multimodal fusionbased predictive tool for energy consumption prediction (MDLFM-ECP) of RE and NRE power sources. Actual data may influence the prediction performance of the results in prediction approaches. The proposed MDLFMECP technique involves pre-processing, fusion-based prediction, and hyperparameter optimization. In addition, the MDLFM-ECP technique involves the fusion of four deep learning (DL) models, namely long short-termmemory (LSTM), bidirectional LSTM (Bi-LSTM), deep belief network (DBN), and gated recurrent unit (GRU). Moreover, the chaotic cat swarm optimization (CCSO) algorithm is applied to tune the hyperparameters of the DL models. The design of the CCSO algorithm for optimal hyperparameter tuning of the DL models, showing the novelty of the work. A series of simulations took place to validate the superior performance of the proposed method, and the simulation outcome emphasized the improved results of the MDLFM-ECP technique over the recent approaches with minimum overall mean absolute percentage error of 3.58%. © 2023 CRL Publishing. All rights reserved.},\n\tdoi = {10.32604/csse.2023.037735},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85166177271&doi=10.32604%2Fcsse.2023.037735&partnerID=40&md5=1345cd205f107c2f780b73c817d6d9dc},\n\tvolume = {47},\n\tnumber = {1},\n\tpages = {1267-1281},\n\tnote = {Export Date: 23 March 2026; Cited By: 4 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.32604/csse.2023.037735"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000046",
+      "entry_type": "article",
+      "title": "DepreST-CAT: Retrospective smartphone call and text logs collected during the COVID-19 Pandemic to Screen for Mental Illnesses",
+      "authors": [
+        "Tlachac, M.L.",
+        "Flores, R.",
+        "Reisch, M.",
+        "Houskeeper, K.",
+        "Rundensteiner, E.A."
+      ],
+      "year": 2022,
+      "journal": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
+      "doi": "10.1145/3534596",
+      "abstract": "The rates of mental illness, especially anxiety and depression, have increased greatly since the start of the COVID-19 pandemic. Traditional mental illness screening instruments are too cumbersome and biased to screen an entire population. In contrast, smartphone call and text logs passively capture communication patterns and thus represent a promising screening alternative. To facilitate the advancement of such research, we collect and curate the DepreST Call and Text log (DepreST-CAT) dataset from over 365 crowdsourced participants during the COVID-19 pandemic. The logs are labeled with traditional anxiety and depression screening scores essential for training machine learning models. We construct time series ranging from 2 to 16 weeks in length from the retrospective smartphone logs. To demonstrate the screening capabilities of these time series, we then train a variety of unimodal and multimodal machine and deep learning models. These models provide insights into the relative screening value of the different types of logs, lengths of log time series, and classification methods. The DepreST-CAT dataset is a valuable resource for the research community to model communication patterns during the COVID-19 pandemic and further the development of machine learning algorithms for passive mental illness screening. © 2022 ACM.",
+      "keywords": [],
+      "normalized_title": "deprest cat retrospective smartphone call and text logs collected during the covid 19 pandemic to screen for mental illnesses",
+      "raw_bibtex": "@ARTICLE{10.1145/3534596,\n\tauthor = {Tlachac, M.L. and Flores, R. and Reisch, M. and Houskeeper, K. and Rundensteiner, E.A.},\n\ttitle = {DepreST-CAT: Retrospective smartphone call and text logs collected during the COVID-19 Pandemic to Screen for Mental Illnesses},\n\tjournal = {Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies},\n\tyear = {2022},\n\tabstract = {The rates of mental illness, especially anxiety and depression, have increased greatly since the start of the COVID-19 pandemic. Traditional mental illness screening instruments are too cumbersome and biased to screen an entire population. In contrast, smartphone call and text logs passively capture communication patterns and thus represent a promising screening alternative. To facilitate the advancement of such research, we collect and curate the DepreST Call and Text log (DepreST-CAT) dataset from over 365 crowdsourced participants during the COVID-19 pandemic. The logs are labeled with traditional anxiety and depression screening scores essential for training machine learning models. We construct time series ranging from 2 to 16 weeks in length from the retrospective smartphone logs. To demonstrate the screening capabilities of these time series, we then train a variety of unimodal and multimodal machine and deep learning models. These models provide insights into the relative screening value of the different types of logs, lengths of log time series, and classification methods. The DepreST-CAT dataset is a valuable resource for the research community to model communication patterns during the COVID-19 pandemic and further the development of machine learning algorithms for passive mental illness screening. © 2022 ACM.},\n\tdoi = {10.1145/3534596},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85134267098&doi=10.1145%2F3534596&partnerID=40&md5=4eeb481eb03a5a5cbb8659ab94cb02ec},\n\tvolume = {6},\n\tnumber = {2},\n\tnote = {Export Date: 23 March 2026; Cited By: 26 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1145/3534596"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000047",
+      "entry_type": "article",
+      "title": "Multi-modality medical image fusion by edge supervising and multi-scale attention features extraction",
+      "authors": [
+        "Mei, W.",
+        "He, K.",
+        "Xu, D.",
+        "Xie, S.",
+        "Zhou, Y."
+      ],
+      "year": 2025,
+      "journal": "Journal of Supercomputing",
+      "doi": "10.1007/s11227-025-07601-3",
+      "abstract": "Since the development of deep learning, multimodal medical image fusion (MMIF) has achieved both efficiency and real-time performance. However, most existing deep learning-based fusion methods primarily focus on the overall network architecture, often overlooking the intrinsic characteristics of the source images. From the perspectives of SPECT and PET imaging and the continuity of biological information, the edge regions of these functional images should receive greater attention during the fusion process. Furthermore, the pseudocolor should be separated before fusion and reintroduced afterward. Since functional images such as SPECT and PET typically suffer from low clarity, directly fusing them without proper processing may obscure texture details in the resulting image. To address these challenges, we propose an end-to-end encoder–decoder network for multimodal medical image fusion, termed EFCNet. The encoder comprises three main components: a smooth edge extraction module (SEEM), a multi-scale attention module (MSAM), and the E-Fusion module. The decoder reconstructs the fused image from these features. Specifically, SEEM extracts and smooths the edge information of functional source images (SPECT and PET), thereby mitigating the issues mentioned above. MSAM captures both local details and global contextual features while adaptively emphasizing more informative channels. E-Fusion then performs effective fusion of the extracted local and global features. Notably, our model is trained on a single dataset to obtain the pretrained weights, yet it achieves impressive results when tested on other datasets, demonstrating the strong generalization capability of the proposed method. The implementation of our proposed method is available on GitHub at https://github.com/VCMHE/EFCNet. © The Author(s), under exclusive licence to Springer Science+Business Media, LLC, part of Springer Nature 2025.",
+      "keywords": [],
+      "normalized_title": "multi modality medical image fusion by edge supervising and multi scale attention features extraction",
+      "raw_bibtex": "@ARTICLE{10.1007/s11227-025-07601-3,\n\tauthor = {Mei, W. and He, K. and Xu, D. and Xie, S. and Zhou, Y.},\n\ttitle = {Multi-modality medical image fusion by edge supervising and multi-scale attention features extraction},\n\tjournal = {Journal of Supercomputing},\n\tyear = {2025},\n\tabstract = {Since the development of deep learning, multimodal medical image fusion (MMIF) has achieved both efficiency and real-time performance. However, most existing deep learning-based fusion methods primarily focus on the overall network architecture, often overlooking the intrinsic characteristics of the source images. From the perspectives of SPECT and PET imaging and the continuity of biological information, the edge regions of these functional images should receive greater attention during the fusion process. Furthermore, the pseudocolor should be separated before fusion and reintroduced afterward. Since functional images such as SPECT and PET typically suffer from low clarity, directly fusing them without proper processing may obscure texture details in the resulting image. To address these challenges, we propose an end-to-end encoder–decoder network for multimodal medical image fusion, termed EFCNet. The encoder comprises three main components: a smooth edge extraction module (SEEM), a multi-scale attention module (MSAM), and the E-Fusion module. The decoder reconstructs the fused image from these features. Specifically, SEEM extracts and smooths the edge information of functional source images (SPECT and PET), thereby mitigating the issues mentioned above. MSAM captures both local details and global contextual features while adaptively emphasizing more informative channels. E-Fusion then performs effective fusion of the extracted local and global features. Notably, our model is trained on a single dataset to obtain the pretrained weights, yet it achieves impressive results when tested on other datasets, demonstrating the strong generalization capability of the proposed method. The implementation of our proposed method is available on GitHub at https://github.com/VCMHE/EFCNet. © The Author(s), under exclusive licence to Springer Science+Business Media, LLC, part of Springer Nature 2025.},\n\tdoi = {10.1007/s11227-025-07601-3},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105013522329&doi=10.1007%2Fs11227-025-07601-3&partnerID=40&md5=d4c7365ba535322e8e7a270274ef488e},\n\tvolume = {81},\n\tnumber = {13},\n\tnote = {Export Date: 23 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1007/s11227-025-07601-3"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000048",
+      "entry_type": "article",
+      "title": "A unified and scalable machine learning framework for feature fusion in object classification using weighted PCA with adaptive concatenation and dynamic scaling",
+      "authors": [
+        "Mahapatra, A.",
+        "Patra, P.K."
+      ],
+      "year": 2025,
+      "journal": "Discover Computing",
+      "doi": "10.1007/s10791-025-09622-1",
+      "abstract": "Feature fusion is essential for enhancing the performance of machine learning classifiers, particularly when managing heterogeneous, high-dimensional, and multimodal datasets. In this work, we propose Weighted PCA with Adaptive Concatenation and Dynamic Scaling (WPCA-ACDS), a novel feature fusion technique designed to address challenges such as overfitting, high dimensionality, and noise sensitivity. WPCA-ACDS integrates three key components: Weighted Principal Component Analysis (Weighted PCA) for efficient dimensionality reduction, Adaptive Concatenation for optimal feature selection based on data-driven strategies, and Dynamic Scaling to balance feature contributions and mitigate the impact of outliers or irrelevant features. Through extensive empirical evaluation on five benchmark datasets—CIFAR-10, Caltech-101, Scene-15, MNIST, and Oxford Pets—utilizing five classifiers (SVM, Random Forest, KNN, Logistic Regression, and Decision Trees), we demonstrate that WPCA-ACDS outperforms several state-of-the-art fusion techniques, including Simple Concatenation, PCA-based Concatenation, Average Fusion, Weighted Average Fusion, Product-based Fusion, cv-weight, Multiple Kernel Learning (MKL), Collaborative Boosting and Dominant Set Fusion. WPCA-ACDS excels in terms of classification accuracy, robustness to noise and high-dimensional data, and computational scalability. Additionally, sensitivity and trade-off analyses emphasize WPCA-ACDS's versatility, solidifying its position as a robust and scalable solution for modern machine learning tasks. Ablation studies further reveal the critical role of each component, demonstrating that the full WPCA-ACDS framework consistently outperforms all ablated variants in classification performance. This establishes WPCA-ACDS as an effective and comprehensive feature fusion technique for a wide range of machine learning tasks. © The Author(s) 2025.",
+      "keywords": [],
+      "normalized_title": "a unified and scalable machine learning framework for feature fusion in object classification using weighted pca with adaptive concatenation and dynamic scaling",
+      "raw_bibtex": "@ARTICLE{10.1007/s10791-025-09622-1,\n\tauthor = {Mahapatra, A. and Patra, P.K.},\n\ttitle = {A unified and scalable machine learning framework for feature fusion in object classification using weighted PCA with adaptive concatenation and dynamic scaling},\n\tjournal = {Discover Computing},\n\tyear = {2025},\n\tabstract = {Feature fusion is essential for enhancing the performance of machine learning classifiers, particularly when managing heterogeneous, high-dimensional, and multimodal datasets. In this work, we propose Weighted PCA with Adaptive Concatenation and Dynamic Scaling (WPCA-ACDS), a novel feature fusion technique designed to address challenges such as overfitting, high dimensionality, and noise sensitivity. WPCA-ACDS integrates three key components: Weighted Principal Component Analysis (Weighted PCA) for efficient dimensionality reduction, Adaptive Concatenation for optimal feature selection based on data-driven strategies, and Dynamic Scaling to balance feature contributions and mitigate the impact of outliers or irrelevant features. Through extensive empirical evaluation on five benchmark datasets—CIFAR-10, Caltech-101, Scene-15, MNIST, and Oxford Pets—utilizing five classifiers (SVM, Random Forest, KNN, Logistic Regression, and Decision Trees), we demonstrate that WPCA-ACDS outperforms several state-of-the-art fusion techniques, including Simple Concatenation, PCA-based Concatenation, Average Fusion, Weighted Average Fusion, Product-based Fusion, cv-weight, Multiple Kernel Learning (MKL), Collaborative Boosting and Dominant Set Fusion. WPCA-ACDS excels in terms of classification accuracy, robustness to noise and high-dimensional data, and computational scalability. Additionally, sensitivity and trade-off analyses emphasize WPCA-ACDS's versatility, solidifying its position as a robust and scalable solution for modern machine learning tasks. Ablation studies further reveal the critical role of each component, demonstrating that the full WPCA-ACDS framework consistently outperforms all ablated variants in classification performance. This establishes WPCA-ACDS as an effective and comprehensive feature fusion technique for a wide range of machine learning tasks. © The Author(s) 2025.},\n\tdoi = {10.1007/s10791-025-09622-1},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105007705324&doi=10.1007%2Fs10791-025-09622-1&partnerID=40&md5=6f5741e0025aa2d5a2e664b54741d6e0},\n\tvolume = {28},\n\tnumber = {1},\n\tnote = {Export Date: 23 March 2026; Cited By: 2 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1007/s10791-025-09622-1"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000049",
+      "entry_type": "article",
+      "title": "JL-TFMSFNet: A domestic cat sound emotion recognition method based on jointly learning the time–frequency domain and multi-scale features",
+      "authors": [
+        "Tang, L.",
+        "Hu, S.",
+        "Yang, C.",
+        "Deng, R.",
+        "Chen, A.",
+        "Zhou, G."
+      ],
+      "year": 2024,
+      "journal": "Expert Systems with Applications",
+      "doi": "10.1016/j.eswa.2024.124620",
+      "abstract": "There is a close biological relationship between cats and humans. Emotion recognition of domestic cat meows plays an essential role in human–animal relationships, animal–environment relationships, and animal conservation. This study proposed a deep learning network named JL-TFMSFNet. It jointly learns the time–frequency domain information and multi-scale features to recognize the sound emotions of domestic cats. Firstly, the Mel feature of the domestic cat's sound was extracted based on the Mel filter, using the proposed Multi-scale Feature Extraction Module (MFEM) to extract weighting information to generate a deeper one. Secondly, the semantic information in the spectrogram was learned from the time–frequency domain using the Time–Frequency Attention Mechanism (TFAM) proposed in the backbone network. Then, the Diverse Branch Block (DBB) module with the different receptive fields was added to improve the recognition performance. Finally, validation experiments were conducted on the self-built dataset Cat_Emotion_Sound (CES) nd the public dataset Urbansound8K. The experiments demonstrated that JL-TFMSFNet outperformed the state-of-the-art sound classification models. The average accuracies of the proposed model in this paper on these two datasets are 94.43% and 96.14%, and the F1-score are 94.01% and 95.65%. © 2024 Elsevier Ltd",
+      "keywords": [],
+      "normalized_title": "jl tfmsfnet a domestic cat sound emotion recognition method based on jointly learning the time frequency domain and multi scale features",
+      "raw_bibtex": "@ARTICLE{10.1016/j.eswa.2024.124620,\n\tauthor = {Tang, L. and Hu, S. and Yang, C. and Deng, R. and Chen, A. and Zhou, G.},\n\ttitle = {JL-TFMSFNet: A domestic cat sound emotion recognition method based on jointly learning the time–frequency domain and multi-scale features},\n\tjournal = {Expert Systems with Applications},\n\tyear = {2024},\n\tabstract = {There is a close biological relationship between cats and humans. Emotion recognition of domestic cat meows plays an essential role in human–animal relationships, animal–environment relationships, and animal conservation. This study proposed a deep learning network named JL-TFMSFNet. It jointly learns the time–frequency domain information and multi-scale features to recognize the sound emotions of domestic cats. Firstly, the Mel feature of the domestic cat's sound was extracted based on the Mel filter, using the proposed Multi-scale Feature Extraction Module (MFEM) to extract weighting information to generate a deeper one. Secondly, the semantic information in the spectrogram was learned from the time–frequency domain using the Time–Frequency Attention Mechanism (TFAM) proposed in the backbone network. Then, the Diverse Branch Block (DBB) module with the different receptive fields was added to improve the recognition performance. Finally, validation experiments were conducted on the self-built dataset Cat_Emotion_Sound (CES) nd the public dataset Urbansound8K. The experiments demonstrated that JL-TFMSFNet outperformed the state-of-the-art sound classification models. The average accuracies of the proposed model in this paper on these two datasets are 94.43% and 96.14%, and the F1-score are 94.01% and 95.65%. © 2024 Elsevier Ltd},\n\tdoi = {10.1016/j.eswa.2024.124620},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85197658245&doi=10.1016%2Fj.eswa.2024.124620&partnerID=40&md5=b45fd09e0a1fe8c8fb85aa2b26a06232},\n\tvolume = {255},\n\tnote = {Export Date: 23 March 2026; Cited By: 5 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.eswa.2024.124620"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000050",
+      "entry_type": "article",
+      "title": "Domain-adapted Large Language Models for Classifying Nuclear Medicine Reports",
+      "authors": [
+        "Huemann, Z.",
+        "Lee, C.",
+        "Hu, J.",
+        "Cho, S.Y.",
+        "Bradshaw, T.J."
+      ],
+      "year": 2023,
+      "journal": "Radiology: Artificial Intelligence",
+      "doi": "10.1148/ryai.220281",
+      "abstract": "Purpose: To evaluate the impact of domain adaptation on the performance of language models in predicting five-point Deauville scores on the basis of clinical fluorine 18 fluorodeoxyglucose PET/CT reports. Materials and Methods: The authors retrospectively retrieved 4542 text reports and images for fluorodeoxyglucose PET/CT lymphoma examinations from 2008 to 2018 in the University of Wisconsin–Madison institutional clinical imaging database. Of these total reports, 1664 had Deauville scores that were extracted from the reports and served as training labels. The bidirectional encoder representations from transformers (BERT) model and initialized BERT models BioClinicalBERT, RadBERT, and RoBERTa were adapted to the nuclear medicine domain by pretraining using masked language modeling. These domain-adapted models were then compared with the non–domain-adapted versions on the task of five-point Deauville score prediction. The language models were compared against vision models, multimodal vision-language models, and a nuclear medicine physician, with sevenfold Monte Carlo cross-validation. Means and SDs for accuracy are reported, with P values from paired t testing. Results: Domain adaptation improved the performance of all language models (P = .01). For example, BERT improved from 61.3% ± 2.9 (SD) five-class accuracy to 65.7% ± 2.2 (P = .01) following domain adaptation. Domain-adapted RoBERTa (named DA RoBERTa) performed best, achieving 77.4% ± 3.4 five-class accuracy; this model performed similarly to its multimodal counterpart (named Multimodal DA RoBERTa) (77.2% ± 3.2) and outperformed the best vision-only model (48.1% ± 3.5, P ≤ .001). A physician given the task on a subset of the data had a five-class accuracy of 66%. Conclusion: Domain adaptation improved the performance of large language models in predicting Deauville scores in PET/CT reports. © RSNA, 2023.",
+      "keywords": [],
+      "normalized_title": "domain adapted large language models for classifying nuclear medicine reports",
+      "raw_bibtex": "@ARTICLE{10.1148/ryai.220281,\n\tauthor = {Huemann, Z. and Lee, C. and Hu, J. and Cho, S.Y. and Bradshaw, T.J.},\n\ttitle = {Domain-adapted Large Language Models for Classifying Nuclear Medicine Reports},\n\tjournal = {Radiology: Artificial Intelligence},\n\tyear = {2023},\n\tabstract = {Purpose: To evaluate the impact of domain adaptation on the performance of language models in predicting five-point Deauville scores on the basis of clinical fluorine 18 fluorodeoxyglucose PET/CT reports. Materials and Methods: The authors retrospectively retrieved 4542 text reports and images for fluorodeoxyglucose PET/CT lymphoma examinations from 2008 to 2018 in the University of Wisconsin–Madison institutional clinical imaging database. Of these total reports, 1664 had Deauville scores that were extracted from the reports and served as training labels. The bidirectional encoder representations from transformers (BERT) model and initialized BERT models BioClinicalBERT, RadBERT, and RoBERTa were adapted to the nuclear medicine domain by pretraining using masked language modeling. These domain-adapted models were then compared with the non–domain-adapted versions on the task of five-point Deauville score prediction. The language models were compared against vision models, multimodal vision-language models, and a nuclear medicine physician, with sevenfold Monte Carlo cross-validation. Means and SDs for accuracy are reported, with P values from paired t testing. Results: Domain adaptation improved the performance of all language models (P = .01). For example, BERT improved from 61.3% ± 2.9 (SD) five-class accuracy to 65.7% ± 2.2 (P = .01) following domain adaptation. Domain-adapted RoBERTa (named DA RoBERTa) performed best, achieving 77.4% ± 3.4 five-class accuracy; this model performed similarly to its multimodal counterpart (named Multimodal DA RoBERTa) (77.2% ± 3.2) and outperformed the best vision-only model (48.1% ± 3.5, P ≤ .001). A physician given the task on a subset of the data had a five-class accuracy of 66%. Conclusion: Domain adaptation improved the performance of large language models in predicting Deauville scores in PET/CT reports. © RSNA, 2023.},\n\tdoi = {10.1148/ryai.220281},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85178194951&doi=10.1148%2Fryai.220281&partnerID=40&md5=2b21e9d596cdbcb3832252969f9ddb97},\n\tvolume = {5},\n\tnumber = {6},\n\tnote = {Export Date: 23 March 2026; Cited By: 21 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1148/ryai.220281"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000051",
+      "entry_type": "article",
+      "title": "Subclinical bacteriuria and pyuria in companion animals without signs of lower urinary tract disease: prevalence and associations in a prospective cross-sectional study using multimodal analytics",
+      "authors": [
+        "Tallaksen, J.M.",
+        "Reinhart, J.M.",
+        "Lopez-Villalobos, N.",
+        "Gal, A."
+      ],
+      "year": 2026,
+      "journal": "Journal of veterinary internal medicine",
+      "doi": "10.1093/jvimsj/aalaf092",
+      "abstract": "BACKGROUND: Subclinical bacteriuria (SB) and pyuria (SP) are recognized in companion animals, yet their prevalence and comorbidities in those without signs of lower urinary tract disease (LUTD) remain underexplored. HYPOTHESIS/OBJECTIVES: Determine SB and SP prevalence, identify associations, and compare species differences. ANIMALS: Two hundred eighty-seven cats and 533 dogs without LUTD signs. METHODS: Prospective cross-sectional study with retrospective analysis of medical records. RESULTS: Subclinical bacteriuria prevalence was 6.67% in cats and 9.81% in dogs. Subclinical pyuria was rarer in cats (1.05%) than in dogs (2.88%). Concurrent SB and SP occurred in 0.3% of cats and 2.5% of dogs (P = .0275), highlighting species-specific patterns. Higher urinary white blood cell levels were associated with higher urine bacterial levels (P < .001). In cats, key multivariable logistic regression associations increasing the composite outcome variable (SP, SB, or SP and SB) odds included previous diagnoses of lower urinary tract infection (LUTI; odds ratio [OR] 5.6 [95% confidence limit or 95CL 2-15.6), diabetes mellitus (OR 6.5 [95CL 1.4-30.3]), hyperthyroidism (OR 9.6 [95CL 1.2-77]), and current diagnosis of acute kidney injury (AKI; OR 7.5 [95CL 2.1-27]); in dogs, a previous diagnosis of AKI (OR 9.9 [95CL 1.3-76.9]), and current diagnoses of AKI (OR 9.9 [95CL 2.3-43.5]) and LUTI (OR 23.3 [95CL 12.5-43.5]). Machine learning revealed additional associations, including hypercortisolism in dogs. CONCLUSIONS AND CLINICAL IMPORTANCE: These findings underscore distinct risk profiles between species, suggesting tailored diagnostic approaches in veterinary practice. The rarity of concurrent SB and SP, unlike in humans, questions the application of human guidelines to animals. © The Author(s) 2026. Published by Oxford University Press on behalf of the American College of Veterinary Internal Medicine.",
+      "keywords": [],
+      "normalized_title": "subclinical bacteriuria and pyuria in companion animals without signs of lower urinary tract disease prevalence and associations in a prospective cross sectional study using multimodal analytics",
+      "raw_bibtex": "@ARTICLE{10.1093/jvimsj/aalaf092,\n\tauthor = {Tallaksen, J.M. and Reinhart, J.M. and Lopez-Villalobos, N. and Gal, A.},\n\ttitle = {Subclinical bacteriuria and pyuria in companion animals without signs of lower urinary tract disease: prevalence and associations in a prospective cross-sectional study using multimodal analytics},\n\tjournal = {Journal of veterinary internal medicine},\n\tyear = {2026},\n\tabstract = {BACKGROUND: Subclinical bacteriuria (SB) and pyuria (SP) are recognized in companion animals, yet their prevalence and comorbidities in those without signs of lower urinary tract disease (LUTD) remain underexplored. HYPOTHESIS/OBJECTIVES: Determine SB and SP prevalence, identify associations, and compare species differences. ANIMALS: Two hundred eighty-seven cats and 533 dogs without LUTD signs. METHODS: Prospective cross-sectional study with retrospective analysis of medical records. RESULTS: Subclinical bacteriuria prevalence was 6.67% in cats and 9.81% in dogs. Subclinical pyuria was rarer in cats (1.05%) than in dogs (2.88%). Concurrent SB and SP occurred in 0.3% of cats and 2.5% of dogs (P = .0275), highlighting species-specific patterns. Higher urinary white blood cell levels were associated with higher urine bacterial levels (P < .001). In cats, key multivariable logistic regression associations increasing the composite outcome variable (SP, SB, or SP and SB) odds included previous diagnoses of lower urinary tract infection (LUTI; odds ratio [OR] 5.6 [95% confidence limit or 95CL 2-15.6), diabetes mellitus (OR 6.5 [95CL 1.4-30.3]), hyperthyroidism (OR 9.6 [95CL 1.2-77]), and current diagnosis of acute kidney injury (AKI; OR 7.5 [95CL 2.1-27]); in dogs, a previous diagnosis of AKI (OR 9.9 [95CL 1.3-76.9]), and current diagnoses of AKI (OR 9.9 [95CL 2.3-43.5]) and LUTI (OR 23.3 [95CL 12.5-43.5]). Machine learning revealed additional associations, including hypercortisolism in dogs. CONCLUSIONS AND CLINICAL IMPORTANCE: These findings underscore distinct risk profiles between species, suggesting tailored diagnostic approaches in veterinary practice. The rarity of concurrent SB and SP, unlike in humans, questions the application of human guidelines to animals. © The Author(s) 2026. Published by Oxford University Press on behalf of the American College of Veterinary Internal Medicine.},\n\tdoi = {10.1093/jvimsj/aalaf092},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105031744457&doi=10.1093%2Fjvimsj%2Faalaf092&partnerID=40&md5=b977c5c97b36d503e5bb6153376b4733},\n\tvolume = {40},\n\tnumber = {1},\n\tnote = {Export Date: 23 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1093/jvimsj/aalaf092"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000052",
+      "entry_type": "article",
+      "title": "Multi-stage intermediate fusion for multimodal learning to classify non-small cell lung cancer subtypes from CT and PET",
+      "authors": [
+        "Aksu, F.",
+        "Gelardi, F.",
+        "Chiti, A.",
+        "Soda, P."
+      ],
+      "year": 2025,
+      "journal": "Pattern Recognition Letters",
+      "doi": "10.1016/j.patrec.2025.04.001",
+      "abstract": "Accurate classification of histological subtypes of non-small cell lung cancer (NSCLC) is essential in the era of precision medicine, yet current invasive techniques are not always feasible and may lead to clinical complications. This study presents MINT, a Multi-stage INTermediate fusion approach to classify NSCLC subtypes from CT and PET images. Our method integrates the two modalities at different stages of feature extraction, using voxel-wise fusion to exploit complementary information across varying abstraction levels while preserving spatial correlations. We compare our method against unimodal approaches using only CT or PET images to demonstrate the benefits of modality fusion, and further benchmark it against early and late fusion techniques to highlight the advantages of intermediate fusion during feature extraction. Additionally, we compare our model with the only existing intermediate fusion method for histological subtype classification using PET/CT images. Our results demonstrate that the proposed method outperforms all alternatives across key metrics, with an accuracy and AUC equal to 0.724 and 0.681, respectively. This non-invasive approach has the potential to significantly improve diagnostic accuracy, facilitate more informed treatment decisions, and advance personalized care in lung cancer management. © 2025",
+      "keywords": [],
+      "normalized_title": "multi stage intermediate fusion for multimodal learning to classify non small cell lung cancer subtypes from ct and pet",
+      "raw_bibtex": "@ARTICLE{10.1016/j.patrec.2025.04.001,\n\tauthor = {Aksu, F. and Gelardi, F. and Chiti, A. and Soda, P.},\n\ttitle = {Multi-stage intermediate fusion for multimodal learning to classify non-small cell lung cancer subtypes from CT and PET},\n\tjournal = {Pattern Recognition Letters},\n\tyear = {2025},\n\tabstract = {Accurate classification of histological subtypes of non-small cell lung cancer (NSCLC) is essential in the era of precision medicine, yet current invasive techniques are not always feasible and may lead to clinical complications. This study presents MINT, a Multi-stage INTermediate fusion approach to classify NSCLC subtypes from CT and PET images. Our method integrates the two modalities at different stages of feature extraction, using voxel-wise fusion to exploit complementary information across varying abstraction levels while preserving spatial correlations. We compare our method against unimodal approaches using only CT or PET images to demonstrate the benefits of modality fusion, and further benchmark it against early and late fusion techniques to highlight the advantages of intermediate fusion during feature extraction. Additionally, we compare our model with the only existing intermediate fusion method for histological subtype classification using PET/CT images. Our results demonstrate that the proposed method outperforms all alternatives across key metrics, with an accuracy and AUC equal to 0.724 and 0.681, respectively. This non-invasive approach has the potential to significantly improve diagnostic accuracy, facilitate more informed treatment decisions, and advance personalized care in lung cancer management. © 2025},\n\tdoi = {10.1016/j.patrec.2025.04.001},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105003541793&doi=10.1016%2Fj.patrec.2025.04.001&partnerID=40&md5=fbdc0c51d58d833d434e6b7536aca7fc},\n\tvolume = {193},\n\tpages = {86-93},\n\tnote = {Export Date: 23 March 2026; Cited By: 2 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.patrec.2025.04.001"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000053",
+      "entry_type": "article",
+      "title": "Shared Generator-Based Serverless Multimodal Federated Learning For Medical Image Analysis",
+      "authors": [
+        "Al-Shaher, M.A.",
+        "Saihood, A.",
+        "Hasan, M.A."
+      ],
+      "year": 2025,
+      "journal": "Mesopotamian Journal of Big Data",
+      "doi": "10.58496/mjbd/2025/015",
+      "abstract": "Medical image analysis constitutes the foundation of the diagnosis of potential life-threatening conditions such as lung cancer. Nevertheless, AI model construction in this context is hindered by strict privacy regulations (e.g., HIPAA, GDPR), the variability of imaging protocols, and the paucity of large annotated datasets. These barriers constrain centralised machine learning and dampen interdisciplinary research. To overcome such barriers, this paper introduces shared generator-serverless federated learning (SGS-FL), a decentralised multimodal medical imaging framework. By employing a shared generator and multidiscriminator architecture, SGS-FL eliminates centralised dependency via cross-modal synthesis, while the communication burden is reduced by embedding a sharing protocol. By employing latent space aggregation with attention and independent component analysis, the interpretability, fairness, and relevance of features are improved. Experimental evaluation was conducted across three lung cancer datasets: LIDC-IDRI CT scans (≈1,018 cases), NODE21 chest radiographs (~10,000 images), and NSCLC radiogenomic PET-CT images (~211 patients). By employing 10-fold cross-validation with 10 independent iterations, SGS-FL achieved 92.5% ± 1.2 accuracy, 0.83 ± 0.02 Dice coefficient, 0.946 ± 0.01 area under the curve, and 21.5 ± 1.1 Frechet inception distance (FID), significantly surpassing benchmark state-of-the-art schemes such as FedACS (~88%) and Federated Transfer Learning (~89%) (p < 0.01). The results indicate that SGS-FL achieves superior scalability, interpretability, and performance and constitutes a sound paradigm of privacy-friendly and clinically trustworthy AI in medical imaging. © 2025, Mesopotamian Academic Press. All rights reserved.",
+      "keywords": [],
+      "normalized_title": "shared generator based serverless multimodal federated learning for medical image analysis",
+      "raw_bibtex": "@ARTICLE{10.58496/MJBD/2025/015,\n\tauthor = {Al-Shaher, M.A. and Saihood, A. and Hasan, M.A.},\n\ttitle = {Shared Generator-Based Serverless Multimodal Federated Learning For Medical Image Analysis},\n\tjournal = {Mesopotamian Journal of Big Data},\n\tyear = {2025},\n\tabstract = {Medical image analysis constitutes the foundation of the diagnosis of potential life-threatening conditions such as lung cancer. Nevertheless, AI model construction in this context is hindered by strict privacy regulations (e.g., HIPAA, GDPR), the variability of imaging protocols, and the paucity of large annotated datasets. These barriers constrain centralised machine learning and dampen interdisciplinary research. To overcome such barriers, this paper introduces shared generator-serverless federated learning (SGS-FL), a decentralised multimodal medical imaging framework. By employing a shared generator and multidiscriminator architecture, SGS-FL eliminates centralised dependency via cross-modal synthesis, while the communication burden is reduced by embedding a sharing protocol. By employing latent space aggregation with attention and independent component analysis, the interpretability, fairness, and relevance of features are improved. Experimental evaluation was conducted across three lung cancer datasets: LIDC-IDRI CT scans (≈1,018 cases), NODE21 chest radiographs (~10,000 images), and NSCLC radiogenomic PET-CT images (~211 patients). By employing 10-fold cross-validation with 10 independent iterations, SGS-FL achieved 92.5% ± 1.2 accuracy, 0.83 ± 0.02 Dice coefficient, 0.946 ± 0.01 area under the curve, and 21.5 ± 1.1 Frechet inception distance (FID), significantly surpassing benchmark state-of-the-art schemes such as FedACS (~88%) and Federated Transfer Learning (~89%) (p < 0.01). The results indicate that SGS-FL achieves superior scalability, interpretability, and performance and constitutes a sound paradigm of privacy-friendly and clinically trustworthy AI in medical imaging. © 2025, Mesopotamian Academic Press. All rights reserved.},\n\tdoi = {10.58496/MJBD/2025/015},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105017866162&doi=10.58496%2FMJBD%2F2025%2F015&partnerID=40&md5=981cf31b0c224371fa279085dd6e08a4},\n\tvolume = {2025},\n\tpages = {222-240},\n\tnote = {Export Date: 23 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.58496/MJBD/2025/015"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000054",
+      "entry_type": "article",
+      "title": "Enhancing Learning-Based Cross-Modality Prediction for Lossless Medical Imaging Compression",
+      "authors": [
+        "Nicolau, D.S.",
+        "Thomaz, L.A.",
+        "Tavora, L.M.N.",
+        "Faria, S.M.M."
+      ],
+      "year": 2025,
+      "journal": "IEEE Open Journal of Signal Processing",
+      "doi": "10.1109/ojsp.2025.3564830",
+      "abstract": "Multimodal medical imaging, which involves the simultaneous acquisition of different modalities, enhances diagnostic accuracy and provides comprehensive visualization of anatomy and physiology. However, this significantly increases data size, posing storage and transmission challenges. Standard image codecs fail to properly exploit cross-modality redundancies, limiting coding efficiency. In this paper, a novel approach is proposed to enhance the compression gain and to reduce the computational complexity of a lossless cross-modality coding scheme for multimodal image pairs. The scheme uses a deep learning-based approach with Image-to-Image translation based on a Generative Adversarial Network architecture to generate an estimated image of one modality from its cross-modal pair. Two different approaches for inter-modal prediction are considered: one using the original and the estimated images for the inter-prediction scheme and another considering a weighted sum of both images. Subsequently, a decider based on a Convolutional Neural Network is employed to estimate the best coding approach to be selected among the two alternatives, before the coding step. A novel loss function that considers the decision accuracy and the compression gain of the chosen prediction approach is applied to improve the decision-making task. The experimental results on PET-CT and PET-MRI datasets demonstrate that the proposed approach improves by 11.76% and 4.61% the compression efficiency when compared with the single modality intra-coding of the Versatile Video Coding. Additionally, this approach allows to reduce the computational complexity by almost half in comparison to selecting the most compression-efficient after testing both schemes. © 2020 IEEE.",
+      "keywords": [],
+      "normalized_title": "enhancing learning based cross modality prediction for lossless medical imaging compression",
+      "raw_bibtex": "@ARTICLE{10.1109/OJSP.2025.3564830,\n\tauthor = {Nicolau, D.S. and Thomaz, L.A. and Tavora, L.M.N. and Faria, S.M.M.},\n\ttitle = {Enhancing Learning-Based Cross-Modality Prediction for Lossless Medical Imaging Compression},\n\tjournal = {IEEE Open Journal of Signal Processing},\n\tyear = {2025},\n\tabstract = {Multimodal medical imaging, which involves the simultaneous acquisition of different modalities, enhances diagnostic accuracy and provides comprehensive visualization of anatomy and physiology. However, this significantly increases data size, posing storage and transmission challenges. Standard image codecs fail to properly exploit cross-modality redundancies, limiting coding efficiency. In this paper, a novel approach is proposed to enhance the compression gain and to reduce the computational complexity of a lossless cross-modality coding scheme for multimodal image pairs. The scheme uses a deep learning-based approach with Image-to-Image translation based on a Generative Adversarial Network architecture to generate an estimated image of one modality from its cross-modal pair. Two different approaches for inter-modal prediction are considered: one using the original and the estimated images for the inter-prediction scheme and another considering a weighted sum of both images. Subsequently, a decider based on a Convolutional Neural Network is employed to estimate the best coding approach to be selected among the two alternatives, before the coding step. A novel loss function that considers the decision accuracy and the compression gain of the chosen prediction approach is applied to improve the decision-making task. The experimental results on PET-CT and PET-MRI datasets demonstrate that the proposed approach improves by 11.76% and 4.61% the compression efficiency when compared with the single modality intra-coding of the Versatile Video Coding. Additionally, this approach allows to reduce the computational complexity by almost half in comparison to selecting the most compression-efficient after testing both schemes. © 2020 IEEE.},\n\tdoi = {10.1109/OJSP.2025.3564830},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105003960535&doi=10.1109%2FOJSP.2025.3564830&partnerID=40&md5=c6a76ab694ee3e8b8c797359b948e7b1},\n\tvolume = {6},\n\tpages = {489-497},\n\tnote = {Export Date: 23 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1109/OJSP.2025.3564830"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000055",
+      "entry_type": "article",
+      "title": "Weighted Fusion Transformer for Dual PET/CT Head and Neck Tumor Segmentation",
+      "authors": [
+        "Mahdi, M.A.",
+        "Ahamad, S.",
+        "Saad, S.A.",
+        "Dafhalla, A.",
+        "Qureshi, R.",
+        "Alqushaibi, A."
+      ],
+      "year": 2024,
+      "journal": "IEEE Access",
+      "doi": "10.1109/access.2024.3439439",
+      "abstract": "Accurate tumor segmentation in PET/CT imaging is essential for the diagnosis and treatment of cancer, impacting therapeutic outcomes and patient management. Our study introduces a new approach integrating a Weighted Fusion Transformer Network to enhance the segmentation of tumor volumes. This method synergizes PET and CT modalities through a Fusion FormerU-Net architecture that employs convolutional neural networks alongside transformer blocks, aiming to leverage the unique advantages of each imaging modality. We evaluated the proposed approach using a multi-institutional dataset, applying key performance metrics such as Dice Similarity Coefficient aggregate, Jaccard Index, Volume Correlation, and Average Surface Distance to assess segmentation precision. The results indicate that the CT/PET/Fusion strategy significantly improves tumor delineation, outperforming traditional segmentation methods. The main findings suggest that this integrative approach could potentially redefine the standard for tumor segmentation in clinical practice. Lastly, the proposed approach offers a promising direction for enhancing the accuracy of oncological imaging, with implications for the improvement of patient-specific treatment strategies. © 2013 IEEE.",
+      "keywords": [],
+      "normalized_title": "weighted fusion transformer for dual pet ct head and neck tumor segmentation",
+      "raw_bibtex": "@ARTICLE{10.1109/ACCESS.2024.3439439,\n\tauthor = {Mahdi, M.A. and Ahamad, S. and Saad, S.A. and Dafhalla, A. and Qureshi, R. and Alqushaibi, A.},\n\ttitle = {Weighted Fusion Transformer for Dual PET/CT Head and Neck Tumor Segmentation},\n\tjournal = {IEEE Access},\n\tyear = {2024},\n\tabstract = {Accurate tumor segmentation in PET/CT imaging is essential for the diagnosis and treatment of cancer, impacting therapeutic outcomes and patient management. Our study introduces a new approach integrating a Weighted Fusion Transformer Network to enhance the segmentation of tumor volumes. This method synergizes PET and CT modalities through a Fusion FormerU-Net architecture that employs convolutional neural networks alongside transformer blocks, aiming to leverage the unique advantages of each imaging modality. We evaluated the proposed approach using a multi-institutional dataset, applying key performance metrics such as Dice Similarity Coefficient aggregate, Jaccard Index, Volume Correlation, and Average Surface Distance to assess segmentation precision. The results indicate that the CT/PET/Fusion strategy significantly improves tumor delineation, outperforming traditional segmentation methods. The main findings suggest that this integrative approach could potentially redefine the standard for tumor segmentation in clinical practice. Lastly, the proposed approach offers a promising direction for enhancing the accuracy of oncological imaging, with implications for the improvement of patient-specific treatment strategies. © 2013 IEEE.},\n\tdoi = {10.1109/ACCESS.2024.3439439},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85200812079&doi=10.1109%2FACCESS.2024.3439439&partnerID=40&md5=4cbe968a297ad1e0aafec2bfc113fde4},\n\tvolume = {12},\n\tpages = {110905-110919},\n\tnote = {Export Date: 23 March 2026; Cited By: 6 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1109/ACCESS.2024.3439439"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000056",
+      "entry_type": "article",
+      "title": "MMCA-NET: A Multimodal Cross Attention Transformer Network for Nasopharyngeal Carcinoma Tumor Segmentation Based on a Total-Body PET/CT System",
+      "authors": [
+        "Zhao, W.",
+        "Huang, Z.",
+        "Tang, S.",
+        "Li, W.",
+        "Gao, Y.",
+        "Hu, Y.",
+        "Fan, W.",
+        "Cheng, C.",
+        "Yang, Y.",
+        "Zheng, H.",
+        "Liang, D.",
+        "Hu, Z."
+      ],
+      "year": 2024,
+      "journal": "IEEE Journal of Biomedical and Health Informatics",
+      "doi": "10.1109/jbhi.2024.3405993",
+      "abstract": "Nasopharyngeal carcinoma (NPC) is a malignant tumor primarily treated by radiotherapy. Accurate delineation of the target tumor is essential for improving the effectiveness of radiotherapy. However, the segmentation performance of current models is unsatisfactory due to poor boundaries, large-scale tumor volume variation, and the labor-intensive nature of manual delineation for radiotherapy. In this paper, MMCA-Net, a novel segmentation network for NPC using PET/CT images that incorporates an innovative multimodal cross attention transformer (MCA-Transformer) and a modified U-Net architecture, is introduced to enhance modal fusion by leveraging cross-attention mechanisms between CT and PET data. Our method, tested against ten algorithms via fivefold cross-validation on samples from Sun Yat-sen University Cancer Center and the public HECKTOR dataset, consistently topped all four evaluation metrics with average Dice similarity coefficients of 0.815 and 0.7944, respectively. Furthermore, ablation experiments were conducted to demonstrate the superiority of our method over multiple baseline and variant techniques. The proposed method has promising potential for application in other tasks. © 2013 IEEE.",
+      "keywords": [],
+      "normalized_title": "mmca net a multimodal cross attention transformer network for nasopharyngeal carcinoma tumor segmentation based on a total body pet ct system",
+      "raw_bibtex": "@ARTICLE{10.1109/JBHI.2024.3405993,\n\tauthor = {Zhao, W. and Huang, Z. and Tang, S. and Li, W. and Gao, Y. and Hu, Y. and Fan, W. and Cheng, C. and Yang, Y. and Zheng, H. and Liang, D. and Hu, Z.},\n\ttitle = {MMCA-NET: A Multimodal Cross Attention Transformer Network for Nasopharyngeal Carcinoma Tumor Segmentation Based on a Total-Body PET/CT System},\n\tjournal = {IEEE Journal of Biomedical and Health Informatics},\n\tyear = {2024},\n\tabstract = {Nasopharyngeal carcinoma (NPC) is a malignant tumor primarily treated by radiotherapy. Accurate delineation of the target tumor is essential for improving the effectiveness of radiotherapy. However, the segmentation performance of current models is unsatisfactory due to poor boundaries, large-scale tumor volume variation, and the labor-intensive nature of manual delineation for radiotherapy. In this paper, MMCA-Net, a novel segmentation network for NPC using PET/CT images that incorporates an innovative multimodal cross attention transformer (MCA-Transformer) and a modified U-Net architecture, is introduced to enhance modal fusion by leveraging cross-attention mechanisms between CT and PET data. Our method, tested against ten algorithms via fivefold cross-validation on samples from Sun Yat-sen University Cancer Center and the public HECKTOR dataset, consistently topped all four evaluation metrics with average Dice similarity coefficients of 0.815 and 0.7944, respectively. Furthermore, ablation experiments were conducted to demonstrate the superiority of our method over multiple baseline and variant techniques. The proposed method has promising potential for application in other tasks. © 2013 IEEE.},\n\tdoi = {10.1109/JBHI.2024.3405993},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85194864142&doi=10.1109%2FJBHI.2024.3405993&partnerID=40&md5=9253e1f1c260d204787d3e8966c9fd4e},\n\tvolume = {28},\n\tnumber = {9},\n\tpages = {5447-5458},\n\tnote = {Export Date: 23 March 2026; Cited By: 19 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1109/JBHI.2024.3405993"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000057",
+      "entry_type": "article",
+      "title": "Risk analysis of pedestrian crosswalks in airport drop-off zones based on integrated VISSIM–SSAM model",
+      "authors": [
+        "Qin, M.-X.",
+        "Tang, T.-Q.",
+        "Wen, S.-W.",
+        "Yuan, X.-T."
+      ],
+      "year": 2026,
+      "journal": "Accident Analysis and Prevention",
+      "doi": "10.1016/j.aap.2025.108279",
+      "abstract": "Airport drop-off zones present a high-risk traffic environment due to limited space and frequent pedestrian–vehicle interactions. To address these challenges, this study develops an integrated simulation framework combining VISSIM and the SSAM to reconstruct microscopic pedestrian and vehicle behaviors, calibrate conflict detection thresholds, and evaluate safety performance in complex terminal settings. The framework enables the quantification of both the frequency and severity of pedestrian–vehicle conflicts under varying spatial and behavioral conditions. A set of scenario-specific TTC and PET thresholds is derived to enhance the accuracy of conflict identification. Based on these insights, two safety strategies are proposed: pedestrian signal control, which facilitates temporal separation, and spatial no-stopping zones, which provide physical buffers to reduce interaction intensity without compromising operational flow. Simulation experiments confirm the effectiveness of both interventions across key safety metrics. The proposed framework provides a transferable methodological basis for assessing pedestrian safety and testing mitigation strategies in high-density curbside environments such as airports and multimodal urban terminals. © 2025 Elsevier Ltd",
+      "keywords": [],
+      "normalized_title": "risk analysis of pedestrian crosswalks in airport drop off zones based on integrated vissim ssam model",
+      "raw_bibtex": "@ARTICLE{10.1016/j.aap.2025.108279,\n\tauthor = {Qin, M.-X. and Tang, T.-Q. and Wen, S.-W. and Yuan, X.-T.},\n\ttitle = {Risk analysis of pedestrian crosswalks in airport drop-off zones based on integrated VISSIM–SSAM model},\n\tjournal = {Accident Analysis and Prevention},\n\tyear = {2026},\n\tabstract = {Airport drop-off zones present a high-risk traffic environment due to limited space and frequent pedestrian–vehicle interactions. To address these challenges, this study develops an integrated simulation framework combining VISSIM and the SSAM to reconstruct microscopic pedestrian and vehicle behaviors, calibrate conflict detection thresholds, and evaluate safety performance in complex terminal settings. The framework enables the quantification of both the frequency and severity of pedestrian–vehicle conflicts under varying spatial and behavioral conditions. A set of scenario-specific TTC and PET thresholds is derived to enhance the accuracy of conflict identification. Based on these insights, two safety strategies are proposed: pedestrian signal control, which facilitates temporal separation, and spatial no-stopping zones, which provide physical buffers to reduce interaction intensity without compromising operational flow. Simulation experiments confirm the effectiveness of both interventions across key safety metrics. The proposed framework provides a transferable methodological basis for assessing pedestrian safety and testing mitigation strategies in high-density curbside environments such as airports and multimodal urban terminals. © 2025 Elsevier Ltd},\n\tdoi = {10.1016/j.aap.2025.108279},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105019112239&doi=10.1016%2Fj.aap.2025.108279&partnerID=40&md5=55d6fd86ce65f46b912a06483504332c},\n\tvolume = {224},\n\tnote = {Export Date: 23 March 2026; Cited By: 1 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.aap.2025.108279"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000058",
+      "entry_type": "article",
+      "title": "Affective Recommender System for Pet Social Network",
+      "authors": [
+        "Cheng, W.K.",
+        "Leong, W.C.",
+        "Tan, J.S.",
+        "Hong, Z.-W.",
+        "Chen, Y.-L."
+      ],
+      "year": 2022,
+      "journal": "Sensors",
+      "doi": "10.3390/s22186759",
+      "abstract": "In this new era, it is no longer impossible to create a smart home environment around the household. Moreover, users are not limited to humans but also include pets such as dogs. Dogs need long-term close companionship with their owners; however, owners may occasionally need to be away from home for extended periods of time and can only monitor their dogs’ behaviors through home security cameras. Some dogs are sensitive and may develop separation anxiety, which can lead to disruptive behavior. Therefore, a novel smart home solution with an affective recommendation module is proposed by developing: (1) an application to predict the behavior of dogs and, (2) a communication platform using smartphones to connect with dog friends from different households. To predict the dogs’ behaviors, the dog emotion recognition and dog barking recognition methods are performed. The ResNet model and the sequential model are implemented to recognize dog emotions and dog barks. The weighted average is proposed to combine the prediction value of dog emotion and dog bark to improve the prediction output. Subsequently, the prediction output is forwarded to a recommendation module to respond to the dogs’ conditions. On the other hand, the Real-Time Messaging Protocol (RTMP) server is implemented as a platform to contact a dog’s friends on a list to interact with each other. Various tests were carried out and the proposed weighted average led to an improvement in the prediction accuracy. Additionally, the proposed communication platform using basic smartphones has successfully established the connection between dog friends. © 2022 by the authors.",
+      "keywords": [],
+      "normalized_title": "affective recommender system for pet social network",
+      "raw_bibtex": "@ARTICLE{10.3390/s22186759,\n\tauthor = {Cheng, W.K. and Leong, W.C. and Tan, J.S. and Hong, Z.-W. and Chen, Y.-L.},\n\ttitle = {Affective Recommender System for Pet Social Network},\n\tjournal = {Sensors},\n\tyear = {2022},\n\tabstract = {In this new era, it is no longer impossible to create a smart home environment around the household. Moreover, users are not limited to humans but also include pets such as dogs. Dogs need long-term close companionship with their owners; however, owners may occasionally need to be away from home for extended periods of time and can only monitor their dogs’ behaviors through home security cameras. Some dogs are sensitive and may develop separation anxiety, which can lead to disruptive behavior. Therefore, a novel smart home solution with an affective recommendation module is proposed by developing: (1) an application to predict the behavior of dogs and, (2) a communication platform using smartphones to connect with dog friends from different households. To predict the dogs’ behaviors, the dog emotion recognition and dog barking recognition methods are performed. The ResNet model and the sequential model are implemented to recognize dog emotions and dog barks. The weighted average is proposed to combine the prediction value of dog emotion and dog bark to improve the prediction output. Subsequently, the prediction output is forwarded to a recommendation module to respond to the dogs’ conditions. On the other hand, the Real-Time Messaging Protocol (RTMP) server is implemented as a platform to contact a dog’s friends on a list to interact with each other. Various tests were carried out and the proposed weighted average led to an improvement in the prediction accuracy. Additionally, the proposed communication platform using basic smartphones has successfully established the connection between dog friends. © 2022 by the authors.},\n\tdoi = {10.3390/s22186759},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85138421510&doi=10.3390%2Fs22186759&partnerID=40&md5=0009c773637ae9a3a870d0f49f131a4a},\n\tvolume = {22},\n\tnumber = {18},\n\tnote = {Export Date: 23 March 2026; Cited By: 8 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.3390/s22186759"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000059",
+      "entry_type": "article",
+      "title": "Machine Learning Facilitates Hotspot Classification in PSMA-PET/CT with Nuclear Medicine Specialist Accuracy",
+      "authors": [
+        "Moazemi, S.",
+        "Khurshid, Z.",
+        "Erle, A.",
+        "Lütje, S.",
+        "Essler, M.",
+        "Schultz, T.",
+        "Bundschuh, R.A."
+      ],
+      "year": 2020,
+      "journal": "Diagnostics",
+      "doi": "10.3390/diagnostics10090622",
+      "abstract": "Gallium-68 prostate-specific membrane antigen positron emission tomography (68Ga-PSMA-PET) is a highly sensitive method to detect prostate cancer (PC) metastases. Visual discrimination between malignant and physiologic/unspecific tracer accumulation by a nuclear medicine (NM) specialist is essential for image interpretation. In the future, automated machine learning (ML)-based tools will assist physicians in image analysis. The aim of this work was to develop a tool for analysis of 68Ga-PSMA-PET images and to compare its efficacy to that of human readers. Five different ML methods were compared and tested on multiple positron emission tomography/computed tomography (PET/CT) data-sets. Forty textural features extracted from both PET- and low-dose CT data were analyzed. In total, 2419 hotspots from 72 patients were included. Comparing results from human readers to those of ML-based analyses, up to 98% area under the curve (AUC), 94% sensitivity (SE), and 89% specificity (SP) were achieved. Interestingly, textural features assessed in native low-dose CT increased the accuracy significantly. Thus, ML based on 68Ga-PSMA-PET/CT radiomics features can classify hotspots with high precision, comparable to that of experienced NM physicians. Additionally, the superiority of multimodal ML-based analysis considering all PET and low-dose CT features was shown. Morphological features seemed to be of special additional importance even though they were extracted from native low-dose CTs. © 2020 by the authors.",
+      "keywords": [],
+      "normalized_title": "machine learning facilitates hotspot classification in psma pet ct with nuclear medicine specialist accuracy",
+      "raw_bibtex": "@ARTICLE{10.3390/diagnostics10090622,\n\tauthor = {Moazemi, S. and Khurshid, Z. and Erle, A. and Lütje, S. and Essler, M. and Schultz, T. and Bundschuh, R.A.},\n\ttitle = {Machine Learning Facilitates Hotspot Classification in PSMA-PET/CT with Nuclear Medicine Specialist Accuracy},\n\tjournal = {Diagnostics},\n\tyear = {2020},\n\tabstract = {Gallium-68 prostate-specific membrane antigen positron emission tomography (68Ga-PSMA-PET) is a highly sensitive method to detect prostate cancer (PC) metastases. Visual discrimination between malignant and physiologic/unspecific tracer accumulation by a nuclear medicine (NM) specialist is essential for image interpretation. In the future, automated machine learning (ML)-based tools will assist physicians in image analysis. The aim of this work was to develop a tool for analysis of 68Ga-PSMA-PET images and to compare its efficacy to that of human readers. Five different ML methods were compared and tested on multiple positron emission tomography/computed tomography (PET/CT) data-sets. Forty textural features extracted from both PET- and low-dose CT data were analyzed. In total, 2419 hotspots from 72 patients were included. Comparing results from human readers to those of ML-based analyses, up to 98% area under the curve (AUC), 94% sensitivity (SE), and 89% specificity (SP) were achieved. Interestingly, textural features assessed in native low-dose CT increased the accuracy significantly. Thus, ML based on 68Ga-PSMA-PET/CT radiomics features can classify hotspots with high precision, comparable to that of experienced NM physicians. Additionally, the superiority of multimodal ML-based analysis considering all PET and low-dose CT features was shown. Morphological features seemed to be of special additional importance even though they were extracted from native low-dose CTs. © 2020 by the authors.},\n\tdoi = {10.3390/diagnostics10090622},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85090188437&doi=10.3390%2Fdiagnostics10090622&partnerID=40&md5=58e4da8660ddd46bc309ac9e427aebc5},\n\tvolume = {10},\n\tnumber = {9},\n\tnote = {Export Date: 23 March 2026; Cited By: 44 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.3390/diagnostics10090622"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000060",
+      "entry_type": "article",
+      "title": "MG-TCCA: Tensor Canonical Correlation Analysis across Multiple Groups",
+      "authors": [
+        "Zhou, Z.",
+        "Tong, B.",
+        "Tarzanagh, D.A.",
+        "Hou, B.",
+        "Saykin, A.J.",
+        "Long, Q.",
+        "Shen, L."
+      ],
+      "year": 2024,
+      "journal": "IEEE/ACM Transactions on Computational Biology and Bioinformatics",
+      "doi": "10.1109/tcbb.2024.3471930",
+      "abstract": "Tensor Canonical Correlation Analysis (TCCA) is a commonly employed statistical method utilized to examine linear associations between two sets of tensor datasets. However, the existing TCCA models fail to adequately address the heterogeneity present in real-world tensor data, such as brain imaging data collected from diverse groups characterized by factors like sex and race. Consequently, these models may yield biased outcomes. In order to surmount this constraint, we propose a novel approach called Multi-Group TCCA (MG-TCCA), which enables the joint analysis of multiple subgroups. By incorporating a dual sparsity structure and a block coordinate ascent algorithm, our MG-TCCA method effectively addresses heterogeneity and leverages information across different groups to identify consistent signals. This novel approach facilitates the quantification of shared and individual structures, reduces data dimensionality, and enables visual exploration. To empirically validate our approach, we conduct a study focused on investigating correlations between two brain positron emission tomography (PET) modalities (AV-45 and FDG) within an Alzheimer's disease (AD) cohort. Our results demonstrate that MG-TCCA surpasses traditional TCCA and Sparse TCCA (STCCA) in identifying sex-specific cross-modality imaging correlations. This heightened performance of MG-TCCA provides valuable insights for the characterization of multimodal imaging biomarkers in AD. © 2004-2012 IEEE.",
+      "keywords": [],
+      "normalized_title": "mg tcca tensor canonical correlation analysis across multiple groups",
+      "raw_bibtex": "@ARTICLE{10.1109/TCBB.2024.3471930,\n\tauthor = {Zhou, Z. and Tong, B. and Tarzanagh, D.A. and Hou, B. and Saykin, A.J. and Long, Q. and Shen, L.},\n\ttitle = {MG-TCCA: Tensor Canonical Correlation Analysis across Multiple Groups},\n\tjournal = {IEEE/ACM Transactions on Computational Biology and Bioinformatics},\n\tyear = {2024},\n\tabstract = {Tensor Canonical Correlation Analysis (TCCA) is a commonly employed statistical method utilized to examine linear associations between two sets of tensor datasets. However, the existing TCCA models fail to adequately address the heterogeneity present in real-world tensor data, such as brain imaging data collected from diverse groups characterized by factors like sex and race. Consequently, these models may yield biased outcomes. In order to surmount this constraint, we propose a novel approach called Multi-Group TCCA (MG-TCCA), which enables the joint analysis of multiple subgroups. By incorporating a dual sparsity structure and a block coordinate ascent algorithm, our MG-TCCA method effectively addresses heterogeneity and leverages information across different groups to identify consistent signals. This novel approach facilitates the quantification of shared and individual structures, reduces data dimensionality, and enables visual exploration. To empirically validate our approach, we conduct a study focused on investigating correlations between two brain positron emission tomography (PET) modalities (AV-45 and FDG) within an Alzheimer's disease (AD) cohort. Our results demonstrate that MG-TCCA surpasses traditional TCCA and Sparse TCCA (STCCA) in identifying sex-specific cross-modality imaging correlations. This heightened performance of MG-TCCA provides valuable insights for the characterization of multimodal imaging biomarkers in AD. © 2004-2012 IEEE.},\n\tdoi = {10.1109/TCBB.2024.3471930},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85205898467&doi=10.1109%2FTCBB.2024.3471930&partnerID=40&md5=e938770d0eac2465ffb1db563961769f},\n\tnote = {Export Date: 23 March 2026; Cited By: 2 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+      ],
+      "source_keys": [
+        "10.1109/TCBB.2024.3471930"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

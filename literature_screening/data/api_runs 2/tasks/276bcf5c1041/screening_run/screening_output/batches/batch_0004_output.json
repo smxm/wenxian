@@ -1,0 +1,104 @@
+{
+  "batch_id": "batch_0004",
+  "results": [
+    {
+      "paper_id": "paper_000031",
+      "decision": "include",
+      "reason": "标题和摘要明确提及轻量化YOLO模型用于实时检测，并在VisDrone数据集上测试，符合无人机视角目标检测和轻量化要求。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000032",
+      "decision": "include",
+      "reason": "标题和摘要明确针对UAV图像目标检测，基于YOLOv11n轻量化基线，并在VisDrone-DET数据集上验证，符合主题和轻量化意图。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "paper_id": "paper_000033",
+      "decision": "include",
+      "reason": "标题和摘要明确针对航空图像的小目标检测，提出轻量化Bio-YOLO网络，并在Visdrone数据集上测试，符合主题和轻量化要求。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000034",
+      "decision": "include",
+      "reason": "摘要明确提及基于YOLOv8n的低光目标检测模型，在VisDrone数据集上测试，并强调减少参数和GFLOPs，符合轻量化意图和主题。",
+      "evidence": [
+        "abstract"
+      ],
+      "confidence": 0.88
+    },
+    {
+      "paper_id": "paper_000035",
+      "decision": "uncertain",
+      "reason": "摘要主要针对植物工厂番茄检测，虽提及VisDrone数据集和轻量化改进，但无人机视角相关性不够明确，主题匹配度存疑。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000036",
+      "decision": "uncertain",
+      "reason": "摘要针对小目标检测提出FReID方法，在VisDrone数据集上测试，但未明确提及无人机视角或轻量化网络架构，轻量化意图证据不足。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000037",
+      "decision": "include",
+      "reason": "标题和摘要明确针对遥感图像目标检测的轻量化YOLO模型，在Visdrone数据集上测试，并部署于边缘设备，符合主题和轻量化要求。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.91
+    },
+    {
+      "paper_id": "paper_000038",
+      "decision": "include",
+      "reason": "标题和摘要明确针对UAV图像的多尺度目标检测，提出轻量化RTUAV-YOLO网络，在VisDrone-DET2019数据集上测试并部署于嵌入式平台。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.93
+    },
+    {
+      "paper_id": "paper_000039",
+      "decision": "include",
+      "reason": "标题和摘要明确针对UAV检测的轻量化框架，在VisDrone数据集上评估，并强调低参数和计算开销，符合主题和轻量化意图。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.89
+    },
+    {
+      "paper_id": "paper_000040",
+      "decision": "include",
+      "reason": "标题和摘要明确针对UAV小目标检测，提出轻量化注意力网络，在VisDrone数据集上测试并部署于边缘设备，符合主题和轻量化要求。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.92
+    }
+  ]
+}

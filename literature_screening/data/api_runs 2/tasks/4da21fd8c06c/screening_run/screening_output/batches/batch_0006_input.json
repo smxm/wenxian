@@ -1,0 +1,366 @@
+{
+  "batch_id": "batch_0006",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000051",
+    "paper_000052",
+    "paper_000053",
+    "paper_000054",
+    "paper_000055",
+    "paper_000056",
+    "paper_000057",
+    "paper_000058",
+    "paper_000059",
+    "paper_000060"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000051",
+      "entry_type": "article",
+      "title": "Ultrasonic signal processing and AI for detecting defects caused by excess sand in concrete structures",
+      "authors": [
+        "Dahmani, M",
+        "Arbaoui, A",
+        "Ouahabi, A"
+      ],
+      "year": 2025,
+      "journal": "CASE STUDIES IN CONSTRUCTION MATERIALS",
+      "doi": "10.1016/j.cscm.2025.e05312",
+      "abstract": "While concrete mix design has been widely investigated, the specific influence of excess sand on ultrasonic signal propagation and its reliable detection remains insufficiently explored, despite its critical impact on durability and structural safety. Excess sand can weaken mechanical strength, reduce durability, and impair the bond with reinforcement, thereby increasing the risk of structural deficiencies. Detecting such defects in hardened concrete is essential for safety and maintenance, yet remains challenging due to the material's heterogeneous nature. This study introduces a novel approach combining ultrasonic testing with AI-based analysis to address this issue. A controlled laboratory case study was carried out using standard cylindrical specimens (160 mm x 320 mm, cement content of 350 kg/m3), where defective mixes were prepared by systematically increasing sand content from 5 % to 30 % in 5 % increments while keeping cement, gravel, and water constant. Ultrasonic testing was performed with \"Pundit PL 200\" transducers, and advanced signal processing techniques-including correlation analysis, frequency content evaluation, signal energy computation, and wavelet decomposition-were applied. The extracted features were used to train a feedforward artificial neural network (ANN), which achieved an accuracy of 96.97 %, an F1-score of 0.97, and a mean squared error below 0.005. These findings validate the effectiveness of the proposed methodology for reliable and non-destructive evaluation of concrete structures such as bridges, tunnels, dams, and buildings.",
+      "keywords": [
+        "Concrete defects",
+        "Nondestructive testing",
+        "Signal processing",
+        "Correlation analysis",
+        "Frequency analysis",
+        "Wavelet decomposition",
+        "Artificial neural network",
+        "STRENGTH"
+      ],
+      "normalized_title": "ultrasonic signal processing and ai for detecting defects caused by excess sand in concrete structures",
+      "raw_bibtex": "@ARTICLE{10.1016/j.cscm.2025.e05312,\n\tauthor = {Dahmani, M and Arbaoui, A and Ouahabi, A},\n\ttitle = {Ultrasonic signal processing and AI for detecting defects caused by excess sand in concrete structures},\n\tjournal = {CASE STUDIES IN CONSTRUCTION MATERIALS},\n\tyear = {2025},\n\tkeywords = {Concrete defects; Nondestructive testing; Signal processing; Correlation analysis; Frequency analysis; Wavelet decomposition; Artificial neural network; STRENGTH},\n\tabstract = {While concrete mix design has been widely investigated, the specific influence of excess sand on ultrasonic signal propagation and its reliable detection remains insufficiently explored, despite its critical impact on durability and structural safety. Excess sand can weaken mechanical strength, reduce durability, and impair the bond with reinforcement, thereby increasing the risk of structural deficiencies. Detecting such defects in hardened concrete is essential for safety and maintenance, yet remains challenging due to the material's heterogeneous nature. This study introduces a novel approach combining ultrasonic testing with AI-based analysis to address this issue. A controlled laboratory case study was carried out using standard cylindrical specimens (160 mm x 320 mm, cement content of 350 kg/m3), where defective mixes were prepared by systematically increasing sand content from 5 % to 30 % in 5 % increments while keeping cement, gravel, and water constant. Ultrasonic testing was performed with \"Pundit PL 200\" transducers, and advanced signal processing techniques-including correlation analysis, frequency content evaluation, signal energy computation, and wavelet decomposition-were applied. The extracted features were used to train a feedforward artificial neural network (ANN), which achieved an accuracy of 96.97 %, an F1-score of 0.97, and a mean squared error below 0.005. These findings validate the effectiveness of the proposed methodology for reliable and non-destructive evaluation of concrete structures such as bridges, tunnels, dams, and buildings.},\n\tdoi = {10.1016/j.cscm.2025.e05312},\n\tvolume = {23},\n\tissn = {2214-5095},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 62 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.cscm.2025.e05312"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000052",
+      "entry_type": "article",
+      "title": "Research on ultrasonic non-destructive detection method for defects in GFRP laminates based on machine learning",
+      "authors": [
+        "Ding, F",
+        "Cai, YQ",
+        "Tu, WL",
+        "Chen, QL",
+        "Peng, MJ",
+        "Ouyang, FL",
+        "Cai, HH",
+        "Fan, K",
+        "Zhou, WY"
+      ],
+      "year": 2025,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2025.120972",
+      "abstract": "As the main load-bearing structure of yachts, glass fiber reinforced plastic (GFRP) laminates are susceptible to internal delamination and blistered defects due to the manufacturing process and material characteristics, which seriously threaten the structural strength and safety of yachts. The traditional ultrasonic testing (UT) method relies on manual experience, making it inefficient and prone to a high false detection rate. To improve the efficiency and accuracy of non-destructive testing, this paper proposes a method for defect detection in GFRP laminates based on ultrasonic B-scan images. Through the hand-layup process and array ultrasonic testing technology, a B-scan ultrasonic dataset of GFRP laminates was constructed, including non-defective samples and samples with delamination and blistered defects of varying locations and sizes. Wavelet packet decomposition extracted features from the data. In response to energy differences of defects in certain wavelet packet subbands, a random forest (RF) method was employed to select relevant subbands, avoiding interference from redundant features. In the classification stage, combining the 3D residual network (3D-ResNet50) model and the channel and spatial attention module (CBAM) significantly improved spatio-temporal feature extraction, focusing on key ones. The final classification accuracy reached 99.00 %. This approach enhanced both efficiency and accuracy of GFRP sheet defect detection.",
+      "keywords": [
+        "Machine learning",
+        "GFRP laminates",
+        "Ultrasonic testing",
+        "Non-destructive detection",
+        "3D-ResNet50-CBAM model"
+      ],
+      "normalized_title": "research on ultrasonic non destructive detection method for defects in gfrp laminates based on machine learning",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2025.120972,\n\tauthor = {Ding, F and Cai, YQ and Tu, WL and Chen, QL and Peng, MJ and Ouyang, FL and Cai, HH and Fan, K and Zhou, WY},\n\ttitle = {Research on ultrasonic non-destructive detection method for defects in GFRP laminates based on machine learning},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2025},\n\tkeywords = {Machine learning; GFRP laminates; Ultrasonic testing; Non-destructive detection; 3D-ResNet50-CBAM model},\n\tabstract = {As the main load-bearing structure of yachts, glass fiber reinforced plastic (GFRP) laminates are susceptible to internal delamination and blistered defects due to the manufacturing process and material characteristics, which seriously threaten the structural strength and safety of yachts. The traditional ultrasonic testing (UT) method relies on manual experience, making it inefficient and prone to a high false detection rate. To improve the efficiency and accuracy of non-destructive testing, this paper proposes a method for defect detection in GFRP laminates based on ultrasonic B-scan images. Through the hand-layup process and array ultrasonic testing technology, a B-scan ultrasonic dataset of GFRP laminates was constructed, including non-defective samples and samples with delamination and blistered defects of varying locations and sizes. Wavelet packet decomposition extracted features from the data. In response to energy differences of defects in certain wavelet packet subbands, a random forest (RF) method was employed to select relevant subbands, avoiding interference from redundant features. In the classification stage, combining the 3D residual network (3D-ResNet50) model and the channel and spatial attention module (CBAM) significantly improved spatio-temporal feature extraction, focusing on key ones. The final classification accuracy reached 99.00 %. This approach enhanced both efficiency and accuracy of GFRP sheet defect detection.},\n\tdoi = {10.1016/j.oceaneng.2025.120972},\n\tvolume = {327},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 9 Total Times Cited: 9 Cited Reference Count: 41 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2025.120972"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000053",
+      "entry_type": "article",
+      "title": "Spatial and Temporal Deep Learning in Air-Coupled Ultrasonic Testing for Enabling NDE 4.0",
+      "authors": [
+        "Schmid, S",
+        "Dürrmeier, F",
+        "Grosse, CU"
+      ],
+      "year": 2023,
+      "journal": "JOURNAL OF NONDESTRUCTIVE EVALUATION",
+      "doi": "10.1007/s10921-023-00993-3",
+      "abstract": "Air-coupled ultrasonic (ACU) testing has been used for several years to detect defects in plate-like structures. Especially, for automated testing procedures, ACU testing is advantageous in comparison to conventional testing. However, the evaluation of the measurement data is usually done in a manual manner, which is an obstruction to the application of ACU testing. The goal of this study is to automate and improve defect characterization and NDE 4.0 accordingly with deep learning. In conventional ACU testing the measurement data contains temporal (A-scans) and spatial (C-scans) information. Both data types are investigated in this study. For the A-scans, which represent time series data, neural network architectures tailored to such data types are applied. In addition, it is evaluated if further adaptions of the training procedure increase the performance. The C-scans are segmented by applying different U-net similar architectures and training strategies. In order to use spatial and temporal information, a further approach is taken. The prediction of the time series models is segmented with image models. The performance of all trained models and training strategies is compared with the F1-score and benchmarked against the conventional evaluation, which is thresholding of the C-scans. As specimens, artificial defects in acrylic and carbon fiber-reinforced polymer plates are investigated.",
+      "keywords": [
+        "Air-coupled ultrasonic testing",
+        "Deep learning",
+        "Spatial and temporal deep learning",
+        "NDE 4.0"
+      ],
+      "normalized_title": "spatial and temporal deep learning in air coupled ultrasonic testing for enabling nde 4 0",
+      "raw_bibtex": "@ARTICLE{10.1007/s10921-023-00993-3,\n\tauthor = {Schmid, S and Dürrmeier, F and Grosse, CU},\n\ttitle = {Spatial and Temporal Deep Learning in Air-Coupled Ultrasonic Testing for Enabling NDE 4.0},\n\tjournal = {JOURNAL OF NONDESTRUCTIVE EVALUATION},\n\tyear = {2023},\n\tkeywords = {Air-coupled ultrasonic testing; Deep learning; Spatial and temporal deep learning; NDE 4.0},\n\tabstract = {Air-coupled ultrasonic (ACU) testing has been used for several years to detect defects in plate-like structures. Especially, for automated testing procedures, ACU testing is advantageous in comparison to conventional testing. However, the evaluation of the measurement data is usually done in a manual manner, which is an obstruction to the application of ACU testing. The goal of this study is to automate and improve defect characterization and NDE 4.0 accordingly with deep learning. In conventional ACU testing the measurement data contains temporal (A-scans) and spatial (C-scans) information. Both data types are investigated in this study. For the A-scans, which represent time series data, neural network architectures tailored to such data types are applied. In addition, it is evaluated if further adaptions of the training procedure increase the performance. The C-scans are segmented by applying different U-net similar architectures and training strategies. In order to use spatial and temporal information, a further approach is taken. The prediction of the time series models is segmented with image models. The performance of all trained models and training strategies is compared with the F1-score and benchmarked against the conventional evaluation, which is thresholding of the C-scans. As specimens, artificial defects in acrylic and carbon fiber-reinforced polymer plates are investigated.},\n\tdoi = {10.1007/s10921-023-00993-3},\n\tvolume = {42},\n\tnumber = {3},\n\tissn = {0195-9298},\n\tnote = {Times Cited in Web of Science Core Collection: 7 Total Times Cited: 7 Cited Reference Count: 24 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s10921-023-00993-3"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000054",
+      "entry_type": "article",
+      "title": "Intelligent Ultrasonic Image Classification of Artillery Cradle Weld Defects Based on MECF-QPSO-KELM Method",
+      "authors": [
+        "Zhang, ER",
+        "Wang, SF",
+        "Zhou, SR",
+        "Cheng, B",
+        "Huang, SZ",
+        "Duan, WB"
+      ],
+      "year": 2023,
+      "journal": "RUSSIAN JOURNAL OF NONDESTRUCTIVE TESTING",
+      "doi": "10.1134/s1061830922601088",
+      "abstract": "The precise qualitative evaluation on the ultrasonic testing of the artillery cradle weld defects can effectively eliminate its security risk induced by the potential hazardous defects. Nevertheless, it is difficult to determine the detailed reflection properties of ultrasonic waves because of the effect of defect size, shape, orientation and its surface roughness. This study focuses on the intelligent analysis on the ultrasonic testing image of the artillery cradle weld defect. An intelligent classification method was proposed based on the small sample conditions. Thus, in this article, a significance classification feature evaluation algorithm was first proposed based on the multiple evaluation criteria fusion (MECF). No matter which pattern recognition algorithm was used, using the classification feature set (M-7, unevenness of gray scale distribution, differential moment, standard deviation of entropy, directionality, long run advantage, contrast, standard deviation of energy, mixed entropy) to intelligently recognize the defect types has a high precision. Especially while using the kernel extreme learning machine (KELM), the classification accuracy reaches 96.4%. Thus, a multi-class classification model of the weld defect recognition termed quantum-behaved particle swarm optimization-based kernel extreme learning machine (QPSO-KELM) was further proposed. The corresponding classification accuracy was raised to 98%. Finally, comparative experiments were done with convolutional neural network (CNN) ResNet-34. The results show that compared with CNN ResNet-34, the proposed method exhibits obvious advantages, and more accurate classification results also indicate the proposed intelligent classification method can be used for the intelligent identification of artillery cradle weld defect during ultrasonic testing.",
+      "keywords": [
+        "weld defect",
+        "ultrasonic phased array",
+        "significance classification feature evaluation",
+        "extreme learning machine",
+        "image intelligent recognition",
+        "WAVELET TRANSFORM",
+        "FEATURE-SELECTION",
+        "ALGORITHM",
+        "DECOMPOSITION",
+        "OPTIMIZATION"
+      ],
+      "normalized_title": "intelligent ultrasonic image classification of artillery cradle weld defects based on mecf qpso kelm method",
+      "raw_bibtex": "@ARTICLE{10.1134/S1061830922601088,\n\tauthor = {Zhang, ER and Wang, SF and Zhou, SR and Cheng, B and Huang, SZ and Duan, WB},\n\ttitle = {Intelligent Ultrasonic Image Classification of Artillery Cradle Weld Defects Based on MECF-QPSO-KELM Method},\n\tjournal = {RUSSIAN JOURNAL OF NONDESTRUCTIVE TESTING},\n\tyear = {2023},\n\tkeywords = {weld defect; ultrasonic phased array; significance classification feature evaluation; extreme learning machine; image intelligent recognition; WAVELET TRANSFORM; FEATURE-SELECTION; ALGORITHM; DECOMPOSITION; OPTIMIZATION},\n\tabstract = {The precise qualitative evaluation on the ultrasonic testing of the artillery cradle weld defects can effectively eliminate its security risk induced by the potential hazardous defects. Nevertheless, it is difficult to determine the detailed reflection properties of ultrasonic waves because of the effect of defect size, shape, orientation and its surface roughness. This study focuses on the intelligent analysis on the ultrasonic testing image of the artillery cradle weld defect. An intelligent classification method was proposed based on the small sample conditions. Thus, in this article, a significance classification feature evaluation algorithm was first proposed based on the multiple evaluation criteria fusion (MECF). No matter which pattern recognition algorithm was used, using the classification feature set (M-7, unevenness of gray scale distribution, differential moment, standard deviation of entropy, directionality, long run advantage, contrast, standard deviation of energy, mixed entropy) to intelligently recognize the defect types has a high precision. Especially while using the kernel extreme learning machine (KELM), the classification accuracy reaches 96.4%. Thus, a multi-class classification model of the weld defect recognition termed quantum-behaved particle swarm optimization-based kernel extreme learning machine (QPSO-KELM) was further proposed. The corresponding classification accuracy was raised to 98%. Finally, comparative experiments were done with convolutional neural network (CNN) ResNet-34. The results show that compared with CNN ResNet-34, the proposed method exhibits obvious advantages, and more accurate classification results also indicate the proposed intelligent classification method can be used for the intelligent identification of artillery cradle weld defect during ultrasonic testing.},\n\tdoi = {10.1134/S1061830922601088},\n\tvolume = {59},\n\tnumber = {3},\n\tpages = {305-319},\n\tissn = {1061-8309},\n\tnote = {Times Cited in Web of Science Core Collection: 4 Total Times Cited: 4 Cited Reference Count: 41 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1134/S1061830922601088"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000055",
+      "entry_type": "article",
+      "title": "Uncertainty quantification for damage detection in 3D-printed auxetic structures using ultrasonic guided waves and a probabilistic neural network",
+      "authors": [
+        "Lu, HY",
+        "Farrokhabadi, A",
+        "Mardanshahi, A",
+        "Rauf, A",
+        "Talemi, R",
+        "Gryllias, K",
+        "Chronopoulos, D"
+      ],
+      "year": 2024,
+      "journal": "THIN-WALLED STRUCTURES",
+      "doi": "10.1016/j.tws.2024.112466",
+      "abstract": "Auxetic structures hold significant potential for applications due to their outstanding properties. Ultrasonic waves and neural networks are the popular technologies used for structural health monitoring (SHM). To increase the reliability of the neural network output for SHM, comprehensive uncertainty quantification is needed for damage detection in unknown areas of auxetic structures. This paper presents the first comprehensive framework for health diagnosis and uncertainty quantification based on ultrasonic guided waves in two 3D-printed star hourglass honeycomb auxetic structures. The proposed framework integrates in- plane compression with simultaneous ultrasonic testing to receive ultrasonic signals across various deformation states. Additionally, fully elastic and elasto-plastic finite element simulations are conducted to analyze wave energy variations and mechanical responses in auxetic structure. Critical damage deformation is identified based on observed deformation patterns and variations in signal energy. The Hilbert transform is used to extract two damage-sensitive features, namely envelope and phase. These features serve as input data for the Flipout probabilistic convolutional neural network (FPCNN) model, which integrates pseudo-independent weight perturbations and a Gaussian probabilistic layer within the visual geometry group 13 architecture to predict structural deformations and associated uncertainties. The UQ framework effectively separates and quantifies the predictive variance of the FPCNN model into aleatoric and epistemic uncertainty. The framework's effectiveness is demonstrated through the comprehensive approach, combining compression and ultrasonic tests, finite element simulation, and the FPCNN technique.",
+      "keywords": [
+        "Auxetic structures",
+        "Uncertainty quantification",
+        "Ultrasonic guided waves",
+        "Flipout neural network",
+        "Structural health monitoring"
+      ],
+      "normalized_title": "uncertainty quantification for damage detection in 3d printed auxetic structures using ultrasonic guided waves and a probabilistic neural network",
+      "raw_bibtex": "@ARTICLE{10.1016/j.tws.2024.112466,\n\tauthor = {Lu, HY and Farrokhabadi, A and Mardanshahi, A and Rauf, A and Talemi, R and Gryllias, K and Chronopoulos, D},\n\ttitle = {Uncertainty quantification for damage detection in 3D-printed auxetic structures using ultrasonic guided waves and a probabilistic neural network},\n\tjournal = {THIN-WALLED STRUCTURES},\n\tyear = {2024},\n\tkeywords = {Auxetic structures; Uncertainty quantification; Ultrasonic guided waves; Flipout neural network; Structural health monitoring},\n\tabstract = {Auxetic structures hold significant potential for applications due to their outstanding properties. Ultrasonic waves and neural networks are the popular technologies used for structural health monitoring (SHM). To increase the reliability of the neural network output for SHM, comprehensive uncertainty quantification is needed for damage detection in unknown areas of auxetic structures. This paper presents the first comprehensive framework for health diagnosis and uncertainty quantification based on ultrasonic guided waves in two 3D-printed star hourglass honeycomb auxetic structures. The proposed framework integrates in- plane compression with simultaneous ultrasonic testing to receive ultrasonic signals across various deformation states. Additionally, fully elastic and elasto-plastic finite element simulations are conducted to analyze wave energy variations and mechanical responses in auxetic structure. Critical damage deformation is identified based on observed deformation patterns and variations in signal energy. The Hilbert transform is used to extract two damage-sensitive features, namely envelope and phase. These features serve as input data for the Flipout probabilistic convolutional neural network (FPCNN) model, which integrates pseudo-independent weight perturbations and a Gaussian probabilistic layer within the visual geometry group 13 architecture to predict structural deformations and associated uncertainties. The UQ framework effectively separates and quantifies the predictive variance of the FPCNN model into aleatoric and epistemic uncertainty. The framework's effectiveness is demonstrated through the comprehensive approach, combining compression and ultrasonic tests, finite element simulation, and the FPCNN technique.},\n\tdoi = {10.1016/j.tws.2024.112466},\n\tvolume = {205},\n\tissn = {0263-8231},\n\tnote = {Times Cited in Web of Science Core Collection: 11 Total Times Cited: 11 Cited Reference Count: 65 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.tws.2024.112466"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000056",
+      "entry_type": "article",
+      "title": "Study on ultrasonic quantitative evaluation technique based on BP neural network and D-S evidence theory",
+      "authors": [
+        "Yao, K",
+        "Li, XL",
+        "Lu, ZX"
+      ],
+      "year": 2024,
+      "journal": "ULTRASONICS",
+      "doi": "10.1016/j.ultras.2023.107235",
+      "abstract": "Ultrasonic detection technology is widely used because of its high sensitivity, strong penetrating ability, accurate defect location, simple operation, and harmlessness to the human body. However, it is still challenging to locate and quantify the defects whose shapes are complex based on ultrasonic testing. The amount of data required for ultrasonic imaging is relatively large, and the efficiency is relatively low. This paper proposes a new method that combines the BP neural network and D-S evidence theory fusion technology with the pulse reflection method. The circular and triangular defects are selected for numerical simulation and experimental testing. The diameter range of the circle is 1-5 mm. The base range of the isosceles triangle is 4-5 mm, and the height range is 3-5 mm. Finally, this paper researches the inversion imaging of single and multiple defects using neural networks, image processing technology and data fusion technology. The results show that after fusion, the similarity coefficient of defects can reach 0.96, and the minimum area error can reach 1.2 %. The maximum error of the average centroid x is only 9.25 %, and the minimum error is 6.36 %. The centroid y error is less than 12 %. The average centroid y error is only 8.73 % at the maximum and 5.09 % at the minimum, indicating that the defect-inversion is relatively accurate.",
+      "keywords": [
+        "Ultrasonic testing",
+        "Finite analysis",
+        "Defect-inversion",
+        "Neural network and data fusion"
+      ],
+      "normalized_title": "study on ultrasonic quantitative evaluation technique based on bp neural network and d s evidence theory",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ultras.2023.107235,\n\tauthor = {Yao, K and Li, XL and Lu, ZX},\n\ttitle = {Study on ultrasonic quantitative evaluation technique based on BP neural network and D-S evidence theory},\n\tjournal = {ULTRASONICS},\n\tyear = {2024},\n\tkeywords = {Ultrasonic testing; Finite analysis; Defect-inversion; Neural network and data fusion},\n\tabstract = {Ultrasonic detection technology is widely used because of its high sensitivity, strong penetrating ability, accurate defect location, simple operation, and harmlessness to the human body. However, it is still challenging to locate and quantify the defects whose shapes are complex based on ultrasonic testing. The amount of data required for ultrasonic imaging is relatively large, and the efficiency is relatively low. This paper proposes a new method that combines the BP neural network and D-S evidence theory fusion technology with the pulse reflection method. The circular and triangular defects are selected for numerical simulation and experimental testing. The diameter range of the circle is 1-5 mm. The base range of the isosceles triangle is 4-5 mm, and the height range is 3-5 mm. Finally, this paper researches the inversion imaging of single and multiple defects using neural networks, image processing technology and data fusion technology. The results show that after fusion, the similarity coefficient of defects can reach 0.96, and the minimum area error can reach 1.2 %. The maximum error of the average centroid x is only 9.25 %, and the minimum error is 6.36 %. The centroid y error is less than 12 %. The average centroid y error is only 8.73 % at the maximum and 5.09 % at the minimum, indicating that the defect-inversion is relatively accurate.},\n\tdoi = {10.1016/j.ultras.2023.107235},\n\tvolume = {138},\n\tissn = {0041-624X},\n\tnote = {Times Cited in Web of Science Core Collection: 3 Total Times Cited: 4 Cited Reference Count: 25 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ultras.2023.107235"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000057",
+      "entry_type": "article",
+      "title": "ML-Enabled Piezoelectric-Driven Internal Defect Assessment in Metal Structures",
+      "authors": [
+        "Adeleye, D",
+        "Seyedi, M",
+        "Ferdowsi, F",
+        "Raush, J",
+        "Khattab, A"
+      ],
+      "year": 2023,
+      "journal": "MACHINES",
+      "doi": "10.3390/machines11121038",
+      "abstract": "With the growth of 3D printing in the production space, it is inevitable that quality assurance will be needed to keep final products within the constraints of requirements. Also, the variety of materials that can be used with 3D printing has increased over the years. Testing also must consider the process of manufacturing. This paper focuses its efforts on the finished product and not the process of manufacturing. Ultrasonic testing is a type of nondestructive testing. The experiments performed in this study aim to explore the usefulness of ultrasonic testing in materials that are 3D printed. The two materials used in this study are steel alloy metals and aluminum blocks of the same dimensions-120 mm x 40 mm x 15 mm. These materials represent common choices in additive manufacturing processes. The chosen alloys, such as Aluminum (6063T6) and grade-304 stainless steel, possess distinct properties crucial for validating the proposed testing method. Metal 3D-printed materials play a pivotal role in diverse industries, since ensuring their structural integrity is imperative for reliability and safety. Testing is crucial to identify and mitigate defects that could compromise the functionality and longevity of the final products, especially in applications with demanding performance requirements. An ultrasonic transducer is used to scan for subsurface defects within the samples and an oscilloscope is used to analyze the signals. Furthermore, several Machine Learning (ML) techniques are used to estimate the severity of the defects. The application of Machine Learning methods in the manufacturing industry has proven advantageous in terms of detecting defects due to its practicality and wide application. Due to their distinct benefits in processing image information, convolutional neural networks (CNNs) are the preferred method when working with picture data. In order to perform binary and multi-class classification, support vector machines that employ the alternative kernel function are a viable option for processing sensor signals and picture data. The study reveals that ultrasonic tests are viable for metallic materials. The primary objective of this work is to evaluate and validate the application of ultrasonic testing for the inspection of 3D-printed steel alloy metals and aluminum blocks. The novelty lies in the integration of Machine Learning techniques to estimate defect severity, offering a comprehensive and non-invasive approach to quality assessment in 3D-printed materials. The proposed method can successfully detect the presence of internal defects in objects, as well as estimate the location and severity of the defects.",
+      "keywords": [
+        "additive manufacturing",
+        "non-destructive testing",
+        "ultrasonics",
+        "machine learning piezoelectric",
+        "metals"
+      ],
+      "normalized_title": "ml enabled piezoelectric driven internal defect assessment in metal structures",
+      "raw_bibtex": "@ARTICLE{10.3390/machines11121038,\n\tauthor = {Adeleye, D and Seyedi, M and Ferdowsi, F and Raush, J and Khattab, A},\n\ttitle = {ML-Enabled Piezoelectric-Driven Internal Defect Assessment in Metal Structures},\n\tjournal = {MACHINES},\n\tyear = {2023},\n\tkeywords = {additive manufacturing; non-destructive testing; ultrasonics; machine learning piezoelectric; metals},\n\tabstract = {With the growth of 3D printing in the production space, it is inevitable that quality assurance will be needed to keep final products within the constraints of requirements. Also, the variety of materials that can be used with 3D printing has increased over the years. Testing also must consider the process of manufacturing. This paper focuses its efforts on the finished product and not the process of manufacturing. Ultrasonic testing is a type of nondestructive testing. The experiments performed in this study aim to explore the usefulness of ultrasonic testing in materials that are 3D printed. The two materials used in this study are steel alloy metals and aluminum blocks of the same dimensions-120 mm x 40 mm x 15 mm. These materials represent common choices in additive manufacturing processes. The chosen alloys, such as Aluminum (6063T6) and grade-304 stainless steel, possess distinct properties crucial for validating the proposed testing method. Metal 3D-printed materials play a pivotal role in diverse industries, since ensuring their structural integrity is imperative for reliability and safety. Testing is crucial to identify and mitigate defects that could compromise the functionality and longevity of the final products, especially in applications with demanding performance requirements. An ultrasonic transducer is used to scan for subsurface defects within the samples and an oscilloscope is used to analyze the signals. Furthermore, several Machine Learning (ML) techniques are used to estimate the severity of the defects. The application of Machine Learning methods in the manufacturing industry has proven advantageous in terms of detecting defects due to its practicality and wide application. Due to their distinct benefits in processing image information, convolutional neural networks (CNNs) are the preferred method when working with picture data. In order to perform binary and multi-class classification, support vector machines that employ the alternative kernel function are a viable option for processing sensor signals and picture data. The study reveals that ultrasonic tests are viable for metallic materials. The primary objective of this work is to evaluate and validate the application of ultrasonic testing for the inspection of 3D-printed steel alloy metals and aluminum blocks. The novelty lies in the integration of Machine Learning techniques to estimate defect severity, offering a comprehensive and non-invasive approach to quality assessment in 3D-printed materials. The proposed method can successfully detect the presence of internal defects in objects, as well as estimate the location and severity of the defects.},\n\tdoi = {10.3390/machines11121038},\n\tvolume = {11},\n\tnumber = {12},\n\tissn = {2075-1702},\n\tnote = {Times Cited in Web of Science Core Collection: 3 Total Times Cited: 5 Cited Reference Count: 33 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/machines11121038"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000058",
+      "entry_type": "article",
+      "title": "Detection of subsurface cracks in marble: application of artificial intelligence based on ultrasonic technique",
+      "authors": [
+        "Coramik, M",
+        "Gunes, H",
+        "Citak, H",
+        "Bicakci, S",
+        "Ege, Y"
+      ],
+      "year": 2025,
+      "journal": "NONDESTRUCTIVE TESTING AND EVALUATION",
+      "doi": "10.1080/10589759.2025.2560596",
+      "abstract": "In this study, a novel artificial intelligence-based measurement system using ultrasonic data was developed to detect the existence and orientation of artificially induced cracks in marble without axial loading. Ultrasonic sensors, acting as detectors, were moved across the marble surface by a PLC-controlled mechanical system. During position-controlled scanning, 268 data points-including average longitudinal wave velocity, Young's modulus, Poisson's ratio, and velocity variations-were recorded with a V-Meter Mark IV (TM) ultrasonic testing device and saved in CSV format. Feature selection was applied to identify crack-related indicators. Since crack data were underrepresented, the Smote method was used for balancing. As no single dominant feature emerged, all data except 256 measurements containing longitudinal wave variations were retained for classification. Decision Tree, Random Forest, and Logistic Regression models were first tested, but due to limited success, deep learning methods were applied. Multiple neural network structures were evaluated, achieving a maximum accuracy of 0.825. The estimated and actual discontinuity positions were then visualised, showing that the orientation of cracks within marble blocks relative to the scanning surface can be determined, thereby reducing waste in the cutting process.",
+      "keywords": [
+        "Ultrasonic testing",
+        "marble",
+        "metamorphic rock",
+        "discontinuity",
+        "artificial intelligence",
+        "ACOUSTIC-EMISSION METHOD",
+        "MECHANICAL-PROPERTIES",
+        "BEHAVIOR",
+        "STRENGTH",
+        "SURFACE",
+        "DAMAGE"
+      ],
+      "normalized_title": "detection of subsurface cracks in marble application of artificial intelligence based on ultrasonic technique",
+      "raw_bibtex": "@ARTICLE{10.1080/10589759.2025.2560596,\n\tauthor = {Coramik, M and Gunes, H and Citak, H and Bicakci, S and Ege, Y},\n\ttitle = {Detection of subsurface cracks in marble: application of artificial intelligence based on ultrasonic technique},\n\tjournal = {NONDESTRUCTIVE TESTING AND EVALUATION},\n\tyear = {2025},\n\tkeywords = {Ultrasonic testing; marble; metamorphic rock; discontinuity; artificial intelligence; ACOUSTIC-EMISSION METHOD; MECHANICAL-PROPERTIES; BEHAVIOR; STRENGTH; SURFACE; DAMAGE},\n\tabstract = {In this study, a novel artificial intelligence-based measurement system using ultrasonic data was developed to detect the existence and orientation of artificially induced cracks in marble without axial loading. Ultrasonic sensors, acting as detectors, were moved across the marble surface by a PLC-controlled mechanical system. During position-controlled scanning, 268 data points-including average longitudinal wave velocity, Young's modulus, Poisson's ratio, and velocity variations-were recorded with a V-Meter Mark IV (TM) ultrasonic testing device and saved in CSV format. Feature selection was applied to identify crack-related indicators. Since crack data were underrepresented, the Smote method was used for balancing. As no single dominant feature emerged, all data except 256 measurements containing longitudinal wave variations were retained for classification. Decision Tree, Random Forest, and Logistic Regression models were first tested, but due to limited success, deep learning methods were applied. Multiple neural network structures were evaluated, achieving a maximum accuracy of 0.825. The estimated and actual discontinuity positions were then visualised, showing that the orientation of cracks within marble blocks relative to the scanning surface can be determined, thereby reducing waste in the cutting process.},\n\tdoi = {10.1080/10589759.2025.2560596},\n\tissn = {1058-9759},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 58 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1080/10589759.2025.2560596"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000059",
+      "entry_type": "article",
+      "title": "Discrimination of Poor Electrode Junctions within Lithium-Ion Batteries by Ultrasonic Measurement and Deep Learning",
+      "authors": [
+        "Hwang, YI",
+        "Park, J",
+        "Munir, N",
+        "Kim, HJ",
+        "Song, SJ",
+        "Kim, KB"
+      ],
+      "year": 2022,
+      "journal": "BATTERIES-BASEL",
+      "doi": "10.3390/batteries8030021",
+      "abstract": "Lithium-ion batteries, which have high energy density, are the most suitable batteries for use in high-tech electromechanical applications requiring high performance. Because one of the important components that determines the efficiency of lithium-ion batteries is the electrode, the manufacturing process for this junction plays an important role in the entire production process. In particular, the process related to the resistance spot welding of the electrode is very important, directly affecting the safety of users, and greatly affecting the performance of the batteries. However, because the electrode tab is spot-welded onto the inner surface of the case, it is impossible to verify with visual testing (using the naked eye) whether the junction is well bonded. Therefore, it is very important to perform quality evaluation of the resistance welding of electrodes after completing the manufacturing process, using non-destructive testing methods. In this paper, a non-destructive ultrasonic testing technique was applied to examine the quality of lithium-ion batteries in which the negative electrode tabs were welded to the inner surface of the cell cans. The status of resistance spot welding between the electrode and the can was verified using deep-learning techniques with the experimentally acquired ultrasonic signal database.",
+      "keywords": [
+        "lithium-ion battery",
+        "electrode tab",
+        "resistance spot welding",
+        "non-destructive evaluation",
+        "ultrasonic testing",
+        "deep learning",
+        "AGING MECHANISMS",
+        "NEURAL-NETWORKS"
+      ],
+      "normalized_title": "discrimination of poor electrode junctions within lithium ion batteries by ultrasonic measurement and deep learning",
+      "raw_bibtex": "@ARTICLE{10.3390/batteries8030021,\n\tauthor = {Hwang, YI and Park, J and Munir, N and Kim, HJ and Song, SJ and Kim, KB},\n\ttitle = {Discrimination of Poor Electrode Junctions within Lithium-Ion Batteries by Ultrasonic Measurement and Deep Learning},\n\tjournal = {BATTERIES-BASEL},\n\tyear = {2022},\n\tkeywords = {lithium-ion battery; electrode tab; resistance spot welding; non-destructive evaluation; ultrasonic testing; deep learning; AGING MECHANISMS; NEURAL-NETWORKS},\n\tabstract = {Lithium-ion batteries, which have high energy density, are the most suitable batteries for use in high-tech electromechanical applications requiring high performance. Because one of the important components that determines the efficiency of lithium-ion batteries is the electrode, the manufacturing process for this junction plays an important role in the entire production process. In particular, the process related to the resistance spot welding of the electrode is very important, directly affecting the safety of users, and greatly affecting the performance of the batteries. However, because the electrode tab is spot-welded onto the inner surface of the case, it is impossible to verify with visual testing (using the naked eye) whether the junction is well bonded. Therefore, it is very important to perform quality evaluation of the resistance welding of electrodes after completing the manufacturing process, using non-destructive testing methods. In this paper, a non-destructive ultrasonic testing technique was applied to examine the quality of lithium-ion batteries in which the negative electrode tabs were welded to the inner surface of the cell cans. The status of resistance spot welding between the electrode and the can was verified using deep-learning techniques with the experimentally acquired ultrasonic signal database.},\n\tdoi = {10.3390/batteries8030021},\n\tvolume = {8},\n\tnumber = {3},\n\tissn = {2313-0105},\n\tnote = {Times Cited in Web of Science Core Collection: 9 Total Times Cited: 9 Cited Reference Count: 40 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/batteries8030021"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000060",
+      "entry_type": "article",
+      "title": "Deep learning-based anomaly detection from ultrasonic images",
+      "authors": [
+        "Posilovic, L",
+        "Medak, D",
+        "Milkovic, F",
+        "Subasic, M",
+        "Budimir, M",
+        "Loncaric, S"
+      ],
+      "year": 2022,
+      "journal": "ULTRASONICS",
+      "doi": "10.1016/j.ultras.2022.106737",
+      "abstract": "Non-destructive testing is a group of methods for evaluating the integrity of components. Among them, ultrasonic inspection stands out due to its ability to visualize both shallow and deep sections of the material in the search for flaws. Testing of the critical components can be a tiring and time-consuming task. Therefore, human experts in analyzing inspection data could use a hand in discarding anomaly-free data and reviewing only suspicious data. Using such a tool, errors would be less common, inspection times would shorten and non-destructive testing would be more efficient. In this work, we evaluate multiple state-of-the-art deeplearning anomaly detection methods on the ultrasonic non-destructive testing dataset. We achieved an average performance of almost 82% of ROC AUC. We discuss in detail the advantages and disadvantages of the presented methods.",
+      "keywords": [
+        "Non-destructive testing",
+        "Ultrasonic testing",
+        "Anomaly detection",
+        "Generative Adversarial Network",
+        "Deep learning"
+      ],
+      "normalized_title": "deep learning based anomaly detection from ultrasonic images",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ultras.2022.106737,\n\tauthor = {Posilovic, L and Medak, D and Milkovic, F and Subasic, M and Budimir, M and Loncaric, S},\n\ttitle = {Deep learning-based anomaly detection from ultrasonic images},\n\tjournal = {ULTRASONICS},\n\tyear = {2022},\n\tkeywords = {Non-destructive testing; Ultrasonic testing; Anomaly detection; Generative Adversarial Network; Deep learning},\n\tabstract = {Non-destructive testing is a group of methods for evaluating the integrity of components. Among them, ultrasonic inspection stands out due to its ability to visualize both shallow and deep sections of the material in the search for flaws. Testing of the critical components can be a tiring and time-consuming task. Therefore, human experts in analyzing inspection data could use a hand in discarding anomaly-free data and reviewing only suspicious data. Using such a tool, errors would be less common, inspection times would shorten and non-destructive testing would be more efficient. In this work, we evaluate multiple state-of-the-art deeplearning anomaly detection methods on the ultrasonic non-destructive testing dataset. We achieved an average performance of almost 82% of ROC AUC. We discuss in detail the advantages and disadvantages of the presented methods.},\n\tdoi = {10.1016/j.ultras.2022.106737},\n\tvolume = {124},\n\tissn = {0041-624X},\n\tnote = {Times Cited in Web of Science Core Collection: 38 Total Times Cited: 45 Cited Reference Count: 32 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ultras.2022.106737"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

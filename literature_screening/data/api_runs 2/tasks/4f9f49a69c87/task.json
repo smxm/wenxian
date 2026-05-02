@@ -1,0 +1,167 @@
+{
+  "id": "4f9f49a69c87",
+  "kind": "screening",
+  "status": "succeeded",
+  "cancel_requested": false,
+  "title": "new-screening-run",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 1,
+  "progress_total": 1,
+  "progress_message": "Task completed",
+  "created_at": "2026-04-01T19:28:15.371254+08:00",
+  "updated_at": "2026-04-01T19:28:24.134506+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "7a77f9d53499",
+    "project_topic": "基于深度学习的冷轧带钢表面缺陷检测与分析",
+    "model_provider": "deepseek",
+    "parent_task_id": null,
+    "input_dataset_ids": [],
+    "request_payload": {
+      "title": "new-screening-run",
+      "topic": "基于深度学习的冷轧带钢表面缺陷检测与分析",
+      "criteria_markdown": "# Role\r\n你是一位人工智能与工业视觉领域的资深学术研究员，正在协助我筛选参考文献。我正在撰写一篇关于【基于深度学习的冷轧带钢表面缺陷检测与分析】的论文，重点关注小样本、无监督、域自适应及轻量化等前沿方向，我需要你帮我精准筛选并总结出对我有用的参考文献。\r\n\r\n# Task\r\n我将提供一批文献的元数据（标题、摘要、关键词等）。请你逐一阅读，并严格按照以下流程处理：\r\n\r\n## Step 1: 筛选判读\r\n请根据以下标准判断该文献是否符合我的研究需求：\r\n\r\n* 纳入标准 (Inclusion Criteria)：\r\n  1. 研究对象必须是冷轧带钢、带钢或高度相关的金属表面缺陷。\r\n  2. 核心技术必须涉及前沿深度学习/计算机视觉方法（如：无监督异常检测、小样本/长尾学习、域自适应/泛化、轻量化边缘网络、或多模态根因分析）。\r\n  3. 具有明确的工业落地痛点解决思路或算法创新。\r\n\r\n* 排除标准 (Exclusion Criteria)：\r\n  1. 纯传统的冶金机理、机械结构或材料化学成分研究，无视觉/数据驱动算法介入。\r\n  2. 过于陈旧的传统图像处理方法（如单纯的阈值分割、传统边缘算子），缺乏深度学习或现代机器学习背景。\r\n  3. 与工业缺陷检测无关的纯理论算法推导。\r\n  4. 非中英文文献。\r\n\r\n## Step 2: 格式化输出\r\n根据判读结果，执行不同的输出逻辑。\r\n**【最高指令警告】：所有输出必须放在 Markdown 代码框内！绝对不允许使用任何形式的来源标记、角标或 `` 等引用格式！严格只输出纯文本！**\r\n\r\n情况 A：如果不符合要求\r\n* 仅输出一行文字：\r\n  `❌ [剔除]：<文献完整标题>`\r\n\r\n情况 B：如果符合要求\r\n* 请按以下结构输出：\r\n\r\n# <文献完整标题>\r\n(<若是英文文献，请在此处提供带括号的中文翻译>)\r\n\r\n核心总结\r\n(请用中文简明扼要地概括：1. 针对带钢检测的什么具体痛点？ 2. 提出了什么核心网络结构或机制？ 3. 取得了什么关键突破？)\r\n\r\n深度分析\r\n* 参考价值：针对我的论文主题，这篇文章在【算法设计】、【数据处理】或【实验对比】方面提供了哪些具体可以引用的素材或思路？\r\n\r\n---\r\n\r\n# Input Data\r\n[在此处粘贴你导出的文献信息，可以是 BibTeX 格式，或者 Excel/CSV 中的标题+摘要文本]",
+      "inclusion": [
+        "研究对象必须是冷轧带钢、带钢或高度相关的金属表面缺陷。",
+        "核心技术必须涉及前沿深度学习/计算机视觉方法（如：无监督异常检测、小样本/长尾学习、域自适应/泛化、轻量化边缘网络、或多模态根因分析）。",
+        "具有明确的工业落地痛点解决思路或算法创新。"
+      ],
+      "exclusion": [
+        "纯传统的冶金机理、机械结构或材料化学成分研究，无视觉/数据驱动算法介入。",
+        "过于陈旧的传统图像处理方法（如单纯的阈值分割、传统边缘算子），缺乏深度学习或现代机器学习背景。",
+        "与工业缺陷检测无关的纯理论算法推导。",
+        "非中英文文献。"
+      ],
+      "provider": "deepseek",
+      "model_name": "deepseek-chat",
+      "api_base_url": "https://api.deepseek.com/v1",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.0,
+      "max_tokens": 1536,
+      "min_request_interval_seconds": 2.0,
+      "batch_size": 10,
+      "target_include_count": 30,
+      "stop_when_target_reached": true,
+      "allow_uncertain": true,
+      "retry_times": 6,
+      "request_timeout_seconds": 240,
+      "encoding": "auto",
+      "project_id": "7a77f9d53499",
+      "parent_task_id": null,
+      "source_dataset_ids": []
+    },
+    "model_secret_id": "231fe3cd9c75454f",
+    "uploaded_input_paths": [
+      "tasks/4f9f49a69c87/uploads/scopus_export_Apr 1-2026_eb5bb4a5-7c33-4882-93ce-fa5189cfc718.ris"
+    ]
+  },
+  "summary": {
+    "run_id": "run_20260401_192815",
+    "input_files_count": 1,
+    "raw_entries_count": 3,
+    "deduped_entries_count": 3,
+    "processed_count": 3,
+    "included_count": 1,
+    "excluded_count": 1,
+    "uncertain_count": 1,
+    "unused_count": 0,
+    "batch_count": 1,
+    "api_call_count": 1,
+    "stop_reason": "all_records_processed",
+    "started_at": "2026-04-01T19:28:15.426638+08:00",
+    "finished_at": "2026-04-01T19:28:24.119696+08:00"
+  },
+  "error": null,
+  "artifacts": {
+    "included_report": {
+      "path": "tasks/4f9f49a69c87/screening_run/screening_output/included_report.md",
+      "filename": "included_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 613
+    },
+    "excluded_report": {
+      "path": "tasks/4f9f49a69c87/screening_run/screening_output/excluded_report.md",
+      "filename": "excluded_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 468
+    },
+    "uncertain_report": {
+      "path": "tasks/4f9f49a69c87/screening_run/screening_output/uncertain_report.md",
+      "filename": "uncertain_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 526
+    },
+    "included_ris": {
+      "path": "tasks/4f9f49a69c87/screening_run/screening_output/included.ris",
+      "filename": "included.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 2359
+    },
+    "unused_ris": {
+      "path": "tasks/4f9f49a69c87/screening_run/screening_output/unused_remaining.ris",
+      "filename": "unused_remaining.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 0
+    },
+    "run_summary": {
+      "path": "tasks/4f9f49a69c87/screening_run/screening_output/run_summary.json",
+      "filename": "run_summary.json",
+      "content_type": "application/json",
+      "size_bytes": 439
+    },
+    "screening_decisions": {
+      "path": "tasks/4f9f49a69c87/screening_run/screening_output/screening_decisions.json",
+      "filename": "screening_decisions.json",
+      "content_type": "application/json",
+      "size_bytes": 1512
+    }
+  },
+  "run_root": "tasks/4f9f49a69c87/screening_run",
+  "output_dir": "tasks/4f9f49a69c87/screening_run/screening_output",
+  "markdown_preview": null,
+  "records": [
+    {
+      "paper_id": "paper_000001",
+      "title": "An Algorithm for Detecting Surface Defects in Industrial Strip Steel based on Receptive Field and Feature Information Supplementation",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确针对带钢表面缺陷检测，提出基于感受野和特征信息补充的深度学习算法，具有算法创新和工业应用背景。",
+      "year": 2024,
+      "journal": "Proceedings of the 2024 27th International Conference on Computer Supported Cooperative Work in Design, CSCWD 2024",
+      "doi": "10.1109/cscwd61410.2024.10580868",
+      "abstract": "In the context of Industry 4.0 and the rise of intelligent manufacturing, the quality of industrial products is becoming more and more important. Strip steel surface defect detection, as a key link in industrial production, is crucial to ensure the quality of industrial products. However, due to the irregularity of the defect scale and the inconspicuous defect features in the surface defect image of strip steel, it is difficult for the existing detection algorithms to realize the effective detection of defects. In order to better extract the features of defects and improve the network's ability to detect defects, this paper proposes an algorithm for detecting surface defects on industrial strip steel based on receptive field and feature information supplementation. First, we design a receptive field (RF) module to replace the residual structure in the C3 module, which we name C3RF. This module can effectively increase the network's receptive field, allowing the network to fully capture irregular defect features without increasing the cost. Second, for the characteristics that defective features are not obvious and tend to lose detail information as the network deepens, an extra information supplemental branching feature fusion pyramid (EFPN) is proposed on the basis of the original PAFPN architecture to compensate for the detail information that is lost by the fragile features in deeper layers. Finally, convolutional block attention module (CBAM) is introduced to replace the spatial pooling pyramid (SPPF) in the baseline network, which enhances the contrast between defects and backgrounds, and improves the classification and localization ability of the network. Our network achieves an accuracy of 82.2% on the publicly available strip steel defect detection dataset, which is a 4.0% improvement over the baseline. The results show that the network constructed in this paper can realize effective defect detection. © 2024 IEEE."
+    },
+    {
+      "paper_id": "paper_000002",
+      "title": "Metal surface Feature Fusion for Defect Recognition",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "标题和摘要涉及金属表面缺陷识别，使用卷积神经网络和多信息融合方法，但未明确说明研究对象是否为冷轧带钢或带钢。",
+      "year": 2023,
+      "journal": "Proceedings - 2023 3rd International Conference on Robotics, Automation and Intelligent Control, ICRAIC 2023",
+      "doi": "10.1109/icraic61978.2023.00011",
+      "abstract": "Metal sheets have been widely used in various industrial production and production life aspects. However, the surface of metal plates is prone to multiple defects, which affect the electromagnetic characteristics and coating effect of metal plates. Currently, mainstream inspection uses YOLO, PaddleClas, and other methods to detect flat metal surfaces. These algorithms are all very potent in their classification capabilities, but as generalized defect handling algorithms, they cannot be specific to each type of defect in a real problem. In this paper, we propose a multi-information fusion method for defect recognition. We consider both low-level texture features and high-level convolutional features of metal surfaces for defect recognition. We use a convolutional neural network as the main body and add extracted and processed prompts during training. Finally, we test the proposed method extensively on Camshaft and Kaggle metal surface defects datasets, and the experimental results demonstrate that our method achieves a state-of-the-art recognition performance that surpasses previous defect recognition methods. © 2023 IEEE."
+    },
+    {
+      "paper_id": "paper_000003",
+      "title": "A Highly Efficient Surface Defect Detection Approach for Hot Rolled Strip Steel Based on Deep Learning",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题明确研究对象为热轧带钢，不符合筛选主题中冷轧带钢的要求。",
+      "year": 2021,
+      "journal": "2021 6th International Conference on Robotics and Automation Engineering, ICRAE 2021",
+      "doi": "10.1109/icrae53653.2021.9657815",
+      "abstract": "With the continuous improvement of the requirements for surface quality assurance in steel strip industrial production, the automatic defect detection based on computer vision has been widely concerned. Currently, the algorithm based on convolutional neural network can achieve satisfactory accuracy in the task of surface defect detection. However, these high-precision deep convolution networks need a lot of computing power, which makes it difficult for these network models to be directly applied to factories. In this paper, a lightweight object detection framework based on MobileNetv3 backbone model is proposed, and three improvements have been made to increase the detection accuracy on strip steel surface defect, i.e., additional output layer for multi-scale detection, spatial pyramid pooling module for richer deep features, and feature pyramid and bottom-up path augmentation module for feature fusion. Experimental results demonstrate that the performance of the network model proposed in this paper is better than that of network models such as YOLOv3, YOLOv4, SSD and faster R-CNN. © 2021 IEEE."
+    }
+  ],
+  "project_id": "7a77f9d53499",
+  "project_topic": "基于深度学习的冷轧带钢表面缺陷检测与分析",
+  "model_provider": "deepseek",
+  "parent_task_id": null,
+  "input_dataset_ids": [],
+  "output_dataset_ids": [
+    "1981e79a312a",
+    "31fb029f6522"
+  ]
+}

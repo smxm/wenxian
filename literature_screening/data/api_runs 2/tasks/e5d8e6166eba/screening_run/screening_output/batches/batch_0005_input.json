@@ -1,0 +1,360 @@
+{
+  "batch_id": "batch_0005",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000041",
+    "paper_000042",
+    "paper_000043",
+    "paper_000044",
+    "paper_000045",
+    "paper_000046",
+    "paper_000047",
+    "paper_000048",
+    "paper_000049",
+    "paper_000050"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000041",
+      "entry_type": "article",
+      "title": "Quantitative evaluation of steel corrosion induced deterioration in rubber concrete by integrating ultrasonic testing, machine learning and mesoscale simulation",
+      "authors": [
+        "Zhang, JR",
+        "Zhang, MX",
+        "Dong, BQ",
+        "Ma, HY"
+      ],
+      "year": 2022,
+      "journal": "CEMENT & CONCRETE COMPOSITES",
+      "doi": "10.1016/j.cemconcomp.2022.104426",
+      "abstract": "Chloride-induced steel corrosion seriously affects the durability of reinforced concrete structures. Rubber concrete, an environmentally friendly construction material in which waste rubber is recycled as a concrete component, has demonstrated superior resistance to chloride-induced steel corrosion and the subsequent concrete deterioration. However, quantitative evaluation of the degree of deterioration in rubber concrete based on nondestructive detection is challenging due to the complexity of the material. In this paper, reinforced concrete specimens with rubber contents of 0, 10% and 20% are subjected to the electrochemically accelerated corrosion experiments and monitored by ultrasonic testing. Six machine learning models are trained by the data derived from the ultrasonic testing to predict the corrosion degree based on ultrasonic traits. The results show that the machine learning models except for the linear model can accurately and robustly predict the corrosion degree under the interference of outlier amplitude and size of training set. Furthermore, the corrosion-induced deterioration process is computed by mesoscale simulation based on the corrosion degree, so that the damages of specimens with different rubber contents are quantitatively evaluated. The experimental and computational studies prove that the addition of rubber into concrete effectively retards the corrosion of steel and the deterioration of concrete.",
+      "keywords": [
+        "Rubber concrete",
+        "Corrosion degree",
+        "Ultrasonic signals",
+        "Machine learning",
+        "Robustness validation",
+        "Mesoscale simulation",
+        "NONUNIFORM CORROSION",
+        "MECHANICAL-PROPERTIES",
+        "ACOUSTIC-EMISSION",
+        "CRACKING",
+        "COVER",
+        "MODEL",
+        "REINFORCEMENT"
+      ],
+      "normalized_title": "quantitative evaluation of steel corrosion induced deterioration in rubber concrete by integrating ultrasonic testing machine learning and mesoscale simulation",
+      "raw_bibtex": "@ARTICLE{10.1016/j.cemconcomp.2022.104426,\n\tauthor = {Zhang, JR and Zhang, MX and Dong, BQ and Ma, HY},\n\ttitle = {Quantitative evaluation of steel corrosion induced deterioration in rubber concrete by integrating ultrasonic testing, machine learning and mesoscale simulation},\n\tjournal = {CEMENT & CONCRETE COMPOSITES},\n\tyear = {2022},\n\tkeywords = {Rubber concrete; Corrosion degree; Ultrasonic signals; Machine learning; Robustness validation; Mesoscale simulation; NONUNIFORM CORROSION; MECHANICAL-PROPERTIES; ACOUSTIC-EMISSION; CRACKING; COVER; MODEL; REINFORCEMENT},\n\tabstract = {Chloride-induced steel corrosion seriously affects the durability of reinforced concrete structures. Rubber concrete, an environmentally friendly construction material in which waste rubber is recycled as a concrete component, has demonstrated superior resistance to chloride-induced steel corrosion and the subsequent concrete deterioration. However, quantitative evaluation of the degree of deterioration in rubber concrete based on nondestructive detection is challenging due to the complexity of the material. In this paper, reinforced concrete specimens with rubber contents of 0, 10% and 20% are subjected to the electrochemically accelerated corrosion experiments and monitored by ultrasonic testing. Six machine learning models are trained by the data derived from the ultrasonic testing to predict the corrosion degree based on ultrasonic traits. The results show that the machine learning models except for the linear model can accurately and robustly predict the corrosion degree under the interference of outlier amplitude and size of training set. Furthermore, the corrosion-induced deterioration process is computed by mesoscale simulation based on the corrosion degree, so that the damages of specimens with different rubber contents are quantitatively evaluated. The experimental and computational studies prove that the addition of rubber into concrete effectively retards the corrosion of steel and the deterioration of concrete.},\n\tdoi = {10.1016/j.cemconcomp.2022.104426},\n\tvolume = {128},\n\tissn = {0958-9465},\n\tnote = {Times Cited in Web of Science Core Collection: 61 Total Times Cited: 68 Cited Reference Count: 61 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.cemconcomp.2022.104426"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000042",
+      "entry_type": "article",
+      "title": "Phased array ultrasonic test signal enhancement and classification using Empirical Wavelet Transform and Deep Convolution Neural Network",
+      "authors": [
+        "Jayasudha, JC",
+        "Lalithakumari, S"
+      ],
+      "year": 2022,
+      "journal": "CONCURRENT ENGINEERING-RESEARCH AND APPLICATIONS",
+      "doi": "10.1177/1063293x211073714",
+      "abstract": "In the recent past, Non-Destructive Testing (NDT) has become the most popular technique due to its efficiency and accuracy without destroying the object and maintaining its original structure and gathering while examining external and internal welding defects. Generally, the NDT environment is harmful which is distinguished by huge volatile fields of electromagnetic, elevated radiation emission instability, and elevated heat. Therefore, a suitable NDT approach could be recognized and practiced. In this paper, a novel algorithm is proposed based on a Phased array ultrasonic test (PAUT) for NDT to attain the proper test attributes. In the proposed methodology, the carbon steel welding section is synthetically produced with various defects and tested using the PAUT method. The signals which are acquired from the PAUT device are having noise. The Adaptive Least Mean Square (ALMS) filter is proposed to filter PAUT signal to eliminate random noise and Gaussian noise. The ALMS filter is the combination of low pass filter (LPF), high pass filter (HPF), and bandpass filter (BPF). The time-domain PAUT signal is converted into a frequency-domain signal to extract more features by applying the Empirical Wavelet Transform (EWT) algorithm. In the frequency domain signal, first order and second order features extraction techniques are applied to extract various features for further classification. The Deep Learning methodology is proposed for the classification of PAUT signals. Based on the PAUT signal features, the Deep Convolution Neural Network (DCNN) is applied for further classification. The DCNN will classify the welding signal as to whether it is defective or non-defective. The Confusion Matrix (CM) is used for the estimation of measurement of performance of classification as calculating accuracy, sensitivity, and specificity. The experiments prove that the proposed methodology for PAUT testing for welding defect classification is obtained more accurately and efficiently across existing methodologies by providing numerical and graphical results.",
+      "keywords": [
+        "non-destructive testing",
+        "phased array ultrasonic testing",
+        "adaptive least mean square",
+        "Empirical Wavelet Transform",
+        "Deep Convolution Neural Network",
+        "Confusion Matrix"
+      ],
+      "normalized_title": "phased array ultrasonic test signal enhancement and classification using empirical wavelet transform and deep convolution neural network",
+      "raw_bibtex": "@ARTICLE{10.1177/1063293X211073714,\n\tauthor = {Jayasudha, JC and Lalithakumari, S},\n\ttitle = {Phased array ultrasonic test signal enhancement and classification using Empirical Wavelet Transform and Deep Convolution Neural Network},\n\tjournal = {CONCURRENT ENGINEERING-RESEARCH AND APPLICATIONS},\n\tyear = {2022},\n\tkeywords = {non-destructive testing; phased array ultrasonic testing; adaptive least mean square; Empirical Wavelet Transform; Deep Convolution Neural Network; Confusion Matrix},\n\tabstract = {In the recent past, Non-Destructive Testing (NDT) has become the most popular technique due to its efficiency and accuracy without destroying the object and maintaining its original structure and gathering while examining external and internal welding defects. Generally, the NDT environment is harmful which is distinguished by huge volatile fields of electromagnetic, elevated radiation emission instability, and elevated heat. Therefore, a suitable NDT approach could be recognized and practiced. In this paper, a novel algorithm is proposed based on a Phased array ultrasonic test (PAUT) for NDT to attain the proper test attributes. In the proposed methodology, the carbon steel welding section is synthetically produced with various defects and tested using the PAUT method. The signals which are acquired from the PAUT device are having noise. The Adaptive Least Mean Square (ALMS) filter is proposed to filter PAUT signal to eliminate random noise and Gaussian noise. The ALMS filter is the combination of low pass filter (LPF), high pass filter (HPF), and bandpass filter (BPF). The time-domain PAUT signal is converted into a frequency-domain signal to extract more features by applying the Empirical Wavelet Transform (EWT) algorithm. In the frequency domain signal, first order and second order features extraction techniques are applied to extract various features for further classification. The Deep Learning methodology is proposed for the classification of PAUT signals. Based on the PAUT signal features, the Deep Convolution Neural Network (DCNN) is applied for further classification. The DCNN will classify the welding signal as to whether it is defective or non-defective. The Confusion Matrix (CM) is used for the estimation of measurement of performance of classification as calculating accuracy, sensitivity, and specificity. The experiments prove that the proposed methodology for PAUT testing for welding defect classification is obtained more accurately and efficiently across existing methodologies by providing numerical and graphical results.},\n\tdoi = {10.1177/1063293X211073714},\n\tvolume = {30},\n\tnumber = {3},\n\tpages = {229-236},\n\tissn = {1063-293X},\n\tnote = {Times Cited in Web of Science Core Collection: 8 Total Times Cited: 8 Cited Reference Count: 11 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1177/1063293X211073714"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000043",
+      "entry_type": "article",
+      "title": "Acoustic Noise-Based Scroll Compressor Diagnosis during the Manufacturing Process",
+      "authors": [
+        "Lee, G",
+        "Kwon, D"
+      ],
+      "year": 2025,
+      "journal": "CMES-COMPUTER MODELING IN ENGINEERING & SCIENCES",
+      "doi": "10.32604/cmes.2025.069402",
+      "abstract": "Nondestructive testing (NDT) methods such as visual inspection and ultrasonic testing are widely applied in manufacturing quality control, but they remain limited in their ability to detect defect characteristics. Visual inspection depends strongly on operator experience, while ultrasonic testing requires physical contact and stable coupling conditions that are difficult to maintain in production lines. These constraints become more pronounced when defect-related information is scarce or when background noise interferes with signal acquisition in manufacturing processes. This study presents a non-contact acoustic method for diagnosing defects in scroll compressors during the manufacturing process. The diagnostic approach leverages Mel-frequency cepstral coefficients (MFCC), and shorttime Fourier transform (STFT) parameters to capture the rotational frequency and harmonic characteristics of the scroll compressor. These parameters enable the extraction of defect-related features even in the presence of background noise. A convolutional neural network (CNN) model was constructed using MFCCs and spectrograms as image inputs. The proposed method was validated using acoustic data collected from compressors operated at a fixed rotational speed under real manufacturing process. The method identified normal operation and three defect types. These results demonstrate the applicability of this method in noise-prone manufacturing environments and suggest its potential for improving product quality, manufacturing reliability and productivity.",
+      "keywords": [
+        "Diagnosis",
+        "manufacturing process",
+        "rotational frequency",
+        "scroll compressor",
+        "CONVOLUTIONAL NEURAL-NETWORK",
+        "FAULT-DIAGNOSIS"
+      ],
+      "normalized_title": "acoustic noise based scroll compressor diagnosis during the manufacturing process",
+      "raw_bibtex": "@ARTICLE{10.32604/cmes.2025.069402,\n\tauthor = {Lee, G and Kwon, D},\n\ttitle = {Acoustic Noise-Based Scroll Compressor Diagnosis during the Manufacturing Process},\n\tjournal = {CMES-COMPUTER MODELING IN ENGINEERING & SCIENCES},\n\tyear = {2025},\n\tkeywords = {Diagnosis; manufacturing process; rotational frequency; scroll compressor; CONVOLUTIONAL NEURAL-NETWORK; FAULT-DIAGNOSIS},\n\tabstract = {Nondestructive testing (NDT) methods such as visual inspection and ultrasonic testing are widely applied in manufacturing quality control, but they remain limited in their ability to detect defect characteristics. Visual inspection depends strongly on operator experience, while ultrasonic testing requires physical contact and stable coupling conditions that are difficult to maintain in production lines. These constraints become more pronounced when defect-related information is scarce or when background noise interferes with signal acquisition in manufacturing processes. This study presents a non-contact acoustic method for diagnosing defects in scroll compressors during the manufacturing process. The diagnostic approach leverages Mel-frequency cepstral coefficients (MFCC), and shorttime Fourier transform (STFT) parameters to capture the rotational frequency and harmonic characteristics of the scroll compressor. These parameters enable the extraction of defect-related features even in the presence of background noise. A convolutional neural network (CNN) model was constructed using MFCCs and spectrograms as image inputs. The proposed method was validated using acoustic data collected from compressors operated at a fixed rotational speed under real manufacturing process. The method identified normal operation and three defect types. These results demonstrate the applicability of this method in noise-prone manufacturing environments and suggest its potential for improving product quality, manufacturing reliability and productivity.},\n\tdoi = {10.32604/cmes.2025.069402},\n\tvolume = {144},\n\tnumber = {3},\n\tpages = {3329-3342},\n\tissn = {1526-1492},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 42 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.32604/cmes.2025.069402"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000044",
+      "entry_type": "article",
+      "title": "Sizing-Based Flaw Acceptability in Weldments Using Phased Array Ultrasonic Testing and Neural Networks",
+      "authors": [
+        "Lee, SE",
+        "Park, J",
+        "Yeom, YT",
+        "Kim, HJ",
+        "Song, SJ"
+      ],
+      "year": 2023,
+      "journal": "APPLIED SCIENCES-BASEL",
+      "doi": "10.3390/app13053204",
+      "abstract": "Liquefied Natural Gas (LNG) is one of the major renewable energy sources and is stored and carried in a storage tank that is designed following international standards. Since LNG becomes highly unstable when it encounters oxygen in the air, a leakage from an LNG storage tank can cause a catastrophic industrial accident. Thus, the inspection of LNG storage tanks is one of the priorities to be completed before LNG is stored in a storage tank. Recently, the usage of Phased Array Ultrasonic Testing (PAUT) has been gradually increasing as the risks of RT emerge. PAUT has some obstacles to overcome in order to substitute RT, such as efficiency and accuracy. Specifically, the cost issue must be addressed. Therefore, many attempts to combine PAUT with Artificial Neural Networks (ANN) have been made. PAUT provides many types of 2D images of the inspected weldment. The S-scan is one of the 2D images provided by PAUT, and it displays the cross-sectional view of the specimen with a single transducer. The inspectors examine the S-scan image and other provided images of PAUT to detect, classify and size the flaw that exists in the weldment so that the decision of whether the inspected weldment with the flaw is acceptable can be made. Nowadays, most of the previous research on PAUT and ANN focuses on detecting and classifying the flaws in B-scan or S-scan images. However, the last step to determine the flaws' acceptability is not yet covered. In this study, the flaw acceptance criteria of PAUT in various international standards are listed. EXTENDE CIVA is used to create the PAUT S-scan images. The S-scan images are labeled with the listed acceptance criteria. Then, they are used in Mask R-CNN training. After the training, some new S-scan images with flaws are used to test the performance, and this showed 96% precision and 87% recall. With the algorithm, the acceptability of a flaw in a weldment can be determined efficiently and it will reduce the burden of PAUT usage and reduce the time required for a full-length inspection.",
+      "keywords": [
+        "Phased Array Ultrasonic Testing",
+        "Mask R-CNN",
+        "flaw acceptance criteria",
+        "Artificial Neural Network"
+      ],
+      "normalized_title": "sizing based flaw acceptability in weldments using phased array ultrasonic testing and neural networks",
+      "raw_bibtex": "@ARTICLE{10.3390/app13053204,\n\tauthor = {Lee, SE and Park, J and Yeom, YT and Kim, HJ and Song, SJ},\n\ttitle = {Sizing-Based Flaw Acceptability in Weldments Using Phased Array Ultrasonic Testing and Neural Networks},\n\tjournal = {APPLIED SCIENCES-BASEL},\n\tyear = {2023},\n\tkeywords = {Phased Array Ultrasonic Testing; Mask R-CNN; flaw acceptance criteria; Artificial Neural Network},\n\tabstract = {Liquefied Natural Gas (LNG) is one of the major renewable energy sources and is stored and carried in a storage tank that is designed following international standards. Since LNG becomes highly unstable when it encounters oxygen in the air, a leakage from an LNG storage tank can cause a catastrophic industrial accident. Thus, the inspection of LNG storage tanks is one of the priorities to be completed before LNG is stored in a storage tank. Recently, the usage of Phased Array Ultrasonic Testing (PAUT) has been gradually increasing as the risks of RT emerge. PAUT has some obstacles to overcome in order to substitute RT, such as efficiency and accuracy. Specifically, the cost issue must be addressed. Therefore, many attempts to combine PAUT with Artificial Neural Networks (ANN) have been made. PAUT provides many types of 2D images of the inspected weldment. The S-scan is one of the 2D images provided by PAUT, and it displays the cross-sectional view of the specimen with a single transducer. The inspectors examine the S-scan image and other provided images of PAUT to detect, classify and size the flaw that exists in the weldment so that the decision of whether the inspected weldment with the flaw is acceptable can be made. Nowadays, most of the previous research on PAUT and ANN focuses on detecting and classifying the flaws in B-scan or S-scan images. However, the last step to determine the flaws' acceptability is not yet covered. In this study, the flaw acceptance criteria of PAUT in various international standards are listed. EXTENDE CIVA is used to create the PAUT S-scan images. The S-scan images are labeled with the listed acceptance criteria. Then, they are used in Mask R-CNN training. After the training, some new S-scan images with flaws are used to test the performance, and this showed 96% precision and 87% recall. With the algorithm, the acceptability of a flaw in a weldment can be determined efficiently and it will reduce the burden of PAUT usage and reduce the time required for a full-length inspection.},\n\tdoi = {10.3390/app13053204},\n\tvolume = {13},\n\tnumber = {5},\n\tissn = {2076-3417},\n\tnote = {Times Cited in Web of Science Core Collection: 9 Total Times Cited: 10 Cited Reference Count: 23 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/app13053204"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000045",
+      "entry_type": "article",
+      "title": "Extraction of Flaw Signals from the Mixed 1-D Signals by Denoising Autoencoder",
+      "authors": [
+        "Lee, SE",
+        "Park, J",
+        "Kim, HJ",
+        "Song, SJ"
+      ],
+      "year": 2023,
+      "journal": "APPLIED SCIENCES-BASEL",
+      "doi": "10.3390/app13063534",
+      "abstract": "Ultrasonic testing (UT) is one of the most popular non-destructive evaluation (NDE) techniques used in many industries to evaluate structural integrity. The commonly used NDE techniques are basic inspection techniques, such as visual testing (VT), penetration testing (PT), and magnetic testing (MT), and advanced inspection techniques, such as UT, radiography testing (RT), eddy current testing (ECT), and phased array ultrasonic testing (PAUT). Among the numerous advanced techniques, ultrasonic testing (UT) is usually used for the inspection of welds in various industries. However, the application of UT still has some shortcomings to overcome. One major shortcoming that reduces the precision of UT is the extra signals from the geometrical interface of a specimen. UT uses the reflection indications of the ultrasonic beam. However, the reflection signals from the welding interface and geometry along with the target flaw signal produce mixed signals. The inspectors use a 1-D reflection outcome called the ultrasonic A-scan to evaluate the welding integrity. The mixed ultrasonic A-scan signals are often very difficult to analyze because inspectors must distinguish the target flaw signal of welding from the mixed ultrasonic A-scan signal, which includes the flaw indication as well as the background signal. Therefore, a method to distinguish between the flaw signal and the background signal must be developed for the efficiency of UT. Autoencoder is an artificial neural network that is made for feature extraction from the input. Denoising autoencoder (DAE) is one of the derivative models of the autoencoder which adds or eliminates random noise signals to extract the prominent features. DAE is already widely used in the denoising of images and sound data. The characteristics of DAE are used in this research to distinguish the ultrasonic flaw signal from the mixed ultrasonic A-scan signal. For the training, 2463 mixed A-scan signals were obtained from 45 different standard blocks in which 5 different types of flaws were embedded. For testing, we used 1000 mixed A-scan signals. The performance of the network was evaluated using a point-by-point comparison method. The autoencoder was trained to denoise the background signal from the mixed ultrasonic A-scan, and the target flaw signal was extracted from the original A-scan signal.",
+      "keywords": [
+        "ultrasonic testing",
+        "flaw signal extraction",
+        "denoising autoencoder",
+        "nondestructive evaluation",
+        "artificial neural networks"
+      ],
+      "normalized_title": "extraction of flaw signals from the mixed 1 d signals by denoising autoencoder",
+      "raw_bibtex": "@ARTICLE{10.3390/app13063534,\n\tauthor = {Lee, SE and Park, J and Kim, HJ and Song, SJ},\n\ttitle = {Extraction of Flaw Signals from the Mixed 1-D Signals by Denoising Autoencoder},\n\tjournal = {APPLIED SCIENCES-BASEL},\n\tyear = {2023},\n\tkeywords = {ultrasonic testing; flaw signal extraction; denoising autoencoder; nondestructive evaluation; artificial neural networks},\n\tabstract = {Ultrasonic testing (UT) is one of the most popular non-destructive evaluation (NDE) techniques used in many industries to evaluate structural integrity. The commonly used NDE techniques are basic inspection techniques, such as visual testing (VT), penetration testing (PT), and magnetic testing (MT), and advanced inspection techniques, such as UT, radiography testing (RT), eddy current testing (ECT), and phased array ultrasonic testing (PAUT). Among the numerous advanced techniques, ultrasonic testing (UT) is usually used for the inspection of welds in various industries. However, the application of UT still has some shortcomings to overcome. One major shortcoming that reduces the precision of UT is the extra signals from the geometrical interface of a specimen. UT uses the reflection indications of the ultrasonic beam. However, the reflection signals from the welding interface and geometry along with the target flaw signal produce mixed signals. The inspectors use a 1-D reflection outcome called the ultrasonic A-scan to evaluate the welding integrity. The mixed ultrasonic A-scan signals are often very difficult to analyze because inspectors must distinguish the target flaw signal of welding from the mixed ultrasonic A-scan signal, which includes the flaw indication as well as the background signal. Therefore, a method to distinguish between the flaw signal and the background signal must be developed for the efficiency of UT. Autoencoder is an artificial neural network that is made for feature extraction from the input. Denoising autoencoder (DAE) is one of the derivative models of the autoencoder which adds or eliminates random noise signals to extract the prominent features. DAE is already widely used in the denoising of images and sound data. The characteristics of DAE are used in this research to distinguish the ultrasonic flaw signal from the mixed ultrasonic A-scan signal. For the training, 2463 mixed A-scan signals were obtained from 45 different standard blocks in which 5 different types of flaws were embedded. For testing, we used 1000 mixed A-scan signals. The performance of the network was evaluated using a point-by-point comparison method. The autoencoder was trained to denoise the background signal from the mixed ultrasonic A-scan, and the target flaw signal was extracted from the original A-scan signal.},\n\tdoi = {10.3390/app13063534},\n\tvolume = {13},\n\tnumber = {6},\n\tissn = {2076-3417},\n\tnote = {Times Cited in Web of Science Core Collection: 4 Total Times Cited: 4 Cited Reference Count: 14 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/app13063534"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000046",
+      "entry_type": "article",
+      "title": "Nondestructive Evaluation and Residual Property Assessment of Impacted Nylon/carbon-Fiber Additively Manufactured FFF Components Using Four-Point Bend and Ultrasonic Testing",
+      "authors": [
+        "Wilkins, JC",
+        "Ritter, CL",
+        "Matalgah, K",
+        "Fleck, TJ"
+      ],
+      "year": 2024,
+      "journal": "RESEARCH IN NONDESTRUCTIVE EVALUATION",
+      "doi": "10.1080/09349847.2024.2375215",
+      "abstract": "Fusion-based material extrusion additive manufacturing, commonly known as fused filament fabrication (FFF), is a layer-by-layer manufacturing process known for creating custom components, specializing in complex geometries, with applications in the aerospace, automotive, medical, as well as many other industries. Due to the critical nature of these industries, it is imperative to understand the relationship between the AM material in question, the nature of the resultant damage, and the impact of these two parameters on the future performance of the component. The purpose of this study is to investigate the relationship between low-velocity impact and the resultant damage in common functional FFF materials and to develop methods of visualizing that damage using ultrasonic nondestructive evaluation. Coupons of a nylon feedstock infused with and without 10% chopped carbon fiber were fabricated using an Essentium HSE printer and impacted at various energies. The extent of the damage was visualized using ultrasonic testing (UT), in which significant internal cracking was observed. Four-point bend testing was utilized to compare behavior of the material prior to impact at a lower impact energy (3J), and a higher impact energy causing visual fracture (7J). X-ray CT was also performed on two samples to validate UT findings.",
+      "keywords": [
+        "Additive manufacturing",
+        "fused filament fabrication",
+        "ultrasonic testing",
+        "X-Ray computed tomography",
+        "fiber reinforced composites",
+        "NEURAL-NETWORKS",
+        "CONCRETE"
+      ],
+      "normalized_title": "nondestructive evaluation and residual property assessment of impacted nylon carbon fiber additively manufactured fff components using four point bend and ultrasonic testing",
+      "raw_bibtex": "@ARTICLE{10.1080/09349847.2024.2375215,\n\tauthor = {Wilkins, JC and Ritter, CL and Matalgah, K and Fleck, TJ},\n\ttitle = {Nondestructive Evaluation and Residual Property Assessment of Impacted Nylon/carbon-Fiber Additively Manufactured FFF Components Using Four-Point Bend and Ultrasonic Testing},\n\tjournal = {RESEARCH IN NONDESTRUCTIVE EVALUATION},\n\tyear = {2024},\n\tkeywords = {Additive manufacturing; fused filament fabrication; ultrasonic testing; X-Ray computed tomography; fiber reinforced composites; NEURAL-NETWORKS; CONCRETE},\n\tabstract = {Fusion-based material extrusion additive manufacturing, commonly known as fused filament fabrication (FFF), is a layer-by-layer manufacturing process known for creating custom components, specializing in complex geometries, with applications in the aerospace, automotive, medical, as well as many other industries. Due to the critical nature of these industries, it is imperative to understand the relationship between the AM material in question, the nature of the resultant damage, and the impact of these two parameters on the future performance of the component. The purpose of this study is to investigate the relationship between low-velocity impact and the resultant damage in common functional FFF materials and to develop methods of visualizing that damage using ultrasonic nondestructive evaluation. Coupons of a nylon feedstock infused with and without 10% chopped carbon fiber were fabricated using an Essentium HSE printer and impacted at various energies. The extent of the damage was visualized using ultrasonic testing (UT), in which significant internal cracking was observed. Four-point bend testing was utilized to compare behavior of the material prior to impact at a lower impact energy (3J), and a higher impact energy causing visual fracture (7J). X-ray CT was also performed on two samples to validate UT findings.},\n\tdoi = {10.1080/09349847.2024.2375215},\n\tvolume = {35},\n\tnumber = {4},\n\tpages = {197-210},\n\tissn = {0934-9847},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 1 Cited Reference Count: 28 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1080/09349847.2024.2375215"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000047",
+      "entry_type": "article",
+      "title": "Machine Learning Statistical Ultrasonic Non-destructive Prediction for Friction Stir Processed Metal",
+      "authors": [
+        "Durell, L",
+        "Guo, YM",
+        "Garcia, D",
+        "Pole, M",
+        "Wang, TH",
+        "Das, H",
+        "Todd, D",
+        "Ross, K",
+        "Barker, E",
+        "Smith, E",
+        "Kappagantula, K"
+      ],
+      "year": 2026,
+      "journal": "INTEGRATING MATERIALS AND MANUFACTURING INNOVATION",
+      "doi": "10.1007/s40192-025-00438-x",
+      "abstract": "In this investigation, we present a two-step model integrating machine learning and statistical techniques to correlate friction stir processing (FSP) parameters with ultrasonic testing waveforms and grain size. The average grain size is determined through electron microscopy, and the mean absolute voltage of ultrasonic testing waveforms is obtained from non-destructive evaluation of steady-state processed regions. A random forest model is selected to predict mean absolute voltage of the ultrasonic data, and prediction intervals are constructed. The accuracy of the mean absolute voltage prediction model is validated against experimental data, aligning within standard deviations. The predictions are then aggregated and mapped to grain size predictions using a statistical model, incorporating a Bonferroni adjustment to manage uncertainty propagation. This work novelly presents an FSP case study at the intersection of machine learning prediction for ultrasonic non-destructive evaluation with extensions to microstructural feature prediction. This pipeline lays the groundwork for future development of control systems aimed at in-line quality prediction and anomaly detection during friction stir processing, underscoring its potential for enhancing manufacturing processes.",
+      "keywords": [
+        "Friction stir processing",
+        "Machine learning",
+        "Ultrasonic non-destructive evaluation"
+      ],
+      "normalized_title": "machine learning statistical ultrasonic non destructive prediction for friction stir processed metal",
+      "raw_bibtex": "@ARTICLE{10.1007/s40192-025-00438-x,\n\tauthor = {Durell, L and Guo, YM and Garcia, D and Pole, M and Wang, TH and Das, H and Todd, D and Ross, K and Barker, E and Smith, E and Kappagantula, K},\n\ttitle = {Machine Learning Statistical Ultrasonic Non-destructive Prediction for Friction Stir Processed Metal},\n\tjournal = {INTEGRATING MATERIALS AND MANUFACTURING INNOVATION},\n\tyear = {2026},\n\tkeywords = {Friction stir processing; Machine learning; Ultrasonic non-destructive evaluation},\n\tabstract = {In this investigation, we present a two-step model integrating machine learning and statistical techniques to correlate friction stir processing (FSP) parameters with ultrasonic testing waveforms and grain size. The average grain size is determined through electron microscopy, and the mean absolute voltage of ultrasonic testing waveforms is obtained from non-destructive evaluation of steady-state processed regions. A random forest model is selected to predict mean absolute voltage of the ultrasonic data, and prediction intervals are constructed. The accuracy of the mean absolute voltage prediction model is validated against experimental data, aligning within standard deviations. The predictions are then aggregated and mapped to grain size predictions using a statistical model, incorporating a Bonferroni adjustment to manage uncertainty propagation. This work novelly presents an FSP case study at the intersection of machine learning prediction for ultrasonic non-destructive evaluation with extensions to microstructural feature prediction. This pipeline lays the groundwork for future development of control systems aimed at in-line quality prediction and anomaly detection during friction stir processing, underscoring its potential for enhancing manufacturing processes.},\n\tdoi = {10.1007/s40192-025-00438-x},\n\tvolume = {15},\n\tnumber = {1},\n\tpages = {136-147},\n\tissn = {2193-9764},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 28 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s40192-025-00438-x"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000048",
+      "entry_type": "article",
+      "title": "An Ultrasonic Signal Recognition Method for Roll Defects Based on C-GAN and CNN-Attention",
+      "authors": [
+        "Lian, JH",
+        "Zhu, YL",
+        "Chen, W",
+        "Liu, Y",
+        "Yan, XN"
+      ],
+      "year": 2025,
+      "journal": "RUSSIAN JOURNAL OF NONDESTRUCTIVE TESTING",
+      "doi": "10.1134/s1061830924603349",
+      "abstract": "This paper proposes a roll defect recognition method based on C-GAN and CNN-Attention, addressing the challenges of limited data and low recognition accuracy in ultrasonic defect detection for rolls. Initially, an ultrasonic testing experimental system is employed to inspect artificially prepared roll defect samples, leading to the collection of actual defect data. Subsequently, a C-GAN data augmentation model is developed to learn the distribution patterns of various defects, generating high-quality new samples that align with the distribution of each defect type, thereby expanding the training dataset. Utilizing this augmented data, a convolutional neural network defect classification method that incorporates an attention mechanism is designed to further enhance prediction accuracy. By integrating an attention module to assign weights to each feature channel, improved feature representations are achieved, optimizing the learning mechanism of the CNN. The model attains a recognition accuracy of 95.83%, demonstrating the effectiveness of this method in roll defect recognition applications.",
+      "keywords": [
+        "roll",
+        "ultrasonic testing",
+        "data augmentation",
+        "attention mechanism",
+        "defect classification"
+      ],
+      "normalized_title": "an ultrasonic signal recognition method for roll defects based on c gan and cnn attention",
+      "raw_bibtex": "@ARTICLE{10.1134/S1061830924603349,\n\tauthor = {Lian, JH and Zhu, YL and Chen, W and Liu, Y and Yan, XN},\n\ttitle = {An Ultrasonic Signal Recognition Method for Roll Defects Based on C-GAN and CNN-Attention},\n\tjournal = {RUSSIAN JOURNAL OF NONDESTRUCTIVE TESTING},\n\tyear = {2025},\n\tkeywords = {roll; ultrasonic testing; data augmentation; attention mechanism; defect classification},\n\tabstract = {This paper proposes a roll defect recognition method based on C-GAN and CNN-Attention, addressing the challenges of limited data and low recognition accuracy in ultrasonic defect detection for rolls. Initially, an ultrasonic testing experimental system is employed to inspect artificially prepared roll defect samples, leading to the collection of actual defect data. Subsequently, a C-GAN data augmentation model is developed to learn the distribution patterns of various defects, generating high-quality new samples that align with the distribution of each defect type, thereby expanding the training dataset. Utilizing this augmented data, a convolutional neural network defect classification method that incorporates an attention mechanism is designed to further enhance prediction accuracy. By integrating an attention module to assign weights to each feature channel, improved feature representations are achieved, optimizing the learning mechanism of the CNN. The model attains a recognition accuracy of 95.83%, demonstrating the effectiveness of this method in roll defect recognition applications.},\n\tdoi = {10.1134/S1061830924603349},\n\tvolume = {61},\n\tnumber = {2},\n\tpages = {197-208},\n\tissn = {1061-8309},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 21 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1134/S1061830924603349"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000049",
+      "entry_type": "article",
+      "title": "Explainable Machine Learning for Bubble Leakage Detection at Tube Array Surfaces in Pool",
+      "authors": [
+        "Ota, Y",
+        "Nukaga, S",
+        "Kanda, Y",
+        "Furuya, M"
+      ],
+      "year": 2025,
+      "journal": "APPLIED SCIENCES-BASEL",
+      "doi": "10.3390/app152312587",
+      "abstract": "Early detection of bubble generation from tube arrays in systems such as fast reactor steam generators, Pressurized Water Reactor (PWR) cores, and Liquefied Natural Gas (LNG) regasification units is critical for safety. While various methods have been proposed, they face challenges such as high spatial resolution requirements, rapid response times, and varying strengths and weaknesses, suggesting the need for a combined approach. This study integrates ultrasonic testing (UT) with Machine Learning (ML) to identify the presence, location, and direction of bubbles within a complex tube array that cause signal attenuation. A Convolutional Neural Network (CNN) successfully achieved 100% identification accuracy. Furthermore, a method was developed that uses an autoencoder as a feature extractor, combined with a One-Class Support Vector Machine (SVM) and k-means. This approach achieved high accuracy and a correct decision basis. It also demonstrated strong generalization, successfully detecting anomalies without requiring labels for anomalous data, enabling robust bubble identification.",
+      "keywords": [
+        "bubble detection",
+        "ultrasonic testing",
+        "CNN",
+        "Grad-CAM method",
+        "autoencoder",
+        "K-means",
+        "LIME method",
+        "one class SVM",
+        "STEAM-GENERATORS",
+        "SODIUM",
+        "WATER",
+        "SUPPORT"
+      ],
+      "normalized_title": "explainable machine learning for bubble leakage detection at tube array surfaces in pool",
+      "raw_bibtex": "@ARTICLE{10.3390/app152312587,\n\tauthor = {Ota, Y and Nukaga, S and Kanda, Y and Furuya, M},\n\ttitle = {Explainable Machine Learning for Bubble Leakage Detection at Tube Array Surfaces in Pool},\n\tjournal = {APPLIED SCIENCES-BASEL},\n\tyear = {2025},\n\tkeywords = {bubble detection; ultrasonic testing; CNN; Grad-CAM method; autoencoder; K-means; LIME method; one class SVM; STEAM-GENERATORS; SODIUM; WATER; SUPPORT},\n\tabstract = {Early detection of bubble generation from tube arrays in systems such as fast reactor steam generators, Pressurized Water Reactor (PWR) cores, and Liquefied Natural Gas (LNG) regasification units is critical for safety. While various methods have been proposed, they face challenges such as high spatial resolution requirements, rapid response times, and varying strengths and weaknesses, suggesting the need for a combined approach. This study integrates ultrasonic testing (UT) with Machine Learning (ML) to identify the presence, location, and direction of bubbles within a complex tube array that cause signal attenuation. A Convolutional Neural Network (CNN) successfully achieved 100% identification accuracy. Furthermore, a method was developed that uses an autoencoder as a feature extractor, combined with a One-Class Support Vector Machine (SVM) and k-means. This approach achieved high accuracy and a correct decision basis. It also demonstrated strong generalization, successfully detecting anomalies without requiring labels for anomalous data, enabling robust bubble identification.},\n\tdoi = {10.3390/app152312587},\n\tvolume = {15},\n\tnumber = {23},\n\tissn = {2076-3417},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 53 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/app152312587"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000050",
+      "entry_type": "article",
+      "title": "Development of deep learning-based error detection model for repeated measurement data of pipe wall-thinning in nuclear secondary system",
+      "authors": [
+        "Im, JS",
+        "Lee, S",
+        "Oh, YJ",
+        "Yun, H"
+      ],
+      "year": 2026,
+      "journal": "NUCLEAR ENGINEERING AND TECHNOLOGY",
+      "doi": "10.1016/j.net.2025.104089",
+      "abstract": "A practical deep learning (DL)-based technique is presented to automatically detect human and measurement errors in repeated ultrasonic testing (UT) measurement data used for pipe wall-thinning evaluation in nuclear power plants. In Korean plants, repeated UT data are stored as two-dimensional matrices in CHECWORKS program and are used for wear evaluation methods. However, various error patterns are frequently embedded in the data, and manual review is rarely performed due to the large data volume and limited program functionality. In this study, UT data collected from Korean nuclear power plants were labeled for error and used to train DL models. A Deep Neural Network (DNN) and Convolutional Neural Networks (CNNs) were developed and comparatively evaluated. The best-performing CNN models achieved F1-scores exceeding 97 %, demonstrating high reliability in error detection. When the detected erroneous data were removed prior to wear evaluation, UT data became better aligned and negative wear-rate artifacts were eliminated, leading to more stable and realistic wear trends. The proposed technique is being prepared for integration into ToSPACE program, providing a practical tool to enhance the reliability of UT data and to support field maintenance decision-making.",
+      "keywords": [
+        "Pipe wall-thinning",
+        "Ultrasonic testing",
+        "Repeated measurement",
+        "Deep learning",
+        "Image-based classification",
+        "Error detection"
+      ],
+      "normalized_title": "development of deep learning based error detection model for repeated measurement data of pipe wall thinning in nuclear secondary system",
+      "raw_bibtex": "@ARTICLE{10.1016/j.net.2025.104089,\n\tauthor = {Im, JS and Lee, S and Oh, YJ and Yun, H},\n\ttitle = {Development of deep learning-based error detection model for repeated measurement data of pipe wall-thinning in nuclear secondary system},\n\tjournal = {NUCLEAR ENGINEERING AND TECHNOLOGY},\n\tyear = {2026},\n\tkeywords = {Pipe wall-thinning; Ultrasonic testing; Repeated measurement; Deep learning; Image-based classification; Error detection},\n\tabstract = {A practical deep learning (DL)-based technique is presented to automatically detect human and measurement errors in repeated ultrasonic testing (UT) measurement data used for pipe wall-thinning evaluation in nuclear power plants. In Korean plants, repeated UT data are stored as two-dimensional matrices in CHECWORKS program and are used for wear evaluation methods. However, various error patterns are frequently embedded in the data, and manual review is rarely performed due to the large data volume and limited program functionality. In this study, UT data collected from Korean nuclear power plants were labeled for error and used to train DL models. A Deep Neural Network (DNN) and Convolutional Neural Networks (CNNs) were developed and comparatively evaluated. The best-performing CNN models achieved F1-scores exceeding 97 %, demonstrating high reliability in error detection. When the detected erroneous data were removed prior to wear evaluation, UT data became better aligned and negative wear-rate artifacts were eliminated, leading to more stable and realistic wear trends. The proposed technique is being prepared for integration into ToSPACE program, providing a practical tool to enhance the reliability of UT data and to support field maintenance decision-making.},\n\tdoi = {10.1016/j.net.2025.104089},\n\tvolume = {58},\n\tnumber = {4},\n\tissn = {1738-5733},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 9 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.net.2025.104089"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

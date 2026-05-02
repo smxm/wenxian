@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0001",
+    "results": [
+        {
+            "paper_id": "paper_000001",
+            "decision": "exclude",
+            "reason": "标题和摘要仅涉及Akkermansia对母乳寡糖的利用机制，未提及乳制品基质或发酵工艺。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000002",
+            "decision": "exclude",
+            "reason": "摘要显示为纯临床研究，探讨巴氏灭活AKK对肌肉功能的影响，未涉及乳制品或发酵工艺。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000003",
+            "decision": "uncertain",
+            "reason": "摘要提到酪蛋白饮食和AKK灌胃，但研究重点为结肠炎恢复机制，是否涉及乳制品应用不够明确。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000004",
+            "decision": "include",
+            "reason": "标题和摘要明确研究牛奶对db/db小鼠的影响，并发现Akkermansia属增加，涉及乳制品基质。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000005",
+            "decision": "exclude",
+            "reason": "摘要比较植物基与乳基婴儿配方，但仅提及AKK作为菌群组成之一，未专门研究AKK在乳制品中的应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.75
+        },
+        {
+            "paper_id": "paper_000006",
+            "decision": "exclude",
+            "reason": "标题和摘要研究氨基酸配方补充母乳寡糖，未涉及AKK或下一代益生菌。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000007",
+            "decision": "exclude",
+            "reason": "摘要探讨地中海饮食脂肪对结肠炎的影响，仅提及AKK作为菌群指标，未涉及乳制品或发酵工艺。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000008",
+            "decision": "include",
+            "reason": "标题和摘要研究人、山羊、牛乳脂肪球对菌群的影响，明确提到Akkermansia，涉及乳制品基质。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000009",
+            "decision": "exclude",
+            "reason": "标题和摘要研究豆奶酸奶对认知功能的影响，仅提及AKK作为菌群组成，未专门针对AKK在乳制品中的应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.75
+        },
+        {
+            "paper_id": "paper_000010",
+            "decision": "exclude",
+            "reason": "摘要探讨菌群与健康指标的关联，仅提及发酵乳制品与乳酸菌相关，未涉及AKK或下一代益生菌。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        }
+    ]
+}

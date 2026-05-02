@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0008",
+    "results": [
+        {
+            "paper_id": "paper_000071",
+            "decision": "include",
+            "reason": "标题和摘要明确研究对象为老年慢性病患者，使用单导联可穿戴心电设备作为互联网+载体，研究心血管疾病风险管理属于护理干预范畴。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000072",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究对象为老年多重慢病患者，但未提及任何互联网+技术载体，仅使用传统统计分析方法。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000073",
+            "decision": "exclude",
+            "reason": "标题和摘要研究对象为农村居民，未明确限定为老年人慢性病患者，且未提及互联网+技术载体，主要关注健康素养调查和预测。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000074",
+            "decision": "uncertain",
+            "reason": "标题和摘要研究对象为老年人，涉及智慧健康养老服务需求，但未明确限定为慢性病患者，且未详细说明具体的互联网+护理干预措施和结局指标。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000075",
+            "decision": "include",
+            "reason": "标题和摘要明确研究对象为社区老年慢性病患者，使用智能药盒作为移动医疗应用技术，研究使用体验属于护理干预范畴。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000076",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究对象为社区老年慢性病患者，但研究内容为量表汉化和信效度检验，未提及任何互联网+技术载体或护理干预措施。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.82
+        },
+        {
+            "paper_id": "paper_000077",
+            "decision": "exclude",
+            "reason": "标题和摘要研究对象为小鼠模型，属于基础医学研究，未涉及老年人、慢性病或互联网+护理干预。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000078",
+            "decision": "exclude",
+            "reason": "标题和摘要研究对象为老年2型糖尿病合并心血管疾病患者，但内容为多重用药管理规范，属于纯医学治疗研究，未提及互联网+技术或护理干预。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000079",
+            "decision": "exclude",
+            "reason": "标题和摘要研究对象为老年COVID-19患者，COVID-19属于急性传染病而非慢性病，且未提及互联网+技术载体。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000080",
+            "decision": "uncertain",
+            "reason": "标题和摘要涉及智慧护理在老年护理中的应用，但未明确限定为慢性病患者，且为综述性文章，缺乏具体的护理干预措施和结局指标信息。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.5
+        }
+    ]
+}

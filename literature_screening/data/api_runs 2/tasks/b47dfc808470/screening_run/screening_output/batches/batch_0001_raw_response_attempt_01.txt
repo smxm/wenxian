@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0001",
+    "results": [
+        {
+            "paper_id": "paper_000001",
+            "decision": "include",
+            "reason": "标题和摘要明确显示研究对象为肺炎克雷伯氏菌，核心围绕甘油代谢产物1,3-丙二醇的高效生产，并详细描述了多种代谢工程改造手段以提高产量。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000002",
+            "decision": "exclude",
+            "reason": "研究对象为鼠伤寒沙门氏菌，与克雷伯氏菌无关，且研究内容围绕木糖酸盐利用的转录调控，未涉及甘油代谢途径。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000003",
+            "decision": "include",
+            "reason": "标题和摘要明确显示研究对象为肺炎克雷伯氏菌，研究内容为通过强化乙醛酸循环和TCA循环以提高甘油生产1,3-丙二醇的产量，涉及基因敲除和过表达等具体改造手段。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000004",
+            "decision": "include",
+            "reason": "标题和摘要明确显示研究对象为肺炎克雷伯氏菌，核心围绕利用甘油生产1,2-丙二醇，并详细描述了关键酶的过表达和发酵工艺优化等具体手段以提高产量。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000005",
+            "decision": "exclude",
+            "reason": "研究对象为恶臭假单胞菌，与克雷伯氏菌无关，且研究内容为利用甘油生产中链聚羟基脂肪酸酯，未涉及甘油途径的C3-C5二醇代谢工程。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000006",
+            "decision": "exclude",
+            "reason": "摘要表明该文献为关于C3-C5二醇微生物合成的综述，缺乏针对克雷伯氏菌甘油途径的具体改造数据或实质性优化内容。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000007",
+            "decision": "uncertain",
+            "reason": "标题和摘要显示研究对象为肺炎克雷伯氏菌，并利用粗甘油生产生物氢，过程中产生1,3-丙二醇等代谢物，但核心是产氢而非针对甘油途径二醇产物的代谢工程改造，信息不足以明确判断是否满足纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000008",
+            "decision": "include",
+            "reason": "标题和摘要明确显示研究对象为肺炎克雷伯氏菌，研究内容为通过阻断副产物合成途径和强化TCA循环以提高1,3-丙二醇产量，涉及基因敲除和过表达等具体改造手段。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.91
+        },
+        {
+            "paper_id": "paper_000009",
+            "decision": "exclude",
+            "reason": "标题和摘要表明该文献为关于非天然宿主生产1-丁醇的综述，未涉及克雷伯氏菌或甘油代谢途径。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.87
+        },
+        {
+            "paper_id": "paper_000010",
+            "decision": "uncertain",
+            "reason": "标题和摘要显示研究利用甘油生产3-羟基丙酸，但研究对象为大肠杆菌，仅使用了来自肺炎克雷伯氏菌的基因，主题相关但信息不足以确认是否满足“涉及克雷伯氏菌”的纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        }
+    ]
+}

@@ -42,6 +42,6 @@
 
 ## Common Verifications
 
-- `docker compose -f /Users/mao/Documents/langchain/docker-compose.local.yml up -d --build`
+- `docker compose -f docker-compose.local.yml up -d --build`
 - `curl http://127.0.0.1:8000/api/health`
 - script compilation or dry-run checks when touching migration helpers

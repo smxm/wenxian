@@ -1,0 +1,170 @@
+# 一、相关文献总体情况
+
+这批文献总体研究了弓网离线电气特性和电弧模型，重点关注Habedank及其衍生模型的应用与改进。主要关注点包括电弧的数学建模、列车速度和环境条件（如气压、冰层）对电弧特性的影响，以及电弧产生的电磁干扰、过电压和对牵引系统的影响。研究分布涵盖了从基础模型开发到特定场景应用的多个方面，为高速铁路和城市轨道交通的弓网系统优化提供了理论支持。
+
+# 二、类型划分
+
+## 电弧建模与仿真
+
+这类文献共同关注弓网电弧的数学模型开发，包括Habedank、Mayr等模型的改进和应用，用于仿真和特性分析。
+
+- Research on the Model and Transient Characteristics of the Pantograph-Catenary Arc in Different Sections of Power Supply Lines
+- Electrical Characterization of Pantograph and Catenary Offline Under Train Operating Conditions Based on Improved Habedank Model and AT Power Supply Network
+- Study on the Influencing Factors of Electrical Characteristics of Articulated Split-Zone Insulator Arc
+- Extended Pantograph–Catenary Arc Modeling and an Analysis of the Vehicular-Grounding Electromagnetic Transients of Electric Multiple Units
+
+## 速度影响研究
+
+这类文献共同探讨列车运行速度对弓网电弧电压、持续时间、功率等特性的影响，以及相关建模和阈值分析。
+
+- An Extended Habedank’s Equation-Based EMTP Model of Pantograph Arcing Considering Pantograph-Catenary Interactions and Train Speeds
+- A pantograph arcing model for electrified railways with different speeds
+- Research on arc length threshold of pantograph-catenary interaction leading to excessive disturbances in traction drive systems
+
+## 环境条件影响
+
+这类文献共同研究高海拔低气压、冰层积累等环境条件对弓网电弧电特性和热特性的影响，为特定场景优化提供依据。
+
+- Influence of Low Air Pressure on Pantograph–Catenary Arc Model
+- Effect of ice coating on thermal characteristics of pantograph-catenary arc and power quality of traction drive system
+- Electrical Characteristics of the Pantograph-Catenary Arc in Urban Rail Transit Under Different Air Pressure Conditions
+
+## 电磁特性与系统影响
+
+这类文献共同关注弓网电弧放电导致的电磁干扰、操作过电压、谐波失真等，分析其对牵引驱动系统电能质量和安全的影响。
+
+- Simulation on Operating Overvoltage of Dropping Pantograph Based on Pantograph–Catenary Arc and Variable Capacitance Model
+- Statistical Study on the Time Characteristics of the Transient EMD Excitation Current from the Pantograph–Catenary Arcing Discharge
+- Study on electric spark discharge between pantograph and catenary in electrified railway
+- Transient Arcing Characteristics of the Pantograph–Catenary System in Electrical Sectioning Overlaps
+
+# 三、逐篇文献总结分析
+
+## An Extended Habedank’s Equation-Based EMTP Model of Pantograph Arcing Considering Pantograph-Catenary Interactions and Train Speeds
+
+总结：
+该文献研究了交流电气化铁路系统中的弓网电弧现象，特别是随着弓网相互作用和列车速度增加时的趋势。采用扩展Habedank方程的电磁暂态程序模型，结合有限元分析，考虑了不同列车速度对电弧的影响。结果表明，该模型能够有效揭示高速铁路系统中电弧的特性和弓网接触问题。
+
+分析：
+该文献提供的扩展Habedank方程模型，为电弧模型研究提供了具体支撑，尤其适合Cassie模型衍生应用。其基于EMTP的建模方法，可直接用于弓网离线电气特性的仿真，支持高速铁路系统设计中动态参数的设置。此外，模型考虑了弓网相互作用和列车速度，为弓网仿真中的机制分析提供了参考价值。
+
+## Simulation on Operating Overvoltage of Dropping Pantograph Based on Pantograph–Catenary Arc and Variable Capacitance Model
+
+总结：
+本文研究了掉落受电弓引起的操作过电压，基于受电弓-接触网电弧和可变电容模型进行仿真。模型考虑了分布式RLC电磁振荡，实现电弧电阻和电容的实时计算，仿真误差小于4.0%。研究发现过电压具有高幅度和高陡度特征，类似于VFTO，且与接触网相位呈正弦关系。
+
+分析：
+该文献的仿真模型结合电弧和可变电容机制，可支撑Cassie衍生模型在弓网离线电气特性中的应用。研究结果揭示了过电压与接触网相位的关系，适用于分析牵引供电系统的过电压形成机制和绝缘协调设计。仿真验证为基于MATLAB的弓网仿真提供了可靠案例，促进系统优化。
+
+## Influence of Low Air Pressure on Pantograph–Catenary Arc Model
+
+总结：
+该文献研究了高海拔低气压环境下弓网电弧的电特性及其建模。通过Mayr电弧模型和Schwarz电弧模型进行建模，并调整耗散功率分析不同海拔下的电弧特性曲线。结果表明，Schwarz模型更适合高海拔弓网电弧建模，电弧电导随海拔增加而下降，熄弧能力同步增强。
+
+分析：
+该文献对于研究弓网电弧模型在高海拔环境下的适用性有直接参考价值，特别是通过比较Mayr和Schwarz模型提供了模型选择依据。结果中的电弧电导和熄弧能力变化规律，可支撑高海拔地区弓网系统参数设计的优化。此外，它对电弧模型在低气压条件下的机制研究提供了实证数据，有助于完善电弧模型的仿真应用。
+
+## Effect of ice coating on thermal characteristics of pantograph-catenary arc and power quality of traction drive system
+
+总结：
+本研究探讨了冰层积累对弓网离线电弧热特性和牵引驱动系统电能质量的影响。通过建立结合弓网动态模型、电弧模型和牵引系统等效模型的综合方法，分析了电弧行为。研究发现，冰层加重会导致电弧增强和系统侵蚀加剧，同时引起过电压和谐波失真，威胁高速铁路安全运行。
+
+分析：
+该文献对弓网离线电弧在冰层条件下的研究，为理解电弧行为在恶劣环境下的表现提供了实证基础。其综合模型方法可支撑电弧模型的开发和应用，尤其是在牵引系统仿真中，帮助评估电能质量影响。结果对高速铁路系统在寒冷地区的安全设计具有参考价值，能指导仿真模型的参数设置和风险预测。
+
+## A pantograph arcing model for electrified railways with different speeds
+
+总结：
+该文献研究了电气化铁路弓网电弧的建模，特别关注列车速度对电弧特性的影响。它提出一个考虑速度影响电弧耗散功率的模型，并建立整体牵引电力系统模型。结果表明速度显著影响电弧电压、持续时间和过零时间，并给出了电弧平均功率与速度的定性关系，模型经现场测试验证。
+
+分析：
+该文献的弓网电弧模型为研究弓网离线电气特性提供了机理分析案例，适合支撑速度影响下电弧行为的机制研究。其建模思路可与Cassie模型结合，用于衍生模型的开发或改进。此外，整体电气模型和验证方法有助于MATLAB弓网仿真系统的设计或优化。
+
+## Research on the Model and Transient Characteristics of the Pantograph-Catenary Arc in Different Sections of Power Supply Lines
+
+总结：
+该文献研究了高速列车运行时弓网离线电弧（PCA）在不同供电线段（常见段和中性段）的模型和瞬态特性。通过分析电压和功耗，建立了基于改进Habedank电弧模型的两个PCA模型，并模拟了不同速度下的高频瞬态电压和电流。研究结果为PCA产生的电磁干扰（EMI）研究提供了理论基础和实验数据。
+
+分析：
+该文献对报告主题具有重要参考价值，因为它详细研究了弓网电弧在不同供电线段的瞬态特性，并建立了基于改进Habedank电弧模型的PCA模型。这为Cassie及其衍生电弧模型在弓网仿真中的应用提供了具体实例和数据支持。此外，其仿真方法和结果可直接用于MATLAB弓网仿真，有助于分析和优化弓网系统的电气设计和电磁干扰防护。
+
+## Electrical Characterization of Pantograph and Catenary Offline Under Train Operating Conditions Based on Improved Habedank Model and AT Power Supply Network
+
+总结：
+该文献研究了高速列车受电弓与接触网离线放电的电气特性，基于改进的Habedank弧模型和全并联AT供电网络进行建模。它分析了列车正常运行及进站出站条件下的电气行为，结果显示离线放电弧电压和机车电压呈现不同趋势，且波形因弧的非线性特性包含大量谐波。该模型提供了一种简单、快速且高精度的建模方法。
+
+分析：
+该文献对Habedank电弧模型的应用扩展了Cassie衍生模型的研究脉络，为弓网离线电气特性建模提供了新思路。其考虑列车操作条件的建模方法，适用于高速铁路系统的电气保护机制和MATLAB仿真设计。结果可用于验证和优化电弧模型参数，支撑离线放电现象的系统分析与应用。
+
+## Study on the Influencing Factors of Electrical Characteristics of Articulated Split-Zone Insulator Arc
+
+总结：
+该文献研究了弓网关节分相绝缘子电弧电气特性的影响因素。基于Habedank黑盒电弧模型建立了数值模拟模型，并验证了其有效性。通过仿真实验分析了运行参数对电弧特性的影响，并使用熵权法量化了参数对电弧持续时间的影响强度。
+
+分析：
+该文献的电弧建模方法为报告主题中的电弧模型研究提供了具体案例，特别是Habedank模型在弓网仿真中的应用。其仿真实验和分析结果支撑MATLAB弓网仿真的参数设置和验证过程。此外，使用熵权法量化影响强度，有助于系统设计中的优化和风险控制。
+
+## Research on arc length threshold of pantograph-catenary interaction leading to excessive disturbances in traction drive systems
+
+总结：
+本研究通过构建自耦变压器牵引网络等效阻抗模型和Habedank电弧模型，分析了弓网电弧在不同列车速度下对牵引系统输入电压和整流器侧直流电压的影响。基于模拟与实验对比验证，确定了可接受的电弧长度阈值随速度变化的规律。结果表明，速度增加导致阈值降低，揭示了牵引变换器对电压扰动的敏感性增强。
+
+分析：
+该文献对当前报告主题的参考价值在于，其Habedank电弧模型与Cassie衍生模型相关，适用于电弧建模的机制研究。其弓网仿真方法和验证流程为MATLAB平台上的弓网电气特性仿真提供技术支撑。结果可用于优化高速列车牵引系统设计，特别是在电压稳定性应用场景中提供阈值依据。
+
+## Statistical Study on the Time Characteristics of the Transient EMD Excitation Current from the Pantograph–Catenary Arcing Discharge
+
+总结：
+本研究统计分析了弓网-接触线电弧放电产生的瞬态电磁干扰激励电流的时间特性。通过实验室测量收集大量样本，采用Kolmogorov-Smirnov测试等统计方法，建立了基于修改双指数函数的随机模型。该模型能生成不同严重程度的电流波形，验证后有助于重现弓网电弧的电磁环境。
+
+分析：
+该文献为弓网离线电气特性提供了统计模型，适用于电弧随机特性的建模，支撑Cassie衍生模型的完善。生成的电流波形可直接应用于MATLAB弓网仿真，模拟电磁干扰场景，增强仿真真实性和电磁安全分析。
+
+## Study on electric spark discharge between pantograph and catenary in electrified railway
+
+总结：
+文献研究了电力铁路中弓网电火花放电现象，基于经典电气接触理论分析接触点及温度上升，揭示火花机制并建立模型。计算了不同参数下的火花率并通过实验验证，支持弓网电气接触质量评估。
+
+分析：
+该文献的机制分析和建模适用于弓网离线电气特性研究，对火花放电机制的揭示可支撑电弧模型（如Cassie模型）在电力铁路场景中的应用。通过参数计算和实验验证，为MATLAB弓网仿真提供理论基础和参考数据。
+
+## Transient Arcing Characteristics of the Pantograph–Catenary System in Electrical Sectioning Overlaps
+
+总结：
+本研究探讨了弓网系统在电气分段重叠区域中瞬态电弧的形成机制和电气演化特性。通过理论分析与数值模拟，建立了多物理场耦合模型来模拟电弧的瞬态行为。结果表明，电流密度在初始电弧阶段高度集中，形成轴对称导电通道，并因几何不连续性导致强局部电场和电弧根迁移。
+
+分析：
+该文献对于弓网离线电气特性研究提供了电弧机制的实证分析，适合支撑Cassie及其衍生模型的验证和应用场景。其多物理场耦合方法和有限元模拟结果可用于优化弓网系统设计中的电弧控制策略。这些发现有助于改进MATLAB弓网仿真中的参数设置和稳定性评估。
+
+## Electrical Characteristics of the Pantograph-Catenary Arc in Urban Rail Transit Under Different Air Pressure Conditions
+
+总结：
+本研究探讨了城市轨道交通弓网电弧在不同气压条件下的电气特性，基于磁流体动力学理论建立了等离子体数学模型，并利用COMSOL Multiphysics进行多物理场仿真。结果显示气压降低导致电弧电压特性变化，如电势下降和电流密度减小，为高海拔地区弓网系统优化提供理论支持。
+
+分析：
+该文献对电弧模型研究具有参考价值，尤其支持Cassie模型及其衍生模型在高海拔环境下的验证和应用。它通过仿真方法展示了弓网系统在极端气压条件下的电气行为，适用于系统设计优化和机制分析，有助于城市轨道交通可持续发展的研究脉络。
+
+## Extended Pantograph–Catenary Arc Modeling and an Analysis of the Vehicular-Grounding Electromagnetic Transients of Electric Multiple Units
+
+总结：
+本研究扩展了弓网离线电弧建模，用于分析高速铁路动车组的车体-接地电磁瞬变。基于链式电弧模型，分析了电弧长度动态特性与离线距离的关系，并提出了电弧建模方案以模拟各种电弧场景。研究探讨了电弧熄灭、重燃及多离线情况下的瞬态过电压，并考虑了电弧长度特性、相位角等影响参数。
+
+分析：
+该文献为报告主题中的弓网离线电气特性研究提供了具体的电弧建模方法，支持Cassie及其衍生模型的机理分析。其电弧动态特性建模和瞬态分析结果适用于动车组电气系统设计或MATLAB弓网仿真模型的开发。通过涵盖多离线影响和参数敏感性，有助于构建更准确的仿真环境，支撑电弧模型在高速铁路应用中的研究脉络。
+
+# 参考列表
+
+[1] Wang, Ying, Liu, Zhi Gang, Mu, Xiu Qing, et al. An Extended Habedank’s Equation-Based EMTP Model of Pantograph Arcing Considering Pantograph-Catenary Interactions and Train Speeds[J]. IEEE Transactions on Power Delivery, 2016.
+[2] Jiang, Da Zuo, Zou, Huan Qing, Guo, Yi Ke, et al. Simulation on Operating Overvoltage of Dropping Pantograph Based on Pantograph–Catenary Arc and Variable Capacitance Model[J]. Applied Sciences, 2024.
+[3] Zou, Dan Dan, Xin Xia, Zi, Tian Xu, Guang, et al. Influence of Low Air Pressure on Pantograph–Catenary Arc Model[J]. IEEE Transactions on Plasma Science, 2025.
+[4] Huang, Gui Zao, Ma, Tong Xin, Liu, Yu Xin, et al. Effect of ice coating on thermal characteristics of pantograph-catenary arc and power quality of traction drive system[J]. Electric Power Systems Research, 2026.
+[5] Gao, Guo Qiang, Zhang, Ting Ting, Wei, Wen Fu, et al. A pantograph arcing model for electrified railways with different speeds[J]. Proceedings of the Institution of Mechanical Engineers, Part F: Journal of Rail and Rapid Transit, 2018.
+[6] Tang, Yu Tao, Li, Fei, Zhou, Chao, et al. Research on the Model and Transient Characteristics of the Pantograph-Catenary Arc in Different Sections of Power Supply Lines[J]. The Applied Computational Electromagnetics Society Journal (ACES), 2023.
+[7] Pan, Li Ke, Wang, Hong Chi, Yu, Zhi Qiang, et al. Electrical Characterization of Pantograph and Catenary Offline Under Train Operating Conditions Based on Improved Habedank Model and AT Power Supply Network[J]. IEEE Access, 2024.
+[8] Pan, Li Ke, Xie, Biao Huan, Chen, Li Ming, et al. Study on the Influencing Factors of Electrical Characteristics of Articulated Split-Zone Insulator Arc[J]. Energies, 2024.
+[9] Chen, Ji En, Wang, Xiao Kang, Song, Yang. Research on arc length threshold of pantograph-catenary interaction leading to excessive disturbances in traction drive systems[J]. Complex Engineering Systems, 2026.
+[10] Jin, Meng Zhe, Wang, Shao Qian, Liu, Shang He, et al. Statistical Study on the Time Characteristics of the Transient EMD Excitation Current from the Pantograph–Catenary Arcing Discharge[J]. Electronics, 2023.
+[11] Zhou, Hong Yi, Duan, Fu Chuan, Liu, Zhi Gang, et al. Study on electric spark discharge between pantograph and catenary in electrified railway[J]. IET Electrical Systems in Transportation, 2022.
+[12] Pan, Li Ke, Wang, Xiao Kang, Yuan, Yuan, et al. Transient Arcing Characteristics of the Pantograph–Catenary System in Electrical Sectioning Overlaps[J]. Infrastructures, 2026.
+[13] Yu, Xiao Ying, Song, Li Ying, Su, Yang, et al. Electrical Characteristics of the Pantograph-Catenary Arc in Urban Rail Transit Under Different Air Pressure Conditions[J]. Sustainability, 2025.
+[14] Huang, Ke, Su, Dong Dong. Extended Pantograph–Catenary Arc Modeling and an Analysis of the Vehicular-Grounding Electromagnetic Transients of Electric Multiple Units[J]. Energies, 2024.

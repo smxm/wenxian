@@ -1,0 +1,192 @@
+{
+  "id": "60790b0ec1e1",
+  "kind": "screening",
+  "status": "succeeded",
+  "cancel_requested": false,
+  "title": "new-screening-run",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 1,
+  "progress_total": 1,
+  "progress_message": "Task completed",
+  "created_at": "2026-04-07T23:08:11.253213+08:00",
+  "updated_at": "2026-04-07T23:08:26.098199+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "29d005d21e2c",
+    "project_topic": "理工科（STEM）学术写作中模糊语（Hedging / Vague Language）的使用及语用分析",
+    "model_provider": "deepseek",
+    "parent_task_id": null,
+    "input_dataset_ids": [],
+    "request_payload": {
+      "title": "new-screening-run",
+      "topic": "理工科（STEM）学术写作中模糊语（Hedging / Vague Language）的使用及语用分析",
+      "criteria_markdown": "# Role\r\n\r\n你是一位专门用途英语（ESP）和学术话语分析领域的资深学术研究员，正在协助我筛选参考文献。我正在撰写一篇关于【理工科（STEM）学术写作中模糊语（Hedging / Vague Language）的使用及语用分析】的论文，我需要你帮我找出我能用到的参考文献。\r\n\r\n# Task\r\n\r\n我将提供一批文献的元数据（标题、摘要等）。请你逐一阅读，并严格按照以下流程处理：\r\n\r\n## Step 1: 筛选判读\r\n\r\n请根据以下标准判断该文献是否符合我的研究需求：\r\n\r\n* 纳入标准 (Inclusion Criteria)：必须探讨学术写作、科技语篇或理工科（含医学、工程等硬学科）背景下的模糊语（hedging, vague language, epistemic modality 等）现象；包含语用功能分析、基于语料库的对比（如中外学者对比、学科对比）或科技文本翻译中的模糊语处理。\r\n* 排除标准 (Exclusion Criteria)：严格排除金融和经济领域的“对冲（hedging）”；严格排除数学、计算机算法和控制系统中的“模糊逻辑/模糊控制（fuzzy logic/fuzzy control）”；排除非学术语境（如日常会话、小说、新闻）的分析。\r\n\r\n## Step 2: 格式化输出\r\n\r\n根据判读结果，执行不同的输出逻辑(输出在markdown代码框内，绝对不要使用任何来源标记或引用功能)：\r\n\r\n情况 A：如果不符合要求\r\n\r\n* 仅输出一行文字：\r\n  `❌ [剔除]：<文献完整标题>`\r\n\r\n情况 B：如果符合要求\r\n\r\n* 请按以下结构输出（不要使用任何来源引用功能，只输出文字）：\r\n\r\n# <文献完整标题>\r\n(<如果是英文文献，请在此处提供中文翻译标题>)\r\n\r\n核心总结\r\n(请用中文概括文章解决了什么问题，使用了什么核心技术/方法/语料库，得出了什么主要结论。)\r\n\r\n深度分析\r\n* 参考价值：针对我的论文主题（理工科学术写作中的模糊语使用），这篇文章提供了哪些具体的素材？（例如：提供了特定的分类理论框架、给出了典型的科技英语例句、提供了中外学者对比的数据支撑等）\r\n\r\n---\r\n\r\n# Input Data\r\n\r\n[在此处粘贴你导出的文献信息，可以是 BibTeX 格式，或者 Excel/CSV 中的标题+摘要文本]",
+      "inclusion": [
+        "必须探讨学术写作、科技语篇或理工科 含医学、工程等硬学科 背景下的模糊语 hedging, vague language, epistemic modality 等 现象",
+        "包含语用功能分析、基于语料库的对比 如中外学者对比、学科对比 或科技文本翻译中的模糊语处理。"
+      ],
+      "exclusion": [
+        "严格排除金融和经济领域的“对冲 hedging ”",
+        "严格排除数学、计算机算法和控制系统中的“模糊逻辑/模糊控制 fuzzy logic/fuzzy control ”",
+        "排除非学术语境 如日常会话、小说、新闻 的分析。"
+      ],
+      "provider": "deepseek",
+      "model_name": "deepseek-chat",
+      "api_base_url": "https://api.deepseek.com/v1",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.0,
+      "max_tokens": 1536,
+      "min_request_interval_seconds": 2.0,
+      "batch_size": 10,
+      "target_include_count": 30,
+      "stop_when_target_reached": false,
+      "allow_uncertain": true,
+      "retry_times": 6,
+      "request_timeout_seconds": 240,
+      "encoding": "auto",
+      "project_id": "29d005d21e2c",
+      "parent_task_id": null,
+      "source_dataset_ids": []
+    },
+    "model_secret_id": "94e9a12a5395425f",
+    "uploaded_input_paths": [
+      "tasks/60790b0ec1e1/uploads/CNKI-20260407230752254.enw"
+    ]
+  },
+  "summary": {
+    "run_id": "run_20260407_230811",
+    "input_files_count": 1,
+    "raw_entries_count": 6,
+    "deduped_entries_count": 6,
+    "processed_count": 6,
+    "included_count": 4,
+    "excluded_count": 2,
+    "uncertain_count": 0,
+    "unused_count": 0,
+    "batch_count": 1,
+    "api_call_count": 1,
+    "stop_reason": "all_records_processed",
+    "started_at": "2026-04-07T23:08:11.286551+08:00",
+    "finished_at": "2026-04-07T23:08:26.003990+08:00"
+  },
+  "error": null,
+  "artifacts": {
+    "included_report": {
+      "path": "tasks/60790b0ec1e1/screening_run/screening_output/included_report.md",
+      "filename": "included_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 1650
+    },
+    "excluded_report": {
+      "path": "tasks/60790b0ec1e1/screening_run/screening_output/excluded_report.md",
+      "filename": "excluded_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 683
+    },
+    "included_ris": {
+      "path": "tasks/60790b0ec1e1/screening_run/screening_output/included.ris",
+      "filename": "included.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 4565
+    },
+    "unused_ris": {
+      "path": "tasks/60790b0ec1e1/screening_run/screening_output/unused_remaining.ris",
+      "filename": "unused_remaining.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 0
+    },
+    "run_summary": {
+      "path": "tasks/60790b0ec1e1/screening_run/screening_output/run_summary.json",
+      "filename": "run_summary.json",
+      "content_type": "application/json",
+      "size_bytes": 439
+    },
+    "screening_decisions": {
+      "path": "tasks/60790b0ec1e1/screening_run/screening_output/screening_decisions.json",
+      "filename": "screening_decisions.json",
+      "content_type": "application/json",
+      "size_bytes": 3140
+    }
+  },
+  "run_root": "tasks/60790b0ec1e1/screening_run",
+  "output_dir": "tasks/60790b0ec1e1/screening_run/screening_output",
+  "markdown_preview": null,
+  "records": [
+    {
+      "paper_id": "paper_000001",
+      "title": "科普演讲中模糊限制语的语用功能分析",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "研究对象为科普演讲，属于非学术语境，不符合纳入标准中学术写作或科技语篇的要求。",
+      "year": 2023,
+      "journal": "外文研究",
+      "doi": null,
+      "abstract": "从研究对象看,以往关于模糊限制语的研究都集中在书面话语,本研究集中探讨演讲话语中模糊限制语的使用情况。从研究内容看,关于模糊限制语的论文主要集中在两大领域:首先,有关命题确定性的问题;其次,与语言的交互或人际方面有关的问题,特别是礼貌问题。由于在模糊限制语的特征中,确定性和不确定性的概念占据中心位置,所以模态(modality)概念在本文的讨论中受到了相当大的关注。本研究的目的是探究模糊限制语在科普演讲中的认知功能、交际功能和文本功能。通过案例分析,本文结合韩礼德系统功能语法的三大元功能展开讨论,作者指出了模糊限制策略的使用情况,并结合语境探究其语用功能。作者认为模糊限制语在很大程度上拉近了说话人和听话人之间的距离,在语用层面增加了命题的可信度,因此模糊限制语的使用有利于科普文本的交流。本文的研究意义在于:一方面,作者通过对TED Talk中的演讲文本进行话语分析,讨论了模糊限制语在科普演讲中是如何表达演讲者对命题的不确定性及信息的模糊性,从而降低对命题的贡献(commitment)。另一方面,在实践意义上,通过对模糊限制语的分析,作者归纳如何提高沟通技巧的几个模糊限制策略,从而实现更好地交流。"
+    },
+    {
+      "paper_id": "paper_000002",
+      "title": "中外医学期刊英文摘要作者立场标记语对比研究",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确分析医学期刊英文摘要中的模糊语，包含中外对比和语用功能分析，符合纳入标准。",
+      "year": 2022,
+      "journal": "中国医药导报",
+      "doi": "10.20047/j.issn1673-7210.2022.02.002",
+      "abstract": "目的 分析中外医学期刊作者立场标记语的使用特征和学术语篇功能。方法 从中国知网、科学引文索引数据库分别随机选取影响因子较高的中外医学期刊,从中摘取发表于2018—2019年论文的英文摘要,建立国内医学期刊英文摘要语料库和国际医学期刊英文摘要语料库,利用Ant Conc 3.5.8软件检索立场标记语在两个语料库中出现的频次,对比分析立场标记语在两个语料库的使用差异。结果 国际期刊的模糊语、增强语、态度标记语、自我指称语使用频次高于国内期刊(P <0.05);国际期刊模糊语中动词、副词、形容词的使用频次高于国内期刊,增强语中名词的使用频次高于国内期刊,态度标记语中态度动词、形容词的使用频次高于国内期刊,自我指称中“we”“our”的使用频次高于国内期刊(P <0.05);国际期刊作者立场标记语选词相对多样化,国内期刊较固化单一。结论 我国医学科研工作者能够合理使用立场标记语来建构自己的学术立场和学术身份,增强与读者之间的语篇互动,从而提升学术话语权并向世界传递中国医学声音。"
+    },
+    {
+      "paper_id": "paper_000003",
+      "title": "中外材料类期刊论文英文摘要中模糊限制语的对比分析",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要显示对比分析材料类期刊英文摘要中的模糊限制语，包含中外对比和语用分析，符合纳入标准。",
+      "year": 2021,
+      "journal": "华北理工大学学报(社会科学版)",
+      "doi": null,
+      "abstract": "文章旨在对比分析中外材料类期刊论文英文摘要中模糊限制语的使用特征,推动中国科技期刊英文摘要语言国际化、规范化,提升中国科技期刊国际影响力。选取中国科技期刊《材料工程》和国际期刊Advanced Materials英文摘要,构建两个小型语料库,使用语料库检索工具AntConc3.5.8对摘要各语步中的模糊限制语进行检索统计。结果显示,中外材料类期刊论文英文摘要中模糊限制语使用特征存在较大差距,中国期刊论文英文摘要模糊限制语使用频率低于国外期刊论文,存在过度使用某一类模糊限制语、过少使用某一类模糊限制语的现象;在英文摘要背景、结果、结论语步中模糊限制语使用方面,中国期刊论文与国际期刊论文也存在显著差异。文章认为,科技工作者应提高模糊限制语使用意识,在期刊论文、特别是英文摘要撰写过程中规范合理使用模糊限制语,提高论文的国际认可度和影响力。期刊编辑部可以通过制定期刊投稿指南、审稿过程关注微观语言特征等引导作者规范使用模糊限制语。"
+    },
+    {
+      "paper_id": "paper_000004",
+      "title": "科技类TED演讲的模糊限制语研究",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "研究对象为科技类TED演讲，属于非学术语境，不符合纳入标准中学术写作或科技语篇的要求。",
+      "year": 2021,
+      "journal": "海外英语",
+      "doi": null,
+      "abstract": "模糊语言是人们日常交际使用的语言之一。模糊限制语作为模糊语言的一部分,也是说话人常用的策略和手段。在科技类TED演讲中,使用严谨、得体的语言是对每一位演讲者的基本要求。演讲者为了减轻义务与责任,有时也会选择模糊限制语来表明观点。文章以Verschueren的顺应论为理论指导,探究TED演讲中模糊限制语的使用频率、顺应物质、社交、心理世界的过程及在科技英语中的功能。研究显示,模糊限制语的相关功能能够帮助演讲者更好地实现演讲目的。"
+    },
+    {
+      "paper_id": "paper_000005",
+      "title": "药学英语学术论文模糊限制语的人际意义研究",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要分析药学英语学术论文中的模糊限制语，探讨人际意义和语用功能，符合纳入标准。",
+      "year": 2021,
+      "journal": "福建师大福清分校学报",
+      "doi": null,
+      "abstract": "基于评价理论框架,采用Antconc软件检索和人工核验的方法,定量分析药学英语学术论文中介入型和极差型模糊限制语频率,定性分析作为不同评价资源模糊限制语的人际意义。研究发现,药学英语论文中介入型模糊限制语多于极差型模糊限制语。药学英语学术论文中,写作者运用不同的评价资源增加或者减少自己态度的介入,表达观点、协商态度并实现人际功能。"
+    },
+    {
+      "paper_id": "paper_000006",
+      "title": "基于语料库的机械工程类学术论文英文摘要中模糊限制语对比研究",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要显示基于语料库对比机械工程类学术论文英文摘要中的模糊限制语，包含中外对比和语用分析，符合纳入标准。",
+      "year": 2021,
+      "journal": "华北理工大学学报(社会科学版)",
+      "doi": null,
+      "abstract": "通过两个自建语料库,对比分析了机械工程类国内硕士学位论文与英语本族语学者撰写的国际核心期刊论文摘要中的模糊限制语。研究结果表明,国内研究生和英语本族语学者在使用模糊限制语的频率及类型上存在显著差异。针对国内机械工程类研究生在学位论文英文摘要写作过程中模糊限制语使用方面存在的问题,提出了相应的建议,以提高研究生学术英语写作过程中灵活使用模糊限制语的能力。"
+    }
+  ],
+  "project_id": "29d005d21e2c",
+  "project_topic": "理工科（STEM）学术写作中模糊语（Hedging / Vague Language）的使用及语用分析",
+  "model_provider": "deepseek",
+  "parent_task_id": null,
+  "input_dataset_ids": [],
+  "output_dataset_ids": [
+    "65225bb9ce7f",
+    "2e3c3486185b"
+  ]
+}

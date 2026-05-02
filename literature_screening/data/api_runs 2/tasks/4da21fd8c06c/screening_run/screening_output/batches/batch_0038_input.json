@@ -1,0 +1,85 @@
+{
+  "batch_id": "batch_0038",
+  "paper_count": 2,
+  "paper_ids": [
+    "paper_000371",
+    "paper_000372"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000371",
+      "entry_type": "article",
+      "title": "Adoption of tomographic analysis and digital volume correlation as a support in calibrating numerical models of cement-based materials",
+      "authors": [
+        "Kaczmarczyk, GP",
+        "Cala, M"
+      ],
+      "year": 2025,
+      "journal": "CONSTRUCTION AND BUILDING MATERIALS",
+      "doi": "10.1016/j.conbuildmat.2025.142369",
+      "abstract": "The article presents an integrated experimental-numerical study of a cement-soil mixture as a composite material of cement and soil, utilizing in-situ X-ray computed tomography (CT) imaging and finite-difference method (FDM) simulations in FLAC3D. Tomographic studies were conducted while compressing the sample inside the tomographic chamber. The process of acquiring tomographic data is described. Tomographic imaging during compression enabled accurate reconstruction of the sample's internal geometry with resolution 10 mu m and in-situ observation of displacements and crack formation with resolution 20 mu m. CT scans were conducted without unloading the specimen. Digital volume correlation (DVC) was applied at multiple subvolume (10-25 voxels) scales to quantify three-dimensional displacement fields throughout loading. The observed influence of pore size and shape on the mixture's strength provides insight into the mechanisms of impermeability under mechanical loading. The authors calibrated the mechanical parameters within the strain range up to twice the strain corresponding to the peak load - an approach that, to the best of our knowledge, has not been commonly addressed in previous studies. The parameters calibrated on one sample were assigned to a second sample, confirming the outcome of the calibration process. The proposed methodology offers insights for crack-resistant design of cement-soil structures such as underground cutoff walls and pile foundations.",
+      "keywords": [
+        "CT",
+        "DVC",
+        "Fracture behaviour",
+        "Cement-soil mixture",
+        "Numerical analysis",
+        "PLASTIC-DAMAGE MODEL",
+        "CONCRETE",
+        "SIMULATION",
+        "STRENGTH",
+        "CRITERIA",
+        "FAILURE"
+      ],
+      "normalized_title": "adoption of tomographic analysis and digital volume correlation as a support in calibrating numerical models of cement based materials",
+      "raw_bibtex": "@ARTICLE{10.1016/j.conbuildmat.2025.142369,\n\tauthor = {Kaczmarczyk, GP and Cala, M},\n\ttitle = {Adoption of tomographic analysis and digital volume correlation as a support in calibrating numerical models of cement-based materials},\n\tjournal = {CONSTRUCTION AND BUILDING MATERIALS},\n\tyear = {2025},\n\tkeywords = {CT; DVC; Fracture behaviour; Cement-soil mixture; Numerical analysis; PLASTIC-DAMAGE MODEL; CONCRETE; SIMULATION; STRENGTH; CRITERIA; FAILURE},\n\tabstract = {The article presents an integrated experimental-numerical study of a cement-soil mixture as a composite material of cement and soil, utilizing in-situ X-ray computed tomography (CT) imaging and finite-difference method (FDM) simulations in FLAC3D. Tomographic studies were conducted while compressing the sample inside the tomographic chamber. The process of acquiring tomographic data is described. Tomographic imaging during compression enabled accurate reconstruction of the sample's internal geometry with resolution 10 mu m and in-situ observation of displacements and crack formation with resolution 20 mu m. CT scans were conducted without unloading the specimen. Digital volume correlation (DVC) was applied at multiple subvolume (10-25 voxels) scales to quantify three-dimensional displacement fields throughout loading. The observed influence of pore size and shape on the mixture's strength provides insight into the mechanisms of impermeability under mechanical loading. The authors calibrated the mechanical parameters within the strain range up to twice the strain corresponding to the peak load - an approach that, to the best of our knowledge, has not been commonly addressed in previous studies. The parameters calibrated on one sample were assigned to a second sample, confirming the outcome of the calibration process. The proposed methodology offers insights for crack-resistant design of cement-soil structures such as underground cutoff walls and pile foundations.},\n\tdoi = {10.1016/j.conbuildmat.2025.142369},\n\tvolume = {489},\n\tissn = {0950-0618},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 43 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (1).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.conbuildmat.2025.142369"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000372",
+      "entry_type": "article",
+      "title": "Defect detection in concrete plates with impulse-response test and statistical pattern recognition",
+      "authors": [
+        "Sajid, S",
+        "Taras, A",
+        "Chouinard, L"
+      ],
+      "year": 2021,
+      "journal": "MECHANICAL SYSTEMS AND SIGNAL PROCESSING",
+      "doi": "10.1016/j.ymssp.2021.107948",
+      "abstract": "Statistical and machine learning analysis of structural health monitoring data is a popular approach for efficient structural level defect detection. However, the application of these techniques to stress-wave methods such as impact-echo and impulse-response data for local level detection has been limited. In this research, statistical pattern recognition in conjunction with the impulse-response test is shown to provide an efficient means for the detection of defects in concrete plates. For this purpose, the Frequency Response Function (FRF) derived from the impulse-response test following ASTM C1740 protocols at specific points on the test plate to define the feature space matrix. Analytical results demonstrate that the variability of the FRF increases in the presence of defects, which forms the physical basis for the proposed pattern recognition algorithm. First, Principal Component Analysis (PCA) is performed on the covariance of the feature space matrix to identify the dominant features of the FRFs and to determine the number of statistically significant factors or principal components. Factor scores are next used to identify locations on the plate that are associated most closely to each pattern. The generalized Extreme Value Studentized (ESD) test and box and whisker plots are applied to the factor score vector of all the test points to objectively identify test points with defects and rank these based on their severity. Two experimental specimens are used to demonstrate the applicability of the proposed detection algorithm. The first specimen, a partially reinforced clamped concrete plate, is used to demonstrate the relationship between the shapes and variability of the FRFs and the severity of defects (delaminations), the efficacy of the factor score as damage sensitive feature, and identification and the ranking of the severity of defects by using outlier statistical tests. The second specimen is used to demonstrate the efficiency of the procedure for detecting both void and honeycomb defects in a larger reinforced concrete plate on elastic supports. The proposed procedure is shown to provide similar levels of detectability as the highly refined yet time consuming ultrasonic shear-wave tomography test. While the impulse-response test has been in use for the condition assessment of concrete elements other than drilled shaft piles since 19800s, defect detection has been based primarily on empirical observations and correlations with limited features of the frequency response function. The use of pattern recognition techniques to the full range of the frequency response function is proposed and shown to greatly improve the detection and characterization of defects. (C) 2021 Elsevier Ltd. All rights reserved.",
+      "keywords": [
+        "Principal component analysis",
+        "Impulse-response test",
+        "Outlier detection",
+        "Plate on elastic foundation",
+        "Frequency response function",
+        "Honeycomb",
+        "TIME-SERIES ANALYSIS",
+        "DAMAGE DETECTION",
+        "VIBRATION DATA",
+        "IDENTIFICATION",
+        "METHODOLOGY",
+        "DIAGNOSIS",
+        "NDT"
+      ],
+      "normalized_title": "defect detection in concrete plates with impulse response test and statistical pattern recognition",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ymssp.2021.107948,\n\tauthor = {Sajid, S and Taras, A and Chouinard, L},\n\ttitle = {Defect detection in concrete plates with impulse-response test and statistical pattern recognition},\n\tjournal = {MECHANICAL SYSTEMS AND SIGNAL PROCESSING},\n\tyear = {2021},\n\tkeywords = {Principal component analysis; Impulse-response test; Outlier detection; Plate on elastic foundation; Frequency response function; Honeycomb; TIME-SERIES ANALYSIS; DAMAGE DETECTION; VIBRATION DATA; IDENTIFICATION; METHODOLOGY; DIAGNOSIS; NDT},\n\tabstract = {Statistical and machine learning analysis of structural health monitoring data is a popular approach for efficient structural level defect detection. However, the application of these techniques to stress-wave methods such as impact-echo and impulse-response data for local level detection has been limited. In this research, statistical pattern recognition in conjunction with the impulse-response test is shown to provide an efficient means for the detection of defects in concrete plates. For this purpose, the Frequency Response Function (FRF) derived from the impulse-response test following ASTM C1740 protocols at specific points on the test plate to define the feature space matrix. Analytical results demonstrate that the variability of the FRF increases in the presence of defects, which forms the physical basis for the proposed pattern recognition algorithm. First, Principal Component Analysis (PCA) is performed on the covariance of the feature space matrix to identify the dominant features of the FRFs and to determine the number of statistically significant factors or principal components. Factor scores are next used to identify locations on the plate that are associated most closely to each pattern. The generalized Extreme Value Studentized (ESD) test and box and whisker plots are applied to the factor score vector of all the test points to objectively identify test points with defects and rank these based on their severity. Two experimental specimens are used to demonstrate the applicability of the proposed detection algorithm. The first specimen, a partially reinforced clamped concrete plate, is used to demonstrate the relationship between the shapes and variability of the FRFs and the severity of defects (delaminations), the efficacy of the factor score as damage sensitive feature, and identification and the ranking of the severity of defects by using outlier statistical tests. The second specimen is used to demonstrate the efficiency of the procedure for detecting both void and honeycomb defects in a larger reinforced concrete plate on elastic supports. The proposed procedure is shown to provide similar levels of detectability as the highly refined yet time consuming ultrasonic shear-wave tomography test. While the impulse-response test has been in use for the condition assessment of concrete elements other than drilled shaft piles since 19800s, defect detection has been based primarily on empirical observations and correlations with limited features of the frequency response function. The use of pattern recognition techniques to the full range of the frequency response function is proposed and shown to greatly improve the detection and characterization of defects. (C) 2021 Elsevier Ltd. All rights reserved.},\n\tdoi = {10.1016/j.ymssp.2021.107948},\n\tvolume = {161},\n\tissn = {0888-3270},\n\tnote = {Times Cited in Web of Science Core Collection: 20 Total Times Cited: 22 Cited Reference Count: 55 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (1).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ymssp.2021.107948"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

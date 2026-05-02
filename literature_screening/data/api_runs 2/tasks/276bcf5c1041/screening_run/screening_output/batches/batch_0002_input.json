@@ -1,0 +1,284 @@
+{
+  "batch_id": "batch_0002",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000011",
+    "paper_000012",
+    "paper_000013",
+    "paper_000014",
+    "paper_000015",
+    "paper_000016",
+    "paper_000017",
+    "paper_000018",
+    "paper_000019",
+    "paper_000020"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000011",
+      "entry_type": "article",
+      "title": "Sustainable Real-Time Urban Mobility with Attention-Based YOLOv5s and Refined Deep SORT Algorithm",
+      "authors": [
+        "Sherin, B.C.",
+        "Poovammal, E."
+      ],
+      "year": 2026,
+      "journal": "Journal of Electrical Engineering and Technology",
+      "doi": "10.1007/s42835-025-02477-y",
+      "abstract": "The rise of urban traffic has resulted in overcrowding of vehicles and road casualties. Sustainable traffic advancement based on vehicle detection and tracking efficient road mobility solutions for congested roadways. The proposed research incorporates modifications to version 5 of You Only Look Once (YOLOv5) for detection along with the refined Deep Simple Online and Real-time Tracking (Deep SORT) for vehicle tracking. A new multi-type vehicle detection dataset called Vehicle Identification aNd Classification (VINC) is introduced. The structure of the proposed YOLOv5s detection model is enhanced with attention mechanism to small object detection. The length-to-width ratio utilized by the Kalman filtering algorithm is replaced only by width in the vehicle prediction box improving Deep SORT’s state prediction rate. The proposed model achieves a precision, recall, and mAP rate of 97.2%, 92.4%, and 77.2% respectively on the VINC dataset exhibiting equivalent detection accuracy in detecting both small and large vehicles. Our approach achieves a multi-object tracking precision (MOTP) of 88.54% and a multi-object tracking accuracy (MOTA) of 79.32% on the VisDrone dataset. These results demonstrate the proposed system’s ability for precise real-time vehicle monitoring by balancing accuracy and inference time. © The Author(s) under exclusive licence to The Korean Institute of Electrical Engineers 2025.",
+      "keywords": [],
+      "normalized_title": "sustainable real time urban mobility with attention based yolov5s and refined deep sort algorithm",
+      "raw_bibtex": "@ARTICLE{10.1007/s42835-025-02477-y,\n\tauthor = {Sherin, B.C. and Poovammal, E.},\n\ttitle = {Sustainable Real-Time Urban Mobility with Attention-Based YOLOv5s and Refined Deep SORT Algorithm},\n\tjournal = {Journal of Electrical Engineering and Technology},\n\tyear = {2026},\n\tabstract = {The rise of urban traffic has resulted in overcrowding of vehicles and road casualties. Sustainable traffic advancement based on vehicle detection and tracking efficient road mobility solutions for congested roadways. The proposed research incorporates modifications to version 5 of You Only Look Once (YOLOv5) for detection along with the refined Deep Simple Online and Real-time Tracking (Deep SORT) for vehicle tracking. A new multi-type vehicle detection dataset called Vehicle Identification aNd Classification (VINC) is introduced. The structure of the proposed YOLOv5s detection model is enhanced with attention mechanism to small object detection. The length-to-width ratio utilized by the Kalman filtering algorithm is replaced only by width in the vehicle prediction box improving Deep SORT’s state prediction rate. The proposed model achieves a precision, recall, and mAP rate of 97.2%, 92.4%, and 77.2% respectively on the VINC dataset exhibiting equivalent detection accuracy in detecting both small and large vehicles. Our approach achieves a multi-object tracking precision (MOTP) of 88.54% and a multi-object tracking accuracy (MOTA) of 79.32% on the VisDrone dataset. These results demonstrate the proposed system’s ability for precise real-time vehicle monitoring by balancing accuracy and inference time. © The Author(s) under exclusive licence to The Korean Institute of Electrical Engineers 2025.},\n\tdoi = {10.1007/s42835-025-02477-y},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105018021079&doi=10.1007%2Fs42835-025-02477-y&partnerID=40&md5=02743307b3032247e60a33837211c088},\n\tvolume = {21},\n\tnumber = {2},\n\tpages = {1919-1927},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1007/s42835-025-02477-y"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000012",
+      "entry_type": "article",
+      "title": "UAV-based object detection model for smart surveillance using deep neural network",
+      "authors": [
+        "Kumar, G.",
+        "Rawat, S.S.",
+        "Gautam, J.",
+        "Salau, A.O."
+      ],
+      "year": 2026,
+      "journal": "Measurement: Sensors",
+      "doi": "10.1016/j.measen.2025.101982",
+      "abstract": "Unmanned aerial vehicles (UAVs) have become indispensable in both civilian and military domains, enabling applications such as smart surveillance, environmental monitoring, and search-and-rescue operations. However, effective object detection in UAV imagery remains challenging due to the small size of targets, high object density, frequent occlusions, and complex backgrounds resulting from varying altitudes and viewpoints. Existing algorithms, such as You Only Look Once (YOLO) v5, exhibit limited accuracy in detecting targets in UAV images. To address these challenges, this study proposes an enhanced YOLOv5-based detection model. The model incorporates an optimized detection module with three prediction heads for multi-scale bounding box predictions. Additionally, self-attention mechanisms and a Convolutional Block Attention Module (CBAM) are integrated to focus on salient regions and mitigate the impact of occlusions. Furthermore, we introduce a ConvELU layer, which replaces the default SiLU activation with the Exponential Linear Unit (ELU). This modified ConvELU layer is applied to the backbone, neck, and head components, effectively improving the model's feature extraction capabilities. Experimental results of the VisDrone dataset demonstrate that the proposed model achieves a precision of 95.1 %, a recall of 86.3 %, and a mean Average Precision (mAP) of 91.6 %, outperforming the standard YOLOv5 and other state-of-the-art detectors. © 2025 The Authors.",
+      "keywords": [],
+      "normalized_title": "uav based object detection model for smart surveillance using deep neural network",
+      "raw_bibtex": "@ARTICLE{10.1016/j.measen.2025.101982,\n\tauthor = {Kumar, G. and Rawat, S.S. and Gautam, J. and Salau, A.O.},\n\ttitle = {UAV-based object detection model for smart surveillance using deep neural network},\n\tjournal = {Measurement: Sensors},\n\tyear = {2026},\n\tabstract = {Unmanned aerial vehicles (UAVs) have become indispensable in both civilian and military domains, enabling applications such as smart surveillance, environmental monitoring, and search-and-rescue operations. However, effective object detection in UAV imagery remains challenging due to the small size of targets, high object density, frequent occlusions, and complex backgrounds resulting from varying altitudes and viewpoints. Existing algorithms, such as You Only Look Once (YOLO) v5, exhibit limited accuracy in detecting targets in UAV images. To address these challenges, this study proposes an enhanced YOLOv5-based detection model. The model incorporates an optimized detection module with three prediction heads for multi-scale bounding box predictions. Additionally, self-attention mechanisms and a Convolutional Block Attention Module (CBAM) are integrated to focus on salient regions and mitigate the impact of occlusions. Furthermore, we introduce a ConvELU layer, which replaces the default SiLU activation with the Exponential Linear Unit (ELU). This modified ConvELU layer is applied to the backbone, neck, and head components, effectively improving the model's feature extraction capabilities. Experimental results of the VisDrone dataset demonstrate that the proposed model achieves a precision of 95.1 %, a recall of 86.3 %, and a mean Average Precision (mAP) of 91.6 %, outperforming the standard YOLOv5 and other state-of-the-art detectors. © 2025 The Authors.},\n\tdoi = {10.1016/j.measen.2025.101982},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105025957769&doi=10.1016%2Fj.measen.2025.101982&partnerID=40&md5=1bf92a75adf29553fd9b7320b73773fe},\n\tvolume = {43},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.measen.2025.101982"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000013",
+      "entry_type": "article",
+      "title": "CA-YOLO: Cross Attention Empowered YOLO for Biomimetic Localization",
+      "authors": [
+        "Zhang, Z.",
+        "Zhao, Q.",
+        "Li, X.",
+        "Wang, C.",
+        "Zhu, G.",
+        "Zhang, Y.",
+        "Huo, Y.",
+        "Yu, H.",
+        "Zhang, Y."
+      ],
+      "year": 2026,
+      "journal": "IEEE Transactions on Circuits and Systems for Video Technology",
+      "doi": "10.1109/tcsvt.2025.3598306",
+      "abstract": "In modern complex environments, achieving accurate and efficient target localization is essential in numerous fields. However, existing systems often face limitations in both accuracy and the ability to recognize small targets. In this study, we propose a bionic stabilized localization system based on CA-YOLO, designed to enhance both target localization accuracy and small target recognition capabilities. Acting as the 'brain' of the system, the target detection algorithm emulates the visual focusing mechanism of animals by integrating bionic modules into the YOLO backbone network. These modules include the introduction of a small target detection head and the development of a Characteristic Fusion Attention Mechanism (CFAM). Furthermore, drawing inspiration from the human Vestibulo-Ocular Reflex (VOR), a bionic pan-tilt tracking control strategy is developed, which incorporates central positioning, stability optimization, adaptive control coefficient adjustment, and an intelligent recapture function. The experimental results show that CA-YOLO outperforms the original model on standard datasets (COCO and VisDrone), with average accuracy metrics improved by 3.94% and 4.90%, respectively. Further time-sensitive target localization experiments validate the effectiveness and practicality of this bionic stabilized localization system. © 1991-2012 IEEE.",
+      "keywords": [],
+      "normalized_title": "ca yolo cross attention empowered yolo for biomimetic localization",
+      "raw_bibtex": "@ARTICLE{10.1109/TCSVT.2025.3598306,\n\tauthor = {Zhang, Z. and Zhao, Q. and Li, X. and Wang, C. and Zhu, G. and Zhang, Y. and Huo, Y. and Yu, H. and Zhang, Y.},\n\ttitle = {CA-YOLO: Cross Attention Empowered YOLO for Biomimetic Localization},\n\tjournal = {IEEE Transactions on Circuits and Systems for Video Technology},\n\tyear = {2026},\n\tabstract = {In modern complex environments, achieving accurate and efficient target localization is essential in numerous fields. However, existing systems often face limitations in both accuracy and the ability to recognize small targets. In this study, we propose a bionic stabilized localization system based on CA-YOLO, designed to enhance both target localization accuracy and small target recognition capabilities. Acting as the 'brain' of the system, the target detection algorithm emulates the visual focusing mechanism of animals by integrating bionic modules into the YOLO backbone network. These modules include the introduction of a small target detection head and the development of a Characteristic Fusion Attention Mechanism (CFAM). Furthermore, drawing inspiration from the human Vestibulo-Ocular Reflex (VOR), a bionic pan-tilt tracking control strategy is developed, which incorporates central positioning, stability optimization, adaptive control coefficient adjustment, and an intelligent recapture function. The experimental results show that CA-YOLO outperforms the original model on standard datasets (COCO and VisDrone), with average accuracy metrics improved by 3.94% and 4.90%, respectively. Further time-sensitive target localization experiments validate the effectiveness and practicality of this bionic stabilized localization system. © 1991-2012 IEEE.},\n\tdoi = {10.1109/TCSVT.2025.3598306},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105013392357&doi=10.1109%2FTCSVT.2025.3598306&partnerID=40&md5=3566d02277aaff50f0ffc562be3a53a6},\n\tvolume = {36},\n\tnumber = {1},\n\tpages = {175-189},\n\tnote = {Export Date: 25 March 2026; Cited By: 1 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1109/TCSVT.2025.3598306"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000014",
+      "entry_type": "article",
+      "title": "Enhancing UAV small target detection: A balanced accuracy-efficiency algorithm with tiered feature focus",
+      "authors": [
+        "Guo, H.",
+        "Liu, S."
+      ],
+      "year": 2026,
+      "journal": "Image and Vision Computing",
+      "doi": "10.1016/j.imavis.2026.105897",
+      "abstract": "Small target detection in unmanned aerial vehicle (UAV) imagery is crucial for both military and civilian applications. However, achieving a balance between detection performance, efficiency, and lightweight architecture remains challenging. This paper introduces TF-DEIM-DFINE, a tiered focused small target detection model designed specifically for UAV tasks.We propose the Convolutional Gated-Visual Mamba (CG-VIM) module to enhance global dependency capture and local detail extraction through long sequence modeling, along with the Half-Channel Single-Head Attention (HCSA) module for global modeling, which improves fine-grained representation while reducing computational redundancy. Additionally, our Tiered Focus-Feature Pyramid Networks (TF-FPN) improve the representational capability of high-frequency information in multi-scale features without significantly increasing computational overhead. Experimental results on the VisDrone dataset demonstrate a 4.7% improvement in APM and a 5.8% improvement in AP metrics, with a 37% reduction in parameter count and only a 6% increase in GFLOPs, maintaining unchanged FPS. These results highlight TF-DEIM-DFINE’s ability to improve detection accuracy while preserving a lightweight and efficient structure © 2026 Elsevier B.V. All rights are reserved, including those for text and data mining, AI training, and similar technologies.",
+      "keywords": [],
+      "normalized_title": "enhancing uav small target detection a balanced accuracy efficiency algorithm with tiered feature focus",
+      "raw_bibtex": "@ARTICLE{10.1016/j.imavis.2026.105897,\n\tauthor = {Guo, H. and Liu, S.},\n\ttitle = {Enhancing UAV small target detection: A balanced accuracy-efficiency algorithm with tiered feature focus},\n\tjournal = {Image and Vision Computing},\n\tyear = {2026},\n\tabstract = {Small target detection in unmanned aerial vehicle (UAV) imagery is crucial for both military and civilian applications. However, achieving a balance between detection performance, efficiency, and lightweight architecture remains challenging. This paper introduces TF-DEIM-DFINE, a tiered focused small target detection model designed specifically for UAV tasks.We propose the Convolutional Gated-Visual Mamba (CG-VIM) module to enhance global dependency capture and local detail extraction through long sequence modeling, along with the Half-Channel Single-Head Attention (HCSA) module for global modeling, which improves fine-grained representation while reducing computational redundancy. Additionally, our Tiered Focus-Feature Pyramid Networks (TF-FPN) improve the representational capability of high-frequency information in multi-scale features without significantly increasing computational overhead. Experimental results on the VisDrone dataset demonstrate a 4.7% improvement in APM and a 5.8% improvement in AP metrics, with a 37% reduction in parameter count and only a 6% increase in GFLOPs, maintaining unchanged FPS. These results highlight TF-DEIM-DFINE’s ability to improve detection accuracy while preserving a lightweight and efficient structure © 2026 Elsevier B.V. All rights are reserved, including those for text and data mining, AI training, and similar technologies.},\n\tdoi = {10.1016/j.imavis.2026.105897},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105029661104&doi=10.1016%2Fj.imavis.2026.105897&partnerID=40&md5=a986c5e33e0db6449c76f7db174c8860},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.imavis.2026.105897"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000015",
+      "entry_type": "article",
+      "title": "WE-YOLO: Wavelet Enhanced YOLO for Small Object Detection in Optical Aerial Remote Sensing Images",
+      "authors": [
+        "Sun, J.",
+        "Guo, Y.",
+        "Zhi, X.",
+        "Wu, X.",
+        "Wang, J.",
+        "Xu, Z.",
+        "Pu, B.",
+        "Gao, Z."
+      ],
+      "year": 2026,
+      "journal": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+      "doi": "10.1109/jstars.2026.3672925",
+      "abstract": "Small object detection in optical aerial remote sensing imagery presents significant challenges due to limited pixel coverage and weak feature representation. This paper introduces Wavelet Enhanced YOLO (WE-YOLO), an improved detector incorporating two novel modules: Mixed Haar Wavelet Downsampling (MixHWD) and Spatial Frequency Enhanced Mamba (SFEM). The MixHWD module minimizes information loss during downsampling through Haar wavelet transform, while its hybrid architecture enhances feature extraction. The SFEM module employs an optimized Mamba block for efficient global context modeling with linear complexity, complemented by wavelet-based spatial frequency domain feature enrichment. WEYOLO achieves AP scores of 22.1%, 59.9%, and 18.8% on AITOD- v2, DIOR-H, and VisDrone-DET2019 datasets, respectively, surpassing the YOLO11n baseline by 2.5%, 1.4%, and 1.0%, respectively. The experimental results demonstrate superior detection accuracy while maintaining comparable parameters and computational efficiency to YOLO11n. © 2008-2012 IEEE.",
+      "keywords": [],
+      "normalized_title": "we yolo wavelet enhanced yolo for small object detection in optical aerial remote sensing images",
+      "raw_bibtex": "@ARTICLE{10.1109/JSTARS.2026.3672925,\n\tauthor = {Sun, J. and Guo, Y. and Zhi, X. and Wu, X. and Wang, J. and Xu, Z. and Pu, B. and Gao, Z.},\n\ttitle = {WE-YOLO: Wavelet Enhanced YOLO for Small Object Detection in Optical Aerial Remote Sensing Images},\n\tjournal = {IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing},\n\tyear = {2026},\n\tabstract = {Small object detection in optical aerial remote sensing imagery presents significant challenges due to limited pixel coverage and weak feature representation. This paper introduces Wavelet Enhanced YOLO (WE-YOLO), an improved detector incorporating two novel modules: Mixed Haar Wavelet Downsampling (MixHWD) and Spatial Frequency Enhanced Mamba (SFEM). The MixHWD module minimizes information loss during downsampling through Haar wavelet transform, while its hybrid architecture enhances feature extraction. The SFEM module employs an optimized Mamba block for efficient global context modeling with linear complexity, complemented by wavelet-based spatial frequency domain feature enrichment. WEYOLO achieves AP scores of 22.1%, 59.9%, and 18.8% on AITOD- v2, DIOR-H, and VisDrone-DET2019 datasets, respectively, surpassing the YOLO11n baseline by 2.5%, 1.4%, and 1.0%, respectively. The experimental results demonstrate superior detection accuracy while maintaining comparable parameters and computational efficiency to YOLO11n. © 2008-2012 IEEE.},\n\tdoi = {10.1109/JSTARS.2026.3672925},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105032791430&doi=10.1109%2FJSTARS.2026.3672925&partnerID=40&md5=2284a0997f990193e1c9b7567beb469a},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1109/JSTARS.2026.3672925"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000016",
+      "entry_type": "article",
+      "title": "Design and Implementation of an Annotation-Driven Drone Autonomy Tool Using YOLOv8–V11 Architectures for Real-Time Object Detection and Distance Estimation",
+      "authors": [
+        "Hegde, P.V.",
+        "Ahmed, M.R.",
+        "Nalband, A.H."
+      ],
+      "year": 2026,
+      "journal": "IEEE Access",
+      "doi": "10.1109/access.2026.3663490",
+      "abstract": "Autonomous UAV perception under Size–Weight–Power (SWaP) constraints is hindered by architectural fragmentation, where annotation, detection, and ranging modules are optimized independently, leaving cross-module synergies underexploited. This research introduces a unified framework that eliminates fragmentation through coordinated, cross-stage optimization for embedded deployment. An adaptive annotation engine combining Datumaro sparse encodings with foundation-model distillation reduces memory usage by 92.3% and labeling effort by 68.7%, while maintaining segmentation quality (mIoU = 0.891 ± 0.023). A mission-aware detection pipeline—featuring YOLO architecture benchmarking (v8–v11) and TensorRT INT8 quantization with kernel fusion—achieves 84.7% mAP@0.5 at 30.6 FPS on Jetson Orin NX (75 W), representing a 10.3-point gain over modular baselines. A hybrid ranging policy adaptively switches between Vincenty geodesics (GNSS-enabled, 2.8 m RMSE) and calibrated monocular geometry (GNSS-denied, 0.48 m RMSE), reducing drift by 67.3%. Replicated factorial analysis on 16,266 scenedisjoint aerial images reveals statistically significant cross-module interactions (δ12 = 0.23, δ13 = 0.31, δ23 = 0.18; p < 0.001), yielding a 29.3% end-to-end performance amplification over additive optimization. The framework generalizes robustly, maintaining 94.2% cross-dataset retention on VisDrone/COCO/UAV benchmarks and achieving 99.84% collision-free operation across 847 autonomous sorties, establishing a reproducible pathway toward SWaP-constrained UAV autonomy. © 2013 IEEE.",
+      "keywords": [],
+      "normalized_title": "design and implementation of an annotation driven drone autonomy tool using yolov8 v11 architectures for real time object detection and distance estimation",
+      "raw_bibtex": "@ARTICLE{10.1109/ACCESS.2026.3663490,\n\tauthor = {Hegde, P.V. and Ahmed, M.R. and Nalband, A.H.},\n\ttitle = {Design and Implementation of an Annotation-Driven Drone Autonomy Tool Using YOLOv8–V11 Architectures for Real-Time Object Detection and Distance Estimation},\n\tjournal = {IEEE Access},\n\tyear = {2026},\n\tabstract = {Autonomous UAV perception under Size–Weight–Power (SWaP) constraints is hindered by architectural fragmentation, where annotation, detection, and ranging modules are optimized independently, leaving cross-module synergies underexploited. This research introduces a unified framework that eliminates fragmentation through coordinated, cross-stage optimization for embedded deployment. An adaptive annotation engine combining Datumaro sparse encodings with foundation-model distillation reduces memory usage by 92.3% and labeling effort by 68.7%, while maintaining segmentation quality (mIoU = 0.891 ± 0.023). A mission-aware detection pipeline—featuring YOLO architecture benchmarking (v8–v11) and TensorRT INT8 quantization with kernel fusion—achieves 84.7% mAP@0.5 at 30.6 FPS on Jetson Orin NX (75 W), representing a 10.3-point gain over modular baselines. A hybrid ranging policy adaptively switches between Vincenty geodesics (GNSS-enabled, 2.8 m RMSE) and calibrated monocular geometry (GNSS-denied, 0.48 m RMSE), reducing drift by 67.3%. Replicated factorial analysis on 16,266 scenedisjoint aerial images reveals statistically significant cross-module interactions (δ12 = 0.23, δ13 = 0.31, δ23 = 0.18; p < 0.001), yielding a 29.3% end-to-end performance amplification over additive optimization. The framework generalizes robustly, maintaining 94.2% cross-dataset retention on VisDrone/COCO/UAV benchmarks and achieving 99.84% collision-free operation across 847 autonomous sorties, establishing a reproducible pathway toward SWaP-constrained UAV autonomy. © 2013 IEEE.},\n\tdoi = {10.1109/ACCESS.2026.3663490},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105029822384&doi=10.1109%2FACCESS.2026.3663490&partnerID=40&md5=6259b56428a5f38b733c2724207d7c78},\n\tvolume = {14},\n\tpages = {28595-28630},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1109/ACCESS.2026.3663490"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000017",
+      "entry_type": "article",
+      "title": "LVMSOD: Lightweight Visual Mamba Small Object Detection for Autonomous Vehicles",
+      "authors": [
+        "Fu, Y.",
+        "Gao, M.",
+        "Wang, Y.",
+        "Deng, X.",
+        "Li, Y.",
+        "Hu, M.",
+        "Bian, Y.",
+        "Ding, R."
+      ],
+      "year": 2026,
+      "journal": "IEEE Internet of Things Journal",
+      "doi": "10.1109/jiot.2026.3664655",
+      "abstract": "The application of object detection in industrial transportation has witnessed substantial advancements, yielding significant enhancements in both safety and efficiency. While Transformer-based detectors have demonstrated remarkable success in object detection for autonomous driving, their quadratic computational complexity and limited small-object perception capabilities remain significant challenges. To address these limitations, we propose lightweight visual Mamba small object detection (LVMSOD) method, a novel selective state space model designed for small object detection task. The proposed framework employs a multi-level cascade of dual-layer nested Mamba modules to comprehensively capture contextual information across different scales, coupled with a hierarchical feature fusion strategy to enhance multi-scale feature integration for improved small object detection. The LVMSOD framework incorporates two key components to enhance feature representation: Visual Mamba Detection (VDM) block that preserves fine-grained image details, and Lightweight Gated Multi-Layer Perceptron (LGMLP) designed to model local feature dependencies efficiently. Furthermore, we propose an optimized feature extraction mechanism employing depthwise and pointwise convolutions with distribution factors, significantly reducing computational overhead while maintaining detection accuracy. Comprehensive evaluations on benchmark datasets demonstrate the effectiveness of our approach, achieving mAP@0.5 scores of 93.3% on KITTI and 45.3% on VisDrone while maintaining superior computational efficiency. These results highlight the potential of LVMSOD for efficient and accurate small object detection. © 2014 IEEE.",
+      "keywords": [],
+      "normalized_title": "lvmsod lightweight visual mamba small object detection for autonomous vehicles",
+      "raw_bibtex": "@ARTICLE{10.1109/JIOT.2026.3664655,\n\tauthor = {Fu, Y. and Gao, M. and Wang, Y. and Deng, X. and Li, Y. and Hu, M. and Bian, Y. and Ding, R.},\n\ttitle = {LVMSOD: Lightweight Visual Mamba Small Object Detection for Autonomous Vehicles},\n\tjournal = {IEEE Internet of Things Journal},\n\tyear = {2026},\n\tabstract = {The application of object detection in industrial transportation has witnessed substantial advancements, yielding significant enhancements in both safety and efficiency. While Transformer-based detectors have demonstrated remarkable success in object detection for autonomous driving, their quadratic computational complexity and limited small-object perception capabilities remain significant challenges. To address these limitations, we propose lightweight visual Mamba small object detection (LVMSOD) method, a novel selective state space model designed for small object detection task. The proposed framework employs a multi-level cascade of dual-layer nested Mamba modules to comprehensively capture contextual information across different scales, coupled with a hierarchical feature fusion strategy to enhance multi-scale feature integration for improved small object detection. The LVMSOD framework incorporates two key components to enhance feature representation: Visual Mamba Detection (VDM) block that preserves fine-grained image details, and Lightweight Gated Multi-Layer Perceptron (LGMLP) designed to model local feature dependencies efficiently. Furthermore, we propose an optimized feature extraction mechanism employing depthwise and pointwise convolutions with distribution factors, significantly reducing computational overhead while maintaining detection accuracy. Comprehensive evaluations on benchmark datasets demonstrate the effectiveness of our approach, achieving mAP@0.5 scores of 93.3% on KITTI and 45.3% on VisDrone while maintaining superior computational efficiency. These results highlight the potential of LVMSOD for efficient and accurate small object detection. © 2014 IEEE.},\n\tdoi = {10.1109/JIOT.2026.3664655},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105029938174&doi=10.1109%2FJIOT.2026.3664655&partnerID=40&md5=6075895be5586f1c2e83001d5ee8a760},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1109/JIOT.2026.3664655"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000018",
+      "entry_type": "article",
+      "title": "A Unified Framework for Vehicle Detection, Tracking, and Counting Across Ground and Aerial Views Using Knowledge Distillation with YOLOv10-S",
+      "authors": [
+        "Khan, M.R.K.",
+        "Rishe, N."
+      ],
+      "year": 2026,
+      "journal": "Remote Sensing",
+      "doi": "10.3390/rs18050842",
+      "abstract": "Highlights: What are the main findings? The proposed unified and modular framework effectively integrates vehicle detection, multi-object tracking, and trajectory-based counting into a consistent end-to-end pipeline that works across both ground and aerial surveillance scenarios. Knowledge distillation strengthens the lightweight YOLOv10-S detector without architectural modification, improving temporal stability and enhancing overall system reliability across diverse viewpoints. What are the implications of the main findings? The study underscores the importance of evaluating traffic monitoring from a system-level perspective, where coordinated detection and tracking directly influence counting accuracy and robustness. The proposed framework provides a practical and scalable foundation for intelligent transportation applications, offering cross-domain adaptability and real-time feasibility for real-world traffic monitoring. Accurate and reliable vehicle detection, tracking, and counting across different surveillance platforms are fundamental requirements for developing smart Traffic Management Systems (TMS) and promoting sustainable urban mobility. Recent advances in both ground-level surveillance and remote sensing using deep learning have opened new opportunities for extracting detailed vehicular information from high-resolution aerial and surveillance video data. Our research reported here aims to present a unified, real-time vehicle analysis framework that integrates lightweight deep learning–based detection, robust multi-object tracking, and trajectory-driven counting within a single modular pipeline. The proposed framework employs a “You Only Look Once” system, YOLOv10-S as the detection backbone and enhances its robustness through supervision-level knowledge distillation without introducing any architectural modifications. Temporal consistency is enforced using an observation-centric multi-object tracking algorithm (OC-SORT), enabling stable identity preservation under camera motion and dense traffic conditions. Vehicle counting is performed using a trajectory-based virtual gate strategy, reducing duplicate counts and improving counting reliability. Comprehensive experiments conducted on the UA-DETRAC and VisDrone benchmarks show that the proposed framework effectively balances detection performance, tracking robustness, counting accuracy, and real-time efficiency in both ground-based and aerial surveillance settings. Furthermore, cross-dataset evaluations under direct train–test transfer highlight the inherent challenges of domain shift while showing that knowledge distillation consistently improves robustness in detection, tracking identity consistency, and vehicle counting. Overall, this framework enables effective real-world traffic monitoring by adopting a scalable and practical system design, where reliability is prioritized over architectural complexity. © 2026 by the authors.",
+      "keywords": [],
+      "normalized_title": "a unified framework for vehicle detection tracking and counting across ground and aerial views using knowledge distillation with yolov10 s",
+      "raw_bibtex": "@ARTICLE{10.3390/rs18050842,\n\tauthor = {Khan, M.R.K. and Rishe, N.},\n\ttitle = {A Unified Framework for Vehicle Detection, Tracking, and Counting Across Ground and Aerial Views Using Knowledge Distillation with YOLOv10-S},\n\tjournal = {Remote Sensing},\n\tyear = {2026},\n\tabstract = {Highlights: What are the main findings? The proposed unified and modular framework effectively integrates vehicle detection, multi-object tracking, and trajectory-based counting into a consistent end-to-end pipeline that works across both ground and aerial surveillance scenarios. Knowledge distillation strengthens the lightweight YOLOv10-S detector without architectural modification, improving temporal stability and enhancing overall system reliability across diverse viewpoints. What are the implications of the main findings? The study underscores the importance of evaluating traffic monitoring from a system-level perspective, where coordinated detection and tracking directly influence counting accuracy and robustness. The proposed framework provides a practical and scalable foundation for intelligent transportation applications, offering cross-domain adaptability and real-time feasibility for real-world traffic monitoring. Accurate and reliable vehicle detection, tracking, and counting across different surveillance platforms are fundamental requirements for developing smart Traffic Management Systems (TMS) and promoting sustainable urban mobility. Recent advances in both ground-level surveillance and remote sensing using deep learning have opened new opportunities for extracting detailed vehicular information from high-resolution aerial and surveillance video data. Our research reported here aims to present a unified, real-time vehicle analysis framework that integrates lightweight deep learning–based detection, robust multi-object tracking, and trajectory-driven counting within a single modular pipeline. The proposed framework employs a “You Only Look Once” system, YOLOv10-S as the detection backbone and enhances its robustness through supervision-level knowledge distillation without introducing any architectural modifications. Temporal consistency is enforced using an observation-centric multi-object tracking algorithm (OC-SORT), enabling stable identity preservation under camera motion and dense traffic conditions. Vehicle counting is performed using a trajectory-based virtual gate strategy, reducing duplicate counts and improving counting reliability. Comprehensive experiments conducted on the UA-DETRAC and VisDrone benchmarks show that the proposed framework effectively balances detection performance, tracking robustness, counting accuracy, and real-time efficiency in both ground-based and aerial surveillance settings. Furthermore, cross-dataset evaluations under direct train–test transfer highlight the inherent challenges of domain shift while showing that knowledge distillation consistently improves robustness in detection, tracking identity consistency, and vehicle counting. Overall, this framework enables effective real-world traffic monitoring by adopting a scalable and practical system design, where reliability is prioritized over architectural complexity. © 2026 by the authors.},\n\tdoi = {10.3390/rs18050842},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105032637507&doi=10.3390%2Frs18050842&partnerID=40&md5=d5930ea28f624e0e716ce9c0f1751ac5},\n\tvolume = {18},\n\tnumber = {5},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.3390/rs18050842"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000019",
+      "entry_type": "article",
+      "title": "DAHI: a fast and efficient density aided hyper inference technique for large scene object detection",
+      "authors": [
+        "Suárez–Ramírez, J.",
+        "Santana–Cedrés, D.",
+        "Monzón, N."
+      ],
+      "year": 2026,
+      "journal": "Pattern Recognition",
+      "doi": "10.1016/j.patcog.2025.112228",
+      "abstract": "Detecting small objects in large-scale scenes remains a fundamental challenge in object detection, primarily due to scale variation, occlusion, and limited resolution. In order to contribute in this research topic, we propose Density Aided Hyper Inference (DAHI), a lightweight and detector-agnostic framework that enhances detection performance through a structured, three-stage inference process. DAHI combines: (i) Region Density Estimation (RDE), which identifies areas likely to contain overlooked objects; (ii) Density-Aided Crop Selection (DACS), which efficiently selects high-density, low-overlap regions for re-inference; and (iii) Crop Margin Aware Non-Maximum Suppression (CMA-NMS), which merges detections from full-image and region-based inferences while mitigating boundary-related errors. DAHI requires no retraining and integrates seamlessly with standard object detectors. Experiments on several aerial and driving detection benchmarks demonstrate improved detection quality and runtime efficiency compared to existing multi-inference approaches, while introducing reduced computational overhead. These results support the use of DAHI as an effective and practical enhancement for small object detection in complex visual scenes. © 2025 The Author(s)",
+      "keywords": [],
+      "normalized_title": "dahi a fast and efficient density aided hyper inference technique for large scene object detection",
+      "raw_bibtex": "@ARTICLE{10.1016/j.patcog.2025.112228,\n\tauthor = {Suárez–Ramírez, J. and Santana–Cedrés, D. and Monzón, N.},\n\ttitle = {DAHI: a fast and efficient density aided hyper inference technique for large scene object detection},\n\tjournal = {Pattern Recognition},\n\tyear = {2026},\n\tabstract = {Detecting small objects in large-scale scenes remains a fundamental challenge in object detection, primarily due to scale variation, occlusion, and limited resolution. In order to contribute in this research topic, we propose Density Aided Hyper Inference (DAHI), a lightweight and detector-agnostic framework that enhances detection performance through a structured, three-stage inference process. DAHI combines: (i) Region Density Estimation (RDE), which identifies areas likely to contain overlooked objects; (ii) Density-Aided Crop Selection (DACS), which efficiently selects high-density, low-overlap regions for re-inference; and (iii) Crop Margin Aware Non-Maximum Suppression (CMA-NMS), which merges detections from full-image and region-based inferences while mitigating boundary-related errors. DAHI requires no retraining and integrates seamlessly with standard object detectors. Experiments on several aerial and driving detection benchmarks demonstrate improved detection quality and runtime efficiency compared to existing multi-inference approaches, while introducing reduced computational overhead. These results support the use of DAHI as an effective and practical enhancement for small object detection in complex visual scenes. © 2025 The Author(s)},\n\tdoi = {10.1016/j.patcog.2025.112228},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105012312588&doi=10.1016%2Fj.patcog.2025.112228&partnerID=40&md5=d50b9049d9254f074057bb4ab316352a},\n\tvolume = {171},\n\tnote = {Export Date: 25 March 2026; Cited By: 1 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.patcog.2025.112228"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000020",
+      "entry_type": "article",
+      "title": "An efficient YOLOv12-based framework for detecting extremely small-scale objects",
+      "authors": [
+        "Chandrashekhar, A.",
+        "Satyanarayana, B.",
+        "Gorrepati, R.R.",
+        "Vasanthi, P.",
+        "Prasanna, K.L."
+      ],
+      "year": 2026,
+      "journal": "Scientific Reports",
+      "doi": "10.1038/s41598-025-31803-7",
+      "abstract": "Object detection in aerial imagery, particularly from UAVs and drones, presents unique challenges such as small and extremely small-scale object distributions. To address these drawbacks, the present research proposes an efficient YOLOv12 model. The first core contribution of our work is the introduction of the Area-Attention C2f (A2C2F) module, which fuses multi-head MLP blocks with localized area-attention mechanisms to strengthen spatial feature learning while maintaining lightweight computation. Second, the model integrates the Cross Stage Partial with Kernel size 2 (C3K2) module, a lightweight variant of the C3 block, which reduces convolutional complexity and computational cost while maintaining feature extraction capability for efficient detection. Third, a multi-scale fusion strategy by stacking A2C2F blocks along with Concat and Upsample operations ensures the preservation of high-resolution features for detecting small-scale objects, a common challenge in drone-captured data. Fourth, a novel detection head with decoupled classification and regression branches, enhanced by attention-guided feature fusion, improves prediction consistency and boosts inference speed. Extensive experiments conducted on the VisDrone dataset demonstrate that the proposed framework effectively detects objects with dimensions smaller than 3–5 pixels, where traditional YOLO variants typically fail, proving its robustness in extremely small-scale detection. The proposed model achieves a Precision of 69.1%, Recall of 48.5%, and F1-score of 56.99%, outperforming recent models. Notably, it achieves a mAP@50 of 58.8% and mAP@0.5:0.95 of 40.9%, showing substantial improvement over prior methods. Despite utilizing 59.1 M parameters and 198.6 GFLOPs, the model maintains an efficient inference rate of approximately 40 FPS on the A100 GPU, confirming its suitability for real-time UAV edge deployment. When compared to two-stage and anchor-based models, our model delivers higher AP scores at a lower input resolution of 640 × 640 pixels, making it a highly effective and computationally efficient framework for UAV-based small and extremely small object detection. © The Author(s) 2025.",
+      "keywords": [],
+      "normalized_title": "an efficient yolov12 based framework for detecting extremely small scale objects",
+      "raw_bibtex": "@ARTICLE{10.1038/s41598-025-31803-7,\n\tauthor = {Chandrashekhar, A. and Satyanarayana, B. and Gorrepati, R.R. and Vasanthi, P. and Prasanna, K.L.},\n\ttitle = {An efficient YOLOv12-based framework for detecting extremely small-scale objects},\n\tjournal = {Scientific Reports},\n\tyear = {2026},\n\tabstract = {Object detection in aerial imagery, particularly from UAVs and drones, presents unique challenges such as small and extremely small-scale object distributions. To address these drawbacks, the present research proposes an efficient YOLOv12 model. The first core contribution of our work is the introduction of the Area-Attention C2f (A2C2F) module, which fuses multi-head MLP blocks with localized area-attention mechanisms to strengthen spatial feature learning while maintaining lightweight computation. Second, the model integrates the Cross Stage Partial with Kernel size 2 (C3K2) module, a lightweight variant of the C3 block, which reduces convolutional complexity and computational cost while maintaining feature extraction capability for efficient detection. Third, a multi-scale fusion strategy by stacking A2C2F blocks along with Concat and Upsample operations ensures the preservation of high-resolution features for detecting small-scale objects, a common challenge in drone-captured data. Fourth, a novel detection head with decoupled classification and regression branches, enhanced by attention-guided feature fusion, improves prediction consistency and boosts inference speed. Extensive experiments conducted on the VisDrone dataset demonstrate that the proposed framework effectively detects objects with dimensions smaller than 3–5 pixels, where traditional YOLO variants typically fail, proving its robustness in extremely small-scale detection. The proposed model achieves a Precision of 69.1%, Recall of 48.5%, and F1-score of 56.99%, outperforming recent models. Notably, it achieves a mAP@50 of 58.8% and mAP@0.5:0.95 of 40.9%, showing substantial improvement over prior methods. Despite utilizing 59.1 M parameters and 198.6 GFLOPs, the model maintains an efficient inference rate of approximately 40 FPS on the A100 GPU, confirming its suitability for real-time UAV edge deployment. When compared to two-stage and anchor-based models, our model delivers higher AP scores at a lower input resolution of 640 × 640 pixels, making it a highly effective and computationally efficient framework for UAV-based small and extremely small object detection. © The Author(s) 2025.},\n\tdoi = {10.1038/s41598-025-31803-7},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105027701772&doi=10.1038%2Fs41598-025-31803-7&partnerID=40&md5=bc79dad87f245c333410a82e996dcf41},\n\tvolume = {16},\n\tnumber = {1},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1038/s41598-025-31803-7"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

@@ -1,0 +1,406 @@
+{
+  "batch_id": "batch_0024",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000231",
+    "paper_000232",
+    "paper_000233",
+    "paper_000234",
+    "paper_000235",
+    "paper_000236",
+    "paper_000237",
+    "paper_000238",
+    "paper_000239",
+    "paper_000240"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000231",
+      "entry_type": "article",
+      "title": "State of charge evaluation of lithium-ion batteries under wide temperature range using multi-feature ultrasonic indicators",
+      "authors": [
+        "d'Apolito, L",
+        "Gu, TW",
+        "Hong, HC",
+        "Zhang, WB",
+        "Shen, SW"
+      ],
+      "year": 2025,
+      "journal": "IONICS",
+      "doi": "10.1007/s11581-025-06227-y",
+      "abstract": "The state of charge (SOC) of the battery, as a core parameter in the Battery Management System (BMS), directly affects the battery performance, lifespan, and safety. Traditional rudimentary methods such as interpolation and time-history integration of on-board collected data, utilized in the form of SOC-OCV lookup and coulomb counting, are generally not highly accurate because of changes in temperature and current, sensor measurement errors or difference between battery open circuit voltage and terminal voltage. Other strategies rely on models of battery dynamics, requiring physical and electrochemical models, but they disregard the internal structure and the mechanical evolution of the battery during charging and discharging. In response to the limitations of existing SOC estimation methods, this study proposes a lithium-ion battery SOC estimation method based on ultrasonic multi-feature indicators under different environmental temperature conditions. The method first acquires the acoustic response of the battery internal structure through non-destructive ultrasonic testing technology, then extracts key feature parameters from three dimensions: time domain, frequency domain, and time-frequency domain. Subsequently, the hyperparameters of the XGBoost model were optimized using the Whale Optimization Algorithm (WOA) to improve its predictive accuracy and robustness. Experimental validation has shown that the proposed WOA-XGBoost model exhibits superior performance in SOC estimation, with a root mean square error (RMSE) lower than other comparative models. Additionally, this study explores the impact of different feature parameter combinations on the estimation effect, further confirming the importance of multi-dimensional feature parameters in improving the accuracy of SOC estimation.",
+      "keywords": [
+        "Ultrasonic non-destructive testing",
+        "SOC",
+        "Lithium-ion battery",
+        "Machine learning",
+        "EXTENDED KALMAN FILTER"
+      ],
+      "normalized_title": "state of charge evaluation of lithium ion batteries under wide temperature range using multi feature ultrasonic indicators",
+      "raw_bibtex": "@ARTICLE{10.1007/s11581-025-06227-y,\n\tauthor = {d'Apolito, L and Gu, TW and Hong, HC and Zhang, WB and Shen, SW},\n\ttitle = {State of charge evaluation of lithium-ion batteries under wide temperature range using multi-feature ultrasonic indicators},\n\tjournal = {IONICS},\n\tyear = {2025},\n\tkeywords = {Ultrasonic non-destructive testing; SOC; Lithium-ion battery; Machine learning; EXTENDED KALMAN FILTER},\n\tabstract = {The state of charge (SOC) of the battery, as a core parameter in the Battery Management System (BMS), directly affects the battery performance, lifespan, and safety. Traditional rudimentary methods such as interpolation and time-history integration of on-board collected data, utilized in the form of SOC-OCV lookup and coulomb counting, are generally not highly accurate because of changes in temperature and current, sensor measurement errors or difference between battery open circuit voltage and terminal voltage. Other strategies rely on models of battery dynamics, requiring physical and electrochemical models, but they disregard the internal structure and the mechanical evolution of the battery during charging and discharging. In response to the limitations of existing SOC estimation methods, this study proposes a lithium-ion battery SOC estimation method based on ultrasonic multi-feature indicators under different environmental temperature conditions. The method first acquires the acoustic response of the battery internal structure through non-destructive ultrasonic testing technology, then extracts key feature parameters from three dimensions: time domain, frequency domain, and time-frequency domain. Subsequently, the hyperparameters of the XGBoost model were optimized using the Whale Optimization Algorithm (WOA) to improve its predictive accuracy and robustness. Experimental validation has shown that the proposed WOA-XGBoost model exhibits superior performance in SOC estimation, with a root mean square error (RMSE) lower than other comparative models. Additionally, this study explores the impact of different feature parameter combinations on the estimation effect, further confirming the importance of multi-dimensional feature parameters in improving the accuracy of SOC estimation.},\n\tdoi = {10.1007/s11581-025-06227-y},\n\tvolume = {31},\n\tnumber = {5},\n\tpages = {4239-4260},\n\tissn = {0947-7047},\n\tnote = {Times Cited in Web of Science Core Collection: 2 Total Times Cited: 2 Cited Reference Count: 36 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s11581-025-06227-y"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000232",
+      "entry_type": "article",
+      "title": "Hardness detection in Friction Stir Additive Manufacturing (FSAM) based on the CEEMDAN algorithm and laser ultrasonic Spatially Resolved Acoustic Spectroscopy (SRAS)",
+      "authors": [
+        "Ni, CY",
+        "Shuai, T",
+        "Sun, YC",
+        "Ying, KN",
+        "Dai, GQ",
+        "Sun, ZG",
+        "Shen, ZH"
+      ],
+      "year": 2026,
+      "journal": "NDT & E INTERNATIONAL",
+      "doi": "10.1016/j.ndteint.2025.103515",
+      "abstract": "FSAM is an emerging high-value additive manufacturing technology. However, the variation in hardness of the formed parts due to manufacturing parameters limits its rapid development. Currently, there is a lack of effective non-contact, non-destructive testing methods for hardness in this manufacturing process. To address this, this paper employs laser ultrasonic testing (LUT) technology and uses SRAS to extract sound velocity by exploiting the center frequency of the narrow-band surface acoustic wave (SAW) generated by a pulsed laser, thereby characterizing hardness. SRAS signals from the surfaces of additively manufactured parts often suffer from significant noise. To address this, the Complete Ensemble Empirical Mode Decomposition with Adaptive Noise (CEEMDAN) algorithm is applied. This algorithm decomposes the noisy raw signal into a series of Intrinsic Mode Functions (IMFs). Subsequently, the modes primarily containing the signal are selected using the correlation coefficient for reconstruction, thus achieving de-noising of the raw signal. Simulation and experimental results show that this algorithm can extract the corresponding center frequency and SAW velocity from SRAS signals with a low signal-to-noise ratio. Comparison with hardness test results indicates that the SAW velocity and center frequency effectively characterize changes in sample hardness. In linear regression analysis, a coefficient of determination (R2 = 0.982) is exhibited.",
+      "keywords": [
+        "Laser ultrasound",
+        "Spatially Resolved Acoustic Spectroscopy (SRAS)",
+        "Complete Ensemble Empirical Mode",
+        "Complete Ensemble Empirical Mode Decomposition with Adaptive Noise (CEEMDAN) algorithm",
+        "Friction Stir Additive Manufacturing (FSAM)",
+        "Hardness imaging",
+        "EMPIRICAL MODE DECOMPOSITION",
+        "WAVELET TRANSFORM",
+        "EMD",
+        "STEEL"
+      ],
+      "normalized_title": "hardness detection in friction stir additive manufacturing fsam based on the ceemdan algorithm and laser ultrasonic spatially resolved acoustic spectroscopy sras",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ndteint.2025.103515,\n\tauthor = {Ni, CY and Shuai, T and Sun, YC and Ying, KN and Dai, GQ and Sun, ZG and Shen, ZH},\n\ttitle = {Hardness detection in Friction Stir Additive Manufacturing (FSAM) based on the CEEMDAN algorithm and laser ultrasonic Spatially Resolved Acoustic Spectroscopy (SRAS)},\n\tjournal = {NDT & E INTERNATIONAL},\n\tyear = {2026},\n\tkeywords = {Laser ultrasound; Spatially Resolved Acoustic Spectroscopy (SRAS); Complete Ensemble Empirical Mode; Complete Ensemble Empirical Mode Decomposition with Adaptive Noise (CEEMDAN) algorithm; Friction Stir Additive Manufacturing (FSAM); Hardness imaging; EMPIRICAL MODE DECOMPOSITION; WAVELET TRANSFORM; EMD; STEEL},\n\tabstract = {FSAM is an emerging high-value additive manufacturing technology. However, the variation in hardness of the formed parts due to manufacturing parameters limits its rapid development. Currently, there is a lack of effective non-contact, non-destructive testing methods for hardness in this manufacturing process. To address this, this paper employs laser ultrasonic testing (LUT) technology and uses SRAS to extract sound velocity by exploiting the center frequency of the narrow-band surface acoustic wave (SAW) generated by a pulsed laser, thereby characterizing hardness. SRAS signals from the surfaces of additively manufactured parts often suffer from significant noise. To address this, the Complete Ensemble Empirical Mode Decomposition with Adaptive Noise (CEEMDAN) algorithm is applied. This algorithm decomposes the noisy raw signal into a series of Intrinsic Mode Functions (IMFs). Subsequently, the modes primarily containing the signal are selected using the correlation coefficient for reconstruction, thus achieving de-noising of the raw signal. Simulation and experimental results show that this algorithm can extract the corresponding center frequency and SAW velocity from SRAS signals with a low signal-to-noise ratio. Comparison with hardness test results indicates that the SAW velocity and center frequency effectively characterize changes in sample hardness. In linear regression analysis, a coefficient of determination (R2 = 0.982) is exhibited.},\n\tdoi = {10.1016/j.ndteint.2025.103515},\n\tvolume = {157},\n\tissn = {0963-8695},\n\tnote = {Times Cited in Web of Science Core Collection: 2 Total Times Cited: 2 Cited Reference Count: 44 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ndteint.2025.103515"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000233",
+      "entry_type": "article",
+      "title": "Defect detection of grouting sleeve connection with energy ratio change in frequency domain",
+      "authors": [
+        "Cao, D",
+        "Pan, ZF",
+        "Zhang, Z",
+        "Zeng, B"
+      ],
+      "year": 2024,
+      "journal": "APPLIED ACOUSTICS",
+      "doi": "10.1016/j.apacoust.2024.110037",
+      "abstract": "Controlling the grouting density is the key to ensure the construction quality of precast structures. Since the grouting sleeve is embedded in concrete, it is difficult to detect the grouting compactness of the sleeve. In this paper, the frequency domain analysis technique is used for non-destructive testing of concrete components with grouting defects. The collected ultrasonic testing signals are calibrated-denoised-decomposed-reconstructed. The damage degree of the grouting signal is evaluated and analyzed by quantifying the energy value of different frequency signals with two norms. Considering the effect of the random distribution of aggregates on the propagation of ultrasonic stress waves, a three-dimensional multi -point detection model and a two-dimensional plane single -point model based on piezoelectric effect are set up respectively. Results show that frequency energy distribution of the grout -deficient signal is concentrated to low -frequency range than that of grout -compact signal. When grouting defect accumulates to a certain extent, the main frequency may move from highfrequency band to lower -frequency band. Although the aggregates in different concrete components are randomly distributed, the test results of the two-dimensional plane model show that the validity of the defect quantitative index is 72%. The experimental tests results show that the method of using frequency energy transfer to lower -frequency band to determine grouting defects is effective, with a detection validity of 66.7%. Therefore, the non-destructive testing method for grouting sleeve compactness proposed in this paper can provide reference for engineering testing application.",
+      "keywords": [
+        "Grouting sleeve",
+        "Grouting defects",
+        "Wavelet packet",
+        "Frequency domain analysis",
+        "Non-destructive testing",
+        "Ultrasonic wave",
+        "CONCRETE",
+        "TENSILE",
+        "BEHAVIOR",
+        "SPLICE"
+      ],
+      "normalized_title": "defect detection of grouting sleeve connection with energy ratio change in frequency domain",
+      "raw_bibtex": "@ARTICLE{10.1016/j.apacoust.2024.110037,\n\tauthor = {Cao, D and Pan, ZF and Zhang, Z and Zeng, B},\n\ttitle = {Defect detection of grouting sleeve connection with energy ratio change in frequency domain},\n\tjournal = {APPLIED ACOUSTICS},\n\tyear = {2024},\n\tkeywords = {Grouting sleeve; Grouting defects; Wavelet packet; Frequency domain analysis; Non-destructive testing; Ultrasonic wave; CONCRETE; TENSILE; BEHAVIOR; SPLICE},\n\tabstract = {Controlling the grouting density is the key to ensure the construction quality of precast structures. Since the grouting sleeve is embedded in concrete, it is difficult to detect the grouting compactness of the sleeve. In this paper, the frequency domain analysis technique is used for non-destructive testing of concrete components with grouting defects. The collected ultrasonic testing signals are calibrated-denoised-decomposed-reconstructed. The damage degree of the grouting signal is evaluated and analyzed by quantifying the energy value of different frequency signals with two norms. Considering the effect of the random distribution of aggregates on the propagation of ultrasonic stress waves, a three-dimensional multi -point detection model and a two-dimensional plane single -point model based on piezoelectric effect are set up respectively. Results show that frequency energy distribution of the grout -deficient signal is concentrated to low -frequency range than that of grout -compact signal. When grouting defect accumulates to a certain extent, the main frequency may move from highfrequency band to lower -frequency band. Although the aggregates in different concrete components are randomly distributed, the test results of the two-dimensional plane model show that the validity of the defect quantitative index is 72%. The experimental tests results show that the method of using frequency energy transfer to lower -frequency band to determine grouting defects is effective, with a detection validity of 66.7%. Therefore, the non-destructive testing method for grouting sleeve compactness proposed in this paper can provide reference for engineering testing application.},\n\tdoi = {10.1016/j.apacoust.2024.110037},\n\tvolume = {221},\n\tissn = {0003-682X},\n\tnote = {Times Cited in Web of Science Core Collection: 3 Total Times Cited: 4 Cited Reference Count: 25 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.apacoust.2024.110037"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000234",
+      "entry_type": "article",
+      "title": "Efficient Denoising Method for Ultrasonic Signals Using IA-ICEEMDAN-VME",
+      "authors": [
+        "Hu, LW",
+        "Li, W",
+        "Chen, X"
+      ],
+      "year": 2026,
+      "journal": "IEEE SENSORS JOURNAL",
+      "doi": "10.1109/jsen.2025.3649525",
+      "abstract": "Ultrasonic testing is a widely used nondestructive technique for detecting internal defects in materials. In practical applications, ultrasonic signals often suffer from low signal-to-noise ratios (SNRs) due to reflection, transmission, and refraction within the tested object, causing defect-related echoes to be obscured and reducing detection accuracy. Existing decomposition-based denoising methods typically rely on fixed or adaptive thresholds to classify intrinsic mode functions (IMFs), and subsequently reconstruct the signal based on the selected effective IMFs. However, IMFs near the threshold are difficult to distinguish as either an informative signal or noise, leading to misclassification and suboptimal reconstruction. To address this challenge, we propose iterative adaptive (IA)-improved complete ensemble empirical mode decomposition with adaptive noise (ICEEMDAN)-variational mode extraction (VME), a denoising framework tailored for low-SNR ultrasonic signals. It employs a Pearson correlation coefficient (CC)-guided residual adaptive iterative strategy to directly extract high-value IMFs without thresholding. The residual from each iteration is reconstructed as the input for the next iteration, gradually building an optimal set of IMFs. To further suppress potential residual noise within selected IMFs, VME is applied, enhancing signal clarity and fidelity. Experiments on both simulated and real-world datasets demonstrate that IA-CEEMDAN-VME outperforms existing methods such as ICEEMDAN and ICEEMDAN-wavelet, achieving higher SNR and lower root-mean-square error (RMSE) under noisy conditions. The proposed method offers a robust solution for ultrasonic nondestructive testing in low-SNR environments, enabling more accurate recovery of defect signals.",
+      "keywords": [
+        "Noise",
+        "Noise reduction",
+        "Acoustics",
+        "Signal to noise ratio",
+        "Testing",
+        "Noise measurement",
+        "Correlation",
+        "Iterative methods",
+        "Correlation coefficient",
+        "Accuracy",
+        "Improved complete ensemble empirical mode decomposition with adaptive noise (ICEEMDAN)",
+        "nondestructive testing",
+        "ultrasonic signal denoising",
+        "variational mode extraction (VME)",
+        "ALGORITHM"
+      ],
+      "normalized_title": "efficient denoising method for ultrasonic signals using ia iceemdan vme",
+      "raw_bibtex": "@ARTICLE{10.1109/JSEN.2025.3649525,\n\tauthor = {Hu, LW and Li, W and Chen, X},\n\ttitle = {Efficient Denoising Method for Ultrasonic Signals Using IA-ICEEMDAN-VME},\n\tjournal = {IEEE SENSORS JOURNAL},\n\tyear = {2026},\n\tkeywords = {Noise; Noise reduction; Acoustics; Signal to noise ratio; Testing; Noise measurement; Correlation; Iterative methods; Correlation coefficient; Accuracy; Improved complete ensemble empirical mode decomposition with adaptive noise (ICEEMDAN); nondestructive testing; ultrasonic signal denoising; variational mode extraction (VME); ALGORITHM},\n\tabstract = {Ultrasonic testing is a widely used nondestructive technique for detecting internal defects in materials. In practical applications, ultrasonic signals often suffer from low signal-to-noise ratios (SNRs) due to reflection, transmission, and refraction within the tested object, causing defect-related echoes to be obscured and reducing detection accuracy. Existing decomposition-based denoising methods typically rely on fixed or adaptive thresholds to classify intrinsic mode functions (IMFs), and subsequently reconstruct the signal based on the selected effective IMFs. However, IMFs near the threshold are difficult to distinguish as either an informative signal or noise, leading to misclassification and suboptimal reconstruction. To address this challenge, we propose iterative adaptive (IA)-improved complete ensemble empirical mode decomposition with adaptive noise (ICEEMDAN)-variational mode extraction (VME), a denoising framework tailored for low-SNR ultrasonic signals. It employs a Pearson correlation coefficient (CC)-guided residual adaptive iterative strategy to directly extract high-value IMFs without thresholding. The residual from each iteration is reconstructed as the input for the next iteration, gradually building an optimal set of IMFs. To further suppress potential residual noise within selected IMFs, VME is applied, enhancing signal clarity and fidelity. Experiments on both simulated and real-world datasets demonstrate that IA-CEEMDAN-VME outperforms existing methods such as ICEEMDAN and ICEEMDAN-wavelet, achieving higher SNR and lower root-mean-square error (RMSE) under noisy conditions. The proposed method offers a robust solution for ultrasonic nondestructive testing in low-SNR environments, enabling more accurate recovery of defect signals.},\n\tdoi = {10.1109/JSEN.2025.3649525},\n\tvolume = {26},\n\tnumber = {5},\n\tpages = {6911-6920},\n\tissn = {1530-437X},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 36 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/JSEN.2025.3649525"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000235",
+      "entry_type": "article",
+      "title": "Quality Classification of Indoor Rock Samples Using Ultrasonic Waveform Features and Cluster Analysis",
+      "authors": [
+        "Lv, SQ",
+        "Liu, JF",
+        "Xu, HN",
+        "Wu, Y",
+        "Liu, DH",
+        "Liu, JJ"
+      ],
+      "year": 2025,
+      "journal": "ROCK MECHANICS AND ROCK ENGINEERING",
+      "doi": "10.1007/s00603-025-05004-7",
+      "abstract": "To assess the quality and initial damage of indoor sandstone samples, an integrated framework combining ultrasonic testing, mechanical testing, and machine learning was developed. Initially, waveforms and peak stresses of 207 samples were acquired. Subsequently, 29 features extracted from time-domain waveforms and the wavelet packet energy were utilized to construct a dataset. Feature weights determined by the Spearman rank correlation matrix were incorporated into preprocessing. Following this, two cluster analyses employing the Gaussian mixture model were conducted on the original and preprocessed datasets, with t-distributed stochastic neighbor embedding applied for visualization. Critically, the preprocessed dataset produced final clustering results showing denser intra-cluster scatter distributions and enhanced clustering metrics: mean silhouette coefficient (0.624), Calinski-Harabasz index (293.413), and Davies-Bouldin index (0.617). Consequently, the feature-weighted clustering outcome was adopted for quality classification. Furthermore, calculation methods for the quality score and relative damage level were proposed, establishing a classification scheme. Validation through multivariate analysis of variance (MANOVA) and Spearman rank correlation confirmed the scheme's rationality and applicability. MANOVA indicated significant discrimination (p < 0.001) in the combined means of peak stresses and P-wave velocities across quality grades. Spearman analysis demonstrated strong positive correlations (p < 0.001) between quality grades and these core indicators. Concurrently, representative samples exhibited variations in key wavelet time-frequency characteristics (amplitude, the frequency corresponding to maximum amplitude, and the time corresponding to maximum amplitude) across ascending quality grades; these variations aligned with wave propagation behavior in rock media, further validating the scheme's reliability.",
+      "keywords": [
+        "Time-domain waveform",
+        "Wavelet packet transform",
+        "Correlation matrix",
+        "Feature weights",
+        "Cluster analysis",
+        "Indoor rock sample quality classification",
+        "DAMAGE IDENTIFICATION",
+        "SYSTEM",
+        "VELOCITY",
+        "ENERGY",
+        "BQ"
+      ],
+      "normalized_title": "quality classification of indoor rock samples using ultrasonic waveform features and cluster analysis",
+      "raw_bibtex": "@ARTICLE{10.1007/s00603-025-05004-7,\n\tauthor = {Lv, SQ and Liu, JF and Xu, HN and Wu, Y and Liu, DH and Liu, JJ},\n\ttitle = {Quality Classification of Indoor Rock Samples Using Ultrasonic Waveform Features and Cluster Analysis},\n\tjournal = {ROCK MECHANICS AND ROCK ENGINEERING},\n\tyear = {2025},\n\tkeywords = {Time-domain waveform; Wavelet packet transform; Correlation matrix; Feature weights; Cluster analysis; Indoor rock sample quality classification; DAMAGE IDENTIFICATION; SYSTEM; VELOCITY; ENERGY; BQ},\n\tabstract = {To assess the quality and initial damage of indoor sandstone samples, an integrated framework combining ultrasonic testing, mechanical testing, and machine learning was developed. Initially, waveforms and peak stresses of 207 samples were acquired. Subsequently, 29 features extracted from time-domain waveforms and the wavelet packet energy were utilized to construct a dataset. Feature weights determined by the Spearman rank correlation matrix were incorporated into preprocessing. Following this, two cluster analyses employing the Gaussian mixture model were conducted on the original and preprocessed datasets, with t-distributed stochastic neighbor embedding applied for visualization. Critically, the preprocessed dataset produced final clustering results showing denser intra-cluster scatter distributions and enhanced clustering metrics: mean silhouette coefficient (0.624), Calinski-Harabasz index (293.413), and Davies-Bouldin index (0.617). Consequently, the feature-weighted clustering outcome was adopted for quality classification. Furthermore, calculation methods for the quality score and relative damage level were proposed, establishing a classification scheme. Validation through multivariate analysis of variance (MANOVA) and Spearman rank correlation confirmed the scheme's rationality and applicability. MANOVA indicated significant discrimination (p < 0.001) in the combined means of peak stresses and P-wave velocities across quality grades. Spearman analysis demonstrated strong positive correlations (p < 0.001) between quality grades and these core indicators. Concurrently, representative samples exhibited variations in key wavelet time-frequency characteristics (amplitude, the frequency corresponding to maximum amplitude, and the time corresponding to maximum amplitude) across ascending quality grades; these variations aligned with wave propagation behavior in rock media, further validating the scheme's reliability.},\n\tdoi = {10.1007/s00603-025-05004-7},\n\tissn = {0723-2632},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 74 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s00603-025-05004-7"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000236",
+      "entry_type": "article",
+      "title": "A metal internal microdamage imaging method based on a three-stage laser ultrasonic bulk wave signal processing strategy",
+      "authors": [
+        "Rui, XB",
+        "Feng, S",
+        "Li, GZ",
+        "Lai, XM",
+        "Zhang, YL",
+        "Zhang, H",
+        "Xu, LX",
+        "Tang, XJ",
+        "Liu, LX",
+        "Zhang, Y"
+      ],
+      "year": 2026,
+      "journal": "MEASUREMENT SCIENCE AND TECHNOLOGY",
+      "doi": "10.1088/1361-6501/ae2f7e",
+      "abstract": "To address issues such as wave mode aliasing, severe surface wave interference, and insufficient imaging accuracy in traditional laser ultrasonic testing, this paper presents a three-stage laser ultrasonic imaging method that integrates principal component subtraction (PCS), delay multiply and sum (DMAS), and minimum variance (MV). First, PCS preprocessing is used to suppress common interference, such as surface waves, and highlight bulk wave signals. Then, DMAS nonlinear summation is employed to enhance the contrast of defect echoes. Finally, the MV algorithm is used to optimize the focusing effect and improve imaging resolution. A simulation model of aluminum alloy with hole defects is established in COMSOL to analyze bulk wave propagation characteristics and verify the method's effectiveness. Additionally, an annular laser excitation is introduced to enhance bulk wave focusing intensity and defect response sensitivity. An experimental platform consisting of a pulsed laser and a laser Doppler vibrometer is used to detect aluminum alloy samples with millimetre-scale through-hole defects. Both simulation and experimental results demonstrate that the proposed method effectively suppresses noise and artifacts, accurately reconstructs the spatial location of defects at varying depths with an average positioning error of 1.75 mm. Furthermore, using a dual-probe synchronized scanning strategy significantly improves data acquisition efficiency compared to traditional full matrix capture (FMC) methods. Results show that the proposed PCS-DMAS-MV pipeline achieves imaging quality comparable to FMC-based processing while significantly improving inspection efficiency. This approach holds significant engineering application value in the high-precision detection of micro-defects in reusable aerospace metallic structures.",
+      "keywords": [
+        "laser ultrasonic",
+        "non-destructive testing",
+        "ultrasonic imaging",
+        "internal defects"
+      ],
+      "normalized_title": "a metal internal microdamage imaging method based on a three stage laser ultrasonic bulk wave signal processing strategy",
+      "raw_bibtex": "@ARTICLE{10.1088/1361-6501/ae2f7e,\n\tauthor = {Rui, XB and Feng, S and Li, GZ and Lai, XM and Zhang, YL and Zhang, H and Xu, LX and Tang, XJ and Liu, LX and Zhang, Y},\n\ttitle = {A metal internal microdamage imaging method based on a three-stage laser ultrasonic bulk wave signal processing strategy},\n\tjournal = {MEASUREMENT SCIENCE AND TECHNOLOGY},\n\tyear = {2026},\n\tkeywords = {laser ultrasonic; non-destructive testing; ultrasonic imaging; internal defects},\n\tabstract = {To address issues such as wave mode aliasing, severe surface wave interference, and insufficient imaging accuracy in traditional laser ultrasonic testing, this paper presents a three-stage laser ultrasonic imaging method that integrates principal component subtraction (PCS), delay multiply and sum (DMAS), and minimum variance (MV). First, PCS preprocessing is used to suppress common interference, such as surface waves, and highlight bulk wave signals. Then, DMAS nonlinear summation is employed to enhance the contrast of defect echoes. Finally, the MV algorithm is used to optimize the focusing effect and improve imaging resolution. A simulation model of aluminum alloy with hole defects is established in COMSOL to analyze bulk wave propagation characteristics and verify the method's effectiveness. Additionally, an annular laser excitation is introduced to enhance bulk wave focusing intensity and defect response sensitivity. An experimental platform consisting of a pulsed laser and a laser Doppler vibrometer is used to detect aluminum alloy samples with millimetre-scale through-hole defects. Both simulation and experimental results demonstrate that the proposed method effectively suppresses noise and artifacts, accurately reconstructs the spatial location of defects at varying depths with an average positioning error of 1.75 mm. Furthermore, using a dual-probe synchronized scanning strategy significantly improves data acquisition efficiency compared to traditional full matrix capture (FMC) methods. Results show that the proposed PCS-DMAS-MV pipeline achieves imaging quality comparable to FMC-based processing while significantly improving inspection efficiency. This approach holds significant engineering application value in the high-precision detection of micro-defects in reusable aerospace metallic structures.},\n\tdoi = {10.1088/1361-6501/ae2f7e},\n\tvolume = {37},\n\tnumber = {3},\n\tissn = {0957-0233},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 32 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1088/1361-6501/ae2f7e"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000237",
+      "entry_type": "article",
+      "title": "Corrosion Detection of Gearbox Based on Wavelet Time-Frequency Attention Fusion Network",
+      "authors": [
+        "Gao, TY",
+        "Li, YJ",
+        "Yang, JL",
+        "Chang, YQ",
+        "Fan, XP",
+        "Zhang, MY"
+      ],
+      "year": 2026,
+      "journal": "IEEE TRANSACTIONS ON INSTRUMENTATION AND MEASUREMENT",
+      "doi": "10.1109/tim.2025.3644553",
+      "abstract": "Marine gearboxes operating long-term in high-temperature, high-humidity, and high-salinity mist marine environments are highly susceptible to corrosion faults, posing significant threats to the reliability and safety of shipboard equipment. Ultrasonic testing (UT) technology, with its noncontact and remote capabilities, is well-suited for inspecting complex workpieces in such adverse conditions. To address the limitations of existing quantitative corrosion detection methods for gearboxes, while fully leveraging the nondestructiveness and information integrity advantages of ultrasonic nondestructive testing technology, this article proposes the wavelet time-frequency attention fusion network (WAFN), an ultrasonic signal-based method for gearbox corrosion detection. The method first constructs an optimized four-channel parallel ConvNeXt network (multichannel time-frequency feature extraction (MCFE) module) for deep feature extraction. Subsequently, a Transformer encoder module is introduced to fuse global features and capture cross-channel spatial dependencies. Then, a symmetric multichannel cross-attention feature fusion (CAFF) module realizes adaptive weighted fusion of local and global features. Finally, a supervised collaborative contrast loss (SCCL) training mechanism is designed, combining feature loss and classification loss to pull features of the same corrosion level closer while pushing features of different levels apart. This effectively mitigates interference from intraclass variations and blurred interclass feature boundaries inherent in quantitative data, achieving quantitative nondestructive detection of gearbox corrosion. Experimental results show that the proposed model achieves higher comprehensive accuracy on the two datasets and in the supplementary experiments with actual plates, verifying the effectiveness of this method.",
+      "keywords": [
+        "Corrosion",
+        "Acoustics",
+        "Testing",
+        "Time-frequency analysis",
+        "Maintenance",
+        "Gears",
+        "Machinery",
+        "Accuracy",
+        "Marine vehicles",
+        "Analytical models",
+        "Gearbox corrosion",
+        "multichannel time-frequency fusion",
+        "nondestructive testing (NDT)",
+        "supervised collaborative contrast loss (SCCL)",
+        "ultrasonic"
+      ],
+      "normalized_title": "corrosion detection of gearbox based on wavelet time frequency attention fusion network",
+      "raw_bibtex": "@ARTICLE{10.1109/TIM.2025.3644553,\n\tauthor = {Gao, TY and Li, YJ and Yang, JL and Chang, YQ and Fan, XP and Zhang, MY},\n\ttitle = {Corrosion Detection of Gearbox Based on Wavelet Time-Frequency Attention Fusion Network},\n\tjournal = {IEEE TRANSACTIONS ON INSTRUMENTATION AND MEASUREMENT},\n\tyear = {2026},\n\tkeywords = {Corrosion; Acoustics; Testing; Time-frequency analysis; Maintenance; Gears; Machinery; Accuracy; Marine vehicles; Analytical models; Gearbox corrosion; multichannel time-frequency fusion; nondestructive testing (NDT); supervised collaborative contrast loss (SCCL); ultrasonic},\n\tabstract = {Marine gearboxes operating long-term in high-temperature, high-humidity, and high-salinity mist marine environments are highly susceptible to corrosion faults, posing significant threats to the reliability and safety of shipboard equipment. Ultrasonic testing (UT) technology, with its noncontact and remote capabilities, is well-suited for inspecting complex workpieces in such adverse conditions. To address the limitations of existing quantitative corrosion detection methods for gearboxes, while fully leveraging the nondestructiveness and information integrity advantages of ultrasonic nondestructive testing technology, this article proposes the wavelet time-frequency attention fusion network (WAFN), an ultrasonic signal-based method for gearbox corrosion detection. The method first constructs an optimized four-channel parallel ConvNeXt network (multichannel time-frequency feature extraction (MCFE) module) for deep feature extraction. Subsequently, a Transformer encoder module is introduced to fuse global features and capture cross-channel spatial dependencies. Then, a symmetric multichannel cross-attention feature fusion (CAFF) module realizes adaptive weighted fusion of local and global features. Finally, a supervised collaborative contrast loss (SCCL) training mechanism is designed, combining feature loss and classification loss to pull features of the same corrosion level closer while pushing features of different levels apart. This effectively mitigates interference from intraclass variations and blurred interclass feature boundaries inherent in quantitative data, achieving quantitative nondestructive detection of gearbox corrosion. Experimental results show that the proposed model achieves higher comprehensive accuracy on the two datasets and in the supplementary experiments with actual plates, verifying the effectiveness of this method.},\n\tdoi = {10.1109/TIM.2025.3644553},\n\tvolume = {75},\n\tissn = {0018-9456},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 39 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TIM.2025.3644553"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000238",
+      "entry_type": "article",
+      "title": "Time-frequency analysis of ultrasonic signals for quality assessment of bonded concrete",
+      "authors": [
+        "Khademi, P",
+        "Mousavi, M",
+        "Dackermann, U",
+        "Gandomi, AH"
+      ],
+      "year": 2023,
+      "journal": "CONSTRUCTION AND BUILDING MATERIALS",
+      "doi": "10.1016/j.conbuildmat.2023.133062",
+      "abstract": "In accelerated bridge construction (ABC), 3D-printed concrete and structural retrofitting using concrete jacketing are used to reduce the onsite construction time. Both techniques involve bonded concrete, where a concrete layer is cast on the old substrate. As a result, the interfacial transition zone between these concrete layers is the weakest part of the structure. In this paper, a machine learning-based model is proposed to predict the bond strength between concrete layers from extracted ultrasonic features. Ultrasound tests provide the input parameters, and bi-surface shear test results are the targets for the machine learning model. To validate the method, laboratory testing is performed on 54 concrete specimens with different design mixtures and bond zone conditions. Variational Mode Decomposition (VMD) is applied to the ultrasonic signals, and three intrinsic mode functions (IMFs) are extracted from each signal leading to 21 independent features. Four machine learning algorithms are deployed, namely K-nearest-neighbors, support vector machine, random forest, and XGB regressors. XGB is found to be the most accurate model, and its hyperparameters are tuned to optimize the model performance. To improve the method, the features' importance values are derived, and the most compelling features for training are identified, which are the third quartile and center frequency of the first IMF's instantaneous frequency, and the center frequency and kurtosis of the second IMF's instantaneous frequency. The resulting final model was a tuned XGBoost regression model that obtained an R-squared value of 95.5 percent taking the four features as input. For the four selected features, apparent clustering was found at a bond strength of 3 MPa, ensuring a reliable prediction of quality bond conditions. These results demonstrate the effectiveness of the proposed model in predicting the bi-surface shear strength of concrete layers based on ultrasonic testing.",
+      "keywords": [
+        "Bi-surface shear test",
+        "Ultrasound test",
+        "Variational mode decomposition",
+        "Machine learning",
+        "PERFORMANCE",
+        "STRENGTH",
+        "MODEL",
+        "SLAG"
+      ],
+      "normalized_title": "time frequency analysis of ultrasonic signals for quality assessment of bonded concrete",
+      "raw_bibtex": "@ARTICLE{10.1016/j.conbuildmat.2023.133062,\n\tauthor = {Khademi, P and Mousavi, M and Dackermann, U and Gandomi, AH},\n\ttitle = {Time-frequency analysis of ultrasonic signals for quality assessment of bonded concrete},\n\tjournal = {CONSTRUCTION AND BUILDING MATERIALS},\n\tyear = {2023},\n\tkeywords = {Bi-surface shear test; Ultrasound test; Variational mode decomposition; Machine learning; PERFORMANCE; STRENGTH; MODEL; SLAG},\n\tabstract = {In accelerated bridge construction (ABC), 3D-printed concrete and structural retrofitting using concrete jacketing are used to reduce the onsite construction time. Both techniques involve bonded concrete, where a concrete layer is cast on the old substrate. As a result, the interfacial transition zone between these concrete layers is the weakest part of the structure. In this paper, a machine learning-based model is proposed to predict the bond strength between concrete layers from extracted ultrasonic features. Ultrasound tests provide the input parameters, and bi-surface shear test results are the targets for the machine learning model. To validate the method, laboratory testing is performed on 54 concrete specimens with different design mixtures and bond zone conditions. Variational Mode Decomposition (VMD) is applied to the ultrasonic signals, and three intrinsic mode functions (IMFs) are extracted from each signal leading to 21 independent features. Four machine learning algorithms are deployed, namely K-nearest-neighbors, support vector machine, random forest, and XGB regressors. XGB is found to be the most accurate model, and its hyperparameters are tuned to optimize the model performance. To improve the method, the features' importance values are derived, and the most compelling features for training are identified, which are the third quartile and center frequency of the first IMF's instantaneous frequency, and the center frequency and kurtosis of the second IMF's instantaneous frequency. The resulting final model was a tuned XGBoost regression model that obtained an R-squared value of 95.5 percent taking the four features as input. For the four selected features, apparent clustering was found at a bond strength of 3 MPa, ensuring a reliable prediction of quality bond conditions. These results demonstrate the effectiveness of the proposed model in predicting the bi-surface shear strength of concrete layers based on ultrasonic testing.},\n\tdoi = {10.1016/j.conbuildmat.2023.133062},\n\tvolume = {403},\n\tissn = {0950-0618},\n\tnote = {Times Cited in Web of Science Core Collection: 9 Total Times Cited: 9 Cited Reference Count: 49 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.conbuildmat.2023.133062"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000239",
+      "entry_type": "article",
+      "title": "Acoustic reverberation time determination in solid medium",
+      "authors": [
+        "Farhat, Y",
+        "Bustillo, J",
+        "Achdjian, H",
+        "Sabra, MN",
+        "Zaouk, D",
+        "Fortineau, J"
+      ],
+      "year": 2022,
+      "journal": "APPLIED ACOUSTICS",
+      "doi": "10.1016/j.apacoust.2022.108958",
+      "abstract": "Classical ultrasonic testing (UT) is a method used to evaluate the parameters of materials using mechan-ical wave. Most of these methods provide local information about the properties of the medium along the direct paths between emitter and receiver. Yet, some of these methods depend on the coda or late reflec-tions, which provide global information about the medium. In this work, a method inspired by room acoustic techniques is proposed to determine medium properties. In fact, the reverberated signal is highly sensitive to mechanical parameters and boundary conditions. In acoustic room theory, which uses these reverberated signals, for determination of the reverberation time which is very useful to enhance the sound quality of rooms. However, this technique only uses one propagation mode, since the wave prop-agates through the air inside the acoustic room. Considering that a solid medium is analogous to the acoustic cavity, the walls are equivalent to boundary conditions. Firstly, a model is developed to estimate the acoustic intensity of each propagation mode taking into account the coupling due to mode conver-sion. It allows the reverberation time to be estimated in solid medium. Secondly, an experimental setup is proposed. A five piezoelectric (PZT) patches, randomly distributed on an aluminum block, one acting as an emitter and the others as receivers to perform experimental reverberation time measurements. Finally, a comparison between the simulated and experimental is done, and inverse problem solving is performed to retrieve the attenuations. A good agreement between the retrieved and literature attenua-tion values of both bulk waves has been observed in aluminum.(c) 2022 Elsevier Ltd. All rights reserved.",
+      "keywords": [
+        "Acoustics",
+        "Reverberation",
+        "Non-destructive evaluation",
+        "Mode conversion",
+        "Signal processing",
+        "ULTRASONIC MICROSCOPY",
+        "DECAY"
+      ],
+      "normalized_title": "acoustic reverberation time determination in solid medium",
+      "raw_bibtex": "@ARTICLE{10.1016/j.apacoust.2022.108958,\n\tauthor = {Farhat, Y and Bustillo, J and Achdjian, H and Sabra, MN and Zaouk, D and Fortineau, J},\n\ttitle = {Acoustic reverberation time determination in solid medium},\n\tjournal = {APPLIED ACOUSTICS},\n\tyear = {2022},\n\tkeywords = {Acoustics; Reverberation; Non-destructive evaluation; Mode conversion; Signal processing; ULTRASONIC MICROSCOPY; DECAY},\n\tabstract = {Classical ultrasonic testing (UT) is a method used to evaluate the parameters of materials using mechan-ical wave. Most of these methods provide local information about the properties of the medium along the direct paths between emitter and receiver. Yet, some of these methods depend on the coda or late reflec-tions, which provide global information about the medium. In this work, a method inspired by room acoustic techniques is proposed to determine medium properties. In fact, the reverberated signal is highly sensitive to mechanical parameters and boundary conditions. In acoustic room theory, which uses these reverberated signals, for determination of the reverberation time which is very useful to enhance the sound quality of rooms. However, this technique only uses one propagation mode, since the wave prop-agates through the air inside the acoustic room. Considering that a solid medium is analogous to the acoustic cavity, the walls are equivalent to boundary conditions. Firstly, a model is developed to estimate the acoustic intensity of each propagation mode taking into account the coupling due to mode conver-sion. It allows the reverberation time to be estimated in solid medium. Secondly, an experimental setup is proposed. A five piezoelectric (PZT) patches, randomly distributed on an aluminum block, one acting as an emitter and the others as receivers to perform experimental reverberation time measurements. Finally, a comparison between the simulated and experimental is done, and inverse problem solving is performed to retrieve the attenuations. A good agreement between the retrieved and literature attenua-tion values of both bulk waves has been observed in aluminum.(c) 2022 Elsevier Ltd. All rights reserved.},\n\tdoi = {10.1016/j.apacoust.2022.108958},\n\tvolume = {197},\n\tissn = {0003-682X},\n\tnote = {Times Cited in Web of Science Core Collection: 2 Total Times Cited: 2 Cited Reference Count: 28 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.apacoust.2022.108958"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000240",
+      "entry_type": "article",
+      "title": "Enhanced analysis of H62 brass thin plates using integrated LIBS and laser ultrasonic Lamb wave for composition and flaw detection",
+      "authors": [
+        "Wang, XH",
+        "Gong, Y",
+        "Zhu, ZJ",
+        "He, SZ",
+        "Tian, YL",
+        "Guo, GQ",
+        "Zhou, YT",
+        "Sun, XC",
+        "Gong, T",
+        "Qiu, XB",
+        "He, XH",
+        "Chen, HQ",
+        "Zhang, L",
+        "Li, CL"
+      ],
+      "year": 2025,
+      "journal": "OPTICS AND LASER TECHNOLOGY",
+      "doi": "10.1016/j.optlastec.2025.112525",
+      "abstract": "The concentration of compositions and the presence of defects can dominate the properties and behavior of brass thin plates. Therefore, it is crucial to simultaneously detect their compositions and defects, particularly during the manufacturing process. In this work, we propose an integrated system using Laser-Induced Breakdown Spectroscopy (LIBS) and laser ultrasonic Lamb wave (LW) systems to identify elemental concentrations and locate flaws in H62 brass thin plates. The first weaker pulse (1.5 GW/mm2) is utilized for determining main elemental compositions by calibration-free (CF)-LIBS. The second stronger pulse (14 GW/mm2) is employed to qualitatively detect trace elements and generates strong laser ultrasonic LW. An all-fiber laser heterodyne interferometer is applied for measuring ultrasonic signals, enhancing the system's flexibility and efficiency. A triple-point receiver has been implemented to determine the location of defects. Additionally, a continuous wavelet transform is applied to analyze the ultrasonic wave at a center frequency of 370 kHz for flaw echo detection. The results demonstrate an error of 3.03 % in the determination of major composition concentrations (Cu, Zn, Fe, Pb), and observe the trace elements (Sn, Ni, Na, Al, Ca) with concentrations lower than 0.01 %. The flaw position is determined by using the four-point arc method, with a relative error of 1.2 % for a circular flaw with a diameter of 2 mm. Therefore, this non-contact measurement technique offers a promising approach for the simultaneous online detection of elemental concentrations and flaws in brass thin plates during manufacturing processes.",
+      "keywords": [
+        "Laser-induced breakdown spectroscopy",
+        "Laser ultrasonic testing",
+        "Multiple points laser heterodyne interferometer",
+        "Lamb wave",
+        "Non-contact measurement technique",
+        "SENSOR ARRAY",
+        "PERFORMANCE",
+        "BREAKDOWN"
+      ],
+      "normalized_title": "enhanced analysis of h62 brass thin plates using integrated libs and laser ultrasonic lamb wave for composition and flaw detection",
+      "raw_bibtex": "@ARTICLE{10.1016/j.optlastec.2025.112525,\n\tauthor = {Wang, XH and Gong, Y and Zhu, ZJ and He, SZ and Tian, YL and Guo, GQ and Zhou, YT and Sun, XC and Gong, T and Qiu, XB and He, XH and Chen, HQ and Zhang, L and Li, CL},\n\ttitle = {Enhanced analysis of H62 brass thin plates using integrated LIBS and laser ultrasonic Lamb wave for composition and flaw detection},\n\tjournal = {OPTICS AND LASER TECHNOLOGY},\n\tyear = {2025},\n\tkeywords = {Laser-induced breakdown spectroscopy; Laser ultrasonic testing; Multiple points laser heterodyne interferometer; Lamb wave; Non-contact measurement technique; SENSOR ARRAY; PERFORMANCE; BREAKDOWN},\n\tabstract = {The concentration of compositions and the presence of defects can dominate the properties and behavior of brass thin plates. Therefore, it is crucial to simultaneously detect their compositions and defects, particularly during the manufacturing process. In this work, we propose an integrated system using Laser-Induced Breakdown Spectroscopy (LIBS) and laser ultrasonic Lamb wave (LW) systems to identify elemental concentrations and locate flaws in H62 brass thin plates. The first weaker pulse (1.5 GW/mm2) is utilized for determining main elemental compositions by calibration-free (CF)-LIBS. The second stronger pulse (14 GW/mm2) is employed to qualitatively detect trace elements and generates strong laser ultrasonic LW. An all-fiber laser heterodyne interferometer is applied for measuring ultrasonic signals, enhancing the system's flexibility and efficiency. A triple-point receiver has been implemented to determine the location of defects. Additionally, a continuous wavelet transform is applied to analyze the ultrasonic wave at a center frequency of 370 kHz for flaw echo detection. The results demonstrate an error of 3.03 % in the determination of major composition concentrations (Cu, Zn, Fe, Pb), and observe the trace elements (Sn, Ni, Na, Al, Ca) with concentrations lower than 0.01 %. The flaw position is determined by using the four-point arc method, with a relative error of 1.2 % for a circular flaw with a diameter of 2 mm. Therefore, this non-contact measurement technique offers a promising approach for the simultaneous online detection of elemental concentrations and flaws in brass thin plates during manufacturing processes.},\n\tdoi = {10.1016/j.optlastec.2025.112525},\n\tvolume = {185},\n\tissn = {0030-3992},\n\tnote = {Times Cited in Web of Science Core Collection: 4 Total Times Cited: 5 Cited Reference Count: 28 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.optlastec.2025.112525"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

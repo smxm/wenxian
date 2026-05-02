@@ -1,0 +1,50 @@
+{
+  "batch_id": "batch_0002",
+  "results": [
+    {
+      "paper_id": "paper_000011",
+      "decision": "uncertain",
+      "reason": "标题和摘要明确讨论电离辐射对肠道菌群的影响，但未明确提及职业性暴露或低剂量慢性暴露条件。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000012",
+      "decision": "exclude",
+      "reason": "标题和摘要聚焦于结直肠癌中AIM2的作用机制与免疫治疗，未提及职业性辐射暴露，且辐射仅作为背景因素之一。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000013",
+      "decision": "uncertain",
+      "reason": "标题和摘要明确研究电离辐射对小鼠肠道隐窝素4表达的影响，涉及肠道菌群调节，但使用8 Gy一次性照射，可能不符合低剂量慢性暴露特征。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords",
+        "doi"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000014",
+      "decision": "include",
+      "reason": "标题和摘要明确研究低剂量辐射预处理对小鼠放射性肠黏膜损伤的保护作用，涉及肠道屏障功能指标，符合低剂量辐射与肠道健康主题。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.85
+    }
+  ]
+}

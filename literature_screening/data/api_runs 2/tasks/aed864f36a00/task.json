@@ -1,0 +1,54 @@
+{
+  "id": "aed864f36a00",
+  "kind": "report",
+  "status": "cancelled",
+  "cancel_requested": true,
+  "title": "new-screening-run-report",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 14,
+  "progress_total": 14,
+  "progress_message": "Report generation completed",
+  "created_at": "2026-03-30T17:07:37.730028+08:00",
+  "updated_at": "2026-03-30T17:09:54.061046+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "ee3f6c4992d8",
+    "project_topic": "弓网离线电气特性、电弧模型（尤其是Cassie及其衍生模型）及MATLAB弓网仿真",
+    "model_provider": "deepseek",
+    "source_screening_task_id": "d002df8e66e9",
+    "input_dataset_ids": [
+      "3cea1d984b66",
+      "6d12d984fc2e"
+    ],
+    "request_payload": {
+      "title": "new-screening-run-report",
+      "project_id": null,
+      "screening_task_id": "d002df8e66e9",
+      "dataset_ids": [],
+      "project_topic": "弓网离线电气特性、电弧模型（尤其是Cassie及其衍生模型）及MATLAB弓网仿真",
+      "model": {
+        "provider": "deepseek",
+        "model_name": "deepseek-chat",
+        "api_base_url": "https://api.deepseek.com/v1",
+        "api_key_env": "DEEPSEEK_API_KEY",
+        "temperature": 0.0,
+        "max_tokens": 1536,
+        "min_request_interval_seconds": 2.0
+      },
+      "report_name": "simple_report",
+      "retry_times": 6,
+      "timeout_seconds": 240,
+      "reference_style": "gbt7714"
+    },
+    "virtual_dataset_paths": [],
+    "model_secret_id": "46c101333c2b4cc6"
+  },
+  "summary": null,
+  "error": null,
+  "artifacts": {},
+  "run_root": null,
+  "output_dir": null,
+  "markdown_preview": null,
+  "records": []
+}

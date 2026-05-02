@@ -1,0 +1,380 @@
+{
+  "id": "abacc60e9134",
+  "kind": "screening",
+  "status": "succeeded",
+  "cancel_requested": false,
+  "title": "new-screening-run",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 2,
+  "progress_total": 5,
+  "progress_message": "Task completed",
+  "created_at": "2026-04-07T18:48:26.340173+08:00",
+  "updated_at": "2026-04-07T19:34:03.625830+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "2555381c3888",
+    "project_topic": "基于BIM技术的某项目施工图预算",
+    "model_provider": "deepseek",
+    "parent_task_id": null,
+    "input_dataset_ids": [],
+    "request_payload": {
+      "title": "new-screening-run",
+      "topic": "基于BIM技术的某项目施工图预算",
+      "criteria_markdown": "# Role\r\n\r\n你是一位工程造价与建筑信息模型（BIM）领域的资深学术研究员。我正在撰写一篇关于【基于BIM技术的某项目施工图预算】的论文，现在需要你协助我严格筛选和提炼参考文献。\r\n\r\n# Task\r\n\r\n我将提供一批文献的元数据（标题、摘要等）。请你逐一阅读，并严格按照以下流程处理：\r\n\r\n## Step 1: 筛选判读\r\n\r\n请根据以下标准判断该文献是否符合我的研究需求：\r\n\r\n* 纳入标准 (Inclusion Criteria)：\r\n  1. 必须涉及 BIM 技术（特别是 5D BIM）在项目造价、成本估算、工程量算量（QTO）或施工图预算编制中的直接应用。\r\n  2. 研究内容包含具体项目的应用案例、传统预算与BIM预算的对比（效率、准确率）、或造价数据互操作性（如 IFC 标准、Revit 与造价软件的数据交互）。\r\n  3. 属于高质量的实证研究、案例分析或系统性综述。\r\n\r\n* 排除标准 (Exclusion Criteria)：\r\n  1. 仅停留在 3D 建模、碰撞检查或 4D 进度管理，未实质性涉及造价成本（5D）数据的文献。\r\n  2. 侧重于施工阶段后的设施运维（FM）、结构力学分析或纯建筑设计的文献。\r\n  3. 无实际工程背景依托的纯理论算法推导，或非建筑/土木工程领域的文献。\r\n\r\n## Step 2: 格式化输出\r\n\r\n根据判读结果，执行不同的输出逻辑（注意：最终输出必须置于 Markdown 代码框内，绝对禁止生成任何形式的来源标记或类似 的引用标注）：\r\n\r\n情况 A：如果不符合要求\r\n\r\n* 仅输出一行文字：\r\n  `❌ [剔除]：<文献完整标题>`\r\n\r\n情况 B：如果符合要求\r\n\r\n* 请按以下结构输出（不要使用任何来源引用功能，只输出文字）：\r\n\r\n# <文献完整标题>\r\n(如果是英文文献，请在此处补充一行带括号的中文准确翻译)\r\n\r\n核心总结\r\n\r\n(请用中文简练概括：1. 文章针对传统施工图预算解决了什么痛点？ 2. 使用了什么核心 BIM 技术/造价软件/流程方法？ 3. 得出了什么关于算量精度、预算效率或成本控制的具体结论？)\r\n\r\n深度分析\r\n\r\n* 参考价值：针对我【基于BIM技术的项目施工图预算】的论文主题，这篇文章可以应用在我论文的哪个部分（如：绪论背景、方法论构建、案例对比分析）？它提供了哪些可直接借鉴的流程节点、评价指标或事实依据？\r\n\r\n---\r\n\r\n# Input Data\r\n\r\n[在此处粘贴你导出的文献信息，可以是 BibTeX 格式，或者 Excel/CSV 中的标题+摘要文本]",
+      "inclusion": [
+        "必须涉及 BIM 技术（特别是 5D BIM）在项目造价、成本估算、工程量算量（QTO）或施工图预算编制中的直接应用。",
+        "研究内容包含具体项目的应用案例、传统预算与BIM预算的对比（效率、准确率）、或造价数据互操作性（如 IFC 标准、Revit 与造价软件的数据交互）。",
+        "属于高质量的实证研究、案例分析或系统性综述。"
+      ],
+      "exclusion": [
+        "仅停留在 3D 建模、碰撞检查或 4D 进度管理，未实质性涉及造价成本（5D）数据的文献。",
+        "侧重于施工阶段后的设施运维（FM）、结构力学分析或纯建筑设计的文献。",
+        "无实际工程背景依托的纯理论算法推导，或非建筑/土木工程领域的文献。"
+      ],
+      "provider": "deepseek",
+      "model_name": "deepseek-chat",
+      "api_base_url": "https://api.deepseek.com/v1",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.0,
+      "max_tokens": 1536,
+      "min_request_interval_seconds": 2.0,
+      "batch_size": 10,
+      "target_include_count": 10,
+      "stop_when_target_reached": true,
+      "allow_uncertain": true,
+      "retry_times": 6,
+      "request_timeout_seconds": 240,
+      "encoding": "auto",
+      "project_id": "2555381c3888",
+      "parent_task_id": null,
+      "source_dataset_ids": []
+    },
+    "model_secret_id": "306b577363aa45cd",
+    "uploaded_input_paths": [
+      "tasks/abacc60e9134/uploads/savedrecs.ris"
+    ]
+  },
+  "summary": {
+    "run_id": "run_20260407_184826",
+    "input_files_count": 1,
+    "raw_entries_count": 50,
+    "deduped_entries_count": 50,
+    "processed_count": 20,
+    "included_count": 8,
+    "excluded_count": 9,
+    "uncertain_count": 3,
+    "unused_count": 30,
+    "batch_count": 2,
+    "api_call_count": 2,
+    "stop_reason": "target_include_count_reached",
+    "started_at": "2026-04-07T18:48:26.516520+08:00",
+    "finished_at": "2026-04-07T18:49:07.611910+08:00",
+    "reviewed": true
+  },
+  "error": null,
+  "artifacts": {
+    "included_report": {
+      "path": "tasks/abacc60e9134/screening_run/screening_output/included_report.md",
+      "filename": "included_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 6622
+    },
+    "excluded_report": {
+      "path": "tasks/abacc60e9134/screening_run/screening_output/excluded_report.md",
+      "filename": "excluded_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 922
+    },
+    "uncertain_report": {
+      "path": "tasks/abacc60e9134/screening_run/screening_output/uncertain_report.md",
+      "filename": "uncertain_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 1368
+    },
+    "included_ris": {
+      "path": "tasks/abacc60e9134/screening_run/screening_output/included.ris",
+      "filename": "included.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 31542
+    },
+    "unused_ris": {
+      "path": "tasks/abacc60e9134/screening_run/screening_output/unused_remaining.ris",
+      "filename": "unused_remaining.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 65115
+    },
+    "run_summary": {
+      "path": "tasks/abacc60e9134/screening_run/screening_output/run_summary.json",
+      "filename": "run_summary.json",
+      "content_type": "application/json",
+      "size_bytes": 451
+    },
+    "screening_decisions": {
+      "path": "tasks/abacc60e9134/screening_run/screening_output/screening_decisions.json",
+      "filename": "screening_decisions.json",
+      "content_type": "application/json",
+      "size_bytes": 10346
+    },
+    "reviewed_decisions": {
+      "path": "tasks/abacc60e9134/screening_run/screening_output/reviewed/screening_decisions.reviewed.json",
+      "filename": "screening_decisions.reviewed.json",
+      "content_type": "application/json",
+      "size_bytes": 9685
+    },
+    "reviewed_included_ris": {
+      "path": "tasks/abacc60e9134/screening_run/screening_output/reviewed/included.reviewed.ris",
+      "filename": "included.reviewed.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 17167
+    },
+    "reviewed_excluded_ris": {
+      "path": "tasks/abacc60e9134/screening_run/screening_output/reviewed/excluded.reviewed.ris",
+      "filename": "excluded.reviewed.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 18300
+    },
+    "reviewed_uncertain_report": {
+      "path": "tasks/abacc60e9134/screening_run/screening_output/reviewed/uncertain.reviewed.md",
+      "filename": "uncertain.reviewed.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 661
+    }
+  },
+  "run_root": "tasks/abacc60e9134/screening_run",
+  "output_dir": "tasks/abacc60e9134/screening_run/screening_output",
+  "markdown_preview": null,
+  "records": [
+    {
+      "paper_id": "paper_000001",
+      "title": "BIM-based quantity takeoff: Current state and future opportunities",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确涉及BIM在工程量算量（QTO）中的应用，关键词包含5D BIM，属于系统性综述。",
+      "year": 2024,
+      "journal": "AUTOMATION IN CONSTRUCTION",
+      "doi": "10.1016/j.autcon.2024.105549",
+      "abstract": "Building Information Modeling (BIM) has a significant role in the digital revolution of the AEC industry. The adoption of this technology has been increasing rapidly, enabling the industry to facilitate several construction tasks and enhance collaboration among stakeholders. Despite the growth of BIM-related publications, no systematic review has been conducted on the BIM-Based Quantity Takeoff (QTO) approach. This paper uses the PRISMA method to present a systematic review of 52 selected journal articles. Scopus (R) and Web of Science (R) databases were employed for literature retrieval to investigate the benefits, challenges, and future opportunities of the BIM-based QTO approach. Bibliometric analysis identified key benefits and challenges in management, professional skills, software functionalities, and implementation cost. Future opportunities, including software development and upskill training for seasoned professionals, were identified from the records and the research gaps. The study contributes a conceptual model for a comprehensive and sustainable implementation approach of BIM-based QTO."
+    },
+    {
+      "paper_id": "paper_000002",
+      "title": "Synergizing BIM and Value Engineering in the Construction of Residential Projects: A Novel Integration Framework",
+      "decision": "exclude",
+      "confidence": 0.92,
+      "reason": "人工复核：批量剔除",
+      "year": 2024,
+      "journal": "BUILDINGS",
+      "doi": "10.3390/buildings14082515",
+      "abstract": "This study explores integrating Building Information Modeling (BIM) and Value Engineering (VE) to enhance cost management and project value optimization in residential construction. The primary aim is to develop a comprehensive framework that synergizes 5th Dimension Building Information Modeling (5D BIM) with VE processes to identify and evaluate the most cost-effective construction alternatives. Employing a mixed-methods approach, this research includes an extensive review of existing practices, an integrated BIM-VE framework proposal, and the application of 5D BIM principles to improve visualization, cost estimation, and scheduling. The findings reveal that integrating BIM and VE significantly enhances project efficiency, quality, and cost-effectiveness. Specifically, the case study of a twin villa project demonstrates a 42% reduction in floor material costs and a 30% reduction in door material costs, resulting in an overall project cost savings of 35%. Additionally, the integrated approach contributes to a 15% reduction in project duration and a notable improvement in design quality and stakeholder collaboration. This research contributes significantly by providing a robust framework for BIM and VE integration, emphasizing its potential to revolutionize cost management practices in the construction industry. The novelty of this study lies in its detailed and practical approach to merging BIM with VE, offering a viable solution for resource optimization and sustainable building practices. This study highlights the transformative potential of BIM-VE integration, advocating for its broader adoption to achieve superior project outcomes."
+    },
+    {
+      "paper_id": "paper_000003",
+      "title": "Automated system for high-accuracy quantity takeoff using BIM",
+      "decision": "include",
+      "confidence": 0.93,
+      "reason": "标题和摘要明确描述基于BIM的自动化工程量算量系统，涉及成本控制和实际项目验证。",
+      "year": 2024,
+      "journal": "AUTOMATION IN CONSTRUCTION",
+      "doi": "10.1016/j.autcon.2023.105155",
+      "abstract": "Reliable construction project cost estimation relies on accurate quantity takeoffs (QTOs), traditionally done with error-prone 2-D drawings, but the emergence of Building Information Modeling (BIM) has improved QTO speed, accuracy, and reliability. However, the quality of BIM models can influence quantity accuracy, an aspect often overlooked in research on automating QTO with BIM. This paper develops an integrated framework to auto-matically extract and visualize construction quantities from BIM models. The system includes a Quantity Pre-cision Check (QPC) module for automating more accurate QTO outputs. These outputs are then automatically transferred to an external database and visualized through a user-friendly dashboard on the Microsoft Power BI platform. This dashboard allows for comparisons between 2-D and BIM quantities and helps track changes in quantities over time due to design changes. The system was successfully validated in an infrastructure con-struction project in Canada, where it identified a 39% inconsistency in wall elements' material quantities and reduced steel quantity by 10% due to design changes. Overall, the system offers a speedy, reliable, and efficient tool for construction estimators, site managers, and cost control teams to provide accurate quantities to the procurement team and make swift decisions in response to design change impacts on construction costs."
+    },
+    {
+      "paper_id": "paper_000004",
+      "title": "Minimizing Cost Overrun in Rail Projects through 5D-BIM: A Conceptual Governance Framework",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "人工复核：批量剔除",
+      "year": 2024,
+      "journal": "BUILDINGS",
+      "doi": "10.3390/buildings14020478",
+      "abstract": "Integration of 5D Building Information Modeling (BIM) into large rail projects has the potential to significantly enhance cost management and control. Nevertheless, 5D-BIM implementation has encountered difficulties stemming from technical, functional, and governance-related factors. This paper builds a conceptual framework to support financial decision making, enhances project management, and promotes efficient project delivery. The framework encompasses a set of interrelated elements that include project governance, BIM policies and standards, digital platforms, BIM LOD, cost-estimation classification, and continuous improvement. The proposed framework acknowledges the significance of project governance in guiding and organizing the implementation of 5D-BIM. Additionally, BIM policies and standards ensure the adherence to quality standards for the produced BIM models. Digital platforms serve as the basis for multiple users to generate, access, share, and exchange project information. BIM LOD promotes collaboration and coordination among all project stakeholders. Cost-estimation classification aligns the estimation process with the development of project scope and financial decision making. Continuous improvement plays a vital role in optimizing processes, enhancing efficiency, and achieving higher-quality outcomes. Moreover, it fosters stakeholder satisfaction, improves project performance, and nurtures a conducive environment for innovation and learning. The study analyzes the framework utilization in Victorian rail projects and identifies key implementation challenges. The main technical hurdles encountered were the lack of current horizontal infrastructure standards for data exchange and the lack of compatibility with current cost-management standards. Increased project complexity and the absence of clear project governance strategies and processes also posed organizational challenges. A further validation of the framework in real-world rail projects was recommended to achieve the implementation goals."
+    },
+    {
+      "paper_id": "paper_000005",
+      "title": "Development of ontological algorithms for exact QTO of reinforced concrete construction items",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "标题和摘要涉及BIM和工程量算量算法开发，但未明确提及成本估算或5D BIM应用，可能偏向纯算法研究。",
+      "year": 2024,
+      "journal": "STRUCTURES",
+      "doi": "10.1016/j.istruc.2024.105907",
+      "abstract": "Building Information Modeling (BIM) provides significant benefits to the construction industry throughout the project management process. However, state-of-the-art BIM software provides erroneous quantity take -off (QTO) results above the negligible margin. In this study, QTO calculation algorithms have been developed for rough construction and implemented on BIM software to solve the stated problem. The developed QTO algorithms establish semantic relations and search the neighborhood of the structural elements to detect the intersecting structural elements. Amount of intersection is calculated by the dimensions and the locations of the intersecting structural elements. Exact length and spacing of the rebar and stirrups are calculated by considering the created semantic relationships. QTO of formwork is accurately calculated by considering the voids of the QTO computations which are obtained from the constructed semantic relationships by investigating the column -beam, slabbeam, and slab -column contact areas. Furthermore, the construction type of the scaffolding for the formwork is determined by considering both the dimensions of the structure and the established semantic relations. The developed algorithms are executed on BIM capable software and tested in four case studies with special conditions. The comparison with manual condition revealed that the proposed algorithms provided exact results. The semantic QTO algorithms developed in this study have the potential to be useful for BIM software developers."
+    },
+    {
+      "paper_id": "paper_000006",
+      "title": "A Cloud-Driven Framework for Automated BIM Quantity Takeoff and Quality Control: Case Study Insights",
+      "decision": "include",
+      "confidence": 0.91,
+      "reason": "标题和摘要明确描述基于BIM的自动化工程量算量和质量控制框架，包含案例研究。",
+      "year": 2025,
+      "journal": "BUILDINGS",
+      "doi": "10.3390/buildings15213942",
+      "abstract": "Accurate quantity takeoff (QTO) is essential for cost estimation and project planning in the construction industry. However, current practices are often fragmented and rely on manual or semi-automated processes, leading to inefficiencies and errors. This study introduces a cloud-based framework that integrates automated QTO with a rule-based Quantity Precision Check (QPC) to ensure that quantities are derived only from validated and consistent BIM data. The framework is designed to be scalable and compatible with open data standards, supporting collaboration across teams and disciplines. A case study demonstrates the implementation of the system using structural and architectural models, where automated validation detected parameter inconsistencies and significantly improved the accuracy and reliability of takeoff results. To evaluate the system's effectiveness, the study proposes five quantitative validation metrics, Inconsistency Detection Rate (IDR), Parameter Consistency Rate (PCR), Quantity Accuracy Improvement (QAI), Change Impact Tracking (CIT), and Automated Reporting Efficiency (ARE). These indicators are newly introduced in this study to address the absence of standardized metrics for automated QTO with pre-takeoff, rule-based validation. However, the current validation was limited to a single project and discipline-specific rule set, suggesting that broader testing across mechanical, electrical, and infrastructure models is needed to fully confirm scalability and generalizability. The proposed approach provides both researchers and practitioners with a replicable, transparent methodology for advancing digital construction practices and improving the quality and efficiency of BIM-based estimation processes."
+    },
+    {
+      "paper_id": "paper_000007",
+      "title": "BIM-Based Automatic Extraction of Daily Concrete and Formwork Requirements for Site Work Planning",
+      "decision": "include",
+      "confidence": 0.88,
+      "reason": "标题和摘要明确涉及BIM自动提取混凝土和模板工程量用于施工计划，属于具体应用案例。",
+      "year": 2024,
+      "journal": "BUILDINGS",
+      "doi": "10.3390/buildings14124021",
+      "abstract": "Material planning is important in construction, for it affects procurement, cost, and schedule. Proper planning of material supply and logistics helps streamline the performance of all tasks through the avoidance of excessive or insufficient material supply. Material planning relies on quantity takeoff (QTO) and project schedules. Conventionally, quantity takeoff was a manual process based on 2D drawings and human interpretation and was error-prone. Presently, with the popularity of Building Information Modelling (BIM), in BIM-based projects, using inbuilt quantity takeoff functions, quantities of work can be generated automatically from BIM models to aid the quantity takeoff. However, if those inbuilt QTO solutions are object-based, then the quantities of works extracted may not meet the requirements of the users in selected cases, e.g., in zone-based construction projects. Also, for estimating daily material requirements, the accuracy of the quantities of work becomes more important, not only for the purpose of efficient planning but also for reducing construction waste. Since works using the same type of material can go overlapping, in addition to estimating the amount of material for each work, the total amount of material for a day must also be calculated. Thus, this research aims to develop a framework for automatic extraction of zone-based concrete volumes and formwork positions for cast-in-place concrete structures using the data in BIM models, followed by linking them with project schedules for estimating daily concrete and formwork requirements. This framework extends the body of knowledge by introducing an innovative algorithm for automatically calculating overlapped areas between concrete members and a rule for naming tasks in the schedule, followed by evaluating the formwork requirements without drawing formwork in a 3D model. A software tool will be developed to achieve the aim, and a case study will be used to validate the proposed framework."
+    },
+    {
+      "paper_id": "paper_000008",
+      "title": "The Impact of Building Information Modeling Technology on Cost Management of Civil Engineering Projects: A Case Study of the Mombasa Port Area Development Project",
+      "decision": "exclude",
+      "confidence": 0.89,
+      "reason": "人工复核：批量剔除",
+      "year": 2024,
+      "journal": "BUILDINGS",
+      "doi": "10.3390/buildings14041175",
+      "abstract": "Introduction: This study examines the impact of building information modeling on the cost management of engineering projects, focusing specifically on the Mombasa Port Area Development Project. The objective of this research is to determine the mechanisms through which building information modeling facilitates stakeholder collaboration, reduces construction-related expenses, and enhances the precision of cost estimation. Furthermore, this study investigates barriers to execution, assesses the impact on the project's transparency, and suggests approaches to maximize resource utilization. Methodology: This study employed a mixed-method research design comprising document reviews and surveys. During the document review, credible databases including ScienceDirect and Institute of Electrical and Electronics Engineers Xplore were explored. The survey included 69 professionals, among which were project managers, cost estimators, and building information modeling administrators. The mixed-methods approach prioritized ethical considerations and the statistical Package for the Social Sciences and Microsoft Excel were used in the analysis. Results: The results show that building information modeling is a valuable system for organizations looking to reduce project costs. The results note that the technology improves cost estimation accuracy, facilitates the identification of cost-related risks, and promotes collaborative decision-making. Conclusions: Building information modeling is an effective cost-estimating technology that positively impacts additional project aspects such as decision-making, collaboration, performance, and delivery time. Therefore, the Mombasa Port Area Development Project should inspire other stakeholders in engineering and construction to embrace building information modeling."
+    },
+    {
+      "paper_id": "paper_000009",
+      "title": "Model-based topological assessment for selective deconstruction: Enhancing quantity recovery and reuse accuracy",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要侧重于拆除和材料回收的拓扑评估，未涉及施工图预算或5D BIM成本应用。",
+      "year": 2025,
+      "journal": "AUTOMATION IN CONSTRUCTION",
+      "doi": "10.1016/j.autcon.2025.106438",
+      "abstract": "Design for reuse (DfR) is a key strategy for advancing sustainable construction, yet its adoption remains limited. A major gap is the lack of tools that incorporate topological assessments to support deconstruction and material reuse planning. Existing quantity takeoff (QTO) tools primarily focus on design and virgin material procurement stages, often overlooking the in-situ topology of materials and the realities of disassembly, resulting in inaccurate reuse estimates. To address this, a method is introduced that topologically evaluates structural components within as-built models, identifies connection types using enriched information, and anticipates component availability after deconstruction. Using the results of two institutional building projects, this framework is shown to more accurately estimate quantities of materials at their end of life, facilitating planning and decision-making for sustainable construction initiatives. The main contribution of this paper is the adaptation of conventional QTO practices to better support circular decision-making at the end-of-life stage of construction projects."
+    },
+    {
+      "paper_id": "paper_000010",
+      "title": "Optimizing Residential Buildings Desing Using Integrated Project Delivery (IPD) and Building Information Modeling (BIM): A Case Study in Peru",
+      "decision": "exclude",
+      "confidence": 0.87,
+      "reason": "人工复核：批量剔除",
+      "year": 2025,
+      "journal": "BUILDINGS",
+      "doi": "10.3390/buildings15060901",
+      "abstract": "Construction projects often exceed budgets and deadlines, evidencing the need for collaborative methodologies such as Integrated Project Delivery (IPD) and Building Information Modeling (BIM). This research evaluates their influence on the design stage of residential buildings through a case study in Peru, managed by an SME. The methodology includes: (1) diagnosis of management through documentary review and interviews, (2) proposal of tools based on BIM and IPD, and (3) validation through statistical analysis and a validation matrix. Nine typical problems were identified, such as deficiencies in plans, measurements and budgets, and poor planning. Eight optimization tools were proposed, including NEC4 ECC contracts, Trimble Connect, Revit, Navis-works, contractor integration, ICE Sessions, 3D, 4D, and 5D BIM models. The 3D model showed 0.48 interferences per m2, the 4D facilitated the monitoring of progress, and the 5D optimized costs by 5.28%. The validation process highlighted the NEC4 ECC Contract, the integration of the contractor, and the 3D and 5D BIM models (Revit and Navisworks) as the most effective tools. This study provides evidence on the implementation of BIM and IPD to optimize the management of residential buildings."
+    },
+    {
+      "paper_id": "paper_000011",
+      "title": "Transforming Construction Management in Peru: The Role of BIM in Innovation and Efficiency",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "摘要提到5D BIM涉及成本估算，但研究焦点是BIM在项目管理中的整体应用评估，未明确展示具体项目预算应用案例或对比。",
+      "year": 2024,
+      "journal": "SAGE OPEN",
+      "doi": "10.1177/21582440241233401",
+      "abstract": "In the contemporary landscape of construction project management, the strategic integration of Building Information Modeling (BIM) methodology has emerged as a fundamental avenue to improve operational efficiency. This study evaluates the feasibility and effectiveness of the implementation of the BIM methodology in improving the management of construction projects in construction companies in Peru. Using an applied approach underscored by a quantitative and correlational non-experimental design, a comprehensive survey was administered to 415 workers. This survey focused on evaluating the dimensions of BIM (3D, 4D, and 5D), as well as the fundamental facets of project management that encompass planning and execution. The results reveal that 47% of respondents highlighted deficiencies within the 3D BIM dimension, indicating potential challenges in visualizing and understanding the design. Likewise, 49% of participants highlighted deficiencies within the 4D BIM dimension, shedding light on issues related to time coordination and strategic planning. Around 57% expressed reservations about the 5D BIM dimension, highlighting the complexities surrounding accurate cost estimation and financial management. The synthesis of these revelations underscores an urgent call for specific interventions to rectify these specific areas. This involves investing in cutting-edge BIM technology tools and the simultaneous provision of targeted training programs for stakeholders to increase their multi-dimensional view of BIM. Ultimately, the study results drive innovation, thus opening the prospect of a more sustainable and streamlined construction industry."
+    },
+    {
+      "paper_id": "paper_000012",
+      "title": "Semantic enrichment of BIM models for construction cost estimation in pumped storage hydropower using industry foundation classes and interconnected data dictionaries",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "人工复核：批量剔除",
+      "year": 2025,
+      "journal": "ADVANCED ENGINEERING INFORMATICS",
+      "doi": "10.1016/j.aei.2025.103670",
+      "abstract": "Accurate construction cost estimation is vital for ensuring profitable project execution for both owners and contractors. However, traditional methods often rely on disparate engineering data, leading to inaccuracies and inconsistencies among stakeholders. To address this, this paper introduces an automated system that semantically enriches Building Information Modeling (BIM) models by integrating Industry Foundation Classes (IFC) with interconnected data dictionaries. By automating the cost estimation procedure, the proposed system streamlines decision-making, demonstrating significant advantages over traditional project management frameworks in a real-world pumped-storage project during the preconstruction phase. The findings also highlight future research directions for incorporating real-time engineering quotas and fluctuating market prices to enhance construction practices."
+    },
+    {
+      "paper_id": "paper_000013",
+      "title": "BIM-based flowchart for improving road construction planning and management",
+      "decision": "include",
+      "confidence": 0.92,
+      "reason": "摘要详细说明BIM工作流实现道路项目时间和成本数据自动化集成，涉及5D BIM和IFC，有实际项目应用。",
+      "year": 2026,
+      "journal": "AUTOMATION IN CONSTRUCTION",
+      "doi": "10.1016/j.autcon.2026.106845",
+      "abstract": "Road construction planning and management still face limitations due to insufficient BIM interoperability and the difficulty of assigning time and cost data to design-stage solids in linear infrastructure projects. This paper investigates how a BIM-based workflow can improve the integration of construction-oriented information in single-carriageway road projects. A new workflow, supported by custom plugins, is developed in Autodesk Civil 3D using Dynamo, enabling automated virtual segmentation of road solids, the definition of new PropertySets for station, time, and cost, and their export through IFC4 and IFC4.3. The workflow is applied to a real construction project, demonstrating improved interoperability, reduced modeling time, fewer errors in time and cost assignment, and enabling a more granular level of detail at the construction stage. These results are particularly relevant for road designers, BIM managers, contractors, and project managers seeking to automate 5D BIM workflows for road infrastructure. The proposed approach provides a foundation for future research on extending automated time and cost integration to more complex road typologies, additional construction elements, and other BIM platforms."
+    },
+    {
+      "paper_id": "paper_000014",
+      "title": "Investigation on the effectiveness of using building information modeling (BIM) tools in project management: a case study",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "人工复核：批量剔除",
+      "year": 2023,
+      "journal": "REVISTA DE LA CONSTRUCCION",
+      "doi": "10.7764/rdlc.22.2.306",
+      "abstract": "Building information modeling (BIM) has brought a technological shift in the area of construction programs, resulting in a significant rise in project management performance and affordability. In Bangladesh, designers have to deal with numerous issues in implementing BIM technology as technological expertise is insufficient in this area. Therefore, the paper focuses on implementing BIM across the project life cycle and assesses its effectiveness on a construction project with respect to the Bangladeshi construction industry. For this, a 3D model simulation of a three-storied residential building is developed and all semantic data (material properties, construction details, schedules, cost of the material, etc.) is stored with the model. In addition, BIM-centered integrated project delivery techniques are analyzed for clash detection, structural analysis, scheduling (4D), and cost estimation (5D) during the planning and construction phase. The outcome of the study indicated that BIM is effective in raising whole process performance, giving precise quantity takeoffs, optimizing schedules, reducing overall project uncertainties, structural defects, and expenses. The constitutional framework of this study can lead to increased efficiency, effective communication, as well as rarer mistakes in the construction project of Bangladesh. In addition, it can be an effective tool for managing medium-and large-scale projects since it can help to boost profitability, cut expenses, and enhance time management."
+    },
+    {
+      "paper_id": "paper_000015",
+      "title": "A Decision Support System for Optimizing Labor Acquisition in Construction",
+      "decision": "include",
+      "confidence": 0.88,
+      "reason": "摘要描述集成Revit和Primavera的5D BIM决策支持系统，优化劳动力成本，涉及具体项目验证和成本对比。",
+      "year": 2025,
+      "journal": "JOURNAL OF CONSTRUCTION ENGINEERING AND MANAGEMENT",
+      "doi": "10.1061/jcemd4.coeng-16841",
+      "abstract": "The construction industry has been criticized for poor team coordination, a crucial factor in effective project delivery. Integrating design data, construction schedules, and labor acquisition can enhance coordination among design, planning, and procurement teams, reducing labor-related issues and improving productivity. An integrated and optimized labor management system can ensure the smooth and efficient acquisition of labor. However, limited research addresses these aspects comprehensively. Previous studies neglected the integration of building information modeling (BIM) with labor acquisition, overlooked optimization of labor release/rehire and idling costs, and lacked dynamic coordination among design, planning, and procurement teams. Limited studies have addressed labor retention thresholds, location-adjusted costs, or multiobjective optimization for workforce management. This study proposes a decision support system (DSS) that integrates design data and construction schedules while optimizing labor acquisition. The DSS utilizes a custom integration developed by the authors between Revit version 2023 and Primavera P6 Professional 22 to facilitate 5-dimensional (5D) BIM. A multiobjective optimization model based on the nondominated sorting genetic algorithm II (NSGA-II) was developed to balance labor release and rehiring, idling, peak labor demand, and overall labor costs. The output of the DSS was visualized using a custom C# application that showed the optimized labor acquisition plan to the end user. The DSS was validated through a building project, where it reduced labor fluctuations by 19.75% and labor costs by 0.19% compared with the actual project schedule. It also outperformed Primavera P6, reducing labor fluctuations by 10.96% and costs by 0.55%, and lowering peak daily labor demand by 7.03% compared with the original plan and 11.85% compared with Primavera P6. By integrating BIM, construction scheduling, and optimization, the DSS offers a cost-effective, dynamic labor acquisition system. It enables practitioners to engage laborers efficiently, minimizing idling and hiring gaps, ultimately ensuring timely project completion within budget."
+    },
+    {
+      "paper_id": "paper_000016",
+      "title": "A hybrid building information modeling and collaboration platform for automation system in smart construction",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "摘要提到BIM技术在智能施工中应用并提及成本管理效益，但未具体说明5D BIM在预算编制中的直接应用细节。",
+      "year": 2024,
+      "journal": "ALEXANDRIA ENGINEERING JOURNAL",
+      "doi": "10.1016/j.aej.2024.01.013",
+      "abstract": "Building information modeling (BIM) technology can organically combine data modeling and virtual reality, and compare them with actual construction objects to realize the smart collaboration of entity and the model in the construction processes, greatly reducing early stage mistakes and improve construction efficiency. This paper proposed an automation system framework of smart construction based on BIM technology and collaboration platform, and discussed the element configuration of smart construction based on BIM technology and collaboration platform, and finally elaborated the working mechanism of automated system based on BIM technology and collaboration platform. The study results show that the automation system based on the BIM technology and collaboration platform supports the rapid construction of large-scale three-dimensional scenes and the precise integration of multi-source data, and can bring together construction information and asset information from different sources to form an open, safe, and accessible digital environment. The application of smart construction technology in construction cost management has brought huge economic benefits, construction efficiency has been increased by 65%, construction period has been shortened by 30%, labor intensity has been reduced by 27%, and labor productivity has been increased by 39%, which has brought considerable indirect benefits to construction projects."
+    },
+    {
+      "paper_id": "paper_000017",
+      "title": "Project-Based Introduction to Computing in Construction Management Curriculum: A Case Study",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要表明研究焦点是建筑管理课程教学案例，涉及BIM和算量软件但属于教育领域，无实际工程预算应用。",
+      "year": 2024,
+      "journal": "JOURNAL OF CIVIL ENGINEERING EDUCATION",
+      "doi": "10.1061/jceecd.eieng-1905",
+      "abstract": "Computing technology is reshaping the way in which professionals in the architecture, engineering, and construction industries conduct their business. The execution of construction tasks is changing from traditional 2D to 3D building information modeling (BIM)-based concepts. The use of BIM is expanded and enriched by the introduction of advanced computing technologies. At the same time, the demands for graduates in construction management with basic computing technology skills are on the rise. One of the challenges of construction management (CM) programs is how to incorporate computing knowledge so that future graduates can gain more experience with it during their undergraduate education. This paper presents a case study on this topic from an undergraduate construction management course at Purdue University. The in-class exercises and project required the use of computing technologies (e.g., quantity takeoff software, scheduling software, and Python programming) in this case study. The performance of students was evaluated before and after the project and the exercises. The findings showed the benefits of incorporating computing into a construction management curriculum as follows: (1) introducing the students to the efficiency and accuracy of computing technologies in CM; and (2) improving students' knowledge and skills in computing technologies and professional software applications. Based on students' feedback, short-term (one-class-long) programming training during the semester and more detailed instructions for a project are needed improvements in this course. The practice in this study provides insights for other instructors seeking to include more computing technologies into CM courses."
+    },
+    {
+      "paper_id": "paper_000018",
+      "title": "Probabilistic Cash Flow Analysis Considering Risk Impacts by Integrating 5D-Building Information Modeling and Bayesian Belief Network",
+      "decision": "exclude",
+      "confidence": 0.93,
+      "reason": "人工复核：批量剔除",
+      "year": 2025,
+      "journal": "BUILDINGS",
+      "doi": "10.3390/buildings15111774",
+      "abstract": "Unrealistic cash flow forecasts negatively affect project stakeholders and are a common issue for construction practitioners. This study proposes a new method for predicting the probabilistic cash flow of a project that can automate the calculation process while considering the impact of risks and their inter-related structure. This research integrates a Bayesian Belief Network (BBN) and 5D-BIM to provide a new probabilistic cash flow analysis approach. Here, 5D-BIM is used to facilitate cash flow calculations and automate the process. The BBN has also been implemented to assess the impact of risk factors on project cash flow, considering their complex inter-related structure. In addition, a hybrid approach combining fuzzy set theory, decision-making trial and evaluation laboratory (DEMATEL), and interpretive structural modeling (ISM) is used to form the BBN. The proposed method provides a robust tool for calculating the probabilistic cash flow of the project. The results showed that the project's cash flow in the last month was IRR 14.4 billion without considering the impact of risks. The probabilistic cash flow of the project indicates that due to the impact of the risks, the project cash flow will be in the range of IRR -142.2 billion and IRR 1.11 billion at the end of the project. This shows the possibility of experiencing between 11 and 130% deviation in the project cash flow due to existing risks. In conclusion, project cash flow is unreliable without considering the impact of risks. This framework supports better financial decisions and allows for the evaluation of cash flow risk management scenarios."
+    },
+    {
+      "paper_id": "paper_000019",
+      "title": "Cost Estimation Model Based on Building Information Modeling and Virtual Reality for Customizing Presold Homes",
+      "decision": "include",
+      "confidence": 0.91,
+      "reason": "摘要描述BIM与VR集成系统实现预售住宅定制化成本估算，自动计算变更成本，符合BIM在造价中的直接应用。",
+      "year": 2023,
+      "journal": "KSCE JOURNAL OF CIVIL ENGINEERING",
+      "doi": "10.1007/s12205-023-0825-2",
+      "abstract": "Presold homes refer to houses that are sold before construction has begun or while the construction is still underway. To facilitate the selection and purchase of houses by clients, construction companies usually use sample houses, models, or videos to show the appearance of new houses being constructed. Clients have numerous opportunities to participate in the spatial planning and spatial allocation of the houses because these houses have not yet been constructed, and clients can direct the style and materials used for interior partition walls and furnishings. However, when discussing housing styles with their clients, construction companies often depend on their imagination to create three-dimensional images depicting the interior layout of houses. Construction companies can neither immediately present new styles when clients request changes to partition walls or styles nor estimate the costs of the changes. Consequently, clients cannot immediately decide on such changes, which then leads to poor communication between the two parties. Accordingly, this study designed a system that integrates building information modeling (BIM) and virtual reality (VR). Through this system, clients can change and immediately view house styles in immersive VR and decide on whether the changes meet their demands. Furthermore, the designed system is linked to a unit price database for materials. When clients make alterations in the system, it automatically calculates the costs of the changes and then helps the client determine whether the changes are within their budgets. The results of this study indicate that the designed system can accurately and rapidly achieve cost estimation. Furthermore, the proposed system ensures consistency between BIM and virtual environment information, thereby promoting the application of BIM in the stages of a building life cycle subsequent to building design."
+    },
+    {
+      "paper_id": "paper_000020",
+      "title": "Applying Building Information Modelling (BIM) Technology in Pre-Tender Cost Estimation of Construction Projects: A Case Study in Iran",
+      "decision": "include",
+      "confidence": 0.94,
+      "reason": "标题和摘要明确研究BIM技术在伊朗项目投标前成本估算中的应用案例，涉及工程量计算和准确性对比。",
+      "year": 2024,
+      "journal": "BUILDINGS",
+      "doi": "10.3390/buildings14051260",
+      "abstract": "The pre-tender cost estimation serves as the foundation for determining the project cost in the early stages and is crucial for all parties involved in the tendering process. It is expected to be highly accurate. However, industry surveys have advocated that in the Iranian construction industry, the pre-tender estimated costs of construction projects are not sufficiently accurate during the bidding stage. Building information modelling (BIM) technology is a modern digital tool deployed in the construction industry that has seen substantial growth of application. It employs useful tools in different sectors and has extended its involvement in various stages of the project lifecycle, including feasibility studies, planning, design, construction, and operation and maintenance. This study examines and assesses the status of BIM development in Iran for its applicability in the pre-tender cost estimating process in construction projects. The findings of this study indicate that while there is a limited number of Iranian building projects' BIM models that possess the required quality and capabilities for BIM-based cost estimation, the results obtained are more precise when compared to existing manual methods. Additionally, utilising BIM-based cost estimation significantly reduces the time required for this process by enhancing the speed of cost estimation operations. An innovative evaluation framework for assessing the quality and functionalities of BIM models is presented, which improves the accuracy of cost estimation before the bidding process in Iran's construction industry. The research findings demonstrate the enhanced accuracy and effectiveness of BIM as compared to conventional approaches. It also suggests the incorporation of AI technology for model evaluation, which has the potential to become an established global industry standard."
+    }
+  ],
+  "project_id": "2555381c3888",
+  "project_topic": "基于BIM技术的某项目施工图预算",
+  "model_provider": "deepseek",
+  "parent_task_id": null,
+  "input_dataset_ids": [],
+  "output_dataset_ids": [
+    "8f3a1773d292",
+    "9af5d9f049d0",
+    "c9afdd0d58fb",
+    "9eca591fc6e2"
+  ]
+}

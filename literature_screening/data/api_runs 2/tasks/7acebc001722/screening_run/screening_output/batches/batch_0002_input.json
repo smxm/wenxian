@@ -1,0 +1,621 @@
+{
+  "batch_id": "batch_0002",
+  "paper_count": 20,
+  "paper_ids": [
+    "paper_000021",
+    "paper_000022",
+    "paper_000023",
+    "paper_000024",
+    "paper_000025",
+    "paper_000026",
+    "paper_000027",
+    "paper_000028",
+    "paper_000029",
+    "paper_000030",
+    "paper_000031",
+    "paper_000032",
+    "paper_000033",
+    "paper_000034",
+    "paper_000035",
+    "paper_000036",
+    "paper_000037",
+    "paper_000038",
+    "paper_000039",
+    "paper_000040"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000021",
+      "entry_type": "article",
+      "title": "Exploring the potential and limitations of artificial intelligence in animal anatomy",
+      "authors": [
+        "Choudhary, O.P.",
+        "Infant, S.S.",
+        "AS, V.",
+        "Chopra, H.",
+        "Manuta, N."
+      ],
+      "year": 2025,
+      "journal": "Annals of Anatomy",
+      "doi": "10.1016/j.aanat.2024.152366",
+      "abstract": "Background: Artificial intelligence (AI) is revolutionizing veterinary medicine, particularly in the domain of veterinary anatomy. At present, there is no existing review article in the literature that examines the prospects and challenges associated with the use of AI in animal anatomy education. Study design: Narrative review. Objective: This review article explores the prospects and drawbacks of AI applications in veterinary anatomy. Anatomy and AI-powered diagnostic systems enhance clinical examination, diagnosis, and treatment by analyzing vast datasets, improving accuracy, and detecting subtle anomalies. Methods: We reviewed and analyzed recent literature on AI applications in veterinary anatomy education, emphasizing their potential, limitations, and future directions. Conclusion: In veterinary anatomy education, AI integrates advanced tools like three-dimensional (3D) models, virtual reality (VR), and augmented reality (AR), offering dynamic and interactive learning experiences to students as well as the faculty of veterinary institutions across the globe. Despite these advantages, AI faces challenges such as the need for extensive, high-quality data, potential biases, and issues with algorithmic transparency. Additionally, virtual dissection and educational tools may impact hands-on learning and ethical and legal concerns regarding data privacy must be addressed. Balancing AI integration with traditional skills and addressing these challenges will maximize AI's benefits in veterinary anatomy and ensure comprehensive veterinary care. © 2024 Elsevier GmbH",
+      "keywords": [],
+      "normalized_title": "exploring the potential and limitations of artificial intelligence in animal anatomy",
+      "raw_bibtex": "@ARTICLE{10.1016/j.aanat.2024.152366,\n\tauthor = {Choudhary, O.P. and Infant, S.S. and AS, V. and Chopra, H. and Manuta, N.},\n\ttitle = {Exploring the potential and limitations of artificial intelligence in animal anatomy},\n\tjournal = {Annals of Anatomy},\n\tyear = {2025},\n\tabstract = {Background: Artificial intelligence (AI) is revolutionizing veterinary medicine, particularly in the domain of veterinary anatomy. At present, there is no existing review article in the literature that examines the prospects and challenges associated with the use of AI in animal anatomy education. Study design: Narrative review. Objective: This review article explores the prospects and drawbacks of AI applications in veterinary anatomy. Anatomy and AI-powered diagnostic systems enhance clinical examination, diagnosis, and treatment by analyzing vast datasets, improving accuracy, and detecting subtle anomalies. Methods: We reviewed and analyzed recent literature on AI applications in veterinary anatomy education, emphasizing their potential, limitations, and future directions. Conclusion: In veterinary anatomy education, AI integrates advanced tools like three-dimensional (3D) models, virtual reality (VR), and augmented reality (AR), offering dynamic and interactive learning experiences to students as well as the faculty of veterinary institutions across the globe. Despite these advantages, AI faces challenges such as the need for extensive, high-quality data, potential biases, and issues with algorithmic transparency. Additionally, virtual dissection and educational tools may impact hands-on learning and ethical and legal concerns regarding data privacy must be addressed. Balancing AI integration with traditional skills and addressing these challenges will maximize AI's benefits in veterinary anatomy and ensure comprehensive veterinary care. © 2024 Elsevier GmbH},\n\tdoi = {10.1016/j.aanat.2024.152366},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85211219079&doi=10.1016%2Fj.aanat.2024.152366&partnerID=40&md5=7065aee8b888b353a39c89aaa9d2e61c},\n\tvolume = {258},\n\tnote = {Export Date: 23 March 2026; Cited By: 35 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_4b691fab-b2df-482d-b600-58da2748e039.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.aanat.2024.152366"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000022",
+      "entry_type": "article",
+      "title": "Identification of kinase inhibitors that rule out the CYP27B1-mediated activation of vitamin D: an integrated machine learning and structure-based drug designing approach",
+      "authors": [
+        "Mahajan, K.",
+        "Verma, H.",
+        "Choudhary, S.",
+        "Raju, B.",
+        "Silakari, O."
+      ],
+      "year": 2021,
+      "journal": "Molecular Diversity",
+      "doi": "10.1007/s11030-021-10270-y",
+      "abstract": "Abstract: CYP27B1, a cytochrome P450-containing hydroxylase enzyme, converts vitamin D precursor calcidiol (25-hydroxycholecalciferol) to its active form calcitriol (1α,25(OH)2D3). Tyrosine kinase inhibitor such as imatinib is reported to interfere with the activation of vitamin D3 by inhibiting CYP27B1 enzyme. Consequently, there is a decrease in the serum levels of active vitamin D that in turn may increase the relapse risk among the cancer patients treated with imatinib. Within this framework, the current study focuses on identifying other possible kinase inhibitors that may affect the calcitriol level in the body by inhibiting CYP27B1. To achieve this, we explored multiple machine learning approaches including support vector machine (SVM), random forest (RF), and artificial neural network (ANN) to identify possible CYP27B1 inhibitors from a pool of kinase inhibitors database. The most reliable classification model was obtained from the SVM approach with Matthews correlation coefficient of 0.82 for the external test set. This model was further employed for the virtual screening of kinase inhibitors from the binding database (DB), which tend to interfere with the CYP27B1-mediated activation of vitamin D. This screening yielded around 4646 kinase inhibitors that were further subjected to structure-based analyses using the homology model of CYP27B1, as the 3D structure of CYP27B1 complexed with heme was not available. Overall, five kinase inhibitors including two well-known drugs, i.e., AT7867 (Compound-2) and amitriptyline N-oxide (Compound-3), were found to interact with CYP27B1 in such a way that may preclude the conversion of vitamin D to its active form and hence testify the impairment of vitamin D activation pathway. Graphic abstract: [Figure not available: see fulltext.]. © 2021, The Author(s), under exclusive licence to Springer Nature Switzerland AG.",
+      "keywords": [],
+      "normalized_title": "identification of kinase inhibitors that rule out the cyp27b1 mediated activation of vitamin d an integrated machine learning and structure based drug designing approach",
+      "raw_bibtex": "@ARTICLE{10.1007/s11030-021-10270-y,\n\tauthor = {Mahajan, K. and Verma, H. and Choudhary, S. and Raju, B. and Silakari, O.},\n\ttitle = {Identification of kinase inhibitors that rule out the CYP27B1-mediated activation of vitamin D: an integrated machine learning and structure-based drug designing approach},\n\tjournal = {Molecular Diversity},\n\tyear = {2021},\n\tabstract = {Abstract: CYP27B1, a cytochrome P450-containing hydroxylase enzyme, converts vitamin D precursor calcidiol (25-hydroxycholecalciferol) to its active form calcitriol (1α,25(OH)2D3). Tyrosine kinase inhibitor such as imatinib is reported to interfere with the activation of vitamin D3 by inhibiting CYP27B1 enzyme. Consequently, there is a decrease in the serum levels of active vitamin D that in turn may increase the relapse risk among the cancer patients treated with imatinib. Within this framework, the current study focuses on identifying other possible kinase inhibitors that may affect the calcitriol level in the body by inhibiting CYP27B1. To achieve this, we explored multiple machine learning approaches including support vector machine (SVM), random forest (RF), and artificial neural network (ANN) to identify possible CYP27B1 inhibitors from a pool of kinase inhibitors database. The most reliable classification model was obtained from the SVM approach with Matthews correlation coefficient of 0.82 for the external test set. This model was further employed for the virtual screening of kinase inhibitors from the binding database (DB), which tend to interfere with the CYP27B1-mediated activation of vitamin D. This screening yielded around 4646 kinase inhibitors that were further subjected to structure-based analyses using the homology model of CYP27B1, as the 3D structure of CYP27B1 complexed with heme was not available. Overall, five kinase inhibitors including two well-known drugs, i.e., AT7867 (Compound-2) and amitriptyline N-oxide (Compound-3), were found to interact with CYP27B1 in such a way that may preclude the conversion of vitamin D to its active form and hence testify the impairment of vitamin D activation pathway. Graphic abstract: [Figure not available: see fulltext.]. © 2021, The Author(s), under exclusive licence to Springer Nature Switzerland AG.},\n\tdoi = {10.1007/s11030-021-10270-y},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85110538090&doi=10.1007%2Fs11030-021-10270-y&partnerID=40&md5=dab8e0e8043dba23542012b561e1e07c},\n\tvolume = {25},\n\tnumber = {3},\n\tpages = {1617-1641},\n\tnote = {Export Date: 23 March 2026; Cited By: 3 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_4b691fab-b2df-482d-b600-58da2748e039.ris"
+      ],
+      "source_keys": [
+        "10.1007/s11030-021-10270-y"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000023",
+      "entry_type": "article",
+      "title": "Dual sensing signal decoupling based on tellurium anisotropy for VR interaction and neuro-reflex system application",
+      "authors": [
+        "Li, L.",
+        "Zhao, S.",
+        "Ran, W.",
+        "Li, Z.",
+        "Yan, Y.",
+        "Zhong, B.",
+        "Lou, Z.",
+        "Wang, L.",
+        "Shen, G."
+      ],
+      "year": 2022,
+      "journal": "Nature Communications",
+      "doi": "10.1038/s41467-022-33716-9",
+      "abstract": "Anisotropy control of the electronic structure in inorganic semiconductors is an important step in developing devices endowed with multi-function. Here, we demonstrate that the intrinsic anisotropy of tellurium nanowires can be used to modulate the electronic structure and piezoelectric polarization and decouple pressure and temperature difference signals, and realize VR interaction and neuro-reflex applications. The architecture design of the device combined with self-locking effect can eliminate dependence on displacement, enabling a single device to determine the hardness and thermal conductivity of materials through a simple touch. We used a bimodal Te-based sensor to develop a wearable glove for endowing real objects to the virtual world, which greatly improves VR somatosensory feedback. In addition, we successfully achieved stimulus recognition and neural-reflex in a rabbit sciatic nerve model by integrating the sensor signals using a deep learning technique. In view of in-/ex-vivo feasibility, the bimodal Te-based sensor would be considered a novel sensing platform for a wide range application of metaverse, AI robot, and electronic medicine. © 2022, The Author(s).",
+      "keywords": [],
+      "normalized_title": "dual sensing signal decoupling based on tellurium anisotropy for vr interaction and neuro reflex system application",
+      "raw_bibtex": "@ARTICLE{10.1038/s41467-022-33716-9,\n\tauthor = {Li, L. and Zhao, S. and Ran, W. and Li, Z. and Yan, Y. and Zhong, B. and Lou, Z. and Wang, L. and Shen, G.},\n\ttitle = {Dual sensing signal decoupling based on tellurium anisotropy for VR interaction and neuro-reflex system application},\n\tjournal = {Nature Communications},\n\tyear = {2022},\n\tabstract = {Anisotropy control of the electronic structure in inorganic semiconductors is an important step in developing devices endowed with multi-function. Here, we demonstrate that the intrinsic anisotropy of tellurium nanowires can be used to modulate the electronic structure and piezoelectric polarization and decouple pressure and temperature difference signals, and realize VR interaction and neuro-reflex applications. The architecture design of the device combined with self-locking effect can eliminate dependence on displacement, enabling a single device to determine the hardness and thermal conductivity of materials through a simple touch. We used a bimodal Te-based sensor to develop a wearable glove for endowing real objects to the virtual world, which greatly improves VR somatosensory feedback. In addition, we successfully achieved stimulus recognition and neural-reflex in a rabbit sciatic nerve model by integrating the sensor signals using a deep learning technique. In view of in-/ex-vivo feasibility, the bimodal Te-based sensor would be considered a novel sensing platform for a wide range application of metaverse, AI robot, and electronic medicine. © 2022, The Author(s).},\n\tdoi = {10.1038/s41467-022-33716-9},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85139495747&doi=10.1038%2Fs41467-022-33716-9&partnerID=40&md5=0ed0eb76fd6e96cf7dd0275bcedb56da},\n\tvolume = {13},\n\tnumber = {1},\n\tnote = {Export Date: 23 March 2026; Cited By: 114 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_4b691fab-b2df-482d-b600-58da2748e039.ris"
+      ],
+      "source_keys": [
+        "10.1038/s41467-022-33716-9"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000024",
+      "entry_type": "article",
+      "title": "Network pharmacology and transcriptomics reveal androgen receptor as a potential protein target for 6PPD-quinone",
+      "authors": [
+        "Liao, X.-L.",
+        "Zhou, J.-M.",
+        "Wang, Y.",
+        "Chen, Z.-F.",
+        "Cai, Z."
+      ],
+      "year": 2024,
+      "journal": "Science of the Total Environment",
+      "doi": "10.1016/j.scitotenv.2024.177678",
+      "abstract": "N-(1,3-dimethylbutyl)-N′-phenyl-p-phenylenediamine quinone (6PPD-quinone, or 6PPD-Q) has received increasing attention as an emerging hotspot contaminant. The occurrence of 6PPD-Q in dust and fine atmospheric particles indicates substantial human exposure to this toxicant but the hazards of 6PPD-Q to human health is unknown. We used in silico approaches to identify potential human protein targets of 6PPD-Q and conducted preliminary validation through an in vitro cell proliferation assay and an in vivo transcriptomic analysis of prostate tissues from 6PPD-Q-treated mice. Receptor-based reverse screening and network pharmacology identified four hub targets of 6PPD-Q that were closely related to prostate carcinogenesis. Among these four targets, 6PPD-Q exhibited a strong binding tendency to androgen receptor (AR) with a binding free energy of −23.04 kcal/mol. A support vector machine (SVM) model for predicting chemicals with AR agonism or AR-inactivity was established with good prediction performance (mean prediction accuracy: 0.92). SVM prediction and AR-mediated cell-based assays, with a known AR agonist and a proposed AR inactive agent as positive and negative controls, confirmed that 6PPD-Q displayed AR agonism. Upregulation of Ar mRNA expression (FC = 1.29, p = 0.0404) and its related prostate cancer pathway was observed in the prostate of mice exposed to environmentally realistic concentrations of 6PPD-Q, suggesting a potential role in promoting prostate carcinogenesis. These findings provide evidence that 6PPD-Q agonized AR to exert downstream gene transactivation and imply its prostate cancer risks to humans. © 2024 Elsevier B.V.",
+      "keywords": [],
+      "normalized_title": "network pharmacology and transcriptomics reveal androgen receptor as a potential protein target for 6ppd quinone",
+      "raw_bibtex": "@ARTICLE{10.1016/j.scitotenv.2024.177678,\n\tauthor = {Liao, X.-L. and Zhou, J.-M. and Wang, Y. and Chen, Z.-F. and Cai, Z.},\n\ttitle = {Network pharmacology and transcriptomics reveal androgen receptor as a potential protein target for 6PPD-quinone},\n\tjournal = {Science of the Total Environment},\n\tyear = {2024},\n\tabstract = {N-(1,3-dimethylbutyl)-N′-phenyl-p-phenylenediamine quinone (6PPD-quinone, or 6PPD-Q) has received increasing attention as an emerging hotspot contaminant. The occurrence of 6PPD-Q in dust and fine atmospheric particles indicates substantial human exposure to this toxicant but the hazards of 6PPD-Q to human health is unknown. We used in silico approaches to identify potential human protein targets of 6PPD-Q and conducted preliminary validation through an in vitro cell proliferation assay and an in vivo transcriptomic analysis of prostate tissues from 6PPD-Q-treated mice. Receptor-based reverse screening and network pharmacology identified four hub targets of 6PPD-Q that were closely related to prostate carcinogenesis. Among these four targets, 6PPD-Q exhibited a strong binding tendency to androgen receptor (AR) with a binding free energy of −23.04 kcal/mol. A support vector machine (SVM) model for predicting chemicals with AR agonism or AR-inactivity was established with good prediction performance (mean prediction accuracy: 0.92). SVM prediction and AR-mediated cell-based assays, with a known AR agonist and a proposed AR inactive agent as positive and negative controls, confirmed that 6PPD-Q displayed AR agonism. Upregulation of Ar mRNA expression (FC = 1.29, p = 0.0404) and its related prostate cancer pathway was observed in the prostate of mice exposed to environmentally realistic concentrations of 6PPD-Q, suggesting a potential role in promoting prostate carcinogenesis. These findings provide evidence that 6PPD-Q agonized AR to exert downstream gene transactivation and imply its prostate cancer risks to humans. © 2024 Elsevier B.V.},\n\tdoi = {10.1016/j.scitotenv.2024.177678},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85210120855&doi=10.1016%2Fj.scitotenv.2024.177678&partnerID=40&md5=26345bf204aada76caa45ef642a455a2},\n\tvolume = {957},\n\tnote = {Export Date: 23 March 2026; Cited By: 3 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_4b691fab-b2df-482d-b600-58da2748e039.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.scitotenv.2024.177678"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000025",
+      "entry_type": "article",
+      "title": "Apolipoprotein A-I mediates function of follicular regulatory T cells and type 2 follicular helper T in allergic rhinitis",
+      "authors": [
+        "Qiu, X.",
+        "Zeng, Y.",
+        "Li, J.",
+        "Zeng, Q.",
+        "Luo, X.",
+        "Liu, W."
+      ],
+      "year": 2025,
+      "journal": "World Allergy Organization Journal",
+      "doi": "10.1016/j.waojou.2025.101045",
+      "abstract": "Background: The follicular regulatory T cells (Tfr) and type 2 follicular helper T (Tfh2) play important roles in the pathogenesis of allergic rhinitis (AR). However, its detailed mechanism underlying the regulation of between Tfr and Tfh in AR is unclear. Apolipoprotein AI (Apo-AI), a well-established anti-inflammatory protein, exhibits anti-inflammatory effects on neutrophils, monocytes, macrophages, eosinophils, and type 2 innate lymphoid cells. We sought to investigate the interaction and mechanism between Apo-AI and Tfr/Tfh2 in AR. Methods: The peripheral Tfh2 and Tfr cells were detected and compared by flow cytometry and their correlation with serum Apo-AI protein expression were analyzed. The effect of Apo-AI on Tfh2 and Tfr cells were determined through detection of functional cytokines and key transcription factors by enzyme-linked immunosorbent assay (ELSIA) or polymerase chain reaction (PCR). A Tfr-Tfh2-B cell coculture system was adopted to investigate the role of Apo-AI. Apo-AI knockout AR mice model was established to verify the results of in vitro studies. Results: The serum Apo-AI concentration was positively correlated with the blood frequencies of Tfr cells and negatively correlated with the blood frequencies of Tfh2 cells in AR patients. Apo-AI inhibited IL-4 and IL-21 protein expression by Tfh2 and promoted IL-10 and TGF-beta protein expression by Tfr. In Tfr-Tfh2-B cell coculture system, Apo-AI attenuated the expression of IL-4, IL-21 and activation-induced cytidine deaminase through inducible costimulator (ICOS)/inducible costimulator ligand (ICOSL) pathways. Apo-AI partially restored the suppressive function of AR-derived Tfr cells. Apo-AI knockout AR mice presented with elevated blood Tfh2 frequencies and decreased blood Tfr frequencies, while administration of anti-ICOSL reversed the effect of Apo-AI. Conclusion: Apo-AI alleviates AR through the regulation of the function of Tfh2 and Tfr, which may serve as a potential treatment target for AR. © 2025 The Author(s)",
+      "keywords": [],
+      "normalized_title": "apolipoprotein a i mediates function of follicular regulatory t cells and type 2 follicular helper t in allergic rhinitis",
+      "raw_bibtex": "@ARTICLE{10.1016/j.waojou.2025.101045,\n\tauthor = {Qiu, X. and Zeng, Y. and Li, J. and Zeng, Q. and Luo, X. and Liu, W.},\n\ttitle = {Apolipoprotein A-I mediates function of follicular regulatory T cells and type 2 follicular helper T in allergic rhinitis},\n\tjournal = {World Allergy Organization Journal},\n\tyear = {2025},\n\tabstract = {Background: The follicular regulatory T cells (Tfr) and type 2 follicular helper T (Tfh2) play important roles in the pathogenesis of allergic rhinitis (AR). However, its detailed mechanism underlying the regulation of between Tfr and Tfh in AR is unclear. Apolipoprotein AI (Apo-AI), a well-established anti-inflammatory protein, exhibits anti-inflammatory effects on neutrophils, monocytes, macrophages, eosinophils, and type 2 innate lymphoid cells. We sought to investigate the interaction and mechanism between Apo-AI and Tfr/Tfh2 in AR. Methods: The peripheral Tfh2 and Tfr cells were detected and compared by flow cytometry and their correlation with serum Apo-AI protein expression were analyzed. The effect of Apo-AI on Tfh2 and Tfr cells were determined through detection of functional cytokines and key transcription factors by enzyme-linked immunosorbent assay (ELSIA) or polymerase chain reaction (PCR). A Tfr-Tfh2-B cell coculture system was adopted to investigate the role of Apo-AI. Apo-AI knockout AR mice model was established to verify the results of in vitro studies. Results: The serum Apo-AI concentration was positively correlated with the blood frequencies of Tfr cells and negatively correlated with the blood frequencies of Tfh2 cells in AR patients. Apo-AI inhibited IL-4 and IL-21 protein expression by Tfh2 and promoted IL-10 and TGF-beta protein expression by Tfr. In Tfr-Tfh2-B cell coculture system, Apo-AI attenuated the expression of IL-4, IL-21 and activation-induced cytidine deaminase through inducible costimulator (ICOS)/inducible costimulator ligand (ICOSL) pathways. Apo-AI partially restored the suppressive function of AR-derived Tfr cells. Apo-AI knockout AR mice presented with elevated blood Tfh2 frequencies and decreased blood Tfr frequencies, while administration of anti-ICOSL reversed the effect of Apo-AI. Conclusion: Apo-AI alleviates AR through the regulation of the function of Tfh2 and Tfr, which may serve as a potential treatment target for AR. © 2025 The Author(s)},\n\tdoi = {10.1016/j.waojou.2025.101045},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105000513845&doi=10.1016%2Fj.waojou.2025.101045&partnerID=40&md5=1a85fbccda53b3218e153c2f105fd52d},\n\tvolume = {18},\n\tnumber = {4},\n\tnote = {Export Date: 23 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_4b691fab-b2df-482d-b600-58da2748e039.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.waojou.2025.101045"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000026",
+      "entry_type": "article",
+      "title": "AI-Enabled Ultra-large Virtual Screening Identifies Potential Inhibitors of Choline Acetyltransferase for Theranostic Purposes",
+      "authors": [
+        "Baidya, A.T.K.",
+        "Goswami, A.K.",
+        "Das, B.",
+        "Darreh-Shori, T.",
+        "Kumar, R."
+      ],
+      "year": 2024,
+      "journal": "ACS Chemical Neuroscience",
+      "doi": "10.1021/acschemneuro.4c00361",
+      "abstract": "Alzheimer’s disease (AD) and related dementias are among the primary neurological disorders and call for the urgent need for early-stage diagnosis to gain an upper edge in therapeutic intervention and increase the overall success rate. Choline acetyltransferase (ChAT) is the key acetylcholine (ACh) biosynthesizing enzyme and a legitimate target for the development of biomarkers for early-stage diagnosis and monitoring of therapeutic responses. It is also a theranostic target for tackling colon and lung cancers, where overexpression of non-neuronal ChAT leads to the production of acetylcholine, which acts as an autocrine growth factor for cancer cells. Theranostics is a hybrid of diagnostics and therapeutics that can be used to locate cancer cells using radiotracers and kill them without affecting other healthy tissues. Traditional virtual screening protocols have a lot of limitations; given the current rate of chemical database expansion exceeding billions, much faster screening protocols are required. Deep docking (DD) is one such platform that leverages the power of deep neural network (DNN)-based virtual screening, empowering researchers to dock billions of molecules in a speedy, yet explicit manner. Here, we have screened 1.3 billion compounds library from the ZINC20 database, identifying the best-performing hits. With each iteration run where the first iteration gave ∼116 million hits, the second iteration gave ∼3.7 million hits, and the final third iteration gave 168,447 hits from which further refinement gave us the top 5 compounds as potential ChAT inhibitors. The discovery of novel ChAT inhibitors will enable researchers to develop new probes that can be used as novel theranostic agents against cancer and as early-stage diagnostics for the onset of AD, for timely therapeutic intervention to halt the further progression of AD. © 2024 American Chemical Society.",
+      "keywords": [],
+      "normalized_title": "ai enabled ultra large virtual screening identifies potential inhibitors of choline acetyltransferase for theranostic purposes",
+      "raw_bibtex": "@ARTICLE{10.1021/acschemneuro.4c00361,\n\tauthor = {Baidya, A.T.K. and Goswami, A.K. and Das, B. and Darreh-Shori, T. and Kumar, R.},\n\ttitle = {AI-Enabled Ultra-large Virtual Screening Identifies Potential Inhibitors of Choline Acetyltransferase for Theranostic Purposes},\n\tjournal = {ACS Chemical Neuroscience},\n\tyear = {2024},\n\tabstract = {Alzheimer’s disease (AD) and related dementias are among the primary neurological disorders and call for the urgent need for early-stage diagnosis to gain an upper edge in therapeutic intervention and increase the overall success rate. Choline acetyltransferase (ChAT) is the key acetylcholine (ACh) biosynthesizing enzyme and a legitimate target for the development of biomarkers for early-stage diagnosis and monitoring of therapeutic responses. It is also a theranostic target for tackling colon and lung cancers, where overexpression of non-neuronal ChAT leads to the production of acetylcholine, which acts as an autocrine growth factor for cancer cells. Theranostics is a hybrid of diagnostics and therapeutics that can be used to locate cancer cells using radiotracers and kill them without affecting other healthy tissues. Traditional virtual screening protocols have a lot of limitations; given the current rate of chemical database expansion exceeding billions, much faster screening protocols are required. Deep docking (DD) is one such platform that leverages the power of deep neural network (DNN)-based virtual screening, empowering researchers to dock billions of molecules in a speedy, yet explicit manner. Here, we have screened 1.3 billion compounds library from the ZINC20 database, identifying the best-performing hits. With each iteration run where the first iteration gave ∼116 million hits, the second iteration gave ∼3.7 million hits, and the final third iteration gave 168,447 hits from which further refinement gave us the top 5 compounds as potential ChAT inhibitors. The discovery of novel ChAT inhibitors will enable researchers to develop new probes that can be used as novel theranostic agents against cancer and as early-stage diagnostics for the onset of AD, for timely therapeutic intervention to halt the further progression of AD. © 2024 American Chemical Society.},\n\tdoi = {10.1021/acschemneuro.4c00361},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85208396722&doi=10.1021%2Facschemneuro.4c00361&partnerID=40&md5=aa5c07b9ff3407158961b35bd1cfa152},\n\tvolume = {15},\n\tnumber = {22},\n\tpages = {4156-4170},\n\tnote = {Export Date: 23 March 2026; Cited By: 5 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_4b691fab-b2df-482d-b600-58da2748e039.ris"
+      ],
+      "source_keys": [
+        "10.1021/acschemneuro.4c00361"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000027",
+      "entry_type": "article",
+      "title": "Towards real-time photorealistic 3D holography with deep neural networks",
+      "authors": [
+        "Shi, L.",
+        "Li, B.",
+        "Kim, C.",
+        "Kellnhofer, P.",
+        "Matusik, W."
+      ],
+      "year": 2021,
+      "journal": "Nature",
+      "doi": "10.1038/s41586-020-03152-0",
+      "abstract": "The ability to present three-dimensional (3D) scenes with continuous depth sensation has a profound impact on virtual and augmented reality, human–computer interaction, education and training. Computer-generated holography (CGH) enables high-spatio-angular-resolution 3D projection via numerical simulation of diffraction and interference1. Yet, existing physically based methods fail to produce holograms with both per-pixel focal control and accurate occlusion2,3. The computationally taxing Fresnel diffraction simulation further places an explicit trade-off between image quality and runtime, making dynamic holography impractical4. Here we demonstrate a deep-learning-based CGH pipeline capable of synthesizing a photorealistic colour 3D hologram from a single RGB-depth image in real time. Our convolutional neural network (CNN) is extremely memory efficient (below 620 kilobytes) and runs at 60 hertz for a resolution of 1,920 × 1,080 pixels on a single consumer-grade graphics processing unit. Leveraging low-power on-device artificial intelligence acceleration chips, our CNN also runs interactively on mobile (iPhone 11 Pro at 1.1 hertz) and edge (Google Edge TPU at 2.0 hertz) devices, promising real-time performance in future-generation virtual and augmented-reality mobile headsets. We enable this pipeline by introducing a large-scale CGH dataset (MIT-CGH-4K) with 4,000 pairs of RGB-depth images and corresponding 3D holograms. Our CNN is trained with differentiable wave-based loss functions5 and physically approximates Fresnel diffraction. With an anti-aliasing phase-only encoding method, we experimentally demonstrate speckle-free, natural-looking, high-resolution 3D holograms. Our learning-based approach and the Fresnel hologram dataset will help to unlock the full potential of holography and enable applications in metasurface design6,7, optical and acoustic tweezer-based microscopic manipulation8–10, holographic microscopy11 and single-exposure volumetric 3D printing12,13. © 2021, The Author(s), under exclusive licence to Springer Nature Limited.",
+      "keywords": [],
+      "normalized_title": "towards real time photorealistic 3d holography with deep neural networks",
+      "raw_bibtex": "@ARTICLE{10.1038/s41586-020-03152-0,\n\tauthor = {Shi, L. and Li, B. and Kim, C. and Kellnhofer, P. and Matusik, W.},\n\ttitle = {Towards real-time photorealistic 3D holography with deep neural networks},\n\tjournal = {Nature},\n\tyear = {2021},\n\tabstract = {The ability to present three-dimensional (3D) scenes with continuous depth sensation has a profound impact on virtual and augmented reality, human–computer interaction, education and training. Computer-generated holography (CGH) enables high-spatio-angular-resolution 3D projection via numerical simulation of diffraction and interference1. Yet, existing physically based methods fail to produce holograms with both per-pixel focal control and accurate occlusion2,3. The computationally taxing Fresnel diffraction simulation further places an explicit trade-off between image quality and runtime, making dynamic holography impractical4. Here we demonstrate a deep-learning-based CGH pipeline capable of synthesizing a photorealistic colour 3D hologram from a single RGB-depth image in real time. Our convolutional neural network (CNN) is extremely memory efficient (below 620 kilobytes) and runs at 60 hertz for a resolution of 1,920 × 1,080 pixels on a single consumer-grade graphics processing unit. Leveraging low-power on-device artificial intelligence acceleration chips, our CNN also runs interactively on mobile (iPhone 11 Pro at 1.1 hertz) and edge (Google Edge TPU at 2.0 hertz) devices, promising real-time performance in future-generation virtual and augmented-reality mobile headsets. We enable this pipeline by introducing a large-scale CGH dataset (MIT-CGH-4K) with 4,000 pairs of RGB-depth images and corresponding 3D holograms. Our CNN is trained with differentiable wave-based loss functions5 and physically approximates Fresnel diffraction. With an anti-aliasing phase-only encoding method, we experimentally demonstrate speckle-free, natural-looking, high-resolution 3D holograms. Our learning-based approach and the Fresnel hologram dataset will help to unlock the full potential of holography and enable applications in metasurface design6,7, optical and acoustic tweezer-based microscopic manipulation8–10, holographic microscopy11 and single-exposure volumetric 3D printing12,13. © 2021, The Author(s), under exclusive licence to Springer Nature Limited.},\n\tdoi = {10.1038/s41586-020-03152-0},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85102374449&doi=10.1038%2Fs41586-020-03152-0&partnerID=40&md5=d9e6a7029c673966b3ced40704a198ea},\n\tvolume = {591},\n\tnumber = {7849},\n\tpages = {234-239},\n\tnote = {Export Date: 23 March 2026; Cited By: 570 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_4b691fab-b2df-482d-b600-58da2748e039.ris"
+      ],
+      "source_keys": [
+        "10.1038/s41586-020-03152-0"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000028",
+      "entry_type": "article",
+      "title": "A Physiology-Based Flexible Strap Sensor for Gesture Recognition by Sensing Tendon Deformation",
+      "authors": [
+        "Peng, Y.",
+        "Wang, J.",
+        "Pang, K.",
+        "Liu, W.",
+        "Meng, J.",
+        "Li, B."
+      ],
+      "year": 2021,
+      "journal": "IEEE Sensors Journal",
+      "doi": "10.1109/jsen.2021.3054562",
+      "abstract": "Gesture recognition using machine-learning methods has been widely studied for human-machine interaction including advanced cybernetics, virtual reality, and healthcare systems. In this paper, we propose a physiology-based flexible strap sensor attached to the back of the hand. By sensing the tendon deformation on the back of the hand, the proposed sensor can recognize hand gestures with high accuracy. The proposed sensor contains six pressure sensing units connected by a flexible strap substrate. The graphene aerogel (GA) serves as the sensitive material of the sensing unit, which is sealed with two polyethylene terephthalate (PET) films. The size of the proposed sensor is 130 mm (L) $\\times6$ mm (W) $\\times3$ mm (H), which is flexible and stretchable for fitting different hands and different gestures. The sensing units can cover the main tendons on the back of the hand, and the data collected from the sensing units can provide distinguishing information of different hand gestures. Experimental results confirmed that the proposed sensor could achieve excellent linearity, repeatability, and resolution. A machine learning method was utilized to recognize twelve typical precision-grasping gestures, and the results showed that the proposed sensor and machine learning method could classify the precision-grasping gestures with a recognition accuracy of 84.7%. The technology is expected to provide a promising path for gesture recognition. © 2001-2012 IEEE.",
+      "keywords": [],
+      "normalized_title": "a physiology based flexible strap sensor for gesture recognition by sensing tendon deformation",
+      "raw_bibtex": "@ARTICLE{10.1109/JSEN.2021.3054562,\n\tauthor = {Peng, Y. and Wang, J. and Pang, K. and Liu, W. and Meng, J. and Li, B.},\n\ttitle = {A Physiology-Based Flexible Strap Sensor for Gesture Recognition by Sensing Tendon Deformation},\n\tjournal = {IEEE Sensors Journal},\n\tyear = {2021},\n\tabstract = {Gesture recognition using machine-learning methods has been widely studied for human-machine interaction including advanced cybernetics, virtual reality, and healthcare systems. In this paper, we propose a physiology-based flexible strap sensor attached to the back of the hand. By sensing the tendon deformation on the back of the hand, the proposed sensor can recognize hand gestures with high accuracy. The proposed sensor contains six pressure sensing units connected by a flexible strap substrate. The graphene aerogel (GA) serves as the sensitive material of the sensing unit, which is sealed with two polyethylene terephthalate (PET) films. The size of the proposed sensor is 130 mm (L) $\\times6$ mm (W) $\\times3$ mm (H), which is flexible and stretchable for fitting different hands and different gestures. The sensing units can cover the main tendons on the back of the hand, and the data collected from the sensing units can provide distinguishing information of different hand gestures. Experimental results confirmed that the proposed sensor could achieve excellent linearity, repeatability, and resolution. A machine learning method was utilized to recognize twelve typical precision-grasping gestures, and the results showed that the proposed sensor and machine learning method could classify the precision-grasping gestures with a recognition accuracy of 84.7%. The technology is expected to provide a promising path for gesture recognition. © 2001-2012 IEEE.},\n\tdoi = {10.1109/JSEN.2021.3054562},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85100489245&doi=10.1109%2FJSEN.2021.3054562&partnerID=40&md5=16d139e9ae97a85c0f663253c9744ac9},\n\tvolume = {21},\n\tnumber = {7},\n\tpages = {9449-9456},\n\tnote = {Export Date: 23 March 2026; Cited By: 21 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_4b691fab-b2df-482d-b600-58da2748e039.ris"
+      ],
+      "source_keys": [
+        "10.1109/JSEN.2021.3054562"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000029",
+      "entry_type": "article",
+      "title": "Discovery of a peptide proteolysis-targeting chimera (PROTAC) drug of p300 for prostate cancer therapy",
+      "authors": [
+        "Zhang, D.",
+        "Ma, B.",
+        "Liu, D.",
+        "Wu, W.",
+        "Zhou, T.",
+        "Gao, Y.",
+        "Yang, C.",
+        "Jian, Y.",
+        "Fan, Y.",
+        "Qian, Y.",
+        "Ma, J.",
+        "Gao, Y.",
+        "Chen, Y.",
+        "Xu, S.",
+        "Li, L."
+      ],
+      "year": 2024,
+      "journal": "eBioMedicine",
+      "doi": "10.1016/j.ebiom.2024.105212",
+      "abstract": "Background: The E1A-associated protein p300 (p300) has emerged as a promising target for cancer therapy due to its crucial role in promoting oncogenic signaling pathways in various cancers, including prostate cancer. This need is particularly significant in prostate cancer. While androgen deprivation therapy (ADT) has demonstrated promising efficacy in prostate cancer, its long-term use can eventually lead to the development of castration-resistant prostate cancer (CRPC) and neuroendocrine prostate cancer (NEPC). Notably, p300 has been identified as an important co-activator of the androgen receptor (AR), highlighting its significance in prostate cancer progression. Moreover, recent studies have revealed the involvement of p300 in AR-independent oncogenes associated with NEPC. Therefore, the blockade of p300 may emerge as an effective therapeutic strategy to address the challenges posed by both CRPC and NEPC. Methods: We employed AI-assisted design to develop a peptide-based PROTAC (proteolysis-targeting chimera) drug that targets p300, effectively degrading p300 in vitro and in vivo utilizing nano-selenium as a peptide drug delivery system. Findings: Our p300-targeting peptide PROTAC drug demonstrated effective p300 degradation and cancer cell-killing capabilities in both CRPC, AR-negative, and NEPC cells. This study demonstrated the efficacy of a p300-targeting drug in NEPC cells. In both AR-positive and AR-negative mouse models, the p300 PROTAC drug showed potent p300 degradation and tumor suppression. Interpretation: The design of peptide PROTAC drug targeting p300 is feasible and represents an efficient therapeutic strategy for CRPC, AR-negative prostate cancer, and NEPC. Funding: The funding details can be found in the Acknowledgements section. © 2024 The Author(s)",
+      "keywords": [],
+      "normalized_title": "discovery of a peptide proteolysis targeting chimera protac drug of p300 for prostate cancer therapy",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ebiom.2024.105212,\n\tauthor = {Zhang, D. and Ma, B. and Liu, D. and Wu, W. and Zhou, T. and Gao, Y. and Yang, C. and Jian, Y. and Fan, Y. and Qian, Y. and Ma, J. and Gao, Y. and Chen, Y. and Xu, S. and Li, L.},\n\ttitle = {Discovery of a peptide proteolysis-targeting chimera (PROTAC) drug of p300 for prostate cancer therapy},\n\tjournal = {eBioMedicine},\n\tyear = {2024},\n\tabstract = {Background: The E1A-associated protein p300 (p300) has emerged as a promising target for cancer therapy due to its crucial role in promoting oncogenic signaling pathways in various cancers, including prostate cancer. This need is particularly significant in prostate cancer. While androgen deprivation therapy (ADT) has demonstrated promising efficacy in prostate cancer, its long-term use can eventually lead to the development of castration-resistant prostate cancer (CRPC) and neuroendocrine prostate cancer (NEPC). Notably, p300 has been identified as an important co-activator of the androgen receptor (AR), highlighting its significance in prostate cancer progression. Moreover, recent studies have revealed the involvement of p300 in AR-independent oncogenes associated with NEPC. Therefore, the blockade of p300 may emerge as an effective therapeutic strategy to address the challenges posed by both CRPC and NEPC. Methods: We employed AI-assisted design to develop a peptide-based PROTAC (proteolysis-targeting chimera) drug that targets p300, effectively degrading p300 in vitro and in vivo utilizing nano-selenium as a peptide drug delivery system. Findings: Our p300-targeting peptide PROTAC drug demonstrated effective p300 degradation and cancer cell-killing capabilities in both CRPC, AR-negative, and NEPC cells. This study demonstrated the efficacy of a p300-targeting drug in NEPC cells. In both AR-positive and AR-negative mouse models, the p300 PROTAC drug showed potent p300 degradation and tumor suppression. Interpretation: The design of peptide PROTAC drug targeting p300 is feasible and represents an efficient therapeutic strategy for CRPC, AR-negative prostate cancer, and NEPC. Funding: The funding details can be found in the Acknowledgements section. © 2024 The Author(s)},\n\tdoi = {10.1016/j.ebiom.2024.105212},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85197036536&doi=10.1016%2Fj.ebiom.2024.105212&partnerID=40&md5=1349022a2c0edb0b79db7f52f378dd1b},\n\tvolume = {105},\n\tnote = {Export Date: 23 March 2026; Cited By: 21 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_4b691fab-b2df-482d-b600-58da2748e039.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ebiom.2024.105212"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000030",
+      "entry_type": "article",
+      "title": "Harnessing artificial intelligence to identify Bufalin as a molecular glue degrader of estrogen receptor alpha",
+      "authors": [
+        "Jiang, S.",
+        "Liu, K.",
+        "Jiang, T.",
+        "Li, H.",
+        "Wei, X.",
+        "Wan, X.",
+        "Zhong, C.",
+        "Gong, R.",
+        "Chen, Z.",
+        "Zou, C.",
+        "Zhang, Q.",
+        "Cheng, Y.",
+        "Cao, D."
+      ],
+      "year": 2025,
+      "journal": "Nature Communications",
+      "doi": "10.1038/s41467-025-62288-7",
+      "abstract": "Target identification in natural products plays a critical role in the development of innovative drugs. Bufalin, a compound derived from traditional medicines, has shown promising anti-cancer activity; however, its precise molecular mechanism of action remains unclear. Here, we employ artificial intelligence, molecular docking, and molecular dynamics simulations to elucidate the molecular mechanism of Bufalin. Using an integrated multi-predictive strategy, we identify CYP17A1, ESR1, mTOR, AR, and PRKCD as the potential targets of Bufalin. Subsequent validation via surface plasmon resonance, biotin pulldown, and thermal shift assays confirms Bufalin’s direct binding to ESR1, which encodes estrogen receptor alpha (ERα). Molecular docking analyses pinpoint Bufalin’s selective interaction with Arg394 on ERα. Molecular dynamic simulations further show that Bufalin acts as a molecular glue, enhancing the interaction between ERα and the E3 ligase STUB1, thereby promoting proteasomal degradation of ERα. Given the therapeutic potential of ERα degradation in overcoming endocrine resistance, we investigate the inhibitory effect of Bufalin on endocrine-resistant models and prove Bufalin reverses Tamoxifen resistance in vitro, in vivo, and in patient-derived breast cancer organoids from tamoxifen-relapsed cases. Collectively, our findings indicate that Bufalin functions as a molecular glue to degrade ERα, offering a potential therapeutic strategy for reversing Tamoxifen resistance. © The Author(s) 2025.",
+      "keywords": [],
+      "normalized_title": "harnessing artificial intelligence to identify bufalin as a molecular glue degrader of estrogen receptor alpha",
+      "raw_bibtex": "@ARTICLE{10.1038/s41467-025-62288-7,\n\tauthor = {Jiang, S. and Liu, K. and Jiang, T. and Li, H. and Wei, X. and Wan, X. and Zhong, C. and Gong, R. and Chen, Z. and Zou, C. and Zhang, Q. and Cheng, Y. and Cao, D.},\n\ttitle = {Harnessing artificial intelligence to identify Bufalin as a molecular glue degrader of estrogen receptor alpha},\n\tjournal = {Nature Communications},\n\tyear = {2025},\n\tabstract = {Target identification in natural products plays a critical role in the development of innovative drugs. Bufalin, a compound derived from traditional medicines, has shown promising anti-cancer activity; however, its precise molecular mechanism of action remains unclear. Here, we employ artificial intelligence, molecular docking, and molecular dynamics simulations to elucidate the molecular mechanism of Bufalin. Using an integrated multi-predictive strategy, we identify CYP17A1, ESR1, mTOR, AR, and PRKCD as the potential targets of Bufalin. Subsequent validation via surface plasmon resonance, biotin pulldown, and thermal shift assays confirms Bufalin’s direct binding to ESR1, which encodes estrogen receptor alpha (ERα). Molecular docking analyses pinpoint Bufalin’s selective interaction with Arg394 on ERα. Molecular dynamic simulations further show that Bufalin acts as a molecular glue, enhancing the interaction between ERα and the E3 ligase STUB1, thereby promoting proteasomal degradation of ERα. Given the therapeutic potential of ERα degradation in overcoming endocrine resistance, we investigate the inhibitory effect of Bufalin on endocrine-resistant models and prove Bufalin reverses Tamoxifen resistance in vitro, in vivo, and in patient-derived breast cancer organoids from tamoxifen-relapsed cases. Collectively, our findings indicate that Bufalin functions as a molecular glue to degrade ERα, offering a potential therapeutic strategy for reversing Tamoxifen resistance. © The Author(s) 2025.},\n\tdoi = {10.1038/s41467-025-62288-7},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105013995721&doi=10.1038%2Fs41467-025-62288-7&partnerID=40&md5=e16585fec38d322668df21a86f404a50},\n\tvolume = {16},\n\tnumber = {1},\n\tnote = {Export Date: 23 March 2026; Cited By: 9 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_4b691fab-b2df-482d-b600-58da2748e039.ris"
+      ],
+      "source_keys": [
+        "10.1038/s41467-025-62288-7"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000031",
+      "entry_type": "article",
+      "title": "Creating an Anthropomorphic Folktale Animal: A Pilot Study on Character Design Creativity Derived From Autonomous Behavior Generation Powered by Reinforcement Learning",
+      "authors": [
+        "Yang, H.",
+        "Hong, S.W."
+      ],
+      "year": 2025,
+      "journal": "Computer Animation and Virtual Worlds",
+      "doi": "10.1002/cav.70013",
+      "abstract": "Popular in fantasy films, games, and extended reality, anthropomorphic animals often rely on animator creativity and real animal observation for behavior visualization. This artistic approach captures emotional traits but lacks uncovering diverse, unanticipated behaviors beyond creators' concepts. To enrich character design, this study employs reinforcement learning (RL) agent simulation to explore the autonomous behavior and unexpected responses of the nine-tailed Fox Sister from Korean folklore. As a method, the agent, with a physics-based controller and skeletal joints, uses hybrid action control to transition between bipedal and quadrupedal actions based on the environment. In result, RL character frequently exhibits behavioral shifts, including unexpected actions in response to training steps and terrain complexities like slopes and hurdles, distinguishing them from animation-based finite-state machines. Additionally, this study validates impacts of RL character on character design creativity. To investigate such unknown impacts, this study conducts a comparative pilot study that recruits five character designers under use and nonuse scenario of RL character. Analysis indicates that RL character promotes creativity of character design, conceptualization, and development of scenario and character's attribute. This study highlights RL's potential for visualizing diverse inspirational behaviors of folkloric creatures by simulating interactions between body structure, motion, and environment. © 2025 John Wiley & Sons Ltd.",
+      "keywords": [],
+      "normalized_title": "creating an anthropomorphic folktale animal a pilot study on character design creativity derived from autonomous behavior generation powered by reinforcement learning",
+      "raw_bibtex": "@ARTICLE{10.1002/cav.70013,\n\tauthor = {Yang, H. and Hong, S.W.},\n\ttitle = {Creating an Anthropomorphic Folktale Animal: A Pilot Study on Character Design Creativity Derived From Autonomous Behavior Generation Powered by Reinforcement Learning},\n\tjournal = {Computer Animation and Virtual Worlds},\n\tyear = {2025},\n\tabstract = {Popular in fantasy films, games, and extended reality, anthropomorphic animals often rely on animator creativity and real animal observation for behavior visualization. This artistic approach captures emotional traits but lacks uncovering diverse, unanticipated behaviors beyond creators' concepts. To enrich character design, this study employs reinforcement learning (RL) agent simulation to explore the autonomous behavior and unexpected responses of the nine-tailed Fox Sister from Korean folklore. As a method, the agent, with a physics-based controller and skeletal joints, uses hybrid action control to transition between bipedal and quadrupedal actions based on the environment. In result, RL character frequently exhibits behavioral shifts, including unexpected actions in response to training steps and terrain complexities like slopes and hurdles, distinguishing them from animation-based finite-state machines. Additionally, this study validates impacts of RL character on character design creativity. To investigate such unknown impacts, this study conducts a comparative pilot study that recruits five character designers under use and nonuse scenario of RL character. Analysis indicates that RL character promotes creativity of character design, conceptualization, and development of scenario and character's attribute. This study highlights RL's potential for visualizing diverse inspirational behaviors of folkloric creatures by simulating interactions between body structure, motion, and environment. © 2025 John Wiley & Sons Ltd.},\n\tdoi = {10.1002/cav.70013},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85216193854&doi=10.1002%2Fcav.70013&partnerID=40&md5=7d6a478804c814cbaffeac5df0771efb},\n\tvolume = {36},\n\tnumber = {1},\n\tnote = {Export Date: 23 March 2026; Cited By: 1 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_4b691fab-b2df-482d-b600-58da2748e039.ris"
+      ],
+      "source_keys": [
+        "10.1002/cav.70013"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000032",
+      "entry_type": "article",
+      "title": "Discovery of small-molecule activators for glucose-6-phosphate dehydrogenase (G6PD) using machine learning approaches",
+      "authors": [
+        "Saddala, M.S.",
+        "Lennikov, A.",
+        "Huang, H."
+      ],
+      "year": 2020,
+      "journal": "International Journal of Molecular Sciences",
+      "doi": "10.3390/ijms21041523",
+      "abstract": "Glucose-6-Phosphate Dehydrogenase (G6PD) is a ubiquitous cytoplasmic enzyme converting glucose-6-phosphate into 6-phosphogluconate in the pentose phosphate pathway (PPP). The G6PD deficiency renders the inability to regenerate glutathione due to lack of Nicotine Adenosine Dinucleotide Phosphate (NADPH) and produces stress conditions that can cause oxidative injury to photoreceptors, retinal cells, and blood barrier function. In this study, we constructed pharmacophore-based models based on the complex of G6PD with compound AG1 (G6PD activator) followed by virtual screening. Fifty-three hit molecules were mapped with core pharmacophore features. We performed molecular descriptor calculation, clustering, and principal component analysis (PCA) to pharmacophore hit molecules and further applied statistical machine learning methods. Optimal performance of pharmacophore modeling and machine learning approaches classified the 53 hits as drug-like (18) and nondrug-like (35) compounds. The drug-like compounds further evaluated our established cheminformatics pipeline (molecular docking and in silico ADMET (absorption, distribution, metabolism, excretion and toxicity) analysis). Finally, five lead molecules with different scaffolds were selected by binding energies and in silico ADMET properties. This study proposes that the combination of machine learning methods with traditional structure-based virtual screening can effectively strengthen the ability to find potential G6PD activators used for G6PD deficiency diseases. Moreover, these compounds can be considered as safe agents for further validation studies at the cell level, animal model, and even clinic setting. © 2020 by the authors. Licensee MDPI, Basel, Switzerland.",
+      "keywords": [],
+      "normalized_title": "discovery of small molecule activators for glucose 6 phosphate dehydrogenase g6pd using machine learning approaches",
+      "raw_bibtex": "@ARTICLE{10.3390/ijms21041523,\n\tauthor = {Saddala, M.S. and Lennikov, A. and Huang, H.},\n\ttitle = {Discovery of small-molecule activators for glucose-6-phosphate dehydrogenase (G6PD) using machine learning approaches},\n\tjournal = {International Journal of Molecular Sciences},\n\tyear = {2020},\n\tabstract = {Glucose-6-Phosphate Dehydrogenase (G6PD) is a ubiquitous cytoplasmic enzyme converting glucose-6-phosphate into 6-phosphogluconate in the pentose phosphate pathway (PPP). The G6PD deficiency renders the inability to regenerate glutathione due to lack of Nicotine Adenosine Dinucleotide Phosphate (NADPH) and produces stress conditions that can cause oxidative injury to photoreceptors, retinal cells, and blood barrier function. In this study, we constructed pharmacophore-based models based on the complex of G6PD with compound AG1 (G6PD activator) followed by virtual screening. Fifty-three hit molecules were mapped with core pharmacophore features. We performed molecular descriptor calculation, clustering, and principal component analysis (PCA) to pharmacophore hit molecules and further applied statistical machine learning methods. Optimal performance of pharmacophore modeling and machine learning approaches classified the 53 hits as drug-like (18) and nondrug-like (35) compounds. The drug-like compounds further evaluated our established cheminformatics pipeline (molecular docking and in silico ADMET (absorption, distribution, metabolism, excretion and toxicity) analysis). Finally, five lead molecules with different scaffolds were selected by binding energies and in silico ADMET properties. This study proposes that the combination of machine learning methods with traditional structure-based virtual screening can effectively strengthen the ability to find potential G6PD activators used for G6PD deficiency diseases. Moreover, these compounds can be considered as safe agents for further validation studies at the cell level, animal model, and even clinic setting. © 2020 by the authors. Licensee MDPI, Basel, Switzerland.},\n\tdoi = {10.3390/ijms21041523},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85079875516&doi=10.3390%2Fijms21041523&partnerID=40&md5=1ca74f2dd34d15d0b1be13c72f8ced53},\n\tvolume = {21},\n\tnumber = {4},\n\tnote = {Export Date: 23 March 2026; Cited By: 18 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_4b691fab-b2df-482d-b600-58da2748e039.ris"
+      ],
+      "source_keys": [
+        "10.3390/ijms21041523"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000033",
+      "entry_type": "article",
+      "title": "Collaborative augmented reconstruction of 3D neuron morphology in mouse and human brains",
+      "authors": [
+        "Zhang, L.",
+        "Huang, L.",
+        "Yuan, Z.",
+        "Hang, Y.",
+        "Zeng, Y.",
+        "Li, K.",
+        "Wang, L.",
+        "Zeng, H.",
+        "Chen, X.",
+        "Zhang, H.",
+        "Xi, J.",
+        "Chen, D.",
+        "Gao, Z.",
+        "Le, L.",
+        "Chen, J.",
+        "Ye, W.",
+        "Liu, L.",
+        "Wang, Y.",
+        "Peng, H."
+      ],
+      "year": 2024,
+      "journal": "Nature Methods",
+      "doi": "10.1038/s41592-024-02401-8",
+      "abstract": "Digital reconstruction of the intricate 3D morphology of individual neurons from microscopic images is a crucial challenge in both individual laboratories and large-scale projects focusing on cell types and brain anatomy. This task often fails in both conventional manual reconstruction and state-of-the-art artificial intelligence (AI)-based automatic reconstruction algorithms. It is also challenging to organize multiple neuroanatomists to generate and cross-validate biologically relevant and mutually agreed upon reconstructions in large-scale data production. Based on collaborative group intelligence augmented by AI, we developed a collaborative augmented reconstruction (CAR) platform for neuron reconstruction at scale. This platform allows for immersive interaction and efficient collaborative editing of neuron anatomy using a variety of devices, such as desktop workstations, virtual reality headsets and mobile phones, enabling users to contribute anytime and anywhere and to take advantage of several AI-based automation tools. We tested CAR’s applicability for challenging mouse and human neurons toward scaled and faithful data production. © The Author(s) 2024.",
+      "keywords": [],
+      "normalized_title": "collaborative augmented reconstruction of 3d neuron morphology in mouse and human brains",
+      "raw_bibtex": "@ARTICLE{10.1038/s41592-024-02401-8,\n\tauthor = {Zhang, L. and Huang, L. and Yuan, Z. and Hang, Y. and Zeng, Y. and Li, K. and Wang, L. and Zeng, H. and Chen, X. and Zhang, H. and Xi, J. and Chen, D. and Gao, Z. and Le, L. and Chen, J. and Ye, W. and Liu, L. and Wang, Y. and Peng, H.},\n\ttitle = {Collaborative augmented reconstruction of 3D neuron morphology in mouse and human brains},\n\tjournal = {Nature Methods},\n\tyear = {2024},\n\tabstract = {Digital reconstruction of the intricate 3D morphology of individual neurons from microscopic images is a crucial challenge in both individual laboratories and large-scale projects focusing on cell types and brain anatomy. This task often fails in both conventional manual reconstruction and state-of-the-art artificial intelligence (AI)-based automatic reconstruction algorithms. It is also challenging to organize multiple neuroanatomists to generate and cross-validate biologically relevant and mutually agreed upon reconstructions in large-scale data production. Based on collaborative group intelligence augmented by AI, we developed a collaborative augmented reconstruction (CAR) platform for neuron reconstruction at scale. This platform allows for immersive interaction and efficient collaborative editing of neuron anatomy using a variety of devices, such as desktop workstations, virtual reality headsets and mobile phones, enabling users to contribute anytime and anywhere and to take advantage of several AI-based automation tools. We tested CAR’s applicability for challenging mouse and human neurons toward scaled and faithful data production. © The Author(s) 2024.},\n\tdoi = {10.1038/s41592-024-02401-8},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85203074979&doi=10.1038%2Fs41592-024-02401-8&partnerID=40&md5=1ca0713ee40d32b990c5dc77649ed566},\n\tvolume = {21},\n\tnumber = {10},\n\tpages = {1936-1946},\n\tnote = {Export Date: 23 March 2026; Cited By: 6 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_4b691fab-b2df-482d-b600-58da2748e039.ris"
+      ],
+      "source_keys": [
+        "10.1038/s41592-024-02401-8"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000034",
+      "entry_type": "article",
+      "title": "Exploring the Caricature Style Identification and Classification Using Convolutional Neural Network and Human-Machine Interaction under Artificial Intelligence",
+      "authors": [
+        "Wang, L.",
+        "Kim, J."
+      ],
+      "year": 2022,
+      "journal": "International Journal of Humanoid Robotics",
+      "doi": "10.1142/s0219843622400096",
+      "abstract": "The objectives are to explore the application effect of deep learning (DL), neural network (NN) and human-machine interaction (HMI) technology in caricature style recognition and classification in the environment of artificial intelligence (AI). It provides a realistic basis for the integration of caricature and AI technology. The convolutional neural network (CNN) model is optimized, and the ARtoolkit, JAVA-based processing and photoshop are applied, combined with an augmented reality (AR) editor to register the logo of caricature. The results indicate that the output value of the optimized CNN is the largest near the fourth neural node, and the output values of the remaining neural nodes are almost all close to zero. The label value of the cat image is the same as the output value, and the image label range is [0, 10]. The use of AR technology can make caricature images have animation functions, giving people the visual experience that the lotus can move, and the caricature style has changed. When the screen is not touched, the fish under the lotus is in a static state. When the screen is touched with the hand, the fish swims away quickly, indicating that the function of HMI is realized. Therefore, the CNN and HMI technology under AI can successfully perform caricature style recognition and classification, which can provide an experimental reference for the subsequent intelligent development of caricature. © 2022 World Scientific Publishing Company.",
+      "keywords": [],
+      "normalized_title": "exploring the caricature style identification and classification using convolutional neural network and human machine interaction under artificial intelligence",
+      "raw_bibtex": "@ARTICLE{10.1142/S0219843622400096,\n\tauthor = {Wang, L. and Kim, J.},\n\ttitle = {Exploring the Caricature Style Identification and Classification Using Convolutional Neural Network and Human-Machine Interaction under Artificial Intelligence},\n\tjournal = {International Journal of Humanoid Robotics},\n\tyear = {2022},\n\tabstract = {The objectives are to explore the application effect of deep learning (DL), neural network (NN) and human-machine interaction (HMI) technology in caricature style recognition and classification in the environment of artificial intelligence (AI). It provides a realistic basis for the integration of caricature and AI technology. The convolutional neural network (CNN) model is optimized, and the ARtoolkit, JAVA-based processing and photoshop are applied, combined with an augmented reality (AR) editor to register the logo of caricature. The results indicate that the output value of the optimized CNN is the largest near the fourth neural node, and the output values of the remaining neural nodes are almost all close to zero. The label value of the cat image is the same as the output value, and the image label range is [0, 10]. The use of AR technology can make caricature images have animation functions, giving people the visual experience that the lotus can move, and the caricature style has changed. When the screen is not touched, the fish under the lotus is in a static state. When the screen is touched with the hand, the fish swims away quickly, indicating that the function of HMI is realized. Therefore, the CNN and HMI technology under AI can successfully perform caricature style recognition and classification, which can provide an experimental reference for the subsequent intelligent development of caricature. © 2022 World Scientific Publishing Company.},\n\tdoi = {10.1142/S0219843622400096},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85134367211&doi=10.1142%2FS0219843622400096&partnerID=40&md5=b5290d26a5e2bd8009fd5a2fd60afd78},\n\tvolume = {19},\n\tnumber = {3},\n\tnote = {Export Date: 23 March 2026; Cited By: 6 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_4b691fab-b2df-482d-b600-58da2748e039.ris"
+      ],
+      "source_keys": [
+        "10.1142/S0219843622400096"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000035",
+      "entry_type": "article",
+      "title": "What Else Is Happening to the Mirror Neurons?—A Bibliometric Analysis of Mirror Neuron Research Trends and Future Directions (1996–2024)",
+      "authors": [
+        "Sun, Y.",
+        "Yu, N.",
+        "Chen, G.",
+        "Liu, T.",
+        "Wen, S.",
+        "Chen, W."
+      ],
+      "year": 2025,
+      "journal": "Brain and Behavior",
+      "doi": "10.1002/brb3.70486",
+      "abstract": "Background: Since its discovery in the late 20th century, research on mirror neurons has become a pivotal area in neuroscience, linked to various cognitive and social functions. This bibliometric analysis explores the research trajectory, key research topics, and future trends in the field of mirror neuron research. Methods: We searched the Web of Science Core Collection (WoSCC) database for publications from 1996 to 2024 on mirror neuron research. Statistical and visualization analyses were performed using CiteSpace and VOSviewer. Results: Publication output on mirror neurons peaked in 2013 and remained active. High-impact journals such as Science, Brain, Neuron, PNAS, and NeuroImage frequently feature findings on the mirror neuron system, including its distribution, neural coding, and roles in intention understanding, affective empathy, motor learning, autism, and neurological disorders. Keyword clustering reveals major directions in cognitive neuroscience, motor neuroscience, and neurostimulation, whereas burst detection underscores the emerging significance of brain-computer interfaces (BCIs). Research methodologies have been evolving from traditional electrophysiological recordings to advanced techniques such as functional magnetic resonance imaging, transcranial magnetic stimulation, and BCIs, highlighting a dynamic, multidisciplinary progression. Conclusions: This study identifies key areas associated with mirror neurons and anticipates that future work will integrate findings with artificial intelligence, clinical interventions, and novel neuroimaging techniques, providing new perspectives on complex socio-cognitive issues and their applications in both basic science and clinical practice. © 2025 The Author(s). Brain and Behavior published by Wiley Periodicals LLC.",
+      "keywords": [],
+      "normalized_title": "what else is happening to the mirror neurons a bibliometric analysis of mirror neuron research trends and future directions 1996 2024",
+      "raw_bibtex": "@ARTICLE{10.1002/brb3.70486,\n\tauthor = {Sun, Y. and Yu, N. and Chen, G. and Liu, T. and Wen, S. and Chen, W.},\n\ttitle = {What Else Is Happening to the Mirror Neurons?—A Bibliometric Analysis of Mirror Neuron Research Trends and Future Directions (1996–2024)},\n\tjournal = {Brain and Behavior},\n\tyear = {2025},\n\tabstract = {Background: Since its discovery in the late 20th century, research on mirror neurons has become a pivotal area in neuroscience, linked to various cognitive and social functions. This bibliometric analysis explores the research trajectory, key research topics, and future trends in the field of mirror neuron research. Methods: We searched the Web of Science Core Collection (WoSCC) database for publications from 1996 to 2024 on mirror neuron research. Statistical and visualization analyses were performed using CiteSpace and VOSviewer. Results: Publication output on mirror neurons peaked in 2013 and remained active. High-impact journals such as Science, Brain, Neuron, PNAS, and NeuroImage frequently feature findings on the mirror neuron system, including its distribution, neural coding, and roles in intention understanding, affective empathy, motor learning, autism, and neurological disorders. Keyword clustering reveals major directions in cognitive neuroscience, motor neuroscience, and neurostimulation, whereas burst detection underscores the emerging significance of brain-computer interfaces (BCIs). Research methodologies have been evolving from traditional electrophysiological recordings to advanced techniques such as functional magnetic resonance imaging, transcranial magnetic stimulation, and BCIs, highlighting a dynamic, multidisciplinary progression. Conclusions: This study identifies key areas associated with mirror neurons and anticipates that future work will integrate findings with artificial intelligence, clinical interventions, and novel neuroimaging techniques, providing new perspectives on complex socio-cognitive issues and their applications in both basic science and clinical practice. © 2025 The Author(s). Brain and Behavior published by Wiley Periodicals LLC.},\n\tdoi = {10.1002/brb3.70486},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105002435613&doi=10.1002%2Fbrb3.70486&partnerID=40&md5=4145bc4db5400dd62f95c754922d6a65},\n\tvolume = {15},\n\tnumber = {4},\n\tnote = {Export Date: 23 March 2026; Cited By: 2 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_4b691fab-b2df-482d-b600-58da2748e039.ris"
+      ],
+      "source_keys": [
+        "10.1002/brb3.70486"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000036",
+      "entry_type": "article",
+      "title": "YBX1 regulation of alveolar type II epithelial cells in idiopathic pulmonary fibrosis: mechanistic insights and small-molecule drug screening",
+      "authors": [
+        "He, Y.",
+        "Li, J.",
+        "Xie, Y.",
+        "Wu, Y.",
+        "Wang, L.",
+        "Ren, J.",
+        "Zhang, Z.",
+        "Yu, T.",
+        "Jiang, S.",
+        "Shan, H.",
+        "Wu, Y.",
+        "Zhou, Y."
+      ],
+      "year": 2025,
+      "journal": "Journal of Translational Medicine",
+      "doi": "10.1186/s12967-025-07297-2",
+      "abstract": "Background: This study aims to systematically elucidate the molecular mechanisms underlying idiopathic pulmonary fibrosis (IPF), with a specific focus on the regulatory role of the nucleic acid-binding protein Y-box binding protein 1 (YBX1) in alveolar type II epithelial cells (AT2) and its association with disease progression. Additionally, the study integrates virtual screening and molecular dynamics (MD) simulations to identify small-molecule compounds targeting YBX1, thereby providing both mechanistic insights and therapeutic candidates for IPF. Methods: We employed integrative multi-omics analysis and bioinformatics approaches to identify IPF-associated signature genes, construct a diagnostic model and risk scoring system, and establish YBX1 as a central regulatory node. Single-cell RNA sequencing (scRNA-seq) data were used to characterize AT2 cell heterogeneity and developmental trajectories, highlighting the dynamic expression pattern of YBX1 during cell fate transitions. Cell–cell communication analysis elucidated YBX1’s potential involvement in immunomodulatory signaling, particularly between AT2 cells and M2 macrophages. Mendelian randomization was applied to infer the causal relationship between YBX1 expression and lung function indices. The expression and functional role of YBX1 were further validated using independent clinical cohorts and in vitro cell models. Structure-based virtual screening was performed to identify candidate compounds targeting YBX1, followed by MD simulations to assess binding stability and infer potential mechanisms of action. Results: YBX1 emerged as a key molecular signature of IPF with strong diagnostic potential and a prominent role in modulating immune cell infiltration. scRNA-seq revealed significant AT2 cell subtype diversity, with YBX1 dynamically expressed along differentiation trajectories. Intercellular communication analysis suggested that YBX1 may mediate indirect signaling between AT2 cells and M2 macrophages, potentially influencing the immune microenvironment and fibrotic progression. Mendelian randomization supported a significant positive causal relationship between YBX1 expression and pulmonary function, suggesting a protective role. Both clinical samples and cell-based assays confirmed YBX1 downregulation in fibrotic lung tissue, and its restoration improved mitochondrial function and enhanced antioxidant capacity. Virtual screening identified several small molecules with high binding affinity to functional domains of YBX1. MD simulations further supported the structural stability of YBX1–ligand complexes and suggested conformational regulation as a potential mechanism of action. Conclusion: This study delineates the pivotal role of YBX1 in the pathogenesis of IPF, highlighting its function in maintaining alveolar epithelial cell homeostasis and regulating disease progression. The identification of YBX1-targeting compounds through virtual screening and MD simulations offers a rational framework for the development of targeted therapies, advancing the translational potential of YBX1 as a diagnostic and therapeutic target in IPF. © The Author(s) 2025.",
+      "keywords": [],
+      "normalized_title": "ybx1 regulation of alveolar type ii epithelial cells in idiopathic pulmonary fibrosis mechanistic insights and small molecule drug screening",
+      "raw_bibtex": "@ARTICLE{10.1186/s12967-025-07297-2,\n\tauthor = {He, Y. and Li, J. and Xie, Y. and Wu, Y. and Wang, L. and Ren, J. and Zhang, Z. and Yu, T. and Jiang, S. and Shan, H. and Wu, Y. and Zhou, Y.},\n\ttitle = {YBX1 regulation of alveolar type II epithelial cells in idiopathic pulmonary fibrosis: mechanistic insights and small-molecule drug screening},\n\tjournal = {Journal of Translational Medicine},\n\tyear = {2025},\n\tabstract = {Background: This study aims to systematically elucidate the molecular mechanisms underlying idiopathic pulmonary fibrosis (IPF), with a specific focus on the regulatory role of the nucleic acid-binding protein Y-box binding protein 1 (YBX1) in alveolar type II epithelial cells (AT2) and its association with disease progression. Additionally, the study integrates virtual screening and molecular dynamics (MD) simulations to identify small-molecule compounds targeting YBX1, thereby providing both mechanistic insights and therapeutic candidates for IPF. Methods: We employed integrative multi-omics analysis and bioinformatics approaches to identify IPF-associated signature genes, construct a diagnostic model and risk scoring system, and establish YBX1 as a central regulatory node. Single-cell RNA sequencing (scRNA-seq) data were used to characterize AT2 cell heterogeneity and developmental trajectories, highlighting the dynamic expression pattern of YBX1 during cell fate transitions. Cell–cell communication analysis elucidated YBX1’s potential involvement in immunomodulatory signaling, particularly between AT2 cells and M2 macrophages. Mendelian randomization was applied to infer the causal relationship between YBX1 expression and lung function indices. The expression and functional role of YBX1 were further validated using independent clinical cohorts and in vitro cell models. Structure-based virtual screening was performed to identify candidate compounds targeting YBX1, followed by MD simulations to assess binding stability and infer potential mechanisms of action. Results: YBX1 emerged as a key molecular signature of IPF with strong diagnostic potential and a prominent role in modulating immune cell infiltration. scRNA-seq revealed significant AT2 cell subtype diversity, with YBX1 dynamically expressed along differentiation trajectories. Intercellular communication analysis suggested that YBX1 may mediate indirect signaling between AT2 cells and M2 macrophages, potentially influencing the immune microenvironment and fibrotic progression. Mendelian randomization supported a significant positive causal relationship between YBX1 expression and pulmonary function, suggesting a protective role. Both clinical samples and cell-based assays confirmed YBX1 downregulation in fibrotic lung tissue, and its restoration improved mitochondrial function and enhanced antioxidant capacity. Virtual screening identified several small molecules with high binding affinity to functional domains of YBX1. MD simulations further supported the structural stability of YBX1–ligand complexes and suggested conformational regulation as a potential mechanism of action. Conclusion: This study delineates the pivotal role of YBX1 in the pathogenesis of IPF, highlighting its function in maintaining alveolar epithelial cell homeostasis and regulating disease progression. The identification of YBX1-targeting compounds through virtual screening and MD simulations offers a rational framework for the development of targeted therapies, advancing the translational potential of YBX1 as a diagnostic and therapeutic target in IPF. © The Author(s) 2025.},\n\tdoi = {10.1186/s12967-025-07297-2},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105022286437&doi=10.1186%2Fs12967-025-07297-2&partnerID=40&md5=0a98fcce400e6ea32b426d5c924402a4},\n\tvolume = {23},\n\tnumber = {1},\n\tnote = {Export Date: 23 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_4b691fab-b2df-482d-b600-58da2748e039.ris"
+      ],
+      "source_keys": [
+        "10.1186/s12967-025-07297-2"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000037",
+      "entry_type": "article",
+      "title": "Decoding the Spatial Genome: A Review of 3D Genome Visualization Technologies",
+      "authors": [
+        "Dhanushkodi, K.",
+        "Bala, A."
+      ],
+      "year": 2025,
+      "journal": "IEEE Access",
+      "doi": "10.1109/access.2025.3646020",
+      "abstract": "The three-dimensional (3D) spatial organization of the genome is fundamental to understanding how genetic information is regulated and expressed in the context of cellular function. The chromatin fiber, far from being a simple linear molecule, adopts a dynamic and hierarchical architecture that orchestrates gene activity, epigenetic signaling, and structural integrity. Recent advances in chromatin conformation capture techniques, such as Hi-C and its derivatives, have made it possible to generate high-resolution interaction maps that reveal the physical proximity of genomic loci across the genome. These datasets have opened new avenues for visualizing the genome as a 3D object, rather than a linear sequence, ushering in an era of structural genomics. Despite progress in experimental mapping, the visualization and interpretation of 3D genome data present major computational and conceptual challenges. Existing tools and methods vary widely in their goals, capabilities, and assumptions ranging from 2D contact heatmaps to immersive 3D reconstructions and integrative browsers that combine spatial and epigenetic data. However, the field remains fragmented and lacks a standardized framework for comparing and selecting appropriate tools. We also discuss limitations that hinder progress in the field, such as sparse data, model validation, lack of interoperability, and the complexity of translating spatial information into functional insights. Finally, we highlight future directions including the integration of artificial intelligence, augmented and virtual reality environments, and open-source interoperability to democratize access and accelerate discovery. Our goal is to provide a structured overview that not only surveys existing tools but also guides future development toward robust, interpretable, and biologically meaningful 3D genome visualization platforms. © 2013 IEEE.",
+      "keywords": [],
+      "normalized_title": "decoding the spatial genome a review of 3d genome visualization technologies",
+      "raw_bibtex": "@ARTICLE{10.1109/ACCESS.2025.3646020,\n\tauthor = {Dhanushkodi, K. and Bala, A.},\n\ttitle = {Decoding the Spatial Genome: A Review of 3D Genome Visualization Technologies},\n\tjournal = {IEEE Access},\n\tyear = {2025},\n\tabstract = {The three-dimensional (3D) spatial organization of the genome is fundamental to understanding how genetic information is regulated and expressed in the context of cellular function. The chromatin fiber, far from being a simple linear molecule, adopts a dynamic and hierarchical architecture that orchestrates gene activity, epigenetic signaling, and structural integrity. Recent advances in chromatin conformation capture techniques, such as Hi-C and its derivatives, have made it possible to generate high-resolution interaction maps that reveal the physical proximity of genomic loci across the genome. These datasets have opened new avenues for visualizing the genome as a 3D object, rather than a linear sequence, ushering in an era of structural genomics. Despite progress in experimental mapping, the visualization and interpretation of 3D genome data present major computational and conceptual challenges. Existing tools and methods vary widely in their goals, capabilities, and assumptions ranging from 2D contact heatmaps to immersive 3D reconstructions and integrative browsers that combine spatial and epigenetic data. However, the field remains fragmented and lacks a standardized framework for comparing and selecting appropriate tools. We also discuss limitations that hinder progress in the field, such as sparse data, model validation, lack of interoperability, and the complexity of translating spatial information into functional insights. Finally, we highlight future directions including the integration of artificial intelligence, augmented and virtual reality environments, and open-source interoperability to democratize access and accelerate discovery. Our goal is to provide a structured overview that not only surveys existing tools but also guides future development toward robust, interpretable, and biologically meaningful 3D genome visualization platforms. © 2013 IEEE.},\n\tdoi = {10.1109/ACCESS.2025.3646020},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105025399662&doi=10.1109%2FACCESS.2025.3646020&partnerID=40&md5=2b04d3b2d570c57550f0c62f31d6125b},\n\tvolume = {13},\n\tpages = {217126-217139},\n\tnote = {Export Date: 23 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_4b691fab-b2df-482d-b600-58da2748e039.ris"
+      ],
+      "source_keys": [
+        "10.1109/ACCESS.2025.3646020"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000038",
+      "entry_type": "article",
+      "title": "Telestration with augmented reality improves the performance of the first ten ex vivo porcine laparoscopic cholecystectomies: a randomized controlled study",
+      "authors": [
+        "Cizmic, A.",
+        "Müller, F.",
+        "Wise, P.A.",
+        "Häberle, F.",
+        "Gabel, F.",
+        "Kowalewski, K.-F.",
+        "Bintintan, V.",
+        "Müller-Stich, B.P.",
+        "Nickel, F."
+      ],
+      "year": 2023,
+      "journal": "Surgical Endoscopy",
+      "doi": "10.1007/s00464-023-10360-y",
+      "abstract": "Introduction: The learning curve in minimally invasive surgery (MIS) is steep compared to open surgery. One of the reasons is that training in the operating room in MIS is mainly limited to verbal instructions. The iSurgeon telestration device with augmented reality (AR) enables visual instructions, guidance, and feedback during MIS. This study aims to compare the effects of the iSurgeon on the training of novices performing repeated laparoscopic cholecystectomy (LC) on a porcine liver compared to traditional verbal instruction methods. Methods: Forty medical students were randomized into the iSurgeon and the control group. The iSurgeon group performed 10 LCs receiving interactive visual guidance. The control group performed 10 LCs receiving conventional verbal guidance. The performance assessment using Objective Structured Assessments of Technical Skills (OSATS) and Global Operative Assessment of Laparoscopic Skills (GOALS) scores, the total operating time, and complications were compared between the two groups. Results: The iSurgeon group performed LCs significantly better (global GOALS 17.3 ± 2.6 vs. 16 ± 2.6, p ≤ 0.001, LC specific GOALS 7 ± 2 vs. 5.9 ± 2.1, p ≤ 0.001, global OSATS 25.3 ± 4.3 vs. 23.5 ± 3.9, p ≤ 0.001, LC specific OSATS scores 50.8 ± 11.1 vs. 41.2 ± 9.4, p ≤ 0.001) compared to the control group. The iSurgeon group had significantly fewer intraoperative complications in total (2.7 ± 2.0 vs. 3.6 ± 2.0, p ≤ 0.001) than the control group. There was no difference in operating time (79.6 ± 25.7 vs. 84.5 ± 33.2 min, p = 0.087). Conclusion: Visual guidance using the telestration device with AR, iSurgeon, improves performance and lowers the complication rates in LCs in novices compared to conventional verbal expert guidance. © 2023, The Author(s).",
+      "keywords": [],
+      "normalized_title": "telestration with augmented reality improves the performance of the first ten ex vivo porcine laparoscopic cholecystectomies a randomized controlled study",
+      "raw_bibtex": "@ARTICLE{10.1007/s00464-023-10360-y,\n\tauthor = {Cizmic, A. and Müller, F. and Wise, P.A. and Häberle, F. and Gabel, F. and Kowalewski, K.-F. and Bintintan, V. and Müller-Stich, B.P. and Nickel, F.},\n\ttitle = {Telestration with augmented reality improves the performance of the first ten ex vivo porcine laparoscopic cholecystectomies: a randomized controlled study},\n\tjournal = {Surgical Endoscopy},\n\tyear = {2023},\n\tabstract = {Introduction: The learning curve in minimally invasive surgery (MIS) is steep compared to open surgery. One of the reasons is that training in the operating room in MIS is mainly limited to verbal instructions. The iSurgeon telestration device with augmented reality (AR) enables visual instructions, guidance, and feedback during MIS. This study aims to compare the effects of the iSurgeon on the training of novices performing repeated laparoscopic cholecystectomy (LC) on a porcine liver compared to traditional verbal instruction methods. Methods: Forty medical students were randomized into the iSurgeon and the control group. The iSurgeon group performed 10 LCs receiving interactive visual guidance. The control group performed 10 LCs receiving conventional verbal guidance. The performance assessment using Objective Structured Assessments of Technical Skills (OSATS) and Global Operative Assessment of Laparoscopic Skills (GOALS) scores, the total operating time, and complications were compared between the two groups. Results: The iSurgeon group performed LCs significantly better (global GOALS 17.3 ± 2.6 vs. 16 ± 2.6, p ≤ 0.001, LC specific GOALS 7 ± 2 vs. 5.9 ± 2.1, p ≤ 0.001, global OSATS 25.3 ± 4.3 vs. 23.5 ± 3.9, p ≤ 0.001, LC specific OSATS scores 50.8 ± 11.1 vs. 41.2 ± 9.4, p ≤ 0.001) compared to the control group. The iSurgeon group had significantly fewer intraoperative complications in total (2.7 ± 2.0 vs. 3.6 ± 2.0, p ≤ 0.001) than the control group. There was no difference in operating time (79.6 ± 25.7 vs. 84.5 ± 33.2 min, p = 0.087). Conclusion: Visual guidance using the telestration device with AR, iSurgeon, improves performance and lowers the complication rates in LCs in novices compared to conventional verbal expert guidance. © 2023, The Author(s).},\n\tdoi = {10.1007/s00464-023-10360-y},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85168589700&doi=10.1007%2Fs00464-023-10360-y&partnerID=40&md5=794940af073b4fda67f25d1c2b55ec89},\n\tvolume = {37},\n\tnumber = {10},\n\tpages = {7839-7848},\n\tnote = {Export Date: 23 March 2026; Cited By: 13 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_4b691fab-b2df-482d-b600-58da2748e039.ris"
+      ],
+      "source_keys": [
+        "10.1007/s00464-023-10360-y"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000039",
+      "entry_type": "article",
+      "title": "JASPAR 2024: 20thãnniversary of the open-access database of transcription factor binding profiles",
+      "authors": [
+        "Rauluseviciute, I.",
+        "Riudavets-Puig, R.",
+        "Blanc-Mathieu, R.",
+        "Castro-Mondragon, J.A.",
+        "Ferenc, K.",
+        "Kumar, V.",
+        "Lemma, R.B.",
+        "Lucas, J.",
+        "Chèneby, J.",
+        "Baranasic, D.",
+        "Khan, A.",
+        "Fornes, O.",
+        "Gundersen, S.",
+        "Johansen, M.",
+        "Hovig, E.",
+        "Lenhard, B.",
+        "Sandelin, A.",
+        "Wasserman, W.W.",
+        "Parcy, F.",
+        "Mathelier, A."
+      ],
+      "year": 2024,
+      "journal": "Nucleic Acids Research",
+      "doi": "10.1093/nar/gkad1059",
+      "abstract": "JASP AR ( https://jaspar .elixir .no/) isã widely-used open-access database presenting manually curated high-qualityãnd non-redundant DNA-binding profiles for transcription factors (TFs)ãcross taxa. In this 10th releaseãnd 20th-anniversary update, the CORE collection has expanded with 329 new profiles. We updated three existing profilesãnd provided orthogonal support for 72 profiles from the previous release's UNV ALID ATED collection. Altogether , the JASP AR 2024 update providesã 20% increase in CORE profiles from the previous release. A trimmingãlgorithm enhanced profiles by removing low information content flanking base pairs, which w ere lik ely uninf ormativ e (within the capacity of the PFM models) for TFBS predictionsãnd modelling TF-DNA interactions. This release includes enhanced metãdatã, featuringã refined classification for plant TFs' str uct ural DNA-binding domains. The new JASPAR collections prompt updates to the genomic tracks of predicted TF binding sites (TFBSs) in 8 organisms, with humanãnd mouse tracksã vãilableãs native tracks in the UCSC Genome browser. All dataãreãvailable through the JASPAR web interfaceãnd programmatically through its APIãnd the updated Bioconductorãnd pyJASP AR packages. Finally ,ã new TFBS extraction tool enables users to retrieve predicted JASPAR TFBSs intersecting their genomic regions of interest. © The Author(s) 2023.",
+      "keywords": [],
+      "normalized_title": "jaspar 2024 20thãnniversary of the open access database of transcription factor binding profiles",
+      "raw_bibtex": "@ARTICLE{10.1093/nar/gkad1059,\n\tauthor = {Rauluseviciute, I. and Riudavets-Puig, R. and Blanc-Mathieu, R. and Castro-Mondragon, J.A. and Ferenc, K. and Kumar, V. and Lemma, R.B. and Lucas, J. and Chèneby, J. and Baranasic, D. and Khan, A. and Fornes, O. and Gundersen, S. and Johansen, M. and Hovig, E. and Lenhard, B. and Sandelin, A. and Wasserman, W.W. and Parcy, F. and Mathelier, A.},\n\ttitle = {JASPAR 2024: 20thãnniversary of the open-access database of transcription factor binding profiles},\n\tjournal = {Nucleic Acids Research},\n\tyear = {2024},\n\tabstract = {JASP AR ( https://jaspar .elixir .no/) isã widely-used open-access database presenting manually curated high-qualityãnd non-redundant DNA-binding profiles for transcription factors (TFs)ãcross taxa. In this 10th releaseãnd 20th-anniversary update, the CORE collection has expanded with 329 new profiles. We updated three existing profilesãnd provided orthogonal support for 72 profiles from the previous release's UNV ALID ATED collection. Altogether , the JASP AR 2024 update providesã 20% increase in CORE profiles from the previous release. A trimmingãlgorithm enhanced profiles by removing low information content flanking base pairs, which w ere lik ely uninf ormativ e (within the capacity of the PFM models) for TFBS predictionsãnd modelling TF-DNA interactions. This release includes enhanced metãdatã, featuringã refined classification for plant TFs' str uct ural DNA-binding domains. The new JASPAR collections prompt updates to the genomic tracks of predicted TF binding sites (TFBSs) in 8 organisms, with humanãnd mouse tracksã vãilableãs native tracks in the UCSC Genome browser. All dataãreãvailable through the JASPAR web interfaceãnd programmatically through its APIãnd the updated Bioconductorãnd pyJASP AR packages. Finally ,ã new TFBS extraction tool enables users to retrieve predicted JASPAR TFBSs intersecting their genomic regions of interest. © The Author(s) 2023.},\n\tdoi = {10.1093/nar/gkad1059},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85180564763&doi=10.1093%2Fnar%2Fgkad1059&partnerID=40&md5=42a2dfe1f1bcd3edd5c3d02dde1f8e26},\n\tvolume = {52},\n\tnumber = {D1},\n\tpages = {D174-D182},\n\tnote = {Export Date: 23 March 2026; Cited By: 606 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_4b691fab-b2df-482d-b600-58da2748e039.ris"
+      ],
+      "source_keys": [
+        "10.1093/nar/gkad1059"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000040",
+      "entry_type": "article",
+      "title": "A Modular Haptic Agent System with Encountered-Type Active Interaction",
+      "authors": [
+        "Dongye, X.",
+        "Weng, D.",
+        "Jiang, H.",
+        "Feng, L."
+      ],
+      "year": 2023,
+      "journal": "Electronics (Switzerland)",
+      "doi": "10.3390/electronics12092069",
+      "abstract": "Virtual agents are artificial intelligence systems that can interact with users in virtual reality (VR), providing users with companionship and entertainment. Virtual pets have become the most popular virtual agents due to their many benefits. However, haptic interaction with virtual pets involves two challenges: the rapid construction of various haptic proxies, and the design of agent-initiated active interaction. In this paper, we propose a modular haptic agent (MHA) prototype system, enabling the tactile simulation and encountered-type haptic interaction of common virtual pet agents through a modular design method and a haptic mapping method. Meanwhile, the MHA system with haptic interaction is actively initiated by the agents according to the user’s intention, which makes the virtual agents appear more autonomous and provides a better experience of human–agent interaction. Finally, we conduct three user studies to demonstrate that the MHA system has more advantages in terms of realism, interactivity, attraction, and raising user emotions. Overall, MHA is a system that can build multiple companion agents, provide active interaction and has the potential to quickly build diverse haptic agents for an intelligent and comfortable virtual world. © 2023 by the authors.",
+      "keywords": [],
+      "normalized_title": "a modular haptic agent system with encountered type active interaction",
+      "raw_bibtex": "@ARTICLE{10.3390/electronics12092069,\n\tauthor = {Dongye, X. and Weng, D. and Jiang, H. and Feng, L.},\n\ttitle = {A Modular Haptic Agent System with Encountered-Type Active Interaction},\n\tjournal = {Electronics (Switzerland)},\n\tyear = {2023},\n\tabstract = {Virtual agents are artificial intelligence systems that can interact with users in virtual reality (VR), providing users with companionship and entertainment. Virtual pets have become the most popular virtual agents due to their many benefits. However, haptic interaction with virtual pets involves two challenges: the rapid construction of various haptic proxies, and the design of agent-initiated active interaction. In this paper, we propose a modular haptic agent (MHA) prototype system, enabling the tactile simulation and encountered-type haptic interaction of common virtual pet agents through a modular design method and a haptic mapping method. Meanwhile, the MHA system with haptic interaction is actively initiated by the agents according to the user’s intention, which makes the virtual agents appear more autonomous and provides a better experience of human–agent interaction. Finally, we conduct three user studies to demonstrate that the MHA system has more advantages in terms of realism, interactivity, attraction, and raising user emotions. Overall, MHA is a system that can build multiple companion agents, provide active interaction and has the potential to quickly build diverse haptic agents for an intelligent and comfortable virtual world. © 2023 by the authors.},\n\tdoi = {10.3390/electronics12092069},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85159214336&doi=10.3390%2Felectronics12092069&partnerID=40&md5=59cd2cc1d0b090bf040cba3c45215e5d},\n\tvolume = {12},\n\tnumber = {9},\n\tnote = {Export Date: 23 March 2026; Cited By: 9 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 23-2026_4b691fab-b2df-482d-b600-58da2748e039.ris"
+      ],
+      "source_keys": [
+        "10.3390/electronics12092069"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+    "batch_id": "batch_0005",
+    "results": [
+        {
+            "paper_id": "paper_000041",
+            "decision": "exclude",
+            "reason": "研究对象为拟杆菌属，与克雷伯氏菌无关，且研究内容为生物传感器开发，不涉及甘油代谢途径。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000042",
+            "decision": "include",
+            "reason": "标题和摘要明确研究肺炎克雷伯氏菌中甘油脱水酶的表达调控，涉及关键酶的正向转录调控机制。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000043",
+            "decision": "include",
+            "reason": "标题和摘要显示对产酸克雷伯氏菌进行系统代谢工程改造，从葡萄糖生产1,3-丙二醇，涉及途径优化和碳通量调控。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000044",
+            "decision": "exclude",
+            "reason": "研究内容为从甘油生产(R,R)-2,3-丁二醇，而非甘油途径的1,3-丙二醇或3-羟基丙酸，不符合核心主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000045",
+            "decision": "exclude",
+            "reason": "标题和摘要表明这是一篇关于塑料生物经济生物传感器的综述，未涉及克雷伯氏菌或甘油代谢途径。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000046",
+            "decision": "uncertain",
+            "reason": "研究涉及肺炎克雷伯氏菌的细菌微区室，与甘油降解相关，但摘要未明确说明是否针对甘油途径进行表达或改造。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000047",
+            "decision": "include",
+            "reason": "标题和摘要明确描述对肺炎克雷伯氏菌进行代谢工程改造以增强1,3-丙二醇生产，涉及途径引入和碳平衡策略。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000048",
+            "decision": "include",
+            "reason": "标题和摘要显示利用代谢工程改造的肺炎克雷伯氏菌菌株发酵生产3-羟基丙酸，涉及基因过表达和竞争途径阻断。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000049",
+            "decision": "exclude",
+            "reason": "研究内容为从甘油生产1,2-丙二醇，而非1,3-丙二醇或3-羟基丙酸，不符合甘油途径的核心主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        }
+    ]
+}

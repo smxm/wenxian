@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0001",
+    "results": [
+        {
+            "paper_id": "paper_000001",
+            "decision": "include",
+            "reason": "标题和摘要明确研究数字普惠金融与收入不平等的关系，并探讨技术创新的调节作用，符合筛选主题和纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000002",
+            "decision": "exclude",
+            "reason": "摘要仅探讨移动电话和互联网使用对金融包容性的影响，未明确涉及收入不平等、贫困或城乡差距等经济学影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000003",
+            "decision": "include",
+            "reason": "标题和摘要明确研究人工智能对城乡收入差距的影响，并提到数字金融包容性的调节作用，符合筛选主题和纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000004",
+            "decision": "exclude",
+            "reason": "摘要仅探讨移动货币对税收收入的影响，未涉及收入不平等、贫困或城乡差距等经济学影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000005",
+            "decision": "uncertain",
+            "reason": "摘要提到金融渗透和金融科技发展，但主要关注传统银行分支扩张对农村减贫的影响，数字金融属性不够明确。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000006",
+            "decision": "uncertain",
+            "reason": "标题和摘要研究金融包容性与收入不平等的关系，但未明确提及数字金融或金融科技变量，信息不足。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000007",
+            "decision": "exclude",
+            "reason": "摘要主要研究COVID-19疫苗接种覆盖的空间不平等，虽提到金融包容性，但与数字普惠金融对收入差距的影响主题不符。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.75
+        },
+        {
+            "paper_id": "paper_000008",
+            "decision": "exclude",
+            "reason": "摘要研究农村电气化的支付意愿，虽提到移动货币服务，但未涉及收入不平等、贫困或城乡差距等经济学影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.7
+        },
+        {
+            "paper_id": "paper_000009",
+            "decision": "exclude",
+            "reason": "摘要研究金融不稳定与收入不平等的互动，但未涉及数字金融或金融科技变量，不符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000010",
+            "decision": "uncertain",
+            "reason": "摘要探讨金融包容性对减贫的作用，但未明确提及数字金融或金融科技变量，且与城乡收入差距主题关联性不足。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.45
+        }
+    ]
+}

@@ -1,0 +1,1363 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要提到监测Doppler-MAP和HM3 LVAD参数，但核心是心脏康复计划，未明确MAP管理策略与临床预后的关联。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:01.030065+08:00"
+  },
+  {
+    "paper_id": "paper_000002",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确研究连续血流LVAD患者的血压测量技术，涉及平均动脉压测量方法比较。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:01.030065+08:00"
+  },
+  {
+    "paper_id": "paper_000003",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦围产期心肌病的分子机制，研究对象包括LVAD患者但核心是生物标志物发现，不涉及术后MAP管理。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:01.030065+08:00"
+  },
+  {
+    "paper_id": "paper_000004",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "摘要明确将术后平均动脉压降低作为右心室衰竭的预测因子，涉及MAP与临床预后的关联。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:01.030065+08:00"
+  },
+  {
+    "paper_id": "paper_000005",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "摘要研究肾灌注压与急性心衰患者肾功能恶化的关系，研究对象为PAC指导治疗的患者，未明确涉及LVAD患者。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:01.030065+08:00"
+  },
+  {
+    "paper_id": "paper_000006",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要研究LVAD术后血管麻痹综合征，涉及平均动脉压管理与术后并发症的关联。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:01.030065+08:00"
+  },
+  {
+    "paper_id": "paper_000007",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要描述新型搏动性LVAD的动物实验，属于体外模拟实验，且未涉及术后MAP管理策略。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:01.030065+08:00"
+  },
+  {
+    "paper_id": "paper_000008",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "摘要明确研究HeartMate 3 LVAD患者使用沙库巴曲缬沙坦管理血压，设定MAP目标范围并评估临床结局。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:01.030065+08:00"
+  },
+  {
+    "paper_id": "paper_000009",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "摘要描述ENVAD-HF试验设计，明确针对HeartMate 3 LVAD患者设定MAP目标范围并评估血压管理策略。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:01.030065+08:00"
+  },
+  {
+    "paper_id": "paper_000010",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦肺栓塞导致的急性右心室衰竭管理，未涉及左心室辅助装置或术后MAP管理。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:01.030065+08:00"
+  },
+  {
+    "paper_id": "paper_000011",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究对象为健康绵羊，属于动物实验，且未涉及LVAD术后MAP管理。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:22.348307+08:00"
+  },
+  {
+    "paper_id": "paper_000012",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究对象为经皮心室辅助装置（PVAD/Impella），属于临时机械循环支持，而非长期植入的连续血流型LVAD。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:22.348307+08:00"
+  },
+  {
+    "paper_id": "paper_000013",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究对象为主动脉内球囊反搏（IABP），属于临时机械循环支持，而非左心室辅助装置（LVAD）。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:22.348307+08:00"
+  },
+  {
+    "paper_id": "paper_000014",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究对象为健康猪，属于动物实验，且为短期左心室支持，未涉及LVAD术后MAP管理。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:22.348307+08:00"
+  },
+  {
+    "paper_id": "paper_000015",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究对象为经皮左心室辅助装置（pLVAD）支持的高危PCI患者，属于临时机械循环支持，而非长期植入的连续血流型LVAD。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:22.348307+08:00"
+  },
+  {
+    "paper_id": "paper_000016",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "标题和摘要显示为LVAD模拟教学案例，涉及MAP测量，但未明确说明是否基于真实患者数据或研究MAP与临床预后的关系。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:22.348307+08:00"
+  },
+  {
+    "paper_id": "paper_000017",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "研究对象为植入HeartMate 3的LVAD患者，摘要明确提到使用患者特异性平均动脉压（MAP）目标进行虚拟血流动力学模型优化。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:22.348307+08:00"
+  },
+  {
+    "paper_id": "paper_000018",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "研究对象为植入HeartMate 3的LVAD患者，摘要明确提到术后MAP目标范围（70-90 mmHg）作为右心室保护策略的一部分。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:22.348307+08:00"
+  },
+  {
+    "paper_id": "paper_000019",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "摘要为综述，涉及平均动脉压在高级心衰和心源性休克中的作用，但未明确针对LVAD术后患者或具体MAP管理策略。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.45,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:22.348307+08:00"
+  },
+  {
+    "paper_id": "paper_000020",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究对象为Magenta Elevate导管，属于临时经皮机械循环支持装置，用于高危PCI，而非长期植入的连续血流型LVAD。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:22.348307+08:00"
+  },
+  {
+    "paper_id": "paper_000021",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦SGLT2抑制剂疗效，未涉及MAP管理策略或与临床预后的关联。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:41.378318+08:00"
+  },
+  {
+    "paper_id": "paper_000022",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "研究对象为绵羊模型，属于动物实验，不符合纳入标准。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:41.378318+08:00"
+  },
+  {
+    "paper_id": "paper_000023",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "摘要仅列出合作者，无研究内容信息，无法判断是否与LVAD术后MAP管理相关。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:41.378318+08:00"
+  },
+  {
+    "paper_id": "paper_000024",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要明确研究cfLVAD患者主动脉瓣开放与MAP的关系，涉及临床预后。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:41.378318+08:00"
+  },
+  {
+    "paper_id": "paper_000025",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "研究聚焦Impella在高危PCI中的使用，未涉及LVAD术后MAP管理。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:41.378318+08:00"
+  },
+  {
+    "paper_id": "paper_000026",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "研究主动脉内球囊反搏在心脏淀粉样变性中的应用，未涉及LVAD。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:41.378318+08:00"
+  },
+  {
+    "paper_id": "paper_000027",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦LVAD患者感染预防和皮肤护理，未涉及MAP管理或临床预后。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:41.378318+08:00"
+  },
+  {
+    "paper_id": "paper_000028",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "研究Impella在心源性休克中的预后模型，未涉及LVAD术后MAP管理。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:41.378318+08:00"
+  },
+  {
+    "paper_id": "paper_000029",
+    "batch_id": "batch_0003",
+    "decision": "uncertain",
+    "reason": "摘要提到连续血流LVAD患者肾阻力指数与MAP的相关性，但未明确涉及MAP管理策略或临床预后。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:41.378318+08:00"
+  },
+  {
+    "paper_id": "paper_000030",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "研究心源性休克与感染的关联，未涉及LVAD或MAP管理。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:01:41.378318+08:00"
+  },
+  {
+    "paper_id": "paper_000031",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究聚焦于新型机械循环支持系统的早期工程开发与测试，不涉及LVAD术后MAP管理策略或临床预后。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:03.551799+08:00"
+  },
+  {
+    "paper_id": "paper_000032",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "标题和摘要明确研究CF-LVAD植入后血管麻痹的预测因素及影响，涉及MAP定义、持续时间与死亡率等临床预后关联。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:03.551799+08:00"
+  },
+  {
+    "paper_id": "paper_000033",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究聚焦于LVAD植入患者感染的风险因素、诊断与治疗，未涉及MAP管理策略或其与临床预后的关系。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:03.551799+08:00"
+  },
+  {
+    "paper_id": "paper_000034",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要明确为大型动物模型研究，涉及VA-ECMO与Impella CP在猪心源性休克中的血流动力学比较，不符合成人CF-LVAD患者研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:03.551799+08:00"
+  },
+  {
+    "paper_id": "paper_000035",
+    "batch_id": "batch_0004",
+    "decision": "uncertain",
+    "reason": "摘要提到HVAD（一种CF-LVAD）患者使用临时pVAD实现心室卸载，但信息有限，未明确涉及MAP管理策略或与临床预后的关联。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:03.551799+08:00"
+  },
+  {
+    "paper_id": "paper_000036",
+    "batch_id": "batch_0004",
+    "decision": "uncertain",
+    "reason": "摘要涉及VAD患者院前护理协议，包括MAP评估，但未明确限定于CF-LVAD或探讨MAP管理策略与临床预后的关系。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:03.551799+08:00"
+  },
+  {
+    "paper_id": "paper_000037",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究聚焦于LVAD植入患者手术伤口感染的围手术期干预措施，未涉及MAP管理策略或其与临床预后的关系。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:03.551799+08:00"
+  },
+  {
+    "paper_id": "paper_000038",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要明确研究Impella临时左心室辅助装置在急性心肌梗死心源性休克中的撤机方案，不涉及CF-LVAD术后MAP管理。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:03.551799+08:00"
+  },
+  {
+    "paper_id": "paper_000039",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要研究心脏移植患者中平均灌注压力与预后的关系，明确提到这些患者不是LVAD治疗候选者，不符合LVAD术后主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:03.551799+08:00"
+  },
+  {
+    "paper_id": "paper_000040",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要明确为健康幼年Landrace猪的心脏尺寸和血流动力学参考值研究，属于动物实验，不符合成人CF-LVAD患者研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:03.551799+08:00"
+  },
+  {
+    "paper_id": "paper_000041",
+    "batch_id": "batch_0005",
+    "decision": "include",
+    "reason": "标题和摘要明确研究EVAHEART 2 LVAD，分析泵速调制对平均动脉压（MAP）的影响，并关联主动脉瓣血流和患者预后。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:24.479516+08:00"
+  },
+  {
+    "paper_id": "paper_000042",
+    "batch_id": "batch_0005",
+    "decision": "include",
+    "reason": "标题和摘要研究连续血流型LVAD患者使用钙通道阻滞剂（血压管理药物）与临床预后（如中风、出血、生存率）的关联。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:24.479516+08:00"
+  },
+  {
+    "paper_id": "paper_000043",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦Impella作为临时机械循环支持设备，不涉及植入LVAD术后MAP管理策略或与临床预后的长期关系。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:24.479516+08:00"
+  },
+  {
+    "paper_id": "paper_000044",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要描述体外模拟循环回路作为监管科学工具，不涉及植入LVAD患者的临床MAP管理或预后。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:24.479516+08:00"
+  },
+  {
+    "paper_id": "paper_000045",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要研究ModulHeart设备在健康小牛中的血流动力学，属于动物实验，且不涉及植入LVAD患者的MAP管理。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:24.479516+08:00"
+  },
+  {
+    "paper_id": "paper_000046",
+    "batch_id": "batch_0005",
+    "decision": "uncertain",
+    "reason": "标题和摘要信息不全，仅提到LVAD患者心室颤动时MAP为70 mmHg，但未明确涉及MAP管理策略或与预后的系统关联。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:24.479516+08:00"
+  },
+  {
+    "paper_id": "paper_000047",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要研究全人工心脏（TAH）的新型泵原理，明确排除标准中指定仅针对TAH的研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:24.479516+08:00"
+  },
+  {
+    "paper_id": "paper_000048",
+    "batch_id": "batch_0005",
+    "decision": "include",
+    "reason": "标题和摘要研究LVAD患者使用SGLT2抑制剂的安全性，包含MAP测量数据，并涉及临床预后如肾功能和不良事件。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:24.479516+08:00"
+  },
+  {
+    "paper_id": "paper_000049",
+    "batch_id": "batch_0005",
+    "decision": "include",
+    "reason": "标题和摘要研究离心流LVAD患者使用SGLT2抑制剂，包含MAP数据，并分析感染和血液相容性相关不良事件。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:24.479516+08:00"
+  },
+  {
+    "paper_id": "paper_000050",
+    "batch_id": "batch_0005",
+    "decision": "uncertain",
+    "reason": "标题和摘要研究多种机械循环支持系统的血流动力学，包括LVAD，但MAP仅作为参数之一提及，未明确聚焦术后MAP管理策略与预后的关系。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:24.479516+08:00"
+  },
+  {
+    "paper_id": "paper_000051",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要表明研究为计算机模拟实验，不涉及真实患者的术后MAP管理策略或临床预后。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:44.475143+08:00"
+  },
+  {
+    "paper_id": "paper_000052",
+    "batch_id": "batch_0006",
+    "decision": "include",
+    "reason": "标题和摘要明确针对HeartMate 3 LVAD患者的血压监测技术，涉及MAP测量并与临床管理相关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:44.475143+08:00"
+  },
+  {
+    "paper_id": "paper_000053",
+    "batch_id": "batch_0006",
+    "decision": "include",
+    "reason": "标题和摘要明确研究LVAD患者的平均动脉压（MAP）自动化测量方法，旨在将血压控制在目标范围以减少并发症。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:44.475143+08:00"
+  },
+  {
+    "paper_id": "paper_000054",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要表明研究针对经皮左心室辅助装置（pLVAD）用于室速消融期间的临时支持，不涉及长期植入的CF-LVAD术后MAP管理。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.82,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:44.475143+08:00"
+  },
+  {
+    "paper_id": "paper_000055",
+    "batch_id": "batch_0006",
+    "decision": "uncertain",
+    "reason": "标题表明为专家共识声明，可能涉及MAP管理，但摘要信息缺失，无法确认是否满足纳入标准的具体内容。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:44.475143+08:00"
+  },
+  {
+    "paper_id": "paper_000056",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要表明研究针对微轴循环支持装置用于急性心梗合并心源性休克的PCI围术期，不涉及长期植入的CF-LVAD术后MAP管理。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:44.475143+08:00"
+  },
+  {
+    "paper_id": "paper_000057",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要明确研究主动脉内球囊反搏（IABP）的时机对血流动力学的影响，不涉及左心室辅助装置（LVAD）。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:44.475143+08:00"
+  },
+  {
+    "paper_id": "paper_000058",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要表明研究针对耐用LVAD患者的室速消融病例，不涉及术后平均动脉压（MAP）的管理策略或目标范围。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:44.475143+08:00"
+  },
+  {
+    "paper_id": "paper_000059",
+    "batch_id": "batch_0006",
+    "decision": "include",
+    "reason": "摘要明确涉及连续血流LVAD植入患者术后平均动脉压（MAP）的测量，并关联了30天死亡率等临床预后。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.86,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:44.475143+08:00"
+  },
+  {
+    "paper_id": "paper_000060",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要表明研究关注LVAD受者的生活体验和患者报告结局，不涉及术后平均动脉压（MAP）的管理或临床预后。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:02:44.475143+08:00"
+  },
+  {
+    "paper_id": "paper_000061",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要未提及左心室辅助装置，不符合研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:03.365870+08:00"
+  },
+  {
+    "paper_id": "paper_000062",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "摘要讨论急性心力衰竭的药物优化系统，未涉及左心室辅助装置患者。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:03.365870+08:00"
+  },
+  {
+    "paper_id": "paper_000063",
+    "batch_id": "batch_0007",
+    "decision": "include",
+    "reason": "标题和摘要明确针对cf-LVAD患者的平均动脉压无创测量技术，涉及MAP管理与临床重要性。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:03.365870+08:00"
+  },
+  {
+    "paper_id": "paper_000064",
+    "batch_id": "batch_0007",
+    "decision": "include",
+    "reason": "标题和摘要研究连续血流左心室辅助装置患者的无创血压测量，直接涉及MAP测量技术。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:03.365870+08:00"
+  },
+  {
+    "paper_id": "paper_000065",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "摘要讨论左心室辅助装置急救算法，未涉及平均动脉压管理或与临床预后的关联。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:03.365870+08:00"
+  },
+  {
+    "paper_id": "paper_000066",
+    "batch_id": "batch_0007",
+    "decision": "uncertain",
+    "reason": "摘要提到平均动脉压与终末期心力衰竭患者预后的关联，但未明确涉及左心室辅助装置患者。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:03.365870+08:00"
+  },
+  {
+    "paper_id": "paper_000067",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要纯探讨HVAD的血流动力学性能和血液损伤，属于器械机械设计研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:03.365870+08:00"
+  },
+  {
+    "paper_id": "paper_000068",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "摘要描述左心室辅助装置经皮停用病例，未涉及平均动脉压管理或临床预后。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:03.365870+08:00"
+  },
+  {
+    "paper_id": "paper_000069",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论Impella经瓣膜微轴流泵，属于短期机械循环支持，非连续血流左心室辅助装置。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:03.365870+08:00"
+  },
+  {
+    "paper_id": "paper_000070",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "摘要研究心脏手术患者右心功能障碍指标，未涉及左心室辅助装置患者。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:03.365870+08:00"
+  },
+  {
+    "paper_id": "paper_000071",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "研究对象为接受高风险PCI并使用iVAC2L机械循环支持的患者，非植入LVAD的成人患者，且不涉及术后MAP管理策略与临床预后的关联。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:25.095459+08:00"
+  },
+  {
+    "paper_id": "paper_000072",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "研究对象为绵羊动物模型，属于动物实验，明确命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:25.095459+08:00"
+  },
+  {
+    "paper_id": "paper_000073",
+    "batch_id": "batch_0008",
+    "decision": "uncertain",
+    "reason": "研究对象包括接受机械循环支持（含LVAD）的患者，涉及MAP管理与血管活性药物使用，但未明确区分LVAD患者亚组，且未直接关联MAP与特定临床预后。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:25.095459+08:00"
+  },
+  {
+    "paper_id": "paper_000074",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "研究对象为接受经皮左心室辅助装置（pLVAD）支持的心肌梗死合并心源性休克患者，非植入LVAD的成人患者，且不涉及术后MAP管理策略与临床预后的关联。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:25.095459+08:00"
+  },
+  {
+    "paper_id": "paper_000075",
+    "batch_id": "batch_0008",
+    "decision": "include",
+    "reason": "标题和摘要明确针对LVAD受者，研究MAP阈值（≤75 mmHg）与卒中/死亡风险的关系，符合筛选主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:25.095459+08:00"
+  },
+  {
+    "paper_id": "paper_000076",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "研究对象为ESCAPE试验参与者，未明确为LVAD患者，且研究焦点为心脏功率输出（CPO）的预后性能，不涉及术后MAP管理策略。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:25.095459+08:00"
+  },
+  {
+    "paper_id": "paper_000077",
+    "batch_id": "batch_0008",
+    "decision": "include",
+    "reason": "标题和摘要明确针对LVAD患者，研究MAP管理（目标70 mmHg）与流量优化策略，涉及并发症减少和预后改善，符合筛选主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:25.095459+08:00"
+  },
+  {
+    "paper_id": "paper_000078",
+    "batch_id": "batch_0008",
+    "decision": "include",
+    "reason": "标题和摘要明确针对植入连续血流型LVAD（HeartMate II）的患者，研究泵速变化对MAP和脑血流的影响，涉及临床预后相关参数。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:25.095459+08:00"
+  },
+  {
+    "paper_id": "paper_000079",
+    "batch_id": "batch_0008",
+    "decision": "uncertain",
+    "reason": "研究对象为植入LVAD（包括HVAD、HeartMate系列）的终末期心衰患者，涉及MAP变化，但未明确探讨MAP管理策略或与特定临床预后的关联。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:25.095459+08:00"
+  },
+  {
+    "paper_id": "paper_000080",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "研究为体外模拟（Mock loop）实验，用于测试血流动力学监测系统，非临床患者研究，明确命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:25.095459+08:00"
+  },
+  {
+    "paper_id": "paper_000081",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "研究对象为猪模型，属于动物实验，明确命中排除标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 1.0,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:44.009906+08:00"
+  },
+  {
+    "paper_id": "paper_000082",
+    "batch_id": "batch_0009",
+    "decision": "include",
+    "reason": "标题和摘要明确研究连续血流型LVAD植入后血管麻痹的定义，涉及MAP阈值与临床预后的关联。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:44.009906+08:00"
+  },
+  {
+    "paper_id": "paper_000083",
+    "batch_id": "batch_0009",
+    "decision": "include",
+    "reason": "标题和摘要研究HeartMate 3患者血压评估的变异性，涉及MAP测量技术与临床管理。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:44.009906+08:00"
+  },
+  {
+    "paper_id": "paper_000084",
+    "batch_id": "batch_0009",
+    "decision": "uncertain",
+    "reason": "摘要提到MAP作为血流动力学指数的组成部分，但未明确说明MAP管理策略或与临床预后的直接关联。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:44.009906+08:00"
+  },
+  {
+    "paper_id": "paper_000085",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "标题和摘要研究lamin A/C突变患者的心脏疾病进展，未涉及LVAD术后MAP管理。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:44.009906+08:00"
+  },
+  {
+    "paper_id": "paper_000086",
+    "batch_id": "batch_0009",
+    "decision": "uncertain",
+    "reason": "标题表明研究LVAD患者无创血压测量的准确性，但摘要缺失，无法确认是否涉及MAP与临床预后的关联。",
+    "evidence": [
+      "title"
+    ],
+    "confidence": 0.45,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:44.009906+08:00"
+  },
+  {
+    "paper_id": "paper_000087",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "标题和摘要研究LVAD患者的室内血流模式，未涉及MAP管理或临床预后。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:44.009906+08:00"
+  },
+  {
+    "paper_id": "paper_000088",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "标题和摘要研究左心房辅助装置的体外模拟实验，未涉及LVAD术后MAP管理。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:44.009906+08:00"
+  },
+  {
+    "paper_id": "paper_000089",
+    "batch_id": "batch_0009",
+    "decision": "include",
+    "reason": "标题和摘要研究LVAD植入后血管麻痹的治疗，涉及MAP和血管加压药需求等临床预后。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:44.009906+08:00"
+  },
+  {
+    "paper_id": "paper_000090",
+    "batch_id": "batch_0009",
+    "decision": "include",
+    "reason": "标题和摘要系统综述连续血流型LVAD患者无创血压测量准确性，涉及MAP测量技术与临床管理。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:44.009906+08:00"
+  },
+  {
+    "paper_id": "paper_000091",
+    "batch_id": "batch_0010",
+    "decision": "include",
+    "reason": "标题和摘要明确研究LVAD患者，涉及平均动脉压（MAP）测量、高血压管理（硝酸盐治疗）及其与心输出量等临床指标的关系。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-03T21:03:50.185406+08:00"
+  }
+]

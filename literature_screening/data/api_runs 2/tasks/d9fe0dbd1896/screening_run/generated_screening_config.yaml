@@ -1,0 +1,49 @@
+project:
+  name: new-screening-run
+  output_dir: tasks/d9fe0dbd1896/screening_run/screening_output
+  save_raw_response: true
+  save_intermediate_files: true
+input:
+  input_files:
+  - tasks/d9fe0dbd1896/screening_run/inputs/scopus_export_Apr 4-2026_ffae3604-9323-4e17-bad0-75b0774b9fde.ris
+  encoding: auto
+dedup:
+  enabled: true
+  strict_doi_match: true
+  normalized_title_exact_match: true
+  fuzzy_title_match: false
+screening:
+  batch_size: 10
+  target_include_count: 30
+  stop_when_target_reached: false
+  allow_uncertain: true
+  retry_times: 6
+  request_timeout_seconds: 240
+criteria:
+  topic: 数字普惠金融对城乡收入差距的影响
+  inclusion:
+  - 必须明确涉及数字金融/金融科技变量（如FinTech, Mobile Money, Digital Credit, 移动支付等）。
+  - 必须探讨了对收入不平等、财富差距、减贫或城乡双层结构的经济学影响。
+  - 侧重于探讨机制（如信贷约束缓解、风险分担）、异质性（数字鸿沟）或空间溢出效应的实证或高质量理论研究。
+  exclusion:
+  - 纯计算机科学或密码学视角的区块链/算法研究（无微观或宏观经济后果探讨）。
+  - 仅探讨传统金融（无数字/技术属性）或传统普惠金融，且未将其作为对比基准的文献。
+  - 与收入、贫困、不平等或城乡要素流动毫无关联的纯公司金融研究（如单纯讨论企业股价、高管薪酬）。
+model:
+  provider: deepseek
+  model_name: deepseek-chat
+  api_base_url: https://api.deepseek.com/v1
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.0
+  max_tokens: 1536
+  min_request_interval_seconds: 2.0
+report:
+  export_included_ris: true
+  export_excluded_ris: false
+  export_unused_ris: true
+  export_included_bib: false
+  export_excluded_bib: false
+  export_unused_bib: false
+  included_report_format: md
+  excluded_report_format: md
+  summary_format: json

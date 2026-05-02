@@ -1,86 +1,77 @@
 # Project State
 
-Last updated: 2026-04-24 18:41 CST
+Last updated: 2026-05-02 11:30 CST
 
 ## Project Overview
 
-- Workspace root: `/Users/mao/Documents/langchain`
+- Workspace root: `.`
 - Git branch: `codex/thread-first-workflow-refresh`
-- Current branch for publish: `codex/thread-first-workflow-refresh`
-- Backend app: `/Users/mao/Documents/langchain/literature_screening`
-- Frontend app: `/Users/mao/Documents/langchain/literature_screening_web`
-- Product direction: thread-first literature workflow from research need to strategy, screening rounds, unified review, and report generation
-- Recommended reading order for a new thread: `/Users/mao/Documents/langchain/project_state.md` -> `/Users/mao/Documents/langchain/docs/project_atlas/index.md` -> `/Users/mao/Documents/langchain/docs/project_atlas/change-routing.md` -> the relevant module card in `/Users/mao/Documents/langchain/docs/project_atlas/modules/` -> `/Users/mao/Documents/langchain/project_session_log.md` only if older chronology still matters
+- Backend app: `literature_screening`
+- Frontend app: `literature_screening_web`
+- Product direction: thread-first literature workflow from research need to strategy, screening rounds, unified review, selectable report sources, and report generation
+- Recommended reading order for a new thread: `project_state.md` -> `docs/project_atlas/index.md` -> `docs/project_atlas/change-routing.md` -> the relevant module card in `docs/project_atlas/modules/`
+- Fast routing skill for future threads: `$wenxian-doc-router`
 
 ## Current Product Shape
 
 - `/threads/new` creates the thread first from the research need; follow-up work continues from the thread detail page.
-- The thread detail page remains the main control surface for strategy generation, screening, unified review, and report generation.
-- Screening rounds can be named, edited from task detail, deleted after mistakes, stopped manually without losing already processed outputs, and configured to stop automatically after a target included-paper count.
-- Screening runs snapshot the topic and criteria used at creation time; later thread-default edits should not rewrite an already-running round.
-- The screening detail page now shows source lineage, uploaded file names, target-stop configuration, per-round criteria snapshots, and a compact handoff into the fulltext workbench.
+- The thread detail page remains the main control surface for strategy generation, screening, unified review, fulltext workbench handoff, and report generation.
+- Screening rounds can be named, edited by restoring their saved parameters into the screening form, deleted after mistakes, stopped manually without losing already processed outputs, and configured to stop automatically after a target included-paper count.
+- Screening tasks now surface live batch-level counts through task summary/progress polling: processed, included, excluded, uncertain, and unused counts update after each completed batch instead of only at the end.
+- Report generation can now choose one or more sources from report-source, fulltext-ready, cumulative included, and individual round included/reviewed datasets, so a newly added batch can be reported without regenerating older included batches.
+- Report and screening model selection now use provider-driven dropdowns. The backend proxies provider `/models` APIs using the entered API key or server env var, with provider defaults as fallback.
 - Unified review still operates at the project level with round-aware history, stable candidate identities, and report-source decisions driven by final inclusion.
-- The fulltext workbench now uses a search-platform layout: top candidate overview, left-side filters/source controls, paginated result list, round/status/language/year filters, relevance sorting, WoS-style multi-select, and inline single-record actions.
-- Report generation still runs through the detached formal-report module, but simple-report category grouping now avoids reusing local fallback taxonomy hints that can leak old domain templates into `deepseek-chat` output.
-- Repo navigation is now split: `project_state.md` for current status, `project_session_log.md` for chronology, and `/Users/mao/Documents/langchain/docs/project_atlas/` for module ownership plus change-entry routing.
+- Repo navigation remains split: `project_state.md` for current status, `project_session_log.md` for chronology, `docs/project_atlas/` for module ownership plus change-entry routing, and `docs/archive/legacy-docs/` for stale docs kept only as context.
 
 ## This Round Changes
 
-- Fixed the screening target-stop path so the frontend sends `stop_when_target_reached`, the backend preserves partial outputs on manual cancel, and task detail exposes the effective stop configuration.
-- Added task deletion and thread/task editing affordances so incorrect initial screening rounds can be removed before polluting the fulltext/report source.
-- Reworked `/Users/mao/Documents/langchain/literature_screening_web/src/views/FulltextQueueView.vue` into a fulltext-candidate search workspace with left filters, paginated results, relevance/year sorting, selectable temporary rounds, range/page/all multi-select, and inline single-paper actions.
-- Diagnosed report tasks `/tasks/a914285f8030` and `/tasks/0a0365ee1ca1`: both received valid `deepseek-chat` JSON, but local simple-report prompts had passed stale fallback categories such as “机器人控制与作业辅助” and “分子机制与信号通路” as `category_hint`.
-- Updated `/Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module/src/literature_screening/formal_report/simple_report.py` and its prompt/tests so overview grouping no longer receives local category hints, uses neutral simple-report fallback labels, and normalizes stale cached categories if the overview model fails.
-- Archived the previous handoff snapshot into `/Users/mao/Documents/langchain/docs/project_history/state_snapshots/2026-04-24_report-and-workbench_state.md` and refreshed the atlas/history docs for the workbench plus report-classification fix.
+- Added provider model discovery: new `/api/model-options` endpoint that fetches model lists from provider APIs (DeepSeek, Kimi, etc.) with fallback defaults.
+- Enhanced screening configuration: new parameters for `batch_size`, `target_include_count`, `stop_when_target_reached`, `min_include_confidence`, `allow_uncertain`, `retry_times`, `request_timeout_seconds`, `encoding`.
+- Refactored FulltextQueueView with improved filtering, pagination, multi-select, and enrichment workflows.
+- Updated ProjectDetailView, ScreeningRunView, and TaskDetailView with UI improvements and better state management.
+- Added comprehensive tests for API endpoints and screening pipeline.
+- Updated project atlas and module cards to reflect new provider model discovery and screening configuration features.
 
 ## Known Issues
 
-- The shared `/Users/mao/.codex/skills/update-project-state/SKILL.md` file still describes only the state/session/history structure; atlas maintenance is documented in-repo but not yet automated in the shared skill.
-- Real browser validation is still needed for the latest fulltext-workbench layout, inline single-paper actions, screening deletion/editing, and target-stop display in long-running tasks.
-- Existing report tasks such as `a914285f8030` and `0a0365ee1ca1` will keep their old generated markdown until rerun; the fix prevents future/regenerated simple reports from feeding old category hints into the overview prompt.
-- DeepSeek's current docs still support JSON output through `response_format: {"type": "json_object"}`, but model naming/defaults should be revisited separately if `deepseek-chat` becomes a deprecated alias in the live account.
-- Older screening tasks that do not have `request_payload.uploaded_file_names` recorded will not be able to show uploaded file names in the detail summary.
-- `/Users/mao/Documents/langchain/literature_screening_web/src/views/ProjectDetailView.vue`, `/Users/mao/Documents/langchain/literature_screening_web/src/views/FulltextQueueView.vue`, and `/Users/mao/Documents/langchain/literature_screening_web/src/views/TaskDetailView.vue` are still fairly large and remain good candidates for component splitting.
-- The atlas will only stay useful if future sessions update the affected module card and change-routing row when module ownership changes.
+- Starting the Vite dev server locally is currently blocked because `literature_screening_web/node_modules` is missing Rollup's macOS optional package `@rollup/rollup-darwin-arm64`; `vue-tsc` still passes through the bundled Codex Node runtime.
+- Provider model discovery needs either a browser-entered API key or a server-side env var such as `DEEPSEEK_API_KEY`; otherwise the UI deliberately shows fallback defaults.
+- "编辑初筛任务" restores a new editable draft from the old task. It does not mutate completed task artifacts or the historical criteria snapshot.
+- Existing completed report artifacts will not rewrite themselves; rerun report tasks when a clean source selection or fresh model choice should be reflected in markdown.
+- Older snapshots and earlier session-log entries still contain historical absolute paths by design; current docs and routing docs should not copy that style forward.
 
 ## Next Thread Suggestions
 
-1. Rerun report generation for `a914285f8030` / `0a0365ee1ca1` or equivalent fresh tasks and confirm the “类型划分” headings are derived from finance/strategy-flexibility content instead of old fallback domains.
-2. Browser-test the fulltext workbench with more than 10 records, multiple selected records, one selected record, a temporary screening round, and long round names.
-3. Exercise an in-progress screening with `stop_when_target_reached` and manual cancel to confirm partial outputs are visible and cumulative/report-source datasets stay consistent.
-4. Split the largest Vue views once the latest UX settles; `FulltextQueueView.vue`, `ProjectDetailView.vue`, and `TaskDetailView.vue` are the highest-payoff targets.
+1. Use `$wenxian-doc-router` at the start of the next feature thread and check whether it gets to the right module card quickly enough.
+2. Browser-test report generation with: report-source only, one latest included dataset only, multiple selected round datasets, and missing/invalid API key fallback.
+3. Run one real long screening task and confirm the thread card plus task detail metrics update after each batch.
+4. Test provider model discovery with different providers and API key configurations.
+5. Repair/reinstall frontend dependencies if a local Vite server is needed; the current `node_modules` looks populated with Linux Rollup optional packages only.
 
 ## Key Files
 
-- `/Users/mao/Documents/langchain/project_state.md`
-- `/Users/mao/Documents/langchain/project_session_log.md`
-- `/Users/mao/Documents/langchain/docs/project_history/index.md`
-- `/Users/mao/Documents/langchain/docs/project_history/incident_notes/2026-04-24_report-category-hints.md`
-- `/Users/mao/Documents/langchain/docs/project_history/state_snapshots/2026-04-18_1430_project_state.md`
-- `/Users/mao/Documents/langchain/docs/project_history/state_snapshots/2026-04-24_report-and-workbench_state.md`
-- `/Users/mao/Documents/langchain/docs/project_history/state_snapshots/2026-04-24_1841_project_state.md`
-- `/Users/mao/Documents/langchain/docs/project_atlas/index.md`
-- `/Users/mao/Documents/langchain/docs/project_atlas/change-routing.md`
-- `/Users/mao/Documents/langchain/docs/project_atlas/invariants.md`
-- `/Users/mao/Documents/langchain/docs/project_atlas/modules/backend-api-and-storage.md`
-- `/Users/mao/Documents/langchain/docs/project_atlas/modules/workflow-orchestration.md`
-- `/Users/mao/Documents/langchain/docs/project_atlas/modules/screening-and-data-pipeline.md`
-- `/Users/mao/Documents/langchain/docs/project_atlas/modules/strategy-generation.md`
-- `/Users/mao/Documents/langchain/docs/project_atlas/modules/reporting-and-formal-report.md`
-- `/Users/mao/Documents/langchain/docs/project_atlas/modules/frontend-shell-and-stores.md`
-- `/Users/mao/Documents/langchain/docs/project_atlas/modules/frontend-thread-and-task-views.md`
-- `/Users/mao/Documents/langchain/docs/project_atlas/modules/runtime-and-operations.md`
-- `/Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module/src/literature_screening/formal_report/simple_report.py`
-- `/Users/mao/Documents/langchain/literature_screening/separated_modules/formal_report_module/prompts/simple_report_overview_prompt.md`
-- `/Users/mao/Documents/langchain/literature_screening_web/src/views/FulltextQueueView.vue`
+- `project_state.md`
+- `project_session_log.md`
+- `docs/project_history/index.md`
+- `docs/project_history/state_snapshots/2026-04-24_2359_project_state.md`
+- `docs/archive/legacy-docs/README.md`
+- `docs/project_atlas/change-routing.md`
+- `docs/project_atlas/invariants.md`
+- `docs/project_atlas/modules/backend-api-and-storage.md`
+- `docs/project_atlas/modules/documentation-handoff-and-skills.md`
+- `docs/project_atlas/modules/frontend-shell-and-stores.md`
+- `docs/project_atlas/modules/frontend-thread-and-task-views.md`
+- `docs/project_atlas/modules/reporting-and-formal-report.md`
+- `docs/project_atlas/modules/screening-and-data-pipeline.md`
+- `README.md`
+- `deploy/cloud-server.md`
+- `literature_screening/README.md`
+- `literature_screening_web/README.md`
+- `skills/update-project-state/SKILL.md`
+- `skills/project-doc-router/SKILL.md`
+- Codex home skill copy: `$CODEX_HOME/skills/project-doc-router/SKILL.md`
 
 ## Verification
 
-- `PYTHONPATH=/Users/mao/Documents/langchain/literature_screening/src /Users/mao/Documents/langchain/literature_screening/.venv311-codex/bin/python -m pytest -q literature_screening/separated_modules/formal_report_module/tests/test_simple_report.py` -> `9 passed`
-- `PYTHONPATH=/Users/mao/Documents/langchain/literature_screening/src /Users/mao/Documents/langchain/literature_screening/.venv311-codex/bin/python -m pytest -q literature_screening/tests/test_api_app.py -k 'report_task or report_source'` -> `4 passed, 24 deselected`
-- `PYTHONPATH=/Users/mao/Documents/langchain/literature_screening/src /Users/mao/Documents/langchain/literature_screening/.venv311-codex/bin/python -m pytest -q literature_screening/tests/test_api_app.py literature_screening/tests/test_task_store.py literature_screening/separated_modules/formal_report_module/tests/test_simple_report.py` -> `40 passed`
-- `cd /Users/mao/Documents/langchain/literature_screening_web && /Applications/Codex.app/Contents/Resources/node node_modules/vue-tsc/bin/vue-tsc.js --noEmit`
-- `PYTHONPATH=/Users/mao/Documents/langchain/literature_screening/src /Users/mao/Documents/langchain/literature_screening/.venv311-codex/bin/python -m py_compile literature_screening/src/literature_screening/api/app.py literature_screening/separated_modules/formal_report_module/src/literature_screening/formal_report/simple_report.py literature_screening/separated_modules/formal_report_module/tests/test_simple_report.py`
-- New overview prompt check against existing tasks: `a914285f8030` and `0a0365ee1ca1` now produce prompts with no `category_hint`, “机器人控制与作业辅助”, “分子机制与信号通路”, or “冲击与贯入机制” terms.
-- `git -C /Users/mao/Documents/langchain diff --check -- literature_screening/src/literature_screening/api/app.py literature_screening/separated_modules/formal_report_module/src/literature_screening/formal_report/simple_report.py literature_screening/separated_modules/formal_report_module/prompts/simple_report_overview_prompt.md literature_screening/separated_modules/formal_report_module/tests/test_simple_report.py`
-- `git -C /Users/mao/Documents/langchain diff --check`
+- Previous code-change verification remains: backend targeted tests `8 passed, 23 deselected`, broader backend/report tests `58 passed`, frontend `vue-tsc --noEmit`, and `git diff --check`.
+- Current documentation pass: active-doc path-hygiene `rg` scans returned no project absolute-path or old drive-letter matches; `find` confirmed the archived docs and new skill files; `git diff --check` passed.

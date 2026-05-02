@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0002",
+    "results": [
+        {
+            "paper_id": "paper_000011",
+            "decision": "uncertain",
+            "reason": "摘要提到5D BIM涉及成本估算，但研究焦点是BIM在项目管理中的整体应用评估，未明确展示具体项目预算应用案例或对比。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000012",
+            "decision": "include",
+            "reason": "标题和摘要明确描述基于BIM和IFC的自动化成本估算系统，应用于抽水蓄能项目，符合纳入标准。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000013",
+            "decision": "include",
+            "reason": "摘要详细说明BIM工作流实现道路项目时间和成本数据自动化集成，涉及5D BIM和IFC，有实际项目应用。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000014",
+            "decision": "include",
+            "reason": "摘要明确包含BIM在住宅项目中的成本估算（5D）应用案例，涉及工程量计算和成本优化，符合纳入标准。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.90
+        },
+        {
+            "paper_id": "paper_000015",
+            "decision": "include",
+            "reason": "摘要描述集成Revit和Primavera的5D BIM决策支持系统，优化劳动力成本，涉及具体项目验证和成本对比。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000016",
+            "decision": "uncertain",
+            "reason": "摘要提到BIM技术在智能施工中应用并提及成本管理效益，但未具体说明5D BIM在预算编制中的直接应用细节。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.50
+        },
+        {
+            "paper_id": "paper_000017",
+            "decision": "exclude",
+            "reason": "标题和摘要表明研究焦点是建筑管理课程教学案例，涉及BIM和算量软件但属于教育领域，无实际工程预算应用。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000018",
+            "decision": "include",
+            "reason": "标题和摘要明确集成5D-BIM进行概率现金流分析，涉及成本数据自动化和风险考量，符合造价应用主题。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.93
+        },
+        {
+            "paper_id": "paper_000019",
+            "decision": "include",
+            "reason": "摘要描述BIM与VR集成系统实现预售住宅定制化成本估算，自动计算变更成本，符合BIM在造价中的直接应用。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.91
+        },
+        {
+            "paper_id": "paper_000020",
+            "decision": "include",
+            "reason": "标题和摘要明确研究BIM技术在伊朗项目投标前成本估算中的应用案例，涉及工程量计算和准确性对比。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.94
+        }
+    ]
+}

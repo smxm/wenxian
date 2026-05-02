@@ -44,8 +44,27 @@ class ModelSettings(BaseModel):
     api_key_env: str
     api_key: str | None = None
     temperature: float = 0.0
-    max_tokens: int = 1536
+    max_tokens: int = 4096
     min_request_interval_seconds: float = 2.0
+
+
+class ProviderModelListRequest(BaseModel):
+    provider: ProviderName
+    api_base_url: str
+    api_key_env: str
+    api_key: str | None = None
+
+
+class ProviderModelOption(BaseModel):
+    id: str
+    label: str
+
+
+class ProviderModelListResponse(BaseModel):
+    provider: ProviderName
+    models: list[ProviderModelOption] = Field(default_factory=list)
+    source: Literal["provider", "fallback"] = "fallback"
+    error: str | None = None
 
 
 class ScreeningTaskCreate(BaseModel):
@@ -57,6 +76,7 @@ class ScreeningTaskCreate(BaseModel):
     batch_size: int = Field(default=10, ge=1, le=50)
     target_include_count: int | None = Field(default=None, ge=1)
     stop_when_target_reached: bool = False
+    min_include_confidence: float = Field(default=0.8, ge=0, le=1)
     allow_uncertain: bool = True
     retry_times: int = Field(default=6, ge=0, le=10)
     request_timeout_seconds: int = Field(default=240, ge=30, le=600)
@@ -125,6 +145,7 @@ class ThreadScreeningSettings(BaseModel):
     batch_size: int = Field(default=10, ge=1, le=50)
     target_include_count: int | None = Field(default=None, ge=1)
     stop_when_target_reached: bool = False
+    min_include_confidence: float = Field(default=0.8, ge=0, le=1)
     allow_uncertain: bool = True
     retry_times: int = Field(default=6, ge=0, le=10)
     request_timeout_seconds: int = Field(default=240, ge=30, le=600)
@@ -142,6 +163,10 @@ class ProjectWorkflowUpdate(BaseModel):
     topic: str | None = None
     description: str | None = None
     thread_profile: ThreadProfile
+
+
+class TaskUpdate(BaseModel):
+    title: str = Field(min_length=1, max_length=240)
 
 
 class DatasetRecord(BaseModel):
@@ -419,6 +444,11 @@ class ScreeningRecordRow(BaseModel):
     decision: str
     confidence: float | str | None = None
     reason: str
+    original_decision: str | None = None
+    original_reason: str | None = None
+    review_decision: str | None = None
+    review_reason: str | None = None
+    reviewed: bool = False
     year: int | None = None
     journal: str | None = None
     doi: str | None = None

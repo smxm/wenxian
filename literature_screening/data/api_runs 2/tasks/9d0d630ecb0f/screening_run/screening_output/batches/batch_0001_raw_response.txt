@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0001",
+    "results": [
+        {
+            "paper_id": "paper_000001",
+            "decision": "include",
+            "reason": "标题和摘要明确提及SLE（系统性红斑狼疮）和视网膜血管病变，符合全身性自身免疫疾病背景及眼部表现研究主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000002",
+            "decision": "include",
+            "reason": "标题和摘要明确研究VKH（小柳原田综合征）的治疗，重点关注脉络膜炎症和视网膜下液等眼部表现。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.98
+        },
+        {
+            "paper_id": "paper_000003",
+            "decision": "include",
+            "reason": "标题和摘要研究混合性结缔组织病（MCTD）的视网膜微血管异常，涉及SLE等自身免疫疾病背景及眼部血管病变。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000004",
+            "decision": "uncertain",
+            "reason": "标题提及狼疮视网膜病变的生物标志物研究，但摘要缺失，无法确认是否实质性探讨眼部特征或机制。",
+            "evidence": ["title"],
+            "confidence": 0.45
+        },
+        {
+            "paper_id": "paper_000005",
+            "decision": "include",
+            "reason": "标题和摘要明确研究SLE患者的狼疮视网膜病变，探讨抗视网膜抗体与眼部并发症的关联。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.96
+        },
+        {
+            "paper_id": "paper_000006",
+            "decision": "include",
+            "reason": "摘要提及免疫检查点抑制剂诱发的视神经病变与VKH样综合征相关，涉及自身免疫背景及眼部神经受累。",
+            "evidence": ["abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000007",
+            "decision": "exclude",
+            "reason": "摘要研究银屑病与葡萄膜炎的流行病学关联，但未提及自身炎症或自身免疫疾病引起的特定眼部表现如眼底病变。",
+            "evidence": ["abstract"],
+            "confidence": 0.82
+        },
+        {
+            "paper_id": "paper_000008",
+            "decision": "include",
+            "reason": "标题和摘要明确研究VKH综合征并发继发性青光眼，涉及自身免疫性葡萄膜炎及视网膜脱离等眼部表现。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.97
+        },
+        {
+            "paper_id": "paper_000009",
+            "decision": "include",
+            "reason": "标题和摘要研究混合性结缔组织病（MCTD）的视网膜微血管密度降低，涉及SLE等自身免疫背景及眼部微血管病变。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.93
+        },
+        {
+            "paper_id": "paper_000010",
+            "decision": "exclude",
+            "reason": "摘要研究羟氯喹视网膜毒性的早期检测方法，属于药物副作用监测，而非自身免疫疾病引起的眼部表现。",
+            "evidence": ["abstract"],
+            "confidence": 0.85
+        }
+    ]
+}

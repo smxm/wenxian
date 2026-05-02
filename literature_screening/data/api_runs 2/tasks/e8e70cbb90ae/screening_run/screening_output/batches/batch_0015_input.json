@@ -1,0 +1,386 @@
+{
+  "batch_id": "batch_0015",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000141",
+    "paper_000142",
+    "paper_000143",
+    "paper_000144",
+    "paper_000145",
+    "paper_000146",
+    "paper_000147",
+    "paper_000148",
+    "paper_000149",
+    "paper_000150"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000141",
+      "entry_type": "article",
+      "title": "3D guidance-based cooperative formation control of USV-UAV systems with input dealys and uncertainties",
+      "authors": [
+        "Chen, Y",
+        "Chen, H",
+        "Zhou, JF",
+        "Zheng, JH",
+        "Zhang, JS",
+        "Xue, MA",
+        "Long, XY"
+      ],
+      "year": 2026,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2025.123246",
+      "abstract": "This paper proposes an integral sliding mode control (ISMC) framework with three-dimensional (3D) guidance mapping for heterogeneous underactuated surface vessel (USV)-unmanned aerial vehicle (UAV) system. Specifically, the system dynamics are modeled with external disturbances, model uncertainty, and input delays, while a graph-theoretic communication topology is adopted to enable distributed kinematic coordination between USV and UAV. Moreover, the 3D guidance mapping strategy incorporates marine-aerial spatial constraints into leader-follower formation trajectories, thus enhancing cooperative capability. Furthermore, a dual-layer ISMC is proposed, integrating a time-delay compensator for position-attitude synchronization with a robust bounded function for nonlinear terms. In addition, rigorous Lyapunov-based analysis guarantees that the tracking errors are uniformly ultimately bounded. Compared with the extended state observer based ISMC, the proposed ISMC achieves more than 50% reduction in most steady-state errors, while also noticeably improving control input performance.",
+      "keywords": [
+        "USV-UAV system",
+        "Cooperative path following",
+        "Time-delay",
+        "Integral sliding mode control",
+        "Dual-layer trajectory tracking",
+        "TRAJECTORY TRACKING CONTROL",
+        "SLIDING MODE CONTROL",
+        "NEURAL-NETWORK",
+        "TIME",
+        "STABILITY",
+        "CONSENSUS",
+        "VEHICLE"
+      ],
+      "normalized_title": "3d guidance based cooperative formation control of usv uav systems with input dealys and uncertainties",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2025.123246,\n\tauthor = {Chen, Y and Chen, H and Zhou, JF and Zheng, JH and Zhang, JS and Xue, MA and Long, XY},\n\ttitle = {3D guidance-based cooperative formation control of USV-UAV systems with input dealys and uncertainties},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2026},\n\tkeywords = {USV-UAV system; Cooperative path following; Time-delay; Integral sliding mode control; Dual-layer trajectory tracking; TRAJECTORY TRACKING CONTROL; SLIDING MODE CONTROL; NEURAL-NETWORK; TIME; STABILITY; CONSENSUS; VEHICLE},\n\tabstract = {This paper proposes an integral sliding mode control (ISMC) framework with three-dimensional (3D) guidance mapping for heterogeneous underactuated surface vessel (USV)-unmanned aerial vehicle (UAV) system. Specifically, the system dynamics are modeled with external disturbances, model uncertainty, and input delays, while a graph-theoretic communication topology is adopted to enable distributed kinematic coordination between USV and UAV. Moreover, the 3D guidance mapping strategy incorporates marine-aerial spatial constraints into leader-follower formation trajectories, thus enhancing cooperative capability. Furthermore, a dual-layer ISMC is proposed, integrating a time-delay compensator for position-attitude synchronization with a robust bounded function for nonlinear terms. In addition, rigorous Lyapunov-based analysis guarantees that the tracking errors are uniformly ultimately bounded. Compared with the extended state observer based ISMC, the proposed ISMC achieves more than 50% reduction in most steady-state errors, while also noticeably improving control input performance.},\n\tdoi = {10.1016/j.oceaneng.2025.123246},\n\tvolume = {343},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 51 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2025.123246"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000142",
+      "entry_type": "article",
+      "title": "Distributed TMPC formation trajectory tracking of multiple underwater unmanned vehicles with uncertainties and external perturbations",
+      "authors": [
+        "Yan, ZP",
+        "Yan, JY",
+        "Cai, SJ",
+        "Yu, YY",
+        "Wang, Y",
+        "Hou, SP"
+      ],
+      "year": 2024,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2024.117160",
+      "abstract": "The tracking task of a multiple underwater unmanned vehicle (UUV) formation system with model uncertainty and external perturbation in three-dimensional space is studied, and a distributed tube model predictive controller (DTMPC) based on a double closed-loop is proposed. First, the position controller and velocity controller are designed separately according to the idea of cascade control to decrease the complexity of the optimal control problem. The position controller utilizes the kinematic incremental model to ensure the smooth variation of the target velocity, and the velocity controller combines the TMPC with the finite-time extended state observer to improve the stability and robustness of the velocity controller. Even with model uncertainties and external perturbations, the formation system can quickly create a formation and converge the tracking error to near zero. In addition, the feasibility and closed-loop stability of the formation controller are demonstrated. Eventually, the effectiveness of the theory is proven by numerical experimentation, and the UUV formation can be used to accurately track the target trajectory.",
+      "keywords": [
+        "Distributed tube model predictive control (DTMPC)",
+        "Underwater unmanned vehicle",
+        "Formation control",
+        "Trajectory tracking",
+        "Extended state observer",
+        "MODEL-PREDICTIVE CONTROL",
+        "SYSTEMS"
+      ],
+      "normalized_title": "distributed tmpc formation trajectory tracking of multiple underwater unmanned vehicles with uncertainties and external perturbations",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2024.117160,\n\tauthor = {Yan, ZP and Yan, JY and Cai, SJ and Yu, YY and Wang, Y and Hou, SP},\n\ttitle = {Distributed TMPC formation trajectory tracking of multiple underwater unmanned vehicles with uncertainties and external perturbations},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2024},\n\tkeywords = {Distributed tube model predictive control (DTMPC); Underwater unmanned vehicle; Formation control; Trajectory tracking; Extended state observer; MODEL-PREDICTIVE CONTROL; SYSTEMS},\n\tabstract = {The tracking task of a multiple underwater unmanned vehicle (UUV) formation system with model uncertainty and external perturbation in three-dimensional space is studied, and a distributed tube model predictive controller (DTMPC) based on a double closed-loop is proposed. First, the position controller and velocity controller are designed separately according to the idea of cascade control to decrease the complexity of the optimal control problem. The position controller utilizes the kinematic incremental model to ensure the smooth variation of the target velocity, and the velocity controller combines the TMPC with the finite-time extended state observer to improve the stability and robustness of the velocity controller. Even with model uncertainties and external perturbations, the formation system can quickly create a formation and converge the tracking error to near zero. In addition, the feasibility and closed-loop stability of the formation controller are demonstrated. Eventually, the effectiveness of the theory is proven by numerical experimentation, and the UUV formation can be used to accurately track the target trajectory.},\n\tdoi = {10.1016/j.oceaneng.2024.117160},\n\tvolume = {298},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 6 Total Times Cited: 6 Cited Reference Count: 50 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2024.117160"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000143",
+      "entry_type": "article",
+      "title": "Energy-Efficient Waypoint Tracking for Underwater Gliders: Theory and Experimental Results",
+      "authors": [
+        "Jing, AY",
+        "Gao, J",
+        "Min, BX",
+        "Wang, JR",
+        "Chen, YM",
+        "Pan, G",
+        "Yang, CG"
+      ],
+      "year": 2025,
+      "journal": "IEEE TRANSACTIONS ON CYBERNETICS",
+      "doi": "10.1109/tcyb.2025.3578122",
+      "abstract": "In this article, a novel energy-efficient control method for waypoint tracking of underwater gliders is designed. The method can be divided into a planning layer and a control layer. In the planning layer, a novel steady/unsteady gliding depth intervals-based dead-reckoning is proposed to predict depth-averaged current velocity with lower consumption. Also a novel heading and depth modification strategy based on line-of-sight is proposed to implement waypoint tracking planning. In the control layer, heading control is implemented by two event-triggered extended state observers (ET-ESOs) and an event-triggered backstepping heading controller (ET-BHC). The ET-ESOs intermittently estimate the real states input to the ET-BHC, and the ET-BHC intermittently outputs the control signal. Simulation and sea trial results show that the UG achieves tracking waypoints, and in addition, energy efficiency is significantly improved.",
+      "keywords": [
+        "Energy efficiency",
+        "Planning",
+        "Oceans",
+        "Path planning",
+        "Gravity",
+        "Event detection",
+        "Energy consumption",
+        "Dead reckoning",
+        "Collision avoidance",
+        "Prediction algorithms",
+        "Energy-efficient",
+        "event-triggered control",
+        "underwater glider (UG)",
+        "underwater vehicle control",
+        "waypoint tracking",
+        "SYSTEMS"
+      ],
+      "normalized_title": "energy efficient waypoint tracking for underwater gliders theory and experimental results",
+      "raw_bibtex": "@ARTICLE{10.1109/TCYB.2025.3578122,\n\tauthor = {Jing, AY and Gao, J and Min, BX and Wang, JR and Chen, YM and Pan, G and Yang, CG},\n\ttitle = {Energy-Efficient Waypoint Tracking for Underwater Gliders: Theory and Experimental Results},\n\tjournal = {IEEE TRANSACTIONS ON CYBERNETICS},\n\tyear = {2025},\n\tkeywords = {Energy efficiency; Planning; Oceans; Path planning; Gravity; Event detection; Energy consumption; Dead reckoning; Collision avoidance; Prediction algorithms; Energy-efficient; event-triggered control; underwater glider (UG); underwater vehicle control; waypoint tracking; SYSTEMS},\n\tabstract = {In this article, a novel energy-efficient control method for waypoint tracking of underwater gliders is designed. The method can be divided into a planning layer and a control layer. In the planning layer, a novel steady/unsteady gliding depth intervals-based dead-reckoning is proposed to predict depth-averaged current velocity with lower consumption. Also a novel heading and depth modification strategy based on line-of-sight is proposed to implement waypoint tracking planning. In the control layer, heading control is implemented by two event-triggered extended state observers (ET-ESOs) and an event-triggered backstepping heading controller (ET-BHC). The ET-ESOs intermittently estimate the real states input to the ET-BHC, and the ET-BHC intermittently outputs the control signal. Simulation and sea trial results show that the UG achieves tracking waypoints, and in addition, energy efficiency is significantly improved.},\n\tdoi = {10.1109/TCYB.2025.3578122},\n\tvolume = {55},\n\tnumber = {9},\n\tpages = {4064-4077},\n\tissn = {2168-2267},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 44 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TCYB.2025.3578122"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000144",
+      "entry_type": "article",
+      "title": "Design of Particle Swarm Optimization Adaptive Sliding Mode Controller Based on an Extended State Observer for the Longitudinal Motion of a Supercavitating Vehicle with Input Saturation",
+      "authors": [
+        "Yang, G",
+        "Lu, FX",
+        "Wu, L",
+        "Xu, JF"
+      ],
+      "year": 2023,
+      "journal": "JOURNAL OF SENSORS",
+      "doi": "10.1155/2023/2938089",
+      "abstract": "The aim of this paper is to present a novel sliding mode control scheme for the supercavitating vehicle trajectory tracking problem that subjects to external disturbances and actuator saturation with two symmetric elevators and a cavitator as actuators by analytical methods and computer simulations. Firstly, the nonlinear and highly coupled dynamic and kinematic models of a supercavitating vehicle are presented in a comprehensive way by taking the cavity memory effect and time-variant planing force into consideration. The PSO algorithm is employed to optimize the control parameters for achieving better and more practical tracking performance by minimizing the objective function. A second-order extended state observer (ESO) is utilized to estimate the unknown external and state-dependent disturbances and compensates for control inputs. In addition, an antiwindup compensator is adopted to cope with actuator saturation. Finally, the proposed control scheme is employed for complex trajectory tracking of a supercavitating vehicle under various conditions by conducting comparative numerical simulations. Rigorous theoretical analysis and simulation results indicate that the proposed control scheme can achieve satisfactory tracking performance and have a good capability of robustness.",
+      "keywords": [
+        "UNDERWATER VEHICLES",
+        "AUV"
+      ],
+      "normalized_title": "design of particle swarm optimization adaptive sliding mode controller based on an extended state observer for the longitudinal motion of a supercavitating vehicle with input saturation",
+      "raw_bibtex": "@ARTICLE{10.1155/2023/2938089,\n\tauthor = {Yang, G and Lu, FX and Wu, L and Xu, JF},\n\ttitle = {Design of Particle Swarm Optimization Adaptive Sliding Mode Controller Based on an Extended State Observer for the Longitudinal Motion of a Supercavitating Vehicle with Input Saturation},\n\tjournal = {JOURNAL OF SENSORS},\n\tyear = {2023},\n\tkeywords = {UNDERWATER VEHICLES; AUV},\n\tabstract = {The aim of this paper is to present a novel sliding mode control scheme for the supercavitating vehicle trajectory tracking problem that subjects to external disturbances and actuator saturation with two symmetric elevators and a cavitator as actuators by analytical methods and computer simulations. Firstly, the nonlinear and highly coupled dynamic and kinematic models of a supercavitating vehicle are presented in a comprehensive way by taking the cavity memory effect and time-variant planing force into consideration. The PSO algorithm is employed to optimize the control parameters for achieving better and more practical tracking performance by minimizing the objective function. A second-order extended state observer (ESO) is utilized to estimate the unknown external and state-dependent disturbances and compensates for control inputs. In addition, an antiwindup compensator is adopted to cope with actuator saturation. Finally, the proposed control scheme is employed for complex trajectory tracking of a supercavitating vehicle under various conditions by conducting comparative numerical simulations. Rigorous theoretical analysis and simulation results indicate that the proposed control scheme can achieve satisfactory tracking performance and have a good capability of robustness.},\n\tdoi = {10.1155/2023/2938089},\n\tvolume = {2023},\n\tissn = {1687-725X},\n\tnote = {Times Cited in Web of Science Core Collection: 4 Total Times Cited: 4 Cited Reference Count: 40 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1155/2023/2938089"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000145",
+      "entry_type": "article",
+      "title": "Velocity-based tuning of degree of homogeneity for finite-time stabilization and fault tolerant control of an ROV in the presence of thruster saturation and rate limits",
+      "authors": [
+        "Hosseinnajad, A",
+        "Loueipour, M"
+      ],
+      "year": 2023,
+      "journal": "NONLINEAR DYNAMICS",
+      "doi": "10.1007/s11071-022-08222-8",
+      "abstract": "This paper introduces a homogeneous controller along a fixed-time state and fault observer for finite-time stabilization and fault accommodation of a remotely-operated vehicle in the presence of actuator saturation and rate limits. For this, a novel tuning algorithm is improvised for manipulating the degree of homogeneity in homogeneous controllers to effectively acquire different properties from the overall control system. The tuning of degree of homogeneity is based on vehicle's velocity. The proposed algorithm results in a switching-type controller, which undergoes three different stages during the operation, to eliminate the sensitivity of conventional finite-time and fixed-time controllers to large initial errors in the presence of thruster constraints. In addition, a new fixed-time fault and state observer is designed for the realization of output feedback control and fault tolerance by combining a fixed-time state observer with a fault estimation unit. In contrast to conventional extended-state observers, this observer considers the dynamics of the thruster system in its formulation so that better performance can be provided for the control system upon thruster failures. Control allocation is utilized to accommodate thruster failures and faults and to take account of thruster saturation and rate limits. Stability analyses are carried out for the overall control system and the proposed observer. It is shown that the closed-loop control system would be globally finite-time stable. The state estimation subsystem is fixed-time stable and the fault estimation unit is input-to-state stable. Simulations are carried out and comparisons are made with several finite-time and fixed-time controllers to outline the advantages of the proposed homogeneous controller and the benefits of the overall fault-tolerant control system.",
+      "keywords": [
+        "Finite-time control",
+        "Fixed-time control",
+        "Fixed-time observer",
+        "Homogeneous control",
+        "Velocity-dependent homogeneity",
+        "SLIDING MODE CONTROL",
+        "ALLOCATION ALGORITHM",
+        "TRAJECTORY TRACKING",
+        "DESIGN",
+        "VEHICLES",
+        "SYSTEMS"
+      ],
+      "normalized_title": "velocity based tuning of degree of homogeneity for finite time stabilization and fault tolerant control of an rov in the presence of thruster saturation and rate limits",
+      "raw_bibtex": "@ARTICLE{10.1007/s11071-022-08222-8,\n\tauthor = {Hosseinnajad, A and Loueipour, M},\n\ttitle = {Velocity-based tuning of degree of homogeneity for finite-time stabilization and fault tolerant control of an ROV in the presence of thruster saturation and rate limits},\n\tjournal = {NONLINEAR DYNAMICS},\n\tyear = {2023},\n\tkeywords = {Finite-time control; Fixed-time control; Fixed-time observer; Homogeneous control; Velocity-dependent homogeneity; SLIDING MODE CONTROL; ALLOCATION ALGORITHM; TRAJECTORY TRACKING; DESIGN; VEHICLES; SYSTEMS},\n\tabstract = {This paper introduces a homogeneous controller along a fixed-time state and fault observer for finite-time stabilization and fault accommodation of a remotely-operated vehicle in the presence of actuator saturation and rate limits. For this, a novel tuning algorithm is improvised for manipulating the degree of homogeneity in homogeneous controllers to effectively acquire different properties from the overall control system. The tuning of degree of homogeneity is based on vehicle's velocity. The proposed algorithm results in a switching-type controller, which undergoes three different stages during the operation, to eliminate the sensitivity of conventional finite-time and fixed-time controllers to large initial errors in the presence of thruster constraints. In addition, a new fixed-time fault and state observer is designed for the realization of output feedback control and fault tolerance by combining a fixed-time state observer with a fault estimation unit. In contrast to conventional extended-state observers, this observer considers the dynamics of the thruster system in its formulation so that better performance can be provided for the control system upon thruster failures. Control allocation is utilized to accommodate thruster failures and faults and to take account of thruster saturation and rate limits. Stability analyses are carried out for the overall control system and the proposed observer. It is shown that the closed-loop control system would be globally finite-time stable. The state estimation subsystem is fixed-time stable and the fault estimation unit is input-to-state stable. Simulations are carried out and comparisons are made with several finite-time and fixed-time controllers to outline the advantages of the proposed homogeneous controller and the benefits of the overall fault-tolerant control system.},\n\tdoi = {10.1007/s11071-022-08222-8},\n\tvolume = {111},\n\tnumber = {9},\n\tpages = {8253-8274},\n\tissn = {0924-090X},\n\tnote = {Times Cited in Web of Science Core Collection: 21 Total Times Cited: 22 Cited Reference Count: 65 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s11071-022-08222-8"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000146",
+      "entry_type": "article",
+      "title": "DSC-ESO Approach to Robust Sliding Model Control for Ship's Curve Trajectory Tracking",
+      "authors": [
+        "Ning, J",
+        "Chen, HM",
+        "Li, W",
+        "Du, BS"
+      ],
+      "year": 2021,
+      "journal": "IEEE ACCESS",
+      "doi": "10.1109/access.2021.3055637",
+      "abstract": "In order to solve the problem of ship's curve trajectory-tracking control, the Norrbin nonlinear response model which can accurately describe the ship's motion state is selected in this paper. The hyperbolic tangent function is used to design the expected hemispheric angle equation, then the complex track control is transformed into a heading control problem. The fast terminal sliding mode (FTSM) is introduced together with the Backstepping control technique to reduce the system adjustment time, eliminate the chattering. Bying combined with extended states observer (ESO) and dynamic surface control (DSC) technique, the internal and external disturbances in real-time can be estimated and compensated, and the \"explosion of complexity\" caused by backstepping technique is solved. The state of the control system is bounded and stable, and the system error converges to zero. Matlab simulation proves that the controller can realize the trajectory-tracking control quickly and accurately, and has strong robustness to external disturbances.",
+      "keywords": [
+        "Marine vehicles",
+        "Mathematical model",
+        "Backstepping",
+        "Motion control",
+        "Trajectory tracking",
+        "Sea surface",
+        "Interference",
+        "Fast terminal sliding mode",
+        "extended states observer",
+        "ship trajectory-tracking control",
+        "robustness",
+        "ALGORITHM"
+      ],
+      "normalized_title": "dsc eso approach to robust sliding model control for ship s curve trajectory tracking",
+      "raw_bibtex": "@ARTICLE{10.1109/ACCESS.2021.3055637,\n\tauthor = {Ning, J and Chen, HM and Li, W and Du, BS},\n\ttitle = {DSC-ESO Approach to Robust Sliding Model Control for Ship's Curve Trajectory Tracking},\n\tjournal = {IEEE ACCESS},\n\tyear = {2021},\n\tkeywords = {Marine vehicles; Mathematical model; Backstepping; Motion control; Trajectory tracking; Sea surface; Interference; Fast terminal sliding mode; extended states observer; ship trajectory-tracking control; robustness; ALGORITHM},\n\tabstract = {In order to solve the problem of ship's curve trajectory-tracking control, the Norrbin nonlinear response model which can accurately describe the ship's motion state is selected in this paper. The hyperbolic tangent function is used to design the expected hemispheric angle equation, then the complex track control is transformed into a heading control problem. The fast terminal sliding mode (FTSM) is introduced together with the Backstepping control technique to reduce the system adjustment time, eliminate the chattering. Bying combined with extended states observer (ESO) and dynamic surface control (DSC) technique, the internal and external disturbances in real-time can be estimated and compensated, and the \"explosion of complexity\" caused by backstepping technique is solved. The state of the control system is bounded and stable, and the system error converges to zero. Matlab simulation proves that the controller can realize the trajectory-tracking control quickly and accurately, and has strong robustness to external disturbances.},\n\tdoi = {10.1109/ACCESS.2021.3055637},\n\tvolume = {9},\n\tpages = {30712-30720},\n\tissn = {2169-3536},\n\tnote = {Times Cited in Web of Science Core Collection: 2 Total Times Cited: 3 Cited Reference Count: 37 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/ACCESS.2021.3055637"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000147",
+      "entry_type": "article",
+      "title": "Formation Control for UAV-USVs Heterogeneous System with Collision Avoidance Performance",
+      "authors": [
+        "Huang, YY",
+        "Li, W",
+        "Ning, J",
+        "Li, ZH"
+      ],
+      "year": 2023,
+      "journal": "JOURNAL OF MARINE SCIENCE AND ENGINEERING",
+      "doi": "10.3390/jmse11122332",
+      "abstract": "This paper investigates the cooperative formation trajectory tracking problem for heterogeneous unmanned aerial vehicle (UAV) and multiple unmanned surface vessel (USV) systems with collision avoidance performance. Firstly, a formation control protocol based on extended state observer (ESO) is proposed to ensure that the UAV and the USVs track the target trajectory simultaneously in the XY plane. Then, the collision avoidance control strategy of USV formation based on artificial potential field (APF) theory is designed. Specifically, the APF method is improved by reconstructing the repulsive potential field to make the collision avoidance action of USVs more in line with the requirements of International Regulations for Preventing Collisions at Sea (COLREGs). Following that, an altitude controller for the UAV is proposed to maintain the cooperative formation of the heterogeneous systems. Based on the input-to-state stability, the stability of the proposed control structure is proven, and all the signals in the closed-loop system are ultimately bounded. Finally, a simulation study is provided to show the efficacy of the proposed strategy.",
+      "keywords": [
+        "heterogeneous formation control system",
+        "UAV-USVs",
+        "extended state observer",
+        "collision avoidance",
+        "artificial potential field method"
+      ],
+      "normalized_title": "formation control for uav usvs heterogeneous system with collision avoidance performance",
+      "raw_bibtex": "@ARTICLE{10.3390/jmse11122332,\n\tauthor = {Huang, YY and Li, W and Ning, J and Li, ZH},\n\ttitle = {Formation Control for UAV-USVs Heterogeneous System with Collision Avoidance Performance},\n\tjournal = {JOURNAL OF MARINE SCIENCE AND ENGINEERING},\n\tyear = {2023},\n\tkeywords = {heterogeneous formation control system; UAV-USVs; extended state observer; collision avoidance; artificial potential field method},\n\tabstract = {This paper investigates the cooperative formation trajectory tracking problem for heterogeneous unmanned aerial vehicle (UAV) and multiple unmanned surface vessel (USV) systems with collision avoidance performance. Firstly, a formation control protocol based on extended state observer (ESO) is proposed to ensure that the UAV and the USVs track the target trajectory simultaneously in the XY plane. Then, the collision avoidance control strategy of USV formation based on artificial potential field (APF) theory is designed. Specifically, the APF method is improved by reconstructing the repulsive potential field to make the collision avoidance action of USVs more in line with the requirements of International Regulations for Preventing Collisions at Sea (COLREGs). Following that, an altitude controller for the UAV is proposed to maintain the cooperative formation of the heterogeneous systems. Based on the input-to-state stability, the stability of the proposed control structure is proven, and all the signals in the closed-loop system are ultimately bounded. Finally, a simulation study is provided to show the efficacy of the proposed strategy.},\n\tdoi = {10.3390/jmse11122332},\n\tvolume = {11},\n\tnumber = {12},\n\tissn = {2077-1312},\n\tnote = {Times Cited in Web of Science Core Collection: 14 Total Times Cited: 15 Cited Reference Count: 45 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/jmse11122332"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000148",
+      "entry_type": "article",
+      "title": "Adaptive simplified surge-heading tracking control for underwater vehicles with thruster′s dead-zone compensation",
+      "authors": [
+        "Yu, CY",
+        "Zhong, YM",
+        "Lian, L",
+        "Xiang, XB"
+      ],
+      "year": 2023,
+      "journal": "NONLINEAR DYNAMICS",
+      "doi": "10.1007/s11071-023-08512-9",
+      "abstract": "Remotely operated underwater vehicles are usually equipped with four horizontal thrusters that form an X-shaped actuation configuration. Yet, thruster ' s inherent dead-zone may possibly result in strong chatter of moment inputs and motion tracking of underwater vehicles. This paper proposes a twolayer cascade tracking controller together with a deadzone compensator, in order to achieve simplified and effective surge-heading control of underwater vehicles equipped with an X-shaped horizontal actuation configuration. For the sake of brevity, the surge and heading dynamics are firstly unified as a second-order dynamic system where the known and unknown parts are separated, respectively. Based on this model, a feedback linearization control law with a combined error measure is designed in the first-layer cascade system for the simplified dynamics tracking. Then, a reducedorder extended state observer without using any priori knowledge of uncertainties is utilized in the secondlayer cascade system to estimate the complex uncertainty of the dynamics. It is noted that this two-layer tracking controller has only two gains to be adjusted, ensuring a simple calculation and microprogramming. Subsequently, a dedicated dead-zone compensator is proposed for the X-shaped actuation configuration and the input-to-state stability of the whole tracking system is analyzed. Finally, comparative numerical cases are provided to demonstrate the adaptivity and robustness of the designed surge-heading tracking controller, i.e., up to 56% reduction of the maximum surge tracking error owing to this dead-zone compensator and less than 0.03(circle) of the heading steady state error against different initial states.",
+      "keywords": [
+        "Underwater vehicles",
+        "Trajectory tracking",
+        "Feedback control",
+        "Extended state observer",
+        "Dead-zone compensation",
+        "REMOTELY OPERATED VEHICLES",
+        "DEPTH CONTROL",
+        "STATE",
+        "AUV"
+      ],
+      "normalized_title": "adaptive simplified surge heading tracking control for underwater vehicles with thruster s dead zone compensation",
+      "raw_bibtex": "@ARTICLE{10.1007/s11071-023-08512-9,\n\tauthor = {Yu, CY and Zhong, YM and Lian, L and Xiang, XB},\n\ttitle = {Adaptive simplified surge-heading tracking control for underwater vehicles with thruster′s dead-zone compensation},\n\tjournal = {NONLINEAR DYNAMICS},\n\tyear = {2023},\n\tkeywords = {Underwater vehicles; Trajectory tracking; Feedback control; Extended state observer; Dead-zone compensation; REMOTELY OPERATED VEHICLES; DEPTH CONTROL; STATE; AUV},\n\tabstract = {Remotely operated underwater vehicles are usually equipped with four horizontal thrusters that form an X-shaped actuation configuration. Yet, thruster ' s inherent dead-zone may possibly result in strong chatter of moment inputs and motion tracking of underwater vehicles. This paper proposes a twolayer cascade tracking controller together with a deadzone compensator, in order to achieve simplified and effective surge-heading control of underwater vehicles equipped with an X-shaped horizontal actuation configuration. For the sake of brevity, the surge and heading dynamics are firstly unified as a second-order dynamic system where the known and unknown parts are separated, respectively. Based on this model, a feedback linearization control law with a combined error measure is designed in the first-layer cascade system for the simplified dynamics tracking. Then, a reducedorder extended state observer without using any priori knowledge of uncertainties is utilized in the secondlayer cascade system to estimate the complex uncertainty of the dynamics. It is noted that this two-layer tracking controller has only two gains to be adjusted, ensuring a simple calculation and microprogramming. Subsequently, a dedicated dead-zone compensator is proposed for the X-shaped actuation configuration and the input-to-state stability of the whole tracking system is analyzed. Finally, comparative numerical cases are provided to demonstrate the adaptivity and robustness of the designed surge-heading tracking controller, i.e., up to 56% reduction of the maximum surge tracking error owing to this dead-zone compensator and less than 0.03(circle) of the heading steady state error against different initial states.},\n\tdoi = {10.1007/s11071-023-08512-9},\n\tvolume = {111},\n\tnumber = {14},\n\tpages = {13073-13088},\n\tissn = {0924-090X},\n\tnote = {Times Cited in Web of Science Core Collection: 19 Total Times Cited: 20 Cited Reference Count: 39 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s11071-023-08512-9"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000149",
+      "entry_type": "article",
+      "title": "ESO-Based Non-Singular Terminal Filtered Integral Sliding Mode Backstepping Control for Unmanned Surface Vessels",
+      "authors": [
+        "Yuan, JP",
+        "Chai, ZH",
+        "Chen, QD",
+        "Dong, ZH",
+        "Wan, L"
+      ],
+      "year": 2025,
+      "journal": "SENSORS",
+      "doi": "10.3390/s25020351",
+      "abstract": "Aiming at the control challenges faced by unmanned surface vessels (USVs) in complex environments, such as nonlinearities, parameter uncertainties, and environmental perturbations, we propose a non-singular terminal integral sliding mode control strategy based on an extended state observer (ESO). The strategy first employs a third-order linear extended state observer to estimate the total disturbances of the USV system, encompassing both external disturbances and internal nonlinearities. Subsequently, a backstepping sliding mode controller based on the Lyapunov theory is designed to generate the steering torque control commands for the USV. To further enhance the tracking performance of the system, we introduce a non-singular terminal integral sliding mode surface with a double power convergence law and redesign the backstepping sliding mode controller for the USV heading control. Meanwhile, to circumvent the differential explosion issue in traditional backstepping control, we simplify the controller design by utilizing a second-order sliding mode filter to accurately estimate the differential signals of the virtual control quantities. Theoretical analysis and simulation results demonstrate that the proposed control algorithm improves the convergence speed, adaptive ability, and anti-interference ability in complex environments compared to traditional linear backstepping sliding mode control, thereby enhancing its engineering practicability. This research offers a more efficient and reliable method for precise heading control and path tracking of USVs in complex and dynamic environments.",
+      "keywords": [
+        "unmanned surface vessels",
+        "ESO",
+        "heading tracking",
+        "path tracking",
+        "non-singular terminal sliding mode",
+        "TRAJECTORY TRACKING CONTROL",
+        "VEHICLES"
+      ],
+      "normalized_title": "eso based non singular terminal filtered integral sliding mode backstepping control for unmanned surface vessels",
+      "raw_bibtex": "@ARTICLE{10.3390/s25020351,\n\tauthor = {Yuan, JP and Chai, ZH and Chen, QD and Dong, ZH and Wan, L},\n\ttitle = {ESO-Based Non-Singular Terminal Filtered Integral Sliding Mode Backstepping Control for Unmanned Surface Vessels},\n\tjournal = {SENSORS},\n\tyear = {2025},\n\tkeywords = {unmanned surface vessels; ESO; heading tracking; path tracking; non-singular terminal sliding mode; TRAJECTORY TRACKING CONTROL; VEHICLES},\n\tabstract = {Aiming at the control challenges faced by unmanned surface vessels (USVs) in complex environments, such as nonlinearities, parameter uncertainties, and environmental perturbations, we propose a non-singular terminal integral sliding mode control strategy based on an extended state observer (ESO). The strategy first employs a third-order linear extended state observer to estimate the total disturbances of the USV system, encompassing both external disturbances and internal nonlinearities. Subsequently, a backstepping sliding mode controller based on the Lyapunov theory is designed to generate the steering torque control commands for the USV. To further enhance the tracking performance of the system, we introduce a non-singular terminal integral sliding mode surface with a double power convergence law and redesign the backstepping sliding mode controller for the USV heading control. Meanwhile, to circumvent the differential explosion issue in traditional backstepping control, we simplify the controller design by utilizing a second-order sliding mode filter to accurately estimate the differential signals of the virtual control quantities. Theoretical analysis and simulation results demonstrate that the proposed control algorithm improves the convergence speed, adaptive ability, and anti-interference ability in complex environments compared to traditional linear backstepping sliding mode control, thereby enhancing its engineering practicability. This research offers a more efficient and reliable method for precise heading control and path tracking of USVs in complex and dynamic environments.},\n\tdoi = {10.3390/s25020351},\n\tvolume = {25},\n\tnumber = {2},\n\tissn = {1424-8220},\n\tnote = {Times Cited in Web of Science Core Collection: 8 Total Times Cited: 8 Cited Reference Count: 25 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/s25020351"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000150",
+      "entry_type": "article",
+      "title": "Heterogeneous cooperative trajectory tracking control between surface and underwater unmanned vehicles",
+      "authors": [
+        "Zhang, HG",
+        "Zhang, XK",
+        "Xu, HT",
+        "Soares, G"
+      ],
+      "year": 2024,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2024.117137",
+      "abstract": "This paper introduces a decentralized control strategy for a heterogeneous team consisting of an unmanned surface vessel serving as the leader vehicle and two unmanned underwater vessels acting as follower vehicles. The team is designed to work together to accomplish underwater exploration missions. The communication network of the team is a fixed, directed topology and only the follower unmanned underwater vessels can read the states of the leader unmanned surface vessel. The proposed system consists of a guidance loop and a control loop. In the guidance loop, a novel cooperative guidance method between a surface and two underwater unmanned vessels is introduced by constructing a path deviation based on vertical line constructs. In the control loop, an iterative sliding mode controller is designed to mitigate chattering issues caused by switching system structures. Meanwhile, an optimization function is employed to optimize control inputs, addressing control input constraints, and reducing control input chattering. The external disturbances and unmodeled dynamics are estimated using a linear extended state observer, and the results are used for the controller design. Finally, simulation tests are carried out to validate the effectiveness of the proposed control system.",
+      "keywords": [
+        "Trajectory tracking",
+        "Heterogeneous cooperative formation control",
+        "USV-UUVs",
+        "Optimized iterative SMC",
+        "ESO",
+        "SLIDING MODE CONTROL",
+        "FOLLOWER FORMATION CONTROL",
+        "PATH-FOLLOWING CONTROL",
+        "UNDERACTUATED SHIPS",
+        "VESSELS"
+      ],
+      "normalized_title": "heterogeneous cooperative trajectory tracking control between surface and underwater unmanned vehicles",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2024.117137,\n\tauthor = {Zhang, HG and Zhang, XK and Xu, HT and Soares, G},\n\ttitle = {Heterogeneous cooperative trajectory tracking control between surface and underwater unmanned vehicles},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2024},\n\tkeywords = {Trajectory tracking; Heterogeneous cooperative formation control; USV-UUVs; Optimized iterative SMC; ESO; SLIDING MODE CONTROL; FOLLOWER FORMATION CONTROL; PATH-FOLLOWING CONTROL; UNDERACTUATED SHIPS; VESSELS},\n\tabstract = {This paper introduces a decentralized control strategy for a heterogeneous team consisting of an unmanned surface vessel serving as the leader vehicle and two unmanned underwater vessels acting as follower vehicles. The team is designed to work together to accomplish underwater exploration missions. The communication network of the team is a fixed, directed topology and only the follower unmanned underwater vessels can read the states of the leader unmanned surface vessel. The proposed system consists of a guidance loop and a control loop. In the guidance loop, a novel cooperative guidance method between a surface and two underwater unmanned vessels is introduced by constructing a path deviation based on vertical line constructs. In the control loop, an iterative sliding mode controller is designed to mitigate chattering issues caused by switching system structures. Meanwhile, an optimization function is employed to optimize control inputs, addressing control input constraints, and reducing control input chattering. The external disturbances and unmodeled dynamics are estimated using a linear extended state observer, and the results are used for the controller design. Finally, simulation tests are carried out to validate the effectiveness of the proposed control system.},\n\tdoi = {10.1016/j.oceaneng.2024.117137},\n\tvolume = {301},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 35 Total Times Cited: 35 Cited Reference Count: 44 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2024.117137"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

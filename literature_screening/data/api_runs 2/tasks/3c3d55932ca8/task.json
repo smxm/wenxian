@@ -1,0 +1,66 @@
+{
+  "id": "3c3d55932ca8",
+  "kind": "screening",
+  "status": "cancelled",
+  "cancel_requested": true,
+  "title": "new-screening-run",
+  "phase": "cancelled",
+  "phase_label": "Cancelled",
+  "progress_current": 0,
+  "progress_total": 4,
+  "progress_message": "Cancellation requested. The current request may still finish in background.",
+  "created_at": "2026-03-30T16:16:32.571952+08:00",
+  "updated_at": "2026-03-30T16:46:51.100472+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "ee3f6c4992d8",
+    "project_topic": "弓网离线电气特性、电弧模型（尤其是Cassie及其衍生模型）及MATLAB弓网仿真",
+    "model_provider": "deepseek",
+    "parent_task_id": null,
+    "input_dataset_ids": [],
+    "request_payload": {
+      "title": "new-screening-run",
+      "topic": "弓网离线电气特性、电弧模型（尤其是Cassie及其衍生模型）及MATLAB弓网仿真",
+      "criteria_markdown": "# Role\r\n\r\n你是一位电气工程与轨道交通领域的资深学术研究员，正在协助我筛选参考文献。我正在撰写一篇关于【弓网离线电气特性、电弧模型（尤其是Cassie及其衍生模型）及MATLAB弓网仿真】的论文，我需要你帮我找出我能用到的参考文献。\r\n\r\n# Task\r\n\r\n我将提供一批文献的元数据（标题、摘要等）。请你逐一阅读，并严格按照以下流程处理：\r\n\r\n## Step 1: 筛选判读\r\n\r\n请根据以下标准判断该文献是否符合我的研究需求：\r\n\r\n* 纳入标准 (Inclusion Criteria)：必须涉及电气化铁路/高铁的弓网系统（Pantograph-catenary system）；核心内容必须探讨弓网离线（Loss of contact/Arcing）引发的电气特性变化（如电压/电流畸变、谐波等）；包含电弧的数学/物理建模（如Cassie、Mayr等黑盒模型）或等效电路的计算机仿真（如MATLAB/Simulink）。\r\n* 排除标准 (Exclusion Criteria)：纯机械动力学或受流质量研究（完全无电气分析）；非弓网场景的电弧研究（如焊接、断路器电弧，且未说明可移植到弓网）；缺乏具体模型公式或仿真/实验波形支撑的纯定性探讨；非中英文文献。\r\n\r\n## Step 2: 格式化输出\r\n\r\n根据判读结果，执行不同的输出逻辑(输出在markdown代码框内，千万别用来源标记，我跪下来求求你了)：\r\n\r\n情况 A：如果不符合要求\r\n\r\n* 仅输出一行文字：\r\n\r\n  `❌ [剔除]：<文献完整标题>`\r\n\r\n情况 B：如果符合要求\r\n\r\n* 请按以下结构输出（不要使用任何来源引用功能，只输出文字）：\r\n\r\n# <文献完整标题>\r\n(如果是英文文献，一级标题写英文原名，然后下面正文加一行带括号的中文翻译)\r\n\r\n核心总结\r\n(请用中文概括文章解决了什么问题，使用了什么核心技术/方法（特别是使用了何种电弧模型或仿真软件），得出了什么主要结论。)\r\n\r\n深度分析\r\n* 参考价值：针对我的论文主题（弓网离线电气特性、电弧模型与MATLAB仿真），这篇文章提供了哪些具体的素材？（例如：是否提供了可供参考的Cassie模型参数、具体的MATLAB/Simulink等效电路拓扑，或是可用于对比的仿真波形特征？）\r\n\r\n---\r\n\r\n# Input Data\r\n\r\n[在此处粘贴你导出的文献信息，可以是 BibTeX 格式，或者 Excel/CSV 中的标题+摘要文本]",
+      "inclusion": [
+        "必须涉及电气化铁路/高铁的弓网系统 Pantograph-catenary system",
+        "核心内容必须探讨弓网离线 Loss of contact/Arcing 引发的电气特性变化 如电压/电流畸变、谐波等",
+        "包含电弧的数学/物理建模 如Cassie、Mayr等黑盒模型 或等效电路的计算机仿真 如MATLAB/Simulink 。"
+      ],
+      "exclusion": [
+        "纯机械动力学或受流质量研究 完全无电气分析",
+        "非弓网场景的电弧研究 如焊接、断路器电弧，且未说明可移植到弓网",
+        "缺乏具体模型公式或仿真/实验波形支撑的纯定性探讨",
+        "非中英文文献。"
+      ],
+      "provider": "deepseek",
+      "model_name": "deepseek-reasoner",
+      "api_base_url": "https://api.deepseek.com/v1",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.0,
+      "max_tokens": 1536,
+      "min_request_interval_seconds": 2.0,
+      "batch_size": 10,
+      "target_include_count": 30,
+      "stop_when_target_reached": false,
+      "allow_uncertain": true,
+      "retry_times": 6,
+      "request_timeout_seconds": 240,
+      "encoding": "auto",
+      "project_id": "ee3f6c4992d8",
+      "parent_task_id": null,
+      "source_dataset_ids": []
+    },
+    "model_secret_id": "2f374486457a4972",
+    "uploaded_input_paths": [
+      "tasks/3c3d55932ca8/uploads/最终整理.ris"
+    ]
+  },
+  "summary": null,
+  "error": null,
+  "artifacts": {},
+  "run_root": null,
+  "output_dir": null,
+  "markdown_preview": null,
+  "records": []
+}

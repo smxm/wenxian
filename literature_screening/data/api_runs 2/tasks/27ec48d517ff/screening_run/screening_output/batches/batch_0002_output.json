@@ -1,0 +1,105 @@
+{
+  "batch_id": "batch_0002",
+  "results": [
+    {
+      "paper_id": "paper_000011",
+      "decision": "exclude",
+      "reason": "研究对象为健康绵羊，属于动物实验，且未涉及LVAD术后MAP管理。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000012",
+      "decision": "exclude",
+      "reason": "研究对象为经皮心室辅助装置（PVAD/Impella），属于临时机械循环支持，而非长期植入的连续血流型LVAD。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000013",
+      "decision": "exclude",
+      "reason": "研究对象为主动脉内球囊反搏（IABP），属于临时机械循环支持，而非左心室辅助装置（LVAD）。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000014",
+      "decision": "exclude",
+      "reason": "研究对象为健康猪，属于动物实验，且为短期左心室支持，未涉及LVAD术后MAP管理。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000015",
+      "decision": "exclude",
+      "reason": "研究对象为经皮左心室辅助装置（pLVAD）支持的高危PCI患者，属于临时机械循环支持，而非长期植入的连续血流型LVAD。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000016",
+      "decision": "uncertain",
+      "reason": "标题和摘要显示为LVAD模拟教学案例，涉及MAP测量，但未明确说明是否基于真实患者数据或研究MAP与临床预后的关系。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000017",
+      "decision": "include",
+      "reason": "研究对象为植入HeartMate 3的LVAD患者，摘要明确提到使用患者特异性平均动脉压（MAP）目标进行虚拟血流动力学模型优化。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000018",
+      "decision": "include",
+      "reason": "研究对象为植入HeartMate 3的LVAD患者，摘要明确提到术后MAP目标范围（70-90 mmHg）作为右心室保护策略的一部分。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000019",
+      "decision": "uncertain",
+      "reason": "摘要为综述，涉及平均动脉压在高级心衰和心源性休克中的作用，但未明确针对LVAD术后患者或具体MAP管理策略。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "paper_id": "paper_000020",
+      "decision": "exclude",
+      "reason": "研究对象为Magenta Elevate导管，属于临时经皮机械循环支持装置，用于高危PCI，而非长期植入的连续血流型LVAD。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    }
+  ]
+}

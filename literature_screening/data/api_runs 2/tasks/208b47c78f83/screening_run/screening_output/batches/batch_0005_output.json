@@ -1,0 +1,27 @@
+{
+  "batch_id": "batch_0005",
+  "results": [
+    {
+      "paper_id": "paper_000041",
+      "decision": "uncertain",
+      "reason": "摘要提到赋能慢性粒细胞白血病患者，但未明确说明研究对象是否为成人，且干预措施为数字护理平台而非直接赋能教育。",
+      "evidence": [
+        "title",
+        "abstract",
+        "year"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000042",
+      "decision": "include",
+      "reason": "标题和摘要明确以白血病患者为研究对象，干预措施基于赋能理论，发表年份符合要求。",
+      "evidence": [
+        "title",
+        "abstract",
+        "year"
+      ],
+      "confidence": 0.9
+    }
+  ]
+}

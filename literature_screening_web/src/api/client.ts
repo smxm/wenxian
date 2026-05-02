@@ -3,6 +3,8 @@ import type {
   DatasetRecord,
   MetaPayload,
   ProjectDetail,
+  ProviderModelListPayload,
+  ProviderModelListResponse,
   ProjectSnapshot,
   ThreadPrefillPayload,
   ThreadPrefillResponse,
@@ -25,6 +27,11 @@ export async function fetchMeta() {
   return data
 }
 
+export async function fetchProviderModels(payload: ProviderModelListPayload) {
+  const { data } = await http.post<ProviderModelListResponse>('/model-options', payload)
+  return data
+}
+
 export async function fetchTasks() {
   const { data } = await http.get<TaskSnapshot[]>('/tasks')
   return data
@@ -37,6 +44,11 @@ export async function fetchProjectTasks(projectId: string) {
 
 export async function fetchTask(taskId: string) {
   const { data } = await http.get<TaskDetail>(`/tasks/${taskId}`)
+  return data
+}
+
+export async function updateTask(taskId: string, payload: { title: string }) {
+  const { data } = await http.patch<TaskDetail>(`/tasks/${taskId}`, payload)
   return data
 }
 
@@ -106,6 +118,7 @@ export async function createScreeningTask(payload: ScreeningFormPayload) {
     formData.append('target_include_count', String(payload.target_include_count))
   }
   formData.append('stop_when_target_reached', String(payload.stop_when_target_reached))
+  formData.append('min_include_confidence', String(payload.min_include_confidence))
   formData.append('allow_uncertain', String(payload.allow_uncertain))
   formData.append('retry_times', String(payload.retry_times))
   formData.append('request_timeout_seconds', String(payload.request_timeout_seconds))

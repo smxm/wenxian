@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0028",
+    "results": [
+        {
+            "paper_id": "paper_000271",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及时间序列表示学习，与超声波检测或基桩完整性检测无关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000272",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及生物乙醇发酵过程建模，与超声波检测或基桩完整性检测无关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000273",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及遥感图像目标检测，与超声波检测或基桩完整性检测无关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000274",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及软件定义网络中的视频流优化，与超声波检测或基桩完整性检测无关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000275",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及基桩完整性测试，并使用RNN-LSTM模型进行信号处理。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000276",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及热完整性剖面法，未提及超声波检测或误差修正算法。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000277",
+            "decision": "include",
+            "reason": "标题和摘要涉及低应变基桩完整性测试，并使用深度学习进行缺陷检测和信号处理。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000278",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及手语识别，与超声波检测或基桩完整性检测无关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000279",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及肌电信号手势识别，与超声波检测或基桩完整性检测无关。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000280",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及颈椎生理曲度自动诊断，与超声波检测或基桩完整性检测无关。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.95
+        }
+    ]
+}

@@ -1,0 +1,113 @@
+{
+  "batch_id": "batch_0011",
+  "results": [
+    {
+      "paper_id": "paper_000101",
+      "decision": "exclude",
+      "reason": "标题和摘要明确讨论金融领域的期权对冲，严格排除金融经济领域的hedging。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "paper_id": "paper_000102",
+      "decision": "exclude",
+      "reason": "标题和摘要讨论投资组合的风险价值估计，属于金融领域，严格排除金融经济领域的hedging。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "paper_id": "paper_000103",
+      "decision": "exclude",
+      "reason": "标题和摘要讨论语言学家的元话语使用，研究对象是语言学而非理工科背景的学术写作。",
+      "evidence": [
+        "title",
+        "abstract",
+        "journal"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000104",
+      "decision": "include",
+      "reason": "摘要明确分析理工科（科学和工程）学生学术写作中的元话语标记，包含hedges等模糊语分析。",
+      "evidence": [
+        "title",
+        "abstract",
+        "journal"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000105",
+      "decision": "exclude",
+      "reason": "标题和摘要讨论需求优先级中的模糊性处理，属于计算机科学中的模糊逻辑应用，严格排除模糊逻辑/模糊控制。",
+      "evidence": [
+        "title",
+        "abstract",
+        "journal"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000106",
+      "decision": "include",
+      "reason": "标题和摘要明确分析工程领域学术写作中的元话语跨语言对比，符合理工科背景和语用分析要求。",
+      "evidence": [
+        "title",
+        "abstract",
+        "journal"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000107",
+      "decision": "exclude",
+      "reason": "标题和摘要讨论高速公路建设中的金融衍生品对冲，属于金融风险管理，严格排除金融经济领域的hedging。",
+      "evidence": [
+        "title",
+        "abstract",
+        "journal"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "paper_id": "paper_000108",
+      "decision": "include",
+      "reason": "标题和摘要明确讨论科学写作中的hedging和weasel words，符合理工科背景和语用分析要求。",
+      "evidence": [
+        "title",
+        "abstract",
+        "journal"
+      ],
+      "confidence": 0.88
+    },
+    {
+      "paper_id": "paper_000109",
+      "decision": "exclude",
+      "reason": "标题和摘要讨论原油采购中的金融对冲策略，属于金融风险管理，严格排除金融经济领域的hedging。",
+      "evidence": [
+        "title",
+        "abstract",
+        "journal"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "paper_id": "paper_000110",
+      "decision": "exclude",
+      "reason": "标题和摘要讨论金融市场的价差期权定价和对冲，严格排除金融经济领域的hedging。",
+      "evidence": [
+        "title",
+        "abstract",
+        "journal"
+      ],
+      "confidence": 1.0
+    }
+  ]
+}

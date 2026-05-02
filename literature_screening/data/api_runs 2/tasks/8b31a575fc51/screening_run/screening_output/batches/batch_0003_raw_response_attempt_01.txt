@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0003",
+    "results": [
+        {
+            "paper_id": "paper_000021",
+            "decision": "uncertain",
+            "reason": "标题涉及系统工程的模糊性，但摘要缺失，无法判断是否属于学术写作中的模糊语分析。",
+            "evidence": ["title"],
+            "confidence": 0.45
+        },
+        {
+            "paper_id": "paper_000022",
+            "decision": "include",
+            "reason": "摘要明确研究工程学术写作中的多模态元话语教学，符合理工科学术写作主题。",
+            "evidence": ["title", "abstract", "journal", "doi"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000023",
+            "decision": "include",
+            "reason": "摘要介绍基于语料库的元话语分析工具，应用于工程学位论文，符合纳入标准。",
+            "evidence": ["title", "abstract", "journal", "doi"],
+            "confidence": 0.82
+        },
+        {
+            "paper_id": "paper_000024",
+            "decision": "include",
+            "reason": "摘要研究理工科博士论文中元话语的历时演变，包含学科对比分析。",
+            "evidence": ["title", "abstract", "journal", "doi"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000025",
+            "decision": "include",
+            "reason": "摘要分析工程学科MOOC视频讲座中的元话语使用，包含学科对比。",
+            "evidence": ["title", "abstract", "journal", "doi"],
+            "confidence": 0.86
+        },
+        {
+            "paper_id": "paper_000026",
+            "decision": "exclude",
+            "reason": "标题明确涉及金融领域的对冲策略，命中排除标准。",
+            "evidence": ["title"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000027",
+            "decision": "exclude",
+            "reason": "标题和摘要中的“hedging”指软件工程中的对比学习框架，属于计算机算法应用。",
+            "evidence": ["title", "abstract", "journal", "doi"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000028",
+            "decision": "uncertain",
+            "reason": "摘要涉及元话语方法论，但主要关注生成式AI的定性研究，与学术写作模糊语的相关性不明确。",
+            "evidence": ["title", "abstract", "journal", "doi"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000029",
+            "decision": "exclude",
+            "reason": "标题和摘要中的“hedging point policy”指生产库存管理策略，属于经济/管理领域。",
+            "evidence": ["title", "abstract", "journal", "doi"],
+            "confidence": 0.90
+        },
+        {
+            "paper_id": "paper_000030",
+            "decision": "include",
+            "reason": "标题和摘要明确研究工程博士论文引言中的模糊语策略，包含基于语料库的跨学科对比。",
+            "evidence": ["title", "abstract", "journal", "doi"],
+            "confidence": 0.95
+        }
+    ]
+}

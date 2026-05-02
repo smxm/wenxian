@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0002",
+    "results": [
+        {
+            "paper_id": "paper_000011",
+            "decision": "include",
+            "reason": "标题和摘要明确探讨慢性应激对癌症发展和预后的影响，包括增加肿瘤负荷和死亡率，并涉及神经内分泌等机制。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000012",
+            "decision": "exclude",
+            "reason": "研究对象为患有严重疾病的父母的年轻后代，未涉及肿瘤患者或心理因素对肿瘤预后的影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000013",
+            "decision": "exclude",
+            "reason": "主题为神经退行性疾病，未涉及肿瘤或心理因素对肿瘤预后的影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000014",
+            "decision": "exclude",
+            "reason": "主题为心力衰竭患者报告结局，未涉及肿瘤或心理因素对肿瘤预后的影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000015",
+            "decision": "uncertain",
+            "reason": "摘要提到犬尿氨酸通路在癌症中的作用，但未明确涉及心理因素对肿瘤预后的影响，信息不足。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000016",
+            "decision": "exclude",
+            "reason": "主题为元认知信念在心理治疗中的作用，未涉及肿瘤或心理因素对肿瘤预后的影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000017",
+            "decision": "uncertain",
+            "reason": "摘要提到多病共存簇预测癌症死亡率，但未明确涉及心理因素，信息不足以判断是否符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.45
+        },
+        {
+            "paper_id": "paper_000018",
+            "decision": "exclude",
+            "reason": "主题为精神疾病生物传感器，未涉及肿瘤或心理因素对肿瘤预后的影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000019",
+            "decision": "include",
+            "reason": "标题和摘要明确探讨抑郁通过HPA轴等机制重塑肿瘤微环境并驱动肿瘤进展，符合主题和纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.98
+        },
+        {
+            "paper_id": "paper_000020",
+            "decision": "exclude",
+            "reason": "主题为肠道微生物组在抑郁症中的作用，未涉及肿瘤或心理因素对肿瘤预后的影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        }
+    ]
+}

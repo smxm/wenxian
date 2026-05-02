@@ -1,0 +1,49 @@
+project:
+  name: new-screening-run
+  output_dir: tasks/0e5b54bd8b5a/screening_run/screening_output
+  save_raw_response: true
+  save_intermediate_files: true
+input:
+  input_files:
+  - tasks/0e5b54bd8b5a/screening_run/inputs/scopus_export_Mar 24-2026_c225c5df-4c47-421e-8b23-ba30cfe44d71.ris
+  encoding: auto
+dedup:
+  enabled: true
+  strict_doi_match: true
+  normalized_title_exact_match: true
+  fuzzy_title_match: false
+screening:
+  batch_size: 10
+  target_include_count: 30
+  stop_when_target_reached: true
+  allow_uncertain: true
+  retry_times: 6
+  request_timeout_seconds: 240
+criteria:
+  topic: 下一代益生菌（Akkermansia muciniphila/AKK）、发酵工艺及乳制品应用
+  inclusion:
+  - 必须涉及下一代益生菌（特别是 Akkermansia muciniphila）或其后生元/灭活形式。
+  - 必须涉及乳制品（如牛奶、酸奶、奶酪等）基质，或发酵工艺。
+  - 研究重点包括但不限于：AKK在乳制品中的存活率提升（如微胶囊化、共培养）、后生元在乳制品中的理化特性影响、合生元开发等。
+  exclusion:
+  - 纯医学/临床研究，仅探讨AKK对某种疾病（如糖尿病、肠炎）的治疗机制，完全未涉及食品基质或乳制品递送。
+  - 仅针对传统益生菌（如乳酸杆菌、双歧杆菌）的研究，未提及AKK或NGPs。
+  - 纯动物模型肠道菌群测序分析，无食品工程、发酵工艺或食品组分介入。
+model:
+  provider: deepseek
+  model_name: deepseek-chat
+  api_base_url: https://api.deepseek.com/v1
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.0
+  max_tokens: 1536
+  min_request_interval_seconds: 2.0
+report:
+  export_included_ris: true
+  export_excluded_ris: false
+  export_unused_ris: true
+  export_included_bib: false
+  export_excluded_bib: false
+  export_unused_bib: false
+  included_report_format: md
+  excluded_report_format: md
+  summary_format: json

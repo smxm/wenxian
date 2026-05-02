@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0026",
+    "results": [
+        {
+            "paper_id": "paper_000251",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究对象为铁路轨枕，未涉及基桩或混凝土结构完整性检测。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000252",
+            "decision": "uncertain",
+            "reason": "摘要提到压缩感知和小波变换等信号处理算法，但未明确涉及基桩检测或管距修正。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000253",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究对象为管道监测，使用导波和光纤传感，未涉及基桩或混凝土结构检测。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.90
+        },
+        {
+            "paper_id": "paper_000254",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究对象为等离子喷涂涂层，属于材料性能研究，未涉及基桩完整性检测。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000255",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究对象为复合材料固化过程监测，未涉及基桩或混凝土结构检测。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.90
+        },
+        {
+            "paper_id": "paper_000256",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究对象为复合材料压力容器，使用导波检测，未涉及基桩或混凝土结构。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000257",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及基桩损伤检测，使用多传感器和神经网络算法进行信号处理。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000258",
+            "decision": "exclude",
+            "reason": "标题和摘要显示使用热完整性测试方法，未涉及超声波透射法或声波检测。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000259",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及混凝土桩缺陷识别，使用小波包分解和卷积神经网络进行信号处理。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000260",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究对象为医学图像分割，与超声波基桩检测无关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.98
+        }
+    ]
+}

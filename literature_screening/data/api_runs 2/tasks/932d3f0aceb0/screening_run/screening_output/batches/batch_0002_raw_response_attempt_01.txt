@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0002",
+    "results": [
+        {
+            "paper_id": "paper_000011",
+            "decision": "include",
+            "reason": "标题和摘要明确探讨课堂手机使用的双重影响（正面和负面），研究场景为大学课堂，符合筛选主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000012",
+            "decision": "include",
+            "reason": "标题和摘要聚焦工程教育中的移动学习，探讨手机作为教学工具的影响，符合正面影响维度。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000013",
+            "decision": "exclude",
+            "reason": "标题和摘要主要讨论移动视频流技术优化，属于纯技术领域，未实质性探讨教育影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000014",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦户外教育中的增强现实技术，未明确涉及手机在课堂中的双重角色。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000015",
+            "decision": "include",
+            "reason": "标题和摘要直接研究中学手机禁令政策，探讨其辩证影响（分心与学习工具），符合辩证视角。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000016",
+            "decision": "include",
+            "reason": "摘要明确讨论手机作为学习工具的潜力及其课堂分心问题，涵盖正负面影响及教师角色。",
+            "evidence": ["abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000017",
+            "decision": "exclude",
+            "reason": "标题和摘要主要描述移动学习系统开发，属于技术实现，未探讨手机在课堂中的具体影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000018",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦驾驶分心干预，研究场景非教育环境，明显不符合筛选主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000019",
+            "decision": "uncertain",
+            "reason": "摘要涉及中学生评估手机健康风险信息，但未明确探讨课堂使用行为或其教育影响，相关性较弱。",
+            "evidence": ["abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000020",
+            "decision": "include",
+            "reason": "标题和摘要研究大学生手机过度使用的负面影响及应对策略，涵盖学业、健康等维度，符合负面影响主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        }
+    ]
+}

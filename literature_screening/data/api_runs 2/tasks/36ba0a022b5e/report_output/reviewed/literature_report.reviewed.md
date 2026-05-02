@@ -1,0 +1,120 @@
+# 一、相关文献总体情况
+
+这批文献围绕慢性肾病（CKD）进展中的细胞凋亡机制及潜在干预策略展开研究，主要关注点包括免疫炎症与组织微环境的相互作用、分子信号通路的调控、以及基于纳米技术和生物材料的干预策略。研究分布广泛，涉及内皮细胞、足细胞、肾小管上皮细胞等多种细胞类型，探讨了凋亡小体、线粒体功能障碍、衰老细胞清除等核心机制，并提出了靶向递送、免疫疗法、基因调控等多种干预途径，为理解CKD进展和开发治疗策略提供了多角度的实验依据。
+
+# 二、类型划分
+
+## 免疫炎症与组织微环境
+
+这类文献共同关注免疫细胞（如T细胞、巨噬细胞）与肾脏组织细胞（如内皮细胞、小管细胞）在微环境中的相互作用，通过特定信号轴（如CXCL16-CXCR6、FAP-IL-4）驱动细胞凋亡、坏死性凋亡或纤维化，强调免疫炎症在CKD进展中的核心作用。
+
+- CAR-M2 immunotherapy resolves renal fibrosis via revascularization and apoptosis of profibrotic Cxcr2(+) endothelial cells.
+- CXCR6+ T cells promote apoptosis and necroptosis in proximal tubules during AKI-to-CKD transition.
+- Apoptotic Bodies in Kidney Disease: Orchestrators of Inflammation, Fibrosis, and Repair.
+- ROS-responsive graphene-hyaluronic acid nanomedicine for targeted therapy in renal ischemia/reperfusion injury.
+
+## 分子机制与信号通路
+
+这类文献聚焦于细胞凋亡的具体分子通路和调控因子，如p38 MAPK、MCL-1、核孔蛋白NUP93等，通过基因敲除、抑制剂干预等手段揭示这些分子如何影响足细胞损伤、衰老细胞清除或转录失调，从而推动CKD进展。
+
+- MYO1C is a urinary extracellular vesicle biomarker and mediator of podocyte injury in diabetic nephropathy.
+- Mechanisms of Podocyte Injury Due to Loss of the Nucleoporin NUP93.
+- Inhibition of MCL-1 to eliminate senescent cells and mitigate renal fibrosis in aristolochic acid nephropathy.
+
+## 纳米技术与靶向干预
+
+这类文献探讨基于纳米材料（如铈掺杂聚吡咯、石墨烯-透明质酸）的干预策略，通过电荷调控、活性氧响应或CD44靶向等方式，实现药物或抗氧化剂的精准递送，以清除ROS、改善线粒体功能并抑制细胞凋亡，从而减缓AKI向CKD转化。
+
+- Charge-dependent mitochondrial targeting of cerium-doped polypyrrole nanoparticles to injured renal tubules for acute kidney injury therapy.
+
+## 线粒体稳态与基因调控
+
+这类文献研究线粒体功能在CKD进展中的关键作用，涉及线粒体自噬、生物合成和功能障碍等机制，通过circRNA（如circAASS）或纳米颗粒靶向调控线粒体稳态，以减轻细胞凋亡和肾纤维化。
+
+- CircAASS alleviates renal injury and fibrosis by regulating mitochondrial homeostasis in tubular epithelial cells.
+
+# 三、逐篇文献总结分析
+
+## CAR-M2 immunotherapy resolves renal fibrosis via revascularization and apoptosis of profibrotic Cxcr2(+) endothelial cells.
+
+总结：
+该文献研究了CAR-M2免疫疗法通过靶向FAP并分泌IL-4，在肾纤维化微环境中促进血管再生并诱导促纤维化Cxcr2+内皮细胞凋亡，从而缓解肾纤维化。研究利用单细胞RNA测序揭示了基质和内皮细胞的异质性及相互作用，并发现CAR-M2通过释放MMP2激活Rxra，触发线粒体自噬导致细胞凋亡。
+
+分析：
+该文献为慢性肾病进展中的细胞凋亡机制提供了直接证据，特别是针对Cxcr2+内皮细胞的凋亡途径，适合支撑免疫疗法在组织微环境干预中的应用场景。其机制涉及细胞特异性靶向和信号通路激活，可参考用于设计针对纤维化疾病的精准治疗策略。
+
+## CXCR6+ T cells promote apoptosis and necroptosis in proximal tubules during AKI-to-CKD transition.
+
+总结：
+该文献研究了急性肾损伤向慢性肾病转变过程中，CXCR6+ T细胞通过促进近端小管细胞凋亡和坏死性凋亡的作用机制。研究采用小鼠模型结合转录组学和蛋白质分析，发现巨噬细胞来源的CXCL16介导CXCR6+ T细胞招募，激活凋亡和坏死性凋亡信号通路，导致小管损伤和纤维化。结果表明，靶向CXCL16-CXCR6轴可能减缓肾损伤进展。
+
+分析：
+该文献对于慢性肾病进展中的细胞凋亡机制研究具有重要参考价值，它揭示了免疫细胞与上皮细胞相互作用的具体通路，适合支撑免疫炎症驱动组织损伤的机制分析。其发现可为干预策略提供靶点，例如在系统设计中考虑抑制CXCL16-CXCR6轴以保护小管功能，适用于研究肾纤维化或AKI后修复失败的应用场景。
+
+## Apoptotic Bodies in Kidney Disease: Orchestrators of Inflammation, Fibrosis, and Repair.
+
+总结：
+该文献探讨了凋亡小体在肾脏疾病中的动态作用，传统上被视为惰性细胞碎片，但新证据表明它们是细胞间通讯的关键介质。在急性肾损伤中，凋亡小体可放大炎症或促进修复，取决于清除效率；在慢性肾病中，其积累通过生物活性物质驱动纤维化和血管钙化。研究强调了凋亡小体作为损伤、炎症、纤维化和再生的主动调节因子，理解其致病与修复效应可启发新生物标志物和治疗策略。
+
+分析：
+这篇文献对当前报告主题的参考价值在于，它系统阐述了凋亡小体在慢性肾病进展中的核心机制，特别是通过影响炎症、纤维化和血管病理来推动疾病发展。它适合支撑慢性肾病中细胞凋亡相关干预策略的研究，例如通过调节清除效率或靶向信号通路来延缓纤维化。此外，文献提出的凋亡小体作为递送系统的工程化应用，为设计新型治疗工具提供了思路，有助于深化对组织微环境调控的理解。
+
+## MYO1C is a urinary extracellular vesicle biomarker and mediator of podocyte injury in diabetic nephropathy.
+
+总结：
+该研究探讨了肌球蛋白IC（MYO1C）作为2型糖尿病肾病（T2DN）的潜在尿液细胞外囊泡生物标志物及其在足细胞损伤中的机制作用。通过机器学习模型在队列中验证了MYO1C的诊断价值，并发现高糖高脂条件诱导MYO1C表达升高，导致足细胞损伤和炎症。机制研究表明，MYO1C通过p38 MAPK信号通路促进足细胞损伤，其敲低可减轻损伤和炎症反应。
+
+分析：
+该文献为慢性肾病（CKD）进展中的细胞凋亡机制提供了具体证据，支持MYO1C作为p38 MAPK信号通路的关键介导因子，适用于研究足细胞损伤的分子机制。它可应用于开发基于尿液生物标志物的诊断工具，并为靶向MYO1C或p38通路的干预策略提供理论依据，有助于设计针对糖尿病肾病细胞凋亡的治疗方案。
+
+## Mechanisms of Podocyte Injury Due to Loss of the Nucleoporin NUP93.
+
+总结：
+该研究通过构建NUP93条件性敲除小鼠模型，探讨了核孔蛋白NUP93缺失导致足细胞损伤的分子机制。研究发现，NUP93缺失会降低足细胞核孔复合体密度，导致转录因子核内丰度减少和转录程序改变，主要影响细胞黏附和肌动蛋白细胞骨架相关基因。最终，足细胞积累基因组损伤并发生凋亡，引发进行性肾小球硬化和慢性肾病。
+
+分析：
+该文献为慢性肾病进展中的细胞凋亡机制研究提供了具体分子通路支持，特别是核孔蛋白功能异常如何通过转录失调和基因组损伤诱导足细胞凋亡。它适用于支撑细胞骨架调控和转录因子核质转运在肾病进展中的作用机制，为干预策略如靶向核孔复合体或DNA损伤响应提供了实验依据。
+
+## Charge-dependent mitochondrial targeting of cerium-doped polypyrrole nanoparticles to injured renal tubules for acute kidney injury therapy.
+
+总结：
+该文献研究了一种基于带正电的铈掺杂聚吡咯纳米颗粒[(+)CePPy]的新型纳米治疗方法，用于治疗急性肾损伤（AKI）。该纳米颗粒通过其正电荷增强细胞摄取和线粒体靶向，有效清除活性氧（ROS）、改善线粒体功能障碍并抑制细胞凋亡，从而防止AKI向慢性肾病（CKD）进展。机制上涉及直接消除ROS和通过上调Mpv17l途径增强内源性抗氧化防御。
+
+分析：
+该文献对于报告主题“慢性肾病（CKD）进展中的细胞凋亡机制及潜在干预策略”具有重要参考价值，因为它提供了通过纳米技术靶向线粒体来干预细胞凋亡的具体机制。它适合支撑基于电荷调控的纳米递送系统设计，应用于肾脏保护场景，特别是针对AKI向CKD转化过程中的凋亡通路。研究中的Mpv17l途径和EEA1介导的靶向机制为开发新型干预策略提供了实验依据。
+
+## ROS-responsive graphene-hyaluronic acid nanomedicine for targeted therapy in renal ischemia/reperfusion injury.
+
+总结：
+该文献开发了一种基于还原氧化石墨烯和透明质酸的多功能纳米平台，用于肾脏靶向递送抗纤维化药物帕立骨化醇。该平台通过CD44介导的靶向作用和活性氧响应性药物释放机制，在缺血再灌注损伤模型中有效减轻了肾小管损伤、纤维化和炎症。研究结果表明，该纳米平台能够整合靶向递送和微环境响应治疗，为抑制急性肾损伤向慢性肾病转化提供了潜在策略。
+
+分析：
+该文献对于慢性肾病进展中的细胞凋亡机制及干预策略研究具有重要参考价值，因为它展示了如何通过纳米技术实现药物在肾脏微环境中的靶向递送和响应性释放。其机制适合支撑基于活性氧清除和抗纤维化药物递送的干预策略，可应用于慢性肾病进展中细胞凋亡和炎症反应的调控场景。这为设计针对肾脏微环境的智能递送系统提供了具体思路，有助于优化慢性肾病治疗中的药物递送效率。
+
+## Inhibition of MCL-1 to eliminate senescent cells and mitigate renal fibrosis in aristolochic acid nephropathy.
+
+总结：
+该研究探讨了肾小管上皮细胞衰老在急性肾损伤向慢性肾病进展中的作用，利用马兜铃酸肾病小鼠模型发现衰老细胞通过上调MCL-1等抗凋亡蛋白抵抗凋亡。通过使用MCL-1特异性抑制剂UMI-77进行干预，研究证实早期抑制MCL-1能有效减少衰老细胞并缓解纤维化，而靶向BCL-2/BCL-xL的ABT-263则无效甚至加重纤维化。
+
+分析：
+该文献为慢性肾病进展中的细胞凋亡机制提供了分子层面的证据，特别强调了MCL-1在衰老细胞存活中的关键作用。它适合支撑针对特定抗凋亡蛋白的精准干预策略，尤其在急性肾损伤早期阶段的应用场景，为开发基于MCL-1抑制的治疗方案提供了实验依据。
+
+## CircAASS alleviates renal injury and fibrosis by regulating mitochondrial homeostasis in tubular epithelial cells.
+
+总结：
+该文献研究了环状RNA circAASS在急性肾损伤（AKI）中的作用，通过调控线粒体稳态来减轻肾小管上皮细胞损伤和纤维化。机制上，circAASS在细胞质中作为竞争性内源RNA隔离MIR324-3p以增强PINK1表达促进线粒体自噬，在细胞核中则与PPARGC1A/PGC-1α蛋白相互作用抑制其降解以促进线粒体生物合成。结果表明，circAASS通过维持线粒体功能缓解AKI和肾纤维化，提示其作为治疗靶点的潜力。
+
+分析：
+该文献对于慢性肾病（CKD）进展中的细胞凋亡机制研究具有参考价值，因为它揭示了circAASS通过调控线粒体稳态来抑制细胞凋亡和炎症反应的具体机制。这适合支撑CKD中细胞凋亡干预策略的研究，特别是针对线粒体功能障碍的靶向治疗。文献中的机制可应用于设计基于circRNA的干预系统，以延缓CKD进展中的纤维化过程。
+
+# 参考列表
+
+[1] ZHAO W Y, ZHOU X, ZHAO X L, et al. CAR-M2 immunotherapy resolves renal fibrosis via revascularization and apoptosis of profibrotic Cxcr2+ endothelial cells[J]. Cell Reports Medicine, 2026, 0(0): 102698.
+[2] LI X X, MELCHINGER I, CHEN Y C, et al. CXCR6+ T cells promote apoptosis and necroptosis in proximal tubules during AKI-to-CKD transition[J]. Cell Death & Disease, 2026.
+[3] COZZOLINO M, CICERI P L. Apoptotic Bodies in Kidney Disease: Orchestrators of Inflammation, Fibrosis, and Repair[J]. Journal of the American Society of Nephrology, 2026: 10.1681/ASN.1073.
+[4] ZHAO Z H, YAN Q Q, ZHOU S J, et al. MYO1C is a urinary extracellular vesicle biomarker and mediator of podocyte injury in diabetic nephropathy[J]. JCI Insight, 2026, 11(5): e194604.
+[5] BACHIR H, KRAUSEL V, BUERGER F, et al. Mechanisms of Podocyte Injury Due to Loss of the Nucleoporin NUP93[J]. Journal of the American Society of Nephrology, 2025: 10.1681/ASN.964.
+[6] HUANG M J, LIU Y Q, XIAO T, et al. Charge-dependent mitochondrial targeting of cerium-doped polypyrrole nanoparticles to injured renal tubules for acute kidney injury therapy[J]. Journal of Nanobiotechnology, 2025, 24(1): 86.
+[7] LEE S, SUH S H, MA S K, et al. ROS-responsive graphene-hyaluronic acid nanomedicine for targeted therapy in renal ischemia/reperfusion injury[J]. Theranostics, 2026, 16(2): 618-636.
+[8] GAO P, CENATUS S, HENLEY N, et al. Inhibition of MCL-1 to eliminate senescent cells and mitigate renal fibrosis in aristolochic acid nephropathy[J]. Cell Death & Disease, 2025, 17(1): 56.
+[9] MA T T, YU Y M, LUO H S, et al. CircAASS alleviates renal injury and fibrosis by regulating mitochondrial homeostasis in tubular epithelial cells[J]. Autophagy, 2026, 22(1): 182-206.

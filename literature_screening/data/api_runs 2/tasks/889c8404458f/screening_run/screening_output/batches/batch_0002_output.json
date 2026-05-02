@@ -1,0 +1,93 @@
+{
+  "batch_id": "batch_0002",
+  "results": [
+    {
+      "paper_id": "paper_000011",
+      "decision": "exclude",
+      "reason": "标题和摘要讨论新药与移植技术整合，未提及赋能教育或患者自我管理。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000012",
+      "decision": "exclude",
+      "reason": "标题和摘要聚焦新药乌帕利斯的药理与临床试验，属于纯药物疗效研究。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000013",
+      "decision": "exclude",
+      "reason": "摘要分析恶性肿瘤住院病例构成与转归，虽提及白血病但未涉及赋能教育干预。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000014",
+      "decision": "include",
+      "reason": "标题和摘要明确研究基于赋能理论的自我管理模式对急性白血病患者的影响，符合主题与纳入标准。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords",
+        "year"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000015",
+      "decision": "exclude",
+      "reason": "标题和摘要研究对象为白血病患儿父母，不符合纯患者群体的纳入标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000016",
+      "decision": "uncertain",
+      "reason": "标题和摘要构建成年急性白血病化疗患者健康教育评价体系，但未明确提及赋能教育或自我效能提升。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords",
+        "year"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000017",
+      "decision": "uncertain",
+      "reason": "标题和摘要研究认知行为干预对急性白血病患者心理的影响，但未明确说明是否属于赋能教育范畴。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords",
+        "year"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000018",
+      "decision": "exclude",
+      "reason": "标题和摘要构建CAR-T治疗护理体系，虽涉及健康教育但核心为护理技术，非赋能教育干预。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords",
+        "year"
+      ],
+      "confidence": 0.8
+    }
+  ]
+}

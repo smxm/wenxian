@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0005",
+    "results": [
+        {
+            "paper_id": "paper_000041",
+            "decision": "include",
+            "reason": "标题和摘要明确提及无人机视角和目标检测，基于YOLOv11改进，并在VisDrone数据集上验证，符合轻量化意图。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000042",
+            "decision": "include",
+            "reason": "标题和摘要明确提及遥感图像小目标检测，基于YOLOv11构建轻量模型，并在VisDrone数据集上验证。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000043",
+            "decision": "include",
+            "reason": "标题和摘要明确提及无人机图像实时目标检测，设计轻量去模糊网络，并在VisDrone等多个无人机数据集上验证。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.87
+        },
+        {
+            "paper_id": "paper_000044",
+            "decision": "include",
+            "reason": "标题和摘要明确提及无人机图像目标检测，提出高效检测框架，使用线性复杂度注意力等轻量技术，并在VisDrone数据集上验证。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.86
+        },
+        {
+            "paper_id": "paper_000045",
+            "decision": "include",
+            "reason": "标题和摘要明确提及基于YOLOv12的轻量车辆检测框架，强调实时边缘部署，并在VisDrone数据集上验证。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000046",
+            "decision": "include",
+            "reason": "标题和摘要明确提及无人机图像小目标检测，改进YOLO11s并减少参数，强调实时无人机应用，并在VisDrone数据集上验证。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.89
+        },
+        {
+            "paper_id": "paper_000047",
+            "decision": "include",
+            "reason": "标题和摘要明确提及无人机图像实时小目标检测，结合CNN和Mamba架构，减少参数并达到实时性能，在VisDrone数据集上验证。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.87
+        },
+        {
+            "paper_id": "paper_000048",
+            "decision": "include",
+            "reason": "标题和摘要明确提及无人机目标检测，提出轻量框架并在边缘设备上实现高速推理，在包含VisDrone的数据集上验证。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.84
+        },
+        {
+            "paper_id": "paper_000049",
+            "decision": "exclude",
+            "reason": "标题和摘要明确聚焦于多目标跟踪（MOT），任务与目标检测不符。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000050",
+            "decision": "include",
+            "reason": "标题和摘要明确提及无人机图像目标检测，提出轻量自适应放大框架，在VisDrone等多个无人机数据集上验证。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.83
+        }
+    ]
+}

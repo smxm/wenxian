@@ -54,7 +54,7 @@ class ModelDraft:
     api_key_env: str
     api_key: str | None = None
     temperature: float = 0.0
-    max_tokens: int = 1536
+    max_tokens: int = 4096
     min_request_interval_seconds: float = 2.0
 
 
@@ -91,6 +91,7 @@ class ScreeningJobRequest:
     batch_size: int = 10
     target_include_count: int = 9999
     stop_when_target_reached: bool = False
+    min_include_confidence: float = 0.8
     allow_uncertain: bool = True
     retry_times: int = 8
     request_timeout_seconds: int = 240
@@ -230,6 +231,7 @@ def run_screening_job(
             "batch_size": request.batch_size,
             "target_include_count": request.target_include_count,
             "stop_when_target_reached": request.stop_when_target_reached,
+            "min_include_confidence": request.min_include_confidence,
             "allow_uncertain": request.allow_uncertain,
             "retry_times": request.retry_times,
             "request_timeout_seconds": request.request_timeout_seconds,

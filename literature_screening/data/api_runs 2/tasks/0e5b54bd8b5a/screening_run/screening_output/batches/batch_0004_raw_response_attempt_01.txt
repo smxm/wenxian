@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0004",
+    "results": [
+        {
+            "paper_id": "paper_000031",
+            "decision": "include",
+            "reason": "摘要明确提到合生元酸奶增加了Akkermansia的相对丰度，研究涉及乳制品基质（酸奶）和下一代益生菌AKK。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000032",
+            "decision": "exclude",
+            "reason": "标题和摘要仅研究牛奶过敏对肠道菌群和行为的影响，未提及下一代益生菌AKK或乳制品发酵工艺。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000033",
+            "decision": "uncertain",
+            "reason": "摘要提到山羊乳水解物增加了Akkermansia的相对丰度，但未明确涉及乳制品基质或发酵工艺，仅提及乳源成分。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000034",
+            "decision": "exclude",
+            "reason": "标题和摘要仅研究从母乳中分离的产尿石素A的链球菌，未提及Akkermansia muciniphila或乳制品应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000035",
+            "decision": "exclude",
+            "reason": "标题和摘要研究AKK对乳化剂的保护作用，但未涉及乳制品基质或发酵工艺，属于纯机制研究。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000036",
+            "decision": "exclude",
+            "reason": "标题和摘要研究肠道菌群与饮食的关联，虽提及AKK和乳制品摄入，但未涉及乳制品基质或发酵工艺的应用研究。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000037",
+            "decision": "include",
+            "reason": "摘要提到瑞士乳杆菌来源的乳清增加了Akkermansia，并涉及发酵乳制品（乳清）和肠道菌群调节。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000038",
+            "decision": "exclude",
+            "reason": "标题和摘要研究宿主遗传与饮食对肠道菌群的联合影响，未提及Akkermansia muciniphila或乳制品应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000039",
+            "decision": "include",
+            "reason": "标题和摘要明确研究AKK的α-半乳糖苷酶，并指出其在乳品工业中水解乳糖寡糖的潜在应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000040",
+            "decision": "uncertain",
+            "reason": "摘要提到AKK是促进短链脂肪酸产生的关键属，但研究焦点是抗性淀粉与植物乳杆菌，未明确涉及乳制品。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        }
+    ]
+}

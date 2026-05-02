@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0001",
+    "results": [
+        {
+            "paper_id": "paper_000001",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于导管并发症和临床管理，未提及赋能教育干预。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000002",
+            "decision": "exclude",
+            "reason": "标题和摘要描述罕见病例报告，未涉及赋能教育干预。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000003",
+            "decision": "uncertain",
+            "reason": "摘要提到患者教育，但研究对象不限于白血病患者，且未明确赋能教育干预。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000004",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于遗传性血小板疾病，未涉及白血病患者的赋能教育。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000005",
+            "decision": "uncertain",
+            "reason": "摘要涉及癌症患者信息需求和自我管理，但研究对象包括实体瘤和血癌，未明确赋能教育干预。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000006",
+            "decision": "exclude",
+            "reason": "标题和摘要描述获得性血友病病例，未涉及白血病患者的赋能教育。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000007",
+            "decision": "include",
+            "reason": "标题和摘要明确研究白血病患者的教育方法对自我效能的影响，符合赋能教育主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000008",
+            "decision": "exclude",
+            "reason": "标题表明文章聚焦CAR-T细胞药理机制，未涉及赋能教育干预。",
+            "evidence": ["title"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000009",
+            "decision": "uncertain",
+            "reason": "标题涉及血癌自我管理，但摘要缺失，无法确认研究对象和干预细节。",
+            "evidence": ["title"],
+            "confidence": 0.45
+        },
+        {
+            "paper_id": "paper_000010",
+            "decision": "exclude",
+            "reason": "标题和摘要研究足部反射疗法对睡眠质量的影响，未涉及赋能教育干预。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        }
+    ]
+}

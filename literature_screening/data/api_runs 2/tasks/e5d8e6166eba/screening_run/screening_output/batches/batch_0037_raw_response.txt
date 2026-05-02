@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0037",
+    "results": [
+        {
+            "paper_id": "paper_000361",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及CSL测试，研究分支板桩形状修正，包含管距计算和形状修正方程。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000362",
+            "decision": "exclude",
+            "reason": "标题和摘要仅涉及传热和流体力学研究，未提及超声波检测、基桩或误差修正算法。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.99
+        },
+        {
+            "paper_id": "paper_000363",
+            "decision": "exclude",
+            "reason": "标题和摘要仅涉及传热和流体力学研究，未提及超声波检测、基桩或误差修正算法。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.99
+        },
+        {
+            "paper_id": "paper_000364",
+            "decision": "uncertain",
+            "reason": "涉及超声波检测和管道缺陷边界识别，但未明确提及基桩或深基础，且误差修正方法描述不足。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000365",
+            "decision": "exclude",
+            "reason": "涉及超声波检测和管道焊缝缺陷，但未提及基桩或深基础，且未涉及误差修正或信号处理算法。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000366",
+            "decision": "exclude",
+            "reason": "涉及焊接工艺和材料性能，虽提及超声波测试但未涉及误差修正或信号处理算法。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000367",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及混凝土桩基的超声CT成像，采用组合优化算法进行图像重建和信号处理。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000368",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及钻孔桩的CSL和全波形层析成像，研究逆问题求解和信号处理方法。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.94
+        },
+        {
+            "paper_id": "paper_000369",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及混凝土桩基的超声波信号检测，采用小波变换和机器学习算法进行起始时间检测和误差分析。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.93
+        },
+        {
+            "paper_id": "paper_000370",
+            "decision": "uncertain",
+            "reason": "涉及灌注桩的声波监测和信号处理，但未明确提及超声波透射法或CSL，且误差修正方法描述不足。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.5
+        }
+    ]
+}

@@ -1,0 +1,1351 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "标题和摘要涉及弓网系统结冰条件下的电弧，但未明确提及电气特性变化的具体模型或仿真。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:45:39.857127+08:00"
+  },
+  {
+    "paper_id": "paper_000002",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "摘要表明研究基于机器视觉检测弓网动态性能和电弧，未涉及电气特性建模或仿真。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:45:39.857127+08:00"
+  },
+  {
+    "paper_id": "paper_000003",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦弓网系统临界速度的机械动力学分析，未提及电气特性或电弧模型。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:45:39.857127+08:00"
+  },
+  {
+    "paper_id": "paper_000004",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要研究碳-铜接触的电气接触电阻和放电，涉及弓网系统，但未明确包含电弧模型或MATLAB仿真。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:45:39.857127+08:00"
+  },
+  {
+    "paper_id": "paper_000005",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确研究弓网电弧电磁传播特性，并建立非均匀传输线模型进行仿真分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:45:39.857127+08:00"
+  },
+  {
+    "paper_id": "paper_000006",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要直接研究弓网电弧检测算法，基于电流信号处理，涉及电气特性分析和算法验证。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:45:39.857127+08:00"
+  },
+  {
+    "paper_id": "paper_000007",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要研究弓网系统电气接触演化，包括接触电阻和电弧侵蚀，但未明确提及数学模型或计算机仿真。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.6,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:45:39.857127+08:00"
+  },
+  {
+    "paper_id": "paper_000008",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确建立基于Habedank方程的电弧EMTP模型，用于弓网电弧研究，并考虑列车速度影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:45:39.857127+08:00"
+  },
+  {
+    "paper_id": "paper_000009",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要研究弓网电弧烧蚀，基于磁流体动力学建立数学模型，并使用COMSOL进行有限元仿真。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:45:39.857127+08:00"
+  },
+  {
+    "paper_id": "paper_000010",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要研究弓网离线瞬态过程对轨道绝缘的影响，建立电路模型并使用ANSYS进行仿真分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:45:39.857127+08:00"
+  },
+  {
+    "paper_id": "paper_000011",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要仅涉及地铁弓网气动性能与局部流场特性，未提及电气特性、电弧模型或MATLAB仿真。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:07.062568+08:00"
+  },
+  {
+    "paper_id": "paper_000012",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确研究弓网电弧放电的电磁干扰激励电流时间特性，建立了基于统计的随机模型，涉及电气特性变化和建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:07.062568+08:00"
+  },
+  {
+    "paper_id": "paper_000013",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "标题和摘要涉及弓网电弧欠电压补偿和仿真测试，但未明确说明是否包含Cassie等电弧数学模型或MATLAB仿真细节。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:07.062568+08:00"
+  },
+  {
+    "paper_id": "paper_000014",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要专注于基于深度学习的弓网电弧图像分割算法，属于计算机视觉应用，未涉及电气特性分析、电弧模型或MATLAB仿真。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:07.062568+08:00"
+  },
+  {
+    "paper_id": "paper_000015",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要描述弓网接触力硬件在环测试台，涉及接触质量评估，但未提及电气特性、电弧模型或MATLAB仿真。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:07.062568+08:00"
+  },
+  {
+    "paper_id": "paper_000016",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "标题和摘要涉及刚性接触网离线仿真器，分析对电源的影响，但未明确说明是否包含电弧建模、电气特性变化或MATLAB仿真。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.45,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:07.062568+08:00"
+  },
+  {
+    "paper_id": "paper_000017",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要专注于弓网电弧检测方法，基于电气参数瞬变分析，但未涉及电弧模型（如Cassie）或MATLAB仿真。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:07.062568+08:00"
+  },
+  {
+    "paper_id": "paper_000018",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确基于弓网电弧和可变电容模型仿真降弓操作过电压，涉及电气特性变化和建模，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:07.062568+08:00"
+  },
+  {
+    "paper_id": "paper_000019",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "标题和摘要涉及弓网相互作用的多域建模，提到电弧现象，但未明确说明是否包含Cassie等电弧数学模型或MATLAB仿真。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:07.062568+08:00"
+  },
+  {
+    "paper_id": "paper_000020",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确研究降弓过程中弓网电弧动力学，基于磁流体动力学理论建立电弧模型并进行数值仿真，涉及电气特性和建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.87,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:07.062568+08:00"
+  },
+  {
+    "paper_id": "paper_000021",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要仅涉及弓网机械动力学与受流质量，未提及电气特性或电弧模型。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:30.252412+08:00"
+  },
+  {
+    "paper_id": "paper_000022",
+    "batch_id": "batch_0003",
+    "decision": "uncertain",
+    "reason": "摘要提到弓网电弧谐波传导电流，涉及电气特性，但未明确说明是否包含电弧数学模型或MATLAB仿真。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:30.252412+08:00"
+  },
+  {
+    "paper_id": "paper_000023",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要明确研究HVDC接地电极线的电弧，非弓网场景且未说明可移植到弓网。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:30.252412+08:00"
+  },
+  {
+    "paper_id": "paper_000024",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "摘要仅涉及弓网电弧故障的多模态检测方法，未包含电弧数学模型或电气特性仿真。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:30.252412+08:00"
+  },
+  {
+    "paper_id": "paper_000025",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要明确研究弓网系统在电气分段区的瞬态电弧特性，包含多物理场耦合电弧模型和数值仿真。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:30.252412+08:00"
+  },
+  {
+    "paper_id": "paper_000026",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要仅研究地铁弓网碳带的非均匀磨损，属于纯摩擦学分析，无电气特性或电弧模型。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:30.252412+08:00"
+  },
+  {
+    "paper_id": "paper_000027",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要研究eHighway公路货运电气化的网络设计模型，非电气化铁路弓网系统，且无电气特性或电弧模型。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:30.252412+08:00"
+  },
+  {
+    "paper_id": "paper_000028",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要明确研究弓网电气分段区电弧的热行为，包含数学建模和多物理场耦合电弧模型及数值分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:30.252412+08:00"
+  },
+  {
+    "paper_id": "paper_000029",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "摘要仅涉及弓网电弧的检测与识别方法，基于多信息融合，未包含电弧数学模型或电气特性仿真。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:30.252412+08:00"
+  },
+  {
+    "paper_id": "paper_000030",
+    "batch_id": "batch_0003",
+    "decision": "uncertain",
+    "reason": "摘要研究弓网系统C/Cu接触对的载流摩擦学行为，涉及电弧侵蚀，但未明确说明是否包含电弧数学模型或仿真。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:30.252412+08:00"
+  },
+  {
+    "paper_id": "paper_000031",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦机械磨损预测，未明确涉及电气特性变化或电弧建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:54.286147+08:00"
+  },
+  {
+    "paper_id": "paper_000032",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "标题和摘要明确研究弓网电弧模型，基于Mayr和Schwarz模型，探讨低气压下的电气特性。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:54.286147+08:00"
+  },
+  {
+    "paper_id": "paper_000033",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦机械控制改善受流质量，未涉及电气特性分析或电弧建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:54.286147+08:00"
+  },
+  {
+    "paper_id": "paper_000034",
+    "batch_id": "batch_0004",
+    "decision": "uncertain",
+    "reason": "标题和摘要研究弓网电弧动态和侵蚀，但未明确提及电气特性变化或具体电弧模型。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:54.286147+08:00"
+  },
+  {
+    "paper_id": "paper_000035",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要研究电流密度分布，未涉及弓网离线、电气特性变化或电弧建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:54.286147+08:00"
+  },
+  {
+    "paper_id": "paper_000036",
+    "batch_id": "batch_0004",
+    "decision": "uncertain",
+    "reason": "标题和摘要涉及弓网电弧建模，但未明确提及电气特性变化或Cassie/Mayr等黑盒模型。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:54.286147+08:00"
+  },
+  {
+    "paper_id": "paper_000037",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "摘要明确使用Mayr电弧模型进行弓网电弧检测，涉及电流信号处理。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:54.286147+08:00"
+  },
+  {
+    "paper_id": "paper_000038",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦机械磨损和电弧放电能量，未涉及电气特性变化或电弧建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:54.286147+08:00"
+  },
+  {
+    "paper_id": "paper_000039",
+    "batch_id": "batch_0004",
+    "decision": "uncertain",
+    "reason": "摘要涉及接触中断对车辆电流的影响，但未明确提及电弧建模或电气特性变化。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.45,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:54.286147+08:00"
+  },
+  {
+    "paper_id": "paper_000040",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "标题和摘要明确研究弓网电弧模型及其对牵引系统电能质量的影响，涉及谐波分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:46:54.286147+08:00"
+  },
+  {
+    "paper_id": "paper_000041",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于电弧检测技术，未提及弓网离线电气特性分析或电弧建模与仿真。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:47:19.770321+08:00"
+  },
+  {
+    "paper_id": "paper_000042",
+    "batch_id": "batch_0005",
+    "decision": "include",
+    "reason": "摘要明确涉及弓网电弧引发的低频纹波，并提出了有源电力滤波控制方法进行抑制，包含电气特性分析与控制模型。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:47:19.770321+08:00"
+  },
+  {
+    "paper_id": "paper_000043",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要主要描述基于图像处理的弓网接触条件研究，属于机械/视觉分析，未涉及电气特性或电弧建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:47:19.770321+08:00"
+  },
+  {
+    "paper_id": "paper_000044",
+    "batch_id": "batch_0005",
+    "decision": "include",
+    "reason": "标题和摘要明确研究双弓网离线电弧特性，建立了黑盒电弧模型并进行电路仿真，符合所有纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:47:19.770321+08:00"
+  },
+  {
+    "paper_id": "paper_000045",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要专注于弓网相互作用的高频数值模拟，属于纯机械动力学研究，未提及电气特性或电弧建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:47:19.770321+08:00"
+  },
+  {
+    "paper_id": "paper_000046",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论接触网多参数优化以改善受流质量，属于机械设计范畴，未涉及电气特性分析或电弧建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:47:19.770321+08:00"
+  },
+  {
+    "paper_id": "paper_000047",
+    "batch_id": "batch_0005",
+    "decision": "uncertain",
+    "reason": "标题和摘要为弓网系统主动控制技术的文献综述，可能涵盖电气特性与电弧建模，但信息不足确认具体内容。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:47:19.770321+08:00"
+  },
+  {
+    "paper_id": "paper_000048",
+    "batch_id": "batch_0005",
+    "decision": "include",
+    "reason": "标题和摘要明确研究分相绝缘器弓网电弧的建模与抑制，提出了黑盒电弧模型并进行仿真验证。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:47:19.770321+08:00"
+  },
+  {
+    "paper_id": "paper_000049",
+    "batch_id": "batch_0005",
+    "decision": "uncertain",
+    "reason": "标题和摘要涉及直流铁路弓网电弧检测方法，提到了电气特性变化，但未明确包含电弧数学模型或仿真细节。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:47:19.770321+08:00"
+  },
+  {
+    "paper_id": "paper_000050",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要专注于基于图像处理的弓网电弧信号检测算法，属于计算机视觉应用，未涉及电气特性分析或电弧建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:47:19.770321+08:00"
+  },
+  {
+    "paper_id": "paper_000051",
+    "batch_id": "batch_0006",
+    "decision": "include",
+    "reason": "标题和摘要明确涉及弓网系统电弧检测，并分析电流电压信号特征，符合电气特性研究主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:47:45.410679+08:00"
+  },
+  {
+    "paper_id": "paper_000052",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要主要研究覆冰对弓网系统动力学和受流质量的影响，未提及电气特性分析或电弧建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:47:45.410679+08:00"
+  },
+  {
+    "paper_id": "paper_000053",
+    "batch_id": "batch_0006",
+    "decision": "include",
+    "reason": "标题和摘要明确研究弓网电弧电气特性，建立了等离子体数学模型并分析电压和电流密度，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:47:45.410679+08:00"
+  },
+  {
+    "paper_id": "paper_000054",
+    "batch_id": "batch_0006",
+    "decision": "include",
+    "reason": "标题和摘要研究弓网电弧驱动力和动态特性，建立了电弧链模型并进行了实验验证，涉及电气建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:47:45.410679+08:00"
+  },
+  {
+    "paper_id": "paper_000055",
+    "batch_id": "batch_0006",
+    "decision": "uncertain",
+    "reason": "标题和摘要提到离线电弧，但核心内容是新型受电弓滑板的散热性能分析，未明确涉及电弧模型或电气特性变化。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:47:45.410679+08:00"
+  },
+  {
+    "paper_id": "paper_000056",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要主要研究受电弓滑板变形的图像检测方法，未涉及弓网离线电气特性或电弧建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:47:45.410679+08:00"
+  },
+  {
+    "paper_id": "paper_000057",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要研究阻尼分布对弓网接触力的影响，属于机械动力学范畴，未提及电气特性或电弧分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:47:45.410679+08:00"
+  },
+  {
+    "paper_id": "paper_000058",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要主要研究接触线覆冰生长预测模型，虽提到电气电弧但未深入分析电气特性或建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.75,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:47:45.410679+08:00"
+  },
+  {
+    "paper_id": "paper_000059",
+    "batch_id": "batch_0006",
+    "decision": "include",
+    "reason": "标题和摘要明确研究城市轨道直流弓网电弧温度及接触线烧蚀，建立了电弧模型和烧蚀模型，涉及电气特性。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:47:45.410679+08:00"
+  },
+  {
+    "paper_id": "paper_000060",
+    "batch_id": "batch_0006",
+    "decision": "uncertain",
+    "reason": "标题和摘要涉及弓网系统电弧检测，但主要关注多模态图像融合和深度学习算法，未明确提及电气特性分析或具体电弧模型。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:47:45.410679+08:00"
+  },
+  {
+    "paper_id": "paper_000061",
+    "batch_id": "batch_0007",
+    "decision": "uncertain",
+    "reason": "标题和摘要涉及弓网机电相互作用模型，提到电弧发生条件，但未明确包含电弧数学模型或MATLAB仿真。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:48:10.322817+08:00"
+  },
+  {
+    "paper_id": "paper_000062",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦接触线磨损机制实验研究，虽涉及电弧放电能量，但核心是磨损分析而非电气特性建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:48:10.322817+08:00"
+  },
+  {
+    "paper_id": "paper_000063",
+    "batch_id": "batch_0007",
+    "decision": "uncertain",
+    "reason": "摘要提到抑制弓网电弧和控制算法优化，涉及电气化铁路弓网系统，但未明确包含电弧模型或MATLAB仿真细节。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:48:10.322817+08:00"
+  },
+  {
+    "paper_id": "paper_000064",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要专注于弓网状态检测方法，涉及接触损失监测，但核心是图像处理与定位技术，无电气特性分析或电弧建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:48:10.322817+08:00"
+  },
+  {
+    "paper_id": "paper_000065",
+    "batch_id": "batch_0007",
+    "decision": "include",
+    "reason": "标题和摘要明确研究弓网电弧检测方法，涉及电流和电磁辐射信号分析，符合弓网系统电气特性主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:48:10.322817+08:00"
+  },
+  {
+    "paper_id": "paper_000066",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要研究双受电弓动态性能，涉及接触损失率，但核心是机械动力学分析，无电气特性或电弧建模内容。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:48:10.322817+08:00"
+  },
+  {
+    "paper_id": "paper_000067",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要分析接触线电流的电磁场暴露，虽提及弓网电弧，但核心是健康风险评估，非弓网离线电气特性建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.87,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:48:10.322817+08:00"
+  },
+  {
+    "paper_id": "paper_000068",
+    "batch_id": "batch_0007",
+    "decision": "include",
+    "reason": "标题和摘要分析弓网电弧电磁干扰，涉及过电压和电磁辐射，明确研究电气化铁路弓网系统的电气特性影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.82,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:48:10.322817+08:00"
+  },
+  {
+    "paper_id": "paper_000069",
+    "batch_id": "batch_0007",
+    "decision": "uncertain",
+    "reason": "摘要提及高速铁路弓网系统电弧放电，建立电磁辐射噪声数学模型，但未明确说明是否针对弓网离线电气特性。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.6,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:48:10.322817+08:00"
+  },
+  {
+    "paper_id": "paper_000070",
+    "batch_id": "batch_0007",
+    "decision": "uncertain",
+    "reason": "标题和摘要研究弓网动态相互作用，提出再附着动量冲击数学模型，涉及电弧来源，但电气特性分析不足。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.58,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:48:10.322817+08:00"
+  },
+  {
+    "paper_id": "paper_000071",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要仅涉及弓网系统的机械控制与接触力优化，未提及离线电气特性或电弧模型。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:48:36.585296+08:00"
+  },
+  {
+    "paper_id": "paper_000072",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "摘要表明研究聚焦于弓网电弧的视觉检测与图像分割算法，未涉及电气特性分析或电弧建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:48:36.585296+08:00"
+  },
+  {
+    "paper_id": "paper_000073",
+    "batch_id": "batch_0008",
+    "decision": "include",
+    "reason": "标题和摘要明确研究弓网电弧模型及其在不同速度下的电气特性（如电压浪涌），并提及模型建立与验证。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:48:36.585296+08:00"
+  },
+  {
+    "paper_id": "paper_000074",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "摘要仅讨论受电弓滑板磨损的深度学习检测方法，未涉及离线电气特性或电弧建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:48:36.585296+08:00"
+  },
+  {
+    "paper_id": "paper_000075",
+    "batch_id": "batch_0008",
+    "decision": "include",
+    "reason": "标题和摘要明确研究弓网电弧对牵引驱动系统的影响，包括电压和谐波特性建模，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:48:36.585296+08:00"
+  },
+  {
+    "paper_id": "paper_000076",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "摘要聚焦于弓网系统状态的在线视觉感知与参数自适应定位，未涉及电气特性分析或电弧建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:48:36.585296+08:00"
+  },
+  {
+    "paper_id": "paper_000077",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "摘要研究碳滑板的分层磨损机制与电弧放电的关系，但未涉及电气特性建模或仿真，属于纯磨损分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:48:36.585296+08:00"
+  },
+  {
+    "paper_id": "paper_000078",
+    "batch_id": "batch_0008",
+    "decision": "uncertain",
+    "reason": "摘要涉及弓网电弧的温度建模与COMSOL仿真，但未明确提及电气特性（如电压/电流畸变）或Cassie等模型，信息不足。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:48:36.585296+08:00"
+  },
+  {
+    "paper_id": "paper_000079",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要仅讨论弓网动态性能的机械阻尼优化，虽提及离线与电弧，但未涉及电气特性分析或建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:48:36.585296+08:00"
+  },
+  {
+    "paper_id": "paper_000080",
+    "batch_id": "batch_0008",
+    "decision": "include",
+    "reason": "标题和摘要明确研究弓网电弧模型与瞬态特性，基于改进的Habedank模型进行仿真，涉及电压/电流分析。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:48:36.585296+08:00"
+  },
+  {
+    "paper_id": "paper_000081",
+    "batch_id": "batch_0009",
+    "decision": "include",
+    "reason": "标题和摘要明确研究弓网电弧，建立MHD模型分析电弧电压和温度，符合电气特性与建模要求。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:49:01.093632+08:00"
+  },
+  {
+    "paper_id": "paper_000082",
+    "batch_id": "batch_0009",
+    "decision": "include",
+    "reason": "标题和摘要研究弓网离线产生的电磁干扰传播特性，涉及电气特性变化，符合主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:49:01.093632+08:00"
+  },
+  {
+    "paper_id": "paper_000083",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "摘要主要讨论刚性接触网振动和机械补偿系统，未提及电气特性或电弧模型。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:49:01.093632+08:00"
+  },
+  {
+    "paper_id": "paper_000084",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦深度学习模型生成电磁干扰信号，未涉及弓网电气特性分析或电弧建模。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:49:01.093632+08:00"
+  },
+  {
+    "paper_id": "paper_000085",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "摘要主要分析轨道刚度对弓网动力学的影响，未提及电气特性或电弧模型。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:49:01.093632+08:00"
+  },
+  {
+    "paper_id": "paper_000086",
+    "batch_id": "batch_0009",
+    "decision": "include",
+    "reason": "标题和摘要研究分段绝缘器电弧特性，建立MHD模型分析电压和温度，符合电气特性与建模要求。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:49:01.093632+08:00"
+  },
+  {
+    "paper_id": "paper_000087",
+    "batch_id": "batch_0009",
+    "decision": "include",
+    "reason": "标题和摘要明确研究弓网电弧漂移特性，建立多场耦合模型定量分析，符合电气特性与建模要求。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:49:01.093632+08:00"
+  },
+  {
+    "paper_id": "paper_000088",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "摘要主要研究接触线和滑板的摩擦磨损特性，未涉及弓网离线电气特性或电弧模型。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:49:01.093632+08:00"
+  },
+  {
+    "paper_id": "paper_000089",
+    "batch_id": "batch_0009",
+    "decision": "include",
+    "reason": "标题和摘要研究弓网电弧温度分布，建立磁流体动力学数学模型进行仿真，符合电气特性与建模要求。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:49:01.093632+08:00"
+  },
+  {
+    "paper_id": "paper_000090",
+    "batch_id": "batch_0009",
+    "decision": "include",
+    "reason": "标题和摘要明确基于改进Habedank电弧模型研究弓网离线电气特性，涉及谐波分析，符合所有纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-30T13:49:01.093632+08:00"
+  }
+]

@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0003",
+    "results": [
+        {
+            "paper_id": "paper_000021",
+            "decision": "include",
+            "reason": "标题和摘要明确提及无人机视角和目标检测，基于YOLO架构并强调轻量化，在VisDrone数据集上验证。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000022",
+            "decision": "include",
+            "reason": "标题和摘要明确提及无人机目标检测，强调轻量化设计和实时部署，在VisDrone-fog数据集上验证。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000023",
+            "decision": "include",
+            "reason": "摘要提及无人机遥感应用和目标检测，强调轻量化和实时推理，在VisDrone数据集上验证。",
+            "evidence": ["abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000024",
+            "decision": "include",
+            "reason": "标题和摘要明确提及无人机视角目标检测，基于RT-DETR并强调实时性能，在VisDrone数据集上验证。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000025",
+            "decision": "include",
+            "reason": "标题和摘要明确提及轻量化小目标检测模型，基于实时检测Transformer并强调边缘部署效率，在VisDrone数据集上验证。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.93
+        },
+        {
+            "paper_id": "paper_000026",
+            "decision": "uncertain",
+            "reason": "摘要提及目标检测和VisDrone数据集，但标题和摘要主要针对港口检查机器人场景，无人机视角相关性不明确。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000027",
+            "decision": "include",
+            "reason": "标题和摘要明确提及航空图像小目标检测，基于YOLO架构并强调性能提升，在VisDrone数据集上验证。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.87
+        },
+        {
+            "paper_id": "paper_000028",
+            "decision": "include",
+            "reason": "标题和摘要明确提及轻量化DETR用于小目标检测，强调计算效率，在VisDrone-DET数据集上验证。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.89
+        },
+        {
+            "paper_id": "paper_000029",
+            "decision": "include",
+            "reason": "摘要提及遥感目标检测并强调高效轻量化设计，减少参数，在VisDrone数据集上验证。",
+            "evidence": ["abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000030",
+            "decision": "include",
+            "reason": "摘要提及无人机图像目标检测，强调轻量化框架和实时速度，在VisDrone数据集上验证。",
+            "evidence": ["abstract"],
+            "confidence": 0.86
+        }
+    ]
+}

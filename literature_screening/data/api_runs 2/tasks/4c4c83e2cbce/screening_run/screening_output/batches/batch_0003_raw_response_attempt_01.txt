@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0003",
+    "results": [
+        {
+            "paper_id": "paper_000021",
+            "decision": "exclude",
+            "reason": "标题和摘要仅涉及弓网机械动力学与受流质量，未提及电气特性或电弧模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000022",
+            "decision": "uncertain",
+            "reason": "摘要提到弓网电弧谐波传导电流，涉及电气特性，但未明确说明是否包含电弧数学模型或MATLAB仿真。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000023",
+            "decision": "exclude",
+            "reason": "标题和摘要明确研究HVDC接地电极线的电弧，非弓网场景且未说明可移植到弓网。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000024",
+            "decision": "exclude",
+            "reason": "摘要仅涉及弓网电弧故障的多模态检测方法，未包含电弧数学模型或电气特性仿真。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000025",
+            "decision": "include",
+            "reason": "标题和摘要明确研究弓网系统在电气分段区的瞬态电弧特性，包含多物理场耦合电弧模型和数值仿真。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000026",
+            "decision": "exclude",
+            "reason": "标题和摘要仅研究地铁弓网碳带的非均匀磨损，属于纯摩擦学分析，无电气特性或电弧模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000027",
+            "decision": "exclude",
+            "reason": "标题和摘要研究eHighway公路货运电气化的网络设计模型，非电气化铁路弓网系统，且无电气特性或电弧模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000028",
+            "decision": "include",
+            "reason": "标题和摘要明确研究弓网电气分段区电弧的热行为，包含数学建模和多物理场耦合电弧模型及数值分析。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000029",
+            "decision": "exclude",
+            "reason": "摘要仅涉及弓网电弧的检测与识别方法，基于多信息融合，未包含电弧数学模型或电气特性仿真。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000030",
+            "decision": "uncertain",
+            "reason": "摘要研究弓网系统C/Cu接触对的载流摩擦学行为，涉及电弧侵蚀，但未明确说明是否包含电弧数学模型或仿真。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        }
+    ]
+}

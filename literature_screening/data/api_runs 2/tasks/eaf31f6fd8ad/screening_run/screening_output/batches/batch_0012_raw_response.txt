@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0012",
+    "results": [
+        {
+            "paper_id": "paper_000111",
+            "decision": "exclude",
+            "reason": "标题和摘要未提及任何互联网+或信息化技术载体，不符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000112",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦宏观工程科技需求分析，未涉及具体的护理干预或老年慢性病患者应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000113",
+            "decision": "exclude",
+            "reason": "标题和摘要为期刊专题策划目录，未提供具体研究内容，无法判断是否符合主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000114",
+            "decision": "exclude",
+            "reason": "标题和摘要研究老年人失能现状，未提及互联网+技术或护理干预，不符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000115",
+            "decision": "include",
+            "reason": "标题和摘要明确研究老年慢性病患者的移动医疗照护体验，符合互联网+载体、老年慢性病和护理干预主题。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000116",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦骨量肌量减少性肥胖综合征的统计学分析，未涉及互联网+技术或护理干预。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000117",
+            "decision": "uncertain",
+            "reason": "摘要提及老年慢性病患者居家医疗护理需求评估，并建议利用信息技术，但未明确描述具体的互联网+应用或护理结局。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000118",
+            "decision": "uncertain",
+            "reason": "摘要提及人工智能在老年慢性病护理中的应用，但属于综述性质，未明确描述具体护理干预或结局指标。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000119",
+            "decision": "exclude",
+            "reason": "标题和摘要研究住院老年慢性病病人治疗负担，未提及任何互联网+或信息化技术载体。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000120",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦健康城市与疗愈环境的宏观探讨，未涉及互联网+在老年慢性病护理中的具体应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        }
+    ]
+}

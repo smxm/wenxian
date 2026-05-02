@@ -1,0 +1,290 @@
+# 一、相关文献总体情况
+
+这批文献聚焦于克雷伯氏菌（主要为肺炎克雷伯氏菌）中甘油代谢途径的工程化改造，以实现1,3-丙二醇、3-羟基丙酸、乙醇等高附加值化学品的生物合成。研究普遍采用系统代谢工程策略，核心关注点包括：通过基因敲除、过表达、CRISPR-dCas9/CRISPRi等技术精准调控关键酶（如甘油脱水酶、二醇脱水酶）和代谢通路（如乙醛酸循环、TCA循环、副产物途径）；优化辅因子（如NAD+、ATP）供应与氧化还原平衡；以及结合适应性进化、电发酵、发酵工艺优化等手段提升菌株的产物耐受性、底物利用效率及最终产量。研究分布广泛，涵盖了从分子机制解析、途径设计到规模化发酵验证的全链条，旨在构建高效、可持续的微生物细胞工厂。
+
+# 二、类型划分
+
+## 核心代谢途径与通量调控
+
+这类文献共同关注如何通过改造中心碳代谢（如TCA循环、乙醛酸循环）和甘油核心还原/氧化途径，来优化碳流分配、减少副产物积累，从而提升目标产物（如1,3-丙二醇、3-羟基丙酸）的合成通量和产率。
+
+- Strengthening glyoxylate bypass and the TCA cycle improved 1,3-propanediol production in Klebsiella pneumoniae
+- Strengthening the TCA cycle to alleviate metabolic stress due to blocking by-products synthesis pathway in Klebsiella pneumoniae
+- Evaluating LDH and BUDB gene knockouts in Klebsiella pneumoniae for improved 1,3-propanediol production
+- Reprogramming the metabolism of Klebsiella pneumoniae for efficient 1,3-propanediol production
+- Metabolic engineering of Klebsiella pneumoniae for 1,3-propanediol production via crude glycerol tolerance enhancement and ATP regeneration
+- Development of Klebsiella pneumoniae J2B as microbial cell factory for the production of 1,3-propanediol from glucose
+- Metabolic engineering of Klebsiella pneumoniae for 1,3-propanediol production
+- Systematic metabolic engineering of Klebsiella oxytoca for production of 1,3-propanediol from glucose
+- Metabolic engineering of Klebsiella pneumoniae for enhanced 1,3-propanediol production
+
+## 基因表达与分子调控机制
+
+这类文献深入探究了在转录或翻译水平上调控关键基因表达的分子机制，包括利用CRISPR-dCas9/CRISPRi系统、研究特定转录因子（如H-NS）的作用，以及通过启动子、RBS优化等手段，以实现对代谢途径的精准、动态控制。
+
+- Enhancing the capability of Klebsiella pneumoniae to produce 1, 3-propanediol by overexpression and regulation through CRISPR-dCas9
+- Switching metabolic flux by engineering tryptophan operon-assisted CRISPR interference system in Klebsiella pneumoniae
+- Small Current but Highly Productive Synthesis of 1,3-Propanediol from Glycerol by an Electrode-Driven Metabolic Shift in Klebsiella pneumoniae L17
+- Intensifying niacin-based biosynthesis of NAD+ to enhance 3-hydroxypropionic acid production in Klebsiella pneumoniae
+- H-NS involved in positive regulation of glycerol dehydratase gene expression in Klebsiella pneumoniae 2e
+- Fermentative production of 3-hydroxypropionic acid by using metabolically engineered Klebsiella pneumoniae strains
+
+## 底物摄取、产物输出与耐受性
+
+这类文献共同关注如何通过改造转运系统（如底物摄取蛋白、产物外排泵）或引入特定转运蛋白，来改善底物（如甘油、粗甘油）的利用效率、增强细胞对目标产物（如3-羟基丙酸）或副产物的耐受性，从而解除生产瓶颈。
+
+- Modification of substrate and product transport systems in Klebsiella pneumoniae to improve 1,3-propanediol production
+- Improvement of 3-hydroxypropionic acid tolerance in Klebsiella pneumoniae by novel transporter YohJK
+- The roles of diol dehydratase from pdu operon on glycerol catabolism in Klebsiella pneumoniae
+
+## 辅因子工程与氧化还原平衡
+
+这类文献着重于通过代谢工程策略优化细胞内辅因子（如NAD(H)、ATP）的供应与再生，或设计共生产策略，以解决目标产物合成过程中的氧化还原失衡问题，从而提高代谢途径的整体效率和产物产量。
+
+- Systems metabolic engineering of Klebsiella pneumoniae for high-level 1,3-propanediol production
+- Redox Balanced Co-production of Propanediol and 3-Hydroxypropionic Acid from Glycerol Using Novel Recombinant Klebsiella quasipneumonia MSN12
+
+## 非1,3-丙二醇产物的途径拓展
+
+这类文献展示了利用克雷伯氏菌的甘油代谢途径，通过特定的基因工程改造（如关键酶过表达、竞争途径阻断），将其拓展用于生产其他有价值化学品，如1,2-丙二醇、乙醇、(R,R)-2,3-丁二醇等，体现了代谢途径的多样性和可塑性。
+
+- 1,2-Propanediol production from glycerol via an endogenous pathway of Klebsiella pneumoniae
+- Construction of Recombinant Klebsiella pneumoniae to Increase Ethanol Production on Residual Glycerol Fed-Batch Cultivations
+- Sustainable production of a highly pure (R,R)-2,3-butanediol from crude glycerol using metabolically engineered Klebsiella pneumoniae GEM167 strain
+- Metabolic and fermentation engineering of Klebsiella Pneumoniae for high-level production of 3-hydroxypropionic acid
+
+## 其他相关文献
+
+该类文献共 1 篇，主要围绕“其他相关文献”这一方向展开。就“克雷伯氏菌（*Klebsiella*）中甘油途径的高效表达与代谢工程改造”而言，这一类型文献可用于梳理该方向的核心问题、常见研究路径及其参考价值。
+
+- Glycerol promotes biomass accumulation of Klebsiella pneumoniae by activating dha regulon
+
+# 三、逐篇文献总结分析
+
+## Systems metabolic engineering of Klebsiella pneumoniae for high-level 1,3-propanediol production
+
+总结：
+该文献研究了通过系统代谢工程改造肺炎克雷伯氏菌，以高效生产1,3-丙二醇。研究采用了途径重编程、适应性实验室进化筛选和反向代谢工程等思路，提高了菌株的产物耐受性和辅因子供应。最终实现了138.6 g/L的1,3-丙二醇产量，无需外部维生素B12补充，为微生物生产提供了高水平的成果。
+
+分析：
+该文献对于克雷伯氏菌中甘油途径的高效表达与代谢工程改造主题具有重要参考价值。它展示了多种代谢调控机制，如产物耐受性增强和辅因子优化，适合支撑代谢工程中的菌株改造和系统设计。研究结果可应用于生物制造场景，为高效生产1,3-丙二醇提供具体的技术路径和实验依据。
+
+## Strengthening glyoxylate bypass and the TCA cycle improved 1,3-propanediol production in Klebsiella pneumoniae
+
+总结：
+该文献研究了通过代谢工程改造肺炎克雷伯氏菌，以提高甘油生产1,3-丙二醇的产量。通过敲除iclR基因激活乙醛酸循环，并过表达sdhC和mdh基因强化TCA循环，减少了乙酸和2,3-丁二醇的积累，提升了1,3-丙二醇的滴度和产率。结果表明，这些改造策略有效改善了甘油消耗和产物合成。
+
+分析：
+该文献对于克雷伯氏菌中甘油途径的高效表达与代谢工程改造主题具有重要参考价值。它展示了通过调控乙醛酸循环和TCA循环来优化代谢通量的具体机制，适合支撑代谢工程中基因敲除和过表达策略的设计。此外，其应用场景涉及生物制造中产物产量的提升，为相关系统优化提供了实证依据。
+
+## 1,2-Propanediol production from glycerol via an endogenous pathway of Klebsiella pneumoniae
+
+总结：
+该研究利用敲除三磷酸异构酶基因的肺炎克雷伯氏菌，通过内源途径将甘油转化为1,2-丙二醇。研究详细探讨了关键酶如mgsA和yqhD的过表达对产量的影响，并优化了发酵工艺参数，最终在补料分批发酵中实现了9.3 g/L的产量。
+
+分析：
+该文献为克雷伯氏菌中甘油代谢工程改造提供了具体机制参考，适合支撑代谢途径优化和酶工程策略。其发酵工艺优化部分可应用于生物制造系统的设计，增强报告主题中高效表达与改造的实践指导价值。
+
+## Strengthening the TCA cycle to alleviate metabolic stress due to blocking by-products synthesis pathway in Klebsiella pneumoniae
+
+总结：
+该文献研究了通过基因工程改造肺炎克雷伯氏菌，以阻断副产物合成途径并强化TCA循环，从而提高1,3-丙二醇的产量。具体策略包括敲除budB、ldhA和aldA基因以减少副产物，以及过表达mdh基因增强代谢流。结果表明，在5-L分批补料发酵中，1,3-丙二醇产量提升至73.5 g/L，摩尔产率提高20%，为高效生产提供了综合方案。
+
+分析：
+该文献对于克雷伯氏菌中甘油途径的高效表达与代谢工程改造主题具有直接参考价值，展示了通过阻断竞争性副产物途径和强化中心代谢来优化目标产物合成的机制。它适用于支撑代谢工程中的途径优化和系统设计，特别是在天然产物生产场景中，为减少代谢压力和提高产物提取效率提供了实证案例。
+
+## Evaluating LDH and BUDB gene knockouts in Klebsiella pneumoniae for improved 1,3-propanediol production
+
+总结：
+该研究通过敲除克雷伯氏菌中的ldh和budB基因，构建ΔLDH和ΔBUDB突变株，以减少副产物形成并提高1,3-丙二醇产量。实验表明ΔBUDB突变株在微氧条件下产量更高，优化培养基后产量进一步提升，残留甘油降至极低水平。结果突显budB基因敲除结合维生素补充能显著提升1,3-丙二醇产率，为工业生物加工提供有效策略。
+
+分析：
+该文献对克雷伯氏菌甘油途径的代谢工程改造提供了具体案例，适合支撑基因敲除优化产物合成的机制研究。其应用场景包括工业生物加工中提高1,3-丙二醇产量的系统设计，可参考其副产物控制和培养基优化方法，丰富代谢工程在天然产物生产中的研究脉络。
+
+## Enhancing the capability of Klebsiella pneumoniae to produce 1, 3-propanediol by overexpression and regulation through CRISPR-dCas9
+
+总结：
+该文献研究了通过CRISPR-dCas9系统增强克雷伯氏菌生产1,3-丙二醇的能力。思路包括过表达还原途径关键基因dhaT，并利用CRISPR-dCas9抑制副产物途径基因lldD和budC的表达。结果表明，组合策略使1,3-丙二醇产量显著提高，在发酵罐中达到57.85 g l−1，比原始菌株有大幅提升。
+
+分析：
+该文献对于克雷伯氏菌甘油途径的代谢工程改造具有重要参考价值。它展示了CRISPR-dCas9系统在精准调控基因表达中的应用，适合支撑代谢通路优化和菌株改造的机制研究。其策略可应用于其他微生物生产有价值化学品的系统设计，为高效生物制造提供技术范例。
+
+## Reprogramming the metabolism of Klebsiella pneumoniae for efficient 1,3-propanediol production
+
+总结：
+该研究针对克雷伯氏菌利用甘油生产1,3-丙二醇时副产物积累的问题，通过代谢工程策略减少乙酸生成并引入聚羟基丁酸酯合成途径，成功提高了1,3-丙二醇产量并实现了产物分离。
+
+分析：
+该文献为克雷伯氏菌代谢工程改造提供了具体策略，适合支撑甘油代谢途径优化和副产物调控机制的研究，可应用于生物基化学品生产的微生物细胞工厂设计。
+
+## Switching metabolic flux by engineering tryptophan operon-assisted CRISPR interference system in Klebsiella pneumoniae
+
+总结：
+该文献研究了一种色氨酸操纵子辅助的CRISPR干扰系统，用于在克雷伯氏菌中切换甘油氧化和还原途径，以协调细胞生长与产物合成。通过RT-qPCR验证，该系统调控了甘油代谢相关基因的表达，提高了3-羟基丙酸的产量，在摇瓶和生物反应器中分别达到3.6 g/L和88.8 g/L。
+
+分析：
+该文献对于克雷伯氏菌中甘油途径的代谢工程改造具有参考价值，展示了CRISPRi系统在调控代谢通量分配方面的应用潜力。它适合支撑代谢工程中基因表达调控和途径优化的机制研究，为高效生产3-羟基丙酸等化学品提供了系统设计思路。
+
+## Small Current but Highly Productive Synthesis of 1,3-Propanediol from Glycerol by an Electrode-Driven Metabolic Shift in Klebsiella pneumoniae L17
+
+总结：
+该文献研究了利用电发酵技术，通过阴极施加电位和电子穿梭体，调控克雷伯氏菌L17的代谢状态，以提高甘油向1,3-丙二醇的生物转化效率。研究发现，在-0.9 V电位和中性红存在下，1,3-丙二醇产量显著提升，代谢通量和转录分析表明碳流转向甘油还原途径。通过同源过表达关键酶DhaB和DhaT，进一步协同增强了1,3-丙二醇的转化，表明电极驱动可有效调控细胞代谢通路。
+
+分析：
+该文献对于克雷伯氏菌中甘油途径的高效表达与代谢工程改造主题具有重要参考价值，它展示了电发酵作为一种外部调控机制，能够通过微小电流输入实现代谢通路的定向偏移，适用于优化还原性化学品的生产系统设计。研究结果支撑了代谢工程中结合电化学刺激与酶过表达的协同策略，为开发高效生物转化平台提供了实验依据，特别适合应用于需精细调控还原能的研究场景。
+
+## Glycerol promotes biomass accumulation of Klebsiella pneumoniae by activating dha regulon
+
+总结：
+该文献研究了通过激活克雷伯氏菌的dha调节子来促进生物质积累。研究采用甘油供应和基因过表达等方法，发现激活dha调节子能有效提升生物质积累，且不影响抗生素敏感性。这为工业规模化学品生产提供了改进策略。
+
+分析：
+该文献对报告主题中克雷伯氏菌甘油途径的高效表达具有直接参考价值。它支撑了代谢工程改造中通过基因调控增强生物质积累的机制，适用于优化工业发酵过程。研究结果可应用于提高化学品产量的系统设计。
+
+## Modification of substrate and product transport systems in Klebsiella pneumoniae to improve 1,3-propanediol production
+
+总结：
+该文献研究了通过过表达克雷伯氏菌中的甘油摄取促进蛋白（GlpF）和耐药结节化细胞分裂（RND）型外排系统成员，以提升1,3-丙二醇产量。结果显示，GlpF过表达能提高甘油脱水酶活性并增加产量，而RND成员如AcrF、TolC和MexF对产量有不同影响，其中MexF效果最显著。这些发现为优化底物摄取和产物外排提供了新思路。
+
+分析：
+该文献对当前报告主题的参考价值在于，它展示了通过代谢工程改造转运系统来增强克雷伯氏菌中甘油途径效率的具体机制，适合支撑代谢调控和系统设计研究。其成果可应用于优化微生物发酵过程，提高1,3-丙二醇的生产效率，为相关生物制造应用提供实验依据。
+
+## Construction of Recombinant Klebsiella pneumoniae to Increase Ethanol Production on Residual Glycerol Fed-Batch Cultivations
+
+总结：
+该研究通过基因工程改造克雷伯氏菌K. pneumoniae BLh-1，构建了携带AdhE基因的重组菌株Kp17，旨在利用生物柴油合成残留的甘油提高乙醇产量。实验分析了Fe2+补充和初始甘油浓度对培养条件的影响，在分批和指数补料分批生物反应器中优化工艺，使乙醇浓度显著提升。结果表明，这种简单方法能有效利用克雷伯氏菌将残留甘油生物转化为乙醇。
+
+分析：
+该文献对当前报告主题的参考价值在于，它展示了通过基因工程改造克雷伯氏菌甘油代谢途径的具体机制，如AdhE基因的插入和质粒稳定性控制。它适合支撑代谢工程中高效表达系统的设计，特别是在利用工业副产物（如残留甘油）进行生物燃料生产的应用场景中，为优化培养工艺和提升产物得率提供了实证案例。
+
+## Improvement of 3-hydroxypropionic acid tolerance in Klebsiella pneumoniae by novel transporter YohJK
+
+总结：
+该文献研究了通过过表达YohJK转运蛋白提高克雷伯氏菌对3-羟基丙酸的耐受性。通过删除yieP基因或过表达yohJK，降低了胞内3-羟基丙酸浓度，从而增强了耐受性和产量。结果表明YohJK1作为3-羟基丙酸转运蛋白，其过表达是提高生产性能的有效策略。
+
+分析：
+该文献为克雷伯氏菌中甘油途径的代谢工程改造提供了具体机制参考，特别是转运蛋白调控在提高产物耐受性方面的应用。它适合支撑代谢工程中通过基因编辑优化产物输出的系统设计，为高效生产3-羟基丙酸的菌株改造提供了实验依据。
+
+## The roles of diol dehydratase from pdu operon on glycerol catabolism in Klebsiella pneumoniae
+
+总结：
+该研究通过基因敲除实验，探究了克雷伯氏菌中二醇脱水酶在甘油代谢中的作用。结果表明，甘油脱水酶和二醇脱水酶共同负责甘油分解，且二醇脱水酶在细胞质和微区室中均有分布。Pdu微区室能减少发酵液中3-羟基丙醛的积累，而PduG可交叉激活甘油脱水酶。
+
+分析：
+该文献为克雷伯氏菌甘油途径的代谢工程改造提供了关键机制参考，揭示了二醇脱水酶和微区室在优化代谢流和减少有毒副产物积累中的作用。它适合支撑涉及酶功能冗余、细胞区室化设计或途径效率提升的系统改造策略。
+
+## Metabolic engineering of Klebsiella pneumoniae for 1,3-propanediol production via crude glycerol tolerance enhancement and ATP regeneration
+
+总结：
+该文献研究了通过代谢工程改造肺炎克雷伯氏菌，利用粗甘油生产1,3-丙二醇。研究采用适应性实验室进化和理性代谢工程策略，并引入腺苷驱动的ATP再生系统，以提高产量。结果表明，工程菌株在5升生物反应器中48小时内可生产110克/升1,3-丙二醇，产率达0.48克/克，无需维生素B12补充，突显了其可持续和成本效益的潜力。
+
+分析：
+该文献对于克雷伯氏菌中甘油途径的高效表达与代谢工程改造主题具有重要参考价值。它展示了通过增强粗甘油耐受性和ATP再生来优化代谢通路的机制，适用于支撑低成本生物制造系统的设计。研究结果可为类似微生物的代谢工程应用提供实践指导，特别是在利用廉价底物进行规模化生产的场景中。
+
+## Sustainable production of a highly pure (R,R)-2,3-butanediol from crude glycerol using metabolically engineered Klebsiella pneumoniae GEM167 strain
+
+总结：
+本研究通过代谢工程改造肺炎克雷伯氏菌GEM167菌株，利用粗甘油高效生产高纯度(R,R)-2,3-丁二醇。研究筛选出具有高活性和选择性的BLi-gldA酶，并通过基因敲除和诱导表达优化，实现了99%纯度的产物。结果表明，该工艺能够利用生物柴油副产物粗甘油，为可持续生物质供应链提供支持。
+
+分析：
+该文献为克雷伯氏菌甘油途径的代谢工程改造提供了具体案例，展示了通过酶筛选和基因操作提升产物纯度的机制。它适合支撑生物炼制系统中废物资源化利用的应用场景，特别是利用工业副产物生产高附加值化学品的设计思路。对于研究甘油代谢途径的优化和循环经济模式下的微生物制造具有参考价值。
+
+## Redox Balanced Co-production of Propanediol and 3-Hydroxypropionic Acid from Glycerol Using Novel Recombinant Klebsiella quasipneumonia MSN12
+
+总结：
+该研究通过从土壤中分离新型类肺炎克雷伯菌MSN12菌株，利用甘油共生产丙二醇和3-羟基丙酸，以解决微生物生产中的氧化还原失衡问题。通过过表达aldH基因，重组菌株显著提高了3-羟基丙酸和丙二醇的产量，同时该菌株表现出较低的脂多糖含量和改善的沉降特性。
+
+分析：
+该文献为克雷伯氏菌中甘油途径的代谢工程改造提供了具体案例，展示了通过菌株筛选和基因过表达优化产物共生产的策略。它适合支撑工业化学品生产中的宿主菌株设计，特别是在平衡氧化还原和提升产物收率方面，对肠道菌群代谢调控研究具有参考价值。
+
+## Development of Klebsiella pneumoniae J2B as microbial cell factory for the production of 1,3-propanediol from glucose
+
+总结：
+该研究开发了肺炎克雷伯氏菌J2B作为微生物细胞工厂，利用葡萄糖生产1,3-丙二醇。通过引入异源甘油合成途径并实施包括解除碳分解代谢抑制、阻断甘油外排、优化NADH再生等33个基因的代谢工程改造，实现了在补料分批培养中62 g/L的产量。研究强调了葡萄糖在目标化学品碳骨架合成与还原力再生中的平衡利用。
+
+分析：
+该文献对克雷伯氏菌中甘油途径的高效表达与代谢工程改造主题具有直接参考价值，展示了通过系统代谢工程策略提升1,3-丙二醇产量的具体机制。它适合支撑微生物细胞工厂设计、代谢途径优化以及工业生物技术应用场景，为类似代谢产物的高效生产提供了可借鉴的改造思路。
+
+## Metabolic engineering of Klebsiella pneumoniae for 1,3-propanediol production
+
+总结：
+本研究通过大气室温等离子体诱变和高通量筛选获得高渗透压耐受菌株，并利用代谢工程阻断冗余代谢途径、增强合成途径，提高了1,3-丙二醇的产量。在5 L发酵罐中优化参数后，工程菌株的产量达到118 g/L，为工业化生产提供了参考。
+
+分析：
+该文献针对克雷伯氏菌中甘油途径的代谢工程改造，展示了诱变筛选和基因编辑在提高产物产量方面的应用，适合支撑代谢调控机制和系统设计的研究。它可为当前报告主题中克雷伯氏菌的高效表达和代谢工程改造提供具体案例，参考其优化策略和发酵参数调整。
+
+## Intensifying niacin-based biosynthesis of NAD+ to enhance 3-hydroxypropionic acid production in Klebsiella pneumoniae
+
+总结：
+该文献研究了在肺炎克雷伯氏菌中通过强化基于烟酸的NAD+生物合成途径来提高3-羟基丙酸产量的方法。研究通过构建tac启动子驱动的NAD+合成途径，发现过表达PncB酶能增加NAD+产量，补充烟酸底物后3-羟基丙酸产量显著提升。结果表明强化NAD+生物合成能有效促进3-羟基丙酸的生产。
+
+分析：
+该文献为克雷伯氏菌甘油途径的代谢工程改造提供了具体的辅因子调控策略，展示了通过增强NAD+供应来解除醛脱氢酶催化限制的机制。适合支撑代谢途径优化中辅因子平衡的系统设计，为类似生物合成过程的生产力提升提供参考思路。
+
+## Metabolic and fermentation engineering of Klebsiella Pneumoniae for high-level production of 3-hydroxypropionic acid
+
+总结：
+该文献研究了通过代谢与发酵工程改造肺炎克雷伯氏菌，以高效生产3-羟基丙酸。研究采用酶筛选突变、RBS和启动子优化、竞争途径下调等策略，在摇瓶培养中显著提升产量，并通过改用组成型表达和玉米浆替代酵母提取物，最终实现110.70 g/L的最高滴度。
+
+分析：
+该文献对于报告主题中克雷伯氏菌甘油途径的高效表达与代谢工程改造具有直接参考价值，它展示了通过系统优化酶表达和代谢流调控来提升产物产量的具体机制。其应用场景适用于基于可再生原料的平台化学品生产系统设计，可支撑研究脉络中关于代谢调控策略和发酵工艺优化的实证分析。
+
+## H-NS involved in positive regulation of glycerol dehydratase gene expression in Klebsiella pneumoniae 2e
+
+总结：
+该文献研究了肺炎克雷伯氏菌2e中甘油脱水酶基因dhaB的表达调控机制，发现组蛋白样核结构蛋白H-NS作为正向转录调节因子，通过识别AT富集区直接结合dhaB启动子区域，从而促进基因表达。在粗甘油条件下，H-NS的多聚体状态变化增强了dhaB的转录水平，提高了甘油脱水酶活性和3-羟基丙醛产量。这些发现揭示了H-NS在调控甘油代谢途径中的关键作用。
+
+分析：
+该文献对于克雷伯氏菌中甘油途径的高效表达与代谢工程改造主题具有重要参考价值，它阐明了H-NS蛋白作为正向调控因子的分子机制，适合支撑代谢工程中关键酶表达优化的系统设计。研究结果可用于指导通过调控H-NS或其多聚体状态来增强甘油脱水酶活性，从而提高1,3-丙二醇的工业生产效率，为菌株改造提供了新的靶点。
+
+## Systematic metabolic engineering of Klebsiella oxytoca for production of 1,3-propanediol from glucose
+
+总结：
+该文献研究了通过系统代谢工程改造产酸克雷伯氏菌，从葡萄糖直接生产1,3-丙二醇。研究思路包括筛选甘油合成途径、阻断竞争副产物途径、增加碳通量以及替换葡萄糖转运系统。结果使工程菌株在摇瓶发酵中达到6.2 g L−1的1,3-丙二醇产量，为高效生物转化提供了方向。
+
+分析：
+这篇文献对报告主题中克雷伯氏菌甘油途径的高效表达与代谢工程改造具有直接参考价值。它展示了系统代谢工程策略在优化碳通量和途径设计中的应用，适合支撑生物制造中代谢网络调控和菌株工程化的机制研究。
+
+## Metabolic engineering of Klebsiella pneumoniae for enhanced 1,3-propanediol production
+
+总结：
+该文献研究了通过代谢工程改造肺炎克雷伯氏菌，以葡萄糖为底物高效生产1,3-丙二醇。研究思路包括引入甘油合成途径、平衡碳分配、缓解碳分解代谢抑制和强化1,3-丙二醇生物合成路线。优化后的菌株产量达到84.7 g/L，产率为0.51 g/g，生产率为1.74 g/L/h。
+
+分析：
+该文献对于克雷伯氏菌中甘油途径的高效表达与代谢工程改造主题具有参考价值，它展示了从葡萄糖到1,3-丙二醇的完整代谢工程策略，适合支撑低成本生物制造的系统设计。研究中的碳平衡和途径强化机制可为类似微生物代谢工程应用提供借鉴。
+
+## Fermentative production of 3-hydroxypropionic acid by using metabolically engineered Klebsiella pneumoniae strains
+
+总结：
+该文献研究了利用代谢工程改造的肺炎克雷伯氏菌菌株发酵生产3-羟基丙酸（3-HP）。通过过表达ydcW基因、阻断竞争途径如dhaT和yqhD，并协同强化ydcW和puuC基因，结合acs基因减少乙酸积累，在72小时补料分批发酵中实现了93.7 g/L的3-HP产量和0.42 g/g·甘油产率。结果表明，该方法具有工业应用潜力。
+
+分析：
+该文献对于报告主题'克雷伯氏菌中甘油途径的高效表达与代谢工程改造'具有直接参考价值，展示了通过基因过表达和途径阻断优化甘油代谢的具体机制。它适合支撑代谢工程中的竞争途径调控和协同强化策略，为设计高效生物生产系统提供了实证案例，有助于理解克雷伯氏菌在工业生物技术中的应用场景。
+
+# 参考列表
+
+[1] Zhang, S, Zhang, F, Sun, J, et al. Systems metabolic engineering of Klebsiella pneumoniae for high-level 1,3-propanediol production[J]. Metabolic Engineering, 2026, 93: 1-13.
+[2] Xie, M, Hu, H, Lu, X, et al. Strengthening glyoxylate bypass and the TCA cycle improved 1,3-propanediol production in Klebsiella pneumoniae[J]. Food and Fermentation Industries, 2020, 46(19): 17-22.
+[3] Sun, S, Shu, L, Lu, X, et al. 1,2-Propanediol production from glycerol via an endogenous pathway of Klebsiella pneumoniae[J]. Applied Microbiology and Biotechnology, 2021, 105(23): 9003-9016.
+[4] Xie, M, Lu, X, Zong, H, et al. Strengthening the TCA cycle to alleviate metabolic stress due to blocking by-products synthesis pathway in Klebsiella pneumoniae[J]. FEMS Microbiology Letters, 2020, 367(18).
+[5] Sembiring, F, Herman, G, Suwanto, A. Evaluating LDH and BUDB gene knockouts in Klebsiella pneumoniae for improved 1,3-propanediol production[J]. Journal of Applied Biology and Biotechnology, 2025, 13(2): 156-165.
+[6] Wang, X, Zhang, L, Liang, S, et al. Enhancing the capability of Klebsiella pneumoniae to produce 1, 3-propanediol by overexpression and regulation through CRISPR-dCas9[J]. Microbial Biotechnology, 2022, 15(7): 2112-2125.
+[7] Wang, W, Yu, X, Wei, Y, et al. Reprogramming the metabolism of Klebsiella pneumoniae for efficient 1,3-propanediol production[J]. Chemical Engineering Science, 2021, 236.
+[8] Zhao, P, Li, Q, Tian, P, et al. Switching metabolic flux by engineering tryptophan operon-assisted CRISPR interference system in Klebsiella pneumoniae[J]. Metabolic Engineering, 2021, 65: 30-41.
+[9] Kim, C, Lee, J.H, Baek, J, et al. Small Current but Highly Productive Synthesis of 1,3-Propanediol from Glycerol by an Electrode-Driven Metabolic Shift in Klebsiella pneumoniae L17[J]. ChemSusChem, 2020, 13(3): 564-573.
+[10] Li, Y, He, R, Ge, X. Glycerol promotes biomass accumulation of Klebsiella pneumoniae by activating dha regulon[J]. Process Biochemistry, 2022, 117: 68-75.
+[11] Teng, Y, Guo, C, Xie, M, et al. Modification of substrate and product transport systems in Klebsiella pneumoniae to improve 1,3-propanediol production[J]. FEMS Microbiology Letters, 2022, 369(1).
+[12] da Silva, V.Z, Ourique, L.J, de David, C, et al. Construction of Recombinant Klebsiella pneumoniae to Increase Ethanol Production on Residual Glycerol Fed-Batch Cultivations[J]. Applied Biochemistry and Biotechnology, 2020, 192(4): 1147-1162.
+[13] Nguyen-Vo, T.P, Ryu, H, Sauer, M, et al. Improvement of 3-hydroxypropionic acid tolerance in Klebsiella pneumoniae by novel transporter YohJK[J]. Bioresource Technology, 2022, 346.
+[14] Shu, L, Wang, Q, Jiang, W, et al. The roles of diol dehydratase from pdu operon on glycerol catabolism in Klebsiella pneumoniae[J]. Enzyme and Microbial Technology, 2022, 157.
+[15] Gao, C, Zhang, S, Liang, G, et al. Metabolic engineering of Klebsiella pneumoniae for 1,3-propanediol production via crude glycerol tolerance enhancement and ATP regeneration[J]. Systems Microbiology and Biomanufacturing, 2026, 6(1).
+[16] Jo, M.-H, Ju, J.-H, Heo, S.-Y, et al. Sustainable production of a highly pure (R,R)-2,3-butanediol from crude glycerol using metabolically engineered Klebsiella pneumoniae GEM167 strain[J]. Chemical and Biological Technologies in Agriculture, 2024, 11(1).
+[17] Ravi, S.N, Sankaranarayanan, M. Redox Balanced Co-production of Propanediol and 3-Hydroxypropionic Acid from Glycerol Using Novel Recombinant Klebsiella quasipneumonia MSN12[J]. Journal of Inorganic and Organometallic Polymers and Materials, 2023, 33(12): 3833-3844.
+[18] Lama, S, Seol, E, Park, S. Development of Klebsiella pneumoniae J2B as microbial cell factory for the production of 1,3-propanediol from glucose[J]. Metabolic Engineering, 2020, 62: 116-125.
+[19] Zhang, S, Gao, C, Li, X, et al. Metabolic engineering of Klebsiella pneumoniae for 1,3-propanediol production[J]. Shengwu Gongcheng Xuebao/Chinese Journal of Biotechnology, 2024, 40(8): 2386-2402.
+[20] Wu, S, Zhao, P, Li, Q, et al. Intensifying niacin-based biosynthesis of NAD+ to enhance 3-hydroxypropionic acid production in Klebsiella pneumoniae[J]. Biotechnology Letters, 2021, 43(1): 223-234.
+[21] Cao, Q.-Y, Xu, H.-Y, Ye, B.-C, et al. Metabolic and fermentation engineering of Klebsiella Pneumoniae for high-level production of 3-hydroxypropionic acid[J]. Archives of Microbiology, 2025, 207(9).
+[22] Li, L, Li, Q, Xiao, Y, et al. H-NS involved in positive regulation of glycerol dehydratase gene expression in Klebsiella pneumoniae 2e[J]. Applied and Environmental Microbiology, 2024, 90(8).
+[23] Chen, Z, Liu, H, Han, X, et al. Systematic metabolic engineering of Klebsiella oxytoca for production of 1,3-propanediol from glucose[J]. Reaction Chemistry and Engineering, 2023, 9(2): 475-483.
+[24] Gao, C, Zhang, S, Liang, G, et al. Metabolic engineering of Klebsiella pneumoniae for enhanced 1,3-propanediol production[J]. Systems Microbiology and Biomanufacturing, 2026, 6(2).
+[25] Song, C.W, Kwon, M, Park, J.M, et al. Fermentative production of 3-hydroxypropionic acid by using metabolically engineered Klebsiella pneumoniae strains[J]. Biochemical Engineering Journal, 2024, 212.

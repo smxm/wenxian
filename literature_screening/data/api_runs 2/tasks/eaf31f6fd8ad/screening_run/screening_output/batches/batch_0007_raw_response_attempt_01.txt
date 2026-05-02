@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0007",
+    "results": [
+        {
+            "paper_id": "paper_000061",
+            "decision": "exclude",
+            "reason": "标题和摘要未提及任何互联网+或信息化技术载体，且内容为专家共识而非护理干预研究。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000062",
+            "decision": "uncertain",
+            "reason": "研究对象为老年糖尿病患者且涉及健康教育，但标题和摘要未明确提及互联网+或信息化技术载体。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000063",
+            "decision": "exclude",
+            "reason": "研究对象为老年慢性病患者且涉及健康教育，但标题和摘要未提及任何互联网+或信息化技术载体。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000064",
+            "decision": "uncertain",
+            "reason": "摘要提到技术智慧化，但未明确说明互联网+载体，且内容偏向政策分析而非具体护理干预。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.45
+        },
+        {
+            "paper_id": "paper_000065",
+            "decision": "include",
+            "reason": "标题和摘要明确基于物联网技术，涉及老年健康监测和慢性病风险预测，属于护理干预范畴。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000066",
+            "decision": "exclude",
+            "reason": "标题和摘要未提及任何互联网+或信息化技术载体，内容为传统营养干预模式。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000067",
+            "decision": "include",
+            "reason": "标题和摘要明确基于患者门户系统进行远程管理，研究对象为老年冠心病患者，涉及自护能力和生活质量等护理结局。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000068",
+            "decision": "exclude",
+            "reason": "研究对象为老年人，但疾病类型为向心性肥胖（可能非典型慢性病），且未提及任何互联网+载体或护理干预。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000069",
+            "decision": "uncertain",
+            "reason": "标题提到基于信息化的干预，但摘要内容为书评，未提供具体研究细节或护理结局信息。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.4
+        },
+        {
+            "paper_id": "paper_000070",
+            "decision": "exclude",
+            "reason": "研究对象为老年高血压患者，但摘要未提及任何互联网+载体或护理干预，内容为疾病感知与心理症状的相关性研究。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        }
+    ]
+}

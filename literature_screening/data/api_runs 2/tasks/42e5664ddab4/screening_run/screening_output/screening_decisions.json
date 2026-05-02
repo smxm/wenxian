@@ -1,0 +1,366 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要提到银行负债监管通过增强信贷风险承担能力来平滑企业动态研发决策，但未明确将研发强度作为风险承担的代理变量。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:03.416291+08:00"
+  },
+  {
+    "paper_id": "paper_000002",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要表明非控股大股东超额委派董事通过提高风险承担来促进研发国际化，但未明确将研发强度作为风险承担的代理变量。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:03.416291+08:00"
+  },
+  {
+    "paper_id": "paper_000003",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "摘要明确提到注册制改革通过加大研发投入力度来提高风险承担水平，将研发投入作为风险承担的代理变量。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:03.416291+08:00"
+  },
+  {
+    "paper_id": "paper_000004",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要提到非控股大股东退出威胁通过提高风险承担来促进研发国际化，但未明确将研发强度作为风险承担的代理变量。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:03.416291+08:00"
+  },
+  {
+    "paper_id": "paper_000005",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "摘要表明财务柔性通过降低企业风险承担来促进创新绩效，但未将研发支出作为风险承担的代理变量。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:03.416291+08:00"
+  },
+  {
+    "paper_id": "paper_000006",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要提到风险承担水平在亲缘利他行为与创新绩效间起中介作用，但未明确将研发强度作为风险承担的代理变量。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.45,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:03.416291+08:00"
+  },
+  {
+    "paper_id": "paper_000007",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要研究风险偏好与企业价值，但未涉及研发支出指标，不符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:03.416291+08:00"
+  },
+  {
+    "paper_id": "paper_000008",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "摘要明确提到研发投入在董事长本地任职与企业风险承担间发挥中介作用，将研发投入作为风险承担的代理变量。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:03.416291+08:00"
+  },
+  {
+    "paper_id": "paper_000009",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要提到社保基金提升研发投资等增加企业价值的风险承担，但未明确将研发强度作为风险承担的代理变量。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.6,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:03.416291+08:00"
+  },
+  {
+    "paper_id": "paper_000010",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "摘要明确提到研发投入在控股股东股权质押与企业价值间发挥中介效应，将研发投入作为风险承担的代理变量。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:03.416291+08:00"
+  },
+  {
+    "paper_id": "paper_000011",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "摘要明确提到行业锦标赛激励通过提高研发支出来影响企业风险承担，符合将研发支出作为风险承担代理变量的纳入标准。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:29.824801+08:00"
+  },
+  {
+    "paper_id": "paper_000012",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "摘要和关键词均未提及研发支出或研发强度，仅讨论风险承担能力与创新绩效，未明确将研发支出作为风险承担的代理变量。",
+    "evidence": [
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:29.824801+08:00"
+  },
+  {
+    "paper_id": "paper_000013",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究聚焦于研发效率，摘要和关键词均未提及企业风险承担，未将研发支出与风险承担概念建立理论联系。",
+    "evidence": [
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:29.824801+08:00"
+  },
+  {
+    "paper_id": "paper_000014",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "摘要明确提到企业风险承担在政府补助、税收优惠影响研发投入中起中介效应，符合将研发支出作为风险承担代理变量的纳入标准。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.92,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:29.824801+08:00"
+  },
+  {
+    "paper_id": "paper_000015",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "摘要明确提到员工薪酬竞争力通过增加研发投入来促进企业风险承担，符合将研发支出作为风险承担代理变量的纳入标准。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.93,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:29.824801+08:00"
+  },
+  {
+    "paper_id": "paper_000016",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "摘要明确提到税收征管数字化升级通过增加研发投入来提升企业风险承担水平，符合将研发支出作为风险承担代理变量的纳入标准。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.94,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:29.824801+08:00"
+  },
+  {
+    "paper_id": "paper_000017",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究聚焦于研发国际化，摘要和关键词均未提及研发支出或研发强度作为风险承担的代理变量，仅提到风险承担能力作为中介。",
+    "evidence": [
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:29.824801+08:00"
+  },
+  {
+    "paper_id": "paper_000018",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "摘要明确提到数字金融通过增加研发支出和提高风险承担水平来促进企业数字化转型，符合将研发支出作为风险承担代理变量的纳入标准。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.91,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:29.824801+08:00"
+  },
+  {
+    "paper_id": "paper_000019",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确将企业风险承担与研发投资并列研究，探讨股权质押对二者的影响，符合将研发支出作为风险承担代理变量的纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.96,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:29.824801+08:00"
+  },
+  {
+    "paper_id": "paper_000020",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确研究女性高管比例与研发强度的关系，并提及风险承担水平，符合将研发强度作为风险承担代理变量的纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:29.824801+08:00"
+  },
+  {
+    "paper_id": "paper_000021",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "摘要和关键词未提及研发支出或研发强度作为风险承担代理变量，不符合纳入标准。",
+    "evidence": [
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:43.358426+08:00"
+  },
+  {
+    "paper_id": "paper_000022",
+    "batch_id": "batch_0003",
+    "decision": "uncertain",
+    "reason": "摘要提到风险承担渠道影响企业创新，但未明确研发支出作为风险承担代理变量，信息不足。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:43.358426+08:00"
+  },
+  {
+    "paper_id": "paper_000023",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "摘要明确将研发投入作为企业创新投入指标，并探讨CEO风险偏好作为中介，符合纳入标准。",
+    "evidence": [
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:43.358426+08:00"
+  },
+  {
+    "paper_id": "paper_000024",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "摘要明确将研发投入作为风险承担的影响路径，符合以研发支出衡量风险承担的主题。",
+    "evidence": [
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:30:43.358426+08:00"
+  }
+]

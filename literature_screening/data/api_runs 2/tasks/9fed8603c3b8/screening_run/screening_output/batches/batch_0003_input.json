@@ -1,0 +1,433 @@
+{
+  "batch_id": "batch_0003",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000021",
+    "paper_000022",
+    "paper_000023",
+    "paper_000024",
+    "paper_000025",
+    "paper_000026",
+    "paper_000027",
+    "paper_000028",
+    "paper_000029",
+    "paper_000030"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000021",
+      "entry_type": "article",
+      "title": "Multifunctional Fluoropolymer-Engineered Magnetic Nanoparticles to Facilitate Blood-Brain Barrier Penetration and Effective Gene Silencing in Medulloblastoma",
+      "authors": [
+        "Forgham, H.",
+        "Zhu, J.",
+        "Huang, X.",
+        "Zhang, C.",
+        "Biggs, H.",
+        "Liu, L.",
+        "Wang, Y.C.",
+        "Fletcher, N.",
+        "Humphries, J.",
+        "Cowin, G.",
+        "Mardon, K.",
+        "Kavallaris, M.",
+        "Thurecht, K.",
+        "Davis, T.P.",
+        "Qiao, R."
+      ],
+      "year": 2024,
+      "journal": "Advanced Science",
+      "doi": "10.1002/advs.202401340",
+      "abstract": "Patients with brain cancers including medulloblastoma lack treatments that are effective long-term and without side effects. In this study, a multifunctional fluoropolymer-engineered iron oxide nanoparticle gene-therapeutic platform is presented to overcome these challenges. The fluoropolymers are designed and synthesized to incorporate various properties including robust anchoring moieties for efficient surface coating, cationic components to facilitate short interference RNA (siRNA) binding, and a fluorinated tail to ensure stability in serum. The blood-brain barrier (BBB) tailored system demonstrates enhanced BBB penetration, facilitates delivery of functionally active siRNA to medulloblastoma cells, and delivers a significant, almost complete block in protein expression within an in vitro extracellular acidic environment (pH 6.7) – as favored by most cancer cells. In vivo, it effectively crosses an intact BBB, provides contrast for magnetic resonance imaging (MRI), and delivers siRNA capable of slowing tumor growth without causing signs of toxicity – meaning it possesses a safe theranostic function. The pioneering methodology applied shows significant promise in the advancement of brain and tumor microenvironment-focused MRI-siRNA theranostics for the better treatment and diagnosis of medulloblastoma. © 2024 The Authors. Advanced Science published by Wiley-VCH GmbH.",
+      "keywords": [],
+      "normalized_title": "multifunctional fluoropolymer engineered magnetic nanoparticles to facilitate blood brain barrier penetration and effective gene silencing in medulloblastoma",
+      "raw_bibtex": "@ARTICLE{10.1002/advs.202401340,\n\tauthor = {Forgham, H. and Zhu, J. and Huang, X. and Zhang, C. and Biggs, H. and Liu, L. and Wang, Y.C. and Fletcher, N. and Humphries, J. and Cowin, G. and Mardon, K. and Kavallaris, M. and Thurecht, K. and Davis, T.P. and Qiao, R.},\n\ttitle = {Multifunctional Fluoropolymer-Engineered Magnetic Nanoparticles to Facilitate Blood-Brain Barrier Penetration and Effective Gene Silencing in Medulloblastoma},\n\tjournal = {Advanced Science},\n\tyear = {2024},\n\tabstract = {Patients with brain cancers including medulloblastoma lack treatments that are effective long-term and without side effects. In this study, a multifunctional fluoropolymer-engineered iron oxide nanoparticle gene-therapeutic platform is presented to overcome these challenges. The fluoropolymers are designed and synthesized to incorporate various properties including robust anchoring moieties for efficient surface coating, cationic components to facilitate short interference RNA (siRNA) binding, and a fluorinated tail to ensure stability in serum. The blood-brain barrier (BBB) tailored system demonstrates enhanced BBB penetration, facilitates delivery of functionally active siRNA to medulloblastoma cells, and delivers a significant, almost complete block in protein expression within an in vitro extracellular acidic environment (pH 6.7) – as favored by most cancer cells. In vivo, it effectively crosses an intact BBB, provides contrast for magnetic resonance imaging (MRI), and delivers siRNA capable of slowing tumor growth without causing signs of toxicity – meaning it possesses a safe theranostic function. The pioneering methodology applied shows significant promise in the advancement of brain and tumor microenvironment-focused MRI-siRNA theranostics for the better treatment and diagnosis of medulloblastoma. © 2024 The Authors. Advanced Science published by Wiley-VCH GmbH.},\n\tdoi = {10.1002/advs.202401340},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85190811676&doi=10.1002%2Fadvs.202401340&partnerID=40&md5=acce0730ef872b9cfdc714abf4a16d5f},\n\tvolume = {11},\n\tnumber = {25},\n\tnote = {Export Date: 29 March 2026; Cited By: 15 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 29-2026_e4cd08bd-6551-48a8-b84c-9f960fc7d3ba.ris"
+      ],
+      "source_keys": [
+        "10.1002/advs.202401340"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000022",
+      "entry_type": "article",
+      "title": "System- and sample-agnostic isotropic three-dimensional microscopy by weakly physics-informed, domain-shift-resistant axial deblurring",
+      "authors": [
+        "Han, J.",
+        "Liu, K.",
+        "Isaacson, K.B.",
+        "Monakhova, K.",
+        "Griffith, L.G.",
+        "You, S."
+      ],
+      "year": 2025,
+      "journal": "Nature Communications",
+      "doi": "10.1038/s41467-025-56078-4",
+      "abstract": "Three-dimensional subcellular imaging is essential for biomedical research, but the diffraction limit of optical microscopy compromises axial resolution, hindering accurate three-dimensional structural analysis. This challenge is particularly pronounced in label-free imaging of thick, heterogeneous tissues, where assumptions about data distribution (e.g. sparsity, label-specific distribution, and lateral-axial similarity) and system priors (e.g. independent and identically distributed noise and linear shift-invariant point-spread functions are often invalid. Here, we introduce SSAI-3D, a weakly physics-informed, domain-shift-resistant framework for robust isotropic three-dimensional imaging. SSAI-3D enables robust axial deblurring by generating a diverse, noise-resilient, sample-informed training dataset and sparsely fine-tuning a large pre-trained blind deblurring network. SSAI-3D is applied to label-free nonlinear imaging of living organoids, freshly excised human endometrium tissue, and mouse whisker pads, and further validated in publicly available ground-truth-paired experimental datasets of three-dimensional heterogeneous biological tissues with unknown blurring and noise across different microscopy systems. © The Author(s) 2025.",
+      "keywords": [],
+      "normalized_title": "system and sample agnostic isotropic three dimensional microscopy by weakly physics informed domain shift resistant axial deblurring",
+      "raw_bibtex": "@ARTICLE{10.1038/s41467-025-56078-4,\n\tauthor = {Han, J. and Liu, K. and Isaacson, K.B. and Monakhova, K. and Griffith, L.G. and You, S.},\n\ttitle = {System- and sample-agnostic isotropic three-dimensional microscopy by weakly physics-informed, domain-shift-resistant axial deblurring},\n\tjournal = {Nature Communications},\n\tyear = {2025},\n\tabstract = {Three-dimensional subcellular imaging is essential for biomedical research, but the diffraction limit of optical microscopy compromises axial resolution, hindering accurate three-dimensional structural analysis. This challenge is particularly pronounced in label-free imaging of thick, heterogeneous tissues, where assumptions about data distribution (e.g. sparsity, label-specific distribution, and lateral-axial similarity) and system priors (e.g. independent and identically distributed noise and linear shift-invariant point-spread functions are often invalid. Here, we introduce SSAI-3D, a weakly physics-informed, domain-shift-resistant framework for robust isotropic three-dimensional imaging. SSAI-3D enables robust axial deblurring by generating a diverse, noise-resilient, sample-informed training dataset and sparsely fine-tuning a large pre-trained blind deblurring network. SSAI-3D is applied to label-free nonlinear imaging of living organoids, freshly excised human endometrium tissue, and mouse whisker pads, and further validated in publicly available ground-truth-paired experimental datasets of three-dimensional heterogeneous biological tissues with unknown blurring and noise across different microscopy systems. © The Author(s) 2025.},\n\tdoi = {10.1038/s41467-025-56078-4},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85216061048&doi=10.1038%2Fs41467-025-56078-4&partnerID=40&md5=cb3cf9121eb3c99779d9972a6261756e},\n\tvolume = {16},\n\tnumber = {1},\n\tnote = {Export Date: 29 March 2026; Cited By: 3 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 29-2026_e4cd08bd-6551-48a8-b84c-9f960fc7d3ba.ris"
+      ],
+      "source_keys": [
+        "10.1038/s41467-025-56078-4"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000023",
+      "entry_type": "article",
+      "title": "A TREM2-activating antibody with a blood–brain barrier transport vehicle enhances microglial metabolism in Alzheimer’s disease models",
+      "authors": [
+        "van Lengerich, B.",
+        "Zhan, L.",
+        "Xia, D.",
+        "Chan, D.",
+        "Joy, D.",
+        "Park, J.I.",
+        "Tatarakis, D.",
+        "Calvert, M.",
+        "Hummel, S.",
+        "Lianoglou, S.",
+        "Pizzo, M.E.",
+        "Prorok, R.",
+        "Thomsen, E.",
+        "Bartos, L.M.",
+        "Beumers, P.",
+        "Capell, A.",
+        "Davis, S.S.",
+        "de Weerd, L.",
+        "Dugas, J.C.",
+        "Duque, J.",
+        "Earr, T.",
+        "Gadkar, K.",
+        "Giese, T.",
+        "Gill, A.",
+        "Gnörich, J.",
+        "Ha, C.",
+        "Kannuswamy, M.",
+        "Kim, D.J.",
+        "Kunte, S.T.",
+        "Kunze, L.H.",
+        "Lac, D.",
+        "Lechtenberg, K.",
+        "Leung, A.W.-S.",
+        "Liang, C.-C.",
+        "Lopez, I.",
+        "McQuade, P.",
+        "Modi, A.",
+        "Torres, V.O.",
+        "Nguyen, H.N.",
+        "Pesämaa, I.",
+        "Propson, N.",
+        "Reich, M.",
+        "Robles-Colmenares, Y.",
+        "Schlepckow, K.",
+        "Slemann, L.",
+        "Solanoy, H.",
+        "Suh, J.H.",
+        "Thorne, R.G.",
+        "Vieira, C.",
+        "Wind-Mark, K.",
+        "Xiong, K.",
+        "Zuchero, Y.J.Y.",
+        "Diaz, D.",
+        "Dennis, M.S.",
+        "Huang, F.",
+        "Scearce-Levie, K.",
+        "Watts, R.J.",
+        "Haass, C.",
+        "Lewcock, J.W.",
+        "Di Paolo, G.",
+        "Brendel, M.",
+        "Sanchez, P.E.",
+        "Monroe, K.M."
+      ],
+      "year": 2023,
+      "journal": "Nature Neuroscience",
+      "doi": "10.1038/s41593-022-01240-0",
+      "abstract": "Loss-of-function variants of TREM2 are associated with increased risk of Alzheimer’s disease (AD), suggesting that activation of this innate immune receptor may be a useful therapeutic strategy. Here we describe a high-affinity human TREM2-activating antibody engineered with a monovalent transferrin receptor (TfR) binding site, termed antibody transport vehicle (ATV), to facilitate blood–brain barrier transcytosis. Upon peripheral delivery in mice, ATV:TREM2 showed improved brain biodistribution and enhanced signaling compared to a standard anti-TREM2 antibody. In human induced pluripotent stem cell (iPSC)-derived microglia, ATV:TREM2 induced proliferation and improved mitochondrial metabolism. Single-cell RNA sequencing and morphometry revealed that ATV:TREM2 shifted microglia to metabolically responsive states, which were distinct from those induced by amyloid pathology. In an AD mouse model, ATV:TREM2 boosted brain microglial activity and glucose metabolism. Thus, ATV:TREM2 represents a promising approach to improve microglial function and treat brain hypometabolism found in patients with AD. © 2023, The Author(s).",
+      "keywords": [],
+      "normalized_title": "a trem2 activating antibody with a blood brain barrier transport vehicle enhances microglial metabolism in alzheimer s disease models",
+      "raw_bibtex": "@ARTICLE{10.1038/s41593-022-01240-0,\n\tauthor = {van Lengerich, B. and Zhan, L. and Xia, D. and Chan, D. and Joy, D. and Park, J.I. and Tatarakis, D. and Calvert, M. and Hummel, S. and Lianoglou, S. and Pizzo, M.E. and Prorok, R. and Thomsen, E. and Bartos, L.M. and Beumers, P. and Capell, A. and Davis, S.S. and de Weerd, L. and Dugas, J.C. and Duque, J. and Earr, T. and Gadkar, K. and Giese, T. and Gill, A. and Gnörich, J. and Ha, C. and Kannuswamy, M. and Kim, D.J. and Kunte, S.T. and Kunze, L.H. and Lac, D. and Lechtenberg, K. and Leung, A.W.-S. and Liang, C.-C. and Lopez, I. and McQuade, P. and Modi, A. and Torres, V.O. and Nguyen, H.N. and Pesämaa, I. and Propson, N. and Reich, M. and Robles-Colmenares, Y. and Schlepckow, K. and Slemann, L. and Solanoy, H. and Suh, J.H. and Thorne, R.G. and Vieira, C. and Wind-Mark, K. and Xiong, K. and Zuchero, Y.J.Y. and Diaz, D. and Dennis, M.S. and Huang, F. and Scearce-Levie, K. and Watts, R.J. and Haass, C. and Lewcock, J.W. and Di Paolo, G. and Brendel, M. and Sanchez, P.E. and Monroe, K.M.},\n\ttitle = {A TREM2-activating antibody with a blood–brain barrier transport vehicle enhances microglial metabolism in Alzheimer’s disease models},\n\tjournal = {Nature Neuroscience},\n\tyear = {2023},\n\tabstract = {Loss-of-function variants of TREM2 are associated with increased risk of Alzheimer’s disease (AD), suggesting that activation of this innate immune receptor may be a useful therapeutic strategy. Here we describe a high-affinity human TREM2-activating antibody engineered with a monovalent transferrin receptor (TfR) binding site, termed antibody transport vehicle (ATV), to facilitate blood–brain barrier transcytosis. Upon peripheral delivery in mice, ATV:TREM2 showed improved brain biodistribution and enhanced signaling compared to a standard anti-TREM2 antibody. In human induced pluripotent stem cell (iPSC)-derived microglia, ATV:TREM2 induced proliferation and improved mitochondrial metabolism. Single-cell RNA sequencing and morphometry revealed that ATV:TREM2 shifted microglia to metabolically responsive states, which were distinct from those induced by amyloid pathology. In an AD mouse model, ATV:TREM2 boosted brain microglial activity and glucose metabolism. Thus, ATV:TREM2 represents a promising approach to improve microglial function and treat brain hypometabolism found in patients with AD. © 2023, The Author(s).},\n\tdoi = {10.1038/s41593-022-01240-0},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85146174239&doi=10.1038%2Fs41593-022-01240-0&partnerID=40&md5=924b075569026adc5ac5a6493aeda287},\n\tvolume = {26},\n\tnumber = {3},\n\tpages = {416-429},\n\tnote = {Export Date: 29 March 2026; Cited By: 209 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 29-2026_e4cd08bd-6551-48a8-b84c-9f960fc7d3ba.ris"
+      ],
+      "source_keys": [
+        "10.1038/s41593-022-01240-0"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000024",
+      "entry_type": "article",
+      "title": "NIR-II Fluorescent Protein Created by In Situ Albumin-Tagging for Sensitive and Specific Imaging of Blood-Brain Barrier Disruption",
+      "authors": [
+        "Xu, J.",
+        "Du, Y.",
+        "Zhu, N.",
+        "Li, J.",
+        "Zhang, Y.",
+        "Zhou, D.",
+        "Zhu, S."
+      ],
+      "year": 2025,
+      "journal": "Advanced Science",
+      "doi": "10.1002/advs.202500443",
+      "abstract": "Imaging albumin in vivo is a reliable strategy to visualize blood-brain barrier (BBB) disruption by detecting the dye-labeled albumin leaking into brain parenchyma. Although Evans Blue (EB) and indocyanine green (ICG) dyes have been applied to assess BBB impairment, their naked-eye observation or near-infrared-I (NIR-I) imaging window limit the imaging sensitivity and contrast for this promising “albumin-based” strategy. Herein, an albumin-specific tagged near-infrared-II (NIR-II) probe is engineered as a chromophore to construct fluorescent proteins (FPs) in situ for assessing BBB disruption in stroke. The optimized chromophore, C7-1080, can covalently bind to albumin through nucleophilic substitution, forming FPs without adjuvant. Notably, the albumin effectively acts as a brightness enhancer and stability regulator for chromophores through the tight clamping effect. Theoretical simulation, proteomics, and protein mutation techniques are employed to investigate the binding behavior between albumin and chromophore. The in situ NIR-II FPs construction strategy facilitates high-precision dual-channel imaging of BBB disruption and cerebral vessels during ischemic stroke when combined with the IR-808Ac probe. Overall, the in situ albumin-specific tag holds promise for diagnosing and monitoring strokes, presenting a tool for investigating the progression and therapeutic responses of related diseases. © 2025 The Author(s). Advanced Science published by Wiley-VCH GmbH.",
+      "keywords": [],
+      "normalized_title": "nir ii fluorescent protein created by in situ albumin tagging for sensitive and specific imaging of blood brain barrier disruption",
+      "raw_bibtex": "@ARTICLE{10.1002/advs.202500443,\n\tauthor = {Xu, J. and Du, Y. and Zhu, N. and Li, J. and Zhang, Y. and Zhou, D. and Zhu, S.},\n\ttitle = {NIR-II Fluorescent Protein Created by In Situ Albumin-Tagging for Sensitive and Specific Imaging of Blood-Brain Barrier Disruption},\n\tjournal = {Advanced Science},\n\tyear = {2025},\n\tabstract = {Imaging albumin in vivo is a reliable strategy to visualize blood-brain barrier (BBB) disruption by detecting the dye-labeled albumin leaking into brain parenchyma. Although Evans Blue (EB) and indocyanine green (ICG) dyes have been applied to assess BBB impairment, their naked-eye observation or near-infrared-I (NIR-I) imaging window limit the imaging sensitivity and contrast for this promising “albumin-based” strategy. Herein, an albumin-specific tagged near-infrared-II (NIR-II) probe is engineered as a chromophore to construct fluorescent proteins (FPs) in situ for assessing BBB disruption in stroke. The optimized chromophore, C7-1080, can covalently bind to albumin through nucleophilic substitution, forming FPs without adjuvant. Notably, the albumin effectively acts as a brightness enhancer and stability regulator for chromophores through the tight clamping effect. Theoretical simulation, proteomics, and protein mutation techniques are employed to investigate the binding behavior between albumin and chromophore. The in situ NIR-II FPs construction strategy facilitates high-precision dual-channel imaging of BBB disruption and cerebral vessels during ischemic stroke when combined with the IR-808Ac probe. Overall, the in situ albumin-specific tag holds promise for diagnosing and monitoring strokes, presenting a tool for investigating the progression and therapeutic responses of related diseases. © 2025 The Author(s). Advanced Science published by Wiley-VCH GmbH.},\n\tdoi = {10.1002/advs.202500443},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105003405735&doi=10.1002%2Fadvs.202500443&partnerID=40&md5=a31fe0b4a2ea5506d1103ab7ee9ec76a},\n\tvolume = {12},\n\tnumber = {16},\n\tnote = {Export Date: 29 March 2026; Cited By: 8 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 29-2026_e4cd08bd-6551-48a8-b84c-9f960fc7d3ba.ris"
+      ],
+      "source_keys": [
+        "10.1002/advs.202500443"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000025",
+      "entry_type": "article",
+      "title": "Conformable hierarchically engineered polymeric micromeshes enabling combinatorial therapies in brain tumours",
+      "authors": [
+        "Di Mascolo, D.",
+        "Palange, A.L.",
+        "Primavera, R.",
+        "Macchi, F.",
+        "Catelani, T.",
+        "Piccardi, F.",
+        "Spanò, R.",
+        "Ferreira, M.",
+        "Marotta, R.",
+        "Armirotti, A.",
+        "Gallotti, A.L.",
+        "Galli, R.",
+        "Wilson, C.",
+        "Grant, G.A.",
+        "Decuzzi, P."
+      ],
+      "year": 2021,
+      "journal": "Nature Nanotechnology",
+      "doi": "10.1038/s41565-021-00879-3",
+      "abstract": "The poor transport of molecular and nanoscale agents through the blood–brain barrier together with tumour heterogeneity contribute to the dismal prognosis in patients with glioblastoma multiforme. Here, a biodegradable implant (μMESH) is engineered in the form of a micrometre-sized poly(lactic-co-glycolic acid) mesh laid over a water-soluble poly(vinyl alcohol) layer. Upon poly(vinyl alcohol) dissolution, the flexible poly(lactic-co-glycolic acid) mesh conforms to the resected tumour cavity as docetaxel-loaded nanomedicines and diclofenac molecules are continuously and directly released into the adjacent tumour bed. In orthotopic brain cancer models, generated with a conventional, reference cell line and patient-derived cells, a single μMESH application, carrying 0.75 mg kg−1 of docetaxel and diclofenac, abrogates disease recurrence up to eight months after tumour resection, with no appreciable adverse effects. Without tumour resection, the μMESH increases the median overall survival (∼30 d) as compared with the one-time intracranial deposition of docetaxel-loaded nanomedicines (15 d) or 10 cycles of systemically administered temozolomide (12 d). The μMESH modular structure, for the independent coloading of different molecules and nanomedicines, together with its mechanical flexibility, can be exploited to treat a variety of cancers, realizing patient-specific dosing and interventions. © 2021, The Author(s), under exclusive licence to Springer Nature Limited.",
+      "keywords": [],
+      "normalized_title": "conformable hierarchically engineered polymeric micromeshes enabling combinatorial therapies in brain tumours",
+      "raw_bibtex": "@ARTICLE{10.1038/s41565-021-00879-3,\n\tauthor = {Di Mascolo, D. and Palange, A.L. and Primavera, R. and Macchi, F. and Catelani, T. and Piccardi, F. and Spanò, R. and Ferreira, M. and Marotta, R. and Armirotti, A. and Gallotti, A.L. and Galli, R. and Wilson, C. and Grant, G.A. and Decuzzi, P.},\n\ttitle = {Conformable hierarchically engineered polymeric micromeshes enabling combinatorial therapies in brain tumours},\n\tjournal = {Nature Nanotechnology},\n\tyear = {2021},\n\tabstract = {The poor transport of molecular and nanoscale agents through the blood–brain barrier together with tumour heterogeneity contribute to the dismal prognosis in patients with glioblastoma multiforme. Here, a biodegradable implant (μMESH) is engineered in the form of a micrometre-sized poly(lactic-co-glycolic acid) mesh laid over a water-soluble poly(vinyl alcohol) layer. Upon poly(vinyl alcohol) dissolution, the flexible poly(lactic-co-glycolic acid) mesh conforms to the resected tumour cavity as docetaxel-loaded nanomedicines and diclofenac molecules are continuously and directly released into the adjacent tumour bed. In orthotopic brain cancer models, generated with a conventional, reference cell line and patient-derived cells, a single μMESH application, carrying 0.75 mg kg−1 of docetaxel and diclofenac, abrogates disease recurrence up to eight months after tumour resection, with no appreciable adverse effects. Without tumour resection, the μMESH increases the median overall survival (∼30 d) as compared with the one-time intracranial deposition of docetaxel-loaded nanomedicines (15 d) or 10 cycles of systemically administered temozolomide (12 d). The μMESH modular structure, for the independent coloading of different molecules and nanomedicines, together with its mechanical flexibility, can be exploited to treat a variety of cancers, realizing patient-specific dosing and interventions. © 2021, The Author(s), under exclusive licence to Springer Nature Limited.},\n\tdoi = {10.1038/s41565-021-00879-3},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85103378021&doi=10.1038%2Fs41565-021-00879-3&partnerID=40&md5=a0862d06772e506b0c9dd683536c11f7},\n\tvolume = {16},\n\tnumber = {7},\n\tpages = {820-829},\n\tnote = {Export Date: 29 March 2026; Cited By: 49 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 29-2026_e4cd08bd-6551-48a8-b84c-9f960fc7d3ba.ris"
+      ],
+      "source_keys": [
+        "10.1038/s41565-021-00879-3"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000026",
+      "entry_type": "article",
+      "title": "A Microfluidic Multisize Spheroid Array for Multiparametric Screening of Anticancer Drugs and Blood–Brain Barrier Transport Properties",
+      "authors": [
+        "Eilenberger, C.",
+        "Rothbauer, M.",
+        "Selinger, F.",
+        "Gerhartl, A.",
+        "Jordan, C.",
+        "Harasek, M.",
+        "Schädl, B.",
+        "Grillari, J.",
+        "Weghuber, J.",
+        "Neuhaus, W.",
+        "Küpcü, S.",
+        "Ertl, P."
+      ],
+      "year": 2021,
+      "journal": "Advanced Science",
+      "doi": "10.1002/advs.202004856",
+      "abstract": "Physiological-relevant in vitro tissue models with their promise of better predictability have the potential to improve drug screening outcomes in preclinical studies. Despite the advances of spheroid models in pharmaceutical screening applications, variations in spheroid size and consequential altered cell responses often lead to nonreproducible and unpredictable results. Here, a microfluidic multisize spheroid array is established and characterized using liver, lung, colon, and skin cells as well as a triple-culture model of the blood-brain barrier (BBB) to assess the effects of spheroid size on (a) anticancer drug toxicity and (b) compound penetration across an advanced BBB model. The reproducible on-chip generation of 360 spheroids of five dimensions on a well-plate format using an integrated microlens technology is demonstrated. While spheroid size-related IC50 values vary up to 160% using the anticancer drugs cisplatin (CIS) or doxorubicin (DOX), reduced CIS:DOX drug dose combinations eliminate all lung microtumors independent of their sizes. A further application includes optimizing cell seeding ratios and size-dependent compound uptake studies in a perfused BBB model. Generally, smaller BBB-spheroids reveal an 80% higher compound penetration than larger spheroids while verifying the BBB opening effect of mannitol and a spheroid size-related modulation on paracellular transport properties. © 2021 The Authors. Advanced Science published by Wiley-VCH GmbH",
+      "keywords": [],
+      "normalized_title": "a microfluidic multisize spheroid array for multiparametric screening of anticancer drugs and blood brain barrier transport properties",
+      "raw_bibtex": "@ARTICLE{10.1002/advs.202004856,\n\tauthor = {Eilenberger, C. and Rothbauer, M. and Selinger, F. and Gerhartl, A. and Jordan, C. and Harasek, M. and Schädl, B. and Grillari, J. and Weghuber, J. and Neuhaus, W. and Küpcü, S. and Ertl, P.},\n\ttitle = {A Microfluidic Multisize Spheroid Array for Multiparametric Screening of Anticancer Drugs and Blood–Brain Barrier Transport Properties},\n\tjournal = {Advanced Science},\n\tyear = {2021},\n\tabstract = {Physiological-relevant in vitro tissue models with their promise of better predictability have the potential to improve drug screening outcomes in preclinical studies. Despite the advances of spheroid models in pharmaceutical screening applications, variations in spheroid size and consequential altered cell responses often lead to nonreproducible and unpredictable results. Here, a microfluidic multisize spheroid array is established and characterized using liver, lung, colon, and skin cells as well as a triple-culture model of the blood-brain barrier (BBB) to assess the effects of spheroid size on (a) anticancer drug toxicity and (b) compound penetration across an advanced BBB model. The reproducible on-chip generation of 360 spheroids of five dimensions on a well-plate format using an integrated microlens technology is demonstrated. While spheroid size-related IC50 values vary up to 160% using the anticancer drugs cisplatin (CIS) or doxorubicin (DOX), reduced CIS:DOX drug dose combinations eliminate all lung microtumors independent of their sizes. A further application includes optimizing cell seeding ratios and size-dependent compound uptake studies in a perfused BBB model. Generally, smaller BBB-spheroids reveal an 80% higher compound penetration than larger spheroids while verifying the BBB opening effect of mannitol and a spheroid size-related modulation on paracellular transport properties. © 2021 The Authors. Advanced Science published by Wiley-VCH GmbH},\n\tdoi = {10.1002/advs.202004856},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85103009625&doi=10.1002%2Fadvs.202004856&partnerID=40&md5=fb9f32ab51d9768efb1c0a95b14938c8},\n\tvolume = {8},\n\tnumber = {11},\n\tnote = {Export Date: 29 March 2026; Cited By: 69 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 29-2026_e4cd08bd-6551-48a8-b84c-9f960fc7d3ba.ris"
+      ],
+      "source_keys": [
+        "10.1002/advs.202004856"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000027",
+      "entry_type": "article",
+      "title": "Integration of human organoids single-cell transcriptomic profiles and human genetics repurposes critical cell type-specific drug targets for severe COVID-19",
+      "authors": [
+        "Ma, Y.",
+        "Zhou, Y.",
+        "Jiang, D.",
+        "Dai, W.",
+        "Li, J.",
+        "Deng, C.",
+        "Chen, C.",
+        "Zheng, G.",
+        "Zhang, Y.",
+        "Qiu, F.",
+        "Sun, H.",
+        "Xing, S.",
+        "Han, H.",
+        "Qu, J.",
+        "Wu, N.",
+        "Yao, Y.",
+        "Su, J."
+      ],
+      "year": 2024,
+      "journal": "Cell Proliferation",
+      "doi": "10.1111/cpr.13558",
+      "abstract": "Human organoids recapitulate the cell type diversity and function of their primary organs holding tremendous potentials for basic and translational research. Advances in single-cell RNA sequencing (scRNA-seq) technology and genome-wide association study (GWAS) have accelerated the biological and therapeutic interpretation of trait-relevant cell types or states. Here, we constructed a computational framework to integrate atlas-level organoid scRNA-seq data, GWAS summary statistics, expression quantitative trait loci, and gene–drug interaction data for distinguishing critical cell populations and drug targets relevant to coronavirus disease 2019 (COVID-19) severity. We found that 39 cell types across eight kinds of organoids were significantly associated with COVID-19 outcomes. Notably, subset of lung mesenchymal stem cells increased proximity with fibroblasts predisposed to repair COVID-19-damaged lung tissue. Brain endothelial cell subset exhibited significant associations with severe COVID-19, and this cell subset showed a notable increase in cell-to-cell interactions with other brain cell types, including microglia. We repurposed 33 druggable genes, including IFNAR2, TYK2, and VIPR2, and their interacting drugs for COVID-19 in a cell-type-specific manner. Overall, our results showcase that host genetic determinants have cellular-specific contribution to COVID-19 severity, and identification of cell type-specific drug targets may facilitate to develop effective therapeutics for treating severe COVID-19 and its complications. © 2023 The Authors. Cell Proliferation published by Beijing Institute for Stem Cell and Regenerative Medicine and John Wiley & Sons Ltd.",
+      "keywords": [],
+      "normalized_title": "integration of human organoids single cell transcriptomic profiles and human genetics repurposes critical cell type specific drug targets for severe covid 19",
+      "raw_bibtex": "@ARTICLE{10.1111/cpr.13558,\n\tauthor = {Ma, Y. and Zhou, Y. and Jiang, D. and Dai, W. and Li, J. and Deng, C. and Chen, C. and Zheng, G. and Zhang, Y. and Qiu, F. and Sun, H. and Xing, S. and Han, H. and Qu, J. and Wu, N. and Yao, Y. and Su, J.},\n\ttitle = {Integration of human organoids single-cell transcriptomic profiles and human genetics repurposes critical cell type-specific drug targets for severe COVID-19},\n\tjournal = {Cell Proliferation},\n\tyear = {2024},\n\tabstract = {Human organoids recapitulate the cell type diversity and function of their primary organs holding tremendous potentials for basic and translational research. Advances in single-cell RNA sequencing (scRNA-seq) technology and genome-wide association study (GWAS) have accelerated the biological and therapeutic interpretation of trait-relevant cell types or states. Here, we constructed a computational framework to integrate atlas-level organoid scRNA-seq data, GWAS summary statistics, expression quantitative trait loci, and gene–drug interaction data for distinguishing critical cell populations and drug targets relevant to coronavirus disease 2019 (COVID-19) severity. We found that 39 cell types across eight kinds of organoids were significantly associated with COVID-19 outcomes. Notably, subset of lung mesenchymal stem cells increased proximity with fibroblasts predisposed to repair COVID-19-damaged lung tissue. Brain endothelial cell subset exhibited significant associations with severe COVID-19, and this cell subset showed a notable increase in cell-to-cell interactions with other brain cell types, including microglia. We repurposed 33 druggable genes, including IFNAR2, TYK2, and VIPR2, and their interacting drugs for COVID-19 in a cell-type-specific manner. Overall, our results showcase that host genetic determinants have cellular-specific contribution to COVID-19 severity, and identification of cell type-specific drug targets may facilitate to develop effective therapeutics for treating severe COVID-19 and its complications. © 2023 The Authors. Cell Proliferation published by Beijing Institute for Stem Cell and Regenerative Medicine and John Wiley & Sons Ltd.},\n\tdoi = {10.1111/cpr.13558},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85173914673&doi=10.1111%2Fcpr.13558&partnerID=40&md5=09240b275372ba251d73ffb1d31df20c},\n\tvolume = {57},\n\tnumber = {3},\n\tnote = {Export Date: 29 March 2026; Cited By: 13 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 29-2026_e4cd08bd-6551-48a8-b84c-9f960fc7d3ba.ris"
+      ],
+      "source_keys": [
+        "10.1111/cpr.13558"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000028",
+      "entry_type": "article",
+      "title": "Metal-Supramolecular Drug Delivery System Empowered Meningeal Lymphatic Vessels-Bridged Intracranial-Peripheral Dual Immune Modulation for Reversing Glioblastoma Immune Suppression",
+      "authors": [
+        "Zhang, C.",
+        "Xu, Z.",
+        "Xu, X.",
+        "Zhang, Z.",
+        "Luo, R.",
+        "Ren, P.",
+        "Luo, Y.",
+        "Wu, Q.",
+        "Liu, X.",
+        "Liu, G.",
+        "He, X.",
+        "Liu, Y."
+      ],
+      "year": 2026,
+      "journal": "Advanced Science",
+      "doi": "10.1002/advs.202522604",
+      "abstract": "Glioblastoma (GBM) presents significant challenges in treatment due to the presence of the blood-brain barrier (BBB) and immunosuppressive tumor microenvironment (TME). Here, we developed a novel metal-supramolecular delivery system (FLM@VC) that empowers meningeal lymphatic vessels (MLVs)-bridged intracranial-peripheral dual immune modulation to reverse GBM immune suppression. Using coordination-driven self-assembly of lipoic acid (LA), iron ions (Fe3+), and bovine albumin (BSA), we engineered nanoassemblies with Verubecestat (MK-8931) encapsulated and with vascular endothelial growth factor C (VEGF-C) and c(RGDfK) conjugated. Subcutaneously delivered FLM@VC hijacks the MLVs for brain delivery bypassing the BBB, overcoming the limitations of conventional intravenous administration. Upon tumor accumulation, GSH-responsive disassembly releases MK-8931 to reprogram TAMs from the pro-tumoral M2 to the anti-tumoral M1 phenotype, thereby eliciting proinflammatory cytokine secretion and enhancing phagocytic clearance of GBM cells. Concurrently, VEGF-C-mediated MLV expansion enhances dendritic cell (DC) trafficking to deep cervical lymph nodes (dCLNs), potently priming CD8+ T cell responses. This MLVs-bridged intracranial-peripheral dual immunomodulation strategy effectively transforms immunologically “cold” GBM into “hot” tumors, resulting in potent tumor eradication and significantly prolonged survival in orthotopic GBM models. It not only presents a novel paradigm for synergistic GBM immunotherapy but also provides an alternative brain drug delivery approach. © 2026 The Author(s). Advanced Science published by Wiley-VCH GmbH.",
+      "keywords": [],
+      "normalized_title": "metal supramolecular drug delivery system empowered meningeal lymphatic vessels bridged intracranial peripheral dual immune modulation for reversing glioblastoma immune suppression",
+      "raw_bibtex": "@ARTICLE{10.1002/advs.202522604,\n\tauthor = {Zhang, C. and Xu, Z. and Xu, X. and Zhang, Z. and Luo, R. and Ren, P. and Luo, Y. and Wu, Q. and Liu, X. and Liu, G. and He, X. and Liu, Y.},\n\ttitle = {Metal-Supramolecular Drug Delivery System Empowered Meningeal Lymphatic Vessels-Bridged Intracranial-Peripheral Dual Immune Modulation for Reversing Glioblastoma Immune Suppression},\n\tjournal = {Advanced Science},\n\tyear = {2026},\n\tabstract = {Glioblastoma (GBM) presents significant challenges in treatment due to the presence of the blood-brain barrier (BBB) and immunosuppressive tumor microenvironment (TME). Here, we developed a novel metal-supramolecular delivery system (FLM@VC) that empowers meningeal lymphatic vessels (MLVs)-bridged intracranial-peripheral dual immune modulation to reverse GBM immune suppression. Using coordination-driven self-assembly of lipoic acid (LA), iron ions (Fe3+), and bovine albumin (BSA), we engineered nanoassemblies with Verubecestat (MK-8931) encapsulated and with vascular endothelial growth factor C (VEGF-C) and c(RGDfK) conjugated. Subcutaneously delivered FLM@VC hijacks the MLVs for brain delivery bypassing the BBB, overcoming the limitations of conventional intravenous administration. Upon tumor accumulation, GSH-responsive disassembly releases MK-8931 to reprogram TAMs from the pro-tumoral M2 to the anti-tumoral M1 phenotype, thereby eliciting proinflammatory cytokine secretion and enhancing phagocytic clearance of GBM cells. Concurrently, VEGF-C-mediated MLV expansion enhances dendritic cell (DC) trafficking to deep cervical lymph nodes (dCLNs), potently priming CD8+ T cell responses. This MLVs-bridged intracranial-peripheral dual immunomodulation strategy effectively transforms immunologically “cold” GBM into “hot” tumors, resulting in potent tumor eradication and significantly prolonged survival in orthotopic GBM models. It not only presents a novel paradigm for synergistic GBM immunotherapy but also provides an alternative brain drug delivery approach. © 2026 The Author(s). Advanced Science published by Wiley-VCH GmbH.},\n\tdoi = {10.1002/advs.202522604},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105029585552&doi=10.1002%2Fadvs.202522604&partnerID=40&md5=264955786710a84f2179f7b616987f51},\n\tnote = {Export Date: 29 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 29-2026_e4cd08bd-6551-48a8-b84c-9f960fc7d3ba.ris"
+      ],
+      "source_keys": [
+        "10.1002/advs.202522604"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000029",
+      "entry_type": "article",
+      "title": "Fusogenic lipid nanoparticles for rapid delivery of large therapeutic molecules to exosomes",
+      "authors": [
+        "Son, G.",
+        "Song, J.",
+        "Park, J.C.",
+        "Kim, H.N.",
+        "Kim, H."
+      ],
+      "year": 2025,
+      "journal": "Nature Communications",
+      "doi": "10.1038/s41467-025-59489-5",
+      "abstract": "Exosomes, as cell-derived lipid nanoparticles, are promising drug carriers because they can traverse challenging physiological barriers such as the blood-brain barrier (BBB). However, a major obstacle in utilizing exosomes as drug carriers is loading large therapeutic molecules without compromising the structural integrity of embedded biomolecules. Here, we introduce a membrane fusion method utilizing fusogenic lipid nanoparticles, cubosomes, to load large molecules into exosomes in a non-destructive manner. When the drug-loaded cubosome and exosome solutions are simply mixed, membrane fusion is completed in just 10 min. Our method effectively loads doxorubicin and immunoglobulin G into exosomes. Moreover, even the most challenging molecule—mRNA—is loaded with nearly 100% efficiency, demonstrating the versatility of our approach. In terms of biological behavior, the resulting hybrid exosomes preserve the functional behavior of exosomes in BBB uptake and penetration. Surprisingly, controlling exosome-to-cubosome ratios allows precise control over BBB uptake and transport. Furthermore, these hybrid exosomes retain cell-specific delivery properties, preserving the targeted delivery functions dictated by their exosomal origin. This study demonstrates the feasibility of a mix-and-load method for rapid and efficient drug loading into exosomes, with significant potential for the treatment of neurological diseases. © The Author(s) 2025.",
+      "keywords": [],
+      "normalized_title": "fusogenic lipid nanoparticles for rapid delivery of large therapeutic molecules to exosomes",
+      "raw_bibtex": "@ARTICLE{10.1038/s41467-025-59489-5,\n\tauthor = {Son, G. and Song, J. and Park, J.C. and Kim, H.N. and Kim, H.},\n\ttitle = {Fusogenic lipid nanoparticles for rapid delivery of large therapeutic molecules to exosomes},\n\tjournal = {Nature Communications},\n\tyear = {2025},\n\tabstract = {Exosomes, as cell-derived lipid nanoparticles, are promising drug carriers because they can traverse challenging physiological barriers such as the blood-brain barrier (BBB). However, a major obstacle in utilizing exosomes as drug carriers is loading large therapeutic molecules without compromising the structural integrity of embedded biomolecules. Here, we introduce a membrane fusion method utilizing fusogenic lipid nanoparticles, cubosomes, to load large molecules into exosomes in a non-destructive manner. When the drug-loaded cubosome and exosome solutions are simply mixed, membrane fusion is completed in just 10 min. Our method effectively loads doxorubicin and immunoglobulin G into exosomes. Moreover, even the most challenging molecule—mRNA—is loaded with nearly 100% efficiency, demonstrating the versatility of our approach. In terms of biological behavior, the resulting hybrid exosomes preserve the functional behavior of exosomes in BBB uptake and penetration. Surprisingly, controlling exosome-to-cubosome ratios allows precise control over BBB uptake and transport. Furthermore, these hybrid exosomes retain cell-specific delivery properties, preserving the targeted delivery functions dictated by their exosomal origin. This study demonstrates the feasibility of a mix-and-load method for rapid and efficient drug loading into exosomes, with significant potential for the treatment of neurological diseases. © The Author(s) 2025.},\n\tdoi = {10.1038/s41467-025-59489-5},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105005776524&doi=10.1038%2Fs41467-025-59489-5&partnerID=40&md5=e6a24a75781c3719fdb0a5acaa8c20ed},\n\tvolume = {16},\n\tnumber = {1},\n\tnote = {Export Date: 29 March 2026; Cited By: 17 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 29-2026_e4cd08bd-6551-48a8-b84c-9f960fc7d3ba.ris"
+      ],
+      "source_keys": [
+        "10.1038/s41467-025-59489-5"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000030",
+      "entry_type": "article",
+      "title": "Targeting axonal guidance dependencies in glioblastoma with ROBO1 CAR T cells",
+      "authors": [
+        "Chokshi, C.R.",
+        "Shaikh, M.V.",
+        "Brakel, B.",
+        "Rossotti, M.A.",
+        "Tieu, D.",
+        "Maich, W.",
+        "Anand, A.",
+        "Chafe, S.C.",
+        "Zhai, K.",
+        "Suk, Y.",
+        "Kieliszek, A.M.",
+        "Miletic, P.",
+        "Mikolajewicz, N.",
+        "Chen, D.",
+        "McNicol, J.D.",
+        "Chan, K.",
+        "Tong, A.H.Y.",
+        "Kuhlmann, L.",
+        "Liu, L.",
+        "Alizada, Z.",
+        "Mobilio, D.",
+        "Tatari, N.",
+        "Savage, N.",
+        "Aghaei, N.",
+        "Grewal, S.",
+        "Puri, A.",
+        "Subapanditha, M.",
+        "McKenna, D.",
+        "Ignatchenko, V.",
+        "Salamoun, J.M.",
+        "Kwiecien, J.M.",
+        "Wipf, P.",
+        "Sharlow, E.R.",
+        "Provias, J.P.",
+        "Lu, J.-Q.",
+        "Lazo, J.S.",
+        "Kislinger, T.",
+        "Lu, Y.",
+        "Brown, K.R.",
+        "Venugopal, C.",
+        "Henry, K.A.",
+        "Moffat, J.",
+        "Singh, S.K."
+      ],
+      "year": 2024,
+      "journal": "Nature Medicine",
+      "doi": "10.1038/s41591-024-03138-9",
+      "abstract": "Resistance to genotoxic therapies and tumor recurrence are hallmarks of glioblastoma (GBM), an aggressive brain tumor. In this study, we investigated functional drivers of post-treatment recurrent GBM through integrative genomic analyses, genome-wide genetic perturbation screens in patient-derived GBM models and independent lines of validation. Specific genetic dependencies were found consistent across recurrent tumor models, accompanied by increased mutational burden and differential transcript and protein expression compared to its primary GBM predecessor. Our observations suggest a multi-layered genetic response to drive tumor recurrence and implicate PTP4A2 (protein tyrosine phosphatase 4A2) as a modulator of self-renewal, proliferation and tumorigenicity in recurrent GBM. Genetic perturbation or small-molecule inhibition of PTP4A2 acts through a dephosphorylation axis with roundabout guidance receptor 1 (ROBO1) and its downstream molecular players, exploiting a functional dependency on ROBO signaling. Because a pan-PTP4A inhibitor was limited by poor penetrance across the blood–brain barrier in vivo, we engineered a second-generation chimeric antigen receptor (CAR) T cell therapy against ROBO1, a cell surface receptor enriched across recurrent GBM specimens. A single dose of ROBO1-targeted CAR T cells doubled median survival in cell-line-derived xenograft (CDX) models of recurrent GBM. Moreover, in CDX models of adult lung-to-brain metastases and pediatric relapsed medulloblastoma, ROBO1 CAR T cells eradicated tumors in 50–100% of mice. Our study identifies a promising multi-targetable PTP4A–ROBO1 signaling axis that drives tumorigenicity in recurrent GBM, with potential in other malignant brain tumors. © The Author(s), under exclusive licence to Springer Nature America, Inc. 2024.",
+      "keywords": [],
+      "normalized_title": "targeting axonal guidance dependencies in glioblastoma with robo1 car t cells",
+      "raw_bibtex": "@ARTICLE{10.1038/s41591-024-03138-9,\n\tauthor = {Chokshi, C.R. and Shaikh, M.V. and Brakel, B. and Rossotti, M.A. and Tieu, D. and Maich, W. and Anand, A. and Chafe, S.C. and Zhai, K. and Suk, Y. and Kieliszek, A.M. and Miletic, P. and Mikolajewicz, N. and Chen, D. and McNicol, J.D. and Chan, K. and Tong, A.H.Y. and Kuhlmann, L. and Liu, L. and Alizada, Z. and Mobilio, D. and Tatari, N. and Savage, N. and Aghaei, N. and Grewal, S. and Puri, A. and Subapanditha, M. and McKenna, D. and Ignatchenko, V. and Salamoun, J.M. and Kwiecien, J.M. and Wipf, P. and Sharlow, E.R. and Provias, J.P. and Lu, J.-Q. and Lazo, J.S. and Kislinger, T. and Lu, Y. and Brown, K.R. and Venugopal, C. and Henry, K.A. and Moffat, J. and Singh, S.K.},\n\ttitle = {Targeting axonal guidance dependencies in glioblastoma with ROBO1 CAR T cells},\n\tjournal = {Nature Medicine},\n\tyear = {2024},\n\tabstract = {Resistance to genotoxic therapies and tumor recurrence are hallmarks of glioblastoma (GBM), an aggressive brain tumor. In this study, we investigated functional drivers of post-treatment recurrent GBM through integrative genomic analyses, genome-wide genetic perturbation screens in patient-derived GBM models and independent lines of validation. Specific genetic dependencies were found consistent across recurrent tumor models, accompanied by increased mutational burden and differential transcript and protein expression compared to its primary GBM predecessor. Our observations suggest a multi-layered genetic response to drive tumor recurrence and implicate PTP4A2 (protein tyrosine phosphatase 4A2) as a modulator of self-renewal, proliferation and tumorigenicity in recurrent GBM. Genetic perturbation or small-molecule inhibition of PTP4A2 acts through a dephosphorylation axis with roundabout guidance receptor 1 (ROBO1) and its downstream molecular players, exploiting a functional dependency on ROBO signaling. Because a pan-PTP4A inhibitor was limited by poor penetrance across the blood–brain barrier in vivo, we engineered a second-generation chimeric antigen receptor (CAR) T cell therapy against ROBO1, a cell surface receptor enriched across recurrent GBM specimens. A single dose of ROBO1-targeted CAR T cells doubled median survival in cell-line-derived xenograft (CDX) models of recurrent GBM. Moreover, in CDX models of adult lung-to-brain metastases and pediatric relapsed medulloblastoma, ROBO1 CAR T cells eradicated tumors in 50–100% of mice. Our study identifies a promising multi-targetable PTP4A–ROBO1 signaling axis that drives tumorigenicity in recurrent GBM, with potential in other malignant brain tumors. © The Author(s), under exclusive licence to Springer Nature America, Inc. 2024.},\n\tdoi = {10.1038/s41591-024-03138-9},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85200232866&doi=10.1038%2Fs41591-024-03138-9&partnerID=40&md5=71ecf78b846886ac10b83cd28e8aeeb0},\n\tvolume = {30},\n\tnumber = {10},\n\tpages = {2936-2946},\n\tnote = {Export Date: 29 March 2026; Cited By: 24 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 29-2026_e4cd08bd-6551-48a8-b84c-9f960fc7d3ba.ris"
+      ],
+      "source_keys": [
+        "10.1038/s41591-024-03138-9"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

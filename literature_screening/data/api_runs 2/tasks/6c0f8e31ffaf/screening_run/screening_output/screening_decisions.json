@@ -1,0 +1,272 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确涉及慢性肾病（CKD）相关的肾纤维化，并探讨了内皮细胞凋亡的机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-31T16:24:39.889248+08:00"
+  },
+  {
+    "paper_id": "paper_000002",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确涉及AKI向CKD转变过程中肾小管细胞的凋亡和坏死性凋亡机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-31T16:24:39.889248+08:00"
+  },
+  {
+    "paper_id": "paper_000003",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确综述了凋亡小体在肾脏疾病（包括CKD）中的作用，涉及凋亡机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.92,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-31T16:24:39.889248+08:00"
+  },
+  {
+    "paper_id": "paper_000004",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要明确探讨的是细胞焦亡（pyroptosis），而非凋亡（apoptosis），不符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-31T16:24:39.889248+08:00"
+  },
+  {
+    "paper_id": "paper_000005",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "摘要提到破骨细胞凋亡，但研究主体是骨矿流失对肾小管的损伤，未明确涉及CKD中的细胞凋亡机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.75,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-31T16:24:39.889248+08:00"
+  },
+  {
+    "paper_id": "paper_000006",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "摘要提到CKD中骨细胞凋亡增加，但研究主体是骨组织，而非肾脏固有细胞或CKD进展中的凋亡机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-31T16:24:39.889248+08:00"
+  },
+  {
+    "paper_id": "paper_000007",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确涉及糖尿病肾病（CKD的一种）中足细胞损伤和凋亡的机制研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-31T16:24:39.889248+08:00"
+  },
+  {
+    "paper_id": "paper_000008",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要描述的是预测模型开发，未涉及CKD进展中的细胞凋亡机制或干预策略。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-31T16:24:39.889248+08:00"
+  },
+  {
+    "paper_id": "paper_000009",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要提到衰老细胞抵抗凋亡，并涉及CKD和AKI，但信息不足以确认是否聚焦于CKD进展中的凋亡机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-31T16:24:39.889248+08:00"
+  },
+  {
+    "paper_id": "paper_000010",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确涉及足细胞损伤，并在晚期导致凋亡，与CKD进展相关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.87,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-31T16:24:39.889248+08:00"
+  },
+  {
+    "paper_id": "paper_000011",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确涉及急性肾损伤向慢性肾病进展，研究肾小管上皮细胞凋亡机制及纳米干预策略。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-31T16:25:01.945368+08:00"
+  },
+  {
+    "paper_id": "paper_000012",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要明确研究巨噬细胞焦亡而非凋亡，且未提及凋亡机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-31T16:25:01.945368+08:00"
+  },
+  {
+    "paper_id": "paper_000013",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "摘要同时提及细胞焦亡和凋亡，但未明确区分凋亡在慢性肾病进展中的具体机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-31T16:25:01.945368+08:00"
+  },
+  {
+    "paper_id": "paper_000014",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确研究肾缺血再灌注损伤，涉及肾小管细胞凋亡及纳米干预策略。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-31T16:25:01.945368+08:00"
+  },
+  {
+    "paper_id": "paper_000015",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确研究肾小管上皮细胞衰老与抗凋亡蛋白MCL-1在慢性肾病进展中的作用及干预。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.92,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-31T16:25:01.945368+08:00"
+  },
+  {
+    "paper_id": "paper_000016",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要明确研究慢性肾病引起的骨骼肌萎缩，而非肾脏固有细胞的凋亡机制。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.87,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-31T16:25:01.945368+08:00"
+  },
+  {
+    "paper_id": "paper_000017",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要明确研究慢性肾病中的心力衰竭，涉及心肌细胞凋亡而非肾脏固有细胞凋亡。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.86,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-31T16:25:01.945368+08:00"
+  },
+  {
+    "paper_id": "paper_000018",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确研究肾小管上皮细胞凋亡与线粒体稳态在急性肾损伤向慢性肾病进展中的作用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.91,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-31T16:25:01.945368+08:00"
+  }
+]

@@ -1,0 +1,61 @@
+{
+  "project": {
+    "name": "new-screening-run",
+    "output_dir": "tasks/42e5664ddab4/screening_run/screening_output",
+    "save_raw_response": true,
+    "save_intermediate_files": true
+  },
+  "input": {
+    "input_files": [
+      "tasks/42e5664ddab4/screening_run/inputs/CNKI-20260324192826879.enw"
+    ],
+    "encoding": "auto"
+  },
+  "dedup": {
+    "enabled": true,
+    "strict_doi_match": true,
+    "normalized_title_exact_match": true,
+    "fuzzy_title_match": false
+  },
+  "screening": {
+    "batch_size": 10,
+    "target_include_count": 30,
+    "stop_when_target_reached": true,
+    "allow_uncertain": true,
+    "retry_times": 6,
+    "request_timeout_seconds": 240
+  },
+  "criteria": {
+    "topic": "以“研发支出比率（研发强度）”作为“企业风险承担”代理变量的实证与理论研究",
+    "inclusion": [
+      "必须在研究设计或理论框架中，明确将“研发支出 R&D ”或“研发强度”作为衡量“企业风险承担 Risk-taking ”水平的指标或代理变量。",
+      "探讨了影响企业研发风险承担的前因变量（如政策、高管特质、公司治理等），或其带来的经济后果（如企业价值、创新绩效等）。",
+      "属于经济学、管理学、公司财务或战略管理领域的高质量实证研究或综述。"
+    ],
+    "exclusion": [
+      "纯自然科学或工程技术类的研发文献 如具体的技术攻关细节，无管理学/经济学视角 。",
+      "虽然研究了研发投入，但并未将其与“风险承担/风险偏好”概念建立理论联系的常规文献。",
+      "仅使用盈余波动率或股票回报率波动衡量风险承担，且全文未涉及研发支出指标的文献。"
+    ]
+  },
+  "model": {
+    "provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "api_base_url": "https://api.deepseek.com/v1",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 1536,
+    "min_request_interval_seconds": 2.0
+  },
+  "report": {
+    "export_included_ris": true,
+    "export_excluded_ris": false,
+    "export_unused_ris": true,
+    "export_included_bib": false,
+    "export_excluded_bib": false,
+    "export_unused_bib": false,
+    "included_report_format": "md",
+    "excluded_report_format": "md",
+    "summary_format": "json"
+  }
+}

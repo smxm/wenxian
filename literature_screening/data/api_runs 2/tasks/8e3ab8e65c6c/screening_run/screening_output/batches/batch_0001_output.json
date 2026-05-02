@@ -1,0 +1,75 @@
+{
+  "batch_id": "batch_0001",
+  "results": [
+    {
+      "paper_id": "paper_000001",
+      "decision": "uncertain",
+      "reason": "标题和摘要明确涉及金属表面缺陷分类和深度学习（Vision Transformer），但研究对象是热轧钢而非冷轧带钢，且未明确提及工业落地痛点或算法创新。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000002",
+      "decision": "uncertain",
+      "reason": "摘要提到在金属表面缺陷数据集上评估算法，但未明确研究对象是否为冷轧带钢，且核心创新是通用目标检测的边界框回归损失，与筛选主题的特定深度学习方向关联不够直接。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000003",
+      "decision": "include",
+      "reason": "标题和摘要明确研究带钢表面缺陷检测，使用深度学习改进Faster R-CNN算法，符合研究对象和核心技术要求。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000004",
+      "decision": "uncertain",
+      "reason": "摘要涉及金属缺陷分割和合成数据生成，但未明确研究对象是否为冷轧带钢，且未详细说明是否使用前沿深度学习方法解决工业痛点。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "paper_id": "paper_000005",
+      "decision": "include",
+      "reason": "标题和摘要明确研究钢铁表面缺陷分割，提出小样本分割网络MPENet解决数据稀缺问题，符合研究对象、核心技术和工业痛点要求。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000006",
+      "decision": "include",
+      "reason": "标题和摘要明确研究金属表面缺陷检测，提出基于Transformer的半监督异常检测方法解决域偏移和样本不足问题，符合研究对象、核心技术和工业痛点要求。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "paper_id": "paper_000007",
+      "decision": "exclude",
+      "reason": "标题和摘要明确研究对象是热轧钢带而非冷轧带钢，且方法为改进ResNet34模型，未涉及筛选主题要求的前沿深度学习方向。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    }
+  ]
+}

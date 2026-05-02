@@ -1,0 +1,50 @@
+project:
+  name: new-screening-run
+  output_dir: tasks/27ec48d517ff/screening_run/screening_output
+  save_raw_response: true
+  save_intermediate_files: true
+input:
+  input_files:
+  - tasks/27ec48d517ff/screening_run/inputs/abstract-Heart-Assi-set.txt
+  encoding: auto
+dedup:
+  enabled: true
+  strict_doi_match: true
+  normalized_title_exact_match: true
+  fuzzy_title_match: false
+screening:
+  batch_size: 10
+  target_include_count: 30
+  stop_when_target_reached: true
+  allow_uncertain: true
+  retry_times: 6
+  request_timeout_seconds: 240
+criteria:
+  topic: 左心室辅助装置（LVAD）术后目标平均动脉压（MAP）的管理策略及其与临床预后的关系
+  inclusion:
+  - 研究对象必须是植入左心室辅助装置（特别是连续血流型 CF-LVAD，如 HeartMate 系列、HVAD 等）的成人患者。
+  - 核心变量必须包含术后平均动脉压（MAP）的管理、目标范围设定、测量技术（如多普勒、动脉导管）或血压控制药物。
+  - 必须涉及 MAP 与临床预后的关联（如中风、泵血栓、主动脉瓣关闭不全、胃肠道出血或生存率）。
+  exclusion:
+  - 纯探讨外科植入手术技术或器械机械设计的文献（不涉及术后血流动力学管理）。
+  - 仅针对右心室辅助装置（RVAD）或全人工心脏（TAH）的研究。
+  - 动物实验或体外模拟（Mock loop）实验（除非对临床指南有直接奠基性作用）。
+  - 纯儿科（Pediatric）病例研究。
+model:
+  provider: deepseek
+  model_name: deepseek-chat
+  api_base_url: https://api.deepseek.com/v1
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.0
+  max_tokens: 1536
+  min_request_interval_seconds: 2.0
+report:
+  export_included_ris: true
+  export_excluded_ris: false
+  export_unused_ris: true
+  export_included_bib: false
+  export_excluded_bib: false
+  export_unused_bib: false
+  included_report_format: md
+  excluded_report_format: md
+  summary_format: json

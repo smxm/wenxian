@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0004",
+    "results": [
+        {
+            "paper_id": "paper_000031",
+            "decision": "exclude",
+            "reason": "标题和摘要表明这是关于弓网主动控制技术的综述，未提及电弧建模或电气特性分析。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000032",
+            "decision": "include",
+            "reason": "标题和摘要明确研究弓网电弧建模，提出黑盒电弧模型并进行仿真验证，符合纳入标准。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000033",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于直流铁路系统的电弧检测方法，未涉及电弧建模或MATLAB仿真。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000034",
+            "decision": "exclude",
+            "reason": "标题和摘要描述基于图像特征的弓网电弧检测算法，未涉及电气特性分析或电弧建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000035",
+            "decision": "include",
+            "reason": "标题和摘要明确研究弓网电弧电气特性，建立等离子体数学模型并使用COMSOL进行仿真分析。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000036",
+            "decision": "include",
+            "reason": "标题和摘要研究弓网电弧驱动力和动态特性，建立电弧链模型并进行实验验证。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000037",
+            "decision": "exclude",
+            "reason": "标题和摘要主要分析旋转式弓网系统的热耗散特性，未涉及电弧建模或电气特性变化。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000038",
+            "decision": "exclude",
+            "reason": "标题和摘要研究弓网接触力中的阻尼分布影响，属于纯机械动力学分析，无电气特性内容。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000039",
+            "decision": "exclude",
+            "reason": "标题和摘要研究接触线结冰预测模型，虽提及电弧但未涉及电气特性分析或电弧建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000040",
+            "decision": "include",
+            "reason": "标题和摘要明确建立弓网电弧模型和接触线烧蚀模型，进行仿真研究电弧温度分布。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        }
+    ]
+}

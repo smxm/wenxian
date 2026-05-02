@@ -1,0 +1,38 @@
+{
+  "batch_id": "batch_0002",
+  "results": [
+    {
+      "paper_id": "paper_000004",
+      "decision": "include",
+      "reason": "标题和摘要明确研究弓网电弧及其对电能质量的影响，包含电弧模型和仿真。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000005",
+      "decision": "uncertain",
+      "reason": "摘要提到黑盒电弧模型和仿真，但未明确说明弓网离线引发的电气特性变化。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000006",
+      "decision": "uncertain",
+      "reason": "摘要提到黑盒电弧模型和仿真，但未明确说明弓网离线引发的电气特性变化。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.5
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "batch_id": "batch_0002",
+  "results": [
+    {
+      "paper_id": "paper_000011",
+      "decision": "include",
+      "reason": "研究对象为水下蛇形机器人（海洋无人载具），核心算法为ADRC，并提出了DI-ADRC改进结构，涉及轨迹跟踪控制。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000012",
+      "decision": "include",
+      "reason": "研究对象为USV，核心算法为LADRC，结合了SAC强化学习进行参数优化，并涉及路径跟踪控制。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.98
+    },
+    {
+      "paper_id": "paper_000013",
+      "decision": "uncertain",
+      "reason": "研究对象为ROV（海洋无人载具），核心算法包含改进ESO，涉及轨迹跟踪，但未明确提及是否结合导引律或智能算法优化。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000014",
+      "decision": "uncertain",
+      "reason": "研究对象为USV，使用了LADRC控制器，涉及轨迹跟踪，但未明确说明ADRC是否为核心论述对象或是否满足子方向要求。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000015",
+      "decision": "include",
+      "reason": "研究对象为USV，使用了ADRC控制器和LOS导引律进行路径跟踪，并涉及自组织图智能算法进行路径规划。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000016",
+      "decision": "exclude",
+      "reason": "研究对象为无人车辆上的惯性稳定平台，控制对象非海洋无人载具，不符合纳入标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000017",
+      "decision": "include",
+      "reason": "研究对象为AUV，核心算法为LADRC，提出了降阶ESO改进结构，并结合了LOS导引律进行轨迹跟踪。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.96
+    },
+    {
+      "paper_id": "paper_000018",
+      "decision": "uncertain",
+      "reason": "研究对象为ROV，涉及轨迹跟踪和非线性扰动观测器，但未明确说明是否基于ADRC/ESO核心算法或满足子方向要求。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "paper_id": "paper_000019",
+      "decision": "include",
+      "reason": "研究对象为USV，核心算法为ADRC，涉及轨迹跟踪控制，并使用了模糊满意优化智能算法进行轨迹优化。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "paper_id": "paper_000020",
+      "decision": "uncertain",
+      "reason": "研究对象为ROV，涉及轨迹跟踪和基于ADRC思想的扰动观测器，但未明确将ADRC/ESO作为核心控制算法。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.48
+    }
+  ]
+}

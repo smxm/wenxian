@@ -1,0 +1,106 @@
+{
+  "batch_id": "batch_0010",
+  "results": [
+    {
+      "paper_id": "paper_000091",
+      "decision": "exclude",
+      "reason": "标题和摘要仅涉及弓网几何偏差对接触力的机械动力学影响，未提及电气特性或电弧模型。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000092",
+      "decision": "include",
+      "reason": "标题和摘要明确研究弓网电弧演化规律，建立了多应力耦合力学分析模型，涉及电弧特性和电气安全。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000093",
+      "decision": "exclude",
+      "reason": "标题和摘要主要研究路堑深度对列车运行安全及弓网接触力的影响，未涉及电气特性或电弧模型。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.88
+    },
+    {
+      "paper_id": "paper_000094",
+      "decision": "uncertain",
+      "reason": "摘要提到弓网电弧产生电磁干扰，但未明确涉及电弧建模或电气特性变化的详细分析。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000095",
+      "decision": "exclude",
+      "reason": "标题和摘要描述基于接触力学的弓网相互作用有限元模型，未提及电气特性、电弧或MATLAB仿真。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.87
+    },
+    {
+      "paper_id": "paper_000096",
+      "decision": "include",
+      "reason": "标题和摘要明确建立扩展弓网电弧模型，分析车辆接地电磁暂态过程，涉及电弧长度动态特性和过电压。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000097",
+      "decision": "include",
+      "reason": "标题和摘要建立基于磁流体动力学的弓网电弧二维模型，研究湿度和气流对电弧特性的影响，并进行仿真验证。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.88
+    },
+    {
+      "paper_id": "paper_000098",
+      "decision": "exclude",
+      "reason": "标题和摘要评估接触线高度变化对受流质量的影响，仅涉及机械接触和随机分析，未提及电气特性或电弧。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.86
+    },
+    {
+      "paper_id": "paper_000099",
+      "decision": "include",
+      "reason": "标题和摘要提出基于扩展Habedank方程的EMTP电弧模型，考虑弓网相互作用和列车速度，涉及电弧参数和电气暂态。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "paper_id": "paper_000100",
+      "decision": "include",
+      "reason": "标题和摘要提出考虑列车速度影响的弓网电弧模型，分析电弧电气特性如电压、持续时间和零交叉时间。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    }
+  ]
+}

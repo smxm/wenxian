@@ -23,6 +23,7 @@
 
 - an API response shape is wrong
 - a new UI field needs persisted support
+- provider model discovery, task progress summaries, or report-source request payloads need API support
 - dataset lineage, task metadata, or workbench state looks inconsistent
 - fulltext or report-source state survives incorrectly across refreshes
 
@@ -30,6 +31,7 @@
 
 - add or adjust an API endpoint in `app.py`
 - extend a response model in `schemas.py`
+- proxy provider metadata such as model lists through API endpoints instead of exposing provider calls directly from the browser
 - carry new metadata through `TaskStore` or `WorkspaceStore`
 - fix path serialization so old and new data both hydrate correctly
 - keep cancellation, deletion, and dataset rebuild paths aligned so partial screening outputs do not disappear or keep polluting downstream queues
@@ -41,8 +43,9 @@
 - if dataset lookup is wrong, check whether project scope was lost
 - report tasks may seed/reuse note caches, so cache version changes must match the detached report module
 - keep compatibility fields deliberate when touching path-related payloads
+- live screening counts depend on both pipeline `run_summary.json` writes and API-side task summary hydration
 
 ## Common Verifications
 
-- `PYTHONPATH=/Users/mao/Documents/langchain/literature_screening/src /Users/mao/Documents/langchain/literature_screening/.venv311-codex/bin/python -m pytest literature_screening/tests/test_api_app.py literature_screening/tests/test_task_store.py`
+- `PYTHONPATH=literature_screening/src python -m pytest literature_screening/tests/test_api_app.py literature_screening/tests/test_task_store.py`
 - targeted `git diff --check` on touched backend files

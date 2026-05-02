@@ -1,0 +1,1816 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要均未提及辐射暴露或肠道健康相关研究内容。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:35:48.947600+08:00"
+  },
+  {
+    "paper_id": "paper_000002",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "摘要明确研究辐射性肠炎，但针对肿瘤放疗患者的大剂量急性暴露模型，不符合职业性低剂量暴露特征。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:35:48.947600+08:00"
+  },
+  {
+    "paper_id": "paper_000003",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及军事人员健康诊断，但未提及辐射暴露或肠道健康相关指标。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:35:48.947600+08:00"
+  },
+  {
+    "paper_id": "paper_000004",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要综述辐射防护剂，但未明确涉及职业性暴露或肠道健康结局。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:35:48.947600+08:00"
+  },
+  {
+    "paper_id": "paper_000005",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要研究放射技师对鼻胃管位置的判读准确性，未涉及辐射暴露对肠道健康的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:35:48.947600+08:00"
+  },
+  {
+    "paper_id": "paper_000006",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要研究癌症多学科团队中的异议，完全未涉及辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:35:48.947600+08:00"
+  },
+  {
+    "paper_id": "paper_000007",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要研究COVID-19疫情期间上消化道内镜的防护设备，未涉及辐射暴露或肠道健康影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:35:48.947600+08:00"
+  },
+  {
+    "paper_id": "paper_000008",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要报告盲肠结核病例，未涉及辐射暴露或职业性辐射对肠道健康的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:35:48.947600+08:00"
+  },
+  {
+    "paper_id": "paper_000009",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "标题和摘要涉及CT扫描减少辐射暴露，但未明确是否为职业性暴露，也未提及肠道健康结局。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:35:48.947600+08:00"
+  },
+  {
+    "paper_id": "paper_000010",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要研究上消化道癌症管理算法，未涉及辐射暴露或职业性辐射对肠道健康的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:35:48.947600+08:00"
+  },
+  {
+    "paper_id": "paper_000011",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要均未提及辐射暴露或肠道健康，主题为风湿病非药物管理。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:36:16.315228+08:00"
+  },
+  {
+    "paper_id": "paper_000012",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究污水处理厂生物气溶胶扩散，未涉及职业性辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:36:16.315228+08:00"
+  },
+  {
+    "paper_id": "paper_000013",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要表明为胃肠道癌症会议报告，未涉及辐射暴露。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:36:16.315228+08:00"
+  },
+  {
+    "paper_id": "paper_000014",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "摘要提到航空人员暴露于辐射，并涉及胃肠道失衡，但未明确低剂量职业暴露对肠道健康的具体影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:36:16.315228+08:00"
+  },
+  {
+    "paper_id": "paper_000015",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究脊柱转移瘤患者治疗期望，未涉及辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:36:16.315228+08:00"
+  },
+  {
+    "paper_id": "paper_000016",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究军事人员疾病与非战斗伤害，摘要提到太阳辐射但未涉及电离辐射或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:36:16.315228+08:00"
+  },
+  {
+    "paper_id": "paper_000017",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "病例报告描述胃肠道间质瘤，未涉及辐射暴露。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:36:16.315228+08:00"
+  },
+  {
+    "paper_id": "paper_000018",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究霍奇金淋巴瘤幸存者的晚期效应，摘要提到胃肠道功能障碍但涉及大剂量放疗，不符合职业性低剂量暴露。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:36:16.315228+08:00"
+  },
+  {
+    "paper_id": "paper_000019",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "病例报告描述脑血吸虫病，未涉及辐射暴露。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:36:16.315228+08:00"
+  },
+  {
+    "paper_id": "paper_000020",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "病例报告描述造血干细胞移植后病毒感染，未涉及辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:36:16.315228+08:00"
+  },
+  {
+    "paper_id": "paper_000021",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论放射肿瘤学领域的性别差异，未涉及职业性辐射暴露对肠道健康的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:36:44.096338+08:00"
+  },
+  {
+    "paper_id": "paper_000022",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦抗癌药物成本分析，未提及辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:36:44.096338+08:00"
+  },
+  {
+    "paper_id": "paper_000023",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论结肠结核病例，未涉及辐射暴露。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:36:44.096338+08:00"
+  },
+  {
+    "paper_id": "paper_000024",
+    "batch_id": "batch_0003",
+    "decision": "uncertain",
+    "reason": "摘要涉及职业性低剂量辐射暴露的细胞遗传学监测，但未明确提及肠道健康结局指标。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:36:44.096338+08:00"
+  },
+  {
+    "paper_id": "paper_000025",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要研究新生儿便携式放射成像系统，未涉及职业性暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:36:44.096338+08:00"
+  },
+  {
+    "paper_id": "paper_000026",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要为结直肠癌会议报告，未涉及辐射暴露。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:36:44.096338+08:00"
+  },
+  {
+    "paper_id": "paper_000027",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要明确研究长期低剂量辐射暴露通过肠道菌群-肠-脑轴影响认知，涉及肠道屏障和代谢物变化。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:36:44.096338+08:00"
+  },
+  {
+    "paper_id": "paper_000028",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题为肥胖外科会议，摘要缺失，无法判断与辐射或肠道健康的相关性。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:36:44.096338+08:00"
+  },
+  {
+    "paper_id": "paper_000029",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要研究音乐疗法对放疗患者的影响，未涉及职业性暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:36:44.096338+08:00"
+  },
+  {
+    "paper_id": "paper_000030",
+    "batch_id": "batch_0003",
+    "decision": "uncertain",
+    "reason": "标题和摘要涉及核燃料工人铀气溶胶暴露的胃肠道溶解研究，但未明确评估肠道健康结局如菌群或屏障功能。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.6,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:36:44.096338+08:00"
+  },
+  {
+    "paper_id": "paper_000031",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要研究高海拔环境暴露，未提及职业性电离辐射暴露。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:37:11.668394+08:00"
+  },
+  {
+    "paper_id": "paper_000032",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "摘要明确研究急性辐射综合征和高剂量辐射暴露，不符合职业性低剂量暴露特征。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:37:11.668394+08:00"
+  },
+  {
+    "paper_id": "paper_000033",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要为家庭肠外营养临床指南，未涉及辐射暴露或肠道健康研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:37:11.668394+08:00"
+  },
+  {
+    "paper_id": "paper_000034",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "研究污水处理站空气细菌和紫外线消毒，未涉及电离辐射暴露或职业性辐射。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:37:11.668394+08:00"
+  },
+  {
+    "paper_id": "paper_000035",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要为手骨关节炎管理建议，完全无关辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:37:11.668394+08:00"
+  },
+  {
+    "paper_id": "paper_000036",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "病例报告研究烧伤患儿气腹症，未涉及辐射暴露或肠道健康指标。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:37:11.668394+08:00"
+  },
+  {
+    "paper_id": "paper_000037",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要为胰腺癌运动指南，提及放疗但未涉及职业暴露或肠道健康结局。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:37:11.668394+08:00"
+  },
+  {
+    "paper_id": "paper_000038",
+    "batch_id": "batch_0004",
+    "decision": "uncertain",
+    "reason": "标题涉及放射性碘治疗，摘要提及胃肠道排泄，但未明确研究职业暴露或肠道健康影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:37:11.668394+08:00"
+  },
+  {
+    "paper_id": "paper_000039",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要为结核病药物临床试验，完全无关辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:37:11.668394+08:00"
+  },
+  {
+    "paper_id": "paper_000040",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要为癌症服务组织调查方法学，未涉及辐射暴露或肠道健康研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:37:11.668394+08:00"
+  },
+  {
+    "paper_id": "paper_000041",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究肿瘤放疗患者的大剂量急性辐射治疗，不符合职业性低剂量暴露特征。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:37:39.391761+08:00"
+  },
+  {
+    "paper_id": "paper_000042",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要研究铀矿工氡暴露与多种疾病死亡率，但未提及肠道健康相关结局指标。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:37:39.391761+08:00"
+  },
+  {
+    "paper_id": "paper_000043",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要研究食管胃切除术后营养性神经病变，未涉及辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:37:39.391761+08:00"
+  },
+  {
+    "paper_id": "paper_000044",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要为2级胶质瘤临床指南，未涉及辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:37:39.391761+08:00"
+  },
+  {
+    "paper_id": "paper_000045",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "摘要提到dmPGE2可减轻肠道黏膜细胞损伤，但研究针对急性辐射综合征的造血系统保护，暴露为大剂量全身照射。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:37:39.391761+08:00"
+  },
+  {
+    "paper_id": "paper_000046",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要研究职业性铅中毒导致肠梗阻，未涉及电离辐射暴露。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:37:39.391761+08:00"
+  },
+  {
+    "paper_id": "paper_000047",
+    "batch_id": "batch_0005",
+    "decision": "include",
+    "reason": "标题明确研究低剂量职业电离辐射暴露与胃肠道癌症死亡率，摘要详细描述放射技师队列和胃肠道癌症结局。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:37:39.391761+08:00"
+  },
+  {
+    "paper_id": "paper_000048",
+    "batch_id": "batch_0005",
+    "decision": "uncertain",
+    "reason": "摘要涉及内镜医师对透视辐射暴露的担忧，但未明确研究肠道健康指标，仅间接相关。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:37:39.391761+08:00"
+  },
+  {
+    "paper_id": "paper_000049",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要模拟内镜过程中气溶胶传播，未涉及辐射暴露或肠道健康影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:37:39.391761+08:00"
+  },
+  {
+    "paper_id": "paper_000050",
+    "batch_id": "batch_0005",
+    "decision": "exclude",
+    "reason": "标题和摘要描述核临界事故中大剂量急性暴露受害者的医疗管理，不符合职业性低剂量暴露特征。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:37:39.391761+08:00"
+  },
+  {
+    "paper_id": "paper_000051",
+    "batch_id": "batch_0006",
+    "decision": "uncertain",
+    "reason": "摘要提到辐射暴露与胃癌风险相关，但未明确是否为职业性低剂量暴露，也未明确涉及肠道健康的具体指标。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:38:08.035546+08:00"
+  },
+  {
+    "paper_id": "paper_000052",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于胃肠道癌症手术的可及性，未涉及职业性辐射暴露或肠道健康结局。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:38:08.035546+08:00"
+  },
+  {
+    "paper_id": "paper_000053",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "研究前列腺癌放疗后直肠出血，属于大剂量急性暴露，不符合职业性低剂量暴露特征。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:38:08.035546+08:00"
+  },
+  {
+    "paper_id": "paper_000054",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论癌症患者反馈改善护理，未涉及职业性辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:38:08.035546+08:00"
+  },
+  {
+    "paper_id": "paper_000055",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦塑料对人类健康的影响，未涉及职业性辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:38:08.035546+08:00"
+  },
+  {
+    "paper_id": "paper_000056",
+    "batch_id": "batch_0006",
+    "decision": "uncertain",
+    "reason": "标题和摘要评估医疗介入手术中工作人员的甲状腺和晶状体剂量，涉及职业性辐射暴露，但未提及肠道健康结局。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:38:08.035546+08:00"
+  },
+  {
+    "paper_id": "paper_000057",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要研究白蚁社会性与免疫进化，未涉及职业性辐射暴露或人类肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:38:08.035546+08:00"
+  },
+  {
+    "paper_id": "paper_000058",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论COVID-19对近距离放疗的影响，未涉及职业性辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:38:08.035546+08:00"
+  },
+  {
+    "paper_id": "paper_000059",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要研究紫外线对十字花科蔬菜的影响及人类肠道细胞反应，未涉及职业性辐射暴露。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:38:08.035546+08:00"
+  },
+  {
+    "paper_id": "paper_000060",
+    "batch_id": "batch_0006",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论遗传性大疱性表皮松解症的食管狭窄管理，未涉及职业性辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:38:08.035546+08:00"
+  },
+  {
+    "paper_id": "paper_000061",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要仅涉及胃造口管放置技术比较，未提及职业性辐射暴露或肠道健康结局。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:38:35.253183+08:00"
+  },
+  {
+    "paper_id": "paper_000062",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要描述梅克尔憩室病例报告，未涉及任何辐射暴露或职业性因素。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:38:35.253183+08:00"
+  },
+  {
+    "paper_id": "paper_000063",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论乳腺癌多学科管理共识，未涉及职业性辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:38:35.253183+08:00"
+  },
+  {
+    "paper_id": "paper_000064",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要研究COVID-19患者的胃肠道症状，未涉及任何辐射暴露因素。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:38:35.253183+08:00"
+  },
+  {
+    "paper_id": "paper_000065",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要研究萝卜微菜中多酚的消化和肠道菌群代谢，未涉及任何辐射暴露因素。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:38:35.253183+08:00"
+  },
+  {
+    "paper_id": "paper_000066",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要描述癌症患者韦尼克脑病病例，未涉及职业性辐射暴露或肠道健康结局。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:38:35.253183+08:00"
+  },
+  {
+    "paper_id": "paper_000067",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要讨论特发性肺纤维化的临床综述，未涉及辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:38:35.253183+08:00"
+  },
+  {
+    "paper_id": "paper_000068",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要描述鼻窦腺癌病例报告，未涉及职业性辐射暴露或肠道健康结局。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:38:35.253183+08:00"
+  },
+  {
+    "paper_id": "paper_000069",
+    "batch_id": "batch_0007",
+    "decision": "uncertain",
+    "reason": "标题和摘要涉及放射学插入胃造口术的辐射剂量，但未明确说明是否为职业性暴露或涉及肠道健康结局。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:38:35.253183+08:00"
+  },
+  {
+    "paper_id": "paper_000070",
+    "batch_id": "batch_0007",
+    "decision": "exclude",
+    "reason": "标题和摘要描述婴儿结肠狭窄的球囊扩张病例，未涉及任何辐射暴露因素。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:38:35.253183+08:00"
+  },
+  {
+    "paper_id": "paper_000071",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于宫颈癌术后性活动导致的阴道残端破裂及小肠疝，未提及职业性辐射暴露或肠道健康影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:39:05.926179+08:00"
+  },
+  {
+    "paper_id": "paper_000072",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "摘要讨论血液透析患者使用放射性药物Lu177-dotatate的剂量调整及工作人员辐射暴露，但未涉及职业性低剂量慢性暴露或肠道健康结局。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:39:05.926179+08:00"
+  },
+  {
+    "paper_id": "paper_000073",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要描述头颈部缺损的显微外科骨瓣重建，提及辐射损伤是病因之一，但未涉及职业性暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:39:05.926179+08:00"
+  },
+  {
+    "paper_id": "paper_000074",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "摘要研究放射肿瘤科门诊的患者流程优化，未涉及职业性辐射暴露对工作人员的影响或肠道健康指标。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:39:05.926179+08:00"
+  },
+  {
+    "paper_id": "paper_000075",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要为肝细胞癌和胆道癌共识会议报告，涉及放射肿瘤学但未提及职业性暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:39:05.926179+08:00"
+  },
+  {
+    "paper_id": "paper_000076",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "摘要讨论前列腺癌放射性药物治疗的患者管理，涉及辐射安全但针对患者而非职业暴露，且未提及肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:39:05.926179+08:00"
+  },
+  {
+    "paper_id": "paper_000077",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "标题和摘要探讨UVC用于诺如病毒消毒及辐射安全考虑，未涉及职业性电离辐射暴露或肠道健康影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:39:05.926179+08:00"
+  },
+  {
+    "paper_id": "paper_000078",
+    "batch_id": "batch_0008",
+    "decision": "exclude",
+    "reason": "摘要讨论COVID-19疫情期间下消化道癌症管理，提及新辅助放化疗但未涉及职业性暴露或肠道健康研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:39:05.926179+08:00"
+  },
+  {
+    "paper_id": "paper_000079",
+    "batch_id": "batch_0008",
+    "decision": "uncertain",
+    "reason": "摘要研究放射科护士的工作投入度，提及辐射暴露咨询系统，但未明确涉及低剂量慢性暴露或肠道健康结局。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:39:05.926179+08:00"
+  },
+  {
+    "paper_id": "paper_000080",
+    "batch_id": "batch_0008",
+    "decision": "include",
+    "reason": "标题和摘要明确研究盆腔放疗后胃肠道晚期影响（盆腔放射病），涉及职业性辐射暴露患者的肠道健康结局。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:39:05.926179+08:00"
+  },
+  {
+    "paper_id": "paper_000081",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究肝癌患者的治疗性放射治疗，属于大剂量急性暴露，不符合职业性低剂量暴露特征。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:39:33.669270+08:00"
+  },
+  {
+    "paper_id": "paper_000082",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究淋巴瘤病例报告，未涉及职业性辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:39:33.669270+08:00"
+  },
+  {
+    "paper_id": "paper_000083",
+    "batch_id": "batch_0009",
+    "decision": "uncertain",
+    "reason": "标题涉及内窥镜辐射安全，可能涉及职业暴露，但摘要缺失无法判断是否涉及肠道健康。",
+    "evidence": [
+      "title"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:39:33.669270+08:00"
+  },
+  {
+    "paper_id": "paper_000084",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究膀胱癌患者的放射治疗，属于大剂量急性暴露，不符合职业性低剂量暴露特征。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:39:33.669270+08:00"
+  },
+  {
+    "paper_id": "paper_000085",
+    "batch_id": "batch_0009",
+    "decision": "uncertain",
+    "reason": "标题和摘要显示研究放射性引导手术，涉及手术人员辐射暴露，但未明确提及肠道健康结局。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:39:33.669270+08:00"
+  },
+  {
+    "paper_id": "paper_000086",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究直肠癌患者的放射治疗，属于大剂量急性暴露，不符合职业性低剂量暴露特征。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:39:33.669270+08:00"
+  },
+  {
+    "paper_id": "paper_000087",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究COVID-19对癌症服务的影响，未涉及职业性辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:39:33.669270+08:00"
+  },
+  {
+    "paper_id": "paper_000088",
+    "batch_id": "batch_0009",
+    "decision": "uncertain",
+    "reason": "标题和摘要显示研究临床工作人员在放射性治疗后的辐射暴露风险，涉及职业暴露，但未明确提及肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.6,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:39:33.669270+08:00"
+  },
+  {
+    "paper_id": "paper_000089",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究药物安全性，未涉及职业性辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:39:33.669270+08:00"
+  },
+  {
+    "paper_id": "paper_000090",
+    "batch_id": "batch_0009",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究地下水化学污染与癌症病例，未涉及职业性辐射暴露。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:39:33.669270+08:00"
+  },
+  {
+    "paper_id": "paper_000091",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究肠系膜下动脉动静脉畸形导致缺血性结肠炎的病例报告，未涉及职业性辐射暴露或肠道健康影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:03.085396+08:00"
+  },
+  {
+    "paper_id": "paper_000092",
+    "batch_id": "batch_0010",
+    "decision": "uncertain",
+    "reason": "标题和摘要明确涉及放射科工作人员的职业性辐射暴露测量，但未提及任何肠道健康相关结局指标。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:03.085396+08:00"
+  },
+  {
+    "paper_id": "paper_000093",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "标题和摘要研究轻度至中度创伤性脑损伤后的脑震荡后症状，未涉及辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:03.085396+08:00"
+  },
+  {
+    "paper_id": "paper_000094",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "标题和摘要调查胃肠道癌症患者和医疗提供者对治疗价值的看法，未涉及辐射暴露或肠道健康影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:03.085396+08:00"
+  },
+  {
+    "paper_id": "paper_000095",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "标题和摘要研究癌症患者放化疗期间基于网络的症状监测，涉及胃肠道癌症但未提及职业性辐射暴露。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:03.085396+08:00"
+  },
+  {
+    "paper_id": "paper_000096",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "标题和摘要研究农场居民的发病模式，提到太阳辐射但非电离辐射，且未明确涉及肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:03.085396+08:00"
+  },
+  {
+    "paper_id": "paper_000097",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "标题和摘要建立危重患者胃肠道功能监测的核心结局集，未涉及任何辐射暴露因素。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:03.085396+08:00"
+  },
+  {
+    "paper_id": "paper_000098",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "标题和摘要研究内镜操作中减少内镜医师面部暴露于飞沫的方法，未涉及辐射暴露或肠道健康影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:03.085396+08:00"
+  },
+  {
+    "paper_id": "paper_000099",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "标题和摘要描述乌克兰癌症患者的国际医疗撤离计划，未涉及辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:03.085396+08:00"
+  },
+  {
+    "paper_id": "paper_000100",
+    "batch_id": "batch_0010",
+    "decision": "exclude",
+    "reason": "标题和摘要研究放射技师解读CT结肠成像对结直肠癌诊断时间的影响，涉及放射学实践但未提及职业性辐射暴露对肠道健康的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:03.085396+08:00"
+  },
+  {
+    "paper_id": "paper_000101",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于放射肿瘤学临床质量保证系统，未提及职业性辐射暴露或肠道健康结局。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:31.584067+08:00"
+  },
+  {
+    "paper_id": "paper_000102",
+    "batch_id": "batch_0011",
+    "decision": "include",
+    "reason": "标题和摘要明确研究机组人员职业性伽马辐射暴露，并报告胃肠道疾病风险增加。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:31.584067+08:00"
+  },
+  {
+    "paper_id": "paper_000103",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "标题和摘要探讨肿瘤患者对补充替代医学的认知，未涉及职业性辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:31.584067+08:00"
+  },
+  {
+    "paper_id": "paper_000104",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及直肠癌新辅助治疗共识会议，未提及辐射暴露或肠道健康结局。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:31.584067+08:00"
+  },
+  {
+    "paper_id": "paper_000105",
+    "batch_id": "batch_0011",
+    "decision": "uncertain",
+    "reason": "标题和摘要讨论介入透视中的辐射剂量总结页，提及医疗人员暴露风险，但未明确涉及肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:31.584067+08:00"
+  },
+  {
+    "paper_id": "paper_000106",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦于黏膜炎评估指南，涉及癌症治疗副作用，但未提及职业性辐射暴露。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:31.584067+08:00"
+  },
+  {
+    "paper_id": "paper_000107",
+    "batch_id": "batch_0011",
+    "decision": "include",
+    "reason": "标题和摘要明确研究低剂量辐射与高脂饮食共同暴露通过肠道菌群影响代谢功能，涉及肠道屏障和菌群变化。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.92,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:31.584067+08:00"
+  },
+  {
+    "paper_id": "paper_000108",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "标题和摘要分析胃癌亚型与预后，未提及辐射暴露或肠道健康结局。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:31.584067+08:00"
+  },
+  {
+    "paper_id": "paper_000109",
+    "batch_id": "batch_0011",
+    "decision": "uncertain",
+    "reason": "标题和摘要探讨医学放射技师在鼻胃管验证中的作用，提及辐射暴露，但未明确涉及肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:31.584067+08:00"
+  },
+  {
+    "paper_id": "paper_000110",
+    "batch_id": "batch_0011",
+    "decision": "exclude",
+    "reason": "标题和摘要报告胃肠癌共识会议，未提及职业性辐射暴露或肠道健康结局。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:31.584067+08:00"
+  },
+  {
+    "paper_id": "paper_000111",
+    "batch_id": "batch_0012",
+    "decision": "exclude",
+    "reason": "研究高剂量辐射与高脂饮食共同暴露，不符合职业性低剂量暴露特征。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:59.501585+08:00"
+  },
+  {
+    "paper_id": "paper_000112",
+    "batch_id": "batch_0012",
+    "decision": "exclude",
+    "reason": "研究大剂量全身照射对血小板功能的影响，未提及肠道健康相关结局。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:59.501585+08:00"
+  },
+  {
+    "paper_id": "paper_000113",
+    "batch_id": "batch_0012",
+    "decision": "include",
+    "reason": "标题和摘要明确研究职业性电离辐射暴露与结直肠癌发病率的关系，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:59.501585+08:00"
+  },
+  {
+    "paper_id": "paper_000114",
+    "batch_id": "batch_0012",
+    "decision": "exclude",
+    "reason": "标题和摘要仅讨论喉切除术的临床管理，未涉及辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:59.501585+08:00"
+  },
+  {
+    "paper_id": "paper_000115",
+    "batch_id": "batch_0012",
+    "decision": "exclude",
+    "reason": "研究肿瘤患者疫情期间的分诊策略，未涉及职业性辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:59.501585+08:00"
+  },
+  {
+    "paper_id": "paper_000116",
+    "batch_id": "batch_0012",
+    "decision": "exclude",
+    "reason": "研究COVID-19对放疗部门的影响，未涉及职业性辐射暴露对肠道健康的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:59.501585+08:00"
+  },
+  {
+    "paper_id": "paper_000117",
+    "batch_id": "batch_0012",
+    "decision": "exclude",
+    "reason": "研究COVID-19患者的放射学评分，未涉及职业性辐射暴露或肠道健康。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:59.501585+08:00"
+  },
+  {
+    "paper_id": "paper_000118",
+    "batch_id": "batch_0012",
+    "decision": "uncertain",
+    "reason": "摘要提到医护人员在荧光镜引导下放置鼻肠管时暴露于辐射，但未明确涉及肠道健康结局。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:59.501585+08:00"
+  },
+  {
+    "paper_id": "paper_000119",
+    "batch_id": "batch_0012",
+    "decision": "exclude",
+    "reason": "研究腐蚀性摄入的临床结果，排除胸部放疗患者，但未涉及职业性辐射暴露对肠道健康的影响。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:59.501585+08:00"
+  },
+  {
+    "paper_id": "paper_000120",
+    "batch_id": "batch_0012",
+    "decision": "uncertain",
+    "reason": "标题和摘要提到兽医人员在荧光镜吞咽研究中暴露于辐射，但未明确涉及肠道健康结局。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:40:59.501585+08:00"
+  },
+  {
+    "paper_id": "paper_000121",
+    "batch_id": "batch_0013",
+    "decision": "exclude",
+    "reason": "研究涉及大剂量急性辐射暴露（11 Gy TBI），不符合职业性低剂量慢性暴露特征。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-26T16:41:06.802725+08:00"
+  }
+]

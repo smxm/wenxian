@@ -1,0 +1,212 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "title": "Longitudinal propagation characteristic of pantograph arcing electromagnetic emission with high-speed train passing the articulated neutral section",
+    "category": "建模与机理分析",
+    "summary": "本研究分析了高速列车通过关节中性段时，弓网电弧电磁发射的纵向传播特性。通过提出架空接触网非均匀传输线模型，并结合实测电磁场数据，预测了电流和电磁场分布。模型在0.5 MHz频率下与实测数据一致，验证了其有效性。",
+    "analysis": "该文献对弓网电弧电磁传播特性的建模研究具有参考价值，尤其适用于电磁兼容性分析。提出的非均匀传输线模型为弓网系统仿真提供了新思路，可支撑MATLAB弓网仿真中的电磁场预测。它有助于理解高速列车通过关节中性段时的电气特性变化，对系统设计有指导意义。"
+  },
+  {
+    "paper_id": "paper_000002",
+    "title": "A Novel Chirp Detector Algorithm for Universal Pantograph Arc Detection",
+    "category": "天然产物与营养干预",
+    "summary": "这篇文献研究了弓网电弧故障的实时检测问题，提出了一种新颖的无图像算法，该算法直接处理电流信号并集成带通滤波、微分和希尔伯特变换来构建检测指标。在多种测试条件下评估后，证明算法能有效区分电弧事件与噪声干扰，支持弓网系统的可靠监测。",
+    "analysis": "该文献的无图像检测算法为弓网电弧模型研究提供了电流信号处理的实际案例，适用于支撑Cassie等电弧模型的验证和在MATLAB仿真中的集成。它拓展了基于电气特性的实时监测系统设计，补充了现有依赖图像的方法，对弓网离线电气特性研究具有参考价值。"
+  },
+  {
+    "paper_id": "paper_000003",
+    "title": "An Extended Habedank's Equation-Based EMTP Model of Pantograph Arcing Considering Pantograph-Catenary Interactions and Train Speeds",
+    "category": "机器人控制与作业辅助",
+    "summary": "该文献研究了交流电气化铁路中弓网电弧现象，尤其关注弓网相互作用和列车速度的影响。采用扩展的Habedank方程，结合电磁暂态程序进行建模，改进了电压梯度和功率耗散。通过有限元分析和参数讨论，验证模型能有效分析电弧特性及弓网接触损失问题。",
+    "analysis": "文献提出的扩展Habedank方程模型为弓网电弧建模提供了新思路，特别针对列车速度变化的影响。它适合支撑高速铁路系统中电弧特性的机制研究，尤其是与Cassie模型相关的衍生模型开发。在系统设计中，可用于改进MATLAB弓网仿真，分析弓网离线时的电气行为。"
+  },
+  {
+    "paper_id": "paper_000004",
+    "title": "Study on the Ablation of Slide Plate by Pantograph–Catenary Arc Based on Pantograph Slide Material",
+    "category": "冲击与贯入机制",
+    "summary": "本研究基于磁流体动力学理论建立了弓网电弧的数学模型。通过COMSOL软件模拟了电弧温度分布和电极表面变化。研究发现弓网间隙增加会拉长电弧、缩小高温区域，铜浸渍碳滑块抗烧蚀性能最佳。增加滑块材料的升华潜热可提升抗烧蚀性能。",
+    "analysis": "该文献的MHD电弧模型为理解弓网电弧物理特性提供了数值方法。研究结果可用于验证Cassie及其衍生模型的参数设置，并对弓网系统仿真中滑块材料选择和间隙优化设计有参考价值。"
+  },
+  {
+    "paper_id": "paper_000005",
+    "title": "Study on the influence of transient processes in pantograph-catenary contact-loss on the characteristics of glue rail insulation",
+    "category": "分子机制与信号通路",
+    "summary": "本研究探讨了弓网离线时，特别是在列车通过中性区时，对轨道绝缘接头电气特性的影响。通过建立电路模型和有限元仿真，分析了瞬态脉冲的机制和传播特性。结果显示，绝缘接头在典型场景下承受4 kV峰值电压和109 kHz频率，为故障追踪和设计优化提供依据。",
+    "analysis": "该文献为报告主题中弓网离线电气特性提供了详细的分析方法，其电路模型和仿真结果可直接应用于MATLAB弓网仿真中的电弧模型参数设定。研究聚焦于绝缘接头的瞬态响应，有助于理解离线过程中的电气机制，并为系统设计、电磁兼容性优化及故障追踪提供参考价值。"
+  },
+  {
+    "paper_id": "paper_000006",
+    "title": "Statistical Study on the Time Characteristics of the Transient EMD Excitation Current from the Pantograph–Catenary Arcing Discharge",
+    "category": "分子机制与信号通路",
+    "summary": "该文献研究了弓网电弧放电引起的电磁干扰激励电流的时间特性。通过实验室测量收集大量波形参数，使用Kolmogorov–Smirnov测试进行统计分析，并提出了一个基于修改双指数函数的随机模型。模型能够生成不同严重程度的电流波形，验证了其有效性，有助于模拟弓网电弧的电磁环境。",
+    "analysis": "该文献为弓网离线电气特性提供了统计建模方法，特别适用于支撑电弧模型如Cassie及其衍生模型中的随机特性分析。它适用于电气化铁路系统的电磁兼容性仿真，可生成真实放电波形用于MATLAB等仿真工具中的系统设计。研究脉络上，它补充了弓网电弧时间特性的统计研究，为电磁安全评估和机制完善提供参考。"
+  },
+  {
+    "paper_id": "paper_000007",
+    "title": "Simulation on Operating Overvoltage of Dropping Pantograph Based on Pantograph–Catenary Arc and Variable Capacitance Model",
+    "category": "机器人控制与作业辅助",
+    "summary": "文献研究了弓网离线时电弧导致的电磁振荡和过电压现象。提出了基于弓网电弧和可变电容的仿真模型，考虑了分布式RLC电磁振荡，模拟误差小于4.0%。分析了不同离线速度和相位对过电压幅值和陡度的影响，发现最大幅值可达298.20 kV，陡度为2096.80 kV/μs，并揭示了相位与幅值的正弦关系。",
+    "analysis": "该仿真模型可用于验证弓网电弧模型在过电压形成机制中的适用性，支持Cassie衍生模型的仿真研究。过电压特性的定量分析有助于牵引供电系统的绝缘协调设计。研究方法和数据可直接应用于MATLAB弓网仿真项目，优化系统设计。"
+  },
+  {
+    "paper_id": "paper_000008",
+    "title": "Dynamics of Pantograph-Catenary Arc during the Pantograph Lowering Process",
+    "category": "机器人控制与作业辅助",
+    "summary": "本文采用数值模拟方法研究弓网电弧在弓网离线过程中的动态特性，建立了基于磁流体动力学理论的模型并考虑动态演化。通过动态网格技术模拟分离过程，分析电弧等离子体的温度分布和流场，发现涡流导致的热紧缩效应影响电弧行为，并探讨了输入电流对特性的影响。",
+    "analysis": "该文献对弓网离线过程中电弧动态特性的分析，可为Cassie型电弧模型的改进提供实验和理论支撑，尤其适用于弓网仿真系统中的电弧行为建模。其数值模拟方法和发现的热紧缩效应，能增强MATLAB弓网仿真的准确性，服务于弓网电气特性研究的应用场景。"
+  },
+  {
+    "paper_id": "paper_000009",
+    "title": "Transient Arcing Characteristics of the Pantograph–Catenary System in Electrical Sectioning Overlaps",
+    "category": "机器人控制与作业辅助",
+    "summary": "这篇文献研究了弓网系统在电气分段重叠区域的瞬态电弧特性。通过理论分析和数值模拟，阐明了电弧的形成机制和电气演化特征。结果表明，电流密度高度集中并形成轴对称导电通道，电弧行为与ESO的几何不连续性相关。",
+    "analysis": "该文献对于研究弓网离线电气特性和电弧模型具有重要参考价值。其多物理场耦合模型可支撑Cassie衍生模型在动态电弧分析中的应用。此外，模拟结果有助于优化弓网系统设计，提高在电气分段重叠区域的工作稳定性。"
+  },
+  {
+    "paper_id": "paper_000010",
+    "title": "Thermal behavior of arcing in electrical section overlaps under specialized mechanical configurations",
+    "category": "机器人控制与作业辅助",
+    "summary": "本研究针对弓网电气截面重叠区域的瞬态电弧热行为，结合了专门的机械配置建立了数学模型和多物理耦合电弧模型。利用磁流体动力学理论和动态网格技术，数值分析了不同条件下的温度场分布。结果表明，电弧温度随电压差增加而升高，与列车速度和侧风速度负相关，并在首个电弧周期内稳定。",
+    "analysis": "该文献为弓网离线电气特性研究提供了基于磁流体动力学的耦合电弧模型，可完善Cassie模型及其衍生模型的理论基础。其数值分析方法适用于MATLAB弓网仿真，支持对离线条件下电弧动态行为的模拟分析。此外，研究成果可为弓网系统在变工况下的安全设计和优化提供机制参考。"
+  },
+  {
+    "paper_id": "paper_000011",
+    "title": "Influence of Low Air Pressure on Pantograph–Catenary Arc Model",
+    "category": "冲击与贯入机制",
+    "summary": "本研究探讨了低气压对弓网电弧模型的影响，通过Mayr和Schwarz电弧数学模型模拟不同海拔下的电弧特性。结果表明，电弧电导随海拔增加而显著减少，灭弧能力同步增强，Schwarz模型更适合高海拔环境下的弓网系统建模。",
+    "analysis": "该文献对于报告主题的参考价值在于，它验证了Schwarz电弧模型在低气压环境下的适用性，直接支持了电弧模型（尤其是衍生模型）的参数化研究。这为高海拔地区弓网系统的电气特性分析和MATLAB仿真提供了具体机制参考，适用于提升系统可靠性和设计优化的应用场景。"
+  },
+  {
+    "paper_id": "paper_000012",
+    "title": "A new arc detection method based on fuzzy logic using S-transform for pantograph–catenary systems",
+    "category": "天然产物与营养干预",
+    "summary": "该文献提出了一种基于模糊逻辑和 S 变换的弓网系统电弧检测新方法。方法利用 Mayr 电弧模型模拟电流数据，通过 S 变换进行频率-时间分析，提取特征用于模糊系统，实现了电弧的实时检测和状态监测。",
+    "analysis": "该文献为弓网系统的电弧检测提供了信号处理和模糊逻辑方法，适合支撑电弧模型的仿真和检测机制研究。其实时处理能力可应用于弓网系统的在线监测和故障诊断系统设计，对弓网离线电气特性及 MATLAB 仿真有参考价值。"
+  },
+  {
+    "paper_id": "paper_000013",
+    "title": "Effect of ice coating on thermal characteristics of pantograph-catenary arc and power quality of traction drive system",
+    "category": "冲击与贯入机制",
+    "summary": "该文献研究了冰覆盖对受电弓-接触网电弧热特性及牵引驱动系统电能质量的影响。通过建立结合动态模型、电弧模型和系统等效模型的新模型，分析了离线电弧的特性。结果表明，结冰条件越严重，电弧越强，导致系统侵蚀加剧，并引发过电压和谐波失真，总谐波失真可达15%，威胁高铁安全运行。",
+    "analysis": "该文献对于报告主题具有参考价值，因为它研究了冰覆盖下的弓网离线电弧特性，可直接支持电弧模型（如Cassie模型）在恶劣环境中的应用。通过建立综合模型并分析电能质量影响，为弓网仿真和系统设计提供了实际数据，有助于优化高铁牵引系统的安全性和可靠性。特别是在极端条件下总谐波失真可达15%的发现，强调了电弧模型在预测和缓解系统风险中的重要性。"
+  },
+  {
+    "paper_id": "paper_000014",
+    "title": "Active Power Filter-Based Low-Frequency Ripple Power Suppression of the DC-Link in Railway Traction Systems",
+    "category": "机器人控制与作业辅助",
+    "summary": "该文献研究了铁路牵引系统中直流链路低频纹波功率的抑制问题，提出一种基于有源功率滤波的控制方法，建立纹波功率解耦模型并使用模型预测控制来抑制二阶纹波电压，通过补偿电容电流参考增强稳态性能。实验结果表明，该方法在低开关频率下相比传统控制具有更高的稳态精度和更快的动态响应，适用于铁路牵引系统。",
+    "analysis": "该文献直接涉及弓网电弧引入的频率纹波抑制，为电弧模型（如Cassie模型）在系统应用中的控制策略提供了具体案例，其模型预测控制方案和稳态增强方法可支撑MATLAB弓网仿真中纹波抑制机制的设计与优化，适合用于研究电弧特性对牵引系统性能的影响及相关控制算法开发。"
+  },
+  {
+    "paper_id": "paper_000015",
+    "title": "Characteristic analysis of pantograph–catenary detachment arc based on double-pantograph–catenary dynamics in electrified railways",
+    "category": "机器人控制与作业辅助",
+    "summary": "本文研究电气化铁路双弓网系统中的弓网离线电弧特性。通过结合双弓网动力学，建立动态电弧模型并扩展黑盒模型，并进行电路仿真分析。分析了不同设计参数下电弧特性及其耦合瞬态影响，模型有效性得到实验验证。",
+    "analysis": "该文献对于研究弓网离线电气特性提供参考，其动态电弧模型可支撑Cassie等电弧模型的衍生开发。适用于分析双弓网系统的设计优化和电弧影响机制，支持弓网仿真如MATLAB仿真的应用场景。"
+  },
+  {
+    "paper_id": "paper_000016",
+    "title": "Study on the Modeling and Suppression of Arcing Generated by Articulated Split-Zone Insulator in Electrified Railways",
+    "category": "分子机制与信号通路",
+    "summary": "本文献研究了电气化铁路中分区分段绝缘子处弓网电弧的建模与抑制。通过分析列车通过绝缘子时的弓网距离动态变化，推导了电弧长度变化公式并提出了黑盒电弧模型。建立了包含该模型的车辆-电网模型进行仿真分析，验证了模型有效性并探讨了电弧抑制措施。",
+    "analysis": "该文献为报告中电弧模型构建提供了针对分区分段绝缘子的实例，增强了电弧模型的适用性。其黑盒模型和MATLAB仿真方法可直接用于分析弓网离线电气特性，在特定场景下支撑电弧抑制研究。验证和敏感性分析部分为电弧模型可靠性评估提供了参考，有助于完善研究脉络和系统设计。"
+  },
+  {
+    "paper_id": "paper_000017",
+    "title": "Fuzzy integral-based multi-sensor fusion for arc detection in the pantograph-catenary system",
+    "category": "实验与性能验证",
+    "summary": "该文献提出了一种基于电流和电压信号的电弧检测新方法，用于弓网系统。它采用数学形态学预处理信号，应用快速傅里叶变换提取功率谱特征，并训练支持向量机分类器结合模糊积分技术进行融合分类。实验结果表明该方法能有效检测电弧，且融合分类器比单一分类器具有更高的准确性。",
+    "analysis": "该文献的电弧检测方法对研究弓网离线电气特性有直接参考价值，可用于验证Cassie电弧模型的电气行为。其模糊积分融合技术适合支撑弓网系统设计中的多传感器数据融合机制，提高检测鲁棒性。信号处理部分可为MATLAB弓网仿真提供算法集成思路，增强仿真模型的真实性。"
+  },
+  {
+    "paper_id": "paper_000018",
+    "title": "Electrical Characteristics of the Pantograph-Catenary Arc in Urban Rail Transit Under Different Air Pressure Conditions",
+    "category": "机器人控制与作业辅助",
+    "summary": "本研究针对城市轨道交通在高海拔地区的弓网系统，通过建立基于磁流体动力学的等离子数学模型，分析了不同气压条件下弓网电弧的电气特性。利用COMSOL Multiphysics软件进行有限元模拟，系统探讨了电弧的电压特性和电流密度分布。结果显示，随着气压降低，电弧轴向电位下降，极间压降加剧，电流密度相应减小。",
+    "analysis": "该文献采用的磁流体动力学模型为电弧建模提供了理论框架，尤其适用于扩展Cassie模型等衍生模型在高气压变化条件下的应用。模拟结果揭示了气压对电弧特性的影响，对于优化高海拔地区弓网系统设计具有直接指导意义。其多物理场仿真方法可借鉴用于MATLAB环境下的弓网仿真，提升模型精度和应用范围。"
+  },
+  {
+    "paper_id": "paper_000019",
+    "title": "Research on driving force and dynamic characteristics of pantograph-catenary arc",
+    "category": "机器人控制与作业辅助",
+    "summary": "本研究针对弓网系统电弧的危害，建立了一个新的PC电弧链模型，考虑了电弧电流元素质量和加速度过程。研究发现电弧演化可分为三个阶段，电磁力和风力载荷主导不同过程，揭示了电弧移动的驱动机制。",
+    "analysis": "该文献为弓网电弧模型的建模提供新思路，更新了控制方程，适用于MATLAB仿真研究。它揭示了电弧的动态特性，有助于理解弓网离线电气特性，并支撑电弧控制机制的设计与应用场景分析。"
+  },
+  {
+    "paper_id": "paper_000020",
+    "title": "Simulation Study on Arc Temperature of Urban Rail DC Pantograph-Catenary and Arc Ablation of Contact Line",
+    "category": "分子机制与信号通路",
+    "summary": "本文研究了城市轨道交通直流弓网电弧的温度分布及其对接触线的烧蚀影响。通过建立弓网电弧模型和接触线电弧烧蚀模型，并考虑熔池流动，发现电弧温度分布呈轴对称，且随电弧时间增加而升高。热流密度呈高斯分布，熔池面积、深度和半径随电弧时间增加，熔池半径始终大于深度。",
+    "analysis": "该文献为弓网离线电气特性中的电弧模型提供了模拟验证，特别适用于Cassie及其衍生模型的温度分布和烧蚀分析。它为MATLAB弓网仿真应用提供了具体案例，有助于支撑电弧物理过程的建模和弓网系统安全设计。在研究脉络上，丰富了弓网仿真在电弧行为机制方面的实证基础。"
+  },
+  {
+    "paper_id": "paper_000021",
+    "title": "A pantograph-catenary arcing detection method based on the fusion of current and electromagnetic radiation",
+    "category": "天然产物与营养干预",
+    "summary": "该文献提出一种基于电流和电磁辐射融合的弓网电弧检测方法。研究通过建立模拟平台，结合信号处理技术如经验模式分解和滚动时间窗，并应用改进的Fisher分数和灰狼优化器-支持向量机模型进行特征提取和分类。结果表明，双信息融合在电弧检测准确率上优于单信号方法，特别是电弧持续时间检测准确率达97.65%。",
+    "analysis": "该文献的双信息融合机制为弓网离线电气特性提供了可靠的检测方法，适用于支撑电弧监测系统设计。其信号处理和机器学习技术可辅助验证Cassie电弧模型在MATLAB仿真中的准确性，并应用于高速铁路安全评估场景，优化弓网电弧研究脉络。"
+  },
+  {
+    "paper_id": "paper_000022",
+    "title": "Analysis of EMI from pantograph-catenary arc on speed sensor based on the high-speed train model",
+    "category": "分子机制与信号通路",
+    "summary": "该文献研究了高速列车弓网电弧（PCA）产生的电磁干扰（EMI）对速度传感器的影响。通过分析牵引控制单元（TCU）速度传感器和建立列车复合模型，验证了PCA引起的过电压和电磁辐射会导致传感器故障。测量结果显示最大过电压达680V，磁场增至58 dBμA/m，与理论仿真一致，并提出了减少EMI的方法。",
+    "analysis": "该文献对报告主题有参考价值，因为它提供了PCA实际影响传感器故障的机制分析，适用于支撑弓网离线电气特性研究。它验证了电弧模型在高速列车系统中的应用场景，并为MATLAB弓网仿真提供了实测数据和验证基础。此外，提出的干扰抑制方法可指导系统设计中的EMI缓解策略。"
+  },
+  {
+    "paper_id": "paper_000023",
+    "title": "A pantograph arcing model for electrified railways with different speeds",
+    "category": "建模与机理分析",
+    "summary": "这篇文献研究了电气化铁路中弓网电弧现象在不同列车速度下的影响。它提出了一个弓网电弧模型，考虑速度对电弧耗散功率的作用，并建立了涵盖牵引系统的整体电气模型。结果显示，列车运行速度显著影响电弧电压、持续时间和零交叉时间，并通过现场测试验证了模型的准确性。",
+    "analysis": "该文献的模型针对弓网离线电气特性中的速度依赖性，为Cassie及其衍生模型提供了速度因素的扩展，支撑电弧机理分析。它适用于模拟高速电气化铁路的弓网电弧现象，有助于MATLAB弓网仿真中的参数设置和验证，并支撑研究牵引系统与弓网交互的电气行为。"
+  },
+  {
+    "paper_id": "paper_000024",
+    "title": "Research on the Model and Transient Characteristics of the Pantograph-Catenary Arc in Different Sections of Power Supply Lines",
+    "category": "分子机制与信号通路",
+    "summary": "本研究探讨了高速列车运行中弓网电弧（PCA）在不同供电区段的模型和瞬态特性。通过分析电压和耗散功率，并基于改进Habedank模型建立PCA模型，进行仿真获取高频瞬态特性。结果为研究PCA引起的电磁干扰提供了理论依据和相关数据。",
+    "analysis": "该文献对弓网电弧模型（特别是改进Habedank模型）的研究为报告主题中的电弧模型部分提供了直接参考。通过仿真分析不同区段的瞬态特性，支持弓网系统在高速列车应用中的电磁干扰评估。结果可用于优化MATLAB弓网仿真，并作为研究Cassie模型衍生应用的基准。"
+  },
+  {
+    "paper_id": "paper_000025",
+    "title": "Characteristics of pantograph-catenary arc under low air pressure and strong airflow",
+    "category": "建模与机理分析",
+    "summary": "本文研究了高速铁路弓网电弧在低气压和强气流下的运动特性。通过建立实验平台和MHD模型，分析了电弧根和电弧柱的动态行为及影响因素。发现低气压延长电弧时间和电极烧蚀，气流增加漂移速度，为高原地区电弧保护提供了理论支持。",
+    "analysis": "该文献对电弧模型研究，特别是Cassie模型在极端条件下的应用有参考价值。它支撑了电弧行为机制在高原高速铁路环境中的分析，适合电弧保护系统设计。研究成果有助于改进MATLAB弓网仿真模型中的电弧动态特性模拟。"
+  },
+  {
+    "paper_id": "paper_000026",
+    "title": "Analysis of propagation characteristics of electromagnetic disturbance from the off-line of pantograph-catenary in high-speed railway viaducts",
+    "category": "分子机制与信号通路",
+    "summary": "该文献研究了高速铁路高架桥场景中弓网离线引起的电磁干扰传播特性。通过建立简化的列车和弓网模型，分析了电磁干扰在横向和纵向的衰减规律。研究发现，在高架桥场景中，电场强度随横向距离增加，与地面场景不同，并提供了拟合公式以研究频率相关衰减。此外，指出当前标准中的限制在高架桥场景中可能不适用。",
+    "analysis": "该文献为弓网离线电气特性的研究提供了高架桥场景下的具体传播数据，有助于验证和扩展电弧模型（如Cassie模型）在实际环境中的应用。其简化的建模方法和测量结果可支持MATLAB弓网仿真的参数设置和验证，提升电磁干扰分析的准确性。此外，研究结果对高速铁路电磁兼容标准制定和车载设备优化布局有直接参考价值。"
+  },
+  {
+    "paper_id": "paper_000027",
+    "title": "Research on the characteristics and influencing factors of arc in segmented insulators",
+    "category": "机器人控制与作业辅助",
+    "summary": "本研究通过开发多物理场仿真模型，分析了分段绝缘子中电弧的特性及其影响因素。利用COMSOL中的磁流体动力学模型，揭示了Kármán涡街对电弧行为的影响机制。研究发现，风速度和电流变化显著影响电弧演化和侵蚀风险，并通过实验验证了仿真准确性。",
+    "analysis": "该文献为弓网离线电气特性的研究提供了电弧行为的具体案例分析，有助于支撑Cassie等电弧模型的衍生和优化。通过多物理场仿真和实验验证，为弓网系统设计中的电弧抑制和绝缘保护机制提供了理论依据。研究结果可用于指导弓网仿真模型的参数设定，提升系统安全性和可靠性。"
+  },
+  {
+    "paper_id": "paper_000028",
+    "title": "Drift characteristics and the multi-field coupling stress mechanism of the pantograph-catenary arc under low air pressure",
+    "category": "机器人控制与作业辅助",
+    "summary": "该文献研究了弓网电弧在低气压下的漂移特性和多场耦合应力机制。通过建立实验平台模拟低气压和强气流环境，分析了电弧漂移高度随时间和不同条件的变化规律。总结物理过程并构建多场应力耦合模型，从理论上解释了低气压下电弧漂移的机制，为高海拔地区的电弧抑制提供理论支持。",
+    "analysis": "该文献的多场耦合应力模型可直接应用于改进电弧模型，尤其是Cassie及其衍生模型，提供实验验证基础。其低气压环境研究适合支撑高海拔或极端条件下弓网系统设计和电弧抑制策略的开发。这些机制可集成到MATLAB弓网仿真中，以模拟复杂工况下的电弧行为，提升仿真准确性和实用性。"
+  },
+  {
+    "paper_id": "paper_000029",
+    "title": "Simulation Study on Surface Temperature Distribution of Collector Strip Material Under Pantograph-Catenary Arc of Urban Rail",
+    "category": "机器人控制与作业辅助",
+    "summary": "本研究模拟了城市轨道交通弓网电弧下收集条材料的表面温度分布。采用磁流体动力学理论和多物理场耦合数学模型，通过COMSOL软件进行仿真分析并实验验证。结果表明，电弧持续时间与最高温度正相关，不同材料表面温度分布相同，且温度随热导率增加而降低。",
+    "analysis": "该文献的模拟方法为弓网电弧模型的温度参数研究提供了实证支持，特别适用于验证Cassie及其衍生模型在实际场景中的应用。结果有助于优化收集条材料选择和弓网系统设计，适用于城市轨道交通的电弧磨损控制。其多物理场耦合思路可借鉴于MATLAB弓网仿真中的电弧特性分析与机制探索。"
+  },
+  {
+    "paper_id": "paper_000030",
+    "title": "Electrical Characterization of Pantograph and Catenary Offline under Train Operating Conditions Based on Improved Habedank Model and at Power Supply Network",
+    "category": "建模与机理分析",
+    "summary": "本研究探讨了列车运行条件下弓网离线放电的电气特性，采用改进的Habedank电弧模型和分布式参数方法，构建了全并行AT电源网络的模型。通过考虑列车加速和进出站等运行条件，模型得到了验证和增强。结果显示进出站时离线放电电弧电压和机车电压波形有特定变化趋势，为电气特性识别和保护提供参考。",
+    "analysis": "该文献的改进Habedank模型直接支撑了当前主题中电弧模型的机制分析，可作为Cassie模型衍生案例用于机理比较。其分布式参数建模方法适用于MATLAB弓网仿真，模拟真实运行场景以提高准确性。研究结果有助于指导弓网系统保护设计和电气特性识别，提升仿真与应用的实用性。"
+  }
+]

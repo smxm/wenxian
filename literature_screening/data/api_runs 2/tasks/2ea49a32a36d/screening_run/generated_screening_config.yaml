@@ -1,0 +1,51 @@
+project:
+  name: 机器学习在场地效应（Site Effects）评估与预测中的应用-continue
+  output_dir: tasks/2ea49a32a36d/screening_run/screening_output
+  save_raw_response: true
+  save_intermediate_files: true
+input:
+  input_files:
+  - tasks/2ea49a32a36d/screening_run/inputs/unused_remaining.ris
+  encoding: auto
+dedup:
+  enabled: true
+  strict_doi_match: true
+  normalized_title_exact_match: true
+  fuzzy_title_match: false
+screening:
+  batch_size: 10
+  target_include_count: 20
+  stop_when_target_reached: true
+  allow_uncertain: true
+  retry_times: 6
+  request_timeout_seconds: 240
+criteria:
+  topic: 机器学习在场地效应（Site Effects）评估与预测中的应用
+  inclusion:
+  - 核心方法：必须包含具体的机器学习或深度学习技术（如神经网络、随机森林、XGBoost、替代模型等）。
+  - 研究目标：必须明确针对“场地放大（Site Amplification）”的量化评估或预测。例如：预测放大系数（Amplification Factors,
+    AF）、模拟频率依赖的放大谱、非线性土层放大响应、地形放大或盆地放大效应。
+  - 数据基础：基于实际地震动记录数据（强震台网数据）或经过验证的大规模数值模拟生成的数据集进行模型训练。
+  exclusion:
+  - 偏离“放大”目标：仅进行粗略的场地类别划分（Site Classification），或仅预测 $V_{S30}$ 等参数但未将其用于计算场地放大。
+  - 偏离“场地”本身：研究对象集中在地表建筑结构（上部结构）的抗震损伤评估、减震隔震设计，而非下方土体/地形的放大效应。
+  - 传统方法：纯经验公式拟合或纯传统一维/二维等效线性化物理模拟，未使用机器学习算法。
+  - 纯算法理论探讨无实际工程地震学背景，或非英语文献。
+model:
+  provider: deepseek
+  model_name: deepseek-chat
+  api_base_url: https://api.deepseek.com/v1
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.0
+  max_tokens: 1536
+  min_request_interval_seconds: 2.0
+report:
+  export_included_ris: true
+  export_excluded_ris: false
+  export_unused_ris: true
+  export_included_bib: false
+  export_excluded_bib: false
+  export_unused_bib: false
+  included_report_format: md
+  excluded_report_format: md
+  summary_format: json

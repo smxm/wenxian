@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0005",
+    "results": [
+        {
+            "paper_id": "paper_000041",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及模糊逻辑和模糊控制，属于排除标准中的数学和计算机算法领域。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000042",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论软件工程中的模糊性问题，属于计算机算法领域，不符合学术写作中的模糊语分析主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000043",
+            "decision": "exclude",
+            "reason": "标题和摘要明确讨论模糊逻辑作为模糊性理论，属于排除标准中的数学和计算机算法领域。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000044",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论语言学中的模糊性和语法，但未涉及学术写作或理工科背景，不符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000045",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及数学编程中的渐进对冲，属于金融经济领域的对冲概念，不符合学术写作中的模糊语分析。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000046",
+            "decision": "include",
+            "reason": "标题和摘要明确分析科学话语中的对冲现象，涉及学术写作背景和语用功能分析，符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000047",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论石油价格波动和对冲有效性，属于金融经济领域的对冲概念，不符合学术写作中的模糊语分析。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000048",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及金融对冲模型，属于金融经济领域的对冲概念，不符合学术写作中的模糊语分析主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000049",
+            "decision": "uncertain",
+            "reason": "标题和摘要讨论元话语标记在正式写作中的使用，但未明确涉及理工科背景或模糊语分析，信息不足以判断是否满足纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000050",
+            "decision": "include",
+            "reason": "标题和摘要分析学术研究文章中元话语标记的使用，涉及跨学科对比和学术写作背景，符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        }
+    ]
+}

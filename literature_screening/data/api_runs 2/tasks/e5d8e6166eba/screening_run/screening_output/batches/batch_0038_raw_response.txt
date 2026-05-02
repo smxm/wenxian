@@ -1,0 +1,19 @@
+{
+  "batch_id": "batch_0038",
+  "results": [
+    {
+      "paper_id": "paper_000371",
+      "decision": "exclude",
+      "reason": "标题和摘要显示研究使用X射线CT和数值模拟分析水泥土混合物，未涉及超声波检测或声测管倾斜修正算法。",
+      "evidence": ["title", "abstract"],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000372",
+      "decision": "uncertain",
+      "reason": "摘要提到冲击响应测试和统计模式识别用于混凝土板缺陷检测，涉及信号处理算法，但未明确提及超声波透射法或基桩检测。",
+      "evidence": ["title", "abstract", "keywords"],
+      "confidence": 0.55
+    }
+  ]
+}

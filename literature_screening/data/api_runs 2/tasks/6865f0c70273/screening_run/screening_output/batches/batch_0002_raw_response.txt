@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0002",
+    "results": [
+        {
+            "paper_id": "paper_000011",
+            "decision": "exclude",
+            "reason": "标题和摘要均聚焦于毛霉菌病的文献计量学研究，未涉及隐球菌或血脑屏障。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000012",
+            "decision": "include",
+            "reason": "标题和摘要明确研究隐球菌在脑膜炎期间对药物的耐受性，涉及脑组织环境，与血脑屏障互作机制相关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000013",
+            "decision": "include",
+            "reason": "标题和摘要研究隐球菌形态变化促进肺外器官（包括脑）进入，涉及血脑屏障穿越机制。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000014",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于HIV患者隐球菌脑膜炎复发的临床风险因素分析，缺乏深层机制探索。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000015",
+            "decision": "uncertain",
+            "reason": "摘要提到甲苯丙胺增强隐球菌在脑中的负荷和致死率，但未明确阐述血脑屏障互作的具体分子机制。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000016",
+            "decision": "exclude",
+            "reason": "标题和摘要仅涉及新型氟胞嘧啶制剂的药代动力学研究，未探讨隐球菌与血脑屏障的互作机制或模型构建。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000017",
+            "decision": "exclude",
+            "reason": "标题和摘要描述隐球菌抗原检测的假阴性病例报告，属于单一临床病例分析，缺乏机制探索。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000018",
+            "decision": "include",
+            "reason": "标题和摘要研究隐球菌感染中脑内小胶质细胞激活延迟及其对感染的影响，直接涉及脑内免疫反应机制。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000019",
+            "decision": "uncertain",
+            "reason": "摘要呼吁加强隐球菌脑膜炎发病机制的基础研究并提及血脑屏障穿越，但本文为观点性综述，未提供具体机制数据。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000020",
+            "decision": "include",
+            "reason": "标题和摘要明确研究隐球菌利用宿主Pdlim2蛋白在血脑屏障内皮细胞内的穿越和排出机制，符合深层分子机制探索。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.92
+        }
+    ]
+}

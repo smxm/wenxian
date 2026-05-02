@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0001",
+    "results": [
+        {
+            "paper_id": "paper_000001",
+            "decision": "include",
+            "reason": "标题和摘要明确探讨慢性心理应激对癌症进展的影响及其神经内分泌免疫机制，符合研究主题和纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000002",
+            "decision": "include",
+            "reason": "标题和摘要显示研究精神疾病对胃癌患者生存期的影响，明确涉及心理因素与肿瘤预后的关联。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.90
+        },
+        {
+            "paper_id": "paper_000003",
+            "decision": "exclude",
+            "reason": "摘要显示研究焦点是精神健康疾病的复发恐惧，未涉及肿瘤或癌症，不符合研究主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000004",
+            "decision": "exclude",
+            "reason": "摘要提到早发性结直肠癌的挑战，但仅提及心理社会挑战，未探讨心理因素如何影响肿瘤预后。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.80
+        },
+        {
+            "paper_id": "paper_000005",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于氯胺酮辅助心理治疗对精神障碍的疗效，未涉及肿瘤或癌症，不符合研究主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000006",
+            "decision": "exclude",
+            "reason": "摘要讨论妇科癌症长期生存者的健康问题，包括心理健康，但未探讨心理因素如何影响肿瘤预后或生存结局。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.80
+        },
+        {
+            "paper_id": "paper_000007",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于皮肤病学的姑息护理，未涉及精神疾病或心理应激对肿瘤患者预后的影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000008",
+            "decision": "exclude",
+            "reason": "摘要提到MASLD与抑郁焦虑相关，并可能增加癌症风险，但未明确探讨心理因素如何影响肿瘤预后或机制。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.75
+        },
+        {
+            "paper_id": "paper_000009",
+            "decision": "exclude",
+            "reason": "摘要提到银屑病与精神疾病共病，但未涉及肿瘤或癌症，不符合研究主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.80
+        },
+        {
+            "paper_id": "paper_000010",
+            "decision": "uncertain",
+            "reason": "摘要缺失，仅从标题无法判断是否涉及精神疾病或心理应激对睾丸癌患者预后的影响。",
+            "evidence": ["title"],
+            "confidence": 0.50
+        }
+    ]
+}

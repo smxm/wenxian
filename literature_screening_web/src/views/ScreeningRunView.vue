@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, onMounted, onUnmounted, ref, watch } from 'vue'
 import { RouterLink, useRoute, useRouter } from 'vue-router'
-import { ArrowLeft, CircleDashed, FileUp, X } from 'lucide-vue-next'
+import { ArrowLeft, CircleDashed, FileUp, RefreshCw, X } from 'lucide-vue-next'
 import {
   NAlert,
   NButton,
@@ -20,8 +20,9 @@ import { useDraftsStore } from '@/stores/drafts'
 import { useMetaStore } from '@/stores/meta'
 import { useProjectsStore } from '@/stores/projects'
 import { useTasksStore } from '@/stores/tasks'
+import { fetchProviderModels } from '@/api/client'
 import { buildCriteriaMarkdown, strategyPlanToCriteriaMarkdown } from '@/utils/strategy'
-import type { ModelSettings, ProjectDetail, ProviderName } from '@/types/api'
+import type { DatasetRecord, ModelSettings, ProjectDetail, ProviderName } from '@/types/api'
 
 const router = useRouter()
 const route = useRoute()
@@ -51,12 +52,16 @@ const model = ref<ModelSettings>({
   api_key_env: 'DEEPSEEK_API_KEY',
   api_key: '',
   temperature: 0,
-  max_tokens: 1536,
+  max_tokens: 4096,
   min_request_interval_seconds: 2
 })
+const modelOptions = ref<Array<{ label: string; value: string }>>([])
+const modelsLoading = ref(false)
+const modelFetchError = ref('')
 const batchSize = ref(10)
 const targetIncludeCount = ref<number | null>(null)
 const stopWhenReached = ref(false)
+const minIncludeConfidence = ref(0.8)
 const syncingTargetControls = ref(false)
 const allowUncertain = ref(true)
 const retryTimes = ref(6)
@@ -66,6 +71,8 @@ const files = ref<File[]>([])
 const isDragging = ref(false)
 const fileInputRef = ref<HTMLInputElement | null>(null)
 const hydratingDraft = ref(false)
+let modelRequestToken = 0
+let modelReloadTimer: number | null = null
 const routeProjectId = computed(() => {
   if (typeof route.params.projectId === 'string') return route.params.projectId
   if (typeof route.query.projectId === 'string') return route.query.projectId
@@ -74,6 +81,9 @@ const routeProjectId = computed(() => {
 
 const currentProject = computed<ProjectDetail | null>(() =>
   projectsStore.currentProject?.id === selectedProjectId.value ? projectsStore.currentProject : null
+)
+const taskTitleById = computed(() =>
+  new Map((currentProject.value?.tasks ?? []).map((task) => [task.id, task.title]))
 )
 const isThreadScoped = computed(() => Boolean(routeProjectId.value))
 const threadHomePath = computed(() => (selectedProjectId.value ? `/threads/${selectedProjectId.value}` : null))
@@ -100,6 +110,102 @@ const defaultTaskTitle = computed(() => {
   return `${newProjectName.value.trim() || 'new-thread'}-screening`
 })
 const effectiveTaskTitle = computed(() => screeningTitle.value.trim() || defaultTaskTitle.value)
+const includeConfidenceOptions = [
+  { label: '严格 · 90%以上', value: 0.9 },
+  { label: '标准 · 80%以上', value: 0.8 },
+  { label: '宽松 · 60%以上', value: 0.6 },
+  { label: '模型判定即可', value: 0 }
+]
+const minIncludeConfidenceLabel = computed(() => (minIncludeConfidence.value > 0 ? `${Math.round(minIncludeConfidence.value * 100)}%` : '模型判定'))
+const includeConfidenceHint = computed(() =>
+  minIncludeConfidence.value > 0
+    ? `模型判为纳入且相关度达到 ${minIncludeConfidenceLabel.value} 才进入纳入集。`
+    : '模型判为纳入即可进入纳入集。'
+)
+const includeConfidenceTag = computed(() =>
+  minIncludeConfidence.value > 0 ? `纳入≥${minIncludeConfidenceLabel.value}` : '模型判定纳入'
+)
+
+function fallbackModelOptions(nextProvider: ProviderName = provider.value) {
+  if (nextProvider === 'deepseek') {
+    return [
+      { label: 'deepseek-chat', value: 'deepseek-chat' },
+      { label: 'deepseek-reasoner', value: 'deepseek-reasoner' }
+    ]
+  }
+  const preset = metaStore.providerPresets.find((item) => item.provider === nextProvider)
+  const modelName = preset?.defaultModel || 'moonshot-v1-auto'
+  return [{ label: modelName, value: modelName }]
+}
+
+function setFallbackModelOptions(nextProvider: ProviderName = provider.value) {
+  modelOptions.value = fallbackModelOptions(nextProvider)
+  if (!modelOptions.value.some((option) => option.value === model.value.model_name)) {
+    model.value = {
+      ...model.value,
+      model_name: modelOptions.value[0]?.value || model.value.model_name
+    }
+  }
+}
+
+async function loadModelOptions(options: { silent?: boolean } = {}) {
+  const requestToken = ++modelRequestToken
+  const currentProvider = provider.value
+  const currentModel = { ...model.value }
+  modelsLoading.value = true
+  modelFetchError.value = ''
+  try {
+    const response = await fetchProviderModels({
+      provider: currentProvider,
+      api_base_url: currentModel.api_base_url,
+      api_key_env: currentModel.api_key_env,
+      api_key: currentModel.api_key || null
+    })
+    if (requestToken !== modelRequestToken || currentProvider !== provider.value) return
+    const providerOptions = response.models.map((item) => ({
+      label: item.label || item.id,
+      value: item.id
+    }))
+    modelOptions.value = providerOptions.length ? providerOptions : fallbackModelOptions(currentProvider)
+    if (!modelOptions.value.some((option) => option.value === model.value.model_name)) {
+      model.value = {
+        ...model.value,
+        model_name: modelOptions.value[0]?.value || model.value.model_name
+      }
+    }
+    modelFetchError.value = response.source === 'fallback' && response.error ? '未能从服务商获取模型，已使用默认模型。' : ''
+  } catch {
+    if (requestToken !== modelRequestToken || currentProvider !== provider.value) return
+    setFallbackModelOptions(currentProvider)
+    modelFetchError.value = '未能从服务商获取模型，已使用默认模型。'
+  } finally {
+    if (requestToken === modelRequestToken) {
+      modelsLoading.value = false
+    }
+  }
+  if (!options.silent && modelFetchError.value) {
+    message.warning(modelFetchError.value)
+  }
+}
+
+function scheduleModelReload() {
+  if (typeof window === 'undefined') return
+  if (modelReloadTimer !== null) window.clearTimeout(modelReloadTimer)
+  modelReloadTimer = window.setTimeout(() => {
+    modelReloadTimer = null
+    void loadModelOptions({ silent: true })
+  }, 700)
+}
+
+function updateModelApiKey(value: string) {
+  model.value.api_key = value
+  draftsStore.setProviderApiKey(provider.value, value)
+  scheduleModelReload()
+}
+
+function screeningMaxTokens(value: number | null | undefined) {
+  return Math.max(value ?? 4096, 4096)
+}
 
 function friendlyDatasetLabel(kind: string) {
   switch (kind) {
@@ -114,15 +220,23 @@ function friendlyDatasetLabel(kind: string) {
     case 'fulltext_ready':
       return '已获取全文'
     case 'report_source':
-      return '报告源文献'
+      return '旧版报告输入'
     default:
       return kind
   }
 }
 
+function datasetOptionLabel(dataset: DatasetRecord) {
+  const kindLabel = friendlyDatasetLabel(dataset.kind)
+  const countLabel = `${dataset.record_count ?? '-'} 篇`
+  const taskTitle = dataset.task_id ? taskTitleById.value.get(dataset.task_id) : ''
+  if (taskTitle) return `${taskTitle} · ${kindLabel} · ${countLabel}`
+  return `${kindLabel} · ${countLabel}`
+}
+
 const datasetOptions = computed(() =>
   (currentProject.value?.datasets ?? []).map((item) => ({
-    label: `${friendlyDatasetLabel(item.kind)} · ${item.record_count ?? '-'} 篇`,
+    label: datasetOptionLabel(item),
     value: item.id
   }))
 )
@@ -152,9 +266,12 @@ function applyDraft() {
   inclusion.value = draft.inclusion.length ? [...draft.inclusion] : ['']
   exclusion.value = draft.exclusion.length ? [...draft.exclusion] : ['']
   provider.value = draft.provider
-  model.value = { ...draft.model }
+  model.value = { ...draft.model, max_tokens: screeningMaxTokens(draft.model.max_tokens) }
+  setFallbackModelOptions(draft.provider)
+  void loadModelOptions({ silent: true })
   batchSize.value = draft.batchSize
   syncTargetControls(draft.targetIncludeCount, draft.stopWhenReached)
+  minIncludeConfidence.value = draft.minIncludeConfidence ?? 0.8
   allowUncertain.value = draft.allowUncertain
   retryTimes.value = draft.retryTimes
   requestTimeout.value = draft.requestTimeout
@@ -182,11 +299,14 @@ function resetToFreshForm(nextProjectId: string | null = null) {
     api_key_env: 'DEEPSEEK_API_KEY',
     api_key: draftsStore.getProviderApiKey('deepseek'),
     temperature: 0,
-    max_tokens: 1536,
+    max_tokens: 4096,
     min_request_interval_seconds: 2
   }
+  setFallbackModelOptions('deepseek')
+  void loadModelOptions({ silent: true })
   batchSize.value = 10
   syncTargetControls(null, false)
+  minIncludeConfidence.value = 0.8
   allowUncertain.value = true
   retryTimes.value = 6
   requestTimeout.value = 240
@@ -209,10 +329,11 @@ function persistDraft() {
     inclusion: inclusion.value,
     exclusion: exclusion.value,
     provider: provider.value,
-    model: model.value,
+    model: { ...model.value, max_tokens: screeningMaxTokens(model.value.max_tokens) },
     batchSize: batchSize.value,
     targetIncludeCount: targetIncludeCount.value,
     stopWhenReached: stopWhenReached.value,
+    minIncludeConfidence: minIncludeConfidence.value,
     allowUncertain: allowUncertain.value,
     retryTimes: retryTimes.value,
     requestTimeout: requestTimeout.value,
@@ -232,11 +353,15 @@ function applyThreadDefaults(project: ProjectDetail) {
     model.value = {
       ...model.value,
       ...defaults.model,
-      api_key: draftsStore.getProviderApiKey(defaults.model.provider)
+      api_key: draftsStore.getProviderApiKey(defaults.model.provider),
+      max_tokens: screeningMaxTokens(defaults.model.max_tokens)
     }
+    setFallbackModelOptions(defaults.model.provider)
+    void loadModelOptions({ silent: true })
   }
   batchSize.value = defaults.batch_size ?? 10
   syncTargetControls(defaults.target_include_count ?? null, defaults.stop_when_target_reached)
+  minIncludeConfidence.value = defaults.min_include_confidence ?? 0.8
   allowUncertain.value = defaults.allow_uncertain
   retryTimes.value = defaults.retry_times
   requestTimeout.value = defaults.request_timeout_seconds
@@ -272,6 +397,7 @@ function applyParentTaskPrefill(taskPayload: { request_payload?: Record<string, 
   if (inheritedInclusion.length) inclusion.value = inheritedInclusion
   if (inheritedExclusion.length) exclusion.value = inheritedExclusion
   if (typeof payload.batch_size === 'number') batchSize.value = payload.batch_size
+  if (typeof payload.min_include_confidence === 'number') minIncludeConfidence.value = payload.min_include_confidence
   const inheritedTargetIncludeCount = typeof payload.target_include_count === 'number' ? payload.target_include_count : null
   const inheritedStopWhenReached = typeof payload.stop_when_target_reached === 'boolean' ? payload.stop_when_target_reached : false
   if (inheritedTargetIncludeCount !== null || typeof payload.stop_when_target_reached === 'boolean') {
@@ -291,6 +417,8 @@ watch(provider, (nextProvider) => {
     api_key_env: preset.defaultApiKeyEnv,
     api_key: draftsStore.getProviderApiKey(preset.provider)
   }
+  setFallbackModelOptions(preset.provider)
+  void loadModelOptions({ silent: true })
 })
 
 watch(selectedProjectId, async (nextProjectId, previousProjectId) => {
@@ -337,6 +465,7 @@ watch(
     batchSize,
     targetIncludeCount,
     stopWhenReached,
+    minIncludeConfidence,
     allowUncertain,
     retryTimes,
     requestTimeout,
@@ -421,10 +550,11 @@ async function submit() {
     criteria_markdown: criteriaMarkdown.value,
     inclusion: inclusion.value.filter(Boolean),
     exclusion: exclusion.value.filter(Boolean),
-    model: model.value,
+    model: { ...model.value, max_tokens: screeningMaxTokens(model.value.max_tokens) },
     batch_size: batchSize.value,
     target_include_count: targetIncludeCount.value,
     stop_when_target_reached: Boolean(targetIncludeCount.value && stopWhenReached.value),
+    min_include_confidence: minIncludeConfidence.value,
     allow_uncertain: allowUncertain.value,
     retry_times: retryTimes.value,
     request_timeout_seconds: requestTimeout.value,
@@ -487,6 +617,12 @@ onMounted(async () => {
     message.info('已恢复草稿内容。由于浏览器限制，已选文件需要重新选择一次。')
   }
 })
+
+onUnmounted(() => {
+  if (modelReloadTimer !== null && typeof window !== 'undefined') {
+    window.clearTimeout(modelReloadTimer)
+  }
+})
 </script>
 
 <template>
@@ -504,9 +640,6 @@ onMounted(async () => {
             返回线程主页
           </NButton>
         </RouterLink>
-        <NAlert type="info" :show-icon="false">
-          报告改到全文工作台确认后生成。
-        </NAlert>
       </div>
     </section>
 
@@ -637,19 +770,40 @@ onMounted(async () => {
             />
           </NFormItem>
           <NFormItem label="模型名称">
-            <NInput v-model:value="model.model_name" />
+            <div class="model-select-row">
+              <NSelect
+                v-model:value="model.model_name"
+                filterable
+                :loading="modelsLoading"
+                :options="modelOptions"
+              />
+              <NButton tertiary :loading="modelsLoading" @click="loadModelOptions()">
+                <template #icon><RefreshCw :size="16" /></template>
+              </NButton>
+            </div>
+            <div v-if="modelFetchError" class="field-hint">{{ modelFetchError }}</div>
           </NFormItem>
           <NFormItem label="API Key">
             <NInput
               type="password"
               show-password-on="click"
               :value="model.api_key || ''"
-              @update:value="(value) => { model.api_key = value; draftsStore.setProviderApiKey(provider, value) }"
+              @update:value="updateModelApiKey"
+              @blur="loadModelOptions({ silent: true })"
               placeholder="仅保存在当前浏览器本地"
             />
           </NFormItem>
           <NFormItem label="批次大小">
             <NInputNumber v-model:value="batchSize" :min="1" :max="50" />
+          </NFormItem>
+          <NFormItem label="最低纳入相关度">
+            <NSelect
+              v-model:value="minIncludeConfidence"
+              :options="includeConfidenceOptions"
+            />
+            <div class="field-hint">
+              {{ includeConfidenceHint }}
+            </div>
           </NFormItem>
           <NFormItem label="目标纳入数">
             <NInputNumber
@@ -677,6 +831,7 @@ onMounted(async () => {
         <div class="setting-tags">
           <NTag round>{{ selectedPreset?.label || provider }}</NTag>
           <NTag round type="success">Batch {{ batchSize }}</NTag>
+          <NTag round type="info">{{ includeConfidenceTag }}</NTag>
           <NTag round type="warning">{{ targetIncludeCount ? `目标纳入 ${targetIncludeCount}` : '全部筛选' }}</NTag>
           <NTag v-if="targetIncludeCount" round :type="stopWhenReached ? 'success' : 'info'">
             {{ stopWhenReached ? '达到目标后停止' : '达到目标后继续筛选' }}
@@ -769,6 +924,12 @@ onMounted(async () => {
 
 .inline-hint {
   margin-top: 0;
+}
+
+.model-select-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
 }
 
 .criteria-head {

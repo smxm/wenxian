@@ -1,0 +1,395 @@
+{
+  "batch_id": "batch_0002",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000011",
+    "paper_000012",
+    "paper_000013",
+    "paper_000014",
+    "paper_000015",
+    "paper_000016",
+    "paper_000017",
+    "paper_000018",
+    "paper_000019",
+    "paper_000020"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000011",
+      "entry_type": "article",
+      "title": "Dual-Loop Controller for Underwater Snake-Like Robot Based on Dynamic Inverse Solution",
+      "authors": [
+        "Yu, JM",
+        "Sun, H",
+        "Sun, QL",
+        "Sun, MW",
+        "Chen, ZQ"
+      ],
+      "year": 2026,
+      "journal": "IEEE JOURNAL OF OCEANIC ENGINEERING",
+      "doi": "10.1109/joe.2025.3632469",
+      "abstract": "The underwater snake-like robot consists of a heterogeneous structure with multiple links, providing strong environmental adaptability and enabling flexible movement in complex and confined environments. However, the attitude of an underwater snake-like robot (the feasible range of the angle between the links) is often restricted by narrow terrain, and using a traditional controller without considering its dynamics can easily lead to problems, such as infeasible control inputs and slow system response. In response to this problem, considering a snake-like robot with three links as an example, this study proposes a dual-loop control method based on a dynamic inverse solution [DI-active disturbance rejection controller (ADRC)]. The outer loop analyzes the robot's dynamic characteristics and applies dynamic inversion to the desired yaw angular acceleration to compute the optimal joint angles for each link. The inner loop embeds an ADRC, which takes the outer-loop control inputs and outputs the joint rotational velocities. Compared to conventional dual-loop ADRC methods that estimate the total system disturbance, DI-ADRC only estimates the residual disturbance between the total system disturbance and the outer-loop inversion result, thereby greatly reducing the computational burden of the extended state observer. The experimental results verified the feasibility of this method for narrow terrain. Compared to the traditional controller, DI-ADRC has smaller overshoot and oscillation, significantly improving control accuracy and response speed, and can dynamically reduce or increase the time to reach the target attitude.",
+      "keywords": [
+        "Robots",
+        "Robot sensing systems",
+        "Kinematics",
+        "Dynamics",
+        "Vehicle dynamics",
+        "Oceans",
+        "Force",
+        "Attitude control",
+        "Autonomous underwater vehicles",
+        "Adaptation models",
+        "Active disturbance rejection control (ADRC)",
+        "dual-loop controller",
+        "dynamics inverse solution",
+        "underwater snake-like robot",
+        "PATH-FOLLOWING CONTROL",
+        "TRAJECTORY TRACKING",
+        "KINEMATICS SOLUTION",
+        "LOCOMOTION",
+        "MANIPULATORS",
+        "MECHANISM"
+      ],
+      "normalized_title": "dual loop controller for underwater snake like robot based on dynamic inverse solution",
+      "raw_bibtex": "@ARTICLE{10.1109/JOE.2025.3632469,\n\tauthor = {Yu, JM and Sun, H and Sun, QL and Sun, MW and Chen, ZQ},\n\ttitle = {Dual-Loop Controller for Underwater Snake-Like Robot Based on Dynamic Inverse Solution},\n\tjournal = {IEEE JOURNAL OF OCEANIC ENGINEERING},\n\tyear = {2026},\n\tkeywords = {Robots; Robot sensing systems; Kinematics; Dynamics; Vehicle dynamics; Oceans; Force; Attitude control; Autonomous underwater vehicles; Adaptation models; Active disturbance rejection control (ADRC); dual-loop controller; dynamics inverse solution; underwater snake-like robot; PATH-FOLLOWING CONTROL; TRAJECTORY TRACKING; KINEMATICS SOLUTION; LOCOMOTION; MANIPULATORS; MECHANISM},\n\tabstract = {The underwater snake-like robot consists of a heterogeneous structure with multiple links, providing strong environmental adaptability and enabling flexible movement in complex and confined environments. However, the attitude of an underwater snake-like robot (the feasible range of the angle between the links) is often restricted by narrow terrain, and using a traditional controller without considering its dynamics can easily lead to problems, such as infeasible control inputs and slow system response. In response to this problem, considering a snake-like robot with three links as an example, this study proposes a dual-loop control method based on a dynamic inverse solution [DI-active disturbance rejection controller (ADRC)]. The outer loop analyzes the robot's dynamic characteristics and applies dynamic inversion to the desired yaw angular acceleration to compute the optimal joint angles for each link. The inner loop embeds an ADRC, which takes the outer-loop control inputs and outputs the joint rotational velocities. Compared to conventional dual-loop ADRC methods that estimate the total system disturbance, DI-ADRC only estimates the residual disturbance between the total system disturbance and the outer-loop inversion result, thereby greatly reducing the computational burden of the extended state observer. The experimental results verified the feasibility of this method for narrow terrain. Compared to the traditional controller, DI-ADRC has smaller overshoot and oscillation, significantly improving control accuracy and response speed, and can dynamically reduce or increase the time to reach the target attitude.},\n\tdoi = {10.1109/JOE.2025.3632469},\n\tissn = {0364-9059},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 50 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/JOE.2025.3632469"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000012",
+      "entry_type": "article",
+      "title": "Soft Actor-Critic based active disturbance rejection path following control for unmanned surface vessel under wind and wave disturbances",
+      "authors": [
+        "Zheng, YM",
+        "Tao, J",
+        "Sun, QL",
+        "Sun, H",
+        "Chen, ZQ",
+        "Sun, MW",
+        "Xie, GM"
+      ],
+      "year": 2022,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2022.110631",
+      "abstract": "The research of unmanned surface vessel (USV) path tracking has always been of great interest in maneuvering control. In the course of navigation, a USV will inevitably be affected by disturbances such as wind and waves, or the USV's operating conditions will suddenly change. To overcome the impact of these disturbances or uncertainties is of great significance to its safe and efficient navigation. In this paper, the three-degree-of freedom (DOF) manipulative modeling group (MMG) model is used to express the dynamic characteristics of a USV so that its motion process is closer to its real states. We consider the underactuated control problem of using rudder angles to realize the tracking control of the USV's position and heading angle. To this end, we propose a guidance law and design a linear active disturbance rejection controller (LADRC), and the stability of the guidance law and controller are analyzed. This paper combines control and decision-making in reinforcement learning and proposes an LADRC control strategy based on soft actor-critic (SAC) algorithm to realize the adaptive control of USV path tracking. The effectiveness of the proposed method is verified by line and circle under wind and wave environments.",
+      "keywords": [
+        "Path following control",
+        "Wind and wave disturbances",
+        "Linear active disturbance rejection control",
+        "Soft Actor-Critic",
+        "Reinforcement learning",
+        "Parameter optimization",
+        "SLIDING MODE CONTROL",
+        "UNDERACTUATED SHIPS",
+        "FIELDS"
+      ],
+      "normalized_title": "soft actor critic based active disturbance rejection path following control for unmanned surface vessel under wind and wave disturbances",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2022.110631,\n\tauthor = {Zheng, YM and Tao, J and Sun, QL and Sun, H and Chen, ZQ and Sun, MW and Xie, GM},\n\ttitle = {Soft Actor-Critic based active disturbance rejection path following control for unmanned surface vessel under wind and wave disturbances},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2022},\n\tkeywords = {Path following control; Wind and wave disturbances; Linear active disturbance rejection control; Soft Actor-Critic; Reinforcement learning; Parameter optimization; SLIDING MODE CONTROL; UNDERACTUATED SHIPS; FIELDS},\n\tabstract = {The research of unmanned surface vessel (USV) path tracking has always been of great interest in maneuvering control. In the course of navigation, a USV will inevitably be affected by disturbances such as wind and waves, or the USV's operating conditions will suddenly change. To overcome the impact of these disturbances or uncertainties is of great significance to its safe and efficient navigation. In this paper, the three-degree-of freedom (DOF) manipulative modeling group (MMG) model is used to express the dynamic characteristics of a USV so that its motion process is closer to its real states. We consider the underactuated control problem of using rudder angles to realize the tracking control of the USV's position and heading angle. To this end, we propose a guidance law and design a linear active disturbance rejection controller (LADRC), and the stability of the guidance law and controller are analyzed. This paper combines control and decision-making in reinforcement learning and proposes an LADRC control strategy based on soft actor-critic (SAC) algorithm to realize the adaptive control of USV path tracking. The effectiveness of the proposed method is verified by line and circle under wind and wave environments.},\n\tdoi = {10.1016/j.oceaneng.2022.110631},\n\tvolume = {247},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 44 Total Times Cited: 45 Cited Reference Count: 44 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2022.110631"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000013",
+      "entry_type": "article",
+      "title": "Flatness-based nonlinear internal model control with disturbances compensation via improved extended state observer for remotely operated vehicle",
+      "authors": [
+        "Lamraoui, HC",
+        "Bouzid, Y",
+        "Nemra, A"
+      ],
+      "year": 2025,
+      "journal": "INTERNATIONAL JOURNAL OF CONTROL",
+      "doi": "10.1080/00207179.2024.2428663",
+      "abstract": "This paper proposes an improved Active Disturbance Rejection Control (ADRC) scheme for nonlinear control-affine systems, achieving superior robustness/ performance trade-offs. By leveraging the flatness property within a closed-loop structure, Nonlinear Internal Model Control (NLIMC) is employed as a model-based controller utilises partial plant knowledge to enhance control performance and eliminate static tracking errors. Subsequently, an improved Extended State Observer (IESO) is incorporated with NLIMC to address unmodelled dynamics, disturbances, and parameter uncertainties in addition to the full state's estimation. The IESO's added hyperbolic function dynamic ensures higher sensitivity and accuracy compared to conventional linear ESOs, especially in case of large errors. Control performances are evaluated through a Remotely Operated Vehicle (ROV) application. Numerical simulations have been carried out and the results confirm its effectiveness and superiority compared to Ocean Disturbance Observer-based Double-loop Sliding Mode Controller (ODSMC) and the linear ADRC.",
+      "keywords": [
+        "Flatness",
+        "nonlinear internal model control",
+        "extended state observer",
+        "trajectory tracking",
+        "stability",
+        "AUTONOMOUS UNDERWATER VEHICLE",
+        "SYSTEMS"
+      ],
+      "normalized_title": "flatness based nonlinear internal model control with disturbances compensation via improved extended state observer for remotely operated vehicle",
+      "raw_bibtex": "@ARTICLE{10.1080/00207179.2024.2428663,\n\tauthor = {Lamraoui, HC and Bouzid, Y and Nemra, A},\n\ttitle = {Flatness-based nonlinear internal model control with disturbances compensation via improved extended state observer for remotely operated vehicle},\n\tjournal = {INTERNATIONAL JOURNAL OF CONTROL},\n\tyear = {2025},\n\tkeywords = {Flatness; nonlinear internal model control; extended state observer; trajectory tracking; stability; AUTONOMOUS UNDERWATER VEHICLE; SYSTEMS},\n\tabstract = {This paper proposes an improved Active Disturbance Rejection Control (ADRC) scheme for nonlinear control-affine systems, achieving superior robustness/ performance trade-offs. By leveraging the flatness property within a closed-loop structure, Nonlinear Internal Model Control (NLIMC) is employed as a model-based controller utilises partial plant knowledge to enhance control performance and eliminate static tracking errors. Subsequently, an improved Extended State Observer (IESO) is incorporated with NLIMC to address unmodelled dynamics, disturbances, and parameter uncertainties in addition to the full state's estimation. The IESO's added hyperbolic function dynamic ensures higher sensitivity and accuracy compared to conventional linear ESOs, especially in case of large errors. Control performances are evaluated through a Remotely Operated Vehicle (ROV) application. Numerical simulations have been carried out and the results confirm its effectiveness and superiority compared to Ocean Disturbance Observer-based Double-loop Sliding Mode Controller (ODSMC) and the linear ADRC.},\n\tdoi = {10.1080/00207179.2024.2428663},\n\tvolume = {98},\n\tnumber = {6},\n\tpages = {1480-1494},\n\tissn = {0020-7179},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 42 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1080/00207179.2024.2428663"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000014",
+      "entry_type": "article",
+      "title": "Parallel self-assembly for modular USVs with diverse docking mechanism layouts",
+      "authors": [
+        "Zhang, LX",
+        "Jiao, Y",
+        "Huang, YH",
+        "Wang, ZY",
+        "Qian, HH"
+      ],
+      "year": 2026,
+      "journal": "ROBOTICS AND AUTONOMOUS SYSTEMS",
+      "doi": "10.1016/j.robot.2026.105377",
+      "abstract": "Self-assembly enables multi-robot systems to merge diverse capabilities and accomplish tasks beyond the reach of individual robots. Incorporating varied docking mechanism layouts (DMLs) can enhance robot versatility or reduce costs. However, assembling multiple heterogeneous robots with diverse DMLs is still a research gap. This paper addresses this problem by introducing CuBoat, an omnidirectional unmanned surface vehicle (USV). CuBoat can be equipped with or without docking systems on its four sides to emulate heterogeneous robots. We implement a multi-robot system based on multiple CuBoats. To enhance maneuverability, a linear active disturbance rejection control (LADRC) scheme is proposed. Additionally, we present a generalized parallel self-assembly planning algorithm for efficient assembly among CuBoats with different DMLs. Validation is conducted through simulation within 2 scenarios across 4 distinct maps, demonstrating the performance of the self-assembly planning algorithm. Moreover, trajectory tracking tests confirm the effectiveness of the LADRC controller. Self-assembly experiments on 5 maps with different target structures affirm the algorithm's feasibility and generality. This study advances robotic self-assembly, enabling multi-robot systems to collaboratively tackle complex tasks beyond the capabilities of individual robots.",
+      "keywords": [
+        "Self-assembly planning",
+        "Unmanned surface vehicle",
+        "Docking mechanism layout",
+        "Multi-USV system",
+        "MOBILE ROBOTS",
+        "ALGORITHM"
+      ],
+      "normalized_title": "parallel self assembly for modular usvs with diverse docking mechanism layouts",
+      "raw_bibtex": "@ARTICLE{10.1016/j.robot.2026.105377,\n\tauthor = {Zhang, LX and Jiao, Y and Huang, YH and Wang, ZY and Qian, HH},\n\ttitle = {Parallel self-assembly for modular USVs with diverse docking mechanism layouts},\n\tjournal = {ROBOTICS AND AUTONOMOUS SYSTEMS},\n\tyear = {2026},\n\tkeywords = {Self-assembly planning; Unmanned surface vehicle; Docking mechanism layout; Multi-USV system; MOBILE ROBOTS; ALGORITHM},\n\tabstract = {Self-assembly enables multi-robot systems to merge diverse capabilities and accomplish tasks beyond the reach of individual robots. Incorporating varied docking mechanism layouts (DMLs) can enhance robot versatility or reduce costs. However, assembling multiple heterogeneous robots with diverse DMLs is still a research gap. This paper addresses this problem by introducing CuBoat, an omnidirectional unmanned surface vehicle (USV). CuBoat can be equipped with or without docking systems on its four sides to emulate heterogeneous robots. We implement a multi-robot system based on multiple CuBoats. To enhance maneuverability, a linear active disturbance rejection control (LADRC) scheme is proposed. Additionally, we present a generalized parallel self-assembly planning algorithm for efficient assembly among CuBoats with different DMLs. Validation is conducted through simulation within 2 scenarios across 4 distinct maps, demonstrating the performance of the self-assembly planning algorithm. Moreover, trajectory tracking tests confirm the effectiveness of the LADRC controller. Self-assembly experiments on 5 maps with different target structures affirm the algorithm's feasibility and generality. This study advances robotic self-assembly, enabling multi-robot systems to collaboratively tackle complex tasks beyond the capabilities of individual robots.},\n\tdoi = {10.1016/j.robot.2026.105377},\n\tvolume = {199},\n\tissn = {0921-8890},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 40 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.robot.2026.105377"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000015",
+      "entry_type": "article",
+      "title": "Multi-USV cooperative path planning by window update based self-organizing map and spectral clustering?",
+      "authors": [
+        "Yao, P",
+        "Lou, YT",
+        "Zhang, KM"
+      ],
+      "year": 2023,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2023.114140",
+      "abstract": "Unmanned surface vehicles (USVs) have shown tremendous application prospects recently. In this paper, a hierarchical two-layer framework is proposed for the cooperative path planning of multi-USV system in complex marine environments. The whole framework incorporates the low-level layer planning the optimal path for each USV, and the high-level layer assigning targets for the multi-USV system. First, to avoid collisions and access multiple targets in the optimal sequence, an improved self-organizing map (SOM) based on window update is proposed. The energy cost is calculated to evaluate the path planning results and construct a similarity graph. Then, the spectral clustering method is utilized based on the customized graph to determine the allocated targets which each USV should access in the low-level layer. Finally, a double smoothing strategy based on B-spline is proposed, and the line-of-sight (LOS) guidance method and active disturbance rejection control (ADRC) controller are used to achieve accurate tracking of paths by USV. The simulation results in various scenarios validate the feasibility and effectiveness of our method for multi-USV cooperation, as well as path traceability.",
+      "keywords": [
+        "Unmanned surface vehicle (USV)",
+        "Path planning",
+        "Self-organizing map (SOM)",
+        "Spectral clustering",
+        "TASK ALLOCATION",
+        "ALGORITHM",
+        "SURFACE",
+        "NAVIGATION",
+        "ASSIGNMENT",
+        "VEHICLES"
+      ],
+      "normalized_title": "multi usv cooperative path planning by window update based self organizing map and spectral clustering",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2023.114140,\n\tauthor = {Yao, P and Lou, YT and Zhang, KM},\n\ttitle = {Multi-USV cooperative path planning by window update based self-organizing map and spectral clustering?},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2023},\n\tkeywords = {Unmanned surface vehicle (USV); Path planning; Self-organizing map (SOM); Spectral clustering; TASK ALLOCATION; ALGORITHM; SURFACE; NAVIGATION; ASSIGNMENT; VEHICLES},\n\tabstract = {Unmanned surface vehicles (USVs) have shown tremendous application prospects recently. In this paper, a hierarchical two-layer framework is proposed for the cooperative path planning of multi-USV system in complex marine environments. The whole framework incorporates the low-level layer planning the optimal path for each USV, and the high-level layer assigning targets for the multi-USV system. First, to avoid collisions and access multiple targets in the optimal sequence, an improved self-organizing map (SOM) based on window update is proposed. The energy cost is calculated to evaluate the path planning results and construct a similarity graph. Then, the spectral clustering method is utilized based on the customized graph to determine the allocated targets which each USV should access in the low-level layer. Finally, a double smoothing strategy based on B-spline is proposed, and the line-of-sight (LOS) guidance method and active disturbance rejection control (ADRC) controller are used to achieve accurate tracking of paths by USV. The simulation results in various scenarios validate the feasibility and effectiveness of our method for multi-USV cooperation, as well as path traceability.},\n\tdoi = {10.1016/j.oceaneng.2023.114140},\n\tvolume = {275},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 27 Total Times Cited: 30 Cited Reference Count: 32 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2023.114140"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000016",
+      "entry_type": "article",
+      "title": "An Anti-Windup Method Based on an LADRC for Miniaturized Inertial Stabilized Platforms on Unmanned Vehicles in Marine Applications",
+      "authors": [
+        "Fu, TL",
+        "Guan, LW",
+        "Gao, YB",
+        "Qin, C"
+      ],
+      "year": 2024,
+      "journal": "JOURNAL OF MARINE SCIENCE AND ENGINEERING",
+      "doi": "10.3390/jmse12040616",
+      "abstract": "This paper investigates an anticipatory activation anti-windup approach based on Linear Active Disturbance Rejection Control (LADRC) to address the influences of accelerated saturation on the actuators in a Miniaturized Inertial Stabilized Platform (MISP) with extreme external disturbance. The proposed method aims to eliminate the high-frequency vibrations on the Line of Sight (LOS) of electro-optical devices during actuator saturation. To achieve this, the Linear Extended State Observer (LESO) is modified by adding saturation feedback to the total disturbance observed state variable, which is operated as an anticipatory activation anti-windup compensator. The stability of the proposed controller is discussed, and the gains are optimized by the Linear Matrix Inequality (LMI) constraints though quadratic programming and an H-infinite performance indicator. Additionally, as the multiple activated scheme for anti-windup, the effectiveness of immediate activation in dealing with accelerated saturation is compared and analyzed. These comparisons and verification are implemented through simulations, where the external disturbance is introduced using recorded attitude data from USV sailing. Finally, experiments are conducted on an MISP for a visual tracking system, demonstrating that the anticipatory activation mothed effectively suppresses high-frequency vibrations on the LOS during instances of accelerated saturation.",
+      "keywords": [
+        "robustness control",
+        "accelerated saturation",
+        "LADRC",
+        "quadratic programming",
+        "anti-windup",
+        "LMI",
+        "DESIGN",
+        "TRACKING"
+      ],
+      "normalized_title": "an anti windup method based on an ladrc for miniaturized inertial stabilized platforms on unmanned vehicles in marine applications",
+      "raw_bibtex": "@ARTICLE{10.3390/jmse12040616,\n\tauthor = {Fu, TL and Guan, LW and Gao, YB and Qin, C},\n\ttitle = {An Anti-Windup Method Based on an LADRC for Miniaturized Inertial Stabilized Platforms on Unmanned Vehicles in Marine Applications},\n\tjournal = {JOURNAL OF MARINE SCIENCE AND ENGINEERING},\n\tyear = {2024},\n\tkeywords = {robustness control; accelerated saturation; LADRC; quadratic programming; anti-windup; LMI; DESIGN; TRACKING},\n\tabstract = {This paper investigates an anticipatory activation anti-windup approach based on Linear Active Disturbance Rejection Control (LADRC) to address the influences of accelerated saturation on the actuators in a Miniaturized Inertial Stabilized Platform (MISP) with extreme external disturbance. The proposed method aims to eliminate the high-frequency vibrations on the Line of Sight (LOS) of electro-optical devices during actuator saturation. To achieve this, the Linear Extended State Observer (LESO) is modified by adding saturation feedback to the total disturbance observed state variable, which is operated as an anticipatory activation anti-windup compensator. The stability of the proposed controller is discussed, and the gains are optimized by the Linear Matrix Inequality (LMI) constraints though quadratic programming and an H-infinite performance indicator. Additionally, as the multiple activated scheme for anti-windup, the effectiveness of immediate activation in dealing with accelerated saturation is compared and analyzed. These comparisons and verification are implemented through simulations, where the external disturbance is introduced using recorded attitude data from USV sailing. Finally, experiments are conducted on an MISP for a visual tracking system, demonstrating that the anticipatory activation mothed effectively suppresses high-frequency vibrations on the LOS during instances of accelerated saturation.},\n\tdoi = {10.3390/jmse12040616},\n\tvolume = {12},\n\tnumber = {4},\n\tissn = {2077-1312},\n\tnote = {Times Cited in Web of Science Core Collection: 5 Total Times Cited: 5 Cited Reference Count: 40 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/jmse12040616"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000017",
+      "entry_type": "article",
+      "title": "LADRC-based wake tracking control via sideslip angle estimation for AUVs following the trajectories of near-surface targets",
+      "authors": [
+        "He, WC",
+        "Meng, ZC",
+        "Li, YZ",
+        "Xu, P",
+        "Wan, XF",
+        "Liu, JH",
+        "Jin, H",
+        "Zhang, KC",
+        "Xie, GM",
+        "Xu, MY"
+      ],
+      "year": 2026,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2026.124680",
+      "abstract": "Autonomous underwater vehicles (AUVs) face considerable challenges in tracking the trajectories of near-surface targets due to nonlinear couplings, environmental disturbances, and pronounced sideslip effects, all of which significantly degrade the stability and accuracy of their control systems. In this paper, a wake-tracking control method is proposed for AUVs following the trajectories of surface targets. The controller integrates sideslip angle estimation with active disturbance rejection. A reduced-order extended state observer is constructed to estimate the real-time sideslip angle, representing the deviation between the vehicle's heading and its actual motion direction caused by wake-induced disturbances. Furthermore, a sideslip-estimation-based line-of-sight (LOS) guidance law is developed to generate coordinated yaw angle and surge velocity commands, thereby improving both directional control and speed regulation during wake tracking. Two linear active disturbance rejection controllers are subsequently designed to achieve decoupled and robust control of the yaw and surge channels. Simulation results demonstrate that the proposed method surpasses conventional LOS guidance and PID controllers integrated with disturbance observers in trajectory accuracy, lateral deviation suppression, convergence rate, and energy efficiency, thereby enabling stable and reliable wake tracking for AUVs in complex near-surface marine environments.",
+      "keywords": [
+        "AUV",
+        "LADRC",
+        "Wake tracking",
+        "Sideslip angle estimation",
+        "AUTONOMOUS UNDERWATER VEHICLE",
+        "SYSTEMS"
+      ],
+      "normalized_title": "ladrc based wake tracking control via sideslip angle estimation for auvs following the trajectories of near surface targets",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2026.124680,\n\tauthor = {He, WC and Meng, ZC and Li, YZ and Xu, P and Wan, XF and Liu, JH and Jin, H and Zhang, KC and Xie, GM and Xu, MY},\n\ttitle = {LADRC-based wake tracking control via sideslip angle estimation for AUVs following the trajectories of near-surface targets},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2026},\n\tkeywords = {AUV; LADRC; Wake tracking; Sideslip angle estimation; AUTONOMOUS UNDERWATER VEHICLE; SYSTEMS},\n\tabstract = {Autonomous underwater vehicles (AUVs) face considerable challenges in tracking the trajectories of near-surface targets due to nonlinear couplings, environmental disturbances, and pronounced sideslip effects, all of which significantly degrade the stability and accuracy of their control systems. In this paper, a wake-tracking control method is proposed for AUVs following the trajectories of surface targets. The controller integrates sideslip angle estimation with active disturbance rejection. A reduced-order extended state observer is constructed to estimate the real-time sideslip angle, representing the deviation between the vehicle's heading and its actual motion direction caused by wake-induced disturbances. Furthermore, a sideslip-estimation-based line-of-sight (LOS) guidance law is developed to generate coordinated yaw angle and surge velocity commands, thereby improving both directional control and speed regulation during wake tracking. Two linear active disturbance rejection controllers are subsequently designed to achieve decoupled and robust control of the yaw and surge channels. Simulation results demonstrate that the proposed method surpasses conventional LOS guidance and PID controllers integrated with disturbance observers in trajectory accuracy, lateral deviation suppression, convergence rate, and energy efficiency, thereby enabling stable and reliable wake tracking for AUVs in complex near-surface marine environments.},\n\tdoi = {10.1016/j.oceaneng.2026.124680},\n\tvolume = {353},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 39 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2026.124680"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000018",
+      "entry_type": "article",
+      "title": "ROV trajectory tracking control based on disturbance observer and combinatorial reaching law of sliding mode",
+      "authors": [
+        "Luo, GS",
+        "Gao, SM",
+        "Jiang, Z",
+        "Luo, CK",
+        "Zhang, WF",
+        "Wang, HH"
+      ],
+      "year": 2024,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2024.117744",
+      "abstract": "To ensure that underwater remotely operated vehicles have the ability to complete trajectory tracking in the presence of external disturbances and model parameter uncertainties, this paper proposes a double-closed-loop integrative sliding mode ROV tracking control based on the nonlinear expansion state observer. Firstly, to address the issue of oscillatory vibrations in the stable state of the dual closed-loop sliding mode structure, the inner loop control adopts a combinatorial reaching rate that leverages both exponential and variable convergence rates. Secondly, addressing the impact of external disturbances and model parameter uncertainties on the ROV, this paper proposes a novel nonlinear disturbance observer inspired by active disturbance rejection control principles. The stability of the complete closed-loop cascaded system is substantiated. Simulation outcomes demonstrate that the presented scheme significantly enhances the control system's transient response, disturbance rejection capacity, and ability to suppress jitter vibrations within sliding mode control, thereby proving the robustness, viability, and effectiveness of the control strategy outlined herein.",
+      "keywords": [
+        "ROV",
+        "Trajectory tracking",
+        "Combinatorial reaching law",
+        "External disturbances",
+        "Nonlinear disturbance state observer",
+        "AUTONOMOUS UNDERWATER VEHICLES"
+      ],
+      "normalized_title": "rov trajectory tracking control based on disturbance observer and combinatorial reaching law of sliding mode",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2024.117744,\n\tauthor = {Luo, GS and Gao, SM and Jiang, Z and Luo, CK and Zhang, WF and Wang, HH},\n\ttitle = {ROV trajectory tracking control based on disturbance observer and combinatorial reaching law of sliding mode},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2024},\n\tkeywords = {ROV; Trajectory tracking; Combinatorial reaching law; External disturbances; Nonlinear disturbance state observer; AUTONOMOUS UNDERWATER VEHICLES},\n\tabstract = {To ensure that underwater remotely operated vehicles have the ability to complete trajectory tracking in the presence of external disturbances and model parameter uncertainties, this paper proposes a double-closed-loop integrative sliding mode ROV tracking control based on the nonlinear expansion state observer. Firstly, to address the issue of oscillatory vibrations in the stable state of the dual closed-loop sliding mode structure, the inner loop control adopts a combinatorial reaching rate that leverages both exponential and variable convergence rates. Secondly, addressing the impact of external disturbances and model parameter uncertainties on the ROV, this paper proposes a novel nonlinear disturbance observer inspired by active disturbance rejection control principles. The stability of the complete closed-loop cascaded system is substantiated. Simulation outcomes demonstrate that the presented scheme significantly enhances the control system's transient response, disturbance rejection capacity, and ability to suppress jitter vibrations within sliding mode control, thereby proving the robustness, viability, and effectiveness of the control strategy outlined herein.},\n\tdoi = {10.1016/j.oceaneng.2024.117744},\n\tvolume = {304},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 23 Total Times Cited: 23 Cited Reference Count: 25 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2024.117744"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000019",
+      "entry_type": "article",
+      "title": "Co-Design of USV Control System Based on Fuzzy Satisfactory Optimization for Automatic Target Arriving and Berthing",
+      "authors": [
+        "Chen, TY",
+        "Peng, HX",
+        "Chang, XY",
+        "Zhang, XN",
+        "Wang, DD"
+      ],
+      "year": 2024,
+      "journal": "IEEE ACCESS",
+      "doi": "10.1109/access.2024.3432868",
+      "abstract": "Most of the previous research about unmanned surface vehicle (USV) control system just focuses on reaching the target but not considers berthing. Moreover, computation cost is rarely concerned. For automatic target arriving and berthing of USV in presence of multi-shape convex obstacles and disturbances, this paper designs a composite control system including trajectory optimization and trajectory tracking. In order to generate a smooth and optimal trajectory, two objectives including minimum running time and energy consumption are proposed, and their priority requirement is presented. Fuzzy satisfactory optimization is introduced to reformulate the objective functions, and the membership degree difference is used to model priority between two objectives. The obstacle avoidance constraint is developed based on the improved P-criterion. The comprehensive optimization model is established to obtain the maximum membership degree. Further, the priority optimization model is proposed to expand the feasible domain by relaxing the comprehensive optimization result. Two models are discretized by Gaussian pseudospectral method to find the optimal solution. To achieve good trajectory tracking under disturbances, two first-order active disturbance rejection control (ADRC) controllers are designed to follow the desired longitudinal velocity and course angular velocity. All the velocities of USV can converge. The simulation proves the effectiveness of the proposed co-designed system by comparing with other methods.",
+      "keywords": [
+        "Underactuated surface vessels",
+        "Trajectory optimization",
+        "Trajectory tracking",
+        "Control systems",
+        "Optimization models",
+        "Energy consumption",
+        "Kinematics",
+        "Gaussian processes",
+        "USV",
+        "trajectory optimization",
+        "trajectory tracking",
+        "Gaussian pseudospectral method",
+        "ADRC",
+        "TRAJECTORY TRACKING CONTROL"
+      ],
+      "normalized_title": "co design of usv control system based on fuzzy satisfactory optimization for automatic target arriving and berthing",
+      "raw_bibtex": "@ARTICLE{10.1109/ACCESS.2024.3432868,\n\tauthor = {Chen, TY and Peng, HX and Chang, XY and Zhang, XN and Wang, DD},\n\ttitle = {Co-Design of USV Control System Based on Fuzzy Satisfactory Optimization for Automatic Target Arriving and Berthing},\n\tjournal = {IEEE ACCESS},\n\tyear = {2024},\n\tkeywords = {Underactuated surface vessels; Trajectory optimization; Trajectory tracking; Control systems; Optimization models; Energy consumption; Kinematics; Gaussian processes; USV; trajectory optimization; trajectory tracking; Gaussian pseudospectral method; ADRC; TRAJECTORY TRACKING CONTROL},\n\tabstract = {Most of the previous research about unmanned surface vehicle (USV) control system just focuses on reaching the target but not considers berthing. Moreover, computation cost is rarely concerned. For automatic target arriving and berthing of USV in presence of multi-shape convex obstacles and disturbances, this paper designs a composite control system including trajectory optimization and trajectory tracking. In order to generate a smooth and optimal trajectory, two objectives including minimum running time and energy consumption are proposed, and their priority requirement is presented. Fuzzy satisfactory optimization is introduced to reformulate the objective functions, and the membership degree difference is used to model priority between two objectives. The obstacle avoidance constraint is developed based on the improved P-criterion. The comprehensive optimization model is established to obtain the maximum membership degree. Further, the priority optimization model is proposed to expand the feasible domain by relaxing the comprehensive optimization result. Two models are discretized by Gaussian pseudospectral method to find the optimal solution. To achieve good trajectory tracking under disturbances, two first-order active disturbance rejection control (ADRC) controllers are designed to follow the desired longitudinal velocity and course angular velocity. All the velocities of USV can converge. The simulation proves the effectiveness of the proposed co-designed system by comparing with other methods.},\n\tdoi = {10.1109/ACCESS.2024.3432868},\n\tvolume = {12},\n\tpages = {102449-102460},\n\tissn = {2169-3536},\n\tnote = {Times Cited in Web of Science Core Collection: 2 Total Times Cited: 2 Cited Reference Count: 30 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/ACCESS.2024.3432868"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000020",
+      "entry_type": "article",
+      "title": "Double-Loop Sliding Mode Controller with an Ocean Current Observer for the Trajectory Tracking of ROV",
+      "authors": [
+        "Mu, WL",
+        "Wang, YX",
+        "Sun, HL",
+        "Liu, GJ"
+      ],
+      "year": 2021,
+      "journal": "JOURNAL OF MARINE SCIENCE AND ENGINEERING",
+      "doi": "10.3390/jmse9091000",
+      "abstract": "To solve the trajectory tracking problem of insufficient response and the large tracking error of remotely operated vehicles (ROVs) under the interference of large ocean currents, this paper proposes a double-loop sliding mode controller with an ocean current observer. The designed controller consisted of an outer-loop controller (the position controller) and an inner-loop controller (the velocity controller): the outer controller was designed by the position error, and a reference velocity was created for the inner loop to achieve accurate positioning and attitude tracking. The reference control input was treated as a new target to design the inner-loop controller, enabling the ROV to achieve accurate reference velocity tracking. Based on the theoretical idea of active disturbance rejection control, a kinematic equation-based ocean current observer was designed to estimate and compensate for large unknown currents to ensure accurate trajectory tracking performance under large currents. The simulation results proved that the double-loop sliding-mode control scheme with an ocean current observer always showed good tracking performance, demonstrating the excellent control performance and high robustness of the scheme. Compared with the high-complexity control schemes such as neural network-based PID control or fuzzy sliding mode control, it effectively improves the robustness to ocean current disturbances without increasing the computational effort excessively, and is more practical in ROV systems with limited computational power.",
+      "keywords": [
+        "remotely operated vehicle (ROV)",
+        "sliding mode control",
+        "double-loop control structure",
+        "ocean current observer",
+        "trajectory tracking",
+        "AUTONOMOUS UNDERWATER VEHICLES",
+        "DESIGN",
+        "SYSTEMS",
+        "DEPTH"
+      ],
+      "normalized_title": "double loop sliding mode controller with an ocean current observer for the trajectory tracking of rov",
+      "raw_bibtex": "@ARTICLE{10.3390/jmse9091000,\n\tauthor = {Mu, WL and Wang, YX and Sun, HL and Liu, GJ},\n\ttitle = {Double-Loop Sliding Mode Controller with an Ocean Current Observer for the Trajectory Tracking of ROV},\n\tjournal = {JOURNAL OF MARINE SCIENCE AND ENGINEERING},\n\tyear = {2021},\n\tkeywords = {remotely operated vehicle (ROV); sliding mode control; double-loop control structure; ocean current observer; trajectory tracking; AUTONOMOUS UNDERWATER VEHICLES; DESIGN; SYSTEMS; DEPTH},\n\tabstract = {To solve the trajectory tracking problem of insufficient response and the large tracking error of remotely operated vehicles (ROVs) under the interference of large ocean currents, this paper proposes a double-loop sliding mode controller with an ocean current observer. The designed controller consisted of an outer-loop controller (the position controller) and an inner-loop controller (the velocity controller): the outer controller was designed by the position error, and a reference velocity was created for the inner loop to achieve accurate positioning and attitude tracking. The reference control input was treated as a new target to design the inner-loop controller, enabling the ROV to achieve accurate reference velocity tracking. Based on the theoretical idea of active disturbance rejection control, a kinematic equation-based ocean current observer was designed to estimate and compensate for large unknown currents to ensure accurate trajectory tracking performance under large currents. The simulation results proved that the double-loop sliding-mode control scheme with an ocean current observer always showed good tracking performance, demonstrating the excellent control performance and high robustness of the scheme. Compared with the high-complexity control schemes such as neural network-based PID control or fuzzy sliding mode control, it effectively improves the robustness to ocean current disturbances without increasing the computational effort excessively, and is more practical in ROV systems with limited computational power.},\n\tdoi = {10.3390/jmse9091000},\n\tvolume = {9},\n\tnumber = {9},\n\tissn = {2077-1312},\n\tnote = {Times Cited in Web of Science Core Collection: 19 Total Times Cited: 23 Cited Reference Count: 45 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/jmse9091000"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

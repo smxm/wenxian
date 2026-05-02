@@ -1,0 +1,289 @@
+{
+  "batch_id": "batch_0003",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000021",
+    "paper_000022",
+    "paper_000023",
+    "paper_000024",
+    "paper_000025",
+    "paper_000026",
+    "paper_000027",
+    "paper_000028",
+    "paper_000029",
+    "paper_000030"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000021",
+      "entry_type": "article",
+      "title": "Air-YOLO: A UAV-based Target Detection Model for Aerial Photography",
+      "authors": [
+        "Liu, Z.",
+        "Tan, L.",
+        "Zhang, C.",
+        "Liu, H."
+      ],
+      "year": 2026,
+      "journal": "Unmanned Systems",
+      "doi": "10.1142/s2301385027500488",
+      "abstract": "Object detection in unmanned aerial vehicle (UAV) imagery has found widespread applications in disaster response, target tracking, and industrial inspection. While UAVs offer advantages such as low cost and flexible deployment, their captured images often contain a high proportion of small objects, frequent occlusions, and complex backgrounds, posing significant challenges to detection algorithms. To address these issues, we propose Air-YOLO, a lightweight and robust detection framework based on the YOLO architecture, tailored for UAV scenarios. The proposed method incorporates a small-object feature enhancement module (SFEM) to strengthen the interaction between shallow and mid-level features, thereby improving small-object representation. In the backbone, deformable convolution-based residual blocks (C2f_DCN) and channel prior convolutional attention (CPCA) are introduced to enhance geometric adaptability and preserve long-range contextual information. Furthermore, a partial convolution enhanced head (PCE-Head) is designed to reduce computational redundancy while improving detection accuracy. Extensive experiments on VisDrone and CODrone datasets demonstrate that Air-YOLO achieves higher detection accuracy than state-of-The-Art baselines, while reducing parameter count and GFLOPs. These results highlight the model's efficiency and robustness, showcasing its potential for real-Time UAV-based applications. © 2027 World Scientific Publishing Company.",
+      "keywords": [],
+      "normalized_title": "air yolo a uav based target detection model for aerial photography",
+      "raw_bibtex": "@ARTICLE{10.1142/S2301385027500488,\n\tauthor = {Liu, Z. and Tan, L. and Zhang, C. and Liu, H.},\n\ttitle = {Air-YOLO: A UAV-based Target Detection Model for Aerial Photography},\n\tjournal = {Unmanned Systems},\n\tyear = {2026},\n\tabstract = {Object detection in unmanned aerial vehicle (UAV) imagery has found widespread applications in disaster response, target tracking, and industrial inspection. While UAVs offer advantages such as low cost and flexible deployment, their captured images often contain a high proportion of small objects, frequent occlusions, and complex backgrounds, posing significant challenges to detection algorithms. To address these issues, we propose Air-YOLO, a lightweight and robust detection framework based on the YOLO architecture, tailored for UAV scenarios. The proposed method incorporates a small-object feature enhancement module (SFEM) to strengthen the interaction between shallow and mid-level features, thereby improving small-object representation. In the backbone, deformable convolution-based residual blocks (C2f_DCN) and channel prior convolutional attention (CPCA) are introduced to enhance geometric adaptability and preserve long-range contextual information. Furthermore, a partial convolution enhanced head (PCE-Head) is designed to reduce computational redundancy while improving detection accuracy. Extensive experiments on VisDrone and CODrone datasets demonstrate that Air-YOLO achieves higher detection accuracy than state-of-The-Art baselines, while reducing parameter count and GFLOPs. These results highlight the model's efficiency and robustness, showcasing its potential for real-Time UAV-based applications. © 2027 World Scientific Publishing Company.},\n\tdoi = {10.1142/S2301385027500488},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105031677461&doi=10.1142%2FS2301385027500488&partnerID=40&md5=e2a816fd71755a31f2a8c34acbd007eb},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1142/S2301385027500488"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000022",
+      "entry_type": "article",
+      "title": "Robust Object Detection for UAVs in Foggy Environments with Spatial-Edge Fusion and Dynamic Task Alignment",
+      "authors": [
+        "Dong, Q.",
+        "Han, T.",
+        "Wu, G.",
+        "Sun, L.",
+        "Lu, Y."
+      ],
+      "year": 2026,
+      "journal": "Remote Sensing",
+      "doi": "10.3390/rs18010169",
+      "abstract": "Highlights: What are the main findings? We introduce Fog-UAVNet, a lightweight detector with a unified design that fuses edge and spatial cues, adapts its receptive field to fog density, and aligns classification with localization. Across multiple fog benchmarks, Fog-UAVNet consistently achieves higher detection accuracy and more efficient inference than strong baselines, leading to a superior accuracy–efficiency trade-off under foggy conditions. What are the implications of the main findings? Robust, real-time UAV perception is feasible without large models, enabling practical onboard deployment. The design offers a simple recipe for adverse weather detection and may generalize across aerial scenarios. Robust scene perception in adverse environmental conditions, particularly under dense fog, presents a persistent and fundamental challenge to the reliability of object detection systems. To address this critical challenge, we propose Fog-UAVNet, a novel lightweight deep-learning architecture designed to enhance unmanned aerial vehicle (UAV) object detection performance in foggy environments. Fog-UAVNet incorporates three key innovations: the Spatial-Edge Feature Fusion Module (SEFFM), which enhances feature extraction by effectively integrating edge and spatial information, the Frequency-Adaptive Dilated Convolution (FADC), which dynamically adjusts to fog density variations and further enhances feature representation under adverse conditions, and the Dynamic Task-Aligned Head (DTAH), which dynamically aligns localization and classification tasks and thus improves overall model performance. To evaluate the effectiveness of our approach, we independently constructed a real-world foggy dataset and synthesized the VisDrone-fog dataset using an atmospheric scattering model. Extensive experiments on multiple challenging datasets demonstrate that Fog-UAVNet consistently outperforms state-of-the-art methods in both detection accuracy and computational efficiency, highlighting its potential for enhancing robust visual perception under adverse weather. © 2026 by the authors.",
+      "keywords": [],
+      "normalized_title": "robust object detection for uavs in foggy environments with spatial edge fusion and dynamic task alignment",
+      "raw_bibtex": "@ARTICLE{10.3390/rs18010169,\n\tauthor = {Dong, Q. and Han, T. and Wu, G. and Sun, L. and Lu, Y.},\n\ttitle = {Robust Object Detection for UAVs in Foggy Environments with Spatial-Edge Fusion and Dynamic Task Alignment},\n\tjournal = {Remote Sensing},\n\tyear = {2026},\n\tabstract = {Highlights: What are the main findings? We introduce Fog-UAVNet, a lightweight detector with a unified design that fuses edge and spatial cues, adapts its receptive field to fog density, and aligns classification with localization. Across multiple fog benchmarks, Fog-UAVNet consistently achieves higher detection accuracy and more efficient inference than strong baselines, leading to a superior accuracy–efficiency trade-off under foggy conditions. What are the implications of the main findings? Robust, real-time UAV perception is feasible without large models, enabling practical onboard deployment. The design offers a simple recipe for adverse weather detection and may generalize across aerial scenarios. Robust scene perception in adverse environmental conditions, particularly under dense fog, presents a persistent and fundamental challenge to the reliability of object detection systems. To address this critical challenge, we propose Fog-UAVNet, a novel lightweight deep-learning architecture designed to enhance unmanned aerial vehicle (UAV) object detection performance in foggy environments. Fog-UAVNet incorporates three key innovations: the Spatial-Edge Feature Fusion Module (SEFFM), which enhances feature extraction by effectively integrating edge and spatial information, the Frequency-Adaptive Dilated Convolution (FADC), which dynamically adjusts to fog density variations and further enhances feature representation under adverse conditions, and the Dynamic Task-Aligned Head (DTAH), which dynamically aligns localization and classification tasks and thus improves overall model performance. To evaluate the effectiveness of our approach, we independently constructed a real-world foggy dataset and synthesized the VisDrone-fog dataset using an atmospheric scattering model. Extensive experiments on multiple challenging datasets demonstrate that Fog-UAVNet consistently outperforms state-of-the-art methods in both detection accuracy and computational efficiency, highlighting its potential for enhancing robust visual perception under adverse weather. © 2026 by the authors.},\n\tdoi = {10.3390/rs18010169},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105027281148&doi=10.3390%2Frs18010169&partnerID=40&md5=d42b56b90894f26db214792e3264131e},\n\tvolume = {18},\n\tnumber = {1},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.3390/rs18010169"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000023",
+      "entry_type": "article",
+      "title": "RSNet-Lite: A Lightweight Perception Subnetwork for Remote Sensing Object Detection",
+      "authors": [
+        "Li, H.",
+        "Ma, J.",
+        "Guo, W.",
+        "Li, X.",
+        "Qin, X.",
+        "Ma, Z."
+      ],
+      "year": 2026,
+      "journal": "IEEE Geoscience and Remote Sensing Letters",
+      "doi": "10.1109/lgrs.2025.3631871",
+      "abstract": "With the rapid development of applications such as unmanned aerial vehicle (UAV)-based remote sensing, smart cities, and intelligent transportation, small-object detection has become increasingly important in the field of object recognition. However, existing methods often struggle to balance detection accuracy and inference efficiency under large-scale variations, dense small-object distributions, and complex background interference. To address these challenges, this letter proposes a lightweight perception subnetwork, RSNet-Lite. The network integrates a multiscale attention mechanism to enhance small-object perception, dynamic convolution, and long-range spatial modeling units to improve feature representation, and lightweight convolution with efficient sampling strategies to significantly reduce computational complexity. As a result, RSNet-Lite achieves real-time inference while maintaining high detection accuracy, striking a balance between speed and performance. Finally, the proposed method is validated on the Aerial Image–Tiny Object Detection (AI-TOD) and Vision Meets Drone (VisDrone) datasets, demonstrating its effectiveness and strong potential for small-object detection tasks. © 2004-2012 IEEE.",
+      "keywords": [],
+      "normalized_title": "rsnet lite a lightweight perception subnetwork for remote sensing object detection",
+      "raw_bibtex": "@ARTICLE{10.1109/LGRS.2025.3631871,\n\tauthor = {Li, H. and Ma, J. and Guo, W. and Li, X. and Qin, X. and Ma, Z.},\n\ttitle = {RSNet-Lite: A Lightweight Perception Subnetwork for Remote Sensing Object Detection},\n\tjournal = {IEEE Geoscience and Remote Sensing Letters},\n\tyear = {2026},\n\tabstract = {With the rapid development of applications such as unmanned aerial vehicle (UAV)-based remote sensing, smart cities, and intelligent transportation, small-object detection has become increasingly important in the field of object recognition. However, existing methods often struggle to balance detection accuracy and inference efficiency under large-scale variations, dense small-object distributions, and complex background interference. To address these challenges, this letter proposes a lightweight perception subnetwork, RSNet-Lite. The network integrates a multiscale attention mechanism to enhance small-object perception, dynamic convolution, and long-range spatial modeling units to improve feature representation, and lightweight convolution with efficient sampling strategies to significantly reduce computational complexity. As a result, RSNet-Lite achieves real-time inference while maintaining high detection accuracy, striking a balance between speed and performance. Finally, the proposed method is validated on the Aerial Image–Tiny Object Detection (AI-TOD) and Vision Meets Drone (VisDrone) datasets, demonstrating its effectiveness and strong potential for small-object detection tasks. © 2004-2012 IEEE.},\n\tdoi = {10.1109/LGRS.2025.3631871},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105021550094&doi=10.1109%2FLGRS.2025.3631871&partnerID=40&md5=d3ad5523f32a4bf1786753d036f1ae8c},\n\tvolume = {23},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1109/LGRS.2025.3631871"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000024",
+      "entry_type": "article",
+      "title": "UAV Small Target Detection Method Based on Frequency-Enhanced Multi-Scale Fusion Backbone",
+      "authors": [
+        "Zhong, Y.",
+        "Zhao, D.",
+        "Han, Y.",
+        "Wang, Z."
+      ],
+      "year": 2026,
+      "journal": "Drones",
+      "doi": "10.3390/drones10020106",
+      "abstract": "Highlights: What are the main findings? A method for redesigning the RT-DETR backbone has been established based on the use of a frequency-enhanced multi-scale feature fusion module and a grouped multi-kernel interaction module. We integrated Shape-NWD into the loss computation to make the objective shape-aware. What are the implications of the main findings? An end-to-end object detection model tailored for UAV aerial-view scenarios is proposed. Compared with RT-DETR, our method achieves improvements in both AP and AP50 while largely preserving the real-time performance of RT-DETR. Despite the widespread adoption of UAV-based object detection, traditional YOLO architectures are bottlenecked by their reliance on NMS, which complicates deployment on edge devices due to limited support across hardware acceleration platforms. While end-to-end models such as RT-DETR eliminate this bottleneck, they suffer from severe feature degradation for small targets caused by the inherent conflict between deep downsampling and detail preservation. To bridge this gap, we propose a Frequency-Enhanced Real-Time Detection framework specifically designed for UAV perspectives. Unlike standard backbones, our design incorporates a Frequency-Enhanced Multi-Scale Fusion module, which transforms features into the frequency domain to explicitly amplify high-frequency components essential for small object localization. Additionally, a Grouped Multi-Kernel Interaction module is introduced to dynamically capture multi-scale contextual information. Furthermore, we integrate Shape-NWD into the loss computation by introducing shape weight coefficients and scale correlation factors, directing focus toward the intrinsic attributes of bounding boxes to enhance regression accuracy for tiny targets. Experimental results on the VisDrone dataset demonstrate that our method improves the Average Precision by 0.9% and AP50 by 1.1% compared to the baseline, with consistent gains observed on the UAVVaste dataset. © 2026 by the authors.",
+      "keywords": [],
+      "normalized_title": "uav small target detection method based on frequency enhanced multi scale fusion backbone",
+      "raw_bibtex": "@ARTICLE{10.3390/drones10020106,\n\tauthor = {Zhong, Y. and Zhao, D. and Han, Y. and Wang, Z.},\n\ttitle = {UAV Small Target Detection Method Based on Frequency-Enhanced Multi-Scale Fusion Backbone},\n\tjournal = {Drones},\n\tyear = {2026},\n\tabstract = {Highlights: What are the main findings? A method for redesigning the RT-DETR backbone has been established based on the use of a frequency-enhanced multi-scale feature fusion module and a grouped multi-kernel interaction module. We integrated Shape-NWD into the loss computation to make the objective shape-aware. What are the implications of the main findings? An end-to-end object detection model tailored for UAV aerial-view scenarios is proposed. Compared with RT-DETR, our method achieves improvements in both AP and AP50 while largely preserving the real-time performance of RT-DETR. Despite the widespread adoption of UAV-based object detection, traditional YOLO architectures are bottlenecked by their reliance on NMS, which complicates deployment on edge devices due to limited support across hardware acceleration platforms. While end-to-end models such as RT-DETR eliminate this bottleneck, they suffer from severe feature degradation for small targets caused by the inherent conflict between deep downsampling and detail preservation. To bridge this gap, we propose a Frequency-Enhanced Real-Time Detection framework specifically designed for UAV perspectives. Unlike standard backbones, our design incorporates a Frequency-Enhanced Multi-Scale Fusion module, which transforms features into the frequency domain to explicitly amplify high-frequency components essential for small object localization. Additionally, a Grouped Multi-Kernel Interaction module is introduced to dynamically capture multi-scale contextual information. Furthermore, we integrate Shape-NWD into the loss computation by introducing shape weight coefficients and scale correlation factors, directing focus toward the intrinsic attributes of bounding boxes to enhance regression accuracy for tiny targets. Experimental results on the VisDrone dataset demonstrate that our method improves the Average Precision by 0.9% and AP50 by 1.1% compared to the baseline, with consistent gains observed on the UAVVaste dataset. © 2026 by the authors.},\n\tdoi = {10.3390/drones10020106},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105031152006&doi=10.3390%2Fdrones10020106&partnerID=40&md5=6ac2dafb57c18dfb66f8ac5519a219fd},\n\tvolume = {10},\n\tnumber = {2},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.3390/drones10020106"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000025",
+      "entry_type": "article",
+      "title": "LSOD-DETR: a lightweight small object detection model based on real-time detection transformer",
+      "authors": [
+        "Zhang, L.",
+        "Han, W.",
+        "Yang, K.",
+        "Zhang, K.",
+        "Zhang, L.",
+        "Xiao, R.",
+        "Li, J.",
+        "Wei, W.",
+        "Yu, P.",
+        "Tan, H."
+      ],
+      "year": 2026,
+      "journal": "Journal of Supercomputing",
+      "doi": "10.1007/s11227-025-08212-8",
+      "abstract": "This paper introduces LSOD-DETR, a lightweight small object detection model based on the real-time detection transformer, designed to address the challenges of low pixel counts and indistinct features in unmanned scenes. To enhance multi-scale feature perception, we design a multi-scale edge information enhancement (MSEIE) module that combines learnable edge extraction with convolution operations. Additionally, a small object detection feature enhancement network (SDENet) is proposed to strengthen the detection of tiny targets by fusing shallow details. Furthermore, a knowledge distillation method is introduced to optimize the trade-off between performance and complexity. Experimental results on the Tsinghua-Tencent 100K dataset demonstrate its superiority, achieving a precision of 91.6%, recall of 86.7%, and mAP (0.5) of 88.9%. Significantly, the model demonstrates exceptional efficiency suitable for real-time edge deployment, operating with only 14.1 million parameters and 44.3 GFLOPs, while achieving an inference speed of 65 FPS. Generalization tests on the VisDrone dataset further validate its robustness, with mAP (0.5) reaching 40.3%. © The Author(s), under exclusive licence to Springer Science+Business Media, LLC, part of Springer Nature 2026.",
+      "keywords": [],
+      "normalized_title": "lsod detr a lightweight small object detection model based on real time detection transformer",
+      "raw_bibtex": "@ARTICLE{10.1007/s11227-025-08212-8,\n\tauthor = {Zhang, L. and Han, W. and Yang, K. and Zhang, K. and Zhang, L. and Xiao, R. and Li, J. and Wei, W. and Yu, P. and Tan, H.},\n\ttitle = {LSOD-DETR: a lightweight small object detection model based on real-time detection transformer},\n\tjournal = {Journal of Supercomputing},\n\tyear = {2026},\n\tabstract = {This paper introduces LSOD-DETR, a lightweight small object detection model based on the real-time detection transformer, designed to address the challenges of low pixel counts and indistinct features in unmanned scenes. To enhance multi-scale feature perception, we design a multi-scale edge information enhancement (MSEIE) module that combines learnable edge extraction with convolution operations. Additionally, a small object detection feature enhancement network (SDENet) is proposed to strengthen the detection of tiny targets by fusing shallow details. Furthermore, a knowledge distillation method is introduced to optimize the trade-off between performance and complexity. Experimental results on the Tsinghua-Tencent 100K dataset demonstrate its superiority, achieving a precision of 91.6%, recall of 86.7%, and mAP (0.5) of 88.9%. Significantly, the model demonstrates exceptional efficiency suitable for real-time edge deployment, operating with only 14.1 million parameters and 44.3 GFLOPs, while achieving an inference speed of 65 FPS. Generalization tests on the VisDrone dataset further validate its robustness, with mAP (0.5) reaching 40.3%. © The Author(s), under exclusive licence to Springer Science+Business Media, LLC, part of Springer Nature 2026.},\n\tdoi = {10.1007/s11227-025-08212-8},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105027419476&doi=10.1007%2Fs11227-025-08212-8&partnerID=40&md5=738ac2c57ec8f87158f83472b4b6b7ec},\n\tvolume = {82},\n\tnumber = {2},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1007/s11227-025-08212-8"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000026",
+      "entry_type": "article",
+      "title": "YOLO-SAD: Enhancing Small Arthropod Target Detection for Autonomous Port Inspection Robots",
+      "authors": [
+        "Song, B.",
+        "Zi, P.",
+        "Pei, J.",
+        "Wang, C.",
+        "Zhuang, X.",
+        "Chen, J.",
+        "Xu, K.",
+        "Ding, X."
+      ],
+      "year": 2026,
+      "journal": "IEEE Sensors Journal",
+      "doi": "10.1109/jsen.2025.3643408",
+      "abstract": "In port trade, the transport of foreign arthropods is often encountered, and manual inspection is usually needed. However, owing to the small size of arthropod targets and the interference of the background, detecting them is difficult. To address this challenge, this article introduces the YOLO-SAD network based on YOLOv11, which uses an inspection robot equipped with a camera and this network for target detection instead of manual inspection. In this study, a dataset containing 1640 images with 30,826 labeled instances of multiple common small-target arthropods and background was constructed. Afterward, a small arthropod detection network (YOLO-SAD) was designed. By constructing a spatial-to-channel dense convolutional fusion (SPDCF) module to replace part of the traditional convolutions, a CBAM-enhanced kernel convolution (CKC) module was used to replace the C3K2 module of the neck network, and a fully connected FPN (FcFPN) network structure was constructed to replace the original neck network structure. Experiments were conducted based on the constructed dataset, and the results revealed that YOLO-SAD, with 22.8% fewer parameters than YOLOv11 had, achieved a 4.2% higher precision, a 1.2% higher mAP@0.5, and a 2% higher mAP@0.5:0.95 than YOLOv11 did. Moreover, it performed well with the VisDrone dataset, demonstrating the strong performance and robustness of YOLO-SAD for small-target detection. This method has the potential for increased target detection accuracy and efficiency in port inspection robots for detecting foreign arthropods. © 2001-2012 IEEE.",
+      "keywords": [],
+      "normalized_title": "yolo sad enhancing small arthropod target detection for autonomous port inspection robots",
+      "raw_bibtex": "@ARTICLE{10.1109/JSEN.2025.3643408,\n\tauthor = {Song, B. and Zi, P. and Pei, J. and Wang, C. and Zhuang, X. and Chen, J. and Xu, K. and Ding, X.},\n\ttitle = {YOLO-SAD: Enhancing Small Arthropod Target Detection for Autonomous Port Inspection Robots},\n\tjournal = {IEEE Sensors Journal},\n\tyear = {2026},\n\tabstract = {In port trade, the transport of foreign arthropods is often encountered, and manual inspection is usually needed. However, owing to the small size of arthropod targets and the interference of the background, detecting them is difficult. To address this challenge, this article introduces the YOLO-SAD network based on YOLOv11, which uses an inspection robot equipped with a camera and this network for target detection instead of manual inspection. In this study, a dataset containing 1640 images with 30,826 labeled instances of multiple common small-target arthropods and background was constructed. Afterward, a small arthropod detection network (YOLO-SAD) was designed. By constructing a spatial-to-channel dense convolutional fusion (SPDCF) module to replace part of the traditional convolutions, a CBAM-enhanced kernel convolution (CKC) module was used to replace the C3K2 module of the neck network, and a fully connected FPN (FcFPN) network structure was constructed to replace the original neck network structure. Experiments were conducted based on the constructed dataset, and the results revealed that YOLO-SAD, with 22.8% fewer parameters than YOLOv11 had, achieved a 4.2% higher precision, a 1.2% higher mAP@0.5, and a 2% higher mAP@0.5:0.95 than YOLOv11 did. Moreover, it performed well with the VisDrone dataset, demonstrating the strong performance and robustness of YOLO-SAD for small-target detection. This method has the potential for increased target detection accuracy and efficiency in port inspection robots for detecting foreign arthropods. © 2001-2012 IEEE.},\n\tdoi = {10.1109/JSEN.2025.3643408},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105025720045&doi=10.1109%2FJSEN.2025.3643408&partnerID=40&md5=7e825e22aaf6bacdaf84dc32e559bc57},\n\tvolume = {26},\n\tnumber = {3},\n\tpages = {4406-4421},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1109/JSEN.2025.3643408"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000027",
+      "entry_type": "article",
+      "title": "FEMT-YOLO: Frequency-enhanced multi-scale network for small object detection in aerial images",
+      "authors": [
+        "Cao, B.",
+        "Yang, Z.",
+        "Zhou, P.",
+        "Chen, H."
+      ],
+      "year": 2026,
+      "journal": "Results in Engineering",
+      "doi": "10.1016/j.rineng.2026.109726",
+      "abstract": "Small object detection in aerial images faces significant challenges: objects typically occupy '0.3% of image area, are embedded in complex backgrounds, and exhibit extreme scale variations. Existing methods have three key limitations: fixed receptive field constraints, feature degradation during propagation, and optimization conflicts in coupled detection heads. We propose FEMT-YOLO (Frequency-Enhanced Multi-Scale Network You Only Look Once), a novel architecture that systematically addresses these challenges through progressive feature refinement across three synergistic stages: extraction, aggregation, and prediction. The Multi-Scale Edge Information Enhancement Block (MSEIBlock) constructs adaptive feature pyramids with explicit boundary perception, addressing fixed receptive field limitations in the extraction stage. The Small Object Detection with Frequency-Enhanced Pyramid Network (SOFE-PNet) performs spatial-frequency dual-path processing, capturing long-range dependencies via frequency domain global modeling while suppressing background noise in the aggregation stage. The Task-Aligned Dynamic Detection Head (TAD-Head) resolves optimization conflicts through task decomposition and dynamic geometric alignment in the prediction stage. Extensive experiments on three challenging datasets validate our approach. On VisDrone-2019, the method achieves 38.20% mAP@50 and 22.90% mAP@50:95, improving 7.20% and 4.90% over YOLOv11 baseline. On RSOD and NWPU VHR-10, mAP@50 reaches 93.60% and 88.50%, respectively, with consistent improvements across all metrics. Cross-dataset evaluation demonstrates an average mAP@50:95 improvement of 3.97%, validating strong generalization capability and establishing competitive performance against state-of-the-art methods for UAV-based vision applications. © 2026 The Authors.",
+      "keywords": [],
+      "normalized_title": "femt yolo frequency enhanced multi scale network for small object detection in aerial images",
+      "raw_bibtex": "@ARTICLE{10.1016/j.rineng.2026.109726,\n\tauthor = {Cao, B. and Yang, Z. and Zhou, P. and Chen, H.},\n\ttitle = {FEMT-YOLO: Frequency-enhanced multi-scale network for small object detection in aerial images},\n\tjournal = {Results in Engineering},\n\tyear = {2026},\n\tabstract = {Small object detection in aerial images faces significant challenges: objects typically occupy '0.3% of image area, are embedded in complex backgrounds, and exhibit extreme scale variations. Existing methods have three key limitations: fixed receptive field constraints, feature degradation during propagation, and optimization conflicts in coupled detection heads. We propose FEMT-YOLO (Frequency-Enhanced Multi-Scale Network You Only Look Once), a novel architecture that systematically addresses these challenges through progressive feature refinement across three synergistic stages: extraction, aggregation, and prediction. The Multi-Scale Edge Information Enhancement Block (MSEIBlock) constructs adaptive feature pyramids with explicit boundary perception, addressing fixed receptive field limitations in the extraction stage. The Small Object Detection with Frequency-Enhanced Pyramid Network (SOFE-PNet) performs spatial-frequency dual-path processing, capturing long-range dependencies via frequency domain global modeling while suppressing background noise in the aggregation stage. The Task-Aligned Dynamic Detection Head (TAD-Head) resolves optimization conflicts through task decomposition and dynamic geometric alignment in the prediction stage. Extensive experiments on three challenging datasets validate our approach. On VisDrone-2019, the method achieves 38.20% mAP@50 and 22.90% mAP@50:95, improving 7.20% and 4.90% over YOLOv11 baseline. On RSOD and NWPU VHR-10, mAP@50 reaches 93.60% and 88.50%, respectively, with consistent improvements across all metrics. Cross-dataset evaluation demonstrates an average mAP@50:95 improvement of 3.97%, validating strong generalization capability and establishing competitive performance against state-of-the-art methods for UAV-based vision applications. © 2026 The Authors.},\n\tdoi = {10.1016/j.rineng.2026.109726},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105032182658&doi=10.1016%2Fj.rineng.2026.109726&partnerID=40&md5=45a42b32a4e1605aa52a64c8965c190b},\n\tvolume = {29},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1016/j.rineng.2026.109726"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000028",
+      "entry_type": "article",
+      "title": "LDA-DETR: A lightweight dynamic attention-enhanced DETR for small object detection",
+      "authors": [
+        "Shi, Y.",
+        "Li, J.",
+        "Jia, Y.",
+        "Hong, Q."
+      ],
+      "year": 2026,
+      "journal": "PLOS ONE",
+      "doi": "10.1371/journal.pone.0340977",
+      "abstract": "The issues of complex background interference, dense distribution, and insufficient feature representation for small objects have become significant challenges and research hotspots in computer vision. Particularly when the algorithm needs to be deployed in practical applications, many state-of-the-art detectors struggle to balance accuracy and efficiency, often requiring extensive computational power or suffering from degraded detection performance on small objects. To tackle these problems, this paper proposes a lightweight dynamic attention-enhanced DETR (LDA-DETR). Firstly, a lightweight feature extraction backbone (LFEB) is designed to improve the efficiency of object detection under limited computational resources. The proposed backbone enhances gradient flow and reduces the model’s parameters through residual structures and partial convolution operations. Then, a Dynamic Multi-Scale Fusion Module (DMSFM) is proposed to improve the model’s adaptability and the ability to fuse diverse features. The proposed module enhances feature representation ability and inference performance by performing convolutions at different scales across multiple branches and dynamically selecting operations. Finally, considering shallow features contain more detailed information, the Attention-Enhanced Fusion Network (AEFN) is constructed. The proposed approach refines and enriches features through attention mechanisms and cascading operations, endowing the features with comprehensive semantic and spatial details. Extensive experiments on the RSOD, NWPU VHR-10, URPC2020, and VisDrone-DET datasets demonstrate that LDA-DETR outperforms the state-of-the-art detection methods and further validate that the technique is better suited for small object detection applications. © 2026 Shi et al. This is an open access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.",
+      "keywords": [],
+      "normalized_title": "lda detr a lightweight dynamic attention enhanced detr for small object detection",
+      "raw_bibtex": "@ARTICLE{10.1371/journal.pone.0340977,\n\tauthor = {Shi, Y. and Li, J. and Jia, Y. and Hong, Q.},\n\ttitle = {LDA-DETR: A lightweight dynamic attention-enhanced DETR for small object detection},\n\tjournal = {PLOS ONE},\n\tyear = {2026},\n\tabstract = {The issues of complex background interference, dense distribution, and insufficient feature representation for small objects have become significant challenges and research hotspots in computer vision. Particularly when the algorithm needs to be deployed in practical applications, many state-of-the-art detectors struggle to balance accuracy and efficiency, often requiring extensive computational power or suffering from degraded detection performance on small objects. To tackle these problems, this paper proposes a lightweight dynamic attention-enhanced DETR (LDA-DETR). Firstly, a lightweight feature extraction backbone (LFEB) is designed to improve the efficiency of object detection under limited computational resources. The proposed backbone enhances gradient flow and reduces the model’s parameters through residual structures and partial convolution operations. Then, a Dynamic Multi-Scale Fusion Module (DMSFM) is proposed to improve the model’s adaptability and the ability to fuse diverse features. The proposed module enhances feature representation ability and inference performance by performing convolutions at different scales across multiple branches and dynamically selecting operations. Finally, considering shallow features contain more detailed information, the Attention-Enhanced Fusion Network (AEFN) is constructed. The proposed approach refines and enriches features through attention mechanisms and cascading operations, endowing the features with comprehensive semantic and spatial details. Extensive experiments on the RSOD, NWPU VHR-10, URPC2020, and VisDrone-DET datasets demonstrate that LDA-DETR outperforms the state-of-the-art detection methods and further validate that the technique is better suited for small object detection applications. © 2026 Shi et al. This is an open access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.},\n\tdoi = {10.1371/journal.pone.0340977},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105028918287&doi=10.1371%2Fjournal.pone.0340977&partnerID=40&md5=24aece0c1de913e9dee6a7f10fba0005},\n\tvolume = {21},\n\tnumber = {1 January},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1371/journal.pone.0340977"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000029",
+      "entry_type": "article",
+      "title": "Efficient Object Detection in Remote Sensing Images Based on Feature Weaving and Redundancy Suppression",
+      "authors": [
+        "Bai, Y.",
+        "Song, C.",
+        "Wang, Y.",
+        "Li, P."
+      ],
+      "year": 2026,
+      "journal": "IEEE Transactions on Geoscience and Remote Sensing",
+      "doi": "10.1109/tgrs.2026.3660762",
+      "abstract": "Remote sensing object detection faces significant challenges in handling scale variations, complex backgrounds, and dense target distributions. Existing models often struggle with high computational costs and a massive number of parameters, hindering deployment on resource-limited devices. To address these issues, we propose an efficient object detection network based on feature weaving and redundancy suppression called EWS-YOLO, featuring two components: 1) the weave-gated parallel (WGP) module employs grouped convolution with interlaced cascading and gating mechanisms to achieve implicit multiscale feature extraction and adaptive fusion, significantly enhancing multiscale target detection capability; and 2) the redundancy-suppressed feature pyramid network (RFS-FPN) integrates an progressive shuffle upsampling (PSU) mechanism coupled with dynamic feature fusion (DFF), enabling intelligent fusion of low-level spatial details and high-level semantic features while effectively suppressing redundant information through adaptive channelwise feature recalibration. Experimental results on VisDrone, DIOR, and UAVDT datasets demonstrate EWS-YOLO's superior performance, achieving 42.4%, 95.2%, and 98.7% mean average precision (mAP)@0.50, respectively, while reducing parameters by 41% compared to YOLOv8s, making it particularly suitable for resource-constrained applications. © 1980-2012 IEEE.",
+      "keywords": [],
+      "normalized_title": "efficient object detection in remote sensing images based on feature weaving and redundancy suppression",
+      "raw_bibtex": "@ARTICLE{10.1109/TGRS.2026.3660762,\n\tauthor = {Bai, Y. and Song, C. and Wang, Y. and Li, P.},\n\ttitle = {Efficient Object Detection in Remote Sensing Images Based on Feature Weaving and Redundancy Suppression},\n\tjournal = {IEEE Transactions on Geoscience and Remote Sensing},\n\tyear = {2026},\n\tabstract = {Remote sensing object detection faces significant challenges in handling scale variations, complex backgrounds, and dense target distributions. Existing models often struggle with high computational costs and a massive number of parameters, hindering deployment on resource-limited devices. To address these issues, we propose an efficient object detection network based on feature weaving and redundancy suppression called EWS-YOLO, featuring two components: 1) the weave-gated parallel (WGP) module employs grouped convolution with interlaced cascading and gating mechanisms to achieve implicit multiscale feature extraction and adaptive fusion, significantly enhancing multiscale target detection capability; and 2) the redundancy-suppressed feature pyramid network (RFS-FPN) integrates an progressive shuffle upsampling (PSU) mechanism coupled with dynamic feature fusion (DFF), enabling intelligent fusion of low-level spatial details and high-level semantic features while effectively suppressing redundant information through adaptive channelwise feature recalibration. Experimental results on VisDrone, DIOR, and UAVDT datasets demonstrate EWS-YOLO's superior performance, achieving 42.4%, 95.2%, and 98.7% mean average precision (mAP)@0.50, respectively, while reducing parameters by 41% compared to YOLOv8s, making it particularly suitable for resource-constrained applications. © 1980-2012 IEEE.},\n\tdoi = {10.1109/TGRS.2026.3660762},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105029624865&doi=10.1109%2FTGRS.2026.3660762&partnerID=40&md5=04c39bf4da38569ad9019c2a6cbe33db},\n\tvolume = {64},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1109/TGRS.2026.3660762"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000030",
+      "entry_type": "article",
+      "title": "Wavelet-attention cross-frequency interaction network for dense small object detection",
+      "authors": [
+        "Hu, J.",
+        "Su, J."
+      ],
+      "year": 2026,
+      "journal": "Signal, Image and Video Processing",
+      "doi": "10.1007/s11760-026-05111-0",
+      "abstract": "Object detection in optical remote sensing, encompassing both UAV-based imagery and satellite observations, plays a vital role in the low-altitude economy as well as in broader applications such as urban security, traffic monitoring, and natural resource management. Unlike natural images, remote sensing imagery is characterized by densely distributed small objects, complex backgrounds, and large-scale variations, which pose significant challenges for accurate detection. To address these issues, this paper introduces WCINet, a lightweight yet powerful framework specifically designed for small object detection under complex backgrounds. Specifically, a hybrid backbone, CTMixer, is proposed to capture fine-grained details across both spatial and frequency domains, thereby enhancing sensitivity to weak object signals. To further improve feature fusion, we design a RepCSP module based on re-parameterization, which strengthens representation during training without increasing inference cost. In addition, we develop a cross-frequency fusion structure, CF2PAN, which leverages frequency-aware filtering to improve intra-class consistency and reduce boundary ambiguity for dense small objects. Extensive experiments on the VisDrone and DIOR datasets further demonstrate the capability of WCINet. Remarkably, WCINet achieves 36.9% mAP on the VisDrone benchmark with only 2.4M parameters and 7.6 GFLOPs, while running at real-time FPS-level speed. © The Author(s), under exclusive licence to Springer-Verlag London Ltd., part of Springer Nature 2026.",
+      "keywords": [],
+      "normalized_title": "wavelet attention cross frequency interaction network for dense small object detection",
+      "raw_bibtex": "@ARTICLE{10.1007/s11760-026-05111-0,\n\tauthor = {Hu, J. and Su, J.},\n\ttitle = {Wavelet-attention cross-frequency interaction network for dense small object detection},\n\tjournal = {Signal, Image and Video Processing},\n\tyear = {2026},\n\tabstract = {Object detection in optical remote sensing, encompassing both UAV-based imagery and satellite observations, plays a vital role in the low-altitude economy as well as in broader applications such as urban security, traffic monitoring, and natural resource management. Unlike natural images, remote sensing imagery is characterized by densely distributed small objects, complex backgrounds, and large-scale variations, which pose significant challenges for accurate detection. To address these issues, this paper introduces WCINet, a lightweight yet powerful framework specifically designed for small object detection under complex backgrounds. Specifically, a hybrid backbone, CTMixer, is proposed to capture fine-grained details across both spatial and frequency domains, thereby enhancing sensitivity to weak object signals. To further improve feature fusion, we design a RepCSP module based on re-parameterization, which strengthens representation during training without increasing inference cost. In addition, we develop a cross-frequency fusion structure, CF2PAN, which leverages frequency-aware filtering to improve intra-class consistency and reduce boundary ambiguity for dense small objects. Extensive experiments on the VisDrone and DIOR datasets further demonstrate the capability of WCINet. Remarkably, WCINet achieves 36.9% mAP on the VisDrone benchmark with only 2.4M parameters and 7.6 GFLOPs, while running at real-time FPS-level speed. © The Author(s), under exclusive licence to Springer-Verlag London Ltd., part of Springer Nature 2026.},\n\tdoi = {10.1007/s11760-026-05111-0},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105028244898&doi=10.1007%2Fs11760-026-05111-0&partnerID=40&md5=857ad46df61764faa8408a56ad90be5f},\n\tvolume = {20},\n\tnumber = {2},\n\tnote = {Export Date: 25 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 25-2026_3b59a8a6-ea12-4399-a6be-a06a0000d452.ris"
+      ],
+      "source_keys": [
+        "10.1007/s11760-026-05111-0"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

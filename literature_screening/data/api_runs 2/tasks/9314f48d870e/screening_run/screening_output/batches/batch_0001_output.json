@@ -1,0 +1,105 @@
+{
+  "batch_id": "batch_0001",
+  "results": [
+    {
+      "paper_id": "paper_000001",
+      "decision": "include",
+      "reason": "标题和摘要明确显示以COF为核心材料用于太阳能蒸汽生成，并提供了蒸发速率和效率数据。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000002",
+      "decision": "exclude",
+      "reason": "摘要显示COF用于肿瘤光热治疗，与海水淡化主题无关。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000003",
+      "decision": "exclude",
+      "reason": "摘要显示COF用于光热催化降解抗生素，未涉及海水蒸发或淡化。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000004",
+      "decision": "include",
+      "reason": "标题和摘要明确提到COF基水凝胶用于太阳能海水淡化，并提供了蒸发速率数据。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.92
+    },
+    {
+      "paper_id": "paper_000005",
+      "decision": "exclude",
+      "reason": "摘要显示COF用于VOCs吸附和太阳能加热活化，未涉及水蒸发或海水淡化。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.88
+    },
+    {
+      "paper_id": "paper_000006",
+      "decision": "exclude",
+      "reason": "摘要显示COF衍生材料用于肿瘤协同治疗，与海水淡化主题无关。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000007",
+      "decision": "exclude",
+      "reason": "摘要显示COF用于原油分离的光热材料，未涉及海水蒸发或淡化。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.87
+    },
+    {
+      "paper_id": "paper_000008",
+      "decision": "exclude",
+      "reason": "摘要显示MOF/COF异质结用于CO2还原的光热协同催化，与海水淡化主题无关。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.86
+    },
+    {
+      "paper_id": "paper_000009",
+      "decision": "exclude",
+      "reason": "摘要显示COF用于防冰防污涂层的光热性能，未涉及海水蒸发或淡化。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000010",
+      "decision": "exclude",
+      "reason": "摘要显示COF用于光热/光动力杀菌和伤口愈合，与海水淡化主题无关。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.89
+    }
+  ]
+}

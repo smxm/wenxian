@@ -7,6 +7,7 @@
 - batch formation, prompt building, LLM calls, response parsing, and validation
 - screening-output artifacts that downstream review, fulltext, and reporting depend on
 - target included-paper stopping and partial-output semantics as they affect downstream artifacts
+- live progress summary files used by the API to show processed/included/excluded counts during long runs
 
 ## Main Files
 
@@ -21,13 +22,14 @@
 | `literature_screening/src/literature_screening/screening/llm_client.py` | provider/model invocation wrapper |
 | `literature_screening/src/literature_screening/screening/response_parser.py` | parse raw model decisions |
 | `literature_screening/src/literature_screening/screening/validator.py` | validate paper ids and batch completeness |
-| `literature_screening/src/literature_screening/pipeline/run_pipeline.py` | execute the end-to-end screening flow |
+| `literature_screening/src/literature_screening/pipeline/run_pipeline.py` | execute the end-to-end screening flow and emit batch-level progress summaries |
 
 ## Start Here When
 
 - imported files are read incorrectly
 - dedup counts or paper ids look wrong
 - screening batches, retry behavior, or prompt content need to change
+- live included/processed counts do not update during screening
 - generated screening artifacts are malformed downstream
 - a stopped or deleted screening round still appears in cumulative/fulltext/report datasets incorrectly
 
@@ -38,6 +40,7 @@
 - change batch size, retry, timeout, or prompt wording
 - harden response parsing or validation around malformed model output
 - adjust stop-target behavior while preserving enough run output for review/workbench handoff
+- keep `run_summary.json` and progress callback messages synchronized after each completed batch
 
 ## Watch-Outs
 
@@ -45,8 +48,9 @@
 - export changes can quietly break downstream consumers that assume specific file names or fields
 - a fix in `screening/` may still require an orchestration or API metadata change if the UI needs to know about it
 - stopping after a target include count should be checked in both pipeline execution and task persistence, not just in the frontend form
+- the frontend only sees live counts after the API progress callback copies the latest run summary into `TaskStore`
 
 ## Common Verifications
 
-- `PYTHONPATH=/Users/mao/Documents/langchain/literature_screening/src /Users/mao/Documents/langchain/literature_screening/.venv311-codex/bin/python -m pytest literature_screening/tests/test_screening_pipeline.py literature_screening/tests/test_api_app.py`
+- `PYTHONPATH=literature_screening/src python -m pytest literature_screening/tests/test_screening_pipeline.py literature_screening/tests/test_api_app.py`
 - inspect generated `screening_output` artifacts for shape regressions when changing exporters or parsers

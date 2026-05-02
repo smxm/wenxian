@@ -1,0 +1,235 @@
+# 一、相关文献总体情况
+
+这批文献聚焦于利用超声波检测技术结合先进信号处理与机器学习方法，对混凝土结构（特别是桩基）进行无损评估与缺陷识别。研究主要关注点包括：通过集成数值模拟、超声实验与神经网络实现高精度测量；采用小波变换、层析成像等信号处理技术增强缺陷检测能力；以及应用卷积神经网络、循环神经网络、迁移学习等深度学习模型进行自动化缺陷识别与定位。文献分布广泛，涵盖了从基础信号处理到复杂AI模型应用的多个层面，共同服务于结构健康监测系统的智能化与实用化发展。
+
+# 二、类型划分
+
+## 信号处理与特征提取技术
+
+这类文献共同关注如何通过先进的信号处理方法（如小波变换、层析成像、经验模态分解等）从原始超声波信号中提取有效特征，以增强缺陷检测的灵敏度与准确性，为后续的机器学习或人工分析提供高质量输入。
+
+- Imaging of inclusions in concrete with enhanced low-frequency ultrasound tomography
+- Ultrasonic based concrete defects identification via wavelet packet transform and GA-BP neural network
+- Detection of grout sleeve defects based on the time domain dimensionless indicators of component signals
+- Subwavelength resolution imaging of ultrasonic total focusing method by decoupling overlapped signals through back propagation neural network
+- Wavelet Analysis for Evaluating the Length of Precast Spliced Piles Using Low Strain Integrity Testing
+- Non-Destructive Evaluation of Material Stiffness beneath Pile Foundations Tip Using Harmonic Wavelet Transform
+- Ultrasonic Computerized Tomography Imaging Method With Combinatorial Optimization Algorithm for Concrete Pile Foundation
+- Nondestructive Evaluation of Drilled Shaft Construction Anomalies Using Full Waveform Tomography of Simulated Crosshole Measurements
+- Onset detection of ultrasonic signals for the testing of concrete foundation piles by coupled continuous wavelet transform and machine learning algorithms
+
+## 机器学习与深度学习模型应用
+
+这类文献共同关注如何应用各种机器学习与深度学习模型（如神经网络、随机森林、迁移学习等）对处理后的超声波信号进行自动化缺陷识别、分类或定位，旨在提升检测的精度、效率与自动化水平，减少人为干预。
+
+- Measurement of reinforcement corrosion in concrete by integrated simulations, ultrasonic tests, and artificial neural networks
+- Concrete Defect Localization Based on Multilevel Convolutional Neural Networks
+- Concrete crack reasoning: Explainable defect diagnosis incorporating generative Pretrained transformer 4 and multimodal nondestructive testing data
+- Ultrasonic signal enhancement for coarse grain materials by machine learning analysis
+- A Hybrid Convolutional and Recurrent Neural Network for Multi-Sensor Pile Damage Detection with Time Series
+- Defect Identification of Concrete Piles Based on Numerical Simulation and Convolutional Neural Network
+- Multi-Defect Identification of Concrete Piles Based on Low Strain Integrity Test and Two-Channel Convolutional Neural Network
+- Recurrent neural network long short term memory model to detect the pile toe using raw data of pile integrity test
+- Transfer Learning-Based Detection of Pile Defects in Low-Strain Pile Integrity Testing
+- Intelligent integrity detection and damage localization of pile from low-strain test using deep learning with accelerated training via variable-order gradient descent
+- Pile Damage Detection Using Machine Learning with the Multipoint Traveling Wave Decomposition Method
+
+## 桩基检测与评估方法
+
+这类文献共同关注针对桩基（如混凝土桩、钻孔桩、预制拼接桩等）的具体无损检测与评估方法，包括低应变完整性测试、跨孔声波测井等，旨在解决桩长评估、缺陷定位、土体刚度分析等工程实际问题。
+
+- An Experimental Study to Shape Detection of Branch-Plate Pile Through the Cross-Hole Sonic Logging Test
+
+# 三、逐篇文献总结分析
+
+## Measurement of reinforcement corrosion in concrete by integrated simulations, ultrasonic tests, and artificial neural networks
+
+总结：
+该研究通过集成数值模拟、超声实验和人工神经网络，实现了混凝土中钢筋腐蚀的高精度无损测量。研究采用COMSOL模拟超声传播与腐蚀关系，通过加速腐蚀实验识别腐蚀三阶段特征，并开发了AdaBoost-BP神经网络模型预测腐蚀指标。该方法为钢筋混凝土结构耐久性监测提供了可靠的无损评估框架。
+
+分析：
+该文献对声测管倾斜管距修正算法研究具有参考价值，其集成超声测试与神经网络的思路可借鉴用于处理复杂介质中的信号衰减与畸变问题。具体适用于支撑基于多传感器数据融合的腐蚀检测机制，为桥梁、海岸建筑等实际结构的智能监测系统设计提供技术路径。
+
+## Imaging of inclusions in concrete with enhanced low-frequency ultrasound tomography
+
+总结：
+该文献研究了利用低频超声波层析成像技术检测混凝土内部缺陷的方法，通过基于平均超声速度的异常路径成像优化和飞行时间优化，提高了成像质量。数值和实验分析验证了该方法能有效增强缺陷检测能力，并减少传感器部署和测量次数。
+
+分析：
+该文献对于声测管倾斜管距修正算法与模型项目具有参考价值，其路径优化和时间飞行优化方法可支撑误差修正机制，适用于混凝土等非均匀材料的声学检测场景，有助于设计更高效、成本更低的现场评估系统。
+
+## Ultrasonic based concrete defects identification via wavelet packet transform and GA-BP neural network
+
+总结：
+该文献研究了基于超声波检测混凝土缺陷的方法，采用小波包变换提取信号特征，并结合遗传算法优化的BP神经网络进行模式识别。实验结果表明，该方法对小型混凝土孔洞缺陷的平均识别准确率达到91.33%，验证了其可行性和效率。
+
+分析：
+该文献为声测管倾斜管距修正算法与模型提供了信号处理与模式识别的参考，其小波包变换特征提取机制可应用于声测信号的特征分析，而GA-BP神经网络模型则支持缺陷识别系统的智能化设计。
+
+## Concrete Defect Localization Based on Multilevel Convolutional Neural Networks
+
+总结：
+该文献提出了一种结合多层卷积神经网络与阵列超声波检测的方法，用于混凝土结构中孔洞缺陷的定位。通过逐层细化检测区域，利用超声波信号输入CNN进行分类，实现了从原始信号直接获取缺陷位置信息，无需人工判别。与传统CNN方法相比，该方法将缺陷定位准确率从85.38%提升至95.27%，同时减少了计算时间，在识别含噪信号时表现出较强鲁棒性。
+
+分析：
+该文献对当前报告主题的参考价值在于，其多层CNN结构为声测管倾斜管距修正提供了可借鉴的渐进式定位机制。其阵列超声波检测与CNN结合的方法，适用于处理复杂结构中的隐蔽缺陷检测场景，可为修正算法中的信号处理与特征提取提供模型设计思路。文献中关于计算效率提升和噪声鲁棒性的验证结果，对优化实时检测系统的设计具有实际参考意义。
+
+## Concrete crack reasoning: Explainable defect diagnosis incorporating generative Pretrained transformer 4 and multimodal nondestructive testing data
+
+总结：
+该文献提出了一种名为Concrete Crack Reasoning（CCR）的混凝土桥梁缺陷诊断框架，通过结合多模态无损检测数据和生成式预训练Transformer 4（GPT-4），采用传感器特定卷积神经网络提取特征并生成可读句子，再通过记忆引导的推理阶段提升准确性。在1088个样本的数据集上，CCR将准确率从49.4%提升至最高97.9%，并增强了可解释性和可审计性。该框架设计轻量，适用于资源受限环境，为可解释AI辅助结构健康监测提供了实用路径。
+
+分析：
+该文献对于当前报告主题的参考价值在于，其多模态数据融合和可解释AI机制可支撑声测管倾斜管距修正算法中的传感器数据整合与模型透明度设计。CCR框架中的自适应优化模式，特别是基于提示检索的自我校正机制，适用于改进算法在复杂场景下的鲁棒性和准确性。此外，其轻量级部署特性为实际应用中的系统设计提供了借鉴，有助于推动结构健康监测技术的实用化发展。
+
+## Detection of grout sleeve defects based on the time domain dimensionless indicators of component signals
+
+总结：
+该文献研究了灌浆套筒缺陷的检测方法，通过建立细观尺度数值模型并利用超声波信号分析，结合小波包变换和经验模态分解提取时域无量纲指标。结果表明，该方法对灌浆套筒缺陷具有高灵敏度的检测优势。
+
+分析：
+该文献为声测管倾斜管距修正算法与模型提供了信号处理技术的参考，其超声波检测和小波包分解方法可支撑缺陷识别机制，适用于结构健康监测系统的设计。
+
+## Subwavelength resolution imaging of ultrasonic total focusing method by decoupling overlapped signals through back propagation neural network
+
+总结：
+该文献提出了一种基于反向传播神经网络的全聚焦方法，通过训练神经网络解耦相邻缺陷的重叠信号并预测到达时间，结合全矩阵采集数据进行延迟求和波束成形，实现了亚波长分辨率的超声波成像。实验结果表明该方法能识别最小中心距离为0.57的相邻缺陷，分辨率优于现有超分辨率成像算法，并通过SHAP分析量化了特征与到达时间的关系。
+
+分析：
+该文献为声测管倾斜管距修正算法提供了基于神经网络的信号解耦与分辨率提升机制参考，其全矩阵采集和特征提取方法可应用于缺陷定位系统的设计，对优化超声检测中的信号处理流程具有直接借鉴价值。
+
+## Ultrasonic signal enhancement for coarse grain materials by machine learning analysis
+
+总结：
+该文献针对粗晶材料超声检测中缺陷回波被晶粒噪声淹没的问题，提出了一种结合聚类算法和降噪自编码器的机器学习信号重建方法。该方法通过分析多个原始信号中的丰富信息来区分目标信号与晶粒噪声，并在不锈钢铸件、增材制造试样和焊接接头等不同微观结构的材料上验证了其有效性。实验结果表明，该方法在缺陷检测中表现出稳定的优异性能和优于传统技术的降噪能力，特别是在噪声与目标信号相似的情况下。
+
+分析：
+该文献为声测管倾斜管距修正算法与模型提供了基于机器学习的信号增强机制参考，其聚类与降噪自编码器组合的思路可用于处理复杂背景噪声下的信号分离问题。文献中针对不同微观结构材料的实验验证，为修正算法在不同管材条件下的适应性研究提供了应用场景支撑。其信号重建方法特别适合支撑需要从强噪声中提取微弱目标信号的系统设计，对倾斜管距修正中的信号预处理环节具有直接参考价值。
+
+## A Hybrid Convolutional and Recurrent Neural Network for Multi-Sensor Pile Damage Detection with Time Series
+
+总结：
+该文献提出了一种基于多传感器时间序列的基桩损伤检测方法，通过行波分解理论处理多传感器信号，并采用一维卷积与循环神经网络的混合模型实现自动多任务识别。该方法利用解析解样本集评估模型性能，能够详细描述实际基桩质量并为质量分类提供支持。
+
+分析：
+该文献对当前报告主题的参考价值在于其混合神经网络架构，适合支撑声测管信号处理中的多传感器数据融合机制。其时间序列分析方法可为倾斜管距修正算法提供多任务学习框架的借鉴，特别是在处理复杂动态土壤反应模型时具有应用潜力。
+
+## Defect Identification of Concrete Piles Based on Numerical Simulation and Convolutional Neural Network
+
+总结：
+该文献研究了基于数值模拟和卷积神经网络的混凝土桩缺陷识别方法。通过低应变桩完整性测试信号，结合小波包分解和维度提升处理，构建了多维特征指标输入卷积神经网络进行训练。最终提出的识别方案对桩基缺陷类型的识别准确率达到94.4%。
+
+分析：
+该文献为声测管倾斜管距修正算法与模型提供了信号处理与机器学习结合的参考思路。其小波包分解和卷积神经网络的应用，适合支撑信号特征提取和缺陷分类的机制设计。研究中的数值模拟方法可为类似声测管信号修正模型的数据生成提供借鉴。
+
+## Multi-Defect Identification of Concrete Piles Based on Low Strain Integrity Test and Two-Channel Convolutional Neural Network
+
+总结：
+该文献研究了基于低应变完整性测试和双通道卷积神经网络的混凝土桩多缺陷识别方法。通过有限元软件ABAQUS二次开发获取多缺陷桩基时域信号数据库，结合小波包去噪和时频图输入，提出TC-CNN模型以融合一维和二维特征。该方法实现了99.17%的分类准确率，有效提升了多缺陷类型识别的效率和精度。
+
+分析：
+该文献对于声测管倾斜管距修正算法与模型的研究具有参考价值，其信号处理机制如小波包去噪和时频分析可借鉴用于声测信号预处理。TC-CNN模型的特征融合思路适用于多源数据整合场景，支撑复杂缺陷检测系统的设计。
+
+## Recurrent neural network long short term memory model to detect the pile toe using raw data of pile integrity test
+
+总结：
+该文献提出了一种基于循环神经网络长短期记忆（RNN-LSTM）模型的新方法，用于自动生成基桩完整性测试的速度反射图。研究通过收集和处理原始加速度信号，训练并优化了多个RNN-LSTM网络，最终开发出一个六层32神经元的模型，在准确性和计算效率之间取得了平衡，验证集和训练集的预测准确率分别达到84%和89.5%。
+
+分析：
+该文献对于当前报告主题的参考价值在于，它展示了深度学习模型在信号处理和自动化检测中的应用，特别是RNN-LSTM在模拟人类专家解释反射波信号方面的有效性。这为声测管倾斜管距修正算法与模型提供了机制支持，适用于基桩完整性测试等场景，有助于减少人为误差并提高系统设计的可靠性。
+
+## Transfer Learning-Based Detection of Pile Defects in Low-Strain Pile Integrity Testing
+
+总结：
+该文献研究基于迁移学习的卷积神经网络方法，用于自动化检测低应变基桩完整性测试中的桩身缺陷。通过使用真实工地采集的328个反射波数据，并采用过采样技术处理类别不平衡，模型在测试集上达到98.2%的准确率。结果表明，该方法相比传统人工解释在精度和效率上均有显著提升，适用于实际工程应用。
+
+分析：
+该文献对于声测管倾斜管距修正算法与模型的研究具有参考价值，其迁移学习框架可借鉴用于处理声测信号中的复杂模式识别问题。它支撑了基于深度学习的信号处理机制，适用于类似地质条件或数据有限的场景，有助于优化系统设计中的自动化检测模块。
+
+## Intelligent integrity detection and damage localization of pile from low-strain test using deep learning with accelerated training via variable-order gradient descent
+
+总结：
+该文献提出了一种基于深度学习的两阶段框架，用于基桩完整性检测与损伤定位。研究采用ShuffleNet和U-Net1D模型，结合Gramian Angular Field、连续小波变换和短时傅里叶变换处理低应变测试信号，并引入lambda-FAdaMax梯度下降算法加速训练。实验结果显示，该框架在完整性检测上达到高精度，损伤定位误差较小，提升了检测的自动化与效率。
+
+分析：
+该文献对于声测管倾斜管距修正算法与模型的研究具有参考价值，其深度学习框架可借鉴用于信号处理与特征提取，支撑基桩检测中的自动化机制。lambda-FAdaMax算法在优化训练速度方面的应用，适合改进模型部署效率，适用于工程场景中的实时或大规模数据处理系统设计。
+
+## Pile Damage Detection Using Machine Learning with the Multipoint Traveling Wave Decomposition Method
+
+总结：
+该文献研究了利用多点行波分解方法结合机器学习进行基桩损伤检测与量化。通过数据驱动的机器学习框架，提取统计与信号处理特征，并采用逻辑回归、XGBoost和多层感知机等分类器进行性能评估。结果表明，该方法能有效评估基桩下部完整性，且特征提取技术提升了分类器性能。
+
+分析：
+该文献为声测管倾斜管距修正算法与模型提供了信号处理与机器学习结合的参考，适用于基桩完整性检测中的损伤量化机制。其数据驱动框架可支撑系统设计中的特征提取和模型优化，尤其在处理有限现场样本时，通过解析解生成数据的方法具有应用价值。
+
+## Wavelet Analysis for Evaluating the Length of Precast Spliced Piles Using Low Strain Integrity Testing
+
+总结：
+该文献针对预制拼接桩低应变完整性测试中桩长评估的难题，提出采用不同重量和材质的锤头组合以增强对拼接部位的敏感性，并利用复连续小波变换分析相位角分布来识别桩底和拼接处的响应特征。通过有限元数值模拟验证，该方法能有效检测标准分析方法难以识别的拼接缺陷和桩长参数。研究结果为现场两段式桩基的长度评估提供了经过数值验证的数据采集与分析技术。
+
+分析：
+该文献对当前声测管倾斜管距修正算法研究具有重要参考价值，其小波变换相位分析技术可直接应用于声波信号处理中的特征提取与缺陷定位。研究展示的数值模拟验证框架可为修正算法的可靠性评估提供方法论借鉴，而针对拼接部位的敏感测试设计思路对复杂桩基结构的检测场景具有启发意义。
+
+## Non-Destructive Evaluation of Material Stiffness beneath Pile Foundations Tip Using Harmonic Wavelet Transform
+
+总结：
+该文献研究了一种非破坏性评估桩基底部土体刚度的方法，通过施加冲击荷载并利用谐波小波变换分析弹性波信号，结合幅度和相位信息来评估土体条件。研究通过数值模拟验证了该方法在弱土体中评估桩底土体刚度的有效性。
+
+分析：
+该文献对于声测管倾斜管距修正算法与模型项目具有参考价值，因为它提供了一种基于信号处理的非破坏性评估机制，适用于基桩检测中的土体条件分析。其方法可支撑信号处理在结构健康监测中的应用场景，特别是针对桩基底部土体刚度的评估，有助于完善相关系统设计。
+
+## An Experimental Study to Shape Detection of Branch-Plate Pile Through the Cross-Hole Sonic Logging Test
+
+总结：
+本研究通过跨孔声波测井试验，开发了一种检测挤压现浇分支板桩外部轮廓和质量的技术。研究建立了桩顶平面坐标系，利用测斜仪测量和管距计算消除偏差，推导出修正分支和板形状的新方程。结果表明，修正后的桩形与设计形状一致，验证了该方法的可行性和实用性。
+
+分析：
+该文献为报告主题提供了具体的声测管倾斜管距修正算法实例，适用于支撑桩基质量检测中的形状修正机制。其推导的修正方程可直接应用于类似工程场景，如螺旋推进桩的声学检测系统设计，有助于优化可靠性评估研究脉络。
+
+## Ultrasonic Computerized Tomography Imaging Method With Combinatorial Optimization Algorithm for Concrete Pile Foundation
+
+总结：
+该文献针对混凝土桩基超声CT成像中图像质量不足的问题，提出了一种组合优化层析成像方法。通过建立具有明确物理意义的二次展宽目标函数，并结合遗传算法的快速自适应优化搜索能力与模拟退火算法的全局搜索控制能力，形成了新的成像方法。数值模拟和实验验证表明，该方法迭代次数少、计算速度快，并能获得更准确的成像结果。
+
+分析：
+该文献对于当前报告主题中声测管倾斜管距修正算法与模型的研究具有参考价值，因为它展示了组合优化算法在超声信号处理和图像重建中的应用机制。其方法可支撑类似场景下的信号优化和模型改进，例如在声测管数据校正中引入全局搜索策略以提升精度。这有助于拓展当前研究在算法设计和系统优化方面的思路。
+
+## Nondestructive Evaluation of Drilled Shaft Construction Anomalies Using Full Waveform Tomography of Simulated Crosshole Measurements
+
+总结：
+该文献研究了钻孔桩施工中结构异常的无损评估方法，通过数值模拟比较了基于射线路径建模的走时层析成像（CT）与利用全波形反演（FWI）的层析成像技术。研究采用谱元法模拟跨孔应力波传播，结果表明在理想化数值模型中，FWI能更准确地估计混凝土速度和异常几何形状，即使CT使用了更多源-接收对信息。
+
+分析：
+该文献对于当前报告主题的参考价值在于，它展示了全波形反演在提高钻孔桩异常检测精度方面的潜力，适合支撑声测管倾斜管距修正算法中信号处理机制的优化。其方法可应用于非破坏性测试场景，为系统设计提供基于波形匹配的逆问题求解思路，有助于研究脉络中从传统走时方法向全波形分析的演进。
+
+## Onset detection of ultrasonic signals for the testing of concrete foundation piles by coupled continuous wavelet transform and machine learning algorithms
+
+总结：
+该文献研究了混凝土桩基完整性检测中超声波信号起始时间的精确识别问题。通过结合连续小波变换预处理与多种机器学习算法，提出了一种高精度的起始检测方法，其中随机森林分类器在信号分类中表现最优。该方法有效降低了波形失真干扰，并通过误差分析验证了其可行性与稳定性。
+
+分析：
+该文献为声测管倾斜管距修正算法与模型提供了信号处理与分类的参考框架，其小波变换预处理机制可借鉴用于消除测量噪声。随机森林分类器的应用展示了机器学习在声学信号分类中的有效性，适合支撑修正算法中的信号识别模块设计。
+
+# 参考列表
+
+[1] HOU Z Z, DU Y L, XU H B. Measurement of reinforcement corrosion in concrete by integrated simulations, ultrasonic tests, and artificial neural networks[J]. Case Studies in Construction Materials, 2025, 23: e05570.
+[2] ZHANG L, QIAO C, JIA S D, et al. Imaging of inclusions in concrete with enhanced low-frequency ultrasound tomography[J]. Sensors and Actuators A: Physical, 2025, 386: 116324.
+[3] HU T Y, ZHAO J H, ZHENG R F, et al. Ultrasonic based concrete defects identification via wavelet packet transform and GA-BP neural network[J]. PeerJ Computer Science, 2021, 7: e635.
+[4] WANG Y M, WANG L H, YE W J, et al. Concrete Defect Localization Based on Multilevel Convolutional Neural Networks[J]. Materials, 2024, 17(15): 3685.
+[5] JIN S J, SONG H, KANG J, et al. Concrete crack reasoning: Explainable defect diagnosis incorporating generative Pretrained transformer 4 and multimodal nondestructive testing data[J]. Automation in Construction, 2026, 181: 106661.
+[6] XIAO H Z, HUANG Y. Detection of grout sleeve defects based on the time domain dimensionless indicators of component signals[J]. Journal of Building Engineering, 2023, 65: 105795.
+[7] LIN L, SHEN H Y, SHI S Q, et al. Subwavelength resolution imaging of ultrasonic total focusing method by decoupling overlapped signals through back propagation neural network[J]. Mechanical Systems and Signal Processing, 2025, 231: 112724.
+[8] XU W L, LI X H, ZHANG J, et al. Ultrasonic signal enhancement for coarse grain materials by machine learning analysis[J]. Ultrasonics, 2021, 117: 106550.
+[9] WU J T, EL NAGGAR M H, WANG K H. A Hybrid Convolutional and Recurrent Neural Network for Multi-Sensor Pile Damage Detection with Time Series[J]. Sensors, 2024, 24(4): 1190.
+[10] WU C S, ZHANG J Q, QI L L, et al. Defect Identification of Concrete Piles Based on Numerical Simulation and Convolutional Neural Network[J]. Buildings, 2022, 12(5): 664.
+[11] WU C S, GE M, QI L L, et al. Multi-Defect Identification of Concrete Piles Based on Low Strain Integrity Test and Two-Channel Convolutional Neural Network[J]. Applied Sciences, 2023, 13(6): 3530.
+[12] SAMAAN R M, SAAFAN M S A, MOKHTAR A A, et al. Recurrent neural network long short term memory model to detect the pile toe using raw data of pile integrity test[J]. Scientific Reports, 2026, 16(1): 6348.
+[13] ÖZTÜRK Ö, ÖZACAR T, CANBULA B. Transfer Learning-Based Detection of Pile Defects in Low-Strain Pile Integrity Testing[J]. Applied Sciences, 2025, 15(15): 8278.
+[14] CHEN G Y, KOH C G, LI S H, et al. Intelligent integrity detection and damage localization of pile from low-strain test using deep learning with accelerated training via variable-order gradient descent[J]. Advanced Engineering Informatics, 2025, 68: 103690.
+[15] WU J T, EL NAGGAR M H, WANG K H. Pile Damage Detection Using Machine Learning with the Multipoint Traveling Wave Decomposition Method[J]. Sensors, 2023, 23(19): 8308.
+[16] LOSEVA E, LOZOVSKY I, ZHOSTKOV R, et al. Wavelet Analysis for Evaluating the Length of Precast Spliced Piles Using Low Strain Integrity Testing[J]. Applied Sciences, 2022, 12(21): 10901.
+[17] OH H J, PARK J H, PARK H C. Non-Destructive Evaluation of Material Stiffness beneath Pile Foundations Tip Using Harmonic Wavelet Transform[J]. Buildings, 2024, 14(2): 511.
+[18] YANG Y Q, LI Y Q, LI G W, et al. An experimental study to shape detection of branch-plate pile through the cross-hole sonic logging test[J]. Advances in Civil Engineering, 2025, 2025(1): 9945439.
+[19] WANG G, CHEN Y, LI Q F, et al. Ultrasonic Computerized Tomography Imaging Method With Combinatorial Optimization Algorithm for Concrete Pile Foundation[J]. IEEE Access, 2019, 7: 132395-132405.
+[20] KORDJAZI A, COE J T, AFANASIEV M. Nondestructive Evaluation of Drilled Shaft Construction Anomalies Using Full Waveform Tomography of Simulated Crosshole Measurements[J]. Journal of Nondestructive Evaluation, 2021, 40(1): 3.
+[21] ZHANG M X, LI M C, ZHANG J R, et al. Onset detection of ultrasonic signals for the testing of concrete foundation piles by coupled continuous wavelet transform and machine learning algorithms[J]. Advanced Engineering Informatics, 2020, 43: 101034.

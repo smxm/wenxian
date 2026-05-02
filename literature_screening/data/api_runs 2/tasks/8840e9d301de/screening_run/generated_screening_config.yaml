@@ -1,0 +1,49 @@
+project:
+  name: new-screening-run
+  output_dir: tasks/8840e9d301de/screening_run/screening_output
+  save_raw_response: true
+  save_intermediate_files: true
+input:
+  input_files:
+  - tasks/8840e9d301de/screening_run/inputs/CNKI-20260324194914879.enw
+  encoding: auto
+dedup:
+  enabled: true
+  strict_doi_match: true
+  normalized_title_exact_match: true
+  fuzzy_title_match: false
+screening:
+  batch_size: 10
+  target_include_count: 30
+  stop_when_target_reached: true
+  allow_uncertain: true
+  retry_times: 6
+  request_timeout_seconds: 240
+criteria:
+  topic: 企业/高管风险承担（以研发支出比率作为测度指标）
+  inclusion:
+  - 必须涉及“风险承担”（Risk-taking，特别是高管风险承担或企业风险承担）这一核心概念。
+  - 必须明确将“研发支出比率”（如R&D投入、研发支出/主营业务收入等）作为衡量风险承担的代理变量/测度指标。
+  - 优先保留包含类似实证框架（如：某变量 -> 风险承担(研发比率) -> 企业绩效等）的实证研究文献，或专门论述此测量方法的经典文献。
+  exclusion:
+  - 探讨“研发活动本身的风险”或“如何降低研发风险”的文献（概念混淆）。
+  - 纯粹研究技术创新、专利产出，通篇未将其提升至“管理层风险承担”维度的文献。
+  - 纯算法、纯工程类或无实证数据支撑的非经管类文献。
+model:
+  provider: deepseek
+  model_name: deepseek-chat
+  api_base_url: https://api.deepseek.com/v1
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.0
+  max_tokens: 1536
+  min_request_interval_seconds: 2.0
+report:
+  export_included_ris: true
+  export_excluded_ris: false
+  export_unused_ris: true
+  export_included_bib: false
+  export_excluded_bib: false
+  export_unused_bib: false
+  included_report_format: md
+  excluded_report_format: md
+  summary_format: json

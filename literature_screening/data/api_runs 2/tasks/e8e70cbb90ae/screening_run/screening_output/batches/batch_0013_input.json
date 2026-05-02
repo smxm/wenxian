@@ -1,0 +1,396 @@
+{
+  "batch_id": "batch_0013",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000121",
+    "paper_000122",
+    "paper_000123",
+    "paper_000124",
+    "paper_000125",
+    "paper_000126",
+    "paper_000127",
+    "paper_000128",
+    "paper_000129",
+    "paper_000130"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000121",
+      "entry_type": "article",
+      "title": "Design and experiments of an adaptive disturbance observer for tracking control of autonomous underwater vehicles",
+      "authors": [
+        "Guerrero, J",
+        "Chemori, A",
+        "Creuze, V",
+        "Torres, J"
+      ],
+      "year": 2025,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2025.120511",
+      "abstract": "Underwater vehicles, controlled by human operators, often employ a simple internal control scheme, such as the Proportional Derivative (PD) controller. The choice of a PD controller is driven by its simplicity, ease of implementation, and acceptable reliability. However, this type of controller often exhibits limited robustness when facing parametric uncertainties (e.g., salinity variations) and external disturbances, such as sea waves. Motivated by these inherent limitations, we designed an adaptive disturbance observer using the Super-Twisting Algorithm. The primary objective of this observer is to enhance the robustness of the PD controller without compromising its simple and straightforward structure and minimizing the effort required for its tuning. Our proposed observer takes inspiration from the Extended State Observer (ESO) and is supported by a rigorous stability analysis using Lyapunov techniques. We also establish the stability of the closed-loop system involving the controller and observer. To showcase the effectiveness and reliability of our proposed method, we carried out a set of real-time experiments under various operating conditions.",
+      "keywords": [
+        "Adaptive disturbance observer sliding modes control",
+        "AUV",
+        "Stability analysis",
+        "Real-time experiments",
+        "TRAJECTORY TRACKING"
+      ],
+      "normalized_title": "design and experiments of an adaptive disturbance observer for tracking control of autonomous underwater vehicles",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2025.120511,\n\tauthor = {Guerrero, J and Chemori, A and Creuze, V and Torres, J},\n\ttitle = {Design and experiments of an adaptive disturbance observer for tracking control of autonomous underwater vehicles},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2025},\n\tkeywords = {Adaptive disturbance observer sliding modes control; AUV; Stability analysis; Real-time experiments; TRAJECTORY TRACKING},\n\tabstract = {Underwater vehicles, controlled by human operators, often employ a simple internal control scheme, such as the Proportional Derivative (PD) controller. The choice of a PD controller is driven by its simplicity, ease of implementation, and acceptable reliability. However, this type of controller often exhibits limited robustness when facing parametric uncertainties (e.g., salinity variations) and external disturbances, such as sea waves. Motivated by these inherent limitations, we designed an adaptive disturbance observer using the Super-Twisting Algorithm. The primary objective of this observer is to enhance the robustness of the PD controller without compromising its simple and straightforward structure and minimizing the effort required for its tuning. Our proposed observer takes inspiration from the Extended State Observer (ESO) and is supported by a rigorous stability analysis using Lyapunov techniques. We also establish the stability of the closed-loop system involving the controller and observer. To showcase the effectiveness and reliability of our proposed method, we carried out a set of real-time experiments under various operating conditions.},\n\tdoi = {10.1016/j.oceaneng.2025.120511},\n\tvolume = {322},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 8 Total Times Cited: 8 Cited Reference Count: 28 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2025.120511"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000122",
+      "entry_type": "article",
+      "title": "Formation Control of Unmanned Vessels with Saturation Constraint and Extended State Observation",
+      "authors": [
+        "Fu, HX",
+        "Wang, SC",
+        "Ji, Y",
+        "Wang, YC"
+      ],
+      "year": 2021,
+      "journal": "JOURNAL OF MARINE SCIENCE AND ENGINEERING",
+      "doi": "10.3390/jmse9070772",
+      "abstract": "This paper addressed the formation control problem of surface unmanned vessels with model uncertainty, parameter perturbation, and unknown environmental disturbances. A formation control method based on the control force saturation constraint and the extended state observer (ESO) was proposed. Compared with the control methods which only consider the disturbances from external environment, the method proposed in this paper took model uncertainties, parameter perturbation, and external environment disturbances as the compound disturbances, and the ESO was used to estimate and compensate for the disturbances, which improved the anti-disturbance performance of the controller. The formation controller was designed with the virtual leader strategy, and backstepping technique was designed with saturation constraint (SC) function to avoid the lack of force of the actuator. The stability of the closed-loop system was analyzed with the Lyapunov method, and it was proved that the whole system is uniformly and ultimately bounded. The tracking error can converge to arbitrarily small by choosing reasonable controller parameters. The comparison and analysis of simulation experiments showed that the controller designed in this paper had strong anti-disturbance and anti-saturation performance to the compound disturbances of vessels and can effectively complete the formation control.",
+      "keywords": [
+        "formation control",
+        "extended state observer",
+        "saturation constraint",
+        "model uncertainty",
+        "backstepping",
+        "unmanned vessels",
+        "FOLLOWER FORMATION CONTROL",
+        "AUTONOMOUS UNDERWATER VEHICLES",
+        "SLIDING MODE CONTROL",
+        "SURFACE VESSELS",
+        "TRAJECTORY TRACKING",
+        "ADAPTIVE-CONTROL",
+        "FEEDBACK",
+        "SPACECRAFT",
+        "SYSTEM",
+        "RANGE"
+      ],
+      "normalized_title": "formation control of unmanned vessels with saturation constraint and extended state observation",
+      "raw_bibtex": "@ARTICLE{10.3390/jmse9070772,\n\tauthor = {Fu, HX and Wang, SC and Ji, Y and Wang, YC},\n\ttitle = {Formation Control of Unmanned Vessels with Saturation Constraint and Extended State Observation},\n\tjournal = {JOURNAL OF MARINE SCIENCE AND ENGINEERING},\n\tyear = {2021},\n\tkeywords = {formation control; extended state observer; saturation constraint; model uncertainty; backstepping; unmanned vessels; FOLLOWER FORMATION CONTROL; AUTONOMOUS UNDERWATER VEHICLES; SLIDING MODE CONTROL; SURFACE VESSELS; TRAJECTORY TRACKING; ADAPTIVE-CONTROL; FEEDBACK; SPACECRAFT; SYSTEM; RANGE},\n\tabstract = {This paper addressed the formation control problem of surface unmanned vessels with model uncertainty, parameter perturbation, and unknown environmental disturbances. A formation control method based on the control force saturation constraint and the extended state observer (ESO) was proposed. Compared with the control methods which only consider the disturbances from external environment, the method proposed in this paper took model uncertainties, parameter perturbation, and external environment disturbances as the compound disturbances, and the ESO was used to estimate and compensate for the disturbances, which improved the anti-disturbance performance of the controller. The formation controller was designed with the virtual leader strategy, and backstepping technique was designed with saturation constraint (SC) function to avoid the lack of force of the actuator. The stability of the closed-loop system was analyzed with the Lyapunov method, and it was proved that the whole system is uniformly and ultimately bounded. The tracking error can converge to arbitrarily small by choosing reasonable controller parameters. The comparison and analysis of simulation experiments showed that the controller designed in this paper had strong anti-disturbance and anti-saturation performance to the compound disturbances of vessels and can effectively complete the formation control.},\n\tdoi = {10.3390/jmse9070772},\n\tvolume = {9},\n\tnumber = {7},\n\tissn = {2077-1312},\n\tnote = {Times Cited in Web of Science Core Collection: 11 Total Times Cited: 11 Cited Reference Count: 43 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/jmse9070772"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000123",
+      "entry_type": "article",
+      "title": "Distributed containment control of the underactuated vessels with collision/obstacle avoidance and connectivity maintenance",
+      "authors": [
+        "Wang, LL",
+        "Hu, J",
+        "Fu, MY"
+      ],
+      "year": 2024,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2024.117194",
+      "abstract": "For the problems of obstacle/collision avoidance and connectivity maintenance of the underactuated vessel formation under the condition of unavailable velocity measurements, a finite -time coordinated formation control scheme based on an improved potential energy function (PEF) is proposed, which improves the safety of the formation system and realizes the vessel formation closer to the actual application. Firstly, a finite -time extended state observer (FTESO) is designed to quickly estimate the velocity and compound disturbances information simultaneously. Secondly, in the kinematic equation, the coupling term of surge velocity and attitude angle is used as the control input to realize the containment control of the leader in any state. Then, a new exponential potential energy function (EPEF) is designed, which can achieve the purpose of fast obstacle/collision avoidance and connectivity maintenance. Subsequently, by combining the improved PEF and the super -twisting algorithm (STA), the finite -time coordinated formation controllers based on the super -twisting sliding mode are designed to realize the safe navigation control of the underactuated vessel formation in the process of coordinated path following. And it is proved by stability analysis that all signals of the formation system are uniformly ultimately bounded. Finally, simulation results and comparative analysis verify that the proposed control method can satisfy the actual safety requirements of the underactuated vessel formation and the formation system has better robustness.",
+      "keywords": [
+        "Distributed formation control of the",
+        "underactuated vessels",
+        "Coordinated path following",
+        "Collision/obstacle avoidance and connectivity",
+        "maintenance",
+        "Potential energy function",
+        "Super-twisting sliding mode control",
+        "AUTONOMOUS UNDERWATER VEHICLES",
+        "FINITE-TIME",
+        "TRACKING CONTROL",
+        "STABILIZATION",
+        "LYAPUNOV",
+        "SYSTEMS"
+      ],
+      "normalized_title": "distributed containment control of the underactuated vessels with collision obstacle avoidance and connectivity maintenance",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2024.117194,\n\tauthor = {Wang, LL and Hu, J and Fu, MY},\n\ttitle = {Distributed containment control of the underactuated vessels with collision/obstacle avoidance and connectivity maintenance},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2024},\n\tkeywords = {Distributed formation control of the; underactuated vessels; Coordinated path following; Collision/obstacle avoidance and connectivity; maintenance; Potential energy function; Super-twisting sliding mode control; AUTONOMOUS UNDERWATER VEHICLES; FINITE-TIME; TRACKING CONTROL; STABILIZATION; LYAPUNOV; SYSTEMS},\n\tabstract = {For the problems of obstacle/collision avoidance and connectivity maintenance of the underactuated vessel formation under the condition of unavailable velocity measurements, a finite -time coordinated formation control scheme based on an improved potential energy function (PEF) is proposed, which improves the safety of the formation system and realizes the vessel formation closer to the actual application. Firstly, a finite -time extended state observer (FTESO) is designed to quickly estimate the velocity and compound disturbances information simultaneously. Secondly, in the kinematic equation, the coupling term of surge velocity and attitude angle is used as the control input to realize the containment control of the leader in any state. Then, a new exponential potential energy function (EPEF) is designed, which can achieve the purpose of fast obstacle/collision avoidance and connectivity maintenance. Subsequently, by combining the improved PEF and the super -twisting algorithm (STA), the finite -time coordinated formation controllers based on the super -twisting sliding mode are designed to realize the safe navigation control of the underactuated vessel formation in the process of coordinated path following. And it is proved by stability analysis that all signals of the formation system are uniformly ultimately bounded. Finally, simulation results and comparative analysis verify that the proposed control method can satisfy the actual safety requirements of the underactuated vessel formation and the formation system has better robustness.},\n\tdoi = {10.1016/j.oceaneng.2024.117194},\n\tvolume = {298},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 8 Total Times Cited: 8 Cited Reference Count: 36 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2024.117194"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000124",
+      "entry_type": "article",
+      "title": "Robust Path-Following Control of Underactuated AUVs with Multiple Uncertainties in the Vertical Plane",
+      "authors": [
+        "Miao, JM",
+        "Deng, KK",
+        "Zhang, WR",
+        "Gong, X",
+        "Lyu, JF",
+        "Ren, L"
+      ],
+      "year": 2022,
+      "journal": "JOURNAL OF MARINE SCIENCE AND ENGINEERING",
+      "doi": "10.3390/jmse10020238",
+      "abstract": "The current study employs a novel nonlinear robust control approach for path-following control of underactuated autonomous underwater vehicles (AUVs) with multiple uncertainties in the vertical plane. Firstly, a nonlinear underactuated AUV model is established to characterize the dynamics of AUV and path-following error. To resolve dependence on a detailed model that appeared in previous studies, the unknown time-varying attack angular velocity in the dynamic model of the path-following error is considered as the kinematic uncertainty, while the linear superposition of the external environmental disturbances, the perturbations in the internal model parameters, and other unmodeled dynamics in the dynamic model is chosen as lumped dynamic uncertainties. Several reduced-order extended state observers (ESOs) are designed for estimating both of these uncertainties. Secondly, to reduce the impact of input saturation and avoid the \"explosion of complexity\" associated with traditional back-stepping method, a nonlinear track differentiator (NTD) is utilized to follow the virtual control signal and its derivative. Thirdly, the constructed reduced-order ESOs and NTD are adopted to establish an augmented back-stepping controller, where its ability to stabilize the overall system is demonstrated using the Lyapunov theorem. Finally, extensive simulations and analyses in various working conditions, including the nominal working condition without disturbances, the working condition with multiple uncertainties, and the conditions which better replicate the actual environment, are performed to demonstrate the effectiveness, superiority, and robustness of the designed controller.",
+      "keywords": [
+        "underactuated AUV",
+        "path-following",
+        "multiple uncertainties",
+        "extended state observers (ESOs)",
+        "nonlinear tracking differentiator (NTD)",
+        "AUTONOMOUS UNDERWATER VEHICLE",
+        "CONTROL DESIGN",
+        "GUIDANCE",
+        "TRACKING",
+        "SUBJECT"
+      ],
+      "normalized_title": "robust path following control of underactuated auvs with multiple uncertainties in the vertical plane",
+      "raw_bibtex": "@ARTICLE{10.3390/jmse10020238,\n\tauthor = {Miao, JM and Deng, KK and Zhang, WR and Gong, X and Lyu, JF and Ren, L},\n\ttitle = {Robust Path-Following Control of Underactuated AUVs with Multiple Uncertainties in the Vertical Plane},\n\tjournal = {JOURNAL OF MARINE SCIENCE AND ENGINEERING},\n\tyear = {2022},\n\tkeywords = {underactuated AUV; path-following; multiple uncertainties; extended state observers (ESOs); nonlinear tracking differentiator (NTD); AUTONOMOUS UNDERWATER VEHICLE; CONTROL DESIGN; GUIDANCE; TRACKING; SUBJECT},\n\tabstract = {The current study employs a novel nonlinear robust control approach for path-following control of underactuated autonomous underwater vehicles (AUVs) with multiple uncertainties in the vertical plane. Firstly, a nonlinear underactuated AUV model is established to characterize the dynamics of AUV and path-following error. To resolve dependence on a detailed model that appeared in previous studies, the unknown time-varying attack angular velocity in the dynamic model of the path-following error is considered as the kinematic uncertainty, while the linear superposition of the external environmental disturbances, the perturbations in the internal model parameters, and other unmodeled dynamics in the dynamic model is chosen as lumped dynamic uncertainties. Several reduced-order extended state observers (ESOs) are designed for estimating both of these uncertainties. Secondly, to reduce the impact of input saturation and avoid the \"explosion of complexity\" associated with traditional back-stepping method, a nonlinear track differentiator (NTD) is utilized to follow the virtual control signal and its derivative. Thirdly, the constructed reduced-order ESOs and NTD are adopted to establish an augmented back-stepping controller, where its ability to stabilize the overall system is demonstrated using the Lyapunov theorem. Finally, extensive simulations and analyses in various working conditions, including the nominal working condition without disturbances, the working condition with multiple uncertainties, and the conditions which better replicate the actual environment, are performed to demonstrate the effectiveness, superiority, and robustness of the designed controller.},\n\tdoi = {10.3390/jmse10020238},\n\tvolume = {10},\n\tnumber = {2},\n\tissn = {2077-1312},\n\tnote = {Times Cited in Web of Science Core Collection: 9 Total Times Cited: 9 Cited Reference Count: 48 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/jmse10020238"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000125",
+      "entry_type": "article",
+      "title": "Adaptive error-constrained tracking and collision avoidance of UUVs in complex environments",
+      "authors": [
+        "Luan, TT",
+        "Liu, CY",
+        "Sun, MX"
+      ],
+      "year": 2026,
+      "journal": "OCEAN ENGINEERING",
+      "doi": "10.1016/j.oceaneng.2025.123741",
+      "abstract": "Considering the model uncertainties and the influence of obstacles on unmanned underwater vehicles (UUVs), the system performance and trajectory tracking accuracy may experience fluctuations or deviations. To address this issue, an adaptive error-constrained preset-time trajectory tracking control scheme is proposed. This scheme is designed to enable UUVs to avoid obstacles and accurately track reference trajectories in complex environments. First, an adaptive error-constrained preset-time obstacle performance function (PTOPF) is introduced, which dynamically adjusts based on the deviation from the reference trajectory, thereby enhancing the system's dynamic performance. In contrast, traditional methods typically employ static functions, making them less adaptable to complex environmental changes and system state fluctuations. Next, a preset-time extended state observer (PTESO) is developed to estimate model uncertainties and compensate for unavailable velocity information. While conventional approaches can handle such issues, they heavily rely on initial states or design parameters and have inherent limitations in predefined convergence time. Subsequently, a fast artificial potential field function (FAPF) with an introduced growth rate adjustment factor is proposed to guide the UUV in avoiding obstacles. Traditional APF methods can achieve a certain degree of obstacle avoidance; however, their response speed is relatively slow, making it difficult to react promptly to sudden environmental changes, which in turn affects the stable navigation of UUVs in complex scenarios. To address input saturation, a preset-time auxiliary dynamic system with a smooth switching function (PTADS-SSF) is constructed. Simulation results validate the effectiveness and advantages of the proposed control strategy in terms of trajectory tracking accuracy and obstacle avoidance capability. Specifically, the absolute error integrals for trajectory tracking in the surge and sway directions were reduced by approximately 22.65 % and 14.32 %, respectively, significantly improving the overall trajectory tracking performance of the system.",
+      "keywords": [
+        "Adaptive error-constrained",
+        "Preset-time control",
+        "Trajectory tracking",
+        "Obstacle avoidance",
+        "Model uncertainty"
+      ],
+      "normalized_title": "adaptive error constrained tracking and collision avoidance of uuvs in complex environments",
+      "raw_bibtex": "@ARTICLE{10.1016/j.oceaneng.2025.123741,\n\tauthor = {Luan, TT and Liu, CY and Sun, MX},\n\ttitle = {Adaptive error-constrained tracking and collision avoidance of UUVs in complex environments},\n\tjournal = {OCEAN ENGINEERING},\n\tyear = {2026},\n\tkeywords = {Adaptive error-constrained; Preset-time control; Trajectory tracking; Obstacle avoidance; Model uncertainty},\n\tabstract = {Considering the model uncertainties and the influence of obstacles on unmanned underwater vehicles (UUVs), the system performance and trajectory tracking accuracy may experience fluctuations or deviations. To address this issue, an adaptive error-constrained preset-time trajectory tracking control scheme is proposed. This scheme is designed to enable UUVs to avoid obstacles and accurately track reference trajectories in complex environments. First, an adaptive error-constrained preset-time obstacle performance function (PTOPF) is introduced, which dynamically adjusts based on the deviation from the reference trajectory, thereby enhancing the system's dynamic performance. In contrast, traditional methods typically employ static functions, making them less adaptable to complex environmental changes and system state fluctuations. Next, a preset-time extended state observer (PTESO) is developed to estimate model uncertainties and compensate for unavailable velocity information. While conventional approaches can handle such issues, they heavily rely on initial states or design parameters and have inherent limitations in predefined convergence time. Subsequently, a fast artificial potential field function (FAPF) with an introduced growth rate adjustment factor is proposed to guide the UUV in avoiding obstacles. Traditional APF methods can achieve a certain degree of obstacle avoidance; however, their response speed is relatively slow, making it difficult to react promptly to sudden environmental changes, which in turn affects the stable navigation of UUVs in complex scenarios. To address input saturation, a preset-time auxiliary dynamic system with a smooth switching function (PTADS-SSF) is constructed. Simulation results validate the effectiveness and advantages of the proposed control strategy in terms of trajectory tracking accuracy and obstacle avoidance capability. Specifically, the absolute error integrals for trajectory tracking in the surge and sway directions were reduced by approximately 22.65 % and 14.32 %, respectively, significantly improving the overall trajectory tracking performance of the system.},\n\tdoi = {10.1016/j.oceaneng.2025.123741},\n\tvolume = {344},\n\tissn = {0029-8018},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 45 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.oceaneng.2025.123741"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000126",
+      "entry_type": "article",
+      "title": "Event-triggered-based finite-time cooperative path following control for underactuated multiple marine surface vehicles",
+      "authors": [
+        "Fu, MY",
+        "Wang, LL"
+      ],
+      "year": 2023,
+      "journal": "ASIAN JOURNAL OF CONTROL",
+      "doi": "10.1002/asjc.2850",
+      "abstract": "This paper develops an event-triggered-based finite-time cooperative path following (CPF) control scheme for underactuated marine surface vehicles (MSVs) with model parameter uncertainties and unknown ocean disturbances. First, a finite-time extended state observer (FTESO) is proposed, in which the FTESO can estimate the velocities and compound disturbances in finite time. Then, the finite-time LOS guidance law based on velocity estimation values is designed to obtain the desired surge velocity and the desired yaw rate. In order to realize the cooperative control of multiple paths in finite time, the cooperative control law for the path variable is designed. In addition, the relative threshold event-triggered control (ETC) mechanism is incorporated into the formation control algorithm, and an event-triggered-based finite-time CPF controller is designed, which not only effectively reduces the update frequency of controller and the mechanical loss of actuator but also improves the control performance of system. Furthermore, by using homogeneous method, Lyapunov theory, and finite-time stability theory, it is proved that under the proposed finite-time CPF control scheme, the formation errors can converge to a small neighborhood around origin in finite time. Finally, numerical simulation results illustrate the effectiveness of the proposed control scheme.",
+      "keywords": [
+        "CPF",
+        "formation control",
+        "FTESO-LOS guidance law",
+        "relative threshold ETC mechanism",
+        "underactuated MSVs",
+        "AUTONOMOUS UNDERWATER VEHICLES",
+        "SLIDING MODE CONTROL",
+        "OBSERVERS"
+      ],
+      "normalized_title": "event triggered based finite time cooperative path following control for underactuated multiple marine surface vehicles",
+      "raw_bibtex": "@ARTICLE{10.1002/asjc.2850,\n\tauthor = {Fu, MY and Wang, LL},\n\ttitle = {Event-triggered-based finite-time cooperative path following control for underactuated multiple marine surface vehicles},\n\tjournal = {ASIAN JOURNAL OF CONTROL},\n\tyear = {2023},\n\tkeywords = {CPF; formation control; FTESO-LOS guidance law; relative threshold ETC mechanism; underactuated MSVs; AUTONOMOUS UNDERWATER VEHICLES; SLIDING MODE CONTROL; OBSERVERS},\n\tabstract = {This paper develops an event-triggered-based finite-time cooperative path following (CPF) control scheme for underactuated marine surface vehicles (MSVs) with model parameter uncertainties and unknown ocean disturbances. First, a finite-time extended state observer (FTESO) is proposed, in which the FTESO can estimate the velocities and compound disturbances in finite time. Then, the finite-time LOS guidance law based on velocity estimation values is designed to obtain the desired surge velocity and the desired yaw rate. In order to realize the cooperative control of multiple paths in finite time, the cooperative control law for the path variable is designed. In addition, the relative threshold event-triggered control (ETC) mechanism is incorporated into the formation control algorithm, and an event-triggered-based finite-time CPF controller is designed, which not only effectively reduces the update frequency of controller and the mechanical loss of actuator but also improves the control performance of system. Furthermore, by using homogeneous method, Lyapunov theory, and finite-time stability theory, it is proved that under the proposed finite-time CPF control scheme, the formation errors can converge to a small neighborhood around origin in finite time. Finally, numerical simulation results illustrate the effectiveness of the proposed control scheme.},\n\tdoi = {10.1002/asjc.2850},\n\tvolume = {25},\n\tnumber = {2},\n\tpages = {1005-1018},\n\tissn = {1561-8625},\n\tnote = {Times Cited in Web of Science Core Collection: 12 Total Times Cited: 12 Cited Reference Count: 26 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1002/asjc.2850"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000127",
+      "entry_type": "article",
+      "title": "3D hybrid formation control of an underwater robot swarm: Switching topologies, unmeasurable velocities, and system constraints",
+      "authors": [
+        "Zhang, YW",
+        "Wang, SP",
+        "Heinrich, MK",
+        "Wang, XJ",
+        "Dorigo, M"
+      ],
+      "year": 2023,
+      "journal": "ISA TRANSACTIONS",
+      "doi": "10.1016/j.isatra.2022.11.014",
+      "abstract": "This paper addresses formation control of underactuated autonomous underwater vehicles in three-dimensional space, using a hybrid protocol that combines aspects of centralized and decentralized control with constraints that are particular to underwater vehicles, including switching topologies, unmeasurable velocities, and system constraints. Using a distributed leader-follower model, the hybrid formation protocol does not require velocity sensing, access to global information, or static and connected topologies. To handle switching jointly connected networks-that is, to tolerate temporary disconnections-a distributed observer is designed for followers to cooperatively estimate leader states using local measurements and local interactions. On this basis, a compound formation control strategy is proposed to achieve geometric convergence. Firstly, cascaded extended state observers are developed to recover the unmeasurable velocities and unknown dynamic uncertainties induced by internal model uncertainty and external disturbances. Secondly, an improved three-dimensional line-of-sight guidance law at the kinematic level is used to address the underactuated configuration and the nonzero attack and sideslip angles. Thirdly, to overcome potential instability as a result of system constraints, including velocity constraints and input saturations, two adaptive compensators in the dynamic controller are used to address the negative effects of truncation. Using the proposed approach, the estimation errors and formation tracking errors are proved to be uniformly and ultimately bounded. Additionally, the numerical simulation results verify the performance of the approach and demonstrate improvement over both distributed and centralized state-of-the-art approaches.(c) 2022 ISA. Published by Elsevier Ltd. All rights reserved.",
+      "keywords": [
+        "Formation control",
+        "Autonomous underwater vehicles",
+        "Distributed observer",
+        "Switching topologies",
+        "System constraints",
+        "LINEAR MULTIAGENT SYSTEMS",
+        "FORMATION TRACKING",
+        "VEHICLE",
+        "AUVS"
+      ],
+      "normalized_title": "3d hybrid formation control of an underwater robot swarm switching topologies unmeasurable velocities and system constraints",
+      "raw_bibtex": "@ARTICLE{10.1016/j.isatra.2022.11.014,\n\tauthor = {Zhang, YW and Wang, SP and Heinrich, MK and Wang, XJ and Dorigo, M},\n\ttitle = {3D hybrid formation control of an underwater robot swarm: Switching topologies, unmeasurable velocities, and system constraints},\n\tjournal = {ISA TRANSACTIONS},\n\tyear = {2023},\n\tkeywords = {Formation control; Autonomous underwater vehicles; Distributed observer; Switching topologies; System constraints; LINEAR MULTIAGENT SYSTEMS; FORMATION TRACKING; VEHICLE; AUVS},\n\tabstract = {This paper addresses formation control of underactuated autonomous underwater vehicles in three-dimensional space, using a hybrid protocol that combines aspects of centralized and decentralized control with constraints that are particular to underwater vehicles, including switching topologies, unmeasurable velocities, and system constraints. Using a distributed leader-follower model, the hybrid formation protocol does not require velocity sensing, access to global information, or static and connected topologies. To handle switching jointly connected networks-that is, to tolerate temporary disconnections-a distributed observer is designed for followers to cooperatively estimate leader states using local measurements and local interactions. On this basis, a compound formation control strategy is proposed to achieve geometric convergence. Firstly, cascaded extended state observers are developed to recover the unmeasurable velocities and unknown dynamic uncertainties induced by internal model uncertainty and external disturbances. Secondly, an improved three-dimensional line-of-sight guidance law at the kinematic level is used to address the underactuated configuration and the nonzero attack and sideslip angles. Thirdly, to overcome potential instability as a result of system constraints, including velocity constraints and input saturations, two adaptive compensators in the dynamic controller are used to address the negative effects of truncation. Using the proposed approach, the estimation errors and formation tracking errors are proved to be uniformly and ultimately bounded. Additionally, the numerical simulation results verify the performance of the approach and demonstrate improvement over both distributed and centralized state-of-the-art approaches.(c) 2022 ISA. Published by Elsevier Ltd. All rights reserved.},\n\tdoi = {10.1016/j.isatra.2022.11.014},\n\tvolume = {136},\n\tpages = {345-360},\n\tissn = {0019-0578},\n\tnote = {Times Cited in Web of Science Core Collection: 18 Total Times Cited: 21 Cited Reference Count: 44 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.isatra.2022.11.014"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000128",
+      "entry_type": "article",
+      "title": "Distributed Cooperative Guidance Model-Free Control for a Cluster of Disk-Type Autonomous Underwater Gliders",
+      "authors": [
+        "Lu, LY",
+        "Wang, HL",
+        "Gu, N",
+        "Peng, ZH",
+        "Zhang, WD"
+      ],
+      "year": 2025,
+      "journal": "IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING",
+      "doi": "10.1109/tase.2025.3543530",
+      "abstract": "This paper focuses on a distributed cooperative guidance model-free control method for a cluster of under-actuated disk-type autonomous underwater gliders (AUGs) in the presence of unknown kinetic model parameters and ocean disturbances. Firstly, a distributed cooperative motion generator is designed to generate reference path points, and then a cooperative control method is proposed based on the update path parameters. Secondly, a three-dimensional (3D) guidance law is constructed by employing closed 3D vector fields. Finally, data-driven filtered adaptive extended state observers (DFAO) are proposed to deal with the unknown input gains, internal uncertainties and external disturbances of the disk-type AUGs, and an adaptive kinetic control law is designed by using the knowledge learned from the observers. Simulation results demonstrate the effectiveness of the proposed 3D distributed cooperative guidance model-free control method for disk-type AUGs subject to fully unknown kinetics.",
+      "keywords": [
+        "Vectors",
+        "Kinetic theory",
+        "Adaptation models",
+        "Three-dimensional displays",
+        "Underwater vehicles",
+        "Generators",
+        "Topology",
+        "Solid modeling",
+        "Kinematics",
+        "Automation",
+        "Cooperative control",
+        "model-free control",
+        "disk-type autonomous underwater glider",
+        "3D guiding vector fields",
+        "adaptive extended state observer",
+        "PATH-FOLLOWING CONTROL",
+        "VEHICLES",
+        "AUV"
+      ],
+      "normalized_title": "distributed cooperative guidance model free control for a cluster of disk type autonomous underwater gliders",
+      "raw_bibtex": "@ARTICLE{10.1109/TASE.2025.3543530,\n\tauthor = {Lu, LY and Wang, HL and Gu, N and Peng, ZH and Zhang, WD},\n\ttitle = {Distributed Cooperative Guidance Model-Free Control for a Cluster of Disk-Type Autonomous Underwater Gliders},\n\tjournal = {IEEE TRANSACTIONS ON AUTOMATION SCIENCE AND ENGINEERING},\n\tyear = {2025},\n\tkeywords = {Vectors; Kinetic theory; Adaptation models; Three-dimensional displays; Underwater vehicles; Generators; Topology; Solid modeling; Kinematics; Automation; Cooperative control; model-free control; disk-type autonomous underwater glider; 3D guiding vector fields; adaptive extended state observer; PATH-FOLLOWING CONTROL; VEHICLES; AUV},\n\tabstract = {This paper focuses on a distributed cooperative guidance model-free control method for a cluster of under-actuated disk-type autonomous underwater gliders (AUGs) in the presence of unknown kinetic model parameters and ocean disturbances. Firstly, a distributed cooperative motion generator is designed to generate reference path points, and then a cooperative control method is proposed based on the update path parameters. Secondly, a three-dimensional (3D) guidance law is constructed by employing closed 3D vector fields. Finally, data-driven filtered adaptive extended state observers (DFAO) are proposed to deal with the unknown input gains, internal uncertainties and external disturbances of the disk-type AUGs, and an adaptive kinetic control law is designed by using the knowledge learned from the observers. Simulation results demonstrate the effectiveness of the proposed 3D distributed cooperative guidance model-free control method for disk-type AUGs subject to fully unknown kinetics.},\n\tdoi = {10.1109/TASE.2025.3543530},\n\tvolume = {22},\n\tpages = {12395-12405},\n\tissn = {1545-5955},\n\tnote = {Times Cited in Web of Science Core Collection: 4 Total Times Cited: 4 Cited Reference Count: 46 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TASE.2025.3543530"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000129",
+      "entry_type": "article",
+      "title": "Adaptive optimal trajectory tracking control of AUVs based on reinforcement learning",
+      "authors": [
+        "Li, ZF",
+        "Wang, M",
+        "Ma, G"
+      ],
+      "year": 2023,
+      "journal": "ISA TRANSACTIONS",
+      "doi": "10.1016/j.isatra.2022.12.003",
+      "abstract": "In this paper, an adaptive model-free optimal reinforcement learning (RL) neural network (NN) control scheme based on filter error is proposed for the trajectory tracking control problem of an autonomous underwater vehicle (AUV) with input saturation. Generally, the optimal control is realized by solving the Hamilton-Jacobi-Bellman (HJB) equation. However, due to its inherent nonlinearity and complexity, the HJB equation of AUV dynamics is challenging to solve. To deal with this problem, an RL strategy based on an actor-critic framework is proposed to approximate the solution of the HJB equation, where actor and critic NNs are used to perform control behavior and evaluate control performance, respectively. In addition, for the AUV system with the second-order strict-feedback dynamic model, the optimal controller design method based on filtering errors is proposed for the first time to simplify the controller design and accelerate the response speed of the system. Then, to solve the model-dependent problem, an extended state observer (ESO) is designed to estimate the unknown nonlinear dynamics, and an adaptive law is designed to estimate the unknown model parameters. To deal with the input saturation, an auxiliary variable system is utilized in the control law. The strict Lyapunov analysis guarantees that all signals of the system are semi-global uniformly ultimately bounded (SGUUB). Finally, the superiority of the proposed method is verified by comparative experiments.& COPY; 2022 ISA. Published by Elsevier Ltd. All rights reserved.",
+      "keywords": [
+        "Reinforcement learning (RL)",
+        "Optimal control",
+        "Neural networks (NNs)",
+        "Autonomous underwater vehicle (AUV)",
+        "Input saturation",
+        "SYSTEMS",
+        "VEHICLES"
+      ],
+      "normalized_title": "adaptive optimal trajectory tracking control of auvs based on reinforcement learning",
+      "raw_bibtex": "@ARTICLE{10.1016/j.isatra.2022.12.003,\n\tauthor = {Li, ZF and Wang, M and Ma, G},\n\ttitle = {Adaptive optimal trajectory tracking control of AUVs based on reinforcement learning},\n\tjournal = {ISA TRANSACTIONS},\n\tyear = {2023},\n\tkeywords = {Reinforcement learning (RL); Optimal control; Neural networks (NNs); Autonomous underwater vehicle (AUV); Input saturation; SYSTEMS; VEHICLES},\n\tabstract = {In this paper, an adaptive model-free optimal reinforcement learning (RL) neural network (NN) control scheme based on filter error is proposed for the trajectory tracking control problem of an autonomous underwater vehicle (AUV) with input saturation. Generally, the optimal control is realized by solving the Hamilton-Jacobi-Bellman (HJB) equation. However, due to its inherent nonlinearity and complexity, the HJB equation of AUV dynamics is challenging to solve. To deal with this problem, an RL strategy based on an actor-critic framework is proposed to approximate the solution of the HJB equation, where actor and critic NNs are used to perform control behavior and evaluate control performance, respectively. In addition, for the AUV system with the second-order strict-feedback dynamic model, the optimal controller design method based on filtering errors is proposed for the first time to simplify the controller design and accelerate the response speed of the system. Then, to solve the model-dependent problem, an extended state observer (ESO) is designed to estimate the unknown nonlinear dynamics, and an adaptive law is designed to estimate the unknown model parameters. To deal with the input saturation, an auxiliary variable system is utilized in the control law. The strict Lyapunov analysis guarantees that all signals of the system are semi-global uniformly ultimately bounded (SGUUB). Finally, the superiority of the proposed method is verified by comparative experiments.& COPY; 2022 ISA. Published by Elsevier Ltd. All rights reserved.},\n\tdoi = {10.1016/j.isatra.2022.12.003},\n\tvolume = {137},\n\tpages = {122-132},\n\tissn = {0019-0578},\n\tnote = {Times Cited in Web of Science Core Collection: 31 Total Times Cited: 35 Cited Reference Count: 40 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.isatra.2022.12.003"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000130",
+      "entry_type": "article",
+      "title": "Data-Driven Adaptive Disturbance Observers for Model-Free Trajectory Tracking Control of Maritime Autonomous Surface Ships",
+      "authors": [
+        "Peng, ZH",
+        "Wang, D",
+        "Wang, J"
+      ],
+      "year": 2021,
+      "journal": "IEEE TRANSACTIONS ON NEURAL NETWORKS AND LEARNING SYSTEMS",
+      "doi": "10.1109/tnnls.2021.3093330",
+      "abstract": "In this article, we address the disturbance/ uncertainty estimation of maritime autonomous surface ships (MASSs) with unknown internal dynamics, unknown external disturbances, and unknown input gains. In contrast to existing disturbance observers where some prior knowledge on kinetic model parameters such as the control input gains is available in advance, reduced- and full-order data-driven adaptive disturbance observers (DADOs) are proposed for estimating unknown input gains, as well as total disturbance composed of unknown internal dynamics and external disturbances. An advantage of the proposed DADOs is that the total disturbance and input gains can be simultaneously estimated with guaranteed convergence via data-driven adaption. We apply the proposed full-order DADO for the trajectory tracking control of an MASS without kinetic modeling and present a model-free trajectory tracking control law for the ship based on the DADO and a backstepping technique. We report the simulation results to substantiate the efficacy of the proposed DADO approach to model-free trajectory tracking control of an autonomous surface ship without knowing its dynamics.",
+      "keywords": [
+        "Marine vehicles",
+        "Adaptation models",
+        "Trajectory tracking",
+        "Sea surface",
+        "Kinetic theory",
+        "Vehicle dynamics",
+        "Disturbance observers",
+        "Data-driven adaptive disturbance observer (DADO)",
+        "maritime autonomous surface ships (MASSs)",
+        "ocean disturbances",
+        "unknown input gains",
+        "unknown internal dynamics",
+        "EXTENDED STATE OBSERVER",
+        "MULTIPLE UNDERACTUATED SHIPS",
+        "CONTAINMENT CONTROL",
+        "VEHICLES",
+        "VESSELS",
+        "SYNCHRONIZATION",
+        "SYSTEMS"
+      ],
+      "normalized_title": "data driven adaptive disturbance observers for model free trajectory tracking control of maritime autonomous surface ships",
+      "raw_bibtex": "@ARTICLE{10.1109/TNNLS.2021.3093330,\n\tauthor = {Peng, ZH and Wang, D and Wang, J},\n\ttitle = {Data-Driven Adaptive Disturbance Observers for Model-Free Trajectory Tracking Control of Maritime Autonomous Surface Ships},\n\tjournal = {IEEE TRANSACTIONS ON NEURAL NETWORKS AND LEARNING SYSTEMS},\n\tyear = {2021},\n\tkeywords = {Marine vehicles; Adaptation models; Trajectory tracking; Sea surface; Kinetic theory; Vehicle dynamics; Disturbance observers; Data-driven adaptive disturbance observer (DADO); maritime autonomous surface ships (MASSs); ocean disturbances; unknown input gains; unknown internal dynamics; EXTENDED STATE OBSERVER; MULTIPLE UNDERACTUATED SHIPS; CONTAINMENT CONTROL; VEHICLES; VESSELS; SYNCHRONIZATION; SYSTEMS},\n\tabstract = {In this article, we address the disturbance/ uncertainty estimation of maritime autonomous surface ships (MASSs) with unknown internal dynamics, unknown external disturbances, and unknown input gains. In contrast to existing disturbance observers where some prior knowledge on kinetic model parameters such as the control input gains is available in advance, reduced- and full-order data-driven adaptive disturbance observers (DADOs) are proposed for estimating unknown input gains, as well as total disturbance composed of unknown internal dynamics and external disturbances. An advantage of the proposed DADOs is that the total disturbance and input gains can be simultaneously estimated with guaranteed convergence via data-driven adaption. We apply the proposed full-order DADO for the trajectory tracking control of an MASS without kinetic modeling and present a model-free trajectory tracking control law for the ship based on the DADO and a backstepping technique. We report the simulation results to substantiate the efficacy of the proposed DADO approach to model-free trajectory tracking control of an autonomous surface ship without knowing its dynamics.},\n\tdoi = {10.1109/TNNLS.2021.3093330},\n\tvolume = {32},\n\tnumber = {12},\n\tpages = {5584-5594},\n\tissn = {2162-237X},\n\tnote = {Times Cited in Web of Science Core Collection: 122 Total Times Cited: 124 Cited Reference Count: 68 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TNNLS.2021.3093330"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

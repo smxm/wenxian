@@ -1,0 +1,643 @@
+{
+  "id": "6865f0c70273",
+  "kind": "screening",
+  "status": "succeeded",
+  "cancel_requested": false,
+  "title": "new-screening-run",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 5,
+  "progress_total": 5,
+  "progress_message": "Task completed",
+  "created_at": "2026-03-26T22:53:42.167063+08:00",
+  "updated_at": "2026-03-26T22:57:13.862502+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "11e841b21db2",
+    "project_topic": "隐球菌侵袭血脑屏障的深层机制及体外仿生血脑屏障模型构建",
+    "model_provider": "deepseek",
+    "parent_task_id": null,
+    "input_dataset_ids": [],
+    "request_payload": {
+      "title": "new-screening-run",
+      "topic": "隐球菌侵袭血脑屏障的深层机制及体外仿生血脑屏障模型构建",
+      "criteria_markdown": "# Role\r\n你是一位微生物学与神经生物学交叉领域的资深学术研究员，正在协助我筛选参考文献。我正在撰写一篇关于“隐球菌侵袭血脑屏障的深层机制及体外仿生血脑屏障模型构建”的论文，我需要你帮我找出我能用到的高质量参考文献。\r\n\r\n# Task\r\n我将提供一批文献的元数据（标题、摘要等，主要来自 CNS 及其子刊）。请你逐一阅读，并严格按照以下流程处理：\r\n\r\n## Step 1: 筛选判读\r\n请根据以下标准判断该文献是否符合我的研究需求：\r\n\r\n* 纳入标准 (Inclusion Criteria)：\r\n  1. 研究对象必须强相关“隐球菌（Cryptococcus）”与“血脑屏障（BBB/脑微血管内皮细胞等）”的互作；或专门针对“高级血脑屏障模型（微流控、器官芯片、iPSC衍生等）”的构建与应用。\r\n  2. 必须是探讨深层分子机制（如穿胞作用、紧密连接破坏、特洛伊木马机制）或新型仿生模型开发的高质量研究/综述。\r\n* 排除标准 (Exclusion Criteria)：\r\n  1. 仅涉及隐球菌肺部感染或其他器官感染，未深入探讨血脑屏障的文献。\r\n  2. 纯常规药物疗效对比、流行病学统计或缺乏机制探索的单一临床病例报告。\r\n  3. 传统的二维静态细胞培养且无明显方法学创新的研究。\r\n\r\n## Step 2: 格式化输出\r\n根据判读结果，执行不同的输出逻辑（**必须将以下所有结果输出在 markdown 代码框内，绝对禁止生成任何形式的来源引用标记、网页链接或 [cite] 格式**）：\r\n\r\n情况 A：如果不符合要求\r\n* 仅输出一行文字：\r\n  `❌ [剔除]：<文献完整标题>`\r\n\r\n情况 B：如果符合要求\r\n* 请按以下结构输出（不要使用任何来源引用功能，只输出纯文本）：\r\n\r\n# <文献完整标题>\r\n（<此处填写准确的中文标题翻译>）\r\n\r\n核心总结\r\n（请用中文精炼概括：1. 解决了什么核心问题；2. 使用了什么关键技术/创新模型；3. 得出了什么主要结论。）\r\n\r\n深度分析\r\n* 参考价值：针对“隐球菌侵袭机制与BBB模型构建”的主题，这篇文章在机制阐述（如具体受体靶点、信号通路）或模型设计（如共培养方案、剪切力参数）上，提供了哪些直接可用的素材和论点？\r\n---\r\n\r\n# Input Data\r\n[在此处粘贴你导出的文献信息，例如 BibTeX、RIS 格式，或 Excel 中的标题+摘要文本]",
+      "inclusion": [
+        "研究对象必须强相关“隐球菌（Cryptococcus）”与“血脑屏障（BBB/脑微血管内皮细胞等）”的互作；或专门针对“高级血脑屏障模型（微流控、器官芯片、iPSC衍生等）”的构建与应用。",
+        "必须是探讨深层分子机制（如穿胞作用、紧密连接破坏、特洛伊木马机制）或新型仿生模型开发的高质量研究/综述。"
+      ],
+      "exclusion": [
+        "仅涉及隐球菌肺部感染或其他器官感染，未深入探讨血脑屏障的文献。",
+        "纯常规药物疗效对比、流行病学统计或缺乏机制探索的单一临床病例报告。",
+        "传统的二维静态细胞培养且无明显方法学创新的研究。"
+      ],
+      "provider": "deepseek",
+      "model_name": "deepseek-chat",
+      "api_base_url": "https://api.deepseek.com/v1",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.0,
+      "max_tokens": 1536,
+      "min_request_interval_seconds": 2.0,
+      "batch_size": 10,
+      "target_include_count": 30,
+      "stop_when_target_reached": false,
+      "allow_uncertain": true,
+      "retry_times": 6,
+      "request_timeout_seconds": 240,
+      "encoding": "auto",
+      "project_id": "11e841b21db2",
+      "parent_task_id": null,
+      "source_dataset_ids": []
+    },
+    "model_secret_id": "e4ad063e22354edb",
+    "uploaded_input_paths": [
+      "tasks/6865f0c70273/uploads/scopus_export_Mar 26-2026_3f19b690-c515-4a4f-b709-32f1db5bfd96.ris"
+    ]
+  },
+  "summary": {
+    "run_id": "run_20260326_225342",
+    "input_files_count": 1,
+    "raw_entries_count": 44,
+    "deduped_entries_count": 44,
+    "processed_count": 44,
+    "included_count": 9,
+    "excluded_count": 29,
+    "uncertain_count": 6,
+    "unused_count": 0,
+    "batch_count": 5,
+    "api_call_count": 5,
+    "stop_reason": "all_records_processed",
+    "started_at": "2026-03-26T22:53:42.252217+08:00",
+    "finished_at": "2026-03-26T22:56:20.219650+08:00",
+    "reviewed": true
+  },
+  "error": null,
+  "artifacts": {
+    "included_report": {
+      "path": "tasks/6865f0c70273/screening_run/screening_output/included_report.md",
+      "filename": "included_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 4457
+    },
+    "excluded_report": {
+      "path": "tasks/6865f0c70273/screening_run/screening_output/excluded_report.md",
+      "filename": "excluded_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 12313
+    },
+    "uncertain_report": {
+      "path": "tasks/6865f0c70273/screening_run/screening_output/uncertain_report.md",
+      "filename": "uncertain_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 2735
+    },
+    "included_ris": {
+      "path": "tasks/6865f0c70273/screening_run/screening_output/included.ris",
+      "filename": "included.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 16965
+    },
+    "unused_ris": {
+      "path": "tasks/6865f0c70273/screening_run/screening_output/unused_remaining.ris",
+      "filename": "unused_remaining.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 0
+    },
+    "run_summary": {
+      "path": "tasks/6865f0c70273/screening_run/screening_output/run_summary.json",
+      "filename": "run_summary.json",
+      "content_type": "application/json",
+      "size_bytes": 444
+    },
+    "screening_decisions": {
+      "path": "tasks/6865f0c70273/screening_run/screening_output/screening_decisions.json",
+      "filename": "screening_decisions.json",
+      "content_type": "application/json",
+      "size_bytes": 21734
+    },
+    "reviewed_decisions": {
+      "path": "tasks/6865f0c70273/screening_run/screening_output/reviewed/screening_decisions.reviewed.json",
+      "filename": "screening_decisions.reviewed.json",
+      "content_type": "application/json",
+      "size_bytes": 21734
+    },
+    "reviewed_included_ris": {
+      "path": "tasks/6865f0c70273/screening_run/screening_output/reviewed/included.reviewed.ris",
+      "filename": "included.reviewed.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 15309
+    },
+    "reviewed_excluded_ris": {
+      "path": "tasks/6865f0c70273/screening_run/screening_output/reviewed/excluded.reviewed.ris",
+      "filename": "excluded.reviewed.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 56100
+    },
+    "reviewed_uncertain_report": {
+      "path": "tasks/6865f0c70273/screening_run/screening_output/reviewed/uncertain.reviewed.md",
+      "filename": "uncertain.reviewed.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 1409
+    }
+  },
+  "run_root": "tasks/6865f0c70273/screening_run",
+  "output_dir": "tasks/6865f0c70273/screening_run/screening_output",
+  "markdown_preview": null,
+  "records": [
+    {
+      "paper_id": "paper_000001",
+      "title": "Involvement of CD146 in the Cryptococcus neoformans adhesion and infection of brain endothelial cells",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究隐球菌与脑微血管内皮细胞的互作机制，探讨CD146在血脑屏障侵袭中的作用。",
+      "year": 2025,
+      "journal": "Infection and Immunity",
+      "doi": "10.1128/iai.00145-25",
+      "abstract": "Cryptococcal meningitis is a common and refractory central nervous system (CNS) infection with high mortality and disability. For Cryptococcus neoformans (C. neoformans) to penetrate the CNS, it first adheres to and breaches the blood‒brain barrier (BBB). Here, we explored the roles of CD146, an adhesion molecule expressed on the surface of brain microvascular endothelial cells (BMECs), in cryptococcal vascular adhesion and BBB invasion. Following cryptococcal infection, we observed a reduction in CD146 expression in BMECs, which was at least partially mediated by metalloproteinase-9. Once overexpressed on BMECs, CD146 increased C. neoformans adhesion; in contrast, CD146 knockout decreased the attachment of fungi to endothelial cells in vitro. Unexpectedly, CD146 knockout failed to reduce fungal infection in the brain following intravascular instillation of C. neoformans. However, the anti-CD146 antibody AA98 significantly increased the fungemia (spleen CFU), suggesting that CD146 may be involved in the early adhesion and invasion of Cryptococcus into cerebral vessels. AA98, however, failed to extend the survival of C. neoformans infected mice. These results suggest that CD146 may play dispensable roles in the C. neoformans brain infection. Copyright © 2025 Liu et al."
+    },
+    {
+      "paper_id": "paper_000002",
+      "title": "Inhibition of myeloid-derived suppressor cell arginase-1 production enhances T-cell-based immunotherapy against Cryptococcus neoformans infection",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "摘要主要关注免疫细胞调控和T细胞免疫治疗，未提及血脑屏障或脑部感染机制。",
+      "year": 2022,
+      "journal": "Nature Communications",
+      "doi": "10.1038/s41467-022-31723-4",
+      "abstract": "Cryptococcosis is a potentially lethal disease that is primarily caused by the fungus Cryptococcus neoformans, treatment options for cryptococcosis are limited. Here, we show glucuronoxylomannan, the major polysaccharide component of C. neoformans, induces the recruitment of neutrophilic myeloid-derived suppressor cells in mice and patients with cryptococcosis. Depletion of neutrophilic myeloid-derived suppressor cells enhances host defense against C. neoformans infection. We identify C-type lectin receptor-2d recognizes glucuronoxylomannan to potentiate the immunosuppressive activity of neutrophilic myeloid-derived suppressor cells by initiating p38-mediated production of the enzyme arginase-1, which inhibits T-cell mediated antifungal responses. Notably, pharmacological inhibition of arginase-1 expression by a specific inhibitor of p38, SB202190, or an orally available receptor tyrosine kinase inhibitor, vandetanib, significantly enhances T-cell mediated antifungal responses against cryptococcosis. These data reveal a crucial suppressive role of neutrophilic myeloid-derived suppressor cells during cryptococcosis and highlight a promising immunotherapeutic application by inhibiting arginase-1 production to combat infectious diseases. © 2022, The Author(s)."
+    },
+    {
+      "paper_id": "paper_000003",
+      "title": "Chinese guidelines for the diagnosis and treatment of human immunodeficiency virus infection/acquired immunodeficiency syndrome (2024 edition)",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要显示为HIV/AIDS临床指南，未专门涉及隐球菌或血脑屏障。",
+      "year": 2025,
+      "journal": "Infectious Diseases and Immunity",
+      "doi": "10.1097/id9.0000000000000152",
+      "abstract": "The Acquired Immunodeficiency Syndrome Professional Group of the Society of Infectious Diseases of the Chinese Medical Association formulated the first edition of the Chinese Guidelines for the Diagnosis and Treatment of human immunodeficiency virus (HIV)/acquired immune deficiency syndrome (AIDS) (referred to as the Guidelines) in 2005. The 2024 edition of the Guidelines has been compiled by updating the 2021 fifth edition, incorporating the latest research advancements in antiviral therapy, comprehensive management, opportunistic infections, concurrent tumors, and the prevention and intervention of HIV infection. The new edition also introduces a new section on \"Incomplete immune reconstitution\", proposes the concept of \"HIV vulnerable populations\"for the first time with recommendations for their diagnosis and treatment. This edition of the Guidelines covers 14 sections: epidemiology, pathogenic characteristics, laboratory tests, pathogenesis, clinical presentation and staging, diagnostic criteria, common opportunistic infections, antiretroviral therapy, immune reconstitution inflammatory syndrome, incomplete immune reconstitution, AIDS-related neoplasms, prevention of mother-to-child transmission and conception in serodiscordant couples, pre- and post-exposure prophylaxis, and whole-course management of HIV infection. This edition of the Guidelines aims to assist clinical physicians in making informed decisions in the diagnosis, treatment, and management of HIV/AIDS and will be periodically revised and updated based on domestic and international research progress. Copyright © 2024 The Chinese Medical Association, published by Wolters Kluwer Health, Inc."
+    },
+    {
+      "paper_id": "paper_000004",
+      "title": "Molecular Identification of Cryptococcus neoformans Isolates from House Environments of HIV-Infected Patients in an Urban Area, Indonesia: A First Report",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "标题和摘要聚焦环境分离株的分子鉴定和流行病学关联，未探讨血脑屏障机制或模型。",
+      "year": 2022,
+      "journal": "Makara Journal of Science",
+      "doi": "10.7454/mss.v26i2.1294",
+      "abstract": "Cryptococcus neoformans isolates were previously obtained from pigeon droppings in Jakarta. This study aimed to determine another source of infection and describe the supporting niche of the fungus. The occurrence of C. neoformans was evaluated in 110 samples of decaying wood and leaves, tree hollow debris, dust, and bird droppings. Yeasts isolates were collected from 22 houses of HIV-infected patients. The isolates were identified based on culture characteristics, an assimilation test, and URA5 restriction fragment length polymorphism polymerase chain reaction. The spatial analysis was conducted in geographical information system to determine dominant house and environmental factors. Seven of the 120 isolates (5.83%) were identified as C. neoformans, corresponding to four (18.2%) houses. All isolates were from house environments of HIV-infected patients with cryptococcal meningitis. Spearman’s correlation analysis and McNemar’s test revealed a significant association between cryptococcosis in HIV-infected patients and their environment. The clinical and environmental isolates were 100% identical based on molecular techniques, indicating that the patients acquired cryptococcosis from the environment. The spatial analysis revealed that house dust, soil, and leaves were the dominant distribution factors in terms of estimating disease prevalence. This study demonstrates that the house environment is a source of infection for cryptococcosis. © 2022, Universitas Indonesia. All rights reserved."
+    },
+    {
+      "paper_id": "paper_000005",
+      "title": "Effective combinatorial antifungal therapy using a host defense peptide mimic that self-assembles into delivery micelles",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "摘要提到隐球菌脑膜炎模型但主要关注药物递送系统，是否深入探讨血脑屏障机制不明确。",
+      "year": 2026,
+      "journal": "Nature Biotechnology",
+      "doi": "10.1038/s41587-025-02930-3",
+      "abstract": "The synergistic combination of two antimicrobial drugs is a promising therapeutic modality for many infectious diseases. However, systemic fungal infections still have a high mortality rate because of distinct in vivo distributions of the two drugs. Here we address this challenge by designing an antifungal polymer that forms micelles suitable for delivering a second antifungal agent to achieve temporal and spatial consistency of delivery. We show that the polymer, which mimics host defense peptides, exerts a synergistic effect with the antifungal amphotericin B (AmB). The AmB-encapsulated micelles (AmBmicelles) greatly reduce the toxicity of AmB through slow release and expand its therapeutic window in vivo. AmBmicelles can selectively target fungal pathogens through charge interactions with the fungal membrane. In mouse models of systemic candidiasis and cryptococcal meningitis, AmBmicelles increase the survival rate by 67–100% compared to the state-of-the-art drug AmBisome or AmBisome and 5-flucytosine combination, suggesting that the strategy may be effective in combating drug-resistant fungal infections including meningitis. © The Author(s), under exclusive licence to Springer Nature America, Inc. 2026."
+    },
+    {
+      "paper_id": "paper_000006",
+      "title": "Berberine-inspired ionizable lipid for self-structure stabilization and brain targeting delivery of nucleic acid therapeutics",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确研究血脑屏障穿透的递送系统，并在隐球菌脑膜炎模型中验证，符合高级模型构建主题。",
+      "year": 2025,
+      "journal": "Nature Communications",
+      "doi": "10.1038/s41467-025-57488-0",
+      "abstract": "Lipid nanoparticles have shown success in targeting major organs such as the liver, spleen, and lungs, but crossing the blood-brain barrier (BBB) remains a major challenge. Effective brain-targeted delivery systems are essential for advancing gene therapy for neurological diseases but remain limited by low transport efficiency and poor nucleic acid stability. Here, we report a library of ionizable lipids based on the tetrahydroisoquinoline structure of protoberberine alkaloids, designed to improve BBB penetration via dopamine D3 receptor-mediated endocytosis. These nanoparticles offer three key advantages: enhanced brain uptake, improved nucleic acid stability through poly(A) self-assembly, and minimal immunogenicity with inherent neuroprotective properties. In murine models, they demonstrate therapeutic potential in Alzheimer’s disease, glioma, and cryptococcal meningitis. This berberine-inspired delivery system integrates precise receptor targeting with nucleic acid stabilization, offering a promising platform for brain-targeted therapeutics. © The Author(s) 2025."
+    },
+    {
+      "paper_id": "paper_000007",
+      "title": "Seven-year performance of a clinical metagenomic next-generation sequencing test for diagnosis of central nervous system infections",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要关注中枢神经系统感染的诊断技术评估，未专门研究隐球菌或血脑屏障机制。",
+      "year": 2024,
+      "journal": "Nature Medicine",
+      "doi": "10.1038/s41591-024-03275-1",
+      "abstract": "Metagenomic next-generation sequencing (mNGS) of cerebrospinal fluid (CSF) is an agnostic method for broad-based diagnosis of central nervous system (CNS) infections. Here we analyzed the 7-year performance of clinical CSF mNGS testing of 4,828 samples from June 2016 to April 2023 performed by the University of California, San Francisco (UCSF) clinical microbiology laboratory. Overall, mNGS testing detected 797 organisms from 697 (14.4%) of 4,828 samples, consisting of 363 (45.5%) DNA viruses, 211 (26.4%) RNA viruses, 132 (16.6%) bacteria, 68 (8.5%) fungi and 23 (2.9%) parasites. We also extracted clinical and laboratory metadata from a subset of the samples (n = 1,164) from 1,053 UCSF patients. Among the 220 infectious diagnoses in this subset, 48 (21.8%) were identified by mNGS alone. The sensitivity, specificity and accuracy of mNGS testing for CNS infections were 63.1%, 99.6% and 92.9%, respectively. mNGS testing exhibited higher sensitivity (63.1%) than indirect serologic testing (28.8%) and direct detection testing from both CSF (45.9%) and non-CSF (15.0%) samples (P < 0.001 for all three comparisons). When only considering diagnoses made by CSF direct detection testing, the sensitivity of mNGS testing increased to 86%. These results justify the routine use of diagnostic mNGS testing for hospitalized patients with suspected CNS infection. © The Author(s) 2024."
+    },
+    {
+      "paper_id": "paper_000008",
+      "title": "Brain-infiltrating CD4 T cells drive inflammatory microglia proliferation during cryptococcal meningitis in mice",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确研究隐球菌脑膜炎中T细胞与脑部免疫细胞的互作，涉及血脑屏障相关炎症机制。",
+      "year": 2025,
+      "journal": "Nature Communications",
+      "doi": "10.1038/s41467-025-64034-5",
+      "abstract": "Cryptococcal meningitis is a fungal infection in patients with compromised CD4 T cell function. CD4 T cells provide killing signals to macrophages, principally IFNγ, to limit intracellular fungal replication. However, CD4 T cells may also drive inflammatory tissue damage. Yet, it is not fully understood how fungal-specific CD4 T cells infiltrate the brain and how they influence functional phenotypes of CNS-resident myeloid cells. In the current work, we develop a mouse model to track fungal-specific CD4 T cells and determine their influence on microglia. We found IFNγ+ fungal-specific CD4 T cells have limited TCR signalling and characterise a population of inflammatory microglia that upregulate MHCII and IFNγ-regulated genes during infection. Inflammatory microglia have poor fungicidal capacity and significantly expand during infection, a process that depends on CD4 T cell infiltration. Taken together, these data identify the early inflammatory consequences of fungal-specific CD4 T cell infiltration and identify proliferating microglia as important drivers of brain inflammation during infection. © The Author(s) 2025."
+    },
+    {
+      "paper_id": "paper_000009",
+      "title": "Genome restructuring and lineage diversification of Cryptococcus neoformans during chronic infection of human hosts",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "标题和摘要关注隐球菌在宿主内的基因组演化，未提及血脑屏障或脑部感染的具体机制。",
+      "year": 2025,
+      "journal": "Cell Reports",
+      "doi": "10.1016/j.celrep.2025.116103",
+      "abstract": "Opportunistic microbial pathogens that infect humans must adapt to radically different fitness landscapes as they transition from the external environment to the host niche. The nature, frequency, and magnitude of genomic changes that accompany adaptation to the human host niche are not well understood for many eukaryotic pathogens because of the logistical challenges of obtaining longitudinal samples of pathogen populations in individual patients. Drawing on a set of case studies, we characterize in-host genomic and phenotypic evolution of the opportunistic human fungal pathogen Cryptococcus neoformans during chronic infections. We find that fungal genome evolution during chronic infection is characterized by large-scale genome restructuring and increasing genomic heterogeneity within hosts. Phenotypic changes include diversification in virulence traits and antifungal susceptibility. Genotypically and phenotypically distinct sublineages arise and co-persist within the same host tissues, consistent with a model of strong and/or diversifying selection in the complex environment of human hosts. © 2025 The Authors"
+    },
+    {
+      "paper_id": "paper_000010",
+      "title": "Vaccination with a ZNF2oe Strain of Cryptococcus Provides Long-Lasting Protection against Cryptococcosis and Is Effective in Immunocompromised Hosts",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要聚焦疫苗开发和免疫保护，未探讨血脑屏障侵袭机制或模型构建。",
+      "year": 2023,
+      "journal": "Infection and Immunity",
+      "doi": "10.1128/iai.00198-23",
+      "abstract": "Systemic cryptococcosis is fatal without treatment. Even with the current antifungal therapies, this disease kills 180,000 of 225,000 infected people annually. Exposure to the causative environmental fungus Cryptococcus neoformans is universal. Either reactivation of a latent infection or an acute infection after high exposure to cryptococcal cells can result in cryptococcosis. Currently, there is no vaccine to prevent cryptococcosis. Previously, we discovered that Znf2, a transcription factor that directs Cryptococcus yeast-to-hypha transition, profoundly affects cryptococcal interaction with the host. Overexpression of ZNF2 drives filamentous growth, attenuates cryptococcal virulence, and elicits protective host immune responses. Importantly, immunization with cryptococcal cells overexpressing ZNF2, in either live or heat-inactivated form, offers significant protection to the host from a subsequent challenge by the otherwise lethal clinical isolate H99. In this study, we found that the heat-inactivated ZNF2oe vaccine offered long-lasting protection with no relapse upon challenge with the wild-type H99. Vaccination with heat-inactivated ZNF2oe cells provides partial protection in hosts with preexisting asymptomatic cryptococcal infection. Importantly, once animals have been vaccinated with heat-inactivated or live short-lived ZNF2oe cells, they are protected against cryptococcosis even when their CD41 T cells are depleted at the time of fungal challenge. Remarkably, vaccination with live, short-lived ZNF2oe cells in CD4-depleted hosts still provides strong protection to these hosts with preexisting immunodeficiency at the time of vaccination. This work raises hope for developing effective vaccines with long-lasting protection for individuals who are immunocompromised or could become immunocompromised later in life. Copyright © 2023 Pham et al."
+    },
+    {
+      "paper_id": "paper_000011",
+      "title": "Publications on Post-Covid Mucormycosis: A Bibliometric Study of WHO Database",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要均聚焦于毛霉菌病的文献计量学研究，未涉及隐球菌或血脑屏障。",
+      "year": 2021,
+      "journal": "Bangladesh Journal of Medical Science",
+      "doi": "10.3329/bjms.v20i5.55415",
+      "abstract": "Background: The COVID-19 pandemic has triggered a large number of publications to inform, understand, conduct more research and control the situation. Although the researchers are analyzing the bibliometrics on this condition, no bibliometric studies are available on the publications related to post-covid mucormycosis. This study is aimed at bibliometric assessment of the publications related to post-covid mucormycosis. Methods: In the presented study, authors have performed the bibliometric analysis of the World health organization (WHO) database named ‘Global literature on coronavirus disease.’ WHO is maintaining this database since the pandemic, and it contains thousands of reports. Two simple search terms, ‘Covid’ and ‘mucormycosis’ used to search the entire database in ‘title, abstract, subject’ mode with the search string was tw:(mucormycosis covid). The search was not restricted to any date range. Results: Only 51 reports (40 articles and 01 clinical trials) were obtained with the above search terms. The study found that there is considerable growth in such publication in the last 6 months. Interestingly only three such reports were published in the year 2020. Database wise 38 of these 51 reports were available in Medline. Most of such reports were published by Indian authors. Indian Journal of Ophthalmology emerged as the most productive journal contributing the highest number (10) of these reports. Conclusions: The highly acclaimed publications were the reviews. This study suggests that India is the most productive country for publications related to post-covid mucormycosis. This resembles the fact that the country, faced the excessive emergence of post-covid-19 mucormycosis cases reported the second-highest number of Covid 19 cases in the substantial worldwide outbreak in the second wave, which is followed by post covid mucormycosis. © 2021, Ibn Sina Trust. All rights reserved."
+    },
+    {
+      "paper_id": "paper_000012",
+      "title": "Brain glucose induces tolerance of Cryptococcus neoformans to amphotericin B during meningitis",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确研究隐球菌在脑膜炎期间对药物的耐受性，涉及脑组织环境，与血脑屏障互作机制相关。",
+      "year": 2024,
+      "journal": "Nature Microbiology",
+      "doi": "10.1038/s41564-023-01561-1",
+      "abstract": "Antibiotic tolerance is the ability of a susceptible population to survive high doses of cidal drugs and has been shown to compromise therapeutic outcomes in bacterial infections. In comparison, whether fungicide tolerance can be induced by host-derived factors during fungal diseases remains largely unknown. Here, through a systematic evaluation of metabolite–drug–fungal interactions in the leading fungal meningitis pathogen, Cryptococcus neoformans, we found that brain glucose induces fungal tolerance to amphotericin B (AmB) in mouse brain tissue and patient cerebrospinal fluid via the fungal glucose repression activator Mig1. Mig1-mediated tolerance limits treatment efficacy for cryptococcal meningitis in mice via inhibiting the synthesis of ergosterol, the target of AmB, and promoting the production of inositolphosphorylceramide, which competes with AmB for ergosterol. Furthermore, AmB combined with an inhibitor of fungal-specific inositolphosphorylceramide synthase, aureobasidin A, shows better efficacy against cryptococcal meningitis in mice than do clinically recommended therapies. © The Author(s), under exclusive licence to Springer Nature Limited 2024."
+    },
+    {
+      "paper_id": "paper_000013",
+      "title": "A dissemination-prone morphotype enhances extrapulmonary organ entry by Cryptococcus neoformans",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "标题和摘要研究隐球菌形态变化促进肺外器官（包括脑）进入，涉及血脑屏障穿越机制。",
+      "year": 2022,
+      "journal": "Cell Host and Microbe",
+      "doi": "10.1016/j.chom.2022.08.017",
+      "abstract": "Environmental pathogens move from ecological niches to mammalian hosts, requiring adaptation to dramatically different environments. Microbes that disseminate farther, including the fungal meningitis pathogen Cryptococcus neoformans, require additional adaptation to diverse tissues. We demonstrate that the formation of a small C. neoformans morphotype—called “seed” cells due to their colonizing ability—is critical for extrapulmonary organ entry. Seed cells exhibit changes in fungal cell size and surface expression that result in an enhanced macrophage update. Seed cell formation is triggered by environmental factors, including C. neoformans’ environmental niche, and pigeon guano with phosphate plays a central role. Seed cells show the enhanced expression of phosphate acquisition genes, and mutants unable to acquire phosphate fail to adopt the seed cell morphotype. Additionally, phosphate can be released by tissue damage, potentially establishing a feed-forward loop of seed cell formation and dissemination. Thus, C. neoformans’ size variation represent inducible morphotypes that change host interactions to facilitate microbe spread. © 2022 The Author(s)"
+    },
+    {
+      "paper_id": "paper_000014",
+      "title": "Risk factors for cryptococcal meningitis recurrence in Human Immunodeficiency Virus (HIV)-infected patients in a large Chinese Acquired Immune Deficiency Syndrome (AIDS) treatment center",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要聚焦于HIV患者隐球菌脑膜炎复发的临床风险因素分析，缺乏深层机制探索。",
+      "year": 2021,
+      "journal": "Medical Science Monitor",
+      "doi": "10.12659/msm.933688",
+      "abstract": "Background: Cryptococcal meningitis (CM) is one of the most common opportunistic neuroinfections in patients with HIV. Most studies have focused on non-HIV CM and there are only a few studies on HIV CM in China. The purpose of the present study was to evaluate the characteristics and risk factors for CM recurrence in patients infected with HIV in the Chongqing Public Health Treatment Center in China. Material/Methods: From January 2014 to December 2017, all patients with CM aged 18 years or older were enrolled and a case-control study was performed to determine the risk factors associated with recurrence of CM. Antimicrobial susceptibility was determined with a fungal drug sensitivity kit and the sequence types (STs) were analyzed with multilocus sequence typing. Results: The incidence of CM in the 5185 HIV-infected patients was 3.5% (179). Follow-up data were available for 82 of the patients for whom complete medical records were available and they were included in the present study. There were 7 STs among 82 Cryptococcus neoformans isolates; ST5 and ST31 were the most prevalent genotypes. Testing showed that C. neoformans had high sensitivity to 5 antifungal drugs and no differences in resistance were observed, even when different STs were tested. Risk factors for recurrence were analyzed in 69 patients, excluding those who died. The results of multivariate analysis showed that only hospital stay was associated with recurrence of CM. Conclusions: Our results indicated that combining education about medication with clinical treatment could help prevent recurrence of CM. © 2021 International Scientific Information, Inc.. All rights reserved."
+    },
+    {
+      "paper_id": "paper_000015",
+      "title": "Methamphetamine Enhances Cryptococcus neoformans Melanization, Antifungal Resistance, and Pathogenesis in a Murine Model of Drug Administration and Systemic Infection",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "摘要提到甲苯丙胺增强隐球菌在脑中的负荷和致死率，但未明确阐述血脑屏障互作的具体分子机制。",
+      "year": 2022,
+      "journal": "Infection and Immunity",
+      "doi": "10.1128/iai.00091-22",
+      "abstract": "Methamphetamine (METH) is a major public health and safety problem in the United States. Chronic METH abuse is associated with a 2-fold-higher risk of HIV infection and, possibly, additional infections, particularly those that enter through the respiratory tract or skin. Cryptococcus neoformans is an encapsulated opportunistic yeast-like fungus that is a relatively frequent cause of meningoencephalitis in immunocompromised patients, especially in individuals with AIDS. C. neoformans melanizes during mammalian infection in a process that presumably uses host-supplied compounds such as catecholamines. L-3,4-Dihydroxyphenylalanine (L-Dopa) is a natural catecholamine that is frequently used to induce melanization in C. neoformans. L-Dopa-melanized cryptococci manifest resistance to radiation, phagocytosis, detergents, and heavy metals. Using a systemic mouse model of infection and in vitro assays to critically assess the impact of METH on C. neoformans melanization and pathogenesis, we demonstrated that METH-treated mice infected with melanized yeast cells showed increased fungal burdens in the blood and brain, exacerbating mortality. Interestingly, analyses of cultures of METH-exposed cryptococci supplemented with L-Dopa revealed that METH accelerates fungal melanization, an event of adaptation to external stimuli that can be advantageous to the fungus during pathogenesis. Our findings provide novel evidence of the impact of METH abuse on host homeostasis and increased permissiveness to opportunistic microorganisms. Copyright © 2022 American Society for Microbiology. All Rights Reserved."
+    },
+    {
+      "paper_id": "paper_000016",
+      "title": "Bioavailability of three novel oral, sustained-release pellets, relative to an immediate-release tablet containing 500 mg flucytosine: A randomized, open-label, crossover study in healthy volunteers",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要仅涉及新型氟胞嘧啶制剂的药代动力学研究，未探讨隐球菌与血脑屏障的互作机制或模型构建。",
+      "year": 2024,
+      "journal": "Clinical and Translational Science",
+      "doi": "10.1111/cts.13756",
+      "abstract": "The opportunistic fungal infection cryptococcal meningoencephalitis is a major cause of death among people living with HIV in sub-Saharan Africa. We report pharmacokinetic (PK) and safety data from a randomized, four-period crossover phase I trial of three sustained-release (SR) oral pellet formulations of 5-flucytosine conducted in South Africa. These formulations were developed to require less frequent administration, to provide a convenient alternative to the current immediate release (IR) formulation, A. Formulations B, C, and D were designed to release 5-flucytosine as a percentage of the nominal dose in vitro. We assessed their safety and PK profiles in a single dose (1 × 3000 mg at 0 h), relative to commercial IR tablets (Ancotil 500 mg tablets; 3 × 500 mg at 0 h and 3 × 500 mg at 6 h) in healthy, fasted participants. Forty-two healthy participants were included. All treatments were well-tolerated. The primary PK parameters, maximum observed plasma concentration (Cmax) and area under the concentration-time profiles, were significantly lower for the SR formulations than for the IR tablets, and the geometric mean ratios fell outside the conventional bioequivalence limits. The median maximum time to Cmax was delayed for the SR pellets. Physiologically-based PK modeling indicated a twice-daily 6400 mg dose of SR formulation D in fasted condition would be optimal for further clinical development. This regimen is predicted to result in a rapid steady-state plasma exposure with effective and safe trough plasma concentration and Cmax values, within the therapeutic boundaries relative to plasma exposure after four times per day administration of IR tablets (PACTR202201760181404). © 2024 DNDI. Luxembourg Institute of Health. Pharmetheus AB. Mylan Laboratories Ltd. FARMOVS (Pty) Ltd and The Authors. Clinical and Translational Science published by Wiley Periodicals LLC on behalf of American Society for Clinical Pharmacology and Therapeutics."
+    },
+    {
+      "paper_id": "paper_000017",
+      "title": "A spuriously negative cryptococcal antigen assay result in disseminated cryptococcosis: The deception of the postzone phenomenon",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要描述隐球菌抗原检测的假阴性病例报告，属于单一临床病例分析，缺乏机制探索。",
+      "year": 2021,
+      "journal": "Annals of Clinical and Laboratory Science",
+      "doi": null,
+      "abstract": "Cryptococcus is a basidiomycetous yeast responsible for considerable HIV-related morbidity and mortality. A cachectic 26-year-old HIV-positive man with a CD4 count of 103 cells/μl presented with fever, breathlessness, and bilateral lower limb weakness. A brain computed tomography scan could not elucidate the neurological deficit. His blood was sent for culture and serum cryptococcal antigen detection, with the latter testing as negative. By the fourth day of admission, the patient’s condition had deteriorated drastically. A lumbar puncture was performed, and like his serum sample, the cerebrospinal fluid also tested negative for cryptococcal antigens. By this time, Cryptococcus neoformans was isolated from the admission blood culture. The laboratory diluted both the serum and cerebrospinal fluid specimens to retest for cryptococcal antigens, and finally, an antigen titer of ≥1:2560 was recorded. © 2021 by the Association of Clinical Scientists, Inc."
+    },
+    {
+      "paper_id": "paper_000018",
+      "title": "Cryptococcus exploits delayed microglial activation, and microglial osteopontin/Spp1 impairs peripheral host control",
+      "decision": "include",
+      "confidence": 0.88,
+      "reason": "标题和摘要研究隐球菌感染中脑内小胶质细胞激活延迟及其对感染的影响，直接涉及脑内免疫反应机制。",
+      "year": 2025,
+      "journal": "Cell Host and Microbe",
+      "doi": "10.1016/j.chom.2025.11.008",
+      "abstract": "Cryptococcus , a neurotropic fungus classified as a critical-priority pathogen by the World Health Organization (WHO), causes cryptococcal meningoencephalitis (CM), the second leading cause of death in HIV/AIDS patients. Despite its clinical importance, host brain responses during CM remain poorly understood. In a mouse systemic infection model, Cryptococcus infiltrates the brain within a day. However, full activation of microglia and recruitment of leukocytes takes 14 days, a delay not observed in brain infections caused by Candida albicans . Microglia exhibit limited ability to directly detect Cryptococcus , and their activation depends on interferon (IFN)-γ from Th1 cells. Therefore, adaptive immunity (Th1 responses) precedes innate immune responses (microglial activation) in the brain during CM. Moreover, microglia-derived osteopontin (OPN/ Spp1 ) exacerbates CM by altering peripheral immunity and increasing fungal loads in peripheral organs. These findings reveal a uniquely slow host cellular response to Cryptococcus brain infiltration, allowing the fungus an extended window to establish the infection. © 2025 Elsevier Inc."
+    },
+    {
+      "paper_id": "paper_000019",
+      "title": "Reimagining the future of African brain health: Perspectives for basic research on the pathogenesis of cryptococcal meningitis",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "摘要呼吁加强隐球菌脑膜炎发病机制的基础研究并提及血脑屏障穿越，但本文为观点性综述，未提供具体机制数据。",
+      "year": 2021,
+      "journal": "Brain, Behavior, and Immunity - Health",
+      "doi": "10.1016/j.bbih.2021.100388",
+      "abstract": "Cryptococcal meningitis is a fatal opportunistic infection of the brain and a leading cause of neurological damage and death in immunocompromised individuals. This neglected fungal disease of the brain is a huge burden on the health systems of developing countries, especially in Sub-Saharan Africa, where up to 25% of people living with HIV/AIDS succumb to it. Cryptococcal fungal cells have a predilection for the brain and they are capable of traversing the blood brain barrier and invade the brain where they cause infection, inflammation and a disruption of normal brain function. A robust host neuroimmune response is critical for pathogen clearance and survival, and a good understanding of the mechanisms underlying its development in the host is critical for the development of effective treatments. However, past basic research studies have been focussed on the characteristics of the fungus and its effect on the peripheral immune system; with little attention paid to how it interacts with brain immune cells. This mini review briefly discusses the paucity of basic research data on the neuroimmune response to cryptococcal infection, raises pertinent questions on how the brain cells respond to the fungal infection, and thereafter discusses models, techniques and advanced technologies that could be useful for carrying out high-throughput research on the pathogenesis of cryptococcal meningitis. © 2021"
+    },
+    {
+      "paper_id": "paper_000020",
+      "title": "Central nervous system-infecting pathogens escherichia coli and Cryptococcus neoformans exploit the host Pdlim2 for intracellular traversal and exocytosis in the blood-brain barrier",
+      "decision": "include",
+      "confidence": 0.92,
+      "reason": "标题和摘要明确研究隐球菌利用宿主Pdlim2蛋白在血脑屏障内皮细胞内的穿越和排出机制，符合深层分子机制探索。",
+      "year": 2021,
+      "journal": "Infection and Immunity",
+      "doi": "10.1128/iai.00128-21",
+      "abstract": "Microbial penetration of the blood-brain barrier, a prerequisite for the development of central nervous system (CNS) infection, involves microbial invasion, intracellular traversal, and exocytosis. Microbial invasion of the blood-brain barrier has been investigated, but the molecular basis for microbial traversal and exit from the blood-brain barrier remains unknown. We performed transcriptome analysis of human brain microvascular endothelial cells (HBMEC) infected with Escherichia coli and Cryptococcus neoformans, representative bacterial and fungal pathogens common in CNS infections. Among the targets upregulated in response to E. coli and C. neoformans infection, PDLIM2 was knocked down by small hairpin RNA (shRNA) in HBMEC for further investigation. We demonstrated that Pdlim2 specifically regulated microbial traversal and exit from HBMEC by assessing microbial invasion, transcytosis, intracellular multiplication, and egression. Additionally, the defective exocytosis of internalized E. coli cells from the PDLIM2 shRNA knockdown cells was restored by treatment with a calcium ionophore (ionomycin). Moreover, we performed proximity-dependent biotin labeling with the biotin ligase BioID2 and identified 210 potential Pdlim2 interactors. Among the nine Pdlim2 interactors enriched in response to both E. coli and C. neoformans infection, we selected MPRIP and showed that HBMEC with knockdown of MPRIP mimicked the phenotype of PDLIM2 knockdown cells. These results suggest that the CNS-infecting microbes hijack Pdlim2 and Mprip for intracellular traversal and exocytosis in the blood-brain barrier. Copyright © 2021 American Society for Microbiology. All Rights Reserved."
+    },
+    {
+      "paper_id": "paper_000021",
+      "title": "Phenotypic landscape of an invasive fungal pathogen reveals its unique biology",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "标题和摘要未提及血脑屏障或相关模型，主要关注全局表型分析而非特定BBB机制。",
+      "year": 2025,
+      "journal": "Cell",
+      "doi": "10.1016/j.cell.2025.05.017",
+      "abstract": "Cryptococcus neoformans is the most common cause of fungal meningitis and the top-ranking WHO fungal priority pathogen. Only distantly related to model fungi, C. neoformans is also a powerful experimental system for exploring conserved eukaryotic mechanisms lost from specialist model yeast lineages. To decipher its biology globally, we constructed 4,328 gene deletions and measured—with exceptional precision—the fitness of each mutant under 141 diverse growth-limiting in vitro conditions and during murine infection. We defined functional modules by clustering genes based on their phenotypic signatures. In-depth studies leveraged these data in two ways. First, we defined and investigated new components of key signaling pathways, which revealed metazoan-like cellular machinery not present in model yeasts. Second, we identified environmental adaptation mechanisms repurposed to promote mammalian virulence by C. neoformans, which lacks a known animal reservoir. Our work provides an unprecedented resource for deciphering a deadly human pathogen. © 2025 Elsevier Inc."
+    },
+    {
+      "paper_id": "paper_000022",
+      "title": "Decision making in a clinical trial for a life-threatening illness: Therapeutic expectation, not misconception",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "摘要明确为临床试验的社会科学研究，不涉及隐球菌与血脑屏障的机制或模型构建。",
+      "year": 2022,
+      "journal": "Social Science and Medicine",
+      "doi": "10.1016/j.socscimed.2022.115082",
+      "abstract": "Potential participants for clinical trials which aim to define treatments for life-threatening conditions are often extremely unwell. When exploring why individuals participate in clinical trials one common observation is a misplaced expectation of personal benefit - a therapeutic misconception. The care offered in some clinical trials is of a higher standard than is routinely available and this has led to criticism around the freedom of choice to enrol - structural coercion. We embedded an ethnographic study within a randomised controlled trial for HIV-associated cryptococcal meningitis in Gaborone, Botswana and Kampala, Uganda. We aimed to gain an understanding of decision-making around the trial and how this was impacted by the study design and broader social context. We conducted in-depth interviews with trial participants, surrogate decision makers and researchers, combined these with direct observations and analysed data using thematic analysis. Between January 2020 and June 2021 we interviewed 89 individuals. We found previous exposure to and awareness of clinical research was limited, as was understanding of the trial objectives and design. Through observations and engagement with healthcare facilities decision-makers were able to identify the trial as providing the best possible chance of survival. Hesitation and reluctance were mostly due to fear of lumbar punctures which was sometimes based on rumours but often based on tragic personal experience. Despite fear, and sometimes conviction that they would die, individuals agreed to consent, often against the wishes of family members. Reassurance and confidence came from trust in routine care staff and the research team but also from fellow participants and their surrogates. We argue that participants made informed decisions based on a therapeutic expectation from the trial and that rather than being the result of structural coercion this was an informed and voluntary choice. © 2022 The Authors"
+    },
+    {
+      "paper_id": "paper_000023",
+      "title": "In toto imaging shows intravascular proliferation promotes transmigration of daughter cells during brain invasion of Cryptococcus neoformans",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究隐球菌血脑屏障穿越机制，涉及血管内增殖和子细胞迁移等深层机制。",
+      "year": 2025,
+      "journal": "Cell Reports",
+      "doi": "10.1016/j.celrep.2025.116658",
+      "abstract": "Cryptococcus neoformans causes lethal meningoencephalitis. Although the mechanism of its blood-brain barrier (BBB) transmigration has been intensively studied, the predominant route remains unclear. We developed fTRACE, a whole-organ imaging workflow enabling in toto visualization of individual fungal cells in vivo, and found that C. neoformans can proliferate intravascularly before BBB transmigration. Importantly, daughter cells, not mother cells, predominantly transmigrate across the BBB. Intravascular proliferation depends on de novo purine biosynthesis. We created a non-proliferative fluorescent mutant to trace fungal fate in the brain and found that the majority of non-proliferative C. neoformans remained intravascular after prolonged brain infection, while the remainder induced local capillary pruning. Angiophagy occurred with low frequency. C. neoformans can be washed out from the brain vasculature, which is expedited by VEGFR-2 inhibition. This study elucidates a major brain invasion route of C. neoformans and provides an approach for studying host-pathogen interactions using in toto imaging. © 2025 The Author(s). Published by Elsevier Inc. This is an open access article under the CC BY-NC-ND license. http://creativecommons.org/licenses/by-nc-nd/4.0/"
+    },
+    {
+      "paper_id": "paper_000024",
+      "title": "Cryptococcosis and unexpected death",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "摘要为法医病理学病例报告，未深入探讨血脑屏障机制或模型构建。",
+      "year": 2021,
+      "journal": "Forensic Science, Medicine, and Pathology",
+      "doi": "10.1007/s12024-021-00400-1",
+      "abstract": "Cryptococcosis is a fungal disease caused predominantly by Cryptococcus neoformans and Cryptococcus gatti. It is most often found in immunocompromised individuals and has quite protean and chronic manifestations affecting all body systems. The unexpected death of a 22-year-old man with cryptococcal meningoencephalitis demonstrates, however, that it may have a fulminant course in previously well individuals. Also present at autopsy was a toruloma of the upper lobe of the right lung. Delays in clinical diagnoses, confusion with tuberculosis and precipitate clinical deterioration may mean that cases will be encountered unexpectedly during medicolegal autopsies. © 2021, Springer Science+Business Media, LLC, part of Springer Nature."
+    },
+    {
+      "paper_id": "paper_000025",
+      "title": "Microevolution of Cryptococcus neoformans in high CO2 converges on mutations isolated from patients with relapsed cryptococcosis",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "摘要聚焦CO2适应性微进化，未提及血脑屏障或相关模型。",
+      "year": 2025,
+      "journal": "Cell Reports",
+      "doi": "10.1016/j.celrep.2025.115349",
+      "abstract": "Cryptococcus neoformans is an environmental fungus that causes an estimated 180,000 deaths annually and transitions from the external environment to the host environment to cause disease. CO2 concentrations in the atmosphere (0.04%) are dramatically lower than in mammalian tissues (5%). Environmental C. neoformans strains that cannot tolerate 5% CO2 are less virulent than CO2-tolerant strains. Microevolution at elevated CO2 generates loss-of-function mutations in the nucleotide binding protein Avc1 that confer CO2 tolerance to CO2-intolerant strains. Mechanistically, Avc1 positively regulates the expression of plasma membrane transporters, including PDR9, a phospholipid floppase that negatively modulates CO2 fitness. Deletion of AVC1 in five CO2-intolerant environmental strains increases competitive fitness in host CO2 and in a mouse infection model. Importantly, strains with similar AVC1 mutations emerge in patients with relapsed cryptococcosis. Therefore, this microevolutionary convergence strongly suggests that adaptation to host CO2 is a significant driver of C. neoformans fitness during infection. © 2025 The Author(s)"
+    },
+    {
+      "paper_id": "paper_000026",
+      "title": "Cryptococcus neoformans adapts to the host environment through TOR-mediated remodeling of phospholipid asymmetry",
+      "decision": "exclude",
+      "confidence": 0.75,
+      "reason": "摘要研究TOR通路与磷脂不对称性，涉及宿主适应但未明确针对血脑屏障机制或模型。",
+      "year": 2023,
+      "journal": "Nature Communications",
+      "doi": "10.1038/s41467-023-42318-y",
+      "abstract": "Cryptococcus spp. are environmental fungi that first must adapt to the host environment before they can cause life-threatening meningitis in immunocompromised patients. Host CO2 concentrations are 100-fold higher than the external environment and strains unable to grow at host CO2 concentrations are not pathogenic. Using a genetic screening and transcriptional profiling approach, we report that the TOR pathway is critical for C. neoformans adaptation to host CO2 partly through Ypk1-dependent remodeling of phosphatidylserine asymmetry at the plasma membrane. We also describe a C. neoformans ABC/PDR transporter (PDR9) that is highly expressed in CO2-sensitive environmental strains, suppresses CO2-induced phosphatidylserine/phospholipid remodeling, and increases susceptibility to host concentrations of CO2. Interestingly, regulation of plasma membrane lipid asymmetry by the TOR-Ypk1 axis is distinct in C. neoformans compared to S. cerevisiae. Finally, host CO2 concentrations suppress the C. neoformans pathways that respond to host temperature (Mpk1) and pH (Rim101), indicating that host adaptation requires a stringent balance among distinct stress responses. © 2023, Springer Nature Limited."
+    },
+    {
+      "paper_id": "paper_000027",
+      "title": "The hypervirulent Type-1/Type-17 phenotype of Cryptococcus neoformans clinical isolates is specific to A/J mice",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "摘要研究小鼠模型中的超毒力表型，未涉及血脑屏障机制或体外模型构建。",
+      "year": 2025,
+      "journal": "Infection and Immunity",
+      "doi": "10.1128/iai.00585-24",
+      "abstract": "Cryptococcus neoformans is a fungal pathogen that causes cryptococcal meningitis in immunocompromised individuals. Both host- and pathogen-specific factors are known to affect patient outcome, and recent studies showed that strain-specific differences in C. neoformans clinical isolates can influence virulence in A/J mice. However, it is unclear how the immunologic and genetic background of inbred mouse strains affects disease outcome during C. neoformans infection. In this study, we show that a hypervirulent phenotype is dependent on the host immune response and mouse genetic background. A/J mice intranasally infected with the hypervirulent isolates, UgCl247, UgCl422, and UgCl236, have increased neutrophil and T-cell recruitment when compared with infection with the reference strain KN99α. In addition, the cytokine profile of the hypervirulent isolates in A/J mice had a profound IFNγ and IL-17 response, and lung resident CD4 T-cells isolated from A/J mice expressed significantly increased Th1 (CXCR3, Tbet) and Th17 (RORγT) markers compared with KN99α infection. Intriguingly, when C57BL/6J mice were infected with these isolates, the hypervirulent phenotype was not evident, and all isolates had virulence comparable to the KN99α control. The immune response in C57BL/6J mice was also nearly identical in response to infections with the hypervirulent isolates and the KN99α control strain. Finally, we determined that the hypervirulent phenotype in A/J mice is not caused by known genetic mutations in the A/J inbred mouse background. Overall, this study demonstrates that an inbred mouse inhalation model can be used to identify host- and pathogen-specific factors that affect C. neoformans disease progression. Copyright © 2025 Ding et al."
+    },
+    {
+      "paper_id": "paper_000028",
+      "title": "Diabetes Is Not Associated with Increased 10-week Mortality Risk in Patients with Cryptococcal Meningitis",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "摘要为糖尿病与隐球菌脑膜炎预后的临床回顾研究，不涉及机制探索或模型构建。",
+      "year": 2022,
+      "journal": "Infectious Diseases and Immunity",
+      "doi": "10.1097/id9.0000000000000043",
+      "abstract": "Background:Diabetes is a risk factor for acquisition of cryptococcal meningitis (CM). However, the effects of diabetes on outcomes of CM patient have not been fully studied.Methods:In this retrospective study, 49 diabetic CM patients and 98 non-diabetic CM patients from January 2008 to December 2018 in the First Affiliated Hospital of Zhejiang University were included by propensity score-matched method (1:2). Demographic characteristics, symptoms, and clinical assay parameters between the two groups were compared. Kaplan-Meier analysis and Cox proportional hazards model were used to assess factors associated with 10-week mortality.Results:The mean age of diabetic patients was 58.2 ± 13.8 years; 71.4% (35/49) were more than 50 years old and 46.9% were male. No difference in symptoms was found between diabetic and non-diabetic CM patients. The Charlson comorbidity score was higher in the diabetic group (1.9 vs. 0.7, P < 0.001). CM patients with diabetes had higher white blood cells count (×106 /L, 111.0 (18.0- 242.5) vs. 50.0 (10.0-140.0), P = 0.034) in cerebrospinal fluid (CSF), lower CSF India ink positivity (40.8% vs. 60.2%, P = 0.039), and Cryptococcus culture positivity (42.9% vs. 60.2%, P = 0.047). The overall 10-week survival rate was 79.7% in diabetic patients vs. 83.2% in non-diabetic patients (log-rank P = 0.794).Conclusion:Diabetic CM patients have higher CSF glucose and Charlson comorbidity score, but lower CSF India ink and culture positivity than non-diabetic CM patients. No difference in 10-week mortality was found between patients with and without diabetes. Other comorbidities may have a greater effect on prognosis. © 2021 The Chinese Medical Association, Published by Wolters Kluwer Health, Inc."
+    },
+    {
+      "paper_id": "paper_000029",
+      "title": "ER–mitochondria encounter structure connections determine drug sensitivity and virulence of Cryptococcus neoformans",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "摘要研究ERMES复合体与毒力关系，未提及血脑屏障或相关模型。",
+      "year": 2025,
+      "journal": "Journal of Cell Science",
+      "doi": "10.1242/jcs.263558",
+      "abstract": "Cryptococcus neoformans is a common fungal pathogen, causing fatal meningoencephalitis in immunocompromised individuals. The limited availability of antifungals and increasing resistance in pathogens including C. neoformans emphasize the need to find new drugs. Mitochondria have long been associated with drug resistance in fungi. They are connected to the endoplasmic reticulum (ER) via a multiprotein complex, the ER–mitochondria encounter structure (ERMES), which is unique in the fungal kingdom. In this study on C. neoformans, the four subunits of the ERMES complex, namely, Mmm1, Mdm12, Mdm10 and Mdm34, were deleted to generate the strains Δmmm1, Δmdm12, Δmdm10 and Δmdm34, respectively. These mutants had impaired mitochondria and were sensitive to antifungals, including echinocandins, due to lower chitin content. Virulence factors, including capsule formation and melanin production, were debilitated in the mutants. The partner organelle ER was also affected by compromised ERMES contact, as the activity of several ER-synthesized enzymes involved in virulence was impacted. The in vivo studies in Caenorhabditis elegans model of cryptococcosis confirmed the reduced virulence of the mutants. These results indicate that the impairment of the ERMES complex is crucial for the virulence and pathogenesis of C. neoformans. © 2025. Published by The Company of Biologists."
+    },
+    {
+      "paper_id": "paper_000030",
+      "title": "Metabolic sensing tips the balance of drug tolerance in fungal meningitis",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "摘要提到脑葡萄糖感知影响药物耐受，可能与血脑屏障环境相关，但信息不足确认是否涉及BBB机制或模型。",
+      "year": 2024,
+      "journal": "Nature Microbiology",
+      "doi": "10.1038/s41564-023-01595-5",
+      "abstract": "Sensing of brain glucose by the fungal pathogen Cryptococcus neoformans alters lipid metabolism and membrane composition in the fungus, rendering it drug tolerant. © Springer Nature Limited 2024."
+    },
+    {
+      "paper_id": "paper_000031",
+      "title": "Innate phase production of IFN-γ by memory and effector T cells expressing early activation marker CD69 during infection with Cryptococcus deneoformans in the lungs",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要仅涉及隐球菌肺部感染中的T细胞免疫反应，未提及血脑屏障或相关模型。",
+      "year": 2024,
+      "journal": "Infection and Immunity",
+      "doi": "10.1128/iai.00024-24",
+      "abstract": "Cryptococcus deneoformans is a yeast-type fungus that causes fatal meningoencephalitis in immunocompromised patients and evades phagocytic cell elimination through an escape mechanism. Memory T (Tm) cells play a central role in preventing the reactivation of this fungal pathogen. Among these cells, tissue-resident memory T (TRM) cells quickly respond to locally invaded pathogens. This study analyzes the kinetics of effector T (Teff) cells and Tm cells in the lungs after cryptococcal infection. Emphasis is placed on the kinetics and cytokine expression of TRM cells in the early phase of infection. CD4+ Tm cells exhibited a rapid increase by day 3, peaked at day 7, and then either maintained their levels or exhibited a slight decrease until day 56. In contrast, CD8+ Tm cells reached their peak on day 3 and thereafter decreased up to day 56 post-infection. These Tm cells were predominantly composed of CD69+ TRM cells and CD69+ CD103+ TRM cells. Disruption of the CARD9 gene resulted in reduced accumulation of these TRM cells and diminished interferon (IFN) -γ expression in TRM cells. TRM cells were derived from T cells with T cell receptors non-specific to ovalbumin in OT-II mice during cryptococcal infection. In addition, TRM cells exhibited varied behavior in different tissues. These results underscore the importance of T cells, which produce IFN-γ in the lungs during the early stage of infection, in providing early protection against cryptococcal infection through CARD9 signaling. © 2024 American Society for Microbiology. All Rights Reserved."
+    },
+    {
+      "paper_id": "paper_000032",
+      "title": "Fungal brain infection modelled in a human-neurovascular-unit-on-a-chip with a functional blood–brain barrier",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究新型隐球菌穿透血脑屏障的机制，并开发了人源神经血管单元芯片模型。",
+      "year": 2021,
+      "journal": "Nature Biomedical Engineering",
+      "doi": "10.1038/s41551-021-00743-8",
+      "abstract": "The neurovascular unit, which consists of vascular cells surrounded by astrocytic end-feet and neurons, controls cerebral blood flow and the permeability of the blood–brain barrier (BBB) to maintain homeostasis in the neuronal milieu. Studying how some pathogens and drugs can penetrate the human BBB and disrupt neuronal homeostasis requires in vitro microphysiological models of the neurovascular unit. Here we show that the neurotropism of Cryptococcus neoformans—the most common pathogen causing fungal meningitis—and its ability to penetrate the BBB can be modelled by the co-culture of human neural stem cells, brain microvascular endothelial cells and brain vascular pericytes in a human-neurovascular-unit-on-a-chip maintained by a stepwise gravity-driven unidirectional flow and recapitulating the structural and functional features of the BBB. We found that the pathogen forms clusters of cells that penetrate the BBB without altering tight junctions, suggesting a transcytosis-mediated mechanism. The neurovascular-unit-on-a-chip may facilitate the study of the mechanisms of brain infection by pathogens, and the development of drugs for a range of brain diseases. © 2021, The Author(s), under exclusive licence to Springer Nature Limited."
+    },
+    {
+      "paper_id": "paper_000033",
+      "title": "Rapid and sensitive acute leukemia classification and diagnosis platform using deep learning-assisted SERS detection",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要聚焦于急性白血病的诊断技术，虽提及脑脊液和脑膜炎分类，但与隐球菌和血脑屏障机制无关。",
+      "year": 2025,
+      "journal": "Cell Reports Medicine",
+      "doi": "10.1016/j.xcrm.2025.102320",
+      "abstract": "Rapid identification and accurate diagnosis are critical for individuals with acute leukemia (AL). Here, we propose a combined deep learning and surface-enhanced Raman scattering (DL-SERS) classification strategy to achieve rapid and sensitive identification of AL with various subtypes and genetic abnormalities. More than 390 of cerebrospinal fluid (CSF) samples are collected as targets, encompassing healthy control, AL patients, and individuals with other diseases. Sensitive SERS detection could be achieved within 5 min, using only 0.5 μL volume of CSF. Through integrated feature fusion (1D spectra and 2D image) with a transformer model, the classification method is developed to screen and diagnose AL patients, demonstrating exceptional classification performances of accuracy, sensitivity, specificity, or reliability. Also, this approach demonstrates remarkable versatility and could be extended to the classifications of meningitis diseases. The sensitive DL-SERS classification platform has the potential to be a powerful auxiliary in vitro diagnostic tool. © 2025 The Author(s)"
+    },
+    {
+      "paper_id": "paper_000034",
+      "title": "Platelets and mast cells promote pathogenic eosinophil recruitment during invasive fungal infection via the 5-HIAA-GPR35 ligand-receptor system",
+      "decision": "exclude",
+      "confidence": 0.88,
+      "reason": "摘要研究隐球菌感染中嗜酸性粒细胞的招募机制，但仅涉及肺部感染，未探讨血脑屏障。",
+      "year": 2023,
+      "journal": "Immunity",
+      "doi": "10.1016/j.immuni.2023.05.006",
+      "abstract": "Cryptococcus neoformans is the leading cause of fungal meningitis and is characterized by pathogenic eosinophil accumulation in the context of type-2 inflammation. The chemoattractant receptor GPR35 is expressed by granulocytes and promotes their migration to the inflammatory mediator 5-hydroxyindoleacetic acid (5-HIAA), a serotonin metabolite. Given the inflammatory nature of cryptococcal infection, we examined the role of GPR35 in the circuitry underlying cell recruitment to the lung. GPR35 deficiency dampened eosinophil recruitment and fungal growth, whereas overexpression promoted eosinophil homing to airways and fungal replication. Activated platelets and mast cells were the sources of GPR35 ligand activity and pharmacological inhibition of serotonin conversion to 5-HIAA, or genetic deficiency in 5-HIAA production by platelets and mast cells resulted in more efficient clearance of Cryptococcus. Thus, the 5-HIAA-GPR35 axis is an eosinophil chemoattractant receptor system that modulates the clearance of a lethal fungal pathogen, with implications for the use of serotonin metabolism inhibitors in the treatment of fungal infections. © 2023 The Authors"
+    },
+    {
+      "paper_id": "paper_000035",
+      "title": "Microglia are not protective against cryptococcal meningitis",
+      "decision": "include",
+      "confidence": 0.92,
+      "reason": "标题和摘要直接研究小胶质细胞在隐球菌脑膜炎中的作用，涉及血脑屏障相关的中枢神经系统感染机制。",
+      "year": 2023,
+      "journal": "Nature Communications",
+      "doi": "10.1038/s41467-023-43061-0",
+      "abstract": "Microglia provide protection against a range of brain infections including bacteria, viruses and parasites, but how these glial cells respond to fungal brain infections is poorly understood. We investigated the role of microglia in the context of cryptococcal meningitis, the most common cause of fungal meningitis in humans. Using a series of transgenic- and chemical-based microglia depletion methods we found that, contrary to their protective role during other infections, loss of microglia did not affect control of Cryptococcus neoformans brain infection which was replicated with several fungal strains. At early time points post-infection, we found that microglia depletion lowered fungal brain burdens, which was related to intracellular residence of C. neoformans within microglia. Further examination of extracellular and intracellular fungal populations revealed that C. neoformans residing in microglia were protected from copper starvation, whereas extracellular yeast upregulated copper transporter CTR4. However, the degree of copper starvation did not equate to fungal survival or abundance of metals within different intracellular niches. Taken together, these data show how tissue-resident myeloid cells may influence fungal phenotype in the brain but do not provide protection against this infection, and instead may act as an early infection reservoir. © 2023, The Author(s)."
+    },
+    {
+      "paper_id": "paper_000036",
+      "title": "Hospitalised infections and rituximab administration among children and adolescents with systemic lupus erythematosus from 2009 to 2021",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要研究系统性红斑狼疮儿童的利妥昔单抗与感染，与隐球菌或血脑屏障无关。",
+      "year": 2024,
+      "journal": "Lupus Science and Medicine",
+      "doi": "10.1136/lupus-2024-001210",
+      "abstract": "Background Rituximab is associated with high infection rates, but studies of infections following rituximab in youth with childhood-onset SLE (cSLE) are limited. We conducted a retrospective longitudinal cohort study to assess the incidence of hospitalised infections following rituximab among children with cSLE and to assess changes in hospital-based rituximab administration over time. Methods Youth ages 2-21 years with an International Classification of Diseases (ICD) code for SLE who received rituximab during admission to a Pediatric Health Information System hospital from 2009 to 2021 were included. Incidence rates for infections requiring hospitalisation over the 12 months following first rituximab administration were calculated. Rituximab use by year of hospital discharge was tabulated. Results We identified 1567 children with cSLE who received rituximab. 219 children were admitted with an infection within 1 year after first rituximab administration, for an incidence rate of 140 cases per 1000 patient-years. Seven children (0.44%) died during a hospitalisation with an infection in the year following rituximab administration. The most common hospitalised infections were bacterial pneumonia, sepsis and cellulitis. 12 children were hospitalised with COVID-19, none of whom died. Hospitalisations with rituximab administered decreased from 2019 to 2021. Conclusions In this cohort of patients with cSLE who received inpatient treatment with rituximab, we observed a 14% rate of hospitalisation with infection in the year following rituximab administration among youth with cSLE. Rituximab use declined during the COVID-19 pandemic. No fatalities with COVID-19 were observed. Given the lack of outpatient data, including doses of concomitant medications and disease activity measures, further research is needed to identify risk factors for infection following rituximab among children with cSLE. © Author(s) (or their employer(s)) 2024. Re-use permitted under CC BY-NC. No commercial re-use. See rights and permissions. Published by BMJ."
+    },
+    {
+      "paper_id": "paper_000037",
+      "title": "A cyclin protein governs the infectious and sexual life cycles of Cryptococcus neoformans",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "摘要研究隐球菌的细胞周期蛋白在感染和性周期中的作用，虽提及脑膜炎但未深入血脑屏障机制或模型。",
+      "year": 2021,
+      "journal": "Science China Life Sciences",
+      "doi": "10.1007/s11427-020-1697-3",
+      "abstract": "Cell cycle is a fundamental process underlying growth and development in evolutionarily diverse organisms, including fungi. In human fungal pathogens, cell cycle control generally determines their life cycles, either in the environment or during infections. Thus, cell cycle components can potentially serve as important targets for the development of antifungal strategy against fungal infections. Here, in Cryptococcus neoformans, the most common cause of fatal fungal meningitis, we show that a previously uncharacterized B-type cyclin named Cbc1 is essential for both its infectious and sexual cycles. We reveal that Cbc1 coordinates various sexual differentiation and molecular processes, including meiosis. Especially, the absence of Cbc1 abolishes formation of sexual spores in C. neoformans, which are presumed infectious particles. Cbc1 is also required for the major Cryptococcus pathogenic attributes. Virulence assessment using the murine model of cryptococcosis revealed that the cbc1 mutant is avirulent. Together, our results provide an important insight into how C. neoformans employs shared cell cycle regulation to coordinate its infectious and sexual cycles, which are considered crucial for virulence evolution and the production of infectious spores. © 2020, Science China Press and Springer-Verlag GmbH Germany, part of Springer Nature."
+    },
+    {
+      "paper_id": "paper_000038",
+      "title": "Pathway-instructed therapeutic selection of ruxolitinib reduces neuroinflammation in fungal postinfectious inflammatory syndrome",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "摘要涉及隐球菌脑膜炎后炎症综合征的神经炎症治疗，与血脑屏障相关但机制探索深度不明确。",
+      "year": 2025,
+      "journal": "Science Advances",
+      "doi": "10.1126/sciadv.adi9885",
+      "abstract": "Therapies to reduce neuroinflammation following resolution of acute central nervous system (CNS) infections are urgently needed, particularly for patients with non–HIV-associated cryptococcal meningoencephalitis complicated by a postinfectious inflammatory response syndrome (cPIIRS). To identify druggable targets in cPIIRS, patient cerebral spinal fluid samples underwent transcriptional analysis, revealing a Janus kinase/signal transducer and activator of transcription (JAK/STAT) pathway dominance in neuroinflammatory gene signatures. Murine cPIIRS models recapitulated this pathway predominance and treatment with the JAK inhibitor ruxolitinib, confirmed a mechanistic requirement for this pathway in disease pathology. Ruxolitinib treatment improved markers of neuronal damage, reduced activated T cell and myeloid cells, and improved weight. On the basis of these findings, we conducted a first-in-human ruxolitinib treatment of patients with cPIIRS (NCT00001352). Ruxolitinib treatment of six patients led to demonstrated tolerability, reductions in inflammatory biomarkers and activated immune cells, and improved brain imaging. These results advocate for pathway-instructed therapeutics in neuroinflammatory diseases and endorse JAK inhibitors in further clinical studies of cPIIRS. Copyright © 2025 The Authors, some rights reserved;"
+    },
+    {
+      "paper_id": "paper_000039",
+      "title": "Regulatory basis for reproductive flexibility in a meningitis-causing fungal pathogen",
+      "decision": "exclude",
+      "confidence": 0.82,
+      "reason": "标题和摘要研究隐球菌的生殖调控网络，虽提及脑膜炎但未涉及血脑屏障互作或模型构建。",
+      "year": 2022,
+      "journal": "Nature Communications",
+      "doi": "10.1038/s41467-022-35549-y",
+      "abstract": "Pathogenic fungi of the genus Cryptococcus can undergo two sexual cycles, involving either bisexual diploidization (after fusion of haploid cells of different mating type) or unisexual diploidization (by autodiploidization of a single cell). Here, we construct a gene-deletion library for 111 transcription factor genes in Cryptococcus deneoformans, and explore the roles of these regulatory networks in the two reproductive modes. We show that transcription factors crucial for bisexual syngamy induce the expression of known mating determinants as well as other conserved genes of unknown function. Deletion of one of these genes, which we term FMP1, leads to defects in bisexual reproduction in C. deneoformans, its sister species Cryptococcus neoformans, and the ascomycete Neurospora crassa. Furthermore, we show that a recently evolved regulatory cascade mediates pre-meiotic unisexual autodiploidization, supporting that this reproductive process is a recent evolutionary innovation. Our findings indicate that genetic circuits with different evolutionary ages govern hallmark events distinguishing unisexual and bisexual reproduction in Cryptococcus. © 2022, The Author(s)."
+    },
+    {
+      "paper_id": "paper_000040",
+      "title": "A case report of cryptococcosis in a captive Cape hyrax (Procavia capensis)",
+      "decision": "exclude",
+      "confidence": 0.87,
+      "reason": "标题和摘要为隐球菌感染的动物病例报告，涉及神经系统症状但缺乏机制探索，属于排除标准中的单一病例报告。",
+      "year": 2024,
+      "journal": "Journal of Veterinary Medical Science",
+      "doi": "10.1292/jvms.24-0079",
+      "abstract": "Cryptococcosis, a globally distributed mycotic disease caused by Cryptococcus neoformans or C. gattii, has been extensively studied in various domestic animals and humans. However, non-domestic species have often been overlooked in the literature, with limited attention given to their susceptibility and contribution to the epidemiology of the disease. In this study, a captive two-year-old Cape hyrax in a Japanese zoo exhibited neurological symptoms and torticollis, ultimately succumbing to the infection. Necropsy and pathological analyses, including histopathological techniques and PCR, revealed the presence of C. neoformans in the lungs, cerebrum, and internal auditory canal. While cryptococcosis has been reported in various wild animals globally, this case represents the first documented cryptococcosis in Cape hyrax. © 2024 The Japanese Society of Veterinary Science."
+    },
+    {
+      "paper_id": "paper_000041",
+      "title": "Echocardiographic assessment of left cardiac structure and function in antiretroviral therapy (ART)-naïve people living with HIV/AIDS",
+      "decision": "exclude",
+      "confidence": 1.0,
+      "reason": "标题和摘要均未提及隐球菌或血脑屏障，研究对象为HIV/AIDS患者的心脏结构与功能评估。",
+      "year": 2023,
+      "journal": "Immunity, Inflammation and Disease",
+      "doi": "10.1002/iid3.799",
+      "abstract": "Background: Patients with human immunodeficiency virus (HIV) are at a significantly higher risk of cardiovascular disease (CVD) compared to HIV-negative people. Left heart dysfunction is the most common cardiac complication in people living with HIV/acquired immune deficiency syndrome (PLWHA), and diastolic dysfunction is an important predictor of cardiovascular events. The aims of this study were (1) to detect changes in left cardiac structure and function in antiretroviral therapy (ART)-naive PLWHA using echocardiography; and (2) to investigate the risk factors for the development of left ventricular diastolic dysfunction (LVDD) in ART-naive PLWHA. Methods: We retrospectively included 105 ART-naïve PLWHA and included 90 healthy subjects as controls to compare the differences in left heart structure and function between the two groups. Univariate and multifactorial logistic regression were employed to explore the risk factors of the development of LVDD in ART-naive PLWHA. Results: The left ventricular end-diastolic internal diameter (LVEDD), left ventricular mass index (LVMI), and left atrial volume index (LAVI) were significantly greater in PLWHA than in controls (p <.05). The E/A ratio, lateral e′ velocity, and mitral deceleration time were significantly lower in PLWHA than in controls (p <.05). Average E/e′ ratio was significantly higher in PLWHA than in controls (p <.05). Left ventricular ejection fraction (LVEF) and left ventricular fractional shortening (LVFS) were not significantly different between PLWHA and controls (p >.05). Multifactorial logistic regression analysis showed that age, body mass index (BMI), and CD4+ count <200 cells/μL were independent risk factors for LVDD in ART-naive PLWHA (OR = 1.781, 1.228, 3.683, p <.05). Conclusions: Left ventricular systolic function did not differ between PLWHA and controls, and left ventricular diastolic function was lower in PLWHA than in controls. Age, BMI, and CD4+ count were independent factors affecting LVDD in ART-naive PLWHA. © 2023 The Authors. Immunity, Inflammation and Disease published by John Wiley & Sons Ltd."
+    },
+    {
+      "paper_id": "paper_000042",
+      "title": "Secreted fungal virulence effector triggers allergic inflammation via TLR4",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "标题和摘要明确研究隐球菌分泌效应蛋白CPL1通过TLR4驱动巨噬细胞极化促进感染，但未明确提及血脑屏障互作或模型构建。",
+      "year": 2022,
+      "journal": "Nature",
+      "doi": "10.1038/s41586-022-05005-4",
+      "abstract": "Invasive fungal pathogens are major causes of human mortality and morbidity1,2. Although numerous secreted effector proteins that reprogram innate immunity to promote virulence have been identified in pathogenic bacteria, so far, there are no examples of analogous secreted effector proteins produced by human fungal pathogens. Cryptococcus neoformans, the most common cause of fungal meningitis and a major pathogen in AIDS, induces a pathogenic type 2 response characterized by pulmonary eosinophilia and alternatively activated macrophages3–8. Here, we identify CPL1 as an effector protein secreted by C. neoformans that drives alternative activation (also known as M2 polarization) of macrophages to enable pulmonary infection in mice. We observed that CPL1-enhanced macrophage polarization requires Toll-like receptor 4, which is best known as a receptor for bacterial endotoxin but is also a poorly understood mediator of allergen-induced type 2 responses9–12. We show that this effect is caused by CPL1 itself and not by contaminating lipopolysaccharide. CPL1 is essential for virulence, drives polarization of interstitial macrophages in vivo, and requires type 2 cytokine signalling for its effect on infectivity. Notably, C. neoformans associates selectively with polarized interstitial macrophages during infection, suggesting a mechanism by which C. neoformans generates its own intracellular replication niche within the host. This work identifies a circuit whereby a secreted effector protein produced by a human fungal pathogen reprograms innate immunity, revealing an unexpected role for Toll-like receptor 4 in promoting the pathogenesis of infectious disease. © 2022, The Author(s), under exclusive licence to Springer Nature Limited."
+    },
+    {
+      "paper_id": "paper_000043",
+      "title": "Bioavailability of a novel sustained-release pellet formulation of 5-flucytosine in healthy-fed participants for use in patients with cryptococcal meningitis",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要研究新型5-氟胞嘧啶缓释制剂在隐球菌脑膜炎患者中的药代动力学，属于药物剂型优化研究，未涉及血脑屏障机制或模型构建。",
+      "year": 2024,
+      "journal": "Clinical and Translational Science",
+      "doi": "10.1111/cts.13908",
+      "abstract": "Cryptococcal meningoencephalitis (CM) is an opportunistic fungal infection and a major cause of death among people living with human immunodeficiency virus in sub-Saharan Africa. 5-flucytosine (5-FC) is a unique, brain-permeable antifungal agent used to reduce mortality from CM and to prevent disease in individuals carrying cryptococcal antigen. 5-FC has a short plasma half-life, requiring 6-hourly oral dosing with an immediate-release (IR) formulation, a significant challenge in hospital and outpatient settings, risking a lack of compliance. We recently reported the relative bioavailability in fasting conditions of a sustained release (SR) oral pellet formulation of 5-FC. In this phase I study, we assessed the safety and pharmacokinetic profiles of the new 5-FC SR formulation in a single dose (2 × 3000 mg), relative to 5-FC IR tablets (Ancotil®; 1500 mg b.i.d.) in healthy participants in fed conditions. This randomized, two-period crossover study was conducted in South Africa to confirm the dose of the identified 5-FC SR formulation for a twice-daily 5-FC regimen in patients. Thirty-six healthy participants were included. All treatments were well tolerated and no serious adverse event was reported. Cmax and AUC(0–t) for the SR formulation (49.2 ± 10.49 μg/mL and 640.4 ± 126.4 h.μg/mL, respectively) were significantly higher than for the IR formulation (36.8 ± 7.61 μg/mL and 456.6 ± 72.8 h.μg/mL, respectively). A physiological based pharmacokinetic model (PBPK) predicted that under fasting conditions, 6000 mg SR pellets would show a good overlap with the IR product (3000 mg b.i.d), thus 6000 mg SR 5-FC b.i.d. in fasting conditions is recommended. © 2024 Farmovs (Pty) Ltd, Luxembourg Institute of Health, Mylan Laboratories Ltd, Pharmetheus AB, Drugs for Neglected Diseases Initiative, DNDi GARDP Southern Africa NPC. Clinical and Translational Science published by Wiley Periodicals LLC on behalf of American Society for Clinical Pharmacology and Therapeutics."
+    },
+    {
+      "paper_id": "paper_000044",
+      "title": "Patterns of leukocyte recovery predict infectious complications after CD19 CAR-T cell therapy in a real-world setting",
+      "decision": "exclude",
+      "confidence": 1.0,
+      "reason": "标题和摘要研究CD19 CAR-T细胞治疗后白细胞恢复模式与感染并发症的关系，研究对象为淋巴瘤患者，未涉及隐球菌或血脑屏障。",
+      "year": 2021,
+      "journal": "Stem Cell Investigation",
+      "doi": "10.21037/sci-2021-008",
+      "abstract": "Background: Adoptive immunotherapy using CD19-targeted Chimeric antigen receptor T cells (CAR-T) has revolutionized the treatment of relapsed/refractory diffuse large B-cell lymphoma (DLBCL). Data is limited on the propensity of infections and lymphohematopoietic reconstitution after Day 30 (D30) following CAR-T cell therapy. In this study, we evaluated the prevalence and nature of infectious complications in an expanded cohort of DLBCL patients treated with CD19 CAR-T therapy and its association with the dynamics of leukocyte subpopulation reconstitution post-CAR-T cell therapy. Methods: We conducted a retrospective study including 19 patients who received axicabtagene ciloleucel and investigated associations between cytopenia and infectious complications after D30. Results: Nineteen patients were included, consisting of 42% Hispanic, 32% Caucasian, 21% African-American, and 5% Asian subjects. Post-D30 of CAR-T infusion, 47% patients (n=9) developed an infection and 53% (n=10) remained infection-free. The most common infection type observed was viral (7 patients) followed by bacterial (5 patients) and fungal (3 patients). Of 25 total infectious events, 56% were grade 1 or 2 and 44% were grade 3 with 10 being viral in etiology. To determine the kinetics of lymphohematopoietic reconstitution and its association with infection risk, we evaluated the relationship between cytopenias and rates of infection after D30. Notably, compared to non-infection group, infection group had a higher median absolute lymphocyte count (ALC) (1,000/μL vs. 600/μL, P<0.05), a lower median absolute neutrophil count (ANC)/ALC ratio (1.6 vs. 3.1, P<0.05) and a lower median AMC/ALC at D30 (0.37 vs. 1.67, P<0.05). In addition, we observed that only 22% of patients had recovered ANC >1,500/μL in the infection group as opposed to 70% in the non-infection group at D90 (P<0.05). Fifty-eight percent of the patients (11/19) with relapsed refractory DLBCL achieved a complete response with a median follow-up of 233 days (7.7 months). Conclusions: Although CAR-T cell therapy is highly effective, infectious complications remain an important cause of morbidity and mortality. Low ANC/ALC and AMC/ALC ratios at D30 are potential novel predictors of infection and can be considered in future prophylactic strategies. © Stem Cell Investigation. All rights reserved."
+    }
+  ],
+  "project_id": "11e841b21db2",
+  "project_topic": "隐球菌侵袭血脑屏障的深层机制及体外仿生血脑屏障模型构建",
+  "model_provider": "deepseek",
+  "parent_task_id": null,
+  "input_dataset_ids": [],
+  "output_dataset_ids": [
+    "556378ee3148",
+    "281fa864e4f2",
+    "ac1a1b1af3b7",
+    "7cdff5a312f4"
+  ]
+}

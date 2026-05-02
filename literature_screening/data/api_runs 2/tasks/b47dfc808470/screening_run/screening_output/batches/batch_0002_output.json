@@ -1,0 +1,105 @@
+{
+  "batch_id": "batch_0002",
+  "results": [
+    {
+      "paper_id": "paper_000011",
+      "decision": "exclude",
+      "reason": "研究对象为枯草芽孢杆菌，而非克雷伯氏菌。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "paper_id": "paper_000012",
+      "decision": "exclude",
+      "reason": "标题与摘要表明这是一篇关于C4醇的综述，未明确聚焦克雷伯氏菌的甘油途径。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000013",
+      "decision": "exclude",
+      "reason": "研究对象为克雷伯氏菌，但核心产物是2,3-丁二醇，而非甘油途径的1,3-丙二醇或3-羟基丙酸。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000014",
+      "decision": "exclude",
+      "reason": "研究对象为大肠杆菌，而非克雷伯氏菌。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 1.0
+    },
+    {
+      "paper_id": "paper_000015",
+      "decision": "include",
+      "reason": "标题与摘要明确研究对象为克雷伯氏菌，通过基因敲除改造以提高1,3-丙二醇产量。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000016",
+      "decision": "include",
+      "reason": "标题与摘要明确研究对象为克雷伯氏菌，通过CRISPR-dCas9系统过表达关键基因以提高1,3-丙二醇产量。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000017",
+      "decision": "include",
+      "reason": "标题与摘要明确研究对象为克雷伯氏菌，通过代谢工程改造以提高1,3-丙二醇产量。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000018",
+      "decision": "include",
+      "reason": "标题与摘要明确研究对象为克雷伯氏菌，通过CRISPRi系统调控甘油代谢途径以提高3-羟基丙酸产量。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000019",
+      "decision": "exclude",
+      "reason": "研究对象为克雷伯氏菌，但核心产物是异丁醇，而非甘油途径的1,3-丙二醇或3-羟基丙酸。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000020",
+      "decision": "include",
+      "reason": "标题与摘要明确研究对象为克雷伯氏菌，通过电发酵和关键酶过表达以提高1,3-丙二醇产量。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    }
+  ]
+}

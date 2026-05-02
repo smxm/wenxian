@@ -1,0 +1,105 @@
+{
+  "batch_id": "batch_0004",
+  "results": [
+    {
+      "paper_id": "paper_000031",
+      "decision": "exclude",
+      "reason": "标题和摘要显示研究对象为桥梁-列车系统相互作用，聚焦上部结构响应，而非场地土体/地形的放大效应。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000032",
+      "decision": "include",
+      "reason": "摘要明确应用机器学习技术于环境噪声数据，以建立基于场地响应参数（包括H/V谱放大因子）的微区划，直接针对场地放大评估。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000033",
+      "decision": "uncertain",
+      "reason": "摘要提到方法能捕捉线性场地放大，但研究核心是发展广义地震动模型（预测PGA、PGV等），是否明确针对场地放大的量化评估与预测信息不足。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000034",
+      "decision": "include",
+      "reason": "标题和摘要明确使用神经网络预测场地局部响应（放大），基于地形地质参数与实测场地放大因子数据集，直接针对场地放大预测。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000035",
+      "decision": "uncertain",
+      "reason": "摘要提到应用机器学习技术于地震相位拾取和事件判别，并观察到频率相关的场地放大，但研究主要目标是断层活动性与地震活动性分析，场地放大仅为附带分析。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "paper_id": "paper_000036",
+      "decision": "include",
+      "reason": "标题和摘要明确结合神经网络与物理模型进行场地响应预测，直接针对地震场地响应（放大）的预测问题。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.88
+    },
+    {
+      "paper_id": "paper_000037",
+      "decision": "exclude",
+      "reason": "摘要显示研究基于一维线性粘弹性波动理论分析场地参数对傅里叶放大因子的影响，未使用任何机器学习算法。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000038",
+      "decision": "exclude",
+      "reason": "标题和摘要表明这是一篇关于土-结构相互作用的综述，涵盖场地放大但未涉及机器学习技术的应用。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000039",
+      "decision": "exclude",
+      "reason": "标题和摘要显示研究使用人工神经网络预测非结构构件的动力放大因子，研究对象为上部建筑构件，而非下方土体/地形的场地放大效应。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000040",
+      "decision": "include",
+      "reason": "标题和摘要明确使用U-Net深度学习模型，以DEM数据为输入，预测地震地形放大因子（PGV放大因子），直接针对地形放大效应的预测。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    }
+  ]
+}

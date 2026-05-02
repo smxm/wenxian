@@ -1,0 +1,62 @@
+{
+  "project": {
+    "name": "new-screening-run",
+    "output_dir": "tasks/fc3926138279/screening_run/screening_output",
+    "save_raw_response": true,
+    "save_intermediate_files": true
+  },
+  "input": {
+    "input_files": [
+      "tasks/fc3926138279/screening_run/inputs/scopus_export_Apr 1-2026_d9d25fa9-a050-4208-ba7c-e25730371fd5.ris",
+      "tasks/fc3926138279/screening_run/inputs/abstract-deerTitleA-set.txt"
+    ],
+    "encoding": "auto"
+  },
+  "dedup": {
+    "enabled": true,
+    "strict_doi_match": true,
+    "normalized_title_exact_match": true,
+    "fuzzy_title_match": false
+  },
+  "screening": {
+    "batch_size": 10,
+    "target_include_count": 30,
+    "stop_when_target_reached": true,
+    "allow_uncertain": true,
+    "retry_times": 6,
+    "request_timeout_seconds": 240
+  },
+  "criteria": {
+    "topic": "鹿精液/生殖细胞的冷冻保存技术、稀释液优化及其冷冻损伤机制",
+    "inclusion": [
+      "研究对象涉及鹿科动物（梅花鹿、马鹿、坡鹿等）的精液、附睾精子或生殖细胞。若涉及其他野生/反刍动物，必须是极具参考价值的生殖细胞冷冻保存研究。",
+      "核心内容必须包含冷冻保存（Cryopreservation）、低温冷藏（Cooling/Storage）、稀释液/冷冻保护剂改良（Extenders/Additives），或冷冻降温过程的生理/组学机制（如蛋白质组学分析）。",
+      "必须包含具体的精液质量评估数据（如CASA动力学分析、顶体/DNA完整性、或体外受精IVF结果）或野外采精/保存实操流程评估。"
+    ],
+    "exclusion": [
+      "与精液/生殖细胞体外保存、冷冻技术完全无关的纯生态学、行为学或宏观种群研究。",
+      "虽然涉及鹿的繁育，但仅限体内激素监测或行为观察，无精液采集、处理与保存实验。",
+      "与繁殖系统无关的鹿类产业研究（如鹿茸生长机制、鹿肉营养成分、饲料配比等）。"
+    ]
+  },
+  "model": {
+    "provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "api_base_url": "https://api.deepseek.com/v1",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 1536,
+    "min_request_interval_seconds": 2.0
+  },
+  "report": {
+    "export_included_ris": true,
+    "export_excluded_ris": false,
+    "export_unused_ris": true,
+    "export_included_bib": false,
+    "export_excluded_bib": false,
+    "export_unused_bib": false,
+    "included_report_format": "md",
+    "excluded_report_format": "md",
+    "summary_format": "json"
+  }
+}

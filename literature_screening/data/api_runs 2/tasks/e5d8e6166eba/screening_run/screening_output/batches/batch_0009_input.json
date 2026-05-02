@@ -1,0 +1,392 @@
+{
+  "batch_id": "batch_0009",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000081",
+    "paper_000082",
+    "paper_000083",
+    "paper_000084",
+    "paper_000085",
+    "paper_000086",
+    "paper_000087",
+    "paper_000088",
+    "paper_000089",
+    "paper_000090"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000081",
+      "entry_type": "article",
+      "title": "Ultrasonic based concrete defects identification via wavelet packet transform and GA-BP neural network",
+      "authors": [
+        "Hu, TY",
+        "Zhao, JH",
+        "Zheng, RF",
+        "Wang, PF",
+        "Li, XL",
+        "Zhang, QC"
+      ],
+      "year": 2021,
+      "journal": "PEERJ COMPUTER SCIENCE",
+      "doi": "10.7717/peerj-cs.635",
+      "abstract": "Concrete is the main material in building. Since its poor structural integrity may cause accidents, it is significant to detect defects in concrete. However, it is a challenging topic as the unevenness of concrete would lead to the complex dynamics with uncertainties in the ultrasonic diagnosis of defects. Note that the detection results mainly depend on the direct parameters, e.g., the time of travel through the concrete. The current diagnosis accuracy and intelligence level are difficult to meet the design requirement for automatic and increasingly high-performance demands. To solve the mentioned problems, our contribution of this paper can be summarized as establishing a diagnosis model based on the GA-BPNN method and ultrasonic information extracted that helps engineers identify concrete defects. Potentially, the application of this model helps to improve the working efficiency, diagnostic accuracy and automation level of ultrasonic testing instruments. In particular, we propose a simple and effective signal recognition method for small-size concrete hole defects. This method can be divided into two parts: (1) signal effective information extraction based on wavelet packet transform (WPT), where mean value, standard deviation, kurtosis coefficient, skewness coefficient and energy ratio are utilized as features to characterize the detection signals based on the analysis of the main frequency node of the signals, and (2) defect signal recognition based on GA optimized back propagation neural network (GA-BPNN), where the crossvalidation method has been used for the stochastic division of the signal dataset and it leads to the BPNN recognition model with small bias. Finally, we implement this method on 150 detection signal data which are obtained by the ultrasonic testing system with 50 kHz working frequency. The experimental test block is a C30 class concrete block with 5, 7, and 9 mm penetrating holes. The information of the experimental environment, algorithmic parameters setting and signal processing procedure are described in detail. The average recognition accuracy is 91.33% for the identification of small size concrete defects according to experimental results, which verifies the feasibility and efficiency.",
+      "keywords": [
+        "Concrete defects",
+        "Ultrasonic signal processing",
+        "Wavelet packet transform",
+        "BP neural network",
+        "Pattern recognition",
+        "SIGNAL",
+        "PROPAGATION",
+        "DAMAGE",
+        "TESTS",
+        "ECHO"
+      ],
+      "normalized_title": "ultrasonic based concrete defects identification via wavelet packet transform and ga bp neural network",
+      "raw_bibtex": "@ARTICLE{10.7717/peerj-cs.635,\n\tauthor = {Hu, TY and Zhao, JH and Zheng, RF and Wang, PF and Li, XL and Zhang, QC},\n\ttitle = {Ultrasonic based concrete defects identification via wavelet packet transform and GA-BP neural network},\n\tjournal = {PEERJ COMPUTER SCIENCE},\n\tyear = {2021},\n\tkeywords = {Concrete defects; Ultrasonic signal processing; Wavelet packet transform; BP neural network; Pattern recognition; SIGNAL; PROPAGATION; DAMAGE; TESTS; ECHO},\n\tabstract = {Concrete is the main material in building. Since its poor structural integrity may cause accidents, it is significant to detect defects in concrete. However, it is a challenging topic as the unevenness of concrete would lead to the complex dynamics with uncertainties in the ultrasonic diagnosis of defects. Note that the detection results mainly depend on the direct parameters, e.g., the time of travel through the concrete. The current diagnosis accuracy and intelligence level are difficult to meet the design requirement for automatic and increasingly high-performance demands. To solve the mentioned problems, our contribution of this paper can be summarized as establishing a diagnosis model based on the GA-BPNN method and ultrasonic information extracted that helps engineers identify concrete defects. Potentially, the application of this model helps to improve the working efficiency, diagnostic accuracy and automation level of ultrasonic testing instruments. In particular, we propose a simple and effective signal recognition method for small-size concrete hole defects. This method can be divided into two parts: (1) signal effective information extraction based on wavelet packet transform (WPT), where mean value, standard deviation, kurtosis coefficient, skewness coefficient and energy ratio are utilized as features to characterize the detection signals based on the analysis of the main frequency node of the signals, and (2) defect signal recognition based on GA optimized back propagation neural network (GA-BPNN), where the crossvalidation method has been used for the stochastic division of the signal dataset and it leads to the BPNN recognition model with small bias. Finally, we implement this method on 150 detection signal data which are obtained by the ultrasonic testing system with 50 kHz working frequency. The experimental test block is a C30 class concrete block with 5, 7, and 9 mm penetrating holes. The information of the experimental environment, algorithmic parameters setting and signal processing procedure are described in detail. The average recognition accuracy is 91.33% for the identification of small size concrete defects according to experimental results, which verifies the feasibility and efficiency.},\n\tdoi = {10.7717/peerj-cs.635},\n\tvolume = {7},\n\tissn = {2376-5992},\n\tnote = {Times Cited in Web of Science Core Collection: 25 Total Times Cited: 27 Cited Reference Count: 38 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.7717/peerj-cs.635"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000082",
+      "entry_type": "article",
+      "title": "Concrete Defect Localization Based on Multilevel Convolutional Neural Networks",
+      "authors": [
+        "Wang, YM",
+        "Wang, LH",
+        "Ye, WJ",
+        "Zhang, FY",
+        "Pan, YD",
+        "Li, Y"
+      ],
+      "year": 2024,
+      "journal": "MATERIALS",
+      "doi": "10.3390/ma17153685",
+      "abstract": "Concrete structures frequently manifest diverse defects throughout their manufacturing and usage processes due to factors such as design, construction, environmental conditions and distress mechanisms. In this paper, a multilevel convolutional neural network (CNN) combined with array ultrasonic testing (AUT) is proposed for identifying the locations of hole defects in concrete structures. By refining the detection area layer by layer, AUT is used to collect ultrasonic signals containing hole defect information, and the original echo signal is input to CNN for the classification of hole locations. The advantage of the proposed method is that the corresponding defect location information can be obtained directly from the input ultrasonic signal without manual discrimination. It effectively addresses the issue of traditional methods being insufficiently accurate when dealing with complex structures or hidden defects. The analysis process is as follows. First, COMSOL-Multiphysics finite element software is utilized to simulate the AUT detection process and generate a large amount of ultrasonic echo data. Next, the extracted signal data are trained and learned using the proposed multilevel CNN approach to achieve progressive localization of internal structural defects. Afterwards, a comparative analysis is conducted between the proposed multilevel CNN method and traditional CNN approaches. The results show that the defect localization accuracy of the proposed multilevel CNN approach improved from 85.38% to 95.27% compared to traditional CNN methods. Furthermore, the computation time required for this process is reduced, indicating that the method not only achieves higher recognition precision but also operates with greater efficiency. Finally, a simple experimental verification is conducted; the results show that this method has strong robustness in recognizing noisy ultrasonic signals, provides effective solutions, and can be used as a reference for future defect detection.",
+      "keywords": [
+        "convolutional neural networks",
+        "concrete structures",
+        "array ultrasonic testing",
+        "defect localization",
+        "NONDESTRUCTIVE TECHNIQUES",
+        "ALGORITHM",
+        "MODEL"
+      ],
+      "normalized_title": "concrete defect localization based on multilevel convolutional neural networks",
+      "raw_bibtex": "@ARTICLE{10.3390/ma17153685,\n\tauthor = {Wang, YM and Wang, LH and Ye, WJ and Zhang, FY and Pan, YD and Li, Y},\n\ttitle = {Concrete Defect Localization Based on Multilevel Convolutional Neural Networks},\n\tjournal = {MATERIALS},\n\tyear = {2024},\n\tkeywords = {convolutional neural networks; concrete structures; array ultrasonic testing; defect localization; NONDESTRUCTIVE TECHNIQUES; ALGORITHM; MODEL},\n\tabstract = {Concrete structures frequently manifest diverse defects throughout their manufacturing and usage processes due to factors such as design, construction, environmental conditions and distress mechanisms. In this paper, a multilevel convolutional neural network (CNN) combined with array ultrasonic testing (AUT) is proposed for identifying the locations of hole defects in concrete structures. By refining the detection area layer by layer, AUT is used to collect ultrasonic signals containing hole defect information, and the original echo signal is input to CNN for the classification of hole locations. The advantage of the proposed method is that the corresponding defect location information can be obtained directly from the input ultrasonic signal without manual discrimination. It effectively addresses the issue of traditional methods being insufficiently accurate when dealing with complex structures or hidden defects. The analysis process is as follows. First, COMSOL-Multiphysics finite element software is utilized to simulate the AUT detection process and generate a large amount of ultrasonic echo data. Next, the extracted signal data are trained and learned using the proposed multilevel CNN approach to achieve progressive localization of internal structural defects. Afterwards, a comparative analysis is conducted between the proposed multilevel CNN method and traditional CNN approaches. The results show that the defect localization accuracy of the proposed multilevel CNN approach improved from 85.38% to 95.27% compared to traditional CNN methods. Furthermore, the computation time required for this process is reduced, indicating that the method not only achieves higher recognition precision but also operates with greater efficiency. Finally, a simple experimental verification is conducted; the results show that this method has strong robustness in recognizing noisy ultrasonic signals, provides effective solutions, and can be used as a reference for future defect detection.},\n\tdoi = {10.3390/ma17153685},\n\tvolume = {17},\n\tnumber = {15},\n\tissn = {1996-1944},\n\tnote = {Times Cited in Web of Science Core Collection: 3 Total Times Cited: 3 Cited Reference Count: 48 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/ma17153685"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000083",
+      "entry_type": "article",
+      "title": "A generic time-frequency analysis-based signal processing and imaging approach for air-coupled ultrasonic testing",
+      "authors": [
+        "Han, BY",
+        "Jiang, C",
+        "Omer, AM",
+        "Hamad, KO",
+        "Shao, TT",
+        "He, L",
+        "Ding, X",
+        "Zhang, H",
+        "Fu, JW",
+        "Meng, JQ",
+        "Duan, YX"
+      ],
+      "year": 2024,
+      "journal": "NDT & E INTERNATIONAL",
+      "doi": "10.1016/j.ndteint.2024.103101",
+      "abstract": "The utilization of air-coupled ultrasonic technology is crucial for examining objects that are challenging to establish contact with or cannot endure coupling. Nevertheless, air-coupled ultrasonic is susceptible to various factors such as impedance mismatch, sound wave attenuation, and environmental noise, consequently leading to a diminished signal-to-noise ratio of the received signal. This reduction in signal quality amplifies the complexity of analysis and imaging processes. In this study, a generic air-coupled ultrasonic signal processing and imaging procedure for ultrasonic inspection is proposed, which capitalizes on time-frequency analysis. This methodology attains a heightened level of stability and superior signal-to-noise ratio imaging through a series of procedural steps, encompassing feature extraction, denoising, and the reconstruction of the A-scan signals. The efficacy of the proposed approach is quantitatively assessed in terms of signal-to-noise ratio, probability of detection, robustness, and generality. This innovative method presents a newfangled resolution for automated air-coupled ultrasonic testing.",
+      "keywords": [
+        "Air -coupled ultrasonic",
+        "Time -frequency analysis",
+        "Denoise",
+        "Imaging",
+        "Probability of detection",
+        "LAMB WAVE SIGNALS",
+        "DAMAGE"
+      ],
+      "normalized_title": "a generic time frequency analysis based signal processing and imaging approach for air coupled ultrasonic testing",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ndteint.2024.103101,\n\tauthor = {Han, BY and Jiang, C and Omer, AM and Hamad, KO and Shao, TT and He, L and Ding, X and Zhang, H and Fu, JW and Meng, JQ and Duan, YX},\n\ttitle = {A generic time-frequency analysis-based signal processing and imaging approach for air-coupled ultrasonic testing},\n\tjournal = {NDT & E INTERNATIONAL},\n\tyear = {2024},\n\tkeywords = {Air -coupled ultrasonic; Time -frequency analysis; Denoise; Imaging; Probability of detection; LAMB WAVE SIGNALS; DAMAGE},\n\tabstract = {The utilization of air-coupled ultrasonic technology is crucial for examining objects that are challenging to establish contact with or cannot endure coupling. Nevertheless, air-coupled ultrasonic is susceptible to various factors such as impedance mismatch, sound wave attenuation, and environmental noise, consequently leading to a diminished signal-to-noise ratio of the received signal. This reduction in signal quality amplifies the complexity of analysis and imaging processes. In this study, a generic air-coupled ultrasonic signal processing and imaging procedure for ultrasonic inspection is proposed, which capitalizes on time-frequency analysis. This methodology attains a heightened level of stability and superior signal-to-noise ratio imaging through a series of procedural steps, encompassing feature extraction, denoising, and the reconstruction of the A-scan signals. The efficacy of the proposed approach is quantitatively assessed in terms of signal-to-noise ratio, probability of detection, robustness, and generality. This innovative method presents a newfangled resolution for automated air-coupled ultrasonic testing.},\n\tdoi = {10.1016/j.ndteint.2024.103101},\n\tvolume = {144},\n\tissn = {0963-8695},\n\tnote = {Times Cited in Web of Science Core Collection: 16 Total Times Cited: 16 Cited Reference Count: 51 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ndteint.2024.103101"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000084",
+      "entry_type": "article",
+      "title": "Ultrasonic Testing of Welds in Thin-Walled Titanium Shells Using an Incomplete Penetration Indicator",
+      "authors": [
+        "Iskhuzhin, RR",
+        "Borisov, VN",
+        "Atavin, VG",
+        "Uzkikh, AA",
+        "Khafizova, KK"
+      ],
+      "year": 2021,
+      "journal": "RUSSIAN JOURNAL OF NONDESTRUCTIVE TESTING",
+      "doi": "10.1134/s1061830921020054",
+      "abstract": "We consider the procedure of ultrasonic quality control of weld seams in thin-walled titanium-alloy shells with a thickness of 0.6 mm. Publications devoted to the excitation and propagation of Lamb waves and practical problems of ultrasonic inspection of thin-walled products are reviewed. The problem of detecting adhesions (areas of a weld seam with lack of penetration that conduct ultrasonic waves well but do not provide mechanical strength) is solved. It is proposed to use a corner groove as an indicator of lack of penetration in the weld. The propagation of different modes of Lamb waves in the material is analyzed, and the optimal testing parameters are selected. High information content of the signal is achieved using wavelet analysis and fine-pitch precision digital filters. Defectograms of a weld containing defective and defect-free areas are analyzed. The results of ultrasound scanning are compared with metallography data.",
+      "keywords": [
+        "acoustic methods",
+        "flaw detection",
+        "ultrasonic testing",
+        "Lamb waves",
+        "weld seam",
+        "variance analysis",
+        "mode",
+        "adhesion",
+        "groove",
+        "LAMB WAVES",
+        "DISPERSION-CURVES",
+        "PLATES"
+      ],
+      "normalized_title": "ultrasonic testing of welds in thin walled titanium shells using an incomplete penetration indicator",
+      "raw_bibtex": "@ARTICLE{10.1134/S1061830921020054,\n\tauthor = {Iskhuzhin, RR and Borisov, VN and Atavin, VG and Uzkikh, AA and Khafizova, KK},\n\ttitle = {Ultrasonic Testing of Welds in Thin-Walled Titanium Shells Using an Incomplete Penetration Indicator},\n\tjournal = {RUSSIAN JOURNAL OF NONDESTRUCTIVE TESTING},\n\tyear = {2021},\n\tkeywords = {acoustic methods; flaw detection; ultrasonic testing; Lamb waves; weld seam; variance analysis; mode; adhesion; groove; LAMB WAVES; DISPERSION-CURVES; PLATES},\n\tabstract = {We consider the procedure of ultrasonic quality control of weld seams in thin-walled titanium-alloy shells with a thickness of 0.6 mm. Publications devoted to the excitation and propagation of Lamb waves and practical problems of ultrasonic inspection of thin-walled products are reviewed. The problem of detecting adhesions (areas of a weld seam with lack of penetration that conduct ultrasonic waves well but do not provide mechanical strength) is solved. It is proposed to use a corner groove as an indicator of lack of penetration in the weld. The propagation of different modes of Lamb waves in the material is analyzed, and the optimal testing parameters are selected. High information content of the signal is achieved using wavelet analysis and fine-pitch precision digital filters. Defectograms of a weld containing defective and defect-free areas are analyzed. The results of ultrasound scanning are compared with metallography data.},\n\tdoi = {10.1134/S1061830921020054},\n\tvolume = {57},\n\tnumber = {2},\n\tpages = {105-113},\n\tissn = {1061-8309},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 2 Cited Reference Count: 84 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1134/S1061830921020054"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000085",
+      "entry_type": "article",
+      "title": "Static elastic modulus of rocks predicted through regression models and Artificial Neural Network",
+      "authors": [
+        "Pappalardo, G",
+        "Mineo, S"
+      ],
+      "year": 2022,
+      "journal": "ENGINEERING GEOLOGY",
+      "doi": "10.1016/j.enggeo.2022.106829",
+      "abstract": "The statistical analysis of the main physical, mechanical and ultrasonic features of various sedimentary rock samples (limestone, calcarenite, marly calcisiltite and sandstone) is presented with the aim of finding reliable models to predict the static elastic modulus from known properties. Based on the relevance of the static elastic modulus Estat in engineering geological applications and on the increasing need of non-destructive procedures for its estimation, this paper attempts to establish prediction models by means of single and multiple regression approaches and Artificial Neural Network (ANN). While in the first two cases rock properties are plotted against each other to study their mutual dependence, even combining more than one independent variable, the Artificial Neural Network approach allows a self-learning model capable of predicting a target value from known input variables to be built. Results show that the static elastic modulus of tested rocks is mainly related to the rock Uniaxial Compressive Strength and it varies with respect to the seismic wave velocities (both compressional Vp and longitudinal Vs) and, consequently, to the dynamic elastic modulus Edyn calculated by ultrasonic tests. In particular, there is a numerical difference between the static and dynamic values of the elastic modulus, as the dynamic ones are generally higher than the corresponding static values. Satisfactory prediction equations were found by multiple regressions involving Vp, Edyn and the rock bulk density, thus providing useful statistical laws for the indirect calculation of Estat. The results arising from the ANN models are used herein to draft Estat pre-diction graphs from known variables, in the perspective of a practical utility for the quick and non-destructive estimation of the static elastic property of tested sedimentary rocks.",
+      "keywords": [
+        "Elastic modulus",
+        "Intact rock",
+        "Regression analysis",
+        "ANN",
+        "Physical -mechanical properties",
+        "Ultrasonic test",
+        "UNIAXIAL COMPRESSIVE STRENGTH",
+        "ENGINEERING PROPERTIES",
+        "FUZZY MODEL",
+        "MICROSTRUCTURE",
+        "SANDSTONES",
+        "STRATEGIES",
+        "PRESSURE",
+        "POROSITY"
+      ],
+      "normalized_title": "static elastic modulus of rocks predicted through regression models and artificial neural network",
+      "raw_bibtex": "@ARTICLE{10.1016/j.enggeo.2022.106829,\n\tauthor = {Pappalardo, G and Mineo, S},\n\ttitle = {Static elastic modulus of rocks predicted through regression models and Artificial Neural Network},\n\tjournal = {ENGINEERING GEOLOGY},\n\tyear = {2022},\n\tkeywords = {Elastic modulus; Intact rock; Regression analysis; ANN; Physical -mechanical properties; Ultrasonic test; UNIAXIAL COMPRESSIVE STRENGTH; ENGINEERING PROPERTIES; FUZZY MODEL; MICROSTRUCTURE; SANDSTONES; STRATEGIES; PRESSURE; POROSITY},\n\tabstract = {The statistical analysis of the main physical, mechanical and ultrasonic features of various sedimentary rock samples (limestone, calcarenite, marly calcisiltite and sandstone) is presented with the aim of finding reliable models to predict the static elastic modulus from known properties. Based on the relevance of the static elastic modulus Estat in engineering geological applications and on the increasing need of non-destructive procedures for its estimation, this paper attempts to establish prediction models by means of single and multiple regression approaches and Artificial Neural Network (ANN). While in the first two cases rock properties are plotted against each other to study their mutual dependence, even combining more than one independent variable, the Artificial Neural Network approach allows a self-learning model capable of predicting a target value from known input variables to be built. Results show that the static elastic modulus of tested rocks is mainly related to the rock Uniaxial Compressive Strength and it varies with respect to the seismic wave velocities (both compressional Vp and longitudinal Vs) and, consequently, to the dynamic elastic modulus Edyn calculated by ultrasonic tests. In particular, there is a numerical difference between the static and dynamic values of the elastic modulus, as the dynamic ones are generally higher than the corresponding static values. Satisfactory prediction equations were found by multiple regressions involving Vp, Edyn and the rock bulk density, thus providing useful statistical laws for the indirect calculation of Estat. The results arising from the ANN models are used herein to draft Estat pre-diction graphs from known variables, in the perspective of a practical utility for the quick and non-destructive estimation of the static elastic property of tested sedimentary rocks.},\n\tdoi = {10.1016/j.enggeo.2022.106829},\n\tvolume = {308},\n\tissn = {0013-7952},\n\tnote = {Times Cited in Web of Science Core Collection: 27 Total Times Cited: 29 Cited Reference Count: 65 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.enggeo.2022.106829"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000086",
+      "entry_type": "article",
+      "title": "Wood hole-damage detection and classification via contact ultrasonic testing",
+      "authors": [
+        "Mousavi, M",
+        "Gandomi, AH"
+      ],
+      "year": 2021,
+      "journal": "CONSTRUCTION AND BUILDING MATERIALS",
+      "doi": "10.1016/j.conbuildmat.2021.124999",
+      "abstract": "Damage detection in wood materials has numerous applications in different industries, such as construction and forestry. Wood is generally a complex medium due to its orthotropic and random properties, which increases the difficulty of non-destructive damage testing. However, machine learning algorithms can be employed to overcome this problem. In this paper, hole-defect classification problems of two common types of wood materials, namely hard (marbau) and soft (pine) wood, are studied using a naive Bayes classification technique. To this end, the results of contact ultrasonic tests conducted on these types of woods in different directions, i.e. tangential and radial to the growth rings of wood, were investigated. The various states of the intact, small defect, and large defect of each type of wood were considered in the testing regime. It is known that contact ultrasonic tests are highly sensitive to different aspects of the test, such as the amount of couplant gel applied to surfaces, the amount of pressure applied to the transducer and receiver, and misalignment of the transducer and receiver. Therefore, 50 replicates of each test were implemented. First, an advanced signal decomposition algorithm termed Variational Mode Decomposition (VMD) was exploited to derive some features from the recorded ultrasonic signals. Then, the derived features were used in a set of classification problems using a naive Bayes classifier to classify the damage state of the specimens. Different types of naive Bayes classifiers, namely Gaussian and kernel, along with combinations of different types of features were employed to improve the results, ultimately achieving nearly 100% 10-fold cross-validation accuracy in all cases individually. However, when cases from different types of wood and direction of the tests were mixed, 93.6% 10-fold cross-validation accuracy was achieved for the classification problem based on the health state of the cases, using kernel naive Bayes classifier and a mixture of two types of features.",
+      "keywords": [
+        "Ultrasonics",
+        "Variational Mode Decomposition",
+        "Naive Bayse Classifier",
+        "Nondestructive testing",
+        "Wood",
+        "Damage sensitive feature",
+        "VARIATIONAL MODE DECOMPOSITION",
+        "NONDESTRUCTIVE EVALUATION",
+        "PROPAGATION",
+        "STRENGTH",
+        "DEFECTS",
+        "IMPACT",
+        "TIMBER",
+        "FAULT",
+        "NDE"
+      ],
+      "normalized_title": "wood hole damage detection and classification via contact ultrasonic testing",
+      "raw_bibtex": "@ARTICLE{10.1016/j.conbuildmat.2021.124999,\n\tauthor = {Mousavi, M and Gandomi, AH},\n\ttitle = {Wood hole-damage detection and classification via contact ultrasonic testing},\n\tjournal = {CONSTRUCTION AND BUILDING MATERIALS},\n\tyear = {2021},\n\tkeywords = {Ultrasonics; Variational Mode Decomposition; Naive Bayse Classifier; Nondestructive testing; Wood; Damage sensitive feature; VARIATIONAL MODE DECOMPOSITION; NONDESTRUCTIVE EVALUATION; PROPAGATION; STRENGTH; DEFECTS; IMPACT; TIMBER; FAULT; NDE},\n\tabstract = {Damage detection in wood materials has numerous applications in different industries, such as construction and forestry. Wood is generally a complex medium due to its orthotropic and random properties, which increases the difficulty of non-destructive damage testing. However, machine learning algorithms can be employed to overcome this problem. In this paper, hole-defect classification problems of two common types of wood materials, namely hard (marbau) and soft (pine) wood, are studied using a naive Bayes classification technique. To this end, the results of contact ultrasonic tests conducted on these types of woods in different directions, i.e. tangential and radial to the growth rings of wood, were investigated. The various states of the intact, small defect, and large defect of each type of wood were considered in the testing regime. It is known that contact ultrasonic tests are highly sensitive to different aspects of the test, such as the amount of couplant gel applied to surfaces, the amount of pressure applied to the transducer and receiver, and misalignment of the transducer and receiver. Therefore, 50 replicates of each test were implemented. First, an advanced signal decomposition algorithm termed Variational Mode Decomposition (VMD) was exploited to derive some features from the recorded ultrasonic signals. Then, the derived features were used in a set of classification problems using a naive Bayes classifier to classify the damage state of the specimens. Different types of naive Bayes classifiers, namely Gaussian and kernel, along with combinations of different types of features were employed to improve the results, ultimately achieving nearly 100% 10-fold cross-validation accuracy in all cases individually. However, when cases from different types of wood and direction of the tests were mixed, 93.6% 10-fold cross-validation accuracy was achieved for the classification problem based on the health state of the cases, using kernel naive Bayes classifier and a mixture of two types of features.},\n\tdoi = {10.1016/j.conbuildmat.2021.124999},\n\tvolume = {307},\n\tissn = {0950-0618},\n\tnote = {Times Cited in Web of Science Core Collection: 37 Total Times Cited: 39 Cited Reference Count: 53 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.conbuildmat.2021.124999"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000087",
+      "entry_type": "article",
+      "title": "Convolutional neural network for risk assessment in polycrystalline alloy structures via ultrasonic testing",
+      "authors": [
+        "Alqahtani, H",
+        "Ray, A"
+      ],
+      "year": 2024,
+      "journal": "FATIGUE & FRACTURE OF ENGINEERING MATERIALS & STRUCTURES",
+      "doi": "10.1111/ffe.14172",
+      "abstract": "In the current state of the art of process industries/manufacturing technologies, computer-instrumented and computer-controlled autonomous techniques are necessary for damage diagnosis and prognosis in operating machinery. From this perspective, the paper addresses the issue of fatigue damage that is one of the most encountered sources of degradation in polycrystalline-alloy structures of machinery components. In this paper, the convolutional neural networks (CNNs) are applied to synergistic combinations of ultrasonic measurements and images from a confocal microscope (Alicona) to detect and evaluate the risk of fatigue damage. The database of the Alicona has been used to calibrate the ultrasonic database and to provide the ground truth for fatigue damage assessment. The results show that both the ultrasonic data and Alicona images are capable of classifying the fatigue damage into their respective classes with considerably high accuracy. However, the ultrasonic CNN model yields better accuracy than the Alicona CNN model by almost 9%.",
+      "keywords": [
+        "convolutional neural networks",
+        "damage classification",
+        "damage detection",
+        "fatigue damage",
+        "ultrasonic",
+        "CLASSIFICATION"
+      ],
+      "normalized_title": "convolutional neural network for risk assessment in polycrystalline alloy structures via ultrasonic testing",
+      "raw_bibtex": "@ARTICLE{10.1111/ffe.14172,\n\tauthor = {Alqahtani, H and Ray, A},\n\ttitle = {Convolutional neural network for risk assessment in polycrystalline alloy structures via ultrasonic testing},\n\tjournal = {FATIGUE & FRACTURE OF ENGINEERING MATERIALS & STRUCTURES},\n\tyear = {2024},\n\tkeywords = {convolutional neural networks; damage classification; damage detection; fatigue damage; ultrasonic; CLASSIFICATION},\n\tabstract = {In the current state of the art of process industries/manufacturing technologies, computer-instrumented and computer-controlled autonomous techniques are necessary for damage diagnosis and prognosis in operating machinery. From this perspective, the paper addresses the issue of fatigue damage that is one of the most encountered sources of degradation in polycrystalline-alloy structures of machinery components. In this paper, the convolutional neural networks (CNNs) are applied to synergistic combinations of ultrasonic measurements and images from a confocal microscope (Alicona) to detect and evaluate the risk of fatigue damage. The database of the Alicona has been used to calibrate the ultrasonic database and to provide the ground truth for fatigue damage assessment. The results show that both the ultrasonic data and Alicona images are capable of classifying the fatigue damage into their respective classes with considerably high accuracy. However, the ultrasonic CNN model yields better accuracy than the Alicona CNN model by almost 9%.},\n\tdoi = {10.1111/ffe.14172},\n\tvolume = {47},\n\tnumber = {1},\n\tpages = {140-152},\n\tissn = {8756-758X},\n\tnote = {Times Cited in Web of Science Core Collection: 2 Total Times Cited: 2 Cited Reference Count: 37 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1111/ffe.14172"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000088",
+      "entry_type": "article",
+      "title": "Ultrasonic signal classification for composite materials via deep convolutional neural networks",
+      "authors": [
+        "Zhang, QR",
+        "Guo, CZ",
+        "Cheng, GG",
+        "Song, SP",
+        "Ding, JN"
+      ],
+      "year": 2025,
+      "journal": "NONDESTRUCTIVE TESTING AND EVALUATION",
+      "doi": "10.1080/10589759.2024.2386349",
+      "abstract": "Ultrasonic testing (UT) is the most commonly used non-destructive testing method in the aerospace field. However, for the detection of delamination defect in multi-layer composite adhesive materials with metal and non-metal bonding, traditional energy statistics methods are limited and cannot achieve high-precision automatic signal classification. This article proposes a signal classification model based on hybrid neural networks. By studying the classification accuracy of convolutional neural networks (CNN) and long short-term memory networks (LSTM) for different types of signals, a relatively balanced classification is achieved, which effectively improves the classification accuracy. By integrating attention mechanisms, the ability of the detection model to identify key features is further enhanced. Experimental results demonstrate that the proposed model achieves an accuracy of 98.57%. Bayesian Optimisation (BO) can effectively and automatically select the optimal hyperparameters, and achieve global optimisation. In the experiment, the accuracy increased by 0.73% compared to the benchmark value. Comparative experiments show that the signal classification model established in this paper has good performance.",
+      "keywords": [
+        "Adhesive bonded components",
+        "debonding defects",
+        "ultrasonic non-destructive testing",
+        "neural network",
+        "machine learning",
+        "PREDICTION"
+      ],
+      "normalized_title": "ultrasonic signal classification for composite materials via deep convolutional neural networks",
+      "raw_bibtex": "@ARTICLE{10.1080/10589759.2024.2386349,\n\tauthor = {Zhang, QR and Guo, CZ and Cheng, GG and Song, SP and Ding, JN},\n\ttitle = {Ultrasonic signal classification for composite materials via deep convolutional neural networks},\n\tjournal = {NONDESTRUCTIVE TESTING AND EVALUATION},\n\tyear = {2025},\n\tkeywords = {Adhesive bonded components; debonding defects; ultrasonic non-destructive testing; neural network; machine learning; PREDICTION},\n\tabstract = {Ultrasonic testing (UT) is the most commonly used non-destructive testing method in the aerospace field. However, for the detection of delamination defect in multi-layer composite adhesive materials with metal and non-metal bonding, traditional energy statistics methods are limited and cannot achieve high-precision automatic signal classification. This article proposes a signal classification model based on hybrid neural networks. By studying the classification accuracy of convolutional neural networks (CNN) and long short-term memory networks (LSTM) for different types of signals, a relatively balanced classification is achieved, which effectively improves the classification accuracy. By integrating attention mechanisms, the ability of the detection model to identify key features is further enhanced. Experimental results demonstrate that the proposed model achieves an accuracy of 98.57%. Bayesian Optimisation (BO) can effectively and automatically select the optimal hyperparameters, and achieve global optimisation. In the experiment, the accuracy increased by 0.73% compared to the benchmark value. Comparative experiments show that the signal classification model established in this paper has good performance.},\n\tdoi = {10.1080/10589759.2024.2386349},\n\tvolume = {40},\n\tnumber = {6},\n\tpages = {2720-2737},\n\tissn = {1058-9759},\n\tnote = {Times Cited in Web of Science Core Collection: 5 Total Times Cited: 5 Cited Reference Count: 30 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1080/10589759.2024.2386349"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000089",
+      "entry_type": "article",
+      "title": "Deep Learning-Based Approach for Automatic Defect Detection in Complex Structures Using PAUT Data",
+      "authors": [
+        "Barshok, K",
+        "Choi, JI",
+        "Lee, J"
+      ],
+      "year": 2025,
+      "journal": "SENSORS",
+      "doi": "10.3390/s25196128",
+      "abstract": "This paper presents a comprehensive study on automated defect detection in complex structures using phased array ultrasonic testing data, focusing on both traditional signal processing and advanced deep learning methods. As a non-AI baseline, the well-known signal-to-noise ratio algorithm was improved by introducing automatic depth gate calculation using derivative analysis and eliminated the need for manual parameter tuning. Even though this method demonstrates robust flaw indication, it faces difficulties for automatic defect detection in highly noisy data or in cases with large pore zones. Considering this, multiple DL architectures-including fully connected networks, convolutional neural networks, and a novel Convolutional Attention Temporal Transformer for Sequences-are developed and trained on diverse datasets comprising simulated CIVA data and real-world data files from welded and composite specimens. Experimental results show that while the FCN architecture is limited in its ability to model dependencies, the CNN achieves a strong performance with a test accuracy of 94.9%, effectively capturing local features from PAUT signals. The CATT-S model, which integrates a convolutional feature extractor with a self-attention mechanism, consistently outperforms the other baselines by effectively modeling both fine-grained signal morphology and long-range inter-beam dependencies. Achieving a remarkable accuracy of 99.4% and a strong F1-score of 0.905 on experimental data, this integrated approach demonstrates significant practical potential for improving the reliability and efficiency of NDT in complex, heterogeneous materials.",
+      "keywords": [
+        "phased array ultrasonic testing (PAUT)",
+        "defect detection",
+        "deep learning",
+        "CATT-S",
+        "INSPECTION",
+        "TRANSFORM"
+      ],
+      "normalized_title": "deep learning based approach for automatic defect detection in complex structures using paut data",
+      "raw_bibtex": "@ARTICLE{10.3390/s25196128,\n\tauthor = {Barshok, K and Choi, JI and Lee, J},\n\ttitle = {Deep Learning-Based Approach for Automatic Defect Detection in Complex Structures Using PAUT Data},\n\tjournal = {SENSORS},\n\tyear = {2025},\n\tkeywords = {phased array ultrasonic testing (PAUT); defect detection; deep learning; CATT-S; INSPECTION; TRANSFORM},\n\tabstract = {This paper presents a comprehensive study on automated defect detection in complex structures using phased array ultrasonic testing data, focusing on both traditional signal processing and advanced deep learning methods. As a non-AI baseline, the well-known signal-to-noise ratio algorithm was improved by introducing automatic depth gate calculation using derivative analysis and eliminated the need for manual parameter tuning. Even though this method demonstrates robust flaw indication, it faces difficulties for automatic defect detection in highly noisy data or in cases with large pore zones. Considering this, multiple DL architectures-including fully connected networks, convolutional neural networks, and a novel Convolutional Attention Temporal Transformer for Sequences-are developed and trained on diverse datasets comprising simulated CIVA data and real-world data files from welded and composite specimens. Experimental results show that while the FCN architecture is limited in its ability to model dependencies, the CNN achieves a strong performance with a test accuracy of 94.9%, effectively capturing local features from PAUT signals. The CATT-S model, which integrates a convolutional feature extractor with a self-attention mechanism, consistently outperforms the other baselines by effectively modeling both fine-grained signal morphology and long-range inter-beam dependencies. Achieving a remarkable accuracy of 99.4% and a strong F1-score of 0.905 on experimental data, this integrated approach demonstrates significant practical potential for improving the reliability and efficiency of NDT in complex, heterogeneous materials.},\n\tdoi = {10.3390/s25196128},\n\tvolume = {25},\n\tnumber = {19},\n\tissn = {1424-8220},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 46 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/s25196128"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000090",
+      "entry_type": "article",
+      "title": "Non-destructive ultrasonic testing and machine learning-assisted early detection of carburizing damage in HP steel pyrolysis furnace tubes",
+      "authors": [
+        "da Silva, FP",
+        "Matos, RS",
+        "da Fonseca, HD",
+        "da Silva, MRP",
+        "Talu, S",
+        "dos Santos, YTB",
+        "da Silva, IC",
+        "Martins, COD"
+      ],
+      "year": 2023,
+      "journal": "MEASUREMENT",
+      "doi": "10.1016/j.measurement.2023.113221",
+      "abstract": "During the operation of HP steel furnace tubes, structural deterioration occurs due to carburization mechanisms. Herein, machine learning models were employed to detect carburization damage in furnace tubes using ultra-sonic signals. The microstructural and elemental analysis revealed phases like austenite, chromium carbide, and niobium carbide. Our volumetric fraction analysis showed that the harmful chromium carbide phase increased toward the tube wall thickness. Three machine learning models, namely Gaussian Naive Bayes (GNB), Kernel Naive Bayes (KNB), and Subspace Discriminant (SD), were used to analyze the ultrasound signals. The GNB model demonstrated the highest accuracy rate (99.2%) and high sensitivity for the dataset with 26 features and a K-fold cross-validation with K value = 5, arising as the most effective classifier for detecting carburization damage in HP steel. Our results underscore the efficacy of the combined use of ultrasonic testing and machine learning for detecting carburization in HP steel furnace tubes.",
+      "keywords": [
+        "HP steel pyrolysis furnaces",
+        "Ultrasound tests",
+        "Carburizing",
+        "Machine learning",
+        "FAULT-DETECTION",
+        "ETHYLENE",
+        "CLASSIFICATION",
+        "DEGRADATION",
+        "EVOLUTION",
+        "DIAGNOSIS",
+        "ALLOY"
+      ],
+      "normalized_title": "non destructive ultrasonic testing and machine learning assisted early detection of carburizing damage in hp steel pyrolysis furnace tubes",
+      "raw_bibtex": "@ARTICLE{10.1016/j.measurement.2023.113221,\n\tauthor = {da Silva, FP and Matos, RS and da Fonseca, HD and da Silva, MRP and Talu, S and dos Santos, YTB and da Silva, IC and Martins, COD},\n\ttitle = {Non-destructive ultrasonic testing and machine learning-assisted early detection of carburizing damage in HP steel pyrolysis furnace tubes},\n\tjournal = {MEASUREMENT},\n\tyear = {2023},\n\tkeywords = {HP steel pyrolysis furnaces; Ultrasound tests; Carburizing; Machine learning; FAULT-DETECTION; ETHYLENE; CLASSIFICATION; DEGRADATION; EVOLUTION; DIAGNOSIS; ALLOY},\n\tabstract = {During the operation of HP steel furnace tubes, structural deterioration occurs due to carburization mechanisms. Herein, machine learning models were employed to detect carburization damage in furnace tubes using ultra-sonic signals. The microstructural and elemental analysis revealed phases like austenite, chromium carbide, and niobium carbide. Our volumetric fraction analysis showed that the harmful chromium carbide phase increased toward the tube wall thickness. Three machine learning models, namely Gaussian Naive Bayes (GNB), Kernel Naive Bayes (KNB), and Subspace Discriminant (SD), were used to analyze the ultrasound signals. The GNB model demonstrated the highest accuracy rate (99.2%) and high sensitivity for the dataset with 26 features and a K-fold cross-validation with K value = 5, arising as the most effective classifier for detecting carburization damage in HP steel. Our results underscore the efficacy of the combined use of ultrasonic testing and machine learning for detecting carburization in HP steel furnace tubes.},\n\tdoi = {10.1016/j.measurement.2023.113221},\n\tvolume = {218},\n\tissn = {0263-2241},\n\tnote = {Times Cited in Web of Science Core Collection: 7 Total Times Cited: 7 Cited Reference Count: 57 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.measurement.2023.113221"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

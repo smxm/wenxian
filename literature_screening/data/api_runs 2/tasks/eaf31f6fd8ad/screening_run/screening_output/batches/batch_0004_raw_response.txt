@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0004",
+    "results": [
+        {
+            "paper_id": "paper_000031",
+            "decision": "exclude",
+            "reason": "标题和摘要表明这是一篇关于网络分析方法的综述，未提及任何互联网+技术载体或具体的护理干预应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000032",
+            "decision": "exclude",
+            "reason": "摘要总结了发达国家的共病管理模式，虽然涉及老年慢性病，但未提及任何互联网+技术载体或具体的护理干预应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000033",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于助推理论在药物治疗启动决策中的应用，研究对象未明确为老年人，且未提及互联网+技术载体或护理干预。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000034",
+            "decision": "exclude",
+            "reason": "摘要描述了社区老年慢性病患者多病共存的管理困境，但未提及任何互联网+技术载体或具体的护理干预应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000035",
+            "decision": "include",
+            "reason": "标题和摘要明确研究老年慢性病患者对“互联网+健康管理”服务的使用意愿，符合互联网+载体、老年慢性病患者和健康管理主题。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000036",
+            "decision": "include",
+            "reason": "标题和摘要表明研究基于单导联可穿戴心电设备（物联网技术）预测老年心血管代谢疾病患者抑郁风险，涉及护理干预和结局指标。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000037",
+            "decision": "exclude",
+            "reason": "摘要研究社区老年群体焦虑与抑郁情绪的预防干预，虽涉及老年慢性病，但未提及任何互联网+技术载体或信息化手段。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000038",
+            "decision": "uncertain",
+            "reason": "标题和摘要提及虚拟病房照护模式在老年慢性病病人中的应用，虚拟病房可能隐含互联网+技术，但信息不足确认具体载体和护理干预细节。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000039",
+            "decision": "exclude",
+            "reason": "标题和摘要表明这是一篇书评，内容聚焦结核病和乙肝传染病的健康教育，未涉及互联网+技术载体，且疾病类型可能不属于典型慢性病。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000040",
+            "decision": "exclude",
+            "reason": "摘要描述全链条闭环护理管理在老年慢性病患者出入院中的应用，但未提及任何互联网+技术载体或信息化手段。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        }
+    ]
+}

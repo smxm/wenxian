@@ -1,0 +1,63 @@
+{
+  "project": {
+    "name": "new-search-strategy-screening",
+    "output_dir": "tasks/ba1e2049ce67/screening_run/screening_output",
+    "save_raw_response": true,
+    "save_intermediate_files": true
+  },
+  "input": {
+    "input_files": [
+      "tasks/ba1e2049ce67/screening_run/inputs/scopus_export_Mar 25-2026_4b324a48-ff16-427f-977c-6c4b81f601aa.ris"
+    ],
+    "encoding": "auto"
+  },
+  "dedup": {
+    "enabled": true,
+    "strict_doi_match": true,
+    "normalized_title_exact_match": true,
+    "fuzzy_title_match": false
+  },
+  "screening": {
+    "batch_size": 10,
+    "target_include_count": 10,
+    "stop_when_target_reached": true,
+    "allow_uncertain": true,
+    "retry_times": 6,
+    "request_timeout_seconds": 240
+  },
+  "criteria": {
+    "topic": "Western opera aria vocal techniques",
+    "inclusion": [
+      "Studies focusing on opera singing or vocal performance.",
+      "Specifically related to Western opera traditions.",
+      "Includes arias as the subject of study.",
+      "Addresses singing techniques, vocal pedagogy, or performance practice."
+    ],
+    "exclusion": [
+      "Excludes non-Western opera forms (e.g., Chinese opera, if not comparative).",
+      "Excludes instrumental music, composition, or non-singing aspects.",
+      "Excludes general music education not specific to opera.",
+      "Excludes popular music or non-classical vocal techniques."
+    ]
+  },
+  "model": {
+    "provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "api_base_url": "https://api.deepseek.com/v1",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 1536,
+    "min_request_interval_seconds": 2.0
+  },
+  "report": {
+    "export_included_ris": true,
+    "export_excluded_ris": false,
+    "export_unused_ris": true,
+    "export_included_bib": false,
+    "export_excluded_bib": false,
+    "export_unused_bib": false,
+    "included_report_format": "md",
+    "excluded_report_format": "md",
+    "summary_format": "json"
+  }
+}

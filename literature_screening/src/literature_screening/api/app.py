@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import difflib
 import json
+import os
 import re
 import sys
 import tempfile
@@ -17,8 +18,8 @@ from fastapi.responses import FileResponse
 
 from literature_screening.bibtex.normalizer import normalize_title
 from literature_screening.api.schemas import DatasetRecord, FulltextBatchStatusUpdateRequest, FulltextQueueItem, FulltextQueueRebuildRequest, FulltextStatusUpdateRequest, ProjectCreate, ProjectDetail, ProjectSnapshot, ProjectUpdate, ProjectWorkbench, ProjectWorkflowUpdate, StrategyPlan, ThreadPrefillRequest, ThreadPrefillResponse, WorkbenchBatchPatchRequest, WorkbenchCandidateItem, WorkbenchItemPatchRequest, WorkbenchLink, WorkbenchRebuildRequest, WorkbenchScreeningEvent, WorkbenchSummary
-from literature_screening.api.schemas import BulkReviewOverrideRequest, ReferenceOverrideRequest, ReportTaskCreate, RetryTaskRequest, ReviewOverrideRequest, SelectionReviewOverrideRequest, StrategyTaskCreate, TaskArtifact
-from literature_screening.api.schemas import TaskDetail, TaskEvent, TaskSnapshot, TaskTemplateRecord
+from literature_screening.api.schemas import BulkReviewOverrideRequest, ProviderModelListRequest, ProviderModelListResponse, ReferenceOverrideRequest, ReportTaskCreate, RetryTaskRequest, ReviewOverrideRequest, SelectionReviewOverrideRequest, StrategyTaskCreate, TaskArtifact
+from literature_screening.api.schemas import TaskDetail, TaskEvent, TaskSnapshot, TaskTemplateRecord, TaskUpdate
 from literature_screening.api.secret_store import SecretStore
 from literature_screening.api.task_store import StoredTask, TaskStore
 from literature_screening.api.template_store import TemplateStore
@@ -63,8 +64,17 @@ DEFAULT_SCREENING_MODEL = {
     "api_key_env": "DEEPSEEK_API_KEY",
     "api_key": None,
     "temperature": 0,
-    "max_tokens": 1536,
+    "max_tokens": 4096,
     "min_request_interval_seconds": 2,
+}
+FALLBACK_PROVIDER_MODELS = {
+    "deepseek": [
+        {"id": "deepseek-chat", "label": "deepseek-chat"},
+        {"id": "deepseek-reasoner", "label": "deepseek-reasoner"},
+    ],
+    "kimi": [
+        {"id": "moonshot-v1-auto", "label": "moonshot-v1-auto"},
+    ],
 }
 
 app = FastAPI(title="Literature Screening Studio API", version="0.2.0")
@@ -96,6 +106,10 @@ def _effective_max_tokens(provider: str, model_name: str, requested: int) -> int
     return int(requested)
 
 
+def _effective_screening_max_tokens(provider: str, model_name: str, requested: int) -> int:
+    return max(_effective_max_tokens(provider, model_name, requested), 4096)
+
+
 def _criteria_to_markdown(topic: str, inclusion: list[str], exclusion: list[str]) -> str:
     parts = ["# 研究主题", "", topic.strip(), "", "# 纳入标准", ""]
     parts.extend(f"- {item}" for item in inclusion if str(item).strip())
@@ -122,6 +136,7 @@ def _base_thread_profile(project: dict) -> dict:
             "batch_size": 10,
             "target_include_count": None,
             "stop_when_target_reached": False,
+            "min_include_confidence": 0.8,
             "allow_uncertain": True,
             "retry_times": 6,
             "request_timeout_seconds": 240,
@@ -167,6 +182,7 @@ def _effective_thread_profile(project: dict, *, project_tasks: list[dict] | None
             "batch_size",
             "target_include_count",
             "stop_when_target_reached",
+            "min_include_confidence",
             "allow_uncertain",
             "retry_times",
             "request_timeout_seconds",
@@ -225,7 +241,16 @@ def _effective_thread_profile(project: dict, *, project_tasks: list[dict] | None
                 "max_tokens": request_payload.get("max_tokens"),
                 "min_request_interval_seconds": request_payload.get("min_request_interval_seconds"),
             })
-        for key in ("batch_size", "target_include_count", "stop_when_target_reached", "allow_uncertain", "retry_times", "request_timeout_seconds", "encoding"):
+        for key in (
+            "batch_size",
+            "target_include_count",
+            "stop_when_target_reached",
+            "min_include_confidence",
+            "allow_uncertain",
+            "retry_times",
+            "request_timeout_seconds",
+            "encoding",
+        ):
             if (not screening_payload or key not in screening_payload) and key in request_payload:
                 profile["screening"][key] = request_payload.get(key)
 
@@ -292,6 +317,78 @@ def meta() -> dict:
             "databases": STRATEGY_DATABASE_OPTIONS,
         },
     }
+
+
+@app.post("/api/model-options", response_model=ProviderModelListResponse)
+def list_provider_models(request: ProviderModelListRequest) -> ProviderModelListResponse:
+    fallback_models = FALLBACK_PROVIDER_MODELS.get(request.provider, [])
+    api_key = (request.api_key or "").strip() or os.getenv(request.api_key_env)
+    if not api_key:
+        return ProviderModelListResponse(
+            provider=request.provider,
+            models=fallback_models,
+            source="fallback",
+            error=f"Missing API key or environment variable: {request.api_key_env}",
+        )
+
+    endpoint = _provider_models_endpoint(request.api_base_url)
+    try:
+        response = httpx.get(
+            endpoint,
+            headers={
+                "Authorization": f"Bearer {api_key}",
+                "Content-Type": "application/json",
+            },
+            timeout=20.0,
+        )
+        response.raise_for_status()
+        models = _extract_provider_models(response.json())
+    except Exception as exc:
+        return ProviderModelListResponse(
+            provider=request.provider,
+            models=fallback_models,
+            source="fallback",
+            error=f"Failed to load provider models: {exc}",
+        )
+
+    if not models:
+        return ProviderModelListResponse(
+            provider=request.provider,
+            models=fallback_models,
+            source="fallback",
+            error="Provider returned an empty model list",
+        )
+
+    return ProviderModelListResponse(provider=request.provider, models=models, source="provider")
+
+
+def _provider_models_endpoint(api_base_url: str) -> str:
+    base = (api_base_url or "").strip().rstrip("/")
+    if not base:
+        base = "https://api.deepseek.com/v1"
+    if base.endswith("/chat/completions"):
+        base = base[: -len("/chat/completions")]
+    return f"{base}/models"
+
+
+def _extract_provider_models(payload: Any) -> list[dict[str, str]]:
+    raw_items = payload.get("data", []) if isinstance(payload, dict) else []
+    models: list[dict[str, str]] = []
+    seen: set[str] = set()
+    for item in raw_items:
+        if isinstance(item, str):
+            model_id = item
+            label = item
+        elif isinstance(item, dict):
+            model_id = str(item.get("id") or "").strip()
+            label = str(item.get("display_name") or item.get("name") or model_id).strip()
+        else:
+            continue
+        if not model_id or model_id in seen:
+            continue
+        seen.add(model_id)
+        models.append({"id": model_id, "label": label or model_id})
+    return models
 
 
 @app.post("/api/threads/prefill", response_model=ThreadPrefillResponse)
@@ -626,6 +723,23 @@ def get_task(task_id: str) -> TaskDetail:
     return _to_detail(task)
 
 
+@app.patch("/api/tasks/{task_id}", response_model=TaskDetail)
+def update_task(task_id: str, request: TaskUpdate) -> TaskDetail:
+    task = _get_task_or_404(task_id)
+    title = request.title.strip()
+    if not title:
+        raise HTTPException(status_code=400, detail="任务名称不能为空")
+
+    metadata = dict(task.get("metadata") or {})
+    request_payload = metadata.get("request_payload")
+    if isinstance(request_payload, dict):
+        metadata["request_payload"] = {**request_payload, "title": title}
+
+    updated = TASK_STORE.update(task_id, title=title, metadata=metadata)
+    TASK_STORE.append_event(task_id, kind="task-renamed", message="Task title updated", metadata={"title": title})
+    return _to_detail(updated)
+
+
 @app.delete("/api/tasks/{task_id}")
 def delete_task(task_id: str) -> dict[str, Any]:
     task = _get_task_or_404(task_id)
@@ -710,13 +824,9 @@ def retry_task(task_id: str, request: RetryTaskRequest) -> TaskSnapshot:
             try:
                 result = run_screening_job(
                     payload,
-                    progress_callback=lambda phase, label, current=None, total=None, message=None: TASK_STORE.update(
+                    progress_callback=_screening_progress_callback(
                         stored_task.task_id,
-                        phase=phase,
-                        phase_label=label,
-                        progress_current=current,
-                        progress_total=total,
-                        progress_message=message,
+                        (payload.run_root_override or (TASK_STORE.tasks_dir / stored_task.task_id / "screening_run")) / "screening_output",
                     ),
                     cancel_callback=lambda: TASK_STORE.is_cancel_requested(stored_task.task_id),
                 )
@@ -1144,11 +1254,12 @@ async def create_screening_task(
     api_key_env: str = Form(...),
     api_key: str = Form(""),
     temperature: float = Form(0.0),
-    max_tokens: int = Form(1536),
+    max_tokens: int = Form(4096),
     min_request_interval_seconds: float = Form(2.0),
     batch_size: int = Form(10),
     target_include_count: str = Form(""),
     stop_when_target_reached: bool = Form(False),
+    min_include_confidence: float = Form(0.8),
     allow_uncertain: bool = Form(True),
     retry_times: int = Form(6),
     request_timeout_seconds: int = Form(240),
@@ -1164,6 +1275,8 @@ async def create_screening_task(
     exclusion = json.loads(exclusion_json)
     source_dataset_ids = json.loads(source_dataset_ids_json)
     target_include_count_value = int(target_include_count) if str(target_include_count).strip() else None
+    if min_include_confidence < 0 or min_include_confidence > 1:
+        raise HTTPException(status_code=400, detail="min_include_confidence must be between 0 and 1")
     project = _ensure_project(
         project_id=project_id,
         new_project_name=new_project_name,
@@ -1183,6 +1296,8 @@ async def create_screening_task(
     effective_batch_size = batch_size or effective_profile["screening"].get("batch_size") or 10
     effective_target_include_count = target_include_count_value
     effective_stop_when_target_reached = stop_when_target_reached and effective_target_include_count is not None
+    effective_min_include_confidence = min_include_confidence
+    effective_max_tokens = _effective_screening_max_tokens(provider, model_name, max_tokens)
 
     input_paths: list[Path] = []
     for dataset_id in source_dataset_ids:
@@ -1211,11 +1326,12 @@ async def create_screening_task(
                 "api_base_url": api_base_url,
                 "api_key_env": api_key_env,
                 "temperature": temperature,
-                "max_tokens": max_tokens,
+                "max_tokens": effective_max_tokens,
                 "min_request_interval_seconds": min_request_interval_seconds,
                 "batch_size": effective_batch_size,
                 "target_include_count": effective_target_include_count,
                 "stop_when_target_reached": effective_stop_when_target_reached,
+                "min_include_confidence": effective_min_include_confidence,
                 "allow_uncertain": allow_uncertain,
                 "retry_times": retry_times,
                 "request_timeout_seconds": request_timeout_seconds,
@@ -1255,7 +1371,7 @@ async def create_screening_task(
             api_key_env=api_key_env,
             api_key=api_key.strip() or None,
             temperature=temperature,
-            max_tokens=max_tokens,
+            max_tokens=effective_max_tokens,
             min_request_interval_seconds=min_request_interval_seconds,
         ),
         runs_root=API_RUNS_ROOT / "runs",
@@ -1263,6 +1379,7 @@ async def create_screening_task(
         batch_size=effective_batch_size,
         target_include_count=effective_target_include_count or 9999,
         stop_when_target_reached=effective_stop_when_target_reached,
+        min_include_confidence=effective_min_include_confidence,
         allow_uncertain=allow_uncertain,
         retry_times=retry_times,
         request_timeout_seconds=request_timeout_seconds,
@@ -1274,13 +1391,9 @@ async def create_screening_task(
         try:
             result = run_screening_job(
                 payload,
-                progress_callback=lambda phase, label, current=None, total=None, message=None: TASK_STORE.update(
+                progress_callback=_screening_progress_callback(
                     stored_task.task_id,
-                    phase=phase,
-                    phase_label=label,
-                    progress_current=current,
-                    progress_total=total,
-                    progress_message=message,
+                    (payload.run_root_override or (TASK_STORE.tasks_dir / stored_task.task_id / "screening_run")) / "screening_output",
                 ),
                 cancel_callback=lambda: TASK_STORE.is_cancel_requested(stored_task.task_id),
             )
@@ -2245,15 +2358,15 @@ def _resolve_task_records(task: dict) -> list[dict]:
         return current_records
 
     if current_records and all(record.get("abstract") for record in current_records):
-        return current_records
+        return _annotate_screening_review_state(current_records, Path(output_dir))
 
     try:
         hydrated_records = load_screening_records(Path(output_dir))
     except Exception:
-        return current_records
+        return _annotate_screening_review_state(current_records, Path(output_dir))
 
     if not current_records:
-        return hydrated_records
+        return _annotate_screening_review_state(hydrated_records, Path(output_dir))
 
     current_map = {record.get("paper_id"): record for record in current_records}
     merged: list[dict] = []
@@ -2263,7 +2376,53 @@ def _resolve_task_records(task: dict) -> list[dict]:
             merged.append({**hydrated, **existing, "abstract": hydrated.get("abstract") or existing.get("abstract")})
         else:
             merged.append(hydrated)
-    return merged
+    return _annotate_screening_review_state(merged, Path(output_dir))
+
+
+def _load_screening_decision_map(path: Path) -> dict[str, dict[str, Any]]:
+    if not path.exists():
+        return {}
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    if not isinstance(payload, list):
+        return {}
+    return {
+        str(item.get("paper_id")): item
+        for item in payload
+        if isinstance(item, dict) and str(item.get("paper_id") or "").strip()
+    }
+
+
+def _annotate_screening_review_state(records: list[dict], output_dir: Path) -> list[dict]:
+    original_map = _load_screening_decision_map(output_dir / "screening_decisions.json")
+    reviewed_map = _load_screening_decision_map(output_dir / "reviewed" / "screening_decisions.reviewed.json")
+    if not original_map and not reviewed_map:
+        return records
+
+    annotated: list[dict] = []
+    for record in records:
+        paper_id = str(record.get("paper_id") or "")
+        original = original_map.get(paper_id)
+        reviewed = reviewed_map.get(paper_id)
+        next_record = dict(record)
+        if original:
+            next_record["original_decision"] = original.get("decision")
+            next_record["original_reason"] = original.get("reason") or ""
+        else:
+            next_record["original_decision"] = record.get("decision")
+            next_record["original_reason"] = record.get("reason") or ""
+        if reviewed:
+            next_record["review_decision"] = reviewed.get("decision")
+            next_record["review_reason"] = reviewed.get("reason") or ""
+            next_record["reviewed"] = True
+        else:
+            next_record["review_decision"] = record.get("decision")
+            next_record["review_reason"] = record.get("reason") or ""
+            next_record["reviewed"] = False
+        annotated.append(next_record)
+    return annotated
 
 
 def _resolve_strategy_plan(task: dict) -> StrategyPlan | None:
@@ -2280,6 +2439,26 @@ def _resolve_strategy_plan(task: dict) -> StrategyPlan | None:
         return StrategyPlan.model_validate(payload)
     except Exception:
         return None
+
+
+def _screening_progress_callback(task_id: str, output_dir: Path):
+    def update(phase: str, label: str, current: int | None = None, total: int | None = None, message: str | None = None) -> None:
+        changes: dict[str, Any] = {
+            "phase": phase,
+            "phase_label": label,
+            "progress_current": current,
+            "progress_total": total,
+            "progress_message": message,
+        }
+        summary_path = output_dir / "run_summary.json"
+        if summary_path.exists():
+            try:
+                changes["summary"] = json.loads(summary_path.read_text(encoding="utf-8"))
+            except Exception:
+                pass
+        TASK_STORE.update(task_id, **changes)
+
+    return update
 
 
 def _build_screening_task_result_payload(
@@ -2434,6 +2613,8 @@ def _screening_request_from_task(task: dict) -> ScreeningJobRequest:
     target_include_count = payload.get("target_include_count")
     effective_target_include_count = int(target_include_count) if target_include_count is not None else 9999
     effective_stop_when_target_reached = bool(payload.get("stop_when_target_reached")) and target_include_count is not None
+    effective_min_include_confidence = float(payload.get("min_include_confidence", 0.8))
+    effective_max_tokens = _effective_screening_max_tokens(payload["provider"], payload["model_name"], payload["max_tokens"])
     input_paths = [Path(item) for item in metadata.get("uploaded_input_paths", [])]
     for dataset_id in payload.get("source_dataset_ids", []):
         dataset = _require_dataset(dataset_id)
@@ -2453,7 +2634,7 @@ def _screening_request_from_task(task: dict) -> ScreeningJobRequest:
             api_key_env=payload["api_key_env"],
             api_key=api_key,
             temperature=payload["temperature"],
-            max_tokens=payload["max_tokens"],
+            max_tokens=effective_max_tokens,
             min_request_interval_seconds=payload["min_request_interval_seconds"],
         ),
         runs_root=API_RUNS_ROOT / "runs",
@@ -2462,6 +2643,7 @@ def _screening_request_from_task(task: dict) -> ScreeningJobRequest:
         batch_size=payload["batch_size"],
         target_include_count=effective_target_include_count,
         stop_when_target_reached=effective_stop_when_target_reached,
+        min_include_confidence=effective_min_include_confidence,
         allow_uncertain=payload["allow_uncertain"],
         retry_times=payload["retry_times"],
         request_timeout_seconds=payload["request_timeout_seconds"],

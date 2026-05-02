@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0002",
+    "results": [
+        {
+            "paper_id": "paper_000011",
+            "decision": "exclude",
+            "reason": "标题和摘要显示研究胎儿心率监测和子宫收缩监测，但未涉及子宫内膜蠕动波定量分析或超微血流成像技术。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000012",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于前置胎盘风险因素，未提及子宫内膜蠕动波或血流动力学的定量评估。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000013",
+            "decision": "include",
+            "reason": "标题和摘要明确研究小鼠子宫收缩动力学，涉及成像方法和定量波形特征分析，符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000014",
+            "decision": "include",
+            "reason": "标题和摘要直接涉及超声斑点追踪和应变分析定量评估子宫内膜蠕动波，并关联IVF临床场景。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000015",
+            "decision": "include",
+            "reason": "标题和摘要使用4D超声评估子宫蠕动，涉及频率定量和与IVF场景的关联，符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000016",
+            "decision": "include",
+            "reason": "标题和摘要比较不同胚胎移植方案中的子宫蠕动频率，涉及超声评估和临床场景，符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000017",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于预测早产的超声指数，未涉及子宫内膜蠕动波或血流动力学的定量分析。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000018",
+            "decision": "include",
+            "reason": "标题和摘要研究阿托西班对子宫蠕动的影响，涉及经阴道超声测量频率和FET临床场景，符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000019",
+            "decision": "uncertain",
+            "reason": "标题和摘要介绍电子宫图评估子宫收缩，但未明确涉及超声技术或定量分析，信息不足以判断是否纳入。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000020",
+            "decision": "include",
+            "reason": "标题和摘要使用超声斑点追踪定量测量子宫收缩性，比较隔膜子宫与正常子宫，符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        }
+    ]
+}

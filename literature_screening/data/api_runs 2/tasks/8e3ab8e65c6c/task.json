@@ -1,0 +1,211 @@
+{
+  "id": "8e3ab8e65c6c",
+  "kind": "screening",
+  "status": "succeeded",
+  "cancel_requested": false,
+  "title": "new-screening-run",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 1,
+  "progress_total": 1,
+  "progress_message": "Task completed",
+  "created_at": "2026-04-01T19:16:28.622341+08:00",
+  "updated_at": "2026-04-01T19:16:48.341717+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "7a77f9d53499",
+    "project_topic": "基于深度学习的冷轧带钢表面缺陷检测与分析",
+    "model_provider": "deepseek",
+    "parent_task_id": null,
+    "input_dataset_ids": [],
+    "request_payload": {
+      "title": "new-screening-run",
+      "topic": "基于深度学习的冷轧带钢表面缺陷检测与分析",
+      "criteria_markdown": "# Role\r\n你是一位人工智能与工业视觉领域的资深学术研究员，正在协助我筛选参考文献。我正在撰写一篇关于【基于深度学习的冷轧带钢表面缺陷检测与分析】的论文，重点关注小样本、无监督、域自适应及轻量化等前沿方向，我需要你帮我精准筛选并总结出对我有用的参考文献。\r\n\r\n# Task\r\n我将提供一批文献的元数据（标题、摘要、关键词等）。请你逐一阅读，并严格按照以下流程处理：\r\n\r\n## Step 1: 筛选判读\r\n请根据以下标准判断该文献是否符合我的研究需求：\r\n\r\n* 纳入标准 (Inclusion Criteria)：\r\n  1. 研究对象必须是冷轧带钢、带钢或高度相关的金属表面缺陷。\r\n  2. 核心技术必须涉及前沿深度学习/计算机视觉方法（如：无监督异常检测、小样本/长尾学习、域自适应/泛化、轻量化边缘网络、或多模态根因分析）。\r\n  3. 具有明确的工业落地痛点解决思路或算法创新。\r\n\r\n* 排除标准 (Exclusion Criteria)：\r\n  1. 纯传统的冶金机理、机械结构或材料化学成分研究，无视觉/数据驱动算法介入。\r\n  2. 过于陈旧的传统图像处理方法（如单纯的阈值分割、传统边缘算子），缺乏深度学习或现代机器学习背景。\r\n  3. 与工业缺陷检测无关的纯理论算法推导。\r\n  4. 非中英文文献。\r\n\r\n## Step 2: 格式化输出\r\n根据判读结果，执行不同的输出逻辑。\r\n**【最高指令警告】：所有输出必须放在 Markdown 代码框内！绝对不允许使用任何形式的来源标记、角标或 `` 等引用格式！严格只输出纯文本！**\r\n\r\n情况 A：如果不符合要求\r\n* 仅输出一行文字：\r\n  `❌ [剔除]：<文献完整标题>`\r\n\r\n情况 B：如果符合要求\r\n* 请按以下结构输出：\r\n\r\n# <文献完整标题>\r\n(<若是英文文献，请在此处提供带括号的中文翻译>)\r\n\r\n核心总结\r\n(请用中文简明扼要地概括：1. 针对带钢检测的什么具体痛点？ 2. 提出了什么核心网络结构或机制？ 3. 取得了什么关键突破？)\r\n\r\n深度分析\r\n* 参考价值：针对我的论文主题，这篇文章在【算法设计】、【数据处理】或【实验对比】方面提供了哪些具体可以引用的素材或思路？\r\n\r\n---\r\n\r\n# Input Data\r\n[在此处粘贴你导出的文献信息，可以是 BibTeX 格式，或者 Excel/CSV 中的标题+摘要文本]",
+      "inclusion": [
+        "研究对象必须是冷轧带钢、带钢或高度相关的金属表面缺陷。",
+        "核心技术必须涉及前沿深度学习/计算机视觉方法（如：无监督异常检测、小样本/长尾学习、域自适应/泛化、轻量化边缘网络、或多模态根因分析）。",
+        "具有明确的工业落地痛点解决思路或算法创新。"
+      ],
+      "exclusion": [
+        "纯传统的冶金机理、机械结构或材料化学成分研究，无视觉/数据驱动算法介入。",
+        "过于陈旧的传统图像处理方法（如单纯的阈值分割、传统边缘算子），缺乏深度学习或现代机器学习背景。",
+        "与工业缺陷检测无关的纯理论算法推导。",
+        "非中英文文献。"
+      ],
+      "provider": "deepseek",
+      "model_name": "deepseek-chat",
+      "api_base_url": "https://api.deepseek.com/v1",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.0,
+      "max_tokens": 1536,
+      "min_request_interval_seconds": 2.0,
+      "batch_size": 10,
+      "target_include_count": 30,
+      "stop_when_target_reached": true,
+      "allow_uncertain": true,
+      "retry_times": 6,
+      "request_timeout_seconds": 240,
+      "encoding": "auto",
+      "project_id": "7a77f9d53499",
+      "parent_task_id": null,
+      "source_dataset_ids": []
+    },
+    "model_secret_id": "9d8eee97e2e74612",
+    "uploaded_input_paths": [
+      "tasks/8e3ab8e65c6c/uploads/scopus_export_Apr 1-2026_5800abc9-92af-43d4-9936-af5310af675c.ris"
+    ]
+  },
+  "summary": {
+    "run_id": "run_20260401_191628",
+    "input_files_count": 1,
+    "raw_entries_count": 7,
+    "deduped_entries_count": 7,
+    "processed_count": 7,
+    "included_count": 3,
+    "excluded_count": 1,
+    "uncertain_count": 3,
+    "unused_count": 0,
+    "batch_count": 1,
+    "api_call_count": 1,
+    "stop_reason": "all_records_processed",
+    "started_at": "2026-04-01T19:16:28.660788+08:00",
+    "finished_at": "2026-04-01T19:16:48.324706+08:00"
+  },
+  "error": null,
+  "artifacts": {
+    "included_report": {
+      "path": "tasks/8e3ab8e65c6c/screening_run/screening_output/included_report.md",
+      "filename": "included_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 1611
+    },
+    "excluded_report": {
+      "path": "tasks/8e3ab8e65c6c/screening_run/screening_output/excluded_report.md",
+      "filename": "excluded_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 552
+    },
+    "uncertain_report": {
+      "path": "tasks/8e3ab8e65c6c/screening_run/screening_output/uncertain_report.md",
+      "filename": "uncertain_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 1720
+    },
+    "included_ris": {
+      "path": "tasks/8e3ab8e65c6c/screening_run/screening_output/included.ris",
+      "filename": "included.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 4194
+    },
+    "unused_ris": {
+      "path": "tasks/8e3ab8e65c6c/screening_run/screening_output/unused_remaining.ris",
+      "filename": "unused_remaining.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 0
+    },
+    "run_summary": {
+      "path": "tasks/8e3ab8e65c6c/screening_run/screening_output/run_summary.json",
+      "filename": "run_summary.json",
+      "content_type": "application/json",
+      "size_bytes": 439
+    },
+    "screening_decisions": {
+      "path": "tasks/8e3ab8e65c6c/screening_run/screening_output/screening_decisions.json",
+      "filename": "screening_decisions.json",
+      "content_type": "application/json",
+      "size_bytes": 3886
+    }
+  },
+  "run_root": "tasks/8e3ab8e65c6c/screening_run",
+  "output_dir": "tasks/8e3ab8e65c6c/screening_run/screening_output",
+  "markdown_preview": null,
+  "records": [
+    {
+      "paper_id": "paper_000001",
+      "title": "Vision Transformer Model for Metal Surface Defect Classification",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "标题和摘要明确涉及金属表面缺陷分类和深度学习（Vision Transformer），但研究对象是热轧钢而非冷轧带钢，且未明确提及工业落地痛点或算法创新。",
+      "year": 2025,
+      "journal": "Proceeding - 2025 IEEE 9th International Conference on Software Engineering and Computer Systems: Advancements in Next-Generation Intelligent Solution, ICSECS 2025",
+      "doi": "10.1109/icsecs65227.2025.11278921",
+      "abstract": "—Automated surface defect classification in steel manufacturing is essential to meet increasing global demands and improve inspection efficiency. While Convolutional Neural Networks (CNNs) have shown promising results, their reliance on local surfaces and large labeled datasets limits their effectiveness for complex defects detection and classification. This study investigates the performance of a Vision Transformer (ViT) compared to several Convolutional Neural Network models using the NEU hot rolled steel surface defect dataset. Performance was evaluated using accuracy, confusion matrices, ROC-curves, Grad-CAM visualization and training behavior. In the investigation, Swin ViT achieved perfect classification accuracy but exhibited signs of overfitting, suggesting a need for optimization techniques such as learning rate scheduling. CNN models like MobileNet, InceptionV3, and VGG16 performed competitively with high accuracy and better generalization, while EfficientNetB0 failed to learn significant features. The result indicates that both ViT and CNNs have distinct strengths, with Swin ViT excelling in accuracy and CNNs offering stable training. Future work will explore additional models, datasets, and training parameter tuning to enhance robustness and generalizability. ©2025 IEEE."
+    },
+    {
+      "paper_id": "paper_000002",
+      "title": "Ambiguous Boundary Uncertainty Reduction in Single Stage Detector Models",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "摘要提到在金属表面缺陷数据集上评估算法，但未明确研究对象是否为冷轧带钢，且核心创新是通用目标检测的边界框回归损失，与筛选主题的特定深度学习方向关联不够直接。",
+      "year": 2024,
+      "journal": "2024 IEEE International Conference on Computer Vision and Machine Intelligence, CVMI 2024",
+      "doi": "10.1109/cvmi61877.2024.10782711",
+      "abstract": "The MS-COCO dataset provides ground truth bounding boxes with high accuracy, leaving minimal room for ambiguity. However, during the annotation process, uncertainties can still arise, particularly in situations where object boundaries are indistinct or when numerous annotators are involved. In this paper, we introduce a novel bounding box regression loss that improves the bounding box localization accuracy during the inference phase, particularly in scenarios characterized by the aforementioned uncertainties. During training, we also experiment with a thresholding procedure at the time of loss computation, which leverages the Intersection over Union (IoU) value, consequently enhancing the stabilization and precision of the bounding box localization. We evaluate the novel loss on multiple datasets focusing especially on metal surface defect datasets, yielding favorable results. When tested on the MSCOCO dataset for small object detection, we observe a gain in the Average Recall for small objects (A RS) and Average Precision with 0.5 IoU value (AP0.5) of YOLOv7 by 1.83% and 1.61% respectively. We also validate the algorithm using other metal defects datasets, namely GC10-DET, and proprietary custom aircraft surface metal defects dataset, with consistently positive outcomes with up to 19.41% gain in Precision, 60.20% gain in Recall, 43.48% gain in mAP@. 5 and 46.86% gain in mAP@.5:.95 for some classes. © 2024 IEEE."
+    },
+    {
+      "paper_id": "paper_000003",
+      "title": "Detection and Identification of Strip Surface Defects Based on Deep Learning",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确研究带钢表面缺陷检测，使用深度学习改进Faster R-CNN算法，符合研究对象和核心技术要求。",
+      "year": 2022,
+      "journal": "Proceedings - 2022 International Conference on Machine Learning and Intelligent Systems Engineering, MLISE 2022",
+      "doi": "10.1109/mlise57402.2022.00086",
+      "abstract": "As one of the important product forms in the steel industry, strip steel plays an irreplaceable role in daily production and life. However, in real life, due to the use of raw materials and the manufacturing process, there are many defects on the surface of strip steel. These defects will not only affect the appearance of strip steel, but also cause significant economic losses. Therefore, it is particularly important to accurately detect these defects on the surface of strip steel. Aiming at the problem that there are many tiny defects in strip steel, which can easily lead to missed detection, this paper improves it based on Faster R-CNN detection algorithm, uses ResNet50+FPN method to extract features to prevent missing tiny defect details, and uses ROI Align instead of ROI Pooling to perform pool operation of defect location. Because the position deviation caused by the two quantization operations of ROI Pooling can prevent the slight defect of missing detection, the experimental verification finally shows that the improved measures effectively improve the accuracy of strip surface detection compared with the previous detection algorithm. © 2022 IEEE."
+    },
+    {
+      "paper_id": "paper_000004",
+      "title": "Synthetic Data for Defect Segmentation on Complex Metal Surfaces",
+      "decision": "uncertain",
+      "confidence": 0.45,
+      "reason": "摘要涉及金属缺陷分割和合成数据生成，但未明确研究对象是否为冷轧带钢，且未详细说明是否使用前沿深度学习方法解决工业痛点。",
+      "year": 2023,
+      "journal": "IEEE Computer Society Conference on Computer Vision and Pattern Recognition Workshops",
+      "doi": "10.1109/cvprw59228.2023.00465",
+      "abstract": "Metal defect segmentation poses a great challenge for automated inspection systems due to the complex light reflection from the surface and lack of training data. In this work we introduce a real and synthetic defect segmentation dataset pair for multi-view inspection of a metal clutch part to overcome data shortage. Model pre-training on our synthetic dataset was compared to similar inspection datasets in the literature. Two techniques are presented to increase model training efficiency and prediction coverage in darker areas of the image. Results were collected over three popular segmentation architectures to confirm superior effectiveness of synthetic data and unveil various challenges of multi-view inspection. © 2023 IEEE."
+    },
+    {
+      "paper_id": "paper_000005",
+      "title": "Multiple Prototype Guided Enhanced Network for Few-Shot Steel Surface Defect Segmentation",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究钢铁表面缺陷分割，提出小样本分割网络MPENet解决数据稀缺问题，符合研究对象、核心技术和工业痛点要求。",
+      "year": 2024,
+      "journal": "2024 5th International Conference on Computer Vision, Image and Deep Learning, CVIDL 2024",
+      "doi": "10.1109/cvidl62147.2024.10604061",
+      "abstract": "Few-shot semantic segmentation techniques can effectively alleviate the high data costs associated with industrial applications. The task of metal surface defect segmentation, due to the numerous types of defects and limited data availability, is highly suited for the application of few-shot semantic segmentation techniques. However, current methods for handling multiple defects in support images may result in semantic shifts in the global prototype due to mask average pooling (MAP). In this paper, we propose the Multiple Prototype Guided Enhanced Network (MPENet). We propose a multiple prototype mask average mask pooling (Multi-MAP) operation to extract each defect region as a prototype and guidance enhancement module to leverage these multiple prototypes to enhance the global prototype. The final experimental results demonstrate that MPENet can achieves state-of-the-art performance on the FSSD12 dataset with minimal increase in learnable parameters. © 2024 IEEE."
+    },
+    {
+      "paper_id": "paper_000006",
+      "title": "Metal Surface Defect Detection based on Variable Mask Ratio Multi-scale Reconstruction",
+      "decision": "include",
+      "confidence": 0.92,
+      "reason": "标题和摘要明确研究金属表面缺陷检测，提出基于Transformer的半监督异常检测方法解决域偏移和样本不足问题，符合研究对象、核心技术和工业痛点要求。",
+      "year": 2025,
+      "journal": "ICMR 2025 - Proceedings of the 2025 International Conference on Multimedia Retrieval",
+      "doi": "10.1145/3731715.3733485",
+      "abstract": "Metal surface defect detection plays a critical role in ensuring product quality in industrial manufacturing. Traditional detection methods often suffer from incomplete feature extraction and limited defective samples, hindering the performance of supervised learning. This paper explores the potential of Vision Transformer (ViT) for metal surface defect detection by addressing domain shift issues and improving training speed. We propose a semi-supervised anomaly detection method based on a Transformer network, using a variable masking ratio to integrate generative modeling with representation learning. By fusing features from a convolutional-Transformer encoder, we utilize a feature pyramid network and a frozen pre-trained hierarchical encoder to generate multi-scale features. By employing these technologies, the proposed method captures fine-grained anomalies effectively, providing a robust solution for detecting diverse defect types. The experimental results on benchmark datasets demonstrate that the proposed method outperforms state-of-the-art defect detection techniques. © 2025 ACM."
+    },
+    {
+      "paper_id": "paper_000007",
+      "title": "Hot-Rolled Steel Strip Defect Classification Based on ResNet34 Model",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要明确研究对象是热轧钢带而非冷轧带钢，且方法为改进ResNet34模型，未涉及筛选主题要求的前沿深度学习方向。",
+      "year": 2023,
+      "journal": "Proceedings - 2023 2nd International Conference on Machine Learning, Cloud Computing, and Intelligent Mining, MLCCIM 2023",
+      "doi": "10.1109/mlccim60412.2023.00025",
+      "abstract": "Currently, the classification accuracy of surface defect images of hot-rolled steel strips is not high. To improve the accuracy and rate of surface defect classification of hot-rolled steel strips, we propose a surface defect classification method for hot rolled steel strips by embedding the attention mechanism into ResNet34 model. The experiment will classify 6 kinds of hot-rolled steel strip defects. To better learn relevant information and extract relevant features, a CBAM attention module is embedded on the basis of ResNet34. The module can learn the characteristic information of channel and space better, so as to enhance the network performance. Results of the experiment indicate that this approach can enhance the classification accuracy and has a quicker convergence rate. This method has a certain degree of application value. © 2023 IEEE."
+    }
+  ],
+  "project_id": "7a77f9d53499",
+  "project_topic": "基于深度学习的冷轧带钢表面缺陷检测与分析",
+  "model_provider": "deepseek",
+  "parent_task_id": null,
+  "input_dataset_ids": [],
+  "output_dataset_ids": [
+    "51ca87678208",
+    "d861d8cb9562"
+  ]
+}

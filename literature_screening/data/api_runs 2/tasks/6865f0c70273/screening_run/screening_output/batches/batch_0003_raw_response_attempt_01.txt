@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0003",
+    "results": [
+        {
+            "paper_id": "paper_000021",
+            "decision": "exclude",
+            "reason": "标题和摘要未明确提及血脑屏障或相关模型，主要关注隐球菌的全局表型研究。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000022",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦临床试验决策的社会科学分析，未探讨隐球菌侵袭血脑屏障的机制或模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000023",
+            "decision": "include",
+            "reason": "标题和摘要明确研究隐球菌血脑屏障穿越机制，涉及血管内增殖和子细胞迁移等深层机制。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000024",
+            "decision": "exclude",
+            "理由": "标题和摘要为法医病理学病例报告，未深入探讨血脑屏障机制或模型构建。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000025",
+            "decision": "exclude",
+            "reason": "标题和摘要研究隐球菌对CO2的微进化适应，未提及血脑屏障或相关模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000026",
+            "decision": "exclude",
+            "reason": "标题和摘要探讨隐球菌通过TOR通路适应宿主CO2环境，未涉及血脑屏障机制或模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000027",
+            "decision": "exclude",
+            "reason": "标题和摘要研究隐球菌临床分离株在小鼠模型中的超毒力表型，未聚焦血脑屏障机制或模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000028",
+            "decision": "exclude",
+            "reason": "标题和摘要为糖尿病与隐球菌脑膜炎患者死亡风险的临床回顾研究，未探讨机制或模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000029",
+            "decision": "exclude",
+            "reason": "标题和摘要研究ER-线粒体连接结构对隐球菌药物敏感性和毒力的影响，未涉及血脑屏障。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000030",
+            "decision": "uncertain",
+            "reason": "摘要提到隐球菌感知脑葡萄糖影响药物耐受，可能与血脑屏障环境相关，但信息不足。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        }
+    ]
+}

@@ -1,0 +1,93 @@
+[
+  {
+    "id": "cd9ed19ad073",
+    "kind": "task-created",
+    "message": "Created screening task",
+    "metadata": {
+      "title": "人工智能（AI）与扩展现实（XR）技术在猫咪及动物交互中的应用（涵盖虚拟宠物与实体动物交互）"
+    },
+    "created_at": "2026-03-23T18:00:48.490937+08:00"
+  },
+  {
+    "id": "66e8af0dee4d",
+    "kind": "task-started",
+    "message": "Task execution started",
+    "metadata": {
+      "attempt_count": 1
+    },
+    "created_at": "2026-03-23T18:00:48.494944+08:00"
+  },
+  {
+    "id": "3be662e5c264",
+    "kind": "task-failed",
+    "message": "Missing API key in environment variable: DEEPSEEK_API_KEY",
+    "metadata": {
+      "error_type": "ModelRequestError"
+    },
+    "created_at": "2026-03-23T18:01:51.894206+08:00"
+  },
+  {
+    "id": "d64cb75f9692",
+    "kind": "task-retry",
+    "message": "Retry scheduled",
+    "metadata": {
+      "attempt_count": 2
+    },
+    "created_at": "2026-03-23T18:03:54.034423+08:00"
+  },
+  {
+    "id": "766c52d83580",
+    "kind": "task-started",
+    "message": "Task execution started",
+    "metadata": {
+      "attempt_count": 2
+    },
+    "created_at": "2026-03-23T18:03:54.037907+08:00"
+  },
+  {
+    "id": "440ed5bf31f8",
+    "kind": "task-failed",
+    "message": "Missing API key in environment variable: DEEPSEEK_API_KEY",
+    "metadata": {
+      "error_type": "ModelRequestError"
+    },
+    "created_at": "2026-03-23T18:04:57.268659+08:00"
+  },
+  {
+    "id": "d65ec885bfcd",
+    "kind": "task-retry",
+    "message": "Retry scheduled",
+    "metadata": {
+      "attempt_count": 3
+    },
+    "created_at": "2026-03-23T18:08:54.882183+08:00"
+  },
+  {
+    "id": "31021c72cf77",
+    "kind": "task-started",
+    "message": "Task execution started",
+    "metadata": {
+      "attempt_count": 3
+    },
+    "created_at": "2026-03-23T18:08:54.886189+08:00"
+  },
+  {
+    "id": "876d42bddd24",
+    "kind": "datasets-registered",
+    "message": "Registered screening output datasets",
+    "metadata": {
+      "output_dataset_ids": [
+        "c05f6447b961",
+        "9b018b2275af"
+      ]
+    },
+    "created_at": "2026-03-23T18:11:10.362915+08:00"
+  },
+  {
+    "id": "7ce156ab2410",
+    "kind": "task-succeeded",
+    "message": "Task completed successfully",
+    "metadata": {},
+    "created_at": "2026-03-23T18:11:10.363914+08:00"
+  }
+]

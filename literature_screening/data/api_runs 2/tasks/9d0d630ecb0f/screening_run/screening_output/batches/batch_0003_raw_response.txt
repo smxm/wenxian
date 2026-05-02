@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0003",
+    "results": [
+        {
+            "paper_id": "paper_000021",
+            "decision": "include",
+            "reason": "标题和摘要明确提及免疫检查点抑制剂诱导的葡萄膜炎，类似VKH综合征，符合自身免疫性疾病背景和眼部表现主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000022",
+            "decision": "include",
+            "reason": "标题和摘要明确研究自身免疫性葡萄膜炎，并使用VKH患者样本，符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000023",
+            "decision": "include",
+            "reason": "标题和摘要明确研究VKH疾病，探讨阿达木单抗对慢性复发性VKH的疗效，符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000024",
+            "decision": "exclude",
+            "reason": "标题和摘要仅涉及自身免疫性甲状腺疾病与全身健康结局的系统综述，未提及眼部表现。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000025",
+            "decision": "include",
+            "reason": "标题和摘要明确研究SLE患者，并探讨羟氯喹视网膜病变，符合自身免疫性疾病背景和眼部表现主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000026",
+            "decision": "exclude",
+            "reason": "标题和摘要研究甲状腺激素对视网膜胶质细胞的影响，缺乏明确的自身免疫或自身炎症性疾病背景。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000027",
+            "decision": "include",
+            "reason": "标题和摘要明确综述SLE治疗药物的眼科安全性，符合自身免疫性疾病背景和眼部表现主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000028",
+            "decision": "include",
+            "reason": "摘要明确提及VKH疾病作为研究对象，探讨感染与神经炎症疾病的关系，符合纳入标准。",
+            "evidence": ["abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000029",
+            "decision": "uncertain",
+            "reason": "摘要提及立克次体与自身免疫疾病（包括葡萄膜炎和SLE）的关联，但研究焦点是生物信息学分析和抑制剂筛选，眼部表现信息不足。",
+            "evidence": ["abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000030",
+            "decision": "include",
+            "reason": "摘要明确提及胶原IV和层粘连蛋白-1在自身免疫性疾病（如SLE）引起的眼部并发症中的作用，符合纳入标准。",
+            "evidence": ["abstract"],
+            "confidence": 0.85
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+{
+    "batch_id": "batch_0005",
+    "results": [
+        {
+            "paper_id": "paper_000041",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及游戏化策略在打击乐活动中的应用，关键词包含游戏化教学，符合音乐教育中的游戏化应用主题。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000042",
+            "decision": "uncertain",
+            "reason": "标题和摘要涉及游戏教学法在音乐课中的应用，但未明确提及音乐鉴赏或具体游戏化机制，信息不足以确认是否完全符合纳入标准。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000043",
+            "decision": "uncertain",
+            "reason": "摘要提到游戏化教学活动设计，但未明确说明具体游戏化机制或聚焦于音乐鉴赏课，主题相关性存在但信息不足。",
+            "evidence": ["abstract"],
+            "confidence": 0.5
+        }
+    ]
+}

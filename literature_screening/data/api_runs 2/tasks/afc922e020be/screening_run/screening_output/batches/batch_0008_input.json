@@ -1,0 +1,311 @@
+{
+  "batch_id": "batch_0008",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000071",
+    "paper_000072",
+    "paper_000073",
+    "paper_000074",
+    "paper_000075",
+    "paper_000076",
+    "paper_000077",
+    "paper_000078",
+    "paper_000079",
+    "paper_000080"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000071",
+      "entry_type": "article",
+      "title": "A retrieval-augmented chatbot based on GPT-4 provides appropriate differential diagnosis in gastrointestinal radiology: a proof of concept study",
+      "authors": [
+        "Rau, S.",
+        "Rau, A.",
+        "Nattenmüller, J.",
+        "Fink, A.",
+        "Bamberg, F.",
+        "Reisert, M.",
+        "Russe, M.F."
+      ],
+      "year": 2024,
+      "journal": "European Radiology Experimental",
+      "doi": "10.1186/s41747-024-00457-x",
+      "abstract": "Background: We investigated the potential of an imaging-aware GPT-4-based chatbot in providing diagnoses based on imaging descriptions of abdominal pathologies. Methods: Utilizing zero-shot learning via the LlamaIndex framework, GPT-4 was enhanced using the 96 documents from the Radiographics Top 10 Reading List on gastrointestinal imaging, creating a gastrointestinal imaging-aware chatbot (GIA-CB). To assess its diagnostic capability, 50 cases on a variety of abdominal pathologies were created, comprising radiological findings in fluoroscopy, MRI, and CT. We compared the GIA-CB to the generic GPT-4 chatbot (g-CB) in providing the primary and 2 additional differential diagnoses, using interpretations from senior-level radiologists as ground truth. The trustworthiness of the GIA-CB was evaluated by investigating the source documents as provided by the knowledge-retrieval mechanism. Mann–Whitney U test was employed. Results: The GIA-CB demonstrated a high capability to identify the most appropriate differential diagnosis in 39/50 cases (78%), significantly surpassing the g-CB in 27/50 cases (54%) (p = 0.006). Notably, the GIA-CB offered the primary differential in the top 3 differential diagnoses in 45/50 cases (90%) versus g-CB with 37/50 cases (74%) (p = 0.022) and always with appropriate explanations. The median response time was 29.8 s for GIA-CB and 15.7 s for g-CB, and the mean cost per case was $0.15 and $0.02, respectively. Conclusions: The GIA-CB not only provided an accurate diagnosis for gastrointestinal pathologies, but also direct access to source documents, providing insight into the decision-making process, a step towards trustworthy and explainable AI. Integrating context-specific data into AI models can support evidence-based clinical decision-making. Relevance statement: A context-aware GPT-4 chatbot demonstrates high accuracy in providing differential diagnoses based on imaging descriptions, surpassing the generic GPT-4. It provided formulated rationale and source excerpts supporting the diagnoses, thus enhancing trustworthy decision-support. Key points: • Knowledge retrieval enhances differential diagnoses in a gastrointestinal imaging-aware chatbot (GIA-CB). • GIA-CB outperformed the generic counterpart, providing formulated rationale and source excerpts. • GIA-CB has the potential to pave the way for AI-assisted decision support systems. Graphical Abstract: (Figure presented.) © The Author(s) 2024.",
+      "keywords": [],
+      "normalized_title": "a retrieval augmented chatbot based on gpt 4 provides appropriate differential diagnosis in gastrointestinal radiology a proof of concept study",
+      "raw_bibtex": "@ARTICLE{10.1186/s41747-024-00457-x,\n\tauthor = {Rau, S. and Rau, A. and Nattenmüller, J. and Fink, A. and Bamberg, F. and Reisert, M. and Russe, M.F.},\n\ttitle = {A retrieval-augmented chatbot based on GPT-4 provides appropriate differential diagnosis in gastrointestinal radiology: a proof of concept study},\n\tjournal = {European Radiology Experimental},\n\tyear = {2024},\n\tabstract = {Background: We investigated the potential of an imaging-aware GPT-4-based chatbot in providing diagnoses based on imaging descriptions of abdominal pathologies. Methods: Utilizing zero-shot learning via the LlamaIndex framework, GPT-4 was enhanced using the 96 documents from the Radiographics Top 10 Reading List on gastrointestinal imaging, creating a gastrointestinal imaging-aware chatbot (GIA-CB). To assess its diagnostic capability, 50 cases on a variety of abdominal pathologies were created, comprising radiological findings in fluoroscopy, MRI, and CT. We compared the GIA-CB to the generic GPT-4 chatbot (g-CB) in providing the primary and 2 additional differential diagnoses, using interpretations from senior-level radiologists as ground truth. The trustworthiness of the GIA-CB was evaluated by investigating the source documents as provided by the knowledge-retrieval mechanism. Mann–Whitney U test was employed. Results: The GIA-CB demonstrated a high capability to identify the most appropriate differential diagnosis in 39/50 cases (78%), significantly surpassing the g-CB in 27/50 cases (54%) (p = 0.006). Notably, the GIA-CB offered the primary differential in the top 3 differential diagnoses in 45/50 cases (90%) versus g-CB with 37/50 cases (74%) (p = 0.022) and always with appropriate explanations. The median response time was 29.8 s for GIA-CB and 15.7 s for g-CB, and the mean cost per case was $0.15 and $0.02, respectively. Conclusions: The GIA-CB not only provided an accurate diagnosis for gastrointestinal pathologies, but also direct access to source documents, providing insight into the decision-making process, a step towards trustworthy and explainable AI. Integrating context-specific data into AI models can support evidence-based clinical decision-making. Relevance statement: A context-aware GPT-4 chatbot demonstrates high accuracy in providing differential diagnoses based on imaging descriptions, surpassing the generic GPT-4. It provided formulated rationale and source excerpts supporting the diagnoses, thus enhancing trustworthy decision-support. Key points: • Knowledge retrieval enhances differential diagnoses in a gastrointestinal imaging-aware chatbot (GIA-CB). • GIA-CB outperformed the generic counterpart, providing formulated rationale and source excerpts. • GIA-CB has the potential to pave the way for AI-assisted decision support systems. Graphical Abstract: (Figure presented.) © The Author(s) 2024.},\n\tdoi = {10.1186/s41747-024-00457-x},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85193486029&doi=10.1186%2Fs41747-024-00457-x&partnerID=40&md5=83dd33b9e29516d8c4fe14978242810a},\n\tvolume = {8},\n\tnumber = {1},\n\tnote = {Export Date: 26 March 2026; Cited By: 23 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 26-2026_6db3994d-95a4-4980-a82f-a01d00b04aea.ris"
+      ],
+      "source_keys": [
+        "10.1186/s41747-024-00457-x"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000072",
+      "entry_type": "article",
+      "title": "The spectrum of imaging features regarding Crohn's Disease Complications with CT and MR Enterography. A Pictorial Essay",
+      "authors": [
+        "Tzamouri, S.",
+        "Lazaridou, E.",
+        "Lerios, P.",
+        "Kalaitzidou, E.",
+        "Tavernaraki, A.",
+        "Exarhos, D."
+      ],
+      "year": 2025,
+      "journal": "Hellenic Journal of Radiology",
+      "doi": "10.36162/hjr.v10i3.46",
+      "abstract": "Crohn's disease is a chronic inflammatory disorder of the gastrointestinal tract that presents significant diagnostic challenges due to its varied manifestations and potential complications. Accurate and timely imaging is essential for assessing disease activity and managing mural and extra-intestinal abnormalities effectively. CT and MR enterography are crucial in diagnosing and evaluating the complications of Crohn’s disease, providing detailed insights into disease extent while offering comprehensive anatomical and functional information non-invasively. This pictorial essay illustrates the spectrum of imaging features associated with Crohn’s disease complications, from segmental mural hyperenhancement and strictures to penetrating manifestations such as fistulas and abscess-es. Additional focus is given in identifying Crohn's-related appendicitis, post-surgical recurrence, and the rare devel-opment of carcinoma. By understanding the distinctive imaging features and procedural nuances of CT and MR enterography, radiologists can better tailor therapeutic strategies, ultimately improving patient outcomes. © 2025, ZITA Medical Management. All rights reserved.",
+      "keywords": [],
+      "normalized_title": "the spectrum of imaging features regarding crohn s disease complications with ct and mr enterography a pictorial essay",
+      "raw_bibtex": "@ARTICLE{10.36162/hjr.v10i3.46,\n\tauthor = {Tzamouri, S. and Lazaridou, E. and Lerios, P. and Kalaitzidou, E. and Tavernaraki, A. and Exarhos, D.},\n\ttitle = {The spectrum of imaging features regarding Crohn's Disease Complications with CT and MR Enterography. A Pictorial Essay},\n\tjournal = {Hellenic Journal of Radiology},\n\tyear = {2025},\n\tabstract = {Crohn's disease is a chronic inflammatory disorder of the gastrointestinal tract that presents significant diagnostic challenges due to its varied manifestations and potential complications. Accurate and timely imaging is essential for assessing disease activity and managing mural and extra-intestinal abnormalities effectively. CT and MR enterography are crucial in diagnosing and evaluating the complications of Crohn’s disease, providing detailed insights into disease extent while offering comprehensive anatomical and functional information non-invasively. This pictorial essay illustrates the spectrum of imaging features associated with Crohn’s disease complications, from segmental mural hyperenhancement and strictures to penetrating manifestations such as fistulas and abscess-es. Additional focus is given in identifying Crohn's-related appendicitis, post-surgical recurrence, and the rare devel-opment of carcinoma. By understanding the distinctive imaging features and procedural nuances of CT and MR enterography, radiologists can better tailor therapeutic strategies, ultimately improving patient outcomes. © 2025, ZITA Medical Management. All rights reserved.},\n\tdoi = {10.36162/hjr.v10i3.46},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105023532826&doi=10.36162%2Fhjr.v10i3.46&partnerID=40&md5=e749e34db29d5c5157c87c6715b0b878},\n\tvolume = {10},\n\tnumber = {3},\n\tpages = {45-54},\n\tnote = {Export Date: 26 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 26-2026_6db3994d-95a4-4980-a82f-a01d00b04aea.ris"
+      ],
+      "source_keys": [
+        "10.36162/hjr.v10i3.46"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000073",
+      "entry_type": "article",
+      "title": "The adequacy of fluoroscopic upper gastrointestinal studies for suspected intestinal volvulus in a tertiary care centre vs. secondary centres: A regional multicentre study",
+      "authors": [
+        "Bollard, K.A.",
+        "Valsenti, G.",
+        "Healey, D.",
+        "Murdoch, J."
+      ],
+      "year": 2021,
+      "journal": "Journal of Medical Imaging and Radiation Oncology",
+      "doi": "10.1111/1754-9485.13156",
+      "abstract": "Introduction: Early diagnosis and treatment of intestinal volvulus are important to reduce morbidity. A fluoroscopic upper GI study is the gold standard for diagnosis and may be performed in a secondary or tertiary care centre prior to surgery. It is important the reporting radiologist is confident in the findings. We aim to assess whether there is any difference in confidence and study quality between paediatric and general radiologists who work in secondary or tertiary care centres. Methods: Retrospective review of initial radiology reports and blinded review of the study images by paediatric radiologists. Results: A total of 277 children underwent a fluoroscopic study for intestinal volvulus over a four-year period. The majority were performed at a tertiary care centre, by paediatric radiologists. The confidence of initial reporting was higher in paediatric than general radiologists despite whether they worked in a secondary or tertiary care centre (P-value < 0.001). On retrospective review, studies performed by paediatric radiologists were rated as having a higher confidence in identifying the location of the duodenojejunal flexure. General radiologists tended to have a slightly higher rate of repeat studies but still low at 2.2%. Despite this, there was no significant difference in the diagnosis rates and secondary centre general radiologists excluded malrotation in 62% of studies likely reducing transfer rates. Conclusion: Confidence in initial reporting and on review of the duodenojejunal flexure location in suspected intestinal volvulus is higher in paediatric radiologists compared with general radiologists, although diagnosis rates are no different. © 2021 The Royal Australian and New Zealand College of Radiologists",
+      "keywords": [],
+      "normalized_title": "the adequacy of fluoroscopic upper gastrointestinal studies for suspected intestinal volvulus in a tertiary care centre vs secondary centres a regional multicentre study",
+      "raw_bibtex": "@ARTICLE{10.1111/1754-9485.13156,\n\tauthor = {Bollard, K.A. and Valsenti, G. and Healey, D. and Murdoch, J.},\n\ttitle = {The adequacy of fluoroscopic upper gastrointestinal studies for suspected intestinal volvulus in a tertiary care centre vs. secondary centres: A regional multicentre study},\n\tjournal = {Journal of Medical Imaging and Radiation Oncology},\n\tyear = {2021},\n\tabstract = {Introduction: Early diagnosis and treatment of intestinal volvulus are important to reduce morbidity. A fluoroscopic upper GI study is the gold standard for diagnosis and may be performed in a secondary or tertiary care centre prior to surgery. It is important the reporting radiologist is confident in the findings. We aim to assess whether there is any difference in confidence and study quality between paediatric and general radiologists who work in secondary or tertiary care centres. Methods: Retrospective review of initial radiology reports and blinded review of the study images by paediatric radiologists. Results: A total of 277 children underwent a fluoroscopic study for intestinal volvulus over a four-year period. The majority were performed at a tertiary care centre, by paediatric radiologists. The confidence of initial reporting was higher in paediatric than general radiologists despite whether they worked in a secondary or tertiary care centre (P-value < 0.001). On retrospective review, studies performed by paediatric radiologists were rated as having a higher confidence in identifying the location of the duodenojejunal flexure. General radiologists tended to have a slightly higher rate of repeat studies but still low at 2.2%. Despite this, there was no significant difference in the diagnosis rates and secondary centre general radiologists excluded malrotation in 62% of studies likely reducing transfer rates. Conclusion: Confidence in initial reporting and on review of the duodenojejunal flexure location in suspected intestinal volvulus is higher in paediatric radiologists compared with general radiologists, although diagnosis rates are no different. © 2021 The Royal Australian and New Zealand College of Radiologists},\n\tdoi = {10.1111/1754-9485.13156},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85101743662&doi=10.1111%2F1754-9485.13156&partnerID=40&md5=c5f7d3916bea13ed7546f37621f6db83},\n\tvolume = {65},\n\tnumber = {3},\n\tpages = {293-300},\n\tnote = {Export Date: 26 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 26-2026_6db3994d-95a4-4980-a82f-a01d00b04aea.ris"
+      ],
+      "source_keys": [
+        "10.1111/1754-9485.13156"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000074",
+      "entry_type": "article",
+      "title": "Primary Vaginal Mucinous Adenocarcinoma of Intestinal Type—Clinical, Radiological and Morphological Aspects",
+      "authors": [
+        "Betova, T.",
+        "Trifonov, R.",
+        "Popovska, S.",
+        "Yordanov, A.",
+        "Karakadieva, K.",
+        "Dancheva, Z.",
+        "Kostov, S."
+      ],
+      "year": 2024,
+      "journal": "Medicina (Lithuania)",
+      "doi": "10.3390/medicina60040525",
+      "abstract": "Background and Objectives: Neoplasms of the vagina are rare and account for 1–2% of all tumors of the female reproductive system. Primary neoplasms of the vagina are most often carcinomas originating from squamous or glandular epithelium. Of the primary glandular tumors, clear cell, endometrioid, and serous adenocarcinomas are the most common types, while mucinous and mesonephric types are very rare. Mucinous adenocarcinoma is histologically subclassified into endocervical and intestinal types. We add to the existing literature another case of an extremely rare gynecological neoplasm—primary vaginal mucinous adenocarcinoma (PVMAC) intestinal type associated with vaginal villous adenoma with high-grade dysplasia. We discuss the clinical, radiological and morphological features of this rare entity. Materials and Methods: We report a case of a 59-year-old woman with PVMAC intestinal type associated with vaginal villous adenoma with high-grade dysplasia. The patient was evaluated with a gynecological exam, and biopsy, curettage and tumor excision were performed. The positron emission tomography-computed tomography (PET/CT) scan, at the level of the pelvis, supported the primary location of the disease. Histological and immunohistochemical methods were applied. Results: The gynecological examination of the vagina revealed an exophytic polypoid mass with a diameter of 3 cm, located on the posterior wall, in the area of introitus vaginae. The PET/CT scan revealed a hypermetabolic malignant formation involving the vagina and anal canal, without evidence of pelvic and inguinal lymphadenopathy, and also, it excluded disease at sites other than the vagina. The histological and immunohistochemical investigations, as well as the clinical and radiological data, lent support to the diagnosis “primary vaginal mucinous adenocarcinoma intestinal type”. Conclusions: PVMAC intestinal type is a rare gynecological pathology, which presents a serious challenge for oncogynecologists, radiologists and pathologists. © 2024 by the authors.",
+      "keywords": [],
+      "normalized_title": "primary vaginal mucinous adenocarcinoma of intestinal type clinical radiological and morphological aspects",
+      "raw_bibtex": "@ARTICLE{10.3390/medicina60040525,\n\tauthor = {Betova, T. and Trifonov, R. and Popovska, S. and Yordanov, A. and Karakadieva, K. and Dancheva, Z. and Kostov, S.},\n\ttitle = {Primary Vaginal Mucinous Adenocarcinoma of Intestinal Type—Clinical, Radiological and Morphological Aspects},\n\tjournal = {Medicina (Lithuania)},\n\tyear = {2024},\n\tabstract = {Background and Objectives: Neoplasms of the vagina are rare and account for 1–2% of all tumors of the female reproductive system. Primary neoplasms of the vagina are most often carcinomas originating from squamous or glandular epithelium. Of the primary glandular tumors, clear cell, endometrioid, and serous adenocarcinomas are the most common types, while mucinous and mesonephric types are very rare. Mucinous adenocarcinoma is histologically subclassified into endocervical and intestinal types. We add to the existing literature another case of an extremely rare gynecological neoplasm—primary vaginal mucinous adenocarcinoma (PVMAC) intestinal type associated with vaginal villous adenoma with high-grade dysplasia. We discuss the clinical, radiological and morphological features of this rare entity. Materials and Methods: We report a case of a 59-year-old woman with PVMAC intestinal type associated with vaginal villous adenoma with high-grade dysplasia. The patient was evaluated with a gynecological exam, and biopsy, curettage and tumor excision were performed. The positron emission tomography-computed tomography (PET/CT) scan, at the level of the pelvis, supported the primary location of the disease. Histological and immunohistochemical methods were applied. Results: The gynecological examination of the vagina revealed an exophytic polypoid mass with a diameter of 3 cm, located on the posterior wall, in the area of introitus vaginae. The PET/CT scan revealed a hypermetabolic malignant formation involving the vagina and anal canal, without evidence of pelvic and inguinal lymphadenopathy, and also, it excluded disease at sites other than the vagina. The histological and immunohistochemical investigations, as well as the clinical and radiological data, lent support to the diagnosis “primary vaginal mucinous adenocarcinoma intestinal type”. Conclusions: PVMAC intestinal type is a rare gynecological pathology, which presents a serious challenge for oncogynecologists, radiologists and pathologists. © 2024 by the authors.},\n\tdoi = {10.3390/medicina60040525},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85191287561&doi=10.3390%2Fmedicina60040525&partnerID=40&md5=54ff04d04e4bb16a0f9021ffb7ffd29b},\n\tvolume = {60},\n\tnumber = {4},\n\tnote = {Export Date: 26 March 2026; Cited By: 3 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 26-2026_6db3994d-95a4-4980-a82f-a01d00b04aea.ris"
+      ],
+      "source_keys": [
+        "10.3390/medicina60040525"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000075",
+      "entry_type": "article",
+      "title": "Comparison of Radiomics and Deep Learning Using Intestinal Ultrasound Images for Differentiating Inflammatory and Fibrotic Intestinal Strictures in Crohn’s Disease",
+      "authors": [
+        "Zhou, R.",
+        "Shi, J.",
+        "Qin, J.",
+        "Xue, X.",
+        "Zhou, W.",
+        "Zhao, X.",
+        "He, X.",
+        "Ma, L.",
+        "Zhou, M.",
+        "Guo, C.",
+        "Bai, X.",
+        "Zhu, Q.",
+        "Yang, H."
+      ],
+      "year": 2025,
+      "journal": "Journal of Inflammation Research",
+      "doi": "10.2147/jir.s546832",
+      "abstract": "Background: Intestinal strictures represent a significant complication in Crohn’s disease (CD), and accurate differentiation between inflammatory and fibrotic strictures is critical for effective treatment planning. Intestinal ultrasound (IUS) assists in diagnosing and monitoring strictures in CD, yet it faces limitations in distinguishing stricture types. This study aimed to compare radiomics-based and deep learning-based approaches for classifying bowel strictures using IUS images. Methods: We conducted a retrospective analysis of 64 CD patients who underwent surgery between 2018 and 2023. A total of 87 ultrasound images were evaluated using radiomics and deep learning methodologies. We used 5-fold cross-validation, where in each fold, the training set was used for feature extraction and diagnostic model construction, and the test set was used to evaluate model performance. Model performances were assessed through accuracy, sensitivity, specificity, and the area under the ROC curve. Additionally, two experienced radiologists independently evaluated the nature of the strictures, and their assessments were compared with the models. Histopathological analysis via Masson’s trichrome staining served as the reference standard. Results: Results indicated the deep learning-based model had superior performance, achieving an accuracy of 83.3%, sensitivity of 88.9%, and specificity of 77.8%, outperforming the radiomics-based approach, which achieved an accuracy of 67.0%. Although expert evaluations provided the highest specificity (86.7%), the deep learning model demonstrated overall superior accuracy compared to both radiomics and expert predictions. Class Activation Mapping highlighted effective feature identification, enhancing discrimination between inflammatory and fibrotic strictures. Conclusion: This pioneering research applies deep learning and radiomics to intestinal ultrasound for the first time to distinguish the types of bowel strictures. The real-time visualization of deep learning attention maps (class activation maps) effectively highlights discriminative pathological regions and enhances interpretability, demonstrating strong potential to support clinical decision-making in intestinal stricture classification. © 2025 Zhou et al.",
+      "keywords": [],
+      "normalized_title": "comparison of radiomics and deep learning using intestinal ultrasound images for differentiating inflammatory and fibrotic intestinal strictures in crohn s disease",
+      "raw_bibtex": "@ARTICLE{10.2147/JIR.S546832,\n\tauthor = {Zhou, R. and Shi, J. and Qin, J. and Xue, X. and Zhou, W. and Zhao, X. and He, X. and Ma, L. and Zhou, M. and Guo, C. and Bai, X. and Zhu, Q. and Yang, H.},\n\ttitle = {Comparison of Radiomics and Deep Learning Using Intestinal Ultrasound Images for Differentiating Inflammatory and Fibrotic Intestinal Strictures in Crohn’s Disease},\n\tjournal = {Journal of Inflammation Research},\n\tyear = {2025},\n\tabstract = {Background: Intestinal strictures represent a significant complication in Crohn’s disease (CD), and accurate differentiation between inflammatory and fibrotic strictures is critical for effective treatment planning. Intestinal ultrasound (IUS) assists in diagnosing and monitoring strictures in CD, yet it faces limitations in distinguishing stricture types. This study aimed to compare radiomics-based and deep learning-based approaches for classifying bowel strictures using IUS images. Methods: We conducted a retrospective analysis of 64 CD patients who underwent surgery between 2018 and 2023. A total of 87 ultrasound images were evaluated using radiomics and deep learning methodologies. We used 5-fold cross-validation, where in each fold, the training set was used for feature extraction and diagnostic model construction, and the test set was used to evaluate model performance. Model performances were assessed through accuracy, sensitivity, specificity, and the area under the ROC curve. Additionally, two experienced radiologists independently evaluated the nature of the strictures, and their assessments were compared with the models. Histopathological analysis via Masson’s trichrome staining served as the reference standard. Results: Results indicated the deep learning-based model had superior performance, achieving an accuracy of 83.3%, sensitivity of 88.9%, and specificity of 77.8%, outperforming the radiomics-based approach, which achieved an accuracy of 67.0%. Although expert evaluations provided the highest specificity (86.7%), the deep learning model demonstrated overall superior accuracy compared to both radiomics and expert predictions. Class Activation Mapping highlighted effective feature identification, enhancing discrimination between inflammatory and fibrotic strictures. Conclusion: This pioneering research applies deep learning and radiomics to intestinal ultrasound for the first time to distinguish the types of bowel strictures. The real-time visualization of deep learning attention maps (class activation maps) effectively highlights discriminative pathological regions and enhances interpretability, demonstrating strong potential to support clinical decision-making in intestinal stricture classification. © 2025 Zhou et al.},\n\tdoi = {10.2147/JIR.S546832},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-105022744395&doi=10.2147%2FJIR.S546832&partnerID=40&md5=f8753d6ed5edf66d6fc9811b14aab164},\n\tvolume = {18},\n\tpages = {16399-16410},\n\tnote = {Export Date: 26 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 26-2026_6db3994d-95a4-4980-a82f-a01d00b04aea.ris"
+      ],
+      "source_keys": [
+        "10.2147/JIR.S546832"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000076",
+      "entry_type": "article",
+      "title": "Contrast-Enhanced Ultrasound in Small Intestinal Ischemia: Proof of Concept",
+      "authors": [
+        "Gummadi, S.",
+        "Koenig, G.",
+        "Wessner, C.E.",
+        "Machado, P.",
+        "Stem, J.",
+        "Forsberg, F.",
+        "Liu, J.-B.",
+        "Lyshchik, A.",
+        "O'Kane, P.",
+        "Eisenbrey, J.R."
+      ],
+      "year": 2022,
+      "journal": "Journal of Ultrasound in Medicine",
+      "doi": "10.1002/jum.15763",
+      "abstract": "Background: Small intestinal ischemia is a challenging diagnosis to make, even with the combination of imaging, laboratory analysis, and physical exam. This pilot study investigated the role of CEUS in evaluating small bowel wall vascularity in participants with suspected ischemia. Methods: In this IRB-approved pilot study, CEUS using perflutren lipid microspheres (DEFINITY®; Lantheus Medical Imaging Inc., N. Billerica, MA) was performed on participants determined by the clinical surgical team to have concerns for small intestinal ischemia. CEUS interpretations were performed at both the bedside and later by a blinded radiologist and compared to clinical imaging, surgical findings, or long-term clinical outcomes. Results: Fifteen CEUS examinations were performed on 14 participants. Five of the participants underwent exploratory laparotomy. Of these, one had small intestinal ischemia (without necrosis). Point of care CEUS demonstrated no evidence of bowel necrosis in any case, and delayed enhancement (indicative of intestinal ischemia) in three cases, resulting in a sensitivity of 100% (95% CI 2.5–100%) and specificity of 85.7% (95% CI 57.2–98.2%). CEUS correctly ruled out ischemia in 91.7% of cases with CT suspicion of small bowel obstruction and 60% of cases that underwent surgical intervention. Additionally, the rate of agreement between bedside interpretation and later radiologist read was high (93%). Conclusions: CEUS is uniquely positioned for evaluating the small intestine, because of its high temporal resolution and immediacy of results. Combined with multi-sectional imaging for focal areas of ischemia and/or clinical suspicion for pan ischemia, CEUS may be a useful rule out test for small intestinal ischemia. © 2021 American Institute of Ultrasound in Medicine.",
+      "keywords": [],
+      "normalized_title": "contrast enhanced ultrasound in small intestinal ischemia proof of concept",
+      "raw_bibtex": "@ARTICLE{10.1002/jum.15763,\n\tauthor = {Gummadi, S. and Koenig, G. and Wessner, C.E. and Machado, P. and Stem, J. and Forsberg, F. and Liu, J.-B. and Lyshchik, A. and O'Kane, P. and Eisenbrey, J.R.},\n\ttitle = {Contrast-Enhanced Ultrasound in Small Intestinal Ischemia: Proof of Concept},\n\tjournal = {Journal of Ultrasound in Medicine},\n\tyear = {2022},\n\tabstract = {Background: Small intestinal ischemia is a challenging diagnosis to make, even with the combination of imaging, laboratory analysis, and physical exam. This pilot study investigated the role of CEUS in evaluating small bowel wall vascularity in participants with suspected ischemia. Methods: In this IRB-approved pilot study, CEUS using perflutren lipid microspheres (DEFINITY®; Lantheus Medical Imaging Inc., N. Billerica, MA) was performed on participants determined by the clinical surgical team to have concerns for small intestinal ischemia. CEUS interpretations were performed at both the bedside and later by a blinded radiologist and compared to clinical imaging, surgical findings, or long-term clinical outcomes. Results: Fifteen CEUS examinations were performed on 14 participants. Five of the participants underwent exploratory laparotomy. Of these, one had small intestinal ischemia (without necrosis). Point of care CEUS demonstrated no evidence of bowel necrosis in any case, and delayed enhancement (indicative of intestinal ischemia) in three cases, resulting in a sensitivity of 100% (95% CI 2.5–100%) and specificity of 85.7% (95% CI 57.2–98.2%). CEUS correctly ruled out ischemia in 91.7% of cases with CT suspicion of small bowel obstruction and 60% of cases that underwent surgical intervention. Additionally, the rate of agreement between bedside interpretation and later radiologist read was high (93%). Conclusions: CEUS is uniquely positioned for evaluating the small intestine, because of its high temporal resolution and immediacy of results. Combined with multi-sectional imaging for focal areas of ischemia and/or clinical suspicion for pan ischemia, CEUS may be a useful rule out test for small intestinal ischemia. © 2021 American Institute of Ultrasound in Medicine.},\n\tdoi = {10.1002/jum.15763},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85107573152&doi=10.1002%2Fjum.15763&partnerID=40&md5=3031c8b46388e5990e07cecc7112eb6f},\n\tvolume = {41},\n\tnumber = {4},\n\tpages = {835-843},\n\tnote = {Export Date: 26 March 2026; Cited By: 5 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 26-2026_6db3994d-95a4-4980-a82f-a01d00b04aea.ris"
+      ],
+      "source_keys": [
+        "10.1002/jum.15763"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000077",
+      "entry_type": "article",
+      "title": "Role of clinical and multidetector computed tomography (MDCT) features in the prediction of patients with intestinal lipoma developing intussusception",
+      "authors": [
+        "Dong, Q.-J.",
+        "Tang, Y.",
+        "Zhang, C.-L.",
+        "Li, X.-G.",
+        "Chen, X.",
+        "Wang, Y."
+      ],
+      "year": 2024,
+      "journal": "Quantitative Imaging in Medicine and Surgery",
+      "doi": "10.21037/qims-23-1530",
+      "abstract": "Background: Intestinal lipoma is considered the most common benign tumor that causes intussusception. This retrospective case-control study aimed to present the clinical and multidetector computed tomography (MDCT) features between intestinal lipomas with and without intussusception and examine risk factors that predict intussusception caused by intestinal lipomas. Methods: We retrospectively analyzed 281 adult patients diagnosed with intestinal lipoma by radiologists using whole-abdominal MDCT between January 2015 and August 2022. Patients were divided into adult intussusception (AI) and non-AI groups based on MDCT images. Univariate logistic regression was performed to identify risk factors for intestinal lipoma-induced intussusception. Results: A total of 281 patients with intestinal lipomas were included in the study, with an average age of 68.0±11.3 years, and the male to female ratio was about 1:1.4. Among them, 24 patients developed lipomainduced intussusception. Patients in the AI group presented with more abdominal pain (70.8% vs. 47.1%, P=0.03), nausea/vomiting (37.5% vs. 14.8%, P=0.009), hematochezia/melena (29.2% vs. 11.3%, P=0.02), and abdominal tenderness (66.7% vs. 24.9%, P<0.001). Lipomas were more common in the small bowel (224/281, 79.7%) than the large bowel (57/281, 20.3%). Lipomas in the AI group showed more heterogeneous hypodensity (41.7% vs. 15.6%, P=0.004), longer length (median, 2.2 vs. 1.2 cm, P<0.001), and larger volume (median, 4.1 vs. 0.6 cm3, P<0.001). In the univariate logistic regression, lipoma density [odds ratio (OR) =3.875, 95% confidence interval (CI): 1.609-9.331, P=0.003] and lipoma length (OR =3.216, 95% CI: 1.977-5.231, P<0.001) were risk factors for intestinal lipoma-induced intussusception. Conclusions: More patients in the AI group have digestive tract symptoms than those in the non-AI group. Lipoma density and length are risk factors for intussusception in patients with intestinal lipoma. In addition, the common site of intestinal lipoma may have changed from the colon to the small intestine. © 2024 AME Publishing Company. All rights reserved.",
+      "keywords": [],
+      "normalized_title": "role of clinical and multidetector computed tomography mdct features in the prediction of patients with intestinal lipoma developing intussusception",
+      "raw_bibtex": "@ARTICLE{10.21037/qims-23-1530,\n\tauthor = {Dong, Q.-J. and Tang, Y. and Zhang, C.-L. and Li, X.-G. and Chen, X. and Wang, Y.},\n\ttitle = {Role of clinical and multidetector computed tomography (MDCT) features in the prediction of patients with intestinal lipoma developing intussusception},\n\tjournal = {Quantitative Imaging in Medicine and Surgery},\n\tyear = {2024},\n\tabstract = {Background: Intestinal lipoma is considered the most common benign tumor that causes intussusception. This retrospective case-control study aimed to present the clinical and multidetector computed tomography (MDCT) features between intestinal lipomas with and without intussusception and examine risk factors that predict intussusception caused by intestinal lipomas. Methods: We retrospectively analyzed 281 adult patients diagnosed with intestinal lipoma by radiologists using whole-abdominal MDCT between January 2015 and August 2022. Patients were divided into adult intussusception (AI) and non-AI groups based on MDCT images. Univariate logistic regression was performed to identify risk factors for intestinal lipoma-induced intussusception. Results: A total of 281 patients with intestinal lipomas were included in the study, with an average age of 68.0±11.3 years, and the male to female ratio was about 1:1.4. Among them, 24 patients developed lipomainduced intussusception. Patients in the AI group presented with more abdominal pain (70.8% vs. 47.1%, P=0.03), nausea/vomiting (37.5% vs. 14.8%, P=0.009), hematochezia/melena (29.2% vs. 11.3%, P=0.02), and abdominal tenderness (66.7% vs. 24.9%, P<0.001). Lipomas were more common in the small bowel (224/281, 79.7%) than the large bowel (57/281, 20.3%). Lipomas in the AI group showed more heterogeneous hypodensity (41.7% vs. 15.6%, P=0.004), longer length (median, 2.2 vs. 1.2 cm, P<0.001), and larger volume (median, 4.1 vs. 0.6 cm3, P<0.001). In the univariate logistic regression, lipoma density [odds ratio (OR) =3.875, 95% confidence interval (CI): 1.609-9.331, P=0.003] and lipoma length (OR =3.216, 95% CI: 1.977-5.231, P<0.001) were risk factors for intestinal lipoma-induced intussusception. Conclusions: More patients in the AI group have digestive tract symptoms than those in the non-AI group. Lipoma density and length are risk factors for intussusception in patients with intestinal lipoma. In addition, the common site of intestinal lipoma may have changed from the colon to the small intestine. © 2024 AME Publishing Company. All rights reserved.},\n\tdoi = {10.21037/qims-23-1530},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85194709691&doi=10.21037%2Fqims-23-1530&partnerID=40&md5=3e3c67f2210e1cfcd23b641e4cd5b313},\n\tvolume = {14},\n\tnumber = {6},\n\tpages = {3939-3950},\n\tnote = {Export Date: 26 March 2026; Cited By: 1 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 26-2026_6db3994d-95a4-4980-a82f-a01d00b04aea.ris"
+      ],
+      "source_keys": [
+        "10.21037/qims-23-1530"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000078",
+      "entry_type": "article",
+      "title": "Role of key guidelines in an era of precision oncology: A primer for the radiologist",
+      "authors": [
+        "Gan, J.M.",
+        "Kikano, E.G.",
+        "Smith, D.A.",
+        "Bui, M.T.",
+        "Tirumani, S.H.",
+        "Ramaiya, N.H."
+      ],
+      "year": 2021,
+      "journal": "American Journal of Roentgenology",
+      "doi": "10.2214/ajr.20.23025",
+      "abstract": "OBJECTIVE. The purpose of this article is to familiarize radiologists with the evidence-based imaging guidelines of major oncologic societies and organizations and to discuss approaches to effective implementation of the most recent guidelines in daily radiology practice. CONCLUSION. In an era of precision oncology, radiologists in practice and radiologists in training are key stakeholders in multidisciplinary care, and their awareness and understanding of society guidelines is critically important. © American Roentgen Ray Society",
+      "keywords": [],
+      "normalized_title": "role of key guidelines in an era of precision oncology a primer for the radiologist",
+      "raw_bibtex": "@ARTICLE{10.2214/AJR.20.23025,\n\tauthor = {Gan, J.M. and Kikano, E.G. and Smith, D.A. and Bui, M.T. and Tirumani, S.H. and Ramaiya, N.H.},\n\ttitle = {Role of key guidelines in an era of precision oncology: A primer for the radiologist},\n\tjournal = {American Journal of Roentgenology},\n\tyear = {2021},\n\tabstract = {OBJECTIVE. The purpose of this article is to familiarize radiologists with the evidence-based imaging guidelines of major oncologic societies and organizations and to discuss approaches to effective implementation of the most recent guidelines in daily radiology practice. CONCLUSION. In an era of precision oncology, radiologists in practice and radiologists in training are key stakeholders in multidisciplinary care, and their awareness and understanding of society guidelines is critically important. © American Roentgen Ray Society},\n\tdoi = {10.2214/AJR.20.23025},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85103280328&doi=10.2214%2FAJR.20.23025&partnerID=40&md5=359b46b9611470f85ffd79584cfd4d56},\n\tvolume = {216},\n\tnumber = {4},\n\tpages = {1112-1125},\n\tnote = {Export Date: 26 March 2026; Cited By: 0 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 26-2026_6db3994d-95a4-4980-a82f-a01d00b04aea.ris"
+      ],
+      "source_keys": [
+        "10.2214/AJR.20.23025"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000079",
+      "entry_type": "article",
+      "title": "Harmonisation of imaging protocols, radiation doses and image quality in gastrointestinal fluoroscopy examinations — multicentre study",
+      "authors": [
+        "Forbes, A.",
+        "Geryes, B.H.",
+        "Hornbeck, A.",
+        "Kien, N.",
+        "Quelquejay, C.",
+        "Adamsbaum, C.",
+        "Farah, J.",
+        "le Pointe, H.D."
+      ],
+      "year": 2022,
+      "journal": "Pediatric Radiology",
+      "doi": "10.1007/s00247-021-05194-6",
+      "abstract": "Background: Paediatric gastrointestinal fluoroscopy examinations can impart varying amounts of radiation for the same patient size and exam type. Objective: To investigate the variability of imaging protocol, radiation dose and image quality in paediatric fluoroscopy examinations in order to provide recommendations for the harmonisation and optimisation of local practices. Materials and methods: Five paediatric radiology departments performing fluoroscopically-guided contrast enema, micturating cystourethrography and upper gastrointestinal tract examinations participated in this study. Information on imaging protocols and radiation doses was retrospectively collected for more than 2,400 examinations. Image quality was analysed on clinical and phantom images. Results: Patient doses showed great variability among centers with up to a factor of 5 for similar fluoroscopy times. The five departments had imaging protocols with major differences in fluoroscopy dose regulation curves and additional filtration. Image quality analysis on phantoms and patients images showed no major improvement in contrast, spatial resolution or noise when increasing the radiation dose. Age-based diagnostic reference levels using both dose area product and fluoroscopy time were proposed per procedure type. Conclusion: Disparities between centers and no correlation of radiation dose with image quality criteria create margins for optimisation. These results highlight the need for guidelines on fluoroscopy image quality and dose reference levels in paediatric gastrointestinal examinations to harmonise practices and optimise patient dose. © 2021, The Author(s), under exclusive licence to Springer-Verlag GmbH Germany, part of Springer Nature.",
+      "keywords": [],
+      "normalized_title": "harmonisation of imaging protocols radiation doses and image quality in gastrointestinal fluoroscopy examinations multicentre study",
+      "raw_bibtex": "@ARTICLE{10.1007/s00247-021-05194-6,\n\tauthor = {Forbes, A. and Geryes, B.H. and Hornbeck, A. and Kien, N. and Quelquejay, C. and Adamsbaum, C. and Farah, J. and le Pointe, H.D.},\n\ttitle = {Harmonisation of imaging protocols, radiation doses and image quality in gastrointestinal fluoroscopy examinations — multicentre study},\n\tjournal = {Pediatric Radiology},\n\tyear = {2022},\n\tabstract = {Background: Paediatric gastrointestinal fluoroscopy examinations can impart varying amounts of radiation for the same patient size and exam type. Objective: To investigate the variability of imaging protocol, radiation dose and image quality in paediatric fluoroscopy examinations in order to provide recommendations for the harmonisation and optimisation of local practices. Materials and methods: Five paediatric radiology departments performing fluoroscopically-guided contrast enema, micturating cystourethrography and upper gastrointestinal tract examinations participated in this study. Information on imaging protocols and radiation doses was retrospectively collected for more than 2,400 examinations. Image quality was analysed on clinical and phantom images. Results: Patient doses showed great variability among centers with up to a factor of 5 for similar fluoroscopy times. The five departments had imaging protocols with major differences in fluoroscopy dose regulation curves and additional filtration. Image quality analysis on phantoms and patients images showed no major improvement in contrast, spatial resolution or noise when increasing the radiation dose. Age-based diagnostic reference levels using both dose area product and fluoroscopy time were proposed per procedure type. Conclusion: Disparities between centers and no correlation of radiation dose with image quality criteria create margins for optimisation. These results highlight the need for guidelines on fluoroscopy image quality and dose reference levels in paediatric gastrointestinal examinations to harmonise practices and optimise patient dose. © 2021, The Author(s), under exclusive licence to Springer-Verlag GmbH Germany, part of Springer Nature.},\n\tdoi = {10.1007/s00247-021-05194-6},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85117072262&doi=10.1007%2Fs00247-021-05194-6&partnerID=40&md5=a637bc273628c6a5228a4cad9206c570},\n\tvolume = {52},\n\tnumber = {1},\n\tpages = {50-57},\n\tnote = {Export Date: 26 March 2026; Cited By: 1 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 26-2026_6db3994d-95a4-4980-a82f-a01d00b04aea.ris"
+      ],
+      "source_keys": [
+        "10.1007/s00247-021-05194-6"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000080",
+      "entry_type": "article",
+      "title": "Diagnostic imaging in the diagnosis of acute complications of bariatric surgery",
+      "authors": [
+        "Catelli, A.",
+        "Corvino, A.",
+        "Loiudice, G.",
+        "Tucci, A.",
+        "Quarantelli, M.",
+        "Venetucci, P."
+      ],
+      "year": 2021,
+      "journal": "Polish Journal of Radiology",
+      "doi": "10.5114/pjr.2021.104003",
+      "abstract": "Purpose: The aim of study is to identify the frequency of acute complications and imaging findings at gastro-intestinal transit (GI) and computerised tomography (CT) in a group of obese patients who developed clinical suspicion of acute complications (painful and meteoric abdomen, nausea, vomiting, fever, intestinal blockage) in post bariatric surgery. Material and methods: We retrospectively review 954 obese patients who underwent bariatric surgery between 2013 and 2019. The study included 72 patients who developed clinical suspicion of acute complications (painful and meteoric abdomen, nausea, vomiting, fever, intestinal blockage) within 6 days of bariatric surgery of sleeve gastrectomy, gastric banding, gastric bypass with Roux loop confirmed by CT, and who underwent a gastrointestinal transit before the CT examination. Results: GI exam allowed visualisation of 58% of complications. Analysing the data for each surgical technique, 46 post-operative complications were found involve gastric banding. The most frequent was bandage migration (26 cases, 56 %), identified in all cases at GI transit and then confirmed on CT. Conclusions: The study suggests that CT should be used to clarify all doubtful or clinically discordant GI transit exaresults. The participation of a radiologist in qualification and post-operative evaluation is important for bariatsurgery patients. © Pol J Radiol.",
+      "keywords": [],
+      "normalized_title": "diagnostic imaging in the diagnosis of acute complications of bariatric surgery",
+      "raw_bibtex": "@ARTICLE{10.5114/pjr.2021.104003,\n\tauthor = {Catelli, A. and Corvino, A. and Loiudice, G. and Tucci, A. and Quarantelli, M. and Venetucci, P.},\n\ttitle = {Diagnostic imaging in the diagnosis of acute complications of bariatric surgery},\n\tjournal = {Polish Journal of Radiology},\n\tyear = {2021},\n\tabstract = {Purpose: The aim of study is to identify the frequency of acute complications and imaging findings at gastro-intestinal transit (GI) and computerised tomography (CT) in a group of obese patients who developed clinical suspicion of acute complications (painful and meteoric abdomen, nausea, vomiting, fever, intestinal blockage) in post bariatric surgery. Material and methods: We retrospectively review 954 obese patients who underwent bariatric surgery between 2013 and 2019. The study included 72 patients who developed clinical suspicion of acute complications (painful and meteoric abdomen, nausea, vomiting, fever, intestinal blockage) within 6 days of bariatric surgery of sleeve gastrectomy, gastric banding, gastric bypass with Roux loop confirmed by CT, and who underwent a gastrointestinal transit before the CT examination. Results: GI exam allowed visualisation of 58% of complications. Analysing the data for each surgical technique, 46 post-operative complications were found involve gastric banding. The most frequent was bandage migration (26 cases, 56 %), identified in all cases at GI transit and then confirmed on CT. Conclusions: The study suggests that CT should be used to clarify all doubtful or clinically discordant GI transit exaresults. The participation of a radiologist in qualification and post-operative evaluation is important for bariatsurgery patients. © Pol J Radiol.},\n\tdoi = {10.5114/pjr.2021.104003},\n\turl = {https://www.scopus.com/inward/record.uri?eid=2-s2.0-85102516899&doi=10.5114%2Fpjr.2021.104003&partnerID=40&md5=2e037d671355ae6d454b2e069e5795b3},\n\tvolume = {86},\n\tnumber = {1},\n\tpages = {102-111},\n\tnote = {Export Date: 26 March 2026; Cited By: 4 ER -; Article},\n\ttype = {Article},\n\tsource = {Scopus}\n}",
+      "source_files": [
+        "scopus_export_Mar 26-2026_6db3994d-95a4-4980-a82f-a01d00b04aea.ris"
+      ],
+      "source_keys": [
+        "10.5114/pjr.2021.104003"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

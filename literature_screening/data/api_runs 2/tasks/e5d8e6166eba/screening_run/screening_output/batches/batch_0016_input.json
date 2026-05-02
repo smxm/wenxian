@@ -1,0 +1,367 @@
+{
+  "batch_id": "batch_0016",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000151",
+    "paper_000152",
+    "paper_000153",
+    "paper_000154",
+    "paper_000155",
+    "paper_000156",
+    "paper_000157",
+    "paper_000158",
+    "paper_000159",
+    "paper_000160"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000151",
+      "entry_type": "article",
+      "title": "Research on Sparse Decomposition Processing of Ultrasonic Signals of Heat Exchanger Fouling",
+      "authors": [
+        "Li, X",
+        "Chen, JH",
+        "Sun, LF",
+        "Li, J",
+        "Zhao, XH"
+      ],
+      "year": 2023,
+      "journal": "IEEE SENSORS JOURNAL",
+      "doi": "10.1109/jsen.2023.3279413",
+      "abstract": "Ultrasonic time-domain reflectometry has the advantages of real-time and accurate detection of fouling in heat exchange tubes, but owing to the complex detection environment, the received ultrasonic is noisy, and there are problems such as mutual interference between echoes. This article presents a new method for sparse decomposition based on selecting the atomic dictionary with a high degree of matching. The imperialist competitive algorithm (ICA) is used to optimize the atomic search process of the matching pursuit. Additionally, the global optimization ability of the ICA is improved by improving the moving mode and adding the update strategy. This way, problems such as low matching accuracy and slow searching speed of sparse decomposition are improved. This article reports on the characteristic reconstruction experiment run on the ultrasonic detection signal for heat transfer fouling to test the signal processing effect of the improved sparse decomposition method. [GRAPHICS]",
+      "keywords": [
+        "Atomic dictionary",
+        "imperialist competitive algorithm (ICA)",
+        "matching pursuit (MP)",
+        "signal feature",
+        "ultrasonic testing",
+        "IMPERIALIST COMPETITIVE ALGORITHM",
+        "OPTIMIZATION"
+      ],
+      "normalized_title": "research on sparse decomposition processing of ultrasonic signals of heat exchanger fouling",
+      "raw_bibtex": "@ARTICLE{10.1109/JSEN.2023.3279413,\n\tauthor = {Li, X and Chen, JH and Sun, LF and Li, J and Zhao, XH},\n\ttitle = {Research on Sparse Decomposition Processing of Ultrasonic Signals of Heat Exchanger Fouling},\n\tjournal = {IEEE SENSORS JOURNAL},\n\tyear = {2023},\n\tkeywords = {Atomic dictionary; imperialist competitive algorithm (ICA); matching pursuit (MP); signal feature; ultrasonic testing; IMPERIALIST COMPETITIVE ALGORITHM; OPTIMIZATION},\n\tabstract = {Ultrasonic time-domain reflectometry has the advantages of real-time and accurate detection of fouling in heat exchange tubes, but owing to the complex detection environment, the received ultrasonic is noisy, and there are problems such as mutual interference between echoes. This article presents a new method for sparse decomposition based on selecting the atomic dictionary with a high degree of matching. The imperialist competitive algorithm (ICA) is used to optimize the atomic search process of the matching pursuit. Additionally, the global optimization ability of the ICA is improved by improving the moving mode and adding the update strategy. This way, problems such as low matching accuracy and slow searching speed of sparse decomposition are improved. This article reports on the characteristic reconstruction experiment run on the ultrasonic detection signal for heat transfer fouling to test the signal processing effect of the improved sparse decomposition method. [GRAPHICS]},\n\tdoi = {10.1109/JSEN.2023.3279413},\n\tvolume = {23},\n\tnumber = {14},\n\tpages = {15795-15802},\n\tissn = {1530-437X},\n\tnote = {Times Cited in Web of Science Core Collection: 6 Total Times Cited: 6 Cited Reference Count: 21 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/JSEN.2023.3279413"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000152",
+      "entry_type": "article",
+      "title": "Deep learning for full-field ultrasonic characterization",
+      "authors": [
+        "Xu, Y",
+        "Pourahmadian, F",
+        "Song, J",
+        "Wang, CL"
+      ],
+      "year": 2023,
+      "journal": "MECHANICAL SYSTEMS AND SIGNAL PROCESSING",
+      "doi": "10.1016/j.ymssp.2023.110668",
+      "abstract": "This study takes advantage of recent advances in machine learning to establish a physics -based data analytic platform for distributed reconstruction of mechanical properties in layered components from full waveform data. In this vein, two logics, namely the direct inversion and physics-informed neural networks (PINNs), are explored. The direct inversion entails three steps: (i) spectral denoising and differentiation of the full-field data, (ii) building appropriate neural maps to approximate the profile of unknown physical and regularization parameters on their respective domains, and (iii) simultaneous training of the neural networks by minimizing the Tikhonov-regularized PDE loss using data from (i). PINNs furnish efficient surrogate models of complex systems with predictive capabilities via multitask learning where the field variables are modeled by neural maps endowed with (scaler or distributed) auxiliary parameters such as physical unknowns and loss function weights. PINNs are then trained by minimizing a measure of data misfit subject to the underlying physical laws as constraints. In this study, to facilitate learning from ultrasonic data, the PINNs loss adopts (a) wavenumber-dependent Sobolev norms to compute the data misfit, and (b) non-adaptive weights in a specific scaling framework to naturally balance the loss objectives by leveraging the form of PDEs germane to elastic-wave propagation. Both paradigms are examined via synthetic and laboratory test data. In the latter case, the reconstructions are performed at multiple frequencies and the results are verified by a set of complementary experiments highlighting the importance of verification and validation in data-driven modeling.",
+      "keywords": [
+        "Deep learning",
+        "Ultrasonic testing",
+        "Data-driven mechanics",
+        "Full-wavefield inversion",
+        "INFORMED NEURAL-NETWORKS",
+        "ELASTOGRAPHY"
+      ],
+      "normalized_title": "deep learning for full field ultrasonic characterization",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ymssp.2023.110668,\n\tauthor = {Xu, Y and Pourahmadian, F and Song, J and Wang, CL},\n\ttitle = {Deep learning for full-field ultrasonic characterization},\n\tjournal = {MECHANICAL SYSTEMS AND SIGNAL PROCESSING},\n\tyear = {2023},\n\tkeywords = {Deep learning; Ultrasonic testing; Data-driven mechanics; Full-wavefield inversion; INFORMED NEURAL-NETWORKS; ELASTOGRAPHY},\n\tabstract = {This study takes advantage of recent advances in machine learning to establish a physics -based data analytic platform for distributed reconstruction of mechanical properties in layered components from full waveform data. In this vein, two logics, namely the direct inversion and physics-informed neural networks (PINNs), are explored. The direct inversion entails three steps: (i) spectral denoising and differentiation of the full-field data, (ii) building appropriate neural maps to approximate the profile of unknown physical and regularization parameters on their respective domains, and (iii) simultaneous training of the neural networks by minimizing the Tikhonov-regularized PDE loss using data from (i). PINNs furnish efficient surrogate models of complex systems with predictive capabilities via multitask learning where the field variables are modeled by neural maps endowed with (scaler or distributed) auxiliary parameters such as physical unknowns and loss function weights. PINNs are then trained by minimizing a measure of data misfit subject to the underlying physical laws as constraints. In this study, to facilitate learning from ultrasonic data, the PINNs loss adopts (a) wavenumber-dependent Sobolev norms to compute the data misfit, and (b) non-adaptive weights in a specific scaling framework to naturally balance the loss objectives by leveraging the form of PDEs germane to elastic-wave propagation. Both paradigms are examined via synthetic and laboratory test data. In the latter case, the reconstructions are performed at multiple frequencies and the results are verified by a set of complementary experiments highlighting the importance of verification and validation in data-driven modeling.},\n\tdoi = {10.1016/j.ymssp.2023.110668},\n\tvolume = {201},\n\tissn = {0888-3270},\n\tnote = {Times Cited in Web of Science Core Collection: 8 Total Times Cited: 10 Cited Reference Count: 56 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ymssp.2023.110668"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000153",
+      "entry_type": "article",
+      "title": "Study on Damage Characteristics of Hot Dry Rock by Liquid Nitrogen Cyclic Cold Shocks Based on Ultrasonic Testing",
+      "authors": [
+        "Lai, YS",
+        "Zhai, C",
+        "Sun, Y",
+        "Xu, HY",
+        "Zheng, YF",
+        "Wang, S",
+        "Huang, J"
+      ],
+      "year": 2023,
+      "journal": "ENERGY & FUELS",
+      "doi": "10.1021/acs.energyfuels.3c03229",
+      "abstract": "Efficient exploitation of hot dry rock resources can alleviate global energy supply pressure. However, the \"low-porosity, low-permeability\" occurrence characteristics of hot dry rock severely restrict the exploitation efficiency. To achieve efficient exploitation of hot dry rock resources, artificial fracturing and permeability-enhancing measures must be taken to transform the reservoir and improve the heat-exchange efficiency. Liquid nitrogen cyclic cold shock is an effective fracturing method for geothermal reservoirs. The huge temperature difference between liquid nitrogen and hot rock can cause uneven contraction between mineral particles, inducing fracture networks. It is crucial to study the damage characteristics of hot dry rock under liquid nitrogen cyclic cold shock. Therefore, this paper carries out liquid nitrogen cold shock experiments on high-temperature granite. Granite samples heated to different temperatures (200, 300, 400, 500, and 600 degrees C) were subjected to cyclic cold shocks (five times) using liquid nitrogen. NMR testing and ultrasonic testing were performed on the treated samples to study the damage characteristics of hot dry rock. The results show that with the increase of heating temperature and the number of cold shocks, the porosity of the cores increases continuously. After five cold shocks, the porosity of the cores heated at 200-600 degrees C increases by 1.108, 1.154, 1.158, 3.080, and 6.896%, respectively. The wave velocity decreases continuously, and the time delay and distortion of the waveforms become more obvious. The frequency distribution gradually shifts toward lower frequencies, the wavelet packet energy distribution transfers to lower-frequency sub-bands, the total energy of the Hilbert energy spectrum decreases continuously, the duration of high instantaneous energy becomes shorter, and the frequency distribution interval shifts toward lower frequencies. The quality factor Q decreases with increasing heating temperature and the number of liquid nitrogen cold shocks and has a good linear relationship with the core porosity.",
+      "keywords": [
+        "MECHANICAL-PROPERTIES",
+        "GEOTHERMAL-ENERGY",
+        "SHALE GAS",
+        "GRANITE",
+        "STRENGTH",
+        "WAVE"
+      ],
+      "normalized_title": "study on damage characteristics of hot dry rock by liquid nitrogen cyclic cold shocks based on ultrasonic testing",
+      "raw_bibtex": "@ARTICLE{10.1021/acs.energyfuels.3c03229,\n\tauthor = {Lai, YS and Zhai, C and Sun, Y and Xu, HY and Zheng, YF and Wang, S and Huang, J},\n\ttitle = {Study on Damage Characteristics of Hot Dry Rock by Liquid Nitrogen Cyclic Cold Shocks Based on Ultrasonic Testing},\n\tjournal = {ENERGY & FUELS},\n\tyear = {2023},\n\tkeywords = {MECHANICAL-PROPERTIES; GEOTHERMAL-ENERGY; SHALE GAS; GRANITE; STRENGTH; WAVE},\n\tabstract = {Efficient exploitation of hot dry rock resources can alleviate global energy supply pressure. However, the \"low-porosity, low-permeability\" occurrence characteristics of hot dry rock severely restrict the exploitation efficiency. To achieve efficient exploitation of hot dry rock resources, artificial fracturing and permeability-enhancing measures must be taken to transform the reservoir and improve the heat-exchange efficiency. Liquid nitrogen cyclic cold shock is an effective fracturing method for geothermal reservoirs. The huge temperature difference between liquid nitrogen and hot rock can cause uneven contraction between mineral particles, inducing fracture networks. It is crucial to study the damage characteristics of hot dry rock under liquid nitrogen cyclic cold shock. Therefore, this paper carries out liquid nitrogen cold shock experiments on high-temperature granite. Granite samples heated to different temperatures (200, 300, 400, 500, and 600 degrees C) were subjected to cyclic cold shocks (five times) using liquid nitrogen. NMR testing and ultrasonic testing were performed on the treated samples to study the damage characteristics of hot dry rock. The results show that with the increase of heating temperature and the number of cold shocks, the porosity of the cores increases continuously. After five cold shocks, the porosity of the cores heated at 200-600 degrees C increases by 1.108, 1.154, 1.158, 3.080, and 6.896%, respectively. The wave velocity decreases continuously, and the time delay and distortion of the waveforms become more obvious. The frequency distribution gradually shifts toward lower frequencies, the wavelet packet energy distribution transfers to lower-frequency sub-bands, the total energy of the Hilbert energy spectrum decreases continuously, the duration of high instantaneous energy becomes shorter, and the frequency distribution interval shifts toward lower frequencies. The quality factor Q decreases with increasing heating temperature and the number of liquid nitrogen cold shocks and has a good linear relationship with the core porosity.},\n\tdoi = {10.1021/acs.energyfuels.3c03229},\n\tvolume = {37},\n\tnumber = {21},\n\tpages = {16573-16587},\n\tissn = {0887-0624},\n\tnote = {Times Cited in Web of Science Core Collection: 19 Total Times Cited: 19 Cited Reference Count: 54 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1021/acs.energyfuels.3c03229"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000154",
+      "entry_type": "article",
+      "title": "Utilizing improved YOLOv8 based on SPD-BRSA-AFPN for ultrasonic phased array non-destructive testing",
+      "authors": [
+        "Chen, HY",
+        "Tao, JF"
+      ],
+      "year": 2024,
+      "journal": "ULTRASONICS",
+      "doi": "10.1016/j.ultras.2024.107382",
+      "abstract": "Non-destructive testing (NDT) is a technique for inspecting materials and their defects without causing damage to the tested components. Phased array ultrasonic testing (PAUT) has emerged as a hot topic in industrial NDT applications. Currently, the collection of ultrasound data is mostly automated, while the analysis of the data is still predominantly carried out manually. Manual analysis of scan image defects is inefficient and prone to instability, prompting the need for computer-based solutions. Deep learning-based object detection methods have shown promise in addressing such challenges recently. This approach typically demands a substantial amount of high-resolution, well-annotated training data, which is challenging to obtain in NDT. Consequently, it becomes difficult to detect low-resolution images and defects with varying positional sizes. This work proposes improvements based on the state-of-the-art YOLOv8 algorithm to enhance the accuracy and efficiency of defect detection in phased-array ultrasonic testing. The space-to-depth convolution (SPD-Conv) is imported to replace strided convolution, mitigating information loss during convolution operations and improving detection performance on low-resolution images. Additionally, this paper constructs and incorporates the bi-level routing and spatial attention module (BRSA) into the backbone, generating multiscale feature maps with richer details. In the neck section, the original structure is replaced by the asymptotic feature pyramid network (AFPN) to reduce model parameters and computational complexity. After testing on public datasets, in comparison to YOLOv8 (the baseline), this algorithm achieves high-quality detection of flat bottom holes (FBH) and aluminium blocks on the simulated dataset. More importantly, for the challenging-to-detect defect side-drilled holes (SDH), it achieves F1 scores (weighted average of precision and recall) of 82.50% and intersection over union (IOU) of 65.96%, representing an improvement of 17.56% and 0.43%. On the experimental dataset, the F1 score and IOU for FBH reach 75.68% (an increase of 9.01%) and 83.79%, respectively. Simultaneously, the proposed algorithm demonstrates robust performance in the presence of external noise, while maintaining exceptionally high computational efficiency and inference speed. These experimental results validate the high detection performance of the proposed intelligent defect detection algorithm for ultrasonic images, which contributes to the advancement of the smart industry.",
+      "keywords": [
+        "Phased array ultrasound",
+        "Non-destructive testing",
+        "Convolutional neural networks",
+        "Defect detection",
+        "YOLOv8"
+      ],
+      "normalized_title": "utilizing improved yolov8 based on spd brsa afpn for ultrasonic phased array non destructive testing",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ultras.2024.107382,\n\tauthor = {Chen, HY and Tao, JF},\n\ttitle = {Utilizing improved YOLOv8 based on SPD-BRSA-AFPN for ultrasonic phased array non-destructive testing},\n\tjournal = {ULTRASONICS},\n\tyear = {2024},\n\tkeywords = {Phased array ultrasound; Non-destructive testing; Convolutional neural networks; Defect detection; YOLOv8},\n\tabstract = {Non-destructive testing (NDT) is a technique for inspecting materials and their defects without causing damage to the tested components. Phased array ultrasonic testing (PAUT) has emerged as a hot topic in industrial NDT applications. Currently, the collection of ultrasound data is mostly automated, while the analysis of the data is still predominantly carried out manually. Manual analysis of scan image defects is inefficient and prone to instability, prompting the need for computer-based solutions. Deep learning-based object detection methods have shown promise in addressing such challenges recently. This approach typically demands a substantial amount of high-resolution, well-annotated training data, which is challenging to obtain in NDT. Consequently, it becomes difficult to detect low-resolution images and defects with varying positional sizes. This work proposes improvements based on the state-of-the-art YOLOv8 algorithm to enhance the accuracy and efficiency of defect detection in phased-array ultrasonic testing. The space-to-depth convolution (SPD-Conv) is imported to replace strided convolution, mitigating information loss during convolution operations and improving detection performance on low-resolution images. Additionally, this paper constructs and incorporates the bi-level routing and spatial attention module (BRSA) into the backbone, generating multiscale feature maps with richer details. In the neck section, the original structure is replaced by the asymptotic feature pyramid network (AFPN) to reduce model parameters and computational complexity. After testing on public datasets, in comparison to YOLOv8 (the baseline), this algorithm achieves high-quality detection of flat bottom holes (FBH) and aluminium blocks on the simulated dataset. More importantly, for the challenging-to-detect defect side-drilled holes (SDH), it achieves F1 scores (weighted average of precision and recall) of 82.50% and intersection over union (IOU) of 65.96%, representing an improvement of 17.56% and 0.43%. On the experimental dataset, the F1 score and IOU for FBH reach 75.68% (an increase of 9.01%) and 83.79%, respectively. Simultaneously, the proposed algorithm demonstrates robust performance in the presence of external noise, while maintaining exceptionally high computational efficiency and inference speed. These experimental results validate the high detection performance of the proposed intelligent defect detection algorithm for ultrasonic images, which contributes to the advancement of the smart industry.},\n\tdoi = {10.1016/j.ultras.2024.107382},\n\tvolume = {142},\n\tissn = {0041-624X},\n\tnote = {Times Cited in Web of Science Core Collection: 7 Total Times Cited: 8 Cited Reference Count: 34 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ultras.2024.107382"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000155",
+      "entry_type": "article",
+      "title": "Concrete crack reasoning: Explainable defect diagnosis incorporating generative Pretrained transformer 4 and multimodal nondestructive testing data",
+      "authors": [
+        "Jin, S",
+        "Song, H",
+        "Kang, J",
+        "Yu, B",
+        "Park, S"
+      ],
+      "year": 2026,
+      "journal": "AUTOMATION IN CONSTRUCTION",
+      "doi": "10.1016/j.autcon.2025.106661",
+      "abstract": "Timely detection of aging concrete deterioration requires diagnostic methods combining laboratory-level accuracy with field robustness. Existing models suffer from opaque decision-making and limited integration of multimodal sensor data. This paper presents Concrete Crack Reasoning (CCR), a field-validated diagnostic framework for concrete bridge defects that overcomes these limitations via a two-module pipeline: (i) sensorspecific convolutional neural networks distill features from ground penetrating radar, impact echo, and ultrasonic testing into concise, human-readable sentences; (ii) a memory-guided GPT-4 reasoning stage, operable in Baseline, Feedback, and Adaptive Refiner modes, the last of which uses prompt retrieval for self-correction. On a 1088-sample, four-class bridge-deck dataset, CCR raises top-1 accuracy from 49.4 % to 87.8 % and 97.9 %, reducing the 95 % bootstrap confidence interval to +/- 1.8 %. Explanations in Adaptive Refiner mode employ threshold-aware, cluster-referenced language consistent with expert practice, enhancing auditability. With lightweight in-model retrieval and no external databases, CCR is deployable on resource-constrained units, offering a practical path toward explainable AI-assisted structural health monitoring.",
+      "keywords": [
+        "Structural health monitoring",
+        "Concrete crack detection",
+        "Multimodal non-destructive testing",
+        "Explainable AI",
+        "GPT-4",
+        "Machine learning"
+      ],
+      "normalized_title": "concrete crack reasoning explainable defect diagnosis incorporating generative pretrained transformer 4 and multimodal nondestructive testing data",
+      "raw_bibtex": "@ARTICLE{10.1016/j.autcon.2025.106661,\n\tauthor = {Jin, S and Song, H and Kang, J and Yu, B and Park, S},\n\ttitle = {Concrete crack reasoning: Explainable defect diagnosis incorporating generative Pretrained transformer 4 and multimodal nondestructive testing data},\n\tjournal = {AUTOMATION IN CONSTRUCTION},\n\tyear = {2026},\n\tkeywords = {Structural health monitoring; Concrete crack detection; Multimodal non-destructive testing; Explainable AI; GPT-4; Machine learning},\n\tabstract = {Timely detection of aging concrete deterioration requires diagnostic methods combining laboratory-level accuracy with field robustness. Existing models suffer from opaque decision-making and limited integration of multimodal sensor data. This paper presents Concrete Crack Reasoning (CCR), a field-validated diagnostic framework for concrete bridge defects that overcomes these limitations via a two-module pipeline: (i) sensorspecific convolutional neural networks distill features from ground penetrating radar, impact echo, and ultrasonic testing into concise, human-readable sentences; (ii) a memory-guided GPT-4 reasoning stage, operable in Baseline, Feedback, and Adaptive Refiner modes, the last of which uses prompt retrieval for self-correction. On a 1088-sample, four-class bridge-deck dataset, CCR raises top-1 accuracy from 49.4 % to 87.8 % and 97.9 %, reducing the 95 % bootstrap confidence interval to +/- 1.8 %. Explanations in Adaptive Refiner mode employ threshold-aware, cluster-referenced language consistent with expert practice, enhancing auditability. With lightweight in-model retrieval and no external databases, CCR is deployable on resource-constrained units, offering a practical path toward explainable AI-assisted structural health monitoring.},\n\tdoi = {10.1016/j.autcon.2025.106661},\n\tvolume = {181},\n\tissn = {0926-5805},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 45 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.autcon.2025.106661"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000156",
+      "entry_type": "article",
+      "title": "Nonlinear Lamb wave-based characterisation of precipitated phase area fraction in creep Ti60 alloy using CNN-BiLSTM-Attention model",
+      "authors": [
+        "Liu, MY",
+        "Liu, LS",
+        "Wu, P",
+        "Lu, J",
+        "Cong, DZ",
+        "Xiao, B",
+        "Xiang, YX",
+        "Xuan, FZ"
+      ],
+      "year": 2025,
+      "journal": "NONDESTRUCTIVE TESTING AND EVALUATION",
+      "doi": "10.1080/10589759.2025.2554915",
+      "abstract": "Ti60 alloys are widely used in aerospace applications, where high-temperature creep is a major failure mechanism. Under high temperature conditions, Ti60 alloys precipitate silicides, leading to a decrease in the strength, ductility and creep resistance of the material. Monitoring the area fraction of the precipitated phase is essential for evaluating microstructural degradation and ensuring long-term structural integrity. Traditional techniques such as metallography and transmission electron microscopy (TEM) are accurate but destructive and unsuitable for real-time monitoring. This study proposes a deep learning-based method to non-destructively predict the area fraction of precipitated phases in Ti60 alloy after high-temperature creep. The model integrates a multi-scale Convolutional Neural Network (CNN), a Bi-directional Long Short-Term Memory network (BiLSTM) and an attention mechanism. The model uses time-frequency images of nonlinear ultrasonic signals as input, exploiting their sensitivity to microstructural evolution. Experimental results show that the model achieves a prediction accuracy of 98% and a root mean square error (RMSE) of 0.29. The proposed approach offers a rapid, accurate, and non-destructive solution for assessing precipitation-related microstructural changes in Ti60 alloy resulting from high-temperature creep damage.",
+      "keywords": [
+        "Nonlinear ultrasonic testing",
+        "CNN-BiLSTM-Attention",
+        "precipitated phase measurement",
+        "Lamb waves",
+        "creep",
+        "2ND-HARMONIC GENERATION",
+        "HARMONIC-GENERATION",
+        "DIAGNOSIS"
+      ],
+      "normalized_title": "nonlinear lamb wave based characterisation of precipitated phase area fraction in creep ti60 alloy using cnn bilstm attention model",
+      "raw_bibtex": "@ARTICLE{10.1080/10589759.2025.2554915,\n\tauthor = {Liu, MY and Liu, LS and Wu, P and Lu, J and Cong, DZ and Xiao, B and Xiang, YX and Xuan, FZ},\n\ttitle = {Nonlinear Lamb wave-based characterisation of precipitated phase area fraction in creep Ti60 alloy using CNN-BiLSTM-Attention model},\n\tjournal = {NONDESTRUCTIVE TESTING AND EVALUATION},\n\tyear = {2025},\n\tkeywords = {Nonlinear ultrasonic testing; CNN-BiLSTM-Attention; precipitated phase measurement; Lamb waves; creep; 2ND-HARMONIC GENERATION; HARMONIC-GENERATION; DIAGNOSIS},\n\tabstract = {Ti60 alloys are widely used in aerospace applications, where high-temperature creep is a major failure mechanism. Under high temperature conditions, Ti60 alloys precipitate silicides, leading to a decrease in the strength, ductility and creep resistance of the material. Monitoring the area fraction of the precipitated phase is essential for evaluating microstructural degradation and ensuring long-term structural integrity. Traditional techniques such as metallography and transmission electron microscopy (TEM) are accurate but destructive and unsuitable for real-time monitoring. This study proposes a deep learning-based method to non-destructively predict the area fraction of precipitated phases in Ti60 alloy after high-temperature creep. The model integrates a multi-scale Convolutional Neural Network (CNN), a Bi-directional Long Short-Term Memory network (BiLSTM) and an attention mechanism. The model uses time-frequency images of nonlinear ultrasonic signals as input, exploiting their sensitivity to microstructural evolution. Experimental results show that the model achieves a prediction accuracy of 98% and a root mean square error (RMSE) of 0.29. The proposed approach offers a rapid, accurate, and non-destructive solution for assessing precipitation-related microstructural changes in Ti60 alloy resulting from high-temperature creep damage.},\n\tdoi = {10.1080/10589759.2025.2554915},\n\tissn = {1058-9759},\n\tnote = {Times Cited in Web of Science Core Collection: 2 Total Times Cited: 3 Cited Reference Count: 54 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1080/10589759.2025.2554915"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000157",
+      "entry_type": "article",
+      "title": "Detection of grout sleeve defects based on the time domain dimensionless indicators of component signals",
+      "authors": [
+        "Xiao, HZ",
+        "Huang, Y"
+      ],
+      "year": 2023,
+      "journal": "JOURNAL OF BUILDING ENGINEERING",
+      "doi": "10.1016/j.jobe.2022.105795",
+      "abstract": "In recent years, precast concrete structures have been widely used in building and bridge engineering. Grouted sleeve connectors (GSC) are extensively applied to connect vertical rebars between precast concrete members. In practical construction, defects, such as no grouting, insufficient grouting, and missing rebar, often exist in the GSC, which reduces the load-bearing capacity. Therefore, detecting GSC defects is important for the safety of precast concrete structures. In this paper, a numerical model of meso-scale GSC concrete was developed. The model was verified by test data from existing literature. The ultrasonic wave signals in the GSC with and without defects were compared in detail. The signals were decomposed based on wavelet packet transform and empirical mode decomposition. Then the time domain dimensionless indicators were extracted to examine the GSC defects. The proposed method was shown to be superior in detecting the GSC defects with high sensitivity.",
+      "keywords": [
+        "Grouted sleeve connectors",
+        "Grouted sleeve connectors defects",
+        "Ultrasonic testing",
+        "Wavelet packet transform",
+        "Empirical mode decomposition",
+        "CONCRETE",
+        "PROPAGATION",
+        "WAVES"
+      ],
+      "normalized_title": "detection of grout sleeve defects based on the time domain dimensionless indicators of component signals",
+      "raw_bibtex": "@ARTICLE{10.1016/j.jobe.2022.105795,\n\tauthor = {Xiao, HZ and Huang, Y},\n\ttitle = {Detection of grout sleeve defects based on the time domain dimensionless indicators of component signals},\n\tjournal = {JOURNAL OF BUILDING ENGINEERING},\n\tyear = {2023},\n\tkeywords = {Grouted sleeve connectors; Grouted sleeve connectors defects; Ultrasonic testing; Wavelet packet transform; Empirical mode decomposition; CONCRETE; PROPAGATION; WAVES},\n\tabstract = {In recent years, precast concrete structures have been widely used in building and bridge engineering. Grouted sleeve connectors (GSC) are extensively applied to connect vertical rebars between precast concrete members. In practical construction, defects, such as no grouting, insufficient grouting, and missing rebar, often exist in the GSC, which reduces the load-bearing capacity. Therefore, detecting GSC defects is important for the safety of precast concrete structures. In this paper, a numerical model of meso-scale GSC concrete was developed. The model was verified by test data from existing literature. The ultrasonic wave signals in the GSC with and without defects were compared in detail. The signals were decomposed based on wavelet packet transform and empirical mode decomposition. Then the time domain dimensionless indicators were extracted to examine the GSC defects. The proposed method was shown to be superior in detecting the GSC defects with high sensitivity.},\n\tdoi = {10.1016/j.jobe.2022.105795},\n\tvolume = {65},\n\tissn = {2352-7102},\n\tnote = {Times Cited in Web of Science Core Collection: 11 Total Times Cited: 11 Cited Reference Count: 38 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.jobe.2022.105795"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000158",
+      "entry_type": "article",
+      "title": "Uncertainty quantification for characterization of rock elastic modulus based on P-velocity",
+      "authors": [
+        "Liu, J",
+        "Jiang, Q",
+        "Xu, DP",
+        "Zheng, H",
+        "Gong, FQ",
+        "Xin, J"
+      ],
+      "year": 2023,
+      "journal": "GEORISK-ASSESSMENT AND MANAGEMENT OF RISK FOR ENGINEERED SYSTEMS AND GEOHAZARDS",
+      "doi": "10.1080/17499518.2022.2119580",
+      "abstract": "The elastic modulus of rock is an important parameter in rock engineering, but the common methods based on laboratory tests are laborious, especially for obtaining the probability distribution of the elastic modulus that is required in reliability-based design. Many scholars have studied the regression model between the elastic modulus and P-wave velocity; however, most previous reports have ignored the characterization of parameter variability and model uncertainty. To address this problem, a large number of granite samples are collected from the Yingliangbao hydropower station (YLB), compressive wave velocity (P-wave velocity) and uniaxial compression tests are carried out in the laboratory. Then, four different regression models based on the frequentist method and Bayesian method are established to estimate the elastic modulus, the normal priors are adopted by prior analysis and the widely applicable information criterion (WAIC) is used to select the most appropriate Bayesian regression model. Finally, the effects of sample size and sample selection on different methods are studied, the results obtained from different priors are compared. The results show that the Bayesian method provides estimations that are more consistent with the test data and has better robustness in given sets of different sample selections, especially in small sample size.",
+      "keywords": [
+        "Bayesian methods",
+        "ultrasonic testing",
+        "elastic modulus",
+        "uncertainty quantification",
+        "informative prior",
+        "UNIAXIAL COMPRESSIVE STRENGTH",
+        "ARTIFICIAL NEURAL-NETWORK",
+        "WAVE VELOCITY",
+        "DEFORMATION MODULUS",
+        "INTACT ROCK",
+        "MECHANICAL PARAMETERS",
+        "RELIABILITY-ANALYSIS",
+        "MODEL SELECTION",
+        "YOUNGS MODULUS",
+        "MASS"
+      ],
+      "normalized_title": "uncertainty quantification for characterization of rock elastic modulus based on p velocity",
+      "raw_bibtex": "@ARTICLE{10.1080/17499518.2022.2119580,\n\tauthor = {Liu, J and Jiang, Q and Xu, DP and Zheng, H and Gong, FQ and Xin, J},\n\ttitle = {Uncertainty quantification for characterization of rock elastic modulus based on P-velocity},\n\tjournal = {GEORISK-ASSESSMENT AND MANAGEMENT OF RISK FOR ENGINEERED SYSTEMS AND GEOHAZARDS},\n\tyear = {2023},\n\tkeywords = {Bayesian methods; ultrasonic testing; elastic modulus; uncertainty quantification; informative prior; UNIAXIAL COMPRESSIVE STRENGTH; ARTIFICIAL NEURAL-NETWORK; WAVE VELOCITY; DEFORMATION MODULUS; INTACT ROCK; MECHANICAL PARAMETERS; RELIABILITY-ANALYSIS; MODEL SELECTION; YOUNGS MODULUS; MASS},\n\tabstract = {The elastic modulus of rock is an important parameter in rock engineering, but the common methods based on laboratory tests are laborious, especially for obtaining the probability distribution of the elastic modulus that is required in reliability-based design. Many scholars have studied the regression model between the elastic modulus and P-wave velocity; however, most previous reports have ignored the characterization of parameter variability and model uncertainty. To address this problem, a large number of granite samples are collected from the Yingliangbao hydropower station (YLB), compressive wave velocity (P-wave velocity) and uniaxial compression tests are carried out in the laboratory. Then, four different regression models based on the frequentist method and Bayesian method are established to estimate the elastic modulus, the normal priors are adopted by prior analysis and the widely applicable information criterion (WAIC) is used to select the most appropriate Bayesian regression model. Finally, the effects of sample size and sample selection on different methods are studied, the results obtained from different priors are compared. The results show that the Bayesian method provides estimations that are more consistent with the test data and has better robustness in given sets of different sample selections, especially in small sample size.},\n\tdoi = {10.1080/17499518.2022.2119580},\n\tvolume = {17},\n\tnumber = {3},\n\tpages = {521-542},\n\tissn = {1749-9518},\n\tnote = {Times Cited in Web of Science Core Collection: 3 Total Times Cited: 4 Cited Reference Count: 55 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1080/17499518.2022.2119580"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000159",
+      "entry_type": "article",
+      "title": "Adaptive optimization strategy for total focusing ultrasonic imaging using sparse array combined with metric learning in dual-layer medium",
+      "authors": [
+        "Zhang, PH",
+        "Ma, SW",
+        "Huang, KH",
+        "Zhu, Q",
+        "Zhang, HY"
+      ],
+      "year": 2026,
+      "journal": "APPLIED ACOUSTICS",
+      "doi": "10.1016/j.apacoust.2026.111246",
+      "abstract": "Phased array ultrasonic testing based on complete matrix data enables high-quality imaging through comprehensive signal processing. However, applying the total focusing scanning imaging to data-intensive complete datasets from composite structures often results in processing delays and defect localization inaccuracies. To overcome these challenges, this paper proposes an adaptive sparse array imaging algorithm incorporating an image quality assessment mechanism. An approximately optimal array element configuration is obtained by applying an improved genetic algorithm that performs real-number encoding and conducts efficient optimization within the initialized array search space. The optimized array element configuration provides the fundamental data required for fast image reconstruction in dual-layer media. A finite element model is then developed to simulate phased array inspection of a medium with discontinuous impedance, from which complete matrix data is extracted for sparse array imaging. Subsequently, image feature extraction and quality evaluation are performed using a Siamese convolutional neural network. Experimental validation is carried out on wedge-coupled thick fiber laminated specimens. Both simulation and experimental results demonstrate that the proposed imaging strategy effectively balances image quality with the number of activated array elements. It significantly improves the reconstruction efficiency for discontinuous impedance materials while maintaining satisfactory levels of signal-to-noise ratio and the array performance index.",
+      "keywords": [
+        "Ultrasonic phased array",
+        "Sparse array optimization",
+        "Full matrix capture",
+        "Ultrasonic imaging"
+      ],
+      "normalized_title": "adaptive optimization strategy for total focusing ultrasonic imaging using sparse array combined with metric learning in dual layer medium",
+      "raw_bibtex": "@ARTICLE{10.1016/j.apacoust.2026.111246,\n\tauthor = {Zhang, PH and Ma, SW and Huang, KH and Zhu, Q and Zhang, HY},\n\ttitle = {Adaptive optimization strategy for total focusing ultrasonic imaging using sparse array combined with metric learning in dual-layer medium},\n\tjournal = {APPLIED ACOUSTICS},\n\tyear = {2026},\n\tkeywords = {Ultrasonic phased array; Sparse array optimization; Full matrix capture; Ultrasonic imaging},\n\tabstract = {Phased array ultrasonic testing based on complete matrix data enables high-quality imaging through comprehensive signal processing. However, applying the total focusing scanning imaging to data-intensive complete datasets from composite structures often results in processing delays and defect localization inaccuracies. To overcome these challenges, this paper proposes an adaptive sparse array imaging algorithm incorporating an image quality assessment mechanism. An approximately optimal array element configuration is obtained by applying an improved genetic algorithm that performs real-number encoding and conducts efficient optimization within the initialized array search space. The optimized array element configuration provides the fundamental data required for fast image reconstruction in dual-layer media. A finite element model is then developed to simulate phased array inspection of a medium with discontinuous impedance, from which complete matrix data is extracted for sparse array imaging. Subsequently, image feature extraction and quality evaluation are performed using a Siamese convolutional neural network. Experimental validation is carried out on wedge-coupled thick fiber laminated specimens. Both simulation and experimental results demonstrate that the proposed imaging strategy effectively balances image quality with the number of activated array elements. It significantly improves the reconstruction efficiency for discontinuous impedance materials while maintaining satisfactory levels of signal-to-noise ratio and the array performance index.},\n\tdoi = {10.1016/j.apacoust.2026.111246},\n\tvolume = {247},\n\tissn = {0003-682X},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 30 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.apacoust.2026.111246"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000160",
+      "entry_type": "article",
+      "title": "Two-Stage Ultrasound Signal Recognition Method Based on Envelope and Local Similarity Features",
+      "authors": [
+        "Wang, LW",
+        "Lu, SX",
+        "Liu, XY",
+        "Liu, JH"
+      ],
+      "year": 2022,
+      "journal": "MACHINES",
+      "doi": "10.3390/machines10121111",
+      "abstract": "Accurate identification of ultrasonic signals can effectively improve the accuracy of a defect detection and inversion. Current methods, based on machine learning and deep learning have been able to classify signals with significant differences. However, the ultrasonic internal detection signal is interspersed with a large number of anomalous signals of an unknown origin and is affected by the time shift of echo features and noise interference, which leads to the low recognition accuracy of the ultrasonic internal detection signal, at this stage. To address the above problems, this paper proposes a two-stage ultrasonic signal recognition method, based on the envelope and local similarity features (TS-ES). In the first stage, a normal signal classification method, based on the envelope feature extraction and fusion is proposed to solve the problem of the low ultrasonic signal classification accuracy under the conditions of the echo feature time shift and noise interference. In the second stage, an abnormal signal detection method, based on the local similarity feature extraction and enhancement is proposed to solve the problem of detecting abnormal signals in ultrasound internal detection data. The experimental results show that the accuracy of the two-stage ultrasonic signal recognition method, based on the envelope and local similarity features (TS-ES) in this paper is 97.43%, and the abnormal signal detection accuracy and recall rate are as high as 99.7% and 97.81%.",
+      "keywords": [
+        "ultrasonic testing",
+        "signal classification",
+        "anomaly detection",
+        "envelope curve",
+        "dynamic time warping",
+        "CLASSIFICATION"
+      ],
+      "normalized_title": "two stage ultrasound signal recognition method based on envelope and local similarity features",
+      "raw_bibtex": "@ARTICLE{10.3390/machines10121111,\n\tauthor = {Wang, LW and Lu, SX and Liu, XY and Liu, JH},\n\ttitle = {Two-Stage Ultrasound Signal Recognition Method Based on Envelope and Local Similarity Features},\n\tjournal = {MACHINES},\n\tyear = {2022},\n\tkeywords = {ultrasonic testing; signal classification; anomaly detection; envelope curve; dynamic time warping; CLASSIFICATION},\n\tabstract = {Accurate identification of ultrasonic signals can effectively improve the accuracy of a defect detection and inversion. Current methods, based on machine learning and deep learning have been able to classify signals with significant differences. However, the ultrasonic internal detection signal is interspersed with a large number of anomalous signals of an unknown origin and is affected by the time shift of echo features and noise interference, which leads to the low recognition accuracy of the ultrasonic internal detection signal, at this stage. To address the above problems, this paper proposes a two-stage ultrasonic signal recognition method, based on the envelope and local similarity features (TS-ES). In the first stage, a normal signal classification method, based on the envelope feature extraction and fusion is proposed to solve the problem of the low ultrasonic signal classification accuracy under the conditions of the echo feature time shift and noise interference. In the second stage, an abnormal signal detection method, based on the local similarity feature extraction and enhancement is proposed to solve the problem of detecting abnormal signals in ultrasound internal detection data. The experimental results show that the accuracy of the two-stage ultrasonic signal recognition method, based on the envelope and local similarity features (TS-ES) in this paper is 97.43%, and the abnormal signal detection accuracy and recall rate are as high as 99.7% and 97.81%.},\n\tdoi = {10.3390/machines10121111},\n\tvolume = {10},\n\tnumber = {12},\n\tissn = {2075-1702},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 17 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/machines10121111"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

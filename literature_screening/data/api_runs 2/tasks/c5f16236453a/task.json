@@ -1,0 +1,181 @@
+{
+  "id": "c5f16236453a",
+  "kind": "screening",
+  "status": "succeeded",
+  "title": "new-screening-run",
+  "phase": "completed",
+  "created_at": "2026-03-22T14:34:09.462285+08:00",
+  "updated_at": "2026-03-22T14:34:36.267029+08:00",
+  "metadata": {
+    "project_topic": "BALF基线病毒谱经免疫调控影响SCAP患者预后的机制及预测研究",
+    "model_provider": "deepseek"
+  },
+  "summary": {
+    "run_id": "run_20260322_143409",
+    "input_files_count": 1,
+    "raw_entries_count": 10,
+    "deduped_entries_count": 10,
+    "processed_count": 10,
+    "included_count": 4,
+    "excluded_count": 4,
+    "uncertain_count": 2,
+    "unused_count": 0,
+    "batch_count": 1,
+    "api_call_count": 1,
+    "stop_reason": "all_records_processed",
+    "started_at": "2026-03-22T14:34:09.923511+08:00",
+    "finished_at": "2026-03-22T14:34:36.260988+08:00"
+  },
+  "error": null,
+  "artifacts": {
+    "included_report": {
+      "path": "runs/20260322_143409_new-screening-run/screening_output/included_report.md",
+      "filename": "included_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 2042
+    },
+    "excluded_report": {
+      "path": "runs/20260322_143409_new-screening-run/screening_output/excluded_report.md",
+      "filename": "excluded_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 1910
+    },
+    "uncertain_report": {
+      "path": "runs/20260322_143409_new-screening-run/screening_output/uncertain_report.md",
+      "filename": "uncertain_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 945
+    },
+    "included_ris": {
+      "path": "runs/20260322_143409_new-screening-run/screening_output/included.ris",
+      "filename": "included.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 9327
+    },
+    "unused_ris": {
+      "path": "runs/20260322_143409_new-screening-run/screening_output/unused_remaining.ris",
+      "filename": "unused_remaining.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 0
+    },
+    "run_summary": {
+      "path": "runs/20260322_143409_new-screening-run/screening_output/run_summary.json",
+      "filename": "run_summary.json",
+      "content_type": "application/json",
+      "size_bytes": 442
+    },
+    "screening_decisions": {
+      "path": "runs/20260322_143409_new-screening-run/screening_output/screening_decisions.json",
+      "filename": "screening_decisions.json",
+      "content_type": "application/json",
+      "size_bytes": 5072
+    }
+  },
+  "run_root": "runs/20260322_143409_new-screening-run",
+  "output_dir": "runs/20260322_143409_new-screening-run/screening_output",
+  "markdown_preview": null,
+  "records": [
+    {
+      "paper_id": "paper_000001",
+      "title": "Clinical characteristics and prognosis of patients with Chlamydia psittaci pneumonia identified by metagenomic next-generation sequencing.",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要聚焦鹦鹉热衣原体肺炎，未涉及筛选主题要求的病毒谱、免疫调控或预后预测模型。",
+      "year": 2026,
+      "journal": "BMC Infect Dis",
+      "doi": "10.1186/s12879-026-12822-9"
+    },
+    {
+      "paper_id": "paper_000002",
+      "title": "Targeted next-generation sequencing improves diagnosis and antimicrobial stewardship in Chlamydia psittaci pneumonia.",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "研究针对鹦鹉热衣原体肺炎的tNGS诊断和抗生素管理，未涉及病毒谱、免疫调控机制或预后预测。",
+      "year": 2026,
+      "journal": "Eur J Clin Microbiol Infect Dis",
+      "doi": "10.1007/s10096-026-05404-9"
+    },
+    {
+      "paper_id": "paper_000003",
+      "title": "Clinical characterization of Chlamydia psittaci infections detected by targeted next generation sequencing in a Chinese tertiary hospital.",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "研究描述鹦鹉热衣原体感染的tNGS检测，虽提及IL-6但非核心机制探讨，未涉及病毒谱或预后预测模型。",
+      "year": 2026,
+      "journal": "Front Med (Lausanne)",
+      "doi": "10.3389/fmed.2026.1744125"
+    },
+    {
+      "paper_id": "paper_000004",
+      "title": "Clinical characteristics and prognostic impact of streptococcal colonization in critically ill patients with severe pneumonia.",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "研究涉及重症肺炎患者链球菌定植与预后，使用BALF mNGS并分析死亡率，但未明确涉及病毒谱或免疫调控机制。",
+      "year": 2026,
+      "journal": "Front Cell Infect Microbiol",
+      "doi": "10.3389/fcimb.2026.1647511"
+    },
+    {
+      "paper_id": "paper_000005",
+      "title": "The role of bronchoalveolar lavage fluid metagenomic next-generation sequencing in detecting pathogens and optimising antibiotic therapy in paediatric severe community-acquired pneumonia.",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确针对儿童重症社区获得性肺炎，使用BALF mNGS优化抗生素治疗并分析临床结局，符合纳入标准。",
+      "year": 2026,
+      "journal": "Front Cell Infect Microbiol",
+      "doi": "10.3389/fcimb.2025.1688473"
+    },
+    {
+      "paper_id": "paper_000006",
+      "title": "Airway microbiome dysbiosis in severe pneumonia: metagenomic evidence of pathogen expansion and commensal depletion.",
+      "decision": "uncertain",
+      "confidence": 0.6,
+      "reason": "研究涉及重症肺炎的BALF mNGS微生物组分析，关联炎症和凝血指标，但未明确讨论病毒谱或免疫调控机制。",
+      "year": 2026,
+      "journal": "Eur J Med Res",
+      "doi": "10.1186/s40001-026-03892-1"
+    },
+    {
+      "paper_id": "paper_000007",
+      "title": "Aspergillus fumigatus in mechanically ventilated pneumonia- independent mortality risk and synergistic microbiome signatures from a multicenter mNGS cohort.",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "研究涉及机械通气重症肺炎的BALF mNGS，分析烟曲霉感染与死亡率风险，并提及EBV等病毒共定植，符合纳入标准。",
+      "year": 2026,
+      "journal": "BMC Pulm Med",
+      "doi": "10.1186/s12890-026-04131-3"
+    },
+    {
+      "paper_id": "paper_000008",
+      "title": "The impact of the timing of mNGS-guided antibiotic adjustment on clinical outcomes in ICU patients with severe community-acquired pneumonia: a retrospective study.",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确针对重症社区获得性肺炎，使用BALF mNGS指导抗生素调整并分析28天死亡率，符合纳入标准。",
+      "year": 2026,
+      "journal": "Ann Clin Microbiol Antimicrob",
+      "doi": "10.1186/s12941-026-00848-5"
+    },
+    {
+      "paper_id": "paper_000009",
+      "title": "Targeted next-generation sequencing has comparable clinical value to metagenomic NGS for pulmonary infections in hematological malignancy patients: a real-world propensity score-matched study.",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "研究比较血液病患者的BALF tNGS与mNGS诊断价值，未涉及重症肺炎、病毒谱、免疫调控或预后预测。",
+      "year": 2026,
+      "journal": "Eur J Med Res",
+      "doi": "10.1186/s40001-026-03893-0"
+    },
+    {
+      "paper_id": "paper_000010",
+      "title": "CD4(+) T cells stratification unveils a dynamic pathogen landscape in severe pneumonia: a targeted next-generation sequencing-based cohort study.",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "研究涉及重症肺炎的BALF tNGS病原谱分析，以CD4+ T细胞分层关联CMV等病毒感染和预后，符合纳入标准。",
+      "year": 2025,
+      "journal": "Front Cell Infect Microbiol",
+      "doi": "10.3389/fcimb.2025.1742311"
+    }
+  ],
+  "project_topic": "BALF基线病毒谱经免疫调控影响SCAP患者预后的机制及预测研究",
+  "model_provider": "deepseek"
+}

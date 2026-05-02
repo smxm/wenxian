@@ -1,0 +1,581 @@
+{
+  "id": "932d3f0aceb0",
+  "kind": "screening",
+  "status": "succeeded",
+  "cancel_requested": false,
+  "title": "new-screening-run-continue",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 4,
+  "progress_total": 4,
+  "progress_message": "Task completed",
+  "created_at": "2026-03-29T14:07:46.558547+08:00",
+  "updated_at": "2026-03-29T14:09:30.552784+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "6467cf31219c",
+    "project_topic": "手机在课堂中的双重角色：分心与教育吸引力（即手机对课堂的负面影响、正面影响以及辩证的管理视角）",
+    "model_provider": "deepseek",
+    "parent_task_id": "c46ec7b0d67e",
+    "input_dataset_ids": [
+      "068c6d2e3c0d"
+    ],
+    "request_payload": {
+      "title": "new-screening-run-continue",
+      "topic": "手机在课堂中的双重角色：分心与教育吸引力（即手机对课堂的负面影响、正面影响以及辩证的管理视角）",
+      "criteria_markdown": "# Role\r\n\r\n你是一位教育心理学与教育技术学领域的资深学术研究员，正在协助我筛选参考文献。我正在撰写一篇关于“手机在课堂中的双重角色：分心与教育吸引力（即手机对课堂的负面影响、正面影响以及辩证的管理视角）”的论文，我需要你帮我找出我能用到的参考文献。\r\n\r\n# Task\r\n\r\n我将提供一批文献的元数据（标题、摘要、关键词等）。请你逐一阅读，并严格按照以下流程处理：\r\n\r\n## Step 1: 筛选判读\r\n\r\n请根据以下标准判断该文献是否符合我的研究需求：\r\n\r\n* 纳入标准 (Inclusion Criteria)：\r\n  1. 研究场景必须是教育环境（如中小学课堂、高等教育讲堂、具体学习环境）。\r\n  2. 核心研究对象必须包含智能手机（Smartphone / Mobile phone）的使用行为及其影响。\r\n  3. 研究主题必须实质性探讨以下至少一个维度：\r\n     - **负面影响**：手机造成的认知干扰、多任务处理、注意力分散、“低头族”现象或学业表现下降等。\r\n     - **正面影响**：手机作为教学工具带来的课堂参与度提升、互动反馈、移动学习效能或学习动机激发等。\r\n     - **辩证视角**：关于学生数字自我调节能力、课堂手机使用政策（禁用与引导）、教师的整合策略等。\r\n\r\n* 排除标准 (Exclusion Criteria)：\r\n  1. 纯通信技术、硬件架构或软件工程领域的非教育类文献。\r\n  2. 研究场景非教育环境（例如：驾驶时使用手机、工作场所的分心行为、医疗健康监控）。\r\n  3. 仅泛泛讨论“互联网”或“电脑/平板”，未明确聚焦于“手机/智能手机”的文献。\r\n  4. 缺乏实质性研究内容（如无摘要、纯会议通知或无核心结论的短评）。\r\n\r\n## Step 2: 格式化输出\r\n\r\n根据判读结果，执行不同的输出逻辑。\r\n**【最高优先级指令】：最终结果必须完整输出在一个 Markdown 代码框内。严禁使用任何系统自带的来源引用功能，绝对不要在文本中添加诸如 \"\"、\"[1]\" 等形式的来源标记。只输出纯文本内容。**\r\n\r\n情况 A：如果不符合要求\r\n\r\n* 仅输出一行文字：\r\n  `❌ [剔除]：<文献完整标题>`\r\n\r\n情况 B：如果符合要求\r\n\r\n* 请按以下结构输出：\r\n\r\n# <文献完整标题>\r\n（<此处填写标题的中文翻译>）\r\n\r\n核心总结\r\n(请用中文概括文章解决了什么问题，使用了什么核心研究方法，得出了什么主要结论。)\r\n\r\n深度分析\r\n* 参考价值：针对我的论文主题（手机在课堂中的双重角色），这篇文章提供了哪些具体的素材或实证数据？建议将其归类到我论文的哪个部分（负面影响、正面教育吸引力，还是辩证管理）？\r\n\r\n---\r\n\r\n# Input Data\r\n\r\n[在此处粘贴你导出的文献信息，可以是 BibTeX 格式，或者 Excel/CSV 中的标题+摘要文本]",
+      "inclusion": [
+        "研究场景必须是教育环境（如中小学课堂、高等教育讲堂、具体学习环境）。",
+        "核心研究对象必须包含智能手机（Smartphone / Mobile phone）的使用行为及其影响。",
+        "研究主题必须实质性探讨以下至少一个维度：",
+        "负面影响：手机造成的认知干扰、多任务处理、注意力分散、“低头族”现象或学业表现下降等。",
+        "正面影响：手机作为教学工具带来的课堂参与度提升、互动反馈、移动学习效能或学习动机激发等。",
+        "辩证视角：关于学生数字自我调节能力、课堂手机使用政策（禁用与引导）、教师的整合策略等。"
+      ],
+      "exclusion": [
+        "纯通信技术、硬件架构或软件工程领域的非教育类文献。",
+        "研究场景非教育环境（例如：驾驶时使用手机、工作场所的分心行为、医疗健康监控）。",
+        "仅泛泛讨论“互联网”或“电脑/平板”，未明确聚焦于“手机/智能手机”的文献。",
+        "缺乏实质性研究内容（如无摘要、纯会议通知或无核心结论的短评）。"
+      ],
+      "provider": "deepseek",
+      "model_name": "deepseek-chat",
+      "api_base_url": "https://api.deepseek.com/v1",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.0,
+      "max_tokens": 1536,
+      "min_request_interval_seconds": 2.0,
+      "batch_size": 10,
+      "target_include_count": 30,
+      "stop_when_target_reached": false,
+      "allow_uncertain": true,
+      "retry_times": 6,
+      "request_timeout_seconds": 240,
+      "encoding": "auto",
+      "project_id": "6467cf31219c",
+      "parent_task_id": "c46ec7b0d67e",
+      "source_dataset_ids": [
+        "068c6d2e3c0d"
+      ]
+    },
+    "model_secret_id": "7a594d3953004adb",
+    "uploaded_input_paths": []
+  },
+  "summary": {
+    "run_id": "run_20260329_140746",
+    "input_files_count": 1,
+    "raw_entries_count": 40,
+    "deduped_entries_count": 40,
+    "processed_count": 40,
+    "included_count": 22,
+    "excluded_count": 10,
+    "uncertain_count": 8,
+    "unused_count": 0,
+    "batch_count": 4,
+    "api_call_count": 4,
+    "stop_reason": "all_records_processed",
+    "started_at": "2026-03-29T14:07:46.602771+08:00",
+    "finished_at": "2026-03-29T14:09:30.520578+08:00"
+  },
+  "error": null,
+  "artifacts": {
+    "included_report": {
+      "path": "tasks/932d3f0aceb0/screening_run/screening_output/included_report.md",
+      "filename": "included_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 10878
+    },
+    "excluded_report": {
+      "path": "tasks/932d3f0aceb0/screening_run/screening_output/excluded_report.md",
+      "filename": "excluded_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 4448
+    },
+    "uncertain_report": {
+      "path": "tasks/932d3f0aceb0/screening_run/screening_output/uncertain_report.md",
+      "filename": "uncertain_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 3885
+    },
+    "included_ris": {
+      "path": "tasks/932d3f0aceb0/screening_run/screening_output/included.ris",
+      "filename": "included.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 45421
+    },
+    "unused_ris": {
+      "path": "tasks/932d3f0aceb0/screening_run/screening_output/unused_remaining.ris",
+      "filename": "unused_remaining.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 0
+    },
+    "run_summary": {
+      "path": "tasks/932d3f0aceb0/screening_run/screening_output/run_summary.json",
+      "filename": "run_summary.json",
+      "content_type": "application/json",
+      "size_bytes": 444
+    },
+    "screening_decisions": {
+      "path": "tasks/932d3f0aceb0/screening_run/screening_output/screening_decisions.json",
+      "filename": "screening_decisions.json",
+      "content_type": "application/json",
+      "size_bytes": 21106
+    }
+  },
+  "run_root": "tasks/932d3f0aceb0/screening_run",
+  "output_dir": "tasks/932d3f0aceb0/screening_run/screening_output",
+  "markdown_preview": null,
+  "records": [
+    {
+      "paper_id": "paper_000001",
+      "title": "Online learning readiness in secondary education: validating the Online Learning Readiness Scale and examining the impact role of ICT familiarity",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "摘要提到多数学生仅通过手机参与在线学习，但研究核心是验证量表并探讨ICT熟悉度，未明确聚焦手机在课堂中的双重角色。",
+      "year": 2024,
+      "journal": "Journal of E-Learning and Knowledge Society",
+      "doi": "10.20368/1971-8829/1135893",
+      "abstract": "Online and blended learning have increased drastically during the pandemic, and their popularity has persisted as we emerge from this global crisis. This study aims to adapt and validate the Online Learning Readiness Scale (OLRS) to assess high school students. Secondary school students were recruited (n = 296) for the study. The OLRS scale included five components: Technology Readiness, Learner Control, Online Communication Self-efficacy, Self-directed Learning and Motivation for Learning. Results supported the OLRS scale in terms of reliability and internal construct validity in context of the study by confirmatory factor analysis and Rasch measurement with partial credit analysis. The differential item functioning analysis revealed no bias issues regarding gender, confirming the measurement invariance statistics achieved. The study also found that the majority of students (73.7%) engaged in online learning solely through their mobile phone. ICT familiarity, i.e., interacting with friends regularly, browsing online learning materials, and watching educational videos on YouTube, had a positive association with students’ readiness for online learning. Students’ access to social networks, online forums and online music did not have a significant effect on their readiness for online learning. The scale demonstrated the capacity to function as an assessment instrument for evaluating readiness for online learning in the context of secondary education. Educational implications were considered, including key requirements of supporting technology and pedagogical practice in online and blended learning environments. © Italian e-Learning Association. ER -"
+    },
+    {
+      "paper_id": "paper_000002",
+      "title": "Analysis of multimedia technology and mobile learning in English teaching in colleges and universities",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确讨论多媒体技术和移动学习在高校英语教学中的应用，聚焦智能手机作为学习工具，符合教育场景和正面影响维度。",
+      "year": 2023,
+      "journal": "Nonlinear Engineering",
+      "doi": "10.1515/nleng-2022-0300",
+      "abstract": "Multimedia and mobile learning are effective teaching tools because of their many useful characteristics. Transmission of educational material to students is facilitated by technology in both multimedia and mobile learning environments. A more interesting and engaging learning experience may be achieved by combining text, graphics, music, video, and animation. Media-rich classrooms are often referred to as \"multimedia learning.\"In contrast, students who use mobile learning may access their courses from any place with an internet connection and a mobile device such as a smartphone or a tablet. Whenever this involves commonplace technological needs, its cellular gadget and notably its clever telephone take the cake. Smartphone gadgets have a very wide range of potential applications and uses. Some ethical considerations are preventing media from reinforcing stereotypes or prejudice in the communities where they are utilized. Student information are gathered and used in a way that protects their privacy, with materials required for students to engage in mobile learning, and respecting intellectual property and copyright regulations while using multimedia language-learning tools. This importance of learning cannot be overstated but when such results come, mobile devices have increasingly been used in schools. This question of whether mobile devices have an impact on education remains open. Because of such \"mobile gaining knowledge,\"along with an overall phrase describing researching where different devices could be utilized in combination to enhance schooling, mobile devices had become more popular. Because today's kids utilize their mobile devices frequently, studies on their effect on word learning are immediately required. This pilot research seeks to understand why school learners think via smartphone-based L2 exercises. In particular, this study collects data about several plenty applications using cell phones in linguistic research. Two hundred and ninety-four college children from one top Turkish institution participated in this research. This project uses some hybrid reporting models and relies on description analysis over its methodology. Their results show that users place one high value on obtaining ready accessibility to materials while studying some foreign language. Respondents not only remarked about their cellphone's portability but also proposed new applications for enhancing their learning in other countries. © 2023 the author(s), published by De Gruyter. ER -"
+    },
+    {
+      "paper_id": "paper_000003",
+      "title": "The effect of problematic smartphone use on school engagement and disengagement among middle school students: The mediating role of academic procrastination and sleep quality",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究问题性智能手机使用对中学生学校投入的影响，探讨负面影响机制，符合教育场景和负面影响维度。",
+      "year": 2023,
+      "journal": "Journal of Adolescence",
+      "doi": "10.1002/jad.12173",
+      "abstract": "Introduction: Although a few research have tried to explore the relationship between problematic smartphone use (PSU) and school engagement, most of them are limited to relatively simple correlation, and the mechanism needs to be further explored. This research focused on the relationship between PSU and school engagement/disengagement, and intended to verify two mediation paths. Methods: We conducted two studies in 2019 at a middle school in China. 289 students (44.6% girls), aged 11–18 (Mage = 13.25, standard deviation [SD] = 1.73), participated in Study 1, a longitudinal cross-lag analysis intend to verify the relationship between PSU and school engagement/disengagement. Using a separate sample, Study 2 explored the mediating roles of academic procrastination and sleep quality. Four hundred thirty-two students aged 11–19 (42.1% girls, Mage = 16.11, SD = 1.56) participated in this cross-sectional study. In both studies, all participants completed self-report measures in classrooms during regular school hours. Results: In Study 1, the results showed that PSU (T1) could significantly predict school engagement/disengagement (T2), but school engagement/disengagement (T1) could not predict PSU (T2). In Study 2, we found that academic procrastination could mediate the effect of PSU on school engagement, and sleep quality could mediate the effect of PSU on both school engagement and disengagement. Conclusions: Results highlighted that the school engagement/disengagement of adolescents can be influenced by PSU through several different ways, through which we can protect adolescents from the negative effects of PSU. © 2023 Foundation for Professionals in Services to Adolescents. ER -"
+    },
+    {
+      "paper_id": "paper_000004",
+      "title": "“A Change Is Gonna Come”: Pedagogical Shifts in a Post-COVID World",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "摘要提到使课程支持手机/平板访问作为教学调整之一，但研究核心是后疫情时代整体教学变革，未实质性探讨手机在课堂中的双重角色。",
+      "year": 2024,
+      "journal": "Teachers College Record",
+      "doi": "10.1177/01614681241282175",
+      "abstract": "Background/Context: COVID-19 changed how students learn, the challenges they face both in and out of the classroom, and the ways they access and engage with higher education. COVID-19 also highlighted inequalities in higher education. In response, faculty have also had to change their pedagogical approaches. Purpose/Focus of Study: This article presents ideas to address some of the challenges that COVID-19 has brought to the community college classroom. The focus of these strategies and pedagogical changes is to create a more equitable and successful environment for all students. Research Design: The author's praxis used Paulo Freire's 1970 work, The Pedagogy of the Oppressed, as a guide to critically examine pedagogical practices and choices for sociological curriculum development at a medium-sized, urban, Hispanic-serving community college. Changes were evaluated through final grade analysis and student feedback. Findings: Ten changes were implemented: making the course mobile phone/tablet accessible, incorporating audio transcripts for all, using additional video formats, engaging families/children, addressing student anxieties, incorporating more assignment choices, using Open Educational Resources for reduced costs, allowing more flexibility in assignments, extending submission times, and varying course length. These changes have reduced barriers, decreased student anxiety, and increased student success. Conclusions: The pedagogical changes made seemed to help students be more successful in their courses. © Teachers College 2024. ER -"
+    },
+    {
+      "paper_id": "paper_000005",
+      "title": "L2 teachers’ mobile-related beliefs and practices: contributions of a professional development initiative",
+      "decision": "include",
+      "confidence": 0.92,
+      "reason": "标题和摘要明确研究教师关于手机使用的信念与实践，聚焦专业发展对移动教学的影响，符合教育场景和辩证视角维度。",
+      "year": 2022,
+      "journal": "Computer Assisted Language Learning",
+      "doi": "10.1080/09588221.2020.1799825",
+      "abstract": "Mobile phones are turning into a growingly widespread educational tool across various contexts. However, the scope of research on teachers’ role in mobile-oriented instruction is limited, much less examining how professional development influences their associated beliefs and practices. Grounded in sociocultural theory, this study aimed to fill some of the void by exploring the contributions of a professional development initiative framed around mobile phone usage to L2 teachers’ beliefs and practices. Data were collected from semi-structured interviews, classroom observations, and online reflections. Data analyses indicated that the teachers gradually developed further awareness of educational exploitability of mobile phones and experienced restructuring in their associated beliefs. Additionally, the analysis of observational data showed direct and indirect patterns of utilizing mobiles by the teachers, undergoing changes during the research process. Results of the study offer implications for mobile-related teacher education, particularly professional development courses geared toward enhancing in teachers greater awareness of utilizing mobile devices. © 2020 Informa UK Limited, trading as Taylor & Francis Group. ER -"
+    },
+    {
+      "paper_id": "paper_000006",
+      "title": "Learner-generated material: the effects of ubiquitous photography on foreign language speaking performance",
+      "decision": "include",
+      "confidence": 0.88,
+      "reason": "摘要明确研究利用手机拍照进行泛在学习对外语口语表现的影响，探讨手机作为教学工具的正面效果，符合教育场景和正面影响维度。",
+      "year": 2022,
+      "journal": "Educational Technology Research and Development",
+      "doi": "10.1007/s11423-022-10149-1",
+      "abstract": "The widespread availability of mobile phones has facilitated mobile learning and ubiquitous learning in language education. Although numerous benefits have been documented, the evidence for speaking fluency enhancement is relatively scant. Firmly grounded in humans’ cognitive structure and learners’ prior knowledge, this study proposes a ubiquitous photography strategy as a form of generative learning strategy. Specifically, besides the photos in English textbooks, foreign language (FL) learners at the college level were encouraged to use their mobile phones to capture photos to practice visual prompted oral tasks. Their learning experience was measured by a self-report questionnaire, triggering their perceptions of mental effort, task complexity, and learning preferences. Their learning outcome was measured by speech analysis of their oral performance, targeting fluency, and vocabulary diversity. Data analysis revealed that ubiquitous photography induced a better learning experience and enhanced their speaking outcomes to various extents. Results contribute to the potential of integrating ubiquitous learning and generative learning strategies in FL classrooms. © 2022, Association for Educational Communications and Technology. ER -"
+    },
+    {
+      "paper_id": "paper_000007",
+      "title": "Digitising English Language Learning For Early Childhood Educators In Malaysian Context: The Rationale",
+      "decision": "uncertain",
+      "confidence": 0.48,
+      "reason": "摘要提到开发手机应用帮助幼儿教育工作者学习英语，但研究核心是应用开发原理，未明确探讨手机在课堂环境中的使用影响。",
+      "year": 2021,
+      "journal": "Asia-Pacific Journal of Research in Early Childhood Education",
+      "doi": "10.17206/apjrece.2021.15.3.113",
+      "abstract": "Nowadays, many kindergartens in Malaysia are striving toward using English in their daily activities with their children and some even use English language as their medium of instruction. However, some of the early childhood educators were not well equipped with the knowledge of English language. This paper aims to report the rationale for digitising English language learning through the development of Kindy Talk Application in terms of approach, content and design. Kindy Talk Application is a mobile application for Malaysian early childhood educators to utilise accurate language in their daily routine interactions and instructional language typically used at daycare centres. This development of the application stemmed from a series of workshops with 2 modules, namely Communication English and Storytelling techniques. These workshops aimed at increasing 30 Pahang early childhood educators’ professional development. To ensure the sustainability of the training, the Kindy Talk Application, which uses augmented reality technology was developed to allow users to practise the daily routine and instructional language using their mobile phones in a safe autonomous learning environment. This enhances the language proficiency and confidence of Malaysian early childhood educators. © 2021. Asia-Pacific Journal of Research in Early Childhood Education. All Rights Reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000008",
+      "title": "Harnessing Social Media to Enhance Nephrology Academia",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要讨论社交媒体在肾脏病学教育中的应用，研究场景为医学专业领域，非普通教育环境，且未聚焦智能手机的课堂使用。",
+      "year": 2023,
+      "journal": "Journal of the Nepal Medical Association",
+      "doi": "10.31729/jnma.8268",
+      "abstract": "The process of learning has been confined to the realms of educational institutions. Over the last ten years, the semantics of social media networks have evolved with the use of mobile gadgets. Consequently, nephrologists have realised the potential benefits of using these platforms for their educational and career development. Social media can change the horizon of nephrology education. The concept of bedside examination, teaching and sharing experiences have changed with the advent of Facebook, YouTube, Instagram and X (former Twitter). Other networking portals, such as WhatsApp, Telegram, X (former Twitter), and Pinterest, have also amassed the attention of selected users. Despite split opinions on the utility of social media, it is undeniable that it has influenced interaction between students and mentors. Resources ranging from online networks, blogs, visual aids, podcasts, online journal clubs, videos, live conference coverages, and tutorials have made it possible for nephrologists to stay informed and educated with recent updates. In this review, we discuss how social media can enrich nephrology academia, facilitate the sharing of research and access to fellowships and mentorship programs, provide career prospects to trainees, and broadcast scientific conferences while bringing nephrology societies together. © 2023, Nepal Medical Association. All rights reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000009",
+      "title": "Heuristics and Think-aloud Method for Evaluating the Usability of Game-based Language Learning",
+      "decision": "exclude",
+      "confidence": 0.82,
+      "reason": "标题和摘要聚焦游戏化语言学习应用的可用性评估，研究核心是软件评估方法，未实质性探讨手机在课堂中的使用行为及其影响。",
+      "year": 2021,
+      "journal": "International Journal of Advanced Computer Science and Applications",
+      "doi": "10.14569/ijacsa.2021.0121136",
+      "abstract": "Digital learning environments are increasingly becoming popular in recent years. The rising usage of cell phones has invited researchers to design and develop learning applications and games for mobile phones. Specifically, gamebased language learning is being promoted by researchers in many parts of the world. “Language Learning Serious Game (LLSG)” is based on a theoretical model constructed by the researcher that supports children learning English as a second language in a cultural context. The usability of such games is evaluated based on well-defined heuristics and other standard methods. This research aims to appraise the usability of LLSG through heuristics and think-aloud approaches while involving all essential stakeholders, including language experts, students, teachers, and game developers. The researcher proposed the heuristics in a cultural context, whereas the think-aloud review is compiled from the rigorous discussion session involving these stakeholders to evaluate the LLSG. The findings obtained from the heuristics evaluation reveal that the usability of LLSG is acceptable. On the other hand, various interesting suggestions and reviews were gathered from the discussion between experts and students. This evaluation will further improve the future versions of the game. © 2021. All Rights Reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000010",
+      "title": "Facilities, challenges, attitudes, and preferences of nursing students related to e-learning in the Covid-19 pandemic in Iranian context: a cross-sectional study",
+      "decision": "include",
+      "confidence": 0.87,
+      "reason": "摘要明确研究护理学生在疫情期间使用手机参与在线学习的挑战与态度，探讨手机在远程教育中的实际使用情况，符合教育场景和辩证视角。",
+      "year": 2024,
+      "journal": "BMC Medical Education",
+      "doi": "10.1186/s12909-024-05029-6",
+      "abstract": "Background: During the Covid-19 pandemic, nursing schools worldwide were forced to deliver nursing courses in ways other than the traditional face-to-face classroom setting. Numerous lessons were learned by nurse educators regarding the use of electronic and online learning strategies. It is necessary to be aware of the factors affecting e-learning and identify the strengths and weaknesses to improve the student learning experience and process in nursing school. Aim of study: The present study aimed to identify the abilities, attitudes, challenges, and preferences of nursing students regarding e-learning during the Covid-19 pandemic. Recognition of these factors can help nurse educators make needed modifications to teach more effectively. Methods: In this cross-sectional study, 228 undergraduate nursing students participated. The random sampling method used a standard questionnaire that students completed voluntarily. SPSS version 22 was used for data analysis. Results: During the Covid-19 pandemic, the majority of nursing students of Zanjan University of Medical Sciences participated in electronic classes at home using mobile phones. Students reported that logistical problems increased by participating in e-classes by their phones due to difficulty typing and frequent internet outages. Online classroom management for instructors was difficult due to students spontaneously leaving the virtual online classroom rather than attending the entire learning session. Despite the technical challenges, the attitudes of students towards the e-learning format were positive. There was a noted correlation between student attitude by gender and educational background. Students preferred that professors used more PowerPoint, showed instructional videos, and had interactive group discussion sessions rather than lecture only. Students objected to attending more than two online classes in one day if the duration lasted more than 60 min and had a rest time of fewer than 30 min between classes. Conclusion: Despite the overall positive student satisfaction with e-learning, this method of education is still far from student preferences and requires planning for an effective learning experience that meets their priorities and preferences. Using a hybrid of face-to-face and e-learning approaches together can be a more effective teaching method than either strategy alone. © 2024, The Author(s). ER -"
+    },
+    {
+      "paper_id": "paper_000011",
+      "title": "Mobile Use in the Classroom is a Mixed Bag, and Lecturers Need to Provide Students With Guidelines",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确探讨课堂手机使用的双重影响（正面和负面），研究场景为大学课堂，符合筛选主题。",
+      "year": 2024,
+      "journal": "SAGE Open",
+      "doi": "10.1177/21582440241299481",
+      "abstract": "In the era of modern life, the use of mobile devices in the classroom helps to enhance the overall performance of students, however, it has some harmful effects on academic performance. Therefore, this study attempts to identify the association between mobile phone use and the academic performance of the students of Jahangirnagar University, Bangladesh. Structural Equation Modeling (SEM) is used for identifying the relationship among variables. Results revealed that about 80% (269) of the students use mobile phones during class, among them, 65.05% (175) use mobile phones for browsing social sites and texting purposes and 24.54% (66) use them to send and receive phone calls. Moreover, students’ academic results are significantly (p <.001) associated with whether students use their mobile phones in the classroom. The results of SEM depict that positive features including recording lectures, support to study, remainder to-do lists, etc., and other features of the mobile phone have played a role positively in improving academic performance, however, different types of distractions have an adverse effect on the academic performance of students. This study explored the relationship between students’ academic performance and mobile applications that help to provide guidelines for students about mobile in the classroom. © The Author(s) 2024. ER -"
+    },
+    {
+      "paper_id": "paper_000012",
+      "title": "Digital pedagogy implementation in engineering using SMART mobiles",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "标题和摘要聚焦工程教育中的移动学习，探讨手机作为教学工具的影响，符合正面影响维度。",
+      "year": 2021,
+      "journal": "Journal of Engineering Education Transformations",
+      "doi": "10.16920/jeet/2021/v34i0/157163",
+      "abstract": "The mobile learning paradigm has significantly started influencing the global education sector, the outcome of which has reflected in the increased usage of mobile for learning by the students for online classrooms. Further, there is a need to better understand as well as individual and contextual level factors which are related to students’ mobile usage in learning activities. Hence, it is imperative to consider the usage of mobile with digital pedagogy. This study explores individual and contextual predictors of mobile usage among undergraduate students in the stream of engineering. Learning intent is defined as the personal importance that the students ascribe to use mobile for online classes. The participants included are 1004 engineering undergraduates.The regression models has been developed to examine the relationship between mobile usage with respect to new proposed model of Mobile Infographic Pedagogy (MIP).It is observed that the study analysis depicts that the Learner centric is a more significant parameter when mobile infographic pedagogy is utilized. The model reported in this paper can easily be applied by all the faculty members in any institution to help the students improve their attention in the process of teaching-learning. © 2021, Rajarambapu Institute Of Technology. All rights reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000013",
+      "title": "Mobile Phone Based Lecture Video Capturing & Streaming Technique for Efficient Bandwidth Utilization",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要主要讨论移动视频流技术优化，属于纯技术领域，未实质性探讨教育影响。",
+      "year": 2022,
+      "journal": "Wireless Personal Communications",
+      "doi": "10.1007/s11277-021-09234-0",
+      "abstract": "Advancement in smart mobile phones and wireless networks technology have broaden capability of mobile phones rather than being limited for voice communication. Smart mobile devices are true multimedia devices proficient of directing, receiving, transforming, transmitting and presentation of data like image, audio, video, and text. These features facilitate high interactive learning system in mobile phones called m-learning. Many approaches have been proposed to improve the quality, as well as reduce the duration of learning videos due to the limited memory size of mobile phones. Moreover, the cameras used so far are high-definition standard cameras which are costly. Therefore, in this paper we propose to develop an android based mobile application which captures as well as stream lecture videos using mobile phone camera. Moreover, we have proposed a content analysis algorithm to reduce size of video frames as well as bandwidth requirement for transmission. We have evaluated our proposed algorithm for various dataset captured in different classroom scenarios. We have also tested our algorithm with the MPEG compression which achieves compression ratios more than 1,000 times to those of the MPEG compression. © 2021, The Author(s), under exclusive licence to Springer Science+Business Media, LLC, part of Springer Nature. ER -"
+    },
+    {
+      "paper_id": "paper_000014",
+      "title": "Mobile Augmented Reality and Outdoor Education",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "标题和摘要聚焦户外教育中的增强现实技术，未明确涉及手机在课堂中的双重角色。",
+      "year": 2021,
+      "journal": "Built Environment",
+      "doi": "10.2148/benv.47.2.223",
+      "abstract": "This paper describes a research project that explored the use of mobile augmented reality combined with outdoor education in a Swedish primary school. Special att ention was paid to mobile augmented reality (AR). Project documentation and communication were reviewed, three iterations of design and usability evaluations of the Minnesmark mobile AR platform was made. Observations and interviews were held with teachers and students. The results describe early experiments, and both the opportunities and challenges that faced the participating teachers. The opportunities included connecting the outdoor learning environment and the indoor learning environment, directing the students’ focus, posing questions and aff ording actions, rendering symbols and timelines visible, providing a point of entry to the context and the narrative, and facilitating conceptualization. Challenges concerned how to make pedagogical use of the landscape, producing or choosing content, structuring processes, sett ing up student groups, and aligning activities and content with learning objectives. It is concluded that the teachers and the students used the mobile augmented reality to make places in the local environment, outside the classroom, the starting point to increase the authenticity of the teaching © 2021. All Rights Reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000015",
+      "title": "Student perspectives on banning mobile phones in South Australian secondary schools: A large-scale qualitative analysis",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要直接研究中学手机禁令政策，探讨其辩证影响（分心与学习工具），符合辩证视角。",
+      "year": 2025,
+      "journal": "Computers in Human Behavior",
+      "doi": "10.1016/j.chb.2025.108603",
+      "abstract": "Background: There has been a global trend to ban mobile phones in schools, with the aim of reducing distraction, improving focus on learning, and increasing prosocial behaviour. Survey evidence suggests tentatively that bans may increase academic performance and reduce bullying. However, an understudied but important aspect of understanding the impact of phone bans is students' personal views on, and experiences of, these policies. To address this gap, this study investigated students' perspectives on the benefits and challenges related to phone bans in schools. Methods: This study was a preregistered policy experiment conducted across five secondary schools in South Australia. A total of 1549 students provided 7188 responses to open-ended survey questions. Results: Thematic analysis of 69,589 words identified five categories with 16 themes. In terms of undesired effects of the bans, students reported: (i) feeling less independent and trustworthy, (ii) losing access to digital learning tools, and (iii) difficulties in regulating emotional distress without phones. However, students also reported benefits in areas of: (i) face-to-face social interaction, (ii) personal health and safety, and (ii) classroom engagement. Some students expressed a desire for education on responsible phone use, as well as approaches to managing digital devices with flexibility and personal agency, as an alternative to banning phones outright. Conclusions: These findings underscore the urgent need to monitor and address students’ overreliance on phones for socialising, emotion regulation, and coping with mental health issues. Students contribute valuable insights to inform policies and guidelines at the nexus of digital technology and student learning and well-being. © 2025 The Authors ER -"
+    },
+    {
+      "paper_id": "paper_000016",
+      "title": "Expanding the learning ecology and autonomy of language learners with mobile technologies",
+      "decision": "include",
+      "confidence": 0.88,
+      "reason": "摘要明确讨论手机作为学习工具的潜力及其课堂分心问题，涵盖正负面影响及教师角色。",
+      "year": 2024,
+      "journal": "Educational Technology and Society",
+      "doi": "10.30191/ets.202404_27(2).sp05",
+      "abstract": "With mobile phones now in the hands of virtually all of our learners, it is becoming increasingly more difficult to imagine environments that do not include learning through mobile devices in even some small capacity. The interest in mobile learning is reflected in the enormous number of publications which have appeared over the past 10 to 15 years, but there are still questions about when, how, and why learners will choose to use or not use mobile devices as a regular part of their learning (Stockwell, 2022). Furthermore, the “disruptive” nature of mobile devices (see Hampel, 2019) has caused mixed reactions from teachers, some of whom feel that they are a distraction in the classroom, while others see a shifting of responsibility to the learners as a positive that can lead to autonomous behaviours that facilitate learning. Making the most of learning through mobile learning is dependent upon understanding the expectations of teachers, learners, and administrators, and to capitalise upon the affordances of the device, the learning ecology, and the short-term and long-term goals of the learners. This paper explores how mobile learning can play a role both inside and outside of the classroom, and the impact that it may have on both formal and informal learning opportunities. It includes a discussion of the shifting roles of teachers and learners, and then going on to explore the myths associated with technology in the development and sustainment of motivation and autonomy. © (2023), (International Forum of Educational Technology and Society). All Rights Reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000017",
+      "title": "Development of Mobile Learning Based on Digital Entrepreneurs Using Raspberry Pi on TVET",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要主要描述移动学习系统开发，属于技术实现，未探讨手机在课堂中的具体影响。",
+      "year": 2023,
+      "journal": "International Journal on Advanced Science, Engineering and Information Technology",
+      "doi": "10.18517/ijaseit.13.6.18608",
+      "abstract": "Mobile learning is a method of instruction that uses portable electronics like laptops, smartphones, mobile phones, and PCs so that students may access lesson materials, instructions, and apps whenever and wherever they are without being constrained by time or place. This is an innovation regarding a systematic and structured application-based learning system as an interactive medium for students, especially at TVET. This article aims to develop mobile learning using a mini server Raspberry Pi 3 Model B+ based on digital entrepreneurs (digipreneur) that runs on the Moodle LMS as a source of learning content so that learning can be carried out interactively and flexibly, without having to be connected to the internet, or classrooms that are not effective even in areas with no internet access. This activity goes through 2 stages of system design known as client-server. In designing the server, the Raspberry Pi mini server model B+ configuration is carried out as a source of digital learning resources by using several supporting applications such as MySQL server, SSH, PHPMyAdmin, and Apache in designing the client using the Moodle LMS application, which contains digipreneur-based digital learning materials and resources, all stored in the database server. Three primary users are built into the Mobile Learning Database System: Administrators, Lecturers, and Students. This application is expected to be innovative and the right solution in terms of learning and become an alternative problem-solving tool in education. © (2023) All Rights Reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000018",
+      "title": "The Impact of an Educational Intervention on Distracted Driving Knowledge, Attitudes, and Behaviors Among College Students",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要聚焦驾驶分心干预，研究场景非教育环境，明显不符合筛选主题。",
+      "year": 2021,
+      "journal": "Journal of Community Health",
+      "doi": "10.1007/s10900-021-01014-y",
+      "abstract": "Distracted driving indiscriminately kills nearly 3500 people each year with young adults having greater risks associated with this phenomenon. Prevention programs targeting the distracted driving habits of young adults are necessary to ameliorate the high costs, both in dollars and in lives, associated with this behavior. Few health education and prevention programs have been assessed for their effectiveness in changing knowledge, attitudes, and behaviors related to distracted driving. This study explores a distracted driving intervention among undergraduate students enrolled in an introductory public health course. A quasi-experimental study design was used to compare the pre- and post-data of the group receiving 5-weeks of a distracted driving intervention to a control group. Questionnaires were administered to both groups prior to and 2 weeks following the intervention to assess changes in knowledge, attitudes, and behaviors related to distracted driving. A Difference-in-Difference technique showed significant changes in knowledge (β = 0.40, p = 0.03) and total scores (β = 2.48, p = 0.04) in the intervention (n = 97) compared to the control (n = 131). T-tests examining pre- and post-scores for individual behaviors showed the intervention group displayed positive changes for some behaviors (talking, texting, cellphone use, grooming) compared to the control. The results support the impact that a classroom-based distracted driving intervention can have on undergraduate college students. Implications for this type of health education program may lead to improvements in distracted driving attitudes and behavior among this age-group. © 2021, The Author(s), under exclusive licence to Springer Science+Business Media, LLC, part of Springer Nature. ER -"
+    },
+    {
+      "paper_id": "paper_000019",
+      "title": "Many truths, many knowledges, many forms of reason: Understanding middle-school student approaches to sources of information on the internet",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "摘要涉及中学生评估手机健康风险信息，但未明确探讨课堂使用行为或其教育影响，相关性较弱。",
+      "year": 2024,
+      "journal": "British Educational Research Journal",
+      "doi": "10.1002/berj.3909",
+      "abstract": "Sourcing information related to socio-scientific issues requires sophisticated literacies to read and evaluate conflicting accounts often signified by disagreement among experts, multiple solutions or misinformation. Much of the previous work exploring how young people approach conflicting information has tended to focus on students in the secondary and tertiary years, often taking an epistemic approach to analysis, rather than a literacies lens. At the heart of such endeavours, however, is the need for sophisticated reading skills accelerated by shifts to digital platforms to source information. Given the limited empirical studies in the field of literacy that articulate how middle school students approach sources of information, this study investigates 45 middle school students’ (13–14 years of age) self-reported strategies for investigating health risks associated with mobile phone use. We asked the students to imagine that a close friend was worried about the health risks of using their mobile phone and had asked them for advice. Students were then prompted to describe how they would search for information about the issue and how they would know if the information was reliable. Our analysis identified three dominant themes in the interview data, namely: (i) mistrust of the internet—people can be reliable sources; (ii) reliable sourcing requires consensus across sources; and (iii) criteria help to determine a reliable source. An interesting finding was the level of scepticism of the internet expressed by students. We draw on examples from the students’ interview dialogue to illustrate the themes and engage in discourse related to their approaches including implications for teaching in English classrooms. © 2023 The Authors. British Educational Research Journal published by John Wiley & Sons Ltd on behalf of British Educational Research Association. ER -"
+    },
+    {
+      "paper_id": "paper_000020",
+      "title": "Perspectives and Experiences of Smartphone Overuse among University Students in Umm Al-Qura University (UQU), Saudi Arabia: A Qualitative Analysis",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要研究大学生手机过度使用的负面影响及应对策略，涵盖学业、健康等维度，符合负面影响主题。",
+      "year": 2022,
+      "journal": "International Journal of Environmental Research and Public Health",
+      "doi": "10.3390/ijerph19074397",
+      "abstract": "Smartphone overuse and addiction is a growing concern worldwide. However, there are limited studies about smartphone addiction and its impacts on university students in Saudi Arabia. This qualitative study aimed to elicit students’ and university staff’s perspectives and experiences about smartphone overuse/addiction in Umm Al-Qura University (UQU), Saudi Arabia. Fifteen undergraduate students and 18 university staff (13 lecturers and five professionals) were recruited for the purpose of this study. The study data were collected using semi-structured interviews and ana-lysed using thematic analysis. The qualitative data comprising 33 participants (students and staff) identified four major themes including the perception of smartphone use; causes of smartphone overuse; negative impacts of smartphone overuse; and strategies to reduce the overuse of smartphone. The overall findings confirmed that students and staff alike held both positive and negative perceptions about using a smartphone. Potential factors leading to smartphone overuse included personal factors (extended free time and low self-confidence, irresponsibility/escaping certain social gatherings/passing the time); smartphone factors (reasonable price, attractive advertise-ments (ads), and engaging smartphone Apps); and social factors (social pressure and fear of losing a connection). The main negative impacts of smartphone overuse were found to be related to low academic productivity, poor physical health (body pain, lack of sleep, and low exercise), compro-mised mental well-being (stress and negative emotions), and decreased socialisation (social isolation and a reduction in face-to-face communication). Our findings suggested that awareness cam-paigns about smartphone overuse, promoting family and social events, encouraging physical activ-ities, and limiting internet use can reduce smartphone usage among university students. This find-ing has significant implications for decision-makers. © 2022 by the authors. Licensee MDPI, Basel, Switzerland. ER -"
+    },
+    {
+      "paper_id": "paper_000021",
+      "title": "Perception Medical Faculty Regarding Students' Classroom Incivilities and Coping Strategies",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确研究医学课堂中学生使用手机（cellphone）作为不文明行为之一，并探讨教师的应对策略，符合教育场景和手机负面影响维度。",
+      "year": 2022,
+      "journal": "Pakistan Armed Forces Medical Journal",
+      "doi": "10.51253/pafmj.v72i5.4351",
+      "abstract": "Objectives: To explore perception of medical faculty regarding students' classroom incivilities and coping strategies. Study Design: Cross-sectional study. Place and study duration: Khawaja Muhammad Safdar Medical College, Sialkot, Pakistan from January to April 2020. Methodology: A self-administered questionnaire was used to collect responses from the faculty. The study was carried out on 125 participants. Data were analyzed using SPSS version 25.0. Results: Of 125 faculties 67(53.6%) were males. Junior faculty members were 80(64.0%). Irritating remarks (89.0%), cellphone use and cheating in the exam (87.0%) were the most common incivilities and reluctance to answer questions (40.0%) was the least common. Being friendly/respectful to students, passionate, establishing clear rules, starting class on time, using eye contact and variable students' engaging activities, encouraging students to self-evaluate their behaviour and welcoming their suggestions were supported by >90% of the faculty. However, humiliating remarks to correct the students' incivility was unanimously rejected. In comparison, the use of cell phones, irritating remarks, whispering, talking out of turn, arriving late in class, cheating in exams and leaving the cell phone bell \"on\" equally bother most junior and senior faculty. Overall, the female junior teachers from basic subjects with experience <10 years were significantly (p <0.05) more sensitive to incivilities. Conclusion: The most common incivilities were irritating remarks/gestures, cell phone use and cheating in examination. Teaching with passion/enthusiasm was the most favourite coping strategy. However, humiliating remarks to correct the incivility was strongly rejected. Junior, female, less experienced demonstrators from basic disciplines were more vulnerable to rude behaviour. © 2022, Army Medical College. All rights reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000022",
+      "title": "Dissemination of Best Practices in Preterm Care Through a Novel Mobile Phone-Based Interactive e-Learning Platform",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "研究场景为医疗专业培训（早产儿护理），非教育环境中的课堂教学，且未探讨手机在课堂中的双重角色。",
+      "year": 2021,
+      "journal": "Indian Journal of Pediatrics",
+      "doi": "10.1007/s12098-021-03689-6",
+      "abstract": "Objective: To describe an innovative interactive e-learning method to disseminate knowledge to larger group of participants over a wide geographical area. Methods: The course material included standard training tool “Best Practices in Preterm Care,” hosted on Telegram, a cloud-based instant messaging platform. The participants were enrolled in the group created on Telegram by the facilitators and included in-service nurses from India, Bhutan, Bangladesh, and UAE. They were mentored by 62 facilitators over 10 wk. Content of each module was loaded every week on two specific days. Mentors specified for that week facilitated learning through discussions. There was a live session every week to address any additional queries and to summarize the key messages of the week. Each week ended with weekly assessments through quiz. Results: In this course, 4623 nursing professionals from India and Southeast Asian Region involved in providing neonatal care, participated. There were 9939 posts with an average of 126 posts per day. Majority of the participants felt that the topics were relevant (~95%) and they were comfortable in asking questions and could clarify their doubts (~90%). Majority rated their overall experience as very good to excellent (~98%). Conclusions: Interactive e-learning using the current approach if channelized optimally seems to be acceptable and feasible method to reach wide geographical area. This, however, needs local champions ready to mentor their own health professionals with context-specific guidance. © 2021, Dr. K C Chaudhuri Foundation. ER -"
+    },
+    {
+      "paper_id": "paper_000023",
+      "title": "Cooperative Learning with Mobile Phones in a Context of Vulnerability: Outcomes for Coexistence in School",
+      "decision": "include",
+      "confidence": 0.88,
+      "reason": "标题和摘要明确研究在基础教育课堂中使用手机进行合作学习，以改善学校共存关系，符合教育场景和手机正面影响维度。",
+      "year": 2022,
+      "journal": "Revista Electronica de Investigacion Educativa",
+      "doi": "10.24320/redie.2022.24.e17.4924",
+      "abstract": "This research seeks to describe and understand how an intervention based on cooperative learning and the use of mobile phones in early childhood and elementary classrooms promotes harmonious relations in schools within a context of socioeconomic vulnerability and cultural diversity. A case study was conducted in a Brazilian school (on the Bolivian border), using different qualitative techniques to collect information (participant observation, semi-structured interviews, and a discussion group). The results point to a reduction in disruptive behavior, academic disengagement, and exclusion, attributed primarily to a combination of cooperative factors enhanced by the use of mobile telephones (positive interdependence, a sense of belonging, heterogeneous grouping, individual responsibility, stimulating interaction, group identity, and teamwork skills). In this case, the use of mobile phones in education, coupled with a cooperative methodology, improved school life in the group studied. © 2022,Revista Electronica de Investigacion Educativa. All Rights Reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000024",
+      "title": "Design, implementation and evaluation of e-learning program for common diseases to smartphone-based medical students: at a developing university",
+      "decision": "include",
+      "confidence": 0.87,
+      "reason": "标题和摘要明确研究为医学生设计基于智能手机的电子学习项目，并评估其效果，符合教育场景和手机作为教学工具的正面影响维度。",
+      "year": 2024,
+      "journal": "BMC Medical Education",
+      "doi": "10.1186/s12909-023-05023-4",
+      "abstract": "Objective: Mobile-based educational software offers a wealth of resources that can foster the growth of learners and facilitate the creation of an interactive learning environment. This environment encourages both students and instructors to engage in exploration and the examination of various medical issues. The objective of this study is to design, implement, and evaluate an electronic educational program focused on common medical conditions, specifically tailored for medical students and accessible through mobile phones. Method: The study was conducted following an action research approach, which comprised four key stages: needs assessment, application design, training, and evaluation. This research took place at the Kermanshah University of Medical Sciences’ Medical School. In the needs assessment phase, a formal survey was distributed to the teaching faculty members, requesting them to identify diseases and medical issues of high importance for medical interns’ education that were suitable for virtual teaching. Each faculty member was asked to prioritize a minimum of three and a maximum of seven cases. Subsequently, 10 faculty members from various departments completed the survey, leading to the identification of 47 common diseases after eliminating duplicates. These 47 cases were then presented to 30 medical interns, who were asked to select the 20 most significant cases. The 20 diseases with the highest statistical frequency were selected for further development due to resource constraints. The mobile application was developed for the Android platform using the Java programming language and the Android Studio development environment. To assess the application’s effectiveness from the students’ perspective, a questionnaire was designed, encompassing 25 questions across five domains: satisfaction, performance, learning, usability, and educational effectiveness. The questionnaire employed a Likert scale, with response options ranging from ‘completely disagree’ to ‘completely agree,’ scored from 1 to 5. One hundred medical interns and trainees were invited to participate in the evaluation, with 92 of them completing the questionnaires. Results: The findings revealed a significant disparity in the average scores between students who underwent traditional teaching methods and those who engaged in mobile-based app-assisted education. This discrepancy was statistically significant across all three examined components. Conclusion: Mobile-based learning represents a burgeoning educational approach with profound implications for healthcare education and the enhancement of patient care quality. The widespread integration of mobile phones into the educational framework offers a flexible teaching paradigm, fostering the potential for continuous lifelong learning. © 2024, The Author(s). ER -"
+    },
+    {
+      "paper_id": "paper_000025",
+      "title": "Systematic Literature Review for Smart Mobile Learning in Programming Courses",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "摘要提到移动学习和手机普及，但未明确研究场景是否为课堂环境，且侧重于编程课程的系统综述，与筛选主题的相关性不够直接。",
+      "year": 2024,
+      "journal": "International Journal of Interactive Mobile Technologies",
+      "doi": "10.3991/ijim.v18i12.46299",
+      "abstract": "Advancements in technology are currently expediting the learning process for students, prompting an investigation into the integration of technology into student education. This study explores the impact of technological evolution on education. E-learning, a method of education that delivers information to students through modern communication platforms such as computers, networks, and multimedia audio components, is being examined. Whether utilized remotely or in traditional classroom settings, this revolution has made the world increasingly dependent on electronic screens in an era marked by the convergence of media technologies, information, culture, and technology. This paper outlines the development of an e-learning system customized for mobile devices, aimed at improving learning within the university environment. With mobile phones now ubiquitous among students, e-learning has become a potent tool for advancing educational objectives. Furthermore, e-learning aids in elevating student proficiency levels. The research conducted involved implementing and evaluating an application, which produced satisfactory results. As this application becomes integrated into university curricula to support learning, it is anticipated to substantially enhance students’ learning processes and performance, as evidenced by survey results following its implementation. © 2024 by the authors of this article. ER -"
+    },
+    {
+      "paper_id": "paper_000026",
+      "title": "Speeches on Facebook and Twitter about the educational use of smartphones in the classroom",
+      "decision": "include",
+      "confidence": 0.86,
+      "reason": "标题和摘要明确分析社交媒体上关于课堂中手机教育使用的争论，包括促进和禁止等视角，符合教育场景和辩证管理维度。",
+      "year": 2022,
+      "journal": "Revista Latina de Comunicacion Social",
+      "doi": "10.4185/rlcs-2022-1541",
+      "abstract": "Introduction: Messages about the pedagogical use of smartphones in the classroom generate debate in social networks and bring about opinions among citizens. This paper aims to analyze the characteristics of the messages, that are disseminated on Facebook and Twitter about the educational use of smartphones in the classroom according to whether the arguments they defend are based on promotion, prohibition, or indeterminacy; and to identify the profiles of their main issuers, as well as the type of argumentative content of the messages that have the greatest impact. Methodology: A descriptive study was carried out. 142 messages in Spanish or English are analyzed, without excluding their geographical origin, from a mixed approach using the engagement criterion to classify their relevance. Results: The results show that the predominant argumentation is the promotion of the educational use of smartphones in the classroom, being education professionals the predominant publishers. Arguments for prohibition are mainly issued by the media and institutional profiles, and these messages have the greatest impact. Discussion: knowing how the informal leadership generated in social networks can lead to a change in the social and/or political agenda, the relationship found between the type of user and the type of message they emit, confirm the relevance of the present study. Conclusions: Ultimately, we find that the criticisms and misgivings about the use of smartphones in the classroom are due to the widespread confusion between the use of smartphones and the use of social networks. © 2022, University of La Laguna. All rights reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000027",
+      "title": "Predictors of Youth Accessibility for a Mobile Phone-Based Life Skills Training Program for Addiction Prevention",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "标题和摘要明确研究在中学课堂中通过手机进行生活技能培训项目，探讨参与和使用情况，符合教育场景和手机作为干预工具的正面影响维度。",
+      "year": 2023,
+      "journal": "International Journal of Environmental Research and Public Health",
+      "doi": "10.3390/ijerph20146379",
+      "abstract": "Background: Digital interventions are an emerging and promising avenue for addiction prevention and mental health promotion, but their reach and use are often limited, and little is known about the factors associated with youth accessibility. SmartCoach is a life skills training program for addiction prevention where adolescents are proactively invited for program participation in secondary school classes. The mobile phone-based program provides individualized coaching for a period of 4 months and addresses self-management skills, social skills, and substance use resistance skills. This study examined sociodemographic and other predictors of program participation and program use. Methods: A total of 476 adolescents in 28 secondary and upper secondary school classes in the German-speaking part of Switzerland were proactively invited for participation in the SmartCoach program. Using generalized linear mixed models (GLMMs), we examined predictors of both program participation and program use at the individual and school class levels. Results: In total, 315 (66.2%) of the present 476 adolescents gave their active consent and provided the necessary information to be included in the program. None of the individual sociodemographic characteristics significantly predicted program participation, however, the participation rate was significantly higher in upper secondary school classes (84%) than secondary school classes (59%). The mean number of interactions with the program was 15.9, i.e., participants took part in almost half of the 34 possible interactions with the SmartCoach program. None of the baseline characteristics on the level of the school class significantly predicted program use. On the level of the individual, the univariate models showed that, compared to the reference category of 14-year-old students, program use was significantly lower for students who were 16 or older. Furthermore, participants with a migration background or an origin from a non-German-speaking country showed significantly lower program use. Finally, students with a medium level of perceived stress showed higher program use compared to those with a low level of stress. Within the final multivariate model for program use, only the variable “origin from a non-German-speaking country” remained significant. Conclusions: SmartCoach is an attractive offer for young people, in which two out of three young people who are invited in the classroom to participate do so. Among the program participants, the use of the program is acceptable, with an average of almost half of the content being worked on. There is potential for improvement in terms of recruitment, especially in school classes with a lower level of education. The most important starting point for improving program use lies in taking greater account of needs and wishes of students with non-German-speaking countries of origin. © 2023 by the authors. ER -"
+    },
+    {
+      "paper_id": "paper_000028",
+      "title": "Do generation Z students read? Reading habits of the students of Dhaka University",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "摘要提到大学生使用手机阅读，但未明确探讨手机在课堂中的双重角色，且侧重于阅读习惯调查，与筛选主题的相关性较弱。",
+      "year": 2024,
+      "journal": "Library Management",
+      "doi": "10.1108/lm-04-2024-0050",
+      "abstract": "Purpose: The proliferation of digital tools and instant access to information has diversified reading habits among Generation Z (Gen Z) students. The primary objective of this study is to examine the reading habits of Gen Z students at Dhaka University. Design/methodology/approach: A survey questionnaire method was employed to collect data from 354 university students. We collected research data through printed questionnaires, and randomly selected students to answer survey questions. A total of 500 printed questionnaires were distributed to the seminar library, university hall library and Dhaka University library. Additional efforts made to engage students in classrooms. Findings: Students prefer printed materials, particularly fiction and enjoy reading at home. The majority have emerged as dormant readers and prefer using mobile phones for reading. Hobbies and interests have been identified as significant influencers in shaping reading habits. Promoting a reading culture, improving access to books, integrating technology, expanding fiction collections, creating engaging content and tailoring outreach strategies are key steps to enhancing the reading habits of the Gen Z students in Bangladesh. Social implications: These findings provide valuable guidance for policymakers and educators seeking to foster effective reading habits among students by aligning strategies with their preferences and needs. Originality/value: This study offers original insights into the reading habits of Gen Z students at Dhaka University, focus on enhancing library collections, particularly in fiction literature, addresses challenges such as space constraints and reflects innovative approaches to fostering improved reading habits among students. © 2024, Emerald Publishing Limited. ER -"
+    },
+    {
+      "paper_id": "paper_000029",
+      "title": "“N.A.M.E.” FUN! Emojis may illustrate structure-function relationships of neurotransmitters to health professions students",
+      "decision": "include",
+      "confidence": 0.84,
+      "reason": "标题和摘要明确描述在生理学课程中使用手机表情符号作为学习工具，以帮助学生理解神经递质功能，符合教育场景和手机正面影响维度。",
+      "year": 2021,
+      "journal": "Advances in Physiology Education",
+      "doi": "10.1152/advan.00123.2021",
+      "abstract": "This article provides a qualitative examination of student responses to an enjoyable online experience illustrating structure-function relationships of chemical messengers (neurotransmitters) in the human nervous system via text messaging emojis (often employed during mobile phone messaging). The “N.A.M.E.” (Neurotransmitters as Messaging Emojis) FUN! experience was presented to 216 undergraduate health professions students enrolled in a human physiology course during Spring 2020 (N = 117) and Spring 2021 (N = 99) semesters as a learning tool, during a time in which students struggled with the concepts of neurotransmitter function. Additional goals for this fun experience design are to 1) engage health professions students in the topics of chemical messengers in the nervous system, and provide 2) a learning tool for students enrolled in the human physiology courses and 3) a memorization online worksheet for select neurotransmitter function. Student participants were able to access the online neurotransmitter fun experience via mobile phone and/or laptop. Resulting analyses of the voluntary and anonymous survey highlight positive responses in both Spring 2020 and 2021 semesters to the online “N.A.M.E.” experience and furthermore the recommendation of student participants to include this online experience in future lecture assignments for the Human Physiology course. Here, we examine several data sets (tables) as we review student choices for matching emojis to neurotransmitter function and qualitative responses on the efficacy of this online match-up fun as a learning tool in a human physiology course for health professions © 2021 the American Physiological Society ER -"
+    },
+    {
+      "paper_id": "paper_000030",
+      "title": "Exploring effects of intelligent recommendation, interactivity, and playfulness on learning engagement: An application of TikTok considering the meditation of anxiety and moderation of virtual reward",
+      "decision": "include",
+      "confidence": 0.83,
+      "reason": "摘要明确研究短视频应用（如抖音）对大学生学习投入的影响，并提到手机使用年限的正面作用，符合教育场景和手机作为学习工具的正面影响维度。",
+      "year": 2023,
+      "journal": "Computers in Human Behavior",
+      "doi": "10.1016/j.chb.2023.107951",
+      "abstract": "The rise of short video applications such as TikTok has brought new opportunities to maximize student learning experiences in online learning environments. Meanwhile, literature that explores its potential to foster student engagement is scarce. To understand the effect of short video applications on students' learning engagement, we take Douyin (the Chinese version of TikTok) as an example to include user experience variables (i.e., playfulness, satisfaction, anxiety) and technology features variables (i.e., interactivity and virtual reward). Five hundred-two valid questionnaire responses were collected from Chinese undergraduates. Data were analyzed using Partial Least Squares Structural Equation Model (PLS-SEM) to test the hypothesis. Overall, learning anxiety has a negative effect on learning engagement, whereas learning satisfaction has a positive effect. Virtual reward has a negative moderating effect on the relationship between interaction and anxiety. Still, it positively moderates the relationship between satisfaction and learning engagement. In addition, both years of using a mobile phone and TikTok positively influence learning engagement. Collectively, the proposed model was supported and provided empirical evidence regarding the importance of user experience and product features (such as Intelligent recommendation and virtual reward) on student engagement. Implications for theories and teaching practice and limitations were discussed. © 2023 Elsevier Ltd ER -"
+    },
+    {
+      "paper_id": "paper_000031",
+      "title": "Cell phones as ‘super props’: children’s language development in sociodramatic play",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "研究场景为学前儿童戏剧游戏，非教育课堂环境，且手机作为非功能性道具使用，未探讨课堂中的双重角色影响。",
+      "year": 2024,
+      "journal": "Early Years",
+      "doi": "10.1080/09575146.2023.2198170",
+      "abstract": "In children’s early years, they frequently pretend, create and take on roles while engaging in the dramatic play area where symbols, language and culture are spontaneously developed and applied. Although abundant research has been conducted on sociodramatic play incorporating digital tools and using props, previous research has given less attention to children using non-functional communication devices as play props. This paper aims to explore children’s language development using non-functional communication devices, such as cell phones, through sociodramatic play, and the study was conducted in two preschool classrooms with 4–5-year-old children. We find that children who incorporate non-functional communication devices into their sociodramatic play expand their language use, extend storylines, develop new characters and practice new words and ways of speaking. Additionally, the inclusion of these devices affords children opportunities to explore imaginary storylines and cultural language usages, rules and norms in different relational ways. © 2023 TACTYC. ER -"
+    },
+    {
+      "paper_id": "paper_000032",
+      "title": "Self-directed Use of Digital Devices for Out-of-class English Learning",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "研究聚焦课外英语学习中的数字设备使用，明确为课堂外环境，不符合教育课堂场景的纳入标准。",
+      "year": 2022,
+      "journal": "International Journal of Education in Mathematics, Science and Technology",
+      "doi": "10.46328/ijemst.2245",
+      "abstract": "Twenty-first-century teaching and learning provide online resources accessible to foster learning experience across time and spaces in an informal context. Hence, enhancing learners’ voluntary adoption of digital devices is crucial to augment the promising assistance of technology for English language learning. This study sheds some light on English for Specific Purposes (ESP) learners’ voluntary digital devices for out-of-class language learning. A total of 267 Indonesian ESP learners participated in this study through a survey and semi-structured interview to examine how they were involved in informal digital learning of English beyond the classroom. The results showed that the learners used digital devices for both intentional learning to strengthen coursework and incidental learning to expand access to the target language. It was also found that the learners frequently employed digital devices for personalized aspects of the language rather than authenticity and connectivity. As for the digital device selection, the learners mostly preferred mobile phones to computers and tablets to carry out out-of-class English language activities. These results provide fruitful insights for educators on supporting ESP learners to engage in informal digital learning of English and achieve possible synchronicity between teachers' designed digital activities and learners' actual learning practices. © 2022 International Journal of Education in Mathematics, Science and Technology. All rights reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000033",
+      "title": "Behaviour of children and adolescents and the use of mobile phones in primary schools in the czech republic",
+      "decision": "include",
+      "confidence": 0.88,
+      "reason": "标题和摘要明确研究小学环境中手机使用行为，探讨了学校政策、负面影响（如社交中断）和正面教育应用，符合辩证视角。",
+      "year": 2021,
+      "journal": "International Journal of Environmental Research and Public Health",
+      "doi": "10.3390/ijerph18168352",
+      "abstract": "Today’s young people spend most of their time in contact with mobile devices. Their excessive use carries many risks, such as addiction, cyberbullying and social disruption. Based on this, this study analysed the mobile phone use of young Czechs between 7 and 17 years old (n = 27.177) and assessed the differences in their behaviour according to the mobile device use policies of their schools. The results show that the use of mobile phones was linked to the one of the social networks, YouTube and videogames for the most part. Similarly, those young people who had them at school preferred to use them, instead of practicing sports or social activities. On the other hand, in the centres in which the use of mobile phones was prohibited, they felt bored and without activities to do. Therefore, it will be necessary for schools to implement educational policies that encourage activities and areas of social interaction in the school, especially during recess. However, at the same time, it is recommended not to prohibit the use of technological devices in the educational centre, since this fact encourages students to use them secretly and increases their desire to use them. To this end, its use in the classroom is advocated from an educational perspective, thus promoting collaborative learning and increasing student motivation. © 2021 by the authors. Licensee MDPI, Basel, Switzerland. ER -"
+    },
+    {
+      "paper_id": "paper_000034",
+      "title": "Compuabuelitos/Technogrands: An intergenerational experience based on Pierre Faure’s pedagogy",
+      "decision": "exclude",
+      "confidence": 0.82,
+      "reason": "研究描述跨代手机技能教学项目，虽涉及教育环境，但核心是代际关系与教学法，未实质性探讨课堂中手机的双重角色影响。",
+      "year": 2021,
+      "journal": "International Review of Education",
+      "doi": "10.1007/s11159-021-09906-w",
+      "abstract": "This article showcases Compuabuelitos, a Mexican project where teenagers taught their own grandparent (or another elderly person they already knew) basic cell phone technology skills. The Spanish project name conflates “computer” and abuelitos [the affectionate term for grandparents], which is difficult to translate, so for this article, published in English, the authors coined the term “technogrands”. Many other projects of this kind have been run in schools in other countries with positive results, but the distinctive feature of this particular intervention was that the adolescents received training about older people’s needs prior to engaging with their elders. The project was conducted as a course assignment at lower secondary/junior high level in a private K–9 school which implements a learner-centred pedagogical model created by French Jesuit Pierre Faure (1904–1988). This model is based on respecting learners’ individual characteristics and pace, and their own self-learning and decision-making capacities. The teenagers applied these principles to the course they taught their third-age learners. The adolescent trainers not only succeeded in helping their trainees achieve learning targets, but also gained a closer relationship with their elders – and the experience proved to be enjoyable for both parties. The teenagers attributed the accomplishment of their teaching success to their using language which was appropriate for their third-age learners, adapting their teaching style to older people’s characteristics and creating a friendly learning environment. Besides being part of the teenagers’ curriculum, the project also served as an opportunity for qualitative research into the students’ perception of the effect of the project. The authors present their findings organised into the three domains of perceptions of the third age as a stage in life, personal relationships and pedagogical skills. Their analysis of the students’ expressions of their experiences draws on the framework of symbolic interactionism. © 2021, UNESCO Institute for Lifelong Learning and Springer Nature B.V. ER -"
+    },
+    {
+      "paper_id": "paper_000035",
+      "title": "Educational applications based on diagnostic learning analytics model in the context of big data analytics",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "摘要提到模型检测到课堂中手机使用占行为33.29%，但研究核心是诊断学习分析技术，手机使用仅为示例数据，是否实质性探讨双重角色不明确。",
+      "year": 2025,
+      "journal": "Systems and Soft Computing",
+      "doi": "10.1016/j.sasc.2025.200386",
+      "abstract": "Under the context of big data analytics, Diagnostic Learning Analytics (DLA) offers a novel approach to understanding and improving student learning behaviors. This study proposes a DLA model that integrates the M-Canopy-K-means clustering algorithm with the PSSHRNet-based pose estimation network to perform deep mining and analysis of classroom behavior data. The experimental results show that the proposed M-Canopy-K-means algorithm improves the clustering accuracy by 10 % and 7 % respectively compared with the K-means and Mini-batch K-means algorithms, and achieves an speedup ratio of more than 2 times on small-scale datasets. In behavior recognition, the PSSHRNet-based network achieved lower loss values and faster convergence on MSCOCO and CrowdPose datasets. In practical applications, the model detected that a student with high engagement had an actual participation score of only 2.81, with mobile phone use accounting for 33.29 % of classroom behavior. The study demonstrates the effectiveness of big data-driven DLA models for diagnosing educational behaviors and provides a solid foundation for personalized teaching interventions. © 2025 ER -"
+    },
+    {
+      "paper_id": "paper_000036",
+      "title": "Research on English Literature Smart Classroom Based on AI",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "标题和摘要表明研究中学英语智能课堂，并分析学生手机使用频率，但信息有限，是否深入探讨双重角色影响不够明确。",
+      "year": 2025,
+      "journal": "International Journal of Cognitive Informatics and Natural Intelligence",
+      "doi": "10.4018/ijcini.385733",
+      "abstract": "The trend of intelligent education has promoted the development of intelligent classrooms, which have changed the traditional teaching mode and improved the interactivity and flexibility by integrating information technology and education. This study focuses on the use of artificial intelligence to improve the quality of English teaching in middle schools, combining curriculum theory and other related theories and using the methods of literature analysis and field investigation to explore. In addition, a K-means algorithm is applied to cluster analysis based on three indicators—students' mobile phone use frequency, homework completion, and grades—aiming at better understanding students' behavior and promoting personalized teaching. © 2025 IGI Global. All rights reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000037",
+      "title": "The Influence of Mobile Technology on STEM Education Student Learning Outcomes",
+      "decision": "include",
+      "confidence": 0.87,
+      "reason": "标题和摘要明确研究移动技术对STEM教育学习成果的影响，探讨了手机在高等教育中的正面应用（如提升参与度），符合纳入标准。",
+      "year": 2024,
+      "journal": "International Journal of Interactive Mobile Technologies",
+      "doi": "10.3991/ijim.v18i20.50837",
+      "abstract": "In many educational institutions, the adoption of mobile learning continues to be a growing topic. As has been considered recently, wireless technologies are currently employed by mobile technology to spread and exchange data via thinking, communicating, exchanging, and understanding. As a consequence, merging mobile technologies into teaching and learning can enhance the ambiance in higher education. Thus, the purpose of this investigation is to implement mobile learning to examine students’ applications in the framework of educational technology. The use of mobile technologies in STEM education is always efficient and engaging for the students. According to its potential to redefine traditional classroom learning paradigms, the inclusion of cellular phones into STEM (science, technology, engineering, and mathematics) education has drawn significant interest. Three artificial intelligence education (AIEd) paradigm structures are utilized to narrow our exploration of how AI is influencing the STEM sectors. An established cross-disciplinary topic of research dealing with leveraging artificial intelligence (AI) approaches to improve training is defined as AIEd. There seems to be an increasing desire to harness AIEd’s promise to tackle academic barriers in STEM fields. The implications of mobile phones on the educational outcomes of students in STEM education settings are explored in this study. By performing a deep review of existing scholarship and empirical investigation, we look for the impact of mobile devices, functions, and platforms on pupil engagement, understanding, and performance in multifaceted STEM fields. A learning approach entitled STEM Project-Based Learning merges project-based curriculum design with the STEM approach to education. As a whole, pupils’ science and technology literacy were improved by the STEM mobile learning package on the ecosystem. Certain learning packages deserve to be studied isolated, while others might be given outright during offline or personal conversations. © 2024 by the authors of this article. ER -"
+    },
+    {
+      "paper_id": "paper_000038",
+      "title": "The evolution of mastery learning: Challenges, technologies, and the AI journey leading to the intelligent tutoring system DARTS",
+      "decision": "include",
+      "confidence": 0.83,
+      "reason": "摘要提到手机普及性支持AI驱动的辅导系统，研究探讨移动设备在课堂内外教育中的应用潜力，符合正面影响和辩证视角。",
+      "year": 2025,
+      "journal": "Issues in Information Systems",
+      "doi": "10.48009/4_iis_2025_105",
+      "abstract": "Bloom’s theory of Mastery Learning (1968) and his “2 Sigma Problem” study (1984) revealed that one-on-one tutoring can produce learning outcomes two standard deviations above conventional instruction (Bloom, 1968, 1984). Despite its proven effectiveness, this model remains difficult to scale due to the cost and complexity of delivering personalized instruction (Guskey, 2007). The emergence of artificial intelligence offers the potential to replicate adaptive, responsive feedback traditionally delivered by human tutors (VanLehn, 2011; Ma, Adesope, Nesbit, & Liu, 2014). Concurrently, the ubiquity of mobile phones strengthens their potential to facilitate scalable AI-driven learning beyond fixed classroom settings (Traxler, 2007; Kukulska-Hulme, 2009). This paper investigates whether DARTS, an AI-driven Intelligent Tutoring System (ITS) delivered via mobile phones, can effectively replicate the learning benefits of one-on-one tutoring outlined in Bloom’s 2 Sigma effect. It further explores DARTS’ integration of real-time classroom interaction and out-of-class personalized tutoring, assessing its potential as a scalable solution for diverse and resource-constrained educational environments. Developed by the author, DARTS (Dynamic Academic Response and Tutoring System) addresses this challenge by combining AI, mobile interactivity, and SMS-based architecture to bridge Bloom’s theoretical promise with real-world educational practice. While initial results are promising, limitations include dependency on consistent student-generated data and institutional readiness for AI adoption in education (Caldwell, 2007; Donker, Plomp, & Kuiper, 2009). Future research will focus on advancing DARTS into a long-term, personalized academic companion that supports learners throughout their educational journey, enhancing both retention and performance. This paper is the first in a three-part series. It focuses on the theoretical foundation and pedagogical rationale behind DARTS, while future installments address its system design and classroom implementation. © 2025 International Association for Computer Information Systems. All rights reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000039",
+      "title": "Completing College Writing Assignments on Mobile Phones: Comparing Students’ Attitudes and Engagement Across Disciplines and Age",
+      "decision": "include",
+      "confidence": 0.89,
+      "reason": "标题和摘要直接研究大学生在手机完成写作作业的态度与参与度，聚焦高等教育课堂中手机使用的具体影响，符合研究主题。",
+      "year": 2021,
+      "journal": "Journalism and Mass Communication Educator",
+      "doi": "10.1177/1077695820942422",
+      "abstract": "Large variations in mobile users, mobile devices, and course content make generalizations about mobile learning difficult. Prior to the international pandemic that forced more virtual and mobile instruction, this exploratory study measured how students in one journalism and one English composition course at two universities responded to completing writing assignments using only their phones. Although pre and post differences in student attitudes and engagement between the writing courses were insignificant, further analyses of age differences (freshman vs seniors) revealed significant variance. These results suggest only a 3-year time span could determine how much students embrace mobile assignments. © AEJMC 2020. ER -"
+    },
+    {
+      "paper_id": "paper_000040",
+      "title": "Educational Robotics: Building and Applying an App-controlled Car to Study Newton's Laws",
+      "decision": "include",
+      "confidence": 0.86,
+      "reason": "摘要描述在中学物理课堂中使用手机App控制机器人汽车的教学活动，探讨手机作为教学工具提升学习动机，符合正面影响维度。",
+      "year": 2021,
+      "journal": "Open Education Studies",
+      "doi": "10.1515/edu-2020-0139",
+      "abstract": "The use of technology - including mobile phones - in classrooms is a growing and promising trend, but it still needs research on ways to integrate it in classrooms and on its impacts. We propose a low cost educational product where students assemble an Arduino car remotely controlled through a mobile app and use it to study Newton's third law, of action-reaction forces. The teacher used an inquiry-based approach to prompt students to test towing capacity of the car. Students connected the car to different weights and used a structure of pulleys to investigate the behaviour of fixed and movable pulleys, as well as the forces involved. The goal of the activity is to motivate students to study physics and to facilitate learning. This article describes a pilot implementation of the educational product in a secondary school of Brazil. We used a qualitative approach to evaluate the implementation. Students answered a survey before and after the activities. They also delivered a report and answered questions about the physics involved. The teacher recorded his observations. The product and the strategy showed great potential: these students were more motivated and engaged in the classes and were able to learn the main concepts involved. © 2021 Maicon Teixeira Matos et al., published by De Gruyter 2021. ER -"
+    }
+  ],
+  "project_id": "6467cf31219c",
+  "project_topic": "手机在课堂中的双重角色：分心与教育吸引力（即手机对课堂的负面影响、正面影响以及辩证的管理视角）",
+  "model_provider": "deepseek",
+  "parent_task_id": "c46ec7b0d67e",
+  "input_dataset_ids": [
+    "068c6d2e3c0d"
+  ],
+  "output_dataset_ids": [
+    "b7e1ed2ec398",
+    "36e43a2e5244"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0004",
+    "results": [
+        {
+            "paper_id": "paper_000031",
+            "decision": "exclude",
+            "reason": "标题和摘要明确讨论金融领域的对冲策略，严格命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000032",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论能源项目设计中的不确定性对冲，属于工程经济决策，不符合学术写作中的模糊语分析主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000033",
+            "decision": "include",
+            "reason": "标题和摘要明确分析护理和教育学术文章中的模糊语使用，包含学科对比和语用功能分析，符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000034",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论金融衍生品定价中的对冲策略，严格命中金融领域排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000035",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论模糊逻辑和程度理论，属于数学和计算机领域的模糊逻辑，严格命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000036",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论钢铁制造技术投资中的不确定性对冲，属于工程管理决策，不符合学术写作中的模糊语分析主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000037",
+            "decision": "include",
+            "reason": "标题和摘要分析学术研究文章中互动元话语标记，涉及多个理工科和经济学学科对比，符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000038",
+            "decision": "include",
+            "reason": "标题和摘要明确分析科学话语中的认识论含义，通过语料库方法对比模糊语和含义理论，符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000039",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论气候政策和技术不确定性下的对冲策略，属于环境经济学决策，不符合学术写作中的模糊语分析主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000040",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论石油价格波动和投资组合对冲，属于金融经济学领域，严格命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 1.0
+        }
+    ]
+}

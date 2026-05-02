@@ -1,0 +1,290 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要提到科创板上市改变了管理层的风险承担意愿，但未明确提及研发支出比率作为风险承担的测度指标。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:18.297709+08:00"
+  },
+  {
+    "paper_id": "paper_000002",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "标题和摘要明确涉及企业风险承担，但未提及研发支出比率作为测度指标。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:18.297709+08:00"
+  },
+  {
+    "paper_id": "paper_000003",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "摘要明确将风险承担作为核心概念，并提到进一步分析显示相对业绩评价促进风险承担有助于企业增加研发投入。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:18.297709+08:00"
+  },
+  {
+    "paper_id": "paper_000004",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "摘要提到财务柔性通过降低企业风险承担来促进创新绩效，但未将研发支出比率作为风险承担的测度指标，且主题侧重于财务柔性而非风险承担测量。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:18.297709+08:00"
+  },
+  {
+    "paper_id": "paper_000005",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要涉及风险承担水平与科技创业绩效，但未明确提及研发支出比率作为风险承担的测度指标。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:18.297709+08:00"
+  },
+  {
+    "paper_id": "paper_000006",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要提到股权激励计划通过提高高管风险承担水平来提高国有企业研发投入，但未明确将研发支出比率作为风险承担的代理变量。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.6,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:18.297709+08:00"
+  },
+  {
+    "paper_id": "paper_000007",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "摘要明确以企业风险承担为核心，并提到行业锦标赛激励提高了研发支出，构成风险承担的作用机制。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:18.297709+08:00"
+  },
+  {
+    "paper_id": "paper_000008",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要提到股权激励通过提升研发风险承担水平影响数字化转型，但未明确将研发支出比率作为风险承担的测度指标。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:18.297709+08:00"
+  },
+  {
+    "paper_id": "paper_000009",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要涉及企业家精神对企业风险承担倾向的影响，但未提及研发支出比率作为风险承担的测度指标。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:18.297709+08:00"
+  },
+  {
+    "paper_id": "paper_000010",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要提到企业风险承担在政府补助、税收优惠作用于企业研发投入中起到中介效应，但未明确将研发支出比率作为风险承担的测度指标。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:18.297709+08:00"
+  },
+  {
+    "paper_id": "paper_000011",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "摘要明确提到风险承担水平更高，并涉及研发投入水平，符合研究主题和纳入标准。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:45.148454+08:00"
+  },
+  {
+    "paper_id": "paper_000012",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确研究企业风险承担，并提到研发投入水平作为具体表现形式，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:45.148454+08:00"
+  },
+  {
+    "paper_id": "paper_000013",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "摘要明确研究高管风险承担意愿与企业技术创新，涉及风险承担概念，符合研究主题。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:45.148454+08:00"
+  },
+  {
+    "paper_id": "paper_000014",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "摘要提到风险承担水平和研发支出，但主题是数字金融与数字化转型，未明确将研发支出比率作为风险承担测度指标。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.75,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:45.148454+08:00"
+  },
+  {
+    "paper_id": "paper_000015",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确从企业风险承担视角检验，并提到研发支出作为风险性投资活动，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:45.148454+08:00"
+  },
+  {
+    "paper_id": "paper_000016",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦新型研发机构绩效评估方法，纯算法和管理类，未涉及企业风险承担概念。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:45.148454+08:00"
+  },
+  {
+    "paper_id": "paper_000017",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确研究企业风险承担与企业创新，并提到研发投入增加，符合研究主题和纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:45.148454+08:00"
+  },
+  {
+    "paper_id": "paper_000018",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "摘要提到风险承担水平作为机制，但主题是风险投资与技术并购，未明确研发支出比率作为测度指标。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:45.148454+08:00"
+  },
+  {
+    "paper_id": "paper_000019",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "摘要明确提到垂直薪酬差异提升非CEO高管的风险承担，并涉及研发强度，符合研究主题。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:45.148454+08:00"
+  },
+  {
+    "paper_id": "paper_000020",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确研究企业风险承担，并提到研发强度作为调节变量，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-24T19:50:45.148454+08:00"
+  }
+]

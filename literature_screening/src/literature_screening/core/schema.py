@@ -52,6 +52,7 @@ RUN_CONFIG_SCHEMA: dict = {
                 "batch_size": {"type": "integer", "minimum": 1, "maximum": 100, "default": 20},
                 "target_include_count": {"type": "integer", "minimum": 1},
                 "stop_when_target_reached": {"type": "boolean", "default": True},
+                "min_include_confidence": {"type": "number", "minimum": 0, "maximum": 1, "default": 0.8},
                 "allow_uncertain": {"type": "boolean", "default": True},
                 "retry_times": {"type": "integer", "minimum": 0, "maximum": 10, "default": 2},
                 "request_timeout_seconds": {

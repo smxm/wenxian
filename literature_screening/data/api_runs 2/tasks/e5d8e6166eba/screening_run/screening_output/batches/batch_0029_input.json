@@ -1,0 +1,350 @@
+{
+  "batch_id": "batch_0029",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000281",
+    "paper_000282",
+    "paper_000283",
+    "paper_000284",
+    "paper_000285",
+    "paper_000286",
+    "paper_000287",
+    "paper_000288",
+    "paper_000289",
+    "paper_000290"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000281",
+      "entry_type": "article",
+      "title": "LSO-CSL: Light spectrum optimizer-based convolutional stacked long short term memory for attack detection in IoT-based healthcare applications",
+      "authors": [
+        "Thulasi, T",
+        "Sivamohan, K"
+      ],
+      "year": 2023,
+      "journal": "EXPERT SYSTEMS WITH APPLICATIONS",
+      "doi": "10.1016/j.eswa.2023.120772",
+      "abstract": "One of the new technological issues of this century is cybersecurity in the health domain. Numerous types of research have been undertaken recently to identify weak points and gaps in healthcare facilities' and hospitals' cyber-resilience. Also, different evaluation techniques are used to identify cyber-defense tactics and mitigation methods. During a crisis, however, the health sector is not immune to scientific or professional advancement since it must concentrate all of its resources to treating patients and saving lives. Thus, we proposed Multi Step Convolutional neural network Stacked Long short term memory architecture (MSCSL) for attack detection in Internet of Things detection (IoT) based healthcare applications. Here, using Light Spectrum Optimizer (LSO) the MSCSL's hyperparameter is optimized. The designed activation function combines the best features of the rectified Liner Unit (ReLU), which is more data-adaptive and has a lower computation complexity. In MSCSL architecture the ReLU is replaced with the Leaky Learnable ReLU (LeLeLU) to improve the data adaptability and minimize the computational complexity. The proposed model is evaluated based on different datasets such as the ECU-Internet of Health Things (IoHT), TON-IoT, and Supervisory Control and Data Acquisition International Electrotechnical Commission (SCADA IEC 60870-5-104) datasets. This dataset includes port scans, brute force, and DoS attacks. When evaluated using different metrics, the proposed method achieves a precision of 98.5%, accuracy of 98.85%, F1-score of 98.74%, recall of 96.3%, Kappa score of 98.9%, and Mathew Correlation coefficient (MCC) values of 0.92, which is higher compared to other existing techniques.",
+      "keywords": [
+        "Internet of Things",
+        "Leaky learnable ReLU",
+        "Light spectrum optimizer",
+        "Convolutional neural network",
+        "Long short term memory",
+        "INTRUSION DETECTION SYSTEM",
+        "NETWORK"
+      ],
+      "normalized_title": "lso csl light spectrum optimizer based convolutional stacked long short term memory for attack detection in iot based healthcare applications",
+      "raw_bibtex": "@ARTICLE{10.1016/j.eswa.2023.120772,\n\tauthor = {Thulasi, T and Sivamohan, K},\n\ttitle = {LSO-CSL: Light spectrum optimizer-based convolutional stacked long short term memory for attack detection in IoT-based healthcare applications},\n\tjournal = {EXPERT SYSTEMS WITH APPLICATIONS},\n\tyear = {2023},\n\tkeywords = {Internet of Things; Leaky learnable ReLU; Light spectrum optimizer; Convolutional neural network; Long short term memory; INTRUSION DETECTION SYSTEM; NETWORK},\n\tabstract = {One of the new technological issues of this century is cybersecurity in the health domain. Numerous types of research have been undertaken recently to identify weak points and gaps in healthcare facilities' and hospitals' cyber-resilience. Also, different evaluation techniques are used to identify cyber-defense tactics and mitigation methods. During a crisis, however, the health sector is not immune to scientific or professional advancement since it must concentrate all of its resources to treating patients and saving lives. Thus, we proposed Multi Step Convolutional neural network Stacked Long short term memory architecture (MSCSL) for attack detection in Internet of Things detection (IoT) based healthcare applications. Here, using Light Spectrum Optimizer (LSO) the MSCSL's hyperparameter is optimized. The designed activation function combines the best features of the rectified Liner Unit (ReLU), which is more data-adaptive and has a lower computation complexity. In MSCSL architecture the ReLU is replaced with the Leaky Learnable ReLU (LeLeLU) to improve the data adaptability and minimize the computational complexity. The proposed model is evaluated based on different datasets such as the ECU-Internet of Health Things (IoHT), TON-IoT, and Supervisory Control and Data Acquisition International Electrotechnical Commission (SCADA IEC 60870-5-104) datasets. This dataset includes port scans, brute force, and DoS attacks. When evaluated using different metrics, the proposed method achieves a precision of 98.5%, accuracy of 98.85%, F1-score of 98.74%, recall of 96.3%, Kappa score of 98.9%, and Mathew Correlation coefficient (MCC) values of 0.92, which is higher compared to other existing techniques.},\n\tdoi = {10.1016/j.eswa.2023.120772},\n\tvolume = {232},\n\tissn = {0957-4174},\n\tnote = {Times Cited in Web of Science Core Collection: 27 Total Times Cited: 30 Cited Reference Count: 21 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.eswa.2023.120772"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000282",
+      "entry_type": "article",
+      "title": "Deep Learning-Based Sign Language Recognition System for Cognitive Development",
+      "authors": [
+        "Jebali, M",
+        "Dakhli, A",
+        "Bakari, W"
+      ],
+      "year": 2023,
+      "journal": "COGNITIVE COMPUTATION",
+      "doi": "10.1007/s12559-023-10182-z",
+      "abstract": "Information in sign language (SL) is transmitted in large part by the movement, positioning, and shape of the hands as well as body language and facial emotions. Systems that recognize sign language can help with the problem that sign language is not widely used despite the large number of individuals who need to use it, and they can give hearing-impaired and deaf people a more practical way of life, employment, and education. Despite the fact that facial features are treated to be fundamental for humans to comprehend sign language, few earlier research work have inspected their cognitive importance for automatic SL recognition systems. To address this problem, this paper comes up with a novel manual and non-manual gesture recognition framework (MNM-VGG16) for the deaf and mute people. The framework employs a convolutional neural network, renowned as VGG-16 net, for implementing a trained model on an amply used video dataset by employing a component that learns the Multimodal Spatial Representation (MSR) of various modalities. The Multimodal Temporal Representation (MTR) component shapes temporal corrections from independent and dependent pathways to analyze the cooperation of different modalities. A cooperative optimization scheme, summarized by the employment of multi-scale perception component, is applied to make the finest of various modalities sources for sign language recognition. To validate the efficiency of MNM-VGG16, we carried out experiments on three large-scale sign language benchmarks: CSL Split II, SIGNUM, and RWTH-PHOENIX-Weather 2014. Experimental results prove that the suggested framework reaches new state-of-the-art achievement on all three benchmarks, and this attainment is noted by the reduction of the word error rate (WER) on test set by 14.2%, 13.7%, and 11.2%, respectively. In this paper, we offer the MNM-VGG16 hybrid method, which recognizes SL words by combining manual and non-manual features. This method demonstrates the significance of jointly modeling various body parts for SL recognition.",
+      "keywords": [
+        "Sign language recognition",
+        "Deep-learning",
+        "Recurrent neural network",
+        "Head pose"
+      ],
+      "normalized_title": "deep learning based sign language recognition system for cognitive development",
+      "raw_bibtex": "@ARTICLE{10.1007/s12559-023-10182-z,\n\tauthor = {Jebali, M and Dakhli, A and Bakari, W},\n\ttitle = {Deep Learning-Based Sign Language Recognition System for Cognitive Development},\n\tjournal = {COGNITIVE COMPUTATION},\n\tyear = {2023},\n\tkeywords = {Sign language recognition; Deep-learning; Recurrent neural network; Head pose},\n\tabstract = {Information in sign language (SL) is transmitted in large part by the movement, positioning, and shape of the hands as well as body language and facial emotions. Systems that recognize sign language can help with the problem that sign language is not widely used despite the large number of individuals who need to use it, and they can give hearing-impaired and deaf people a more practical way of life, employment, and education. Despite the fact that facial features are treated to be fundamental for humans to comprehend sign language, few earlier research work have inspected their cognitive importance for automatic SL recognition systems. To address this problem, this paper comes up with a novel manual and non-manual gesture recognition framework (MNM-VGG16) for the deaf and mute people. The framework employs a convolutional neural network, renowned as VGG-16 net, for implementing a trained model on an amply used video dataset by employing a component that learns the Multimodal Spatial Representation (MSR) of various modalities. The Multimodal Temporal Representation (MTR) component shapes temporal corrections from independent and dependent pathways to analyze the cooperation of different modalities. A cooperative optimization scheme, summarized by the employment of multi-scale perception component, is applied to make the finest of various modalities sources for sign language recognition. To validate the efficiency of MNM-VGG16, we carried out experiments on three large-scale sign language benchmarks: CSL Split II, SIGNUM, and RWTH-PHOENIX-Weather 2014. Experimental results prove that the suggested framework reaches new state-of-the-art achievement on all three benchmarks, and this attainment is noted by the reduction of the word error rate (WER) on test set by 14.2%, 13.7%, and 11.2%, respectively. In this paper, we offer the MNM-VGG16 hybrid method, which recognizes SL words by combining manual and non-manual features. This method demonstrates the significance of jointly modeling various body parts for SL recognition.},\n\tdoi = {10.1007/s12559-023-10182-z},\n\tvolume = {15},\n\tnumber = {6},\n\tpages = {2189-2201},\n\tissn = {1866-9956},\n\tnote = {Times Cited in Web of Science Core Collection: 2 Total Times Cited: 2 Cited Reference Count: 48 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s12559-023-10182-z"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000283",
+      "entry_type": "article",
+      "title": "Applying mmWave Radar Sensors to Vocabulary-Level Dynamic Chinese Sign Language Recognition for the Community With Deafness and Hearing Loss",
+      "authors": [
+        "Lan, SC",
+        "Ye, LT",
+        "Zhang, K"
+      ],
+      "year": 2023,
+      "journal": "IEEE SENSORS JOURNAL",
+      "doi": "10.1109/jsen.2023.3324369",
+      "abstract": "To facilitate human-computer interaction (HCL) for the community with deafness and hearing loss (D&HL), this article explored the feasibility of recognizing a vocabulary of dynamic Chinese sign language (CSL) based on millimeter-wave (mmWave) radar sensors within the scope of data science. Fundamental problems that challenge its applications on computers and other electronic devices were addressed from multidisciplinary aspects including how to capture signs with an mmWave radar sensor, how to characterize signs using mmWave, and how to recognize signs based on the extracted features. Accordingly, this article proposed tentative solutions for the key concerns on this topic. A case study was later given by constructing a lightweight attentive augmented convolutional neural network (CNN) to classify 15 Chinese sign words based on radar spectrograms. The network achieved a 98.82% weight reduction and a 3.7% accuracy improvement over the original ResNet-18. Furthermore, a deep convolutional generated adversarial network for data augmentation was used to alleviate the conflicts between large numbers of parameters and small data sample sizes. This article shows the keenness of the authors to witness more practical developments in this new area with interdisciplinary collaboration and evolutionary process.",
+      "keywords": [
+        "Data-driven network",
+        "generative adversarial network (GAN)",
+        "knowledge distillation (KD)",
+        "millimeter-wave (mmWave) radar",
+        "sign language recognition (SLR)",
+        "DOPPLER RADAR"
+      ],
+      "normalized_title": "applying mmwave radar sensors to vocabulary level dynamic chinese sign language recognition for the community with deafness and hearing loss",
+      "raw_bibtex": "@ARTICLE{10.1109/JSEN.2023.3324369,\n\tauthor = {Lan, SC and Ye, LT and Zhang, K},\n\ttitle = {Applying mmWave Radar Sensors to Vocabulary-Level Dynamic Chinese Sign Language Recognition for the Community With Deafness and Hearing Loss},\n\tjournal = {IEEE SENSORS JOURNAL},\n\tyear = {2023},\n\tkeywords = {Data-driven network; generative adversarial network (GAN); knowledge distillation (KD); millimeter-wave (mmWave) radar; sign language recognition (SLR); DOPPLER RADAR},\n\tabstract = {To facilitate human-computer interaction (HCL) for the community with deafness and hearing loss (D&HL), this article explored the feasibility of recognizing a vocabulary of dynamic Chinese sign language (CSL) based on millimeter-wave (mmWave) radar sensors within the scope of data science. Fundamental problems that challenge its applications on computers and other electronic devices were addressed from multidisciplinary aspects including how to capture signs with an mmWave radar sensor, how to characterize signs using mmWave, and how to recognize signs based on the extracted features. Accordingly, this article proposed tentative solutions for the key concerns on this topic. A case study was later given by constructing a lightweight attentive augmented convolutional neural network (CNN) to classify 15 Chinese sign words based on radar spectrograms. The network achieved a 98.82% weight reduction and a 3.7% accuracy improvement over the original ResNet-18. Furthermore, a deep convolutional generated adversarial network for data augmentation was used to alleviate the conflicts between large numbers of parameters and small data sample sizes. This article shows the keenness of the authors to witness more practical developments in this new area with interdisciplinary collaboration and evolutionary process.},\n\tdoi = {10.1109/JSEN.2023.3324369},\n\tvolume = {23},\n\tnumber = {22},\n\tpages = {27273-27283},\n\tissn = {1530-437X},\n\tnote = {Times Cited in Web of Science Core Collection: 5 Total Times Cited: 6 Cited Reference Count: 37 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/JSEN.2023.3324369"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000284",
+      "entry_type": "article",
+      "title": "Directional Alignment Instance Knowledge Distillation for Arbitrary-Oriented Object Detection",
+      "authors": [
+        "Wang, A",
+        "Wang, H",
+        "Huang, ZC",
+        "Zhao, BY",
+        "Li, W"
+      ],
+      "year": 2023,
+      "journal": "IEEE TRANSACTIONS ON GEOSCIENCE AND REMOTE SENSING",
+      "doi": "10.1109/tgrs.2023.3307690",
+      "abstract": "Recently, many lightweight neural networks have been deployed on airborne or satellite remote sensing platforms for real-time object detection. To bridge the performance gap between lightweight models and complex models, many knowledge distillation (KD) methods are investigated. However, existing KD methods ignore to transfer effective directional knowledge. Meanwhile, knowledge of different subtasks interferes with each other. To this end, a directional alignment instance knowledge distillation (DAIK) method for improving the performance of the lightweight object detection model is proposed. Specifically, an angle distillation (AD) module is developed to combine the circular smooth label (CSL) and teacher logits to transfer effective directional knowledge. Angular distance aspect ratio lookup table (AAL) is incorporated into label assignment and reweighting loss to enhance the prediction sensitivity of direction and shape in a discrete manner. Sample alignment distillation (SAD) reduces the spatial misalignment by mimicking the teacher model's distribution of anchor points. Extensive experiments are performed on several public remote sensing object detection datasets, which demonstrates the effectiveness of the proposed DAIK.",
+      "keywords": [
+        "Knowledge distillation (KD)",
+        "real-time arbitrary-oriented object detection (AOOD)",
+        "remote sensing images"
+      ],
+      "normalized_title": "directional alignment instance knowledge distillation for arbitrary oriented object detection",
+      "raw_bibtex": "@ARTICLE{10.1109/TGRS.2023.3307690,\n\tauthor = {Wang, A and Wang, H and Huang, ZC and Zhao, BY and Li, W},\n\ttitle = {Directional Alignment Instance Knowledge Distillation for Arbitrary-Oriented Object Detection},\n\tjournal = {IEEE TRANSACTIONS ON GEOSCIENCE AND REMOTE SENSING},\n\tyear = {2023},\n\tkeywords = {Knowledge distillation (KD); real-time arbitrary-oriented object detection (AOOD); remote sensing images},\n\tabstract = {Recently, many lightweight neural networks have been deployed on airborne or satellite remote sensing platforms for real-time object detection. To bridge the performance gap between lightweight models and complex models, many knowledge distillation (KD) methods are investigated. However, existing KD methods ignore to transfer effective directional knowledge. Meanwhile, knowledge of different subtasks interferes with each other. To this end, a directional alignment instance knowledge distillation (DAIK) method for improving the performance of the lightweight object detection model is proposed. Specifically, an angle distillation (AD) module is developed to combine the circular smooth label (CSL) and teacher logits to transfer effective directional knowledge. Angular distance aspect ratio lookup table (AAL) is incorporated into label assignment and reweighting loss to enhance the prediction sensitivity of direction and shape in a discrete manner. Sample alignment distillation (SAD) reduces the spatial misalignment by mimicking the teacher model's distribution of anchor points. Extensive experiments are performed on several public remote sensing object detection datasets, which demonstrates the effectiveness of the proposed DAIK.},\n\tdoi = {10.1109/TGRS.2023.3307690},\n\tvolume = {61},\n\tissn = {0196-2892},\n\tnote = {Times Cited in Web of Science Core Collection: 7 Total Times Cited: 7 Cited Reference Count: 66 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TGRS.2023.3307690"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000285",
+      "entry_type": "article",
+      "title": "Multi-Stream General and Graph-Based Deep Neural Networks for Skeleton-Based Sign Language Recognition",
+      "authors": [
+        "Miah, AM",
+        "Hasan, MA",
+        "Jang, SW",
+        "Lee, HS",
+        "Shin, J"
+      ],
+      "year": 2023,
+      "journal": "ELECTRONICS",
+      "doi": "10.3390/electronics12132841",
+      "abstract": "Sign language recognition (SLR) aims to bridge speech-impaired and general communities by recognizing signs from given videos. However, due to the complex background, light illumination, and subject structures in videos, researchers still face challenges in developing effective SLR systems. Many researchers have recently sought to develop skeleton-based sign language recognition systems to overcome the subject and background variation in hand gesture sign videos. However, skeleton-based SLR is still under exploration, mainly due to a lack of information and hand key point annotations. More recently, researchers have included body and face information along with hand gesture information for SLR; however, the obtained performance accuracy and generalizability properties remain unsatisfactory. In this paper, we propose a multi-stream graph-based deep neural network (SL-GDN) for a skeleton-based SLR system in order to overcome the above-mentioned problems. The main purpose of the proposed SL-GDN approach is to improve the generalizability and performance accuracy of the SLR system while maintaining a low computational cost based on the human body pose in the form of 2D landmark locations. We first construct a skeleton graph based on 27 whole-body key points selected among 67 key points to address the high computational cost problem. Then, we utilize the multi-stream SL-GDN to extract features from the whole-body skeleton graph considering four streams. Finally, we concatenate the four different features and apply a classification module to refine the features and recognize corresponding sign classes. Our data-driven graph construction method increases the system's flexibility and brings high generalizability, allowing it to adapt to varied data. We use two large-scale benchmark SLR data sets to evaluate the proposed model: The Turkish Sign Language data set (AUTSL) and Chinese Sign Language (CSL). The reported performance accuracy results demonstrate the outstanding ability of the proposed model, and we believe that it will be considered a great innovation in the SLR domain.",
+      "keywords": [
+        "sign language recognition (SLR)",
+        "large scale dataset",
+        "American Sign Language",
+        "Turkish Sign Language",
+        "Chinese Sign Language",
+        "AUTSL",
+        "CSL"
+      ],
+      "normalized_title": "multi stream general and graph based deep neural networks for skeleton based sign language recognition",
+      "raw_bibtex": "@ARTICLE{10.3390/electronics12132841,\n\tauthor = {Miah, AM and Hasan, MA and Jang, SW and Lee, HS and Shin, J},\n\ttitle = {Multi-Stream General and Graph-Based Deep Neural Networks for Skeleton-Based Sign Language Recognition},\n\tjournal = {ELECTRONICS},\n\tyear = {2023},\n\tkeywords = {sign language recognition (SLR); large scale dataset; American Sign Language; Turkish Sign Language; Chinese Sign Language; AUTSL; CSL},\n\tabstract = {Sign language recognition (SLR) aims to bridge speech-impaired and general communities by recognizing signs from given videos. However, due to the complex background, light illumination, and subject structures in videos, researchers still face challenges in developing effective SLR systems. Many researchers have recently sought to develop skeleton-based sign language recognition systems to overcome the subject and background variation in hand gesture sign videos. However, skeleton-based SLR is still under exploration, mainly due to a lack of information and hand key point annotations. More recently, researchers have included body and face information along with hand gesture information for SLR; however, the obtained performance accuracy and generalizability properties remain unsatisfactory. In this paper, we propose a multi-stream graph-based deep neural network (SL-GDN) for a skeleton-based SLR system in order to overcome the above-mentioned problems. The main purpose of the proposed SL-GDN approach is to improve the generalizability and performance accuracy of the SLR system while maintaining a low computational cost based on the human body pose in the form of 2D landmark locations. We first construct a skeleton graph based on 27 whole-body key points selected among 67 key points to address the high computational cost problem. Then, we utilize the multi-stream SL-GDN to extract features from the whole-body skeleton graph considering four streams. Finally, we concatenate the four different features and apply a classification module to refine the features and recognize corresponding sign classes. Our data-driven graph construction method increases the system's flexibility and brings high generalizability, allowing it to adapt to varied data. We use two large-scale benchmark SLR data sets to evaluate the proposed model: The Turkish Sign Language data set (AUTSL) and Chinese Sign Language (CSL). The reported performance accuracy results demonstrate the outstanding ability of the proposed model, and we believe that it will be considered a great innovation in the SLR domain.},\n\tdoi = {10.3390/electronics12132841},\n\tvolume = {12},\n\tnumber = {13},\n\tissn = {2079-9292},\n\tnote = {Times Cited in Web of Science Core Collection: 34 Total Times Cited: 35 Cited Reference Count: 67 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/electronics12132841"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000286",
+      "entry_type": "article",
+      "title": "Continuous sign language recognition based on iterative alignment network and attention mechanism",
+      "authors": [
+        "Xue, CH",
+        "Yu, M",
+        "Yan, G",
+        "Gao, Y",
+        "Liu, YA"
+      ],
+      "year": 2023,
+      "journal": "MULTIMEDIA TOOLS AND APPLICATIONS",
+      "doi": "10.1007/s11042-022-14085-3",
+      "abstract": "The biggest challenge of continuous sign language recognition is the weak supervision of sign language labels. This paper proposes a continuous sign language recognition framework based on iterative alignment network and attention mechanism to solve this problem. The iterative alignment network uses a spatial-temporal residual network (STRN) to extract block-level features, a temporal convolutional module (TCM) to enhance the temporal correlation between block-level features, and Bidirectional Gated neural network(BGRU) and connectionist temporal classification (CTC) to generate pseudo-labels for each block-level feature; this in turn performs strong supervised learning with STRN and TCM, optimizes the network parameters, and uses CTC to learn new mapping relationships based on the optimized parameters in the next iteration. Then, the word-level features generated by the iterative alignment network are input into the encoder-decoder network, which is based on an attention mechanism. The attention module is used to fully pay attention to the relevant time-step information of the input feature sequence during decoding to obtain more accurate decoding results. The method is evaluated experimentally on three large-scale continuous sign language data sets (RWTH-Phoenix-Weather 2014, CSL and CSL daily), and the experimental results prove the method's effectiveness.",
+      "keywords": [
+        "Weak supervision",
+        "Spatio-temporal residual network",
+        "Temporal convolution module",
+        "Iterative alignment network",
+        "CTC",
+        "Attention mechanisms"
+      ],
+      "normalized_title": "continuous sign language recognition based on iterative alignment network and attention mechanism",
+      "raw_bibtex": "@ARTICLE{10.1007/s11042-022-14085-3,\n\tauthor = {Xue, CH and Yu, M and Yan, G and Gao, Y and Liu, YA},\n\ttitle = {Continuous sign language recognition based on iterative alignment network and attention mechanism},\n\tjournal = {MULTIMEDIA TOOLS AND APPLICATIONS},\n\tyear = {2023},\n\tkeywords = {Weak supervision; Spatio-temporal residual network; Temporal convolution module; Iterative alignment network; CTC; Attention mechanisms},\n\tabstract = {The biggest challenge of continuous sign language recognition is the weak supervision of sign language labels. This paper proposes a continuous sign language recognition framework based on iterative alignment network and attention mechanism to solve this problem. The iterative alignment network uses a spatial-temporal residual network (STRN) to extract block-level features, a temporal convolutional module (TCM) to enhance the temporal correlation between block-level features, and Bidirectional Gated neural network(BGRU) and connectionist temporal classification (CTC) to generate pseudo-labels for each block-level feature; this in turn performs strong supervised learning with STRN and TCM, optimizes the network parameters, and uses CTC to learn new mapping relationships based on the optimized parameters in the next iteration. Then, the word-level features generated by the iterative alignment network are input into the encoder-decoder network, which is based on an attention mechanism. The attention module is used to fully pay attention to the relevant time-step information of the input feature sequence during decoding to obtain more accurate decoding results. The method is evaluated experimentally on three large-scale continuous sign language data sets (RWTH-Phoenix-Weather 2014, CSL and CSL daily), and the experimental results prove the method's effectiveness.},\n\tdoi = {10.1007/s11042-022-14085-3},\n\tvolume = {82},\n\tnumber = {11},\n\tpages = {17195-17212},\n\tissn = {1380-7501},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 33 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s11042-022-14085-3"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000287",
+      "entry_type": "article",
+      "title": "Applying self-supervised learning for semantic cloud segmentation of all-sky images",
+      "authors": [
+        "Fabel, Y",
+        "Nouri, B",
+        "Wilbert, S",
+        "Blum, N",
+        "Triebel, R",
+        "Hasenbalg, M",
+        "Kuhn, P",
+        "Zarzalejo, LF",
+        "Pitz-Paal, R"
+      ],
+      "year": 2022,
+      "journal": "ATMOSPHERIC MEASUREMENT TECHNIQUES",
+      "doi": "10.5194/amt-15-797-2022",
+      "abstract": "Semantic segmentation of ground-based all-sky images (ASIs) can provide high-resolution cloud coverage information of distinct cloud types, applicable for meteorology-, climatology- and solar-energy-related applications. Since the shape and appearance of clouds is variable, and there is high similarity between cloud types, a clear classification is difficult. Therefore, most state-of-the-art methods focus on the distinction between cloudy and cloud-free pixels without taking into account the cloud type. On the other hand, cloud classification is typically determined separately at the image level, neglecting the cloud's position and only considering the prevailing cloud type. Deep neural networks have proven to be very effective and robust for segmentation tasks; however they require large training datasets to learn complex visual features. In this work, we present a self-supervised learning approach to exploit many more data than in purely supervised training and thus increase the model's performance. In the first step, we use about 300 000 ASIs in two different pretext tasks for pretraining.One of them pursues an image reconstruction approach. The other one is based on the DeepCluster model, an iterative procedure of clustering and classifying the neural network output. In the second step, our model is fine-tuned on a small labeled dataset of 770 ASIs, of which 616 are used for training and 154 for validation. For each of them, a ground truth mask was created that classifies each pixel into clear sky or a low-layer, mid-layer or high-layer cloud. To analyze the effectiveness of self-supervised pretraining, we compare our approach to randomly initialized and pretrained ImageNet weights using the same training and validation sets. Achieving 85.8 % pixel accuracy on average, our best self-supervised model outperforms the conventional approaches of random (78.3 %) and pretrained ImageNet initialization (82.1 %). The benefits become even more evident when regarding precision, recall and intersection over union (IoU) of the respective cloud classes, where the improvement is between 5 and 20 percentage points. Furthermore, we compare the performance of our best model with regards to binary segmentation with a clear-sky library (CSL) from the literature. Our model outperforms the CSL by over 7 percentage points, reaching a pixel accuracy of 95 %.",
+      "keywords": [
+        "CLASSIFICATION",
+        "ALGORITHMS"
+      ],
+      "normalized_title": "applying self supervised learning for semantic cloud segmentation of all sky images",
+      "raw_bibtex": "@ARTICLE{10.5194/amt-15-797-2022,\n\tauthor = {Fabel, Y and Nouri, B and Wilbert, S and Blum, N and Triebel, R and Hasenbalg, M and Kuhn, P and Zarzalejo, LF and Pitz-Paal, R},\n\ttitle = {Applying self-supervised learning for semantic cloud segmentation of all-sky images},\n\tjournal = {ATMOSPHERIC MEASUREMENT TECHNIQUES},\n\tyear = {2022},\n\tkeywords = {CLASSIFICATION; ALGORITHMS},\n\tabstract = {Semantic segmentation of ground-based all-sky images (ASIs) can provide high-resolution cloud coverage information of distinct cloud types, applicable for meteorology-, climatology- and solar-energy-related applications. Since the shape and appearance of clouds is variable, and there is high similarity between cloud types, a clear classification is difficult. Therefore, most state-of-the-art methods focus on the distinction between cloudy and cloud-free pixels without taking into account the cloud type. On the other hand, cloud classification is typically determined separately at the image level, neglecting the cloud's position and only considering the prevailing cloud type. Deep neural networks have proven to be very effective and robust for segmentation tasks; however they require large training datasets to learn complex visual features. In this work, we present a self-supervised learning approach to exploit many more data than in purely supervised training and thus increase the model's performance. In the first step, we use about 300 000 ASIs in two different pretext tasks for pretraining.One of them pursues an image reconstruction approach. The other one is based on the DeepCluster model, an iterative procedure of clustering and classifying the neural network output. In the second step, our model is fine-tuned on a small labeled dataset of 770 ASIs, of which 616 are used for training and 154 for validation. For each of them, a ground truth mask was created that classifies each pixel into clear sky or a low-layer, mid-layer or high-layer cloud. To analyze the effectiveness of self-supervised pretraining, we compare our approach to randomly initialized and pretrained ImageNet weights using the same training and validation sets. Achieving 85.8 % pixel accuracy on average, our best self-supervised model outperforms the conventional approaches of random (78.3 %) and pretrained ImageNet initialization (82.1 %). The benefits become even more evident when regarding precision, recall and intersection over union (IoU) of the respective cloud classes, where the improvement is between 5 and 20 percentage points. Furthermore, we compare the performance of our best model with regards to binary segmentation with a clear-sky library (CSL) from the literature. Our model outperforms the CSL by over 7 percentage points, reaching a pixel accuracy of 95 %.},\n\tdoi = {10.5194/amt-15-797-2022},\n\tvolume = {15},\n\tnumber = {3},\n\tpages = {797-809},\n\tissn = {1867-1381},\n\tnote = {Times Cited in Web of Science Core Collection: 49 Total Times Cited: 56 Cited Reference Count: 63 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.5194/amt-15-797-2022"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000288",
+      "entry_type": "article",
+      "title": "Interpretable 2.5D network by hierarchical attention and consistency learning for 3D MRI classification",
+      "authors": [
+        "Pang, ST",
+        "Chen, YD",
+        "Shi, XS",
+        "Wang, R",
+        "Dai, MZ",
+        "Zhu, XF",
+        "Song, B",
+        "Li, K"
+      ],
+      "year": 2025,
+      "journal": "PATTERN RECOGNITION",
+      "doi": "10.1016/j.patcog.2025.111539",
+      "abstract": "Deep learning methods have been widely applied in diagnostic research on MRI data. Among the existing methods, attention-based multiple-instance learning, which not only provides classification results but also explains significant regions related to the task, has attracted considerable attention from scholars. However, prior methods might be restricted by these issues: (i) the loss of spatial or volume information, (ii) semantic inconsistency of attention weights, (iii) missing information exchange between attention mechanisms within different branches. To overcome these issues, we propose an innovative dual-branch attention-based deep multiple-instance learning framework, namely HA-CSL, which consists of a 2D branch and a 3D branch, a hierarchical attention (HA) module and a consistency learning (CSL) module. Specifically, the 2D and 3D branches employ the 2D and 3D convolutional neural networks to extract 2D and 3D patch-level features, respectively, so as to learn more richer image information. Additionally, the HA module comprises slice-, region- and channel-level attentions to interpret the significance of slices, regions and channels, respectively. Moreover, the CSL module is to enhance the consistency of attention weights obtained by the two branches, so as to reduce the semantic gap of attentions and promote better information exchange of two branches. Experiments on two 3D MRI image datasets demonstrate the superior classification and interpretation performance of the proposed framework over recent state-of-the-art methods. The source codes are available at https://github.com/shuting-pang/HA_CSL.",
+      "keywords": [
+        "3D MRI",
+        "Multiple instance learning",
+        "Hierarchical attention",
+        "Consistency learning",
+        "2.5D network",
+        "PREDICTION"
+      ],
+      "normalized_title": "interpretable 2 5d network by hierarchical attention and consistency learning for 3d mri classification",
+      "raw_bibtex": "@ARTICLE{10.1016/j.patcog.2025.111539,\n\tauthor = {Pang, ST and Chen, YD and Shi, XS and Wang, R and Dai, MZ and Zhu, XF and Song, B and Li, K},\n\ttitle = {Interpretable 2.5D network by hierarchical attention and consistency learning for 3D MRI classification},\n\tjournal = {PATTERN RECOGNITION},\n\tyear = {2025},\n\tkeywords = {3D MRI; Multiple instance learning; Hierarchical attention; Consistency learning; 2.5D network; PREDICTION},\n\tabstract = {Deep learning methods have been widely applied in diagnostic research on MRI data. Among the existing methods, attention-based multiple-instance learning, which not only provides classification results but also explains significant regions related to the task, has attracted considerable attention from scholars. However, prior methods might be restricted by these issues: (i) the loss of spatial or volume information, (ii) semantic inconsistency of attention weights, (iii) missing information exchange between attention mechanisms within different branches. To overcome these issues, we propose an innovative dual-branch attention-based deep multiple-instance learning framework, namely HA-CSL, which consists of a 2D branch and a 3D branch, a hierarchical attention (HA) module and a consistency learning (CSL) module. Specifically, the 2D and 3D branches employ the 2D and 3D convolutional neural networks to extract 2D and 3D patch-level features, respectively, so as to learn more richer image information. Additionally, the HA module comprises slice-, region- and channel-level attentions to interpret the significance of slices, regions and channels, respectively. Moreover, the CSL module is to enhance the consistency of attention weights obtained by the two branches, so as to reduce the semantic gap of attentions and promote better information exchange of two branches. Experiments on two 3D MRI image datasets demonstrate the superior classification and interpretation performance of the proposed framework over recent state-of-the-art methods. The source codes are available at https://github.com/shuting-pang/HA_CSL.},\n\tdoi = {10.1016/j.patcog.2025.111539},\n\tvolume = {164},\n\tissn = {0031-3203},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 47 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.patcog.2025.111539"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000289",
+      "entry_type": "article",
+      "title": "Forecasting SMEs' credit risk in supply chain finance with a sampling strategy based on machine learning techniques",
+      "authors": [
+        "Wang, LK",
+        "Jia, F",
+        "Chen, LJ",
+        "Xu, QF"
+      ],
+      "year": 2023,
+      "journal": "ANNALS OF OPERATIONS RESEARCH",
+      "doi": "10.1007/s10479-022-04518-5",
+      "abstract": "Exploring the value of multi-source information fusion to predict small and medium-sized enterprises' (SMEs) credit risk in supply chain finance (SCF) is a popular yet challenging task, as two issues of key variable selection and imbalanced class must be addressed simultaneously. To this end, we develop new forecast models adopting an imbalance sampling strategy based on machine learning techniques and apply these new models to predict credit risk of SMEs in China, using financial information, operation information, innovation information, and negative events as predictors. The empirical results show that the financial-based information, such as TOC, NIR, is most useful in predicting SMEs' credit risk in SCF, and multi-source information fusion is meaningful in better predicting the credit risk. In addition, based on the preferred CSL-RF model, which extends cost-sensitive learning to a random forest, we also present the varying mechanisms of key predictors for SMEs' credit risk by using partial dependency analysis. The strategic insights obtained may be helpful for market participants, such as SMEs' managers, investors, and market regulators.",
+      "keywords": [
+        "Credit risk forecasting",
+        "Supply chain finance",
+        "Key variable selection",
+        "Imbalanced sampling strategy",
+        "Partial dependency analysis",
+        "ARTIFICIAL NEURAL-NETWORKS",
+        "MODELS",
+        "INFORMATION",
+        "TECHNOLOGY",
+        "FRAMEWORK"
+      ],
+      "normalized_title": "forecasting smes credit risk in supply chain finance with a sampling strategy based on machine learning techniques",
+      "raw_bibtex": "@ARTICLE{10.1007/s10479-022-04518-5,\n\tauthor = {Wang, LK and Jia, F and Chen, LJ and Xu, QF},\n\ttitle = {Forecasting SMEs' credit risk in supply chain finance with a sampling strategy based on machine learning techniques},\n\tjournal = {ANNALS OF OPERATIONS RESEARCH},\n\tyear = {2023},\n\tkeywords = {Credit risk forecasting; Supply chain finance; Key variable selection; Imbalanced sampling strategy; Partial dependency analysis; ARTIFICIAL NEURAL-NETWORKS; MODELS; INFORMATION; TECHNOLOGY; FRAMEWORK},\n\tabstract = {Exploring the value of multi-source information fusion to predict small and medium-sized enterprises' (SMEs) credit risk in supply chain finance (SCF) is a popular yet challenging task, as two issues of key variable selection and imbalanced class must be addressed simultaneously. To this end, we develop new forecast models adopting an imbalance sampling strategy based on machine learning techniques and apply these new models to predict credit risk of SMEs in China, using financial information, operation information, innovation information, and negative events as predictors. The empirical results show that the financial-based information, such as TOC, NIR, is most useful in predicting SMEs' credit risk in SCF, and multi-source information fusion is meaningful in better predicting the credit risk. In addition, based on the preferred CSL-RF model, which extends cost-sensitive learning to a random forest, we also present the varying mechanisms of key predictors for SMEs' credit risk by using partial dependency analysis. The strategic insights obtained may be helpful for market participants, such as SMEs' managers, investors, and market regulators.},\n\tdoi = {10.1007/s10479-022-04518-5},\n\tvolume = {331},\n\tnumber = {1},\n\tpages = {1-33},\n\tissn = {0254-5330},\n\tnote = {Times Cited in Web of Science Core Collection: 89 Total Times Cited: 103 Cited Reference Count: 48 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s10479-022-04518-5"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000290",
+      "entry_type": "article",
+      "title": "CSL-SFNet for Cooperative Spectrum Sensing in Cognitive Satellite Network with GEO and LEO Satellites",
+      "authors": [
+        "Yang, K",
+        "Hu, SB",
+        "Zhang, X",
+        "Yan, TT",
+        "Zhu, MQ"
+      ],
+      "year": 2024,
+      "journal": "IET SIGNAL PROCESSING",
+      "doi": "10.1049/2024/5897908",
+      "abstract": "In a cognitive satellite network (CSN) with GEO and LEO satellites, there is a large propagation losses between the sensing satellite and the ground station. The results of spectrum sensing from a single satellite may be inaccurate, which will create serious interference in the primary satellite system. Cooperative spectrum sensing (CSS) has become the key technology for solving the above problems in recent years. However, most of the current CSS techniques are model-driven. They are difficult to model and implement in CSNs since their detection performance is strongly dependent on an assumed statistical model. Thus, we propose a novel CSS scheme, which uses convolutional neural networks (CNNs), self-attention (SA) modules, long short-term memory networks (LSTMs), and soft fusion networks, called CSL-SFNet. This scheme combines the advantages of CNNs, SA modules, and LSTMs to extract the features of the input signals from the spatial and temporal domains. Additionally, the CSL-SFNet makes use of a novel soft fusion technique that improves detection performance while also considerably reducing communication overhead. The simulation results demonstrate that the proposed algorithm can achieve a detection probability of 90% when the signal-to-noise ratio is -20 dB; it has a shorter running time and always outperforms the other CSS algorithms.",
+      "keywords": [
+        "DATA FUSION",
+        "SCHEMES"
+      ],
+      "normalized_title": "csl sfnet for cooperative spectrum sensing in cognitive satellite network with geo and leo satellites",
+      "raw_bibtex": "@ARTICLE{10.1049/2024/5897908,\n\tauthor = {Yang, K and Hu, SB and Zhang, X and Yan, TT and Zhu, MQ},\n\ttitle = {CSL-SFNet for Cooperative Spectrum Sensing in Cognitive Satellite Network with GEO and LEO Satellites},\n\tjournal = {IET SIGNAL PROCESSING},\n\tyear = {2024},\n\tkeywords = {DATA FUSION; SCHEMES},\n\tabstract = {In a cognitive satellite network (CSN) with GEO and LEO satellites, there is a large propagation losses between the sensing satellite and the ground station. The results of spectrum sensing from a single satellite may be inaccurate, which will create serious interference in the primary satellite system. Cooperative spectrum sensing (CSS) has become the key technology for solving the above problems in recent years. However, most of the current CSS techniques are model-driven. They are difficult to model and implement in CSNs since their detection performance is strongly dependent on an assumed statistical model. Thus, we propose a novel CSS scheme, which uses convolutional neural networks (CNNs), self-attention (SA) modules, long short-term memory networks (LSTMs), and soft fusion networks, called CSL-SFNet. This scheme combines the advantages of CNNs, SA modules, and LSTMs to extract the features of the input signals from the spatial and temporal domains. Additionally, the CSL-SFNet makes use of a novel soft fusion technique that improves detection performance while also considerably reducing communication overhead. The simulation results demonstrate that the proposed algorithm can achieve a detection probability of 90% when the signal-to-noise ratio is -20 dB; it has a shorter running time and always outperforms the other CSS algorithms.},\n\tdoi = {10.1049/2024/5897908},\n\tvolume = {2024},\n\tissn = {1751-9675},\n\tnote = {Times Cited in Web of Science Core Collection: 2 Total Times Cited: 2 Cited Reference Count: 33 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1049/2024/5897908"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

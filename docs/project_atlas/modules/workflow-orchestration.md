@@ -39,5 +39,5 @@
 
 ## Common Verifications
 
-- `PYTHONPATH=/Users/mao/Documents/langchain/literature_screening/src /Users/mao/Documents/langchain/literature_screening/.venv311-codex/bin/python -m pytest literature_screening/tests/test_api_app.py`
+- `PYTHONPATH=literature_screening/src python -m pytest literature_screening/tests/test_api_app.py`
 - `python -m compileall` over `literature_screening/src/literature_screening/studio/service.py` and nearby touched files

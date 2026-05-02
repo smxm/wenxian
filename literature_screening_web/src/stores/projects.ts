@@ -45,9 +45,13 @@ export const useProjectsStore = defineStore('projects', {
     async loadProject(projectId: string) {
       this.loadingDetail = true
       try {
-        this.currentProject = null
-        this.currentProject = await apiFetchProject(projectId)
-        this.templates = await apiFetchTemplates(projectId)
+        if (this.currentProject?.id !== projectId) {
+          this.currentProject = null
+          this.templates = []
+        }
+        const [project, templates] = await Promise.all([apiFetchProject(projectId), apiFetchTemplates(projectId)])
+        this.currentProject = project
+        this.templates = templates
         return this.currentProject
       } finally {
         this.loadingDetail = false

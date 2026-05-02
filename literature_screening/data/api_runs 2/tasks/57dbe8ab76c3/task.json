@@ -1,0 +1,1072 @@
+{
+  "id": "57dbe8ab76c3",
+  "kind": "screening",
+  "status": "succeeded",
+  "title": "new-screening-run",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 5,
+  "progress_total": 5,
+  "progress_message": "Task completed",
+  "created_at": "2026-03-23T18:46:03.918965+08:00",
+  "updated_at": "2026-03-23T18:49:55.663155+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "775cd31c00c1",
+    "project_topic": "人工智能（AI）与扩展现实（XR）技术在猫咪及动物交互中的应用（涵盖虚拟宠物与实体动物交互）",
+    "model_provider": "deepseek",
+    "parent_task_id": null,
+    "input_dataset_ids": [],
+    "request_payload": {
+      "title": "new-screening-run",
+      "topic": "人工智能（AI）与扩展现实（XR）技术在猫咪及动物交互中的应用（涵盖虚拟宠物与实体动物交互）",
+      "inclusion": [
+        "必须明确涉及人工智能技术（如机器学习、生成式AI、计算机视觉、行为树等）。",
+        "必须涉及 XR 技术（VR、AR、MR）或元宇宙、3D虚拟空间。",
+        "核心研究对象或应用场景必须包含动物（特别是猫咪/Feline）或虚拟宠物（Virtual Pets/Companions）。",
+        "重点关注“交互”层面（如人宠互动、动物行为分析、虚拟伴侣的情感反馈）。"
+      ],
+      "exclusion": [
+        "纯兽医学或动物生物学研究，无前沿计算机技术（AI/XR）介入。",
+        "纯 AI 算法理论或纯 XR 硬件研究，未结合动物交互或虚拟宠物场景。",
+        "传统的2D宠物游戏开发（无 AI 自主性或 XR 沉浸感）。",
+        "非英语或非学术类文章（如纯商业新闻报道）。"
+      ],
+      "provider": "deepseek",
+      "model_name": "deepseek-chat",
+      "api_base_url": "https://api.deepseek.com/v1",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.0,
+      "max_tokens": 1536,
+      "min_request_interval_seconds": 2.0,
+      "batch_size": 20,
+      "target_include_count": 30,
+      "stop_when_target_reached": true,
+      "allow_uncertain": true,
+      "retry_times": 6,
+      "request_timeout_seconds": 240,
+      "encoding": "auto",
+      "project_id": "775cd31c00c1",
+      "parent_task_id": null,
+      "source_dataset_ids": []
+    },
+    "uploaded_input_paths": [
+      "tasks/57dbe8ab76c3/uploads/scopus_export_Mar 23-2026_7fcb7bd0-a3fd-441a-ad28-d66ea1e7d957.ris"
+    ]
+  },
+  "summary": {
+    "run_id": "run_20260323_184603",
+    "input_files_count": 1,
+    "raw_entries_count": 94,
+    "deduped_entries_count": 94,
+    "processed_count": 94,
+    "included_count": 6,
+    "excluded_count": 79,
+    "uncertain_count": 9,
+    "unused_count": 0,
+    "batch_count": 5,
+    "api_call_count": 5,
+    "stop_reason": "all_records_processed",
+    "started_at": "2026-03-23T18:46:04.005211+08:00",
+    "finished_at": "2026-03-23T18:49:55.626430+08:00"
+  },
+  "error": null,
+  "artifacts": {
+    "included_report": {
+      "path": "tasks/57dbe8ab76c3/screening_run/screening_output/included_report.md",
+      "filename": "included_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 2638
+    },
+    "excluded_report": {
+      "path": "tasks/57dbe8ab76c3/screening_run/screening_output/excluded_report.md",
+      "filename": "excluded_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 33026
+    },
+    "uncertain_report": {
+      "path": "tasks/57dbe8ab76c3/screening_run/screening_output/uncertain_report.md",
+      "filename": "uncertain_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 3722
+    },
+    "included_ris": {
+      "path": "tasks/57dbe8ab76c3/screening_run/screening_output/included.ris",
+      "filename": "included.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 10578
+    },
+    "unused_ris": {
+      "path": "tasks/57dbe8ab76c3/screening_run/screening_output/unused_remaining.ris",
+      "filename": "unused_remaining.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 0
+    },
+    "run_summary": {
+      "path": "tasks/57dbe8ab76c3/screening_run/screening_output/run_summary.json",
+      "filename": "run_summary.json",
+      "content_type": "application/json",
+      "size_bytes": 443
+    },
+    "screening_decisions": {
+      "path": "tasks/57dbe8ab76c3/screening_run/screening_output/screening_decisions.json",
+      "filename": "screening_decisions.json",
+      "content_type": "application/json",
+      "size_bytes": 44185
+    }
+  },
+  "run_root": "tasks/57dbe8ab76c3/screening_run",
+  "output_dir": "tasks/57dbe8ab76c3/screening_run/screening_output",
+  "markdown_preview": null,
+  "records": [
+    {
+      "paper_id": "paper_000001",
+      "title": "EvoZymePro-Cat: A Protein–Ligand-Aware Deep Learning Framework for Predicting Mutation Effects in Enzyme Function",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要仅涉及酶蛋白的深度学习预测，未提及AI/XR技术或动物交互。",
+      "year": 2026,
+      "journal": "ACS Synthetic Biology",
+      "doi": "10.1021/acssynbio.5c00755"
+    },
+    {
+      "paper_id": "paper_000002",
+      "title": "A Two-Level Dynamic Adaptive Network for Medical Image Fusion",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要聚焦医学图像融合的深度学习，未涉及XR技术或动物交互场景。",
+      "year": 2022,
+      "journal": "IEEE Transactions on Instrumentation and Measurement",
+      "doi": "10.1109/tim.2022.3169546"
+    },
+    {
+      "paper_id": "paper_000003",
+      "title": "Hybrid deep learning framework for pancreatic cancer detection and segmentation using graph attention CNN and swin transformer",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要关于胰腺癌检测的深度学习框架，未涉及XR技术或动物交互。",
+      "year": 2025,
+      "journal": "ICT Express",
+      "doi": "10.1016/j.icte.2025.09.017"
+    },
+    {
+      "paper_id": "paper_000004",
+      "title": "Multimodal Approach of Optical Coherence Tomography and Raman Spectroscopy Can Improve Differentiating Benign and Malignant Skin Tumors in Animal Patients",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "摘要提到动物肿瘤的光学成像和机器学习分析，但未涉及XR技术或交互层面。",
+      "year": 2022,
+      "journal": "Cancers",
+      "doi": "10.3390/cancers14122820"
+    },
+    {
+      "paper_id": "paper_000005",
+      "title": "Contrastive adversarial tuning: Enhancing discriminability and robustness of LLMs for emotion recognition in conversation",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要关于对话情感识别的LLM优化，未涉及XR技术或动物交互。",
+      "year": 2026,
+      "journal": "Pattern Recognition",
+      "doi": "10.1016/j.patcog.2025.113025"
+    },
+    {
+      "paper_id": "paper_000006",
+      "title": "Computational Brain Imaging Framework for Neurological Mapping and Disorder Classification Using Multimodal Image Processing",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要关于脑成像的计算框架，未涉及XR技术或动物交互。",
+      "year": 2025,
+      "journal": "International Journal of Computational Intelligence Systems",
+      "doi": "10.1007/s44196-025-00852-1"
+    },
+    {
+      "paper_id": "paper_000007",
+      "title": "Enhancing early Alzheimer's diagnosis through machine learning on multimodal neuroimaging and cognitive data",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要关于阿尔茨海默症早期诊断的机器学习，未涉及XR技术或动物交互。",
+      "year": 2025,
+      "journal": "Iran Journal of Computer Science",
+      "doi": "10.1007/s42044-025-00282-4"
+    },
+    {
+      "paper_id": "paper_000008",
+      "title": "Multimodal Medical Image Fusion Using a Progressive Parallel Strategy Based on Deep Learning",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要关于医学图像融合的深度学习，未涉及XR技术或动物交互。",
+      "year": 2025,
+      "journal": "Electronics (Switzerland)",
+      "doi": "10.3390/electronics14112266"
+    },
+    {
+      "paper_id": "paper_000009",
+      "title": "Interpretable Temporal-Spatial Graph Attention Network with Hyperbolic Sine Optimizer Algorithm for Alzheimer’s Disease Diagnosis Through Multiscale Feature Modeling",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要关于阿尔茨海默症诊断的深度学习模型，未涉及XR技术或动物交互。",
+      "year": 2025,
+      "journal": "Biomedical Materials and Devices",
+      "doi": "10.1007/s44174-025-00485-0"
+    },
+    {
+      "paper_id": "paper_000010",
+      "title": "TOWARD ROBUST SPEECH EMOTION RECOGNITION AND CLASSIFICATION USING NATURAL LANGUAGE PROCESSING WITH DEEP LEARNING MODEL",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要关于语音情感识别的深度学习，未涉及XR技术或动物交互。",
+      "year": 2025,
+      "journal": "Fractals",
+      "doi": "10.1142/s0218348x25400225"
+    },
+    {
+      "paper_id": "paper_000011",
+      "title": "An interpretable multimodal deep learning framework for Alzheimer's disease diagnosis",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要关于阿尔茨海默症诊断的多模态AI框架，未涉及XR技术或动物交互。",
+      "year": 2025,
+      "journal": "Digital Health",
+      "doi": "10.1177/20552076251390281"
+    },
+    {
+      "paper_id": "paper_000012",
+      "title": "Hybrid Dual-Context Prompted Cross-Attention Framework with Language Model Guidance for Multi-Label Prediction of Human Off-Target Ligand–Protein Interactions",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要关于药物靶点预测的深度学习，未涉及XR技术或动物交互。",
+      "year": 2026,
+      "journal": "International Journal of Molecular Sciences",
+      "doi": "10.3390/ijms27021126"
+    },
+    {
+      "paper_id": "paper_000013",
+      "title": "MultiRoiMix: A Data Augmentation Method for PET/CT Multimodal Medical Images",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要关于医学图像数据增强方法，未涉及XR技术或动物交互。",
+      "year": 2024,
+      "journal": "Journal of Medical and Biological Engineering",
+      "doi": "10.1007/s40846-024-00862-y"
+    },
+    {
+      "paper_id": "paper_000014",
+      "title": "Deep multimodal learning for domain-level cognitive decline prediction in Alzheimer's disease",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要关于阿尔茨海默症认知衰退预测的AI，未涉及XR技术或动物交互。",
+      "year": 2025,
+      "journal": "Frontiers in Artificial Intelligence",
+      "doi": "10.3389/frai.2025.1731062"
+    },
+    {
+      "paper_id": "paper_000015",
+      "title": "Okeydoggy: A Mobile Application That Helps Understand Calming Signals of Dog Using MOBILENETV2 —Focusing on “Play Bowing” and “Licking Nose”",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "标题和摘要涉及使用MobileNetV2识别狗的情绪信号，但未明确提及XR技术。",
+      "year": 2024,
+      "journal": "Advances in Artificial Intelligence and Machine Learning",
+      "doi": "10.54364/aaiml.2024.42130"
+    },
+    {
+      "paper_id": "paper_000016",
+      "title": "Integrating PET/CT, radiomics and clinical data: An advanced multi-modal approach for lymph node metastasis prediction in prostate cancer",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要关于前列腺癌淋巴结转移预测的AI模型，未涉及XR技术或动物交互。",
+      "year": 2025,
+      "journal": "Computers in Biology and Medicine",
+      "doi": "10.1016/j.compbiomed.2024.109339"
+    },
+    {
+      "paper_id": "paper_000017",
+      "title": "Emotion Analysis Using Improved Cat Swarm Optimization with Machine Learning for Speech-impaired People",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要关于言语障碍者情感分析的机器学习，未涉及动物或XR技术。",
+      "year": 2024,
+      "journal": "Journal of Disability Research",
+      "doi": "10.57197/jdr-2024-0017"
+    },
+    {
+      "paper_id": "paper_000018",
+      "title": "Speech Emotion Recognition of Animal Vocals Using Deep Learning",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "标题和摘要涉及使用深度学习识别动物声音情感，但未明确提及XR技术。",
+      "year": 2024,
+      "journal": "International Journal of Intelligent Systems and Applications in Engineering",
+      "doi": null
+    },
+    {
+      "paper_id": "paper_000019",
+      "title": "Machine Learning-Based Prognosis Prediction in Glioblastoma Multiforme Patients by Integrating Clinical Data with Multimodal Radiomics †",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要关于胶质母细胞瘤预后预测的机器学习，未涉及XR技术或动物交互。",
+      "year": 2026,
+      "journal": "Diagnostics",
+      "doi": "10.3390/diagnostics16040512"
+    },
+    {
+      "paper_id": "paper_000020",
+      "title": "Synthesis of pseudo-PET/CT fusion images in radiotherapy based on a new transformer model",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要关于放疗中伪PET/CT图像合成的Transformer模型，未涉及XR技术或动物交互。",
+      "year": 2025,
+      "journal": "Medical Physics",
+      "doi": "10.1002/mp.17512"
+    },
+    {
+      "paper_id": "paper_000021",
+      "title": "HME-NET: A HYBRID MULTIMODAL ENSEMBLE FRAMEWORK FOR EXPLAINABLE AND EFFICIENT BONE CANCER DIAGNOSIS",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要聚焦于人类骨癌诊断，未涉及动物交互或XR技术。",
+      "year": 2025,
+      "journal": "International Journal of Applied Mathematics",
+      "doi": "10.12732/ijam.v38i4s.289"
+    },
+    {
+      "paper_id": "paper_000022",
+      "title": "Unleash the Power of Vision-Language Models by Visual Attention Prompt and Multimodal Interaction",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "研究视觉语言模型通用方法，未提及动物、虚拟宠物或XR技术。",
+      "year": 2025,
+      "journal": "IEEE Transactions on Multimedia",
+      "doi": "10.1109/tmm.2024.3521785"
+    },
+    {
+      "paper_id": "paper_000023",
+      "title": "Ai-assissted multimodal classification of canine and feline (Sub-)Cutaneous tumors using ultrasound, white light and fluorescence imaging",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "涉及犬猫肿瘤诊断的AI应用，但未提及XR技术或交互层面。",
+      "year": 2025,
+      "journal": "Measurement: Journal of the International Measurement Confederation",
+      "doi": "10.1016/j.measurement.2025.117295"
+    },
+    {
+      "paper_id": "paper_000024",
+      "title": "Deep evidential fusion with uncertainty quantification and reliability learning for multimodal medical image segmentation",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "专注于医学图像分割的深度证据融合，未涉及动物或XR。",
+      "year": 2025,
+      "journal": "Information Fusion",
+      "doi": "10.1016/j.inffus.2024.102648"
+    },
+    {
+      "paper_id": "paper_000025",
+      "title": "Hybrid Multimodal Medical Image Fusion Method Based on LatLRR and ED-D2GAN",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "提出医学图像融合方法，未涉及动物交互或XR技术。",
+      "year": 2022,
+      "journal": "Applied Sciences (Switzerland)",
+      "doi": "10.3390/app122412758"
+    },
+    {
+      "paper_id": "paper_000026",
+      "title": "MFF: A Deep Learning Model for Multi-Modal Image Fusion Based on Multiple Filters",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "研究多模态图像融合深度学习模型，未提及动物或XR。",
+      "year": 2025,
+      "journal": "IEEE Access",
+      "doi": "10.1109/access.2025.3540007"
+    },
+    {
+      "paper_id": "paper_000027",
+      "title": "Multimodal deep learning based on the combination of EfficientNetV2 and ViT for Alzheimer’s disease early diagnosis enhanced by SAGAN data augmentation",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "专注于阿尔茨海默病早期诊断，未涉及动物或XR技术。",
+      "year": 2022,
+      "journal": "International Journal of Computer Information Systems and Industrial Management Applications",
+      "doi": null
+    },
+    {
+      "paper_id": "paper_000028",
+      "title": "Collaborative Attention Transformer on facial expression recognition under partial occlusion",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "研究面部表情识别，未涉及动物、虚拟宠物或XR。",
+      "year": 2022,
+      "journal": "Journal of Electronic Imaging",
+      "doi": "10.1117/1.jei.31.2.023037"
+    },
+    {
+      "paper_id": "paper_000029",
+      "title": "Nanophotonic-Enhanced Photoacoustic Fusion with Transformers for Brain Tumor Classification",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "专注于脑肿瘤分类的医学影像融合，未提及动物或XR。",
+      "year": 2025,
+      "journal": "International Journal of Electrical and Electronics Research",
+      "doi": "10.37391/ijeer.130427"
+    },
+    {
+      "paper_id": "paper_000030",
+      "title": "A Cross-Modal Mutual Knowledge Distillation Framework for Alzheimer’s Disease Diagnosis: Addressing Incomplete Modalities",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "研究阿尔茨海默病诊断的跨模态知识蒸馏，未涉及动物或XR。",
+      "year": 2025,
+      "journal": "IEEE Transactions on Automation Science and Engineering",
+      "doi": "10.1109/tase.2025.3556290"
+    },
+    {
+      "paper_id": "paper_000031",
+      "title": "A Multi-Scale Interpretability-Based PET-CT Tumor Segmentation Method",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "专注于PET-CT肿瘤分割，未提及动物交互或XR技术。",
+      "year": 2025,
+      "journal": "Mathematics",
+      "doi": "10.3390/math13071139"
+    },
+    {
+      "paper_id": "paper_000032",
+      "title": "A Multimodal Approach for Alzheimer's Disease Detection and Classification Using Deep Learning",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "研究阿尔茨海默病检测的深度学习方法，未涉及动物或XR。",
+      "year": 2024,
+      "journal": "Journal of Computing and Biomedical Informatics",
+      "doi": null
+    },
+    {
+      "paper_id": "paper_000033",
+      "title": "Multitask Learning Radiomics on Longitudinal Imaging to Predict Survival Outcomes following Risk-Adaptive Chemoradiation for Non-Small Cell Lung Cancer",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "专注于肺癌生存预测的放射组学，未提及动物或XR技术。",
+      "year": 2022,
+      "journal": "Cancers",
+      "doi": "10.3390/cancers14051228"
+    },
+    {
+      "paper_id": "paper_000034",
+      "title": "How to feel about emotionalized artificial intelligence? When robot pets, holograms, and chatbots become affective partners",
+      "decision": "include",
+      "confidence": 0.8,
+      "reason": "标题明确讨论机器人宠物和情感化AI，涉及虚拟伴侣的情感反馈。",
+      "year": 2021,
+      "journal": "Ethics and Information Technology",
+      "doi": "10.1007/s10676-021-09598-8"
+    },
+    {
+      "paper_id": "paper_000035",
+      "title": "1D-CNN-LSTM Hybrid-Model-Based Pet Behavior Recognition through Wearable Sensor Data Augmentation",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "标题和摘要涉及宠物行为识别与AI，但未明确提及XR技术或虚拟宠物。",
+      "year": 2024,
+      "journal": "Journal of Information Processing Systems",
+      "doi": "10.3745/jips.02.0211"
+    },
+    {
+      "paper_id": "paper_000036",
+      "title": "Efficient 3D Biomedical Image Segmentation by Parallelly Multiscale Transformer–CNN Aggregation Network",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "专注于3D生物医学图像分割，未涉及动物交互或XR技术。",
+      "year": 2025,
+      "journal": "Chemical and Biomedical Imaging",
+      "doi": "10.1021/cbmi.4c00102"
+    },
+    {
+      "paper_id": "paper_000037",
+      "title": "Deep learning in neuroradiology: A systematic review of current algorithms and approaches for the new wave of imaging technology",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "系统综述神经放射学中的深度学习，未专门涉及动物或XR。",
+      "year": 2020,
+      "journal": "Radiology: Artificial Intelligence",
+      "doi": "10.1148/ryai.2020190026"
+    },
+    {
+      "paper_id": "paper_000038",
+      "title": "Machine learning based diagnostics of veterinary cancer on ultrasound and optical imaging data",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "涉及犬猫癌症诊断的机器学习，但未提及XR技术或交互层面。",
+      "year": 2025,
+      "journal": "Veterinary Quarterly",
+      "doi": "10.1080/01652176.2025.2510486"
+    },
+    {
+      "paper_id": "paper_000039",
+      "title": "Potentials and caveats of AI in hybrid imaging",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "综述AI在混合成像中的潜力，未专门涉及动物或XR。",
+      "year": 2021,
+      "journal": "Methods",
+      "doi": "10.1016/j.ymeth.2020.10.004"
+    },
+    {
+      "paper_id": "paper_000040",
+      "title": "Sub-region aware retrieval-based network with multimodal prior knowledge guidance for microvascular invasion prediction in PET/CT imaging",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "专注于肝癌微血管侵犯预测，未涉及动物交互或XR技术。",
+      "year": 2024,
+      "journal": "Neural Computing and Applications",
+      "doi": "10.1007/s00521-024-09777-w"
+    },
+    {
+      "paper_id": "paper_000041",
+      "title": "CsAGP: Detecting Alzheimer's disease from multimodal images via dual-transformer with cross-attention and graph pooling",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要显示研究阿尔茨海默病的医学影像诊断，未涉及动物或虚拟宠物交互。",
+      "year": 2023,
+      "journal": "Journal of King Saud University - Computer and Information Sciences",
+      "doi": "10.1016/j.jksuci.2023.101618"
+    },
+    {
+      "paper_id": "paper_000042",
+      "title": "Overcoming Limitations in One-Shot Semantic Segmentation via Adaptive Visual-Text Guided Prototype Relationship Optimization",
+      "decision": "exclude",
+      "confidence": 0.92,
+      "reason": "标题和摘要聚焦医学图像分割算法，未提及动物或XR技术。",
+      "year": 2025,
+      "journal": "IEEE Transactions on Circuits and Systems for Video Technology",
+      "doi": "10.1109/tcsvt.2025.3632277"
+    },
+    {
+      "paper_id": "paper_000043",
+      "title": "Lung Pathology Detection: A Qualitative and Comprehensive Survey of Deep Neural Networks Utilising CT, MRI, and PET Imaging Modalities",
+      "decision": "exclude",
+      "confidence": 0.93,
+      "reason": "标题和摘要为COVID-19医学影像综述，未涉及动物交互或XR技术。",
+      "year": 2025,
+      "journal": "Journal of Innovative Image Processing",
+      "doi": "10.36548/jiip.2025.4.002"
+    },
+    {
+      "paper_id": "paper_000044",
+      "title": "DeepImageTranslator V2: Analysis of Multimodal Medical Images using Semantic Segmentation Maps Generated through Deep Learning",
+      "decision": "exclude",
+      "confidence": 0.91,
+      "reason": "标题和摘要描述医学图像分析软件工具，未涉及动物或AI/XR交互场景。",
+      "year": 2022,
+      "journal": "HighTech and Innovation Journal",
+      "doi": "10.28991/hij-2022-03-03-07"
+    },
+    {
+      "paper_id": "paper_000045",
+      "title": "Predictive Multimodal Deep Learning-Based Sustainable Renewable and Non-Renewable Energy Utilization",
+      "decision": "exclude",
+      "confidence": 0.94,
+      "reason": "标题和摘要研究能源预测的AI模型，未涉及动物或XR技术。",
+      "year": 2023,
+      "journal": "Computer Systems Science and Engineering",
+      "doi": "10.32604/csse.2023.037735"
+    },
+    {
+      "paper_id": "paper_000046",
+      "title": "DepreST-CAT: Retrospective smartphone call and text logs collected during the COVID-19 Pandemic to Screen for Mental Illnesses",
+      "decision": "exclude",
+      "confidence": 0.92,
+      "reason": "标题和摘要聚焦心理健康筛查的智能手机数据分析，未涉及动物或XR技术。",
+      "year": 2022,
+      "journal": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
+      "doi": "10.1145/3534596"
+    },
+    {
+      "paper_id": "paper_000047",
+      "title": "Multi-modality medical image fusion by edge supervising and multi-scale attention features extraction",
+      "decision": "exclude",
+      "confidence": 0.93,
+      "reason": "标题和摘要描述医学图像融合算法，未涉及动物交互或XR技术。",
+      "year": 2025,
+      "journal": "Journal of Supercomputing",
+      "doi": "10.1007/s11227-025-07601-3"
+    },
+    {
+      "paper_id": "paper_000048",
+      "title": "A unified and scalable machine learning framework for feature fusion in object classification using weighted PCA with adaptive concatenation and dynamic scaling",
+      "decision": "exclude",
+      "confidence": 0.91,
+      "reason": "标题和摘要研究机器学习特征融合方法，未涉及动物或XR技术。",
+      "year": 2025,
+      "journal": "Discover Computing",
+      "doi": "10.1007/s10791-025-09622-1"
+    },
+    {
+      "paper_id": "paper_000049",
+      "title": "JL-TFMSFNet: A domestic cat sound emotion recognition method based on jointly learning the time–frequency domain and multi-scale features",
+      "decision": "include",
+      "confidence": 0.88,
+      "reason": "标题明确研究家猫声音情感识别，摘要提到深度学习网络用于人-动物关系，符合AI与动物交互主题。",
+      "year": 2024,
+      "journal": "Expert Systems with Applications",
+      "doi": "10.1016/j.eswa.2024.124620"
+    },
+    {
+      "paper_id": "paper_000050",
+      "title": "Domain-adapted Large Language Models for Classifying Nuclear Medicine Reports",
+      "decision": "exclude",
+      "confidence": 0.92,
+      "reason": "标题和摘要研究核医学报告分类的语言模型，未涉及动物或XR技术。",
+      "year": 2023,
+      "journal": "Radiology: Artificial Intelligence",
+      "doi": "10.1148/ryai.220281"
+    },
+    {
+      "paper_id": "paper_000051",
+      "title": "Subclinical bacteriuria and pyuria in companion animals without signs of lower urinary tract disease: prevalence and associations in a prospective cross-sectional study using multimodal analytics",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要为伴侣动物泌尿疾病的兽医学研究，未提及AI或XR技术。",
+      "year": 2026,
+      "journal": "Journal of veterinary internal medicine",
+      "doi": "10.1093/jvimsj/aalaf092"
+    },
+    {
+      "paper_id": "paper_000052",
+      "title": "Multi-stage intermediate fusion for multimodal learning to classify non-small cell lung cancer subtypes from CT and PET",
+      "decision": "exclude",
+      "confidence": 0.93,
+      "reason": "标题和摘要研究肺癌亚型分类的医学影像融合，未涉及动物或XR技术。",
+      "year": 2025,
+      "journal": "Pattern Recognition Letters",
+      "doi": "10.1016/j.patrec.2025.04.001"
+    },
+    {
+      "paper_id": "paper_000053",
+      "title": "Shared Generator-Based Serverless Multimodal Federated Learning For Medical Image Analysis",
+      "decision": "exclude",
+      "confidence": 0.91,
+      "reason": "标题和摘要描述医学图像分析的联邦学习框架，未涉及动物或XR技术。",
+      "year": 2025,
+      "journal": "Mesopotamian Journal of Big Data",
+      "doi": "10.58496/mjbd/2025/015"
+    },
+    {
+      "paper_id": "paper_000054",
+      "title": "Enhancing Learning-Based Cross-Modality Prediction for Lossless Medical Imaging Compression",
+      "decision": "exclude",
+      "confidence": 0.92,
+      "reason": "标题和摘要研究医学图像压缩的深度学习方法，未涉及动物或XR技术。",
+      "year": 2025,
+      "journal": "IEEE Open Journal of Signal Processing",
+      "doi": "10.1109/ojsp.2025.3564830"
+    },
+    {
+      "paper_id": "paper_000055",
+      "title": "Weighted Fusion Transformer for Dual PET/CT Head and Neck Tumor Segmentation",
+      "decision": "exclude",
+      "confidence": 0.93,
+      "reason": "标题和摘要描述PET/CT肿瘤分割的医学影像方法，未涉及动物或XR技术。",
+      "year": 2024,
+      "journal": "IEEE Access",
+      "doi": "10.1109/access.2024.3439439"
+    },
+    {
+      "paper_id": "paper_000056",
+      "title": "MMCA-NET: A Multimodal Cross Attention Transformer Network for Nasopharyngeal Carcinoma Tumor Segmentation Based on a Total-Body PET/CT System",
+      "decision": "exclude",
+      "confidence": 0.92,
+      "reason": "标题和摘要研究鼻咽癌分割的医学影像网络，未涉及动物或XR技术。",
+      "year": 2024,
+      "journal": "IEEE Journal of Biomedical and Health Informatics",
+      "doi": "10.1109/jbhi.2024.3405993"
+    },
+    {
+      "paper_id": "paper_000057",
+      "title": "Risk analysis of pedestrian crosswalks in airport drop-off zones based on integrated VISSIM–SSAM model",
+      "decision": "exclude",
+      "confidence": 0.94,
+      "reason": "标题和摘要研究机场行人安全的风险分析模型，未涉及动物或AI/XR技术。",
+      "year": 2026,
+      "journal": "Accident Analysis and Prevention",
+      "doi": "10.1016/j.aap.2025.108279"
+    },
+    {
+      "paper_id": "paper_000058",
+      "title": "Affective Recommender System for Pet Social Network",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "标题和摘要涉及宠物社交网络的情感推荐系统，提到狗行为预测和AI模型，但未明确提及XR技术。",
+      "year": 2022,
+      "journal": "Sensors",
+      "doi": "10.3390/s22186759"
+    },
+    {
+      "paper_id": "paper_000059",
+      "title": "Machine Learning Facilitates Hotspot Classification in PSMA-PET/CT with Nuclear Medicine Specialist Accuracy",
+      "decision": "exclude",
+      "confidence": 0.93,
+      "reason": "标题和摘要研究前列腺癌PET/CT热点分类的机器学习方法，未涉及动物或XR技术。",
+      "year": 2020,
+      "journal": "Diagnostics",
+      "doi": "10.3390/diagnostics10090622"
+    },
+    {
+      "paper_id": "paper_000060",
+      "title": "MG-TCCA: Tensor Canonical Correlation Analysis across Multiple Groups",
+      "decision": "exclude",
+      "confidence": 0.92,
+      "reason": "标题和摘要研究阿尔茨海默病脑影像的统计分析方法，未涉及动物或XR技术。",
+      "year": 2024,
+      "journal": "IEEE/ACM Transactions on Computational Biology and Bioinformatics",
+      "doi": "10.1109/tcbb.2024.3471930"
+    },
+    {
+      "paper_id": "paper_000061",
+      "title": "Hyper-Dense_Lung_Seg: Multimodal-Fusion-Based Modified U-Net for Lung Tumour Segmentation Using Multimodality of CT-PET Scans",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要显示研究聚焦于人类肺癌医学影像分割，未涉及动物或虚拟宠物交互场景。",
+      "year": 2023,
+      "journal": "Diagnostics",
+      "doi": "10.3390/diagnostics13223481"
+    },
+    {
+      "paper_id": "paper_000062",
+      "title": "A spatial squeeze and multimodal feature fusion attention network for multiple tumor segmentation from PET–CT Volumes",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要表明研究针对人类多肿瘤医学影像分割，未涉及动物或虚拟宠物交互。",
+      "year": 2023,
+      "journal": "Engineering Applications of Artificial Intelligence",
+      "doi": "10.1016/j.engappai.2023.105955"
+    },
+    {
+      "paper_id": "paper_000063",
+      "title": "Hybridized Deep Learning Approach for Detecting Alzheimer’s Disease",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要显示研究聚焦于人类阿尔茨海默病检测，未涉及动物或虚拟宠物交互。",
+      "year": 2023,
+      "journal": "Biomedicines",
+      "doi": "10.3390/biomedicines11010149"
+    },
+    {
+      "paper_id": "paper_000064",
+      "title": "Automated landmark-based cat facial analysis and its applications",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确涉及AI技术用于猫咪面部分析，包括品种识别和疼痛识别等交互相关应用。",
+      "year": 2024,
+      "journal": "Frontiers in Veterinary Science",
+      "doi": "10.3389/fvets.2024.1442634"
+    },
+    {
+      "paper_id": "paper_000065",
+      "title": "Deep learning based facial expression recognition using improved Cat Swarm Optimization",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要显示研究针对人类面部表情识别，虽然算法名称包含'Cat'但未涉及真实动物或虚拟宠物交互。",
+      "year": 2021,
+      "journal": "Journal of Ambient Intelligence and Humanized Computing",
+      "doi": "10.1007/s12652-020-02463-4"
+    },
+    {
+      "paper_id": "paper_000066",
+      "title": "Consumer-Centric Explainable Multimodal Digital Twin Modeling for Personalized Alzheimer’s Detection in Healthcare 5.0",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要表明研究针对人类阿尔茨海默病检测的数字孪生建模，未涉及动物或虚拟宠物交互。",
+      "year": 2026,
+      "journal": "IEEE Transactions on Consumer Electronics",
+      "doi": "10.1109/tce.2026.3659536"
+    },
+    {
+      "paper_id": "paper_000067",
+      "title": "Positron emission tomography for response evaluation in microenvironment-targeted anti-cancer therapy",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要显示研究聚焦于人类癌症治疗响应评估的PET成像技术，未涉及动物或虚拟宠物交互。",
+      "year": 2020,
+      "journal": "Biomedicines",
+      "doi": "10.3390/biomedicines8090371"
+    },
+    {
+      "paper_id": "paper_000068",
+      "title": "FDG-PET/CT and Multimodal Machine Learning Model Prediction of Pathological Complete Response to Neoadjuvant Chemotherapy in Triple-Negative Breast Cancer",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要表明研究针对人类乳腺癌的机器学习预测模型，未涉及动物或虚拟宠物交互。",
+      "year": 2025,
+      "journal": "Cancers",
+      "doi": "10.3390/cancers17071249"
+    },
+    {
+      "paper_id": "paper_000069",
+      "title": "EEG Based Emotion Analysis Using Reinforced Spatio-Temporal Attentive Graph Neural and Contextnet Techniques",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要显示研究针对人类EEG情感分类，未涉及动物或虚拟宠物交互。",
+      "year": 2024,
+      "journal": "Journal of Automation, Mobile Robotics and Intelligent Systems",
+      "doi": "10.14313/jamris/3-2024/23"
+    },
+    {
+      "paper_id": "paper_000070",
+      "title": "Advancing cat facial emotion interpretation: evaluating supervised and semi-supervised models using facial landmark and image data",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确涉及AI技术用于猫咪面部情感解释，使用监督和半监督模型进行情感分类。",
+      "year": 2026,
+      "journal": "Multimedia Tools and Applications",
+      "doi": "10.1007/s11042-026-21301-x"
+    },
+    {
+      "paper_id": "paper_000071",
+      "title": "Hierarchical Contrastive Learning for Precise Whole-Body Anatomical Localization in PET/CT Imaging",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要显示研究聚焦于人类PET/CT影像的解剖定位，未涉及动物或虚拟宠物交互。",
+      "year": 2026,
+      "journal": "IEEE Transactions on Medical Imaging",
+      "doi": "10.1109/tmi.2025.3599197"
+    },
+    {
+      "paper_id": "paper_000072",
+      "title": "A Machine Learning Pipeline for Prognostic Modeling of Alzheimer’s Disease Using Multimodal Data",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要表明研究针对人类阿尔茨海默病的预后建模，未涉及动物或虚拟宠物交互。",
+      "year": 2026,
+      "journal": "Sensors",
+      "doi": "10.3390/s26051523"
+    },
+    {
+      "paper_id": "paper_000073",
+      "title": "Alzheimer’s Disease Detection from Fused PET and MRI Modalities Using an Ensemble Classifier",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要显示研究针对人类阿尔茨海默病检测，未涉及动物或虚拟宠物交互。",
+      "year": 2023,
+      "journal": "Machine Learning and Knowledge Extraction",
+      "doi": "10.3390/make5020031"
+    },
+    {
+      "paper_id": "paper_000074",
+      "title": "Intelligent Detection of Road Rage Using PNN Parameter Optimization and Multimodal Driver Speech and Text Data",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要表明研究针对人类路怒检测，未涉及动物或虚拟宠物交互。",
+      "year": 2026,
+      "journal": "Tehnicki Vjesnik",
+      "doi": "10.17559/tv-20250620002763"
+    },
+    {
+      "paper_id": "paper_000075",
+      "title": "A Systematic Review of Deep Learning Models and Multimodal Fusion Techniques for Alzheimer’s Disease Prediction",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要显示为阿尔茨海默病预测的系统综述，未涉及动物或虚拟宠物交互。",
+      "year": 2025,
+      "journal": "NIPES - Journal of Science and Technology Research",
+      "doi": "10.37933/nipes/7.4.2025.si252"
+    },
+    {
+      "paper_id": "paper_000076",
+      "title": "CEPrompt: Cross-Modal Emotion-Aware Prompting for Facial Expression Recognition",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要表明研究针对人类面部表情识别，未涉及动物或虚拟宠物交互。",
+      "year": 2024,
+      "journal": "IEEE Transactions on Circuits and Systems for Video Technology",
+      "doi": "10.1109/tcsvt.2024.3424777"
+    },
+    {
+      "paper_id": "paper_000077",
+      "title": "A dual-branch encoder network based on squeeze-and-excitation UNet and transformer for 3D PET-CT image tumor segmentation",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要显示研究聚焦于人类肿瘤医学影像分割，未涉及动物或虚拟宠物交互。",
+      "year": 2026,
+      "journal": "Medical and Biological Engineering and Computing",
+      "doi": "10.1007/s11517-025-03427-6"
+    },
+    {
+      "paper_id": "paper_000078",
+      "title": "Multimodal Analogy-Based Image Retrieval by Improving Semantic Embeddings",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "摘要提到使用猫狗图像进行多模态类比检索，涉及动物图像但未明确说明是否包含AI/XR技术或交互应用。",
+      "year": 2022,
+      "journal": "Journal of Advanced Computational Intelligence and Intelligent Informatics",
+      "doi": "10.20965/jaciii.2022.p0995"
+    },
+    {
+      "paper_id": "paper_000079",
+      "title": "An analytic method for improving the reliability of models based on a histogram for prediction of companion dogs’ behaviors",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "标题和摘要涉及伴侣狗行为识别，使用AI技术但未明确提及XR技术或虚拟宠物交互。",
+      "year": 2021,
+      "journal": "Applied Sciences (Switzerland)",
+      "doi": "10.3390/app112211050"
+    },
+    {
+      "paper_id": "paper_000080",
+      "title": "Deep Learning-Based Dog Expression Recognition",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "标题和摘要涉及狗表情识别的深度学习研究，但未明确提及XR技术或虚拟宠物交互场景。",
+      "year": 2026,
+      "journal": "IEEE Access",
+      "doi": "10.1109/access.2025.3650550"
+    },
+    {
+      "paper_id": "paper_000081",
+      "title": "Reducing pediatric total-body PET/CT imaging scan time with multimodal artificial intelligence technology",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要显示研究涉及儿科PET/CT成像与人工智能技术，但未涉及XR技术或动物交互场景。",
+      "year": 2024,
+      "journal": "EJNMMI Physics",
+      "doi": "10.1186/s40658-023-00605-z"
+    },
+    {
+      "paper_id": "paper_000082",
+      "title": "High-Dose Stereotactic Re-Irradiation of Recurrent High-Grade Gliomas: Clinical Outcome and Experience with AI-Based Target Volume Simulation",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要显示研究涉及脑胶质瘤再放疗与AI靶区模拟，但未涉及XR技术或动物交互场景。",
+      "year": 2025,
+      "journal": "Cancers",
+      "doi": "10.3390/cancers17213423"
+    },
+    {
+      "paper_id": "paper_000083",
+      "title": "ETMO-NAS: An efficient two-step multimodal one-shot NAS for lung nodules classification",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要显示研究涉及肺结节分类的神经网络架构搜索，但未涉及XR技术或动物交互场景。",
+      "year": 2025,
+      "journal": "Biomedical Signal Processing and Control",
+      "doi": "10.1016/j.bspc.2024.107479"
+    },
+    {
+      "paper_id": "paper_000084",
+      "title": "Can Multimodal Large Language Models Enhance Performance Benefits Among Higher Education Students? An Investigation Based on the Task–Technology Fit Theory and the Artificial Intelligence Device Use Acceptance Model",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要显示研究涉及多模态大语言模型在高等教育中的应用，但未涉及XR技术或动物交互场景。",
+      "year": 2024,
+      "journal": "Sustainability (Switzerland)",
+      "doi": "10.3390/su162310780"
+    },
+    {
+      "paper_id": "paper_000085",
+      "title": "Adaptive multimodal prompt for human-object interaction with local feature enhanced transformer",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要显示研究涉及人-物交互检测的计算机视觉方法，但未涉及XR技术或动物交互场景。",
+      "year": 2024,
+      "journal": "Applied Intelligence",
+      "doi": "10.1007/s10489-024-05774-7"
+    },
+    {
+      "paper_id": "paper_000086",
+      "title": "Touch-and-Heal: Data-driven Affective Computing in Tactile Interaction with Robotic Dog",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确涉及人工智能技术（深度学习算法）和动物交互（人与机器狗的情感触觉交互），符合研究主题。",
+      "year": 2023,
+      "journal": "Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies",
+      "doi": "10.1145/3596258"
+    },
+    {
+      "paper_id": "paper_000087",
+      "title": "Using weighted directed graphs for identification of flow of emotions in poems",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要显示研究涉及诗歌情感流识别，但未涉及AI/XR技术或动物交互场景。",
+      "year": 2020,
+      "journal": "Journal of Intelligent and Fuzzy Systems",
+      "doi": "10.3233/jifs-179885"
+    },
+    {
+      "paper_id": "paper_000088",
+      "title": "MECF-Net: A prostate cancer lymph node metastasis classification method based on 18F-PSMA-1007 and 18F-FDG dual-tracer PET/CT image feature optimization",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要显示研究涉及前列腺癌淋巴结转移分类的PET/CT图像分析，但未涉及XR技术或动物交互场景。",
+      "year": 2025,
+      "journal": "Biomedical Signal Processing and Control",
+      "doi": "10.1016/j.bspc.2025.107651"
+    },
+    {
+      "paper_id": "paper_000089",
+      "title": "Survival prediction in diffuse large B-cell lymphoma patients: multimodal PET/CT deep features radiomic model utilizing automated machine learning",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要显示研究涉及淋巴瘤生存预测的PET/CT深度学习模型，但未涉及XR技术或动物交互场景。",
+      "year": 2024,
+      "journal": "Journal of Cancer Research and Clinical Oncology",
+      "doi": "10.1007/s00432-024-05905-0"
+    },
+    {
+      "paper_id": "paper_000090",
+      "title": "An Image Captioning Algorithm Based on Combination Attention Mechanism",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要显示研究涉及图像描述生成的注意力机制，但未涉及XR技术或动物交互场景。",
+      "year": 2022,
+      "journal": "Electronics (Switzerland)",
+      "doi": "10.3390/electronics11091397"
+    },
+    {
+      "paper_id": "paper_000091",
+      "title": "From Visual to Multimodal: Systematic Ablation of Encoders and Fusion Strategies in Animal Identification",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "标题和摘要显示研究涉及动物识别的多模态方法，但未明确提及AI技术或XR技术，信息不足。",
+      "year": 2026,
+      "journal": "Journal of Imaging",
+      "doi": "10.3390/jimaging12010030"
+    },
+    {
+      "paper_id": "paper_000092",
+      "title": "Generative AI Meets Animal Welfare: Evaluating GPT-4 for Pet Emotion Detection",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "标题和摘要明确涉及生成式AI（GPT-4）和宠物情感检测，符合AI技术与动物交互的研究主题。",
+      "year": 2025,
+      "journal": "Animals",
+      "doi": "10.3390/ani15040492"
+    },
+    {
+      "paper_id": "paper_000093",
+      "title": "Improved Image Fusion Technique Using Convolutional Neural Networks and The Hybrid PCA-Guided Filter",
+      "decision": "exclude",
+      "confidence": 0.95,
+      "reason": "标题和摘要显示研究涉及医学图像融合的卷积神经网络方法，但未涉及XR技术或动物交互场景。",
+      "year": 2023,
+      "journal": "International Journal of Computing and Digital Systems",
+      "doi": "10.12785/ijcds/130161"
+    },
+    {
+      "paper_id": "paper_000094",
+      "title": "A Deep Learning-Based Approach for Precise Emotion Recognition in Domestic Animals Using EfficientNetB5 Architecture",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "标题和摘要显示研究涉及宠物动物情感识别的深度学习，但未明确提及XR技术，信息不足。",
+      "year": 2025,
+      "journal": "Eng",
+      "doi": "10.3390/eng6010009"
+    }
+  ],
+  "project_id": "775cd31c00c1",
+  "project_topic": "人工智能（AI）与扩展现实（XR）技术在猫咪及动物交互中的应用（涵盖虚拟宠物与实体动物交互）",
+  "model_provider": "deepseek",
+  "parent_task_id": null,
+  "input_dataset_ids": [],
+  "output_dataset_ids": [
+    "160f1a8e1405",
+    "c005d3831339"
+  ]
+}

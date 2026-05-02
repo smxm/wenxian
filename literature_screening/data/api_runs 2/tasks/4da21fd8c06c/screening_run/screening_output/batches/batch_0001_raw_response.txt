@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0001",
+    "results": [
+        {
+            "paper_id": "paper_000001",
+            "decision": "exclude",
+            "reason": "研究对象为聚乙烯管道电熔接头，未涉及基桩、深基础或混凝土结构检测。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000002",
+            "decision": "exclude",
+            "reason": "研究对象为碳纤维复合材料孔隙率检测，未涉及基桩、深基础或混凝土结构检测。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000003",
+            "decision": "exclude",
+            "reason": "研究对象为复合材料，未涉及基桩、深基础或混凝土结构检测。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000004",
+            "decision": "uncertain",
+            "reason": "涉及喷射混凝土结构超声检测和小波包分解信号处理，但未明确提及基桩或深基础，且误差修正方法描述不够具体。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000005",
+            "decision": "uncertain",
+            "reason": "涉及混凝土损伤超声检测和连续小波变换信号处理，但未明确提及基桩或深基础，且管距修正相关内容不足。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000006",
+            "decision": "exclude",
+            "reason": "研究对象为铜管壁厚预测，未涉及基桩、深基础或混凝土结构检测。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000007",
+            "decision": "uncertain",
+            "reason": "涉及超声信号去卷积和神经网络处理，但研究对象为铝块缺陷检测，未明确涉及基桩、深基础或混凝土结构。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.45
+        },
+        {
+            "paper_id": "paper_000008",
+            "decision": "uncertain",
+            "reason": "涉及阵列超声检测和神经网络定位，但研究对象为板结构，未明确涉及基桩、深基础或混凝土结构。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000009",
+            "decision": "exclude",
+            "reason": "研究对象为点焊接头直径预测，未涉及基桩、深基础或混凝土结构检测。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000010",
+            "decision": "exclude",
+            "reason": "研究对象为热塑性复合材料粘接质量分类，未涉及基桩、深基础或混凝土结构检测。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        }
+    ]
+}

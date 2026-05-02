@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0003",
+    "results": [
+        {
+            "paper_id": "paper_000021",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于货运网络设计与环境效益评估，未涉及弓网离线电气特性、电弧模型或MATLAB仿真。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000022",
+            "decision": "include",
+            "reason": "标题和摘要明确研究弓网电气分段重叠处的电弧热行为，建立了多物理场耦合电弧模型并进行了数值分析。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000023",
+            "decision": "exclude",
+            "reason": "标题和摘要主要研究C/Cu接触对的摩擦学与载流特性，虽涉及电弧但未明确建立电弧数学模型或进行计算机仿真。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000024",
+            "decision": "include",
+            "reason": "标题和摘要明确基于Mayr和Schwarz电弧数学模型建立弓网电弧模型，研究低气压对电气特性的影响并进行仿真。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000025",
+            "decision": "uncertain",
+            "reason": "标题和摘要研究湿度对弓网电弧动力学与侵蚀的影响，但未明确提及具体的电弧数学模型或计算机仿真细节。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000026",
+            "decision": "include",
+            "reason": "标题和摘要明确建立结合弓网动态模型、电弧模型及牵引系统等效模型的综合模型，研究覆冰引起的离线电弧热特性及其对电能质量的影响。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000027",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于电弧闪光的非接触式紫外传感检测技术，虽提及弓网场景但未涉及电弧建模或电气特性仿真分析。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000028",
+            "decision": "exclude",
+            "reason": "标题和摘要研究铁路牵引系统直流侧低频纹波抑制的有源滤波控制方法，虽提及弓网电弧但非核心内容，未涉及电弧建模。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.87
+        },
+        {
+            "paper_id": "paper_000029",
+            "decision": "include",
+            "reason": "标题和摘要明确基于黑盒电弧模型建立双弓网系统动态离线电弧模型，结合电路模型进行仿真并分析电弧特性。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.93
+        },
+        {
+            "paper_id": "paper_000030",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于基于响应面法的弹性链悬挂多参数优化以改善受流质量，纯机械动力学研究，未涉及电气特性或电弧模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.94
+        }
+    ]
+}

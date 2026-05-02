@@ -1,0 +1,48 @@
+project:
+  name: new-screening-run
+  output_dir: tasks/db31c5cb6985/screening_run/screening_output
+  save_raw_response: true
+  save_intermediate_files: true
+input:
+  input_files:
+  - tasks/db31c5cb6985/screening_run/inputs/CNKI-20260326173157798.enw
+  encoding: auto
+dedup:
+  enabled: true
+  strict_doi_match: true
+  normalized_title_exact_match: true
+  fuzzy_title_match: false
+screening:
+  batch_size: 10
+  target_include_count: 30
+  stop_when_target_reached: true
+  allow_uncertain: true
+  retry_times: 6
+  request_timeout_seconds: 240
+criteria:
+  topic: 职业性低剂量电离辐射暴露对人群肠道健康状况影响
+  inclusion:
+  - 暴露因素：必须涉及职业性辐射暴露（如放射科人员、核电站工人等）或模拟职业暴露条件的动物/细胞模型（低剂量、慢性电离辐射 LDR）。
+  - 结局指标：必须明确涉及肠道健康（如肠道菌群结构变化、肠道屏障功能受损、肠道黏膜免疫/炎症反应、肠道代谢物改变等）。
+  exclusion:
+  - 大剂量/急性暴露：排除专门研究肿瘤放疗患者、核事故受害者等大剂量急性辐射的文献，这不符合职业暴露特征。
+  - 无关靶器官：排除仅探讨辐射对造血系统、甲状腺、生殖系统等其他器官的影响，且完全未提及胃肠道/微生态的文献。
+  - 缺乏实质内容的文献（如仅有标题无摘要，无法判读）。
+model:
+  provider: deepseek
+  model_name: deepseek-chat
+  api_base_url: https://api.deepseek.com/v1
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.0
+  max_tokens: 1536
+  min_request_interval_seconds: 2.0
+report:
+  export_included_ris: true
+  export_excluded_ris: false
+  export_unused_ris: true
+  export_included_bib: false
+  export_excluded_bib: false
+  export_unused_bib: false
+  included_report_format: md
+  excluded_report_format: md
+  summary_format: json

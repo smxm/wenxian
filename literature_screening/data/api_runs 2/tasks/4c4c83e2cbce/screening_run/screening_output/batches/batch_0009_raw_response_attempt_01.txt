@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0009",
+    "results": [
+        {
+            "paper_id": "paper_000081",
+            "decision": "include",
+            "reason": "标题和摘要明确研究弓网电弧，建立MHD模型分析电弧电压和温度，符合电气特性与建模要求。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000082",
+            "decision": "include",
+            "reason": "标题和摘要研究弓网离线产生的电磁干扰传播特性，涉及电气特性变化，符合主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000083",
+            "decision": "exclude",
+            "reason": "摘要主要讨论刚性接触网振动和机械补偿系统，未提及电气特性或电弧模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000084",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦深度学习模型生成电磁干扰信号，未涉及弓网电气特性分析或电弧建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000085",
+            "decision": "exclude",
+            "reason": "摘要主要分析轨道刚度对弓网动力学的影响，未提及电气特性或电弧模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000086",
+            "decision": "include",
+            "reason": "标题和摘要研究分段绝缘器电弧特性，建立MHD模型分析电压和温度，符合电气特性与建模要求。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000087",
+            "decision": "include",
+            "reason": "标题和摘要明确研究弓网电弧漂移特性，建立多场耦合模型定量分析，符合电气特性与建模要求。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000088",
+            "decision": "exclude",
+            "reason": "摘要主要研究接触线和滑板的摩擦磨损特性，未涉及弓网离线电气特性或电弧模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000089",
+            "decision": "include",
+            "reason": "标题和摘要研究弓网电弧温度分布，建立磁流体动力学数学模型进行仿真，符合电气特性与建模要求。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000090",
+            "decision": "include",
+            "reason": "标题和摘要明确基于改进Habedank电弧模型研究弓网离线电气特性，涉及谐波分析，符合所有纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        }
+    ]
+}

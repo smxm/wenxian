@@ -1,0 +1,369 @@
+{
+  "batch_id": "batch_0027",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000261",
+    "paper_000262",
+    "paper_000263",
+    "paper_000264",
+    "paper_000265",
+    "paper_000266",
+    "paper_000267",
+    "paper_000268",
+    "paper_000269",
+    "paper_000270"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000261",
+      "entry_type": "article",
+      "title": "MAG-Res2Net: a novel deep learning network for human activity recognition",
+      "authors": [
+        "Liu, HY",
+        "Zhao, BY",
+        "Dai, CB",
+        "Sun, BX",
+        "Li, A",
+        "Wang, ZQ"
+      ],
+      "year": 2023,
+      "journal": "PHYSIOLOGICAL MEASUREMENT",
+      "doi": "10.1088/1361-6579/ad0ab8",
+      "abstract": "Objective. Human activity recognition (HAR) has become increasingly important in healthcare, sports, and fitness domains due to its wide range of applications. However, existing deep learning based HAR methods often overlook the challenges posed by the diversity of human activities and data quality, which can make feature extraction difficult. To address these issues, we propose a new neural network model called MAG-Res2Net, which incorporates the Borderline-SMOTE data upsampling algorithm, a loss function combination algorithm based on metric learning, and the Lion optimization algorithm. Approach. We evaluated the proposed method on two commonly utilized public datasets, UCI-HAR and WISDM, and leveraged the CSL-SHARE multimodal human activity recognition dataset for comparison with state-of-the-art models. Main results. On the UCI-HAR dataset, our model achieved accuracy, F1-macro, and F1-weighted scores of 94.44%, 94.38%, and 94.26%, respectively. On the WISDM dataset, the corresponding scores were 98.32%, 97.26%, and 98.42%, respectively. Significance. The proposed MAG-Res2Net model demonstrates robust multimodal performance, with each module successfully enhancing model capabilities. Additionally, our model surpasses current human activity recognition neural networks on both evaluation metrics and training efficiency. Source code of this work is available at: https://github.com/LHY1007/MAG-Res2Net.",
+      "keywords": [
+        "human activity recognition",
+        "borderline-SMOTE",
+        "multi-scale convolutional neural network",
+        "attention mechanism",
+        "metric learning"
+      ],
+      "normalized_title": "mag res2net a novel deep learning network for human activity recognition",
+      "raw_bibtex": "@ARTICLE{10.1088/1361-6579/ad0ab8,\n\tauthor = {Liu, HY and Zhao, BY and Dai, CB and Sun, BX and Li, A and Wang, ZQ},\n\ttitle = {MAG-Res2Net: a novel deep learning network for human activity recognition},\n\tjournal = {PHYSIOLOGICAL MEASUREMENT},\n\tyear = {2023},\n\tkeywords = {human activity recognition; borderline-SMOTE; multi-scale convolutional neural network; attention mechanism; metric learning},\n\tabstract = {Objective. Human activity recognition (HAR) has become increasingly important in healthcare, sports, and fitness domains due to its wide range of applications. However, existing deep learning based HAR methods often overlook the challenges posed by the diversity of human activities and data quality, which can make feature extraction difficult. To address these issues, we propose a new neural network model called MAG-Res2Net, which incorporates the Borderline-SMOTE data upsampling algorithm, a loss function combination algorithm based on metric learning, and the Lion optimization algorithm. Approach. We evaluated the proposed method on two commonly utilized public datasets, UCI-HAR and WISDM, and leveraged the CSL-SHARE multimodal human activity recognition dataset for comparison with state-of-the-art models. Main results. On the UCI-HAR dataset, our model achieved accuracy, F1-macro, and F1-weighted scores of 94.44%, 94.38%, and 94.26%, respectively. On the WISDM dataset, the corresponding scores were 98.32%, 97.26%, and 98.42%, respectively. Significance. The proposed MAG-Res2Net model demonstrates robust multimodal performance, with each module successfully enhancing model capabilities. Additionally, our model surpasses current human activity recognition neural networks on both evaluation metrics and training efficiency. Source code of this work is available at: https://github.com/LHY1007/MAG-Res2Net.},\n\tdoi = {10.1088/1361-6579/ad0ab8},\n\tvolume = {44},\n\tnumber = {11},\n\tissn = {0967-3334},\n\tnote = {Times Cited in Web of Science Core Collection: 7 Total Times Cited: 7 Cited Reference Count: 45 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1088/1361-6579/ad0ab8"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000262",
+      "entry_type": "article",
+      "title": "Real-Time Chinese Sign Language Recognition Based on Convolutional Neural Network",
+      "authors": [
+        "Tian, YJ",
+        "Dong, Y",
+        "Ahmed, M",
+        "Shah, SO",
+        "Alabdulkreem, E"
+      ],
+      "year": 2026,
+      "journal": "INTERNATIONAL JOURNAL OF HUMANOID ROBOTICS",
+      "doi": "10.1142/s0219843625400225",
+      "abstract": "The development of assistive technologies plays a vital role in promoting diversity and accessibility in communication. This study presents an advanced computer vision system designed to accurately detect numerical gestures in Chinese Sign Language (CSL). We propose a novel hybrid framework that integrates MediaPipe for real-time hand detection and keypoint extraction with a YOLOv5-based CNN classifier for robust digit recognition. A custom dataset comprising 1410 images of CSL digits (0-9), collected under varying hand poses, lighting conditions, and backgrounds, was constructed to enhance model generalization. Preprocessing included grayscale conversion, Haar-cascade-based hand region extraction, and normalization. Experimental results demonstrate strong performance, achieving 99.1% accuracy, 98.7% precision, 98.9% recall, 98.8% F1-score, and mAP@0.5 of 0.99 on the test set. The system further exhibits real-time capability, maintaining low-latency inference during live video streams. These findings confirm the effectiveness of combining MediaPipe and YOLOv5 for CSL digit recognition and underscore the potential of deep learning-based assistive technologies to improve communication accessibility for the deaf and hard-of-hearing community.",
+      "keywords": [
+        "Chinese sign language",
+        "convolutional neural network",
+        "YOLOv5",
+        "computer vision",
+        "MediaPipe",
+        "FINGERSPELLING RECOGNITION",
+        "GRAPH"
+      ],
+      "normalized_title": "real time chinese sign language recognition based on convolutional neural network",
+      "raw_bibtex": "@ARTICLE{10.1142/S0219843625400225,\n\tauthor = {Tian, YJ and Dong, Y and Ahmed, M and Shah, SO and Alabdulkreem, E},\n\ttitle = {Real-Time Chinese Sign Language Recognition Based on Convolutional Neural Network},\n\tjournal = {INTERNATIONAL JOURNAL OF HUMANOID ROBOTICS},\n\tyear = {2026},\n\tkeywords = {Chinese sign language; convolutional neural network; YOLOv5; computer vision; MediaPipe; FINGERSPELLING RECOGNITION; GRAPH},\n\tabstract = {The development of assistive technologies plays a vital role in promoting diversity and accessibility in communication. This study presents an advanced computer vision system designed to accurately detect numerical gestures in Chinese Sign Language (CSL). We propose a novel hybrid framework that integrates MediaPipe for real-time hand detection and keypoint extraction with a YOLOv5-based CNN classifier for robust digit recognition. A custom dataset comprising 1410 images of CSL digits (0-9), collected under varying hand poses, lighting conditions, and backgrounds, was constructed to enhance model generalization. Preprocessing included grayscale conversion, Haar-cascade-based hand region extraction, and normalization. Experimental results demonstrate strong performance, achieving 99.1% accuracy, 98.7% precision, 98.9% recall, 98.8% F1-score, and mAP@0.5 of 0.99 on the test set. The system further exhibits real-time capability, maintaining low-latency inference during live video streams. These findings confirm the effectiveness of combining MediaPipe and YOLOv5 for CSL digit recognition and underscore the potential of deep learning-based assistive technologies to improve communication accessibility for the deaf and hard-of-hearing community.},\n\tdoi = {10.1142/S0219843625400225},\n\tissn = {0219-8436},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 102 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1142/S0219843625400225"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000263",
+      "entry_type": "article",
+      "title": "VALO: A Versatile Anytime Framework for LiDAR-Based Object Detection Deep Neural Networks",
+      "authors": [
+        "Soyyigit, A",
+        "Yao, SC",
+        "Yun, H"
+      ],
+      "year": 2024,
+      "journal": "IEEE TRANSACTIONS ON COMPUTER-AIDED DESIGN OF INTEGRATED CIRCUITS AND SYSTEMS",
+      "doi": "10.1109/tcad.2024.3443774",
+      "abstract": "This work addresses the challenge of adapting dynamic deadline requirements for the LiDAR object detection deep neural networks (DNNs). The computing latency of object detection is critically important to ensure safe and efficient navigation. However, the state-of-the-art LiDAR object detection DNNs often exhibit significant latency, hindering their real-time performance on the resource-constrained edge platforms. Therefore, a tradeoff between the detection accuracy and latency should be dynamically managed at runtime to achieve the optimum results. In this article, we introduce versatile anytime algorithm for the LiDAR Object detection (VALO), a novel data-centric approach that enables anytime computing of 3-D LiDAR object detection DNNs. VALO employs a deadline-aware scheduler to selectively process the input regions, making execution time and accuracy tradeoffs without architectural modifications. Additionally, it leverages efficient forecasting of the past detection results to mitigate possible loss of accuracy due to partial processing of input. Finally, it utilizes a novel input reduction technique within its detection heads to significantly accelerate the execution without sacrificing accuracy. We implement VALO on the state-of-the-art 3-D LiDAR object detection networks, namely CenterPoint and VoxelNext, and demonstrate its dynamic adaptability to a wide range of time constraints while achieving higher accuracy than the prior state-of-the-art. Code is available at https://github.com/CSL-KU/VALOgithub.com/CSL-KU/VALO.",
+      "keywords": [
+        "Accuracy",
+        "Laser radar",
+        "Runtime",
+        "Processor scheduling",
+        "Navigation",
+        "Object detection",
+        "Artificial neural networks",
+        "Real-time systems",
+        "Time factors",
+        "Forecasting",
+        "3-D object detection",
+        "anytime computing",
+        "LiDAR",
+        "PERCEPTION"
+      ],
+      "normalized_title": "valo a versatile anytime framework for lidar based object detection deep neural networks",
+      "raw_bibtex": "@ARTICLE{10.1109/TCAD.2024.3443774,\n\tauthor = {Soyyigit, A and Yao, SC and Yun, H},\n\ttitle = {VALO: A Versatile Anytime Framework for LiDAR-Based Object Detection Deep Neural Networks},\n\tjournal = {IEEE TRANSACTIONS ON COMPUTER-AIDED DESIGN OF INTEGRATED CIRCUITS AND SYSTEMS},\n\tyear = {2024},\n\tkeywords = {Accuracy; Laser radar; Runtime; Processor scheduling; Navigation; Object detection; Artificial neural networks; Real-time systems; Time factors; Forecasting; 3-D object detection; anytime computing; LiDAR; PERCEPTION},\n\tabstract = {This work addresses the challenge of adapting dynamic deadline requirements for the LiDAR object detection deep neural networks (DNNs). The computing latency of object detection is critically important to ensure safe and efficient navigation. However, the state-of-the-art LiDAR object detection DNNs often exhibit significant latency, hindering their real-time performance on the resource-constrained edge platforms. Therefore, a tradeoff between the detection accuracy and latency should be dynamically managed at runtime to achieve the optimum results. In this article, we introduce versatile anytime algorithm for the LiDAR Object detection (VALO), a novel data-centric approach that enables anytime computing of 3-D LiDAR object detection DNNs. VALO employs a deadline-aware scheduler to selectively process the input regions, making execution time and accuracy tradeoffs without architectural modifications. Additionally, it leverages efficient forecasting of the past detection results to mitigate possible loss of accuracy due to partial processing of input. Finally, it utilizes a novel input reduction technique within its detection heads to significantly accelerate the execution without sacrificing accuracy. We implement VALO on the state-of-the-art 3-D LiDAR object detection networks, namely CenterPoint and VoxelNext, and demonstrate its dynamic adaptability to a wide range of time constraints while achieving higher accuracy than the prior state-of-the-art. Code is available at https://github.com/CSL-KU/VALOgithub.com/CSL-KU/VALO.},\n\tdoi = {10.1109/TCAD.2024.3443774},\n\tvolume = {43},\n\tnumber = {11},\n\tpages = {4045-4056},\n\tissn = {0278-0070},\n\tnote = {Times Cited in Web of Science Core Collection: 5 Total Times Cited: 6 Cited Reference Count: 36 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TCAD.2024.3443774"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000264",
+      "entry_type": "article",
+      "title": "TimeCSL: Unsupervised Contrastive Learning of General Shapelets for Explorable Time Series Analysis",
+      "authors": [
+        "Liang, ZY",
+        "Liang, C",
+        "Liang, Z",
+        "Wang, HZ",
+        "Zheng, B"
+      ],
+      "year": 2024,
+      "journal": "PROCEEDINGS OF THE VLDB ENDOWMENT",
+      "doi": "10.14778/3685800.3685907",
+      "abstract": "Unsupervised (a.k.a. Self-supervised) representation learning (URL) has emerged as a new paradigm for time series analysis, because it has the ability to learn generalizable time series representation beneficial for many downstream tasks without using labels that are usually difficult to obtain. Considering that existing approaches have limitations in the design of the representation encoder and the learning objective, we have proposed Contrastive Shapelet Learning (CSL), the first URL method that learns the general-purpose shapelet-based representation through unsupervised contrastive learning, and shown its superior performance in several analysis tasks, such as time series classification, clustering, and anomaly detection. In this paper, we develop TimeCSL, an end-to-end system that makes full use of the general and interpretable shapelets learned by CSL to achieve explorable time series analysis in a unified pipeline. We introduce the system components and demonstrate how users interact with TimeCSL to solve different analysis tasks in the unified pipeline, and gain insight into their time series by the learned and",
+      "keywords": [],
+      "normalized_title": "timecsl unsupervised contrastive learning of general shapelets for explorable time series analysis",
+      "raw_bibtex": "@ARTICLE{10.14778/3685800.3685907,\n\tauthor = {Liang, ZY and Liang, C and Liang, Z and Wang, HZ and Zheng, B},\n\ttitle = {TimeCSL: Unsupervised Contrastive Learning of General Shapelets for Explorable Time Series Analysis},\n\tjournal = {PROCEEDINGS OF THE VLDB ENDOWMENT},\n\tyear = {2024},\n\tabstract = {Unsupervised (a.k.a. Self-supervised) representation learning (URL) has emerged as a new paradigm for time series analysis, because it has the ability to learn generalizable time series representation beneficial for many downstream tasks without using labels that are usually difficult to obtain. Considering that existing approaches have limitations in the design of the representation encoder and the learning objective, we have proposed Contrastive Shapelet Learning (CSL), the first URL method that learns the general-purpose shapelet-based representation through unsupervised contrastive learning, and shown its superior performance in several analysis tasks, such as time series classification, clustering, and anomaly detection. In this paper, we develop TimeCSL, an end-to-end system that makes full use of the general and interpretable shapelets learned by CSL to achieve explorable time series analysis in a unified pipeline. We introduce the system components and demonstrate how users interact with TimeCSL to solve different analysis tasks in the unified pipeline, and gain insight into their time series by the learned and},\n\tdoi = {10.14778/3685800.3685907},\n\tvolume = {17},\n\tnumber = {12},\n\tpages = {4489-4492},\n\tissn = {2150-8097},\n\tnote = {Times Cited in Web of Science Core Collection: 3 Total Times Cited: 4 Cited Reference Count: 23 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.14778/3685800.3685907"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000265",
+      "entry_type": "article",
+      "title": "Multi-Defect Identification of Concrete Piles Based on Low Strain Integrity Test and Two-Channel Convolutional Neural Network",
+      "authors": [
+        "Wu, CS",
+        "Ge, M",
+        "Qi, LL",
+        "Zhuo, DB",
+        "Zhang, JQ",
+        "Hao, TQ",
+        "Peng, YX"
+      ],
+      "year": 2023,
+      "journal": "APPLIED SCIENCES-BASEL",
+      "doi": "10.3390/app13063530",
+      "abstract": "Defects in different positions and degrees in pile foundations will affect the building structure's safety and the foundation's bearing capacity. The efficiency and accuracy of using traditional methods to identify multi-defect types of pile foundations are very low, so finding suitable methods to improve their related indicators for pile foundation safety and engineering applications is necessary. In this paper, under the condition of secondary development of finite element software ABAQUS to obtain the time-domain signal database of six kinds of multi-defect pile foundations, a multi-defect type identification method of pile foundations based on two-channel convolutional neural network (TC-CNN) and low-strain pile integrity test (LSPIT) is proposed. Firstly, simulated time-domain signals of the dynamic measurements that match the experimental results performed wavelet packet denoising. Secondly, the 1D time-domain signals before and after denoising and the corresponding 2D wavelet time-frequency maps are inputs to retain more data information and prevent overfitting. Finally, TC-CNN achieved the multi-defect type identification of concrete piles. Compared with the single-channel convolutional neural network, this method can effectively fuse 1D and 2D features, extract more potential features, and make the classification accuracy reach 99.17%.",
+      "keywords": [
+        "concrete multi-defect pile",
+        "numerical simulation",
+        "wavelet packet denoising",
+        "low-strain integrity detection",
+        "two-channel convolutional neural network",
+        "CONTINUOUS WAVELET TRANSFORM"
+      ],
+      "normalized_title": "multi defect identification of concrete piles based on low strain integrity test and two channel convolutional neural network",
+      "raw_bibtex": "@ARTICLE{10.3390/app13063530,\n\tauthor = {Wu, CS and Ge, M and Qi, LL and Zhuo, DB and Zhang, JQ and Hao, TQ and Peng, YX},\n\ttitle = {Multi-Defect Identification of Concrete Piles Based on Low Strain Integrity Test and Two-Channel Convolutional Neural Network},\n\tjournal = {APPLIED SCIENCES-BASEL},\n\tyear = {2023},\n\tkeywords = {concrete multi-defect pile; numerical simulation; wavelet packet denoising; low-strain integrity detection; two-channel convolutional neural network; CONTINUOUS WAVELET TRANSFORM},\n\tabstract = {Defects in different positions and degrees in pile foundations will affect the building structure's safety and the foundation's bearing capacity. The efficiency and accuracy of using traditional methods to identify multi-defect types of pile foundations are very low, so finding suitable methods to improve their related indicators for pile foundation safety and engineering applications is necessary. In this paper, under the condition of secondary development of finite element software ABAQUS to obtain the time-domain signal database of six kinds of multi-defect pile foundations, a multi-defect type identification method of pile foundations based on two-channel convolutional neural network (TC-CNN) and low-strain pile integrity test (LSPIT) is proposed. Firstly, simulated time-domain signals of the dynamic measurements that match the experimental results performed wavelet packet denoising. Secondly, the 1D time-domain signals before and after denoising and the corresponding 2D wavelet time-frequency maps are inputs to retain more data information and prevent overfitting. Finally, TC-CNN achieved the multi-defect type identification of concrete piles. Compared with the single-channel convolutional neural network, this method can effectively fuse 1D and 2D features, extract more potential features, and make the classification accuracy reach 99.17%.},\n\tdoi = {10.3390/app13063530},\n\tvolume = {13},\n\tnumber = {6},\n\tissn = {2076-3417},\n\tnote = {Times Cited in Web of Science Core Collection: 5 Total Times Cited: 6 Cited Reference Count: 57 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/app13063530"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000266",
+      "entry_type": "article",
+      "title": "A Visual Encoding Model Based on Contrastive Self-Supervised Learning for Human Brain Activity along the Ventral Visual Stream",
+      "authors": [
+        "Li, JW",
+        "Zhang, C",
+        "Wang, LY",
+        "Ding, PH",
+        "Hu, LL",
+        "Yan, B",
+        "Tong, L"
+      ],
+      "year": 2021,
+      "journal": "BRAIN SCIENCES",
+      "doi": "10.3390/brainsci11081004",
+      "abstract": "Visual encoding models are important computational models for understanding how information is processed along the visual stream. Many improved visual encoding models have been developed from the perspective of the model architecture and the learning objective, but these are limited to the supervised learning method. From the view of unsupervised learning mechanisms, this paper utilized a pre-trained neural network to construct a visual encoding model based on contrastive self-supervised learning for the ventral visual stream measured by functional magnetic resonance imaging (fMRI). We first extracted features using the ResNet50 model pre-trained in contrastive self-supervised learning (ResNet50-CSL model), trained a linear regression model for each voxel, and finally calculated the prediction accuracy of different voxels. Compared with the ResNet50 model pre-trained in a supervised classification task, the ResNet50-CSL model achieved an equal or even relatively better encoding performance in multiple visual cortical areas. Moreover, the ResNet50-CSL model performs hierarchical representation of input visual stimuli, which is similar to the human visual cortex in its hierarchical information processing. Our experimental results suggest that the encoding model based on contrastive self-supervised learning is a strong computational model to compete with supervised models, and contrastive self-supervised learning proves an effective learning method to extract human brain-like representations.",
+      "keywords": [
+        "visual encoding models",
+        "deep neural networks",
+        "contrastive self-supervised learning",
+        "fMRI",
+        "visual cortex",
+        "NATURAL IMAGES",
+        "REPRESENTATIONS"
+      ],
+      "normalized_title": "a visual encoding model based on contrastive self supervised learning for human brain activity along the ventral visual stream",
+      "raw_bibtex": "@ARTICLE{10.3390/brainsci11081004,\n\tauthor = {Li, JW and Zhang, C and Wang, LY and Ding, PH and Hu, LL and Yan, B and Tong, L},\n\ttitle = {A Visual Encoding Model Based on Contrastive Self-Supervised Learning for Human Brain Activity along the Ventral Visual Stream},\n\tjournal = {BRAIN SCIENCES},\n\tyear = {2021},\n\tkeywords = {visual encoding models; deep neural networks; contrastive self-supervised learning; fMRI; visual cortex; NATURAL IMAGES; REPRESENTATIONS},\n\tabstract = {Visual encoding models are important computational models for understanding how information is processed along the visual stream. Many improved visual encoding models have been developed from the perspective of the model architecture and the learning objective, but these are limited to the supervised learning method. From the view of unsupervised learning mechanisms, this paper utilized a pre-trained neural network to construct a visual encoding model based on contrastive self-supervised learning for the ventral visual stream measured by functional magnetic resonance imaging (fMRI). We first extracted features using the ResNet50 model pre-trained in contrastive self-supervised learning (ResNet50-CSL model), trained a linear regression model for each voxel, and finally calculated the prediction accuracy of different voxels. Compared with the ResNet50 model pre-trained in a supervised classification task, the ResNet50-CSL model achieved an equal or even relatively better encoding performance in multiple visual cortical areas. Moreover, the ResNet50-CSL model performs hierarchical representation of input visual stimuli, which is similar to the human visual cortex in its hierarchical information processing. Our experimental results suggest that the encoding model based on contrastive self-supervised learning is a strong computational model to compete with supervised models, and contrastive self-supervised learning proves an effective learning method to extract human brain-like representations.},\n\tdoi = {10.3390/brainsci11081004},\n\tvolume = {11},\n\tnumber = {8},\n\tissn = {2076-3425},\n\tnote = {Times Cited in Web of Science Core Collection: 5 Total Times Cited: 6 Cited Reference Count: 50 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/brainsci11081004"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000267",
+      "entry_type": "article",
+      "title": "Monitoring of Caspian Sea-level changes using deep learning-based 3D reconstruction of GRACE signal",
+      "authors": [
+        "Sorkhabi, OM",
+        "Asgari, J",
+        "Amiri-Simkooei, A"
+      ],
+      "year": 2021,
+      "journal": "MEASUREMENT",
+      "doi": "10.1016/j.measurement.2021.109004",
+      "abstract": "The gravity recovery and climate experiment (GRACE) satellites detect changes in the distribution of water on the Earth surface based on the gravity anomaly. A correct reconstruction of the GRACE signal is still a challenging problem due to signal attenuation and noise levels. In this contribution, the GRACE data are analysed using a deep neural network to investigate changes caused in the Caspian Sea level (CSL). The novelty is to reconstruct the three-dimensional GRACE signal for reducing stripe errors, leakage error and gap filling. The reduction of the CSL was approximately 70 ? 0.2 cm from 2005 to 2016, with an annual trend of -6.77 ? 0.2 cm/year. The northern regions of CSL have a smaller annual amplitude than other regions. The proposed method has an average significant correlation of 82% with satellite altimetry and data collected by three tide gauge stations, thus showing good compatibility.",
+      "keywords": [
+        "Deep learning",
+        "GRACE",
+        "Caspian Sea-level monitoring",
+        "Satellite altimetry",
+        "Three-dimensional reconstruction",
+        "NEURAL-NETWORKS",
+        "PATH DELAYS",
+        "VARIABILITY",
+        "PREDICTION",
+        "ALTIMETRY",
+        "FLUCTUATIONS",
+        "GRAVITY",
+        "JASON-1",
+        "BLACK",
+        "BAY"
+      ],
+      "normalized_title": "monitoring of caspian sea level changes using deep learning based 3d reconstruction of grace signal",
+      "raw_bibtex": "@ARTICLE{10.1016/j.measurement.2021.109004,\n\tauthor = {Sorkhabi, OM and Asgari, J and Amiri-Simkooei, A},\n\ttitle = {Monitoring of Caspian Sea-level changes using deep learning-based 3D reconstruction of GRACE signal},\n\tjournal = {MEASUREMENT},\n\tyear = {2021},\n\tkeywords = {Deep learning; GRACE; Caspian Sea-level monitoring; Satellite altimetry; Three-dimensional reconstruction; NEURAL-NETWORKS; PATH DELAYS; VARIABILITY; PREDICTION; ALTIMETRY; FLUCTUATIONS; GRAVITY; JASON-1; BLACK; BAY},\n\tabstract = {The gravity recovery and climate experiment (GRACE) satellites detect changes in the distribution of water on the Earth surface based on the gravity anomaly. A correct reconstruction of the GRACE signal is still a challenging problem due to signal attenuation and noise levels. In this contribution, the GRACE data are analysed using a deep neural network to investigate changes caused in the Caspian Sea level (CSL). The novelty is to reconstruct the three-dimensional GRACE signal for reducing stripe errors, leakage error and gap filling. The reduction of the CSL was approximately 70 ? 0.2 cm from 2005 to 2016, with an annual trend of -6.77 ? 0.2 cm/year. The northern regions of CSL have a smaller annual amplitude than other regions. The proposed method has an average significant correlation of 82% with satellite altimetry and data collected by three tide gauge stations, thus showing good compatibility.},\n\tdoi = {10.1016/j.measurement.2021.109004},\n\tvolume = {174},\n\tissn = {0263-2241},\n\tnote = {Times Cited in Web of Science Core Collection: 16 Total Times Cited: 18 Cited Reference Count: 40 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.measurement.2021.109004"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000268",
+      "entry_type": "article",
+      "title": "Efficient pullulan production by Aureobasidium pullulans using cost-effective substrates",
+      "authors": [
+        "He, CY",
+        "Zhang, Z",
+        "Zhang, YD",
+        "Wang, GL",
+        "Wang, CL",
+        "Wang, DH",
+        "Wei, GY"
+      ],
+      "year": 2021,
+      "journal": "INTERNATIONAL JOURNAL OF BIOLOGICAL MACROMOLECULES",
+      "doi": "10.1016/j.ijbiomac.2021.07.068",
+      "abstract": "In this study, cost-effective substrates such as cassava starch, corn steep liquor (CSL) and soybean meal hydrolysate (SMH) were used for pullulan production by Aureobasidium pullulans CCTCC M 2012259. The medium was optimized using response surface methodology (RSM) and artificial neural network (ANN) approaches, and analysis of variance indicated that the ANN model achieved higher prediction accuracy. The optimal medium predicted by ANN was used to produce high molecular weight pullulan in high yield. SMH substrates increased both biomass and pullulan titer, while CSL substrates maintained higher pullulan molecular weight. Results of kinetic parameters, key enzyme activities and intracellular uridine diphosphate glucose contents revealed the physiological mechanism of changes in pullulan titer and molecular weight using different substrates. Economic analysis of batch pullulan production using different substrates was performed, and the cost of nutrimental materials for CSL and SMH substrates was decreased by 46.1% and 49.9%, respectively, compared to the control using glucose and yeast extract as substrates, which could improve the competitiveness of pullulan against other polysaccharides in industrial applications.",
+      "keywords": [
+        "Artificial neural network",
+        "Cassava starch",
+        "Corn steep liquor",
+        "Pullulan",
+        "Soybean meal hydrolysate",
+        "MOLECULAR-WEIGHT PULLULAN",
+        "EXOPOLYSACCHARIDE",
+        "BIOSYNTHESIS",
+        "BIOCONVERSION",
+        "OPTIMIZATION",
+        "WASTE"
+      ],
+      "normalized_title": "efficient pullulan production by aureobasidium pullulans using cost effective substrates",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ijbiomac.2021.07.068,\n\tauthor = {He, CY and Zhang, Z and Zhang, YD and Wang, GL and Wang, CL and Wang, DH and Wei, GY},\n\ttitle = {Efficient pullulan production by Aureobasidium pullulans using cost-effective substrates},\n\tjournal = {INTERNATIONAL JOURNAL OF BIOLOGICAL MACROMOLECULES},\n\tyear = {2021},\n\tkeywords = {Artificial neural network; Cassava starch; Corn steep liquor; Pullulan; Soybean meal hydrolysate; MOLECULAR-WEIGHT PULLULAN; EXOPOLYSACCHARIDE; BIOSYNTHESIS; BIOCONVERSION; OPTIMIZATION; WASTE},\n\tabstract = {In this study, cost-effective substrates such as cassava starch, corn steep liquor (CSL) and soybean meal hydrolysate (SMH) were used for pullulan production by Aureobasidium pullulans CCTCC M 2012259. The medium was optimized using response surface methodology (RSM) and artificial neural network (ANN) approaches, and analysis of variance indicated that the ANN model achieved higher prediction accuracy. The optimal medium predicted by ANN was used to produce high molecular weight pullulan in high yield. SMH substrates increased both biomass and pullulan titer, while CSL substrates maintained higher pullulan molecular weight. Results of kinetic parameters, key enzyme activities and intracellular uridine diphosphate glucose contents revealed the physiological mechanism of changes in pullulan titer and molecular weight using different substrates. Economic analysis of batch pullulan production using different substrates was performed, and the cost of nutrimental materials for CSL and SMH substrates was decreased by 46.1% and 49.9%, respectively, compared to the control using glucose and yeast extract as substrates, which could improve the competitiveness of pullulan against other polysaccharides in industrial applications.},\n\tdoi = {10.1016/j.ijbiomac.2021.07.068},\n\tvolume = {186},\n\tpages = {544-553},\n\tissn = {0141-8130},\n\tnote = {Times Cited in Web of Science Core Collection: 31 Total Times Cited: 33 Cited Reference Count: 46 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ijbiomac.2021.07.068"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000269",
+      "entry_type": "article",
+      "title": "Sign language recognition and translation network based on multi-view data",
+      "authors": [
+        "Li, RH",
+        "Meng, L"
+      ],
+      "year": 2022,
+      "journal": "APPLIED INTELLIGENCE",
+      "doi": "10.1007/s10489-022-03407-5",
+      "abstract": "Sign language recognition and translation can address the communication problem between hearing-impaired and general population, and can break the sign language boundariesy between different countries and different languages. Traditional sign language recognition and translation algorithms use Convolutional Neural Networks (CNNs) to extract spatial features and Recurrent Neural Networks (RNNs) to extract temporal features. However, these methods cannot model the complex spatiotemporal features of sign language. Moreover, RNN and its variant algorithms find it difficult to learn long-term dependencies. This paper proposes a novel and effective network based on Transformer and Graph Convolutional Network (GCN), which can be divided into three parts: a multi-view spatiotemporal embedding network (MSTEN), a continuous sign language recognition network (CSLRN), and a sign language translation network (SLTN). MSTEN can extract the spatiotemporal features of RGB data and skeleton data. CSLRN can recognize sign language glosses and obtain intermediate features from multi-view input sign data. SLTN can translate intermediate features into spoken sentences. The entire network was designed as end-to-end. Our method was tested on three public sign language datasets (SLR-100, RWTH, and CSL-daily) and the results demonstrated that our method achieved excellent performance on these datasets.",
+      "keywords": [
+        "RGB and Skeleton",
+        "Sign language translation",
+        "Transformer",
+        "GCN",
+        "MODEL"
+      ],
+      "normalized_title": "sign language recognition and translation network based on multi view data",
+      "raw_bibtex": "@ARTICLE{10.1007/s10489-022-03407-5,\n\tauthor = {Li, RH and Meng, L},\n\ttitle = {Sign language recognition and translation network based on multi-view data},\n\tjournal = {APPLIED INTELLIGENCE},\n\tyear = {2022},\n\tkeywords = {RGB and Skeleton; Sign language translation; Transformer; GCN; MODEL},\n\tabstract = {Sign language recognition and translation can address the communication problem between hearing-impaired and general population, and can break the sign language boundariesy between different countries and different languages. Traditional sign language recognition and translation algorithms use Convolutional Neural Networks (CNNs) to extract spatial features and Recurrent Neural Networks (RNNs) to extract temporal features. However, these methods cannot model the complex spatiotemporal features of sign language. Moreover, RNN and its variant algorithms find it difficult to learn long-term dependencies. This paper proposes a novel and effective network based on Transformer and Graph Convolutional Network (GCN), which can be divided into three parts: a multi-view spatiotemporal embedding network (MSTEN), a continuous sign language recognition network (CSLRN), and a sign language translation network (SLTN). MSTEN can extract the spatiotemporal features of RGB data and skeleton data. CSLRN can recognize sign language glosses and obtain intermediate features from multi-view input sign data. SLTN can translate intermediate features into spoken sentences. The entire network was designed as end-to-end. Our method was tested on three public sign language datasets (SLR-100, RWTH, and CSL-daily) and the results demonstrated that our method achieved excellent performance on these datasets.},\n\tdoi = {10.1007/s10489-022-03407-5},\n\tvolume = {52},\n\tnumber = {13},\n\tpages = {14624-14638},\n\tissn = {0924-669X},\n\tnote = {Times Cited in Web of Science Core Collection: 11 Total Times Cited: 13 Cited Reference Count: 47 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s10489-022-03407-5"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000270",
+      "entry_type": "article",
+      "title": "Real-Time Chinese Sign Language Gesture Prediction Based on Surface EMG Sensors and Artificial Neural Network",
+      "authors": [
+        "Cheng, JR",
+        "Hu, X",
+        "Yang, K"
+      ],
+      "year": 2025,
+      "journal": "ELECTRONICS",
+      "doi": "10.3390/electronics14224374",
+      "abstract": "Sign language recognition aims to capture and classify hand and arm motion signals to enable intuitive communication for individuals with hearing and speech impairments. This study proposes a real-time Chinese Sign Language (CSL) recognition framework that integrates a dual-stage segmentation strategy with a lightweight three-layer artificial neural network to achieve early gesture prediction before completion of motion sequences. The system was evaluated on a 21-class CSL dataset containing several highly similar gestures and achieved an accuracy of 91.5%, with low average inference latency per cycle. Furthermore, training set truncation experiments demonstrate that using only the first 50% of each gesture instance preserves model accuracy while reducing training time by half, thereby enhancing real-time efficiency and practical deployability for embedded or assistive applications.",
+      "keywords": [
+        "sign language recognition system",
+        "surface electromyography (sEMG)",
+        "artificial neural network",
+        "real-time recognition"
+      ],
+      "normalized_title": "real time chinese sign language gesture prediction based on surface emg sensors and artificial neural network",
+      "raw_bibtex": "@ARTICLE{10.3390/electronics14224374,\n\tauthor = {Cheng, JR and Hu, X and Yang, K},\n\ttitle = {Real-Time Chinese Sign Language Gesture Prediction Based on Surface EMG Sensors and Artificial Neural Network},\n\tjournal = {ELECTRONICS},\n\tyear = {2025},\n\tkeywords = {sign language recognition system; surface electromyography (sEMG); artificial neural network; real-time recognition},\n\tabstract = {Sign language recognition aims to capture and classify hand and arm motion signals to enable intuitive communication for individuals with hearing and speech impairments. This study proposes a real-time Chinese Sign Language (CSL) recognition framework that integrates a dual-stage segmentation strategy with a lightweight three-layer artificial neural network to achieve early gesture prediction before completion of motion sequences. The system was evaluated on a 21-class CSL dataset containing several highly similar gestures and achieved an accuracy of 91.5%, with low average inference latency per cycle. Furthermore, training set truncation experiments demonstrate that using only the first 50% of each gesture instance preserves model accuracy while reducing training time by half, thereby enhancing real-time efficiency and practical deployability for embedded or assistive applications.},\n\tdoi = {10.3390/electronics14224374},\n\tvolume = {14},\n\tnumber = {22},\n\tissn = {2079-9292},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 29 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/electronics14224374"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

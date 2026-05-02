@@ -1,0 +1,53 @@
+project:
+  name: new-screening-run
+  output_dir: tasks/58ccb03adf0f/screening_run/screening_output
+  save_raw_response: true
+  save_intermediate_files: true
+input:
+  input_files:
+  - tasks/58ccb03adf0f/screening_run/inputs/scopus_export_Mar 30-2026_b8c4d3f7-e50f-4dc9-9799-a4942c027529.ris
+  - tasks/58ccb03adf0f/screening_run/inputs/scopus_export_Mar 30-2026_31a45eb0-d7be-4847-a09d-0460d95ecec7.ris
+  - tasks/58ccb03adf0f/screening_run/inputs/scopus_export_Mar 30-2026_124b3b2b-e306-4739-a525-baea7f2d50ec.ris
+  - tasks/58ccb03adf0f/screening_run/inputs/scopus_export_Mar 30-2026_bc0cfde4-07c7-4b43-91a6-1346bb335439.ris
+  encoding: auto
+dedup:
+  enabled: true
+  strict_doi_match: true
+  normalized_title_exact_match: true
+  fuzzy_title_match: false
+screening:
+  batch_size: 10
+  target_include_count: 30
+  stop_when_target_reached: false
+  allow_uncertain: true
+  retry_times: 6
+  request_timeout_seconds: 240
+criteria:
+  topic: 前沿超声多模态技术（超微血流SMI/MVFI、粘弹性成像SWE、超分辨率超声造影SR CEUS）在妇科生殖（尤其是子宫内膜蠕动波及微血流评估）中的应用
+  inclusion:
+  - 研究对象必须涉及妇产科或生殖医学领域（如子宫、子宫内膜、卵巢、盆腔微环境等）。
+  - 核心技术必须包含至少一种前沿超声技术：超微血流（SMI/MVFI/超快多普勒）、粘弹性成像（SWE/剪切波弹性）、超分辨率超声造影（SR-CEUS/ULM），或重点探讨了子宫内膜蠕动波（Uterine
+    peristalsis）。
+  - 研究类型包含临床试验、高质量动物模型研究或权威综述。
+  exclusion:
+  - 纯超声仪器硬件开发或纯物理算法理论，缺乏医学/生物学应用场景。
+  - 研究器官非妇科生殖系统（如单纯研究肝脏、乳腺、甲状腺等，除非其方法学可直接迁移至妇科应用）。
+  - 仅使用传统二维超声或常规彩色多普勒，未涉及上述前沿技术。
+model:
+  provider: deepseek
+  model_name: deepseek-chat
+  api_base_url: https://api.deepseek.com/v1
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.0
+  max_tokens: 1536
+  min_request_interval_seconds: 2.0
+report:
+  export_included_ris: true
+  export_excluded_ris: false
+  export_unused_ris: true
+  export_included_bib: false
+  export_excluded_bib: false
+  export_unused_bib: false
+  included_report_format: md
+  excluded_report_format: md
+  summary_format: json

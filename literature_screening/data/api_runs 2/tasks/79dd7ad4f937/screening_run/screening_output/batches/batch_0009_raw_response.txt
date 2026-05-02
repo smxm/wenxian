@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0009",
+    "results": [
+        {
+            "paper_id": "paper_000081",
+            "decision": "exclude",
+            "reason": "标题和摘要仅涉及弓网机械动力学建模与接触力分析，未提及电气特性或电弧模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000082",
+            "decision": "exclude",
+            "reason": "摘要提到接触力、离线与电弧，但研究重点为光学测量方法与机械相互作用，未涉及电气特性分析或电弧建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000083",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于电弧检测的深度学习算法，未涉及弓网离线电气特性分析或电弧物理建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000084",
+            "decision": "exclude",
+            "reason": "摘要研究纯碳条失效机制与电弧侵蚀，但属于材料摩擦学分析，未涉及电气特性变化或电弧模型仿真。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000085",
+            "decision": "include",
+            "reason": "标题和摘要明确研究弓网分相区电弧电气特性，基于Habedank黑盒电弧模型建立数值仿真模型，符合纳入标准。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000086",
+            "decision": "exclude",
+            "reason": "标题和摘要专注于电弧检测的图像分割算法，未涉及电气特性分析或电弧物理建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000087",
+            "decision": "exclude",
+            "reason": "摘要研究碳条磨损率预测，提及燃弧与离线率但属于磨损机制分析，未涉及电气特性变化或电弧模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000088",
+            "decision": "uncertain",
+            "reason": "摘要研究电弧对接触线的损伤实验，涉及离线与电气测量，但未明确提及电弧模型或仿真，信息不足以判断是否满足纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000089",
+            "decision": "exclude",
+            "reason": "标题和摘要涉及弓网系统降阶模型与PID控制，提及离线但属于控制系统研究，未涉及电气特性或电弧建模。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000090",
+            "decision": "exclude",
+            "reason": "标题和摘要研究电热融冰技术下的电气热传导特性，提及弓网电弧现象但非核心内容，未涉及离线电气特性或电弧模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0007",
+    "results": [
+        {
+            "paper_id": "paper_000061",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于人工智能算法和胎儿监护，未提及前沿超声技术或子宫内膜蠕动波。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000062",
+            "decision": "exclude",
+            "reason": "病例报告讨论妊娠期肺癌与肺栓塞的鉴别诊断，未涉及妇科生殖系统的前沿超声技术。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000063",
+            "decision": "exclude",
+            "reason": "研究评估麻醉镇痛技术对剖宫产术后疼痛的影响，未涉及前沿超声技术或子宫内膜蠕动波评估。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000064",
+            "decision": "exclude",
+            "reason": "临床试验研究西地那非对分娩期围产结局的影响，未使用或评估前沿超声技术。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.87
+        },
+        {
+            "paper_id": "paper_000065",
+            "decision": "include",
+            "reason": "标题和摘要明确研究子宫内膜蠕动波，使用宫腔内电子宫造影技术进行客观评估，符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000066",
+            "decision": "uncertain",
+            "reason": "摘要提到子宫内膜蠕动波是胚胎植入的保护因素，但未说明评估方法是否为前沿超声技术。",
+            "evidence": ["abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000067",
+            "decision": "exclude",
+            "reason": "病例报告讨论超声在剖宫产术中的应用，但未涉及前沿超声多模态技术或子宫内膜蠕动波评估。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.86
+        },
+        {
+            "paper_id": "paper_000068",
+            "decision": "exclude",
+            "reason": "研究超声参数预测引产失败，仅使用传统超声测量，未涉及前沿超声技术。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.89
+        },
+        {
+            "paper_id": "paper_000069",
+            "decision": "exclude",
+            "reason": "随机对照试验比较硬膜外镇痛技术，关注胎儿心率模式，未涉及前沿超声技术或子宫内膜评估。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000070",
+            "decision": "include",
+            "reason": "标题和摘要明确研究异常子宫内膜蠕动波，使用经阴道超声评估，并探讨阿托西班治疗的影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.92
+        }
+    ]
+}

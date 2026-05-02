@@ -1,0 +1,61 @@
+{
+  "project": {
+    "name": "new-screening-run",
+    "output_dir": "tasks/251e14126493/screening_run/screening_output",
+    "save_raw_response": true,
+    "save_intermediate_files": true
+  },
+  "input": {
+    "input_files": [
+      "tasks/251e14126493/screening_run/inputs/savedrecs (3).ris"
+    ],
+    "encoding": "auto"
+  },
+  "dedup": {
+    "enabled": true,
+    "strict_doi_match": true,
+    "normalized_title_exact_match": true,
+    "fuzzy_title_match": false
+  },
+  "screening": {
+    "batch_size": 10,
+    "target_include_count": 10,
+    "stop_when_target_reached": true,
+    "allow_uncertain": true,
+    "retry_times": 6,
+    "request_timeout_seconds": 240
+  },
+  "criteria": {
+    "topic": "人工智能驱动下的智慧物流仓储系统优化",
+    "inclusion": [
+      "研究内容必须直接涉及“智慧物流”的核心技术应用（如：物联网IoT、人工智能AI、大数据、数字孪生、区块链等）或其管理学影响（如：供应链韧性、绿色可持续发展）。",
+      "必须有具体的物流应用场景落地（如：仓储、配送、冷链、港口等）。",
+      "文献类型需为高质量的实证研究、案例分析或系统性综述。"
+    ],
+    "exclusion": [
+      "纯传统物流或供应链管理研究（缺乏数字化、智能化技术要素）。",
+      "纯计算机底层算法理论或纯硬件研发（未结合物流业务场景进行验证）。",
+      "缺乏实质性数据支持的低质量短文或非学术性新闻报道。"
+    ]
+  },
+  "model": {
+    "provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "api_base_url": "https://api.deepseek.com/v1",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 1536,
+    "min_request_interval_seconds": 2.0
+  },
+  "report": {
+    "export_included_ris": true,
+    "export_excluded_ris": false,
+    "export_unused_ris": true,
+    "export_included_bib": false,
+    "export_excluded_bib": false,
+    "export_unused_bib": false,
+    "included_report_format": "md",
+    "excluded_report_format": "md",
+    "summary_format": "json"
+  }
+}

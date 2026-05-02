@@ -1,0 +1,61 @@
+{
+  "project": {
+    "name": "new-screening-run",
+    "output_dir": "tasks/6c0f8e31ffaf/screening_run/screening_output",
+    "save_raw_response": true,
+    "save_intermediate_files": true
+  },
+  "input": {
+    "input_files": [
+      "tasks/6c0f8e31ffaf/screening_run/inputs/abstract-RenalInsuf-set.txt"
+    ],
+    "encoding": "auto"
+  },
+  "dedup": {
+    "enabled": true,
+    "strict_doi_match": true,
+    "normalized_title_exact_match": true,
+    "fuzzy_title_match": false
+  },
+  "screening": {
+    "batch_size": 10,
+    "target_include_count": 30,
+    "stop_when_target_reached": false,
+    "allow_uncertain": true,
+    "retry_times": 6,
+    "request_timeout_seconds": 240
+  },
+  "criteria": {
+    "topic": "慢性肾病（CKD）进展中的细胞凋亡机制及潜在干预策略",
+    "inclusion": [
+      "必须同时涉及慢性肾病 或具体的肾脏固有细胞，如足细胞、肾小管上皮细胞等 与细胞凋亡 Apoptosis",
+      "重点关注发病机制 如氧化应激、内质网应激、线粒体途径等 或抗凋亡的治疗干预研究。"
+    ],
+    "exclusion": [
+      "研究主体为非肾脏疾病",
+      "探讨的是细胞坏死/焦亡/自噬而非凋亡 除非作为对比",
+      "仅为纯临床观察无机制探讨",
+      "关于肿瘤/癌症中的凋亡研究 除非涉及抗癌药物引起的肾毒性 。"
+    ]
+  },
+  "model": {
+    "provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "api_base_url": "https://api.deepseek.com/v1",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 1536,
+    "min_request_interval_seconds": 2.0
+  },
+  "report": {
+    "export_included_ris": true,
+    "export_excluded_ris": false,
+    "export_unused_ris": true,
+    "export_included_bib": false,
+    "export_excluded_bib": false,
+    "export_unused_bib": false,
+    "included_report_format": "md",
+    "excluded_report_format": "md",
+    "summary_format": "json"
+  }
+}

@@ -1,0 +1,399 @@
+{
+  "batch_id": "batch_0007",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000061",
+    "paper_000062",
+    "paper_000063",
+    "paper_000064",
+    "paper_000065",
+    "paper_000066",
+    "paper_000067",
+    "paper_000068",
+    "paper_000069",
+    "paper_000070"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000061",
+      "entry_type": "article",
+      "title": "Laser ultrasonic inspection of surface and subsurface defects in materials based on deep learning",
+      "authors": [
+        "Zhang, J",
+        "Wan, HP",
+        "Sun, FY",
+        "Chen, XY",
+        "Jia, KN",
+        "Fan, L",
+        "Cheng, LP",
+        "Xu, XD",
+        "Yan, XJ",
+        "Yuan, PL",
+        "Zhang, SY"
+      ],
+      "year": 2025,
+      "journal": "NONDESTRUCTIVE TESTING AND EVALUATION",
+      "doi": "10.1080/10589759.2024.2429691",
+      "abstract": "Laser ultrasonic testing is an advanced non-destructive testing with high frequency and fast detection speed. However, most laser ultrasonic testing characterises defects by manually extracting the features of signals. To address this, deep learning is introduced to identify defects intelligently. Firstly, theoretical models based on finite elements are built to study the the surface and subsurface defects' effects on surface acoustic wave (SAW) propagation. Experimental studies are also conducted on 5 samples with surface defects and 15 with subsurface defects. Then, Gaussian white noise is added to both simulation and experimental signals to expand the data set and imitate the complex conditions. The wavelet transform images of the reflected and transmitted signal are combined into a data set for training the convolutional neural network (CNN). The subsurface defects' data set is similarly augmented. Finally, a total of 40,000 surface defect and 21,000 subsurface defect data are collected and split into training, test, and validation sets (6:2:2 ratio). The CNN accurately classifies surface defect penetration depth (minimum error 5.87%), while subsurface defect widths are determined with transfer learning (minimum error 5.6%). It proves that it is feasible to classify and identify defects by combining the laser ultrasonic method with deep learning.",
+      "keywords": [
+        "Non-destructive testing",
+        "surface acoustic waves",
+        "laser ultrasonics",
+        "deep learning"
+      ],
+      "normalized_title": "laser ultrasonic inspection of surface and subsurface defects in materials based on deep learning",
+      "raw_bibtex": "@ARTICLE{10.1080/10589759.2024.2429691,\n\tauthor = {Zhang, J and Wan, HP and Sun, FY and Chen, XY and Jia, KN and Fan, L and Cheng, LP and Xu, XD and Yan, XJ and Yuan, PL and Zhang, SY},\n\ttitle = {Laser ultrasonic inspection of surface and subsurface defects in materials based on deep learning},\n\tjournal = {NONDESTRUCTIVE TESTING AND EVALUATION},\n\tyear = {2025},\n\tkeywords = {Non-destructive testing; surface acoustic waves; laser ultrasonics; deep learning},\n\tabstract = {Laser ultrasonic testing is an advanced non-destructive testing with high frequency and fast detection speed. However, most laser ultrasonic testing characterises defects by manually extracting the features of signals. To address this, deep learning is introduced to identify defects intelligently. Firstly, theoretical models based on finite elements are built to study the the surface and subsurface defects' effects on surface acoustic wave (SAW) propagation. Experimental studies are also conducted on 5 samples with surface defects and 15 with subsurface defects. Then, Gaussian white noise is added to both simulation and experimental signals to expand the data set and imitate the complex conditions. The wavelet transform images of the reflected and transmitted signal are combined into a data set for training the convolutional neural network (CNN). The subsurface defects' data set is similarly augmented. Finally, a total of 40,000 surface defect and 21,000 subsurface defect data are collected and split into training, test, and validation sets (6:2:2 ratio). The CNN accurately classifies surface defect penetration depth (minimum error 5.87%), while subsurface defect widths are determined with transfer learning (minimum error 5.6%). It proves that it is feasible to classify and identify defects by combining the laser ultrasonic method with deep learning.},\n\tdoi = {10.1080/10589759.2024.2429691},\n\tvolume = {40},\n\tnumber = {10},\n\tpages = {4744-4763},\n\tissn = {1058-9759},\n\tnote = {Times Cited in Web of Science Core Collection: 6 Total Times Cited: 6 Cited Reference Count: 38 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1080/10589759.2024.2429691"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000062",
+      "entry_type": "article",
+      "title": "Research Progress in Ultrasonic Testing of Defects in Aerospace CFRP Composites",
+      "authors": [
+        "Wang, YM",
+        "Guo, YS",
+        "Chen, ZL",
+        "Chen, JX"
+      ],
+      "year": 2025,
+      "journal": "IEEE ACCESS",
+      "doi": "10.1109/access.2025.3641640",
+      "abstract": "Carbon fiber reinforced polymer (CFRP) composites are essential to modern aerospace structures due to their high strength-to-weight ratio and design flexibility. However, internal defects formed during manufacturing or service life critically threaten structural integrity, demanding reliable non-destructive evaluation (NDE). Ultrasonic testing has emerged as the dominant method, offering high defect sensitivity and quantitative capabilities. Yet, CFRP's inherent anisotropy, complex layup, and high attenuation cause beam distortion, structural noise, and limited penetration-constraining inspection accuracy and efficiency. This review systematically assesses recent advances and challenges in ultrasonic inspection of aerospace CFRPs. It compares contact and non-contact techniques to define their applicability limits and analyzes optimization strategies spanning acoustic physics and intelligent algorithms. A key focus is the trend toward intelligent systems: machine learning enhances offline diagnosis but requires integration of physical models to improve generalizability and interpretability, while structural health monitoring enables a shift from post-event inspection to real-time assessment. Looking forward, we propose a development pathway centered on multi-modal sensing, physics-guided artificial intelligence, and digital twin-based prognosis. And promote the standardization of the detection process to enhance the robustness of the system. This integrated approach will support the evolution of intelligent inspection systems capable of full-lifecycle health management for next-generation aerospace composite structures.",
+      "keywords": [
+        "Acoustics",
+        "Inspection",
+        "Attenuation",
+        "Delamination",
+        "Mathematical models",
+        "Anisotropic magnetoresistance",
+        "Acoustic beams",
+        "Scattering",
+        "Reviews",
+        "Optical fiber sensors",
+        "Carbon fiber reinforced polymer",
+        "ultrasonic testing",
+        "detection mechanisms",
+        "intelligent applications",
+        "RAY COMPUTED-TOMOGRAPHY",
+        "IMPACT DAMAGE DETECTION",
+        "MECHANICAL-PROPERTIES",
+        "FIBER",
+        "THERMOGRAPHY",
+        "COMPRESSION",
+        "GENERATION",
+        "MATRIX"
+      ],
+      "normalized_title": "research progress in ultrasonic testing of defects in aerospace cfrp composites",
+      "raw_bibtex": "@ARTICLE{10.1109/ACCESS.2025.3641640,\n\tauthor = {Wang, YM and Guo, YS and Chen, ZL and Chen, JX},\n\ttitle = {Research Progress in Ultrasonic Testing of Defects in Aerospace CFRP Composites},\n\tjournal = {IEEE ACCESS},\n\tyear = {2025},\n\tkeywords = {Acoustics; Inspection; Attenuation; Delamination; Mathematical models; Anisotropic magnetoresistance; Acoustic beams; Scattering; Reviews; Optical fiber sensors; Carbon fiber reinforced polymer; ultrasonic testing; detection mechanisms; intelligent applications; RAY COMPUTED-TOMOGRAPHY; IMPACT DAMAGE DETECTION; MECHANICAL-PROPERTIES; FIBER; THERMOGRAPHY; COMPRESSION; GENERATION; MATRIX},\n\tabstract = {Carbon fiber reinforced polymer (CFRP) composites are essential to modern aerospace structures due to their high strength-to-weight ratio and design flexibility. However, internal defects formed during manufacturing or service life critically threaten structural integrity, demanding reliable non-destructive evaluation (NDE). Ultrasonic testing has emerged as the dominant method, offering high defect sensitivity and quantitative capabilities. Yet, CFRP's inherent anisotropy, complex layup, and high attenuation cause beam distortion, structural noise, and limited penetration-constraining inspection accuracy and efficiency. This review systematically assesses recent advances and challenges in ultrasonic inspection of aerospace CFRPs. It compares contact and non-contact techniques to define their applicability limits and analyzes optimization strategies spanning acoustic physics and intelligent algorithms. A key focus is the trend toward intelligent systems: machine learning enhances offline diagnosis but requires integration of physical models to improve generalizability and interpretability, while structural health monitoring enables a shift from post-event inspection to real-time assessment. Looking forward, we propose a development pathway centered on multi-modal sensing, physics-guided artificial intelligence, and digital twin-based prognosis. And promote the standardization of the detection process to enhance the robustness of the system. This integrated approach will support the evolution of intelligent inspection systems capable of full-lifecycle health management for next-generation aerospace composite structures.},\n\tdoi = {10.1109/ACCESS.2025.3641640},\n\tvolume = {13},\n\tpages = {214161-214179},\n\tissn = {2169-3536},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 163 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/ACCESS.2025.3641640"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000063",
+      "entry_type": "article",
+      "title": "Automatic flaw detection in sectoral scans using machine learning",
+      "authors": [
+        "Hervé-Côte, H",
+        "Dupont-Marillia, F",
+        "Bélanger, P"
+      ],
+      "year": 2024,
+      "journal": "ULTRASONICS",
+      "doi": "10.1016/j.ultras.2024.107316",
+      "abstract": "Phased array ultrasonic testing (PAUT) requires highly trained and qualified personnel to interpret and analyze images. It takes a solid understanding of wave propagation physics to comprehend the generated images. As such, the inspector's judgment and level of experience have a significant impact on the analysis's outcome. In addition, the procedure is prone to error and laborious. AI had shown to be effective in computer vision in a variety of classification and detection tasks. Regarding PAUT, studies have also demonstrated that machine learning may be able to identify defects with a level of accuracy that is on par or even superior to that of trained and qualified inspectors. Nonetheless, the use of computer vision in PAUT remains very limited. The primary cause of this is the challenge accessing large databases of labelled inspections. In fact, a considerable amount of training data is required for machine learning. While it is easy to access sizeable, labelled databases of MRI scans or photographs for instance, that is not the case in PAUT because inspection results are usually confidential. In this project, a large database was generated using mock-ups commonly used to train and evaluate inspectors. The different defects contained in these mock-ups were used to train a machine learning model. The data was acquired with several different probes centered at different frequencies. Each acquisition was performed using Full Matrix Capture (FMC). The post-processing of the data contained in the FMC allows to compute any sectoral scan from its focal laws. As a result, a comprehensive database composed of hundreds of thousands of sectoral scans was generated from these few FMC acquisitions. The completeness of this database facilitated robust training of a defect detection model for PAUT sectoral scans. The evaluation of the model demonstrated its ability to generalize even to defect types it had never been trained on. Furthermore, the detection performance remained consistent even in high noise conditions where the Contrast-to-Noise Ratio (CNR) was very low.",
+      "keywords": [
+        "Ultrasonic testing",
+        "Full Matrix Capture",
+        "Total Focusing Method",
+        "Phased Array Ultrasonic Testing",
+        "Convolutional Neural Network",
+        "Flaw detection",
+        "FULL MATRIX",
+        "CLASSIFICATION"
+      ],
+      "normalized_title": "automatic flaw detection in sectoral scans using machine learning",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ultras.2024.107316,\n\tauthor = {Hervé-Côte, H and Dupont-Marillia, F and Bélanger, P},\n\ttitle = {Automatic flaw detection in sectoral scans using machine learning},\n\tjournal = {ULTRASONICS},\n\tyear = {2024},\n\tkeywords = {Ultrasonic testing; Full Matrix Capture; Total Focusing Method; Phased Array Ultrasonic Testing; Convolutional Neural Network; Flaw detection; FULL MATRIX; CLASSIFICATION},\n\tabstract = {Phased array ultrasonic testing (PAUT) requires highly trained and qualified personnel to interpret and analyze images. It takes a solid understanding of wave propagation physics to comprehend the generated images. As such, the inspector's judgment and level of experience have a significant impact on the analysis's outcome. In addition, the procedure is prone to error and laborious. AI had shown to be effective in computer vision in a variety of classification and detection tasks. Regarding PAUT, studies have also demonstrated that machine learning may be able to identify defects with a level of accuracy that is on par or even superior to that of trained and qualified inspectors. Nonetheless, the use of computer vision in PAUT remains very limited. The primary cause of this is the challenge accessing large databases of labelled inspections. In fact, a considerable amount of training data is required for machine learning. While it is easy to access sizeable, labelled databases of MRI scans or photographs for instance, that is not the case in PAUT because inspection results are usually confidential. In this project, a large database was generated using mock-ups commonly used to train and evaluate inspectors. The different defects contained in these mock-ups were used to train a machine learning model. The data was acquired with several different probes centered at different frequencies. Each acquisition was performed using Full Matrix Capture (FMC). The post-processing of the data contained in the FMC allows to compute any sectoral scan from its focal laws. As a result, a comprehensive database composed of hundreds of thousands of sectoral scans was generated from these few FMC acquisitions. The completeness of this database facilitated robust training of a defect detection model for PAUT sectoral scans. The evaluation of the model demonstrated its ability to generalize even to defect types it had never been trained on. Furthermore, the detection performance remained consistent even in high noise conditions where the Contrast-to-Noise Ratio (CNR) was very low.},\n\tdoi = {10.1016/j.ultras.2024.107316},\n\tvolume = {141},\n\tissn = {0041-624X},\n\tnote = {Times Cited in Web of Science Core Collection: 6 Total Times Cited: 6 Cited Reference Count: 24 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ultras.2024.107316"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000064",
+      "entry_type": "article",
+      "title": "Development of Maximum Residual Stress Prediction Technique for Shot-Peened Specimen Using Rayleigh Wave Dispersion Data Based on Convolutional Neural Network",
+      "authors": [
+        "Choi, YW",
+        "Lee, TG",
+        "Yeom, YT",
+        "Kwon, SD",
+        "Kim, HH",
+        "Lee, KY",
+        "Kim, HJ",
+        "Song, SJ"
+      ],
+      "year": 2023,
+      "journal": "MATERIALS",
+      "doi": "10.3390/ma16237406",
+      "abstract": "Shot peening is a surface treatment process that improves the fatigue life of a material and suppresses cracks by generating residual stress on the surface. The injected small shots create a compressive residual stress layer on the material's surface. Maximum compressive residual stress occurs at a certain depth, and tensile residual stress gradually occurs as the depth increases. This process is primarily used for nickel-based superalloy steel materials in certain environments, such as the aerospace industry and nuclear power fields. To prevent such a severe accident due to the high-temperature and high-pressure environment, evaluating the residual stress of shot-peened materials is essential in evaluating the soundness of the material. Representative methods for evaluating residual stress include perforation strain gauge analysis, X-ray diffraction (XRD), and ultrasonic testing. Among them, ultrasonic testing is a representative, non-destructive evaluation method, and residual stress can be estimated using a Rayleigh wave. Therefore, in this study, the maximum compressive residual stress value of the peened Inconel 718 specimen was predicted using a prediction convolutional neural network (CNN) based on the relationship between Rayleigh wave dispersion and stress distribution on the specimen. By analyzing the residual stress distribution in the depth direction generated in the model from various studies in the literature, 173 residual stress distributions were generated using the Gaussian function and factorial design approach. The distribution generated using the relationship was converted into 173 Rayleigh wave dispersion data to be used as a database for the CNN model. The CNN model was learned through this database, and performance was verified using validation data. The adopted Rayleigh wave dispersion and convolutional neural network procedures demonstrate the ability to predict the maximum compressive residual stress in the peened specimen.",
+      "keywords": [
+        "shot peened",
+        "residual stress",
+        "Rayleigh wave",
+        "convolutional neural network",
+        "Inconel 718",
+        "FATIGUE LIFE",
+        "MECHANISM"
+      ],
+      "normalized_title": "development of maximum residual stress prediction technique for shot peened specimen using rayleigh wave dispersion data based on convolutional neural network",
+      "raw_bibtex": "@ARTICLE{10.3390/ma16237406,\n\tauthor = {Choi, YW and Lee, TG and Yeom, YT and Kwon, SD and Kim, HH and Lee, KY and Kim, HJ and Song, SJ},\n\ttitle = {Development of Maximum Residual Stress Prediction Technique for Shot-Peened Specimen Using Rayleigh Wave Dispersion Data Based on Convolutional Neural Network},\n\tjournal = {MATERIALS},\n\tyear = {2023},\n\tkeywords = {shot peened; residual stress; Rayleigh wave; convolutional neural network; Inconel 718; FATIGUE LIFE; MECHANISM},\n\tabstract = {Shot peening is a surface treatment process that improves the fatigue life of a material and suppresses cracks by generating residual stress on the surface. The injected small shots create a compressive residual stress layer on the material's surface. Maximum compressive residual stress occurs at a certain depth, and tensile residual stress gradually occurs as the depth increases. This process is primarily used for nickel-based superalloy steel materials in certain environments, such as the aerospace industry and nuclear power fields. To prevent such a severe accident due to the high-temperature and high-pressure environment, evaluating the residual stress of shot-peened materials is essential in evaluating the soundness of the material. Representative methods for evaluating residual stress include perforation strain gauge analysis, X-ray diffraction (XRD), and ultrasonic testing. Among them, ultrasonic testing is a representative, non-destructive evaluation method, and residual stress can be estimated using a Rayleigh wave. Therefore, in this study, the maximum compressive residual stress value of the peened Inconel 718 specimen was predicted using a prediction convolutional neural network (CNN) based on the relationship between Rayleigh wave dispersion and stress distribution on the specimen. By analyzing the residual stress distribution in the depth direction generated in the model from various studies in the literature, 173 residual stress distributions were generated using the Gaussian function and factorial design approach. The distribution generated using the relationship was converted into 173 Rayleigh wave dispersion data to be used as a database for the CNN model. The CNN model was learned through this database, and performance was verified using validation data. The adopted Rayleigh wave dispersion and convolutional neural network procedures demonstrate the ability to predict the maximum compressive residual stress in the peened specimen.},\n\tdoi = {10.3390/ma16237406},\n\tvolume = {16},\n\tnumber = {23},\n\tissn = {1996-1944},\n\tnote = {Times Cited in Web of Science Core Collection: 6 Total Times Cited: 6 Cited Reference Count: 40 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/ma16237406"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000065",
+      "entry_type": "article",
+      "title": "Analysis and Examination of Aluminum Sheets Suitable for Automotion Body: Ultrasonic Testing, Signal Processing, Simulation",
+      "authors": [
+        "Mirmahdi, E"
+      ],
+      "year": 2021,
+      "journal": "RUSSIAN JOURNAL OF NONDESTRUCTIVE TESTING",
+      "doi": "10.1134/s1061830921020108",
+      "abstract": "There are many changes in the automotive industry, today. All aluminum sheets used in the automotive body must have good weldability. In this article, we will test the spot welding on 6 types of 5XXX and 6XXX aluminum sheets. These sheets have been selected as the best sheet suitable for the automotive body after welding test on all sheets. This test was examined by ultrasound. The signals obtained from the ultrasound wave test do not have accurate results for better sheet determination. For this purpose, signal processing was performed on the obtained signals in order to detect sheet defect. By simulating these sheets, a comparison is made between the experimental test and the simulation, which can be used to make the best decision about the chosen sheets. The status charts of these sheets have been reviewed and it is easy to select the sheets that have been tested in the shortest time. Generally, findings indicated that the best suitable sheets in automotive body are type of 5XXX aluminum sheets.",
+      "keywords": [
+        "5XXX and 6XXX group aluminum",
+        "ultrasonic test",
+        "simulation",
+        "signal processing",
+        "positioning diagrams",
+        "ALLOYS",
+        "BONE"
+      ],
+      "normalized_title": "analysis and examination of aluminum sheets suitable for automotion body ultrasonic testing signal processing simulation",
+      "raw_bibtex": "@ARTICLE{10.1134/S1061830921020108,\n\tauthor = {Mirmahdi, E},\n\ttitle = {Analysis and Examination of Aluminum Sheets Suitable for Automotion Body: Ultrasonic Testing, Signal Processing, Simulation},\n\tjournal = {RUSSIAN JOURNAL OF NONDESTRUCTIVE TESTING},\n\tyear = {2021},\n\tkeywords = {5XXX and 6XXX group aluminum; ultrasonic test; simulation; signal processing; positioning diagrams; ALLOYS; BONE},\n\tabstract = {There are many changes in the automotive industry, today. All aluminum sheets used in the automotive body must have good weldability. In this article, we will test the spot welding on 6 types of 5XXX and 6XXX aluminum sheets. These sheets have been selected as the best sheet suitable for the automotive body after welding test on all sheets. This test was examined by ultrasound. The signals obtained from the ultrasound wave test do not have accurate results for better sheet determination. For this purpose, signal processing was performed on the obtained signals in order to detect sheet defect. By simulating these sheets, a comparison is made between the experimental test and the simulation, which can be used to make the best decision about the chosen sheets. The status charts of these sheets have been reviewed and it is easy to select the sheets that have been tested in the shortest time. Generally, findings indicated that the best suitable sheets in automotive body are type of 5XXX aluminum sheets.},\n\tdoi = {10.1134/S1061830921020108},\n\tvolume = {57},\n\tnumber = {2},\n\tpages = {135-144},\n\tissn = {1061-8309},\n\tnote = {Times Cited in Web of Science Core Collection: 3 Total Times Cited: 6 Cited Reference Count: 19 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1134/S1061830921020108"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000066",
+      "entry_type": "article",
+      "title": "Intelligent identification method for pipeline ultrasonic internal inspection",
+      "authors": [
+        "Xu, GL",
+        "Zhou, ZH",
+        "Xin, S",
+        "Lin, ZW",
+        "Cai, LX"
+      ],
+      "year": 2025,
+      "journal": "NONDESTRUCTIVE TESTING AND EVALUATION",
+      "doi": "10.1080/10589759.2024.2389935",
+      "abstract": "In pipeline ultrasonic testing, the accurate identification of defect types is a prerequisite for quantifying defect sizes. To this end, this paper proposes a defect identification algorithm based on the combination of Wavelet Packet Transform (WPT), Distance Evaluation Technique (DET) and GA-SVM to precisely identify defect boundaries. First, the ultrasonic echo signals are processed using WPT to more accurately extract defect information. Then, DET is employed to eliminate redundant feature parameters, which are sorted by sensitivity to determine the input feature parameters for the GA-SVM. On this basis, a self-developed ultrasonic testing experimental system is used to collect ultrasonic echo signals from Q235 steel pipes with cylindrical, spherical, and conical defects at different spatial orientations of the probe and the pipe. After processing and identifying the signals, it was found that the proposed algorithm achieves an average identification accuracy of 99% for different types of defects, thereby realising automatic identification of pipeline defects. The results provide new ideas and methods for the intelligent identification of volumetric defect types in pipeline ultrasonic internal testing and promote the development of industrial-grade ultrasonic internal detectors.",
+      "keywords": [
+        "Pipeline",
+        "ultrasonic inner inspection",
+        "DET",
+        "GA-SVM",
+        "WPT",
+        "SIGNAL",
+        "CLASSIFICATION",
+        "EXTRACTION"
+      ],
+      "normalized_title": "intelligent identification method for pipeline ultrasonic internal inspection",
+      "raw_bibtex": "@ARTICLE{10.1080/10589759.2024.2389935,\n\tauthor = {Xu, GL and Zhou, ZH and Xin, S and Lin, ZW and Cai, LX},\n\ttitle = {Intelligent identification method for pipeline ultrasonic internal inspection},\n\tjournal = {NONDESTRUCTIVE TESTING AND EVALUATION},\n\tyear = {2025},\n\tkeywords = {Pipeline; ultrasonic inner inspection; DET; GA-SVM; WPT; SIGNAL; CLASSIFICATION; EXTRACTION},\n\tabstract = {In pipeline ultrasonic testing, the accurate identification of defect types is a prerequisite for quantifying defect sizes. To this end, this paper proposes a defect identification algorithm based on the combination of Wavelet Packet Transform (WPT), Distance Evaluation Technique (DET) and GA-SVM to precisely identify defect boundaries. First, the ultrasonic echo signals are processed using WPT to more accurately extract defect information. Then, DET is employed to eliminate redundant feature parameters, which are sorted by sensitivity to determine the input feature parameters for the GA-SVM. On this basis, a self-developed ultrasonic testing experimental system is used to collect ultrasonic echo signals from Q235 steel pipes with cylindrical, spherical, and conical defects at different spatial orientations of the probe and the pipe. After processing and identifying the signals, it was found that the proposed algorithm achieves an average identification accuracy of 99% for different types of defects, thereby realising automatic identification of pipeline defects. The results provide new ideas and methods for the intelligent identification of volumetric defect types in pipeline ultrasonic internal testing and promote the development of industrial-grade ultrasonic internal detectors.},\n\tdoi = {10.1080/10589759.2024.2389935},\n\tvolume = {40},\n\tnumber = {7},\n\tpages = {2891-2912},\n\tissn = {1058-9759},\n\tnote = {Times Cited in Web of Science Core Collection: 9 Total Times Cited: 9 Cited Reference Count: 33 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1080/10589759.2024.2389935"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000067",
+      "entry_type": "article",
+      "title": "Standing tree health assessment using contact-ultrasonic testing and machine learning",
+      "authors": [
+        "Mousavi, M",
+        "Taskhiri, MS",
+        "Gandomi, AH"
+      ],
+      "year": 2023,
+      "journal": "COMPUTERS AND ELECTRONICS IN AGRICULTURE",
+      "doi": "10.1016/j.compag.2023.107816",
+      "abstract": "The problem of hole-defect detection in standing trees is solved. An ultrasonic device (Pundit PL-200) was employed to collect ultrasonic signals from various wood specimens both in the lab and field. The collected ultrasonic signals were then processed through the Variational Mode Decomposition algorithm to derive effective features. In order to solve the classification problem more efficiently, the obtained characteristics were then analyzed through PCA to determine the most useful features. Several machine learning algorithms and a one-dimensional convolutional neural network (1D-CNN) were employed to solve a set of classification problems based on data collected from (1) specimens with artificial defects in the lab and (2) billets with natural defects selected from trees harvested at sites in the two states of WA and NSW, Australia. The results demonstrate the effectiveness of the proposed method for classifying wood materials based on their health state, where testing accuracy results of 100% in the lab and at least 92.2% in fields were achieved. The Fine Gaussian SVM was found to perform most effectively on data derived from specimens in the lab and fields. It was also shown that 1D-CNN results were more reliable for generalizing the solution to the classification problem of standing trees in fields.",
+      "keywords": [
+        "Contact-ultrasonic testing",
+        "Machine learning",
+        "One dimensional CNN",
+        "Feature engineering",
+        "Variational mode decomposition",
+        "WOOD",
+        "DEFECTS",
+        "TIMBER"
+      ],
+      "normalized_title": "standing tree health assessment using contact ultrasonic testing and machine learning",
+      "raw_bibtex": "@ARTICLE{10.1016/j.compag.2023.107816,\n\tauthor = {Mousavi, M and Taskhiri, MS and Gandomi, AH},\n\ttitle = {Standing tree health assessment using contact-ultrasonic testing and machine learning},\n\tjournal = {COMPUTERS AND ELECTRONICS IN AGRICULTURE},\n\tyear = {2023},\n\tkeywords = {Contact-ultrasonic testing; Machine learning; One dimensional CNN; Feature engineering; Variational mode decomposition; WOOD; DEFECTS; TIMBER},\n\tabstract = {The problem of hole-defect detection in standing trees is solved. An ultrasonic device (Pundit PL-200) was employed to collect ultrasonic signals from various wood specimens both in the lab and field. The collected ultrasonic signals were then processed through the Variational Mode Decomposition algorithm to derive effective features. In order to solve the classification problem more efficiently, the obtained characteristics were then analyzed through PCA to determine the most useful features. Several machine learning algorithms and a one-dimensional convolutional neural network (1D-CNN) were employed to solve a set of classification problems based on data collected from (1) specimens with artificial defects in the lab and (2) billets with natural defects selected from trees harvested at sites in the two states of WA and NSW, Australia. The results demonstrate the effectiveness of the proposed method for classifying wood materials based on their health state, where testing accuracy results of 100% in the lab and at least 92.2% in fields were achieved. The Fine Gaussian SVM was found to perform most effectively on data derived from specimens in the lab and fields. It was also shown that 1D-CNN results were more reliable for generalizing the solution to the classification problem of standing trees in fields.},\n\tdoi = {10.1016/j.compag.2023.107816},\n\tvolume = {209},\n\tissn = {0168-1699},\n\tnote = {Times Cited in Web of Science Core Collection: 10 Total Times Cited: 13 Cited Reference Count: 40 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.compag.2023.107816"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000068",
+      "entry_type": "article",
+      "title": "Machine learning supported ultrasonic testing for characterization of cracks in polyethylene pipes",
+      "authors": [
+        "Said-El Hawwat",
+        "Shah, JK",
+        "Wang, H"
+      ],
+      "year": 2025,
+      "journal": "MEASUREMENT",
+      "doi": "10.1016/j.measurement.2024.115609",
+      "abstract": "This study aims to develop a machine learning supported ultrasonic guided wave testing (UGWT) for detection and characterization of cracks in polyethylene (PE) pipes used for natural gas distribution. Ultrasonic testing is conducted to investigate the wave-crack interaction and determine damping properties of PE pipes. Finite element models are further built with material properties fine-tuned by wave attenuation experiments combined with cross-correlation analysis between the simulated and experimental signals. A synthetic database is populated using sensed signals over a wide range of crack geometries from numerical simulations. Finally, support vector machine (SVM) models are developed with different feature selections for classification of crack geometry and the accuracy is evaluated using both simulated and experimental cases. The findings demonstrate the potential of locating the circumferential position of crack with the ring-focusing method and classifying crack geometry in PE pipes using SVM model with central frequency features.",
+      "keywords": [
+        "Polyethylene pipes",
+        "Ultrasonic guided wave testing",
+        "Machine learning",
+        "Finite element model",
+        "Crack geometry",
+        "Wave Attenuation",
+        "FAILURE",
+        "CLASSIFICATION",
+        "TRANSDUCERS"
+      ],
+      "normalized_title": "machine learning supported ultrasonic testing for characterization of cracks in polyethylene pipes",
+      "raw_bibtex": "@ARTICLE{10.1016/j.measurement.2024.115609,\n\tauthor = {Said-El Hawwat and Shah, JK and Wang, H},\n\ttitle = {Machine learning supported ultrasonic testing for characterization of cracks in polyethylene pipes},\n\tjournal = {MEASUREMENT},\n\tyear = {2025},\n\tkeywords = {Polyethylene pipes; Ultrasonic guided wave testing; Machine learning; Finite element model; Crack geometry; Wave Attenuation; FAILURE; CLASSIFICATION; TRANSDUCERS},\n\tabstract = {This study aims to develop a machine learning supported ultrasonic guided wave testing (UGWT) for detection and characterization of cracks in polyethylene (PE) pipes used for natural gas distribution. Ultrasonic testing is conducted to investigate the wave-crack interaction and determine damping properties of PE pipes. Finite element models are further built with material properties fine-tuned by wave attenuation experiments combined with cross-correlation analysis between the simulated and experimental signals. A synthetic database is populated using sensed signals over a wide range of crack geometries from numerical simulations. Finally, support vector machine (SVM) models are developed with different feature selections for classification of crack geometry and the accuracy is evaluated using both simulated and experimental cases. The findings demonstrate the potential of locating the circumferential position of crack with the ring-focusing method and classifying crack geometry in PE pipes using SVM model with central frequency features.},\n\tdoi = {10.1016/j.measurement.2024.115609},\n\tvolume = {240},\n\tissn = {0263-2241},\n\tnote = {Times Cited in Web of Science Core Collection: 17 Total Times Cited: 18 Cited Reference Count: 39 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.measurement.2024.115609"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000069",
+      "entry_type": "article",
+      "title": "Unsupervised machine learning for flaw detection in automated ultrasonic testing of carbon fibre reinforced plastic composites",
+      "authors": [
+        "Tunukovic, V",
+        "Mcknight, S",
+        "Pyle, R",
+        "Wang, ZM",
+        "Mohseni, E",
+        "Pierce, SG",
+        "Vithanage, RKW",
+        "Dobie, G",
+        "Macleod, CN",
+        "Cochran, S",
+        "Hare, TO'"
+      ],
+      "year": 2024,
+      "journal": "ULTRASONICS",
+      "doi": "10.1016/j.ultras.2024.107313",
+      "abstract": "The use of Carbon Fibre Reinforced Plastic (CFRP) composite materials for critical components has significantly surged within the energy and aerospace industry. With this rapid increase in deployment, reliable postmanufacturing Non-Destructive Evaluation (NDE) is critical for verifying the mechanical integrity of manufactured components. To this end, an automated Ultrasonic Testing (UT) NDE process delivered by an industrial manipulator was developed, greatly increasing the measurement speed, repeatability, and locational precision, while increasing the throughput of data generated by the selected NDE modality. Data interpretation of UT signals presents a current bottleneck, as it is still predominantly performed manually in industrial settings. To reduce the interpretation time and minimise human error, this paper presents a two-stage automated NDE evaluation pipeline consisting of a) an intelligent gating process and b) an autoencoder (AE) defect detector. Both stages are based on an unsupervised method, leveraging density-based spatial clustering of applications with noise clustering method for robust automated gating and undefective UT data for the training of the AE architecture. The AE network trained on ultrasonic B-scan data was tested for performance on a set of reference CFRP samples with embedded and manufactured defects. The developed model is rapid during inference, processing over 2000 ultrasonic B-scans in 1.26 s with the area under the receiver operating characteristic curve of 0.922 in simple and 0.879 in complex geometry samples. The benefits and shortcomings of the presented methods are discussed, and uncertainties associated with the reported results are evaluated.",
+      "keywords": [
+        "Automated defect detection",
+        "Machine learning",
+        "Deep learning in ultrasonic testing",
+        "Non-destructive evaluation",
+        "Carbon fibre reinforced polymers",
+        "Aerospace composites",
+        "ALGORITHMS",
+        "IMPACT"
+      ],
+      "normalized_title": "unsupervised machine learning for flaw detection in automated ultrasonic testing of carbon fibre reinforced plastic composites",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ultras.2024.107313,\n\tauthor = {Tunukovic, V and Mcknight, S and Pyle, R and Wang, ZM and Mohseni, E and Pierce, SG and Vithanage, RKW and Dobie, G and Macleod, CN and Cochran, S and Hare, TO'},\n\ttitle = {Unsupervised machine learning for flaw detection in automated ultrasonic testing of carbon fibre reinforced plastic composites},\n\tjournal = {ULTRASONICS},\n\tyear = {2024},\n\tkeywords = {Automated defect detection; Machine learning; Deep learning in ultrasonic testing; Non-destructive evaluation; Carbon fibre reinforced polymers; Aerospace composites; ALGORITHMS; IMPACT},\n\tabstract = {The use of Carbon Fibre Reinforced Plastic (CFRP) composite materials for critical components has significantly surged within the energy and aerospace industry. With this rapid increase in deployment, reliable postmanufacturing Non-Destructive Evaluation (NDE) is critical for verifying the mechanical integrity of manufactured components. To this end, an automated Ultrasonic Testing (UT) NDE process delivered by an industrial manipulator was developed, greatly increasing the measurement speed, repeatability, and locational precision, while increasing the throughput of data generated by the selected NDE modality. Data interpretation of UT signals presents a current bottleneck, as it is still predominantly performed manually in industrial settings. To reduce the interpretation time and minimise human error, this paper presents a two-stage automated NDE evaluation pipeline consisting of a) an intelligent gating process and b) an autoencoder (AE) defect detector. Both stages are based on an unsupervised method, leveraging density-based spatial clustering of applications with noise clustering method for robust automated gating and undefective UT data for the training of the AE architecture. The AE network trained on ultrasonic B-scan data was tested for performance on a set of reference CFRP samples with embedded and manufactured defects. The developed model is rapid during inference, processing over 2000 ultrasonic B-scans in 1.26 s with the area under the receiver operating characteristic curve of 0.922 in simple and 0.879 in complex geometry samples. The benefits and shortcomings of the presented methods are discussed, and uncertainties associated with the reported results are evaluated.},\n\tdoi = {10.1016/j.ultras.2024.107313},\n\tvolume = {140},\n\tissn = {0041-624X},\n\tnote = {Times Cited in Web of Science Core Collection: 35 Total Times Cited: 37 Cited Reference Count: 54 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ultras.2024.107313"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000070",
+      "entry_type": "article",
+      "title": "Accurate detection and characterization of sub-millimeter cracks using nonlinear ultrasonics-informed parallel multi-branch convolutional neural network",
+      "authors": [
+        "Wang, L",
+        "Qi, ZP",
+        "Ding, XY",
+        "Hu, N",
+        "Bi, XY",
+        "Zhang, H",
+        "Zhao, LB"
+      ],
+      "year": 2026,
+      "journal": "ENGINEERING APPLICATIONS OF ARTIFICIAL INTELLIGENCE",
+      "doi": "10.1016/j.engappai.2025.113638",
+      "abstract": "Conventional ultrasonic testing struggles to inspect sub-millimeter cracks and identify multiple characteristics. To overcome these limitations, this study proposes a parallel multi-branch convolutional neural network (PMCNN) to simultaneously and accurately detect the depth, length, and orientation of sub-millimeter cracks. The artificial intelligence (AI) innovation lies in the PMCNN's branch-specific kernels and cross-task isolation layers that effectively decouple overlapping nonlinear ultrasonic signals. First, ultrasonic non-destructive testing was performed on micro-crack specimens to obtain essential data for verifying both the finite element (FE) model and PMCNN. Subsequently, an FE model was established to systematically analyze the coupling effects of depth, length, and orientation on the signals and to generate a comprehensive dataset for PMCNN training. The primary engineering application is the provision of an effective solution for quantitative micro-crack assessment in complex operational environments through experimental validation with practical inspection signals. Results reveal that while harmonic amplitudes correlated with individual parameter variations, their sensitivity significantly decreases under multiparameter conditions. Interpretability analysis confirms the distinct feature selectivity of each branch network, while a hybrid data training strategy maintains robust accuracy (above 90 %) under noisy conditions. Experimental validation demonstrates that the proposed method achieves stable and reliable performance, bridging advanced AI techniques with practical structural health monitoring needs.",
+      "keywords": [
+        "Structural health monitoring",
+        "Artificial intelligence",
+        "Nonlinear ultrasonic testing",
+        "Parallel multi-branch convolutional neural",
+        "network",
+        "Micro-crack characterization",
+        "Ultrasonic phased arrays",
+        "DEEP",
+        "CLASSIFICATION",
+        "INSPECTION",
+        "WAVELET",
+        "SYSTEM",
+        "GROWTH",
+        "WELD"
+      ],
+      "normalized_title": "accurate detection and characterization of sub millimeter cracks using nonlinear ultrasonics informed parallel multi branch convolutional neural network",
+      "raw_bibtex": "@ARTICLE{10.1016/j.engappai.2025.113638,\n\tauthor = {Wang, L and Qi, ZP and Ding, XY and Hu, N and Bi, XY and Zhang, H and Zhao, LB},\n\ttitle = {Accurate detection and characterization of sub-millimeter cracks using nonlinear ultrasonics-informed parallel multi-branch convolutional neural network},\n\tjournal = {ENGINEERING APPLICATIONS OF ARTIFICIAL INTELLIGENCE},\n\tyear = {2026},\n\tkeywords = {Structural health monitoring; Artificial intelligence; Nonlinear ultrasonic testing; Parallel multi-branch convolutional neural; network; Micro-crack characterization; Ultrasonic phased arrays; DEEP; CLASSIFICATION; INSPECTION; WAVELET; SYSTEM; GROWTH; WELD},\n\tabstract = {Conventional ultrasonic testing struggles to inspect sub-millimeter cracks and identify multiple characteristics. To overcome these limitations, this study proposes a parallel multi-branch convolutional neural network (PMCNN) to simultaneously and accurately detect the depth, length, and orientation of sub-millimeter cracks. The artificial intelligence (AI) innovation lies in the PMCNN's branch-specific kernels and cross-task isolation layers that effectively decouple overlapping nonlinear ultrasonic signals. First, ultrasonic non-destructive testing was performed on micro-crack specimens to obtain essential data for verifying both the finite element (FE) model and PMCNN. Subsequently, an FE model was established to systematically analyze the coupling effects of depth, length, and orientation on the signals and to generate a comprehensive dataset for PMCNN training. The primary engineering application is the provision of an effective solution for quantitative micro-crack assessment in complex operational environments through experimental validation with practical inspection signals. Results reveal that while harmonic amplitudes correlated with individual parameter variations, their sensitivity significantly decreases under multiparameter conditions. Interpretability analysis confirms the distinct feature selectivity of each branch network, while a hybrid data training strategy maintains robust accuracy (above 90 %) under noisy conditions. Experimental validation demonstrates that the proposed method achieves stable and reliable performance, bridging advanced AI techniques with practical structural health monitoring needs.},\n\tdoi = {10.1016/j.engappai.2025.113638},\n\tvolume = {166},\n\tissn = {0952-1976},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 55 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.engappai.2025.113638"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

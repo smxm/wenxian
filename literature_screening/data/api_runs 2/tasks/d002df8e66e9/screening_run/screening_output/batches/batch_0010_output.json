@@ -1,0 +1,35 @@
+{
+  "batch_id": "batch_0010",
+  "results": [
+    {
+      "paper_id": "paper_000028",
+      "decision": "uncertain",
+      "reason": "标题和摘要涉及弓网电弧温度场模拟，但未明确探讨电气特性变化如电压/电流畸变。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000029",
+      "decision": "exclude",
+      "reason": "标题和摘要研究电弧运动特性和力分析，未涉及电气特性变化或电弧建模。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000030",
+      "decision": "include",
+      "reason": "标题显示电弧建模，摘要探讨电磁暂态和过电压，符合电气特性分析。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    }
+  ]
+}

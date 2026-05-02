@@ -35,6 +35,7 @@ class ScreeningConfig(BaseModel):
     batch_size: int = Field(default=10, ge=1, le=100)
     target_include_count: int = Field(ge=1)
     stop_when_target_reached: bool = True
+    min_include_confidence: float = Field(default=0.8, ge=0, le=1)
     allow_uncertain: bool = True
     retry_times: int = Field(default=2, ge=0, le=10)
     request_timeout_seconds: int = Field(default=120, ge=10, le=600)

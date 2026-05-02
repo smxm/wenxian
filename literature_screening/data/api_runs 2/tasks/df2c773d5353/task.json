@@ -1,0 +1,688 @@
+{
+  "id": "df2c773d5353",
+  "kind": "screening",
+  "status": "succeeded",
+  "cancel_requested": false,
+  "title": "new-search-strategy-screening",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 5,
+  "progress_total": 5,
+  "progress_message": "Task completed",
+  "created_at": "2026-03-25T00:13:41.812718+08:00",
+  "updated_at": "2026-03-25T00:16:38.975190+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "cef63c17bb07",
+    "project_topic": "Western opera aria vocal techniques",
+    "model_provider": "deepseek",
+    "parent_task_id": "ba1e2049ce67",
+    "input_dataset_ids": [
+      "d42e8a5bd6c6"
+    ],
+    "request_payload": {
+      "title": "new-search-strategy-screening",
+      "topic": "Western opera aria vocal techniques",
+      "inclusion": [
+        "Studies focusing on opera singing or vocal performance.",
+        "Specifically related to Western opera traditions.",
+        "Includes arias as the subject of study.",
+        "Addresses singing techniques, vocal pedagogy, or performance practice."
+      ],
+      "exclusion": [
+        "Excludes non-Western opera forms (e.g., Chinese opera, if not comparative).",
+        "Excludes instrumental music, composition, or non-singing aspects.",
+        "Excludes general music education not specific to opera.",
+        "Excludes popular music or non-classical vocal techniques."
+      ],
+      "provider": "deepseek",
+      "model_name": "deepseek-chat",
+      "api_base_url": "https://api.deepseek.com/v1",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.0,
+      "max_tokens": 1536,
+      "min_request_interval_seconds": 2.0,
+      "batch_size": 10,
+      "target_include_count": 30,
+      "stop_when_target_reached": true,
+      "allow_uncertain": true,
+      "retry_times": 6,
+      "request_timeout_seconds": 240,
+      "encoding": "auto",
+      "project_id": "cef63c17bb07",
+      "parent_task_id": "ba1e2049ce67",
+      "source_dataset_ids": [
+        "d42e8a5bd6c6"
+      ]
+    },
+    "model_secret_id": "fbaefe1909b948e2",
+    "uploaded_input_paths": []
+  },
+  "summary": {
+    "run_id": "run_20260325_001341",
+    "input_files_count": 1,
+    "raw_entries_count": 50,
+    "deduped_entries_count": 50,
+    "processed_count": 50,
+    "included_count": 20,
+    "excluded_count": 21,
+    "uncertain_count": 9,
+    "unused_count": 0,
+    "batch_count": 5,
+    "api_call_count": 5,
+    "stop_reason": "all_records_processed",
+    "started_at": "2026-03-25T00:13:41.865128+08:00",
+    "finished_at": "2026-03-25T00:16:38.958461+08:00"
+  },
+  "error": null,
+  "artifacts": {
+    "included_report": {
+      "path": "tasks/df2c773d5353/screening_run/screening_output/included_report.md",
+      "filename": "included_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 8464
+    },
+    "excluded_report": {
+      "path": "tasks/df2c773d5353/screening_run/screening_output/excluded_report.md",
+      "filename": "excluded_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 9092
+    },
+    "uncertain_report": {
+      "path": "tasks/df2c773d5353/screening_run/screening_output/uncertain_report.md",
+      "filename": "uncertain_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 3932
+    },
+    "included_ris": {
+      "path": "tasks/df2c773d5353/screening_run/screening_output/included.ris",
+      "filename": "included.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 41921
+    },
+    "unused_ris": {
+      "path": "tasks/df2c773d5353/screening_run/screening_output/unused_remaining.ris",
+      "filename": "unused_remaining.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 0
+    },
+    "run_summary": {
+      "path": "tasks/df2c773d5353/screening_run/screening_output/run_summary.json",
+      "filename": "run_summary.json",
+      "content_type": "application/json",
+      "size_bytes": 444
+    },
+    "screening_decisions": {
+      "path": "tasks/df2c773d5353/screening_run/screening_output/screening_decisions.json",
+      "filename": "screening_decisions.json",
+      "content_type": "application/json",
+      "size_bytes": 24614
+    }
+  },
+  "run_root": "tasks/df2c773d5353/screening_run",
+  "output_dir": "tasks/df2c773d5353/screening_run/screening_output",
+  "markdown_preview": null,
+  "records": [
+    {
+      "paper_id": "paper_000001",
+      "title": "The Aural/Visual Synchrony: Opera Film, Close-up, and Cinematic Literacy in Mao-era China (1949–1966)",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要聚焦中国歌剧电影与电影技术，未涉及西方歌剧咏叹调演唱技巧研究。",
+      "year": 2024,
+      "journal": "CHINOPERL: Journal of Chinese Oral and Performing Literature",
+      "doi": "10.1353/cop.2024.a932318",
+      "abstract": "In the first two decades of the People’s Republic of China (PRC; 1949–present), the filmmakers were caught in a dilemma between a fast-growing film industry and Chinese moviegoers’ pervasive lack of cinematic literacy, that is, a proper understanding of cinematic techniques, such as the use of shots in films. To make motion pictures a mass culture by enhancing cinematic literacy among Chinese viewers, filmmakers produced over one hundred opera films—a filmic genre that resorts to cinematic techniques to represent Chinese theater on the silver screen. Considering Chinese audiences’ familiarity with China’s operatic arts, such as singing and music, filmmakers in post-1949 China deftly synchronized close-up shots with operatic music/singing in opera films to highlight characters’ heightened emotions and thereby popularize a filmic mode of narration and presentation. This paper argues that close and close-up shots provided an avenue for a transition from stage to screen as a chief means of entertainment and a widely accepted mode of representation in the early years of the PRC. © The Permanent Conference on Chinese Oral and Performing Literature, Inc. 2024. ER -"
+    },
+    {
+      "paper_id": "paper_000002",
+      "title": "An online breathing and wellbeing programme (ENO Breathe) for people with persistent symptoms following COVID-19: a parallel-group, single-blind, randomised controlled trial",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "研究针对COVID-19后遗症患者的呼吸训练项目，虽提及歌唱技巧，但主题为医疗康复而非西方歌剧咏叹调演唱技巧。",
+      "year": 2022,
+      "journal": "The Lancet Respiratory Medicine",
+      "doi": "10.1016/s2213-2600(22)00125-4",
+      "abstract": "Background: There are few evidence-based interventions for long COVID; however, holistic approaches supporting recovery are advocated. We assessed whether an online breathing and wellbeing programme improves health related quality-of-life (HRQoL) in people with persisting breathlessness following COVID-19. Methods: We conducted a parallel-group, single-blind, randomised controlled trial in patients who had been referred from one of 51 UK-based collaborating long COVID clinics. Eligible participants were aged 18 years or older; were recovering from COVID-19 with ongoing breathlessness, with or without anxiety, at least 4 weeks after symptom onset; had internet access with an appropriate device; and were deemed clinically suitable for participation by one of the collaborating COVID-19 clinics. Following clinical assessment, potential participants were given a unique online portal code. Participants were randomly assigned (1:1) to either immediate participation in the English National Opera (ENO) Breathe programme or to usual care. Randomisation was done by the research team using computer-generated block randomisation lists, with block size 10. The researcher responsible for randomisation was masked to responses. Participants in the ENO Breathe group participated in a 6-week online breathing and wellbeing programme, developed for people with long COVID experiencing breathlessness, focusing on breathing retraining using singing techniques. Those in the deferred group received usual care until they exited the trial. The primary outcome, assessed in the intention-to-treat population, was change in HRQoL, assessed using the RAND 36-item short form survey instrument mental health composite (MHC) and physical health composite (PHC) scores. Secondary outcome measures were the chronic obstructive pulmonary disease assessment test score, visual analogue scales (VAS) for breathlessness, and scores on the dyspnoea-12, the generalised anxiety disorder 7-item scale, and the short form-6D. A thematic analysis exploring participant experience was also conducted using qualitative data from focus groups, survey responses, and email correspondence. This trial is registered with ClinicalTrials.gov, NCT04830033. Findings: Between April 22 and May 25, 2021, 158 participants were recruited and randomly assigned. Of these, eight (5%) individuals were excluded and 150 participants were allocated to a treatment group (74 in the ENO Breathe group and 76 in the usual care group). Compared with usual care, ENO Breathe was associated with an improvement in MHC score (regression coefficient 2·42 [95% CI 0·03 to 4·80]; p=0·047), but not PHC score (0·60 [–1·33 to 2·52]; p=0·54). VAS for breathlessness (running) favoured ENO Breathe participation (−10·48 [–17·23 to –3·73]; p=0·0026). No other statistically significant between-group differences in secondary outcomes were observed. One minor self-limiting adverse event was reported by a participant in the ENO Breathe group who felt dizzy using a computer for extended periods. Thematic analysis of ENO Breathe participant experience identified three key themes: (1) improvements in symptoms; (2) feeling that the programme was complementary to standard care; and (3) the particular suitability of singing and music to address their needs. Interpretation: Our findings suggest that an online breathing and wellbeing programme can improve the mental component of HRQoL and elements of breathlessness in people with persisting symptoms after COVID-19. Mind–body and music-based approaches, including practical, enjoyable, symptom-management techniques might have a role supporting recovery. Funding: Imperial College London. © 2022 The Author(s). Published by Elsevier Ltd. This is an Open Access article under the CC BY 4.0 license ER -"
+    },
+    {
+      "paper_id": "paper_000003",
+      "title": "Complexity of Vocal Vibrato in Opera and Jazz Recordings: Insights From Entropy and Recurrence Analyses",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确研究歌剧与爵士演唱中颤音的复杂性，直接涉及西方歌剧演唱技巧分析。",
+      "year": 2023,
+      "journal": "Journal of Voice",
+      "doi": "10.1016/j.jvoice.2023.11.020",
+      "abstract": "Introduction: Vibrato is an oscillation in frequency, intensity, and timbre of the singing voice. Previous studies have found a relationship between its periodicity and perceived quality. The diversity of vibrato enriches the music and singer's performances but create challenges for quantifying and capturing the characteristics that contribute to achieving these expressive goals. Vibrato tones have been addressed using rate, extent, jitter, and shimmer; however, these do not necessarily capture relevant complex time-varying features. This paper applies techniques from disciplines that specialize in periodicity and complexity to provide insight into vibrato characteristics not yet understood. Objectives: This study aimed to assess whether nonlinear metrics are relevant features in characterizing and illustrating differences in vibrato behavior in opera and jazz singing, as well as considering the relationship of nonlinear metrics to other vibrato parameters. Methods: Vibrato tones from published music material of world-class singers from opera and jazz were analyzed with entropy, recurrence, and the established parameters of rate, extent, jitter, and shimmer. Dimensionality reduction was employed to consider the relationship and significance of each of the metrics in collectively characterizing vibrato. Results: The principal component, explaining 40% of variability, had positive weights of determinism and line length derived from recurrence while having negative weights of rate, shimmer, and sample entropy. Using these components, the vibrato tones from opera compared to jazz singing were found to be more regular and had lower rate and extent, and it was possible to spotlight singers and notes with high periodicity. Conclusion: Our study shows that nonlinear metrics applied to vibrato tones provide a valuable tool for observing and quantifying regularity in vibrato tones. The results of this study highlight the potential for more detailed descriptions of vibrato characteristics that may support categorization of individuals, genres, or musical expression in the future and could be applicable to pedagogical techniques. © 2023 The Authors ER -"
+    },
+    {
+      "paper_id": "paper_000004",
+      "title": "Comparison of sound radiation between classical and pop singers",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要比较古典（歌剧）与流行歌手的声辐射，直接研究歌剧演唱者的声学技术与差异。",
+      "year": 2021,
+      "journal": "Biomedical Signal Processing and Control",
+      "doi": "10.1016/j.bspc.2021.102426",
+      "abstract": "The directional characteristics of six soprano opera singers and five pop singers in the horizontal and vertical planes were measured in an anechoic room. Sound radiation measurements were made across the whole frequency range at 44 positions in the hemispherical array around the head at a distance of 120 cm while the singer's mouth was the centre. The scales through two octaves (C4–C6) in four dynamics and gradual increase of loudness (crescendo) in nine pitch positions were measured for the Czech vowels /a/, /i/, and /u/. The main aim was to describe differences in sound radiation between both groups of singers and verify the results of a preliminary study. The study confirmed that classical singers have more omnidirectional sound radiation patterns. A different type of pattern was found when singing /i/ in the middle voice range A4–F5#. The analysis of sound radiation in octave bands confirmed the main influence of the position and levels in the frequency bands of the first formant or first harmonic level, which is made by the difference in vocal technique between both groups of genres. When pitch and SPL levels are higher, the level of sound radiation is attenuated in the rear directions in general. The different trends of sound radiation, connected with the change of pitch and SPL, are probably caused by the shape and size of the singer's mouth. Those relations will be examined in the follow-up study. © 2021 Elsevier Ltd ER -"
+    },
+    {
+      "paper_id": "paper_000005",
+      "title": "Effect of Respiratory Muscle Training on Pitch Range and Sound Duration in Brass Instrument Players and Singers",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "研究呼吸肌训练对歌手（含歌剧歌手）音高范围的影响，主题相关但未明确聚焦咏叹调或西方歌剧传统，信息不足。",
+      "year": 2022,
+      "journal": "Journal of Voice",
+      "doi": "10.1016/j.jvoice.2020.04.012",
+      "abstract": "Objective: Effective use of respiratory organs is important for musicians. Therefore, the impact of Respiratory Muscle Training (RMT) on phonation is open to research. The aim of this study was to investigate the measurable effects of RMT on blowing in brass instrumental and on voice performance in singers. Methods: Thirty musicians were recruited and separated into a four groups. The brass instrumental and singers groups were further subdivided into control and RMT groups for a 4 week RMT intervention giving a total four groups: singers experimental (SE; n:10), singers control (SC; n:10), brass instrument players experimental (BIPE; n:5), and BIPC (n:5). The groups selected from the musicians of Samsun State Opera and Ballet Directorate and Samsun Metropolitan Municipality Band Team participated in the study. Results: After 4 weeks of RMT application in the study groups, significant increase in all parameters except Forced vital capacity/Forced expiratory volume in 1 second was observed in the values of pulmonary function tests and respiratory muscle strength in subjects with SE and BIPE (P < 0.05). The most significant results of this study are that in addition to changes in the duration of phonation (SE 36%), high-pitch (SE 79%, BIPE 27%) and low-pitch sounds (BIPE 61% and SE 42%), the SE (15%) and BIPE (3%) groups reached higher pitches in the high-pitch notes. Conclusions: It was determined that performance of the highest and lowest pitch sounds within a vocal register in a single breath and phonation times can be improved by RMT. © 2020 The Voice Foundation ER -"
+    },
+    {
+      "paper_id": "paper_000006",
+      "title": "Singing voice detection in opera recordings: A case study on robustness and generalization",
+      "decision": "exclude",
+      "confidence": 0.88,
+      "reason": "标题和摘要研究歌剧录音中的歌声检测算法，属于音乐信息检索技术，未涉及演唱技巧或声乐教学。",
+      "year": 2021,
+      "journal": "Electronics (Switzerland)",
+      "doi": "10.3390/electronics10101214",
+      "abstract": "Automatically detecting the presence of singing in music audio recordings is a central task within music information retrieval. While modern machine-learning systems produce high-quality results on this task, the reported experiments are usually limited to popular music and the trained systems often overfit to confounding factors. In this paper, we aim to gain a deeper understanding of such machine-learning methods and investigate their robustness in a challenging opera scenario. To this end, we compare two state-of-the-art methods for singing voice detection based on supervised learning: A traditional approach relying on hand-crafted features with a random forest classifier, as well as a deep-learning approach relying on convolutional neural networks. To evaluate these algorithms, we make use of a cross-version dataset comprising 16 recorded performances (versions) of Richard Wagner’s four-opera cycle Der Ring des Nibelungen. This scenario allows us to systematically investigate generalization to unseen versions, musical works, or both. In particular, we study the trained systems’ robustness depending on the acoustic and musical variety, as well as the overall size of the training dataset. Our experiments show that both systems can robustly detect singing voice in opera recordings even when trained on relatively small datasets with little variety. © 2021 by the authors. Licensee MDPI, Basel, Switzerland. ER -"
+    },
+    {
+      "paper_id": "paper_000007",
+      "title": "Voice efficiency for different voice qualities combining experimentally derived sound signals and numerical modeling of the vocal tract",
+      "decision": "include",
+      "confidence": 0.92,
+      "reason": "摘要明确研究西方古典歌唱等不同声乐品质的声效率，直接涉及歌剧演唱技术与声带振动分析。",
+      "year": 2022,
+      "journal": "Frontiers in Physiology",
+      "doi": "10.3389/fphys.2022.1081622",
+      "abstract": "Purpose: Concerning voice efficiency considerations of different singing styles, from western classical singing to contemporary commercial music, only limited data is available to date. This single-subject study attempts to quantify the acoustic sound intensity within the human glottis depending on different vocal tract configurations and vocal fold vibration. Methods: Combining Finite-Element-Models derived from 3D-MRI data, audio recordings, and electroglottography (EGG) we analyzed vocal tract transfer functions, particle velocity and acoustic pressure at the glottis, and EGG-related quantities to evaluate voice efficiency at the glottal level and resonance characteristics of different voice qualities according to Estill Voice Training®. Results: Voice qualities Opera and Belting represent highly efficient strategies but apply different vowel strategies and should thus be capable of predominate orchestral sounds. Twang and Belting use similar vowels, but the twang vocal tract configuration enabled the occurrence of anti-resonances and was associated with reduced vocal fold contact but still partially comparable energy transfer from the glottis to the vocal tract. Speech was associated with highly efficient glottal to vocal tract energy transfer, but with the absence of psychoactive strategies makes it more susceptible to noise interference. Falsetto and Sobbing apply less efficiently. Falsetto mainly due to its voice source characteristics, Sobbing due to energy loss in the vocal tract. Thus technical amplification might be appropriate here. Conclusion: Differences exist between voice qualities regarding the sound intensity, caused by different vocal tract morphologies and oscillation characteristics of the vocal folds. The combination of numerical analysis of geometries inside the human body and experimentally determined data outside sheds light on acoustical quantities at the glottal level. Copyright © 2022 Fleischer, Rummel, Stritt, Fischer, Bock, Echternach, Richter and Traser. ER -"
+    },
+    {
+      "paper_id": "paper_000008",
+      "title": "How does the music that students listen to affect their level of musical literacy? Comparative analysis of Chinese students’ musical literacy formed with modern online technologies in the context of music and non-music academic majors",
+      "decision": "exclude",
+      "confidence": 0.87,
+      "reason": "标题和摘要研究中国学生音乐素养教育，虽提及西方古典音乐和中国歌剧，但主题为通用音乐教育而非西方歌剧咏叹调演唱技巧。",
+      "year": 2024,
+      "journal": "Interactive Learning Environments",
+      "doi": "10.1080/10494820.2023.2205895",
+      "abstract": "The aim of this paper is to determine both the influence of musical compositions’ genres on the students’ musical literacy formed using artificial intelligence technologies and the musical literacy skills among music and non-music major students. Accordingly, the method of analysis was used to identify the most common musical genres in the Chinese music education system. The genres prevailed in the following order: folk music, Western classical music, Chinese opera music, Qi genre, vocal chamber music, and pop music. Identifying genres of music was necessary to examine the impact of each on the development literacy skills in music. The development of music teaching approaches was based on the use of online technology. The technology contributed to the improvement of melodic skills with SwiftScales; articulation skills with Learn Singing; and expressive performance with Singscope. The research findings suggested that students of music majors were more likely to recognize the genres of musical composition (24%) after training, whereas students pursuing non-music majors developed linguistic abilities (27%). The study also revealed that minimal musical knowledge among music students contributes to the improvement of literacy skills in music ((Formula presented.) = 0.82). Non-music students primarily develop memory ((Formula presented.) = 0.84), with improved musical literacy skills as a result of knowledge accumulation. © 2023 Informa UK Limited, trading as Taylor & Francis Group. ER -"
+    },
+    {
+      "paper_id": "paper_000009",
+      "title": "Exploring the Role of Opera Voice Quality Exercise in the Voice Therapy",
+      "decision": "include",
+      "confidence": 0.93,
+      "reason": "标题和摘要探索歌剧声质练习在嗓音治疗中的应用，直接研究歌剧演唱技巧对声学参数的影响。",
+      "year": 2024,
+      "journal": "Journal of Voice",
+      "doi": "10.1016/j.jvoice.2024.02.014",
+      "abstract": "Objective: There are very diverse approaches for voice therapy, and the application of voice quality used in vocal arts in voice therapy can also be seen. However, there is little research on the application of opera voice quality in voice therapy. This study explored the applications of our Opera Voice Quality Exercise in the field of voice therapy and investigated the impacts of this exercise on pitch, intensity, voice quality, and vocal ability. Methods: Sixty-two healthy subjects, defined as those with no discomfort in their voice and no appearance of organic lesions on the larynx via stroboscopic laryngoscopy were included in the study. The subjects were randomly divided into an experimental group of 31 subjects and a control group of 31 subjects. The experimental group received a voice health education and weekly coaching sessions of Opera Voice Quality Exercise, whereas the subjects in the control group only had the former. The acoustic and aerodynamic parameters were evaluated before and after the experimental interventions. Results: When producing [a] at comfortable speech pitch and intensity, the experimental group compared to the control group showed statistically significant improvement (P < 0.05) in the irregularity component (IC) parameter for males. When producing [a] at loudest intensity at a higher pitch in the normal speech pitch range, the experimental group compared to the control group showed statistically significant increase (P < 0.01) in sound pressure level (SPL) as well as improvements (P < 0.05) in shimmer and IC parameters for males. There was a statistically significant increase (P < 0.05) in SPL for females. During continuous speech, the experimental group compared to the control group showed statistically significant increase (P < 0.01) in SPLmax (maximum sound pressure level) for both males and females. There was a statistically significant increase in highest pitch (P < 0.01) and lowest pitch (P < 0.05) for males. Conclusion: Regardless of gender, there is the greatest impact of Opera Voice Quality Exercise on phonation intensity. Furthermore, for males, this exercise causes the voice quality to be improved and the speech pitch to raise. Therefore, there may be applications of Opera Voice Quality Exercise in voice problems with weak voice such as nonorganic hypofunctional dysphonia, vocal fold paresis and paralysis, and voice problems related to Parkinson and age. © 2024 The Voice Foundation ER -"
+    },
+    {
+      "paper_id": "paper_000010",
+      "title": "Acoustical Traditions and Cultural Identity: Exploring Kunqu’s Contribution to Collective Memory",
+      "decision": "exclude",
+      "confidence": 0.91,
+      "reason": "标题和摘要研究昆曲的声学传统与文化身份，属于中国歌剧形式，未涉及西方歌剧或咏叹调。",
+      "year": 2024,
+      "journal": "Acoustics",
+      "doi": "10.3390/acoustics6040061",
+      "abstract": "Kunqu Opera, hailed as the “ancestor of all Chinese operas”, plays a crucial role in preserving cultural identity and collective memory in the Jiangnan region. This research examines the acoustical traditions of Kunqu. Through expert interviews and thematic analysis, the study explores key acoustic elements, including vocal techniques and musical structures, and their symbolic and emotional impact. Five central themes emerged, including Kunqu’s role in collective memory, its function as a cultural symbol, the evolution of its transmission, the emotional resonance of its acoustic elements, and the modern challenges and opportunities for preservation. The findings highlight the importance of maintaining Kunqu’s cultural identity within acoustical heritage, while also recognizing the need for innovation in its transmission. This research contributes to the broader discussion on intangible cultural heritage and provides insights into how traditional art forms like Kunqu can be preserved amidst modernization. © 2024 by the authors. ER -"
+    },
+    {
+      "paper_id": "paper_000011",
+      "title": "Optimization of vocal singing training method based on intelligent big data technology",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "标题和摘要聚焦于通用声乐训练方法优化与大数据技术，未明确涉及西方歌剧咏叹调或特定歌剧演唱技术。",
+      "year": 2023,
+      "journal": "Applied Mathematics and Nonlinear Sciences",
+      "doi": "10.2478/amns.2023.1.00179",
+      "abstract": "With the advancement of science and technology, the relationship between vocal singing training methods and big data technology is getting closer and closer. The application of training methods is a means of expressing vocal compositions. Emotional expression is the ultimate purpose and meaning of method optimization. Training methods and emotional expression are equally important in vocal singing, and both are indispensable. In this paper, a VSSA-separation model is established based on the Vocal Signal Separation Algorithm (VSSA). Focus on optimizing the training method of vocal singing. Through in-depth discussion of existing works, I try to find its inner influence and outer connection. In order to better understand the grasp and application of vocal singing method and emotional expression balance. It can be seen from the calculation that the image shaping in the song language accounts for 83% of the optimization of the training method. Inverse word processing in song language has a different proportion of the optimization of the training method. It accounts for 71% of English operas. It accounts for only 13% of Chinese operas. Artistic effects have the highest average optimization difficulty among the training methods. Its optimization difficulty is as high as 89%. © 2023 Xiaoling Huang, published by Sciendo. ER -"
+    },
+    {
+      "paper_id": "paper_000012",
+      "title": "Does Vocal Fatigue Negatively Affect Low Vocal Range in Professional, Female Opera Singers? A Survey Study and Single-Subject Pilot Study",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确研究专业女歌剧歌手的声带疲劳对音域的影响，直接涉及歌剧演唱技术与表演实践。",
+      "year": 2024,
+      "journal": "Journal of Voice",
+      "doi": "10.1016/j.jvoice.2021.12.005",
+      "abstract": "Objective: 1. To survey how vocal fatigue manifests itself in the vocal range of a sample of professional, female opera singers. 2. To assess laryngeal videostroboscopic changes of one professional, female opera singer before and after extended operatic singing. Methods: Survey study: 296 professional, female opera singers were recruited to participate in an anonymous research survey querying the temporary impact of vocal fatigue in professional, female opera singers. 46.3% of participants described themselves as singing mainstage roles at large, A-level opera houses. Singers were asked to report where in their vocal range they experienced the effects of vocal fatigue and could choose more than one response. Single-subject study: One professional, female opera singer (the author) underwent two laryngeal videostroboscopic exams pre and post vocal loading. The exams were evaluated and compared independently by two blinded laryngologists. Results: The results of the survey found that 42.9% of the total responses from professional, female opera singers indicated a temporary impact on the lower middle range (≈C4-F4) as a result of vocal fatigue. 36.5% of participants experienced a temporary impact on their lowest range (≈below C4) and 19.6% reported a temporary impact on their higher range due to vocal fatigue. The results of the single-subject study showed reduced glottal closure pattern in the postloading, lower middle range, head voice condition. Conclusions: A large proportion (64.9%) of the professional, female opera singers surveyed reported increased difficulty navigating their lower middle range and/or lowest range after extended operatic singing. These results support the single-subject study, which found that after vocal loading, there was a decrease in glottal competence while singing in head voice in the lower middle range. © 2021 The Voice Foundation ER -"
+    },
+    {
+      "paper_id": "paper_000013",
+      "title": "Electromyographic Assessment of the External Laryngeal Muscles of Opera Singers During Phonation and Non-Phonation Tasks",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要研究专业歌剧歌手喉部肌肉的肌电图特征，直接涉及歌剧演唱技术与声乐生理学。",
+      "year": 2024,
+      "journal": "Journal of Voice",
+      "doi": "10.1016/j.jvoice.2022.01.002",
+      "abstract": "Introduction: The surface EMG technique (sEMG) gives valuable assessment of vocal tract as well as diagnosis or outcome assessment in dysphonia. There are very few papers on the use of sEMG in vocal professionalists. Aim: The aim of this study was to evaluate the electromyographic characteristics of selected external laryngeal and neck muscles in professional opera singers. Material: The study material consisted of 50 subjects. Twenty-six opera professional singers and 24 healthy non-singers. Method: Each person underwent otolaryngologic and phoniatric examination, laryngeal videostroboscopy, hearing testing, multiparametric acoustic voice analysis (multidimensional voice program) and sEMG of submentalis, cricothyroid and sternocleidomastoid muscles. Results: Statistical analysis of the values of the amplitudes of the submentalis and the cricothyroid muscles showed significant differences between the vocalists and the control group. Moreover, during vowel phonation and glissando, significantly greater differences in the asymmetry of sternocleidomastoid muscles amplitudes were observed in singers compared to the control group. In most subjects, the studied muscles did not show asymmetry during saliva swallowing. Conclusions: Laryngeal muscle function should be assessed during different phonation and non-phonation tasks. Singers have different SEMG characteristics than non-singers. Knowledge of the patient's history and endoscopic studies is needed to interpret EMG recordings. © 2022 The Voice Foundation ER -"
+    },
+    {
+      "paper_id": "paper_000014",
+      "title": "CORRELATION ANALYSIS ON THE AWARENESS AND EDUCATIONAL ACTIVITIES OF CHINESE OPERA SONG, “XIGE (戏歌)”",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要明确研究中国戏曲歌曲“戏歌”的教学与认知，属于非西方歌剧形式，不符合筛选主题。",
+      "year": 2024,
+      "journal": "Fonseca Journal of Communication",
+      "doi": "10.48047/fjc.28.01.21",
+      "abstract": "One of the reasons that Xige’s singing methods and direction techniques are complicated is that they require Chinese opera song singing techniques, and the other reason is the necessity of reflecting Chinese traditional culture awareness. It is therefore recommended that Xige education be taught by professional teachers in special educational institutions. Considering this point, this study conducted a survey of music major teachers at universities in China. The study questions were seven in total, with the variables of teachers’ awareness of Xige, teaching methods, availability of application methods. They were used in teachers’ preferences and value differentiation for the purpose of determining if there was a correlation between them. In the result, there was an opinion that Xige teaching methods should include a consideration of the value of traditional arts. It was revealed that the more preferences Xige teachers have, the higher their value differentiation. In this context, six of the seven hypotheses were accepted, while a single hypothesis regarding the relationship between teachers’ teaching methods and value differentiation was rejected. This means that teachers could struggle to coordinate many factors of singing methods of plays to create Xige. This finding may be significant in the field of traditional music teaching. Additionally, through frequency analysis based on a survey of teachers’ basic data, we found that higher teaching backgrounds of teachers and their age made them accept Xige more. The most effective channels for passing on Xige are television and internet broadcasts. © 2024 Ediciones Universidad de Salamanca. All rights reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000015",
+      "title": "Heroic Artists, Critical Abuse, and the Death of Maria Malibran",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "标题和摘要聚焦于歌剧歌手Maria Malibran的传记与生平分析，未涉及咏叹调演唱技术或声乐教学法。",
+      "year": 2023,
+      "journal": "Journal of Musicology",
+      "doi": "10.1525/jm.2023.40.1.103",
+      "abstract": "Maria Malibran (1808-36), the most famous opera star of her day, suffered a violent, protracted, and gory death. Although the story of her final days has been told time and again, this article offers a new reading, focusing on the abuse that she sustained as a child at the hands of her father,Manuel Garcia, and the subsequent trauma that followed her for the rest of her life. This rereading of Malibran's death draws on the growing body of scholarship dedicated to understanding the daily life and contributions of performers, especially prima donnas. In reevaluating some of the key moments of her development as an artist and person, I nevertheless take a largely biographical approach, adding elements to her story while casting new light on other established narratives. In so doing, my aim is not only to correct long-standing assumptions surrounding the causes of her illnesses and death but also to illustrate that many of the pressures Malibran faced throughout her career reveal a set of burdens shared by many other prima donnas as well as some leading men. By exploring how Malibran responded to these pressures, I expand the picture of the conditions in which nineteenth-century prima donnas were trained and worked, and suggest that their heroism can be taken at face value, without the guise of mythical Romanticism. © 2023 by The Regents of the University of California. ER -"
+    },
+    {
+      "paper_id": "paper_000016",
+      "title": "Kazakh opera in the dialogue of traditions: Transformation of national heritage in the world academic vocal art",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "标题和摘要讨论哈萨克歌剧如何融合民族传统与西方歌剧技术（包括美声唱法），但主题是民族歌剧而非西方歌剧咏叹调技术。",
+      "year": 2025,
+      "journal": "Rast Muzikoloji Dergisi",
+      "doi": "10.12975/rastmd.20251346",
+      "abstract": "Kazakh opera is an original phenomenon in the history of musical art, which arose as a result of the dynamic interaction of the national musical heritage of Kazakhstan with Russian and Western European opera traditions. Starting from the earliest works such as Kyz Zhibek by E. Brusilovsky, Abai by A. Zhubanov and L. Khamidi and Birzhan-Sara by M. Tulebaev, Kazakh composers sought to integrate folklore elements into the academic opera form. This synthesis included not only direct quoting of folk songs, but also a reinterpretation of the Kazakh intonation system within the framework of opera dramaturgy. The influence of Russian opera, especially with regard to the use of folklore material as a dramatic basis, and the borrowing of Western European forms, including the bel canto vocal technique, played a decisive role in shaping the national style. A distinctive feature of this process is the introduction of symphonic thinking into Kazakh opera. Drawing inspiration from Russian composers who expanded the scale and depth of the opera through symphonic development, Kazakh composers combined this structural approach with national melodic and rhythmic features. This combination has made Kazakh opera more accessible to both local, Russian and international audiences. The expressive potential of this genre has been further expanded due to the psychological depth of the arias, where the music goes beyond simple accompaniment and becomes an independent dramatic element. The bel canto technique, adapted to the phonetic, harmonic and declamatory features of the Kazakh language, contributed to the emergence of a national opera style combining European technical skill with the plasticity and emotional richness of the Kazakh melody. In the context of globalization, Kazakh opera serves as an example of cultural hybridity, where traditions are not eroded, but are revived in dialogue with world artistic practices. Modern productions demonstrate the genre’s continued ability to preserve its cultural identity while simultaneously seeking renewal and international recognition, ensuring its relevance in the cultural arena of the 21st centuryt. © (2025), (Genç Bilge Yayıncılık). All rights reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000017",
+      "title": "Acoustic Characteristics of Modern Chinese Folk Singing at Different Vocal Efforts",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要研究现代中国民族唱法的声学特征，明确比较中国戏曲与西方古典唱法，但主题是中国民族唱法而非西方歌剧。",
+      "year": 2024,
+      "journal": "Journal of Voice",
+      "doi": "10.1016/j.jvoice.2024.09.022",
+      "abstract": "Objectives: Modern Chinese folk singing is developed by fusing regionally specific traditional Chinese singing with Western scientific training techniques. The purpose of this research is to contribute to the exploration of the acoustic characteristics of Chinese folk songs and the efficient resonance space for the performance. Method: Seven tenors and seven sopranos were invited to sing three songs and read the lyrics in an anechoic chamber. The vocal outputs were meticulously recorded and subjected to a comprehensive acoustic analysis. Overall equivalent sound level, long-term average spectrum (LTAS), gain factors, and other acoustic parameters were analyzed for different vocal efforts (soft, normal, and loud), genders, and vocal modes (singing and speaking). Results: Male singers have singer's formant at 3 kHz in LTAS, a characteristic not found in other country singers or Chinese opera singers, but slightly higher than the frequency of Western Classical singers. Female singers do not have singer's formant and their LTAS curves are much flatter. The α, spectral balance, and singing power ratio all increased with increasing vocal effort, and they are higher for singing than for speaking. Finally, there is a significant gain factor at 3 kHz, with a maximum value of 1.85 for men and 1.68 for women. Conclusions: Male singers in Chinese folk singing have a singer's formant, a phenomenon not consistently observed in their female singers. The intricate acoustic characteristics of this singing style have been extensively examined and can contribute to the existing literature on the spectral properties of diverse vocal genres. Furthermore, this analysis offers foundational data essential for the optimization of room acoustics tailored to vocal performance. © 2024 The Voice Foundation ER -"
+    },
+    {
+      "paper_id": "paper_000018",
+      "title": "Ethnocultural technologies of vocal training of students of pedagogical universities of China",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要探讨基于中国戏曲传统的声乐训练技术，用于音乐教师教育，属于非西方歌剧形式。",
+      "year": 2024,
+      "journal": "Edelweiss Applied Science and Technology",
+      "doi": "10.55214/25768484.v8i6.2337",
+      "abstract": "The training of music teachers in China's pedagogical universities is based on strategies for linking national cultural traditions and innovative education systems in other countries. Today, special attention is paid to the training of music teachers, which is due to the increased demand of children and parents for music education. The deepening of such training is facilitated by the special specializations of students, which allow them to acquire knowledge and performing skills in a particular type of musical activity in the final semesters of study at the university. But, since students receive education in pedagogical universities, this performance training should be based on Chinese ethnocultural traditions, and be organically combined with pedagogical training. The article examines an ethnocultural technologist based on the traditions of the national Chinese opera, contributing to the formation of stage skills necessary both for staging an opera performance by students and for replenishing the pedagogical baggage of a school music teacher. The introduction of this technology into the \"Performing Arts\" subject of the \"Vocal Music\" specialization among fourth-year students has shown its effectiveness both for staging fragments of opera performances, not only by Chinese but also by Western composers and for replenishing the pedagogical skills of future music teachers. © 2024 by the authors; licensee Learning Gate. ER -"
+    },
+    {
+      "paper_id": "paper_000019",
+      "title": "Modelling note’s pitch and duration in trained professional singers",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "摘要提到研究主要针对歌剧风格的专业歌手，分析音符音高与时长，但未明确涉及咏叹调或具体演唱技术细节。",
+      "year": 2024,
+      "journal": "Eurasip Journal on Audio, Speech, and Music Processing",
+      "doi": "10.1186/s13636-024-00380-4",
+      "abstract": "Performing musical notes correctly does not mean that all the performers will play the notes at the exact same pitch and duration. However, it does imply that they are performing the notes within acceptable psychoacoustic ranges. Therefore, this article aims to find the range of a note’ duration and pitch according to its position in a piece of music by analysing several parameters in trained-professional singers’ behaviours in singing notes. To achieve the goal, the variations of eight variables on 2688 solo singing recorded files by trained professional singers were investigated to find the relationships between a performed note’s F0 and duration with these variables. The variables considered in this study are the interval to the following and previous notes, the existence of rest before or after the note, the note’s MIDI pitch code and duration in a music score, and the particular singing technique applied. The Bayesian hierarchical model was used to find the effect of the variables on the pitch and duration of a note sung by professionals, mainly in opera style, singers. The investigation confirms that these parameters affect the pitch and duration of notes performed by professional singers. Finally, this paper proposes formulas to calculate the pitch frequency and duration of the notes according to the variables to simulate the behaviour of the trained-professional singers in performing notes’ pitches and duration. © The Author(s) 2024. ER -"
+    },
+    {
+      "paper_id": "paper_000020",
+      "title": "The Unity of Music, Singing and Movement: From The Experience of the Production the Opera “Orpheus and Eurydice” by K. V. Gluck in the Genre of Vocal-Plastic Action",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "标题和摘要描述格鲁克歌剧《奥菲欧与尤丽狄茜》的制作，涉及声乐-动作训练方法，直接关联歌剧表演实践与演唱技术。",
+      "year": 2021,
+      "journal": "Musical Art and Education",
+      "doi": "10.31862/2309-1428-2021-9-1-43-59",
+      "abstract": "The article is dedicated to the author’s own experience of the production of Gluck’s “Orpheus and Eurydice” in the genre of vocal-plastic action. The main character of the performance is the “dancing choir” which plastically expresses the musical images and meanings. The unity of music and dancing, singing and movement creates a specific type of musical theatre, musical drama being the basis of the action. The work was based on the method of musical movement and vocalmovement training. On this foundation, the training of performers was carried out, which allowed in the further to combine organically movement with singing, to create one ensemble, singing and dancing at the same time. The article sets out the main principles of vocal-movement training – the author’s method of training the singing voice and basic vocal skills building through active movement during group classes. The stages of work on the performance, the search for a harmonious union of musical, plastic, vocal and plot lines of the performance are described. In order to carry out the concept of the performance-action the innovative techniques have been worked out. The article reveals connection between the proposed approach and the main trends in the development of art in the late XIX – early XXI centuries: the idea of the synthesis of arts, improvisation, interest in the creative process itself and creation of a work, the active role and co-authorship of all participants in the performance, including the audience, the desire of a modern person to overcome machinery and gain the lost integrity. © Айламазьян А. М., Ганешина М. А., 2021 ER -"
+    },
+    {
+      "paper_id": "paper_000021",
+      "title": "STRIVING FOR THE UNDERNEATH: BODY AND PATHOS IN CHAYA CZERNOWIN’S COMPOSITION FOR VOICE IN INFINITE NOW AND HEART CHAMBER",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "标题和摘要聚焦于当代歌剧作曲家的声乐合奏技术，但未明确涉及咏叹调或传统西方歌剧演唱技巧。",
+      "year": 2023,
+      "journal": "Tempo (United Kingdom)",
+      "doi": "10.1017/s0040298223000086",
+      "abstract": "In her two recent operas, Heart Chamber (2017–19) and Infinite Now (2015–16), Chaya Czernowin uses vocal ensembles to embody a single character. In a 2016 article, she explained that she wanted to liberate the individual voice from its fixed emotional, social and individual conventions (especially its ingrained pathos), and to work with the voice as a free imaginative sonic material, using the ensemble technique to achieve this. This article argues that the voice ensemble technique amplifies and intensifies the pathos of the voice rather than eliminating it. Recognising that the voice has strong somatic qualities since it is produced in the body, I suggest a material-musical analysis, based on the theories of Hans Ulrich Gumbrecht and Brian Massumi, that focuses on the body, the sensual experience and the physical space, and rejects the hermeneutic tradition that refers to meaning and interpretation only. What emerges is that the voices, instrumentation and electronics of the ensemble are designed to embody the inner body and the outer space at the same time. The voice ensemble may split and produce multi-layered mental–physical states, and express how traditional dichotomies, such as culture/nature, body/mind and subject/object, can meld into multi-perspective processual movements. It is in this intersection of sound and drama, manifesting the corporeal, that the unique power of opera is evinced. © The Author(s), 2023. Published by Cambridge University Press. ER -"
+    },
+    {
+      "paper_id": "paper_000022",
+      "title": "Increased Callosal Thickness in Early Trained Opera Singers",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确研究歌剧歌手的脑结构变化，涉及专业声乐训练，符合纳入标准。",
+      "year": 2025,
+      "journal": "Brain Topography",
+      "doi": "10.1007/s10548-025-01134-x",
+      "abstract": "Structural adaptations of the corpus callosum have been well documented in early-trained instrumental musicians, reflecting experience-dependent plasticity in response to bimanual coordination and auditory–motor integration. Although the sensorimotor demands of singing differ, professional vocal training also requires precise control of bilateral vocal tract musculature and integration of auditory feedback; yet, less is known about whether similar adaptations occur in professional singers. This study used structural neuroimaging to investigate variations in callosal thickness in relation to vocal training in 55 participants, including 27 professionally trained opera singers and 28 non-singers. A significant negative correlation between age at first singing lesson and callosal thickness was observed in singers, with effects surviving correction for multiple comparisons in the anterior third (rostrum, genu, rostral body), at the anterior-posterior midbody border, and the isthmus. While group comparisons revealed greater callosal thickness in singers than non-singers in these same regions, these differences did not remain significant after correction. Likewise, a positive correlation between years of professional singing and callosal thickness in the midbody did not survive correction for multiple comparisons. Our main finding aligns with prior evidence of training-related plasticity in the corpus callosum and suggests that early musical experience—including in the context of intensive vocal practice—may contribute to enhanced interhemispheric connectivity. Although the current design does not allow us to isolate effects specific to singing compared to other forms of sensorimotor training, the results underscore developmental timing as a key factor in how prolonged musical experience may shape brain structure. © The Author(s) 2025. ER -"
+    },
+    {
+      "paper_id": "paper_000023",
+      "title": "Effects of Historical Recording Technology on Vibrato in Modern-Day Opera Singers",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要直接研究西方歌剧歌手的颤音技术，明确涉及演唱技巧。",
+      "year": 2022,
+      "journal": "Journal of Voice",
+      "doi": "10.1016/j.jvoice.2020.07.022",
+      "abstract": "Objective: Past literature indicates that vibrato measurements of singers objectively changed (i.e., vibrato rate decreased and vibrato extent increased) from 1900 to the present day; however, historical audio recording technology may distort acoustic measurements of the voice output signal, including vibrato. As such, the listener's perception of historical singing may be influenced by the limitations of historical technology. This study attempts to show how the wax cylinder phonograph system—the oldest form of mass-produced audio recording technology—alters the recorded voice output signal of modern-day singers and, thus, provides an objective lens through which to study the effect(s) of historical audio recording technology on vibrato measurements. Methods: Twenty professional Western opera singers sang a messa di voce on the vowel [a] and on the pitch C4 for male singers and C5 for female singers, three times into a flat-response omnidirectional microphone and onto an Edison Home Phonograph simultaneously. The middle 1–3 seconds (6–10 vibrato cycles) of each sample was analyzed for vibrato rate, vibrato extent, jitter (ddp), shimmer (dda), and fundamental frequency for each recording condition (wax cylinder phonograph or microphone). Steady-state and frequency-modulating sinewave test signals were also recorded under the multiple recording conditions. Results: Results indicated no significant effect of recording condition on vibrato rate (mean [standard deviation], cylinder: 5.3 Hz [0.5], microphone: 5.3 Hz [0.5]) and no significant difference was found for mean fundamental frequency (cylinder: 389 Hz [137], microphone: 390 Hz [137]). A significant main effect of recording condition was found for vibrato extent (cylinder: ±103 cents [30], microphone: ±100 cents [31]). Additionally, mean jitter (ddp) (cylinder: 1.22% [1.09], microphone: 0.24% [0.12]) and mean shimmer (dda) (cylinder: 9.40% [4.90], microphone: 1.92% [0.94]) were significantly higher for the cylinder recording condition, indicating more cycle-to-cycle variability in the wax cylinder recorded signal. Analysis of test signals revealed similar patterns based on recording condition. Discussion: This study validates past scholarly inquiry about vibrato measurements as extracted from digitized wax cylinder phonograph recordings by demonstrating that measured vibrato rate remains constant during both recording conditions. In other words, vibrato rate as measured from historical recordings can be viewed as an accurate representation of the historical singer being studied. Furthermore, it suggests that the value of prior vibrato extent measurements from these acoustic recordings may be slightly overestimated from the original voice output signals produced by singers near the beginning of the 20th century (i.e., a narrow vibrato extent might have been numerically smaller on average). Increased jitter and shimmer in the wax cylinder recording conditions may be indicative of nonlinearities in the phonograph recording or playback systems © 2020 The Voice Foundation ER -"
+    },
+    {
+      "paper_id": "paper_000024",
+      "title": "The use of traditional chinese elements in selected saxophone works by Lei Liang",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要聚焦于萨克斯管作品中的中国京剧元素，不符合西方歌剧传统。",
+      "year": 2021,
+      "journal": "Journal of Music Research",
+      "doi": "10.6244/jomr.202111_(35).04",
+      "abstract": "The purpose of this study is to examine the use of traditional Chinese elements in two of Lei Liang’s saxophone works, Peking Opera Soliloquy and Xiaoxiang, and to analyze how Liang incorporates such elements into compositions written largely with Western musical techniques and vocabularies. Traditional Chinese elements identified in these pieces include Peking Opera singing, Peking Opera accompaniment, traditional Chinese melodies, one-note polyphony, and other Chinese artistic elements such as negative space and calligraphy. This study also explores how the traditional Chinese musical and artistic elements are reproduced or alluded to with western musical notation, genres, saxophone performance styles and techniques in creative and innovative ways. It is hoped that this research can inspire further investigations on works of saxophone or works of other musical instruments with embedded Chinese elements. © 2021, National Taiwan Normal University-College of Music. All rights reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000025",
+      "title": "Tradition and innovation in Henan Opera: An ethnographic study of Chen Suzhen's artistic legacy and the aesthetics of performance",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要研究河南戏曲，属于非西方歌剧形式，明确命中排除标准。",
+      "year": 2026,
+      "journal": "Multidisciplinary Science Journal",
+      "doi": "10.31893/multiscience.2026254",
+      "abstract": "Henan Opera stands as one of China’s most prominent regional operatic traditions, renowned for its vivid vocal styles, heroic spirit, and symbolic stagecraft. The researcher conducted qualitative research and collected data through field investigations involving key informants. Research tools included observation and interviews. This review explores its performance aesthetics through the artistry of Chen Suzhen, whose legacy embodies both preservation and innovation. Chen mastered the four pillars of performance—singing, recitation, acting, and combat—yet distinguished herself by fusing these skills into psychologically rich and emotionally authentic portrayals. Her artistry was characterized by refined emotional expression, from subtle eye movements and powerful crying scenes to the seamless integration of emotion into her vocal resonance. Through mastery of head, chest, and oral resonance, she transformed singing into a vessel of character psychology. She also redefined the use of costumes and props, elevating water sleeves and fans into expressive tools that externalized inner feelings. These innovations established the Chen School, a stylistic lineage that continues to shape Henan Opera. Preserving its vitality requires combining individual and group transmission, archival protection, and new educational initiatives. Chen Suzhen’s ethos—anchoring technique in emotion and role psychology—offers a sustainable path for Henan Opera’s future, uniting tradition with contemporary relevance. Copyright (c) 2026 The Authors. This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. ER -"
+    },
+    {
+      "paper_id": "paper_000026",
+      "title": "Electrophysiological predictors of hyperfunctional dysphonia",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "摘要提到研究对象包括专业歌剧歌手，但主要研究发声障碍的生理指标，与演唱技巧的相关性不明确。",
+      "year": 2023,
+      "journal": "Acta Oto-Laryngologica",
+      "doi": "10.1080/00016489.2022.2162961",
+      "abstract": "Background: The relation between the autonomic nervous system (ANS) and muscles of the vocal tract is of particular importance when considering the pathomechanism of a functional voice disorder. Aims: The aim of this study was to record electrophysiological indicators from the ANS as well as the tone of the external laryngeal muscle and test whether together they could point to an enhanced risk of primary functional voice disorder. Materials and methods: The study material consisted of 81 people, 27 of whom were professional opera singers. None reported any voice complaints. The research comprised ENT and phoniatric examination, superficial electromyography (SEMG), and recording of physiological indicators (pulse rate, skin resistance). Results: All subjects had a clear voice with no sign of vocal disability. Endoscopy revealed laryngeal hyperfunction in 26 people. SEMG revealed that the 26 had increased external laryngeal muscle tone during phonation, and this finding correlated with a change in certain electrophysiological indicators HRV, BVP, EDA. Conclusions: We conclude that anomalies in electrophysiological parameters in individuals with subclinical symptoms of functional voice disorder may be at risk of developing fully symptomatic hyperfunctional dysphonia in the future. Vocal training, which differentiates singers and non-singers, is known to have an effect on subclinical hyperfunctional dysphonia. Significance: By measuring indicators of hyperfunctional dysphonia, it may be possible to take remedial action before symptomatic dysphonia develops. © 2023 Acta Oto-Laryngologica AB (Ltd). ER -"
+    },
+    {
+      "paper_id": "paper_000027",
+      "title": "Processing of Vocal Music Using Artificial Intelligence: Unveiling Creative Potential and Shaping Listener Perception",
+      "decision": "uncertain",
+      "confidence": 0.45,
+      "reason": "摘要涉及人工智能处理声乐音乐，但提到歌剧评分较低，是否聚焦歌剧演唱技巧不明确。",
+      "year": 2025,
+      "journal": "Perceptual and Motor Skills",
+      "doi": "10.1177/00315125251407932",
+      "abstract": "Technological transformations occurring at the intersection of artificial intelligence and vocal music necessitate an epistemological reevaluation of both perceptual mechanisms and creative capacities. The integration of artificial intelligence with vocal music compels a reconsideration of perceptual mechanisms and creative potential. While prior research has focused primarily on the technical accuracy of AI systems, their influence on perception and broader cultural implications has remained largely unexplored. The present study addresses this research gap. This study quantitatively assesses the impact of AI on vocal-music processing. Employing a mixed-methods approach, it examines algorithmic integration within musical traditions, explores correlations between technical parameters and affective responses that characterize human–AI collaboration, and compares architectural variations among systems along with their perceptual consequences. Statistical analysis revealed differences in genre receptivity: contemporary music (EDM and jazz) received a mean score of μ = 9.0, whereas traditional genres such as opera (μ = 5.0) and classical music (μ = 6.0) remained at comparatively low levels. The integration of artificial intelligence enhanced musicians’ creative output from M = 6.7 to M = 8.1 and increased audience engagement by 12%. Correlational analysis confirmed a strong association between emotional intensity and listener engagement (r = 0.72). Educational institutions may implement AI-enhanced vocal training programs; recording studios are adopting system-specific technologies tailored to desired affective outcomes; and cultural-heritage initiatives can leverage algorithmic assistance while preserving interpretive authenticity. © The Author(s) 2025 ER -"
+    },
+    {
+      "paper_id": "paper_000028",
+      "title": "Speak Like You Sing: Integrating Classical Techniques From Theatre and Music in Spoken Dialogue for Opera",
+      "decision": "include",
+      "confidence": 0.92,
+      "reason": "标题和摘要明确研究歌剧歌手的说话与演唱技巧整合，涉及声乐教学和表演实践。",
+      "year": 2024,
+      "journal": "Journal of Voice",
+      "doi": "10.1016/j.jvoice.2021.08.008",
+      "abstract": "Objective: In order to maintain characterization throughout a production, opera singers frequently need skills in more than one vocal task. This exploratory study investigated spoken dialogue before and after two hours of training (one-hour class, one-hour tutorial) in the use of language as an actor, with breath management, pitch range, and resonance strategies of a singer. Comparative recordings of sung and spoken material were analyzed for acoustic qualities. Design: At the National Opera Center, New York, six professional singers from different voice categories recorded one minute of spoken dialogue before training. Approximately a week later, they recorded one minute of an aria, unaccompanied, followed by the spoken dialogue post-training, then improvised a one - two-minute performance moving between singing and speaking. Data were analyzed for fundamental frequency (F0), sound pressure level (SPL), and long-term average spectrum (LTAS). Results: Comparing for all singers pre- to post-training, mean F0 of spoken dialogue increased and SPL mean and range increased. Comparing aria to spoken dialogue post-training, SPL range increased. F0 ranges were closer to each other in improvisation than in separate performances of aria and dialogue. Energy peaks between 2 and 4 kHz on LTAS appeared in more than one performing condition. Conclusions: In spoken dialogue post-training, some F0 and SPL data gravitated toward those of the aria and away from the initial recording, suggesting that participants were beginning to transfer production skills from singing to speaking. A perceptual study is needed to assess characterization and the use of language pre- and post-training. © 2021 The Authors ER -"
+    },
+    {
+      "paper_id": "paper_000029",
+      "title": "Remember Me: Vocal Cadenzas as Mementos in Nineteenth-Century Musical Autograph Albums",
+      "decision": "include",
+      "confidence": 0.88,
+      "reason": "标题和摘要研究19世纪女性歌手的声乐华彩段，明确涉及歌剧咏叹调和演唱艺术。",
+      "year": 2023,
+      "journal": "Journal of the American Musicological Society",
+      "doi": "10.1525/jams.2023.76.2.279",
+      "abstract": "Between the 1830s and the 1880s, leading female singers such as Henriette Rossi Sontag, Laure Cinti-Damoreau, Adelina Patti, and Pauline Viardot participated in a widespread custom of inscribing original vocal cadenzas in autograph albums (also known as friendship albums, keepsake albums, alba amicorum, or Stammbücher). The appeal of album cadenzas, along with other compact inscriptions, reflects a wider Romantic fascination with remembering through small keepsakes such as miniature almanacs and annual compilations of poetry, prose, or music. Whether improvised in the presence of collectors or offered as souvenirs of earlier performances, cadenzas functioned as mementos of musical and social encounters while visually representing singers’ musical personae through performative gestures. These florid pieces also allowed female singers to exercise agency as both creative artists and curators of their public images, much like the (mostly male) composers whose musical signatures fill surrounding album leaves. As performance-practical sources, vocal cadenzas preserve rare and revealing traces of singers’ artistry; many, in fact, can be linked to specific concerts or performances of operas by Bellini, Donizetti, Meyerbeer, Rossini, Verdi, and others. In the case of Cinti-Damoreau, such music illuminates the connection between improvisation, performance, and pedagogy. The gradual disappearance of album cadenzas during the last quarter of the nineteenth century is attributable not only to a waning interest in musical improvisation generally, but also to a shift in creative authority away from singers and toward composers, particularly in the operatic realm. © 2023 University of California Press. All rights reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000030",
+      "title": "“Below 58 BPM,” involving real-time monitoring and self-medication practices in music performance through IoT technology",
+      "decision": "uncertain",
+      "confidence": 0.48,
+      "reason": "摘要提到歌剧演唱技巧，但主要研究物联网健康监测系统，是否聚焦演唱技术本身不明确。",
+      "year": 2024,
+      "journal": "Frontiers in Computer Science",
+      "doi": "10.3389/fcomp.2024.1187933",
+      "abstract": "The project presented in this paper illustrates the design process for the development of an IoT system that monitors a specific bio-metric parameter (heart rate) in real time and provides feedback for an opera singer, as well as adding effects that manipulate the sounds emitted by the body during a self-healing practice. This allows the singer to rest and alternate opera singing techniques (which is very demanding) with other less demanding singing techniques and even a self-healing session in case of necessity during a performance. The case study presented in this paper has been developed with and for Eleonora Amianto, an opera singer who suffered from a carotid aneurysm. We performed an idiographic design process, closely collaborating with Eleonora, and developed a wearable IoT that suited her health and artistic needs. In the design of the system, we explore the intersection between self-healthcare and performative arts, focusing on the use of an Internet of Musical Things (IoMusT) system to implement medical prevention and treatment practices in an art performance. The system is developed using open-source tools, allowing for easy replication and improvement, as well as reducing risks of obsolescence and costs of updating. We complement a formal evaluation session with field notes collected during the design phase. We could observe a positive effect of the system on Eleonora's practice and its potential applications within different performative scenarios. Copyright © 2024 Merendino, Rodà and Masu. ER -"
+    },
+    {
+      "paper_id": "paper_000031",
+      "title": "Three-dimensional analysis of vocal fold nodules in operatic soprano singers undergoing microlaryngeal surgery: Differences according to voice type subcategories (Lyric vs. Dramatic)",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确研究歌剧女高音歌手的声带结节，聚焦于声部类型对声乐技术的影响。",
+      "year": 2026,
+      "journal": "Auris Nasus Larynx",
+      "doi": "10.1016/j.anl.2025.12.006",
+      "abstract": "Objectives Vocal demands in opera singers vary not only by vocal range but also by voice type subcategories (e.g., lyric vs. dramatic), which shapes technique and repertoire. Despite this, little is known about how these voice subcategories influence vocal fold pathology. To address this gap, we investigate the three-dimensional characteristics of vocal fold nodules in professional soprano opera singers and to clarify morphological differences based on voice type subcategories (lyric vs. dramatic). Methods This retrospective study included 19 professional soprano singers who underwent microlaryngeal surgery for bilateral vocal fold nodules between January 2018 and May 2023. Voice type subcategories, based on self-reported repertoire, was categorized as either lyric or dramatic. Nodules were classified as edematous or fibrous. Vertical location, estimated area, estimated contact area, and estimated volume of the nodules were calculated using intraoperative measurements and surgical video review. Statistical comparisons were performed between the lyric and dramatic groups. Results A total of 38 nodules were analyzed: 26 from lyric sopranos and 12 from dramatic sopranos. Lyric sopranos predominantly exhibited edematous nodules (24/26), while dramatic sopranos had a higher proportion of fibrous nodules (6/12). In both groups, nodules were more frequently located in the upper part of the vocal folds. Lyric sopranos showed significantly greater width, estimated area, estimated contact area, and estimated volume of vocal fold nodules compared to dramatic sopranos. Conclusion Voice-type subcategories may influence the morphological characteristics of vocal fold nodules in professional soprano singers. Lyric sopranos tend to develop larger, edematous nodules, likely due to repetitive high-frequency phonation, while dramatic sopranos are more prone to smaller, fibrotic nodules, potentially resulting from greater horizontal mechanical stress. Copyright © 2025. Published by Elsevier B.V. ER -"
+    },
+    {
+      "paper_id": "paper_000032",
+      "title": "Content and Main Directions of Training Singers for the Professional Performance Activity of the Artist-Vocalist of Musical",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要明确研究音乐剧歌手的训练，属于非歌剧的流行音乐形式。",
+      "year": 2021,
+      "journal": "Musical Art and Education",
+      "doi": "10.31862/2309-1428-2021-9-3-107-121",
+      "abstract": "The article is devoted to identifying the features of the work and professional training of an artist-vocalist of a musical, one of the most relevant and demanded genres of the 21st century. It is shown that the formation of the musical as a synthetic genre was carried out under the influence of musical theater, opera, operetta, vaudeville, minstrel show, burlesque. The formation of such varieties as American, British, French and Russian musicals was due to the specifics of national composing schools, approaches to the choice of the plot, the interpretation of drama and forms of theatrical practice. The idea is substantiated that the versatility of the genre imposes a number of special requirements on actors. For a deeper and more multifaceted understanding of the activities of an artist-vocalist of a modern musical, his Professiogram is offered. It contains a general description of the content of the singer’s work (functions, responsibilities and tasks), and also includes an analysis of the requirements for professional knowledge, skills, business and personal qualities of the performer. To concretize the main directions of professional training of an artist-vocalist of a musical, the article also considers the key components of his performing activity. These are vocal, acting, choreographic work and work on the stage image. In the article conclusion, it is concluded that drawing up a professiogram allows to identify professional requirements for an individual educational training strategy, to improve artistic skills and the formation of specialized educational programs in educational institutions of the corresponding profile and level, including in the system of additional music education. © 2021. All Rights Reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000033",
+      "title": "Louise: Wagnerism, Realism, Stage, Screen",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "标题和摘要分析歌剧《路易丝》的瓦格纳主义与现实主义，未涉及歌唱技术或声乐教学。",
+      "year": 2024,
+      "journal": "Nineteenth Century Music",
+      "doi": "10.1525/ncm.2024.48.1-2.19",
+      "abstract": "Gustave Charpentier’s opera Louise (1900) strikes an unlikely but successful compromise between a Wagnerian aesthetic and a Naturalist one. The opera’s very musical language adopts Wagnerian leitmotivic technique, but eschews the Wagnerian tendency toward the autonomy of the artwork, and instead references both other compositions and the external world. This tension is exploited in Abel Gance’s 1939 film adaptation of Louise. Gance’s Louise conflates Charpentier’s male protagonist with Charpentier himself, and reenacts the opera’s plot and the opera’s genesis at the same time. It is, therefore, a hybrid between two types of early opera film, the “prose opera” and the “parallel opera.” Musically, Charpentier’s score is disassembled and reassigned to the various components of the film’s soundtrack: underscoring, diegetic music, “artless” singing, sound effects. The opera’s music, then, becomes the material through which Gance builds a work that is thoroughly conceived for the new medium. And in the context of the new medium, the tension between Wagnerism and Naturalism is replaced by a tension between a photographic mode (the relatively unmediated depiction of reality) and an auratic mode (reality as filtered through the imagination of the character-composer). © 2024 by The Regents of the University of California. All rights reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000034",
+      "title": "THE LAWS OF SUCCESSFUL PROFESSIONAL ACTIVITY OF AN ACADEMIC SINGER",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "标题和摘要提及声乐教学法，但未明确是否针对歌剧或咏叹调，信息不足。",
+      "year": 2024,
+      "journal": "Musical Art and Education",
+      "doi": "10.31862/2309-1428-2024-12-2-126-136",
+      "abstract": "The article briefly describes the features of vocal pedagogy and methodology as a combination of the empirical basis and scientific basis of the singing process, and outlines the need to develop understandable rules (laws) for the successful training and professional work of academic singers. For the first time, a classification of the laws of the singing process has been proposed, including the laws of physics, acoustics, physiology and psychology, as well as the patterns of life of an academic singer. These laws will be useful not only for academic vocal teachers, but also for singers in the implementation of their long and successful professional career. © Семкин Д. Н. ER -"
+    },
+    {
+      "paper_id": "paper_000035",
+      "title": "Research on character tone trend clustering of Kunqu Opera based on quantum adaptive genetic algorithm",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确研究昆曲的声腔趋势，属于非西方歌剧形式。",
+      "year": 2024,
+      "journal": "Digital Scholarship in the Humanities",
+      "doi": "10.1093/llc/fqad074",
+      "abstract": "Kunqu, one of the oldest forms of Chinese opera, features a unique artistic expression arising from the interplay between vocal melody and the tonal quality of its lyrics. Identifying Kunqu's character tone trend (vocal melodies derived from tonal quality of the lyrics) is critical to understanding and preserving this art form. Traditional research methods, which rely on qualitative descriptions by musicologists, have often been debated due to their subjective nature. In this study, we present a novel approach to analyze the character tone trend in Kunqu by employing computer modeling machine learning techniques. By extracting the character tone trend of Kunqu using computational modeling methods and employing machine learning techniques to apply cluster analysis on Kunqu's character tone melody, our model uncovers musical structural patterns between singing and speech, validating and refining the qualitative findings of musicologists. Furthermore, our model can automatically assess whether a piece adheres to the rhythmic norms of 'the integration of literature and music' in Kunqu, thus contributing to the digitization, creation, and preservation of this important cultural heritage. © The Author(s) 2023. ER -"
+    },
+    {
+      "paper_id": "paper_000036",
+      "title": "Integrated Sports Medicine: A First Investigation of Heart Performance in Opera Singers",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "标题和摘要研究歌剧歌手的心脏性能，直接涉及歌剧歌唱的生理影响。",
+      "year": 2022,
+      "journal": "Journal of Functional Morphology and Kinesiology",
+      "doi": "10.3390/jfmk7020036",
+      "abstract": "Introduction: Opera singers are continuously subjected to cardiopulmonary exercise. The impact on cardiac performance has not been studied. Our aim was to verify the impact of singing on heart performance, particularly by the evaluation of ECG and deformation parameters as strain, rotation and twist. Methods: A population of 17 OS (opera singers) underwent a 12-lead ECG and 2D echocardiographic evaluation. A post-processing analysis of the images to obtain the deformation parameters was included. The data expressed as mean as SD were compared to a group of 15 high-level athletes (A). Results: In both groups, the ECG parameters, 2D standard systodiastolic parameters and pulmonary pressure were normal, and in the OS group—LVDd: 47 ± 2.75 mm, LVSd: 31 ± 3.38 mm, E/A: 1.08 ± 0.23, RV: 27.63 ± 3.38 mm; in the A group—LVDd: 51 ± 1.50 mm, LVSd: 32 ± 2.50 mm, E/A: 2.37 ± 0.73, RV: 25.00 ± 3.00 mm. Indexed LV mass was significantly greater in athletes, while ejection fraction (EF) results were higher in OS. Deformation parameters did not differ among the two groups, with the exclusion of GLS expressing a major value in athletes. Rotational parameters resulted in the OS group similar to the athletes. Conclusions: OS show myocardial performance as high as the athletes. The data obtained suggest a positive impact of regular training as an opera singer. Deformation parameters highlight the fitness status in this group with a specific remodeling in RV in the presence of normal PP. Classic music singing appears to have a training effect on the heart. Further studies are necessary to confirm this hypothesis. © 2022 by the authors. Licensee MDPI, Basel, Switzerland. ER -"
+    },
+    {
+      "paper_id": "paper_000037",
+      "title": "Emma Renzi: From opera singer to singing pedagogue: A philosophical perspective",
+      "decision": "include",
+      "confidence": 0.8,
+      "reason": "标题和摘要分析歌剧歌手转为声乐教师的经历，涉及歌剧歌唱技术和教学法。",
+      "year": 2024,
+      "journal": "Koers",
+      "doi": "10.19108/koers.89.1.2589",
+      "abstract": "In one sense, this article is an autobiography about Emma Renzi, who turned 97 on 8 April 2023. Renzi was an internationally celebrated South African opera singer who was also a pedagogue and a role model for many singers during the second phase of her illustrious career. The transition from singer to exceptionally gifted pedagogue was a conscious decision that she made to express her convictions that she should live her life and her talents in the most positive and focused way. It is thus this odyssey that is investigated and analysed in this article. Due to the nature of our bond, the discussions in this article focus on Renzi’s professional career, her memories of a specific era, the technical aspects of singing instruction, and the challenges of a professional singing career. The wealth of Renzi’s first-hand experiences and her knowledge of styles in various singing genres are invaluable for the development of young singers and instructors. It is also of historical importance for South Africans to honour the legacy of a singer who achieved international fame during her career and made it her life’s mission to pass on the insights she gained to her students. In this way, she shaped them with professionalism, compassion, and understanding, enabling them to pursue illustrious and fulfilling careers of their own. Autobiographical research includes narratives as well as the views of other authorities about lived experiences and their significance for singers and singing pedagogues. In this study, it was possible to lead and shape students and not merely teach them. A framework for the article was constructed by describing special experiences and challenges. Problems, life conditions and the informal interaction between Renzi and the audience, conductors, co-singers, agents, and students are highlighted. Ultimately, the meaning of Renzi’s career is underlined for South Africans. Her lived experiences as an international singer and renowned pedagogue offer a valuable background for singers and teachers to help singers realise their full human capacity. © 2024. The Author(s). Published under the Creative Commons Attribution License. ER -"
+    },
+    {
+      "paper_id": "paper_000038",
+      "title": "Peculiarities of Singing in Chinese Popular and Traditional Music: Influence of Musical Genres on Vocals",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要研究中国流行和传统音乐的歌唱特点，未涉及西方歌剧。",
+      "year": 2022,
+      "journal": "Musica Hodie",
+      "doi": "10.5216/mh.v22.73226",
+      "abstract": "Under the conditions of multiculturalism, Chinese vocal art has formed its own unique theoretical system based on the characteristics of vocalization, articulation, diction, and breathing. The aims of the study are to identify singing features in Chinese popular and traditional music, as well as to determine the ways in which musical genres influence vocals. Two teachers of modern vocal, two teachers of traditional vocal, 30 students of the Vocal Arts Department of Beijing University, art historians from the Central Conservatory of Music and Lishui University took part in the study. According to the study purpose, it was found that in traditional Chinese vocal arts, the main technique is falsetto (58%), mixed techniques (21.2%), vibrato (13.2%), overtone singing (6.1%), and glissando (1.5%) are also used. In popular singing the key technique is splitting (33.6%), also used: subtone (20.2%), vibrato (17.7%), drive (12.1%), glissando (11.1%), vocal fry register (9.2%), falsetto (3.3%), overtone singing (2%). As a result of the correlation analysis the dependence of popular singing techniques on traditional singing was determined. The coefficient of determination was 33.5%. It was also determined that when performing pop music, vibrato is controlled; noises and growling tones are used in rock music; uncontrolled vibrato, falsetto, and mixed techniques are used in opera; nasal sounds and minimal vibrato are in folk/country music; clear diction, articulation, slides, and scatting in blues/jazz; rhythmic and nasal sounds in hip-hop. The experiment results can be used in pedagogy for teaching vocals in China and abroad, as part of cultural activities related to the organization of events such as festivals, concerts, tourist programs, theatrical performances, etc. © 2022 Universidade Federal de Goias. All rights reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000039",
+      "title": "Perceived vibrato and the singing power ratio explain overall evaluations in opera singing",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确研究歌剧歌唱中颤音和声功率比对整体评价的影响。",
+      "year": 2025,
+      "journal": "Frontiers in Psychology",
+      "doi": "10.3389/fpsyg.2025.1568982",
+      "abstract": "In opera singing competitions, judges use an overall score to evaluate the singers' voices and determine their rankings. This score not only guides the singers' technique and expressiveness but also serves as a crucial indicator that can significantly influence their careers. However, the specific elements captured by this overall score remain unclear. To address this gap, the present study analyzed opera singing recordings to identify the factors that explain the overall score. Ten trained female Japanese singers performed “Caro mio ben” under standardized recording conditions. Four experts evaluated the recorded performances by assigning an overall score of 100 points and rating six vocal attributes: vibrato, resonance, timbre, diction, intonation, and expressiveness. The recordings were then analyzed to calculate specific acoustic and audio features, including the singing power ratio (SPR), harmonic-to-noise ratio (HNR), and loudness units full scale (LUFS). We developed two linear mixed models: the first regressed the overall score on the subjective vocal attributes, whereas the second predicted the overall score from the acoustic features. Evaluator identity was included as a random effect in both models. The results showed that vibrato was a significant predictor of the overall score in the first model. In the second model, only SPR emerged as a significant predictor. These findings suggest that vibrato, which reflects emotional expressiveness and vocal control, and SPR, which indicates the relative power in the high-frequency band (2–4 kHz) and assists a voice clearer than the accompaniment, are key factors in explaining the overall score in opera singing. Copyright © 2025 Kondo, Kondoh and Fujii. ER -"
+    },
+    {
+      "paper_id": "paper_000040",
+      "title": "DESIGN AND IMPLEMENTATION OF A DIGITAL MODULE ON IMPERIAL CHINESE THEATRE FOR PRE-SERVICE MUSIC TEACHERS: FOCUSING ON KUNQU MELODIC PATTERNS AND VOCAL EXPRESSION",
+      "decision": "exclude",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确研究昆曲的数字教学模块，属于非西方歌剧形式。",
+      "year": 2025,
+      "journal": "Scientific Culture",
+      "doi": "10.5281/zenodo.18231635",
+      "abstract": "Imperial Chinese theatre, especially Kunqu opera, has huge cultural and pedagogical importance in the field of music education. Although Kunqu is a recognized example of Intangible Cultural Heritage of the UNESCO, it is still underrepresented in the present-day music teacher training curricula. The presence of a gap in the existing literature in digital pedagogical materials specifically designed to meet the needs of pre-service music educators, has been identified. This research fills this gap through the design and execution of a web-based learning module that would be devoted to melodic patterns of Kunqu and the expression of vocal directed to pre-service music teachers in particular. The study utilized a systematic literature review (SLR) as its main methodological approach and synthesized 16 research papers on music pedagogy, digital education, and Chinese opera studies. The results served as the basis of creating an interactive and multimedia-based module, which combines historical background, audio-visual analysis, and instructed vocal practice. The major insights are that exposure to Kunqu online adds to the appreciation of learners, their technical knowledge, and their confidence when working with non-Western vocal culture. Intercultural awareness and pedagogical creativity in music teaching are also encouraged in the module. The findings highlight the possibility of digital tools in filling the cultural content divide of teacher education. The research will be relevant to the development of the curriculum as well as to the discussion on the integration of traditional performing arts into the music education of the 21st century. © 2025. ER -"
+    },
+    {
+      "paper_id": "paper_000041",
+      "title": "Playing Techniques of New Pieces of Koto Music in Japanese Urban Culture",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要聚焦日本筝乐器演奏技巧，仅附带提及与歌剧演唱结合，不符合西方歌剧咏叹调声乐技巧主题。",
+      "year": 2024,
+      "journal": "Journal of Urban Culture Research",
+      "doi": "10.58837/chula.jucr.1.1.13",
+      "abstract": "A major element in the social understanding of urban culture is the relationship between social change and its impact on artistic culture. In Japan, the Koto is a musical instrument that plays a major role in Japanese urban society as its character has been dynamically developed along with Japanese urban culture and society. The changes to playing techniques and the birth of new ones along with various tempo changes in melody create a contemporary sound, which reflects more playing freedom. Additionally, differences in the style of switching the playing pressure applied to the strings have occurred as well as the new colorful combination of Koto with opera singing. These above mentioned developments and changes have been directly influenced by social urbanization in direction, degree, and character. © 2024 Chulalongkorn University, Faculty of Fine and Applied Arts. All rights reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000042",
+      "title": "Harnessing Machine Learning in Vocal Arts Medicine: A Random Forest Application for “Fach” Classification in Opera",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确研究歌剧演唱中的声部分类，涉及声乐技巧和声乐教学法，符合纳入标准。",
+      "year": 2023,
+      "journal": "Diagnostics",
+      "doi": "10.3390/diagnostics13182870",
+      "abstract": "Vocal arts medicine provides care and prevention strategies for professional voice disorders in performing artists. The issue of correct “Fach” determination depending on the presence of a lyric or dramatic voice structure is of crucial importance for opera singers, as chronic overuse often leads to vocal fold damage. To avoid phonomicrosurgery or prevent a premature career end, our aim is to offer singers an improved, objective fach counseling using digital sound analyses and machine learning procedures. For this purpose, a large database of 2004 sound samples from professional opera singers was compiled. Building on this dataset, we employed a classic ensemble learning method, namely the Random Forest algorithm, to construct an efficient fach classifier. This model was trained to learn from features embedded within the sound samples, subsequently enabling voice classification as either lyric or dramatic. As a result, the developed system can decide with an accuracy of about 80% in most examined voice types whether a sound sample has a lyric or dramatic character. To advance diagnostic tools and health in vocal arts medicine and singing voice pedagogy, further machine learning methods will be applied to find the best and most efficient classification method based on artificial intelligence approaches. © 2023 by the authors. ER -"
+    },
+    {
+      "paper_id": "paper_000043",
+      "title": "Online Learning and Opera: The Rise in Digital Vocal Master Classes and Workshops",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "标题和摘要研究歌剧演唱在线教学，涉及声乐技巧和声乐教学法，符合纳入标准。",
+      "year": 2025,
+      "journal": "International Review of Research in Open and Distributed Learning",
+      "doi": "10.19173/irrodl.v26i4.8645",
+      "abstract": "Professionalism in opera singing depends on the quality of education. This study examines the teaching of opera singing online via master classes and seminars. Based on the present findings, master classes are effective in improving the voice technically and range-wise, whereas seminars are effective in helping opera singers achieve emotionality. These instructional methods were compared in terms of content variety, balance between theoretical and practical components, and their effect on performance artistry and technical skills. Those learning to sing opera through master classes reported experiencing improvements in memory (24%) and problem-solving (22%). Students who attended the online seminars reported improvements in concentration (28%) and memory (26%). Challenges include limited control over assignments, attendance, and assessment. This study highlights effective tools for online opera training, with potential for future comparisons of methods in developing vocal and instrumental skills. © 2025, Athabasca University. All rights reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000044",
+      "title": "Emotional expressiveness in contemporary Chinese and Ukrainian opera and chamber singing",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "标题和摘要比较中国和乌克兰歌剧演唱，涉及非西方歌剧形式，不符合西方歌剧传统要求。",
+      "year": 2025,
+      "journal": "Musica Hodie",
+      "doi": "10.5216/mh.v25.83631",
+      "abstract": "This study examines the influence of cultural context on emotional expressiveness in vocal art based on a comparative analysis of chamber and opera performances in China and Ukraine. Drawing on musicological, psychological, and cultural perspectives, it analyses the characteristics of vocal aesthetics and interpretative approaches across national traditions. The Chinese vocal style is characterised by contemplative emotionality, expressed through restrained dynamics, subtle intonational changes, and smooth phrasing, grounded in the ideals of inner harmony and symbolic moderation. In contrast, the Ukrainian tradition reflects emotional openness and dramatic intensity, influenced by folk and liturgical heritage, as well as contemporary social experience. The results of the study show that both traditions translate emotions into culturally specific performance grammar, illustrating different but equally sophisticated strategies of affective communication. These results may be helpful for intercultural vocal pedagogy and for improving interpretative approaches in globalised performance contexts. © 2025, Universidade Federal de Goias. All rights reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000045",
+      "title": "Climatic Crescendo: Assessing the Impact of Climate Change on Opera Singers' Well-Being in South Africa",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "标题和摘要研究气候变化对歌剧演唱者福祉的影响，不涉及声乐技巧、教学法或表演实践。",
+      "year": 2024,
+      "journal": "Journal of African Films and Diaspora Studies",
+      "doi": "10.31920/2516-2713/2024/7n3a8",
+      "abstract": "The pervasive effects of climate change have permeated various facets of human life, presenting unique challenges to numerous industries, including the performing arts. Among the myriad of artists navigating this evolving landscape, opera singers stand out as a particularly vulnerable group, facing many challenges stemming from the intricate interplay between their craft and the changing environment. The choice to focus on opera singers in this article is a deliberate one, grounded in the researcher's specialised knowledge and understanding of this specific artistic domain. Therefore, this article seeks to assess the impact of climate change on opera singers' well-being in South Africa. This article used a qualitative research methodology and mostly relied on secondary sources. Accredited academic journals, published peer-reviewed journal articles, academic books, reliable academic websites, and reliable databases were the data sources used in this article. The researcher then analysed the data using the content analysis technique to generate empirical knowledge and pinpoint any gaps in the current understanding of the complex impact of climate change on the welfare of opera singers. The psychosocial stress theory was used to understand the complex nature of stress and its impacts on individuals' mental and physical well-being due to climate change. The findings of this article reveal that opera singers in South Africa grapple with a unique convergence of artistic expression and environmental variability, making them an ideal group for studying the effects of climate change on performing artists. In conclusion, this article has illuminated the profound impact of climate change on the well-being of opera singers in South Africa. © 2024 Adonis and Abbey Publishers Ltd. All rights reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000046",
+      "title": "New objective timbre parameters for classification of voice type and fach in professional opera singers",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要研究歌剧演唱者音色参数用于声部分类，涉及声乐技巧和声乐教学法，符合纳入标准。",
+      "year": 2022,
+      "journal": "Scientific Reports",
+      "doi": "10.1038/s41598-022-22821-w",
+      "abstract": "Voice timbre is defined as sound color independent of pitch and volume, based on a broad frequency band between 2 and 4 kHz. Since there are no specific timbre parameters, previous studies have come to the very general conclusion that the center frequencies of the singer’s formants are somewhat higher in the higher voice types than in the lower ones. For specification, a database was created containing 1723 sound examples of various voice types. The energy distribution in the frequency bands of the singer’s formants was extracted for quantitative analysis. When the energy distribution function reached 50%, the corresponding absolute frequency in Hz was defined as Frequency of Half Energy (FHE). This new parameter quantifies the timbre of a singing voice as a concrete measure, independent of fundamental frequency, vowel color and volume. The database allows assigning FHE means ± SD as characteristic or comparative values for sopranos (3092 ± 284 Hz), tenors (2705 ± 221 Hz), baritones (2454 ± 206 Hz) and basses (2384 ± 164 Hz). In addition to vibrato, specific timbre parameters provide another valuable feature in vocal pedagogy for classification of voice type and fach according to the lyric or dramatic character of the voice. © 2022, The Author(s). ER -"
+    },
+    {
+      "paper_id": "paper_000047",
+      "title": "Maximizing phonation: impact of inspiratory muscle strengthening on vocal durations and pitch range",
+      "decision": "include",
+      "confidence": 0.85,
+      "reason": "标题和摘要研究吸气肌热身对歌剧演唱者发声表现的影响，涉及声乐技巧和表演实践，符合纳入标准。",
+      "year": 2025,
+      "journal": "BMC Pulmonary Medicine",
+      "doi": "10.1186/s12890-024-03471-2",
+      "abstract": "Background: This study investigated the acute effects of inspiratory muscle warm-up (IWU) on vocal performance in singers. Proper vocal and respiratory warm-up can enhance vocal range, quality, and endurance. The aim was to determine whether IWU improves maximum phonation time and pitch range, contributing to better voice production efficiency (vocal efficiency) and reduced fatigue. Materials and methods: Singers were selected from the Samsun State Opera and the Ballet Directorate (n = 16). This cross-sectional study aimed to investigate the acute effects. The singers in the control group (SC = 8) performed only one session of routine voice warm-up, and the experimental group (SE = 8) conducted an inspiratory muscle warm-up (IWU) of 2 sets, 30 times/set at 40% maximal inspiratory pressure (MIP) in addition to routine voice warm-up. Subsequently, All participants were then required to perform pre- and post- pulmonary function tests, maximal inspiratory pressure (MIP) and maximal expiratory pressure (MEP), and voice recordings (note high pitch, note low pitch, high pitch durations and low pitch durations sustained with one breath, and maximum phonation duration). Results: All pulmonary function and muscle strength parameters improved in the SE group, with the highest increases in MIP (22.9%) and MEP (14.7%). No significant improvements were noted in the SC group (p > 0.05). The Borg Rating of Perceived Exertion showed that the SE group experienced less difficulty with their vocal performance after IWU (-11.6%, p = 0.006), while no significant change was observed in the SC group (p = 0.316). Both warm-up methods used in the study significantly affected the frequencies of high-pitch sounds (SE = 17.8%, SC = 10.9%, p = 0.003); however, the frequency of low-pitch sounds was not significantly affected (p = 0.437). IWU significantly affected the high-pitched note duration (p < 0.001; 32.17%), low-pitched note duration (p < 0.001; 27.11%), and maximum phonation time (p < 0.001; 21%), while routine voice warm-up did not significantly affect any parameter (p > 0.05). Conclusions: The combination of IWU with the general body and voice warm-up protocol can acutely improve vocal performance in terms of maximum phonation time, phonation times of the highest and lowest pitched sounds in a single breath, and vocal range levels. © The Author(s) 2025. ER -"
+    },
+    {
+      "paper_id": "paper_000048",
+      "title": "In-service teacher training for Cantonese opera teaching in Hong Kong schools",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要聚焦粤剧教学培训，属于非西方歌剧形式，不符合西方歌剧传统要求。",
+      "year": 2025,
+      "journal": "Music Education Research",
+      "doi": "10.1080/14613808.2025.2539392",
+      "abstract": "Since its inclusion in the Hong Kong school curriculum in 2003, Cantonese opera has remained underrepresented in music education, mainly due to insufficient teacher training. This study evaluates the effectiveness of an in-service professional development programme to equip music educators with the skills and knowledge necessary to teach Cantonese opera. Four music teachers participated in a 120-hour training programme encompassing operatic singing and accompaniment, musical structures, and the historical and cultural contexts of the genre. Post-training, participants were interviewed, and their classroom practices were observed. The findings reveal that the programme significantly increased teacher and student motivation toward Cantonese opera. However, challenges persisted, including addressing colleagues’ expectations, school leadership, education authorities, and student preferences. Notably, the dominance of Western classical music education emerged as a key barrier to the effective integration of Cantonese opera into school music programmes. This study underscores the importance of targeted teacher training and recommends advancing Cantonese opera education in Hong Kong. These include pedagogical innovations, curriculum reform, enhanced professional development, and supportive policy measures. © 2025 Informa UK Limited, trading as Taylor & Francis Group. ER -"
+    },
+    {
+      "paper_id": "paper_000049",
+      "title": "Chopin’s Singing Melody: Coloratura and Beyond",
+      "decision": "uncertain",
+      "confidence": 0.5,
+      "reason": "标题和摘要研究肖邦钢琴旋律与歌剧演唱传统的关联，但未明确聚焦咏叹调或声乐技巧，信息不足。",
+      "year": 2022,
+      "journal": "Journal of Music Research",
+      "doi": "10.6244/jomr.202211_(37).01",
+      "abstract": "“Cantabile” melodies, with ornaments similar to vocal coloratura, are commonly seen in Frédéric Chopin’s music. Even in his early years, Chopin was familiar with a diverse range of arias from operas. He attended operatic performances, accompanied operatic rehearsals, improvised on themes from arias, and composed variations on themes from operas. His song-like melodies contain different types of ornamentation which can be traced back to different singing practices. This paper compares some of Chopin’s melodies to vocal passages from different sources to demonstrate the influence from operatic music and singing traditions. Various aspects of Chopin’s melodies are classified in accordance with different types of vocal ornamentation and vocal compositional techniques, such as variations on a theme, progressions of parallel thirds and sixths as used in operatic duets, and extended melodic lines with rhythmic tension at climaxes as in Vincenzo Bellini’s operas. The comparison and classification function to suggest possible ways of rendering Chopin’s music through the knowledge of how contemporaneous singers, who are often the muse of his inspiration, performed and improvised those melodic aspects. Different sources that commend how his music should be rendered are studied, including the performance practice of operas in Chopin’s time, notated variations from composers and singers, and written records of Chopin playing the piano. © 2022, National Taiwan Normal University-College of Music. All rights reserved. ER -"
+    },
+    {
+      "paper_id": "paper_000050",
+      "title": "The perspective of trainers on the use of imagination in singing training",
+      "decision": "include",
+      "confidence": 0.8,
+      "reason": "标题和摘要研究歌剧演唱者教学中想象力技巧的应用，涉及声乐技巧和声乐教学法，符合纳入标准。",
+      "year": 2023,
+      "journal": "Journal of Pedagogical Research",
+      "doi": "10.33902/jpr.202317864",
+      "abstract": "Based on how singing teachers and opera singers (teaching singing) apply imagination techniques in singing training, this study examines the use of these techniques in singing training. The data for the study using qualitative research method was collected through semi-structured interviews. A descriptive analysis was performed on the data collected from 18 individuals, including 13 academics and five opera singers. Overall, the study concluded that the following images are used by experts to describe the skills necessary to learn to sing correctly and effectively: adopting an appropriate posture, breathing properly, activating the required reflexes to keep the body aligned and working in balance and coordination, closing the vocal cords properly, opening up the resonance cavities, placing the voice correctly with a precise articulation, work rendition, and dynamics. © 2023, Pharmaceutical Association of Serbia. All rights reserved. ER -"
+    }
+  ],
+  "project_id": "cef63c17bb07",
+  "project_topic": "Western opera aria vocal techniques",
+  "model_provider": "deepseek",
+  "parent_task_id": "ba1e2049ce67",
+  "input_dataset_ids": [
+    "d42e8a5bd6c6"
+  ],
+  "output_dataset_ids": [
+    "489abbc5dbe5",
+    "62d66fbbb4ff"
+  ]
+}

@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0003",
+    "results": [
+        {
+            "paper_id": "paper_000021",
+            "decision": "include",
+            "reason": "标题和摘要显示研究对象为公共组织的记录管理系统，涉及电子记录存储和全生命周期管理挑战。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000022",
+            "decision": "include",
+            "reason": "标题和摘要明确讨论电子记录管理系统在石油天然气行业的应用，涉及系统组件和实施框架。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000023",
+            "decision": "include",
+            "reason": "标题和摘要聚焦云计算对电子记录和档案管理的影响，涉及架构、生命周期和长期保存问题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.82
+        },
+        {
+            "paper_id": "paper_000024",
+            "decision": "uncertain",
+            "reason": "摘要提到大学图书馆的云记录管理，但研究对象偏向学术馆藏而非企业/机构业务档案。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000025",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦制药行业数据完整性，属于质量监管范畴，未涉及档案系统建设或数据化开发。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000026",
+            "decision": "exclude",
+            "reason": "标题和摘要描述历史文档数字化技术流程，属于图书馆/档案馆藏数字化，非组织机构业务档案管理。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000027",
+            "decision": "include",
+            "reason": "标题和摘要明确讨论制药行业和监管机构的记录管理与归档，涉及数字档案长期保存和信息模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.83
+        },
+        {
+            "paper_id": "paper_000028",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦信息科学硕士课程设计，属于教育研究，未涉及企业档案系统建设或数据化开发。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000029",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论准病毒技术与经济数字化转型，仅提及数字记录作为技术示例，未聚焦档案系统。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.87
+        },
+        {
+            "paper_id": "paper_000030",
+            "decision": "include",
+            "reason": "标题和摘要研究津巴布韦金融公共服务机构数字记录管理，涉及政策、基础设施和生命周期模型。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.81
+        }
+    ]
+}

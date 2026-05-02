@@ -14,6 +14,8 @@ class ChatCompletionClient:
         self.config = config
         self.timeout_seconds = timeout_seconds
         self._last_request_finished_at = 0.0
+        self.request_count = 0
+        self.last_finish_reason: str | None = None
 
     def chat(self, prompt: str) -> str:
         api_key = self.config.api_key or os.getenv(self.config.api_key_env)
@@ -45,6 +47,7 @@ class ChatCompletionClient:
 
         try:
             with self._client() as client:
+                self.request_count += 1
                 response = client.post(url, headers=self._build_headers(api_key), json=payload)
                 response.raise_for_status()
         except httpx.HTTPStatusError as exc:
@@ -62,18 +65,20 @@ class ChatCompletionClient:
         try:
             choice = data["choices"][0]
             message = choice["message"]
+            finish_reason = choice.get("finish_reason")
+            self.last_finish_reason = str(finish_reason) if finish_reason else None
             content = message.get("content")
             if isinstance(content, str) and content:
                 return content
 
-            finish_reason = choice.get("finish_reason")
+            if finish_reason == "length":
+                raise ModelRequestError(
+                    f"{self.config.provider} API response hit max_tokens before returning final content; "
+                    "increase max_tokens or reduce screening batch size."
+                )
+
             reasoning_content = message.get("reasoning_content")
             if self.config.provider == "deepseek" and self.config.model_name == "deepseek-reasoner":
-                if finish_reason == "length":
-                    raise ModelRequestError(
-                        "deepseek-reasoner returned no final content before hitting the token limit; "
-                        "max_tokens may be too low because DeepSeek counts reasoning tokens and answer tokens together."
-                    )
                 if isinstance(reasoning_content, str) and reasoning_content.strip():
                     raise ModelRequestError("deepseek-reasoner returned reasoning_content but no final answer content.")
             raise ModelRequestError(f"{self.config.provider} API response did not contain assistant message content.")

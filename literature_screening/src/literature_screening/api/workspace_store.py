@@ -50,6 +50,7 @@ class WorkspaceStore:
                     "batch_size": 10,
                     "target_include_count": None,
                     "stop_when_target_reached": False,
+                    "min_include_confidence": 0.8,
                     "allow_uncertain": True,
                     "retry_times": 6,
                     "request_timeout_seconds": 240,

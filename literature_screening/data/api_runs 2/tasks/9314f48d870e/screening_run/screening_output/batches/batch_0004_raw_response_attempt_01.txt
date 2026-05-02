@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0004",
+    "results": [
+        {
+            "paper_id": "paper_000031",
+            "decision": "include",
+            "reason": "标题和摘要明确研究COF气凝胶用于太阳能海水淡化，涉及侧基工程、光热涂层布局、水传输和抗盐沉积，并提供了蒸发速率数据。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000032",
+            "decision": "uncertain",
+            "reason": "标题和摘要主要关注窄带隙COF的合成与光热响应，但未明确提及在光热驱动海水蒸发中的应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000033",
+            "decision": "exclude",
+            "reason": "标题和摘要表明研究COF复合材料用于原油清理，涉及光热效应但应用于油水分离而非海水蒸发。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000034",
+            "decision": "exclude",
+            "reason": "标题和摘要表明是COF在纳米医学和药物递送中的综述，涉及光热治疗但未提及海水蒸发或淡化。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000035",
+            "decision": "exclude",
+            "reason": "标题和摘要明确研究COF用于光催化水分解产氢，与光热驱动海水蒸发的主题不符。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000036",
+            "decision": "exclude",
+            "reason": "标题和摘要表明研究COF用于癌症免疫治疗，涉及光热治疗但应用于肿瘤治疗而非海水蒸发。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000037",
+            "decision": "uncertain",
+            "reason": "标题和摘要提到COF增强智能驱动器，涉及光热转换和水分子传输，但未明确应用于海水蒸发或淡化。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000038",
+            "decision": "exclude",
+            "reason": "标题和摘要表明研究MXene钴铁氧体复合材料用于光热抗癌，主体材料为非COF且未与COF结合。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000039",
+            "decision": "exclude",
+            "reason": "标题和摘要表明研究COF用于肿瘤治疗的低温热疗，涉及光热治疗但应用于癌症治疗而非海水蒸发。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000040",
+            "decision": "exclude",
+            "reason": "标题和摘要表明研究手性COF用于不对称催化反应，涉及光热转换但应用于有机合成而非海水蒸发。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        }
+    ]
+}

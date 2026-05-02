@@ -1,0 +1,104 @@
+{
+  "batch_id": "batch_0004",
+  "results": [
+    {
+      "paper_id": "paper_000031",
+      "decision": "uncertain",
+      "reason": "摘要和关键词缺失，仅凭标题和期刊信息无法判断是否涉及理工科学术写作中的模糊语分析。",
+      "evidence": [
+        "title",
+        "journal"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "paper_id": "paper_000032",
+      "decision": "exclude",
+      "reason": "标题和摘要聚焦于计算机科学中的自然语言处理技术，涉及语义模糊性，但未提及学术写作或语用分析，属于排除的计算机算法领域。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000033",
+      "decision": "exclude",
+      "reason": "标题和摘要明确讨论核战略中的“核对冲”，属于政治学或国际关系领域，严格排除金融经济以外的其他“对冲”含义。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000034",
+      "decision": "exclude",
+      "reason": "标题和摘要讨论癌症细胞中的“赌注对冲”生物学现象，属于生物医学领域，与语言学的模糊语无关。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000035",
+      "decision": "include",
+      "reason": "标题和摘要明确分析学术写作中元话语的使用，包括模糊语，并跨工程、医学等学科进行对比，符合纳入标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000036",
+      "decision": "exclude",
+      "reason": "标题和摘要涉及交通基础设施投资中的“对冲风险”，属于金融经济领域的“对冲”，严格排除。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000037",
+      "decision": "exclude",
+      "reason": "标题和摘要讨论电力系统优化中的“渐进对冲”算法，属于数学或计算机算法领域，严格排除。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000038",
+      "decision": "exclude",
+      "reason": "标题和摘要涉及物流优化中的“渐进对冲算法”，属于运筹学或数学领域，严格排除。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000039",
+      "decision": "exclude",
+      "reason": "标题和摘要讨论微燃烧器设计中的“对冲”进气方式，属于工程热物理领域，与语言学的模糊语无关。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000040",
+      "decision": "exclude",
+      "reason": "标题提到“对冲规则”，但摘要缺失，结合标题判断可能涉及水资源优化中的数学方法，属于排除领域。",
+      "evidence": [
+        "title"
+      ],
+      "confidence": 0.7
+    }
+  ]
+}

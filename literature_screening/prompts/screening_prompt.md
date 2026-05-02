@@ -26,6 +26,12 @@
 - `0.40 - 0.59`：相关性存在，但信息不足，适合 `uncertain`。
 - `0.00 - 0.39`：通常不建议使用；只有在信息极弱但你仍被迫保留低置信判断时才使用。
 
+纳入相关度阈值：
+
+- 本轮最低纳入相关度为 `{{ min_include_confidence_percent }}`（confidence >= `{{ min_include_confidence }}`）。
+- 只有当文献符合纳入标准，并且 confidence 达到本轮最低纳入相关度时，才能判为 `include`。
+- 如果文献有一定相关性但 confidence 低于本轮最低纳入相关度，请{{ below_threshold_instruction }}。
+
 `reason` 字段要求：
 
 - 使用简洁中文。

@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0003",
+    "results": [
+        {
+            "paper_id": "paper_000021",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论放射肿瘤学领域的性别差异，未涉及职业性辐射暴露对肠道健康的影响。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000022",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦抗癌药物成本分析，未提及辐射暴露或肠道健康。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000023",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论结肠结核病例，未涉及辐射暴露。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000024",
+            "decision": "uncertain",
+            "reason": "摘要涉及职业性低剂量辐射暴露的细胞遗传学监测，但未明确提及肠道健康结局指标。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000025",
+            "decision": "exclude",
+            "reason": "标题和摘要研究新生儿便携式放射成像系统，未涉及职业性暴露或肠道健康。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000026",
+            "decision": "exclude",
+            "reason": "标题和摘要为结直肠癌会议报告，未涉及辐射暴露。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000027",
+            "decision": "include",
+            "reason": "标题和摘要明确研究长期低剂量辐射暴露通过肠道菌群-肠-脑轴影响认知，涉及肠道屏障和代谢物变化。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000028",
+            "decision": "exclude",
+            "reason": "标题为肥胖外科会议，摘要缺失，无法判断与辐射或肠道健康的相关性。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000029",
+            "decision": "exclude",
+            "reason": "标题和摘要研究音乐疗法对放疗患者的影响，未涉及职业性暴露或肠道健康。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000030",
+            "decision": "uncertain",
+            "reason": "标题和摘要涉及核燃料工人铀气溶胶暴露的胃肠道溶解研究，但未明确评估肠道健康结局如菌群或屏障功能。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.6
+        }
+    ]
+}

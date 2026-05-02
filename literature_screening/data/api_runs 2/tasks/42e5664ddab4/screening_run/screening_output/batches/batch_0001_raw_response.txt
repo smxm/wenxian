@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0001",
+    "results": [
+        {
+            "paper_id": "paper_000001",
+            "decision": "uncertain",
+            "reason": "摘要提到银行负债监管通过增强信贷风险承担能力来平滑企业动态研发决策，但未明确将研发强度作为风险承担的代理变量。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000002",
+            "decision": "uncertain",
+            "reason": "摘要表明非控股大股东超额委派董事通过提高风险承担来促进研发国际化，但未明确将研发强度作为风险承担的代理变量。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000003",
+            "decision": "include",
+            "reason": "摘要明确提到注册制改革通过加大研发投入力度来提高风险承担水平，将研发投入作为风险承担的代理变量。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000004",
+            "decision": "uncertain",
+            "reason": "摘要提到非控股大股东退出威胁通过提高风险承担来促进研发国际化，但未明确将研发强度作为风险承担的代理变量。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000005",
+            "decision": "exclude",
+            "reason": "摘要表明财务柔性通过降低企业风险承担来促进创新绩效，但未将研发支出作为风险承担的代理变量。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000006",
+            "decision": "uncertain",
+            "reason": "摘要提到风险承担水平在亲缘利他行为与创新绩效间起中介作用，但未明确将研发强度作为风险承担的代理变量。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.45
+        },
+        {
+            "paper_id": "paper_000007",
+            "decision": "exclude",
+            "reason": "标题和摘要研究风险偏好与企业价值，但未涉及研发支出指标，不符合纳入标准。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000008",
+            "decision": "include",
+            "reason": "摘要明确提到研发投入在董事长本地任职与企业风险承担间发挥中介作用，将研发投入作为风险承担的代理变量。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000009",
+            "decision": "uncertain",
+            "reason": "摘要提到社保基金提升研发投资等增加企业价值的风险承担，但未明确将研发强度作为风险承担的代理变量。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.6
+        },
+        {
+            "paper_id": "paper_000010",
+            "decision": "include",
+            "reason": "摘要明确提到研发投入在控股股东股权质押与企业价值间发挥中介效应，将研发投入作为风险承担的代理变量。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        }
+    ]
+}

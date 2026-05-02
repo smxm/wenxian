@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0008",
+    "results": [
+        {
+            "paper_id": "paper_000071",
+            "decision": "include",
+            "reason": "标题和摘要明确针对慢性粒细胞白血病患者，开发以患者为中心的赋能平台，涉及患者参与和工具提供以自我管理疾病。",
+            "evidence": ["title", "abstract", "year"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000072",
+            "decision": "exclude",
+            "reason": "研究对象为淋巴瘤患者，不符合成人白血病患者的纳入标准。",
+            "evidence": ["title", "abstract", "year"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000073",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于血液恶性肿瘤的疼痛管理和阿片类药物使用，未涉及赋能教育干预。",
+            "evidence": ["title", "abstract", "year"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000074",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论博舒替尼在慢性粒细胞白血病中的药物作用，属于纯药物治疗综述，未涉及赋能教育。",
+            "evidence": ["title", "abstract", "year"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000075",
+            "decision": "exclude",
+            "reason": "研究对象为青少年和年轻成人白血病幸存者，包含未成年人，不符合成人患者群体的纳入标准。",
+            "evidence": ["title", "abstract", "year"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000076",
+            "decision": "uncertain",
+            "reason": "摘要研究造血干细胞移植患者的症状管理自我效能，但未明确说明患者是否为白血病患者，且干预性质不够明确。",
+            "evidence": ["title", "abstract", "year"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000077",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论靶向癌症治疗引起的口腔黏膜损伤，属于临床病理机制研究，未涉及赋能教育。",
+            "evidence": ["title", "abstract", "year"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000078",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于慢性粒细胞白血病的酪氨酸激酶抑制剂使用和药学实践，未涉及赋能教育干预。",
+            "evidence": ["title", "abstract", "year"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000079",
+            "decision": "exclude",
+            "reason": "研究对象为年轻成人癌症幸存者，包含多种癌症类型，且白血病/淋巴瘤仅占12.5%，不符合纯成人白血病患者群体的纳入标准。",
+            "evidence": ["title", "abstract", "year"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000080",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论急性髓系白血病的去甲基化药物使用指南，属于纯药物治疗综述，未涉及赋能教育。",
+            "evidence": ["title", "abstract", "year"],
+            "confidence": 0.9
+        }
+    ]
+}

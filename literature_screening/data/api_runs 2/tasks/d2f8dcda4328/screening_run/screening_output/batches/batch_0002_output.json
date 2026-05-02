@@ -1,0 +1,55 @@
+{
+  "batch_id": "batch_0002",
+  "results": [
+    {
+      "paper_id": "paper_000011",
+      "decision": "exclude",
+      "reason": "标题和摘要仅提及AKK作为肠道菌群组成被分析，未涉及将AKK作为食品成分添加到乳制品基质中。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000012",
+      "decision": "exclude",
+      "reason": "研究关注添加nisin或plantaricin Q7的发酵乳对小鼠的影响，摘要仅提及AKK丰度变化作为结果，未涉及将AKK作为食品成分或发酵菌株添加到食品中。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000013",
+      "decision": "uncertain",
+      "reason": "研究开发了基于乳外泌体的益生菌包埋系统，并将AKK作为包埋对象之一，评估了其在模拟胃肠道环境中的存活率。但未明确说明是否将包埋后的AKK实际添加到具体的乳制品食品基质中。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000014",
+      "decision": "include",
+      "reason": "标题和摘要明确将AKK添加到奶酪涂抹酱中，并评估了其在有氧冷藏储存和模拟消化过程中的存活率，以及食品的理化特性和生物活性。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000015",
+      "decision": "exclude",
+      "reason": "研究主要关注双歧杆菌F1-7与HMO的合生元微胶囊，摘要仅提及AKK作为肠道菌群变化的结果之一被富集，未涉及将AKK作为食品成分添加到乳制品中。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.88
+    }
+  ]
+}

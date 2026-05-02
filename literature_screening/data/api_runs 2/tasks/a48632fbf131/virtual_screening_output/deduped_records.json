@@ -1,0 +1,76 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "entry_type": "inproceedings",
+    "title": "Detection and Identification of Strip Surface Defects Based on Deep Learning",
+    "authors": [
+      "Zhan, Y.",
+      "Feng, F."
+    ],
+    "year": 2022,
+    "journal": "Proceedings - 2022 International Conference on Machine Learning and Intelligent Systems Engineering, MLISE 2022",
+    "doi": "10.1109/mlise57402.2022.00086",
+    "abstract": "As one of the important product forms in the steel industry, strip steel plays an irreplaceable role in daily production and life. However, in real life, due to the use of raw materials and the manufacturing process, there are many defects on the surface of strip steel. These defects will not only affect the appearance of strip steel, but also cause significant economic losses. Therefore, it is particularly important to accurately detect these defects on the surface of strip steel. Aiming at the problem that there are many tiny defects in strip steel, which can easily lead to missed detection, this paper improves it based on Faster R-CNN detection algorithm, uses ResNet50+FPN method to extract features to prevent missing tiny defect details, and uses ROI Align instead of ROI Pooling to perform pool operation of defect location. Because the position deviation caused by the two quantization operations of ROI Pooling can prevent the slight defect of missing detection, the experimental verification finally shows that the improved measures effectively improve the accuracy of strip surface detection compared with the previous detection algorithm. © 2022 IEEE. ER - ER - ER -",
+    "keywords": [],
+    "normalized_title": "detection and identification of strip surface defects based on deep learning",
+    "raw_bibtex": "@INPROCEEDINGS{10.1109/mlise57402.2022.00086,\n\tauthor = {Zhan, Y. and Feng, F.},\n\ttitle = {Detection and Identification of Strip Surface Defects Based on Deep Learning},\n\tjournal = {Proceedings - 2022 International Conference on Machine Learning and Intelligent Systems Engineering, MLISE 2022},\n\tyear = {2022},\n\tabstract = {As one of the important product forms in the steel industry, strip steel plays an irreplaceable role in daily production and life. However, in real life, due to the use of raw materials and the manufacturing process, there are many defects on the surface of strip steel. These defects will not only affect the appearance of strip steel, but also cause significant economic losses. Therefore, it is particularly important to accurately detect these defects on the surface of strip steel. Aiming at the problem that there are many tiny defects in strip steel, which can easily lead to missed detection, this paper improves it based on Faster R-CNN detection algorithm, uses ResNet50+FPN method to extract features to prevent missing tiny defect details, and uses ROI Align instead of ROI Pooling to perform pool operation of defect location. Because the position deviation caused by the two quantization operations of ROI Pooling can prevent the slight defect of missing detection, the experimental verification finally shows that the improved measures effectively improve the accuracy of strip surface detection compared with the previous detection algorithm. © 2022 IEEE. ER - ER - ER -},\n\tdoi = {10.1109/mlise57402.2022.00086},\n\ttype = {CONF}\n}",
+    "source_files": [
+      "fulltext_ready.ris"
+    ],
+    "source_keys": [
+      "10.1109/mlise57402.2022.00086"
+    ],
+    "merged_from": [],
+    "status": "unprocessed"
+  },
+  {
+    "paper_id": "paper_000002",
+    "entry_type": "inproceedings",
+    "title": "Multiple Prototype Guided Enhanced Network for Few-Shot Steel Surface Defect Segmentation",
+    "authors": [
+      "Liang, C.",
+      "Bai, S."
+    ],
+    "year": 2024,
+    "journal": "2024 5th International Conference on Computer Vision, Image and Deep Learning, CVIDL 2024",
+    "doi": "10.1109/cvidl62147.2024.10604061",
+    "abstract": "Few-shot semantic segmentation techniques can effectively alleviate the high data costs associated with industrial applications. The task of metal surface defect segmentation, due to the numerous types of defects and limited data availability, is highly suited for the application of few-shot semantic segmentation techniques. However, current methods for handling multiple defects in support images may result in semantic shifts in the global prototype due to mask average pooling (MAP). In this paper, we propose the Multiple Prototype Guided Enhanced Network (MPENet). We propose a multiple prototype mask average mask pooling (Multi-MAP) operation to extract each defect region as a prototype and guidance enhancement module to leverage these multiple prototypes to enhance the global prototype. The final experimental results demonstrate that MPENet can achieves state-of-the-art performance on the FSSD12 dataset with minimal increase in learnable parameters. © 2024 IEEE. ER - ER - ER -",
+    "keywords": [],
+    "normalized_title": "multiple prototype guided enhanced network for few shot steel surface defect segmentation",
+    "raw_bibtex": "@INPROCEEDINGS{10.1109/cvidl62147.2024.10604061,\n\tauthor = {Liang, C. and Bai, S.},\n\ttitle = {Multiple Prototype Guided Enhanced Network for Few-Shot Steel Surface Defect Segmentation},\n\tjournal = {2024 5th International Conference on Computer Vision, Image and Deep Learning, CVIDL 2024},\n\tyear = {2024},\n\tabstract = {Few-shot semantic segmentation techniques can effectively alleviate the high data costs associated with industrial applications. The task of metal surface defect segmentation, due to the numerous types of defects and limited data availability, is highly suited for the application of few-shot semantic segmentation techniques. However, current methods for handling multiple defects in support images may result in semantic shifts in the global prototype due to mask average pooling (MAP). In this paper, we propose the Multiple Prototype Guided Enhanced Network (MPENet). We propose a multiple prototype mask average mask pooling (Multi-MAP) operation to extract each defect region as a prototype and guidance enhancement module to leverage these multiple prototypes to enhance the global prototype. The final experimental results demonstrate that MPENet can achieves state-of-the-art performance on the FSSD12 dataset with minimal increase in learnable parameters. © 2024 IEEE. ER - ER - ER -},\n\tdoi = {10.1109/cvidl62147.2024.10604061},\n\ttype = {CONF}\n}",
+    "source_files": [
+      "fulltext_ready.ris"
+    ],
+    "source_keys": [
+      "10.1109/cvidl62147.2024.10604061"
+    ],
+    "merged_from": [],
+    "status": "unprocessed"
+  },
+  {
+    "paper_id": "paper_000003",
+    "entry_type": "inproceedings",
+    "title": "Metal Surface Defect Detection based on Variable Mask Ratio Multi-scale Reconstruction",
+    "authors": [
+      "Zheng, Y.",
+      "Du, M.",
+      "Zhao, L.",
+      "Peng, C."
+    ],
+    "year": 2025,
+    "journal": "ICMR 2025 - Proceedings of the 2025 International Conference on Multimedia Retrieval",
+    "doi": "10.1145/3731715.3733485",
+    "abstract": "Metal surface defect detection plays a critical role in ensuring product quality in industrial manufacturing. Traditional detection methods often suffer from incomplete feature extraction and limited defective samples, hindering the performance of supervised learning. This paper explores the potential of Vision Transformer (ViT) for metal surface defect detection by addressing domain shift issues and improving training speed. We propose a semi-supervised anomaly detection method based on a Transformer network, using a variable masking ratio to integrate generative modeling with representation learning. By fusing features from a convolutional-Transformer encoder, we utilize a feature pyramid network and a frozen pre-trained hierarchical encoder to generate multi-scale features. By employing these technologies, the proposed method captures fine-grained anomalies effectively, providing a robust solution for detecting diverse defect types. The experimental results on benchmark datasets demonstrate that the proposed method outperforms state-of-the-art defect detection techniques. © 2025 ACM. ER - ER - ER -",
+    "keywords": [],
+    "normalized_title": "metal surface defect detection based on variable mask ratio multi scale reconstruction",
+    "raw_bibtex": "@INPROCEEDINGS{10.1145/3731715.3733485,\n\tauthor = {Zheng, Y. and Du, M. and Zhao, L. and Peng, C.},\n\ttitle = {Metal Surface Defect Detection based on Variable Mask Ratio Multi-scale Reconstruction},\n\tjournal = {ICMR 2025 - Proceedings of the 2025 International Conference on Multimedia Retrieval},\n\tyear = {2025},\n\tabstract = {Metal surface defect detection plays a critical role in ensuring product quality in industrial manufacturing. Traditional detection methods often suffer from incomplete feature extraction and limited defective samples, hindering the performance of supervised learning. This paper explores the potential of Vision Transformer (ViT) for metal surface defect detection by addressing domain shift issues and improving training speed. We propose a semi-supervised anomaly detection method based on a Transformer network, using a variable masking ratio to integrate generative modeling with representation learning. By fusing features from a convolutional-Transformer encoder, we utilize a feature pyramid network and a frozen pre-trained hierarchical encoder to generate multi-scale features. By employing these technologies, the proposed method captures fine-grained anomalies effectively, providing a robust solution for detecting diverse defect types. The experimental results on benchmark datasets demonstrate that the proposed method outperforms state-of-the-art defect detection techniques. © 2025 ACM. ER - ER - ER -},\n\tdoi = {10.1145/3731715.3733485},\n\ttype = {CONF}\n}",
+    "source_files": [
+      "fulltext_ready.ris"
+    ],
+    "source_keys": [
+      "10.1145/3731715.3733485"
+    ],
+    "merged_from": [],
+    "status": "unprocessed"
+  }
+]

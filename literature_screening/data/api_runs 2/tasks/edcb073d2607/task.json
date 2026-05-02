@@ -1,0 +1,84 @@
+{
+  "id": "edcb073d2607",
+  "kind": "strategy",
+  "status": "succeeded",
+  "cancel_requested": false,
+  "title": "new-search-strategy",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 0,
+  "progress_total": null,
+  "progress_message": "Task completed",
+  "created_at": "2026-03-25T00:05:03.549119+08:00",
+  "updated_at": "2026-03-25T00:06:27.447633+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "cef63c17bb07",
+    "project_topic": "忘了",
+    "model_provider": "deepseek",
+    "request_payload": {
+      "title": "new-search-strategy",
+      "project_id": "cef63c17bb07",
+      "new_project_name": "",
+      "new_project_description": "",
+      "project_topic": "忘了",
+      "research_need": "歌剧演唱、西方歌剧 、咏叹调演唱技巧",
+      "selected_databases": [
+        "scopus",
+        "wos"
+      ],
+      "model": {
+        "provider": "deepseek",
+        "model_name": "deepseek-reasoner",
+        "api_base_url": "https://api.deepseek.com/v1",
+        "api_key_env": "DEEPSEEK_API_KEY",
+        "api_key": "sk-b046916fe6b84d58ae43c2500d74bca9",
+        "temperature": 0.0,
+        "max_tokens": 4096,
+        "min_request_interval_seconds": 2.0
+      },
+      "retry_times": 4,
+      "timeout_seconds": 180
+    },
+    "model_secret_id": "a077dcc8ed1344ad"
+  },
+  "summary": {
+    "topic": "Vocal techniques in Western opera aria singing",
+    "screening_topic": "Western opera aria vocal techniques",
+    "selected_databases": [
+      "scopus",
+      "wos"
+    ],
+    "database_count": 2,
+    "inclusion_count": 4,
+    "exclusion_count": 4
+  },
+  "error": null,
+  "artifacts": {
+    "strategy_plan": {
+      "path": "tasks/edcb073d2607/strategy_run/strategy_output/strategy_plan.md",
+      "filename": "strategy_plan.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 1903
+    },
+    "strategy_plan_json": {
+      "path": "tasks/edcb073d2607/strategy_run/strategy_output/strategy_plan.json",
+      "filename": "strategy_plan.json",
+      "content_type": "application/json",
+      "size_bytes": 2122
+    },
+    "strategy_raw_response": {
+      "path": "tasks/edcb073d2607/strategy_run/strategy_output/strategy_raw_response.txt",
+      "filename": "strategy_raw_response.txt",
+      "content_type": "text/plain; charset=utf-8",
+      "size_bytes": 2048
+    }
+  },
+  "run_root": "tasks/edcb073d2607/strategy_run",
+  "output_dir": "tasks/edcb073d2607/strategy_run/strategy_output",
+  "markdown_preview": "# 检索与筛选方案\n\n## 研究主题\n\nVocal techniques in Western opera aria singing\n\n## 需求概括\n\nTo investigate and synthesize research on singing techniques employed in arias within the context of Western opera.\n\n## 建议用于初筛的研究主题\n\nWestern opera aria vocal techniques\n\n## 纳入标准\n\n- Studies focusing on opera singing or vocal performance.\n- Specifically related to Western opera traditions.\n- Includes arias as the subject of study.\n- Addresses singing techniques, vocal pedagogy, or performance practice.\n\n## 排除标准\n\n- Excludes non-Western opera forms (e.g., Chinese opera, if not comparative).\n- Excludes instrumental music, composition, or non-singing aspects.\n- Excludes general music education not specific to opera.\n- Excludes popular music or non-classical vocal techniques.\n\n## 检索词与高级检索式\n\n### Scopus advanced search for Western opera aria singing techniques\n\n```text\nTITLE-ABS-KEY( ( opera OR \"Western opera\" ) AND ( aria OR arias ) AND ( \"singing technique*\" OR \"vocal technique*\" OR \"vocal pedagogy\" OR \"performance practice\" ) )\n```\n\n- 说明：Use this query in Scopus advanced search interface.\n- 说明：Adjust date range or language filters as needed.\n\n### Web of Science advanced search for Western opera aria singing techniques\n\n```text\nTS=( ( opera OR \"Western opera\" ) AND ( aria OR arias ) AND ( \"singing technique*\" OR \"vocal technique*\" OR \"vocal pedagogy\" OR \"performance practice\" ) )\n```\n\n- 说明：Use this query in Web of Science advanced search interface.\n- 说明：Consider refining with additional fields if necessary.\n\n## 检索边界与注意事项\n\n- Include synonyms like 'bel canto' if relevant to the research scope.\n- Be mindful of language variations in opera terminology.\n- Ensure screening for specific historical periods or composers if required.\n",
+  "records": [],
+  "project_id": "cef63c17bb07",
+  "project_topic": "忘了",
+  "model_provider": "deepseek"
+}

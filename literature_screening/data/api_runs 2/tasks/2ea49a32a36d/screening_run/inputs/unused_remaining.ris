@@ -1,0 +1,86 @@
+TY  - JOUR
+AU  - Kim, H.-S.
+AU  - Sun, C.-G.
+AU  - Lee, M.-G.
+AU  - Cho, H.-I.
+TI  - Multivariate geotechnical zonation of seismic site effects with clustering-blended model for a city area, South Korea
+PY  - 2021
+JO  - Engineering Geology
+DO  - 10.1016/j.enggeo.2021.106365
+AB  - The site classification system in the seismic design code and its dependent zonation should be guaranteed to represent the local spatial uncertainty of subsurface features, but have been uniformly used based on the site response parameters. Spatial interpolation-based zonation is only practically feasible if there are clear-cut stochastic/spatial correlations in geotechnical/geophysical measurements. The geology and terrain features can be substituted as an influential proxy for site amplification. To develop cluster-oriented zonation considering the spatial heterogeneity of the different site response parameters focusing on an uninvestigated area, this study proposes a new approach for multivariate site classification blended with geographic information system (GIS)-based spatial clustering and machine learning (ML)-based clustering ensemble technologies. GIS-based clustering characterizes a hot spot cluster with statistical and spatial correlation values of the site response parameters and defines the relative weight using the Gi∗ Z-score as the index of spatial heterogeneity. ML-based clustering ensembles aim to combine the clustering model in terms of consistency and performance, and are designed for optimization through a consensus function by comparing the fitness with the site classification system to obtain better results than individual clustering algorithms. The novelty of the proposed workflow is the stepwise improvement of the proposed models compared with the zonation phases and practical methods. © 2021 Elsevier B.V.
+ER  -
+
+TY  - JOUR
+AU  - Jeong, W.
+AU  - Song, M.-S.
+AU  - Yum, S.-G.
+AU  - Adhikari, M.D.
+TI  - Ground Settlement Susceptibility Assessment in Urban Areas Using PSInSAR and Ensemble Learning: An Integrated Geospatial Approach
+PY  - 2025
+JO  - Buildings
+DO  - 10.3390/buildings15234364
+AB  - Ground settlement is a multifaceted geological phenomenon driven by natural and man-made forces, posing a significant impediment to sustainable urban development. Thus, ground settlement susceptibility (GSS) mapping has emerged as a critical tool for understanding and mitigating cascading hazards in seismically active and anthropogenically modified sedimentary basins. Here, we develop an integrated framework for assessing GSS in the Pohang region, South Korea, by integrating Persistent Scatterer Interferometric Synthetic Aperture Radar (PSInSAR)-derived vertical land motion (VLM) data with seismological, geotechnical, and topographic parameters (i.e., peak ground acceleration (PGA), effective shear-wave velocity (Vs30), site period (Ts), general amplification factor (AF), seismic vulnerability index (Kg), soil depth, topographic slope, and landform classes) through ensemble machine learning models such as Random Forest (RF), XGBoost, and Decision Tree (DT). Analysis of 56 Sentinel-1 SLC images (2017–2023) revealed persistent subsidence concentrated in Quaternary alluvium, reclaimed coastal plains, and basin-fill deposits. Among the tested models, RF achieved the best performance and strongly agreed with field evidence of sand boils, liquefaction, and structural damage from the 2017 Pohang earthquake. The very-high-susceptibility zones exhibited mean subsidence rates of −3.21 mm/year, primarily within soft sediments (Vs30 < 360 m/s) and areas of thick alluvium deposits. Integration of the optimal RF-based GSS index with regional building inventories revealed that nearly 65% of existing buildings fell within high- to very-high-susceptibility zones. The proposed framework demonstrates that integrating PSInSAR and ensemble learning provides a robust and transferable approach for quantifying ground settlement hazards and supporting risk-informed urban planning in seismically active and complex geological coastal environments. © 2025 by the authors.
+ER  -
+
+TY  - JOUR
+AU  - Vyshnavi, P.
+AU  - Challagulla, S.P.
+AU  - Adamu, M.
+AU  - Vicencio, F.
+AU  - Jameel, M.
+AU  - Ibrahim, Y.E.
+AU  - Ahmed, O.S.
+TI  - Utilizing Artificial Neural Networks and Random Forests to Forecast the Dynamic Amplification Factors of Non-Structural Components
+PY  - 2023
+JO  - Applied Sciences (Switzerland)
+DO  - 10.3390/app132011329
+AB  - Soft stories in buildings are well-known to present structural vulnerabilities during seismic events, and the failure of non-structural components (NSCs) has been evident in past earthquakes, along with structural damage. This study seeks to investigate how the presence of a soft story in a building affects the criteria for elastic floor acceleration. The soft story is assumed to be at the top, middle, and bottom levels of the structure. To comprehend the behavior of NSCs, the researchers analyze the floor response spectra (FRSs) and component acceleration amplification. Remarkably, the results reveal that the position of the soft story strongly influences the floor response spectra, with structures featuring a middle soft story showing the most significant amplification of component acceleration. In constructing the FRSs, the component dynamic amplification factors (CDAFs) play a vital role as they accurately illustrate how NSCs amplify floor vibrations. Consequently, the study delves into exploring machine learning (ML) models like artificial neural networks (ANNs) and random forest (RF) to map the intricate relationship between CDAFs, the dynamic characteristics of the building, and the behavior of NSCs. Upon comparison of the two models, the random forest model emerges as the superior method in predicting the CDAFs. © 2023 by the authors.
+ER  -
+
+TY  - JOUR
+AU  - Meng, S.-B.
+AU  - Zhao, J.-W.
+AU  - Liu, Z.-X.
+AU  - Jin, W.
+TI  - Prediction and Modeling for Local Site Amplification Effect of Ground Motion: Exploring Optimized Machine Learning Approaches
+PY  - 2022
+JO  - Pure and Applied Geophysics
+DO  - 10.1007/s00024-022-02997-y
+AB  - Local site conditions, especially complex topography and geological structure, play a critical role in determining the peak acceleration and spectral representation of ground motions under earthquakes; however, they are not yet considered sufficiently in ground motion prediction equations. The scattering of seismic waves by complex site conditions leads to complexity for quantifying the relation among incident waves, site conditions, and site amplification effect based on traditional regression technology. This article explores the prediction performance for local site amplification effect on ground motion using a machine learning-based model, including the support vector machine, extreme learning machine, classical artificial neural network, and two optimizing algorithms with an artificial neural network. A typical local topography, a canyon with cliffs, is studied as an example, and the site amplification effect generated by scattering is determined by the boundary element method. The results indicate that the extreme learning machine and artificial neural network can predict the local site effect of ground motion, while the support vector machine does not yield reliable estimates. The particle swarm optimization and adaptive differential evolution can improve the predicted accuracy, and the adaptive differential evolution-artificial neural network algorithm has slightly better performance and stability. The incident frequency and depth of cliffs are significant parameters for the site amplification effect, whereas the depth of the V-shaped canyon is relatively insignificant. © 2022, The Author(s), under exclusive licence to Springer Nature Switzerland AG.
+ER  -
+
+TY  - JOUR
+AU  - Tetik, T.
+AU  - Cihan, P.
+TI  - Non-parametric ground motion duration and energy-based intensity measure models: A novel stacking ensemble model using regional seismic data
+PY  - 2026
+JO  - Soil Dynamics and Earthquake Engineering
+DO  - 10.1016/j.soildyn.2026.110135
+AB  - This study leverages data-driven Machine Learning (ML) algorithms and Türkiye's regional ground motion (GM) database (1983–2025) to predict significant durations (D5–75, D5–95, D20–80), Cumulative Absolute Velocity (CAV), and Housner Intensity (SI). The models evaluated include Extreme Gradient Boosting (XGBoost), Random Forest (RF), Gradient Boosting Regression (GBR), Linear Regression (LR), and two stacking ensemble models. The Stacking-GBR model yielded the best performance, with R2 values of 0.987 and 0.988 for SI and CAV, respectively. Compared with established empirical equations (e.g., BSA09 for duration and CB19 for CAV), the proposed framework achieves a 20–25 % reduction in total variability (σ) for duration metrics. The SHapley Additive exPlanations (SHAP) analysis reveals that moment magnitude (Mw) and rupture distance govern scaling and attenuation, whereas Vs30 and basin-depth proxies capture site-amplification effects, supporting the model's physical interpretability of the model. Crucially, a SHAP-informed model reduction further demonstrates that physically motivated predictors (Mw, RRUP, Vs30) retain strong predictive capability for energy-based intensity measures, supporting practical applicability when detailed source parameters are unavailable. Residual analyses indicate that duration metrics are more sensitive to source and site variability, particularly at smaller magnitudes and in softer soils, while energy-based measures, especially SI, exhibit greater stability and lower model uncertainty. The findings highlight that the integration of ML with explainability methods enhances the predictive accuracy and physical interpretability of seismic intensity measures, supporting performance-based earthquake engineering and regional hazard assessment. © 2026 Elsevier Ltd.
+ER  -
+
+TY  - JOUR
+AU  - Ji, K.
+AU  - Zhu, C.
+AU  - Yaghmaei-Sabegh, S.
+AU  - Lu, J.
+AU  - Ren, Y.
+AU  - Wen, R.
+TI  - Site classification using deep-learning-based image recognition techniques
+PY  - 2023
+JO  - Earthquake Engineering and Structural Dynamics
+DO  - 10.1002/eqe.3801
+AB  - Classification of local soil conditions is important for the interpretation of structural seismic damage, which also plays a vital role in site-specific seismic hazard analyses. In this study, we propose to classify sites as an image recognition task using a deep convolutional neural network (DCNN)-based technique. We design the input image as a combination of the topographic slope and the mean horizontal-to-vertical spectral ratio (HVSR) of earthquake recordings. A DCNN model with five convolutional layers is trained using 1649 sites in Japan. The recall rates for site classes C, D, and E using our DCNN classifier for Japanese sites are 82%, 70%, and 60%, respectively. When compared with existing site classification schemes relying on predefined standard HVSR curves, our proposed method achieves the highest total accuracy rate (between 73% and 75%). The generality and applicability of our trained classifier are further validated using sites in Europe with a total accuracy between 64% and 66%. The proposed data-driven approach could be extended to other types of site amplification functions in the future. © 2022 John Wiley & Sons Ltd.
+ER  -
+
+TY  - JOUR
+AU  - Yang, X.
+AU  - Chen, Y.
+AU  - Teng, S.
+AU  - Chen, G.
+TI  - A novel method for predicting local site amplification factors using 1-D convolutional neural networks
+PY  - 2021
+JO  - Applied Sciences (Switzerland)
+DO  - 10.3390/app112411650
+AB  - The analysis of site seismic amplification characteristics is one of the important tasks of seismic safety evaluation. Owing to the high computational cost and complex implementation of numerical simulations, significant differences exist in the prediction of seismic ground motion amplification in engineering problems. In this paper, a novel prediction method for the amplification characteristics of local sites was proposed, using a state-of-the-art convolutional neural network (CNN) combined with real-time seismic signals. The amplification factors were computed by the standard spectral ratio method according to the observed records of seven stations in the Lower Hutt Valley, New Zealand. Based on the geological exploration data from the seven stations and the geological hazard information of the Lower Hutt Valley, eight parameters related to the seismic information were presumed to influence the amplification characteristics of the local site. The CNN method was used to establish the relationship between the amplification factors of local sites and the eight parameters, and the training samples and testing samples were generated through the observed and geological data other than the estimated values. To analyze the CNN prediction ability for amplification factors on unrecorded domains, two CNN models were established for comparison. One CNN model used about 80% of the data from 44 seismic events of the seven stations for training and the remaining data for testing. The other CNN model used the data of six stations to train and the remaining station’s data to test the CNN. The results showed that the CNN method based on the observation data can provide a powerful tool for predicting the amplification factors of local sites both for recorded positions and for unrecorded positions, while the traditional standard spectral ratio method only predicts the amplification factors for recorded positions. The comparison of the two CNN models showed that both can effectively predict the amplification factors of local ground motion without records, and the accuracy and stability of predictions can meet the requirements. With increasing seismic records, the CNN method becomes practical and effective for prediction purposes in earthquake engineering. © 2021 by the authors. Licensee MDPI, Basel, Switzerland.
+ER  -

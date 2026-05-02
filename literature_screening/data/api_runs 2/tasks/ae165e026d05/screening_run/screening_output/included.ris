@@ -1,0 +1,262 @@
+TY  - JOUR
+AU  - Esteghamati, M.Z.
+AU  - Kottke, A.R.
+AU  - Rodriguez-Marek, A.
+TI  - A Data-Driven Approach to Evaluate Site Amplification of Ground-Motion Models Using Vector Proxies Derived from Horizontal-to-Vertical Spectral Ratios
+PY  - 2022
+JO  - Bulletin of the Seismological Society of America
+DO  - 10.1785/0120220106
+AB  - This study develops a data-driven framework to improve the prediction of site amplification in ground-motion models (GMM) using horizontal-to-vertical spectral ratios (HVSR) proxies derived from strong-motion data. Three machine learning algorithms (multiple regression, random forest, and support vector machine [SVM]) were implemented in an automated data-driven workflow that included feature selection (filter-based, wrapper-based, and embedded methods), hyperparameter tuning, and cross-validation modules. The site-to-site variability of resultant data-driven models was then compared to a baseline GMM. In addition, sensitivity analysis on framework choices was carried out. The results show that data-driven models with HVSR proxies provide lower site-to-site variability than conventional GMM. The best performing data-driven model (i.e., SVMs) showed an average of 24.1% (and up to 50.8%) lower site-to-site variability than the baseline GMM, where the difference was more significant at lower frequencies. Finally, all feature selection methods favor using a vector of the HVSR spectrum over single-valued HVSR proxies such as peak frequency and amplitude. © Seismological Society of America.
+ER  -
+
+TY  - JOUR
+AU  - Jiang, Q.
+AU  - Wei, W.
+AU  - Xu, H.
+AU  - Dong, T.
+TI  - A novel seismic topographic effect prediction method based on neural network models
+PY  - 2023
+JO  - European Physical Journal Plus
+DO  - 10.1140/epjp/s13360-023-04662-2
+AB  - Topography has a great effect on ground motions, and may aggravate seismic hazards. The quantification of topographic effects is vital for hazard prevention in practice. A series of studies were conducted to achieve this quantification. First, three bell-shaped hills’ numerical models with three input motions for each were established and calculated using finite element method. Second, topographic variables that were closely related to the amplification factors were analysed and selected. Third, back propagation (BP) neural network models using different input variables were tested to quantify the topographic effect. Core methods used in this study were validated using recorded seismic data. The results showed that altitude, slope, aspect, and frequency are important variables that can affect topographic amplification factors. Thin hills or high frequencies of incident waves generally cause great amplification factors at crests. High-frequency waves tend to be captured by small-scale topography and induce amplifications of ground motions at these positions. Altitudes can be positively correlated with amplification factors when wavelengths of incident waves are apparently longer than the dimensions of local topography. Slopes generally do not have a good correlation with amplification factors for low hills until the upper part and lower part of a hill are separated for analysis, owing to slopes at the tops and feet of low hills being very similar. The BP neural network method is adequate for the quantification of the topographic effect. There are at least two combinations of input variables of BP models that can achieve good performance. One combination includes altitude, slope, aspect, and frequency, while the other includes altitude, x-axis gradient, y-axis gradient, and frequency. The former combination is less precise but has better expandability of the predictive region, while the latter combination is more precise but lacks expandability of the predictive region. © 2023, The Author(s), under exclusive licence to Società Italiana di Fisica and Springer-Verlag GmbH Germany, part of Springer Nature.
+ER  -
+
+TY  - JOUR
+AU  - Wang, X.
+AU  - Wang, Z.
+AU  - Wang, J.
+AU  - Miao, P.
+AU  - Dang, H.
+AU  - Li, Z.
+TI  - Machine learning based ground motion site amplification prediction
+PY  - 2023
+JO  - Frontiers in Earth Science
+DO  - 10.3389/feart.2023.1053085
+AB  - Site condition impact on seismic ground motion has been a complex but important subject in earthquake hazard analysis. Traditional studies on site amplification effect are either based on site response via wave propagation simulation or regression analysis using parameters such as Vs30, bedrock ground motion and site response period. Ground Motion Prediction Equations (GMPEs) are used for regions where there is limited data of seismic records. The main issues with these approaches are that they cannot demonstrate the complex relationship between site amplification and its various affecting parameters, thus there exists large uncertainty in the results. Recent studies based on machine learning have shown significant improvement in predicting the site amplification, but the result is not well explained. This study assembled the information on 6 parameters including Vs30, magnitude, epicentral distance, earthquake source depth, bedrock ground motion, and altitude of 353,327 records observed during 1997 and 2019 from 698 KiK-net stations. Three machine learning algorithms of Random Forest (RF), XGBoost, and Deep Neural Networks (DNN) were implemented to predict the site amplification factor using these 6 selected parameters. Shapley Additive explanation (SHAP) was used to explain the importance of the 6 parameters. The results show that all three machine learning algorithms performed much better than the traditional GMPE approach with XGBoost’s performance the best. The explanation provided by the SHAP analysis further enhanced the reasonability of this study. It is anticipated that the combination of machine learning and SHAP analysis can provide better assessment for site amplification of ground motion with better potential of future application in seismic hazard analysis. Copyright © 2023 Wang, Wang, Wang, Miao, Dang and Li.
+ER  -
+
+TY  - JOUR
+AU  - Bergamo, P.
+AU  - Hammer, C.
+AU  - Fäh, D.
+TI  - On the relation between empirical amplification and proxies measured at swiss and japanese stations: Systematic regression analysis and neural network prediction of amplification
+PY  - 2021
+JO  - Bulletin of the Seismological Society of America
+DO  - 10.1785/0120200228
+AB  - We address the relation between local amplification and site-condition indicators derived from in situ geophysical surveys for the estimation of the VS profile, and sin-gle-station recordings processed with horizontal-to-vertical spectral ratio technique. Site-condition indicators, or proxies (e.g., VS30), aim at “summarizing” the description of the local geophysical structure, with a focus on its relation to site amplification. The premise for our work was the compilation of two companion databases: one of soil condition proxies and the other of empirically derived Fourier amplification functions, for Swiss and Japanese stations. We investigated the connection between these two datasets, at first, with a systematic set of regressions correlating each proxy to amplification factors within the frequency band 0.5– 20 Hz, second, with a neural network (NN) structure predicting site amplification from proxies. The regression analyses showed that, generally, site-condition parameters (SCPs) bear a better correlation with amplification within 1.7–6.7 Hz; the “best” indicators are the fre-quency-dependent quarter-wavelength (QWL) velocity and, among scalar parameters, VS30, the bedrock depth, and f0 . Collating Swiss and Japanese datasets, the trend of variation of amplification with respect to most proxies is similar. Finally, we evaluated the prediction performance of various combinations of SCPs, for local amplification, using a NN. To attain a database large enough to constrain the estimation of the network parameters, we merged Swiss and Japanese stations into a single training and validation dataset, motivated by the similarities observed in the regression analyses. The outcome we obtained from the NN is encouraging and consistent with the results of the regressions; SCPs with higher correlation to amplification provide a better forecast of the latter (particularly within 1.7–6.7 Hz). More complete input information, such as QWL parameters (velocity, impedance contrast), or extended ensembles of scalar proxies (particularly, including f0 ), offer a better estimation of local amplification. © Seismological Society of America.
+ER  -
+
+TY  - JOUR
+AU  - Lee, Y.-G.
+AU  - Kim, S.-J.
+AU  - Achmet, Z.
+AU  - Kwon, O.-S.
+AU  - Park, D.
+AU  - Di Sarno, L.
+TI  - Site amplification prediction model of shallow bedrock sites based on machine learning models
+PY  - 2023
+JO  - Soil Dynamics and Earthquake Engineering
+DO  - 10.1016/j.soildyn.2023.107772
+AB  - Prediction of the site amplification is of primary importance for a site-specific seismic hazard assessment. A large suite of both empirical and simulation-based site amplification models has been proposed. Because they are conditioned on a few simplified site proxies including time-averaged shear wave velocity up to a depth of 30 m (VS30) and site period (TG), they only provide approximate estimates of the site amplification. In this study, site amplification prediction models are developed using two machine learning algorithms, which are random forest (RF) and deep neural network (DNN). A comprehensive database of site response analysis outputs obtained from simulations performed on shallow bedrock profiles is used. Instead of simplified site proxies and ground motion intensity measures, matrix data which include the response spectrum of the input ground motion and shear wave velocity profile. Both machine learning based models provide exceptional prediction accuracies of both the linear and nonlinear amplifications compared with the regression-based model, producing accurate predictions of both binned mean and standard deviation of the site amplification. Among two machine learning techniques, DNN-based model is revealed to produce better predictions. © 2023
+ER  -
+
+TY  - JOUR
+AU  - Raja, M.N.A.
+AU  - Mercado, V.
+AU  - Abdoun, T.
+AU  - El-Sekelly, W.
+TI  - Seismic site amplification prediction- an integrated Bayesian optimisation explainable machine learning approach
+PY  - 2025
+JO  - Georisk
+DO  - 10.1080/17499518.2025.2521870
+AB  - This study presents machine learning (ML) models for predicting average seismic site amplification, a key factor in seismic hazard assessment. Utilizing data from Japan’s KiK-Net strong-motion network, several algorithms were developed, including Gaussian Process Regression (GPR), Least Median Square Regression (LMSR), Sequential Minimal Optimization Regression (SMOR), K-star (K*), M5 Rules, Alternative Modeling Trees (AMT), and Regression Tree Ensemble (RTE). Input features included shear wave velocity profiles, peak ground acceleration at the rock, and ground motion duration. Models were optimized using Bayesian tuning and k-fold cross-validation. Among all models, the RTE model exhibited superior performance, achieving the lowest Root Relative Square Error (RRSE) values of 0.125 and 0.568, and Mean Squared Logarithmic Error (MSLE) values of 0.005 and 0.058 in the training and testing sets, respectively. It also showed MSLE reductions of 83.4% and 60% compared to LMSR and traditional 1D equivalent linear analysis. Shapley Additive explanations and partial dependence plots were used to interpret model behavior, revealing key variable impacts and increasing model transparency. The results highlight the capability of ML—particularly RTE—in improving the accuracy and efficiency of seismic site response predictions, demonstrating strong potential for advancing geotechnical engineering applications. © 2025 Informa UK Limited, trading as Taylor & Francis Group.
+ER  -
+
+TY  - JOUR
+AU  - Jiang, Q.
+AU  - Rong, M.
+AU  - Wei, W.
+AU  - Chen, T.
+TI  - A Quantitative Seismic Topographic Effect Prediction Method Based upon BP Neural Network Algorithm and FEM Simulation
+PY  - 2024
+JO  - Journal of Earth Science
+DO  - 10.1007/s12583-022-1795-x
+AB  - Topography can strongly affect ground motion, and studies of the quantification of hill surfaces’ topographic effect are relatively rare. In this paper, a new quantitative seismic topographic effect prediction method based upon the BP neural network algorithm and three-dimensional finite element method (FEM) was developed. The FEM simulation results were compared with seismic records and the results show that the PGA and response spectra have a tendency to increase with increasing elevation, but the correlation between PGA amplification factors and slope is not obvious for low hills. New BP neural network models were established for the prediction of amplification factors of PGA and response spectra. Two kinds of input variables’ combinations which are convenient to achieve are proposed in this paper for the prediction of amplification factors of PGA and response spectra, respectively. The absolute values of prediction errors can be mostly within 0.1 for PGA amplification factors, and they can be mostly within 0.2 for response spectra’s amplification factors. One input variables’ combination can achieve better prediction performance while the other one has better expandability of the predictive region. Particularly, the BP models only employ one hidden layer with about a hundred nodes, which makes it efficient for training. © China University of Geosciences (Wuhan) and Springer-Verlag GmbH Germany, Part of Springer Nature 2024.
+ER  -
+
+TY  - JOUR
+AU  - Pan, D.
+AU  - Miura, H.
+AU  - Kanno, T.
+AU  - Shigefuji, M.
+AU  - Abiru, T.
+TI  - Deep-Neural-Network-Based Estimation of Site Amplification Factor from Microtremor H/V Spectral Ratio
+PY  - 2022
+JO  - Bulletin of the Seismological Society of America
+DO  - 10.1785/0120210300
+AB  - Site amplification factors (SAFs) of S wave at ground surface are crucial for evaluating and predicting seismic ground motions. This study proposed a novel methodology for directly estimating S-wave SAF from microtremor horizontal-to-vertical spectral ratio (MHVR) based on deep neural network (DNN) model. We analyzed site amplifications obtained from generalized spectral inversion technique and microtremor data observed at Kyoshin net and Kiban–Kyoshin network sites in Chugoku district, western Japan. The DNN model was developed using peak frequency and the frequency-dependent relationship between MHVRs and SAFs. The sites were divided into training set, validation set, and test set. The training set and validation set were used in k-fold cross-validation technique to evaluate and select optimal model. Once the optimal model had been determined, the model was employed on the test set that was completely independent of the training and validation set for evaluating the generalization performance. Residuals and root mean square errors between the estimated and observed SAFs were evaluated to discuss the applicability of the proposed model. We also confirmed that the DNN model shows better performance in estimating SAFs com-pared with the existing double empirical correction method. © Seismological Society of America.
+ER  -
+
+TY  - JOUR
+AU  - Lee, Y.-G.
+AU  - Park, D.
+AU  - Kwon, O.-S.
+TI  - Development of a site and motion proxy-based site amplification model for shallow bedrock profiles using machine learning
+PY  - 2025
+JO  - Frontiers in Built Environment
+DO  - 10.3389/fbuil.2025.1597715
+AB  - Accurate prediction of site amplification is crucial for seismic hazard assessment, particularly at shallow bedrock sites where limited data can constrain modeling efforts. Traditional regression-based models often fail to capture complex nonlinear interactions inherent in seismic ground response. This study aims to develop proxy-based linear and nonlinear site amplification models that provide reliable predictions using machine learning (ML) techniques, enabling practical applications in regional ground motion modeling. The outputs of a series of one-dimensional site response analyses were used for training. Three ML algorithms were used: random forest (RF), extreme gradient boosting (XGB), and deep neural network (DNN). The models incorporated four site proxies and two motion proxies to predict site amplification, and their performance was evaluated against both a conventional regression-based model and a rigorous ML model utilizing full shear-wave velocity profiles and input motion spectra. When identical proxies were used, the differences between the regression and ML-based models were not pronounced. However, when the ML model was trained simultaneously with the site and motion proxies for both linear and nonlinear components, the prediction performance was significantly enhanced. This revealed that the traditional two-track approach of the site-proxy-dependent linear component and motion-proxy-conditioned nonlinear component is ineffective. A pairing scheme for site and motion proxies is recommended to achieve the most accurate predictions. Among the three ML methods, the RF algorithm exhibited the weakest performance. The XGB and DNN algorithms’ prediction accuracies were superior to the RF algorithm. The XGB and DNN outperformed each other when predicting the linear and nonlinear components, respectively. The proposed ML models achieved coefficient of determination (R2) values up to 0.97 with root mean square error (RMSE) as low as 0.04 for linear components, and R2 up to 0.92 with RMSE as low as 0.06 for nonlinear components, demonstrating significant improvements over conventional regression-based models. Compared with a rigorous ML model, the proxy-based models exhibited agreeable predictions with far less information, illustrating the benefit of adopting the ML algorithms for improved adaptability and predictive capability. The constraint imposed on the site type, considering only profiles with a bedrock depth of less than 30 m, may have resulted in the strong performance of the proxy-based model. Copyright © 2025 Lee, Park and Kwon.
+ER  -
+
+TY  - JOUR
+AU  - Roten, D.
+AU  - Olsen, K.B.
+TI  - Estimation of site amplification from geotechnical array data using neural networks
+PY  - 2021
+JO  - Bulletin of the Seismological Society of America
+DO  - 10.1785/0120200346
+AB  - We use deep learning to predict surface-to-borehole Fourier amplification functions (AFs) from discretized shear-wave velocity profiles. Specifically, we train a fully connected neural network and a convolutional neural network using mean AFs observed at ∼600 KiK-net vertical array sites. Compared with predictions based on theoretical SH 1D amplifications, the neural network (NN) results in up to 50% reduction of the mean squared log error between predictions and observations at sites not used for training. In the future, NNs may lead to a purely data-driven prediction of site response that is independent of proxies or simplifying assumptions. © Seismological Society of America.
+ER  -
+
+TY  - JOUR
+AU  - Bou Nassif, A.
+AU  - Maufroy, E.
+AU  - Lacroix, P.
+AU  - Chaljub, E.
+AU  - Causse, M.
+AU  - Bard, P.-Y.
+TI  - The i-FSC proxy for predicting inter-event and spatial variation of topographic site effects
+PY  - 2025
+JO  - Bulletin of Earthquake Engineering
+DO  - 10.1007/s10518-024-02042-4
+AB  - Our study focuses on predicting topographic amplification of ground motion in the near-source region, where seismic rays reach the free-surface at varying incidence angles. We rely on data from previous 3D numerical simulations conducted on a topographic relief with a homogeneous medium. First, using neural networks, we identify which key parameters, describing the geometric characteristics of the relief relative to the seismic source position, control ground motion amplification. Then, we determine the functional form that relates these parameters to the simulated amplifications. Subsequently, we conduct a regression study to develop a model of topographic amplification, referred to as the i-FSC proxy (Illuminated Frequency-Scaled Curvature). Our estimator depends on the frequency-scaled (1) curvature, a parameter that accounts for the occurrence of amplifications over convex topographies and de-amplification over concave ones; (2) normalized illumination angle, a newly defined parameter that quantifies the slope exposure to the incoming wavefield, accounting for high amplification on slopes oriented opposite to the seismic source. The illumination parameter reduces the uncertainties of the proxy by a factor of 2 compared to estimators that rely solely on curvature. The proxy does not require high computational resources. It uses a digital elevation map and a seismic source position to predict amplification factors (without lithological effects) for an S-wave at any site on the surface topography. It allows exploration of variations in topographic amplification near seismic sources, representing a significant breakthrough as areas closest to the fault typically sustain the highest damages. A MATLAB script performing the i-FSC calculations is provided. © The Author(s) 2024.
+ER  -
+
+TY  - JOUR
+AU  - Pan, D.
+AU  - Miura, H.
+AU  - Kwan, C.
+TI  - Transfer learning model for estimating site amplification factors from limited microtremor H/V spectral ratios
+PY  - 2024
+JO  - Geophysical Journal International
+DO  - 10.1093/gji/ggae065
+AB  - Site amplification factors (SAFs) of seismic ground motions are essential in evaluating and estimating seismic hazards. In our previous study, the authors proposed a simple and cost-effective method to estimate a SAF based on a deep neural network (DNN) model and microtremor horizontal-to-vertical spectral ratio (MHVR). Since the previous DNN model was based on the observed SAFs and MHVRs within a limited district in Japan, the applicability of the previous model to non-source regions with different site conditions was limited. This study explored the application of a transfer learning (TL) technique to adapt an existing (pre-trained) DNN model to new regions and a different database. The SAFs obtained through generalized spectral inversion technique (GIT) at the seismic observation stations (K-NET and KiK-net) in Japan were collated as the ground truth for site effects. MHVRs recorded at the stations in several districts of Japan were collected to construct a data set for the development of the TL model. Subsequently, a TL model was constructed, leveraging the neural network layers and their weights from the pre-trained model while incorporating additional neural network layers to enhance the performance. During the training process, a total data set of 112 sites was divided into training set, validation set, and external test set by 1:1:5. Utilizing a cross-validation strategy, the residuals between pSAFs (pseudo-SAFs) estimated by the TL model and the observed SAFs were analysed for the external test set containing 80 sites. The results showed that the TL model outperformed the pre-trained DNN model. The cross-validation results demonstrated that almost consistent prediction results were obtained regardless of any combination of 16 sites selected as the training set. Furthermore, by contrasting the influence of varying training set sizes on the performance of the TL model and comparing the TL model to a DNN model with an extended training set, the effectiveness of constructing the model with the limited number of data (16 sites) was ascertained. Finally, the effectiveness and limitations of the TL model were evaluated using MHVRs with peak frequencies falling outside the training set’s range. C The Author(s) 2024.
+ER  -
+
+TY  - JOUR
+AU  - Miura, H.
+AU  - Gonzales, C.
+AU  - Diaz, M.
+AU  - Estrada, M.
+AU  - Lazares, F.
+AU  - Aguilar, Z.
+AU  - Pan, D.
+AU  - Matsuoka, M.
+TI  - Assessment of Site Amplification Factors in Southern Lima, Peru Based on Microtremor H/V Spectral Ratios and Deep Neural Network
+PY  - 2023
+JO  - Journal of Disaster Research
+DO  - 10.20965/jdr.2023.p0298
+AB  - Evaluation of site amplification factors (SAFs) of seismic waves has been one of the important issues for evaluating seismic hazards. The authors have pro-posed a deep neural network (DNN) model in or-der to cost-effectively and accurately estimate SAF from microtremor horizontal-to-vertical spectral ratio (MHVR). In this study, we assessed the SAFs in southern Lima, Peru by estimating from MHVRs and DNN. First, we validated the applicability of the DNN model to Lima by estimating the SAFs from the MHVRs observed at seismic stations in Lima. From the comparison with the observed SAFs derived from spectral inversion technique, we confirmed that the SAFs in Lima were accurately estimated by the DNN model. The SAFs in the southern Lima including Chorrillos and Villa El Salvador districts were evaluated by ap-plying the DNN model to the observed MHVRs at ap-proximately 250 sites. We found that large amplifications at low frequency around 1 Hz were expected in the southeastern coastal areas formed by eolian sands whereas smaller amplification were estimated in the northwestern areas mainly located on alluvial de-posits. © Fuji Technology Press Ltd.
+ER  -
+
+TY  - JOUR
+AU  - Díaz, J.P.
+AU  - Sáez, E.
+AU  - Monsalve, M.
+AU  - Candia, G.
+AU  - Aron, F.
+AU  - González, G.
+TI  - Machine learning techniques for estimating seismic site amplification in the Santiago basin, Chile
+PY  - 2022
+JO  - Engineering Geology
+DO  - 10.1016/j.enggeo.2022.106764
+AB  - Seismic site amplification and seismic hazard maps are crucial inputs for decision making and risk evaluation in places where seismicity imposes a significant risk to human life and infrastructure. In this work, we propose a novel machine learning (ML) based methodology to integrate qualitative and quantitative data to map the degree of seismic amplification in an area of Chile, one of the most seismically active countries on Earth. Our method uses measurements of surface shear wave velocities (Vs30) and predominant frequencies (f0) combined with gravity anomaly maps to update the geographic extension of seismic amplification classes. Additionally, we trained the predictive models to interpolate and extrapolate Vs30 and f0 to the unsampled sites. Applying this method to the Santiago basin resulted in (i) a refined seismic amplification map, and (ii) maps of Vs30 and f0 estimated with improved accuracy. The best predictions, obtained by ML techniques and validated through cross-validation, are possibly due to the inclusion of spatial covariates for algorithm training, enhancing the ability of the model to capture the spatial correlations of geological, geophysical and geotechnical data. The estimation of predominant frequencies (f0) is improved considerably by including gravity as a covariant. The accuracy of the f0 predictions apparently depends more on the choice of covariates than on the algorithm used, while the Vs30 predictions are more sensitive to the chosen algorithm. These results illustrate the great potential of machine learning predictive algorithms in digital soil mapping, which surpass traditional geostatistical techniques. The major contribution of this work is to introduce a novel methodology, based on artificial intelligence models, to extend local measurements of site-specific dynamic properties. This information can be used to quantitatively estimate seismic hazard over a regional scale. © 2022 Elsevier B.V.
+ER  -
+
+TY  - JOUR
+AU  - Qadri, S.M.T.
+AU  - Malik, O.A.
+TI  - Establishing site response-based micro-zonation by applying machine learning techniques on ambient noise data: a case study from Northern Potwar Region, Pakistan
+PY  - 2021
+JO  - Environmental Earth Sciences
+DO  - 10.1007/s12665-020-09322-7
+AB  - Several major earthquakes have jolted Pakistan during the last 30 years, destroyed infrastructure and severe damage to the economy. Despite advancement in data sciences and its linkages with other domains, no such study has been conducted in Pakistan, which incorporates the application of machine learning techniques on ambient noise data. This study presents the application of machine learning techniques on the ambient noise data to establish the micro-zones within the urban settlements of northern Potwar region of Pakistan, based on the site response parameters and seismic vulnerability. The ambient noise data from 148 sites in the study area, are acquired, processed and interpreted. Different clustering techniques namely, K-mean, fuzzy c-means and hierarchical clustering have been applied to the interpreted ambient noise data set. Arc GIS maps of the study area have been developed by making use of the interpretation of the ambient noise data and the resulted clustering solutions. The results showed that the fundamental frequency f0 ranges between 0.5 and 15 Hz, the H/V spectral amplification factor ranges between 0.8 and 5.9; the soft sediment thickness ranges from 1.6 to 316 m, whereas, the soil vulnerability index is observed between 0.1 and 63. These site response parameters indicated that the study area is moderate to highly vulnerable to site amplification, and any seismic event can lead to catastrophe within the study area. The clustering techniques also detected three groups from the interpretation of the ambient noise data set by separating the locations according to their vulnerability due to site amplification. The quality of cluster solutions was evaluated using cluster validity indexes and the results of these techniques were compared. These results present the similarities and dissimilarities among different sites and indicate the sites which are geographically distant but have very similar vulnerability characteristics or vice versa. The Arc GIS tool showed the spatial distribution of site response parameters and three zones were established as zone 1, zone 2 and zone 3 with low, intermediate and high values, respectively. The spatial distribution maps showed that the northeastern and northwestern parts of the study area are more vulnerable to site amplification. © 2021, Springer-Verlag GmbH Germany, part of Springer Nature.
+ER  -
+
+TY  - JOUR
+AU  - Bergamo, P.
+AU  - Hammer, C.
+AU  - Fäh, D.
+TI  - Correspondence between Site Amplification and Topographical, Geological Parameters: Collation of Data from Swiss and Japanese Stations, and Neural Networks-Based Prediction of Local Response
+PY  - 2022
+JO  - Bulletin of the Seismological Society of America
+DO  - 10.1785/0120210225
+AB  - We address the relation between seismic local amplification and topographical and geological indicators describing the site morphology. We focus on parameters that can be derived from layers of diffuse information (e.g., digital elevation models, geological maps) and do not require in situ surveys; we term these parameters as “indirect” proxies, as opposed to “direct” indicators (e.g., f0, VS30 ) derived from field measurements. We first compiled an extensive database of indirect parameters covering 142 and 637 instrumented sites in Switzerland and Japan, respectively; we collected topographical indicators at various spatial extents and focused on shared features in the geological descriptions of the two countries. We paired this proxy database with a companion dataset of site amplification factors at 10 frequencies within 0.5–20 Hz, empirically measured at the same Swiss and Japanese stations. We then assessed the robustness of the correlation between individual site-condition indicators and local response by means of statistical analyses; we also compared the proxy-site amplification relations at Swiss versus Japanese sites. Finally, we tested the prediction of site amplification by feeding ensembles of indirect parameters to a neural network (NN) structure. The main results are: (1) indirect indicators show higher correlation with site amplification in the low-frequency range (0.5–3.33 Hz); (2) topographical parameters primarily relate to local response not because of topographical amplification effects but because topographical features correspond to the properties of the subsurface, hence to stratigraphic amplification; (3) large-scale topographical indicators relate to low-frequency response, smaller-scale to higher-frequency response; (4) site amplification versus indirect proxy relations show a more marked regional variability when compared with direct indicators; and (5) the NN-based prediction of site response is the best achieved in the 1.67–5 Hz band, with both geological and topographical proxies provided as input; topographical indicators alone perform better than geological parameters. © Seismological Society of America.
+ER  -
+
+TY  - JOUR
+AU  - Zhang, H.
+AU  - Zheng, K.
+AU  - Miao, Y.
+TI  - Combining physical model with neural networks for earthquake site response prediction
+PY  - 2025
+JO  - Soil Dynamics and Earthquake Engineering
+DO  - 10.1016/j.soildyn.2024.109116
+AB  - The amplitude of seismic waves will be significantly amplified near the Earth's surface, and this phenomenon is known as the seismic site response. Site response prediction is of paramount importance for the seismic-resistant building design and seismic risk assessment. However, accurately predicting site response has always been a challenge due to the incomplete physical knowledge and insufficient dataset volumes. Here, we propose an approach that combines the neural networks with classical homogeneous layered model for site response prediction. This approach exploits the potential for improving the accuracy of site response prediction from both the physical and data perspectives, which reduces the requirements for the model complexity and the training data volume. Compared to the physics-driven method, this approach reduces the estimation errors by approximately 50 % on average, and corrects the correlation between the observed and predicted results. This approach firstly reproduces the four-stage characteristics of the site response in the entire seismic band, and provides a new framework for site response prediction. © 2024
+ER  -
+
+TY  - JOUR
+AU  - Li, Y.
+AU  - Zhou, H.
+TI  - Prediction of seismic topographic effects from DEM data via U-Net deep learning model
+PY  - 2026
+JO  - European Physical Journal Plus
+DO  - 10.1140/epjp/s13360-025-07235-7
+AB  - Site effects are a critical topic in seismology and earthquake engineering, with topographic effects playing a pivotal role in local seismic response. Traditional models often rely on manually selected topographic parameters, such as slope, curvature, or relative elevation, limiting their effectiveness and interpretability. In this study, seismic ground motion in the Erlang Mountain area of the Sichuan–Tibet region, China, was simulated using the spectral element method (SEM). A U-Net-based deep learning model was then employed to predict seismic topographic amplification, taking digital elevation model (DEM) data as input and peak ground velocity (PGV) amplification factors as output. Multi-layer convolution operations extracted topographic features, while skip connections integrated multi-scale information. Quantified by root-mean-square error (RMSE), the U-Net model outperformed traditional back-propagation (BP) neural networks. Incorporating incident angle and subsurface velocity structures as additional input channels further improved prediction accuracy, highlighting the coupled influence of topography and subsurface conditions. This study provides a data-driven framework for simulating seismic topographic effects. © The Author(s), under exclusive licence to Società Italiana di Fisica and Springer-Verlag GmbH Germany, part of Springer Nature 2026.
+ER  -
+
+TY  - JOUR
+AU  - Zaoui, M.A.I.
+AU  - Derras, B.
+AU  - Régnier, J.
+TI  - Impact of several site-condition proxies and ground-motion intensity measures on the spectral amplification factor using neuro-fuzzy approach: an example on the KiK-Net dataset
+PY  - 2025
+JO  - Natural Hazards
+DO  - 10.1007/s11069-025-07151-0
+AB  - The aim of this paper is to utilize noted machine learning algorithm to examine the impact of 22 Site Condition Proxies (SCPs) and 3 Ground Motion Intensity Measurements (GMIMs) on the Response Spectral Amplification Factor (SAF). The SAF represents the ratio of Pseudo-Spectral Acceleration with 5% damping between surface and downhole measurements, with the downhole data serving as the reference site. The 22 SCPs include average shear velocities at various depths (VS10, VS20, VS30, VS50, VS100), Average shear wave velocity from the ground surface up to the depth at which shear velocity reaches 800 m/s, so-called H800 (VS800), mean shear velocity to the total depth of the profile (Vsmean), minimum and maximum shear velocities (Vsmin, Vsmax), shear wave velocity at the location of the borehole instrument (Vszhole), contrast velocities (CVs), gradient velocity to 30 m (B30), topographic slope, depth at which shear velocity reaches 800 m/s (H800), and frequency peaks of the site response (fn). The 3 GMIMs consist of peak ground acceleration, peak ground velocity (PGV), and a proxy for maximum strain (PGV/VS30). This SAF is developed using a subset of the KiK-Net database and employs the Adaptive Neuro-Fuzzy Inference System (ANFIS) machine learning algorithm. The input variables of the model are the SCPs and GMIMs, while the target variables are the SAF values at different periods, ranging from 0.01 to 4 s. A sensitivity analysis is conducted to identify the most relevant SCPs and GMIMs, using the variance reduction coefficient (RC) as a metric to evaluate model performance. Among the GMIMs, PGV/VS30 is identified as the most effective. However, no single SCP is found to be relevant across all periods; therefore, a combination of two SCPs is chosen, with the optimal pair being [f0HV: fundamental resonance frequency using horizontal-to-vertical spectral ratio, CV2 = Vsmax/VS30,]. The final combination includes [f0HV, CV2, PGV/VS30]. This combination accounts for the different characteristics of SCPs, such as rigidity and depth, as well as a ground motion intensity parameter. The ANFIS model is validated through three methods: comparison with models proposed by (Earth Planets Sp 69:1–21, 10.1186/s40623-017-0718-z, 2017; Bull Earthq Eng 17:119–139, 10.1007/s10518-018-0459-9, 2019), testing with the same data used in the training phase, and validation with new data (Bahrampouri et al. in Earthq Spectra 37:505–522, 10.1177/8755293020952447, 2021). This sensitivity study and the developed model aim to enhance the consideration of local site effects, both for seismic code revisions and site-specific studies. © The Author(s), under exclusive licence to Springer Nature B.V. 2025.
+ER  -
+
+TY  - JOUR
+AU  - Yang, X.
+AU  - Hu, M.
+AU  - Chen, X.
+AU  - Teng, S.
+AU  - Chen, G.
+AU  - Bassir, D.
+TI  - Predicting Models for Local Sedimentary Basin Effect Using a Convolutional Neural Network
+PY  - 2023
+JO  - Applied Sciences (Switzerland)
+DO  - 10.3390/app13169128
+AB  - Although the numerical models can estimate the significant influence of local site conditions on the seismic propagation characteristics near the surface in many studies, they cannot feasibly predict the seismic ground motion amplification in regular engineering practice or earthquake hazard assessment due to the high computational cost and their complex implementation. In this paper, the scattering problem of trapezoidal sedimentary basins, one of the representatives of local complex sites with a relatively small model size, and simplified by practice in this type of study, was selected as the basin model. A series of standard basin models were built to quantify the relationship between the site condition parameters and the site amplification parameters (the peak ground acceleration and the hazard location). In addition, the factors that influence seismic ground motion amplification, such as the basin shape ratio, the soil depth, the basin edge dip angle, the ratio of shear wave velocity between the bedrock and the soil layer, the damping coefficient, and the fundamental frequency, were selected to investigate the sensitivity. A convolutional neural network (CNN) algorithm based on deep learning replacing traditional recursive algorithms was explored to establish a prediction model of basin amplification characteristics. By the Bayesian optimization method, the structural parameters of the CNN predicting model were selected to improve the accuracy of the prediction model. The results show that the optimized CNN models could predict the amplification characteristics of the basin better than the un-optimized CNN models. Three prediction models were established with the site condition parameters as the input parameters and their output parameters were the maximum amplification value of the peak ground acceleration (PGA), the hazard location, and their combination for each basin. To analyze the CNN’s prediction ability, each CNN model used about 80% of the data from the seismic model repose results for training and the remaining data (20%) for testing. By comparing the CNN prediction results with the FE simulation results, the accuracy and rationality of each prediction model were studied. The results show that, compared to a single numerical model, the CNN prediction results of the site amplification features could be quickly obtained by inputting the relevant parameters. Compared to recursive class models, the established CNN prediction model can directly establish the relationships among multiple input and multiple output parameters. A comparison of the three kinds of CNN models shows that the prediction accuracy of the joint parameter model was slightly lower than that of the two single-output models. © 2023 by the authors.
+ER  -
+
+TY  - JOUR
+AU  - Ju, S.
+AU  - Jia, J.
+AU  - Pan, X.
+TI  - Prediction framework of slope topographic amplification on seismic acceleration based on machine learning algorithms
+PY  - 2024
+JO  - Engineering Applications of Artificial Intelligence
+DO  - 10.1016/j.engappai.2024.108143
+AB  - Slope topographic amplification of peak seismic acceleration leads to more severe seismic damage to nearby buildings, so its quantitative prediction is required for engineering applications. However, prior quantitative studies are fewer and use traditional regression methods, which require subjective assumptions and have lower accuracy. To solve this problem, artificial intelligence regression algorithms were firstly attempted to establish a predictive model for slope topographic amplification. In this model, slope inclination, slope height, and frequency of seismic waves were taken as parameters, and amplification ratio was taken as prediction target. Then, the multivariate nonlinear relationship between the prediction target and the sample parameters was established using artificial intelligence regression algorithms. Compared with the traditional prediction method, the determination coefficient of the present model is improved by 17.84%–32.60%, and the root mean square error is reduced by 30.05%–77.36%. In addition, the effect of different regression algorithms on the prediction model was investigated, and the influence of each parameter on the topographic amplification was analyzed. Finally, the proposed prediction model was applied to three practical earthquake cases, which confirmed that it can fill the gap in quantitatively predicting the slope topographic amplification and provide a guide for seismic design in engineering. © 2024 Elsevier Ltd
+ER  -
+
+TY  - JOUR
+AU  - Boudghene Stambouli, A.
+AU  - Guizani, L.
+TI  - Neural Network-Based Prediction of Amplification Factors for Nonlinear Soil Behaviour: Insights into Site Proxies
+PY  - 2025
+JO  - Applied Sciences (Switzerland)
+DO  - 10.3390/app15073618
+AB  - Featured Application: The results offer the possibility to better understand the main factors for the prediction of the site effect for the seismic analysis and design of infrastructures. They could also help enhance the codes’ provisions in this regard. The methodology offers an insight into further possibilities for the integration of artificial intelligence within the domain of structural and geotechnical engineering. The identification of the most pertinent site parameters to classify soils in terms of their amplification of seismic ground motions is still of prime interest to earthquake engineering and codes. This study investigates many options for improving soil classifications in order to reduce the deviation between “exact” predictions using wave propagation and the method used in seismic codes based on amplification (site) factors. To this end, an exhaustive parametric study is carried out to obtain nonlinear responses of sets of 324 clay and sand columns and to constitute the database for neuronal network methods used to predict the regression equations of the amplification factors in terms of seismic and site parameters. A wide variety of parameters and their combinations are considered in the study, namely, soil depth, shear wave velocity, the stiffness of the underlaying bedrock, and the intensity and frequency content of the seismic excitation. A database of AFs for 324 nonlinear soil profiles of sand and clay under multiple records with different intensities and frequency contents is obtained by wave propagation, where soil nonlinearity is accounted for through the equivalent linear model and an iterative procedure. Then, a Generalized Regression Neural Network (GRNN) is used on the obtained database to determine the most significant parameters affecting the AFs. A second neural network, the Radial Basis Function (RBF) network, is used to develop simple and practical prediction equations. Both the whole period range and specific short-, mid-, and long-period ranges associated with the AFs, Fa, Fv, and Fl, respectively, are considered. The results indicate that the amplification factor of an arbitrary soil profile can be satisfactorily approximated with a limited number of sites and the seismic record parameters (two to six). The best parameter pair is (PGA; resonance frequency, f0), which leads to a standard deviation reduction of at least 65%. For improved performance, we propose the practical triplet (Formula presented.) with Vs30 being the average shear wave velocity within the upper 30 m of soil below the foundation. Most other relevant results include the fact that the AFs for long periods (Fl) can be significantly higher than those for short or mid periods for soft soils. Finally, it is recommended to further refine this study by including additional soil parameters such as spatial configuration and by adopting more refined soil models. © 2025 by the authors.
+ER  -

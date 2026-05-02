@@ -1,0 +1,105 @@
+{
+  "batch_id": "batch_0001",
+  "results": [
+    {
+      "paper_id": "paper_000001",
+      "decision": "uncertain",
+      "reason": "摘要提到监测Doppler-MAP和HM3 LVAD参数，但核心是心脏康复计划，未明确MAP管理策略与临床预后的关联。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000002",
+      "decision": "include",
+      "reason": "标题和摘要明确研究连续血流LVAD患者的血压测量技术，涉及平均动脉压测量方法比较。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000003",
+      "decision": "exclude",
+      "reason": "标题和摘要聚焦围产期心肌病的分子机制，研究对象包括LVAD患者但核心是生物标志物发现，不涉及术后MAP管理。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000004",
+      "decision": "include",
+      "reason": "摘要明确将术后平均动脉压降低作为右心室衰竭的预测因子，涉及MAP与临床预后的关联。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "paper_id": "paper_000005",
+      "decision": "exclude",
+      "reason": "摘要研究肾灌注压与急性心衰患者肾功能恶化的关系，研究对象为PAC指导治疗的患者，未明确涉及LVAD患者。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000006",
+      "decision": "include",
+      "reason": "标题和摘要研究LVAD术后血管麻痹综合征，涉及平均动脉压管理与术后并发症的关联。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "paper_id": "paper_000007",
+      "decision": "exclude",
+      "reason": "标题和摘要描述新型搏动性LVAD的动物实验，属于体外模拟实验，且未涉及术后MAP管理策略。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000008",
+      "decision": "include",
+      "reason": "摘要明确研究HeartMate 3 LVAD患者使用沙库巴曲缬沙坦管理血压，设定MAP目标范围并评估临床结局。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000009",
+      "decision": "include",
+      "reason": "摘要描述ENVAD-HF试验设计，明确针对HeartMate 3 LVAD患者设定MAP目标范围并评估血压管理策略。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000010",
+      "decision": "exclude",
+      "reason": "标题和摘要聚焦肺栓塞导致的急性右心室衰竭管理，未涉及左心室辅助装置或术后MAP管理。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0010",
+    "results": [
+        {
+            "paper_id": "paper_000091",
+            "decision": "exclude",
+            "reason": "标题和摘要明确讨论金融领域的对冲（hedging），严格命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000092",
+            "decision": "exclude",
+            "reason": "标题和摘要明确讨论金融领域的对冲（hedging），严格命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000093",
+            "decision": "include",
+            "reason": "标题和摘要明确探讨学术写作中的模糊语（hedging）作为礼貌策略，并基于语料库进行跨学科对比分析。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000094",
+            "decision": "exclude",
+            "reason": "标题和摘要明确讨论金融工程和风险管理中的对冲（hedging），严格命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000095",
+            "decision": "exclude",
+            "reason": "标题和摘要明确讨论商品价格风险的对冲（hedging）策略，属于金融/经济领域，严格命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000096",
+            "decision": "exclude",
+            "reason": "标题和摘要明确讨论金融衍生品作为风险管理工具的对冲（hedging），严格命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000097",
+            "decision": "uncertain",
+            "reason": "标题和摘要探讨元话语标记的跨学科跨语言分析，但未明确提及模糊语（hedging）或语用功能分析，信息不足。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000098",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论多目标评估推理中的模糊知识表示，属于计算机/控制系统中的模糊逻辑，严格命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000099",
+            "decision": "exclude",
+            "reason": "标题和摘要明确讨论金融保险产品的对冲（hedging）和定价，严格命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 1.0
+        },
+        {
+            "paper_id": "paper_000100",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论小学数学课堂中的元话语发展，属于非学术语境（基础教育课堂）的分析，命中排除标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        }
+    ]
+}

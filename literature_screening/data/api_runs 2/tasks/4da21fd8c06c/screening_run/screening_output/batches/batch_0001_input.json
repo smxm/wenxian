@@ -1,0 +1,368 @@
+{
+  "batch_id": "batch_0001",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000001",
+    "paper_000002",
+    "paper_000003",
+    "paper_000004",
+    "paper_000005",
+    "paper_000006",
+    "paper_000007",
+    "paper_000008",
+    "paper_000009",
+    "paper_000010"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000001",
+      "entry_type": "article",
+      "title": "Convolutional Neural Network Based Defect Recognition Model for Phased Array Ultrasonic Testing Images of Electrofusion Joints",
+      "authors": [
+        "Tao, YJ",
+        "Shi, JF",
+        "Guo, WC",
+        "Zheng, JY"
+      ],
+      "year": 2023,
+      "journal": "JOURNAL OF PRESSURE VESSEL TECHNOLOGY-TRANSACTIONS OF THE ASME",
+      "doi": "10.1115/1.4056836",
+      "abstract": "This technical brief proposes a defect recognition model to recognize four typical defects of phased array ultrasonic testing (PA-UT) images for electrofusion (EF) joints. PA-UT has been proved to be the most feasible way to inspect defects in EF joints of polyethylene pipes. The recognition of defects in PA-UT images relies on the experience of operators, resulting in inconsistent defective detection rate and low recognition speed. The proposed recognition model was composed of an anomaly detection model and a defect detection model. The anomaly detection model recognized anomalies in PA-UT images, meeting the requirement of real-time recognition for practical inspection. The defect detection model classified and located defects in abnormal PA-UT images, achieving high accuracy of defects recognition. By comparing detection models, optimizing parameters and augmenting dataset, the anomaly detection model and defect detection model reached a good combination of accuracy and speed.",
+      "keywords": [
+        "electrofusion joint",
+        "phased array ultrasonic testing",
+        "defect recognition model",
+        "convolutional neural network"
+      ],
+      "normalized_title": "convolutional neural network based defect recognition model for phased array ultrasonic testing images of electrofusion joints",
+      "raw_bibtex": "@ARTICLE{10.1115/1.4056836,\n\tauthor = {Tao, YJ and Shi, JF and Guo, WC and Zheng, JY},\n\ttitle = {Convolutional Neural Network Based Defect Recognition Model for Phased Array Ultrasonic Testing Images of Electrofusion Joints},\n\tjournal = {JOURNAL OF PRESSURE VESSEL TECHNOLOGY-TRANSACTIONS OF THE ASME},\n\tyear = {2023},\n\tkeywords = {electrofusion joint; phased array ultrasonic testing; defect recognition model; convolutional neural network},\n\tabstract = {This technical brief proposes a defect recognition model to recognize four typical defects of phased array ultrasonic testing (PA-UT) images for electrofusion (EF) joints. PA-UT has been proved to be the most feasible way to inspect defects in EF joints of polyethylene pipes. The recognition of defects in PA-UT images relies on the experience of operators, resulting in inconsistent defective detection rate and low recognition speed. The proposed recognition model was composed of an anomaly detection model and a defect detection model. The anomaly detection model recognized anomalies in PA-UT images, meeting the requirement of real-time recognition for practical inspection. The defect detection model classified and located defects in abnormal PA-UT images, achieving high accuracy of defects recognition. By comparing detection models, optimizing parameters and augmenting dataset, the anomaly detection model and defect detection model reached a good combination of accuracy and speed.},\n\tdoi = {10.1115/1.4056836},\n\tvolume = {145},\n\tnumber = {2},\n\tissn = {0094-9930},\n\tnote = {Times Cited in Web of Science Core Collection: 37 Total Times Cited: 39 Cited Reference Count: 23 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1115/1.4056836"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000002",
+      "entry_type": "article",
+      "title": "Ultrasonic signal classification and porosity testing for CFRP materials via artificial neural network",
+      "authors": [
+        "Chen, DKK",
+        "Zhou, YF",
+        "Wang, W",
+        "Zhang, YM",
+        "Deng, Y"
+      ],
+      "year": 2022,
+      "journal": "MATERIALS TODAY COMMUNICATIONS",
+      "doi": "10.1016/j.mtcomm.2021.103021",
+      "abstract": "Ultrasonic testing is one of the most commonly used non-destructive (NDT) methods to detect porosity in carbon fiber reinforced polymer (CFRP) material. However, the ultrasonic testing requires well-trained technicians and their high concentration during the testing process to avoid human errors, The artificial neural network (ANN) models provide an efficient and accurate way to reduce testing time and effort and reduce the human factor and uncertainty during ultrasonic testing. In this work, CFRP samples with 12 different kinds of porosity levels and thicknesses were prepared for the experiment. X-ray CT testing and through-transmission ultrasonic (TTU) testing are applied to measure the material porosity. Based on the porosity data obtained by these two testing methods, a backpropagation (BP) neural network was developed and trained to analyze and predict the sample porosity. In our experiment, the accuracy of our ANN-based method can reach up to 97.22%, and the average prediction result is 88.02%. Our experimental results demonstrate that our new method is quite promising to predict porosity testing results in CFRP materials.",
+      "keywords": [
+        "Ultrasonic testing",
+        "Non-destructive testing",
+        "Porosity measurement",
+        "Artificial neural network",
+        "DAMAGE ASSESSMENT",
+        "WAVE-PROPAGATION",
+        "VOID CONTENT",
+        "ATTENUATION",
+        "VELOCITY",
+        "SIMULATIONS",
+        "COMPOSITES",
+        "IMPACT"
+      ],
+      "normalized_title": "ultrasonic signal classification and porosity testing for cfrp materials via artificial neural network",
+      "raw_bibtex": "@ARTICLE{10.1016/j.mtcomm.2021.103021,\n\tauthor = {Chen, DKK and Zhou, YF and Wang, W and Zhang, YM and Deng, Y},\n\ttitle = {Ultrasonic signal classification and porosity testing for CFRP materials via artificial neural network},\n\tjournal = {MATERIALS TODAY COMMUNICATIONS},\n\tyear = {2022},\n\tkeywords = {Ultrasonic testing; Non-destructive testing; Porosity measurement; Artificial neural network; DAMAGE ASSESSMENT; WAVE-PROPAGATION; VOID CONTENT; ATTENUATION; VELOCITY; SIMULATIONS; COMPOSITES; IMPACT},\n\tabstract = {Ultrasonic testing is one of the most commonly used non-destructive (NDT) methods to detect porosity in carbon fiber reinforced polymer (CFRP) material. However, the ultrasonic testing requires well-trained technicians and their high concentration during the testing process to avoid human errors, The artificial neural network (ANN) models provide an efficient and accurate way to reduce testing time and effort and reduce the human factor and uncertainty during ultrasonic testing. In this work, CFRP samples with 12 different kinds of porosity levels and thicknesses were prepared for the experiment. X-ray CT testing and through-transmission ultrasonic (TTU) testing are applied to measure the material porosity. Based on the porosity data obtained by these two testing methods, a backpropagation (BP) neural network was developed and trained to analyze and predict the sample porosity. In our experiment, the accuracy of our ANN-based method can reach up to 97.22%, and the average prediction result is 88.02%. Our experimental results demonstrate that our new method is quite promising to predict porosity testing results in CFRP materials.},\n\tdoi = {10.1016/j.mtcomm.2021.103021},\n\tvolume = {30},\n\tissn = {2352-4928},\n\tnote = {Times Cited in Web of Science Core Collection: 19 Total Times Cited: 20 Cited Reference Count: 38 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.mtcomm.2021.103021"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000003",
+      "entry_type": "article",
+      "title": "Study on intelligent and visualization method of ultrasonic testing of composite materials based on deep learning",
+      "authors": [
+        "Hu, QC",
+        "Wei, XL",
+        "Guo, HY",
+        "Xu, HJ",
+        "Li, CZ",
+        "He, WF",
+        "Pei, BB"
+      ],
+      "year": 2023,
+      "journal": "APPLIED ACOUSTICS",
+      "doi": "10.1016/j.apacoust.2023.109363",
+      "abstract": "Intelligent ultrasonic testing technology of composite materials can greatly reduce the dependence on people and improve the efficiency of ultrasonic testing. The combination of ultrasonic testing and visual positioning technology can realize strong robust visual interpretation of ultrasonic testing results. In this paper, the DiMP tracking model is improved by using the Wasserstein distance, and the intelligent track-ing and positioning of ultrasonic probe is realized. At the same time, an ultrasonic signal classification network based on 1DCNN depth neural network is built to realize the intelligent detection of ultrasonic signals, and an effective data connection mode is designed to make the two networks work together, so that the intelligent interpretation and visual display of internal defects of composite materials can be realized. The experimental results show that the interpretation accuracy of the method proposed in this paper reaches 98.74%, and the Kappa coefficient reaches 0.97. The comparison results with other models show that the improved model in this paper is more excellent, and the AUC and Precision values are increased by 6.4% and 8.32% respectively compared with the benchmark.(c) 2023 Elsevier Ltd. All rights reserved.",
+      "keywords": [
+        "Composite materials",
+        "Non-destructive testing",
+        "Ultrasonic flaw detection",
+        "Deep learning"
+      ],
+      "normalized_title": "study on intelligent and visualization method of ultrasonic testing of composite materials based on deep learning",
+      "raw_bibtex": "@ARTICLE{10.1016/j.apacoust.2023.109363,\n\tauthor = {Hu, QC and Wei, XL and Guo, HY and Xu, HJ and Li, CZ and He, WF and Pei, BB},\n\ttitle = {Study on intelligent and visualization method of ultrasonic testing of composite materials based on deep learning},\n\tjournal = {APPLIED ACOUSTICS},\n\tyear = {2023},\n\tkeywords = {Composite materials; Non-destructive testing; Ultrasonic flaw detection; Deep learning},\n\tabstract = {Intelligent ultrasonic testing technology of composite materials can greatly reduce the dependence on people and improve the efficiency of ultrasonic testing. The combination of ultrasonic testing and visual positioning technology can realize strong robust visual interpretation of ultrasonic testing results. In this paper, the DiMP tracking model is improved by using the Wasserstein distance, and the intelligent track-ing and positioning of ultrasonic probe is realized. At the same time, an ultrasonic signal classification network based on 1DCNN depth neural network is built to realize the intelligent detection of ultrasonic signals, and an effective data connection mode is designed to make the two networks work together, so that the intelligent interpretation and visual display of internal defects of composite materials can be realized. The experimental results show that the interpretation accuracy of the method proposed in this paper reaches 98.74%, and the Kappa coefficient reaches 0.97. The comparison results with other models show that the improved model in this paper is more excellent, and the AUC and Precision values are increased by 6.4% and 8.32% respectively compared with the benchmark.(c) 2023 Elsevier Ltd. All rights reserved.},\n\tdoi = {10.1016/j.apacoust.2023.109363},\n\tvolume = {207},\n\tissn = {0003-682X},\n\tnote = {Times Cited in Web of Science Core Collection: 15 Total Times Cited: 21 Cited Reference Count: 28 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.apacoust.2023.109363"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000004",
+      "entry_type": "article",
+      "title": "Research on Ultrasonic Testing with Wavelet Packet Analysis for Shotcrete",
+      "authors": [
+        "Yao, F",
+        "Cao, YM"
+      ],
+      "year": 2021,
+      "journal": "MATERIALS EVALUATION",
+      "doi": "10.32548/2021.me-04217",
+      "abstract": "Shotcrete structures are widely used in tunnel engineering. Quality inspection is difficult, and the traditional ultrasonic testing (UT) method based on first arrival velocity has limitations. In this paper, shotcrete-rock specimens were made in a laboratory and evaluated using UT. Wavelet packet decomposition is introduced for better frequency analysis of the condition evaluation. Two methods, including calculation of the energy eigenvalues and machine learning, are used to describe the contact quality at the interface between the shotcrete and rock. The relative energy eigenvalue increases with the gradual reduction of contact quality, which can become a quantitative index of the contact quality. Machine learning performed well in the rapid recognition of discontinuities in the multiple-classification models. Both methods based on wavelet packet decomposition achieved good results in identifying discontinuities and have the potential to be used in practical engineering applications.",
+      "keywords": [
+        "shotcrete",
+        "ultrasonic testing",
+        "wavelet packet decomposition",
+        "nondestructive testing",
+        "index",
+        "artificial neural network",
+        "CONCRETE",
+        "STRENGTH"
+      ],
+      "normalized_title": "research on ultrasonic testing with wavelet packet analysis for shotcrete",
+      "raw_bibtex": "@ARTICLE{10.32548/2021.me-04217,\n\tauthor = {Yao, F and Cao, YM},\n\ttitle = {Research on Ultrasonic Testing with Wavelet Packet Analysis for Shotcrete},\n\tjournal = {MATERIALS EVALUATION},\n\tyear = {2021},\n\tkeywords = {shotcrete; ultrasonic testing; wavelet packet decomposition; nondestructive testing; index; artificial neural network; CONCRETE; STRENGTH},\n\tabstract = {Shotcrete structures are widely used in tunnel engineering. Quality inspection is difficult, and the traditional ultrasonic testing (UT) method based on first arrival velocity has limitations. In this paper, shotcrete-rock specimens were made in a laboratory and evaluated using UT. Wavelet packet decomposition is introduced for better frequency analysis of the condition evaluation. Two methods, including calculation of the energy eigenvalues and machine learning, are used to describe the contact quality at the interface between the shotcrete and rock. The relative energy eigenvalue increases with the gradual reduction of contact quality, which can become a quantitative index of the contact quality. Machine learning performed well in the rapid recognition of discontinuities in the multiple-classification models. Both methods based on wavelet packet decomposition achieved good results in identifying discontinuities and have the potential to be used in practical engineering applications.},\n\tdoi = {10.32548/2021.me-04217},\n\tvolume = {79},\n\tnumber = {10},\n\tpages = {1005-1015},\n\tissn = {0025-5327},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 18 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.32548/2021.me-04217"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000005",
+      "entry_type": "article",
+      "title": "Automated ultrasonic-based diagnosis of concrete compressive damage amidst temperature variations utilizing deep learning",
+      "authors": [
+        "Wang, L",
+        "Yi, SC",
+        "Yu, Y",
+        "Gao, C",
+        "Samali, B"
+      ],
+      "year": 2024,
+      "journal": "MECHANICAL SYSTEMS AND SIGNAL PROCESSING",
+      "doi": "10.1016/j.ymssp.2024.111719",
+      "abstract": "Ultrasonic-based non-destructive testing technologies have been extensively applied for detection of internal damage in concrete. However, it is vulnerable to environmental temperature variations. An automated ultrasonic-based diagnosis approach integrating the continuous wavelet transform, and the transfer learning enhanced deep convolutional neural networks is proposed to evaluate compressive damage amidst temperature variations. The ultrasonic tests were conducted on pre-damaged concrete specimens, considering both temperature variations and damage levels as variables. The results indicate that the temperature fluctuations significantly influence the ultrasonic parameters of concrete compression damage. The proposed method effectively identifies the concrete damage state amidst temperature variations. Furthermore, it is recommended that the temperature range within the training set should uniformly cover the expected temperature range throughout the lifespan of concrete structures. This study offers novel perspectives for ultrasonic testing of concrete subjected to environmental variations.",
+      "keywords": [
+        "Ultrasonic testing",
+        "Concrete compressive damage",
+        "Temperature variations",
+        "Deep convolutional neural networks",
+        "Continuous wavelet transform",
+        "CODA WAVE INTERFEROMETRY"
+      ],
+      "normalized_title": "automated ultrasonic based diagnosis of concrete compressive damage amidst temperature variations utilizing deep learning",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ymssp.2024.111719,\n\tauthor = {Wang, L and Yi, SC and Yu, Y and Gao, C and Samali, B},\n\ttitle = {Automated ultrasonic-based diagnosis of concrete compressive damage amidst temperature variations utilizing deep learning},\n\tjournal = {MECHANICAL SYSTEMS AND SIGNAL PROCESSING},\n\tyear = {2024},\n\tkeywords = {Ultrasonic testing; Concrete compressive damage; Temperature variations; Deep convolutional neural networks; Continuous wavelet transform; CODA WAVE INTERFEROMETRY},\n\tabstract = {Ultrasonic-based non-destructive testing technologies have been extensively applied for detection of internal damage in concrete. However, it is vulnerable to environmental temperature variations. An automated ultrasonic-based diagnosis approach integrating the continuous wavelet transform, and the transfer learning enhanced deep convolutional neural networks is proposed to evaluate compressive damage amidst temperature variations. The ultrasonic tests were conducted on pre-damaged concrete specimens, considering both temperature variations and damage levels as variables. The results indicate that the temperature fluctuations significantly influence the ultrasonic parameters of concrete compression damage. The proposed method effectively identifies the concrete damage state amidst temperature variations. Furthermore, it is recommended that the temperature range within the training set should uniformly cover the expected temperature range throughout the lifespan of concrete structures. This study offers novel perspectives for ultrasonic testing of concrete subjected to environmental variations.},\n\tdoi = {10.1016/j.ymssp.2024.111719},\n\tvolume = {221},\n\tissn = {0888-3270},\n\tnote = {Times Cited in Web of Science Core Collection: 107 Total Times Cited: 109 Cited Reference Count: 51 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ymssp.2024.111719"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000006",
+      "entry_type": "article",
+      "title": "Comparative Study on Online Prediction of TP2 Rolled Copper Tube Wall Thickness Based on Different Proxy Models",
+      "authors": [
+        "Yue, FL",
+        "Sha, Z",
+        "Sun, HY",
+        "Liu, H",
+        "Chen, DY",
+        "Liu, JS",
+        "Chen, CL"
+      ],
+      "year": 2024,
+      "journal": "MATERIALS",
+      "doi": "10.3390/ma17235685",
+      "abstract": "The wall thickness of the TP2 copper tube casting billet is not uniform after a three-roll planetary rotational rolling, which affects the wall thickness uniformity of the copper tube in the subsequent process. In order to study the influence of wall thickness at different positions of copper pipe after rolling on the wall thickness of copper pipe after joint drawing, an online ultrasonic test platform was used to measure the wall thickness of copper pipe after tying, and based on the test data, a finite element model of copper pipe billet was established, and the numerical simulation of joint drawing wall thickness was conducted. Based on the results of the ultrasonic testing experiment and finite element simulation, different neural network models were used to predict the joint tensile wall thickness with the data of the ultrasonic testing experiment as input and the results of finite element simulation as output. The prediction effect of different neural network models was compared, and the results showed that the prediction and fitting effect of the SVM model was better, but overfitting occurred during the fitting process. Furthermore, particle swarm optimization is used to optimize the penalty parameter C and the kernel parameter g in the SVM model. Compared with the traditional SVM model, the PSO-SVM model is more suitable for the prediction of joint tensile wall thickness, which can better guide the production to solve this problem.",
+      "keywords": [
+        "joint drawing",
+        "ultrasonic testing",
+        "numerical simulation",
+        "neural network",
+        "WAVELET TRANSFORM"
+      ],
+      "normalized_title": "comparative study on online prediction of tp2 rolled copper tube wall thickness based on different proxy models",
+      "raw_bibtex": "@ARTICLE{10.3390/ma17235685,\n\tauthor = {Yue, FL and Sha, Z and Sun, HY and Liu, H and Chen, DY and Liu, JS and Chen, CL},\n\ttitle = {Comparative Study on Online Prediction of TP2 Rolled Copper Tube Wall Thickness Based on Different Proxy Models},\n\tjournal = {MATERIALS},\n\tyear = {2024},\n\tkeywords = {joint drawing; ultrasonic testing; numerical simulation; neural network; WAVELET TRANSFORM},\n\tabstract = {The wall thickness of the TP2 copper tube casting billet is not uniform after a three-roll planetary rotational rolling, which affects the wall thickness uniformity of the copper tube in the subsequent process. In order to study the influence of wall thickness at different positions of copper pipe after rolling on the wall thickness of copper pipe after joint drawing, an online ultrasonic test platform was used to measure the wall thickness of copper pipe after tying, and based on the test data, a finite element model of copper pipe billet was established, and the numerical simulation of joint drawing wall thickness was conducted. Based on the results of the ultrasonic testing experiment and finite element simulation, different neural network models were used to predict the joint tensile wall thickness with the data of the ultrasonic testing experiment as input and the results of finite element simulation as output. The prediction effect of different neural network models was compared, and the results showed that the prediction and fitting effect of the SVM model was better, but overfitting occurred during the fitting process. Furthermore, particle swarm optimization is used to optimize the penalty parameter C and the kernel parameter g in the SVM model. Compared with the traditional SVM model, the PSO-SVM model is more suitable for the prediction of joint tensile wall thickness, which can better guide the production to solve this problem.},\n\tdoi = {10.3390/ma17235685},\n\tvolume = {17},\n\tnumber = {23},\n\tissn = {1996-1944},\n\tnote = {Times Cited in Web of Science Core Collection: 2 Total Times Cited: 2 Cited Reference Count: 49 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/ma17235685"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000007",
+      "entry_type": "article",
+      "title": "Deconvolution of ultrasonic signals using a convolutional neural network",
+      "authors": [
+        "Chapon, A",
+        "Pereira, D",
+        "Toews, M",
+        "Belanger, P"
+      ],
+      "year": 2021,
+      "journal": "ULTRASONICS",
+      "doi": "10.1016/j.ultras.2020.106312",
+      "abstract": "Successfully employing ultrasonic testing to distinguish a flaw in close proximity to another flaw or geometrical feature depends on the wavelength and the bandwidth of the ultrasonic transducer. This explains why the frequency is commonly increased in ultrasonic testing in order to improve the axial resolution. However, as the frequency increases, the penetration depth of the propagating ultrasonic waves is reduced due to an attendant increase in attenuation. The nondestructive testing research community is consequently very interested in finding methods that combine high penetration depth with high axial resolution. This work aims to improve the compromise between the penetration depth and the axial resolution by using a convolutional neural network to separate overlapping echoes in time traces in order to estimate the time-of-flight and amplitude. The originality of the proposed framework consists in its training of the neural network using data generated in simulations. The framework was validated experimentally to detect flat bottom holes in an aluminum block with a minimum depth corresponding to lambda/4.",
+      "keywords": [
+        "Ultrasonic testing",
+        "Axial resolution",
+        "Time-of-flight",
+        "Deconvolution",
+        "Convolutional neural network",
+        "SIMULATIONS",
+        "WAVES"
+      ],
+      "normalized_title": "deconvolution of ultrasonic signals using a convolutional neural network",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ultras.2020.106312,\n\tauthor = {Chapon, A and Pereira, D and Toews, M and Belanger, P},\n\ttitle = {Deconvolution of ultrasonic signals using a convolutional neural network},\n\tjournal = {ULTRASONICS},\n\tyear = {2021},\n\tkeywords = {Ultrasonic testing; Axial resolution; Time-of-flight; Deconvolution; Convolutional neural network; SIMULATIONS; WAVES},\n\tabstract = {Successfully employing ultrasonic testing to distinguish a flaw in close proximity to another flaw or geometrical feature depends on the wavelength and the bandwidth of the ultrasonic transducer. This explains why the frequency is commonly increased in ultrasonic testing in order to improve the axial resolution. However, as the frequency increases, the penetration depth of the propagating ultrasonic waves is reduced due to an attendant increase in attenuation. The nondestructive testing research community is consequently very interested in finding methods that combine high penetration depth with high axial resolution. This work aims to improve the compromise between the penetration depth and the axial resolution by using a convolutional neural network to separate overlapping echoes in time traces in order to estimate the time-of-flight and amplitude. The originality of the proposed framework consists in its training of the neural network using data generated in simulations. The framework was validated experimentally to detect flat bottom holes in an aluminum block with a minimum depth corresponding to lambda/4.},\n\tdoi = {10.1016/j.ultras.2020.106312},\n\tvolume = {111},\n\tissn = {0041-624X},\n\tnote = {Times Cited in Web of Science Core Collection: 34 Total Times Cited: 39 Cited Reference Count: 22 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ultras.2020.106312"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000008",
+      "entry_type": "article",
+      "title": "Damage localization method using ultrasonic lamb waves and Wav2Vec2.0 neural network",
+      "authors": [
+        "Qian, LB",
+        "Liu, SH",
+        "Fan, GP",
+        "Liu, XL",
+        "Zhang, H",
+        "Mei, YH",
+        "Xing, YH",
+        "Wang, ZQ"
+      ],
+      "year": 2023,
+      "journal": "FRONTIERS IN MATERIALS",
+      "doi": "10.3389/fmats.2023.1212909",
+      "abstract": "In this paper, a Wav2Vec2.0 neural network based on an attention mechanism is proposed to locate defects in array ultrasonic testing signals. This method does not require knowledge of the a priori condition of the sample sound velocity or the feature extraction of ultrasonic scattering signals. First, an array piezoelectric ultrasonic testing system is used to detect a signal through hole defects at different positions in the plate structure. Then, three different neural networks-1D-CNN, Muti-Transformer, and Wav2Vec2.0-are used to locate the defects in the collected ultrasonic testing data. The performance of the network is verified with the data set collected through finite element simulation and the experimental system, and the identification accuracy and the calculation efficiency of different networks are compared and analyzed. To provide a solution for the poor balance of the experimental data set and the weak noise resistance of the simulation data set, a data set expansion method based on time domain transformation technology is proposed. The research results show that, the positioning accuracy of the Wav2Vec2.0 neural network proposed in this article is 98.46%, and the positioning accuracy is superior to Muti Transformer and ID-CNN.",
+      "keywords": [
+        "lamb wave",
+        "Wav2Vec2.0 neural network",
+        "ultrasonic testing",
+        "structural health monitoring",
+        "defect identification"
+      ],
+      "normalized_title": "damage localization method using ultrasonic lamb waves and wav2vec2 0 neural network",
+      "raw_bibtex": "@ARTICLE{10.3389/fmats.2023.1212909,\n\tauthor = {Qian, LB and Liu, SH and Fan, GP and Liu, XL and Zhang, H and Mei, YH and Xing, YH and Wang, ZQ},\n\ttitle = {Damage localization method using ultrasonic lamb waves and Wav2Vec2.0 neural network},\n\tjournal = {FRONTIERS IN MATERIALS},\n\tyear = {2023},\n\tkeywords = {lamb wave; Wav2Vec2.0 neural network; ultrasonic testing; structural health monitoring; defect identification},\n\tabstract = {In this paper, a Wav2Vec2.0 neural network based on an attention mechanism is proposed to locate defects in array ultrasonic testing signals. This method does not require knowledge of the a priori condition of the sample sound velocity or the feature extraction of ultrasonic scattering signals. First, an array piezoelectric ultrasonic testing system is used to detect a signal through hole defects at different positions in the plate structure. Then, three different neural networks-1D-CNN, Muti-Transformer, and Wav2Vec2.0-are used to locate the defects in the collected ultrasonic testing data. The performance of the network is verified with the data set collected through finite element simulation and the experimental system, and the identification accuracy and the calculation efficiency of different networks are compared and analyzed. To provide a solution for the poor balance of the experimental data set and the weak noise resistance of the simulation data set, a data set expansion method based on time domain transformation technology is proposed. The research results show that, the positioning accuracy of the Wav2Vec2.0 neural network proposed in this article is 98.46%, and the positioning accuracy is superior to Muti Transformer and ID-CNN.},\n\tdoi = {10.3389/fmats.2023.1212909},\n\tvolume = {10},\n\tissn = {2296-8016},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 28 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3389/fmats.2023.1212909"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000009",
+      "entry_type": "article",
+      "title": "Acoustic simulation of ultrasonic testing and neural network used for diameter prediction of three-sheet spot welded joints",
+      "authors": [
+        "Ghafarallahi, E",
+        "Farrahi, GH",
+        "Amiri, N"
+      ],
+      "year": 2021,
+      "journal": "JOURNAL OF MANUFACTURING PROCESSES",
+      "doi": "10.1016/j.jmapro.2021.03.012",
+      "abstract": "Ultrasonic Testing (UT) is one of the most common types of nondestructive methods that is being used in various industries, especially in the automotive industry. In this paper, qualitative and quantitative control of resistance spot welds on three-sheet joints was studied. Initially, mathematical model of ultrasonic waves was extracted for triple sheet joints. Then, acoustic simulation of ultrasonic testing on spot welds was performed using Finite Element Method (FEM). Afterwards, A Multilayer Perceptron (MLP) neural network was used to classify spot welds based on their diameter. There was a mean error of 20.9 % between peak amplitudes of numerical and theoretical models which the most reason was due to the dispersion effect. Also, theoretical formula for diameter calculation showed 14 % error. Results of Artificial Neural Network (ANN) had an error of 5.11 % on average which indicated capability of ANN to evaluate quality of spot welds. It was also found that diameter calculation using mathematical formulas are less accurate than estimation by ANN. Finally, the simulation and UT results of real samples were compared which indicated that ANN has over 90 % accuracy in identifying the state of spot welds.",
+      "keywords": [
+        "Acoustic simulation",
+        "Ultrasonic testing",
+        "Spot welding",
+        "Artificial Neural Network",
+        "FEM modeling",
+        "Nondestructive testing",
+        "NONDESTRUCTIVE EVALUATION",
+        "QUALITY",
+        "STEEL"
+      ],
+      "normalized_title": "acoustic simulation of ultrasonic testing and neural network used for diameter prediction of three sheet spot welded joints",
+      "raw_bibtex": "@ARTICLE{10.1016/j.jmapro.2021.03.012,\n\tauthor = {Ghafarallahi, E and Farrahi, GH and Amiri, N},\n\ttitle = {Acoustic simulation of ultrasonic testing and neural network used for diameter prediction of three-sheet spot welded joints},\n\tjournal = {JOURNAL OF MANUFACTURING PROCESSES},\n\tyear = {2021},\n\tkeywords = {Acoustic simulation; Ultrasonic testing; Spot welding; Artificial Neural Network; FEM modeling; Nondestructive testing; NONDESTRUCTIVE EVALUATION; QUALITY; STEEL},\n\tabstract = {Ultrasonic Testing (UT) is one of the most common types of nondestructive methods that is being used in various industries, especially in the automotive industry. In this paper, qualitative and quantitative control of resistance spot welds on three-sheet joints was studied. Initially, mathematical model of ultrasonic waves was extracted for triple sheet joints. Then, acoustic simulation of ultrasonic testing on spot welds was performed using Finite Element Method (FEM). Afterwards, A Multilayer Perceptron (MLP) neural network was used to classify spot welds based on their diameter. There was a mean error of 20.9 % between peak amplitudes of numerical and theoretical models which the most reason was due to the dispersion effect. Also, theoretical formula for diameter calculation showed 14 % error. Results of Artificial Neural Network (ANN) had an error of 5.11 % on average which indicated capability of ANN to evaluate quality of spot welds. It was also found that diameter calculation using mathematical formulas are less accurate than estimation by ANN. Finally, the simulation and UT results of real samples were compared which indicated that ANN has over 90 % accuracy in identifying the state of spot welds.},\n\tdoi = {10.1016/j.jmapro.2021.03.012},\n\tvolume = {64},\n\tpages = {1507-1516},\n\tissn = {1526-6125},\n\tnote = {Times Cited in Web of Science Core Collection: 18 Total Times Cited: 20 Cited Reference Count: 28 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.jmapro.2021.03.012"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000010",
+      "entry_type": "article",
+      "title": "Classification of adhesive bonding between thermoplastic composites using ultrasonic testing aided by machine learning",
+      "authors": [
+        "Li, JY",
+        "Gopalakrishnan, K",
+        "Piao, GY",
+        "Pacha, R",
+        "Walia, P",
+        "Deng, YM",
+        "Chakrapani, SK"
+      ],
+      "year": 2023,
+      "journal": "INTERNATIONAL JOURNAL OF ADHESION AND ADHESIVES",
+      "doi": "10.1016/j.ijadhadh.2023.103427",
+      "abstract": "Adhesive bonding is widely used for joining light weight structures and surface preparation methods play a significant role in improving the bonding quality. Bond quality assessment of thermoplastic composites can be challenging due to the highly inhomogeneous structure. This article explores the use of ultrasonic testing to nondestructively characterize the bond state between thermoplastic composites with different surface preparation methods. Classification of bond states was carried out using a physics-based statistical method and machine learning based method. The results suggest that machine learning methods show a higher classification accuracy. The ultrasonics results were validated using destructive lap-shear testing.",
+      "keywords": [
+        "Ultrasonic testing",
+        "Adhesive bonding",
+        "Machine learning",
+        "Classification",
+        "Thermoplastic",
+        "SURFACE-TREATMENT",
+        "BONDED JOINTS",
+        "IMPACT"
+      ],
+      "normalized_title": "classification of adhesive bonding between thermoplastic composites using ultrasonic testing aided by machine learning",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ijadhadh.2023.103427,\n\tauthor = {Li, JY and Gopalakrishnan, K and Piao, GY and Pacha, R and Walia, P and Deng, YM and Chakrapani, SK},\n\ttitle = {Classification of adhesive bonding between thermoplastic composites using ultrasonic testing aided by machine learning},\n\tjournal = {INTERNATIONAL JOURNAL OF ADHESION AND ADHESIVES},\n\tyear = {2023},\n\tkeywords = {Ultrasonic testing; Adhesive bonding; Machine learning; Classification; Thermoplastic; SURFACE-TREATMENT; BONDED JOINTS; IMPACT},\n\tabstract = {Adhesive bonding is widely used for joining light weight structures and surface preparation methods play a significant role in improving the bonding quality. Bond quality assessment of thermoplastic composites can be challenging due to the highly inhomogeneous structure. This article explores the use of ultrasonic testing to nondestructively characterize the bond state between thermoplastic composites with different surface preparation methods. Classification of bond states was carried out using a physics-based statistical method and machine learning based method. The results suggest that machine learning methods show a higher classification accuracy. The ultrasonics results were validated using destructive lap-shear testing.},\n\tdoi = {10.1016/j.ijadhadh.2023.103427},\n\tvolume = {125},\n\tissn = {0143-7496},\n\tnote = {Times Cited in Web of Science Core Collection: 18 Total Times Cited: 19 Cited Reference Count: 41 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ijadhadh.2023.103427"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

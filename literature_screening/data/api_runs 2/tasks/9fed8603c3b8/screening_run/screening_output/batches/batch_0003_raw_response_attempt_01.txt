@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0003",
+    "results": [
+        {
+            "paper_id": "paper_000021",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于脑癌（髓母细胞瘤）的纳米颗粒基因治疗平台，未提及隐球菌或真菌感染机制，也未涉及高级体外血脑屏障模型构建。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000022",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论三维显微成像技术，未涉及隐球菌感染机制或血脑屏障模型构建。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000023",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于阿尔茨海默病中TREM2抗体治疗，未提及隐球菌或真菌感染机制，也未涉及高级体外血脑屏障模型构建。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000024",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论血脑屏障破坏的成像技术，未涉及隐球菌感染机制或高级体外血脑屏障模型构建方法。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000025",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于脑肿瘤（胶质母细胞瘤）的植入式治疗装置，未提及隐球菌或真菌感染机制，也未涉及高级体外血脑屏障模型构建。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000026",
+            "decision": "include",
+            "reason": "摘要明确描述使用微流控多尺寸球体阵列，包含血脑屏障三重培养模型，用于评估化合物渗透性，符合高级体外血脑屏障模型构建标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000027",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于COVID-19的类器官单细胞转录组分析，未提及隐球菌或真菌感染机制，也未涉及血脑屏障模型构建。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000028",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论胶质母细胞瘤的免疫治疗递送系统，未提及隐球菌或真菌感染机制，也未涉及高级体外血脑屏障模型构建。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000029",
+            "decision": "uncertain",
+            "reason": "摘要提到外泌体作为药物载体可穿越血脑屏障，并涉及脂质纳米颗粒加载方法，可能与血脑屏障模型相关，但未明确说明是否为高级体外模型构建。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000030",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于胶质母细胞瘤的CAR-T细胞治疗，未提及隐球菌或真菌感染机制，也未涉及高级体外血脑屏障模型构建。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        }
+    ]
+}

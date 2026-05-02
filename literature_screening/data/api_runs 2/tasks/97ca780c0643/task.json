@@ -1,0 +1,20 @@
+{
+  "id": "97ca780c0643",
+  "kind": "screening",
+  "status": "failed",
+  "title": "new-screening-run",
+  "phase": "failed",
+  "created_at": "2026-03-22T14:30:34.269383+08:00",
+  "updated_at": "2026-03-22T14:31:37.335107+08:00",
+  "metadata": {
+    "project_topic": "BALF基线病毒谱经免疫调控影响SCAP患者预后的机制及预测研究",
+    "model_provider": "deepseek"
+  },
+  "summary": null,
+  "error": "Traceback (most recent call last):\n  File \"E:\\wenxian\\literature_screening\\src\\literature_screening\\api\\task_store.py\", line 82, in _run_worker\n    result = worker(task)\n             ^^^^^^^^^^^^\n  File \"E:\\wenxian\\literature_screening\\src\\literature_screening\\api\\app.py\", line 154, in worker\n    result = run_screening_job(payload)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\wenxian\\literature_screening\\src\\literature_screening\\studio\\service.py\", line 228, in run_screening_job\n    run_pipeline(run_config, dry_run=False)\n  File \"E:\\wenxian\\literature_screening\\src\\literature_screening\\pipeline\\run_pipeline.py\", line 101, in run_pipeline\n    payload = _request_validated_batch_payload(\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"E:\\wenxian\\literature_screening\\src\\literature_screening\\pipeline\\run_pipeline.py\", line 273, in _request_validated_batch_payload\n    raise last_error\n  File \"E:\\wenxian\\literature_screening\\src\\literature_screening\\pipeline\\run_pipeline.py\", line 247, in _request_validated_batch_payload\n    raw_text = client.chat(prompt)\n               ^^^^^^^^^^^^^^^^^^^\n  File \"E:\\wenxian\\literature_screening\\src\\literature_screening\\screening\\llm_client.py\", line 21, in chat\n    raise ModelRequestError(f\"Missing API key in environment variable: {self.config.api_key_env}\")\nliterature_screening.core.exceptions.ModelRequestError: Missing API key in environment variable: sk-de8dd59ef13b4bdb96312d9713255a15\n",
+  "artifacts": {},
+  "run_root": null,
+  "output_dir": null,
+  "markdown_preview": null,
+  "records": []
+}

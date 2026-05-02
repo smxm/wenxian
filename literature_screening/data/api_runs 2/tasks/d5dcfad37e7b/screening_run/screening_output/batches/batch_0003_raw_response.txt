@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0003",
+    "results": [
+        {
+            "paper_id": "paper_000021",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及天然产物（迷迭香酸）、纳米材料（介孔结构）、肿瘤（结肠癌）和肠道微生态（调节肠道菌群），符合纳入标准。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000022",
+            "decision": "uncertain",
+            "reason": "摘要和关键词提到小檗碱、肠道微生物组和纳米载体，但未明确说明纳米递送系统如何通过脑肠轴靶向治疗肿瘤，信息不足。",
+            "evidence": ["abstract", "keywords"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000023",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及天然产物（多酚）、纳米材料（超颗粒）、肿瘤和肠道微生态（重塑肠道菌群、调控免疫-肿瘤-微生物轴），符合纳入标准。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000024",
+            "decision": "uncertain",
+            "reason": "摘要提到橄榄苦苷、纳米载体和肠道微生物组，但未明确说明纳米递送系统如何通过脑肠轴靶向治疗肿瘤，信息不够具体。",
+            "evidence": ["abstract", "keywords"],
+            "confidence": 0.58
+        },
+        {
+            "paper_id": "paper_000025",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于植物性膳食化合物调节肠道菌群治疗炎症性肠病，未涉及肿瘤，不符合研究主题。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000026",
+            "decision": "include",
+            "reason": "标题和摘要明确涉及天然产物（姜黄素）、纳米材料（纳米颗粒）、肿瘤（肝癌）和肠道微生态（改善肠道菌群失调），符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000027",
+            "decision": "uncertain",
+            "reason": "摘要提到天然产物、癌症和肠道微生物组，但未明确说明纳米递送系统如何通过脑肠轴靶向治疗肿瘤，信息宽泛。",
+            "evidence": ["abstract", "keywords"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000028",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于癌症免疫疗法，虽提及肠道微生物组，但未涉及天然产物或纳米材料递送，不符合核心要素。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000029",
+            "decision": "uncertain",
+            "reason": "摘要提到小檗碱、纳米技术和肠道微生物组，但未明确说明纳米递送系统如何通过脑肠轴靶向治疗肿瘤，信息不足。",
+            "evidence": ["abstract"],
+            "confidence": 0.52
+        },
+        {
+            "paper_id": "paper_000030",
+            "decision": "uncertain",
+            "reason": "摘要提到多酚、纳米颗粒和肠道微生物组，但未明确说明纳米递送系统如何通过脑肠轴靶向治疗肿瘤，信息不够具体。",
+            "evidence": ["abstract", "keywords"],
+            "confidence": 0.56
+        }
+    ]
+}

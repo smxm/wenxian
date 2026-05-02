@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0002",
+    "results": [
+        {
+            "paper_id": "paper_000011",
+            "decision": "include",
+            "reason": "标题和摘要明确聚焦歌剧演唱教学法，涉及声乐技巧和训练工具。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000012",
+            "decision": "include",
+            "reason": "标题和摘要直接研究歌剧歌手的颤音分析，与声乐技巧和教学相关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000013",
+            "decision": "uncertain",
+            "reason": "摘要讨论歌剧声乐美学和歌手共振峰，但主要批判研究方法而非直接研究声乐技巧。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000014",
+            "decision": "include",
+            "reason": "标题和摘要研究专业歌唱的解剖学适应，明确涉及歌剧歌手和声乐训练。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000015",
+            "decision": "exclude",
+            "reason": "摘要涵盖多种歌唱流派，包括古典和音乐剧，但未明确聚焦歌剧或咏叹调。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000016",
+            "decision": "exclude",
+            "reason": "标题和摘要明确研究中国昆曲歌剧，属于非西方歌剧形式。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000017",
+            "decision": "include",
+            "reason": "标题和摘要直接研究歌剧歌手的神经活动，涉及歌剧声乐和颤音技巧。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.87
+        },
+        {
+            "paper_id": "paper_000018",
+            "decision": "exclude",
+            "reason": "标题和摘要明确研究中国京剧元素在钢琴作品中的应用，属于非西方歌剧且聚焦器乐。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.96
+        },
+        {
+            "paper_id": "paper_000019",
+            "decision": "uncertain",
+            "reason": "标题提到美声唱法技巧，但摘要未明确说明研究歌剧咏叹调或西方歌剧传统。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000020",
+            "decision": "include",
+            "reason": "标题和摘要直接比较歌剧、轻歌剧等流派的颤音特征，与歌剧声乐技巧和教学相关。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.86
+        }
+    ]
+}

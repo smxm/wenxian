@@ -1,0 +1,190 @@
+# 一、相关文献总体情况
+
+这批文献聚焦于机器学习在场地效应评估与预测中的应用，主要关注利用神经网络、随机森林、XGBoost、深度学习等算法预测地形放大、场地放大、沉积盆地效应等场地响应。研究普遍采用数据驱动方法，整合Vs30、震级、地形参数、微动数据等多源变量，通过有限元模拟、敏感性分析、贝叶斯优化等技术提升模型精度与可解释性。应用场景涵盖地震风险评估、灾害预防、城市微区划和工程抗震设计，强调机器学习在提升预测效率、处理非线性关系及优化传统方法方面的潜力。
+
+# 二、类型划分
+
+## 地形效应预测
+
+这类文献共同关注利用机器学习方法预测地形对地震动的放大效应，通过神经网络、U-Net等模型结合数字高程模型（DEM）、有限元模拟和关键地形参数（如坡度、坡向、高程），量化地形放大因子，以提升地震风险评估的准确性。
+
+- A novel seismic topographic effect prediction method based on neural network models
+- A Quantitative Seismic Topographic Effect Prediction Method Based upon BP Neural Network Algorithm and FEM Simulation
+- The i-FSC proxy for predicting inter-event and spatial variation of topographic site effects
+- Prediction of seismic topographic effects from DEM data via U-Net deep learning model
+- Prediction framework of slope topographic amplification on seismic acceleration based on machine learning algorithms
+
+## 场地放大预测与参数优化
+
+这类文献侧重于应用机器学习算法（如随机森林、XGBoost、深度神经网络）预测地震动场地放大效应，通过整合Vs30、震级、剪切波速剖面等场地参数，并采用SHAP分析、敏感性分析等方法优化输入变量组合，以增强预测精度和模型可解释性，服务于地震灾害评估。
+
+- Machine learning based ground motion site amplification prediction
+- Site amplification prediction model of shallow bedrock sites based on machine learning models
+- Seismic site amplification prediction- an integrated Bayesian optimisation explainable machine learning approach
+- Impact of several site-condition proxies and ground-motion intensity measures on the spectral amplification factor using neuro-fuzzy approach: an example on the KiK-Net dataset
+- Neural Network-Based Prediction of Amplification Factors for Nonlinear Soil Behaviour: Insights into Site Proxies
+
+## 微动数据与区域应用
+
+这类文献关注利用微动水平/垂直谱比（MHVR）和环境噪声数据，结合迁移学习、深度神经网络等技术，在数据有限或特定区域（如秘鲁利马、智利圣地亚哥盆地）评估场地放大因子，实现低成本、高精度的场地响应预测和微区划，支持城市防灾规划和地震危险性制图。
+
+- Transfer learning model for estimating site amplification factors from limited microtremor H/V spectral ratios
+- Assessment of Site Amplification Factors in Southern Lima, Peru Based on Microtremor H/V Spectral Ratios and Deep Neural Network
+- Machine learning techniques for estimating seismic site amplification in the Santiago basin, Chile
+- Establishing site response-based micro-zonation by applying machine learning techniques on ambient noise data: a case study from Northern Potwar Region, Pakistan
+
+## 混合模型与沉积盆地效应
+
+这类文献探索结合机器学习与传统物理模型（如均匀分层模型）或专注于沉积盆地效应预测，通过卷积神经网络、贝叶斯优化等方法，提升场地响应预测的准确性和计算效率，旨在降低对数据量和模型复杂度的依赖，为工程实践提供快速评估工具。
+
+- Combining physical model with neural networks for earthquake site response prediction
+- Predicting Models for Local Sedimentary Basin Effect Using a Convolutional Neural Network
+
+# 三、逐篇文献总结分析
+
+## A novel seismic topographic effect prediction method based on neural network models
+
+总结：
+该文献提出了一种基于神经网络模型的地形效应预测方法，通过有限元模拟和变量分析，识别出海拔、坡度、坡向和频率等关键变量对地形放大因子的影响。研究验证了BP神经网络在量化地形效应方面的适用性，并比较了不同输入变量组合的预测性能与可扩展性。
+
+分析：
+该文献对于机器学习在场地效应评估中的应用具有参考价值，其神经网络方法可支撑地形放大因子的预测机制，适用于地震风险评估和灾害预防场景。研究中的变量分析有助于优化系统设计，为场地效应研究提供数据驱动的建模思路。
+
+## Machine learning based ground motion site amplification prediction
+
+总结：
+该研究利用机器学习方法预测地震动场地放大效应，通过整合Vs30、震级等六个参数，应用随机森林、XGBoost和深度神经网络算法，显著提升了预测精度。研究还采用SHAP分析解释参数重要性，增强了结果的可解释性，为地震灾害分析提供了更可靠的评估工具。
+
+分析：
+该文献对于机器学习在场地效应评估中的应用具有直接参考价值，适合支撑基于数据驱动的预测机制，可应用于地震灾害风险评估系统设计。其SHAP分析部分有助于理解参数影响，为研究脉络中模型可解释性提供实证案例。
+
+## Site amplification prediction model of shallow bedrock sites based on machine learning models
+
+总结：
+该文献研究了基于机器学习模型预测浅层基岩场地放大效应的方法。采用随机森林和深度神经网络算法，利用包含输入地震动响应谱和剪切波速剖面的矩阵数据，替代简化的场地代理参数。结果表明，两种机器学习模型在线性和非线性放大预测上均优于回归模型，其中深度神经网络模型表现更佳。
+
+分析：
+该文献对于机器学习在场地效应评估中的应用具有参考价值，适合支撑基于数据驱动的场地放大预测机制。它可用于地震工程中的场地特定危险性评估场景，为系统设计提供更准确的预测工具，并丰富机器学习在地震工程研究中的应用脉络。
+
+## Seismic site amplification prediction- an integrated Bayesian optimisation explainable machine learning approach
+
+总结：
+该研究采用机器学习模型预测地震场地放大效应，利用日本KiK-Net强震网络数据，开发了包括高斯过程回归和回归树集成等多种算法，并通过贝叶斯优化和交叉验证进行调优。结果表明，回归树集成模型表现最优，在训练和测试集上均取得最低误差，相比传统方法显著提升了预测精度和效率。研究还使用Shapley解释和部分依赖图增强模型可解释性，揭示了关键变量的影响机制。
+
+分析：
+该文献为机器学习在场地效应评估中的应用提供了具体案例，其回归树集成模型的高精度结果可支撑冲击与贯入机制中的场地响应预测系统设计。研究中的贝叶斯优化和可解释性方法适用于提升类似地震工程应用的模型可靠性和透明度，有助于推动机器学习在岩土工程中的实际部署。
+
+## A Quantitative Seismic Topographic Effect Prediction Method Based upon BP Neural Network Algorithm and FEM Simulation
+
+总结：
+该文献提出了一种基于BP神经网络算法和三维有限元模拟的定量地震地形效应预测方法。研究通过有限元模拟与地震记录对比，发现峰值加速度和反应谱随高程增加而增大，但低矮山丘的峰值加速度放大因子与坡度相关性不明显。建立的BP神经网络模型能有效预测放大因子，预测误差较小，且模型结构简单高效。
+
+分析：
+该文献对于机器学习在场地效应评估与预测中的应用主题具有参考价值，它展示了BP神经网络在量化地形对地震动影响方面的具体机制，适用于支撑地震风险评估中的场地效应建模。其方法可应用于机器人控制与作业辅助场景，例如在地形复杂区域进行地震安全分析或系统设计优化。
+
+## The i-FSC proxy for predicting inter-event and spatial variation of topographic site effects
+
+总结：
+该文献研究了近源区域地形对地震动放大的预测，通过神经网络识别控制放大的关键几何参数，并基于回归分析开发了i-FSC代理模型。该模型结合频率缩放曲率和归一化照明角参数，能有效预测地形放大因子，且计算资源需求低。
+
+分析：
+该文献对于机器学习在场地效应评估中的应用具有参考价值，其i-FSC代理模型适合支撑地形放大预测的机制，适用于近源区域地震风险评估和系统设计，有助于优化场地效应预测中的计算效率。
+
+## Transfer learning model for estimating site amplification factors from limited microtremor H/V spectral ratios
+
+总结：
+该文献研究了利用迁移学习技术，基于微动水平垂直谱比数据估计场地放大因子的方法。通过构建迁移学习模型，将预训练的深度神经网络模型适应于新区域和不同数据库，提高了模型在非源区域的适用性。结果表明，该模型在有限数据条件下表现优于预训练模型，并验证了其在小样本训练集上的有效性。
+
+分析：
+该文献对于机器学习在场地效应评估中的应用具有参考价值，特别适合支撑迁移学习在数据稀缺场景下的机制设计。它可为地震风险评估中的场地效应预测提供技术思路，适用于系统设计中处理区域差异和数据不足的问题。
+
+## Assessment of Site Amplification Factors in Southern Lima, Peru Based on Microtremor H/V Spectral Ratios and Deep Neural Network
+
+总结：
+该文献研究了利用微动水平/垂直谱比（MHVR）和深度神经网络（DNN）模型，评估秘鲁利马南部场地放大因子（SAFs）的方法。通过验证DNN模型在利马地区的适用性，并与谱反演技术结果对比，确认了模型能准确估计SAFs。研究发现，东南沿海风成砂区域在约1Hz低频处有较大放大，而西北冲积沉积区域放大较小。
+
+分析：
+该文献对于机器学习在场地效应评估中的应用具有参考价值，展示了DNN模型在低成本、高精度估计SAFs方面的潜力。它适合支撑基于微动数据的场地响应预测机制，可应用于地震风险评估和城市防灾规划等场景，为系统设计提供数据驱动的方法验证。
+
+## Machine learning techniques for estimating seismic site amplification in the Santiago basin, Chile
+
+总结：
+该文献提出了一种基于机器学习的方法，用于整合定性和定量数据，以绘制智利圣地亚哥盆地的地震场地放大程度图。该方法结合了表面剪切波速度（Vs30）、主导频率（f0）和重力异常图，通过训练预测模型来插值和外推未采样点的数据，从而生成更精确的地震放大图、Vs30图和f0图。结果表明，机器学习算法在数字土壤制图中具有巨大潜力，能够超越传统的地统计技术，提高地震危险性评估的准确性。
+
+分析：
+该文献对于当前报告主题的参考价值在于，它展示了机器学习在场地效应评估中的具体应用机制，特别是通过整合多源数据（如Vs30、f0和重力异常）来优化预测模型。这适合支撑基于人工智能的场地响应预测系统设计，为区域尺度地震危险性定量估计提供方法学参考，并强调了空间协变量在提升模型性能中的关键作用。
+
+## Establishing site response-based micro-zonation by applying machine learning techniques on ambient noise data: a case study from Northern Potwar Region, Pakistan
+
+总结：
+该研究应用机器学习技术处理环境噪声数据，以巴基斯坦北部Potwar地区为例，基于场地响应参数和地震脆弱性建立微区划。研究采用K均值、模糊C均值和层次聚类等方法，分析148个站点的数据，得出场地基本频率、放大因子、软沉积厚度和土壤脆弱性指数等参数，并识别出三个脆弱性不同的区域。结果表明，研究区域存在中高程度的场地放大脆弱性，东北部和西北部尤为显著。
+
+分析：
+这篇文献对于机器学习在场地效应评估中的应用具有直接参考价值，展示了如何利用环境噪声数据和聚类算法实现场地微区划，支撑了基于数据驱动的场地响应预测机制。它适用于地震风险评估和城市规划场景，为系统设计提供了结合地理信息系统（GIS）和机器学习技术的实证案例，有助于研究脉络中探索自动化、高效的地震脆弱性分析方法。
+
+## Combining physical model with neural networks for earthquake site response prediction
+
+总结：
+该文献提出了一种结合神经网络与经典均匀分层模型的场地响应预测方法，旨在从物理和数据两个角度提升预测精度，降低对模型复杂度和训练数据量的要求。相比纯物理驱动方法，该方法平均减少约50%的估计误差，并修正了观测与预测结果之间的相关性。它首次在整个地震频段再现了场地响应的四阶段特征，为场地响应预测提供了新框架。
+
+分析：
+该文献对于当前报告主题的参考价值在于，它展示了机器学习如何与传统物理模型结合，以提升场地效应评估的准确性和效率。它适合支撑基于混合模型的系统设计，特别是在数据有限或物理知识不完整的应用场景中，为地震风险评估和抗震建筑设计提供更可靠的预测工具。这有助于拓展机器学习在地震工程中的实际应用脉络，强调数据驱动与物理约束的协同作用。
+
+## Prediction of seismic topographic effects from DEM data via U-Net deep learning model
+
+总结：
+该研究利用U-Net深度学习模型，基于数字高程模型（DEM）数据预测地震地形放大效应，通过多层卷积提取地形特征并结合入射角和地下速度结构提升预测精度，结果表明U-Net模型在均方根误差上优于传统反向传播神经网络。
+
+分析：
+该文献为机器学习在场地效应评估中的应用提供了具体案例，适合支撑基于深度学习的场地响应预测机制，可应用于地震工程中的地形效应模拟和风险评估系统设计，有助于拓展数据驱动方法在地震学研究中的脉络。
+
+## Impact of several site-condition proxies and ground-motion intensity measures on the spectral amplification factor using neuro-fuzzy approach: an example on the KiK-Net dataset
+
+总结：
+该文献利用自适应神经模糊推理系统（ANFIS）机器学习算法，基于KiK-Net数据集，研究了22种场地条件代理（SCPs）和3种地震动强度指标（GMIMs）对响应谱放大因子（SAF）的影响。通过敏感性分析，确定了PGV/VS30为最有效的GMIM，并选取了[f0HV, CV2, PGV/VS30]作为最优变量组合，以综合考虑场地刚度和深度特性及地震动强度。研究旨在为地震规范修订和场地特定研究提供改进的局部场地效应评估模型。
+
+分析：
+该文献对于机器学习在场地效应评估与预测中的应用主题具有重要参考价值，它展示了ANFIS算法在整合多变量场地参数和地震动指标以预测谱放大因子方面的有效性。研究结果适合支撑场地效应预测中的机制建模，特别是通过敏感性分析识别关键变量，为系统设计提供优化输入组合。这有助于在冲击与贯入机制相关研究中，提升场地条件对地震响应影响的量化精度。
+
+## Predicting Models for Local Sedimentary Basin Effect Using a Convolutional Neural Network
+
+总结：
+该文献研究了利用卷积神经网络预测梯形沉积盆地地震动放大效应的方法。通过构建标准盆地模型量化场地条件参数与放大参数的关系，并采用贝叶斯优化方法改进CNN模型结构以提高预测精度。结果表明，优化后的CNN模型能快速预测场地放大特征，相比传统数值模型具有更高的计算效率。
+
+分析：
+该文献为机器学习在场地效应评估中的应用提供了具体案例，展示了CNN在建立多输入多输出参数关系方面的优势。适合支撑基于深度学习的场地响应预测机制研究，为工程实践中快速评估地震危险性提供了可行的技术路径。
+
+## Prediction framework of slope topographic amplification on seismic acceleration based on machine learning algorithms
+
+总结：
+该文献研究了基于机器学习算法预测边坡地形对地震加速度的放大效应。通过采用人工智能回归算法，以坡度、坡高和地震波频率为参数，建立了放大比与参数间的多元非线性关系预测模型。结果表明，相比传统方法，该模型的确定系数提高了17.84%–32.60%，均方根误差降低了30.05%–77.36%，并验证了其在三个实际地震案例中的适用性。
+
+分析：
+该文献对于机器学习在场地效应评估与预测中的应用主题具有参考价值，它展示了机器学习如何替代传统回归方法，提升边坡地形放大效应的定量预测精度。这适合支撑场地效应评估中的建模机制，为工程抗震设计提供更可靠的数据支持，并拓展了机器学习在地震工程领域的应用场景。
+
+## Neural Network-Based Prediction of Amplification Factors for Nonlinear Soil Behaviour: Insights into Site Proxies
+
+总结：
+该研究通过构建324个非线性砂土和黏土柱的数据库，利用广义回归神经网络（GRNN）和径向基函数（RBF）网络，预测了地震场地放大因子（AFs）。研究识别了影响放大因子的关键参数，如峰值地面加速度（PGA）和共振频率（f0），并提出了实用的预测方程，以减少与精确波传播方法之间的偏差。结果表明，软土的长周期放大因子（Fl）可能显著高于短或中周期，为场地分类提供了改进方向。
+
+分析：
+该文献对机器学习在场地效应评估中的应用具有参考价值，特别适合支撑基于神经网络的预测机制，用于地震工程中的场地放大因子计算。它提供了具体的参数组合（如PGA和f0）和简化方程，可应用于基础设施的抗震设计和规范修订，尤其在处理非线性土壤行为时，有助于优化场地分类和风险评估。
+
+# 参考列表
+
+[1] Jiang, Q, Wei, W, Xu, H, et al. A novel seismic topographic effect prediction method based on neural network models[J]. European Physical Journal Plus, 2023.
+[2] Wang, X, Wang, Z, Wang, J, et al. Machine learning based ground motion site amplification prediction[J]. Frontiers in Earth Science, 2023.
+[3] Lee, Y.-G, Kim, S.-J, Achmet, Z, et al. Site amplification prediction model of shallow bedrock sites based on machine learning models[J]. Soil Dynamics and Earthquake Engineering, 2023.
+[4] Raja, M.N.A, Mercado, V, Abdoun, T, et al. Seismic site amplification prediction- an integrated Bayesian optimisation explainable machine learning approach[J]. Georisk, 2025.
+[5] Jiang, Q, Rong, M, Wei, W, et al. A Quantitative Seismic Topographic Effect Prediction Method Based upon BP Neural Network Algorithm and FEM Simulation[J]. Journal of Earth Science, 2024.
+[6] Bou Nassif, A, Maufroy, E, Lacroix, P, et al. The i-FSC proxy for predicting inter-event and spatial variation of topographic site effects[J]. Bulletin of Earthquake Engineering, 2025.
+[7] Pan, D, Miura, H, Kwan, C. Transfer learning model for estimating site amplification factors from limited microtremor H/V spectral ratios[J]. Geophysical Journal International, 2024.
+[8] Miura, H, Gonzales, C, Diaz, M, et al. Assessment of Site Amplification Factors in Southern Lima, Peru Based on Microtremor H/V Spectral Ratios and Deep Neural Network[J]. Journal of Disaster Research, 2023.
+[9] Díaz, J.P, Sáez, E, Monsalve, M, et al. Machine learning techniques for estimating seismic site amplification in the Santiago basin, Chile[J]. Engineering Geology, 2022.
+[10] Qadri, S.M.T, Malik, O.A. Establishing site response-based micro-zonation by applying machine learning techniques on ambient noise data: a case study from Northern Potwar Region, Pakistan[J]. Environmental Earth Sciences, 2021.
+[11] Zhang, H, Zheng, K, Miao, Y. Combining physical model with neural networks for earthquake site response prediction[J]. Soil Dynamics and Earthquake Engineering, 2025.
+[12] Li, Y, Zhou, H. Prediction of seismic topographic effects from DEM data via U-Net deep learning model[J]. European Physical Journal Plus, 2026.
+[13] Zaoui, M.A.I, Derras, B, Régnier, J. Impact of several site-condition proxies and ground-motion intensity measures on the spectral amplification factor using neuro-fuzzy approach: an example on the KiK-Net dataset[J]. Natural Hazards, 2025.
+[14] Yang, X, Hu, M, Chen, X, et al. Predicting Models for Local Sedimentary Basin Effect Using a Convolutional Neural Network[J]. Applied Sciences (Switzerland), 2023.
+[15] Ju, S, Jia, J, Pan, X. Prediction framework of slope topographic amplification on seismic acceleration based on machine learning algorithms[J]. Engineering Applications of Artificial Intelligence, 2024.
+[16] Boudghene Stambouli, A, Guizani, L. Neural Network-Based Prediction of Amplification Factors for Nonlinear Soil Behaviour: Insights into Site Proxies[J]. Applied Sciences (Switzerland), 2025.

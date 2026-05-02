@@ -1,0 +1,331 @@
+{
+  "id": "6c0f8e31ffaf",
+  "kind": "screening",
+  "status": "succeeded",
+  "cancel_requested": false,
+  "title": "new-screening-run",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 2,
+  "progress_total": 2,
+  "progress_message": "Task completed",
+  "created_at": "2026-03-31T16:24:13.019232+08:00",
+  "updated_at": "2026-03-31T16:25:01.972409+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "cad63b3ce1bc",
+    "project_topic": "慢性肾病（CKD）进展中的细胞凋亡机制及潜在干预策略",
+    "model_provider": "deepseek",
+    "parent_task_id": null,
+    "input_dataset_ids": [],
+    "request_payload": {
+      "title": "new-screening-run",
+      "topic": "慢性肾病（CKD）进展中的细胞凋亡机制及潜在干预策略",
+      "criteria_markdown": "# Role\r\n\r\n你是一位肾脏病理生理学领域的资深学术研究员，正在协助我筛选参考文献。我正在撰写一篇关于“慢性肾病（CKD）进展中的细胞凋亡机制及潜在干预策略”的研究报告，我需要你帮我从收集到的文献元数据中找出高价值的参考文献并进行结构化总结。\r\n\r\n# Task\r\n\r\n我将提供一批文献的元数据（包含标题、摘要、关键词等）。请你逐一仔细阅读，并严格按照以下流程处理：\r\n\r\n## Step 1: 筛选判读\r\n\r\n请根据以下标准判断该文献是否符合我的研究需求：\r\n\r\n* 纳入标准 (Inclusion Criteria)：必须同时涉及慢性肾病（或具体的肾脏固有细胞，如足细胞、肾小管上皮细胞等）与细胞凋亡（Apoptosis）；重点关注发病机制（如氧化应激、内质网应激、线粒体途径等）或抗凋亡的治疗干预研究。\r\n* 排除标准 (Exclusion Criteria)：研究主体为非肾脏疾病；探讨的是细胞坏死/焦亡/自噬而非凋亡（除非作为对比）；仅为纯临床观察无机制探讨；关于肿瘤/癌症中的凋亡研究（除非涉及抗癌药物引起的肾毒性）。\r\n\r\n## Step 2: 格式化输出\r\n\r\n根据判读结果，严格执行以下输出逻辑（**必须将所有输出内容放在一个 markdown 代码块内，绝对不允许使用任何形式的来源引用标记或脚注，只输出纯文本**）：\r\n\r\n情况 A：如果不符合要求\r\n\r\n* 仅输出一行文字：\r\n  `❌ [剔除]：<文献完整标题>`\r\n\r\n情况 B：如果符合要求\r\n\r\n* 请按以下结构输出：\r\n\r\n# <文献完整标题>\r\n（<这里提供文献标题的中文翻译>）\r\n\r\n## 核心总结\r\n（请用中文精炼概括：1. 文章致力于解决什么具体的科学问题？ 2. 使用了什么核心技术、实验模型（体内/体外）或分析方法？ 3. 得出了什么最核心的结论？）\r\n\r\n## 深度分析\r\n* 参考价值：针对我“慢性肾病与细胞凋亡”的论文主题，这篇文章能为我提供哪些具体的素材？（例如：可用于背景介绍、提供了某种特定通路的证据、或者提供了某种药物干预的参考思路等）。\r\n\r\n---\r\n\r\n# Input Data\r\n\r\n[在此处粘贴你导出的文献信息，例如 BibTeX 文本，或者标题+摘要的纯文本]",
+      "inclusion": [
+        "必须同时涉及慢性肾病 或具体的肾脏固有细胞，如足细胞、肾小管上皮细胞等 与细胞凋亡 Apoptosis",
+        "重点关注发病机制 如氧化应激、内质网应激、线粒体途径等 或抗凋亡的治疗干预研究。"
+      ],
+      "exclusion": [
+        "研究主体为非肾脏疾病",
+        "探讨的是细胞坏死/焦亡/自噬而非凋亡 除非作为对比",
+        "仅为纯临床观察无机制探讨",
+        "关于肿瘤/癌症中的凋亡研究 除非涉及抗癌药物引起的肾毒性 。"
+      ],
+      "provider": "deepseek",
+      "model_name": "deepseek-chat",
+      "api_base_url": "https://api.deepseek.com/v1",
+      "api_key_env": "DEEPSEEK_API_KEY",
+      "temperature": 0.0,
+      "max_tokens": 1536,
+      "min_request_interval_seconds": 2.0,
+      "batch_size": 10,
+      "target_include_count": 30,
+      "stop_when_target_reached": false,
+      "allow_uncertain": true,
+      "retry_times": 6,
+      "request_timeout_seconds": 240,
+      "encoding": "auto",
+      "project_id": "cad63b3ce1bc",
+      "parent_task_id": null,
+      "source_dataset_ids": []
+    },
+    "model_secret_id": "2618d1befffb4f1a",
+    "uploaded_input_paths": [
+      "tasks/6c0f8e31ffaf/uploads/abstract-RenalInsuf-set.txt"
+    ]
+  },
+  "summary": {
+    "run_id": "run_20260331_162413",
+    "input_files_count": 1,
+    "raw_entries_count": 21,
+    "deduped_entries_count": 18,
+    "processed_count": 18,
+    "included_count": 9,
+    "excluded_count": 7,
+    "uncertain_count": 2,
+    "unused_count": 0,
+    "batch_count": 2,
+    "api_call_count": 2,
+    "stop_reason": "all_records_processed",
+    "started_at": "2026-03-31T16:24:13.231213+08:00",
+    "finished_at": "2026-03-31T16:25:01.952367+08:00"
+  },
+  "error": null,
+  "artifacts": {
+    "included_report": {
+      "path": "tasks/6c0f8e31ffaf/screening_run/screening_output/included_report.md",
+      "filename": "included_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 3700
+    },
+    "excluded_report": {
+      "path": "tasks/6c0f8e31ffaf/screening_run/screening_output/excluded_report.md",
+      "filename": "excluded_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 2841
+    },
+    "uncertain_report": {
+      "path": "tasks/6c0f8e31ffaf/screening_run/screening_output/uncertain_report.md",
+      "filename": "uncertain_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 780
+    },
+    "included_ris": {
+      "path": "tasks/6c0f8e31ffaf/screening_run/screening_output/included.ris",
+      "filename": "included.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 19172
+    },
+    "unused_ris": {
+      "path": "tasks/6c0f8e31ffaf/screening_run/screening_output/unused_remaining.ris",
+      "filename": "unused_remaining.ris",
+      "content_type": "application/x-research-info-systems",
+      "size_bytes": 0
+    },
+    "run_summary": {
+      "path": "tasks/6c0f8e31ffaf/screening_run/screening_output/run_summary.json",
+      "filename": "run_summary.json",
+      "content_type": "application/json",
+      "size_bytes": 442
+    },
+    "screening_decisions": {
+      "path": "tasks/6c0f8e31ffaf/screening_run/screening_output/screening_decisions.json",
+      "filename": "screening_decisions.json",
+      "content_type": "application/json",
+      "size_bytes": 8721
+    }
+  },
+  "run_root": "tasks/6c0f8e31ffaf/screening_run",
+  "output_dir": "tasks/6c0f8e31ffaf/screening_run/screening_output",
+  "markdown_preview": null,
+  "records": [
+    {
+      "paper_id": "paper_000001",
+      "title": "CAR-M2 immunotherapy resolves renal fibrosis via revascularization and apoptosis of profibrotic Cxcr2(+) endothelial cells.",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确涉及慢性肾病（CKD）相关的肾纤维化，并探讨了内皮细胞凋亡的机制。",
+      "year": 2026,
+      "journal": "Cell Rep Med",
+      "doi": "10.1016/j.xcrm.2026.102698",
+      "abstract": "Renal fibrosis is a common outcome of chronic kidney disease (CKD), forming a fibrotic niche characterized by fibroblast activation and vascular rarefaction. Currently, there are no effective treatment strategies targeting fibrotic niche. Here, we show that chimeric antigen receptor-modified M2 macrophages (CAR-M2) targeting FAP and secreting interleukin (IL)-4 are delivered via an injectable HAMA-CS hydrogel beneath the renal subcapsule and attenuate renal fibrosis while promoting renal revascularization. The single-cell RNA sequencing reveals the heterogeneity and interaction of stroma and endothelial cells (ECs). A fibrosis-related Cxcr2+ EC subset is identified, and its specific depletion effectively mitigates renal fibrosis. Further results reveal that CAR-M2 can release matrix metalloproteinase 2 (MMP2) in close proximity to activate retinoid X receptor alpha (Rxra) in the Cxcr2+ ECs and further triggers its mitochondrial autophagy, leading to apoptosis. Our research provides innovative strategies and proof of principle for the immunotherapy of organ fibrosis."
+    },
+    {
+      "paper_id": "paper_000002",
+      "title": "CXCR6+ T cells promote apoptosis and necroptosis in proximal tubules during AKI-to-CKD transition.",
+      "decision": "include",
+      "confidence": 0.95,
+      "reason": "标题和摘要明确涉及AKI向CKD转变过程中肾小管细胞的凋亡和坏死性凋亡机制。",
+      "year": 2026,
+      "journal": "Cell Death Dis",
+      "doi": "10.1038/s41419-026-08644-x",
+      "abstract": "Acute kidney injury (AKI) can progress to chronic kidney disease (CKD) in the setting of maladaptive repair characterized by tubular atrophy, inflammation, and fibrosis. Programmed cell death is a key driver of proximal tubule (PT) loss, yet how immune infiltration promotes tubular injury and death remains incompletely understood. Using a mouse model of maladaptive repair, we integrated bulk and single-cell RNA sequencing with immunohistochemistry and protein analyses to define immune-epithelial interactions during AKI-to-CKD transition. Injured kidneys exhibited loss of healthy PTs, expansion of injured PT subsets, and late-stage T cell accumulation. Apoptotic and necroptotic signaling pathways were markedly upregulated, particularly in VCAM1+ PT cells. Cell-cell interaction analysis identified macrophage-derived Cxcl16 as the dominant chemokine mediating recruitment of Cxcr6+ T cells. Genetic deletion of Cxcr6 reduced renal T cell accumulation, cytotoxic effector expression, and activation of apoptotic (cleaved caspase-3, Bax) and necroptotic signaling (MLKL, phospho-MLKL) in PT cells. Accordingly, Cxcr6-/- mice displayed preserved PT differentiation, reduced fibrosis, and improved renal function. Together, these findings identify Cxcr6+ T cells as key mediators of immune-driven tubular cell death during maladaptive repair and suggest that targeting the CXCL16-CXCR6 axis may mitigate tubular injury and slow AKI-to-CKD progression."
+    },
+    {
+      "paper_id": "paper_000003",
+      "title": "Apoptotic Bodies in Kidney Disease: Orchestrators of Inflammation, Fibrosis, and Repair.",
+      "decision": "include",
+      "confidence": 0.92,
+      "reason": "标题和摘要明确综述了凋亡小体在肾脏疾病（包括CKD）中的作用，涉及凋亡机制。",
+      "year": 2026,
+      "journal": "J Am Soc Nephrol",
+      "doi": "10.1681/asn.0000001073",
+      "abstract": "Apoptotic bodies are membrane-bound vesicles generated during the terminal stages of programmed cell death and traditionally viewed as inert cellular debris. Emerging evidence, however, positions apoptotic bodies as dynamic mediators of intercellular communication with critical roles in renal physiology and pathology. In the healthy kidney, efficient efferocytosis of apoptotic bodies maintains tissue homeostasis by ensuring immunologically silent clearance of apoptotic remnants. In acute kidney injury (AKI), extensive tubular epithelial apoptosis generates a high burden of apoptotic bodies that can amplify inflammation, endothelial dysfunction, and adaptive immune activation when clearance is impaired, yet promote resolution and epithelial repair when efficiently removed. In chronic kidney disease (CKD), persistent low-grade apoptosis combined with defective efferocytosis leads to progressive accumulation of apoptotic bodies in the interstitium, where their bioactive cargo-including DAMPs, cytokines, growth factors, and profibrotic microRNAs-drives fibroblast activation, extracellular matrix expansion, and fibrosis. In the vasculature, apoptotic bodies derived from vascular smooth muscle cells act as nucleation sites for calcium-phosphate crystal deposition, linking apoptosis to the development of medial vascular calcification in CKD. Together, these findings highlight apoptotic bodies as active regulators of injury, inflammation, fibrosis, regeneration, and vascular pathology. Understanding the determinants of their pathogenic versus reparative effects could yield new biomarkers and therapeutic strategies, including modulation of efferocytosis, targeting apoptotic body-derived signaling pathways, and engineering apoptotic bodies-based delivery systems."
+    },
+    {
+      "paper_id": "paper_000004",
+      "title": "MUC20 alleviates kidney fibrosis by modulating pyroptosis through the MET/RAS/STING axis.",
+      "decision": "exclude",
+      "confidence": 0.88,
+      "reason": "标题和摘要明确探讨的是细胞焦亡（pyroptosis），而非凋亡（apoptosis），不符合纳入标准。",
+      "year": 2026,
+      "journal": "Theranostics",
+      "doi": "10.7150/thno.123986",
+      "abstract": "Rationale: Mucins are epithelial transmembrane glycoproteins involved in inflammation and kidney dysfunction, yet the role of the transmembrane mucin MUC20 in renal injury and fibrosis remains unclear. This study aimed to define the functional significance and underlying mechanisms of MUC20 in kidney fibrosis. Methods: Muc20-deficient mice and tubular epithelial cell models were used to evaluate renal fibrosis and pyroptosis in induced kidney injury. Molecular and biochemical approaches were applied to assess protein interactions, RAS activation, 2'3'-cGAMP production, cGAS-STING signaling, lysosomal integrity, potassium efflux, and NLRP3 inflammasome activation. Results: Loss of MUC20 significantly exacerbated renal fibrosis and increased pyroptosis in tubular epithelial cells. Mechanistically, MUC20 interacted with MET to promote RAS activation. MUC20 deficiency decreased GTP-bound RAS levels, leading to increased 2'3'-cGAMP production and activation of the cGAS-STING pathway. STING activation induced lysosomal membrane permeabilization, potassium efflux, and subsequent NLRP3 inflammasome-mediated pyroptosis. Conclusions: MUC20 acts as a key protective regulator in kidney by restraining RAS-cGAS-STING-NLRP3-driven pyroptosis and fibrotic progression. Targeting MUC20-related signaling pathways may offer therapeutic potential for kidney fibrosis and chronic kidney disease."
+    },
+    {
+      "paper_id": "paper_000005",
+      "title": "Bone mineral loss damages renal tubules in mice.",
+      "decision": "exclude",
+      "confidence": 0.75,
+      "reason": "摘要提到破骨细胞凋亡，但研究主体是骨矿流失对肾小管的损伤，未明确涉及CKD中的细胞凋亡机制。",
+      "year": 2026,
+      "journal": "Commun Biol",
+      "doi": "10.1038/s42003-026-09603-0",
+      "abstract": "Fibroblast growth factor-23 (FGF23) is a bone-derived hormone that promotes urinary phosphate excretion in response to phosphate loading. While essential for phosphate homeostasis, elevated FGF23 increases phosphate concentration in the renal tubular fluid, promoting calcium-phosphate crystal formation and tubular injury. Here we show that bone resorption mobilizes phosphate into the circulation and mimics the pathophysiology of dietary phosphate loading. Enhanced bone resorption, induced by soluble receptor activator of NF-κB ligand (sRANKL) administration or microgravity exposure on the International Space Station, increased circulating FGF23 levels and caused renal tubular injury in mice. Pre-treatment with bisphosphonate, an inducer of osteoclast apoptosis, prevented sRANKL-induced increases in FGF23 and tubular damage. These findings suggest that bone mineral loss may contribute to renal tubular injury in clinical settings, including immobilization, osteoporosis, and chronic kidney disease-mineral bone disorder."
+    },
+    {
+      "paper_id": "paper_000006",
+      "title": "Uremia and parathyroid hormone have distinct effects on bone protein and gene expression.",
+      "decision": "exclude",
+      "confidence": 0.8,
+      "reason": "摘要提到CKD中骨细胞凋亡增加，但研究主体是骨组织，而非肾脏固有细胞或CKD进展中的凋亡机制。",
+      "year": 2026,
+      "journal": "Kidney Int",
+      "doi": "10.1016/j.kint.2025.12.025",
+      "abstract": "INTRODUCTION: Chronic kidney disease (CKD)-associated osteoporosis is highly prevalent and increases the risk of fractures. Current therapy aims to preserve normal bone turnover, by maintaining parathyroid hormone (PTH) at relatively adequate levels. However, these patients continue to experience fractures. METHODS: To assess potential adverse effects of PTH on bone, we examined bone histology and osteocytic gene and protein expression in 76 patients receiving hemodialysis compared to that of 33 control individuals. RESULTS: Using bulk bone tissue RNAseq, we observed that CKD is associated with enhanced inflammatory signaling, increased cell death, impaired osteoblastic differentiation, and reduced bone mass, consistent with low osteocyte count and increased apoptosis. Patients with elevated PTH levels showed an attenuation of these alterations, but exhibited increased expression of genes related to fibrosis, matrix apposition, and bone remodeling, leading to increased cortical porosity. CONCLUSIONS: CKD induces inflammation and cell death in bone. However, elevated PTH levels exhibited dual effects that were both protective and detrimental to bone tissue quality and strength. Our findings suggest that combining anabolic agents with relatively low PTH levels may be a potential approach to improve bone quality in CKD. This hypothesis warrants further investigation in future studies."
+    },
+    {
+      "paper_id": "paper_000007",
+      "title": "MYO1C is a urinary extracellular vesicle biomarker and mediator of podocyte injury in diabetic nephropathy.",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确涉及糖尿病肾病（CKD的一种）中足细胞损伤和凋亡的机制研究。",
+      "year": 2026,
+      "journal": "JCI Insight",
+      "doi": "10.1172/jci.insight.194604",
+      "abstract": "Type 2 diabetic nephropathy (T2DN) is a major complication of type 2 diabetes and a leading cause of chronic kidney disease. This study aimed to explore Myosin IC (MYO1C) as both a candidate biomarker and elucidate its role as a mechanistic mediator of podocyte injury in T2DN. Using urinary extracellular vesicle RNA biomarkers identified from a training and validation cohort of 33 type 2 diabetes and 40 patients with T2DN, we developed a machine learning diagnostic model for T2DN. The model achieved an AUC of 0.877 in validation and performed well in an independent test cohort with an AUC of 0.824. MYO1C was identified as the most influential feature in the final model. Mechanistic investigations in vitro and in vivo revealed that high glucose and high-fat conditions induced podocyte injury, inflammation, and apoptosis, with increased MYO1C expression. MYO1C knockdown in vitro and in vivo reduced podocyte damage and inflammatory responses. MYO1C overexpression enhanced p38, p-CREB, and TNF-α levels, while p38 inhibition mitigated these effects. These findings support MYO1C not only as a potential urinary biomarker for T2DN but also as a key pathogenic driver that promotes podocyte injury via p38 MAPK signaling."
+    },
+    {
+      "paper_id": "paper_000008",
+      "title": "A Five-Plasma Protein-Based Algorithm for Predicting Incident CKD in Type 2 Diabetes.",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要描述的是预测模型开发，未涉及CKD进展中的细胞凋亡机制或干预策略。",
+      "year": 2025,
+      "journal": "J Am Soc Nephrol",
+      "doi": "10.1681/asn.0000000902",
+      "abstract": "KEY POINTS: Proteomics analyses consistently identified nine independent protein predictors for CKD in both Chinese and European participants with type 2 diabetes. A novel prediction model, \"eGFR+five-protein panel predicting CKD,\" reliably predicted CKD with good performance (area under the receiver operating characteristic curve ≥0.80). The new \"eGFR+five-protein panel predicting CKD\" model exhibited superior performance over traditional clinical models. BACKGROUND: Currently, there is a lack of reliable biomarkers for noninvasive prediction of CKD in patients with diabetes. This study aimed to identify novel protein predictors and construct a prediction model for incident CKD in participants with type 2 diabetes applicable across different populations. METHODS: A targeted Olink plasma proteomics profiling analysis, involving 368 proteins, was conducted in a nested case-control study comprising 132 incident CKD cases and 132 non-CKD controls, matched for age, sex, duration of diabetes, and eGFR, recruited from a long-term prospective cohort of Chinese type 2 diabetes participants (median approximately 9-year follow-up). False discovery rate was applied for multiple testing corrections. A q -value <0.2 was considered statistically significant. Three machine-learning approaches (Boruta, support vector machine, and eXtreme gradient boosting) were used for feature selection. Independent associations of proteins with incident CKD with adjustments for conventional clinical risk factors were examined in the training set ( n =1580, including 173 incident CKD cases and 1407 non-CKD controls; 70%) of the UK Biobank Pharma Proteomics Project (UKB-PPP) (median approximately 13.5-year follow-up). The least absolute shrinkage and selection operator-based Cox-regression analysis was used to develop the prediction model, which was subsequently validated in the testing set ( n =677, including 85 incident CKD cases and 592 non-CKD controls; 30%) of UKB-PPP. RESULTS: Among the 18 identified protein features predictive of incident CKD, 12 showed significant associations with consistent direction of effects in both cohorts. A prediction model (\"eGFR+five-protein panel predicting CKD [eGFR+FPPC]\") combining eGFR and five proteins (alpha-1-microglobulin/bikunin precursor, matrix metallopeptidase 7, placental growth factor, TNF-related apoptosis-inducing ligand receptor 2, and kidney injury molecule-1) was constructed and validated in the testing and training sets of the UKB-PPP, respectively. The \"eGFR+FPPC\" model achieved superior predictive performance in both training (area under the receiver operating characteristic curve [95% confidence interval]: 0.82 [0.79 to 0.85]) and testing (area under the receiver operating characteristic curve [95% confidence interval]: 0.80 [0.74 to 0.86]) sets of UKB-PPP and yielded fewer indeterminate results compared with conventional clinical models. CONCLUSIONS: The \"eGFR+FPPC\" model performed better than conventional clinical models in predicting incident CKD in type 2 diabetes participants across different populations."
+    },
+    {
+      "paper_id": "paper_000009",
+      "title": "The Aging Kidney and Acute Kidney Injury.",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "摘要提到衰老细胞抵抗凋亡，并涉及CKD和AKI，但信息不足以确认是否聚焦于CKD进展中的凋亡机制。",
+      "year": 2025,
+      "journal": "J Am Soc Nephrol",
+      "doi": "10.1681/asn.0000001002",
+      "abstract": "Aging is unavoidable and driven, at least in part, by the biologic process termed senescence. Senescence is characterized by cell cycle arrest incurred by one or more stressors wherein there is cellular upregulation of cyclin-dependent kinase inhibitors, p16 Ink4a and/or p21 Cip1 . Senescent cells are metabolically active and resistant to apoptosis, have increased β -galactosidase activity, and express a senescence-associated secretory phenotype (SASP). The SASP produces an array of inflammatory, cytotoxic, fibrotic, and vasoactive factors. Senescence is a diffusible process as, largely through the SASP, a focus of senescent cells can recruit adjacent cells and cells in distant organs, thereby expanding its scope way beyond its original focus. Senescence predisposes not only to chronic diseases (including CKD) but also acute processes (including AKI). This review provides evidence that age increases the risk of human AKI and summarizes clinical factors that predispose older individuals to AKI. It provides an overview of the biology of senescence, and it discusses the role of intrarenal senescent cells in the pathogenesis of AKI, the significance of the extrarenal milieu and distant organs in predisposing to AKI with age, heme as a prosenescent species, and the role of senescence in the AKI to CKD transition. The risk for AKI with aging, in large part, reflects the fact that virtually all processes implicated in AKI, irrespective of age, occur as the kidney ages. Processes discussed include senescent cells, vascular responses, diabetes, impaired NAD + content, sirtuin expression, mitochondrial dysfunction, impaired autophagy, epigenetic changes, telomere shortening, impaired nephroprotectant expression, inflammaging, and immunosenescence. The review concludes by discussing the basis for senolytics (agents that kill senescent cells), senomorphics (agents that block SASP factors), and other aspects of senotherapies."
+    },
+    {
+      "paper_id": "paper_000010",
+      "title": "Mechanisms of Podocyte Injury Due to Loss of the Nucleoporin NUP93.",
+      "decision": "include",
+      "confidence": 0.87,
+      "reason": "标题和摘要明确涉及足细胞损伤，并在晚期导致凋亡，与CKD进展相关。",
+      "year": 2025,
+      "journal": "J Am Soc Nephrol",
+      "doi": "10.1681/asn.0000000964",
+      "abstract": "KEY POINTS: Loss of NUP93 caused progressive glomerular disease in mice. Nuclear levels of podocyte transcription factors were reduced on loss of NUP93. Loss of NUP93 changed transcriptional programs in podocytes. BACKGROUND: Genetic variants in six different genes encoding nuclear pore complex (NPC) proteins cause steroid-resistant nephrotic syndrome and FSGS in pediatric patients. All affected proteins are structural components of NPCs, restricted channels across the nuclear envelope that are required for molecular exchange between nucleoplasm and cytoplasm. Although podocyte injury is a unifying feature of these genetic variants, the molecular mechanisms remain poorly understood. METHODS: To elucidate the pathogenesis of NPC protein-related podocyte injury, a mouse model with conditional knockout of the Nup93 gene was generated and studied. NPC density was measured by stimulated emission depletion microscopy. Transcriptomics, proteomics, and immunofluorescence analysis were used to define molecular pathogenic mechanisms. RESULTS: Knockout of Nup93 reduced NPC density in podocyte nuclei. While knockout of Nup93 during kidney development led to embryonic lethality, its deletion in mature podocytes ( NPHS2 -Cre) caused progressive glomerular disease with onset around 4 months of age, when a phenotype of minimal change glomerulopathy was observed. At this stage, immunofluorescence staining revealed reduced nuclear abundance of podocyte-specific transcription factors, which was due to cytoplasmic redistribution. Transcriptome and proteome analysis detected altered transcriptional regulation, prominently affecting genes related to cell adhesion and regulation of the actin cytoskeleton. Until 6 months of age, knockout mice developed progressive CKD with FSGS, podocyte loss, and uremia. Before induction of apoptosis, NUP93-deficient podocytes accumulated genomic damage as indicated by activation of the DNA damage response pathway. CONCLUSIONS: Our data suggest that in early stages of disease, loss of NUP93 impaired podocyte transcription factors and altered transcriptional programs in podocytes, prominently affecting regulators of the actin cytoskeleton. In the late stages, podocytes accumulated genomic damage, leading to apoptosis and progressive glomerulosclerosis."
+    },
+    {
+      "paper_id": "paper_000011",
+      "title": "Charge-dependent mitochondrial targeting of cerium-doped polypyrrole nanoparticles to injured renal tubules for acute kidney injury therapy.",
+      "decision": "include",
+      "confidence": 0.9,
+      "reason": "标题和摘要明确涉及急性肾损伤向慢性肾病进展，研究肾小管上皮细胞凋亡机制及纳米干预策略。",
+      "year": 2025,
+      "journal": "J Nanobiotechnology",
+      "doi": "10.1186/s12951-025-03967-x",
+      "abstract": "Acute kidney injury (AKI) is a critical medical condition with limited treatment options and frequently progresses to chronic kidney disease (CKD). This study introduces a novel nanotherapeutic approach based on positively charged cerium-doped polypyrrole nanoparticles [(+)CePPy] for AKI treatment. The positive surface charge of these nanoparticles enhances their cellular uptake and mitochondrial targeting in proximal tubular epithelial cells (PTECs), which play a central role in the pathophysiology of AKI. Comprehensive in vitro and in vivo evaluations demonstrate that (+)CePPy effectively scavenges reactive oxygen species (ROS), ameliorates mitochondrial dysfunction, attenuates apoptosis, and prevents AKI-to-CKD progression. The nanoparticles exhibit excellent biocompatibility and undergo efficient renal clearance within 14 days. Mechanistically, the renoprotective effects involve both direct elimination of ROS and the reinforcement of endogenous antioxidant defenses through upregulation of the Mpv17 mitochondrial membrane protein-like (Mpv17l) pathway. Furthermore, we report that early endosome antigen 1 (EEA1) upregulation mediates the enhanced renal targeting of (+)CePPy under AKI conditions. This research highlights the potential of charge-modulated nanotherapeutics as a translatable strategy for renal protection and presents a promising approach for AKI treatment. GRAPHICAL ABSTRACT: [Image: see text] SUPPLEMENTARY INFORMATION: The online version contains supplementary material available at 10.1186/s12951-025-03967-x."
+    },
+    {
+      "paper_id": "paper_000012",
+      "title": "Tubule-Derived IFN-α Promotes GSDMD-Mediated Macrophage Pyroptosis to Drive Renal Inflammation and Fibrosis Through JAK2/STAT2 Activation.",
+      "decision": "exclude",
+      "confidence": 0.85,
+      "reason": "标题和摘要明确研究巨噬细胞焦亡而非凋亡，且未提及凋亡机制。",
+      "year": 2026,
+      "journal": "Adv Sci (Weinh)",
+      "doi": "10.1002/advs.202512278",
+      "abstract": "Macrophages exhibit high plasticity in response to tubular epithelial cell (TEC) injury. Gasdermin D (GSDMD)-mediated pyroptosis amplifies the inflammatory and fibrogenic cascade, yet its role in chronic kidney disease (CKD) remains elusive. Herein, GSDMD is upregulated in kidney macrophages following unilateral renal ischemia-reperfusion injury (UIRI) or folic acid-induced injury, paralleling elevated pyroptosis rates. Clinically, the active fragment GSDMD-N localizes primarily to CD68+ macrophages, and its renal level positively correlates with fibrosis severity across diverse CKD etiologies, reinforcing its pathogenic relevance. Macrophage-specific deletion of Gsdmd ameliorates pyroptosis, inflammation, and renal fibrosis in both murine models, without affecting acute tubular damage in bilateral IRI. Mechanistically, injured TECs initiate this cascade through secreted IFN-α, which activates the IFNAR1/JAK2/STAT2 axis in macrophages​. STAT2 then forms a complex with IRF9, directly binding to the Gsdmd promoter to transcriptionally upregulate GSDMD expression. Genetic ablation of Jak2, Stat2, or Ifnar1 reduces GSDMD and GSDMD-N levels and inhibits IL-1β/IL-18 secretion. Notably, administration of an IFN-α neutralizing antibody attenuates UIRI-induced pyroptotic macrophage, inflammation, and renal fibrosis. Collectively, the findings uncover a STAT2/IRF9-dependent paracrine IFN-α feedback loop that orchestrates GSDMD-mediated pyroptosis, linking injured TECs to macrophage-driven renal inflammation and fibrosis. Targeting this axis represents a promising strategy to halt CKD progression."
+    },
+    {
+      "paper_id": "paper_000013",
+      "title": "Spatially selective clearance of inflammation-mediated reactive oxygen species in injured kidney cells.",
+      "decision": "uncertain",
+      "confidence": 0.55,
+      "reason": "摘要同时提及细胞焦亡和凋亡，但未明确区分凋亡在慢性肾病进展中的具体机制。",
+      "year": 2026,
+      "journal": "Theranostics",
+      "doi": "10.7150/thno.112905",
+      "abstract": "Rationale: Kidney injury is characterized by the accumulation of reactive oxygen species (ROS). Current ROS scavengers utilized in the treatment of clinical kidney injury lack the capacity for spatially selective ROS scavenging within the injured cells, often resulting in irreversible damage to healthy tissues. Methods: We developed a spatially selective therapeutic strategy using platelet-shipped tetrahedral framework nucleic acids (TFNAs@PLT). Results: In this system, platelets achieve spatial targeting of injured kidney cells by responding to inflammatory signals and releasing TFNAs following TNF-α activation. TFNAs subsequently exert a potent antioxidant effect in the injured cells. We have demonstrated that TFNAs@PLT reduces pyroptosis and apoptosis through the Caspase-3/GSDME pathway and the NLRP3-mediated Caspase-1/IL-1β pathway in the acute kidney injury (AKI) mouse model, while also inhibiting renal fibrosis via the NLRP3/Caspase-1 and the TNF-α/NF-κB pathways in the chronic kidney disease (CKD) mouse model. Conclusion: TFNAs@PLT offers a safe and effective therapeutic strategy for kidney injury and other inflammation-mediated diseases."
+    },
+    {
+      "paper_id": "paper_000014",
+      "title": "ROS-responsive graphene-hyaluronic acid nanomedicine for targeted therapy in renal ischemia/reperfusion injury.",
+      "decision": "include",
+      "confidence": 0.88,
+      "reason": "标题和摘要明确研究肾缺血再灌注损伤，涉及肾小管细胞凋亡及纳米干预策略。",
+      "year": 2026,
+      "journal": "Theranostics",
+      "doi": "10.7150/thno.120560",
+      "abstract": "Background: Acute kidney injury (AKI) frequently progresses to chronic kidney disease (CKD) through the AKI-to-CKD transition; however, effective treatment strategies remain challenging due to the complex and multifactorial pathophysiology of this process. This study aims to develop a multifunctional nanoplatform for kidney-specific targeting, reactive oxygen species (ROS) scavenging, and anti-fibrotic drug delivery to mitigate AKI-to-CKD progression. Methods: Reduced graphene oxide (rGO) was conjugated with hyaluronic acid (HA) to form HA/rGO nanoparticles, enabling CD44-mediated renal targeting and ROS-responsive drug release. Paricalcitol, a hydrophobic anti-fibrotic agent, was loaded onto HA/rGO to form P/HA/rGO. The physicochemical characteristics, ROS-scavenging capacity, and oxidative stress-responsive drug release were evaluated. In vitro cytoprotection was assessed using HK-2 cells under oxidative stress. In vivo studies using ischemia/reperfusion (IR) injury mouse models assessed biodistribution, renal targeting, and therapeutic efficacy after systemic administration of P/HA/rGO. Results: HA/rGO nanoparticles demonstrated potent antioxidant activity and significantly protected HK-2 cells from ROS-induced cytotoxicity. P/HA/rGO exhibited a high paricalcitol loading efficiency (93%) and released 26% of the drug over 30 days under oxidative conditions. P/HA/rGO selectively accumulated in IR-injured kidneys via HA-CD44 interactions, decreased serum NGAL and cystatin C levels, and effectively attenuated tubular injury, fibrosis, inflammation, and apoptosis compared to vehicle-treated controls. Conclusion: The P/HA/rGO nanoplatform enables kidney-targeted delivery of paricalcitol with ROS-scavenging and ROS-responsive release properties, providing a promising therapeutic strategy to suppress the AKI-to-CKD transition via integrated targeting and microenvironment-responsive therapy."
+    },
+    {
+      "paper_id": "paper_000015",
+      "title": "Inhibition of MCL-1 to eliminate senescent cells and mitigate renal fibrosis in aristolochic acid nephropathy.",
+      "decision": "include",
+      "confidence": 0.92,
+      "reason": "标题和摘要明确研究肾小管上皮细胞衰老与抗凋亡蛋白MCL-1在慢性肾病进展中的作用及干预。",
+      "year": 2025,
+      "journal": "Cell Death Dis",
+      "doi": "10.1038/s41419-025-08268-7",
+      "abstract": "The role of tubular epithelial cells (TEC) senescence in the progression from acute kidney injury (AKI) to chronic kidney disease (CKD) remains debated due to the complexity of senescent cell populations and their pro-survival mechanisms. To directly assess the contribution of TEC senescence to AKI-to-CKD progression, we employed an aristolochic acid nephropathy (AAN) mouse model. Here, we demonstrated that AAI-induced DNA damage specifically drives TEC senescence during AKI-to-CKD progression. Concomitant with the emergence of senescence, immunofluorescence staining revealed the expression of anti-apoptotic proteins, including BCL-2, BCL-xL, and MCL-1, within KIM1+ tubules-a marker of tubular injury. To further characterize these senescent cells, we integrated this model with snRNA-Seq data and identified a distinct population of KIM1+ senescent TEC exhibiting resistance to apoptosis through upregulation of pro-survival proteins such as MCL-1, BCL-2, and BCL-xL. To evaluate the therapeutic potential of targeting these pathways, we treated AAN mice with the MCL-1-specific inhibitor UMI-77 and the senolytic ABT-263 (targeting BCL-2/BCL-xL) during both the acute and late phases. Interestingly, only UMI-77 administration during the acute phase effectively reduced tubular senescence and mitigated fibrosis. In contrast, late-phase treatment had only marginal benefits. Notably, ABT-263 failed to eliminate senescent cells and instead exacerbated fibrosis, suggesting that while senescent TEC relies on pro-survival mechanisms to evade apoptosis, their dependency on specific anti-apoptotic proteins varies. Our study provides a high-resolution molecular framework for understanding TEC senescence and identifies MCL-1 inhibition as a precise and effective therapeutic strategy to prevent AKI-to-CKD progression, with early intervention being critical for therapeutic success."
+    },
+    {
+      "paper_id": "paper_000016",
+      "title": "Cinnamic acid prevents skeletal muscle atrophy in nephrectomized rats by modulating apoptosis and endoplasmic reticulum stress.",
+      "decision": "exclude",
+      "confidence": 0.87,
+      "reason": "标题和摘要明确研究慢性肾病引起的骨骼肌萎缩，而非肾脏固有细胞的凋亡机制。",
+      "year": 2025,
+      "journal": "Phytomedicine",
+      "doi": "10.1016/j.phymed.2025.157499",
+      "abstract": "BACKGROUND: Skeletal muscle atrophy is frequently observed in patients with chronic kidney disease (CKD), exacerbating disease progression and diminishing patients' quality of life. Cinnamic acid (CINN), a low-toxicity phenolic acid derived from Cinnamomum cassia (L.) J. Presl, remains uncharacterized in terms of its efficacy and mechanism against CKD-induced skeletal muscle atrophy. PURPOSE: To assess the protective impact of CINN on skeletal muscle atrophy in CKD rats and elucidate its potential molecular mechanisms. METHODS: A 5/6 nephrectomy (5/6 Nx) rat model was constructed and treated with varying concentrations of CINN via gavage. Potential targets and pathways of CINN were identified using network pharmacology and validated through transmission electron microscopy, TUNEL staining, quantitative real-time PCR, and western blot analysis. To confirm whether CINN's therapeutic effects depended on its interaction with the identified target, in vitro experiments employed specific inhibitors to reverse the observed effects. RESULTS: CINN therapy enhanced body and muscle mass, serum albumin concentrations, and various clinical markers. Western blot analysis revealed that CINN inhibited protein proteolysis and promoted protein synthesis in the 5/6 Nx group. Network pharmacology and experimental validation indicated that CINN may alleviate skeletal muscle atrophy by reducing apoptosis and endoplasmic reticulum stress through targeting heat shock protein 90 alpha family class A member 1 (HSP90AA1). In vitro experiments using an HSP90AA1 antagonist demonstrated that the muscle-protective effects of CINN were partially reversed when HSP90AA1 was inhibited. CONCLUSION: CINN may alleviate CKD-induced skeletal muscle atrophy by inhibiting apoptosis and endoplasmic reticulum stress via its action on HSP90AA1."
+    },
+    {
+      "paper_id": "paper_000017",
+      "title": "Circulating Extracellular Vesicles in the Pathogenesis of Heart Failure in Patients With Chronic Kidney Disease.",
+      "decision": "exclude",
+      "confidence": 0.86,
+      "reason": "标题和摘要明确研究慢性肾病中的心力衰竭，涉及心肌细胞凋亡而非肾脏固有细胞凋亡。",
+      "year": 2026,
+      "journal": "Circulation",
+      "doi": "10.1161/circulationaha.125.075579",
+      "abstract": "BACKGROUND: Cardiovascular disease causes >50% of deaths in patients with advanced chronic kidney disease (CKD). Clinical studies suggest that kidney-derived factors contribute to cardiovascular disease development in CKD, independently of comorbidities. However, to date, no kidney-specific humoral risk factor that triggers direct cardiotoxicity has been identified. In this cross-sectional study, we investigate how, in patients with CKD, circulating extracellular vesicles (EVs) facilitate pathological kidney-heart communication, thereby causing cardiotoxicity, impairing cardiac function, and contributing to heart failure progression. METHODS: We investigated the function of EVs from patients with CKD and adenine diet-induced CKD mice on cardiomyocyte and cardiac contractility. microRNA (miRNA) cargo of EVs was identified by small RNA sequencing and quantitative reverse transcription polymerase chain reaction, and their cardiotoxicity was tested by using miRNA mimics. Tissue and cellular origin of CKD-EV-miRNAs were determined from their corresponding primary miRNA expressions in mice. RESULTS: EVs from plasma of patients with CKD, but not from healthy controls, were cardiotoxic; they significantly induced apoptosis both in vitro and in vivo and impaired contractility of adult rat primary cardiomyocytes in vitro. Likewise, EVs from both plasma and kidneys of CKD mice were cardiotoxic. Pharmacologically depleting circulating EVs in CKD mice significantly recovered cardiac function and ameliorated heart failure, improvements that suggest CKD-EVs play a causal role in heart failure pathogenesis. Both human and mouse CKD-EVs were enriched in distinct miRNAs compared with control EVs. CKD-EV-miRNA mimics were cardiotoxic, impairing contractility and downregulating contractile gene expression in human induced pluripotent stem cell-derived cardiomyocytes. It is interesting that levels of endogenous primary miRNAs corresponding to circulating CKD-EV-miRNAs were significantly higher in CKD kidney tissues, specifically in CD45-veCD31-ve renal cells, but not in CKD hearts, CKD livers, or CKD-peripheral blood mononuclear cells, a result that indicates CKD-EV-miRNAs originate renally. It is remarkable that CKD-EV-miRNA levels correlated with established markers of cardiac injury, thus uncovering the presence of subclinical heart disease and demonstrating heterogeneity in reno-cardiac disease. CONCLUSIONS: Collectively, our human subject and mouse studies show that circulating CKD-EVs, carrying distinct renal-derived miRNAs, mediate the molecular crosstalk that contributes to the pathogenesis of heart failure in CKD. Consequently, CKD-EVs hold promise as diagnostic and prognostic biomarkers for early disease detection and as targets for novel therapeutic interventions in chronic reno-cardiac disease."
+    },
+    {
+      "paper_id": "paper_000018",
+      "title": "CircAASS alleviates renal injury and fibrosis by regulating mitochondrial homeostasis in tubular epithelial cells.",
+      "decision": "include",
+      "confidence": 0.91,
+      "reason": "标题和摘要明确研究肾小管上皮细胞凋亡与线粒体稳态在急性肾损伤向慢性肾病进展中的作用。",
+      "year": 2026,
+      "journal": "Autophagy",
+      "doi": "10.1080/15548627.2025.2581212",
+      "abstract": "Acute kidney injury (AKI) is characterized by the dysfunction of renal tubular epithelial cells (TECs), often leading to renal fibrosis. Mitochondrial impairment is a common hallmark across various types of AKI. However, the potential role of circular RNAs (circRNAs) in modulating mitochondrial homeostasis during AKI and subsequent renal fibrosis remains underexplored. Our findings reveal a significant reduction of circAass levels in the renal cortex across all three AKI models. Mechanistically, circAASS mitigates TEC apoptosis and inflammatory responses by promoting mitochondrial homeostasis, thereby attenuating AKI. Specifically, cytoplasmic circAASS acts as a competing endogenous RNA (ceRNA) by sequestering MIR324-3p, which in turn enhances the expression of PINK1, a critical regulator of mitophagy. Additionally, nuclear circAASS directly interacts with the PPARGC1A/PGC-1α protein, inhibiting its ubiquitin-mediated degradation and thereby promoting mitochondrial biogenesis. Furthermore, we demonstrated that the RNA-binding protein IGF2BP2 suppresses circAASS biogenesis by binding to intronic sequences in the AASS pre-mRNA. Restoring circAass in AKI mouse models improves both mitochondrial biogenesis and mitophagy, ameliorating pro-inflammatory responses of TECs and thus mitigating renal fibrosis. Decreased circAASS expression and its association with impaired mitochondrial function in TECs, followed by more severe renal fibrosis, are observed in AKI patients. Collectively, our results suggest that circAASS protects against AKI by regulating mitochondrial homeostasis, highlighting its potential as a therapeutic target for kidney injury.Abbreviations: AAV9: adeno-associated virus serotype 9; AKI: acute kidney injury; BLAST: Basic Local Alignment Search Tool; ceRNA: competing endogenous RNA; circRNA: circular RNA; CKD: chronic kidney disease; CP-AKI: cisplatin-induced AKI; DHE: dihydroethidium; FISH: fluorescence in situ hybridization; HK2: human renal proximal tubular cells; IF: immunofluorescence; H/R: hypoxia-reoxygenation; I/R: ischemia-reperfusion; ISH: in situ hybridization; LPS: lipopolysaccharide; m6A: N6-methyladenosine; MMP: mitochondrial membrane potential; NC: negative control; ncRNA: non-coding RNA; PAS: periodic acid-schiff staining; PINK1: PTEN induced kinase 1; PRKN: parkin RBR E3 ubiquitin protein ligase; RBPs: RNA-binding proteins; RIP: RNA immunoprecipitation; ROS: reactive oxygen species; RT-qPCR: real-time quantitative polymerase chain reaction; SAKI: septic AKI; Scr: serum creatinine; Seq: sequencing; siRNA: small interfering RNA; TECs: tubular epithelial cells; TEM: transmission electron microscopy."
+    }
+  ],
+  "project_id": "cad63b3ce1bc",
+  "project_topic": "慢性肾病（CKD）进展中的细胞凋亡机制及潜在干预策略",
+  "model_provider": "deepseek",
+  "parent_task_id": null,
+  "input_dataset_ids": [],
+  "output_dataset_ids": [
+    "64782b883149",
+    "65302e1c54a4"
+  ]
+}

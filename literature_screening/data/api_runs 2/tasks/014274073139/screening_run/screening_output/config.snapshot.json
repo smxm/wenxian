@@ -1,0 +1,66 @@
+{
+  "project": {
+    "name": "new-screening-run",
+    "output_dir": "tasks/014274073139/screening_run/screening_output",
+    "save_raw_response": true,
+    "save_intermediate_files": true
+  },
+  "input": {
+    "input_files": [
+      "tasks/014274073139/screening_run/inputs/scopus_export_Apr 1-2026_fa1fed05-a5b3-49e0-938a-913252c30c84.ris",
+      "tasks/014274073139/screening_run/inputs/savedrecs.ris"
+    ],
+    "encoding": "auto"
+  },
+  "dedup": {
+    "enabled": true,
+    "strict_doi_match": true,
+    "normalized_title_exact_match": true,
+    "fuzzy_title_match": false
+  },
+  "screening": {
+    "batch_size": 10,
+    "target_include_count": 30,
+    "stop_when_target_reached": false,
+    "allow_uncertain": true,
+    "retry_times": 6,
+    "request_timeout_seconds": 240
+  },
+  "criteria": {
+    "topic": "认知-行为取向团体辅导对大学生职业决策困难的干预效果研究——基于 SCCT 理论的方案设计与实践",
+    "inclusion": [
+      "(满足其一或多项即可)",
+      "(满足其一或多项即可)研究对象明确包含大学生（College/University students）或即将步入职场的青年群体。",
+      "(满足其一或多项即可)核心变量涉及“职业决策困难 (Career decision-making difficulties)”、“职业犹豫”或“职业自我效能感”。",
+      "(满足其一或多项即可)研究使用了“认知行为疗法 (CBT)”技术或“团体辅导/干预 (Group counseling/intervention)”形式。",
+      "(满足其一或多项即可)理论框架明确基于或探讨了“社会认知职业理论 (SCCT)”。",
+      "(满足其一或多项即可)包含具体的干预方案设计，或具有前测/后测/追踪数据的实证干预研究（Empirical study）。"
+    ],
+    "exclusion": [
+      "研究对象非目标群体（如：儿童、初高中生、无业中年人、退休人员）。",
+      "纯临床精神疾病干预（如针对重度抑郁症、精神分裂症的CBT治疗），且完全未涉及职业规划/生涯发展。",
+      "缺乏实质性干预过程或数据的纯泛泛而谈的经验性总结（经典的SCCT理论奠基文献除外）。",
+      "仅研究个体心理咨询，明确排除团体辅导形式，且不具备向团体辅导转化的参考价值。"
+    ]
+  },
+  "model": {
+    "provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "api_base_url": "https://api.deepseek.com/v1",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 1536,
+    "min_request_interval_seconds": 2.0
+  },
+  "report": {
+    "export_included_ris": true,
+    "export_excluded_ris": false,
+    "export_unused_ris": true,
+    "export_included_bib": false,
+    "export_excluded_bib": false,
+    "export_unused_bib": false,
+    "included_report_format": "md",
+    "excluded_report_format": "md",
+    "summary_format": "json"
+  }
+}

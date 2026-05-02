@@ -1,0 +1,106 @@
+{
+  "batch_id": "batch_0007",
+  "results": [
+    {
+      "paper_id": "paper_000061",
+      "decision": "exclude",
+      "reason": "标题和摘要聚焦于摩擦磨损特性，未提及弓网离线电气特性或电弧模型。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000062",
+      "decision": "uncertain",
+      "reason": "摘要提到建立弓网电弧数学模型并仿真温度场，但未明确说明是否涉及电气特性变化或Cassie等电弧模型。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000063",
+      "decision": "include",
+      "reason": "标题和摘要明确研究弓网离线电气特性，使用改进的Habedank电弧模型，并分析电压波形和谐波。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000064",
+      "decision": "uncertain",
+      "reason": "摘要研究弓网离线电弧侵蚀行为，建立仿真模型并分析热流密度，但未明确提及电气特性变化或具体电弧模型公式。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000065",
+      "decision": "uncertain",
+      "reason": "摘要研究受电弓下降过程的电弧烧蚀，建立多物理场耦合瞬态电弧模型，但未明确说明是否分析电气特性变化或使用特定电弧模型。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.52
+    },
+    {
+      "paper_id": "paper_000066",
+      "decision": "exclude",
+      "reason": "标题和摘要聚焦于视觉测量受电弓运动参数，属于机械检测技术，未涉及电气特性或电弧模型。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.88
+    },
+    {
+      "paper_id": "paper_000067",
+      "decision": "exclude",
+      "reason": "标题和摘要研究基于深度学习的电弧检测方法，属于图像识别技术，未涉及电气特性分析或电弧数学模型。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000068",
+      "decision": "exclude",
+      "reason": "标题和摘要研究动态接触力对摩擦学性能的影响，属于机械磨损分析，未涉及电气特性变化或电弧模型。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.87
+    },
+    {
+      "paper_id": "paper_000069",
+      "decision": "exclude",
+      "reason": "标题和摘要研究基于语义分割和生成对抗网络的电弧检测模型，属于图像处理方法，未涉及电气特性或电弧数学模型。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.86
+    },
+    {
+      "paper_id": "paper_000070",
+      "decision": "include",
+      "reason": "标题和摘要明确研究弓网电弧对牵引系统电压的影响，使用Habedank黑盒电弧模型，并分析谐波和电压波动。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.93
+    }
+  ]
+}

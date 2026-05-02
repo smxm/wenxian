@@ -1,0 +1,61 @@
+{
+    "batch_id": "batch_0015",
+    "results": [
+        {
+            "paper_id": "paper_000141",
+            "decision": "uncertain",
+            "reason": "标题和摘要提到“互联网+”和医养结合，但未明确研究对象为老年慢性病患者，也未明确护理干预和结局指标。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000142",
+            "decision": "exclude",
+            "reason": "研究对象为上海市成年人，未限定为老年人；研究内容为健康期望寿命测算，未涉及互联网+护理干预。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000143",
+            "decision": "exclude",
+            "reason": "研究对象为养老机构老年人，但研究内容为抑郁现状及影响因素，未涉及互联网+护理干预或慢性病管理。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000144",
+            "decision": "uncertain",
+            "reason": "标题和摘要提到医养结合和信息化建设，但未明确研究对象为老年慢性病患者，也未明确护理干预和结局指标。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000145",
+            "decision": "include",
+            "reason": "标题和摘要明确研究对象为老年高血压患者，采用远程药学服务（互联网+载体），属于慢病管理干预，并有明确的护理结局指标。",
+            "evidence": ["title", "abstract", "keywords", "doi"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000146",
+            "decision": "uncertain",
+            "reason": "标题和摘要明确研究对象为老年慢性病患者，研究内容为延续性健康管理需求，但未明确提及互联网+载体或具体的护理干预措施。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.6
+        },
+        {
+            "paper_id": "paper_000147",
+            "decision": "uncertain",
+            "reason": "标题和摘要提到失能失智老人和互联网医疗，但未明确慢性病类型，也未明确具体的护理干预和结局指标。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000148",
+            "decision": "exclude",
+            "reason": "标题和摘要明确研究对象为老年心血管病患者，但研究内容为指标体系构建，未涉及互联网+护理干预或具体的护理应用数据。",
+            "evidence": ["title", "abstract", "keywords", "doi"],
+            "confidence": 0.85
+        }
+    ]
+}

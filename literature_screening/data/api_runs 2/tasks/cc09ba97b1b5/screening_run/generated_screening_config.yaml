@@ -1,0 +1,49 @@
+project:
+  name: new-screening-run
+  output_dir: tasks/cc09ba97b1b5/screening_run/screening_output
+  save_raw_response: true
+  save_intermediate_files: true
+input:
+  input_files:
+  - tasks/cc09ba97b1b5/screening_run/inputs/CNKI-20260403174755870.enw
+  encoding: auto
+dedup:
+  enabled: true
+  strict_doi_match: true
+  normalized_title_exact_match: true
+  fuzzy_title_match: false
+screening:
+  batch_size: 10
+  target_include_count: 30
+  stop_when_target_reached: true
+  allow_uncertain: true
+  retry_times: 6
+  request_timeout_seconds: 240
+criteria:
+  topic: 游戏化教学法在高中鉴赏课中的运用
+  inclusion:
+  - 必须涉及“游戏化教学/教育游戏”、“音乐教育/音乐鉴赏”、“高中阶段教育”或“《欢乐颂》/古典交响乐教学”中的至少两项核心概念的交叉。
+  - 优先纳入包含具体教学设计框架、实证研究数据、或深度探讨游戏化心理机制（如心流理论、动机理论）的文献。
+  - 优先纳入探讨高中音乐课现实困境与对策的文献。
+  exclusion:
+  - 纯音乐本体或史料分析（完全不涉及教学法或受众心理）。
+  - 纯计算机软件开发或算法研究（无实际教育教学场景落地）。
+  - 与音乐学科完全无关的游戏化教学文献。
+model:
+  provider: deepseek
+  model_name: deepseek-chat
+  api_base_url: https://api.deepseek.com/v1
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.0
+  max_tokens: 1536
+  min_request_interval_seconds: 2.0
+report:
+  export_included_ris: true
+  export_excluded_ris: false
+  export_unused_ris: true
+  export_included_bib: false
+  export_excluded_bib: false
+  export_unused_bib: false
+  included_report_format: md
+  excluded_report_format: md
+  summary_format: json

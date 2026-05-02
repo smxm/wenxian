@@ -1,0 +1,46 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确针对带钢表面缺陷检测，提出基于感受野和特征信息补充的深度学习算法，具有算法创新和工业应用背景。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-01T19:28:24.114159+08:00"
+  },
+  {
+    "paper_id": "paper_000002",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "标题和摘要涉及金属表面缺陷识别，使用卷积神经网络和多信息融合方法，但未明确说明研究对象是否为冷轧带钢或带钢。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-01T19:28:24.114159+08:00"
+  },
+  {
+    "paper_id": "paper_000003",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题明确研究对象为热轧带钢，不符合筛选主题中冷轧带钢的要求。",
+    "evidence": [
+      "title"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-04-01T19:28:24.114159+08:00"
+  }
+]

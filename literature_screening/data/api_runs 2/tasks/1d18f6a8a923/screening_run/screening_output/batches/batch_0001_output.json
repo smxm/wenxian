@@ -1,0 +1,105 @@
+{
+  "batch_id": "batch_0001",
+  "results": [
+    {
+      "paper_id": "paper_000001",
+      "decision": "exclude",
+      "reason": "标题和摘要聚焦于医疗电子病历系统，研究对象是医疗记录而非企业/机构档案，不符合筛选主题。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000002",
+      "decision": "include",
+      "reason": "标题和摘要明确研究公共机构档案管理，涉及数字档案创新管理、组织文化与知识治理，符合企业/机构档案数字化主题。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000003",
+      "decision": "exclude",
+      "reason": "标题和摘要完全聚焦于医疗设施对高血压和糖尿病的准备情况评估，与档案系统建设无关。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000004",
+      "decision": "include",
+      "reason": "标题和摘要明确研究南非水务公司的记录管理系统整合，涉及ERP与ECM系统集成框架，符合企业数字档案系统建设主题。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.88
+    },
+    {
+      "paper_id": "paper_000005",
+      "decision": "exclude",
+      "reason": "标题和摘要聚焦于宗教文化遗产的数字记录与保存，属于文化遗产保护而非企业/机构业务档案管理。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.87
+    },
+    {
+      "paper_id": "paper_000006",
+      "decision": "include",
+      "reason": "标题和摘要明确研究博茨瓦纳公共部门的企业级可信数字记录管理系统，涉及ECM系统与档案管理实践整合。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.86
+    },
+    {
+      "paper_id": "paper_000007",
+      "decision": "include",
+      "reason": "标题和摘要研究坦桑尼亚公共部门组织的记录管理系统使用，涉及数字记录管理实践，符合机构档案数字化主题。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.82
+    },
+    {
+      "paper_id": "paper_000008",
+      "decision": "include",
+      "reason": "标题和摘要提出结合物联网与区块链技术增强数字记录安全与透明度的框架，符合档案数据安全与长期保存主题。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.84
+    },
+    {
+      "paper_id": "paper_000009",
+      "decision": "uncertain",
+      "reason": "标题和摘要描述文化遗产领域的关联数据众包系统，虽涉及数字档案但主要面向文化遗产而非企业/机构业务档案。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000010",
+      "decision": "exclude",
+      "reason": "标题和摘要完全聚焦于介入放射学不良事件报告系统的评估，属于医疗质量管理系统，与档案系统无关。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.92
+    }
+  ]
+}

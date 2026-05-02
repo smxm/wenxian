@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0001",
+    "results": [
+        {
+            "paper_id": "paper_000001",
+            "decision": "include",
+            "reason": "标题和摘要明确显示使用机器学习算法预测场地放大，基于强震数据，符合纳入标准。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000002",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于建筑结构非结构构件的地震需求，而非场地土体放大效应。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000003",
+            "decision": "include",
+            "reason": "标题和摘要明确使用神经网络预测地形放大因子，基于数值模拟和实测数据验证。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.92
+        },
+        {
+            "paper_id": "paper_000004",
+            "decision": "uncertain",
+            "reason": "摘要提到物理符号学习器包含场地放大饱和，但未明确说明是否用于预测放大因子或基于强震数据。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000005",
+            "decision": "exclude",
+            "reason": "标题和摘要研究钢框架结构的地震性能，涉及位移放大因子但属于上部结构响应，非场地放大。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.88
+        },
+        {
+            "paper_id": "paper_000006",
+            "decision": "include",
+            "reason": "标题和摘要明确使用机器学习算法预测场地放大因子，基于KiK-net强震记录数据。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.96
+        },
+        {
+            "paper_id": "paper_000007",
+            "decision": "include",
+            "reason": "标题和摘要显示使用神经网络预测场地放大，基于瑞士和日本台站的实测数据。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.93
+        },
+        {
+            "paper_id": "paper_000008",
+            "decision": "include",
+            "reason": "标题和摘要明确使用随机森林和深度神经网络预测场地放大，基于场地响应分析模拟数据。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.94
+        },
+        {
+            "paper_id": "paper_000009",
+            "decision": "uncertain",
+            "reason": "摘要提到神经网络包含场地放大效应，但未明确说明是否专门预测放大因子或基于强震数据。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000010",
+            "decision": "include",
+            "reason": "标题和摘要明确使用机器学习模型预测平均场地放大，基于KiK-net强震数据。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        }
+    ]
+}

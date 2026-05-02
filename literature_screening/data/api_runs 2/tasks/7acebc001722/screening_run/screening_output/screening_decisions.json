@@ -1,0 +1,795 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦肾脏移植的分子生物学研究，未涉及AI/XR技术或动物交互场景。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:09:43.795620+08:00"
+  },
+  {
+    "paper_id": "paper_000002",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "摘要讨论AI在动物解剖学的应用，但未提及XR技术或虚拟宠物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:09:43.795620+08:00"
+  },
+  {
+    "paper_id": "paper_000003",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及中药与机器学习，但研究对象为小鼠抑郁症模型，未涉及XR或虚拟宠物。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:09:43.795620+08:00"
+  },
+  {
+    "paper_id": "paper_000004",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "摘要提到VR/AR娱乐和宠物作为心理对策，但未明确结合AI技术或具体动物交互研究。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:09:43.795620+08:00"
+  },
+  {
+    "paper_id": "paper_000005",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确讨论XR技术在动物虚拟环境中的应用，涉及动物行为研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:09:43.795620+08:00"
+  },
+  {
+    "paper_id": "paper_000006",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦前列腺癌的计算生物学研究，未涉及AI/XR技术或动物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:09:43.795620+08:00"
+  },
+  {
+    "paper_id": "paper_000007",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "摘要描述使用AR与真实动物玩偶进行虚拟人交互，符合AI/XR与动物交互主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.75,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:09:43.795620+08:00"
+  },
+  {
+    "paper_id": "paper_000008",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要聚焦蛋白质组学方法开发，未涉及AI/XR技术或动物研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:09:43.795620+08:00"
+  },
+  {
+    "paper_id": "paper_000009",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "摘要描述将儿童绘画的动物变为3D虚拟化身并交互，结合VR和AI技术。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:09:43.795620+08:00"
+  },
+  {
+    "paper_id": "paper_000010",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及机器学习虚拟筛选，但研究对象为斑马鱼神经保护，未涉及XR或虚拟宠物。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:09:43.795620+08:00"
+  },
+  {
+    "paper_id": "paper_000011",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要描述机器学习辅助免疫细胞追踪工具，未涉及XR技术或动物交互场景。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:09:43.795620+08:00"
+  },
+  {
+    "paper_id": "paper_000012",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "摘要明确描述使用AR模拟猫狗视觉来研究宠物交互，符合AI/XR与动物伴侣主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:09:43.795620+08:00"
+  },
+  {
+    "paper_id": "paper_000013",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "标题和摘要描述AR动物卡片教育应用，但未明确提及AI技术或虚拟宠物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:09:43.795620+08:00"
+  },
+  {
+    "paper_id": "paper_000014",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及生物信息学与机器学习，但研究对象为疾病生物标志物，未涉及XR或动物。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:09:43.795620+08:00"
+  },
+  {
+    "paper_id": "paper_000015",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "摘要描述斑马鱼心脏的深度学习与VR可视化，但未涉及动物交互或虚拟宠物场景。",
+    "evidence": [
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:09:43.795620+08:00"
+  },
+  {
+    "paper_id": "paper_000016",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及计算模拟斑马鱼雄激素受体，但未提及AI/XR技术或交互研究。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:09:43.795620+08:00"
+  },
+  {
+    "paper_id": "paper_000017",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及机器学习与分子对接，但研究对象为小鼠生殖毒性，未涉及XR或虚拟宠物。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:09:43.795620+08:00"
+  },
+  {
+    "paper_id": "paper_000018",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要描述基于边缘AI的犬类运动识别，用于交互娱乐系统，符合AI与动物交互主题。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.75,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:09:43.795620+08:00"
+  },
+  {
+    "paper_id": "paper_000019",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要涉及AI虚拟筛选，但研究对象为心脏肌球蛋白调节剂，未涉及XR或动物。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:09:43.795620+08:00"
+  },
+  {
+    "paper_id": "paper_000020",
+    "batch_id": "batch_0001",
+    "decision": "exclude",
+    "reason": "标题和摘要描述混合现实群机器人框架，受动物行为启发但未涉及真实动物或虚拟宠物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:09:43.795620+08:00"
+  },
+  {
+    "paper_id": "paper_000021",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "摘要提到AI和VR/AR在兽医解剖学教育中的应用，但未明确涉及动物交互或虚拟宠物场景。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:10:36.737827+08:00"
+  },
+  {
+    "paper_id": "paper_000022",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究使用机器学习进行药物发现，但未涉及XR技术或动物/虚拟宠物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:10:36.737827+08:00"
+  },
+  {
+    "paper_id": "paper_000023",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "摘要提到VR交互和深度学习，但研究对象是兔子的神经反射模型，未涉及宠物交互或虚拟宠物场景。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:10:36.737827+08:00"
+  },
+  {
+    "paper_id": "paper_000024",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究使用支持向量机进行化学物质分析，但未涉及XR技术或动物/虚拟宠物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:10:36.737827+08:00"
+  },
+  {
+    "paper_id": "paper_000025",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究是免疫学机制研究，未涉及AI、XR技术或动物/虚拟宠物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:10:36.737827+08:00"
+  },
+  {
+    "paper_id": "paper_000026",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究使用AI进行虚拟筛选，但未涉及XR技术或动物/虚拟宠物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:10:36.737827+08:00"
+  },
+  {
+    "paper_id": "paper_000027",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "摘要提到深度学习用于全息术和VR/AR，但未涉及动物或虚拟宠物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:10:36.737827+08:00"
+  },
+  {
+    "paper_id": "paper_000028",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "摘要提到机器学习用于手势识别和VR，但未涉及动物或虚拟宠物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:10:36.737827+08:00"
+  },
+  {
+    "paper_id": "paper_000029",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "摘要提到AI辅助药物设计，但未涉及XR技术或动物/虚拟宠物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:10:36.737827+08:00"
+  },
+  {
+    "paper_id": "paper_000030",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究使用AI进行药物靶点识别，但未涉及XR技术或动物/虚拟宠物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:10:36.737827+08:00"
+  },
+  {
+    "paper_id": "paper_000031",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确使用强化学习生成拟人化民间传说动物的自主行为，涉及XR环境中的角色设计。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:10:36.737827+08:00"
+  },
+  {
+    "paper_id": "paper_000032",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究使用机器学习进行药物发现，但未涉及XR技术或动物/虚拟宠物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:10:36.737827+08:00"
+  },
+  {
+    "paper_id": "paper_000033",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "摘要提到AI和VR用于神经元重建，但研究对象是老鼠和人类大脑，未涉及宠物交互或虚拟宠物。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:10:36.737827+08:00"
+  },
+  {
+    "paper_id": "paper_000034",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "摘要提到CNN、AR和人机交互用于漫画风格识别，并涉及猫图像，但未明确涉及动物交互或虚拟宠物场景。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:10:36.737827+08:00"
+  },
+  {
+    "paper_id": "paper_000035",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要显示是镜像神经元的文献计量分析，未涉及AI、XR技术或动物/虚拟宠物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:10:36.737827+08:00"
+  },
+  {
+    "paper_id": "paper_000036",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究使用虚拟筛选进行药物发现，但未涉及XR技术或动物/虚拟宠物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:10:36.737827+08:00"
+  },
+  {
+    "paper_id": "paper_000037",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "摘要提到AI和AR/VR用于3D基因组可视化，但未涉及动物或虚拟宠物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:10:36.737827+08:00"
+  },
+  {
+    "paper_id": "paper_000038",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "摘要提到AR用于手术训练，但研究对象是猪的胆囊切除术，未涉及AI或宠物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:10:36.737827+08:00"
+  },
+  {
+    "paper_id": "paper_000039",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "标题和摘要显示是转录因子数据库的更新描述，未涉及AI、XR技术或动物/虚拟宠物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:10:36.737827+08:00"
+  },
+  {
+    "paper_id": "paper_000040",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "标题和摘要明确涉及VR中的虚拟宠物代理，使用模块化触觉系统进行主动交互，符合AI和XR技术结合虚拟宠物的标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.98,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:10:36.737827+08:00"
+  },
+  {
+    "paper_id": "paper_000041",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究斑马鱼幼虫的捕食行为，涉及虚拟现实但未提及人工智能技术或虚拟宠物场景。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:11:10.339913+08:00"
+  },
+  {
+    "paper_id": "paper_000042",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究机器学习辅助的荧光传感平台用于全麦食品检测，未涉及XR技术或动物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:11:10.339913+08:00"
+  },
+  {
+    "paper_id": "paper_000043",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究深度学习辅助的肺癌轮廓勾画，未涉及XR技术或动物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:11:10.339913+08:00"
+  },
+  {
+    "paper_id": "paper_000044",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究过敏性鼻炎的免疫相关生物标志物和诊断模型，未涉及人工智能、XR技术或动物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:11:10.339913+08:00"
+  },
+  {
+    "paper_id": "paper_000045",
+    "batch_id": "batch_0003",
+    "decision": "uncertain",
+    "reason": "标题和摘要显示研究基于扩散模型从大鼠脑活动生成图像，涉及人工智能和动物，但未提及XR技术或交互层面。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:11:10.339913+08:00"
+  },
+  {
+    "paper_id": "paper_000046",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究机器学习预测抗原反应性克隆型，涉及生物淘选，未涉及XR技术或动物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:11:10.339913+08:00"
+  },
+  {
+    "paper_id": "paper_000047",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究毒理学预测的共识模型，未涉及人工智能、XR技术或动物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:11:10.339913+08:00"
+  },
+  {
+    "paper_id": "paper_000048",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究基于HoloLens 2的远程手术指导系统，涉及XR技术但未提及人工智能或动物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:11:10.339913+08:00"
+  },
+  {
+    "paper_id": "paper_000049",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究尼罗罗非鱼FGF基因家族的分子对接和进化动力学，未涉及人工智能或XR技术。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:11:10.339913+08:00"
+  },
+  {
+    "paper_id": "paper_000050",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究抗生素耐药性监测的Web服务器，未涉及人工智能、XR技术或动物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:11:10.339913+08:00"
+  },
+  {
+    "paper_id": "paper_000051",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究人工智能在商业教育中的应用，未涉及XR技术或动物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:11:10.339913+08:00"
+  },
+  {
+    "paper_id": "paper_000052",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示研究增殖细胞核抗原与雄激素受体的相互作用，未涉及人工智能、XR技术或动物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:11:10.339913+08:00"
+  },
+  {
+    "paper_id": "paper_000053",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示综述气候韧性畜牧系统的减排策略和技术创新，提及机器学习但未涉及XR技术或虚拟宠物交互。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-23T18:11:10.339913+08:00"
+  }
+]

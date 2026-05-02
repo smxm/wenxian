@@ -1,0 +1,26 @@
+{
+    "batch_id": "batch_0009",
+    "results": [
+        {
+            "paper_id": "paper_000081",
+            "decision": "exclude",
+            "reason": "研究聚焦脂肪酸分布对小鼠代谢和认知的影响，虽提及Akkermansia但未涉及乳制品基质或发酵工艺，属于纯动物模型肠道菌群分析。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000082",
+            "decision": "exclude",
+            "reason": "研究比较母乳与婴儿配方奶粉对小鼠肠道菌群和免疫的影响，虽提及Akkermansia但未涉及乳制品发酵工艺或AKK在乳制品中的应用，属于纯动物模型分析。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000083",
+            "decision": "include",
+            "reason": "摘要明确提及合生元微胶囊促进A. muciniphila富集，研究涉及微胶囊化技术和合生元开发，符合下一代益生菌在食品工业中的应用主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.8
+        }
+    ]
+}

@@ -1,0 +1,639 @@
+[
+  {
+    "paper_id": "paper_000001",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要表明研究对象为ROV（无人水下机器人），核心算法为ADRC与深度强化学习优化，涉及轨迹跟踪控制。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:42:48.957993+08:00"
+  },
+  {
+    "paper_id": "paper_000002",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确研究对象为USV，核心算法为改进ADRC，应用于路径跟随控制。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.98,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:42:48.957993+08:00"
+  },
+  {
+    "paper_id": "paper_000003",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要表明研究对象为USV-UAV协同系统，核心算法为LADRC与遗传算法优化，涉及路径跟随与LOS导引。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.96,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:42:48.957993+08:00"
+  },
+  {
+    "paper_id": "paper_000004",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确研究对象为USV，核心算法为ADRC与LESO，应用于路径跟随控制。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.97,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:42:48.957993+08:00"
+  },
+  {
+    "paper_id": "paper_000005",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要表明研究对象为水下滑翔机，核心算法为ADRC与优化LOS导引，应用于深度跟踪控制。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.96,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:42:48.957993+08:00"
+  },
+  {
+    "paper_id": "paper_000006",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确研究对象为AUV，核心算法为ADRC与自适应LOS导引，应用于深度跟踪控制。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.97,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:42:48.957993+08:00"
+  },
+  {
+    "paper_id": "paper_000007",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要表明研究对象为UUV，核心算法为改进ADRC与ESO，应用于三维轨迹跟踪控制。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:42:48.957993+08:00"
+  },
+  {
+    "paper_id": "paper_000008",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要明确研究对象为AUV，核心算法为ADRC-SMC与自适应LOS导引，应用于深度跟踪控制。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.96,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:42:48.957993+08:00"
+  },
+  {
+    "paper_id": "paper_000009",
+    "batch_id": "batch_0001",
+    "decision": "uncertain",
+    "reason": "标题和摘要主要讨论AUV的浮力系统设计与扩展性，虽提及ADRC但未明确说明是否为核心算法或应用于导引/轨迹跟踪。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:42:48.957993+08:00"
+  },
+  {
+    "paper_id": "paper_000010",
+    "batch_id": "batch_0001",
+    "decision": "include",
+    "reason": "标题和摘要表明研究对象为AUV，核心算法为基于有限时间ESO的ADRC，应用于跟踪控制。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.94,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:42:48.957993+08:00"
+  },
+  {
+    "paper_id": "paper_000011",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "研究对象为水下蛇形机器人（海洋无人载具），核心算法为ADRC，并提出了DI-ADRC改进结构，涉及轨迹跟踪控制。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:43:19.929734+08:00"
+  },
+  {
+    "paper_id": "paper_000012",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "研究对象为USV，核心算法为LADRC，结合了SAC强化学习进行参数优化，并涉及路径跟踪控制。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.98,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:43:19.929734+08:00"
+  },
+  {
+    "paper_id": "paper_000013",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "研究对象为ROV（海洋无人载具），核心算法包含改进ESO，涉及轨迹跟踪，但未明确提及是否结合导引律或智能算法优化。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.55,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:43:19.929734+08:00"
+  },
+  {
+    "paper_id": "paper_000014",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "研究对象为USV，使用了LADRC控制器，涉及轨迹跟踪，但未明确说明ADRC是否为核心论述对象或是否满足子方向要求。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.5,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:43:19.929734+08:00"
+  },
+  {
+    "paper_id": "paper_000015",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "研究对象为USV，使用了ADRC控制器和LOS导引律进行路径跟踪，并涉及自组织图智能算法进行路径规划。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:43:19.929734+08:00"
+  },
+  {
+    "paper_id": "paper_000016",
+    "batch_id": "batch_0002",
+    "decision": "exclude",
+    "reason": "研究对象为无人车辆上的惯性稳定平台，控制对象非海洋无人载具，不符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:43:19.929734+08:00"
+  },
+  {
+    "paper_id": "paper_000017",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "研究对象为AUV，核心算法为LADRC，提出了降阶ESO改进结构，并结合了LOS导引律进行轨迹跟踪。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.96,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:43:19.929734+08:00"
+  },
+  {
+    "paper_id": "paper_000018",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "研究对象为ROV，涉及轨迹跟踪和非线性扰动观测器，但未明确说明是否基于ADRC/ESO核心算法或满足子方向要求。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.45,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:43:19.929734+08:00"
+  },
+  {
+    "paper_id": "paper_000019",
+    "batch_id": "batch_0002",
+    "decision": "include",
+    "reason": "研究对象为USV，核心算法为ADRC，涉及轨迹跟踪控制，并使用了模糊满意优化智能算法进行轨迹优化。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.92,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:43:19.929734+08:00"
+  },
+  {
+    "paper_id": "paper_000020",
+    "batch_id": "batch_0002",
+    "decision": "uncertain",
+    "reason": "研究对象为ROV，涉及轨迹跟踪和基于ADRC思想的扰动观测器，但未明确将ADRC/ESO作为核心控制算法。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.48,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:43:19.929734+08:00"
+  },
+  {
+    "paper_id": "paper_000021",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要显示核心控制算法为动态表面滑模控制，未提及ADRC或ESO作为核心算法。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:43:51.345667+08:00"
+  },
+  {
+    "paper_id": "paper_000022",
+    "batch_id": "batch_0003",
+    "decision": "exclude",
+    "reason": "标题和摘要表明这是一篇综述文章，未提出新的ADRC/ESO改进或应用。",
+    "evidence": [
+      "title",
+      "abstract"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:43:51.345667+08:00"
+  },
+  {
+    "paper_id": "paper_000023",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "摘要明确提出了规定时间扩张状态观测器（PTESO）用于无人水下航行器，属于ADRC/ESO的改进结构。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:43:51.345667+08:00"
+  },
+  {
+    "paper_id": "paper_000024",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "摘要提到有限时间扩张状态观测器（FESO）用于UUV轨迹跟踪，属于ADRC/ESO的改进结构。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:43:51.345667+08:00"
+  },
+  {
+    "paper_id": "paper_000025",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要明确研究固定时间扩张状态观测器（FTESO）用于AUV轨迹跟踪，属于ADRC/ESO的改进结构。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:43:51.345667+08:00"
+  },
+  {
+    "paper_id": "paper_000026",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要明确使用扩张状态观测器（ESO）进行USV轨迹跟踪控制，并设计了导引律。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:43:51.345667+08:00"
+  },
+  {
+    "paper_id": "paper_000027",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "标题和摘要明确结合有限时间扩张状态观测器（ESO）与滑模控制器用于AUV，属于ADRC/ESO的应用。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:43:51.345667+08:00"
+  },
+  {
+    "paper_id": "paper_000028",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "摘要提到非线性扩张状态观测器（NESO）用于USV轨迹跟踪控制，属于ADRC/ESO的应用。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:43:51.345667+08:00"
+  },
+  {
+    "paper_id": "paper_000029",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "摘要提到自适应扩张状态观测器（ESO）用于小型AUV固定时间轨迹跟踪，属于ADRC/ESO的应用。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.8,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:43:51.345667+08:00"
+  },
+  {
+    "paper_id": "paper_000030",
+    "batch_id": "batch_0003",
+    "decision": "include",
+    "reason": "摘要明确结合改进的扩张状态观测器（ESO）与模糊自适应控制用于AUV轨迹跟踪，符合智能算法优化ADRC的标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.85,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:43:51.345667+08:00"
+  },
+  {
+    "paper_id": "paper_000031",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "标题和摘要明确研究USV轨迹跟踪，使用有限时间扩张状态观测器（FTESO）作为核心算法，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.95,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:44:24.167199+08:00"
+  },
+  {
+    "paper_id": "paper_000032",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "标题和摘要明确研究USV轨迹跟踪与避障，使用模型自由扩张状态观测器（MFESO）作为核心算法，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.92,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:44:24.167199+08:00"
+  },
+  {
+    "paper_id": "paper_000033",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "标题和摘要明确研究AUV编队轨迹跟踪，使用快速有限时间扩张状态观测器（FFTESO）作为核心算法，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.93,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:44:24.167199+08:00"
+  },
+  {
+    "paper_id": "paper_000034",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "标题和摘要明确研究AUV轨迹跟踪，使用固定时间扩张状态观测器（FxTESO）作为核心算法，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.94,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:44:24.167199+08:00"
+  },
+  {
+    "paper_id": "paper_000035",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "标题和摘要明确研究USV协同目标跟踪，使用固定时间扩张状态观测器（ESO）作为核心算法，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.91,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:44:24.167199+08:00"
+  },
+  {
+    "paper_id": "paper_000036",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "标题和摘要明确研究USV路径跟随，结合视线导引律和降阶扩张状态观测器（ROESO），符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.9,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:44:24.167199+08:00"
+  },
+  {
+    "paper_id": "paper_000037",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "标题和摘要明确研究USV路径跟随，使用扩张状态观测器（ESO）结合视线导引律和自适应模糊控制，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.92,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:44:24.167199+08:00"
+  },
+  {
+    "paper_id": "paper_000038",
+    "batch_id": "batch_0004",
+    "decision": "exclude",
+    "reason": "标题和摘要表明研究对象包括飞机、陆地车辆和海洋载具，未明确聚焦海洋无人载具，且未强调ADRC/ESO作为核心。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.88,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:44:24.167199+08:00"
+  },
+  {
+    "paper_id": "paper_000039",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "标题和摘要明确研究USV路径跟随，使用降阶扩张状态观测器（ROESO）结合视线导引律和RBF神经网络，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.93,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:44:24.167199+08:00"
+  },
+  {
+    "paper_id": "paper_000040",
+    "batch_id": "batch_0004",
+    "decision": "include",
+    "reason": "标题和摘要明确研究AUV轨迹跟踪，使用有限时间扩张状态观测器（FTESO）作为核心算法，符合纳入标准。",
+    "evidence": [
+      "title",
+      "abstract",
+      "keywords"
+    ],
+    "confidence": 0.94,
+    "screen_stage": "title_abstract",
+    "model_provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "timestamp": "2026-03-25T17:44:24.167199+08:00"
+  }
+]

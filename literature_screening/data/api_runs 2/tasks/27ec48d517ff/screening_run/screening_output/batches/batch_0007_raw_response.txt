@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0007",
+    "results": [
+        {
+            "paper_id": "paper_000061",
+            "decision": "exclude",
+            "reason": "标题和摘要未提及左心室辅助装置，不符合研究主题。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000062",
+            "decision": "exclude",
+            "reason": "摘要讨论急性心力衰竭的药物优化系统，未涉及左心室辅助装置患者。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000063",
+            "decision": "include",
+            "reason": "标题和摘要明确针对cf-LVAD患者的平均动脉压无创测量技术，涉及MAP管理与临床重要性。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000064",
+            "decision": "include",
+            "reason": "标题和摘要研究连续血流左心室辅助装置患者的无创血压测量，直接涉及MAP测量技术。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000065",
+            "decision": "exclude",
+            "reason": "摘要讨论左心室辅助装置急救算法，未涉及平均动脉压管理或与临床预后的关联。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000066",
+            "decision": "uncertain",
+            "reason": "摘要提到平均动脉压与终末期心力衰竭患者预后的关联，但未明确涉及左心室辅助装置患者。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000067",
+            "decision": "exclude",
+            "reason": "标题和摘要纯探讨HVAD的血流动力学性能和血液损伤，属于器械机械设计研究。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000068",
+            "decision": "exclude",
+            "reason": "摘要描述左心室辅助装置经皮停用病例，未涉及平均动脉压管理或临床预后。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000069",
+            "decision": "exclude",
+            "reason": "标题和摘要讨论Impella经瓣膜微轴流泵，属于短期机械循环支持，非连续血流左心室辅助装置。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000070",
+            "decision": "exclude",
+            "reason": "摘要研究心脏手术患者右心功能障碍指标，未涉及左心室辅助装置患者。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        }
+    ]
+}

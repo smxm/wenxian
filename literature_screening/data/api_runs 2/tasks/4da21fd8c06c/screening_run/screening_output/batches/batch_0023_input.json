@@ -1,0 +1,385 @@
+{
+  "batch_id": "batch_0023",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000221",
+    "paper_000222",
+    "paper_000223",
+    "paper_000224",
+    "paper_000225",
+    "paper_000226",
+    "paper_000227",
+    "paper_000228",
+    "paper_000229",
+    "paper_000230"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000221",
+      "entry_type": "article",
+      "title": "A Multivariate Linear Regression-Based Ultrasonic Non-Destructive Evaluating Method for Characterizing Weld Tensile Strength Properties",
+      "authors": [
+        "Chi, DZ",
+        "Wang, ZM",
+        "Liu, HC"
+      ],
+      "year": 2025,
+      "journal": "MATERIALS",
+      "doi": "10.3390/ma18091925",
+      "abstract": "Destructive testing is a common method for obtaining tensile strength properties of welds. However, it is inconvenient to characterize the overall weld, and it cannot be applied to in-service structures. Non-destructive testing and evaluation (NDT&E) methods have the potential ability of overcoming these limitations. In this paper, an ultrasonic-based non-destructive evaluating method for weld tensile strength was proposed. Multiple sets of fully automatic welded X80 steel pipes were prepared. Acoustic signals from a total of 240 measurement points of the welds were collected, and ultrasonic characteristic parameters were subtracted through signal processing. Subsequently, tensile strength values were obtained through destructive testing. Using the ultrasonic and tensile test databases, a multivariate regression-based (MLR) non-destructive evaluation model was established to predict the tensile strength value. Based on this, in order to rapidly characterize the welds, a grading evaluation model was introduced. The grading evaluation result of the 240 measurement points indicates that the accuracy of the proposed method is 76.3%. In order to improve accuracy, a deep learning-based method could be used in the future.",
+      "keywords": [
+        "weld",
+        "tensile strength",
+        "ultrasonic testing",
+        "non-destructive testing",
+        "GRAIN-SIZE DETERMINATION",
+        "EDDY-CURRENT",
+        "MICROSTRUCTURE",
+        "HARDNESS"
+      ],
+      "normalized_title": "a multivariate linear regression based ultrasonic non destructive evaluating method for characterizing weld tensile strength properties",
+      "raw_bibtex": "@ARTICLE{10.3390/ma18091925,\n\tauthor = {Chi, DZ and Wang, ZM and Liu, HC},\n\ttitle = {A Multivariate Linear Regression-Based Ultrasonic Non-Destructive Evaluating Method for Characterizing Weld Tensile Strength Properties},\n\tjournal = {MATERIALS},\n\tyear = {2025},\n\tkeywords = {weld; tensile strength; ultrasonic testing; non-destructive testing; GRAIN-SIZE DETERMINATION; EDDY-CURRENT; MICROSTRUCTURE; HARDNESS},\n\tabstract = {Destructive testing is a common method for obtaining tensile strength properties of welds. However, it is inconvenient to characterize the overall weld, and it cannot be applied to in-service structures. Non-destructive testing and evaluation (NDT&E) methods have the potential ability of overcoming these limitations. In this paper, an ultrasonic-based non-destructive evaluating method for weld tensile strength was proposed. Multiple sets of fully automatic welded X80 steel pipes were prepared. Acoustic signals from a total of 240 measurement points of the welds were collected, and ultrasonic characteristic parameters were subtracted through signal processing. Subsequently, tensile strength values were obtained through destructive testing. Using the ultrasonic and tensile test databases, a multivariate regression-based (MLR) non-destructive evaluation model was established to predict the tensile strength value. Based on this, in order to rapidly characterize the welds, a grading evaluation model was introduced. The grading evaluation result of the 240 measurement points indicates that the accuracy of the proposed method is 76.3%. In order to improve accuracy, a deep learning-based method could be used in the future.},\n\tdoi = {10.3390/ma18091925},\n\tvolume = {18},\n\tnumber = {9},\n\tissn = {1996-1944},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 30 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/ma18091925"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000222",
+      "entry_type": "article",
+      "title": "Ultrasonic phased array measurement & compression for in-process weld bevel estimation",
+      "authors": [
+        "Dimakos, A",
+        "Sweeney, NE",
+        "Loukas, C",
+        "Nicolson, E",
+        "Macleod, CN",
+        "Mohseni, E",
+        "Lines, D",
+        "Sibson, J"
+      ],
+      "year": 2026,
+      "journal": "ULTRASONICS",
+      "doi": "10.1016/j.ultras.2026.108025",
+      "abstract": "This work presents a real-time ultrasonic inspection pipeline for weld bevel orientation measurement in robotic welding applications, addressing two major barriers to industrial deployment: reliable bevel geometry estimation in challenging environments and efficient management of high-throughput ultrasonic data. While phased array ultrasonics provides volumetric imaging where optical methods fail, its application in robotics has been limited by data scale and latency. Validated across both conventional V-groove and 120 mm thick narrow-gap geometries, the integrated GPU-accelerated orientation estimator and lightweight AUC compression strategy deliver +/- 0.4 degrees angular precision for conventional V-grooves; the pipeline achieves sub-250 ms execution for single-probe V-groove scanning and sub-1500 ms for complex dual-tandem narrow-gap configurations, maintaining over 88% data reduction with geometric errors below 3 mm. The system is validated on a robotically deployed phased array platform dynamically scanning stepped bevel geometries, simulating realistic industrial scenarios. Rather than focusing on novel algorithms in isolation, the contribution lies in demonstrating, for the first time, a modular and interpretable FMC pipeline that achieves real-time weld geometry inference in tandem with data sparsification. This proof-of-concept highlights a viable pathway toward embedded, closed-loop ultrasonic inspection for robotic welding automation.",
+      "keywords": [
+        "Phased array ultrasonic testing",
+        "Ultrasonic signal processing",
+        "Bevel orientation",
+        "Full matrix capture",
+        "Real-time compression",
+        "Nondestructive evaluation",
+        "Adaptive sensing",
+        "DISTORTION"
+      ],
+      "normalized_title": "ultrasonic phased array measurement compression for in process weld bevel estimation",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ultras.2026.108025,\n\tauthor = {Dimakos, A and Sweeney, NE and Loukas, C and Nicolson, E and Macleod, CN and Mohseni, E and Lines, D and Sibson, J},\n\ttitle = {Ultrasonic phased array measurement & compression for in-process weld bevel estimation},\n\tjournal = {ULTRASONICS},\n\tyear = {2026},\n\tkeywords = {Phased array ultrasonic testing; Ultrasonic signal processing; Bevel orientation; Full matrix capture; Real-time compression; Nondestructive evaluation; Adaptive sensing; DISTORTION},\n\tabstract = {This work presents a real-time ultrasonic inspection pipeline for weld bevel orientation measurement in robotic welding applications, addressing two major barriers to industrial deployment: reliable bevel geometry estimation in challenging environments and efficient management of high-throughput ultrasonic data. While phased array ultrasonics provides volumetric imaging where optical methods fail, its application in robotics has been limited by data scale and latency. Validated across both conventional V-groove and 120 mm thick narrow-gap geometries, the integrated GPU-accelerated orientation estimator and lightweight AUC compression strategy deliver +/- 0.4 degrees angular precision for conventional V-grooves; the pipeline achieves sub-250 ms execution for single-probe V-groove scanning and sub-1500 ms for complex dual-tandem narrow-gap configurations, maintaining over 88% data reduction with geometric errors below 3 mm. The system is validated on a robotically deployed phased array platform dynamically scanning stepped bevel geometries, simulating realistic industrial scenarios. Rather than focusing on novel algorithms in isolation, the contribution lies in demonstrating, for the first time, a modular and interpretable FMC pipeline that achieves real-time weld geometry inference in tandem with data sparsification. This proof-of-concept highlights a viable pathway toward embedded, closed-loop ultrasonic inspection for robotic welding automation.},\n\tdoi = {10.1016/j.ultras.2026.108025},\n\tvolume = {164},\n\tissn = {0041-624X},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 41 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ultras.2026.108025"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000223",
+      "entry_type": "article",
+      "title": "Numerical Analysis of Guided Waves to Improve Damage Detection and Localization in Multilayered CFRP Panel",
+      "authors": [
+        "Papanaboina, MR",
+        "Jasiuniene, E",
+        "Zukauskas, E",
+        "Mazeika, L"
+      ],
+      "year": 2022,
+      "journal": "MATERIALS",
+      "doi": "10.3390/ma15103466",
+      "abstract": "Multilayered carbon fiber-reinforced polymers (CFRP) are increasingly used in aircraft components because of their superior mechanical properties. However, composite materials are vulnerable to impact loads, resulting in delamination-type damage which, if unnoticed, could lead to catastrophic structural failure. The objective of this research was to investigate possibilities to improve damage detection and the localization using signal processing methods. Numerical modeling using the semi-analytical finite element (SAFE) method was performed to obtain guided wave dispersion curves and to perform modal analysis. From the modal analysis, A(0) mode for inspection of the composite with delamination type defects was selected. From the numerical simulation, A(0) mode interaction with delamination along the longitudinal direction was analyzed and the location of the defect was estimated by measuring the time of flight (ToF) of the signal using Hilbert transform (HT) and continuous wavelet transform (CWT). The CWT has shown better results in estimating the delamination location compared with HT. The depth of delamination was characterized in the frequency domain by comparing the amplitude of the A(0) mode. Inverse fast Fourier transform (IFFT) is recommended to reconstruct the reflected and transmitted modes for better damage detection and to reduce the complexity of signal interpretation.",
+      "keywords": [
+        "guided waves",
+        "ultrasonic testing",
+        "structural health monitoring",
+        "CFRP",
+        "CWT",
+        "IFFT",
+        "COMPOSITE STRUCTURES",
+        "TRANSFORM",
+        "PROPAGATION"
+      ],
+      "normalized_title": "numerical analysis of guided waves to improve damage detection and localization in multilayered cfrp panel",
+      "raw_bibtex": "@ARTICLE{10.3390/ma15103466,\n\tauthor = {Papanaboina, MR and Jasiuniene, E and Zukauskas, E and Mazeika, L},\n\ttitle = {Numerical Analysis of Guided Waves to Improve Damage Detection and Localization in Multilayered CFRP Panel},\n\tjournal = {MATERIALS},\n\tyear = {2022},\n\tkeywords = {guided waves; ultrasonic testing; structural health monitoring; CFRP; CWT; IFFT; COMPOSITE STRUCTURES; TRANSFORM; PROPAGATION},\n\tabstract = {Multilayered carbon fiber-reinforced polymers (CFRP) are increasingly used in aircraft components because of their superior mechanical properties. However, composite materials are vulnerable to impact loads, resulting in delamination-type damage which, if unnoticed, could lead to catastrophic structural failure. The objective of this research was to investigate possibilities to improve damage detection and the localization using signal processing methods. Numerical modeling using the semi-analytical finite element (SAFE) method was performed to obtain guided wave dispersion curves and to perform modal analysis. From the modal analysis, A(0) mode for inspection of the composite with delamination type defects was selected. From the numerical simulation, A(0) mode interaction with delamination along the longitudinal direction was analyzed and the location of the defect was estimated by measuring the time of flight (ToF) of the signal using Hilbert transform (HT) and continuous wavelet transform (CWT). The CWT has shown better results in estimating the delamination location compared with HT. The depth of delamination was characterized in the frequency domain by comparing the amplitude of the A(0) mode. Inverse fast Fourier transform (IFFT) is recommended to reconstruct the reflected and transmitted modes for better damage detection and to reduce the complexity of signal interpretation.},\n\tdoi = {10.3390/ma15103466},\n\tvolume = {15},\n\tnumber = {10},\n\tissn = {1996-1944},\n\tnote = {Times Cited in Web of Science Core Collection: 8 Total Times Cited: 8 Cited Reference Count: 42 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/ma15103466"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000224",
+      "entry_type": "article",
+      "title": "The Effect of Various Parameters on a Portable Sensor for the Detection of Thin Biofilms in Water Pipes",
+      "authors": [
+        "Davis, S",
+        "Salowitz, N",
+        "Beversdorf, L",
+        "Silva, MR"
+      ],
+      "year": 2021,
+      "journal": "SENSORS",
+      "doi": "10.3390/s21134421",
+      "abstract": "The use of high-frequency strain waves to perform examinations and note measurements is referred to as ultrasonic testing (UT). UT is commonly used for the detection or evaluation of flaws and characterization of materials, among other applications. A standard ultrasonic inspection system comprises a pulser/receiver, transducer, and display devices. The pulser/receiver produces electrical pulses of high voltage. The transducer generates high-frequency ultrasonic energy after being driven by the pulser. The reflected wave is then converted into an electrical signal by the transducer and is displayed on a screen. The reflected signal strength versus the time plot helps to glean information regarding the features of a defect. In this paper, we discuss the experiments performed in a laboratory setting to determine ultrasound-based biofilm sensor sensitivity in relation to changes in the surrounding environment of temperature, concentration, turbidity, and conductivity of the liquid passing through the system. The effect of the change in frequency of the sensors was also studied. The sensors being developed are small and compact, portable, can be placed on the outer walls of the desired surface, use digital signal processing techniques, and the biofilm presence on the inner walls of the surface can be monitored.",
+      "keywords": [
+        "sensor systems",
+        "system",
+        "portable sensors",
+        "non-invasive",
+        "non-destructive",
+        "biofilm",
+        "BIOFOULING CONTROL",
+        "ULTRASOUND",
+        "BACTERIA",
+        "SURFACES"
+      ],
+      "normalized_title": "the effect of various parameters on a portable sensor for the detection of thin biofilms in water pipes",
+      "raw_bibtex": "@ARTICLE{10.3390/s21134421,\n\tauthor = {Davis, S and Salowitz, N and Beversdorf, L and Silva, MR},\n\ttitle = {The Effect of Various Parameters on a Portable Sensor for the Detection of Thin Biofilms in Water Pipes},\n\tjournal = {SENSORS},\n\tyear = {2021},\n\tkeywords = {sensor systems; system; portable sensors; non-invasive; non-destructive; biofilm; BIOFOULING CONTROL; ULTRASOUND; BACTERIA; SURFACES},\n\tabstract = {The use of high-frequency strain waves to perform examinations and note measurements is referred to as ultrasonic testing (UT). UT is commonly used for the detection or evaluation of flaws and characterization of materials, among other applications. A standard ultrasonic inspection system comprises a pulser/receiver, transducer, and display devices. The pulser/receiver produces electrical pulses of high voltage. The transducer generates high-frequency ultrasonic energy after being driven by the pulser. The reflected wave is then converted into an electrical signal by the transducer and is displayed on a screen. The reflected signal strength versus the time plot helps to glean information regarding the features of a defect. In this paper, we discuss the experiments performed in a laboratory setting to determine ultrasound-based biofilm sensor sensitivity in relation to changes in the surrounding environment of temperature, concentration, turbidity, and conductivity of the liquid passing through the system. The effect of the change in frequency of the sensors was also studied. The sensors being developed are small and compact, portable, can be placed on the outer walls of the desired surface, use digital signal processing techniques, and the biofilm presence on the inner walls of the surface can be monitored.},\n\tdoi = {10.3390/s21134421},\n\tvolume = {21},\n\tnumber = {13},\n\tissn = {1424-8220},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 30 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/s21134421"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000225",
+      "entry_type": "article",
+      "title": "Soil Porosity Detection Method Based on Ultrasound and Multi-Scale Feature Extraction",
+      "authors": [
+        "Xing, H",
+        "Zhong, ZY",
+        "Zhang, WH",
+        "Jiang, Y",
+        "Jiang, XY",
+        "Yang, XL",
+        "Cai, WZ",
+        "Wu, SL",
+        "Qi, L"
+      ],
+      "year": 2025,
+      "journal": "SENSORS",
+      "doi": "10.3390/s25103223",
+      "abstract": "Soil porosity, as an essential indicator for assessing soil quality, plays a key role in guiding agricultural production, so it is beneficial to detect soil porosity. However, the currently available methods do not apply to high-precision and rapid detection of soil with a black-box nature in the field, so this paper proposes a soil porosity detection method based on ultrasound and multi-scale CNN-LSTM. Firstly, a series of ring cutter soil samples with different porosities were prepared manually to simulate soil collected in the field using a ring cutter, followed by ultrasonic signal acquisition of the soil samples. The acquired signals were subjected to three kinds of data augmentation processes to enrich the dataset: adding Gaussian white noise, time shift transformation, and random perturbation. Since the collected ultrasonic signals belong to long-time series data and there are different frequency and sequence features, this study constructs a multi-scale CNN-LSTM deep neural network model using large convolution kernels based on the idea of multi-scale feature extraction, which uses multiple large convolution kernels of different sizes to downsize the collected ultra-long time series data and extract local features in the sequences, and combining the ability of LSTM to capture global and long-term dependent features enhances the feature expression ability of the model. The multi-head self-attention mechanism is added at the end of the model to infer the before-and-after relationship of the sequence data to improve the degradation of the model performance caused by waveform distortion. Finally, the model was trained, validated, and tested using ultrasonic signal data collected from soil samples to demonstrate the accuracy of the detection method. The model has a coefficient of determination of 0.9990 for detecting soil porosity, with a percentage root mean square error of only 0.66%. It outperforms other advanced comparative models, making it very promising for application.",
+      "keywords": [
+        "soil porosity",
+        "ultrasonic testing",
+        "multi-scale feature extraction",
+        "large convolution kernel"
+      ],
+      "normalized_title": "soil porosity detection method based on ultrasound and multi scale feature extraction",
+      "raw_bibtex": "@ARTICLE{10.3390/s25103223,\n\tauthor = {Xing, H and Zhong, ZY and Zhang, WH and Jiang, Y and Jiang, XY and Yang, XL and Cai, WZ and Wu, SL and Qi, L},\n\ttitle = {Soil Porosity Detection Method Based on Ultrasound and Multi-Scale Feature Extraction},\n\tjournal = {SENSORS},\n\tyear = {2025},\n\tkeywords = {soil porosity; ultrasonic testing; multi-scale feature extraction; large convolution kernel},\n\tabstract = {Soil porosity, as an essential indicator for assessing soil quality, plays a key role in guiding agricultural production, so it is beneficial to detect soil porosity. However, the currently available methods do not apply to high-precision and rapid detection of soil with a black-box nature in the field, so this paper proposes a soil porosity detection method based on ultrasound and multi-scale CNN-LSTM. Firstly, a series of ring cutter soil samples with different porosities were prepared manually to simulate soil collected in the field using a ring cutter, followed by ultrasonic signal acquisition of the soil samples. The acquired signals were subjected to three kinds of data augmentation processes to enrich the dataset: adding Gaussian white noise, time shift transformation, and random perturbation. Since the collected ultrasonic signals belong to long-time series data and there are different frequency and sequence features, this study constructs a multi-scale CNN-LSTM deep neural network model using large convolution kernels based on the idea of multi-scale feature extraction, which uses multiple large convolution kernels of different sizes to downsize the collected ultra-long time series data and extract local features in the sequences, and combining the ability of LSTM to capture global and long-term dependent features enhances the feature expression ability of the model. The multi-head self-attention mechanism is added at the end of the model to infer the before-and-after relationship of the sequence data to improve the degradation of the model performance caused by waveform distortion. Finally, the model was trained, validated, and tested using ultrasonic signal data collected from soil samples to demonstrate the accuracy of the detection method. The model has a coefficient of determination of 0.9990 for detecting soil porosity, with a percentage root mean square error of only 0.66%. It outperforms other advanced comparative models, making it very promising for application.},\n\tdoi = {10.3390/s25103223},\n\tvolume = {25},\n\tnumber = {10},\n\tissn = {1424-8220},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 38 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/s25103223"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000226",
+      "entry_type": "article",
+      "title": "Delamination Defects Localization Using a New Time Frequency Algorithm Based on S-Transform for Ultrasonic Testing of Wind Turbine Blades Composite Materials",
+      "authors": [
+        "Benyahia, A",
+        "Benammar, A",
+        "Guessoum, A"
+      ],
+      "year": 2021,
+      "journal": "RUSSIAN JOURNAL OF NONDESTRUCTIVE TESTING",
+      "doi": "10.1134/s1061830921110024",
+      "abstract": "Wind turbine blades are one of the most critical parts of a wind turbine system. They have a significant impact on the entire wind power system. Composite materials with polymeric matrices present the most used material to fabricate wind turbine blades. Despite all the characteristics of this type of materials, it can deteriorate under certain conditions. That is why wind turbine blades should be inspected periodically. Ultrasonic techniques are well known for their use in composites material part inspection. However, the detection and localization of defects remain difficult. It should be noted that modern signal processing algorithms are used to improve ultrasound data resolution such as methods based on time-frequency analysis. The objective of this work is to present an algorithm for detection and localization of delamination defects in composite materials of wind turbine blades. The proposed algorithm is based on modified Stockwell transform, Otsu global thresholding time-frequency and normalized Shannon energy envelope. A simulation study was carried out to evaluate the performance of the proposed algorithm and its defect echoes detection ability in case of attenuation and/or high noise. Experimental tests were performed on a sample of carbon fiber reinforced polymer composite material (CFRP) containing two delamination defects. The obtained results show that the proposed method can locate precisely the delamination defects.",
+      "keywords": [
+        "composite materials",
+        "wind turbine blades",
+        "ultrasonic signal",
+        "modified Stockwell transform",
+        "Otsu global thresholding",
+        "Shannon envelope",
+        "STOCKWELL TRANSFORM",
+        "THRESHOLD",
+        "CLASSIFICATION",
+        "SEGMENTATION"
+      ],
+      "normalized_title": "delamination defects localization using a new time frequency algorithm based on s transform for ultrasonic testing of wind turbine blades composite materials",
+      "raw_bibtex": "@ARTICLE{10.1134/S1061830921110024,\n\tauthor = {Benyahia, A and Benammar, A and Guessoum, A},\n\ttitle = {Delamination Defects Localization Using a New Time Frequency Algorithm Based on S-Transform for Ultrasonic Testing of Wind Turbine Blades Composite Materials},\n\tjournal = {RUSSIAN JOURNAL OF NONDESTRUCTIVE TESTING},\n\tyear = {2021},\n\tkeywords = {composite materials; wind turbine blades; ultrasonic signal; modified Stockwell transform; Otsu global thresholding; Shannon envelope; STOCKWELL TRANSFORM; THRESHOLD; CLASSIFICATION; SEGMENTATION},\n\tabstract = {Wind turbine blades are one of the most critical parts of a wind turbine system. They have a significant impact on the entire wind power system. Composite materials with polymeric matrices present the most used material to fabricate wind turbine blades. Despite all the characteristics of this type of materials, it can deteriorate under certain conditions. That is why wind turbine blades should be inspected periodically. Ultrasonic techniques are well known for their use in composites material part inspection. However, the detection and localization of defects remain difficult. It should be noted that modern signal processing algorithms are used to improve ultrasound data resolution such as methods based on time-frequency analysis. The objective of this work is to present an algorithm for detection and localization of delamination defects in composite materials of wind turbine blades. The proposed algorithm is based on modified Stockwell transform, Otsu global thresholding time-frequency and normalized Shannon energy envelope. A simulation study was carried out to evaluate the performance of the proposed algorithm and its defect echoes detection ability in case of attenuation and/or high noise. Experimental tests were performed on a sample of carbon fiber reinforced polymer composite material (CFRP) containing two delamination defects. The obtained results show that the proposed method can locate precisely the delamination defects.},\n\tdoi = {10.1134/S1061830921110024},\n\tvolume = {57},\n\tnumber = {11},\n\tpages = {976-986},\n\tissn = {1061-8309},\n\tnote = {Times Cited in Web of Science Core Collection: 4 Total Times Cited: 4 Cited Reference Count: 29 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1134/S1061830921110024"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000227",
+      "entry_type": "article",
+      "title": "Ultrasonic defect detection in noisy signals by a nonconvex sparse regularization approach",
+      "authors": [
+        "Wu, B",
+        "Zhou, WS"
+      ],
+      "year": 2023,
+      "journal": "APPLIED ACOUSTICS",
+      "doi": "10.1016/j.apacoust.2023.109461",
+      "abstract": "Ultrasonic testing has been an important tool for the detection of hidden defects in materials yet its effectiveness is usually compromised by the noise originated from both the testing system and the material being evaluated. Motivated by the prior knowledge that only a small number of defects or reflectors exist within the tested material thus the measured signal can be viewed as a linear combination of a few echoes, a signal processing method is proposed in this study where a nonconvex sparse regularization method based on l(p)-norm (0 < p < 1) penalty is employed to suppress noises in ultrasonic NDT signals thus enhancing the effectiveness and accuracy of flaw detection. Based on a specially designed overcomplete Gabor dictionary, the nonconvex sparse regularization method is introduced to sparsely represent the noisy signal. After signal representation, noise is suppressed by a pruning operator, facilitating the identification and reconstruction of flaw-reflected echoes. The performance of the proposed method is quantitatively evaluated and compared with competing algorithms using simulated noisy ultrasonic signals in a statistical manner. Experimental results are also presented to demonstrate the effectiveness of our method.",
+      "keywords": [
+        "Ultrasonic NDT",
+        "Sparse representation",
+        "Flaw detection",
+        "Nonconvex sparse regularization",
+        "Noise suppression",
+        "LINEAR INVERSE PROBLEMS",
+        "SPLIT-SPECTRUM",
+        "FLAW DETECTION",
+        "MATCHING PURSUITS",
+        "REPRESENTATION",
+        "WAVELET",
+        "RECONSTRUCTION",
+        "APPROXIMATION",
+        "DECONVOLUTION",
+        "DICTIONARIES"
+      ],
+      "normalized_title": "ultrasonic defect detection in noisy signals by a nonconvex sparse regularization approach",
+      "raw_bibtex": "@ARTICLE{10.1016/j.apacoust.2023.109461,\n\tauthor = {Wu, B and Zhou, WS},\n\ttitle = {Ultrasonic defect detection in noisy signals by a nonconvex sparse regularization approach},\n\tjournal = {APPLIED ACOUSTICS},\n\tyear = {2023},\n\tkeywords = {Ultrasonic NDT; Sparse representation; Flaw detection; Nonconvex sparse regularization; Noise suppression; LINEAR INVERSE PROBLEMS; SPLIT-SPECTRUM; FLAW DETECTION; MATCHING PURSUITS; REPRESENTATION; WAVELET; RECONSTRUCTION; APPROXIMATION; DECONVOLUTION; DICTIONARIES},\n\tabstract = {Ultrasonic testing has been an important tool for the detection of hidden defects in materials yet its effectiveness is usually compromised by the noise originated from both the testing system and the material being evaluated. Motivated by the prior knowledge that only a small number of defects or reflectors exist within the tested material thus the measured signal can be viewed as a linear combination of a few echoes, a signal processing method is proposed in this study where a nonconvex sparse regularization method based on l(p)-norm (0 < p < 1) penalty is employed to suppress noises in ultrasonic NDT signals thus enhancing the effectiveness and accuracy of flaw detection. Based on a specially designed overcomplete Gabor dictionary, the nonconvex sparse regularization method is introduced to sparsely represent the noisy signal. After signal representation, noise is suppressed by a pruning operator, facilitating the identification and reconstruction of flaw-reflected echoes. The performance of the proposed method is quantitatively evaluated and compared with competing algorithms using simulated noisy ultrasonic signals in a statistical manner. Experimental results are also presented to demonstrate the effectiveness of our method.},\n\tdoi = {10.1016/j.apacoust.2023.109461},\n\tvolume = {210},\n\tissn = {0003-682X},\n\tnote = {Times Cited in Web of Science Core Collection: 9 Total Times Cited: 10 Cited Reference Count: 54 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.apacoust.2023.109461"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000228",
+      "entry_type": "article",
+      "title": "A SHapley Additive exPlanations-Based Data-Driven Approach for Lithium-Ion Battery State of Health Estimation Using Ultrasound Technology",
+      "authors": [
+        "Xu, DC",
+        "Ma, SX",
+        "Ji, XF",
+        "Han, XH",
+        "Lin, J",
+        "Liu, KL"
+      ],
+      "year": 2025,
+      "journal": "ENERGY TECHNOLOGY",
+      "doi": "10.1002/ente.202500673",
+      "abstract": "Accurate estimation of battery state of health (SoH) is essential for ensuring battery safety and stability. This article presents an interpretable data-driven framework that leverages ultrasonic technology for rapid SoH estimation. Specifically, an ultrasonic testing platform is developed, with a probe externally placed on the battery surface to transmit and receive signals. From the collected data, three key ultrasonic features (time of flight [ToF], signal maximum [Max], and signal minimum[Min]) are extracted to characterize the battery SoH. Four machine learning models are then employed to estimate the battery's SoH. Finally, the SHapley Additive exPlanations (SHAP) method is applied to these models to identify the most important ultrasonic features for SoH estimation. Experimental results demonstrate that the random forest model achieves the highest accuracy in battery SoH estimation, with an R2 value of 0.97. The most important ultrasonic feature is time of flight, followed by Min and Max features. This indicates that the proposed method is highly effective and can be practically applied for battery SoH estimation. Furthermore, integrating the interpretable technique SHAP enhances the model's prediction interpretability and offers valuable insights into the relative importance of ultrasonic features, providing a reliable tool for battery health monitoring and diagnostics.",
+      "keywords": [
+        "lithium-ion batteries",
+        "SHapley Additive exPlanations",
+        "state of health",
+        "ultrasound technologies",
+        "NETWORK"
+      ],
+      "normalized_title": "a shapley additive explanations based data driven approach for lithium ion battery state of health estimation using ultrasound technology",
+      "raw_bibtex": "@ARTICLE{10.1002/ente.202500673,\n\tauthor = {Xu, DC and Ma, SX and Ji, XF and Han, XH and Lin, J and Liu, KL},\n\ttitle = {A SHapley Additive exPlanations-Based Data-Driven Approach for Lithium-Ion Battery State of Health Estimation Using Ultrasound Technology},\n\tjournal = {ENERGY TECHNOLOGY},\n\tyear = {2025},\n\tkeywords = {lithium-ion batteries; SHapley Additive exPlanations; state of health; ultrasound technologies; NETWORK},\n\tabstract = {Accurate estimation of battery state of health (SoH) is essential for ensuring battery safety and stability. This article presents an interpretable data-driven framework that leverages ultrasonic technology for rapid SoH estimation. Specifically, an ultrasonic testing platform is developed, with a probe externally placed on the battery surface to transmit and receive signals. From the collected data, three key ultrasonic features (time of flight [ToF], signal maximum [Max], and signal minimum[Min]) are extracted to characterize the battery SoH. Four machine learning models are then employed to estimate the battery's SoH. Finally, the SHapley Additive exPlanations (SHAP) method is applied to these models to identify the most important ultrasonic features for SoH estimation. Experimental results demonstrate that the random forest model achieves the highest accuracy in battery SoH estimation, with an R2 value of 0.97. The most important ultrasonic feature is time of flight, followed by Min and Max features. This indicates that the proposed method is highly effective and can be practically applied for battery SoH estimation. Furthermore, integrating the interpretable technique SHAP enhances the model's prediction interpretability and offers valuable insights into the relative importance of ultrasonic features, providing a reliable tool for battery health monitoring and diagnostics.},\n\tdoi = {10.1002/ente.202500673},\n\tvolume = {13},\n\tnumber = {11},\n\tissn = {2194-4288},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 38 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1002/ente.202500673"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000229",
+      "entry_type": "article",
+      "title": "Quantification and fusion of thermography and ultrasonic non-destructive testing results for composites with low-velocity impact damage",
+      "authors": [
+        "Amraei, J",
+        "Katunin, A",
+        "Dragan, K",
+        "Colombo, C",
+        "Swiderski, W",
+        "Salerno, A",
+        "Manes, A"
+      ],
+      "year": 2026,
+      "journal": "COMPOSITES PART B-ENGINEERING",
+      "doi": "10.1016/j.compositesb.2025.113293",
+      "abstract": "This study presents a comparative evaluation of four infrared thermography (IRT) techniques, namely stepheating, C-CheckIR, flash, and lock-in thermography, as well as ultrasonic C-scan for the detection and quantification of low-velocity impact damage (LVID) in thin laminated composites. The assessment relied on the quantitative hit/miss metric analysis, along with the dependency of thermal response on impact energy and impactor tip geometry under 20 different scenarios. The qualitative and quantitative analyses highlighted CCheckIR and lock-in thermography were effective partially but illustrated inconsistent performance across most LVID scenarios. Flash thermography, in contrast, was identified as the most reliable thermography technique, offering consistent detection capability across a wide range of impact scenarios. Its superior performance is attributed to higher sensitivity to energy level and impactor tip size, as well as consistently lower error magnitudes in the hit/miss quantities, including relative area error, detected and missed area fractions. Furthermore, a dual-tree complex wavelet transform (DTCWT)-based algorithm was developed to fuse flash thermography and ultrasonic C-scan results, enabling complementary visualization of surface cracks and subsurface delamination. The fusion framework improved the interpretability of damage patterns, reduced false interpretations, and provided more comprehensive assessment of impact damage compared to individual non-destructive testing techniques.",
+      "keywords": [
+        "Damage quantification",
+        "Infrared thermography",
+        "Ultrasonic testing",
+        "Image processing",
+        "Fusion",
+        "Wavelet transform",
+        "Quantitative evaluation metrics",
+        "IMAGE FUSION",
+        "ENHANCEMENT",
+        "CFRP",
+        "IDENTIFICATION",
+        "CONTRAST"
+      ],
+      "normalized_title": "quantification and fusion of thermography and ultrasonic non destructive testing results for composites with low velocity impact damage",
+      "raw_bibtex": "@ARTICLE{10.1016/j.compositesb.2025.113293,\n\tauthor = {Amraei, J and Katunin, A and Dragan, K and Colombo, C and Swiderski, W and Salerno, A and Manes, A},\n\ttitle = {Quantification and fusion of thermography and ultrasonic non-destructive testing results for composites with low-velocity impact damage},\n\tjournal = {COMPOSITES PART B-ENGINEERING},\n\tyear = {2026},\n\tkeywords = {Damage quantification; Infrared thermography; Ultrasonic testing; Image processing; Fusion; Wavelet transform; Quantitative evaluation metrics; IMAGE FUSION; ENHANCEMENT; CFRP; IDENTIFICATION; CONTRAST},\n\tabstract = {This study presents a comparative evaluation of four infrared thermography (IRT) techniques, namely stepheating, C-CheckIR, flash, and lock-in thermography, as well as ultrasonic C-scan for the detection and quantification of low-velocity impact damage (LVID) in thin laminated composites. The assessment relied on the quantitative hit/miss metric analysis, along with the dependency of thermal response on impact energy and impactor tip geometry under 20 different scenarios. The qualitative and quantitative analyses highlighted CCheckIR and lock-in thermography were effective partially but illustrated inconsistent performance across most LVID scenarios. Flash thermography, in contrast, was identified as the most reliable thermography technique, offering consistent detection capability across a wide range of impact scenarios. Its superior performance is attributed to higher sensitivity to energy level and impactor tip size, as well as consistently lower error magnitudes in the hit/miss quantities, including relative area error, detected and missed area fractions. Furthermore, a dual-tree complex wavelet transform (DTCWT)-based algorithm was developed to fuse flash thermography and ultrasonic C-scan results, enabling complementary visualization of surface cracks and subsurface delamination. The fusion framework improved the interpretability of damage patterns, reduced false interpretations, and provided more comprehensive assessment of impact damage compared to individual non-destructive testing techniques.},\n\tdoi = {10.1016/j.compositesb.2025.113293},\n\tvolume = {312},\n\tissn = {1359-8368},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 82 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.compositesb.2025.113293"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000230",
+      "entry_type": "article",
+      "title": "Frequency-Optimized Ultrasonic and Machine Learning Framework for Early Detection of Carburization in HP Steel Tubes",
+      "authors": [
+        "da Silva, FP",
+        "Martins, COD",
+        "da Fonseca, HD",
+        "Matos, RS",
+        "Silva, IC"
+      ],
+      "year": 2025,
+      "journal": "JOURNAL OF NONDESTRUCTIVE EVALUATION",
+      "doi": "10.1007/s10921-025-01261-2",
+      "abstract": "Carburization is a critical degradation mechanism in high-performance (HP) steel furnace tubes, impairing structural integrity during prolonged high-temperature service. This study proposes a machine learning-assisted ultrasonic testing framework to classify four levels of carburization damage in Cr-Ni-Nb HP steel alloys. A total of 80 A-scan signals were acquired per frequency (2.25 and 5 MHz) across four distinct damage classes, with spectral features extracted via discrete cosine transform (DTC). Microstructural analysis confirmed a linear increase in the volumetric fraction of chromium carbides from 9.5% (SP01, low carburization) to 40.5% (SP04, severe carburization). Among the classifiers evaluated, the K-Nearest Neighbors (KNN) and Quadratic Support Vector Machine (QSVM) achieved 100% accuracy (AUC = 1.00) at 2.25 MHz for advanced damage levels. However, early-stage detection remained challenging, with GNB attaining only 83.1% accuracy and AUC = 0.91 for SP01. Classification performance deteriorated significantly at 5 MHz due to increased signal attenuation and noise, with accuracy falling to 47.3-53.5%. These findings underscore the influence of ultrasonic frequency on damage detectability and model reliability. The integration of frequency-optimized ultrasonic inspection with machine learning delivers a scalable approach for real-time, non-destructive monitoring of carburization in industrial HP steel components, offering critical insights for predictive maintenance and structural health assessment.",
+      "keywords": [
+        "Ultrasonic inspection tests",
+        "Carburization",
+        "HP steel pyrolysis tubes",
+        "Machine learning",
+        "Piezoelectric transducer"
+      ],
+      "normalized_title": "frequency optimized ultrasonic and machine learning framework for early detection of carburization in hp steel tubes",
+      "raw_bibtex": "@ARTICLE{10.1007/s10921-025-01261-2,\n\tauthor = {da Silva, FP and Martins, COD and da Fonseca, HD and Matos, RS and Silva, IC},\n\ttitle = {Frequency-Optimized Ultrasonic and Machine Learning Framework for Early Detection of Carburization in HP Steel Tubes},\n\tjournal = {JOURNAL OF NONDESTRUCTIVE EVALUATION},\n\tyear = {2025},\n\tkeywords = {Ultrasonic inspection tests; Carburization; HP steel pyrolysis tubes; Machine learning; Piezoelectric transducer},\n\tabstract = {Carburization is a critical degradation mechanism in high-performance (HP) steel furnace tubes, impairing structural integrity during prolonged high-temperature service. This study proposes a machine learning-assisted ultrasonic testing framework to classify four levels of carburization damage in Cr-Ni-Nb HP steel alloys. A total of 80 A-scan signals were acquired per frequency (2.25 and 5 MHz) across four distinct damage classes, with spectral features extracted via discrete cosine transform (DTC). Microstructural analysis confirmed a linear increase in the volumetric fraction of chromium carbides from 9.5% (SP01, low carburization) to 40.5% (SP04, severe carburization). Among the classifiers evaluated, the K-Nearest Neighbors (KNN) and Quadratic Support Vector Machine (QSVM) achieved 100% accuracy (AUC = 1.00) at 2.25 MHz for advanced damage levels. However, early-stage detection remained challenging, with GNB attaining only 83.1% accuracy and AUC = 0.91 for SP01. Classification performance deteriorated significantly at 5 MHz due to increased signal attenuation and noise, with accuracy falling to 47.3-53.5%. These findings underscore the influence of ultrasonic frequency on damage detectability and model reliability. The integration of frequency-optimized ultrasonic inspection with machine learning delivers a scalable approach for real-time, non-destructive monitoring of carburization in industrial HP steel components, offering critical insights for predictive maintenance and structural health assessment.},\n\tdoi = {10.1007/s10921-025-01261-2},\n\tvolume = {44},\n\tnumber = {4},\n\tissn = {0195-9298},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 60 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s10921-025-01261-2"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

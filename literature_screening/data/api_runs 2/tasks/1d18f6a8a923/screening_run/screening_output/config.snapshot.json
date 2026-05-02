@@ -1,0 +1,61 @@
+{
+  "project": {
+    "name": "new-screening-run",
+    "output_dir": "tasks/1d18f6a8a923/screening_run/screening_output",
+    "save_raw_response": true,
+    "save_intermediate_files": true
+  },
+  "input": {
+    "input_files": [
+      "tasks/1d18f6a8a923/screening_run/inputs/scopus_export_Mar 27-2026_313c67b0-0550-4797-b426-168af053e8d7.ris"
+    ],
+    "encoding": "auto"
+  },
+  "dedup": {
+    "enabled": true,
+    "strict_doi_match": true,
+    "normalized_title_exact_match": true,
+    "fuzzy_title_match": false
+  },
+  "screening": {
+    "batch_size": 10,
+    "target_include_count": 30,
+    "stop_when_target_reached": false,
+    "allow_uncertain": true,
+    "retry_times": 6,
+    "request_timeout_seconds": 240
+  },
+  "criteria": {
+    "topic": "企业数字档案系统建设与数据化开发利用",
+    "inclusion": [
+      "研究对象必须是企业、政府或大型机构的档案/电子记录。",
+      "核心内容必须涉及以下至少一项：数字档案系统架构设计、电子文件全生命周期管理（前端控制/业务协同）、档案数据安全与长期保存（如OAIS模型）、档案数据化与知识管理（如AI提取、知识图谱）。",
+      "必须是具有具体实施方案、模型框架或高质量综述的学术文献。"
+    ],
+    "exclusion": [
+      "纯实体档案物理保护（如纸张去酸、库房温湿度、虫害控制）。",
+      "纯图书馆学或公共文化馆藏管理（非组织机构的业务档案）。",
+      "脱离档案管理实际业务的纯底层IT算法测试。"
+    ]
+  },
+  "model": {
+    "provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "api_base_url": "https://api.deepseek.com/v1",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 1536,
+    "min_request_interval_seconds": 2.0
+  },
+  "report": {
+    "export_included_ris": true,
+    "export_excluded_ris": false,
+    "export_unused_ris": true,
+    "export_included_bib": false,
+    "export_excluded_bib": false,
+    "export_unused_bib": false,
+    "included_report_format": "md",
+    "excluded_report_format": "md",
+    "summary_format": "json"
+  }
+}

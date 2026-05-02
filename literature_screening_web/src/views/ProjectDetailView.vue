@@ -2,7 +2,7 @@
 import { computed, nextTick, onMounted, onUnmounted, ref, watch } from 'vue'
 import { RouterLink, useRoute, useRouter } from 'vue-router'
 import dayjs from 'dayjs'
-import { BookOpenText, FileSearch, FileText, Pencil, Sparkles, Trash2, Wand2 } from 'lucide-vue-next'
+import { BookOpenText, FileSearch, FileText, Pencil, RefreshCw, Sparkles, Trash2, Wand2 } from 'lucide-vue-next'
 import {
   NAlert,
   NButton,
@@ -20,7 +20,7 @@ import {
   useMessage
 } from 'naive-ui'
 import ThreadMessageCard from '@/components/ThreadMessageCard.vue'
-import { getArtifactUrl, prefillThreadSetup } from '@/api/client'
+import { fetchProviderModels, getArtifactUrl, prefillThreadSetup } from '@/api/client'
 import { useDraftsStore } from '@/stores/drafts'
 import { useMetaStore } from '@/stores/meta'
 import { useProjectsStore } from '@/stores/projects'
@@ -52,6 +52,10 @@ const reportModelForm = ref({
   apiKeyEnv: 'DEEPSEEK_API_KEY',
   apiKey: ''
 })
+const selectedReportDatasetIds = ref<string[]>([])
+const reportModelOptions = ref<Array<{ label: string; value: string }>>([])
+const reportModelsLoading = ref(false)
+const reportModelFetchError = ref('')
 const editingThread = ref(false)
 const assistingThread = ref(false)
 const assistSubmitting = ref(false)
@@ -78,6 +82,8 @@ const reportPanelRef = ref<HTMLElement | null>(null)
 const reportFocusNote = ref('')
 const reportPanelHighlighted = ref(false)
 let reportFocusTimer: number | null = null
+let reportModelRequestToken = 0
+let reportModelReloadTimer: number | null = null
 
 const datasetMap = computed(() => {
   const map = new Map<string, DatasetRecord>()
@@ -88,15 +94,44 @@ const datasetMap = computed(() => {
 })
 
 const tasks = computed(() => [...(project.value?.tasks ?? [])].sort((a, b) => dayjs(a.created_at).valueOf() - dayjs(b.created_at).valueOf()))
+const taskMap = computed(() => {
+  const map = new Map<string, TaskSnapshot>()
+  for (const task of tasks.value) {
+    map.set(task.id, task)
+  }
+  return map
+})
 const screeningRounds = computed(() => tasks.value.filter((task) => task.kind === 'screening'))
 
 const screeningDefaults = computed(() => threadProfile.value?.screening ?? null)
 const strategyContext = computed(() => threadProfile.value?.strategy ?? null)
 const reportDraftKey = computed(() => project.value?.id ?? null)
 const reportSourceDataset = computed(() =>
-  (project.value?.datasets ?? []).find((dataset) => dataset.kind === 'report_source')
-  ?? (project.value?.datasets ?? []).find((dataset) => dataset.kind === 'fulltext_ready')
+  (project.value?.datasets ?? []).find((dataset) => dataset.kind === 'fulltext_ready')
   ?? null
+)
+const reportSourceDatasets = computed(() =>
+  (project.value?.datasets ?? []).filter((dataset) =>
+    ['fulltext_ready', 'included_reviewed', 'included', 'cumulative_included'].includes(dataset.kind)
+  )
+)
+const reportSourceOptions = computed(() =>
+  reportSourceDatasets.value.map((dataset) => ({
+    label: reportDatasetOptionLabel(dataset),
+    value: dataset.id,
+    disabled: (dataset.record_count ?? 0) <= 0
+  }))
+)
+const selectedReportDatasets = computed(() =>
+  selectedReportDatasetIds.value
+    .map((datasetId) => datasetMap.value.get(datasetId) ?? null)
+    .filter((dataset): dataset is DatasetRecord => Boolean(dataset))
+)
+const selectedReportSourceCount = computed(() =>
+  selectedReportDatasets.value.reduce((total, dataset) => total + Number(dataset.record_count ?? 0), 0)
+)
+const fulltextReadyCount = computed(() =>
+  (project.value?.datasets ?? []).find((dataset) => dataset.kind === 'fulltext_ready')?.record_count ?? 0
 )
 
 const workbenchSummary = computed(() => project.value?.workbench.summary ?? {
@@ -129,18 +164,18 @@ const stageCards = computed(() => [
     emphasis: screeningRounds.value.length ? 'ready' : 'pending'
   },
   {
-    title: '全文获取',
-    description: workbenchSummary.value.total_candidates ? '在这里打开链接、标记全文状态；已获取全文会自动进入报告源' : '初筛完成后候选文献会进入这里',
+    title: '复核与全文',
+    description: workbenchSummary.value.total_candidates ? '在这里复核文献并标记全文获取状态' : '初筛完成后候选文献会进入这里',
     value: workbenchSummary.value.actionable_candidates,
     unit: '篇候选',
     emphasis: workbenchSummary.value.actionable_candidates ? 'ready' : 'pending'
   },
   {
-    title: '生成报告',
-    description: (reportSourceDataset.value?.record_count ?? 0) > 0 ? '可生成报告' : '暂无报告源',
-    value: reportSourceDataset.value?.record_count ?? 0,
-    unit: '篇报告源',
-    emphasis: (reportSourceDataset.value?.record_count ?? 0) > 0 ? 'ready' : 'pending'
+    title: '报告生成',
+    description: fulltextReadyCount.value > 0 ? '可从已获取全文中选择本次输入' : '暂无已获取全文',
+    value: fulltextReadyCount.value,
+    unit: '篇已获取',
+    emphasis: fulltextReadyCount.value > 0 ? 'ready' : 'pending'
   }
 ])
 
@@ -151,6 +186,38 @@ function latestMatchingDataset(task: TaskSnapshot, kinds: string[]) {
   return matches.length ? matches[matches.length - 1] : null
 }
 
+function reportDatasetKindLabel(kind: string) {
+  switch (kind) {
+    case 'report_source':
+      return '旧版报告输入'
+    case 'fulltext_ready':
+      return '已获取全文'
+    case 'included_reviewed':
+      return '人工复核后纳入'
+    case 'included':
+      return '本轮纳入'
+    case 'cumulative_included':
+      return '累计纳入'
+    default:
+      return kind
+  }
+}
+
+function reportDatasetOptionLabel(dataset: DatasetRecord) {
+  const taskTitle = dataset.task_id ? taskMap.value.get(dataset.task_id)?.title : ''
+  const roundLabel = taskTitle ? ` · ${taskTitle}` : ''
+  return `${reportDatasetKindLabel(dataset.kind)}${roundLabel} · ${dataset.record_count ?? 0} 篇`
+}
+
+function defaultReportDatasetIds(draftDatasetIds: string[] = []) {
+  const validOptions = new Set(reportSourceOptions.value.filter((option) => !option.disabled).map((option) => option.value))
+  const fromDraft = [...new Set(draftDatasetIds)].filter((datasetId) => validOptions.has(datasetId))
+  if (fromDraft.length) return fromDraft
+  if (reportSourceDataset.value && validOptions.has(reportSourceDataset.value.id)) return [reportSourceDataset.value.id]
+  const firstAvailable = reportSourceDatasets.value.find((dataset) => validOptions.has(dataset.id))
+  return firstAvailable ? [firstAvailable.id] : []
+}
+
 function sourceLabelOf(task: TaskSnapshot) {
   if (task.input_dataset_ids.length) {
     const labels = task.input_dataset_ids
@@ -159,7 +226,7 @@ function sourceLabelOf(task: TaskSnapshot) {
     if (labels.length) return `来源：${labels.join(' + ')}`
   }
   if (task.parent_task_id) return '来源：延续上一轮'
-  if (task.kind === 'report') return '来源：候选池报告源'
+  if (task.kind === 'report') return '输入：本次报告生成所选文献'
   if (task.kind === 'strategy') return '来源：研究需求生成线程方案'
   return '来源：新上传文献'
 }
@@ -224,7 +291,7 @@ function buildScreeningActions(task: TaskSnapshot): ThreadAction[] {
   if (includedDataset) {
     actions.push({
       id: `${task.id}-fulltext`,
-      label: '进入全文工作台',
+      label: '进入复核与全文工作台',
       kind: 'route',
       to: `/threads/${projectId.value}/fulltext?screeningTaskId=${task.id}`,
       emphasis: 'secondary'
@@ -295,7 +362,7 @@ function buildThreadMessage(task: TaskSnapshot): ThreadMessage {
             ? `本轮执行失败。${firstLine(task.error) || task.progress_message || '请进入详情页查看错误。'}`
             : task.progress_message || '正在执行这一轮初筛。',
       sourceLabel: sourceLabelOf(task),
-      note: task.status === 'succeeded' ? '下一步建议去全文工作台打开链接并标记已获取全文。' : undefined,
+      note: task.status === 'succeeded' ? '下一步建议去复核与全文工作台打开链接并标记全文状态。' : undefined,
       createdAt: task.created_at,
       updatedAt: task.updated_at,
       phaseLabel: task.phase_label,
@@ -352,6 +419,9 @@ function initializeReportDefaults() {
     apiKeyEnv: draft?.apiKeyEnv?.trim() || threadProfile.value?.strategy.model?.api_key_env || nextPreset?.defaultApiKeyEnv || metaStore.strategyDefaults.api_key_env,
     apiKey: draftsStore.getProviderApiKey(nextProvider)
   }
+  selectedReportDatasetIds.value = defaultReportDatasetIds(draft?.datasetIds ?? [])
+  setFallbackReportModelOptions(nextProvider)
+  void loadReportModelOptions({ silent: true })
 }
 
 function openEditThread() {
@@ -418,6 +488,84 @@ function applyReportProviderPreset(nextProvider: ProviderName) {
     apiKeyEnv: preset.defaultApiKeyEnv,
     apiKey: draftsStore.getProviderApiKey(nextProvider)
   }
+  setFallbackReportModelOptions(nextProvider)
+  void loadReportModelOptions({ silent: true })
+}
+
+function fallbackReportModelOptions(nextProvider: ProviderName) {
+  if (nextProvider === 'deepseek') {
+    return [
+      { label: 'deepseek-chat', value: 'deepseek-chat' },
+      { label: 'deepseek-reasoner', value: 'deepseek-reasoner' }
+    ]
+  }
+  const preset = metaStore.providerPresets.find((item) => item.provider === nextProvider)
+  const modelName = preset?.defaultModel || 'moonshot-v1-auto'
+  return [{ label: modelName, value: modelName }]
+}
+
+function setFallbackReportModelOptions(nextProvider: ProviderName = reportModelForm.value.provider) {
+  reportModelOptions.value = fallbackReportModelOptions(nextProvider)
+  if (!reportModelOptions.value.some((option) => option.value === reportModelForm.value.modelName)) {
+    reportModelForm.value = {
+      ...reportModelForm.value,
+      modelName: reportModelOptions.value[0]?.value || reportModelForm.value.modelName
+    }
+  }
+}
+
+async function loadReportModelOptions(options: { silent?: boolean } = {}) {
+  const requestToken = ++reportModelRequestToken
+  const currentForm = { ...reportModelForm.value }
+  reportModelsLoading.value = true
+  reportModelFetchError.value = ''
+  try {
+    const response = await fetchProviderModels({
+      provider: currentForm.provider,
+      api_base_url: currentForm.apiBaseUrl,
+      api_key_env: currentForm.apiKeyEnv,
+      api_key: currentForm.apiKey || null
+    })
+    if (requestToken !== reportModelRequestToken || currentForm.provider !== reportModelForm.value.provider) return
+    const providerOptions = response.models.map((item) => ({
+      label: item.label || item.id,
+      value: item.id
+    }))
+    reportModelOptions.value = providerOptions.length ? providerOptions : fallbackReportModelOptions(currentForm.provider)
+    if (!reportModelOptions.value.some((option) => option.value === reportModelForm.value.modelName)) {
+      reportModelForm.value = {
+        ...reportModelForm.value,
+        modelName: reportModelOptions.value[0]?.value || reportModelForm.value.modelName
+      }
+    }
+    reportModelFetchError.value = response.source === 'fallback' && response.error ? '未能从服务商获取模型，已使用默认模型。' : ''
+  } catch {
+    if (requestToken !== reportModelRequestToken || currentForm.provider !== reportModelForm.value.provider) return
+    setFallbackReportModelOptions(currentForm.provider)
+    reportModelFetchError.value = '未能从服务商获取模型，已使用默认模型。'
+  } finally {
+    if (requestToken === reportModelRequestToken) {
+      reportModelsLoading.value = false
+    }
+  }
+  if (!options.silent && reportModelFetchError.value) {
+    message.warning(reportModelFetchError.value)
+  }
+}
+
+function scheduleReportModelReload() {
+  if (typeof window === 'undefined') return
+  if (reportModelReloadTimer !== null) window.clearTimeout(reportModelReloadTimer)
+  reportModelReloadTimer = window.setTimeout(() => {
+    reportModelReloadTimer = null
+    void loadReportModelOptions({ silent: true })
+  }, 700)
+}
+
+function updateReportApiKey(value: string) {
+  reportModelForm.value.apiKey = value
+  draftsStore.setProviderApiKey(reportModelForm.value.provider, value)
+  scheduleReportModelReload()
 }
 
 async function saveThreadEdits() {
@@ -523,7 +671,7 @@ async function applyAiThreadAssist() {
 
 async function removeCurrentThread() {
   if (!project.value) return
-  if (!window.confirm(`确认删除主题“${project.value.name}”？相关初筛和报告任务也会一起删除。`)) {
+  if (!window.confirm(`确认删除主题“${project.value.name}”？相关初筛和报告生成任务也会一起删除。`)) {
     return
   }
   stopProjectPolling()
@@ -552,17 +700,21 @@ watch(
 )
 
 watch(
-  [() => route.query.reportDatasetId, () => route.query.focusPanel],
+  [() => route.query.reportDatasetId, () => route.query.focusPanel, () => project.value?.id, () => reportSourceOptions.value.length],
   async ([datasetId, focusPanel]) => {
     if (focusPanel !== 'report') {
       reportFocusNote.value = ''
       reportPanelHighlighted.value = false
       return
     }
+    const focusedDataset = typeof datasetId === 'string' ? datasetMap.value.get(datasetId) : null
+    if (focusedDataset && reportSourceOptions.value.some((option) => option.value === focusedDataset.id && !option.disabled)) {
+      selectedReportDatasetIds.value = [focusedDataset.id]
+    }
     reportFocusNote.value =
-      typeof datasetId === 'string' && datasetId === reportSourceDataset.value?.id
-        ? '报告源已经准备好，下一步只需要确认报告主题和样式，然后生成报告。'
-        : '已恢复上一次报告任务的参数。确认主题、模型和样式后，可以重新提交。'
+      focusedDataset
+        ? '报告输入已经带入，下一步确认报告主题、模型和样式。'
+        : '已恢复上一次报告生成参数。确认主题、模型和样式后，可以重新提交。'
     reportPanelHighlighted.value = true
     await nextTick()
     reportPanelRef.value?.scrollIntoView({ behavior: 'smooth', block: 'center' })
@@ -582,6 +734,7 @@ watch(
     reportTopic,
     reportName,
     reportReferenceStyle,
+    selectedReportDatasetIds,
     () => reportModelForm.value.provider,
     () => reportModelForm.value.modelName,
     () => reportModelForm.value.apiBaseUrl,
@@ -592,7 +745,7 @@ watch(
     draftsStore.updateReportDraft(reportDraftKey.value, {
       projectId: project.value?.id ?? null,
       screeningTaskId: null,
-      datasetIds: reportSourceDataset.value ? [reportSourceDataset.value.id] : [],
+      datasetIds: [...selectedReportDatasetIds.value],
       title: reportTitle.value,
       projectTopic: reportTopic.value,
       reportName: reportName.value,
@@ -624,10 +777,10 @@ function reportMaxTokens(modelName: string) {
 
 async function submitThreadReport() {
   if (!project.value) return
-  const reportSourceCount = reportSourceDataset.value?.record_count ?? 0
-  if (!reportSourceDataset.value || reportSourceCount <= 0) {
+  const sourceDatasetIds = [...selectedReportDatasetIds.value]
+  if (!sourceDatasetIds.length || selectedReportSourceCount.value <= 0) {
     message.warning('当前纳入文献为 0，无法生成报告。')
-    await focusReportPanel('当前报告源为 0。先去全文工作台把已拿到全文的文献纳入报告源。')
+    await focusReportPanel('当前选中的报告输入为 0。可以去复核与全文工作台标记已获取全文，或在这里选择某一轮已获取全文批次。')
     return
   }
   draftsStore.setProviderApiKey(reportModelForm.value.provider, reportModelForm.value.apiKey)
@@ -635,7 +788,7 @@ async function submitThreadReport() {
     title: reportTitle.value.trim() || `${project.value.name}-report`,
     project_id: project.value.id,
     screening_task_id: null,
-    dataset_ids: [reportSourceDataset.value.id],
+    dataset_ids: sourceDatasetIds,
     project_topic: reportTopic.value.trim() || screeningDefaults.value?.topic || project.value.topic,
     report_name: reportName.value.trim() || 'simple_report',
     retry_times: 6,
@@ -655,7 +808,7 @@ async function submitThreadReport() {
   if (reportDraftKey.value) {
     draftsStore.clearReportDraft(reportDraftKey.value)
   }
-  message.success('报告任务已创建')
+  message.success('报告生成任务已创建')
   await router.push(`/tasks/${task.id}`)
 }
 
@@ -693,6 +846,9 @@ onUnmounted(() => {
   stopProjectPolling()
   if (reportFocusTimer !== null && typeof window !== 'undefined') {
     window.clearTimeout(reportFocusTimer)
+  }
+  if (reportModelReloadTimer !== null && typeof window !== 'undefined') {
+    window.clearTimeout(reportModelReloadTimer)
   }
 })
 </script>
@@ -763,7 +919,7 @@ onUnmounted(() => {
           <RouterLink :to="`/threads/${project.id}/fulltext`">
               <NButton secondary>
                 <template #icon><BookOpenText :size="16" /></template>
-              进入全文工作台
+              进入复核与全文工作台
               </NButton>
             </RouterLink>
           <NButton tertiary type="warning" @click="focusReportPanel()">
@@ -826,10 +982,10 @@ onUnmounted(() => {
           <NEmpty v-else description="还没有初筛轮次" />
         </NCard>
 
-        <NCard title="阶段 3：全文获取工作台" class="panel-surface">
+        <NCard title="阶段 3：复核与全文工作台" class="panel-surface">
           <div class="fulltext-summary-card">
             <div class="fulltext-summary-copy">
-              拿到全文就会自动进入报告源；只有特殊情况才需要手动移出。
+              在这里复核初筛结果并标记全文获取状态；生成报告时再选择需要的已获取全文批次。
             </div>
             <div class="fulltext-summary">
               <RouterLink :to="{ path: `/threads/${project.id}/fulltext` }">
@@ -839,7 +995,7 @@ onUnmounted(() => {
                 <NTag round :bordered="false" class="summary-tag">待获取 {{ workbenchSummary.needs_link + workbenchSummary.needs_access }}</NTag>
               </RouterLink>
               <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { stage: 'report-included' } }">
-                <NTag round type="success" :bordered="false" class="summary-tag">已纳入报告 {{ workbenchSummary.report_included }}</NTag>
+                <NTag round type="success" :bordered="false" class="summary-tag">已获取全文 {{ workbenchSummary.report_included }}</NTag>
               </RouterLink>
               <RouterLink :to="{ path: `/threads/${project.id}/fulltext`, query: { stage: 'unavailable' } }">
                 <NTag round type="error" :bordered="false" class="summary-tag">无权限 {{ workbenchSummary.unavailable }}</NTag>
@@ -852,23 +1008,32 @@ onUnmounted(() => {
         </NCard>
 
         <div ref="reportPanelRef">
-          <NCard title="阶段 4：生成报告" class="panel-surface report-workspace-card" :class="{ highlighted: reportPanelHighlighted }">
+          <NCard title="阶段 4：报告生成" class="panel-surface report-workspace-card" :class="{ highlighted: reportPanelHighlighted }">
             <NAlert v-if="reportFocusNote" type="warning" :show-icon="false" class="report-workspace-alert">
               {{ reportFocusNote }}
             </NAlert>
             <div class="report-workspace-copy">
-              基于已纳入报告的文献生成。
+              基于本次选中的已获取全文批次生成。
             </div>
             <div class="report-workspace-status">
-              <NTag round :type="(reportSourceDataset?.record_count ?? 0) > 0 ? 'success' : 'warning'">
-                报告源 {{ reportSourceDataset?.record_count ?? 0 }} 篇
+              <NTag round :type="selectedReportSourceCount > 0 ? 'success' : 'warning'">
+                已选 {{ selectedReportSourceCount }} 篇
               </NTag>
             </div>
-            <NAlert v-if="(reportSourceDataset?.record_count ?? 0) <= 0" type="info" :show-icon="false">
-              当前纳入文献为 0。
+            <NAlert v-if="selectedReportSourceCount <= 0" type="info" :show-icon="false">
+              当前选中输入为 0。
             </NAlert>
             <NForm label-placement="top" class="report-form">
-              <NFormItem label="报告任务名称">
+              <NFormItem label="报告输入">
+                <NSelect
+                  v-model:value="selectedReportDatasetIds"
+                  multiple
+                  clearable
+                  :options="reportSourceOptions"
+                  placeholder="选择已获取全文批次，必要时也可选择历史纳入数据"
+                />
+              </NFormItem>
+              <NFormItem label="报告生成任务名称">
                 <NInput v-model:value="reportTitle" placeholder="例如：某主题文献整理报告" />
               </NFormItem>
               <NFormItem label="报告主题">
@@ -883,14 +1048,27 @@ onUnmounted(() => {
                   />
                 </NFormItem>
                 <NFormItem label="模型名称">
-                  <NInput v-model:value="reportModelForm.modelName" placeholder="例如：deepseek-chat / deepseek-reasoner" />
+                  <div class="model-select-row">
+                    <NSelect
+                      v-model:value="reportModelForm.modelName"
+                      filterable
+                      :loading="reportModelsLoading"
+                      :options="reportModelOptions"
+                    />
+                    <NButton tertiary :loading="reportModelsLoading" @click="loadReportModelOptions()">
+                      <template #icon><RefreshCw :size="16" /></template>
+                    </NButton>
+                  </div>
+                  <div v-if="reportModelFetchError" class="field-hint">{{ reportModelFetchError }}</div>
                 </NFormItem>
               </div>
               <NFormItem label="API Key">
                 <NInput
                   type="password"
                   show-password-on="click"
-                  v-model:value="reportModelForm.apiKey"
+                  :value="reportModelForm.apiKey"
+                  @update:value="updateReportApiKey"
+                  @blur="loadReportModelOptions({ silent: true })"
                   placeholder="仅保存在当前浏览器本地"
                 />
               </NFormItem>
@@ -908,7 +1086,7 @@ onUnmounted(() => {
             </NForm>
             <NButton type="primary" block @click="submitThreadReport">
               <template #icon><FileText :size="16" /></template>
-              基于报告源生成报告
+              基于选中文献生成报告
             </NButton>
           </NCard>
         </div>
@@ -1239,6 +1417,19 @@ onUnmounted(() => {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
+}
+
+.model-select-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 8px;
+}
+
+.field-hint {
+  margin-top: 6px;
+  color: #7a6b45;
+  font-size: 12px;
+  line-height: 1.5;
 }
 
 .empty-thread {

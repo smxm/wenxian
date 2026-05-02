@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0005",
+    "results": [
+        {
+            "paper_id": "paper_000041",
+            "decision": "exclude",
+            "reason": "标题和摘要未提及互联网+技术或护理干预，仅为营养管理专家共识。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000042",
+            "decision": "include",
+            "reason": "标题和关键词明确涉及人工智能技术在老年慢性病药物管理中的应用，属于互联网+护理范畴。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000043",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦预立医疗照护计划，未提及互联网+技术或具体的护理干预措施。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000044",
+            "decision": "uncertain",
+            "reason": "摘要提到信息化建设，但未明确说明互联网+技术在护理干预中的具体应用，信息不足。",
+            "evidence": ["abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000045",
+            "decision": "exclude",
+            "reason": "标题和摘要研究老年2型糖尿病患者口腔衰弱，未涉及互联网+技术或护理干预。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000046",
+            "decision": "uncertain",
+            "reason": "摘要提到“厦门i健康”平台，暗示信息化手段，但未明确描述互联网+在护理干预中的具体应用。",
+            "evidence": ["abstract"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000047",
+            "decision": "include",
+            "reason": "标题和摘要明确用户画像在老年慢性病患者健康管理中的应用，属于互联网+护理干预。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000048",
+            "decision": "exclude",
+            "reason": "摘要提到使用微信作为影响因素，但研究焦点是抑郁症状分析，非互联网+护理干预。",
+            "evidence": ["abstract"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000049",
+            "decision": "uncertain",
+            "reason": "标题提到智能技术，但摘要仅为指南介绍，未提供具体应用细节，信息不足。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.45
+        },
+        {
+            "paper_id": "paper_000050",
+            "decision": "uncertain",
+            "reason": "摘要提到推进“互联网+医养结合”，但内容为行业动态，缺乏具体研究或护理干预证据。",
+            "evidence": ["abstract"],
+            "confidence": 0.4
+        }
+    ]
+}

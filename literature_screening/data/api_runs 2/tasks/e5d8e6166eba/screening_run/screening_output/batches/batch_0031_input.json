@@ -1,0 +1,361 @@
+{
+  "batch_id": "batch_0031",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000301",
+    "paper_000302",
+    "paper_000303",
+    "paper_000304",
+    "paper_000305",
+    "paper_000306",
+    "paper_000307",
+    "paper_000308",
+    "paper_000309",
+    "paper_000310"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000301",
+      "entry_type": "article",
+      "title": "Action recognition method based on a novel keyframe extraction method and enhanced 3D convolutional neural network",
+      "authors": [
+        "Tian, QH",
+        "Li, SW",
+        "Zhang, YK",
+        "Lu, HY",
+        "Pan, H"
+      ],
+      "year": 2025,
+      "journal": "INTERNATIONAL JOURNAL OF MACHINE LEARNING AND CYBERNETICS",
+      "doi": "10.1007/s13042-024-02235-y",
+      "abstract": "At present, action recognition is a challenging task in the field of computer vision. Traditional action recognition methods cannot fully extract the spatiotemporal features of actions in video. To address the problem, an action recognition method based on keyframe extraction and DAMR_3DNet (D3DNet+3D Attention Mechanism module+3D Residual module) is proposed. Firstly, we explore a keyframe extraction method based on image information entropy and hog_ssim similarity algorithm, which selects keyframes from the input video to represent video content. And we take the selected keyframes as the model input to reduce the computational complexity of network model. Afterward, we design a DAMR_3DNet model to recognize action and reduce the parameters of network. The D3DNet module improves the C3D network by using the 3D decoupled convolution substituting the 3D convolution and introducing a feature fusion layer. And a 3D attention mechanism is designed to strengthen the action features and reduce the influence of background features. Finally, a 3D residual structure is explored to avoid gradient disappearance while fusing the high-level and low-level spatiotemporal features. Experiments consistently show the superiority of the proposed method on UCF101, Chinese sign language (CSL) and HMDB51 datasets. And the results demonstrate that the proposed method is effective, which improves the performance of action recognition and outperforms the most state-of-the-art methods.",
+      "keywords": [
+        "Action recognition",
+        "3D attention mechanism",
+        "Keyframe extraction",
+        "3D residual structure"
+      ],
+      "normalized_title": "action recognition method based on a novel keyframe extraction method and enhanced 3d convolutional neural network",
+      "raw_bibtex": "@ARTICLE{10.1007/s13042-024-02235-y,\n\tauthor = {Tian, QH and Li, SW and Zhang, YK and Lu, HY and Pan, H},\n\ttitle = {Action recognition method based on a novel keyframe extraction method and enhanced 3D convolutional neural network},\n\tjournal = {INTERNATIONAL JOURNAL OF MACHINE LEARNING AND CYBERNETICS},\n\tyear = {2025},\n\tkeywords = {Action recognition; 3D attention mechanism; Keyframe extraction; 3D residual structure},\n\tabstract = {At present, action recognition is a challenging task in the field of computer vision. Traditional action recognition methods cannot fully extract the spatiotemporal features of actions in video. To address the problem, an action recognition method based on keyframe extraction and DAMR_3DNet (D3DNet+3D Attention Mechanism module+3D Residual module) is proposed. Firstly, we explore a keyframe extraction method based on image information entropy and hog_ssim similarity algorithm, which selects keyframes from the input video to represent video content. And we take the selected keyframes as the model input to reduce the computational complexity of network model. Afterward, we design a DAMR_3DNet model to recognize action and reduce the parameters of network. The D3DNet module improves the C3D network by using the 3D decoupled convolution substituting the 3D convolution and introducing a feature fusion layer. And a 3D attention mechanism is designed to strengthen the action features and reduce the influence of background features. Finally, a 3D residual structure is explored to avoid gradient disappearance while fusing the high-level and low-level spatiotemporal features. Experiments consistently show the superiority of the proposed method on UCF101, Chinese sign language (CSL) and HMDB51 datasets. And the results demonstrate that the proposed method is effective, which improves the performance of action recognition and outperforms the most state-of-the-art methods.},\n\tdoi = {10.1007/s13042-024-02235-y},\n\tvolume = {16},\n\tnumber = {1},\n\tpages = {475-491},\n\tissn = {1868-8071},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 41 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s13042-024-02235-y"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000302",
+      "entry_type": "article",
+      "title": "A cost-sensitive active learning algorithm: toward imbalanced time series forecasting",
+      "authors": [
+        "Zhang, J",
+        "Dai, Q"
+      ],
+      "year": 2022,
+      "journal": "NEURAL COMPUTING & APPLICATIONS",
+      "doi": "10.1007/s00521-021-06837-3",
+      "abstract": "Recently, many outstanding techniques for Time series forecasting (TSF) have been proposed. These techniques depend on necessary and sufficient data samples, which is the key to train a good predictor. Thus, an Active learning (AL) algorithmic framework based on Support vector regression (SVR) is designed for TSF, with the goal to choose the most valuable samples and reduce the complexity of the training set. To evaluate the quality of samples comprehensively, multiple essential criteria, such as informativeness, representativeness and diversity, are considered in a two clustering-based consecutive stages procedure. In addition, considering the imbalance of time series data, a range of values might be seriously under-represented but extremely important to the user. Thus, it is unreasonable to assign the same prediction cost to each sample. To address this imbalance problem, a multiple criteria cost-sensitive active learning algorithm in the virtue of weight SVR architecture, abbreviated as MAW-SVR, ad hoc for imbalanced TSF, is proposed. By introducing the cost-sensitive scheme, each sample is endowed with a penalty weight, which can be dynamically updated in the AL procedure. The experimental comparisons between MAW-SVR and the other six AL algorithms on a total of thirty time series datasets verify the effectiveness of the proposed algorithm.",
+      "keywords": [
+        "Time series forecasting (TSF)",
+        "Data imbalance",
+        "Cost-sensitive learning (CSL)",
+        "Active learning (AL)",
+        "NEURAL-NETWORKS",
+        "REGRESSION",
+        "CLASSIFICATION",
+        "QUERY"
+      ],
+      "normalized_title": "a cost sensitive active learning algorithm toward imbalanced time series forecasting",
+      "raw_bibtex": "@ARTICLE{10.1007/s00521-021-06837-3,\n\tauthor = {Zhang, J and Dai, Q},\n\ttitle = {A cost-sensitive active learning algorithm: toward imbalanced time series forecasting},\n\tjournal = {NEURAL COMPUTING & APPLICATIONS},\n\tyear = {2022},\n\tkeywords = {Time series forecasting (TSF); Data imbalance; Cost-sensitive learning (CSL); Active learning (AL); NEURAL-NETWORKS; REGRESSION; CLASSIFICATION; QUERY},\n\tabstract = {Recently, many outstanding techniques for Time series forecasting (TSF) have been proposed. These techniques depend on necessary and sufficient data samples, which is the key to train a good predictor. Thus, an Active learning (AL) algorithmic framework based on Support vector regression (SVR) is designed for TSF, with the goal to choose the most valuable samples and reduce the complexity of the training set. To evaluate the quality of samples comprehensively, multiple essential criteria, such as informativeness, representativeness and diversity, are considered in a two clustering-based consecutive stages procedure. In addition, considering the imbalance of time series data, a range of values might be seriously under-represented but extremely important to the user. Thus, it is unreasonable to assign the same prediction cost to each sample. To address this imbalance problem, a multiple criteria cost-sensitive active learning algorithm in the virtue of weight SVR architecture, abbreviated as MAW-SVR, ad hoc for imbalanced TSF, is proposed. By introducing the cost-sensitive scheme, each sample is endowed with a penalty weight, which can be dynamically updated in the AL procedure. The experimental comparisons between MAW-SVR and the other six AL algorithms on a total of thirty time series datasets verify the effectiveness of the proposed algorithm.},\n\tdoi = {10.1007/s00521-021-06837-3},\n\tvolume = {34},\n\tnumber = {9},\n\tpages = {6953-6972},\n\tissn = {0941-0643},\n\tnote = {Times Cited in Web of Science Core Collection: 7 Total Times Cited: 8 Cited Reference Count: 41 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s00521-021-06837-3"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000303",
+      "entry_type": "article",
+      "title": "A multi-modal fusion framework for continuous sign language recognition based on multi-layer self-attention mechanism",
+      "authors": [
+        "Xue, CH",
+        "Yu, M",
+        "Yan, G",
+        "Qin, MX",
+        "Liu, YA",
+        "Jia, JL"
+      ],
+      "year": 2022,
+      "journal": "JOURNAL OF INTELLIGENT & FUZZY SYSTEMS",
+      "doi": "10.3233/jifs-211697",
+      "abstract": "Some of the existing continuous sign language recognition (CSLR) methods require alignment. However, this is time-consuming, and breaks the continuity of the frame sequence, and also affects the subsequent process of CSLR. In this paper, we propose a multi-modal network framework for CSLR based on a multi-layer self-attention mechanism. We propose a 3D convolution residual neural network (CR3D) and a multi-layer self-attention network (ML-SAN) for the feature extraction stage. The CR3D obtains the short-term spatiotemporal features of the RGB and optical flow image streams, whereas the ML-SAN uses a bi-gated recurrent unit (BGRU) to model the long-term sequence relationship and a multi-layer self-attention mechanism to learn the internal relationships between sign language sequences. For the performance optimization stage, we propose a cross-modal spatial mapping loss function, which improves the precision of CSLR by studying the spatial similarity between the video and text domains. Experiments were conducted on two test datasets: the RWTH-PHOENIX-Weather multi-signer dataset, and a Chinese SL (CSL) dataset. The results show that the proposed method can obtain state-of-the-art recognition performance on the two datasets, with word error rate (WER) value of 24.4% and accuracy value of 14.42%, respectively.",
+      "keywords": [
+        "CR3D",
+        "multi-modal fusion",
+        "self-attention mechanism",
+        "ML-SAN",
+        "cross-modal spatial mapping"
+      ],
+      "normalized_title": "a multi modal fusion framework for continuous sign language recognition based on multi layer self attention mechanism",
+      "raw_bibtex": "@ARTICLE{10.3233/JIFS-211697,\n\tauthor = {Xue, CH and Yu, M and Yan, G and Qin, MX and Liu, YA and Jia, JL},\n\ttitle = {A multi-modal fusion framework for continuous sign language recognition based on multi-layer self-attention mechanism},\n\tjournal = {JOURNAL OF INTELLIGENT & FUZZY SYSTEMS},\n\tyear = {2022},\n\tkeywords = {CR3D; multi-modal fusion; self-attention mechanism; ML-SAN; cross-modal spatial mapping},\n\tabstract = {Some of the existing continuous sign language recognition (CSLR) methods require alignment. However, this is time-consuming, and breaks the continuity of the frame sequence, and also affects the subsequent process of CSLR. In this paper, we propose a multi-modal network framework for CSLR based on a multi-layer self-attention mechanism. We propose a 3D convolution residual neural network (CR3D) and a multi-layer self-attention network (ML-SAN) for the feature extraction stage. The CR3D obtains the short-term spatiotemporal features of the RGB and optical flow image streams, whereas the ML-SAN uses a bi-gated recurrent unit (BGRU) to model the long-term sequence relationship and a multi-layer self-attention mechanism to learn the internal relationships between sign language sequences. For the performance optimization stage, we propose a cross-modal spatial mapping loss function, which improves the precision of CSLR by studying the spatial similarity between the video and text domains. Experiments were conducted on two test datasets: the RWTH-PHOENIX-Weather multi-signer dataset, and a Chinese SL (CSL) dataset. The results show that the proposed method can obtain state-of-the-art recognition performance on the two datasets, with word error rate (WER) value of 24.4% and accuracy value of 14.42%, respectively.},\n\tdoi = {10.3233/JIFS-211697},\n\tvolume = {43},\n\tnumber = {4},\n\tpages = {4303-4316},\n\tissn = {1064-1246},\n\tnote = {Times Cited in Web of Science Core Collection: 6 Total Times Cited: 6 Cited Reference Count: 58 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3233/JIFS-211697"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000304",
+      "entry_type": "article",
+      "title": "Spoken Language Identification in Unseen Target Domain Using Centroid Similarity Loss With Adaptive Gradient Blending",
+      "authors": [
+        "Muralikrishna, H",
+        "Kumar, S",
+        "Dinesh, DA",
+        "Thenkanidiyoor, V"
+      ],
+      "year": 2024,
+      "journal": "IEEE ACCESS",
+      "doi": "10.1109/access.2024.3422380",
+      "abstract": "In this paper, we propose a centroid similarity loss (CSL) with adaptive gradient blending (AGB) (denoted as CSL-with-AGB) strategy to improve the generalization of a spoken language identification (LID) system to unseen target domain conditions. Unlike most of the existing approaches, the proposed CSL-with-AGB can improve the generalization even when the training dataset lacks domain-diversity. Specifically, in this approach, the LID network first analyses the input at two different temporal resolutions using a set of two embedding extractors, which allow them to generalize better by encoding complementary contents. We then propose to use the CSL to further improve the generalization of the network by encouraging the embedding extractors to learn discriminative and domain-invariant embeddings. However, application of auxiliary loss like CSL can sometimes force the two embedding extractors of the network to learn in an unbalanced way, diminishing their ability to encode complementary contents in the input. To overcome this issue, we propose to include the AGB strategy with the CSL. With the help of two auxiliary classifiers attached to the two embedding extractors, the AGB monitors and guides them to have a balanced learning, leading to enhanced performance in unseen target domain conditions.",
+      "keywords": [
+        "Feature extraction",
+        "Training",
+        "Robustness",
+        "Object recognition",
+        "Adaptive systems",
+        "Natural language processing",
+        "Gradient methods",
+        "Spoken language identification",
+        "unseen target domain",
+        "domain-mismatch",
+        "adaptive gradient blending",
+        "centroid similarity loss",
+        "DEEP NEURAL-NETWORKS",
+        "RECOGNITION"
+      ],
+      "normalized_title": "spoken language identification in unseen target domain using centroid similarity loss with adaptive gradient blending",
+      "raw_bibtex": "@ARTICLE{10.1109/ACCESS.2024.3422380,\n\tauthor = {Muralikrishna, H and Kumar, S and Dinesh, DA and Thenkanidiyoor, V},\n\ttitle = {Spoken Language Identification in Unseen Target Domain Using Centroid Similarity Loss With Adaptive Gradient Blending},\n\tjournal = {IEEE ACCESS},\n\tyear = {2024},\n\tkeywords = {Feature extraction; Training; Robustness; Object recognition; Adaptive systems; Natural language processing; Gradient methods; Spoken language identification; unseen target domain; domain-mismatch; adaptive gradient blending; centroid similarity loss; DEEP NEURAL-NETWORKS; RECOGNITION},\n\tabstract = {In this paper, we propose a centroid similarity loss (CSL) with adaptive gradient blending (AGB) (denoted as CSL-with-AGB) strategy to improve the generalization of a spoken language identification (LID) system to unseen target domain conditions. Unlike most of the existing approaches, the proposed CSL-with-AGB can improve the generalization even when the training dataset lacks domain-diversity. Specifically, in this approach, the LID network first analyses the input at two different temporal resolutions using a set of two embedding extractors, which allow them to generalize better by encoding complementary contents. We then propose to use the CSL to further improve the generalization of the network by encouraging the embedding extractors to learn discriminative and domain-invariant embeddings. However, application of auxiliary loss like CSL can sometimes force the two embedding extractors of the network to learn in an unbalanced way, diminishing their ability to encode complementary contents in the input. To overcome this issue, we propose to include the AGB strategy with the CSL. With the help of two auxiliary classifiers attached to the two embedding extractors, the AGB monitors and guides them to have a balanced learning, leading to enhanced performance in unseen target domain conditions.},\n\tdoi = {10.1109/ACCESS.2024.3422380},\n\tvolume = {12},\n\tpages = {95959-95971},\n\tissn = {2169-3536},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 39 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/ACCESS.2024.3422380"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000305",
+      "entry_type": "article",
+      "title": "Multi-level wavelet network based on CNN-Transformer hybrid attention for single image deraining",
+      "authors": [
+        "Liu, B",
+        "Fang, SY"
+      ],
+      "year": 2023,
+      "journal": "NEURAL COMPUTING & APPLICATIONS",
+      "doi": "10.1007/s00521-023-08899-x",
+      "abstract": "Removing rain streaks from rainy images can improve the accuracy of computer vision applications such as object detection. In order to make full use of the frequency domain analysis characteristics of wavelet and combine the advantages of Convolutional Neural Network (CNN) and Transformer, a Multi-level Wavelet Network Based on CNN-Transformer Hybrid Attention (MWN-CTHA) for single image deraining is proposed. MWN-CTHA obtains multi-scale low-frequency and high-frequency images through multi-level non-separable lifting wavelet transform and uses CNN-Transformer Hybrid Attention Block (CTHAB) to learn global structure and detail information from low-frequency and high-frequency, respectively. CTHAB consists of CA-SA Layer (CSL) and Detail-enhanced Attention Feed-forward Layer (DAFL). CSL uses the non-local modeling ability of self-attention to capture long-range rain streaks and uses convolutional attention to enhance the search ability for local rain streaks, where convolution can assist self-attention to achieve better feature representation. DAFL utilizes Depth-wise Convolutional Layer to supplement detailed features and filters the information of feed-forward layer through Dual-branch Attention. The experimental results on the four synthetic datasets demonstrate that the proposed method achieves higher PSNR and SSIM than the state-of-the-art method DANet, with an improvement of 1.07 dB and 0.0098, respectively. The code is available at .",
+      "keywords": [
+        "Single image deraining",
+        "Convolution",
+        "Transformer",
+        "Attention",
+        "Wavelet transform"
+      ],
+      "normalized_title": "multi level wavelet network based on cnn transformer hybrid attention for single image deraining",
+      "raw_bibtex": "@ARTICLE{10.1007/s00521-023-08899-x,\n\tauthor = {Liu, B and Fang, SY},\n\ttitle = {Multi-level wavelet network based on CNN-Transformer hybrid attention for single image deraining},\n\tjournal = {NEURAL COMPUTING & APPLICATIONS},\n\tyear = {2023},\n\tkeywords = {Single image deraining; Convolution; Transformer; Attention; Wavelet transform},\n\tabstract = {Removing rain streaks from rainy images can improve the accuracy of computer vision applications such as object detection. In order to make full use of the frequency domain analysis characteristics of wavelet and combine the advantages of Convolutional Neural Network (CNN) and Transformer, a Multi-level Wavelet Network Based on CNN-Transformer Hybrid Attention (MWN-CTHA) for single image deraining is proposed. MWN-CTHA obtains multi-scale low-frequency and high-frequency images through multi-level non-separable lifting wavelet transform and uses CNN-Transformer Hybrid Attention Block (CTHAB) to learn global structure and detail information from low-frequency and high-frequency, respectively. CTHAB consists of CA-SA Layer (CSL) and Detail-enhanced Attention Feed-forward Layer (DAFL). CSL uses the non-local modeling ability of self-attention to capture long-range rain streaks and uses convolutional attention to enhance the search ability for local rain streaks, where convolution can assist self-attention to achieve better feature representation. DAFL utilizes Depth-wise Convolutional Layer to supplement detailed features and filters the information of feed-forward layer through Dual-branch Attention. The experimental results on the four synthetic datasets demonstrate that the proposed method achieves higher PSNR and SSIM than the state-of-the-art method DANet, with an improvement of 1.07 dB and 0.0098, respectively. The code is available at .},\n\tdoi = {10.1007/s00521-023-08899-x},\n\tvolume = {35},\n\tnumber = {30},\n\tpages = {22387-22404},\n\tissn = {0941-0643},\n\tnote = {Times Cited in Web of Science Core Collection: 8 Total Times Cited: 9 Cited Reference Count: 46 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s00521-023-08899-x"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000306",
+      "entry_type": "article",
+      "title": "SKIM: Skeleton-Based Isolated Sign Language Recognition With Part Mixing",
+      "authors": [
+        "Lin, KZ",
+        "Wang, XH",
+        "Zhu, LC",
+        "Zhang, B",
+        "Yang, Y"
+      ],
+      "year": 2024,
+      "journal": "IEEE TRANSACTIONS ON MULTIMEDIA",
+      "doi": "10.1109/tmm.2023.3321502",
+      "abstract": "In this article, we present skeleton-based isolated sign language recognition (IsoSLR) with part mixing - SKIM. An IsoSLR model that solely takes the skeleton representation of the human body as input. Previous skeleton-based works either perform worse when compared to RGB-based counterparts or require fusion with other modalities to obtain competitive results. With SKIM, a single skeleton-based model without complex pre-training can obtain similar or even higher accuracy than current state-of-the-art methods. This margin can be further increased by simple late fusion within the same modality. To achieve this, we first develop a novel data augmentation technique called part mixing. It swaps the corresponding keypoints within one region (e.g. hand) between two randomly selected samples and combines their labels linearly as the new label. As regions like hand and face are key articulators for sign language, direct swapping of such parts creates a believable pseudo sign that promotes the model to recognize the true pairs. Secondly, following current advances in skeleton-based action recognition, we devise a channel-wise graph neural network with multi-scale awareness and per-keypoint temporal re-weighting. With this design, the backbone is capable of leveraging both manual and non-manual features. The combination of hand mixing and the channel-wise multi-scale GCN backbone allows us to achieve state-of-the-art accuracy on both WLASL and NMFs-CSL benchmarks.",
+      "keywords": [
+        "Sign language",
+        "Face recognition",
+        "Biological system modeling",
+        "Manuals",
+        "Benchmark testing",
+        "Assistive technologies",
+        "Data augmentation",
+        "sign language recognition",
+        "skeleton",
+        "MODEL"
+      ],
+      "normalized_title": "skim skeleton based isolated sign language recognition with part mixing",
+      "raw_bibtex": "@ARTICLE{10.1109/TMM.2023.3321502,\n\tauthor = {Lin, KZ and Wang, XH and Zhu, LC and Zhang, B and Yang, Y},\n\ttitle = {SKIM: Skeleton-Based Isolated Sign Language Recognition With Part Mixing},\n\tjournal = {IEEE TRANSACTIONS ON MULTIMEDIA},\n\tyear = {2024},\n\tkeywords = {Sign language; Face recognition; Biological system modeling; Manuals; Benchmark testing; Assistive technologies; Data augmentation; sign language recognition; skeleton; MODEL},\n\tabstract = {In this article, we present skeleton-based isolated sign language recognition (IsoSLR) with part mixing - SKIM. An IsoSLR model that solely takes the skeleton representation of the human body as input. Previous skeleton-based works either perform worse when compared to RGB-based counterparts or require fusion with other modalities to obtain competitive results. With SKIM, a single skeleton-based model without complex pre-training can obtain similar or even higher accuracy than current state-of-the-art methods. This margin can be further increased by simple late fusion within the same modality. To achieve this, we first develop a novel data augmentation technique called part mixing. It swaps the corresponding keypoints within one region (e.g. hand) between two randomly selected samples and combines their labels linearly as the new label. As regions like hand and face are key articulators for sign language, direct swapping of such parts creates a believable pseudo sign that promotes the model to recognize the true pairs. Secondly, following current advances in skeleton-based action recognition, we devise a channel-wise graph neural network with multi-scale awareness and per-keypoint temporal re-weighting. With this design, the backbone is capable of leveraging both manual and non-manual features. The combination of hand mixing and the channel-wise multi-scale GCN backbone allows us to achieve state-of-the-art accuracy on both WLASL and NMFs-CSL benchmarks.},\n\tdoi = {10.1109/TMM.2023.3321502},\n\tvolume = {26},\n\tpages = {4271-4280},\n\tissn = {1520-9210},\n\tnote = {Times Cited in Web of Science Core Collection: 13 Total Times Cited: 13 Cited Reference Count: 46 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TMM.2023.3321502"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000307",
+      "entry_type": "article",
+      "title": "Spatial-temporal transformer for end-to-end sign language recognition",
+      "authors": [
+        "Cui, ZC",
+        "Zhang, WB",
+        "Li, ZX",
+        "Wang, ZQ"
+      ],
+      "year": 2023,
+      "journal": "COMPLEX & INTELLIGENT SYSTEMS",
+      "doi": "10.1007/s40747-023-00977-w",
+      "abstract": "Continuous sign language recognition (CSLR) is an essential task for communication between hearing-impaired and people without limitations, which aims at aligning low-density video sequences with high-density text sequences. The current methods for CSLR were mainly based on convolutional neural networks. However, these methods perform poorly in balancing spatial and temporal features during visual feature extraction, making them difficult to improve the accuracy of recognition. To address this issue, we designed an end-to-end CSLR network: Spatial-Temporal Transformer Network (STTN). The model encodes and decodes the sign language video as a predicted sequence that is aligned with a given text sequence. First, since the image sequences are too long for the model to handle directly, we chunk the sign language video frames, i.e., \"image to patch\", which reduces the computational complexity. Second, global features of the sign language video are modeled at the beginning of the model, and the spatial action features of the current video frame and the semantic features of consecutive frames in the temporal dimension are extracted separately, giving rise to fully extracting visual features. Finally, the model uses a simple cross-entropy loss to align video and text. We extensively evaluated the proposed network on two publicly available datasets, CSL and RWTH-PHOENIX-Weather multi-signer 2014 (PHOENIX-2014), which demonstrated the superior performance of our work in CSLR task compared to the state-of-the-art methods.",
+      "keywords": [
+        "Spatial-temporal encoder",
+        "Continuous sign language recognition",
+        "Transformer",
+        "Patched image",
+        "ATTENTION"
+      ],
+      "normalized_title": "spatial temporal transformer for end to end sign language recognition",
+      "raw_bibtex": "@ARTICLE{10.1007/s40747-023-00977-w,\n\tauthor = {Cui, ZC and Zhang, WB and Li, ZX and Wang, ZQ},\n\ttitle = {Spatial-temporal transformer for end-to-end sign language recognition},\n\tjournal = {COMPLEX & INTELLIGENT SYSTEMS},\n\tyear = {2023},\n\tkeywords = {Spatial-temporal encoder; Continuous sign language recognition; Transformer; Patched image; ATTENTION},\n\tabstract = {Continuous sign language recognition (CSLR) is an essential task for communication between hearing-impaired and people without limitations, which aims at aligning low-density video sequences with high-density text sequences. The current methods for CSLR were mainly based on convolutional neural networks. However, these methods perform poorly in balancing spatial and temporal features during visual feature extraction, making them difficult to improve the accuracy of recognition. To address this issue, we designed an end-to-end CSLR network: Spatial-Temporal Transformer Network (STTN). The model encodes and decodes the sign language video as a predicted sequence that is aligned with a given text sequence. First, since the image sequences are too long for the model to handle directly, we chunk the sign language video frames, i.e., \"image to patch\", which reduces the computational complexity. Second, global features of the sign language video are modeled at the beginning of the model, and the spatial action features of the current video frame and the semantic features of consecutive frames in the temporal dimension are extracted separately, giving rise to fully extracting visual features. Finally, the model uses a simple cross-entropy loss to align video and text. We extensively evaluated the proposed network on two publicly available datasets, CSL and RWTH-PHOENIX-Weather multi-signer 2014 (PHOENIX-2014), which demonstrated the superior performance of our work in CSLR task compared to the state-of-the-art methods.},\n\tdoi = {10.1007/s40747-023-00977-w},\n\tvolume = {9},\n\tnumber = {4},\n\tpages = {4645-4656},\n\tissn = {2199-4536},\n\tnote = {Times Cited in Web of Science Core Collection: 18 Total Times Cited: 19 Cited Reference Count: 32 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1007/s40747-023-00977-w"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000308",
+      "entry_type": "article",
+      "title": "Intelligent integrity detection and damage localization of pile from low-strain test using deep learning with accelerated training via variable-order gradient descent",
+      "authors": [
+        "Chen, GY",
+        "Koh, CG",
+        "Li, SH",
+        "Jiang, ZY",
+        "Liang, YZ",
+        "Xu, Z",
+        "Wu, DG"
+      ],
+      "year": 2025,
+      "journal": "ADVANCED ENGINEERING INFORMATICS",
+      "doi": "10.1016/j.aei.2025.103690",
+      "abstract": "Low-Strain Testing (LST) is widely used for pile integrity assessment, where wave velocity signals enable engineers to qualitatively evaluate pile's integrity and locate damage. However, this method heavily relies on the expertise of inspectors, involving subjectivity, uncertainty, and inefficiency. To enhance the accuracy, efficiency, and automation of pile quality inspection, this study proposes a novel two-stage deep learning framework for pile integrity recognition and damage localization, using ShuffleNet and U-Net1D. In the first stage, the framework addresses the low energy and narrow frequency characteristics of one-dimensional LST signals by applying Gramian Angular Field, Continuous Wavelet Transform, and Short-Time Fourier Transform to generate three feature images, which are combined into an RGB image and input into ShuffleNet for pile integrity detection. In the second stage, U-Net1D is employed for damage localization. To overcome challenges posed by sparse, discontinuous and discrete binary damage labels, a novel damage label construction strategy is introduced to more precise guidance for localization, based on Gaussian membership functions and the probability sum approach. Additionally, to improve model training speed and deployment, a variable-order gradient descent algorithm called lambda-FAdaMax is proposed, combining Caputo fractional derivatives with the Adam optimizer to balance convergence speed and precision. Experimental results show that, under lambda-FAdaMax, the framework achieves 99.17 % accuracy on the training set and 100 % on the test set for pile integrity detection, with median localization errors of 0.034 m, 0.033 m, and 0.073 m for three damage levels, respectively. The proposed algorithm lambda-FAdaMax outperforms traditional optimizers, demonstrating significant potential for engineering applications.",
+      "keywords": [
+        "Pile integrity",
+        "Low-strain test",
+        "Gradient descent",
+        "Fractional calculus",
+        "Deep learning",
+        "CONVOLUTIONAL NEURAL-NETWORK",
+        "WAVELET TRANSFORM",
+        "MODEL"
+      ],
+      "normalized_title": "intelligent integrity detection and damage localization of pile from low strain test using deep learning with accelerated training via variable order gradient descent",
+      "raw_bibtex": "@ARTICLE{10.1016/j.aei.2025.103690,\n\tauthor = {Chen, GY and Koh, CG and Li, SH and Jiang, ZY and Liang, YZ and Xu, Z and Wu, DG},\n\ttitle = {Intelligent integrity detection and damage localization of pile from low-strain test using deep learning with accelerated training via variable-order gradient descent},\n\tjournal = {ADVANCED ENGINEERING INFORMATICS},\n\tyear = {2025},\n\tkeywords = {Pile integrity; Low-strain test; Gradient descent; Fractional calculus; Deep learning; CONVOLUTIONAL NEURAL-NETWORK; WAVELET TRANSFORM; MODEL},\n\tabstract = {Low-Strain Testing (LST) is widely used for pile integrity assessment, where wave velocity signals enable engineers to qualitatively evaluate pile's integrity and locate damage. However, this method heavily relies on the expertise of inspectors, involving subjectivity, uncertainty, and inefficiency. To enhance the accuracy, efficiency, and automation of pile quality inspection, this study proposes a novel two-stage deep learning framework for pile integrity recognition and damage localization, using ShuffleNet and U-Net1D. In the first stage, the framework addresses the low energy and narrow frequency characteristics of one-dimensional LST signals by applying Gramian Angular Field, Continuous Wavelet Transform, and Short-Time Fourier Transform to generate three feature images, which are combined into an RGB image and input into ShuffleNet for pile integrity detection. In the second stage, U-Net1D is employed for damage localization. To overcome challenges posed by sparse, discontinuous and discrete binary damage labels, a novel damage label construction strategy is introduced to more precise guidance for localization, based on Gaussian membership functions and the probability sum approach. Additionally, to improve model training speed and deployment, a variable-order gradient descent algorithm called lambda-FAdaMax is proposed, combining Caputo fractional derivatives with the Adam optimizer to balance convergence speed and precision. Experimental results show that, under lambda-FAdaMax, the framework achieves 99.17 % accuracy on the training set and 100 % on the test set for pile integrity detection, with median localization errors of 0.034 m, 0.033 m, and 0.073 m for three damage levels, respectively. The proposed algorithm lambda-FAdaMax outperforms traditional optimizers, demonstrating significant potential for engineering applications.},\n\tdoi = {10.1016/j.aei.2025.103690},\n\tvolume = {68},\n\tissn = {1474-0346},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 93 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.aei.2025.103690"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000309",
+      "entry_type": "article",
+      "title": "Development of deep learning-based models highlighting the significance of non-manual features in sign language recognition",
+      "authors": [
+        "Jebali, M",
+        "Trabelsi, L",
+        "Harrouch, H",
+        "Triki, R",
+        "Mohamed, S"
+      ],
+      "year": 2025,
+      "journal": "AIMS MATHEMATICS",
+      "doi": "10.3934/math.2025898",
+      "abstract": "The quality of recognition systems for sign language utterances has significantly improved in recent years for the benefit of hearing-impaired people. Nevertheless, research initiatives frequently overlook particular linguistic characteristics of sign languages, such as nonmanual utterances. Nonmanual articulations are an essential element of all sign languages. They encompass not only many elements of facial expression but also ocular gaze, as well as the position of the head and the upper body movements. This study assessed the efficacy of a recognition system utilizing a single video camera about nonmanual features. We presented a two-stage pipeline utilizing 2D body joint locations derived from red, green, blue (RGB) camera data. The initial pipeline examined heteroscedastic head pose network (HHP-net), a technique for calculating head direction from individual frames utilizing a HHP-net to ascertain an individual's head position from a limited number of head keypoints. In the second pipeline, we presented a kinematic hand pose rectification method for enforcing constraints to enhance the realism of hand skeletal representations. Next, we examined spatial-temporal graph convolutional networks and multi-modal long short-term memory to use multi-articulatory information (e.g., body, right hand, and left hand) for the recognition of sign glosses. We trained an spatiotemporal graph convolutional network (ST-GCN) model to learn representations from the upper body and hands. The suggested method was subsequently assessed using two publicly available datasets, the RWTH-PHOENIX-Weather and the Chinese sign language (CSL), featuring a range of nonmanual utterances. By examining several data forms and network characteristics, we identified word segments with 92.8% accuracy from the underlying body joint movement data. The research showed a 17.8% word error rate for whole sentence predictions, a significant improvement from ground truth scores based on labeling that ignored nonmanual content.",
+      "keywords": [
+        "CNN",
+        "CTC",
+        "recurrent neural network",
+        "sign language recognition",
+        "head pose"
+      ],
+      "normalized_title": "development of deep learning based models highlighting the significance of non manual features in sign language recognition",
+      "raw_bibtex": "@ARTICLE{10.3934/math.2025898,\n\tauthor = {Jebali, M and Trabelsi, L and Harrouch, H and Triki, R and Mohamed, S},\n\ttitle = {Development of deep learning-based models highlighting the significance of non-manual features in sign language recognition},\n\tjournal = {AIMS MATHEMATICS},\n\tyear = {2025},\n\tkeywords = {CNN; CTC; recurrent neural network; sign language recognition; head pose},\n\tabstract = {The quality of recognition systems for sign language utterances has significantly improved in recent years for the benefit of hearing-impaired people. Nevertheless, research initiatives frequently overlook particular linguistic characteristics of sign languages, such as nonmanual utterances. Nonmanual articulations are an essential element of all sign languages. They encompass not only many elements of facial expression but also ocular gaze, as well as the position of the head and the upper body movements. This study assessed the efficacy of a recognition system utilizing a single video camera about nonmanual features. We presented a two-stage pipeline utilizing 2D body joint locations derived from red, green, blue (RGB) camera data. The initial pipeline examined heteroscedastic head pose network (HHP-net), a technique for calculating head direction from individual frames utilizing a HHP-net to ascertain an individual's head position from a limited number of head keypoints. In the second pipeline, we presented a kinematic hand pose rectification method for enforcing constraints to enhance the realism of hand skeletal representations. Next, we examined spatial-temporal graph convolutional networks and multi-modal long short-term memory to use multi-articulatory information (e.g., body, right hand, and left hand) for the recognition of sign glosses. We trained an spatiotemporal graph convolutional network (ST-GCN) model to learn representations from the upper body and hands. The suggested method was subsequently assessed using two publicly available datasets, the RWTH-PHOENIX-Weather and the Chinese sign language (CSL), featuring a range of nonmanual utterances. By examining several data forms and network characteristics, we identified word segments with 92.8% accuracy from the underlying body joint movement data. The research showed a 17.8% word error rate for whole sentence predictions, a significant improvement from ground truth scores based on labeling that ignored nonmanual content.},\n\tdoi = {10.3934/math.2025898},\n\tvolume = {10},\n\tnumber = {9},\n\tpages = {20084-20112},\n\tissn = {2473-6988},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 56 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3934/math.2025898"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000310",
+      "entry_type": "article",
+      "title": "Scalable frame resolution for efficient continuous sign language recognition",
+      "authors": [
+        "Hu, LY",
+        "Gao, LQ",
+        "Liu, ZK",
+        "Feng, W"
+      ],
+      "year": 2024,
+      "journal": "PATTERN RECOGNITION",
+      "doi": "10.1016/j.patcog.2023.109903",
+      "abstract": "In this paper, we explore the spatial redundancy in continuous sign language recognition (CSLR), aiming to improve its efficiency. Despite recent advances in accuracy in CSLR, state-of-the-art CSLR methods typically require large amounts of computations and memory occupation, which are not friendly towards fast inference under limited computation/memory budgets. Based on a simple observation that not all frames are equally important for CSLR, we propose AdaSize to handle this problem by modeling the frame resolution decision as an end-to-end learnable task to save unnecessary computations. Specifically, a lightweight 2D convolutional neural network (CNN) is first used to quickly browse input frames under a low resolution (e.g., 112 x 112). These extracted coarse and cheap features are sent into a recurrent policy network to dynamically determine the desired resolution for each frame. Once the optimal resolution for each frame is decided, frames with different resolutions are fed into the following backbones to extract representative features. Finally, these features pass through a sequence of temporal modules and a classifier to predict sentences. Extensive experiments on four large-scale datasets, including PHOENIX14, PHOENIX14-T, CSL-Daily and CSL, demonstrate the effectiveness of AdaSize. AdaSize could consistently achieve comparable accuracy with state-of-the-art CSLR methods, with only 0.38x computations, 0.41x memory usage and 1.25x throughput. Comparisons with commonly-used lightweight backbones and other efficient methods verify the superiority of AdaSize under similar computational/memory budgets. We finally plot the frame resolution decisions for AdaSize, hoping to provide insightful analysis of the inherent spatial redundancy in videos.",
+      "keywords": [
+        "Continuous sign language recognition",
+        "Efficient inference",
+        "Scalable frame resolution",
+        "Adaptive inference",
+        "NETWORK"
+      ],
+      "normalized_title": "scalable frame resolution for efficient continuous sign language recognition",
+      "raw_bibtex": "@ARTICLE{10.1016/j.patcog.2023.109903,\n\tauthor = {Hu, LY and Gao, LQ and Liu, ZK and Feng, W},\n\ttitle = {Scalable frame resolution for efficient continuous sign language recognition},\n\tjournal = {PATTERN RECOGNITION},\n\tyear = {2024},\n\tkeywords = {Continuous sign language recognition; Efficient inference; Scalable frame resolution; Adaptive inference; NETWORK},\n\tabstract = {In this paper, we explore the spatial redundancy in continuous sign language recognition (CSLR), aiming to improve its efficiency. Despite recent advances in accuracy in CSLR, state-of-the-art CSLR methods typically require large amounts of computations and memory occupation, which are not friendly towards fast inference under limited computation/memory budgets. Based on a simple observation that not all frames are equally important for CSLR, we propose AdaSize to handle this problem by modeling the frame resolution decision as an end-to-end learnable task to save unnecessary computations. Specifically, a lightweight 2D convolutional neural network (CNN) is first used to quickly browse input frames under a low resolution (e.g., 112 x 112). These extracted coarse and cheap features are sent into a recurrent policy network to dynamically determine the desired resolution for each frame. Once the optimal resolution for each frame is decided, frames with different resolutions are fed into the following backbones to extract representative features. Finally, these features pass through a sequence of temporal modules and a classifier to predict sentences. Extensive experiments on four large-scale datasets, including PHOENIX14, PHOENIX14-T, CSL-Daily and CSL, demonstrate the effectiveness of AdaSize. AdaSize could consistently achieve comparable accuracy with state-of-the-art CSLR methods, with only 0.38x computations, 0.41x memory usage and 1.25x throughput. Comparisons with commonly-used lightweight backbones and other efficient methods verify the superiority of AdaSize under similar computational/memory budgets. We finally plot the frame resolution decisions for AdaSize, hoping to provide insightful analysis of the inherent spatial redundancy in videos.},\n\tdoi = {10.1016/j.patcog.2023.109903},\n\tvolume = {145},\n\tissn = {0031-3203},\n\tnote = {Times Cited in Web of Science Core Collection: 21 Total Times Cited: 22 Cited Reference Count: 76 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.patcog.2023.109903"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

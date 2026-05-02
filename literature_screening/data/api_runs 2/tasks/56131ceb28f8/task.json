@@ -1,0 +1,84 @@
+{
+  "id": "56131ceb28f8",
+  "kind": "strategy",
+  "status": "succeeded",
+  "cancel_requested": false,
+  "title": "您的论文标题（可不填）：“小芳草”南京芳草国际旅-thread-plan",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 0,
+  "progress_total": null,
+  "progress_message": "Task completed",
+  "created_at": "2026-04-10T06:22:05.835739+00:00",
+  "updated_at": "2026-04-10T06:23:18.251194+00:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "0cdf7775e62a",
+    "project_topic": "您的论文标题（可不填）：“小芳草”南京芳草国际旅行社IP设计\n\n\n\n英文文献or中文文献：中文\n\n查找文献的主题：设计类IP形象类 旅行社ip形象研学特色建筑与IP形象结合插画 海报 \n\n关键词：芳草国际旅行社 IP形象 研学\n\n作者（机构）国籍（属地）要求：外国\n\n文章篇幅要求（字数or页数）：无\n\n发表期刊要求 无\n\n\n\n文献年份：2020到现在\n\n需要的文献数量：4\n\n其他要求：无",
+    "model_provider": "deepseek",
+    "request_payload": {
+      "title": "您的论文标题（可不填）：“小芳草”南京芳草国际旅-thread-plan",
+      "project_id": null,
+      "new_project_name": "",
+      "new_project_description": "",
+      "project_topic": "",
+      "research_need": "您的论文标题（可不填）：“小芳草”南京芳草国际旅行社IP设计\n\n\n\n英文文献or中文文献：中文\n\n查找文献的主题：设计类IP形象类 旅行社ip形象研学特色建筑与IP形象结合插画 海报 \n\n关键词：芳草国际旅行社 IP形象 研学\n\n作者（机构）国籍（属地）要求：外国\n\n文章篇幅要求（字数or页数）：无\n\n发表期刊要求 无\n\n\n\n文献年份：2020到现在\n\n需要的文献数量：4\n\n其他要求：无",
+      "selected_databases": [
+        "scopus",
+        "wos"
+      ],
+      "model": {
+        "provider": "deepseek",
+        "model_name": "deepseek-reasoner",
+        "api_base_url": "https://api.deepseek.com/v1",
+        "api_key_env": "DEEPSEEK_API_KEY",
+        "api_key": "",
+        "temperature": 0.0,
+        "max_tokens": 4096,
+        "min_request_interval_seconds": 2.0
+      },
+      "retry_times": 4,
+      "timeout_seconds": 180
+    },
+    "model_secret_id": null
+  },
+  "summary": {
+    "topic": "IP image design for travel agencies incorporating research travel and architectural visual elements",
+    "screening_topic": "IP design travel agency research travel architecture illustration",
+    "selected_databases": [
+      "scopus",
+      "wos"
+    ],
+    "database_count": 2,
+    "inclusion_count": 5,
+    "exclusion_count": 5
+  },
+  "error": null,
+  "artifacts": {
+    "strategy_plan": {
+      "path": "tasks/56131ceb28f8/strategy_run/strategy_output/strategy_plan.md",
+      "filename": "strategy_plan.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 2623
+    },
+    "strategy_plan_json": {
+      "path": "tasks/56131ceb28f8/strategy_run/strategy_output/strategy_plan.json",
+      "filename": "strategy_plan.json",
+      "content_type": "application/json",
+      "size_bytes": 2892
+    },
+    "strategy_raw_response": {
+      "path": "tasks/56131ceb28f8/strategy_run/strategy_output/strategy_raw_response.txt",
+      "filename": "strategy_raw_response.txt",
+      "content_type": "text/plain; charset=utf-8",
+      "size_bytes": 2892
+    }
+  },
+  "run_root": "tasks/56131ceb28f8/strategy_run",
+  "output_dir": "tasks/56131ceb28f8/strategy_run/strategy_output",
+  "markdown_preview": "# 检索与筛选方案\n\n## 研究主题\n\nIP image design for travel agencies incorporating research travel and architectural visual elements\n\n## 需求概括\n\nThe user seeks Chinese literature from 2020 onwards on designing IP images for travel agencies, specifically Nanjing Fangcao International Travel Agency, with a focus on research travel features, integration of architecture, and aspects of illustration and poster design.\n\n## 建议用于初筛的研究主题\n\nIP design travel agency research travel architecture illustration\n\n## 纳入标准\n\n- Studies published in or after 2020.\n- Primary topic is IP image or brand identity design in the travel or tourism sector.\n- Includes elements of research travel, educational tourism, or study tours.\n- Discusses integration with architecture, spatial design, or visual arts like illustration and poster design.\n- Written in Chinese language.\n\n## 排除标准\n\n- Studies not related to travel, tourism, or hospitality.\n- No focus on design, branding, or IP development.\n- Published before 2020.\n- In languages other than Chinese.\n- Focused solely on marketing or management without design aspects.\n\n## 检索词与高级检索式\n\n### Scopus advanced search for IP design in Chinese travel agencies\n\n```text\nTITLE-ABS-KEY( \"IP形象\" OR \"品牌设计\" OR \"IP design\" ) AND TITLE-ABS-KEY( \"旅行社\" OR \"旅游机构\" OR \"travel agency\" ) AND TITLE-ABS-KEY( \"研学\" OR \"教育旅游\" OR \"research travel\" ) AND TITLE-ABS-KEY( \"建筑\" OR \"architecture\" OR \"插画\" OR \"illustration\" OR \"海报\" OR \"poster\" ) AND PUBYEAR > 2019 AND LANGUAGE( chinese )\n```\n\n- 说明：Adjust search terms based on initial results; use TITLE-ABS-KEY for comprehensive coverage.\n- 说明：Consider refining with specific terms like \"芳草国际旅行社\" if noise is high.\n\n### Web of Science advanced search for IP design in Chinese travel agencies\n\n```text\nTS=( \"IP形象\" OR \"品牌设计\" ) AND TS=( \"旅行社\" OR \"旅游机构\" ) AND TS=( \"研学\" OR \"教育旅游\" ) AND TS=( \"建筑\" OR \"插画\" OR \"海报\" ) AND PY=2020-2024 AND LA=chinese\n```\n\n- 说明：Use TS field for topic search covering title, abstract, and keywords.\n- 说明：Update PY range as needed for current year; consider adding more visual design terms.\n\n## 检索边界与注意事项\n\n- The search may retrieve studies not specific to travel agencies; manually screen for relevance.\n- Some relevant studies might be in English; if results are limited, consider removing language filter.\n- Architecture and illustration terms could introduce noise; refine with additional context terms during screening.\n",
+  "records": [],
+  "project_id": "0cdf7775e62a",
+  "project_topic": "IP design travel agency research travel architecture illustration",
+  "model_provider": "deepseek"
+}

@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0003",
+    "results": [
+        {
+            "paper_id": "paper_000021",
+            "decision": "exclude",
+            "reason": "标题和摘要显示核心控制算法为动态表面滑模控制，未提及ADRC或ESO作为核心算法。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000022",
+            "decision": "exclude",
+            "reason": "标题和摘要表明这是一篇综述文章，未提出新的ADRC/ESO改进或应用。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000023",
+            "decision": "include",
+            "reason": "摘要明确提出了规定时间扩张状态观测器（PTESO）用于无人水下航行器，属于ADRC/ESO的改进结构。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000024",
+            "decision": "include",
+            "reason": "摘要提到有限时间扩张状态观测器（FESO）用于UUV轨迹跟踪，属于ADRC/ESO的改进结构。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000025",
+            "decision": "include",
+            "reason": "标题和摘要明确研究固定时间扩张状态观测器（FTESO）用于AUV轨迹跟踪，属于ADRC/ESO的改进结构。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000026",
+            "decision": "include",
+            "reason": "标题和摘要明确使用扩张状态观测器（ESO）进行USV轨迹跟踪控制，并设计了导引律。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000027",
+            "decision": "include",
+            "reason": "标题和摘要明确结合有限时间扩张状态观测器（ESO）与滑模控制器用于AUV，属于ADRC/ESO的应用。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000028",
+            "decision": "include",
+            "reason": "摘要提到非线性扩张状态观测器（NESO）用于USV轨迹跟踪控制，属于ADRC/ESO的应用。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000029",
+            "decision": "include",
+            "reason": "摘要提到自适应扩张状态观测器（ESO）用于小型AUV固定时间轨迹跟踪，属于ADRC/ESO的应用。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.8
+        },
+        {
+            "paper_id": "paper_000030",
+            "decision": "include",
+            "reason": "摘要明确结合改进的扩张状态观测器（ESO）与模糊自适应控制用于AUV轨迹跟踪，符合智能算法优化ADRC的标准。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        }
+    ]
+}

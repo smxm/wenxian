@@ -1,0 +1,26 @@
+{
+  "batch_id": "batch_0009",
+  "results": [
+    {
+      "paper_id": "paper_000025",
+      "decision": "uncertain",
+      "reason": "标题和摘要显示建立弓网电弧模型并仿真，但未明确涉及电气特性变化如电压/电流畸变。",
+      "evidence": ["title", "abstract", "year", "journal", "doi"],
+      "confidence": 0.50
+    },
+    {
+      "paper_id": "paper_000026",
+      "decision": "uncertain",
+      "reason": "摘要讨论电弧温度模型和烧蚀，侧重于热效应，未提及电压/电流等电气特性变化。",
+      "evidence": ["title", "abstract", "year", "journal", "doi"],
+      "confidence": 0.50
+    },
+    {
+      "paper_id": "paper_000027",
+      "decision": "uncertain",
+      "reason": "摘要提出电弧数学模型和PSCAD仿真，涉及电气特性，但仿真软件未指定为MATLAB，且模型未明确为Cassie衍生。",
+      "evidence": ["title", "abstract", "year", "journal", "doi"],
+      "confidence": 0.60
+    }
+  ]
+}

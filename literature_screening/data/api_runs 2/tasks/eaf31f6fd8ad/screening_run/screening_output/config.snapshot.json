@@ -1,0 +1,64 @@
+{
+  "project": {
+    "name": "new-screening-run",
+    "output_dir": "tasks/eaf31f6fd8ad/screening_run/screening_output",
+    "save_raw_response": true,
+    "save_intermediate_files": true
+  },
+  "input": {
+    "input_files": [
+      "tasks/eaf31f6fd8ad/screening_run/inputs/CNKI-20260403233112547.enw"
+    ],
+    "encoding": "auto"
+  },
+  "dedup": {
+    "enabled": true,
+    "strict_doi_match": true,
+    "normalized_title_exact_match": true,
+    "fuzzy_title_match": false
+  },
+  "screening": {
+    "batch_size": 10,
+    "target_include_count": 30,
+    "stop_when_target_reached": false,
+    "allow_uncertain": true,
+    "retry_times": 6,
+    "request_timeout_seconds": 240
+  },
+  "criteria": {
+    "topic": "互联网+在老年慢性病患者中应用的护理",
+    "inclusion": [
+      "必须包含“互联网/信息化技术”载体 如 : 移动医疗、微信、App、物联网、远程监测等",
+      "研究对象必须明确为“老年人”或高龄人群；",
+      "疾病类型必须为“慢性病”（或特指的 [此处填入具体病种]）；",
+      "核心内容必须属于“护理干预”、“延续性护理”、“自我管理”或“健康教育”范畴，且有明确的护理结局指标。"
+    ],
+    "exclusion": [
+      "研究对象为非老年人群（如儿童、中青年）；",
+      "非慢性病（如急性创伤、突发传染病）；",
+      "纯计算机算法、系统架构开发或纯硬件工程研究（缺乏真实的临床或社区护理应用数据）；",
+      "纯医学治疗、病理机制或药理研究（无护理/管理干预成分）；",
+      "仅为传统常规护理，未结合任何“互联网+”或信息化手段。"
+    ]
+  },
+  "model": {
+    "provider": "deepseek",
+    "model_name": "deepseek-chat",
+    "api_base_url": "https://api.deepseek.com/v1",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "temperature": 0.0,
+    "max_tokens": 1536,
+    "min_request_interval_seconds": 2.0
+  },
+  "report": {
+    "export_included_ris": true,
+    "export_excluded_ris": false,
+    "export_unused_ris": true,
+    "export_included_bib": false,
+    "export_excluded_bib": false,
+    "export_unused_bib": false,
+    "included_report_format": "md",
+    "excluded_report_format": "md",
+    "summary_format": "json"
+  }
+}

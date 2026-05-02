@@ -1,0 +1,82 @@
+{
+  "id": "b5497797d0e1",
+  "kind": "report",
+  "status": "succeeded",
+  "cancel_requested": false,
+  "title": "new-screening-run-report",
+  "phase": "completed",
+  "phase_label": "Completed",
+  "progress_current": 2,
+  "progress_total": 2,
+  "progress_message": "Task completed",
+  "created_at": "2026-03-24T19:35:01.424811+08:00",
+  "updated_at": "2026-03-24T19:35:30.890793+08:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "5add104a4870",
+    "project_topic": "下一代益生菌（Akkermansia muciniphila/AKK）、发酵工艺及乳制品应用",
+    "model_provider": "deepseek",
+    "source_screening_task_id": "d2f8dcda4328",
+    "input_dataset_ids": [
+      "82f74ba3c9a6",
+      "1b8fcb0e14b1"
+    ],
+    "request_payload": {
+      "title": "new-screening-run-report",
+      "screening_task_id": "d2f8dcda4328",
+      "dataset_ids": [],
+      "project_topic": "下一代益生菌（Akkermansia muciniphila/AKK）、发酵工艺及乳制品应用",
+      "model": {
+        "provider": "deepseek",
+        "model_name": "deepseek-chat",
+        "api_base_url": "https://api.deepseek.com/v1",
+        "api_key_env": "DEEPSEEK_API_KEY",
+        "temperature": 0.0,
+        "max_tokens": 1536,
+        "min_request_interval_seconds": 2.0
+      },
+      "report_name": "simple_report",
+      "retry_times": 6,
+      "timeout_seconds": 240,
+      "reference_style": "gbt7714"
+    },
+    "virtual_dataset_paths": [],
+    "model_secret_id": "cd4a2c7edb9547bb"
+  },
+  "summary": {
+    "report_name": "simple_report",
+    "reference_style": "gbt7714"
+  },
+  "error": null,
+  "artifacts": {
+    "literature_report": {
+      "path": "tasks/b5497797d0e1/report_output/literature_report.md",
+      "filename": "literature_report.md",
+      "content_type": "text/markdown; charset=utf-8",
+      "size_bytes": 4141
+    },
+    "paper_notes": {
+      "path": "tasks/b5497797d0e1/report_output/paper_notes.json",
+      "filename": "paper_notes.json",
+      "content_type": "application/json",
+      "size_bytes": 2463
+    },
+    "report_overview": {
+      "path": "tasks/b5497797d0e1/report_output/report_overview.json",
+      "filename": "report_overview.json",
+      "content_type": "application/json",
+      "size_bytes": 1198
+    }
+  },
+  "run_root": "tasks/b5497797d0e1",
+  "output_dir": "tasks/b5497797d0e1/report_output",
+  "markdown_preview": "# 一、相关文献总体情况\n\n这批文献聚焦于下一代益生菌Akkermansia muciniphila在乳制品中的应用研究，主要关注其在功能性发酵乳制品中的肠道菌群调控、代谢物产生及益生菌稳定性。研究分布涵盖动物模型实验和产品开发，探讨了益生菌通过发酵工艺优化对肠道稳态、免疫调节和生物活性的影响，为功能性食品设计提供了实证支持。\n\n# 二、类型划分\n\n## 肠道菌群与代谢调控\n\n这类文献共同关注益生菌在乳制品中如何通过发酵工艺影响肠道菌群结构和代谢功能，包括促进有益菌如Akkermansia muciniphila的增长和代谢物产生，以调控肠道稳态和免疫反应。\n\n- Functional Swiss-type cheeses promote beneficial effects in mice gut microbiome during homeostasis and inflammation\n\n## 益生菌稳定性与载体设计\n\n这类文献共同关注如何通过特定乳制品基质和发酵工艺增强益生菌如Akkermansia muciniphila在有氧储存和消化过程中的稳定性，并评估其生物活性，为功能性食品载体开发提供参考。\n\n- Can a functional cheese spread incorporating Akkermansia muciniphila deliver beneficial physicochemical and biological properties while enhancing probiotic stability and viability during aerobic storage and in vitro digestion?\n\n# 三、逐篇文献总结分析\n\n## Functional Swiss-type cheeses promote beneficial effects in mice gut microbiome during homeostasis and inflammation\n\n总结：\n该研究探讨了两种由益生菌发酵的功能性瑞士奶酪对健康小鼠和DSS诱导结肠炎小鼠肠道菌群的影响。通过鸟枪法宏基因组测序分析，发现Emmental奶酪摄入增加了Romboutsia和Akkermansia muciniphila等共生菌，并可能促进代谢物如乙酸、吲哚和γ-氨基丁酸的产生。在结肠炎小鼠中，仅由丙酸杆菌发酵的奶酪恢复了部分受损的微生物代谢功能，而Emmental奶酪则促进了具有免疫调节潜力的Ligilactobacillus murinus的增加。\n\n分析：\n该文献为下一代益生菌（如Akkermansia muciniphila）在乳制品应用中的功能性表征提供了实证支持，适合支撑发酵工艺优化和益生菌产品设计。其关于Ligilactobacillus murinus免疫调节潜力的发现，可参考用于研究肠道菌群与宿主相互作用的抗炎机制。此外，代谢通路分析结果有助于理解益生菌通过代谢物调控肠道稳态的脉络，适用于功能性食品开发场景。\n\n## Can a functional cheese spread incorporating Akkermansia muciniphila deliver beneficial physicochemical and biological properties while enhancing probiotic stability and viability during aerobic storage and in vitro digestion?\n\n总结：\n该研究将下一代益生菌Akkermansia muciniphila融入乳制品基质，开发了一种功能性奶酪涂抹酱。通过评估其微生物学、理化参数及生物活性，发现该产品在21天有氧冷藏储存和模拟胃肠道消化过程中能保持高益生菌存活率，同时具有显著的抗糖尿病和抗高血压活性。研究结果表明该奶酪涂抹酱是保护A. muciniphila活力的有效食品载体。\n\n分析：\n该文献为报告主题提供了益生菌在乳制品中应用的具体案例，展示了通过特定发酵工艺（葡萄牙乳清奶酪与希腊式酸奶3.5:1比例）增强益生菌稳定性的机制。它适合支撑益生菌食品载体设计的研究脉络，特别是针对有氧储存和消化过程稳定性挑战的应用场景，为开发功能性发酵乳制品提供了实证参考。\n\n# 参考列表\n\n[1] Carvalho, R.D.D.O, Rabah, H, Ariute, J.C, et al. Functional Swiss-type cheeses promote beneficial effects in mice gut microbiome during homeostasis and inflammation[J]. Food Bioscience, 2023.\n[2] Fonseca, M, Vedor, R, Barbosa, J.C, et al. Can a functional cheese spread incorporating Akkermansia muciniphila deliver beneficial physicochemical and biological properties while enhancing probiotic stability and viability during aerobic storage and in vitro digestion?[J]. LWT, 2024.\n",
+  "records": [],
+  "project_id": "5add104a4870",
+  "project_topic": "下一代益生菌（Akkermansia muciniphila/AKK）、发酵工艺及乳制品应用",
+  "model_provider": "deepseek",
+  "input_dataset_ids": [
+    "82f74ba3c9a6",
+    "1b8fcb0e14b1"
+  ]
+}

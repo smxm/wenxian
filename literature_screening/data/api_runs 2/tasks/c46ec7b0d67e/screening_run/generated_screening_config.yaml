@@ -1,0 +1,53 @@
+project:
+  name: new-screening-run
+  output_dir: tasks/c46ec7b0d67e/screening_run/screening_output
+  save_raw_response: true
+  save_intermediate_files: true
+input:
+  input_files:
+  - tasks/c46ec7b0d67e/screening_run/inputs/scopus_export_Mar 29-2026_f4a86f30-53a9-46de-be67-fab3edce4f2d.ris
+  encoding: auto
+dedup:
+  enabled: true
+  strict_doi_match: true
+  normalized_title_exact_match: true
+  fuzzy_title_match: false
+screening:
+  batch_size: 10
+  target_include_count: 30
+  stop_when_target_reached: true
+  allow_uncertain: true
+  retry_times: 6
+  request_timeout_seconds: 240
+criteria:
+  topic: 手机在课堂中的双重角色：分心与教育吸引力（即手机对课堂的负面影响、正面影响以及辩证的管理视角）
+  inclusion:
+  - 研究场景必须是教育环境（如中小学课堂、高等教育讲堂、具体学习环境）。
+  - 核心研究对象必须包含智能手机（Smartphone / Mobile phone）的使用行为及其影响。
+  - 研究主题必须实质性探讨以下至少一个维度：
+  - 负面影响：手机造成的认知干扰、多任务处理、注意力分散、“低头族”现象或学业表现下降等。
+  - 正面影响：手机作为教学工具带来的课堂参与度提升、互动反馈、移动学习效能或学习动机激发等。
+  - 辩证视角：关于学生数字自我调节能力、课堂手机使用政策（禁用与引导）、教师的整合策略等。
+  exclusion:
+  - 纯通信技术、硬件架构或软件工程领域的非教育类文献。
+  - 研究场景非教育环境（例如：驾驶时使用手机、工作场所的分心行为、医疗健康监控）。
+  - 仅泛泛讨论“互联网”或“电脑/平板”，未明确聚焦于“手机/智能手机”的文献。
+  - 缺乏实质性研究内容（如无摘要、纯会议通知或无核心结论的短评）。
+model:
+  provider: deepseek
+  model_name: deepseek-chat
+  api_base_url: https://api.deepseek.com/v1
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.0
+  max_tokens: 1536
+  min_request_interval_seconds: 2.0
+report:
+  export_included_ris: true
+  export_excluded_ris: false
+  export_unused_ris: true
+  export_included_bib: false
+  export_excluded_bib: false
+  export_unused_bib: false
+  included_report_format: md
+  excluded_report_format: md
+  summary_format: json

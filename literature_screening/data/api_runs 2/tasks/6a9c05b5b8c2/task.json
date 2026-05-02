@@ -1,0 +1,54 @@
+{
+  "id": "6a9c05b5b8c2",
+  "kind": "report",
+  "status": "cancelled",
+  "cancel_requested": true,
+  "title": "new-screening-run-report",
+  "phase": "building-paper-notes",
+  "phase_label": "Building paper notes",
+  "progress_current": 2,
+  "progress_total": 15,
+  "progress_message": "Generating note for Lexical realizations of hedging: A cross-disciplinary study of research article abstracts by Russian authors",
+  "created_at": "2026-04-09T07:33:50.644055+00:00",
+  "updated_at": "2026-04-09T07:35:58.686875+00:00",
+  "attempt_count": 1,
+  "metadata": {
+    "project_id": "29d005d21e2c",
+    "project_topic": "理工科（STEM）学术写作中模糊语（Hedging / Vague Language）的使用及语用分析",
+    "model_provider": "deepseek",
+    "source_screening_task_id": "8b31a575fc51",
+    "input_dataset_ids": [
+      "399a697a8ff5",
+      "a85570185083"
+    ],
+    "request_payload": {
+      "title": "new-screening-run-report",
+      "project_id": null,
+      "screening_task_id": "8b31a575fc51",
+      "dataset_ids": [],
+      "project_topic": "理工科（STEM）学术写作中模糊语（Hedging / Vague Language）的使用及语用分析",
+      "model": {
+        "provider": "deepseek",
+        "model_name": "deepseek-chat",
+        "api_base_url": "https://api.deepseek.com/v1",
+        "api_key_env": "DEEPSEEK_API_KEY",
+        "temperature": 0.0,
+        "max_tokens": 1536,
+        "min_request_interval_seconds": 2.0
+      },
+      "report_name": "simple_report",
+      "retry_times": 6,
+      "timeout_seconds": 240,
+      "reference_style": "gbt7714"
+    },
+    "virtual_dataset_paths": [],
+    "model_secret_id": null
+  },
+  "summary": null,
+  "error": null,
+  "artifacts": {},
+  "run_root": null,
+  "output_dir": null,
+  "markdown_preview": null,
+  "records": []
+}

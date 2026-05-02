@@ -1,0 +1,105 @@
+{
+  "batch_id": "batch_0002",
+  "results": [
+    {
+      "paper_id": "paper_000011",
+      "decision": "exclude",
+      "reason": "标题和摘要仅涉及地铁弓网气动性能与局部流场特性，未提及电气特性、电弧模型或MATLAB仿真。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000012",
+      "decision": "include",
+      "reason": "标题和摘要明确研究弓网电弧放电的电磁干扰激励电流时间特性，建立了基于统计的随机模型，涉及电气特性变化和建模。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000013",
+      "decision": "uncertain",
+      "reason": "标题和摘要涉及弓网电弧欠电压补偿和仿真测试，但未明确说明是否包含Cassie等电弧数学模型或MATLAB仿真细节。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000014",
+      "decision": "exclude",
+      "reason": "标题和摘要专注于基于深度学习的弓网电弧图像分割算法，属于计算机视觉应用，未涉及电气特性分析、电弧模型或MATLAB仿真。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000015",
+      "decision": "exclude",
+      "reason": "标题和摘要描述弓网接触力硬件在环测试台，涉及接触质量评估，但未提及电气特性、电弧模型或MATLAB仿真。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000016",
+      "decision": "uncertain",
+      "reason": "标题和摘要涉及刚性接触网离线仿真器，分析对电源的影响，但未明确说明是否包含电弧建模、电气特性变化或MATLAB仿真。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.45
+    },
+    {
+      "paper_id": "paper_000017",
+      "decision": "exclude",
+      "reason": "标题和摘要专注于弓网电弧检测方法，基于电气参数瞬变分析，但未涉及电弧模型（如Cassie）或MATLAB仿真。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "paper_id": "paper_000018",
+      "decision": "include",
+      "reason": "标题和摘要明确基于弓网电弧和可变电容模型仿真降弓操作过电压，涉及电气特性变化和建模，符合纳入标准。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.88
+    },
+    {
+      "paper_id": "paper_000019",
+      "decision": "uncertain",
+      "reason": "标题和摘要涉及弓网相互作用的多域建模，提到电弧现象，但未明确说明是否包含Cassie等电弧数学模型或MATLAB仿真。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000020",
+      "decision": "include",
+      "reason": "标题和摘要明确研究降弓过程中弓网电弧动力学，基于磁流体动力学理论建立电弧模型并进行数值仿真，涉及电气特性和建模。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.87
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "batch_id": "batch_0002",
+  "results": [
+    {
+      "paper_id": "paper_000011",
+      "decision": "exclude",
+      "reason": "标题和摘要聚焦于硬件在环测试平台和机械测量，未提及电气特性分析或电弧模型。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000012",
+      "decision": "include",
+      "reason": "标题和摘要明确研究弓网电弧检测，基于电气参数瞬态变化，涉及电气特性分析。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "paper_id": "paper_000013",
+      "decision": "include",
+      "reason": "标题和摘要明确研究弓网离线过电压仿真，包含电弧模型和可变电容模型，关键词提到电弧模型。",
+      "evidence": [
+        "title",
+        "abstract",
+        "keywords"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000014",
+      "decision": "uncertain",
+      "reason": "摘要提到弓网相互作用和多域建模，涉及电弧但未明确说明是否包含电气特性分析或具体模型。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000015",
+      "decision": "exclude",
+      "reason": "标题和摘要聚焦于新干线接触网设备机械设计和动力学性能，未提及电气特性或电弧模型。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000016",
+      "decision": "uncertain",
+      "reason": "摘要提到弓网电弧谐波传导电流和电磁发射模型，但未明确说明是否包含电弧数学模型或仿真细节。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000017",
+      "decision": "exclude",
+      "reason": "标题和摘要明确研究HVDC接地电极线路的电弧物理特性，非弓网场景且未说明可移植到弓网。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000018",
+      "decision": "uncertain",
+      "reason": "标题和摘要研究弓网电弧故障检测，基于声学和视觉成像融合，但未提及电气特性分析或电弧模型。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "paper_id": "paper_000019",
+      "decision": "include",
+      "reason": "标题和摘要明确研究弓网系统在电气分段重叠区的瞬态电弧特性，包含多物理场耦合电弧模型和数值仿真。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000020",
+      "decision": "exclude",
+      "reason": "标题和摘要聚焦于地铁受电弓碳滑板非均匀磨损的摩擦学实验，未提及电气特性或电弧模型。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    }
+  ]
+}

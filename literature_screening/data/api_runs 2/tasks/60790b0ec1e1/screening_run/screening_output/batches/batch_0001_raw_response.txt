@@ -1,0 +1,47 @@
+{
+    "batch_id": "batch_0001",
+    "results": [
+        {
+            "paper_id": "paper_000001",
+            "decision": "exclude",
+            "reason": "研究对象为科普演讲，属于非学术语境，不符合纳入标准中学术写作或科技语篇的要求。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000002",
+            "decision": "include",
+            "reason": "标题和摘要明确分析医学期刊英文摘要中的模糊语，包含中外对比和语用功能分析，符合纳入标准。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000003",
+            "decision": "include",
+            "reason": "标题和摘要显示对比分析材料类期刊英文摘要中的模糊限制语，包含中外对比和语用分析，符合纳入标准。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000004",
+            "decision": "exclude",
+            "reason": "研究对象为科技类TED演讲，属于非学术语境，不符合纳入标准中学术写作或科技语篇的要求。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000005",
+            "decision": "include",
+            "reason": "标题和摘要分析药学英语学术论文中的模糊限制语，探讨人际意义和语用功能，符合纳入标准。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000006",
+            "decision": "include",
+            "reason": "标题和摘要显示基于语料库对比机械工程类学术论文英文摘要中的模糊限制语，包含中外对比和语用分析，符合纳入标准。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        }
+    ]
+}

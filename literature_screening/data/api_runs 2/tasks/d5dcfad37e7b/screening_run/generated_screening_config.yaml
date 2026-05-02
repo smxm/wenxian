@@ -1,0 +1,52 @@
+project:
+  name: new-screening-run
+  output_dir: tasks/d5dcfad37e7b/screening_run/screening_output
+  save_raw_response: true
+  save_intermediate_files: true
+input:
+  input_files:
+  - tasks/d5dcfad37e7b/screening_run/inputs/abstract-Brain-GutA-set.txt
+  - tasks/d5dcfad37e7b/screening_run/inputs/scopus_export_Apr 7-2026_854d2f91-d820-4b9b-a454-4a91357b63de.ris
+  - tasks/d5dcfad37e7b/screening_run/inputs/savedrecs (1).ris
+  encoding: auto
+dedup:
+  enabled: true
+  strict_doi_match: true
+  normalized_title_exact_match: true
+  fuzzy_title_match: false
+screening:
+  batch_size: 10
+  target_include_count: 80
+  stop_when_target_reached: true
+  allow_uncertain: true
+  retry_times: 6
+  request_timeout_seconds: 240
+criteria:
+  topic: 纳米材料递送天然产物靶向脑肠轴（肠道微生态）治疗肿瘤及缓解相关并发症
+  inclusion:
+  - 核心要素：必须同时涉及或强关联至少三个核心维度（天然产物、纳米材料、脑肠轴/肠道微生态、肿瘤）。
+  - 研究侧重点：探究纳米递送系统如何提高天然产物的靶向性或生物利用度；或研究该体系如何通过重塑肠道菌群、调控脑肠轴（如代谢物、免疫因子通路）来抑制肿瘤生长或缓解化疗/肿瘤引起的神经与胃肠道并发症。
+  - 文章类型：高质量的基础实验研究（体内/体外机制）或高质量的系统性综述。
+  exclusion:
+  - 纯材料科学文章，仅有合成与表征，无生物学效价评估。
+  - 常规药理学研究，仅证明天然产物抗癌，既没有使用纳米技术，也没有涉及微生态/脑肠轴。
+  - 研究的疾病对象完全与肿瘤无关（如单纯研究肥胖、糖尿病的肠道菌群），且无法跨界提供肿瘤研究思路。
+  - 非中/英文文献，或仅有标题无摘要的文献。
+model:
+  provider: deepseek
+  model_name: deepseek-chat
+  api_base_url: https://api.deepseek.com/v1
+  api_key_env: DEEPSEEK_API_KEY
+  temperature: 0.0
+  max_tokens: 1536
+  min_request_interval_seconds: 2.0
+report:
+  export_included_ris: true
+  export_excluded_ris: false
+  export_unused_ris: true
+  export_included_bib: false
+  export_excluded_bib: false
+  export_unused_bib: false
+  included_report_format: md
+  excluded_report_format: md
+  summary_format: json

@@ -1,0 +1,105 @@
+{
+  "batch_id": "batch_0001",
+  "results": [
+    {
+      "paper_id": "paper_000001",
+      "decision": "uncertain",
+      "reason": "标题和摘要涉及弓网系统结冰条件下的电弧，但未明确提及电气特性变化的具体模型或仿真。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.55
+    },
+    {
+      "paper_id": "paper_000002",
+      "decision": "exclude",
+      "reason": "摘要表明研究基于机器视觉检测弓网动态性能和电弧，未涉及电气特性建模或仿真。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.8
+    },
+    {
+      "paper_id": "paper_000003",
+      "decision": "exclude",
+      "reason": "标题和摘要聚焦弓网系统临界速度的机械动力学分析，未提及电气特性或电弧模型。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000004",
+      "decision": "uncertain",
+      "reason": "摘要研究碳-铜接触的电气接触电阻和放电，涉及弓网系统，但未明确包含电弧模型或MATLAB仿真。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.5
+    },
+    {
+      "paper_id": "paper_000005",
+      "decision": "include",
+      "reason": "标题和摘要明确研究弓网电弧电磁传播特性，并建立非均匀传输线模型进行仿真分析。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000006",
+      "decision": "include",
+      "reason": "标题和摘要直接研究弓网电弧检测算法，基于电流信号处理，涉及电气特性分析和算法验证。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    },
+    {
+      "paper_id": "paper_000007",
+      "decision": "uncertain",
+      "reason": "摘要研究弓网系统电气接触演化，包括接触电阻和电弧侵蚀，但未明确提及数学模型或计算机仿真。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.6
+    },
+    {
+      "paper_id": "paper_000008",
+      "decision": "include",
+      "reason": "标题和摘要明确建立基于Habedank方程的电弧EMTP模型，用于弓网电弧研究，并考虑列车速度影响。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.95
+    },
+    {
+      "paper_id": "paper_000009",
+      "decision": "include",
+      "reason": "标题和摘要研究弓网电弧烧蚀，基于磁流体动力学建立数学模型，并使用COMSOL进行有限元仿真。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.9
+    },
+    {
+      "paper_id": "paper_000010",
+      "decision": "include",
+      "reason": "标题和摘要研究弓网离线瞬态过程对轨道绝缘的影响，建立电路模型并使用ANSYS进行仿真分析。",
+      "evidence": [
+        "title",
+        "abstract"
+      ],
+      "confidence": 0.85
+    }
+  ]
+}

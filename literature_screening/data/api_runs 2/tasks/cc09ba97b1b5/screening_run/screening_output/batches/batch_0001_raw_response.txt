@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0001",
+    "results": [
+        {
+            "paper_id": "paper_000001",
+            "decision": "exclude",
+            "reason": "标题和摘要聚焦于儿童音乐教育和红色文化，未涉及高中阶段或古典交响乐教学。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000002",
+            "decision": "uncertain",
+            "reason": "摘要提到游戏化教学和音乐教育，但未明确涉及高中阶段或具体教学主题，信息不足。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000003",
+            "decision": "exclude",
+            "reason": "标题和摘要明确针对高校音乐鉴赏课程和粤剧，未涉及高中阶段或古典交响乐教学。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000004",
+            "decision": "exclude",
+            "reason": "标题和摘要明确针对高校音乐鉴赏课程和粤剧，未涉及高中阶段或古典交响乐教学。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000005",
+            "decision": "exclude",
+            "reason": "标题和摘要明确针对小学低年段教学，未涉及高中阶段或音乐鉴赏。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000006",
+            "decision": "exclude",
+            "reason": "标题和摘要明确针对专科院校学前音乐教育专业，未涉及高中阶段或音乐鉴赏。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000007",
+            "decision": "exclude",
+            "reason": "标题和摘要明确针对小学生音乐素养，未涉及高中阶段或音乐鉴赏。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000008",
+            "decision": "exclude",
+            "reason": "标题和摘要明确针对幼儿教育，未涉及高中阶段或音乐鉴赏。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000009",
+            "decision": "uncertain",
+            "reason": "摘要提到游戏化学习和音乐教育，但未明确涉及高中阶段或具体教学主题，信息不足。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000010",
+            "decision": "uncertain",
+            "reason": "标题和摘要涉及游戏化教学和音乐教育，但未明确涉及高中阶段或音乐鉴赏，信息不足。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.5
+        }
+    ]
+}

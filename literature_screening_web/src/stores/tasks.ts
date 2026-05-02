@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { applyBulkReviewOverride, applyReferenceOverride, applyReviewOverride, applySelectionReviewOverride, cancelTask, createReportTask, createScreeningTask, createStrategyTask, deleteTask, fetchTask, fetchTasks, retryTask } from '@/api/client'
+import { applyBulkReviewOverride, applyReferenceOverride, applyReviewOverride, applySelectionReviewOverride, cancelTask, createReportTask, createScreeningTask, createStrategyTask, deleteTask, fetchTask, fetchTasks, retryTask, updateTask } from '@/api/client'
 import type { ReportFormPayload, ScreeningFormPayload, StrategyFormPayload, TaskDetail, TaskSnapshot } from '@/types/api'
 
 export const useTasksStore = defineStore('tasks', {
@@ -20,8 +20,7 @@ export const useTasksStore = defineStore('tasks', {
   }),
   getters: {
     latestScreeningTask: (state) => state.list.find(task => task.kind === 'screening'),
-    runningTasks: (state) => state.list.filter(task => task.status === 'running' || task.status === 'pending'),
-    completedReports: (state) => state.list.filter(task => task.kind === 'report' && task.status === 'succeeded')
+    runningTasks: (state) => state.list.filter(task => task.status === 'running' || task.status === 'pending')
   },
   actions: {
     async refreshList() {
@@ -114,6 +113,16 @@ export const useTasksStore = defineStore('tasks', {
         await this.refreshList()
         await this.loadTask(task.id, true)
         return task
+      } finally {
+        this.submitting = false
+      }
+    },
+    async rename(taskId: string, title: string) {
+      this.submitting = true
+      try {
+        this.currentTask = await updateTask(taskId, { title })
+        await this.refreshList()
+        return this.currentTask
       } finally {
         this.submitting = false
       }

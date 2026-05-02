@@ -1,0 +1,145 @@
+# 一、相关文献总体情况
+
+这批文献聚焦于共价有机框架（COFs）在光热驱动海水蒸发（太阳能海水淡化）领域的应用研究。总体研究情况表明，学者们主要通过分子设计、结构调控和系统集成等策略来优化COFs材料的光热转换性能、水蒸发效率和环境适应性。主要关注点包括：通过引入超亲水基团、离子染料、金属配位、卟啉结构等分子设计来增强光吸收和热转换；通过构建凝胶、气凝胶、水凝胶、膜、纺织品等不同形态来优化传质、热管理和机械性能；以及通过集成光热-光催化、光热-光电等多功能系统来实现海水淡化与污染物去除的协同。研究分布上，多数文献侧重于分子层面的机制探索（如氢键调控、电荷异质性、非辐射过程），部分文献则关注宏观系统设计（如反射器优化、仿生结构、真空驱动），共同推动着高效、稳定、多功能的太阳能海水淡化技术的发展。
+
+# 二、类型划分
+
+## 分子设计与光热机制优化
+
+这类文献共同关注通过分子层面的设计来优化COFs的光热转换机制，包括引入特定官能团（如超亲水基团、离子染料、金属配位中心、卟啉单元）以增强光吸收、调控氢键网络、降低蒸发焓，从而提升太阳能蒸汽生成效率。
+
+- Superhydrophilic 2D Covalent Organic Frameworks as Broadband Absorbers for Efficient Solar Steam Generation
+- Synergistic Light-Thermal-Mass Engineering of Metal-Coordinated Covalent Organic Framework Membranes for Water Purification
+- Ionic Dye Based Covalent Organic Frameworks for Photothermal Water Evaporation
+- Exploring Three-Dimensional Porphyrin-Based Covalent Organic Frameworks with Outstanding Solar Energy Conversion
+- Nonradiative Photothermal Process Coupled With Hydrogen-Bond Regulations of Water Molecules in Covalent Organic Frameworks for Efficient Solar Steam Generation
+- Ultrafast low-temperature pervaporation desalination with photo-responsive covalent organic framework membranes
+- Photothermal-Photocatalysis System by Photosensitive Covalent Organic Framework@Wood for Efficient Solar-Driven Water Evaporation and Uranium Removal
+
+## 结构调控与材料形态创新
+
+这类文献共同关注通过调控COFs的结构和形态来改善其性能，包括合成凝胶、气凝胶、水凝胶、膜、纺织品等不同形态，以优化孔隙率、机械强度、热管理、抗盐性或加工性，从而适应太阳能海水淡化的实际应用需求。
+
+- Highly efficient solar steam evaporation via elastic polymer covalent organic frameworks monolith
+- A General Group-Protection Synthesis Strategy to Fabricate Covalent Organic Framework Gels
+- Polyacid-Protonated Covalent Organic Frameworks Enable Stable and Efficient Photothermal Textiles
+- Engineering Charge Heterogeneity in COF/Graphene Hydrogels for Salt-Resistant Solar Evaporation
+
+## 系统集成与多功能应用
+
+这类文献共同关注将COFs材料集成到更复杂的系统中，实现光热驱动海水淡化与其他功能（如光催化、污染物去除、过氧化氢生产、铀去除）的协同，通过仿生设计、多级孔结构或真空驱动等策略提升太阳能利用效率和系统多功能性。
+
+- Bioinspired Photo-Thermal Catalytic System Using Covalent Organic Framework-Based Aerogel for Synchronous Seawater Desalination and H2O2 Production
+
+# 三、逐篇文献总结分析
+
+## Superhydrophilic 2D Covalent Organic Frameworks as Broadband Absorbers for Efficient Solar Steam Generation
+
+总结：
+该文献研究了一种基于TPAD的超亲水二维共价有机框架（TPAD-COF），通过其宽谱光吸收特性（覆盖紫外/可见光至近红外区域）实现高效光热转换，用于太阳能蒸汽生成。该材料在无添加剂条件下表现出优异的水蒸发速率（1.42 kg m−2 h−1）和高达94%的能量转换效率，并通过后合成修饰进一步扩展了光吸收范围。系统实验分析表明，在TPAD-COF中，光热转换材料的亲水性对太阳能蒸汽生成起主导作用。
+
+分析：
+该文献对于共价有机框架在光热驱动海水蒸发领域的应用具有重要参考价值，它展示了通过分子设计（如引入超亲水性和宽谱吸收基团）优化材料性能的机制，适合支撑太阳能海水淡化系统中高效光热转换材料的设计。其强调亲水性在蒸汽生成中的主导作用，为相关应用场景（如海水淡化或废水处理）提供了关键设计思路，并有助于完善COFs在能源转换领域的研究脉络。
+
+## Synergistic Light-Thermal-Mass Engineering of Metal-Coordinated Covalent Organic Framework Membranes for Water Purification
+
+总结：
+该文献提出了一种协同光-热-质工程策略，通过金属离子配位共价有机框架（COF）膜来提升水净化性能。研究利用界面聚合合成具有丰富氮氧螯合位点的光热COF，并通过二价阳离子配位实现原子级分散的钴中心，从而在光照下增强界面梯度和浮力对流，促进传质和蒸发。实验表明，钴-COF膜实现了99.996%的离子去除率，并通过前沿分子轨道分析揭示了光学吸收边的近红外红移，提升了光热和光催化效率。
+
+分析：
+该文献对于共价有机框架在光热驱动海水淡化领域的应用具有重要参考价值，它展示了金属离子配位如何优化COF的光热转换和传质机制。研究结果适用于支撑高效太阳能海水淡化系统的设计，特别是通过界面工程增强蒸发和污染物去除的分子机制。这为开发可持续水处理技术提供了具体的实验和理论依据，有助于推动光热-光催化协同作用在实际应用中的实现。
+
+## Ionic Dye Based Covalent Organic Frameworks for Photothermal Water Evaporation
+
+总结：
+该文献研究了利用离子染料构建共价有机框架（iCOF）用于光热水蒸发。通过席夫碱化学快速合成iCOF STTP，其离子基团增强了全光谱光吸收（>97%），降低激子解离能以提高光热效应，并促进水活化以减少蒸发焓。结果表明，该材料实现了3.55 kg h−1 m−2的高蒸发速率和95.8%的太阳能-蒸汽效率。
+
+分析：
+该文献对报告主题的参考价值在于，它展示了iCOF材料在光热海水淡化中的高效机制，特别是离子基团设计如何同时优化光吸收、热转换和水活化。这适合支撑太阳能驱动水蒸发系统的材料设计，为研究共价有机框架在可持续水净化应用中的性能提升提供了具体案例。
+
+## Highly efficient solar steam evaporation via elastic polymer covalent organic frameworks monolith
+
+总结：
+该文献研究了利用弹性聚合物共价有机框架（PP-PEG）制备三维太阳能蒸汽蒸发器，通过形成卟啉环结构实现全光谱吸收和优异的光热转换性能。通过优化热管理、亲水性和PEG链长度，在自包含模式下获得了4.89 kg m−2 h−1的蒸发速率，结合截锥反射器后提升至18.88 kg m−2 h−1，创下已知最高纪录。这种设计因其制备简单、高效耐用，在海水淡化和水净化领域具有广阔应用前景。
+
+分析：
+该文献为COFs在光热驱动海水蒸发领域的应用提供了具体的高效设计案例，展示了通过结构优化（如PEG链调控）和热管理策略提升蒸发性能的机制。其截锥反射器设计思路可支撑太阳能收集系统的光学优化研究，而弹性聚合物框架的耐久性特点适合作为长期运行的海水淡化系统设计参考。
+
+## A General Group-Protection Synthesis Strategy to Fabricate Covalent Organic Framework Gels
+
+总结：
+该文献提出了一种通用的基团保护合成策略，用于制备共价有机框架（COF）凝胶。该策略通过减缓COF形成速率并调控其形貌，促进了交联纳米纤维/纳米片的形成，从而成功制备了10种具有高结晶度、孔隙率和良好机械性能的COF凝胶。研究还揭示了有机/水二元溶剂与COF骨架中官能团形成的氢键网络对凝胶的耐溶剂和抗冻性能至关重要，并展示了其在太阳能海水淡化等应用中的潜力。
+
+分析：
+该文献对于当前报告主题的参考价值在于，它提供了一种通用的合成机制，可用于制备适用于光热驱动海水蒸发的COF凝胶材料。其基团保护策略和氢键网络机制特别适合支撑太阳能海水淡化系统中的材料设计，如提高光热转换效率和耐环境性能。这有助于拓展COF在可再生能源应用中的研究脉络，为系统优化提供实验基础。
+
+## Polyacid-Protonated Covalent Organic Frameworks Enable Stable and Efficient Photothermal Textiles
+
+总结：
+该文献研究了通过聚酸质子化共价有机框架（PaCOFs）提升光热性能的策略，采用二巯基丁二酸在COF孔道内原位聚合形成动态二硫键，实现了稳定的质子化和77.8%的高光热转换效率。PaCOFs可通过静电纺丝加工成双模式热管理纺织品，在阳光下实现辐射冷却和太阳能加热，性能优于商业产品。
+
+分析：
+该文献对COFs在光热驱动海水淡化领域的应用具有参考价值，其聚酸质子化机制可增强COFs的稳定性和光热效率，适用于太阳能海水淡化系统中的光热材料设计。双模式纺织品展示了COFs在热管理场景的集成潜力，为开发高效、可穿戴的蒸发器件提供了思路。
+
+## Bioinspired Photo-Thermal Catalytic System Using Covalent Organic Framework-Based Aerogel for Synchronous Seawater Desalination and H2O2 Production
+
+总结：
+该文献受植物光合作用启发，设计了一种基于共价有机框架气凝胶的人工太阳能转换器，实现了光热与光化学的协同转化。该系统利用碳纳米管作为光收集器和COF定向气凝胶作为反应器与传输通道，在自然光下同步进行海水淡化和过氧化氢生产。实验表明该系统实现了创纪录的太阳能转换效率，为高效太阳能利用提供了新思路。
+
+分析：
+该文献对报告主题的参考价值在于展示了COFs在光热驱动海水淡化中的具体应用机制，特别是通过仿生结构设计实现多功能集成。它适合支撑太阳能海水淡化系统的材料设计与性能优化研究，为开发高效、多功能的太阳能利用系统提供了实验验证和设计范例。
+
+## Exploring Three-Dimensional Porphyrin-Based Covalent Organic Frameworks with Outstanding Solar Energy Conversion
+
+总结：
+该文献研究了三维卟啉基共价有机框架（3D Por-An-COFs）的合成及其在太阳能转换中的应用。通过设计具有合理拓扑结构的框架，实现了卟啉单元在共轭骨架中的周期性排列，从而增强了光捕获和活性中心与客体物种的相互作用。结果表明，该材料在光化学和光热转换方面表现出优异性能，例如在界面水蒸发系统中达到1.64 kg m⁻²h⁻¹的蒸发速率，并产生195 mV的输出电压。
+
+分析：
+这篇文献对于光热驱动海水蒸发领域具有重要参考价值，因为它展示了三维卟啉基COFs在太阳能转换中的高效机制，特别是通过周期性排列的卟啉单元增强光热效应。它适合支撑太阳能海水淡化系统的材料设计，为开发基于COFs的光热蒸发器提供了结构优化思路，并有助于理解维度依赖的光响应行为在提升蒸发效率中的作用。
+
+## Engineering Charge Heterogeneity in COF/Graphene Hydrogels for Salt-Resistant Solar Evaporation
+
+总结：
+该文献研究了通过调控共价有机框架（COF）与石墨烯水凝胶的电荷分布，以提升太阳能驱动界面蒸发技术在海水环境中的效率。通过调整COF合成中阴离子和阳离子构建单元的比例，在分子水平上连续调节水凝胶蒸发器的表面电荷，包括同电荷、异电荷和两性离子功能化。异电荷和两性离子水凝胶通过降低蒸发焓，在海水中的蒸发速率高于纯水，其中异电荷水凝胶在3.5 wt.%盐水中达到3.23 kg m−2 h−1的蒸发速率，比纯水高12%，并在20 wt.%盐水中保持强抗盐性。
+
+分析：
+该文献对于共价有机框架在光热驱动海水蒸发领域的应用具有重要参考价值，它展示了通过分子水平电荷调控来优化蒸发器性能的机制，适合支撑太阳能海水淡化系统的抗盐设计。其异电荷和两性离子策略为处理复杂环境废水提供了可扩展平台，有助于研究COF材料在可持续水处理中的信号通路和分子机制。
+
+## Nonradiative Photothermal Process Coupled With Hydrogen-Bond Regulations of Water Molecules in Covalent Organic Frameworks for Efficient Solar Steam Generation
+
+总结：
+该文献研究了两种新型哌嗪连接的酞菁基共价有机框架（COFs）在太阳能蒸汽生成中的应用。通过引入含C═O基团的非共轭TABQ调控COFs的亲水性，实现了从可见光到近红外的宽带吸收和非辐射光热过程，从而促进了高效的光热转换。实验结果表明，CoPc-NH-TABQ-iAA COF在1太阳光强下达到了2.56 kg m−2 h−1的高水蒸发速率和100小时的长期稳定性，揭示了氢键微环境调控对提升光热水蒸发效率的关键作用。
+
+分析：
+该文献对于当前报告主题的参考价值在于，它具体展示了COFs材料通过分子设计（如引入亲水基团）优化光热性能和氢键调控的机制，这为太阳能海水淡化领域提供了材料层面的创新思路。它适合支撑光热转换效率提升和系统耐久性设计的研究，特别是在涉及水分子相互作用和能量转换的应用场景中，可作为机制验证的典型案例。
+
+## Ultrafast low-temperature pervaporation desalination with photo-responsive covalent organic framework membranes
+
+总结：
+该文献研究了一种利用光响应共价有机框架膜实现超快低温渗透蒸发脱盐的系统。通过太阳能驱动在纳米通道入口处利用光热和光电效应破坏氢键网络，降低水进入的能量壁垒，随后在真空驱动下实现水的快速传输。该系统在30°C下对高盐度盐水（7.5 wt%）实现了120 kg m−2 h−1的优异水通量和>99%的脱盐率，性能相当于传统渗透蒸发在70°C下的水平。
+
+分析：
+该文献对于当前报告主题中COFs在光热驱动海水蒸发领域的应用具有直接参考价值。它展示了光响应COF膜如何通过光热和光电效应耦合太阳能与真空驱动，实现高效低温脱盐，适合支撑光热驱动机制在海水淡化系统设计中的应用。此外，其跨宽盐度范围（0.1–7.5 wt%）的稳定高性能为可持续脱盐技术开发提供了新思路。
+
+## Photothermal-Photocatalysis System by Photosensitive Covalent Organic Framework@Wood for Efficient Solar-Driven Water Evaporation and Uranium Removal
+
+总结：
+该文献构建了一种基于光敏共价有机框架@木材（COF@wood）的光热-光催化系统，用于高效太阳能驱动水蒸发和铀去除。通过将光敏组分和氧化还原活性位点整合到COFs中，并利用木材的多级孔结构改善材料分布和润湿性，实现了2.07 kg m−2 h−1的高蒸发效率和约93%的铀去除率。该系统能够同时利用红外波段进行光热蒸发和紫外/可见波段进行光催化，将太阳能转化为化学能以去除可溶性铀。
+
+分析：
+该文献为COFs在光热驱动海水淡化领域的应用提供了具体的分子机制和系统设计参考。其光敏COF@wood平台展示了如何通过材料功能化整合光热和光催化活性，适合支撑太阳能全光谱利用的机制研究。对于涉及海水淡化与污染物协同去除的应用场景，该系统的多级孔结构和界面设计具有借鉴价值。
+
+# 参考列表
+
+[1] Yan, X, Lyu, S, Xu, X.-Q, et al. Superhydrophilic 2D Covalent Organic Frameworks as Broadband Absorbers for Efficient Solar Steam Generation[J]. Angewandte Chemie - International Edition, 2022.
+[2] Sheng, K, Xiao, Z, Meng, J, et al. Synergistic Light-Thermal-Mass Engineering of Metal-Coordinated Covalent Organic Framework Membranes for Water Purification[J]. Advanced Functional Materials, 2026.
+[3] Li, G, Yue, Q, Fu, P, et al. Ionic Dye Based Covalent Organic Frameworks for Photothermal Water Evaporation[J]. Advanced Functional Materials, 2023.
+[4] Hu, A, Zhao, Y, Hu, Q, et al. Highly efficient solar steam evaporation via elastic polymer covalent organic frameworks monolith[J]. Nature Communications, 2024.
+[5] Jia, S, Liu, Y, Hao, L, et al. A General Group-Protection Synthesis Strategy to Fabricate Covalent Organic Framework Gels[J]. Journal of the American Chemical Society, 2023.
+[6] Chen, G, Xu, L, Wang, C, et al. Polyacid-Protonated Covalent Organic Frameworks Enable Stable and Efficient Photothermal Textiles[J]. Journal of the American Chemical Society, 2026.
+[7] Xu, Y, Ai, S, Wu, T, et al. Bioinspired Photo-Thermal Catalytic System Using Covalent Organic Framework-Based Aerogel for Synchronous Seawater Desalination and H2O2 Production[J]. Angewandte Chemie - International Edition, 2025.
+[8] Guo, J, Guo, Y, Zhang, M, et al. Exploring Three-Dimensional Porphyrin-Based Covalent Organic Frameworks with Outstanding Solar Energy Conversion[J]. Journal of the American Chemical Society, 2025.
+[9] Jia, S, Li, Y, He, G, et al. Engineering Charge Heterogeneity in COF/Graphene Hydrogels for Salt-Resistant Solar Evaporation[J]. Advanced Science, 2026.
+[10] Wang, L, Wu, D, Zhu, X, et al. Nonradiative Photothermal Process Coupled With Hydrogen-Bond Regulations of Water Molecules in Covalent Organic Frameworks for Efficient Solar Steam Generation[J]. Advanced Functional Materials, 2025.
+[11] Zhao, J, Wang, Y, Zhu, Z, et al. Ultrafast low-temperature pervaporation desalination with photo-responsive covalent organic framework membranes[J]. Nature Water, 2025.
+[12] Zhang, R.-W, Huang, Q, Zhang, J, et al. Photothermal-Photocatalysis System by Photosensitive Covalent Organic Framework@Wood for Efficient Solar-Driven Water Evaporation and Uranium Removal[J]. Advanced Functional Materials, 2026.

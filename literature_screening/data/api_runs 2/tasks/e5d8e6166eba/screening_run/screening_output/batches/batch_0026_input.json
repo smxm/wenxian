@@ -1,0 +1,396 @@
+{
+  "batch_id": "batch_0026",
+  "paper_count": 10,
+  "paper_ids": [
+    "paper_000251",
+    "paper_000252",
+    "paper_000253",
+    "paper_000254",
+    "paper_000255",
+    "paper_000256",
+    "paper_000257",
+    "paper_000258",
+    "paper_000259",
+    "paper_000260"
+  ],
+  "papers": [
+    {
+      "paper_id": "paper_000251",
+      "entry_type": "article",
+      "title": "In-Motion Railroad Tie Deflection Measurement via Ultrasonic Airborne Sonar and Computer Vision Techniques",
+      "authors": [
+        "Hosseinzadeh, AZ",
+        "Datta, D",
+        "di Scalea, FL"
+      ],
+      "year": 2023,
+      "journal": "RESEARCH IN NONDESTRUCTIVE EVALUATION",
+      "doi": "10.1080/09349847.2022.2136808",
+      "abstract": "It is known in the railroad maintenance engineering community that the deflection of railroad ties is an indicator of the quality of the tie-ballast interface, whose deterioration may cause dangerous train derailments. A new technology is proposed to reconstruct the full-field deflection profile of railroad ties in-motion by means of non-contact ultrasonic testing and computer vision techniques. The sensing layout consists of an array of air-coupled capacitive transducers (operated in pulse-echo sonar-based ranging mode) and a high frame-rate camera, rigidly connected to the main frame of a moving train car. The acquisition system is programmed such that the synchronized waveforms and images are collected and saved as train car moves. In the processing stage, a supervised machine learning-based image classification approach is developed to demarcate the tie boundaries. For this purpose, the Speeded-Up Robust Features (SURF) and Bag of Visual Words (BOVW) algorithms are employed to encode images into condensed feature vectors, which are subsequently fed into the Support Vector Machine (SVM) to train a classifier. The relative deflections of the identified ties are eventually computed by tracking the time-of-flight of the reflected waves from the surfaces flagged as tie. An image processing technique is also developed to estimate the spatial resolution of the tracking system, required to reconstruct the full-field deflection profile of the scanned ties. The importance of such a technique is stressed if the test run is performed without any dedicated positioning system. The proposed 'tie sonar' system was prototyped and used to reconstruct the deflection profile of the ties scanned during a series of test runs conducted at slow (walking) speed at the Rail Defect Testing Facility (RDTF) of UC San Diego as well as a BNSF yard in San Diego, CA, with a realistic train load. Further developments of this system should include a performance evaluation at higher speeds (e.g., revenue speed).",
+      "keywords": [
+        "Railroad ties",
+        "ultrasonic tie sonar",
+        "machine learning",
+        "image processing and classification",
+        "in-motion deflection measurement"
+      ],
+      "normalized_title": "in motion railroad tie deflection measurement via ultrasonic airborne sonar and computer vision techniques",
+      "raw_bibtex": "@ARTICLE{10.1080/09349847.2022.2136808,\n\tauthor = {Hosseinzadeh, AZ and Datta, D and di Scalea, FL},\n\ttitle = {In-Motion Railroad Tie Deflection Measurement via Ultrasonic Airborne Sonar and Computer Vision Techniques},\n\tjournal = {RESEARCH IN NONDESTRUCTIVE EVALUATION},\n\tyear = {2023},\n\tkeywords = {Railroad ties; ultrasonic tie sonar; machine learning; image processing and classification; in-motion deflection measurement},\n\tabstract = {It is known in the railroad maintenance engineering community that the deflection of railroad ties is an indicator of the quality of the tie-ballast interface, whose deterioration may cause dangerous train derailments. A new technology is proposed to reconstruct the full-field deflection profile of railroad ties in-motion by means of non-contact ultrasonic testing and computer vision techniques. The sensing layout consists of an array of air-coupled capacitive transducers (operated in pulse-echo sonar-based ranging mode) and a high frame-rate camera, rigidly connected to the main frame of a moving train car. The acquisition system is programmed such that the synchronized waveforms and images are collected and saved as train car moves. In the processing stage, a supervised machine learning-based image classification approach is developed to demarcate the tie boundaries. For this purpose, the Speeded-Up Robust Features (SURF) and Bag of Visual Words (BOVW) algorithms are employed to encode images into condensed feature vectors, which are subsequently fed into the Support Vector Machine (SVM) to train a classifier. The relative deflections of the identified ties are eventually computed by tracking the time-of-flight of the reflected waves from the surfaces flagged as tie. An image processing technique is also developed to estimate the spatial resolution of the tracking system, required to reconstruct the full-field deflection profile of the scanned ties. The importance of such a technique is stressed if the test run is performed without any dedicated positioning system. The proposed 'tie sonar' system was prototyped and used to reconstruct the deflection profile of the ties scanned during a series of test runs conducted at slow (walking) speed at the Rail Defect Testing Facility (RDTF) of UC San Diego as well as a BNSF yard in San Diego, CA, with a realistic train load. Further developments of this system should include a performance evaluation at higher speeds (e.g., revenue speed).},\n\tdoi = {10.1080/09349847.2022.2136808},\n\tvolume = {34},\n\tnumber = {1},\n\tpages = {1-21},\n\tissn = {0934-9847},\n\tnote = {Times Cited in Web of Science Core Collection: 6 Total Times Cited: 7 Cited Reference Count: 24 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1080/09349847.2022.2136808"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000252",
+      "entry_type": "article",
+      "title": "Compressive Sensing Strategy on Sparse Array to Accelerate Ultrasonic TFM Imaging",
+      "authors": [
+        "Piedade, LP",
+        "Painchaud-April, G",
+        "Le Duff, A",
+        "Bélanger, P"
+      ],
+      "year": 2023,
+      "journal": "IEEE TRANSACTIONS ON ULTRASONICS FERROELECTRICS AND FREQUENCY CONTROL",
+      "doi": "10.1109/tuffc.2023.3266719",
+      "abstract": "Phased array ultrasonic testing (PAUT) based on full matrix capture (FMC) has recently been gaining popularity in the scientific and nondestructive testing communities. FMC is a versatile acquisition method that collects all the transmitter-receiver combinations from a given array. Furthermore, when postprocessing FMC data using the total focusing method (TFM), high-resolution images are achieved for defect characterization. Today, the combination of FMC and TFM is becoming more widely available in commercial ultrasonic phased array controllers. However, executing the FMC-TFM method is data-intensive, as the amount of data collected and processed is proportional to the square of the number of elements of the probe. This shortcoming may be overcome using a sparsely populated array in transmission followed by an efficient compression using compressive sensing (CS) approaches. The method can therefore lead to a massive reduction of data and hardware requirements and ultimately accelerate TFM imaging. In the present work, a CS methodology was applied to experimental data measured from samples containing artificial flaws. The results demonstrated that the proposed CS method allowed a reduction of up to 80% in the volume of data while achieving adequate FMC data recovery. Such results indicate the possibility of recovering experimental FMC signals using sampling rates under the Nyquist theorem limit. The TFM images obtained from the FMC, CS-FMC, and sparse CS approaches were compared in terms of contrast-to-noise ratio (CNR). It was seen that the CS-FMC combination produced images comparable to those acquitted using the FMC. Implementation of sparse arrays improved CS reconstruction times by up to 11 folds and reduced the firing events by approximately 90%. Moreover, image formation was accelerated by 6.6 times at the cost of only minor image quality degradation relative to the FMC.",
+      "keywords": [
+        "Acoustics",
+        "Arrays",
+        "Image reconstruction",
+        "Transforms",
+        "Ultrasonic imaging",
+        "Probes",
+        "Sparse matrices",
+        "Compressive sensing (CS)",
+        "discrete wavelet transform (DWT)",
+        "full matrix capture (FMC)",
+        "L1-norm minimization",
+        "total focusing method (TFM)",
+        "ultrasound",
+        "SYNTHETIC TRANSMIT APERTURE",
+        "WIRELESS SENSOR NETWORKS",
+        "UNCERTAINTY PRINCIPLES",
+        "RECOVERY",
+        "RECONSTRUCTION",
+        "ALGORITHMS",
+        "MATRIX"
+      ],
+      "normalized_title": "compressive sensing strategy on sparse array to accelerate ultrasonic tfm imaging",
+      "raw_bibtex": "@ARTICLE{10.1109/TUFFC.2023.3266719,\n\tauthor = {Piedade, LP and Painchaud-April, G and Le Duff, A and Bélanger, P},\n\ttitle = {Compressive Sensing Strategy on Sparse Array to Accelerate Ultrasonic TFM Imaging},\n\tjournal = {IEEE TRANSACTIONS ON ULTRASONICS FERROELECTRICS AND FREQUENCY CONTROL},\n\tyear = {2023},\n\tkeywords = {Acoustics; Arrays; Image reconstruction; Transforms; Ultrasonic imaging; Probes; Sparse matrices; Compressive sensing (CS); discrete wavelet transform (DWT); full matrix capture (FMC); L1-norm minimization; total focusing method (TFM); ultrasound; SYNTHETIC TRANSMIT APERTURE; WIRELESS SENSOR NETWORKS; UNCERTAINTY PRINCIPLES; RECOVERY; RECONSTRUCTION; ALGORITHMS; MATRIX},\n\tabstract = {Phased array ultrasonic testing (PAUT) based on full matrix capture (FMC) has recently been gaining popularity in the scientific and nondestructive testing communities. FMC is a versatile acquisition method that collects all the transmitter-receiver combinations from a given array. Furthermore, when postprocessing FMC data using the total focusing method (TFM), high-resolution images are achieved for defect characterization. Today, the combination of FMC and TFM is becoming more widely available in commercial ultrasonic phased array controllers. However, executing the FMC-TFM method is data-intensive, as the amount of data collected and processed is proportional to the square of the number of elements of the probe. This shortcoming may be overcome using a sparsely populated array in transmission followed by an efficient compression using compressive sensing (CS) approaches. The method can therefore lead to a massive reduction of data and hardware requirements and ultimately accelerate TFM imaging. In the present work, a CS methodology was applied to experimental data measured from samples containing artificial flaws. The results demonstrated that the proposed CS method allowed a reduction of up to 80% in the volume of data while achieving adequate FMC data recovery. Such results indicate the possibility of recovering experimental FMC signals using sampling rates under the Nyquist theorem limit. The TFM images obtained from the FMC, CS-FMC, and sparse CS approaches were compared in terms of contrast-to-noise ratio (CNR). It was seen that the CS-FMC combination produced images comparable to those acquitted using the FMC. Implementation of sparse arrays improved CS reconstruction times by up to 11 folds and reduced the firing events by approximately 90%. Moreover, image formation was accelerated by 6.6 times at the cost of only minor image quality degradation relative to the FMC.},\n\tdoi = {10.1109/TUFFC.2023.3266719},\n\tvolume = {70},\n\tnumber = {6},\n\tpages = {538-550},\n\tissn = {0885-3010},\n\tnote = {Times Cited in Web of Science Core Collection: 15 Total Times Cited: 15 Cited Reference Count: 36 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/TUFFC.2023.3266719"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000253",
+      "entry_type": "article",
+      "title": "Location-dependent noise modeling: bridging the gap between simulated and experimental guided wave data in fiber optic pipeline monitoring",
+      "authors": [
+        "Zhang, PD",
+        "Naeem, K",
+        "Sarcinelli, E",
+        "Venketeswaran, A",
+        "Bukka, SR",
+        "Lalam, N",
+        "Wright, RF",
+        "Ohodnicki, PR"
+      ],
+      "year": 2025,
+      "journal": "STRUCTURAL HEALTH MONITORING-AN INTERNATIONAL JOURNAL",
+      "doi": "10.1177/14759217251382956",
+      "abstract": "Pipelines are critical components of modern infrastructure, transporting resources such as oil, gas, and water securely and efficiently. Yet they face persistent threats-such as corrosion and cracking-that can lead to costly failures. To address these risks, guided wave techniques combined with fiber optic sensing have emerged as powerful tools. By enabling continuous, distributed measurements across long distances, these methods facilitate early detection of subtle defects, reducing maintenance costs and enhancing overall pipeline safety and reliability. However, interpreting the large and complex datasets generated by these systems can be challenging. Manual analysis is time-consuming and may miss subtle trends, prompting increased use of machine learning (ML) and artificial intelligence. While previous work has explored some of these aspects, our study is among the first to integrate fiber optic sensing, guided wave detection, and ML-driven domain adaptation into a unified framework for pipeline health monitoring. A key difficulty lies in bridging the gap between simulated and real-world data. Although simulations are easier to generate, they often lack the complexity and noise characteristics of actual measurements. Domain adaptation methods show promise, yet pipelines introduce unique obstacles, including varying wave propagation conditions, sensor placement differences, and limited experimental datasets. To tackle these challenges, we focus on modeling noise patterns that occur along the pipeline. Three primary noise factors-time-axial misalignment, coherent signal interference, and background fluctuations-shape the measured signals. We develop a position-specific noise model that learns from a single healthy pipeline, capturing how flexural waves evolve from sensor to sensor. By applying these learned noise characteristics to simulations, we create synthetic data that closely resemble real measurements. This approach not only helps overcome the scarcity of experimental datasets but also improves the robustness of ML models, enabling them to recognize and classify defects more accurately in varied pipeline scenarios. In doing so, we move beyond piecemeal solutions and present a comprehensive strategy that brings together fiber optics, guided waves, and ML-based domain adaptation. Our work sets the stage for more accurate, reliable, and data-efficient pipeline integrity assessments, ultimately improving infrastructure safety and reducing the need for extensive experimental data collection.",
+      "keywords": [
+        "Quasi-distributed acoustic sensors",
+        "pipeline structural health monitoring",
+        "active ultrasonic testing",
+        "torsional symmetric mode <italic>T</italic>(0",
+        "1)",
+        "corrosion detection",
+        "weld irregularities",
+        "calibration of simulation models",
+        "experimental validation",
+        "data augmentation"
+      ],
+      "normalized_title": "location dependent noise modeling bridging the gap between simulated and experimental guided wave data in fiber optic pipeline monitoring",
+      "raw_bibtex": "@ARTICLE{10.1177/14759217251382956,\n\tauthor = {Zhang, PD and Naeem, K and Sarcinelli, E and Venketeswaran, A and Bukka, SR and Lalam, N and Wright, RF and Ohodnicki, PR},\n\ttitle = {Location-dependent noise modeling: bridging the gap between simulated and experimental guided wave data in fiber optic pipeline monitoring},\n\tjournal = {STRUCTURAL HEALTH MONITORING-AN INTERNATIONAL JOURNAL},\n\tyear = {2025},\n\tkeywords = {Quasi-distributed acoustic sensors; pipeline structural health monitoring; active ultrasonic testing; torsional symmetric mode <italic>T</italic>(0,1); corrosion detection; weld irregularities; calibration of simulation models; experimental validation; data augmentation},\n\tabstract = {Pipelines are critical components of modern infrastructure, transporting resources such as oil, gas, and water securely and efficiently. Yet they face persistent threats-such as corrosion and cracking-that can lead to costly failures. To address these risks, guided wave techniques combined with fiber optic sensing have emerged as powerful tools. By enabling continuous, distributed measurements across long distances, these methods facilitate early detection of subtle defects, reducing maintenance costs and enhancing overall pipeline safety and reliability. However, interpreting the large and complex datasets generated by these systems can be challenging. Manual analysis is time-consuming and may miss subtle trends, prompting increased use of machine learning (ML) and artificial intelligence. While previous work has explored some of these aspects, our study is among the first to integrate fiber optic sensing, guided wave detection, and ML-driven domain adaptation into a unified framework for pipeline health monitoring. A key difficulty lies in bridging the gap between simulated and real-world data. Although simulations are easier to generate, they often lack the complexity and noise characteristics of actual measurements. Domain adaptation methods show promise, yet pipelines introduce unique obstacles, including varying wave propagation conditions, sensor placement differences, and limited experimental datasets. To tackle these challenges, we focus on modeling noise patterns that occur along the pipeline. Three primary noise factors-time-axial misalignment, coherent signal interference, and background fluctuations-shape the measured signals. We develop a position-specific noise model that learns from a single healthy pipeline, capturing how flexural waves evolve from sensor to sensor. By applying these learned noise characteristics to simulations, we create synthetic data that closely resemble real measurements. This approach not only helps overcome the scarcity of experimental datasets but also improves the robustness of ML models, enabling them to recognize and classify defects more accurately in varied pipeline scenarios. In doing so, we move beyond piecemeal solutions and present a comprehensive strategy that brings together fiber optics, guided waves, and ML-based domain adaptation. Our work sets the stage for more accurate, reliable, and data-efficient pipeline integrity assessments, ultimately improving infrastructure safety and reducing the need for extensive experimental data collection.},\n\tdoi = {10.1177/14759217251382956},\n\tissn = {1475-9217},\n\tnote = {Times Cited in Web of Science Core Collection: 0 Total Times Cited: 0 Cited Reference Count: 44 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1177/14759217251382956"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000254",
+      "entry_type": "article",
+      "title": "Quantitative characterization of microstructures and elastic properties in plasma sprayed coatings based on \"Ultrasonic - Elasticity - Microstructure\" interaction mechanism",
+      "authors": [
+        "Lin, L",
+        "Sun, LM",
+        "Ma, ZY",
+        "Lei, MK"
+      ],
+      "year": 2024,
+      "journal": "NDT & E INTERNATIONAL",
+      "doi": "10.1016/j.ndteint.2023.102997",
+      "abstract": "In plasma sprayed coatings, pores are the primary microstructure, and their features such as porosity, shape, and orientation significantly influence the thermal insulation and elastic properties of the coatings. Therefore, the ultrasonic characterization of pore feature parameters plays a crucial role in guiding the processing and predicting the lifespan of coatings. However, the coupling of multiple pore feature parameters leads to ill-posed problem and nonlinearity between these parameters and the ultrasonic feature signals, making it challenging to identify multiple pore feature parameters accurately. In this study, based on the \"ultrasonic - elasticity structure\" interaction mechanism, a novel strategy for the ultrasonic quantitative identification of pore feature parameters and elastic constants in plasma sprayed coatings is proposed.Firstly, a random pore model (RPM) was developed to reveal the complex morphology of pores in plasma sprayed coatings. The porosity, average aspect ratio, orientation factor, and contour roughness factor were statistically analyzed for 15 sets of constructed RPMs, followed by ultrasonic finite element simulations. Then, a sensitivity matrix (SM) inversion method is developed for the \"ultrasonic - elasticity\" relationship by accurately measuring the elastic constants of the coatings through ultrasonic wave velocity inversion at multiple angles, yielding a relative error of only 0.57%. Lastly, a Multi-output Support Vector Regression machine learning model optimized by genetic algorithm (GA-MSVR) was proposed to establish the \"elasticity - microstructure\" relationship and identify multiple pore feature parameters based on elastic constants. The maximum relative errors for the four pore feature parameters are found to be 12.28%, 6.35%, 18.87%, and 7.62%, respectively, demonstrating the feasibility of the proposed strategy. Furthermore, the sensitivity matrix was employed to explain the cause for the larger relative error of the orientation factor.In summary, a challenging task of quantitatively identifying pore feature parameters in plasma sprayed coatings is addressed by proposing a novel solving strategy based on the \"ultrasonic - elasticity - microstructure\" interaction mechanism. The developed RPM, SM inversion method, and GA-MSVR model contribute to the accurate and comprehensive identification of pore feature parameters. The results obtained validate the feasibility of the proposed strategy.",
+      "keywords": [
+        "Plasma spraying",
+        "Al 2 O 3 coating",
+        "Ultrasonic testing",
+        "Elastic constant",
+        "Pore features",
+        "THERMAL BARRIER COATINGS",
+        "NONDESTRUCTIVE MEASUREMENT",
+        "MODULUS",
+        "PORE",
+        "METHODOLOGY",
+        "ANISOTROPY",
+        "POROSITY",
+        "PHASE",
+        "ANGLE"
+      ],
+      "normalized_title": "quantitative characterization of microstructures and elastic properties in plasma sprayed coatings based on ultrasonic elasticity microstructure interaction mechanism",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ndteint.2023.102997,\n\tauthor = {Lin, L and Sun, LM and Ma, ZY and Lei, MK},\n\ttitle = {Quantitative characterization of microstructures and elastic properties in plasma sprayed coatings based on \"Ultrasonic - Elasticity - Microstructure\" interaction mechanism},\n\tjournal = {NDT & E INTERNATIONAL},\n\tyear = {2024},\n\tkeywords = {Plasma spraying; Al 2 O 3 coating; Ultrasonic testing; Elastic constant; Pore features; THERMAL BARRIER COATINGS; NONDESTRUCTIVE MEASUREMENT; MODULUS; PORE; METHODOLOGY; ANISOTROPY; POROSITY; PHASE; ANGLE},\n\tabstract = {In plasma sprayed coatings, pores are the primary microstructure, and their features such as porosity, shape, and orientation significantly influence the thermal insulation and elastic properties of the coatings. Therefore, the ultrasonic characterization of pore feature parameters plays a crucial role in guiding the processing and predicting the lifespan of coatings. However, the coupling of multiple pore feature parameters leads to ill-posed problem and nonlinearity between these parameters and the ultrasonic feature signals, making it challenging to identify multiple pore feature parameters accurately. In this study, based on the \"ultrasonic - elasticity structure\" interaction mechanism, a novel strategy for the ultrasonic quantitative identification of pore feature parameters and elastic constants in plasma sprayed coatings is proposed.Firstly, a random pore model (RPM) was developed to reveal the complex morphology of pores in plasma sprayed coatings. The porosity, average aspect ratio, orientation factor, and contour roughness factor were statistically analyzed for 15 sets of constructed RPMs, followed by ultrasonic finite element simulations. Then, a sensitivity matrix (SM) inversion method is developed for the \"ultrasonic - elasticity\" relationship by accurately measuring the elastic constants of the coatings through ultrasonic wave velocity inversion at multiple angles, yielding a relative error of only 0.57%. Lastly, a Multi-output Support Vector Regression machine learning model optimized by genetic algorithm (GA-MSVR) was proposed to establish the \"elasticity - microstructure\" relationship and identify multiple pore feature parameters based on elastic constants. The maximum relative errors for the four pore feature parameters are found to be 12.28%, 6.35%, 18.87%, and 7.62%, respectively, demonstrating the feasibility of the proposed strategy. Furthermore, the sensitivity matrix was employed to explain the cause for the larger relative error of the orientation factor.In summary, a challenging task of quantitatively identifying pore feature parameters in plasma sprayed coatings is addressed by proposing a novel solving strategy based on the \"ultrasonic - elasticity - microstructure\" interaction mechanism. The developed RPM, SM inversion method, and GA-MSVR model contribute to the accurate and comprehensive identification of pore feature parameters. The results obtained validate the feasibility of the proposed strategy.},\n\tdoi = {10.1016/j.ndteint.2023.102997},\n\tvolume = {141},\n\tissn = {0963-8695},\n\tnote = {Times Cited in Web of Science Core Collection: 2 Total Times Cited: 2 Cited Reference Count: 54 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ndteint.2023.102997"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000255",
+      "entry_type": "article",
+      "title": "Utilizing an Ultrasonic Inspection System Operating Inside an Autoclave and Machine Learning to Quantify Porosity within Composites During Cure",
+      "authors": [
+        "Hudson, TB",
+        "Chung, GR",
+        "Pinakidis, JJ",
+        "Follis, PJ",
+        "Sreekantamurthy, T",
+        "Palmieri, FL"
+      ],
+      "year": 2024,
+      "journal": "RESEARCH IN NONDESTRUCTIVE EVALUATION",
+      "doi": "10.1080/09349847.2023.2277424",
+      "abstract": "Composite materials are increasingly being utilized in aerospace applications for their high stiffness and strength to weight ratios and fatigue resistance. However, defects in the composite may arise during cure (e.g. porosity, delamination, fiber waviness), and current technology only allows for post-cure evaluation (e.g. microscopy, ultrasonic inspection). A high-temperature ultrasonic scanning system was developed for deployment in an autoclave, which can detect porosity in composites during the cure process. This study focused on the implementation of machine learning techniques to help generate a model that can quantify porosity, in addition to detection and localization that has previously been demonstrated. Two, six-hour-long experiments were conducted on curing of 762 mm x 305 mm (30 in. x12 in.) composite panels with a [0/45/90/-45]4s layup and varying regions of high and low pressure due to its tapered geometry in contact with a flat caul plate. The first experiment utilized a thick (12.7 mm) caul plate and the second utilized a thin (3.2 mm) caul plate. During experimentation, within the scan area (406 mm x 13 mm), data was recorded and stored for ultrasonic amplitude. Additional variables were measured or predicted including temperature, autoclave pressure, number of plies, slope of the composite panel surface with respect to the transducer, viscosity, and glass transition temperature. The pre-processed data was entered into the Regression Learner Application in MATLABCIRCLED LATIN CAPITAL LETTER R,1 and a rational quadratic Gaussian process regression (GPR) was chosen for the machine learning algorithm. The model was then trained on a larger data set to make it more robust and capable of predictions using a function callout. The result was a machine learning algorithm that can reliably quantify porosity in a composite panel during cure based on measured amplitude response and generate images for intuitive visualization. This tool can be further trained with more experimentation and potentially employed for real-time porosity detection and quantification of composite components during cure in an autoclave. Practical use of this technology is the potential to dynamically control processing parameters (e.g. autoclave pressure) in real-time to reduce the level of porosity within the laminate to acceptable limits (e.g. 2% by volume).",
+      "keywords": [
+        "Defect Detection",
+        "Inspection During Cure",
+        "Machine Learning (ML)",
+        "Porosity",
+        "Process Monitoring",
+        "Ultrasonic Testing (UT)",
+        "DESIGN"
+      ],
+      "normalized_title": "utilizing an ultrasonic inspection system operating inside an autoclave and machine learning to quantify porosity within composites during cure",
+      "raw_bibtex": "@ARTICLE{10.1080/09349847.2023.2277424,\n\tauthor = {Hudson, TB and Chung, GR and Pinakidis, JJ and Follis, PJ and Sreekantamurthy, T and Palmieri, FL},\n\ttitle = {Utilizing an Ultrasonic Inspection System Operating Inside an Autoclave and Machine Learning to Quantify Porosity within Composites During Cure},\n\tjournal = {RESEARCH IN NONDESTRUCTIVE EVALUATION},\n\tyear = {2024},\n\tkeywords = {Defect Detection; Inspection During Cure; Machine Learning (ML); Porosity; Process Monitoring; Ultrasonic Testing (UT); DESIGN},\n\tabstract = {Composite materials are increasingly being utilized in aerospace applications for their high stiffness and strength to weight ratios and fatigue resistance. However, defects in the composite may arise during cure (e.g. porosity, delamination, fiber waviness), and current technology only allows for post-cure evaluation (e.g. microscopy, ultrasonic inspection). A high-temperature ultrasonic scanning system was developed for deployment in an autoclave, which can detect porosity in composites during the cure process. This study focused on the implementation of machine learning techniques to help generate a model that can quantify porosity, in addition to detection and localization that has previously been demonstrated. Two, six-hour-long experiments were conducted on curing of 762 mm x 305 mm (30 in. x12 in.) composite panels with a [0/45/90/-45]4s layup and varying regions of high and low pressure due to its tapered geometry in contact with a flat caul plate. The first experiment utilized a thick (12.7 mm) caul plate and the second utilized a thin (3.2 mm) caul plate. During experimentation, within the scan area (406 mm x 13 mm), data was recorded and stored for ultrasonic amplitude. Additional variables were measured or predicted including temperature, autoclave pressure, number of plies, slope of the composite panel surface with respect to the transducer, viscosity, and glass transition temperature. The pre-processed data was entered into the Regression Learner Application in MATLABCIRCLED LATIN CAPITAL LETTER R,1 and a rational quadratic Gaussian process regression (GPR) was chosen for the machine learning algorithm. The model was then trained on a larger data set to make it more robust and capable of predictions using a function callout. The result was a machine learning algorithm that can reliably quantify porosity in a composite panel during cure based on measured amplitude response and generate images for intuitive visualization. This tool can be further trained with more experimentation and potentially employed for real-time porosity detection and quantification of composite components during cure in an autoclave. Practical use of this technology is the potential to dynamically control processing parameters (e.g. autoclave pressure) in real-time to reduce the level of porosity within the laminate to acceptable limits (e.g. 2% by volume).},\n\tdoi = {10.1080/09349847.2023.2277424},\n\tvolume = {35},\n\tnumber = {2},\n\tpages = {47-69},\n\tissn = {0934-9847},\n\tnote = {Times Cited in Web of Science Core Collection: 1 Total Times Cited: 1 Cited Reference Count: 27 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1080/09349847.2023.2277424"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000256",
+      "entry_type": "article",
+      "title": "Damage quantification in an aluminium-CFRP composite structure using guided wave wavenumber mapping: Comparison of instantaneous and local wavenumber analyses",
+      "authors": [
+        "Lugovtsova, Y",
+        "Bulling, J",
+        "Mesnil, O",
+        "Prager, J",
+        "Gohlke, D",
+        "Boller, C"
+      ],
+      "year": 2021,
+      "journal": "NDT & E INTERNATIONAL",
+      "doi": "10.1016/j.ndteint.2021.102472",
+      "abstract": "Composite-overwrapped pressure vessels (COPV) are increasingly used in the transportation industry due to their high strength to mass ratio. Throughout the years, various designs were developed and found their applications. Currently, there are five designs, which can be subdivided into two main categories - with a load-sharing metal liner and with a non-load-sharing plastic liner. The main damage mechanism defining the lifetime of the first type is fatigue of the metal liner, whereas for the second type it is fatigue of the composite overwrap. Never-theless, one damage type which may drastically reduce the lifetime of COPV is impact-induced damage. Therefore, this barely visible damage needs to be assessed in a non-destructive way to decide whether the pressure vessel can be further used or has to be put out of service. One of the possible methods is based on ultrasonic waves. In this contribution, both conventional ultrasonic testing (UT) by high-frequency bulk waves and wavenumber mapping by low frequency guided waves are used to evaluate impact damage. Wavenumber mapping techniques are first benchmarked on a simulated aluminium panel then applied to experimental measurements acquired on a delaminated aluminium-CFRP composite plate which corresponds to a structure of COPV with a load-sharing metal liner. The analysis of experimental data obtained from measurements of guided waves propagating in an aluminium-CFRP composite plate with impact-induced damage is performed. All approaches show similar performance in terms of quantification of damage size and depths while being applied to numerical data. The approaches used on the experimental data deliver an accurate estimate of the in-plane size of the large delamination at the aluminium-CFRP interface but only a rough estimate of its depth. Moreover, none of the wavenumber mapping techniques used in the study can quantify every delamination between CFRP plies caused by the impact, which is the case for conventional UT. This may be solved by using higher frequencies (shorter wavelengths) or more advanced signal processing techniques. All in all, it can be concluded that imaging of complex impact damage in fibre-reinforced composites based on wavenumber mapping is not straightforward and stays a challenging task.",
+      "keywords": [
+        "Ultrasonic guided waves",
+        "Instantaneous wavenumber analysis",
+        "Local wavenumber analysis",
+        "Signal processing",
+        "DELAMINATION DETECTION",
+        "LAMB WAVES"
+      ],
+      "normalized_title": "damage quantification in an aluminium cfrp composite structure using guided wave wavenumber mapping comparison of instantaneous and local wavenumber analyses",
+      "raw_bibtex": "@ARTICLE{10.1016/j.ndteint.2021.102472,\n\tauthor = {Lugovtsova, Y and Bulling, J and Mesnil, O and Prager, J and Gohlke, D and Boller, C},\n\ttitle = {Damage quantification in an aluminium-CFRP composite structure using guided wave wavenumber mapping: Comparison of instantaneous and local wavenumber analyses},\n\tjournal = {NDT & E INTERNATIONAL},\n\tyear = {2021},\n\tkeywords = {Ultrasonic guided waves; Instantaneous wavenumber analysis; Local wavenumber analysis; Signal processing; DELAMINATION DETECTION; LAMB WAVES},\n\tabstract = {Composite-overwrapped pressure vessels (COPV) are increasingly used in the transportation industry due to their high strength to mass ratio. Throughout the years, various designs were developed and found their applications. Currently, there are five designs, which can be subdivided into two main categories - with a load-sharing metal liner and with a non-load-sharing plastic liner. The main damage mechanism defining the lifetime of the first type is fatigue of the metal liner, whereas for the second type it is fatigue of the composite overwrap. Never-theless, one damage type which may drastically reduce the lifetime of COPV is impact-induced damage. Therefore, this barely visible damage needs to be assessed in a non-destructive way to decide whether the pressure vessel can be further used or has to be put out of service. One of the possible methods is based on ultrasonic waves. In this contribution, both conventional ultrasonic testing (UT) by high-frequency bulk waves and wavenumber mapping by low frequency guided waves are used to evaluate impact damage. Wavenumber mapping techniques are first benchmarked on a simulated aluminium panel then applied to experimental measurements acquired on a delaminated aluminium-CFRP composite plate which corresponds to a structure of COPV with a load-sharing metal liner. The analysis of experimental data obtained from measurements of guided waves propagating in an aluminium-CFRP composite plate with impact-induced damage is performed. All approaches show similar performance in terms of quantification of damage size and depths while being applied to numerical data. The approaches used on the experimental data deliver an accurate estimate of the in-plane size of the large delamination at the aluminium-CFRP interface but only a rough estimate of its depth. Moreover, none of the wavenumber mapping techniques used in the study can quantify every delamination between CFRP plies caused by the impact, which is the case for conventional UT. This may be solved by using higher frequencies (shorter wavelengths) or more advanced signal processing techniques. All in all, it can be concluded that imaging of complex impact damage in fibre-reinforced composites based on wavenumber mapping is not straightforward and stays a challenging task.},\n\tdoi = {10.1016/j.ndteint.2021.102472},\n\tvolume = {122},\n\tissn = {0963-8695},\n\tnote = {Times Cited in Web of Science Core Collection: 44 Total Times Cited: 47 Cited Reference Count: 34 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.ndteint.2021.102472"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000257",
+      "entry_type": "article",
+      "title": "A Hybrid Convolutional and Recurrent Neural Network for Multi-Sensor Pile Damage Detection with Time Series",
+      "authors": [
+        "Wu, JT",
+        "El Naggar, MH",
+        "Wang, KH"
+      ],
+      "year": 2024,
+      "journal": "SENSORS",
+      "doi": "10.3390/s24041190",
+      "abstract": "Machine learning (ML) algorithms are increasingly applied to structure health monitoring (SHM) problems. However, their application to pile damage detection (PDD) is hindered by the complexity of the problem. A novel multi-sensor pile damage detection (MSPDD) method is proposed in this paper to extend the application of ML algorithms in the automatic identification of PDD. The time-series signals collected by multiple sensors during the pile integrity test are first processed by the traveling wave decomposition (TWD) theory and are then input into a hybrid one-dimensional (1D) convolutional and recurrent neural network. The hybrid neural network can achieve the automatic multi-task identification of pile damage detection based on the time series of MSPDD results. Finally, the analytical solution-based sample set is utilized to evaluate the performance of the proposed hybrid model. The outputs of the multi-task learning framework can provide a detailed description of the actual pile quality and provide strong support for the classification of pile quality as well.",
+      "keywords": [
+        "pile damage detection",
+        "multiple sensors",
+        "convolutional neural network",
+        "recurrent neural network",
+        "analytical solution",
+        "DYNAMIC SOIL REACTIONS",
+        "MODEL"
+      ],
+      "normalized_title": "a hybrid convolutional and recurrent neural network for multi sensor pile damage detection with time series",
+      "raw_bibtex": "@ARTICLE{10.3390/s24041190,\n\tauthor = {Wu, JT and El Naggar, MH and Wang, KH},\n\ttitle = {A Hybrid Convolutional and Recurrent Neural Network for Multi-Sensor Pile Damage Detection with Time Series},\n\tjournal = {SENSORS},\n\tyear = {2024},\n\tkeywords = {pile damage detection; multiple sensors; convolutional neural network; recurrent neural network; analytical solution; DYNAMIC SOIL REACTIONS; MODEL},\n\tabstract = {Machine learning (ML) algorithms are increasingly applied to structure health monitoring (SHM) problems. However, their application to pile damage detection (PDD) is hindered by the complexity of the problem. A novel multi-sensor pile damage detection (MSPDD) method is proposed in this paper to extend the application of ML algorithms in the automatic identification of PDD. The time-series signals collected by multiple sensors during the pile integrity test are first processed by the traveling wave decomposition (TWD) theory and are then input into a hybrid one-dimensional (1D) convolutional and recurrent neural network. The hybrid neural network can achieve the automatic multi-task identification of pile damage detection based on the time series of MSPDD results. Finally, the analytical solution-based sample set is utilized to evaluate the performance of the proposed hybrid model. The outputs of the multi-task learning framework can provide a detailed description of the actual pile quality and provide strong support for the classification of pile quality as well.},\n\tdoi = {10.3390/s24041190},\n\tvolume = {24},\n\tnumber = {4},\n\tissn = {1424-8220},\n\tnote = {Times Cited in Web of Science Core Collection: 5 Total Times Cited: 5 Cited Reference Count: 44 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/s24041190"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000258",
+      "entry_type": "article",
+      "title": "Integrity monitoring of cast in-situ piles using thermal approach: A field case study",
+      "authors": [
+        "Sun, QC",
+        "Elshafie, MZEB",
+        "Barker, C",
+        "Fisher, A",
+        "Schooling, J",
+        "Rui, Y"
+      ],
+      "year": 2022,
+      "journal": "ENGINEERING STRUCTURES",
+      "doi": "10.1016/j.engstruct.2022.114586",
+      "abstract": "A review of the literature shows that pile integrity is a significant concern in pile construction; in particular, determining the location and nature of anomalies along the depth of the piles using thermal integrity testing data. This paper proposes a new anomaly detection approach which combines early-age temperature monitoring data and finite element back-analyses. A case study on a continuous flight auger (CFA) test pile with engineered inclusions was conducted using this new approach. Through 1D finite element analysis, a linear relationship between maximum temperature and effective pile radius is established. A crucial indicator - 'the effective pile radius' could be used to reconstruct as-built pile 3D shape and identify anomalous regions inside or outside the pile reinforcement cage. The data interpretation results of the field case study show that thermal integrity testing provides reliable information to identify anomalous regions within the pile. Compared to the conventional cross -hole sonic logging, thermal integrity testing used in combination with the new approach presented in this paper, can provide more reliable information in the pile integrity assessment process.",
+      "keywords": [
+        "Thermal integrity test",
+        "Pile anomaly detection",
+        "Finite element modelling",
+        "Cast in-situ pile",
+        "Structural health monitoring",
+        "Non-destructive test"
+      ],
+      "normalized_title": "integrity monitoring of cast in situ piles using thermal approach a field case study",
+      "raw_bibtex": "@ARTICLE{10.1016/j.engstruct.2022.114586,\n\tauthor = {Sun, QC and Elshafie, MZEB and Barker, C and Fisher, A and Schooling, J and Rui, Y},\n\ttitle = {Integrity monitoring of cast in-situ piles using thermal approach: A field case study},\n\tjournal = {ENGINEERING STRUCTURES},\n\tyear = {2022},\n\tkeywords = {Thermal integrity test; Pile anomaly detection; Finite element modelling; Cast in-situ pile; Structural health monitoring; Non-destructive test},\n\tabstract = {A review of the literature shows that pile integrity is a significant concern in pile construction; in particular, determining the location and nature of anomalies along the depth of the piles using thermal integrity testing data. This paper proposes a new anomaly detection approach which combines early-age temperature monitoring data and finite element back-analyses. A case study on a continuous flight auger (CFA) test pile with engineered inclusions was conducted using this new approach. Through 1D finite element analysis, a linear relationship between maximum temperature and effective pile radius is established. A crucial indicator - 'the effective pile radius' could be used to reconstruct as-built pile 3D shape and identify anomalous regions inside or outside the pile reinforcement cage. The data interpretation results of the field case study show that thermal integrity testing provides reliable information to identify anomalous regions within the pile. Compared to the conventional cross -hole sonic logging, thermal integrity testing used in combination with the new approach presented in this paper, can provide more reliable information in the pile integrity assessment process.},\n\tdoi = {10.1016/j.engstruct.2022.114586},\n\tvolume = {272},\n\tissn = {0141-0296},\n\tnote = {Times Cited in Web of Science Core Collection: 7 Total Times Cited: 8 Cited Reference Count: 33 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1016/j.engstruct.2022.114586"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000259",
+      "entry_type": "article",
+      "title": "Defect Identification of Concrete Piles Based on Numerical Simulation and Convolutional Neural Network",
+      "authors": [
+        "Wu, CS",
+        "Zhang, JQ",
+        "Qi, LL",
+        "Zhuo, DB"
+      ],
+      "year": 2022,
+      "journal": "BUILDINGS",
+      "doi": "10.3390/buildings12050664",
+      "abstract": "Defects in pile foundations, such as neck defects, bulge imperfections, weak concretes, cracks, and broken piles, can cause a decrease in the bearing capacity and the structural stability of the foundation. Identification of the type of defect is vital in formulating a reasonable repair plan for the pile foundation. In this study, the authors proposed a scheme to identify the types of defects in concrete piles based on a convolution neural network and a low-strain pile integrity test (LSPIT). A batch modeling method of defective pile foundations using Python script was also proffered. The different degrees of signals of five types of defective pile foundations were simulated by this method. The original data were decomposed and reconstructed by wavelet packet decomposition (WPT). To prevent the data from losing too much information after WPT, the data of 400 x 1 after decomposition and reconstruction were processed by dimension-raising to obtain the data of 20 x 20 x 1. Then, the multidimensional feature index of 20 x 20 x 2 was generated by index fusion with the original data. Finally, the data were input onto convolutional neural network (CNN) as a training parameter. Following an improvement of the dataset, the recognition accuracy of the type of defect in the pile foundation by the proposed identification scheme reached 94.4%.",
+      "keywords": [
+        "concrete pile",
+        "numerical simulation",
+        "convolutional neural network",
+        "wavelet packet decomposition",
+        "low strain pile integrity test"
+      ],
+      "normalized_title": "defect identification of concrete piles based on numerical simulation and convolutional neural network",
+      "raw_bibtex": "@ARTICLE{10.3390/buildings12050664,\n\tauthor = {Wu, CS and Zhang, JQ and Qi, LL and Zhuo, DB},\n\ttitle = {Defect Identification of Concrete Piles Based on Numerical Simulation and Convolutional Neural Network},\n\tjournal = {BUILDINGS},\n\tyear = {2022},\n\tkeywords = {concrete pile; numerical simulation; convolutional neural network; wavelet packet decomposition; low strain pile integrity test},\n\tabstract = {Defects in pile foundations, such as neck defects, bulge imperfections, weak concretes, cracks, and broken piles, can cause a decrease in the bearing capacity and the structural stability of the foundation. Identification of the type of defect is vital in formulating a reasonable repair plan for the pile foundation. In this study, the authors proposed a scheme to identify the types of defects in concrete piles based on a convolution neural network and a low-strain pile integrity test (LSPIT). A batch modeling method of defective pile foundations using Python script was also proffered. The different degrees of signals of five types of defective pile foundations were simulated by this method. The original data were decomposed and reconstructed by wavelet packet decomposition (WPT). To prevent the data from losing too much information after WPT, the data of 400 x 1 after decomposition and reconstruction were processed by dimension-raising to obtain the data of 20 x 20 x 1. Then, the multidimensional feature index of 20 x 20 x 2 was generated by index fusion with the original data. Finally, the data were input onto convolutional neural network (CNN) as a training parameter. Following an improvement of the dataset, the recognition accuracy of the type of defect in the pile foundation by the proposed identification scheme reached 94.4%.},\n\tdoi = {10.3390/buildings12050664},\n\tvolume = {12},\n\tnumber = {5},\n\tissn = {2075-5309},\n\tnote = {Times Cited in Web of Science Core Collection: 8 Total Times Cited: 8 Cited Reference Count: 47 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.3390/buildings12050664"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    },
+    {
+      "paper_id": "paper_000260",
+      "entry_type": "article",
+      "title": "Quaternion Cross-Modality Spatial Learning for Multi-Modal Medical Image Segmentation",
+      "authors": [
+        "Chen, JY",
+        "Huang, GH",
+        "Yuan, XC",
+        "Zhong, G",
+        "Zheng, ZW",
+        "Pun, CM",
+        "Zhu, J",
+        "Huang, ZX"
+      ],
+      "year": 2024,
+      "journal": "IEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS",
+      "doi": "10.1109/jbhi.2023.3346529",
+      "abstract": "Recently, the Deep Neural Networks (DNNs) have had a large impact on imaging process including medical image segmentation, and the real-valued convolution of DNN has been extensively utilized in multi-modal medical image segmentation to accurately segment lesions via learning data information. However, the weighted summation operation in such convolution limits the ability to maintain spatial dependence that is crucial for identifying different lesion distributions. In this paper, we propose a novel Quaternion Cross-modality Spatial Learning (Q-CSL) which explores the spatial information while considering the linkage between multi-modal images. Specifically, we introduce to quaternion to represent data and coordinates that contain spatial information. Additionally, we propose Quaternion Spatial-association Convolution to learn the spatial information. Subsequently, the proposed De-level Quaternion Cross-modality Fusion (De-QCF) module excavates inner space features and fuses cross-modality spatial dependency. Our experimental results demonstrate that our approach compared to the competitive methods perform well with only 0.01061 M parameters and 9.95G FLOPs.",
+      "keywords": [
+        "Quaternions",
+        "Convolution",
+        "Three-dimensional displays",
+        "Biomedical imaging",
+        "Image segmentation",
+        "Feature extraction",
+        "Lesions",
+        "Multi-modal medical image",
+        "Quaternion",
+        "Spatial dependency",
+        "Cross-modality",
+        "CONVOLUTIONAL NEURAL-NETWORKS",
+        "TUMOR SEGMENTATION",
+        "3D",
+        "TRANSFORMER",
+        "CNN"
+      ],
+      "normalized_title": "quaternion cross modality spatial learning for multi modal medical image segmentation",
+      "raw_bibtex": "@ARTICLE{10.1109/JBHI.2023.3346529,\n\tauthor = {Chen, JY and Huang, GH and Yuan, XC and Zhong, G and Zheng, ZW and Pun, CM and Zhu, J and Huang, ZX},\n\ttitle = {Quaternion Cross-Modality Spatial Learning for Multi-Modal Medical Image Segmentation},\n\tjournal = {IEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS},\n\tyear = {2024},\n\tkeywords = {Quaternions; Convolution; Three-dimensional displays; Biomedical imaging; Image segmentation; Feature extraction; Lesions; Multi-modal medical image; Quaternion; Spatial dependency; Cross-modality; CONVOLUTIONAL NEURAL-NETWORKS; TUMOR SEGMENTATION; 3D; TRANSFORMER; CNN},\n\tabstract = {Recently, the Deep Neural Networks (DNNs) have had a large impact on imaging process including medical image segmentation, and the real-valued convolution of DNN has been extensively utilized in multi-modal medical image segmentation to accurately segment lesions via learning data information. However, the weighted summation operation in such convolution limits the ability to maintain spatial dependence that is crucial for identifying different lesion distributions. In this paper, we propose a novel Quaternion Cross-modality Spatial Learning (Q-CSL) which explores the spatial information while considering the linkage between multi-modal images. Specifically, we introduce to quaternion to represent data and coordinates that contain spatial information. Additionally, we propose Quaternion Spatial-association Convolution to learn the spatial information. Subsequently, the proposed De-level Quaternion Cross-modality Fusion (De-QCF) module excavates inner space features and fuses cross-modality spatial dependency. Our experimental results demonstrate that our approach compared to the competitive methods perform well with only 0.01061 M parameters and 9.95G FLOPs.},\n\tdoi = {10.1109/JBHI.2023.3346529},\n\tvolume = {28},\n\tnumber = {3},\n\tpages = {1412-1423},\n\tissn = {2168-2194},\n\tnote = {Times Cited in Web of Science Core Collection: 9 Total Times Cited: 9 Cited Reference Count: 60 ER -},\n\ttype = {JOUR}\n}",
+      "source_files": [
+        "savedrecs (2).ris"
+      ],
+      "source_keys": [
+        "10.1109/JBHI.2023.3346529"
+      ],
+      "merged_from": [],
+      "status": "unprocessed"
+    }
+  ]
+}

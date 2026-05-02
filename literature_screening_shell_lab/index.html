@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Literature Screening Shell Lab</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="shell-app">
+      <aside class="shell-rail">
+        <div class="brand-block">
+          <div class="brand-kicker">Shell Lab</div>
+          <h1>极简线程台</h1>
+          <p>独立视觉原型。</p>
+        </div>
+
+        <section class="rail-section">
+          <div class="rail-title">场景状态</div>
+          <div class="scenario-stack">
+            <button class="scenario-button" data-scenario="draft" type="button">刚建线程</button>
+            <button class="scenario-button is-active" data-scenario="active" type="button">推进中</button>
+            <button class="scenario-button" data-scenario="report" type="button">可生成报告</button>
+          </div>
+        </section>
+
+        <section class="rail-section">
+          <div class="rail-title">演示控制</div>
+          <div class="scenario-stack">
+            <button class="scenario-button" data-demo-action="advance" type="button">自动演示一步</button>
+            <button class="scenario-button" data-demo-action="reset" type="button">重置当前场景</button>
+          </div>
+        </section>
+
+        <section class="rail-section">
+          <div class="rail-title">核心原则</div>
+          <div class="principle-list">
+            <div class="principle-item">
+              <strong>一个线程</strong>
+              <span>一张总控板</span>
+            </div>
+            <div class="principle-item">
+              <strong>四个动作</strong>
+              <span>方案、初筛、复核、报告</span>
+            </div>
+            <div class="principle-item">
+              <strong>一个工作流</strong>
+              <span>找文献、开链接、标状态、做终判</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="rail-section rail-note">
+          <div class="rail-title">说明</div>
+          <p>不接后端，不影响现有系统。</p>
+        </section>
+      </aside>
+
+      <div class="shell-main">
+        <header class="shell-topbar">
+          <div>
+            <div class="topbar-kicker">Front-end Exploration</div>
+            <h2>把流程压成一眼能懂的壳子</h2>
+          </div>
+          <nav class="scene-nav">
+            <button class="scene-button is-active" data-scene="thread" type="button">线程总览</button>
+            <button class="scene-button" data-scene="workbench" type="button">候选池</button>
+            <button class="scene-button" data-scene="report" type="button">报告台</button>
+          </nav>
+        </header>
+
+        <main id="scene-host" class="scene-host"></main>
+      </div>
+    </div>
+
+    <div id="toast" class="toast" aria-live="polite"></div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

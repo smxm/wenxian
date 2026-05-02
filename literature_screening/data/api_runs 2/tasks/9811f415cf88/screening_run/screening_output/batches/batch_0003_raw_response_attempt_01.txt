@@ -1,0 +1,75 @@
+{
+    "batch_id": "batch_0003",
+    "results": [
+        {
+            "paper_id": "paper_000021",
+            "decision": "exclude",
+            "reason": "标题和摘要表明是文献计量学分析，缺乏具体的护理干预应用数据和明确的护理结局指标。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000022",
+            "decision": "uncertain",
+            "reason": "摘要提到慢性病健康管理和老年人口，但未明确描述具体的互联网技术载体、护理干预内容或护理结局指标。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000023",
+            "decision": "include",
+            "reason": "标题和摘要明确针对老年慢性病患者，应用“互联网+”居家照护模式，并报告了自我管理能力、依从性、心理状态、生活质量等护理结局指标。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000024",
+            "decision": "exclude",
+            "reason": "标题和摘要表明是文献计量学热点分析，缺乏具体的护理干预应用数据和明确的护理结局指标。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000025",
+            "decision": "include",
+            "reason": "标题和摘要明确针对老年慢性病患者，应用基于“互联网+”的延续康复护理平台，并报告了心理状态、遵医行为、护理满意度等护理结局指标。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.95
+        },
+        {
+            "paper_id": "paper_000026",
+            "decision": "uncertain",
+            "reason": "标题和摘要提到“互联网+”医疗在老年慢性病管理中的应用，但侧重于问题与对策分析，未明确描述具体的护理干预内容和护理结局指标。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.55
+        },
+        {
+            "paper_id": "paper_000027",
+            "decision": "include",
+            "reason": "标题和摘要明确针对慢性病患者（摘要提及老年患者），应用“互联网+护理服务”模式进行延续性护理，并报告了满意度、照顾者负担、再入院率等护理结局指标。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.9
+        },
+        {
+            "paper_id": "paper_000028",
+            "decision": "exclude",
+            "reason": "标题和摘要表明是SWOT模型应用分析，缺乏具体的护理干预应用数据和明确的护理结局指标。",
+            "evidence": ["title", "abstract"],
+            "confidence": 0.85
+        },
+        {
+            "paper_id": "paper_000029",
+            "decision": "uncertain",
+            "reason": "标题和摘要综述“互联网+护理服务”的发展现状，提到为慢性病人群服务，但未描述具体的研究对象、干预内容或护理结局指标。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.5
+        },
+        {
+            "paper_id": "paper_000030",
+            "decision": "uncertain",
+            "reason": "标题和摘要综述“互联网+全科团队”模式在老年慢性病健康管理的应用现状，但未明确描述具体的护理干预内容和护理结局指标。",
+            "evidence": ["title", "abstract", "keywords"],
+            "confidence": 0.55
+        }
+    ]
+}
